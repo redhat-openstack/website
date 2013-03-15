@@ -8,12 +8,42 @@ wiki_last_updated: 2015-06-15
 
 # Main Page
 
-**MediaWiki has been successfully installed.**
+## Introducing RDO
 
-Consult the [User's Guide](//meta.wikimedia.org/wiki/Help:Contents) for information on using the wiki software.
+RDO makes it easy to install and deploy the most up-to-date OpenStack Just as a traditional OS relies on the hardware beneath it, so too does the OpenStack cloud operating system rely on the foundation of a hypervisor and OS platform.
 
-## Getting started
+## Supported by Red Hat
 
-*   [Configuration settings list](//www.mediawiki.org/wiki/Manual:Configuration_settings)
-*   [MediaWiki FAQ](//www.mediawiki.org/wiki/Manual:FAQ)
-*   [MediaWiki release mailing list](https://lists.wikimedia.org/mailman/listinfo/mediawiki-announce)
+The OpenStack project benefits from a broad group of providers and distributors, but none match Red Hat's combination of production experience, technical expertise, and commitment to the open source way of producing software. Many of the largest production clouds in the world run on and are supported by Red Hat, and Red Hat engineers contribute to every layer of the OpenStack platform. From the Linux kernel and the KVM hypervisor to the top level OpenStack project components, Red Hat is at or near the top of the list in terms of number of developers and of contributions.
+
+## Download and get started!
+
+In just a few short steps, you can transform any machine running Fedora, Red Hat Enterprise Linux, or RHEL-based distribution into an OpenStack powerhouse.
+
+(QUICK START) We'll help you get set up
+
+## The RDO Blog
+
+### RDO version 1.3.2 released!
+
+It's time for a new release again.
+
+Version 1.3.2 is packed-full of awesome features. Simply yum upgrade and you'll have the newly released OpenStack running on your system!
+
+24 comments / read more
+
+View older posts
+
+## From the forums
+
+How do I install on Fedora 22? 17 replies, last 3 minutes ago
+
+How much RAM is needed? 5 replies, last about 2 minutes ago
+
+Participate in the forum
+
+## Join the community
+
+RDO packages up the upstream OpenStack components to run well together on Red Hat Enterprise Linux and its derivatives, and enables users to tap into community support through the RDO forums.
+
+For a commercially-supported OpenStack solution, Red Hat provides $WHAT, an enterprise-class cloud platform based on OpenStack Folsom.
