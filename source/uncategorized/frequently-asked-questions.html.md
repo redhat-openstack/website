@@ -12,7 +12,9 @@ wiki_last_updated: 2013-04-08
 
 RDO is a freely-available, community-supported distribution of OpenStack that runs on Red Hat Enterprise Linux, Fedora, and their derivatives. In addition to providing a set of software packages, RDO is a place for users of cloud computing platform on Red Hat Linux operating systems to get help and compare notes on running OpenStack.
 
-=== What is OpenStack? == OpenStack is an open source project for building a private or public infrastructure-as-a-service (IaaS) cloud running on standard hardware. You can learn more about it by visiting [openstack.org](http://www.openstack.org).
+## What is OpenStack?
+
+OpenStack is an open source project for building a private or public infrastructure-as-a-service (IaaS) cloud running on standard hardware. You can learn more about it by visiting [openstack.org](http://www.openstack.org).
 
 ## Why is RDO needed?
 
