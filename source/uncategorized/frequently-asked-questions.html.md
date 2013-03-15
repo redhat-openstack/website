@@ -86,6 +86,6 @@ RDO is built using Koji infrastructure, similar to how Fedora packages are built
 
 ## What is the relationship between RDO and Red Hat OpenStack?
 
-RDO is a community-supported OpenStack distribution that tracks the latest version of OpenStack upstream, beginning with OpenStack Grizzly. RHOS is a commercially-supported product from Red Hat. Initially, RHOS will be based on the Folsom release of OpenStack.
+RDO is a community-supported OpenStack distribution that tracks the latest version of OpenStack upstream, beginning with OpenStack Grizzly. Red Hat OpenStack is a commercially-supported product from Red Hat. Initially, Red Hat OpenStack will be based on the Folsom release of OpenStack.
 
 <Category:Documentation>
