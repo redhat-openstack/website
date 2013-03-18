@@ -11,11 +11,11 @@ wiki_last_updated: 2015-06-15
 __NOTOC__
 
 <div class="hero-unit row">
-<div class="span4 intro-stack">
+<div class="intro-stack">
  
 
 </div>
-<div class="span6 intro-text">
+<div class="offset4 span6 intro-text">
 The most up-to-date OpenStack on the
  industry's most trusted Linux platform,
  now easy to install and deploy.
