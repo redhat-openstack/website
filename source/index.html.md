@@ -15,7 +15,7 @@ __NOTOC__
  
 
 </div>
-<div class="span6">
+<div class="span6 intro-text">
 The most up-to-date OpenStack on the
  industry's most trusted Linux platform,
  now easy to install and deploy.
