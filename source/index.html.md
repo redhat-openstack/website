@@ -9,7 +9,7 @@ wiki_last_updated: 2015-06-15
 # Main Page
 
 <div class="row">
-<div class="span10 offset1 pad-sides">
+<div class="span12">
 <div class="hero-unit">
 The most up-to-date OpenStack on the
  industry's most trusted Linux platform,
@@ -18,6 +18,8 @@ The most up-to-date OpenStack on the
 </div>
 </div>
 </div>
+<div class="row">
+<div class="span10 offset1 pad-sides">
 ## Introducing RDO
 
 RDO makes it easy to install and deploy the most up-to-date OpenStack Just as a traditional OS relies on the hardware beneath it, so too does the OpenStack cloud operating system rely on the foundation of a hypervisor and OS platform.
@@ -57,3 +59,5 @@ Participate in the forum
 RDO packages up the upstream OpenStack components to run well together on Red Hat Enterprise Linux and its derivatives, and enables users to tap into community support through the RDO forums.
 
 For a commercially-supported OpenStack solution, Red Hat provides $WHAT, an enterprise-class cloud platform based on OpenStack Folsom.
+
+</div>
