@@ -14,7 +14,7 @@ __NOTOC__
 <div class="offset4 span6">
 The most up-to-date OpenStack on the
  industry's most trusted Linux platform,
- now easy to install and deploy. <span class="btn btn-action btn-block">[Quick start →](quickstart)</span>
+ now easy to install and deploy. <span class="btn btn-action">[Quick start →](quickstart)</span>
 
 </div>
 </div>
