@@ -12,6 +12,8 @@ __NOTOC__
 
 <div class="hero-unit row">
 <div class="span4 intro-stack">
+ 
+
 </div>
 <div class="span6">
 The most up-to-date OpenStack on the
