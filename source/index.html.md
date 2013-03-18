@@ -16,7 +16,7 @@ The most up-to-date OpenStack on the
  industry's most trusted Linux platform,
  now easy to install and deploy.
 
-<span class="btn btn-action">[Quick start →](quickstart)</span>
+<span class="btn">[Quick start →](quickstart)</span>
 
 </div>
 </div>
