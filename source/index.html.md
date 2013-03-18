@@ -8,6 +8,14 @@ wiki_last_updated: 2015-06-15
 
 # Main Page
 
+<div class="row">
+<div class="hero-unit">
+The most up-to-date OpenStack on the
+ industry's most trusted Linux platform,
+ now easy to install and deploy.
+
+</div>
+</div>
 ## Introducing RDO
 
 RDO makes it easy to install and deploy the most up-to-date OpenStack Just as a traditional OS relies on the hardware beneath it, so too does the OpenStack cloud operating system rely on the foundation of a hypervisor and OS platform.
