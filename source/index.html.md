@@ -11,9 +11,7 @@ wiki_last_updated: 2015-06-15
 __NOTOC__
 
 <div class="hero-unit row">
-<div class="span4">
-<img src="/skins/common/images/intro-stack.png">
-
+<div class="span4 intro-stack">
 </div>
 <div class="span6">
 The most up-to-date OpenStack on the
