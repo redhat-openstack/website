@@ -8,6 +8,8 @@ wiki_last_updated: 2015-06-15
 
 # Main Page
 
+__NOTOC__
+
 <div class="row">
 <div class="span12">
 <div class="hero-unit">
