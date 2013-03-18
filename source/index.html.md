@@ -12,7 +12,7 @@ __NOTOC__
 
 <div class="hero-unit">
 <div class="row">
-<div class="offset4 span7">
+<div class="offset4 span6">
 The most up-to-date OpenStack on the
  industry's most trusted Linux platform,
  now easy to install and deploy.
