@@ -9,11 +9,13 @@ wiki_last_updated: 2015-06-15
 # Main Page
 
 <div class="row">
+<div class="span10 offset1 pad-sides">
 <div class="hero-unit">
 The most up-to-date OpenStack on the
  industry's most trusted Linux platform,
  now easy to install and deploy.
 
+</div>
 </div>
 </div>
 ## Introducing RDO
