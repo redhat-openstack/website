@@ -25,7 +25,7 @@ The most up-to-date OpenStack on the
 </div>
 </div>
 <div class="row">
-<div class="offset4 span7 pad-sides begin-content">
+<div class="offset4 span7 pad-sides begin-content pull-l">
 ## Introducing RDO
 
 RDO makes it easy to install and deploy the most up-to-date OpenStack Just as a traditional OS relies on the hardware beneath it, so too does the OpenStack cloud operating system rely on the foundation of a hypervisor and OS platform.
@@ -33,7 +33,7 @@ RDO makes it easy to install and deploy the most up-to-date OpenStack Just as a 
 </div>
 </div>
 <div class="row">
-<div class="span7 offset4 pad-sides begin-content">
+<div class="span7 offset4 pad-sides begin-content pull-m">
 ## Supported by Red Hat
 
 The OpenStack project benefits from a broad group of providers and distributors, but none match Red Hat's combination of production experience, technical expertise, and commitment to the open source way of producing software. Many of the largest production clouds in the world run on and are supported by Red Hat, and Red Hat engineers contribute to every layer of the OpenStack platform. From the Linux kernel and the KVM hypervisor to the top level OpenStack project components, Red Hat is at or near the top of the list in terms of number of developers and of contributions.
