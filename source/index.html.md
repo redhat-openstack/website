@@ -70,7 +70,7 @@ View older posts
 </div>
 </div>
 <div class="row">
-<div class="span7 offset4 pad-sides begin-content pull-s block-highlight">
+<div class="span7 offset4 pad-sides begin-content pull-s">
 ## From the forums
 
 <div class="forum-blurbs">
