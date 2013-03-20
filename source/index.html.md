@@ -70,11 +70,25 @@ View older posts
 <div class="span7 offset4 pad-sides begin-content pull-s">
 ## From the forums
 
-How do I install on Fedora 22? 17 replies, last 3 minutes ago
+<div class="forum-blurbs">
+<div class="forum-blurb">
+How do I install on Fedora 22?
 
-How much RAM is needed? 5 replies, last about 2 minutes ago
+</div>
+<div class="forum-blurb-info">
+17 replies, last 3 minutes ago
 
-Participate in the forum
+</div>
+<div class="forum-blurb">
+How much RAM is needed?
+
+</div>
+<div class="forum-blurb-info">
+5 replies, last about 2 minutes ago
+
+</div>
+</div>
+[Participate in the forum]
 
 </div>
 </div>
