@@ -74,7 +74,7 @@ View older posts
 
 <div class="forum-blurbs">
 <div class="forum-blurb">
-<div class="forum-content">
+<div class="forum-blurb-content">
 How do I install on Fedora 22?
 
 </div>
@@ -84,7 +84,7 @@ How do I install on Fedora 22?
 </div>
 </div>
 <div class="forum-blurb">
-<div class="forum-content">
+<div class="forum-blurb-content">
 How much RAM is needed?
 
 </div>
