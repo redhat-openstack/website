@@ -64,7 +64,9 @@ Version 1.3.2 is packed-full of awesome features. Simply yum upgrade and you'll 
 
 View older posts
 
-### From the forums
+<div class="row">
+<div class="span7 offset4 pad-sides begin-content pull-s">
+## From the forums
 
 How do I install on Fedora 22? 17 replies, last 3 minutes ago
 
@@ -75,7 +77,7 @@ Participate in the forum
 </div>
 </div>
 <div class="row">
-<div class="span7 offset4 pad-sides begin-content pull-s">
+<div class="span7 offset4 pad-sides begin-content pull-m">
 ## Join the community
 
 RDO packages up the upstream OpenStack components to run well together on Red Hat Enterprise Linux and its derivatives, and enables users to tap into community support through the RDO forums.
