@@ -46,7 +46,7 @@ The OpenStack project benefits from a broad group of providers and distributors,
 
 In just a few short steps, you can transform any machine running Fedora, Red Hat Enterprise Linux, or RHEL-based distribution into an OpenStack powerhouse.
 
-(QUICK START) We'll help you get set up
+<span class="btn">[QUICK START](quickstart)</span> We'll help you get set up
 
 </div>
 </div>
