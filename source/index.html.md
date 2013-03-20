@@ -88,7 +88,7 @@ How much RAM is needed?
 
 </div>
 </div>
-[Participate in the forum]
+[Participate in the forum](forum)
 
 </div>
 </div>
