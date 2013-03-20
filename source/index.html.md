@@ -28,14 +28,10 @@ The most up-to-date OpenStack on the
 <div class="offset4 span7 pad-sides begin-content pull-s">
 ## Introducing RDO
 
-<div class="text-focus">
 RDO makes it easy to install and deploy the most up-to-date OpenStack.
 
-</div>
-<div class="text-secondary">
 Just as a traditional OS relies on the hardware beneath it, so too does the OpenStack cloud operating system rely on the foundation of a hypervisor and OS platform.
 
-</div>
 </div>
 </div>
 <div class="row">
