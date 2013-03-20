@@ -53,7 +53,7 @@ In just a few short steps, you can transform any machine running Fedora, Red Hat
 </div>
 </div>
 <div class="row">
-<div class="span7 offset4 pad-sides begin-content pull-m">
+<div class="span7 offset4 pad-sides begin-content pull-m block-highlight">
 ## The RDO Blog
 
 ### RDO version 1.3.2 released!
@@ -69,7 +69,7 @@ View older posts
 </div>
 </div>
 <div class="row">
-<div class="span7 offset4 pad-sides begin-content pull-s">
+<div class="span7 offset4 pad-sides begin-content pull-s block-highlight">
 ## From the forums
 
 <div class="forum-blurbs">
@@ -94,7 +94,7 @@ How much RAM is needed?
 </div>
 </div>
 </div>
-[Participate in the forum]
+[Participate in the forum](Participate in the forum)
 
 </div>
 </div>
