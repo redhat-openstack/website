@@ -64,6 +64,8 @@ Version 1.3.2 is packed-full of awesome features. Simply yum upgrade and you'll 
 
 View older posts
 
+</div>
+</div>
 <div class="row">
 <div class="span7 offset4 pad-sides begin-content pull-s">
 ## From the forums
