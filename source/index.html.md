@@ -24,7 +24,8 @@ The most up-to-date OpenStack on the
 
 </div>
 </div>
-<div class="row bg-boxes">
+<div class="bg-boxes">
+<div class="row">
 <div class="offset4 span7 pad-sides begin-content pull-s">
 ## Introducing RDO
 
@@ -108,4 +109,6 @@ RDO packages up the upstream OpenStack components to run well together on Red Ha
 
 For a commercially-supported OpenStack solution, Red Hat provides $WHAT, an enterprise-class cloud platform based on OpenStack Folsom.
 
+</div>
+</div>
 </div>
