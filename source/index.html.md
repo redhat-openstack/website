@@ -10,6 +10,7 @@ wiki_last_updated: 2015-06-15
 
 __NOTOC__
 
+<div class="bg-boxes">
 <div class="hero-unit row">
 <div class="intro-stack">
  
@@ -24,7 +25,6 @@ The most up-to-date OpenStack on the
 
 </div>
 </div>
-<div class="bg-boxes">
 <div class="row">
 <div class="offset4 span7 pad-sides begin-content pull-s">
 ## Introducing RDO
