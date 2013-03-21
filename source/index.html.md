@@ -24,7 +24,7 @@ The most up-to-date OpenStack on the
 
 </div>
 </div>
-<div class="row">
+<div class="row bg-boxes">
 <div class="offset4 span7 pad-sides begin-content pull-s">
 ## Introducing RDO
 
