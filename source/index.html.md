@@ -17,9 +17,7 @@ __NOTOC__
 
 </div>
 <div class="offset4 span6 intro-text">
-The most up-to-date OpenStack on the
- industry's most trusted Linux platform,
- now easy to install and deploy.
+The most up-to-date OpenStack on the industry's most trusted Linux platform, now easy to install and deploy.
 
 <span class="btn">[Quick start →](quickstart)</span>
 
