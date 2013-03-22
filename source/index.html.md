@@ -107,7 +107,7 @@ How much RAM is needed?
 
 RDO packages up the upstream OpenStack components to run well together on Red Hat Enterprise Linux and its derivatives, and enables users to tap into community support through the RDO forums.
 
-{{#ev:vimeo|62219238|500|center}}
+{{#ev:vimeo|33873143|500|center}}
 
 For a commercially-supported OpenStack solution, Red Hat provides $WHAT, an enterprise-class cloud platform based on OpenStack Folsom.
 
