@@ -12,6 +12,8 @@ wiki_last_updated: 2015-07-16
 
 # Docs
 
+__NOTOC__
+
 (Paragraph here about documentation)
 
 Links here, including [Get Involved](Get Involved)
