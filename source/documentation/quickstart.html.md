@@ -22,7 +22,7 @@ First, we'll explain how to set up OpenStack on one server, and afterward, we wi
 </div>
 </div>
 <div class="row bg-boxes">
-<div class="offset3 span6 pull-s">
+<div class="offset4 span7 pull-s">
 ### Step 0: Prerequisites
 
 **Software:** Install Fedora, Red Hat Enterprise Linux (RHEL), or one of the RHEL-based Linux distributions such as CentOS, Scientific Linux, etc. Just as a traditional OS relies on the hardware beneath it, so too does the OpenStack cloud operating system rely on the foundation of a hypervisor and OS platform.
