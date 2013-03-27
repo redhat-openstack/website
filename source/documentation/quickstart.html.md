@@ -151,7 +151,11 @@ Should be able to provide the range on as a packstack argument, but addresses ar
 
 </div>
 </div>
+<div class="row">
+<div class="offset2 span8">
 
 ------------------------------------------------------------------------
 
 Notes: An F18 cloud image in qcow format is available here: <http://mattdm.fedorapeople.org/cloud-images/Fedora18-Cloud-x86_64-latest.qcow2>
+
+</div>
