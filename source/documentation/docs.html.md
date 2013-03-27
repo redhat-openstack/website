@@ -16,7 +16,7 @@ wiki_last_updated: 2015-07-16
 
 Links here, including [Get Involved](Get Involved)
 
-## FAQ
+## Frequently Asked Questions (FAQ)
 
 <div class="alert alert-info alert-block">
 This is a copy/paste from <https://rhoswiki-dneary.rhcloud.com/index.php/RDO_FAQ> (it is current as of 25 Feb 2013)
