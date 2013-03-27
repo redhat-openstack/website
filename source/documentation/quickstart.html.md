@@ -9,7 +9,7 @@ wiki_revision_count: 141
 wiki_last_updated: 2015-06-30
 ---
 
-*   -   last tested on F18 on 3/16, on EL6.4 on 3/21 \*\*
+__NOTOC__
 
 # RDO Quickstart:
 
@@ -17,6 +17,8 @@ Deploying RDO is a quick and easy process. Setting up an OpenStack cloud takes a
 
 First, we'll explain how to set up OpenStack on one server, and afterward, we will show you how to set up additional OpenStack nodes and get them working with each other.
 
+<div class="row bg-boxes">
+<div class="offset2 span8 pull-s">
 ### Step 0: Prerequisites
 
 **Software:** Install Fedora, Red Hat Enterprise Linux (RHEL), or one of the RHEL-based Linux distributions such as CentOS, Scientific Linux, etc. Just as a traditional OS relies on the hardware beneath it, so too does the OpenStack cloud operating system rely on the foundation of a hypervisor and OS platform.
@@ -142,6 +144,9 @@ Should be able to provide the range on as a packstack argument, but addresses ar
 1.  Identify an open chunk of addresses on your network.
 2.  If you don't know (best), and can't ask someone who does know (next best), you can make an intelligent guess by steering well clear of the range you typically get DHCP addresses in, by picking a fairly small range (/29 gives an 8 address range, 6 of which will be usable, so, like 192.168.1.56/29 is a range of 192.168.1.56-63, with 57-62 usable) and by using nmap to check if hosts are up in the range you're guessing at (nmap 192.168.1.56/29).
 3.  Either supply packstack with this initially, or do it afterward. Before will be simpler.
+
+</div>
+</div>
 
 ------------------------------------------------------------------------
 
