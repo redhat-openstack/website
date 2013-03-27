@@ -18,8 +18,10 @@ Links here, including [Get Involved](Get Involved)
 
 ## FAQ
 
+<div class="note">
 This is a copy/paste from <https://rhoswiki-dneary.rhcloud.com/index.php/RDO_FAQ> (it is current as of 25 Feb 2013)
 
+</div>
 ### What is RDO?
 
 RDO (Red Hat Distribution of OpenStack) is a freely-available, community-supported distribution of OpenStack that runs on Red Hat Enterprise Linux, Fedora, and their derivatives. In addition to providing a set of software packages, RDO is a place for users of cloud computing platform on Red Hat Linux operating systems to get help and compare notes on running OpenStack.
