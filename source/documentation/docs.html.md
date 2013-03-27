@@ -16,6 +16,6 @@ wiki_last_updated: 2015-07-16
 
 (Paragraph here about documentation)
 
-Links here, including [Get Involved]
+Links here, including [Get Involved](Get Involved)
 
 ## FAQ
