@@ -13,7 +13,7 @@ __NOTOC__
 
 <div class="bg-boxes">
 <div class="row block-highlight">
-<div class="offset4 span7 pull-s">
+<div class="offset4 span7">
 # RDO Quickstart
 
 Deploying RDO is a quick and easy process. Setting up an OpenStack cloud takes approximately 12 minutes, and can be as short as 4 steps.
