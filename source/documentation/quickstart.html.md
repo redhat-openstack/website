@@ -11,12 +11,16 @@ wiki_last_updated: 2015-06-30
 
 __NOTOC__
 
+<div class="row">
+<div class="offset2 span8 pull-s">
 # RDO Quickstart:
 
 Deploying RDO is a quick and easy process. Setting up an OpenStack cloud takes approximately 12 minutes, and can be as short as 4 steps.
 
 First, we'll explain how to set up OpenStack on one server, and afterward, we will show you how to set up additional OpenStack nodes and get them working with each other.
 
+</div>
+</div>
 <div class="row bg-boxes">
 <div class="offset2 span8 pull-s">
 ### Step 0: Prerequisites
