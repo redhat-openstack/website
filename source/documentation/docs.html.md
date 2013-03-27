@@ -12,6 +12,10 @@ wiki_last_updated: 2015-07-16
 
 # Docs
 
-Docs go here!
+## Documentation
 
-Should we have links above, the FAQ in-line? (random thought)
+(Paragraph here about documentation)
+
+Links here, including [Get Involved]
+
+## FAQ
