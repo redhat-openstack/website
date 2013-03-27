@@ -18,7 +18,7 @@ Links here, including [Get Involved](Get Involved)
 
 ## FAQ
 
-<div class="note">
+<div class="alert alert-info alert-block">
 This is a copy/paste from <https://rhoswiki-dneary.rhcloud.com/index.php/RDO_FAQ> (it is current as of 25 Feb 2013)
 
 </div>
