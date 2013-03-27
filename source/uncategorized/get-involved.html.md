@@ -8,6 +8,8 @@ wiki_last_updated: 2013-04-08
 
 # Get Involved
 
+__NOTOC__
+
 Help us make the RDO community site a great place for users and cloud operators in the Red Hat ecosystem by sharing your OpenStack questions and solutions in our [forum](http://openstack.redhat.com/forum), and by adding [the most useful solutions](Troubleshooting) and [stories](Case_studies) to he RDO website.
 
 ## Discuss
