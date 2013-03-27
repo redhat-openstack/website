@@ -11,7 +11,8 @@ wiki_last_updated: 2015-06-30
 
 __NOTOC__
 
-<div class="row">
+<div class="bg-boxes">
+<div class="row ">
 <div class="offset2 span8 pull-s">
 # RDO Quickstart:
 
@@ -21,7 +22,7 @@ First, we'll explain how to set up OpenStack on one server, and afterward, we wi
 
 </div>
 </div>
-<div class="row bg-boxes">
+<div class="row">
 <div class="offset4 span7 pull-s">
 ### Step 0: Prerequisites
 
@@ -158,4 +159,5 @@ Should be able to provide the range on as a packstack argument, but addresses ar
 
 Notes: An F18 cloud image in qcow format is available here: <http://mattdm.fedorapeople.org/cloud-images/Fedora18-Cloud-x86_64-latest.qcow2>
 
+</div>
 </div>
