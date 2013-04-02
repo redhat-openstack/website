@@ -39,12 +39,11 @@ OpenStack relies on the underlying operating system and hypervisor — and what 
 
 The OpenStack project has a diverse and growing community of contributors, but none match Red Hat's combination of production experience, technical expertise, and commitment to the open source way of producing software.
 
-<div class="text-secondary">
 From the Linux kernel and the KVM hypervisor to the top level OpenStack project components, Red Hat has expertise at every level of the stack. Whether you want to run a proof of concept of OpenStack on CentOS, or you want to prepare a production cloud and you are evaluating partners for your deployment, who better to go to than the number one contributor to OpenStack.
 
+</div>
 And when you're ready for production, and you want support from a partner you know, Red Hat offers you the Red Hat OpenStack Early Adopter Program, with its partner certification program.
 
-</div>
 </div>
 </div>
 <div class="row">
