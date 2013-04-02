@@ -29,7 +29,7 @@ The most up-to-date OpenStack on the industry's most trusted Linux platform, now
 
 RDO makes it easy to install and deploy the most up-to-date OpenStack on Red Hat Enterprise Linux and its derivatives.
 
-OpenStack relies on the underlying operating system and hypervisor - and what better operating system to build on than the industry's leading enterprise operating system. The RDO community is the best place to get and share information about using OpenStack on Red Hat.
+OpenStack relies on the underlying operating system and hypervisor — and what better operating system to build on than the industry's leading enterprise operating system? The RDO community is the best place to get and share information about using OpenStack on Red Hat.
 
 </div>
 </div>
