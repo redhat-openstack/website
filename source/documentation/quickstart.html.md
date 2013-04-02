@@ -44,7 +44,7 @@ As root, run the following command:
 
 ### Step 2: Install Packstack Installer
 
-    sudo yum install -y openstack-packstack
+    $ sudo yum install -y openstack-packstack
 
 ### Step 3: Run Packstack to install OpenStack
 
