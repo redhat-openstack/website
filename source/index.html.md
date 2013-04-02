@@ -51,7 +51,7 @@ When you're ready for production, and you want support from a partner you know, 
 <div class="span7 offset4 pad-sides begin-content pull-l">
 ## Download and get started!
 
-In just a few short steps, you can transform any machine running Fedora, Red Hat Enterprise Linux, or RHEL-based distribution into an OpenStack powerhouse.
+In just a few short steps, you can transform any machine running Fedora, Red Hat Enterprise Linux, CentOS, Scientific Linux or any other Red Hat Enterprise Linux based distribution into an OpenStack powerhouse.
 
 <div class="button-wrap">
 <span class="btn">[QUICK START →](quickstart)</span> We'll help you get set up
