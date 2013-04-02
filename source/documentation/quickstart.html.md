@@ -26,11 +26,9 @@ First, we'll explain how to set up OpenStack on one server, and afterward, we wi
 <div class="offset4 span7 pull-s">
 ### Step 0: Prerequisites
 
-**Software:** Install Fedora, Red Hat Enterprise Linux (RHEL), or one of the RHEL-based Linux distributions such as CentOS, Scientific Linux, etc. Just as a traditional OS relies on the hardware beneath it, so too does the OpenStack cloud operating system rely on the foundation of a hypervisor and OS platform.
+**Software:** Fedora, Red Hat Enterprise Linux (RHEL), or one of the RHEL-based Linux distributions such as CentOS, Scientific Linux, etc.
 
-**Hardware:** Ideally, you should install RDO on a machine with a healthy amount of RAM (at least 2GB) and processors with hardware virtualization extensions, although you may run OpenStack in a less-capable machine or a virtual machine with reduced performance. You'll need one network adapter for the single-host OpenStack install.
-
-**Network:** Every VM instance you launch with OpenStack is issued a private IP address, which connects the instance to its host and to other instances. To make your instances accessible to other machines on your network, you'll need to issue the instance a floating IP address. Identify a range of addresses on your network that OpenStack use for floating IP addresses. For tips on identifying a floating IP range, see WHERE.
+**Hardware:** Machine with at least 2GB RAM, processors with hardware virtualization extensions, and at least one network adapter.
 
 ### Step 1: Software repositories
 
