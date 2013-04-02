@@ -7,6 +7,11 @@ wiki_revision_count: 33
 wiki_last_updated: 2015-07-22
 ---
 
+__NOTOC__
+
+<div class="bg-boxes">
+<div class="row">
+<div class="offset4 span7">
 # Running an Instance
 
 ### Step 1: Visit the Dashboard
