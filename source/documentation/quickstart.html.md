@@ -36,25 +36,11 @@ As root, run the following command:
 
 **For Fedora:**
 
-*working command:*
-
-    sudo curl -sO /etc/yum.repos.d/fedora-openstack-grizzly.repo http://repos.fedorapeople.org/repos/openstack/openstack-grizzly/fedora-openstack-grizzly.repo
-
-*aspirational command:*
-
     sudo yum localinstall http://openstack.redhat.com/releases/rdo-grizzly-fedora-release.rpm
 
 **For RHEL and derivatives:**
 
-*working command:*
-
-    sudo curl -sO /etc/yum.repos.d/epel-openstack-grizzly.repo http://repos.fedorapeople.org/repos/openstack/openstack-grizzly/epel-openstack-grizzly.repo
-
-*aspirational command:*
-
     sudo yum localinstall -y http://openstack.redhat.com/releases/rdo-grizzly-epel-release.rpm
-
-[Given an rdo-release package (which, for EL, configured RDO & EPEL repos), this command could become "yum localinstall URL-TO-RDO-RELEASEPACKAGE" -- echo, separate EPEL install wouldn't be needed.]
 
 ### Step 2: Install Packstack Installer
 
