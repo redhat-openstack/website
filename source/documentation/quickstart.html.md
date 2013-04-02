@@ -44,17 +44,7 @@ As root, run the following command:
 
 ### Step 2: Install Packstack Installer
 
-*working command:*
-
-    sudo yum install -y net-tools &amp;&amp; sudo yum install -y openstack-packstack --enablerepo=updates-testing
-
-[trim the --enablerepo=updates-testing for EL]
-
-*aspirational command:*
-
     sudo yum install -y openstack-packstack
-
-[Openstack-packstack should be made to depend on net-tools, which would remove installing net-tools from this step (required for Fedora). Openstack-packstack isn't in the standard Fedora repos right now, but in updates-testing. If packstack were in the RDO repo, the --enablerepo argument wouldn't be required.]
 
 ### Step 3: Run Packstack to install OpenStack
 
