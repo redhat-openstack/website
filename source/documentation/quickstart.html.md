@@ -18,7 +18,7 @@ __NOTOC__
 
 Deploying RDO is a quick and easy process. Setting up an OpenStack cloud takes approximately 12 minutes, and can be as short as 4 steps.
 
-First, we'll explain how to set up OpenStack on one server, and afterward, we will show you how to set up additional OpenStack nodes and get them working with each other.
+Below, we'll explain how to set up OpenStack on a single server. You'll be able to add more nodes to your OpenStack cloud later, if you choose.
 
 </div>
 </div>
