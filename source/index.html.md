@@ -27,9 +27,9 @@ The most up-to-date OpenStack on the industry's most trusted Linux platform, now
 <div class="offset4 span7 pad-sides begin-content pull-s">
 ## Introducing RDO
 
-RDO makes it easy to install and deploy the most up-to-date OpenStack.
+RDO makes it easy to install and deploy the most up-to-date OpenStack on Red Hat Enterprise Linux and its derivatives.
 
-Just as a traditional OS relies on the hardware beneath it, so too does the OpenStack cloud operating system rely on the foundation of a hypervisor and OS platform.
+OpenStack relies on the underlying operating system and hypervisor - and what better operating system to build on than the industry's leading enterprise operating system. The RDO community is the best place to get and share information about using OpenStack on Red Hat.
 
 </div>
 </div>
