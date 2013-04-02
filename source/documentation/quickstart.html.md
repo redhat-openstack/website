@@ -50,13 +50,11 @@ As root, run the following command:
 
 Packstack takes the work out of manually setting up OpenStack. For a single node OpenStack deployment, run the following command, including your test machine's IP address.
 
-    packstack --install-hosts=$YOURIP --novacompute-privif=lo --novanetwork-privif=lo --novanetwork-floating-range=XX.XX.XX.XX/XX
+    packstack --install-hosts=$YOURIP --novacompute-privif=lo --novanetwork-privif=lo
 
 The installer will ask you to enter the root password for each host node you are installing on the network, to enable remote configuration of the host so it can remotely configure each node using Puppet.
 
 Once the process is complete, you can log in to the OpenStack web interface "Horizon" by going to <http://CONTROL_NODE/dashboard>. The username is "admin". The password can be found in the file keystonerc_admin in the /root/ directory of the control node.
-
-[on F18, no auth would work until [chown -R keystone:keystone /etc/keystone/ssl/\*] [also need to "firewall-cmd --permanent --add-service=http" to keep dash accessible between reboots] [had to "service openstack-nova-conductor start" at least following reboot] [As of last Fedora and EL tests, setenforce 0 was required]
 
 ------------------------------------------------------------------------
 
