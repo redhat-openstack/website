@@ -62,7 +62,7 @@ The installer will ask you to enter the root password for each host node you are
 
 Once the process is complete, you can log in to the OpenStack web interface "Horizon" by going to <http://CONTROL_NODE/dashboard>. The username is "admin". The password can be found in the file keystonerc_admin in the /root/ directory of the control node.
 
-### Next Steps
+# Next Steps
 
 Now that your single node OpenStack instance is up and running, you can read on about [running an instance](running an instance), configuring a [floating ip range](floating ip range), or about expanding your installation by [adding a compute node](adding a compute node).
 
