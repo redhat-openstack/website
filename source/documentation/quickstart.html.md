@@ -38,7 +38,7 @@ Below, we'll explain how to set up OpenStack on a single server. You'll be able 
 </div>
 ### Step 1: Software repositories
 
-As root, run the following command:
+Run the following command:
 
 **For Fedora:**
 
