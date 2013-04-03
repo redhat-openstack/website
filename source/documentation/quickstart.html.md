@@ -11,7 +11,7 @@ wiki_last_updated: 2015-06-30
 
 __NOTOC__
 
-<div class="bg-boxes">
+<div class="bg-boxes bg-boxes-single">
 <div class="row">
 <div class="offset3 span8">
 # RDO Quickstart
