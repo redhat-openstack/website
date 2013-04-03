@@ -42,15 +42,15 @@ Run the following command:
 
 **For Fedora:**
 
-    $ sudo yum localinstall http://openstack.redhat.com/releases/rdo-grizzly-fedora-release.rpm
+    sudo yum localinstall http://openstack.redhat.com/releases/rdo-grizzly-fedora-release.rpm
 
 **For RHEL and derivatives:**
 
-    $ sudo yum localinstall -y http://openstack.redhat.com/releases/rdo-grizzly-epel-release.rpm
+    sudo yum localinstall -y http://openstack.redhat.com/releases/rdo-grizzly-epel-release.rpm
 
 ### Step 2: Install Packstack Installer
 
-    $ sudo yum install -y openstack-packstack
+    sudo yum install -y openstack-packstack
 
 ### Step 3: Run Packstack to install OpenStack
 
