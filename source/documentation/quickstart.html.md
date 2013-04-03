@@ -26,10 +26,16 @@ Below, we'll explain how to set up OpenStack on a single server. You'll be able 
 <div class="offset4 span7 pull-s">
 ### Step 0: Prerequisites
 
+<div class="row">
+<div class="span6">
 **Software:** Fedora, Red Hat Enterprise Linux (RHEL), or one of the RHEL-based Linux distributions such as CentOS, Scientific Linux, etc.
 
+</div>
+<div class="span6">
 **Hardware:** Machine with at least 2GB RAM, processors with hardware virtualization extensions, and at least one network adapter.
 
+</div>
+</div>
 ### Step 1: Software repositories
 
 As root, run the following command:
