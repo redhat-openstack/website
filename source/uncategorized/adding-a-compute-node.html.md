@@ -28,9 +28,13 @@ If you're not familiar with vi, you may use another editor such as "nano".
 </div>
 #### Change values
 
-"CONFIG_NOVA_COMPUTE_PRIVIF" and "CONFIG_NOVA_NETWORK_PRIVIF" from "lo" to "eth1" (substitute the correct name for your second nic, if needed)
+Change "`CONFIG_NOVA_COMPUTE_PRIVIF`" and `CONFIG_NOVA_NETWORK_PRIVIF` from `lo` to `eth1`
 
-Change the value for "CONFIG_NOVA_COMPUTE_HOSTS" from "\(YOUR_1st_HOST_IP" to "\)YOUR_1st_HOST_IP,$YOUR_2nd_HOST_IP"
+<div class="text-secondary">
+Your second NIC may have a different name. You can find the names of your devices by running <kbd>ifconfig | grep '^\\w\*:'</kbd>
+
+</div>
+Change the value for `CONFIG_NOVA_COMPUTE_HOSTS` from your the value of first host IP address to the value of your second host IP address.
 
 ### Re-run packstack with the new values
 
