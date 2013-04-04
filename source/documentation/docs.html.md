@@ -16,4 +16,4 @@ __NOTOC__
 
 (Paragraph here about documentation)
 
-Links here, including [Get Involved](Get Involved) and [FAQ](FAQ)
+Links here, including [Get Involved](Get Involved) and [Frequently Asked Questions](Frequently Asked Questions)
