@@ -11,7 +11,7 @@ wiki_last_updated: 2015-07-22
 
 # Floating IP range
 
-## Setting your floating IP range
+## Set your floating IP range
 
 OpenStack instances receive a private IP address through which they can reach each other and through which hosts can reach them. In order to access these instances from other machines in your network, such as your workstation, the instances will need to be allocated a "floating IP." Packstack automatically configures this with a default that may well be wrong for your network.
 
