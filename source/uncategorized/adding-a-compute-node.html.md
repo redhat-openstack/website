@@ -20,7 +20,7 @@ Expanding your single-node OpenStack cloud to include a second compute node requ
 
 First, you must edit the "answer file" generated during the initial packstack setup. You'll find it in the directory from which you ran packstack.
 
-FIXME: change $youranswerfile to the default filename for the answefile
+FIXME: change $youranswerfile to the default filename for the answerfile
 
     vi $youranswerfile
 
