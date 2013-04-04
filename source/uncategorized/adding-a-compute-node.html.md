@@ -11,7 +11,7 @@ __NOTOC__
 
 <div class="bg-boxes bg-boxes-single">
 <div class="row">
-<div class="offset4 span7">
+<div class="offset3 span8 pull-s">
 # Adding a compute node
 
 Expanding your single-node OpenStack cloud to include a second compute node requires a second network adapter: in order for our pair of nodes to share the same private network, we must replace the "lo" interface we used for the private network with a real nic.
@@ -20,7 +20,7 @@ Expanding your single-node OpenStack cloud to include a second compute node requ
 
 You'll find it in the directory from which you ran packstack.
 
-      vi $youranswerfile
+    vi $youranswerfile
 
 #### Change values
 
@@ -32,6 +32,6 @@ Change the value for "CONFIG_NOVA_COMPUTE_HOSTS" from "\(YOUR_1st_HOST_IP" to "\
 
 Run packstack again, specifiying your modified answer file:
 
-      sudo packstack --answer-file=$youranswerfile
+    sudo packstack --answer-file=$youranswerfile
 
 Packstack will prompt you for the root password for each of your nodes.
