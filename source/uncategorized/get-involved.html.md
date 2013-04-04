@@ -27,8 +27,8 @@ Help us make the RDO community site a great place for users and cloud operators 
 
 ### Solve
 
-*   Check our FAQ [FAQ] for the answer to common questions
-*   Try our Troubleshooting [Troubleshooting] page for solutions to common problems
+*   Check our [FAQ|Frequently Asked Questions (FAQ) page] for the answer to common questions
+*   Try our [troubleshooting page](Troubleshooting) for solutions to common problems
 *   Search the forum to find previous discussions on the topic
 
 ### Write
