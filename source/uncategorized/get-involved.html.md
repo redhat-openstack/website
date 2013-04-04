@@ -16,7 +16,8 @@ Help us make the RDO community site a great place for users and cloud operators 
 
 ### Discuss
 
-*   Visit our forums to:
+[Visit our forums](forum) to:
+
 *   Ask questions and get help
 *   Help others
 *   Share your experiences running RDO
