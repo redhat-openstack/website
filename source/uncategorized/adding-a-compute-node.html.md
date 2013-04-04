@@ -20,11 +20,13 @@ Expanding your single-node OpenStack cloud to include a second compute node requ
 
 First, you must edit the "answer file" generated during the initial packstack setup. You'll find it in the directory from which you ran packstack.
 
+FIXME: change $youranswerfile to the default filename for the answefile
+
     vi $youranswerfile
 
 If you're not familiar with vi, you may use another editor such as "nano".
 
-Change `CONFIG_NOVA_COMPUTE_PRIVIF` and `CONFIG_NOVA_NETWORK_PRIVIF` from `lo` to `eth1`
+Change both `CONFIG_NOVA_COMPUTE_PRIVIF` and `CONFIG_NOVA_NETWORK_PRIVIF` from `lo` to `eth1`
 
 Your second NIC may have a different name. You can find the names of your devices by running: <kbd>ifconfig | grep '^\\w\*:'</kbd>
 
