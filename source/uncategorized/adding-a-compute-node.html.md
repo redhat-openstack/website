@@ -28,7 +28,7 @@ If you're not familiar with vi, you may use another editor such as "nano".
 </div>
 #### Change values
 
-Change "`CONFIG_NOVA_COMPUTE_PRIVIF`" and `CONFIG_NOVA_NETWORK_PRIVIF` from `lo` to `eth1`
+Change `CONFIG_NOVA_COMPUTE_PRIVIF` and `CONFIG_NOVA_NETWORK_PRIVIF` from `lo` to `eth1`
 
 <div class="text-secondary">
 Your second NIC may have a different name. You can find the names of your devices by running <kbd>ifconfig | grep '^\\w\*:'</kbd>
