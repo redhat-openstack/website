@@ -9,7 +9,7 @@ wiki_last_updated: 2015-03-05
 
 __NOTOC__
 
-<div class="bg-boxes">
+<div class="bg-boxes bg-boxes-single">
 <div class="row">
 <div class="offset4 span7">
 ## Adding a compute node
