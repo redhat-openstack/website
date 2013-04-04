@@ -22,11 +22,7 @@ First, you must edit the "answer file" generated during the initial packstack se
 
     vi $youranswerfile
 
-<div class="text-secondary">
 If you're not familiar with vi, you may use another editor such as "nano".
-
-</div>
-#### Change values
 
 Change `CONFIG_NOVA_COMPUTE_PRIVIF` and `CONFIG_NOVA_NETWORK_PRIVIF` from `lo` to `eth1`
 
