@@ -16,12 +16,16 @@ __NOTOC__
 
 Expanding your single-node OpenStack cloud to include a second compute node requires a second network adapter: in order for our pair of nodes to share the same private network, we must replace the "lo" interface we used for the private network with a real nic.
 
-### Edit the answer file generated during the initial packstack setup.
+### Edit the answer file
 
-You'll find it in the directory from which you ran packstack.
+First, you must edit the "answer file" generated during the initial packstack setup. You'll find it in the directory from which you ran packstack.
 
     vi $youranswerfile
 
+<div class="text-secondary">
+If you're not familiar with vi, you may use another editor such as "nano".
+
+</div>
 #### Change values
 
 "CONFIG_NOVA_COMPUTE_PRIVIF" and "CONFIG_NOVA_NETWORK_PRIVIF" from "lo" to "eth1" (substitute the correct name for your second nic, if needed)
