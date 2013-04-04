@@ -40,6 +40,8 @@ Change the value for `CONFIG_NOVA_COMPUTE_HOSTS` from your the value of first ho
 
 Run packstack again, specifiying your modified answer file:
 
+FIXME: change $youranswerfile to the default filename for the answerfile
+
     sudo packstack --answer-file=$youranswerfile
 
 Packstack will prompt you for the root password for each of your nodes.
