@@ -26,7 +26,7 @@ FIXME: change $youranswerfile to the default filename for the answefile
 
 If you're not familiar with vi, you may use another editor such as "nano".
 
-=== Adjust network card names ==
+#### Adjust network card names
 
 Change both `CONFIG_NOVA_COMPUTE_PRIVIF` and `CONFIG_NOVA_NETWORK_PRIVIF` from `lo` to `eth1` or whatever name your network card uses.
 
