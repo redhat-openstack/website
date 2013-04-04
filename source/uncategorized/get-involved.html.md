@@ -8,7 +8,7 @@ wiki_last_updated: 2013-04-08
 
 __NOTOC__
 
-<div class="row">
+<div class="row bg-boxes bg-boxes-single">
 <div class="offset3 span8 pull-s">
 # Get Involved
 
