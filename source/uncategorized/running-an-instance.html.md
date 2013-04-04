@@ -9,9 +9,9 @@ wiki_last_updated: 2015-07-22
 
 __NOTOC__
 
-<div class="bg-boxes">
+<div class="bg-boxes bg-boxes-single">
 <div class="row">
-<div class="offset4 span7">
+<div class="offset3 span8 pull-s">
 # Running an Instance
 
 ### Step 1: Visit the Dashboard
