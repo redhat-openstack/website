@@ -8,7 +8,8 @@ wiki_last_updated: 2013-04-08
 
 __NOTOC__
 
-<div class="row bg-boxes bg-boxes-single">
+<div class="bg-boxes bg-boxes-single">
+<div class="row">
 <div class="offset3 span8 pull-s">
 # Get Involved
 
@@ -43,5 +44,6 @@ If you see something which you'd like to improve in RDO, there is a good chance 
 
 Feel free to contribute any packaging and integration patches via our contributor mailling list, or propose improvements to OpenStack on the upstream Launchpad page [3](https://launchpad.net/openstack).
 
+</div>
 </div>
 </div>
