@@ -66,31 +66,11 @@ In just a few short steps, you can transform any machine running Fedora, Red Hat
 <div class="span7 offset4 pad-sides begin-content pull-m">
 ## From the forums
 
-<rss max=4 ><http://localhost/forum/discussions/feed.rss></rss>
-
 <div class="forum-blurbs">
-<div class="forum-blurb">
-<div class="forum-blurb-content">
-How do I install on Fedora 22?
+<rss max=4 highlight="community wiki foundation"><http://localhost/forum/discussions/feed.rss></rss>
 
 </div>
-<div class="forum-blurb-info">
-17 replies, last 3 minutes ago
-
-</div>
-</div>
-<div class="forum-blurb">
-<div class="forum-blurb-content">
-How much RAM is needed?
-
-</div>
-<div class="forum-blurb-info">
-5 replies, last about 2 minutes ago
-
-</div>
-</div>
-</div>
-[Participate in the forum](Participate in the forum)
+[ Participate in the forum](Forum)
 
 </div>
 </div>
