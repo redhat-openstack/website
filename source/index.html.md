@@ -66,7 +66,7 @@ In just a few short steps, you can transform any machine running Fedora, Red Hat
 <div class="span7 offset4 pad-sides begin-content pull-m">
 ## From the forums
 
-<rss max=4 ><http://54.225.229.160/forum/discussions/feed.rss></rss>
+<rss max=4 ><http://localhost/forum/discussions/feed.rss></rss>
 
 <div class="forum-blurbs">
 <div class="forum-blurb">
