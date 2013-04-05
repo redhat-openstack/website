@@ -64,23 +64,9 @@ In just a few short steps, you can transform any machine running Fedora, Red Hat
 <div class="block-highlight">
 <div class="row">
 <div class="span7 offset4 pad-sides begin-content pull-m">
-## The RDO Blog
-
-### RDO version 1.3.2 released!
-
-It's time for a new release again.
-
-Version 1.3.2 is packed-full of awesome features. Simply yum upgrade and you'll have the newly released OpenStack running on your system!
-
-24 comments / read more
-
-View older posts
-
-</div>
-</div>
-<div class="row">
-<div class="span7 offset4 pad-sides begin-content pull-s">
 ## From the forums
+
+<rss max=4 ><http://54.225.229.160/forum/discussions/feed.rss></rss>
 
 <div class="forum-blurbs">
 <div class="forum-blurb">
