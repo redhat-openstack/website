@@ -52,11 +52,15 @@ If you've come across useful tips for resolving issues on OpenStack, or if you'r
 <div class="offset1 span10">
 ### Upstream documentation
 
+<div class="alert">
+"trunk" in these URLs will become "grizzly"
+
+</div>
 <div class="column-split">
-*   [OpenStack Compute Administration Manual](http://docs.openstack.org/grizzly/openstack-compute/admin/content/index.html)
-*   [OpenStack Networking Administration Guide](http://docs.openstack.org/grizzly/openstack-network/admin/content/index.html)
-*   [OpenStack Object Storage Administration Manual](http://docs.openstack.org/grizzly/openstack-object-storage/admin/content/)
-*   [OpenStack Operations Guide](http://docs.openstack.org/grizzly/openstack-ops/content/index.html)
+*   [OpenStack Compute Administration Manual](http://docs.openstack.org/trunk/openstack-compute/admin/content/index.html)
+*   [OpenStack Networking Administration Guide](http://docs.openstack.org/trunk/openstack-network/admin/content/index.html)
+*   [OpenStack Object Storage Administration Manual](http://docs.openstack.org/trunk/openstack-object-storage/admin/content/)
+*   [OpenStack Operations Guide](http://docs.openstack.org/trunk/openstack-ops/content/index.html)
 *   [Python Developer Documentation](http://docs.openstack.org/developer/openstack-projects.html)
 *   [OpenStack CLI Clients documentation](http://docs.openstack.org/cli/quick-start/content/index.html)
 *   [OpenStack API docs](http://docs.openstack.org/api/)
