@@ -17,14 +17,16 @@ Help us make the RDO community site a great place for users and cloud operators 
 
 ### Discuss
 
-[/forum Visit our forums] to:
+[/forum Visit our **forums**] to:
 
 *   Ask questions and get help
 *   Help others
 *   Share your experiences running RDO
 *   Discuss your ideas for improvements
 
-Come and chat real-time with RDO users on IRC - you can find us in #RDO on [Freenode](http://freenode.net). If you want to help with our packaging and integration work, consider [joining our contributor mailing list](//www.redhat.com/mailman/listinfo/rdo-list).
+Come and chat real-time with RDO users on **IRC** - you can find us in #RDO on [Freenode](http://freenode.net).
+
+If you want to help with our packaging and integration work, consider [joining our contributor **mailing list**](//www.redhat.com/mailman/listinfo/rdo-list).
 
 ### Solve
 
