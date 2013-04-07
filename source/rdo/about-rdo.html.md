@@ -28,3 +28,11 @@ In addition, we provide packages for several promising incubating projects:
 
 *   Orchestration service ([Heat](https://wiki.openstack.org/wiki/Heat))
 *   Monitoring and metering ([Ceilometer](https://wiki.openstack.org/wiki/Ceilometer))
+
+## Red Hat OpenStack
+
+If you are happy with community support, and what you want is to use and test the latest version of OpenStack, then RDO is for you.
+
+If, however, what you are looking for is a stable, supported platform, with certification of partner applications, and a reliable partner with a great track record in enterprise infrastructure to build or scale out your production OpenStack cloud, you should consider [Red Hat OpenStack](http://redhat.com/openstack). Our current product offering is Red Hat Openstack Early Adopter Edition, built on OpenStack Folsom, and hardened for enterprise usage.
+
+<Category:RDO>
