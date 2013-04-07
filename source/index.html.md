@@ -70,7 +70,7 @@ In just a few short steps, you can transform any machine running Fedora, Red Hat
 <rss max=4 highlight="community wiki foundation"><http://localhost/forum/discussions/feed.rss></rss>
 
 </div>
-[ Participate in the forum](Forum)
+[/forum Participate in the forum]
 
 </div>
 </div>
