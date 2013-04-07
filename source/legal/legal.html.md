@@ -12,7 +12,7 @@ wiki_last_updated: 2013-04-13
 
 ## Copyright
 
-All submissions to this site (including wiki page edits, forum posts and comments) are licensed under the [Creative Commons Attribution 3.0 license](http://creativecommons.org/licenses/by-sa/3.0/).
+Except where otherwise indicated, all submissions to this site (including wiki page edits, forum posts and comments) are licensed under the [Creative Commons Attribution-ShareAlike 3.0 Unported license](http://creativecommons.org/licenses/by/3.0/)
 
 ## Trademarks
 
