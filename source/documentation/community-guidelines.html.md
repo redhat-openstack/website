@@ -16,7 +16,7 @@ To ensure that the RDO community is a fun and productive place to come and learn
 
 The RDO community's growth and prosperity depends on each one of us contributing our skills and knowledge for each other's benefit. Take time to ask and answer questions in the forums or on IRC, propose topics for the RDO community blog, talk about RDO at events, etc. By sharing our collective wisdom widely, we all benefit.
 
-If you would are interested in starting an RDO user group, sharing your stories on the community blog or just want to talk to the folks at Red Hat working on RDO, [[drop us a line](mailto://rdo-info@redhat.com).
+If you would are interested in starting an RDO user group, sharing your stories on the community blog or just want to talk to the folks at Red Hat working on RDO, [drop us a line](mailto:rdo-info@redhat.com).
 
 ## Be helpful
 
@@ -28,6 +28,6 @@ We are a global community of developers and users, and we want to create a produ
 
 ## We're here for you
 
-Communication with a global community can be richly rewarding and, at times, problematic. That's OK - we're here to help. If you're having any difficulties communicating effectively with your fellow users, please [[drop us a line](mailto://rdo-info@redhat.com).
+Communication with a global community can be richly rewarding and, at times, problematic. That's OK - we're here to help. If you're having any difficulties communicating effectively with your fellow users, please [drop us a line](mailto:rdo-info@redhat.com).
 
 <Category:Community>
