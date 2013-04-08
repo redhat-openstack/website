@@ -50,3 +50,4 @@ Feel free to contribute any packaging and integration patches via [our contribut
 </div>
 </div>
 </div>
+<Category:Community>
