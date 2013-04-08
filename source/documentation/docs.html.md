@@ -52,10 +52,6 @@ If you've come across useful tips for resolving issues on OpenStack, or if you'r
 <div class="offset1 span10">
 ### Upstream documentation
 
-<div class="alert">
-"trunk" in these URLs will become "grizzly"
-
-</div>
 <div class="column-split">
 *   [OpenStack Compute Administration Manual](http://docs.openstack.org/trunk/openstack-compute/admin/content/index.html)
 *   [OpenStack Networking Administration Guide](http://docs.openstack.org/trunk/openstack-network/admin/content/index.html)
