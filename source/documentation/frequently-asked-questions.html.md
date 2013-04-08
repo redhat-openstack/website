@@ -27,9 +27,9 @@ Just as a traditional operating system relies on the hardware beneath it, so too
 
 The OpenStack project benefits from a broad group of providers and distributors, but none match Red Hat's combination of production experience, technical expertise, and commitment to the open source way of producing software. Some of the largest production clouds in the world run on and are supported by Red Hat, and Red Hat engineers contribute to every layer of the OpenStack platform. From the Linux kernel and the KVM hypervisor to the top level OpenStack project components, Red Hat is at or near the top of the list in terms of number of developers and of contributions.
 
-## Which distributions does RDO support?
+## For which distributions does RDO provide packages?
 
-RDO targets Red Hat Enterprise Linux, Fedora, and their derivatives. Specifically, RDO supports RHEL 6.3 or later (and CentOS 6.3+, ScientificLinux 6.3+ and other similar derivatives), as well as Fedora 18 and later. Please note that el6.3 does not have Open vSwitch [1](http://www.openvswitch.org) in its kernel - for Open vSwitch support in Quantum, you should install kernel version 2.6.32-343 or later.
+RDO targets Red Hat Enterprise Linux, Fedora, and their derivatives. Specifically, RDO packages are available for RHEL 6.3 or later (and CentOS 6.3+, ScientificLinux 6.3+ and other similar derivatives), as well as Fedora 18 and later. Please note that el6.3 does not have Open vSwitch [1](http://www.openvswitch.org) in its kernel - for Open vSwitch support in Quantum, you should install kernel version 2.6.32-343 or later.
 
 ## How is RDO different from upstream?
 
@@ -59,9 +59,9 @@ Packstack, an installation utility which uses Puppet modules to deploy OpenStack
 
 You can find documentation and get help through the forums, IRC, or mailing lists and from others in the RDO community.
 
-## Can I buy support for RDO?
+## Can I buy commercial support for RDO?
 
-No commercial support for RDO will be available from Red Hat. Red Hat offers [an enterprise-hardened and supported product line for OpenStack](http://redhat.com/openstack) at <http://redhat.com/openstack> including a Partner Certification Program and Red Hat's award-winning support offering.
+No commercial support for RDO will be available from Red Hat. Red Hat offers [the enterprise-hardened and supported product Red Hat OpenStack Early Adopter Edition](http://redhat.com/openstack) including a Partner Certification Program and Red Hat's award-winning support offering.
 
 ## What is the errata or updates policy for RDO?
 
