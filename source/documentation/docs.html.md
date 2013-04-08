@@ -26,7 +26,7 @@ If you've come across useful tips for resolving issues on OpenStack, or if you'r
 <div class="offset1 span3">
 ### About
 
-*   [Get Involved](Get Involved)
+*   [Get involved](Get involved)
 *   [Frequently Asked Questions](Frequently Asked Questions)
 *   [Troubleshooting](Troubleshooting)
 *   [Case studies](Case studies)
@@ -36,9 +36,9 @@ If you've come across useful tips for resolving issues on OpenStack, or if you'r
 ### Install
 
 *   [ Quick start guide ](Quickstart)
-*   [ Launching your first VM ](Running_an_instance)
+*   [ Launching your first VM ](Running an instance)
 *   Install screencast (TK, needs install process to be stabilized to be worthwhile)
-*   [ Setting a Floating IP Range ](Floating_ip_range)
+*   [ Setting a Floating IP Range ](Floating ip range)
 
 </div>
 <div class="span3">
