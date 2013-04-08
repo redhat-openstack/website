@@ -29,7 +29,7 @@ The OpenStack project benefits from a broad group of providers and distributors,
 
 ## For which distributions does RDO provide packages?
 
-RDO targets Red Hat Enterprise Linux, Fedora, and their derivatives. Specifically, RDO packages are available for RHEL 6.3 or later (and CentOS 6.3+, ScientificLinux 6.3+ and other similar derivatives), as well as Fedora 18 and later. Please note that el6.3 does not have Open vSwitch [1](http://www.openvswitch.org) in its kernel - for Open vSwitch support in Quantum, you should install kernel version 2.6.32-343 or later.
+RDO targets Red Hat Enterprise Linux, Fedora, and their derivatives. Specifically, RDO packages are available for RHEL 6.3 or later (and CentOS 6.3+, ScientificLinux 6.3+ and other similar derivatives), as well as Fedora 18 and later. Please note that el6.3 does not have [Open vSwitch](http://www.openvswitch.org) in its kernel - for Open vSwitch support in Quantum, you should install kernel version 2.6.32-343 or later.
 
 ## How is RDO different from upstream?
 
@@ -37,7 +37,7 @@ The OpenStack project develops code, and does not handle packaging for specific 
 
 ## How can I participate?
 
-Sign up to our forum [2](http://openstack.redhat.com/forum) and help others with their RDO questions. Add your case study to our case studies section of the wiki. Take the best answer from a forum thread and turn it into a new page in the knowledge base. Feel free to contribute any packaging and integration patches via our developer mailling lists, or propose improvements to OpenStack on the upstream Launchpad page. For more information, see PARTICIPATION_PAGE.
+Sign up to our [forum](http://openstack.redhat.com/forum) and help others with their RDO questions. Add your case study to our case studies section of the wiki. Take the best answer from a forum thread and turn it into a new page in the knowledge base. Feel free to contribute any packaging and integration patches via our developer mailling lists, or propose improvements to OpenStack on the upstream Launchpad page. For more information, see PARTICIPATION_PAGE.
 
 ## Is RDO a fork of OpenStack?
 
@@ -85,7 +85,7 @@ RDO includes all "integrated" OpenStack components (Nova, Glance, Keystone, Cind
 
 ## Where is RDO built?
 
-RDO is built using Koji infrastructure, similar to how Fedora packages are built. The build system is accessible at WHERE. [CK is it separate koji, or same koji as Fedora? Currently looking at using Copr <http://copr-fe.cloud.fedoraproject.org/> ]
+RDO is built using Koji infrastructure, similar to how Fedora packages are built. The build system is accessible at WHERE. (CK is it separate koji, or same koji as Fedora? Currently looking at using Copr <http://copr-fe.cloud.fedoraproject.org/> )
 
 ## What is the relationship between RDO and Red Hat's commercial OpenStack product?
 
