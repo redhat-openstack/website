@@ -69,3 +69,4 @@ If you've come across useful tips for resolving issues on OpenStack, or if you'r
 </div>
 </div>
 </div>
+<Category:Documentation>
