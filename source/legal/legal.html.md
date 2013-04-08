@@ -10,6 +10,8 @@ wiki_last_updated: 2013-04-13
 
 # Legal
 
+__NOTOC__
+
 ## Copyright
 
 Except where otherwise indicated, all submissions to this site (including wiki page edits, forum posts and comments) are licensed under the [Creative Commons Attribution-ShareAlike 3.0 Unported license](http://creativecommons.org/licenses/by/3.0/)
