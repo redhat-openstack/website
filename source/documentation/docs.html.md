@@ -38,7 +38,7 @@ If you've come across useful tips for resolving issues on OpenStack, or if you'r
 *   [ Quick start guide ](Quickstart)
 *   [ Launching your first VM ](Running an instance)
 *   Install screencast (TK, needs install process to be stabilized to be worthwhile)
-*   [ Setting a Floating IP Range ](Floating ip range)
+*   [ Setting a Floating IP Range ](Floating IP range)
 
 </div>
 <div class="span3">
