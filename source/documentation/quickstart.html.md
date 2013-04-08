@@ -42,7 +42,7 @@ Run the following command:
 
 #### For RHEL and derivatives:
 
-    sudo yum localinstall -y http://openstack.redhat.com/releases/rdo-grizzly-epel-release.rpm
+    sudo yum localinstall -y http://repos.fedorapeople.org/repos/openstack/openstack-grizzly/epel-openstack-grizzly.repo
 
 #### For Fedora:
 
