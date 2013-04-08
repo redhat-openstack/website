@@ -72,3 +72,4 @@ Now that your single node OpenStack instance is up and running, you can read on 
 <div class="offset2 span8">
 </div>
 </div>
+<Category:Documentation>
