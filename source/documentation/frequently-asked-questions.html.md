@@ -77,7 +77,7 @@ RDO bugfix updates will be available every 8 weeks or so, in line with the relea
 
 ## Who is RDO for?
 
-RDO aims to be the 'best' (easiest, etc.) option for anyone that wants to run the most recently released version of OpenStack on RHEL, Fedora or their derivatives. Whether you are interested in running OpenStack on CentOS in a production environment, or doing a proof-of-concept deployment on RHEL, RDO is for you.
+RDO aims to be the natural option for anyone that wants to run the most recently released version of OpenStack on RHEL, Fedora or their derivatives. Whether you are interested in running OpenStack on CentOS in a production environment, or doing a proof-of-concept deployment on RHEL, RDO is for you.
 
 ## Which OpenStack components does RDO include?
 
