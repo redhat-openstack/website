@@ -28,7 +28,7 @@ Below, we'll explain how to set up OpenStack on a single server. You'll be able 
 
 <div class="row">
 <div class="span4">
-**Software:** Fedora 18 or later, Red Hat Enterprise Linux (RHEL) 6.3 or later, or one of the RHEL-based Linux distributions such as CentOS, Scientific Linux, etc.
+**Software:** Red Hat Enterprise Linux (RHEL) 6.3 or later, or one of the RHEL-based Linux distributions such as CentOS, Scientific Linux, etc. Or Fedora 18 or later,
 
 </div>
 <div class="span4">
