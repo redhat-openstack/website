@@ -54,9 +54,9 @@ Run the following command:
 
 ### Step 3: Run Packstack to install OpenStack
 
-Packstack takes the work out of manually setting up OpenStack. For a single node OpenStack deployment, run the following command, including your test machine's IP address.
+Packstack takes the work out of manually setting up OpenStack. For a single node OpenStack deployment, run the following command.
 
-    packstack --install-hosts=$YOURIP --novacompute-privif=lo --novanetwork-privif=lo
+    packstack --allinone
 
 The installer will ask you to enter the root password for each host node you are installing on the network, to enable remote configuration of the host so it can remotely configure each node using Puppet.
 
