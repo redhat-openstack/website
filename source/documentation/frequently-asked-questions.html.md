@@ -69,7 +69,7 @@ RDO updates when the OpenStack project provides updates. RDO provides no lifecyc
 
 ## Can I upgrade between versions of RDO?
 
-[NEED CK] RDO users will be able to upgrade between consecutive OpenStack versions (from Grizzly to Havana, for instance). The RDO project will strive to release updated OpenStack versions as soon as possible following upstream releases, on the order of hours to a few days.
+We plan to enable RDO users to upgrade between consecutive OpenStack versions (from Grizzly to Havana, for instance). The RDO project will strive to release updated OpenStack versions as soon as possible following upstream releases, on the order of hours to a few days.
 
 ## How often are bugfix updates of RDO made available?
 
