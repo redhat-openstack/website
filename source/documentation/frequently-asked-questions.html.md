@@ -37,7 +37,7 @@ The OpenStack project develops code, and does not handle packaging for specific 
 
 ## How can I participate?
 
-Sign up to our [forum](http://openstack.redhat.com/forum) and help others with their RDO questions. Add your case study to our case studies section of the wiki. Take the best answer from a forum thread and turn it into a new page in the knowledge base. Feel free to contribute any packaging and integration patches via our developer mailling lists, or propose improvements to OpenStack on the upstream Launchpad page. For more information, see PARTICIPATION_PAGE.
+Sign up to our [forum](http://openstack.redhat.com/forum) and help others with their RDO questions. Add your case study to our case studies section of the wiki. Take the best answer from a forum thread and turn it into a new page in the knowledge base. Feel free to contribute any packaging and integration patches via our developer mailing lists, or propose improvements to OpenStack on the upstream Launchpad page. For more information, see [ getting involved](get involved).
 
 ## Is RDO a fork of OpenStack?
 
