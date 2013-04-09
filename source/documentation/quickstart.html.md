@@ -46,7 +46,7 @@ Run the following command:
 
 #### For Fedora:
 
-    sudo yum localinstall http://openstack.redhat.com/releases/rdo-grizzly-fedora-release.rpm
+    sudo yum localinstall -y http://repos.fedorapeople.org/repos/openstack/openstack-grizzly/rdo-release-grizzly-1.noarch.rpm
 
 ### Step 2: Install Packstack Installer
 
