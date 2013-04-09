@@ -85,7 +85,7 @@ RDO includes all "integrated" OpenStack components (Nova, Glance, Keystone, Cind
 
 ## Where is RDO built?
 
-RDO is built using Koji infrastructure, similar to how Fedora packages are built. The build system is accessible at WHERE. (CK is it separate koji, or same koji as Fedora? Currently looking at using Copr <http://copr-fe.cloud.fedoraproject.org/> )
+RDO is built using Koji infrastructure, similar to how Fedora packages are built. The build system is accessible at [Fedora Buildsystem](http://koji.fedoraproject.org/koji/).
 
 ## What is the relationship between RDO and Red Hat's commercial OpenStack product?
 
