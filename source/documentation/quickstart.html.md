@@ -40,12 +40,6 @@ Below, we'll explain how to set up OpenStack on a single server. You'll be able 
 
 Run the following command:
 
-#### For RHEL and derivatives:
-
-    sudo yum localinstall -y http://repos.fedorapeople.org/repos/openstack/openstack-grizzly/rdo-release-grizzly-1.noarch.rpm
-
-#### For Fedora:
-
     sudo yum localinstall -y http://repos.fedorapeople.org/repos/openstack/openstack-grizzly/rdo-release-grizzly-1.noarch.rpm
 
 ### Step 2: Install Packstack Installer
@@ -55,6 +49,12 @@ Run the following command:
 ### Step 3: Run Packstack to install OpenStack
 
 Packstack takes the work out of manually setting up OpenStack. For a single node OpenStack deployment, run the following command.
+
+#### For RHEL and derivatives:
+
+    packstack --allinone --use-epel=y
+
+#### For Fedora:
 
     packstack --allinone
 
