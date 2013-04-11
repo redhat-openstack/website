@@ -10,6 +10,11 @@ wiki_last_updated: 2013-04-11
 
 # OSAS test lab
 
-Red Hat Open Source and Standards Test Lab
+__NOTOC__
 
-Deployment: Red Hat's Open Source and Standards team runs its test lab on a mixture of OpenStack and oVirt nodes, running on Fedora 18-based hosts. We use OpenStack to host standing services for our lab (such as our oVirt management server), to quickly build up and tear down test environments, and to deploy staging and development instances for sites under construction.
+## Red Hat's Open Source and Standards team test lab
+
+Deployment: Red Hat's Open Source and Standards team runs its test lab on a mixture of OpenStack and oVirt nodes, running on Fedora 18-based hosts.
+Use case: We use OpenStack to host standing services for our lab (such as our oVirt management server), to quickly build up and tear down test environments, and to deploy staging and development instances for sites under construction.  
+
+[Category:Case studies](Category:Case studies)
