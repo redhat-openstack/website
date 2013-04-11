@@ -45,7 +45,7 @@ If you want to help with our packaging and integration work, consider [joining o
 
 If you see something which you'd like to improve in RDO, there is a good chance that the best place to make that happen is in [the OpenStack project](http://www.openstack.org).
 
-Feel free to contribute any packaging and integration patches via [our contributor mailing list](//www.redhat.com/mailman/listinfo/rdo-list), or propose improvements to OpenStack on [the upstream Launchpad page](//launchpad.net/openstack).
+Feel free to contribute any packaging and integration patches via [our contributor mailing list](//www.redhat.com/mailman/listinfo/rdo-list), [fork us on GitHub](//github.com/redhat-openstack), or propose improvements to OpenStack on [the upstream Launchpad page](//launchpad.net/openstack).
 
 </div>
 </div>
