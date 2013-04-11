@@ -23,6 +23,6 @@ Here are a few guidelines for contributing new content to the wiki
 
 The main pages for contributed documentation are [docs](docs), [troubleshooting](troubleshooting) and [case studies](case studies).
 
-There are lots of other ways to [get involved] too. Have fun!
+There are lots of other ways to [get involved](get involved) too. Have fun!
 
 <Category:Community>
