@@ -16,9 +16,11 @@ __NOTOC__
 <div class="offset3 span8">
 # RDO Quickstart
 
-Deploying RDO is a quick and easy process. Setting up an OpenStack cloud takes approximately 15 minutes, and can be as short as 3 steps.
+Deploying RDO is a quick and easy process. Setting up an OpenStack Grizzly cloud takes approximately 15 minutes, and can be as short as 3 steps.
 
 Below, we'll explain how to set up OpenStack on a single server. You'll be able to [add more nodes](Adding_a_compute_node) to your OpenStack cloud later, if you choose.
+
+*Note: If you want to run Folsom, check out [Red Hat OpenStack Early Adopter Edition](//redhat.com/openstack) or install the openstack-packstack package from the Fedora 18 repository.*
 
 </div>
 </div>
