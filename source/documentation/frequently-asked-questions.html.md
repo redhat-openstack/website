@@ -61,7 +61,7 @@ Packstack, an installation utility which uses Puppet modules to deploy OpenStack
 
 ## Where can I find help with RDO?
 
-You can find documentation and get help through the forums, IRC, or mailing lists and from others in the RDO community.
+You can find documentation and get help through the [/forum forums], IRC, or mailing lists and from others in the RDO community. And don't hesitate to answer someone else's question if you know the answer. You can find all of the ways you can get involved in the RDO community at [ getting involved](get involved).
 
 ## Can I buy commercial support for RDO?
 
