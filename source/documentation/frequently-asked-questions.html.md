@@ -85,7 +85,7 @@ RDO aims to be the natural option for anyone that wants to run the most recently
 
 ## Which OpenStack components does RDO include?
 
-RDO includes all "integrated" OpenStack components (Nova, Glance, Keystone, Cinder, Quantum and Horizon), OpenStack client libraries and CLIs, as well as the PackStack installer and assoicated puppet modules. In addition, RDO includes those projects which are Incubating in Grizzly, i.e. Heat and Ceilometer.
+RDO includes all "integrated" OpenStack components (Nova, Glance, Keystone, Cinder, Quantum and Horizon), OpenStack client libraries and CLIs, as well as the PackStack installer and assoicated puppet modules. In addition, RDO includes those projects which are Incubating in Grizzly, i.e. Heat and Ceilometer. You can find out more about the OpenStack components included, and about RDO, at [about RDO](about RDO).
 
 ## Where is RDO built?
 
