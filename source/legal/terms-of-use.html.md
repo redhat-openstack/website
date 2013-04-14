@@ -8,7 +8,7 @@ wiki_revision_count: 6
 wiki_last_updated: 2013-04-15
 ---
 
-## Terms of Use
+# Terms of use
 
 1. General Information
 
