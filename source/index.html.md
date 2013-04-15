@@ -27,7 +27,6 @@ The most up-to-date OpenStack on the industry's most trusted Linux platform, now
 <div class="offset4 span7 pad-sides begin-content pull-s">
 ## Introducing RDO
 
-<div class="row">
 <div class="span3">
 RDO is a community of people using and deploying OpenStack on Red Hat and Red Hat-based platforms. We've got [ documentation to help you get started](Docs), [/forum forums] where you can connect with other users, and [ community-supported packages](Quickstart) of the most up-to-date OpenStack releases available for download.
 
@@ -35,7 +34,6 @@ RDO is a community of people using and deploying OpenStack on Red Hat and Red Ha
 <div class="span4">
 ![`openstack-distribution.png`](openstack-distribution.png "openstack-distribution.png")
 
-</div>
 </div>
 If you are looking for enterprise-level support, or information on partner certification, Red Hat also offers [Red Hat OpenStack Early Adopter Edition](//redhat.com/openstack).
 
