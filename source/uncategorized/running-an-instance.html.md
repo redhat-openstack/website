@@ -38,6 +38,8 @@ In the main portion of the screen, under the "Images" heading, click the "Launch
 
 In the main portion of the screen, under the "Instances" heading, click the "More" button, followed by the "Associate Floating IP" link for the instance you just launched. You should see both public and private IP addresses listed in the "IP Address" column for your instance.
 
+For additional details, please read [how to set a floating IP range](Floating IP range).
+
 ### Step 6: SSH to Your Instance
 
 Using the key pair file from step 3, ssh into the running vm using its floating ip address:
