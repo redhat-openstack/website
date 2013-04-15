@@ -52,12 +52,6 @@ Run the following command:
 
 Packstack takes the work out of manually setting up OpenStack. For a single node OpenStack deployment, run the following command.
 
-#### For RHEL and derivatives:
-
-    packstack --allinone --use-epel=y
-
-#### For Fedora:
-
     packstack --allinone
 
 The installer will ask you to enter the root password for each host node you are installing on the network, to enable remote configuration of the host so it can remotely configure each node using Puppet.
