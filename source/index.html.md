@@ -35,8 +35,6 @@ OpenStack relies on the underlying operating system and hypervisor — and what 
 
 ![](openstack-distribution.png "openstack-distribution.png")
 
-RDO is an official OpenStack Distribution.
-
 </div>
 </div>
 <div class="row">
