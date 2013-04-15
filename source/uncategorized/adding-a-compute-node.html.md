@@ -20,7 +20,7 @@ Expanding your single-node OpenStack cloud to include a second compute node requ
 
 First, you must edit the "answer file" generated during the initial packstack setup. You'll find it in the directory from which you ran packstack.
 
-FIXME: change $youranswerfile to the default filename for the answerfile
+NOTE: change $youranswerfile to the name of your answerfile
 
     vi $youranswerfile
 
@@ -40,7 +40,7 @@ Change the value for `CONFIG_NOVA_COMPUTE_HOSTS` from your the value of first ho
 
 Run packstack again, specifiying your modified answer file:
 
-FIXME: change $youranswerfile to the default filename for the answerfile
+NOTE: change $youranswerfile to the name of your answerfile
 
     sudo packstack --answer-file=$youranswerfile
 
