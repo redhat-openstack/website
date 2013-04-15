@@ -47,9 +47,8 @@ You agree not to use the Website to:
 7.  Remove, circumvent, disable, damage or otherwise interfere with any security-related features that enforce limitations on the use of the Website;
 8.  Attempt to gain unauthorized access to the Website, other accounts, computer systems or networks associated with the Website, or interfere or attempt to interfere with the proper working of the Website or any activities conducted through the Website;
 9.  Impersonate another person or entity, or falsely state or otherwise misrepresent your affiliation with a person or entity;
-10. Post or transmit any personally identifiable information about persons under 13 years of age;
-11. Use the Website in any manner that could disable, overburden, damage or impair the Website, or interfere with any other party's use or enjoyment of the Website; or
-12. Promote products or services that are competitive with Red Hat's products and services and/or with the Website.
+10. Post or transmit any personally identifiable information about persons under 13 years of age; or
+11. Use the Website in any manner that could disable, overburden, damage or impair the Website, or interfere with any other party's use or enjoyment of the Website.
 
 ## Terms Relating to Content on the Website
 
