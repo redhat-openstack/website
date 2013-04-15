@@ -32,7 +32,7 @@ The most up-to-date OpenStack on the industry's most trusted Linux platform, now
 RDO is a community of people using and deploying OpenStack on Red Hat and Red Hat-based platforms. We've got [ documentation to help you get started](Docs), [/forum forums] where you can connect with other users, and [ community-supported packages](Quickstart) of the most up-to-date OpenStack releases available for download.
 
 </div>
-<div class="span3">
+<div class="span2">
 ![`openstack-distribution.png`](openstack-distribution.png "openstack-distribution.png")
 
 </div>
