@@ -42,7 +42,7 @@ Below, we'll explain how to set up OpenStack on a single server. You'll be able 
 
 Run the following command:
 
-    sudo yum localinstall -y http://repos.fedorapeople.org/repos/openstack/openstack-grizzly/rdo-release-grizzly-1.noarch.rpm
+    sudo yum install -y http://repos.fedorapeople.org/repos/openstack/openstack-grizzly/rdo-release-grizzly-1.noarch.rpm
 
 ### Step 2: Install Packstack Installer
 
