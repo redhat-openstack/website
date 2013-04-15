@@ -33,6 +33,8 @@ If you are looking for enterprise-level support, or information on partner certi
 
 OpenStack relies on the underlying operating system and hypervisor — and what better operating system to build on than the industry's leading enterprise operating system? The RDO community is your one-stop community site for all things related to using OpenStack on Red Hat based platforms.
 
+![](openstack-distribution.png "fig:openstack-distribution.png") RDO is an official OpenStack Distribution.
+
 </div>
 </div>
 <div class="row">
