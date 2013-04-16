@@ -59,7 +59,7 @@ Users of OpenStack on Fedora are welcome to participate in the Red Hat OpenStack
 
 ## How do I deploy RDO?
 
-Packstack, an installation utility which uses Puppet modules to deploy OpenStack, is the primary tool for deploying RDO. Instructions on enabling the RDO Yum repository and installing RDO with Packstack are available on the DOWNLOAD_PAGE.
+Packstack, an installation utility which uses Puppet modules to deploy OpenStack, is the primary tool for deploying RDO. Instructions on enabling the RDO Yum repository and installing RDO with Packstack are available on the [ quick start](Quickstart) page.
 
 ## Where can I find help with RDO?
 
