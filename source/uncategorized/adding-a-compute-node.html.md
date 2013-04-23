@@ -44,4 +44,4 @@ NOTE: by default $youranswerfile is called packstack-answer-$date-$time.txt
 
     sudo packstack --answer-file=$youranswerfile
 
-Packstack will prompt you for the root password for each of your nodes.
+Packstack will prompt yous for the root password for each of your nodes.
