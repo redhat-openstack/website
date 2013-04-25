@@ -40,7 +40,7 @@ In the main portion of the screen, under the "Instances" heading, click the "Mor
 
 For additional details, please read [how to set a floating IP range](Floating IP range).
 
-### Step 6: SSH to Your Instance
+### Step 7: SSH to Your Instance
 
 Using the key pair file from step 3, ssh into the running vm using its floating ip address:
 
