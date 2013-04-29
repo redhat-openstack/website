@@ -13,5 +13,6 @@ wiki_last_updated: 2013-08-28
 Every piece of software as complex as OpenStack has some pitfalls in its usage. We will use this page to collect tips and tricks related to installation and configuration issues, and issues which people run into during the lifetime of their OpenStack deployment.
 
 *   [SELinux issues](SELinux issues)
+*   [Accessing Nagios](Accessing Nagios)
 
 <Category:Documentation>
