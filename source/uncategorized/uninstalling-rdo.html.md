@@ -14,7 +14,6 @@ To completely uninstall RDO, including all application data, and all packages wh
 
 WARNING: This script will remove packages including Puppet, httpd, Nagios and others which you may require for other packages. The script will also delete all MySQL databases and Nagios application data. Use at your own risk.
 
-    <code>
     # Warning! Dangerous step! Destroys VMs
     for x in $(virsh list --all | grep instance- | awk '{print $2}') ; do
         virsh destroy $x ;
@@ -44,6 +43,5 @@ WARNING: This script will remove packages including Puppet, httpd, Nagios and ot
     for x in $(df | grep "/lib/" | sed -e 's/.* //g') ; do
         umount $x ;
     done
-    </code>
 
 <Category:Documentation>
