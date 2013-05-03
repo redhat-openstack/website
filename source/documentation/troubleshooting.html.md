@@ -14,5 +14,6 @@ Every piece of software as complex as OpenStack has some pitfalls in its usage. 
 
 *   [SELinux issues](SELinux issues)
 *   [Accessing Nagios](Accessing Nagios)
+*   [Installation errors](Installation errors)
 
 <Category:Documentation>
