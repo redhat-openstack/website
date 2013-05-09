@@ -8,17 +8,16 @@ wiki_last_updated: 2013-10-01
 
 # Deploy Heat and launch your first Application
 
-## Deploy OpenStack Heat on RHEL (and derivates)
+## Deploy OpenStack Heat on RHEL (and derivatives)
 
-[Heat](http://wiki.openstack.org/wiki/Heat) provides orchestration of composite cloud applications using the CloudFormation API and templates; it is an incubated project of OpenStack. Its development cycle has been integrated with OpenStack from the H release and, with the recent G release, it's got more mature. What it does?
+[Heat](http://wiki.openstack.org/wiki/Heat) provides orchestration of composite cloud applications using the CloudFormation API and templates; it is an incubated project of OpenStack. Its development cycle is to be Integrated in Havana and follow the full OpenStack release process.
 
 > Heat is a service to orchestrate multiple composite cloud applications using the AWS CloudFormation template format, through both an OpenStack-native ReST API and a CloudFormation-compatible Query API.
 
-So you're going to deploy a composite application (made up of more than a single instance) on the cloud infrastructure, this also involves launchtime customizations of the VMs but before start, some assumptions are needed:
+So you're going to deploy a composite application (made up of more than a single instance) on the cloud infrastructure, this also involves launch-time customization of the VMs but before start, some assumptions are needed:
 
-*   I'm using CentOS 6.4 / MySQL for the examples
-*   I'm using the RDO repository to install the packages
-*   The core OpenStack infrastructure is already configured and in good shape
+*   OpenStack has already been configured via PackStack as described in the QuickStart guide
+*   RHEL 6.4 / MySQL is the platform used
 
 ### Installation
 
@@ -82,7 +81,7 @@ It is time now to launch your first multi-instance cloud application! There are 
 
 `# wget `[`https://raw.github.com/openstack/heat/master/templates/WordPress_Composed_Instances.template`](https://raw.github.com/openstack/heat/master/templates/WordPress_Composed_Instances.template)
 
-Heat_ can use the templates distributed for [AWS CloudFormation](http://aws.amazon.com/cloudformation/). These expect you to have a well known set of flavor types defined while the default flavors available in OpenStack don't match strictly such a collection. To avoid the need of hack the templates, you can use an helpful script which recreates in OpenStack the same flavors from AWS::
+Heat_ can use the templates distributed for [AWS CloudFormation](http://aws.amazon.com/cloudformation/). These expect you to have a well known set of flavor types defined while the default flavors available in OpenStack don't match strictly such a collection. To avoid the need of hack the templates, you can use a helpful script which recreates in OpenStack the same flavors from AWS::
 
       # curl `[`https://raw.github.com/openstack/heat/master/tools/nova_create_flavors.sh`](https://raw.github.com/openstack/heat/master/tools/nova_create_flavors.sh)` | bash
 
