@@ -31,7 +31,7 @@ You'll get four new services installed: an engine, a native api, a cloudformatio
 
 Heat comes with a script which creates (and populates) the needed database for it to work but you need to know your MySQL's `root` account password. If you've used Packstack, than that is saved as `CONFIG_MYSQL_PW` in the answers file (`/root/packstack-answers*` by default). Now run the prepare script:
 
-      # heat-db-setup rpm -y -r ${MYSQL_ROOT_PASSWORD} -p ${HEAT_DB_PASSWORD_OF_CHOICE}
+      % sudo heat-db-setup rpm -y -r ${MYSQL_ROOT_PASSWORD} -p ${HEAT_DB_PASSWORD_OF_CHOICE}
 
 Check in `/etc/heat/heat-engine.conf` that your database connection string is correct::
 
@@ -39,12 +39,12 @@ Check in `/etc/heat/heat-engine.conf` that your database connection string is co
 
 Now go trough the \*usual\* steps needed to create a new user, service and endpoint with Keystone and don't forget to source the admin credentials before starting (which are in `/root/keystonerc_admin` if you've used Packstack)::
 
-      # keystone user-create --name heat --pass ${HEAT_USER_PASSWORD_OF_CHOICE}
-      # keystone user-role-add --user heat --role admin --tenant ${SERVICES_TENANT_NAME}
-      # keystone service-create --name heat --type orchestration
-      # keystone service-create --name heat-cfn --type cloudformation
-      # keystone endpoint-create --region RegionOne --service-id ${HEAT-CFN-SERVICE-ID} --publicurl "`[`http://`](http://)`${HEAT-CFN-HOSTNAME}:8000/v1" --adminurl "`[`http://`](http://)`${HEAT-CFN-HOSTNAME}:8000/v1" --internalurl "`[`http://`](http://)`${HEAT-CFN-HOSTNAME}:8000/v1"
-      # keystone endpoint-create --region RegionOne --service-id ${HEAT-SERVICE-ID} --publicurl "`[`http://`](http://)`${HEAT-HOSTNAME}:8004/v1/%(tenant_id)s" --adminurl "`[`http://`](http://)`${HEAT-HOSTNAME}:8004/v1/%(tenant_id)s --internalurl "`[`http://`](http://)`${HEAT-HOSTNAME}:8004/v1/%(tenant_id)s"
+      % keystone user-create --name heat --pass ${HEAT_USER_PASSWORD_OF_CHOICE}
+      % keystone user-role-add --user heat --role admin --tenant ${SERVICES_TENANT_NAME}
+      % keystone service-create --name heat --type orchestration
+      % keystone service-create --name heat-cfn --type cloudformation
+      % keystone endpoint-create --region RegionOne --service-id ${HEAT-CFN-SERVICE-ID} --publicurl "`[`http://`](http://)`${HEAT-CFN-HOSTNAME}:8000/v1" --adminurl "`[`http://`](http://)`${HEAT-CFN-HOSTNAME}:8000/v1" --internalurl "`[`http://`](http://)`${HEAT-CFN-HOSTNAME}:8000/v1"
+      % keystone endpoint-create --region RegionOne --service-id ${HEAT-SERVICE-ID} --publicurl "`[`http://`](http://)`${HEAT-HOSTNAME}:8004/v1/%(tenant_id)s" --adminurl "`[`http://`](http://)`${HEAT-HOSTNAME}:8004/v1/%(tenant_id)s --internalurl "`[`http://`](http://)`${HEAT-HOSTNAME}:8004/v1/%(tenant_id)s"
 
 Update the paste files at `/etc/heat/heat-api{,-cfn,-cloudwatch}-paste.ini` with the credentials just created::
 
@@ -67,11 +67,11 @@ In `/etc/heat/heat-engine.conf` you've to make instead sure that the following v
 
 The application templates can use wait conditions and signaling for the orchestration, Heat needs to create special users to receive the progress data and these users are, by default, given the role of `heat_stack_user`. You can configure the role name in `heat-engine.conf` or just create a so called role::
 
-      # keystone role-create --name heat_stack_user
+      % keystone role-create --name heat_stack_user
 
 The configuration should now be complete and the services can be started::
 
-      # cd /etc/init.d && for s in $(ls openstack-heat-*); do chkconfig $s on && service $s start; done
+      #  cd /etc/init.d && for s in $(ls openstack-heat-*); do chkconfig $s on && service $s start; done
 
 Make sure by checking the logs that everything was started successfully. Specifically, in case the engine service reports `ImportError: cannot import name Random` then you're probably using an old version of `pycrypto`. A fix has been merged upstream to workaround the issue. It's [a trivial change](https://review.openstack.org/#/c/26759/) which you can apply manually to `heat/common/crypt.py`.
 
