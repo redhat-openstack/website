@@ -99,16 +99,16 @@ While that is downloading, create a new keypair or upload you public key in nova
 
 It is time for the real fun now, launch your first composed application with::
 
-      # heat-cfn create wordpress --template-file=WordPress_Composed_Instances.template --parameters="DBUsername=wp;DBPassword=wp;KeyName=userkey;LinuxDistribution=F17"
+      % heat-cfn create wordpress --template-file=WordPress_Composed_Instances.template --parameters="DBUsername=wp;DBPassword=wp;KeyName=userkey;LinuxDistribution=F17"
 
 More parameters could have passed, note for instance the LinuxDistribution parameter discussed above. Now the interesting stuff::
 
-      # heat-cfn list
-      # heat-cfn event-list wordpress
+      % heat-cfn list
+      % heat-cfn event-list wordpress
 
 After the VMs are launched, the mysql/httpd/wordpress installation and configuration begins, the process is driven by the `cfntools`, installed in the VMs images. It will take quite some time, despite the `event-list` reporting completion for the WordPress install too early (there is signaling, via `cfn-signal`, only in the MySQL template). You can login on the instances and check the logs or just use `ps` to see how things are going. After some minutes the setup should be finished::
 
-      # heat-cfn describe wordpress
-      # wget ${WebsiteURL} // that is an URL from the previous command!
+      % heat-cfn describe wordpress
+      % wget ${WebsiteURL} // that is an URL from the previous command!
 
 If anything goes wrong, check the logs at `/var/log/heat/engine.log` or look at the scripts passed as `UserData` to the instances, these should be found in `/var/lib/cloud/data/`. Time to hack your very own template and delete the test deployment! :)
