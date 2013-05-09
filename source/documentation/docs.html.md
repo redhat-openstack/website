@@ -38,6 +38,7 @@ If you've come across useful tips for resolving issues on OpenStack, or if you'r
 *   [ Quick start guide ](Quickstart)
 *   [ Launching your first VM ](Running an instance)
 *   [ Setting a Floating IP Range ](Floating IP range)
+*   [ Deploy Heat and Launch your first application ](Deploy Heat and Launch your first application)
 
 </div>
 <div class="span3">
