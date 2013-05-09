@@ -14,10 +14,10 @@ wiki_last_updated: 2013-10-01
 
 > Heat is a service to orchestrate multiple composite cloud applications using the AWS CloudFormation template format, through both an OpenStack-native ReST API and a CloudFormation-compatible Query API.
 
-This guide deploys a composite application (made up of more than a single instance) on the cloud infrastructure, this also involves launch-time customization of the VMs but before start, some assumptions are needed:
+This guide deploys a composite application (made up of more than a single instance) on the cloud infrastructure. This also involves launch-time customization of the VMs. This guide makes some assumptions:
 
 *   OpenStack has already been configured via PackStack as described in the QuickStart guide
-*   RHEL 6.4 / MySQL is the platform used
+*   OpenStack is deployed on RHEL 6.4
 
 ### Installation
 
