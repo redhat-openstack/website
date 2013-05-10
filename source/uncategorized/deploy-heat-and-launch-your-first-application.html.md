@@ -93,7 +93,7 @@ There is a tool, <https://github.com/sdake/heat-jeos>, which can be used to crea
 
 While that is downloading, create a new keypair or upload you public key in nova to make sure you'll be able to login on the VMs using SSH::
 
-$ nova keypair-add --pub_key ~/.ssh/id_rsa.pub userkey
+      $ nova keypair-add --pub_key ~/.ssh/id_rsa.pub userkey
 
 ### Launch!
 
