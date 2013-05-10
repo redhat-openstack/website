@@ -79,7 +79,7 @@ Make sure by checking the logs that everything was started successfully. Specifi
 
 It is time now to launch your first multi-instance cloud application! There are a number of sample templates available in the [github repo](https://github.com/openstack/heat), download the composed Wordpress example with::
 
-`% wget `[`https://raw.github.com/openstack/heat/master/templates/WordPress_Composed_Instances.template`](https://raw.github.com/openstack/heat/master/templates/WordPress_Composed_Instances.template)
+`$ wget `[`https://raw.github.com/openstack/heat/master/templates/WordPress_Composed_Instances.template`](https://raw.github.com/openstack/heat/master/templates/WordPress_Composed_Instances.template)
 
 Heat_ can use the templates distributed for [AWS CloudFormation](http://aws.amazon.com/cloudformation/). These expect you to have a well known set of flavor types defined while the default flavors available in OpenStack don't match strictly such a collection. To avoid the need of hack the templates, you can use a helpful script which recreates in OpenStack the same flavors from AWS::
 
@@ -89,11 +89,11 @@ Every template also provides you with a list of usable distros and map these int
 
 There is a tool, <https://github.com/sdake/heat-jeos>, which can be used to create the JEOS images and upload them to Glance but there is also a collection of prebuilt images at: <http://fedorapeople.org/groups/heat/prebuilt-jeos-images/> so I suggest you to just download one from `F17-x86_64-cfntools.qcow2` or `U10-x86_64-cfntools.qcow2` (which are referred by many if not all the templates available in the Heat's repo). To upload the F17 x86_64 image in Glance::
 
-`% glance image-create --name F17-x86_64-cfntools --disk-format qcow2 --container-format bare --is-public True --copy-from `[`http://fedorapeople.org/groups/heat/prebuilt-jeos-images/F17-x86_64-cfntools.qcow2`](http://fedorapeople.org/groups/heat/prebuilt-jeos-images/F17-x86_64-cfntools.qcow2)
+`$ glance image-create --name F17-x86_64-cfntools --disk-format qcow2 --container-format bare --is-public True --copy-from `[`http://fedorapeople.org/groups/heat/prebuilt-jeos-images/F17-x86_64-cfntools.qcow2`](http://fedorapeople.org/groups/heat/prebuilt-jeos-images/F17-x86_64-cfntools.qcow2)
 
 While that is downloading, create a new keypair or upload you public key in nova to make sure you'll be able to login on the VMs using SSH::
 
-% nova keypair-add --pub_key ~/.ssh/id_rsa.pub userkey
+$ nova keypair-add --pub_key ~/.ssh/id_rsa.pub userkey
 
 ### Launch!
 
