@@ -44,7 +44,7 @@ Now go trough the \*usual\* steps needed to create a new user, service and endpo
       $ keystone service-create --name heat --type orchestration
       $ keystone service-create --name heat-cfn --type cloudformation
       $ keystone endpoint-create --region RegionOne --service-id ${HEAT-CFN-SERVICE-ID} --publicurl "`[`http://`](http://)`${HEAT-CFN-HOSTNAME}:8000/v1" --adminurl "`[`http://`](http://)`${HEAT-CFN-HOSTNAME}:8000/v1" --internalurl "`[`http://`](http://)`${HEAT-CFN-HOSTNAME}:8000/v1"
-      % keystone endpoint-create --region RegionOne --service-id ${HEAT-SERVICE-ID} --publicurl "`[`http://`](http://)`${HEAT-HOSTNAME}:8004/v1/%(tenant_id)s" --adminurl "`[`http://`](http://)`${HEAT-HOSTNAME}:8004/v1/%(tenant_id)s --internalurl "`[`http://`](http://)`${HEAT-HOSTNAME}:8004/v1/%(tenant_id)s"
+      $ keystone endpoint-create --region RegionOne --service-id ${HEAT-SERVICE-ID} --publicurl "`[`http://`](http://)`${HEAT-HOSTNAME}:8004/v1/%(tenant_id)s" --adminurl "`[`http://`](http://)`${HEAT-HOSTNAME}:8004/v1/%(tenant_id)s --internalurl "`[`http://`](http://)`${HEAT-HOSTNAME}:8004/v1/%(tenant_id)s"
 
 Update the paste files at `/etc/heat/heat-api{,-cfn,-cloudwatch}-paste.ini` with the credentials just created::
 
