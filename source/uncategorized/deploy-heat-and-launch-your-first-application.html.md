@@ -83,7 +83,7 @@ It is time now to launch your first multi-instance cloud application! There are 
 
 Heat_ can use the templates distributed for [AWS CloudFormation](http://aws.amazon.com/cloudformation/). These expect you to have a well known set of flavor types defined while the default flavors available in OpenStack don't match strictly such a collection. To avoid the need of hack the templates, you can use a helpful script which recreates in OpenStack the same flavors from AWS::
 
-      % curl `[`https://raw.github.com/openstack/heat/master/tools/nova_create_flavors.sh`](https://raw.github.com/openstack/heat/master/tools/nova_create_flavors.sh)` | bash
+      $ curl `[`https://raw.github.com/openstack/heat/master/tools/nova_create_flavors.sh`](https://raw.github.com/openstack/heat/master/tools/nova_create_flavors.sh)` | bash
 
 Every template also provides you with a list of usable distros and map these into an AMI string, for each arch. You will have to populate Glance with an image matching the AMI string that the template file is expecting to find.
 
