@@ -8,6 +8,8 @@ wiki_last_updated: 2013-10-01
 
 # Deploy Heat and launch your first Application
 
+__NOTOC__
+
 ## Deploy OpenStack Heat on RHEL (and derivatives)
 
 [Heat](http://wiki.openstack.org/wiki/Heat) provides orchestration of composite cloud applications using the CloudFormation API and templates; it is an incubated project of OpenStack. Its development cycle is to be Integrated in Havana and follow the full OpenStack release process.
