@@ -10,4 +10,8 @@ wiki_last_updated: 2014-09-14
 
 # Editing
 
-For editing this wiki, please use Markdown syntax, documentation -- <http://daringfireball.net/projects/markdown/syntax>
+For editing this wiki, please use [MediaWiki syntax](https://meta.wikimedia.org/wiki/Help:Editing#Editing_help).
+
+In forum posts and comments, you can use [Markdown syntax](//daringfireball.net/projects/markdown/syntax).
+
+<Category:Documentation>
