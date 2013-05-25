@@ -8,7 +8,7 @@ wiki_last_updated: 2013-05-25
 
 # Common service operations
 
-## A few commonly used **service** operations
+## Frequently used **service** operations
 
 ### All OpenStack services
 
