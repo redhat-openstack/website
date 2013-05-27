@@ -81,7 +81,7 @@ Make sure by checking the logs that everything was started successfully. Specifi
 
 It is time now to launch your first multi-instance cloud application! There are a number of sample templates available in the [github repo](https://github.com/openstack/heat), download the composed Wordpress example with::
 
-`$ wget `[`https://raw.github.com/openstack/heat/master/templates/WordPress_Composed_Instances.template`](https://raw.github.com/openstack/heat/master/templates/WordPress_Composed_Instances.template)
+`$ wget `[`https://raw.github.com/openstack/heat-templates/master/cfn/WordPress_Composed_Instances.template`](https://raw.github.com/openstack/heat-templates/master/cfn/WordPress_Composed_Instances.template)
 
 Heat_ can use the templates distributed for [AWS CloudFormation](http://aws.amazon.com/cloudformation/). These expect you to have a well known set of flavor types defined while the default flavors available in OpenStack don't match strictly such a collection. To avoid the need of hack the templates, you can use a helpful script which recreates in OpenStack the same flavors from AWS::
 
