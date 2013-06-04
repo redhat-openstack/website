@@ -10,7 +10,7 @@ wiki_last_updated: 2013-06-05
 
 # Using RDO on TryStack
 
-If you want to get familiar with the OpenStack dashboard interface, and experiment with the creation of instances and shared volumes, [TryStack](http://trystack.org) could be for you. If you connect to "OpenStack Grizzly on x86/RHEL", you will be connecting to a public sandboxed instance of RDO, on hardware which has been contributed by Red Hat, and installed and maintained by [People#radez Dav=n Radez](People#radez_Dav=n_Radez), a member of Red Hat's OpenStack team.
+If you want to get familiar with the OpenStack dashboard interface, and experiment with the creation of instances and shared volumes, [TryStack](http://trystack.org) could be for you. If you connect to "OpenStack Grizzly on x86/RHEL", you will be connecting to a public sandboxed instance of RDO, on hardware which has been contributed by Red Hat, and installed and maintained by [ Dan Radez](People#radez), a member of Red Hat's OpenStack team.
 
 # Signing up
 
