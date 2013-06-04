@@ -42,11 +42,14 @@ When your instance is booted, you can see its private (internal) IP address and 
 
 You can create a block storage volume and attach it to your running instance from the dashboard.
 
-1. In the Volumes tab, chlick "Create volume", set a unique volume name, set the size (limit is 1 GB) , and create the volume. 2. Once the volume has been created, attach it to the instance. Click "Edit attachments", and in the "Select an instance" drop-down box, select your running instance. Confirm the attachment. A few seconds later, the volume will be attached.
+1.  In the Volumes tab, chlick "Create volume", set a unique volume name, set the size (limit is 1 GB) , and create the volume.
+2.  Once the volume has been created, attach it to the instance. Click "Edit attachments", and in the "Select an instance" drop-down box, select your running instance. Confirm the attachment. A few seconds later, the volume will be attached.
 
 To make the storage available to use in your instance, you will need to make it available as a mounted filesystem.
 
-1. Note down the hardware node of the block device in the Instances view on the Dashboard (eg. vdb) 2. Inside your instance, create a filesystem on this volume: \`mkfs.ext4 /dev/vdb\` 3. Mount the volume as you normally would inside the instance: \`mount /dev/vdb /mnt/myvolume\`
+1.  Note down the hardware node of the block device in the Instances view on the Dashboard (eg. vdb)
+2.  Inside your instance, create a filesystem on this volume: \`mkfs.ext4 /dev/vdb\`
+3.  Mount the volume as you normally would inside the instance: \`mount /dev/vdb /mnt/myvolume\`
 
 You now can use this volume to store data on your instance.
 
