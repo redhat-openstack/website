@@ -39,6 +39,7 @@ If you've come across useful tips for resolving issues on OpenStack, or if you'r
 *   [ Launching your first VM ](Running an instance)
 *   [ Setting a Floating IP Range ](Floating IP range)
 *   [ Deploy Heat and launch your first Application ](Deploy Heat and launch your first Application)
+*   [Using RDO on TryStack](Using RDO on TryStack)
 
 </div>
 <div class="span3">
