@@ -36,9 +36,14 @@ The instance will go through a few steps in the "Build" state: "Networking", "Bl
 
 # Connecting to an instance
 
-When your instance is booted, you can see its private (internal) IP address and public access IP address in the Instances dashboard. To connect over SSH, ensure that your private SSH key has been correctly added to your local keyring, and run
+When your instance is booted, you can see its private (internal) IP address and public access IP address in the Instances dashboard. To connect over SSH, ensure that your private SSH key has been correctly added to your local keyring, and run:
 
     ssh root@<public IP address>
+
+Alternatively, ensure that the key has the correct permissions and then explicitly provide it to the SSH client comment when connecting:
+
+    chmod 600 keypair.pem
+    ssh -i keypair.pem root@<public IP address>
 
 # Attaching a volume
 
