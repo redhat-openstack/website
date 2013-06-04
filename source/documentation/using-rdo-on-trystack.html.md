@@ -16,7 +16,8 @@ If you want to get familiar with the OpenStack dashboard interface, and experime
 
 To get started on TryStack:
 
-1. Join the [TryStack Facebook group](https://www.facebook.com/groups/269238013145112) - we use Facebook to authenticate users for the TryStack instance afterwards. 2. Once your membership in the group os approved, [Log in](https://x86.trystack.org/dashboard/) to the TryStack instance. You're connected to an OpenStack Dashboard instance.
+1.  Join the [TryStack Facebook group](https://www.facebook.com/groups/269238013145112) - we use Facebook to authenticate users for the TryStack instance afterwards.
+2.  Once your membership in the group os approved, [Log in](https://x86.trystack.org/dashboard/) to the TryStack instance. You're connected to an OpenStack Dashboard instance.
 
 # Booting an instance
 
