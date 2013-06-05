@@ -40,7 +40,7 @@ When your instance is booted, you can see its private (internal) IP address and 
 
     ssh root@<public IP address>
 
-Alternatively, ensure that the key has the correct permissions and then explicitly provide it to the SSH client comment when connecting:
+If you generated a new keypair in the last step, ensure that the key has the correct permissions and then explicitly provide it to the SSH client comment when connecting:
 
     chmod 600 <key file>
     ssh -i <key file> root@<public IP address>
