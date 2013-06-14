@@ -118,7 +118,7 @@ Next, add the user to the `enabled_users` group in the `cn=openstack` tree. Use 
     > 
     > EOF
     Enter LDAP Password: 
-    modifying entry "cn=enabled_users,cn=openstack,dc=atl,dc=salab,dc=redhat,dc=com"
+    modifying entry "cn=enabled_users,cn=openstack,dc=example,dc=com"
 
 If the `ldapmodify` command does not succeed, troubleshoot the role, permission, and privilege created in the first step.
 
@@ -228,7 +228,7 @@ If the LDAP mappings are correct in `keystone.conf`, the `user-list` command sho
     +------------+------------+---------+-------------------------------+
     |   admin    |   admin    |  False  |                               |
     ....
-    |  rdoadmin  |  rdoadmin  |   True  | rdoadmin@atl.salab.redhat.com |
+    |  rdoadmin  |  rdoadmin  |   True  | rdoadmin@example.com |
     ...
     +------------+------------+---------+-------------------------------+
 
@@ -307,7 +307,7 @@ The `rdoadmin` user should also be able to list all users as it was granted the 
     +------------+------------+---------+-------------------------------+
     |   admin    |   admin    |  False  |                               |
     ....
-    |  rdoadmin  |  rdoadmin  |   True  | rdoadmin@atl.salab.redhat.com |
+    |  rdoadmin  |  rdoadmin  |   True  | rdoadmin@example.com |
     ...
     +------------+------------+---------+-------------------------------+
 
