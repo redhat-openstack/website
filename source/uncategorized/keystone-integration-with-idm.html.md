@@ -302,3 +302,96 @@ Initiate a new shell session on `keystone` without the `SERVICE_TOKEN` environme
 The `rdoadmin` user should also be able to list all users as it was granted the `admin` role:
 
     [root@keystone ~(keystone_admin)]# keystone user-list
+    +------------+------------+---------+-------------------------------+
+    |     id     |    name    | enabled |             email             |
+    +------------+------------+---------+-------------------------------+
+    |   admin    |   admin    |  False  |                               |
+    ....
+    |  rdoadmin  |  rdoadmin  |   True  | rdoadmin@atl.salab.redhat.com |
+    ...
+    +------------+------------+---------+-------------------------------+
+
+## Creating Service Users
+
+The glance, nova, ec2, cinder, and swift services all have service accounts in IDM to authenticate to Keystone. To create these accounts, use the following proceedure:
+
+*   Create the user account in IDM
+
+<!-- -->
+
+    [root@ipa01 ~]# ipa user-add glance --cn=glance --first=glance --last=service
+    -------------------
+    Added user "glance"
+    -------------------
+      User login: glance
+      First name: glance
+      Last name: service
+      Full name: glance
+      Display name: glance service
+      Initials: gs
+      Home directory: /home/glance
+      GECOS field: glance service
+      Login shell: /bin/sh
+      Kerberos principal: glance@EXAMPLE.COM
+      UID: 1840200016
+      GID: 1840200016
+      Password: False
+      Kerberos keys available: False
+
+*   Set the user's password
+
+<!-- -->
+
+    [root@ipa01 ~]# ipa passwd glance
+    New Password: 
+    Enter New Password again to verify: 
+    --------------------------------------------------
+    Changed password for "glance@EXAMPLE.COM"
+    --------------------------------------------------
+    [root@ipa01 ~]$ kinit glance@EXAMPLE.COM
+    Password for glance@EXAMPLE.COM: 
+    Password expired.  You must change it now.
+    Enter new password: 
+    Enter it again: 
+
+*   Add the user to the `enabled_users` group in the `cn=openstack` subtree
+
+<!-- -->
+
+    [root@ipa01 ~]# ldapmodify -x -D"uid=rdoadmin,cn=users,cn=accounts,dc=example,dc=com" -W <<EOF
+    > dn: cn=enabled_users,cn=openstack,dc=example,dc=com
+    > changetype: modify
+    > add: member
+    > member: uid=glance,cn=users,cn=accounts,dc=example,dc=com
+    > EOF
+    Enter LDAP Password: 
+    modifying entry "cn=enabled_users,cn=openstack,dc=example,dc=com"
+
+*   Add the user to the `service` tenant in the `cn=openstack` subtree
+
+<!-- -->
+
+    [root@ipa01 ~]# ldapmodify -x -D"uid=rdoadmin,cn=users,cn=accounts,dc=example,dc=com" -W <<EOF
+    > dn: cn=a459741dfa8f4a8cb74306f001c564e3,ou=tenants,cn=openstack,dc=example,dc=com
+    > changetype: modify
+    > add: member
+    > member: uid=glance,cn=users,cn=accounts,dc=example,dc=com
+    > EOF
+    Enter LDAP Password: 
+    modifying entry "cn=a459741dfa8f4a8cb74306f001c564e3,ou=tenants,cn=openstack,dc=example,dc=com"
+
+*   Add the `admin` role to the user account in the `service` tenant.
+
+<!-- -->
+
+    [root@keystone ~]# keystone user-role-add --user-id glance --tenant-id a459741dfa8f4a8cb74306f001c564e3 --role-id d797691eb43640adb401c9b698fb4cef
+
+Repeat this process with each of the other services which will be enabled in this OpenStack instance. For each of those services, edit the appropriate configuration file and set the `keystone_authtoken` attributes to match the IDM user account. For example:
+
+    [keystone_authtoken]
+    auth_host = <your keystone IP>
+    auth_port = 35357
+    auth_protocol = http
+    admin_tenant_name = service
+    admin_user = glance
+    admin_password = <password>
