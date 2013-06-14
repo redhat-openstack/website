@@ -234,4 +234,71 @@ If the LDAP mappings are correct in `keystone.conf`, the `user-list` command sho
 
 If keystone returns a 401 error or a 404 error, confirm the settings in `/etc/keystone/keystone.conf`. Also consider setting `debug = True` in the `[DEFAULT]` section. This will print the actual LDAP queries being run against the IDM server and their return codes in `/var/log/keystone/keystone.log`.
 
-### Creating Tenants
+### Creating Tenants and Roles
+
+Next, create the initial set of Tenants for OpenStack users and services to use. The following examples use the Tenant names from the OpenStack installation guide:
+
+    [root@keystone ~]# keystone tenant-create --name demo --description "Default Tenant"
+    [root@keystone ~]# keystone tenant-create --name service --description "Service Tenant"
+
+Verify that the tenants were created:
+
+    [root@keystone ~]# keystone tenant-list
+    +----------------------------------+---------+---------+
+    |                id                |   name  | enabled |
+    +----------------------------------+---------+---------+
+    | 573429b5b7cc4312b981117890c1e9d8 |  demo   |   True  |
+    | a459741dfa8f4a8cb74306f001c564e3 | service |   True  |
+    +----------------------------------+---------+---------+
+
+Once the initial tenants have been created, add the `rdoadmin` user to the `demo` tenant on the IDM server:
+
+    [root@ipa01 ~]# ldapmodify -x -D"uid=rdoadmin,cn=users,cn=accounts,dc=example,dc=com" -W <<EOF
+    dn: cn=573429b5b7cc4312b981117890c1e9d8,ou=tenants,cn=openstack,dc=example,dc=com
+    changetype: modify
+    add: member
+    member: uid=rdoadmin,cn=users,cn=accounts,dc=example,dc=com
+    EOF
+
+    Enter LDAP Password: 
+    modifying entry "cn=573429b5b7cc4312b981117890c1e9d8,ou=tenants,cn=openstack,dc=example,dc=com"
+
+Next, create the initial set of Roles for OpenStack users and services to use back on the `keystone` server. The following examples create an `admin` and `user` role.
+
+    [root@keystone ~]# keystone role-create --name admin
+    [root@keystone ~]# keystone role-create --name user
+    [root@keystone ~]# keystone role-list
+    +----------------------------------+-------+
+    |                id                |  name |
+    +----------------------------------+-------+
+    | d797691eb43640adb401c9b698fb4cef | admin |
+    | 69dd03c5b0fb43c38da33c0af7b52cfc |  user |
+    +----------------------------------+-------+
+
+Lastly, grant the `admin` role to the OpenStack Administrator account in the demo Tenant:
+
+    [root@keystone]# keystone user-role-add --user-id rdoadmin --tenant-id 573429b5b7cc4312b981117890c1e9d8 --role-id d797691eb43640adb401c9b698fb4cef
+
+To test, create a `keystonerc_rdoadmin` file with the following contents:
+
+    export OS_USERNAME=rdoadmin
+    export OS_TENANT_NAME=demo
+    export OS_PASSWORD=<password>
+    export OS_AUTH_URL=http://10.17.12.12:35357/v2.0/
+    export PS1='[\u@\h \W(keystone_admin)]$ '
+
+Initiate a new shell session on `keystone` without the `SERVICE_TOKEN` environment variable set, source the `keystonerc_rdoadmin` script and then test retrieving a token:
+
+    [root@keystone ~(keystone_admin)]# keystone token-get
+    +-----------+----------------------------------+
+    |  Property |              Value               |
+    +-----------+----------------------------------+
+    |  expires  |       2013-06-15T02:15:17Z       |
+    |     id    | a6a8fd0ac3c443dd9425489a4990be3b |
+    | tenant_id | 573429b5b7cc4312b981117890c1e9d8 |
+    |  user_id  |             rdoadmin             |
+    +-----------+----------------------------------+
+
+The `rdoadmin` user should also be able to list all users as it was granted the `admin` role:
+
+    [root@keystone ~(keystone_admin)]# keystone user-list
