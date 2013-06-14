@@ -395,3 +395,48 @@ Repeat this process with each of the other services which will be enabled in thi
     admin_tenant_name = service
     admin_user = glance
     admin_password = <password>
+
+## Populating the Service Catalog
+
+The last step in Keystone configuration is to populate the Service Catalog. In this example, services are stored in the MySQL database. The following page describes the population of the Service Catalog:
+
+<http://docs.openstack.org/grizzly/openstack-compute/install/yum/content/keystone-service-endpoint-create.html>
+
+## Managing User Accounts
+
+### Granting OpenStack privileges to an existing Red Hat IDM user
+
+To grant privileges to an existing IDM user, use the following process:
+
+*   Add the account to the OpenStack enabled_users group:
+
+<!-- -->
+
+    [root@ipa01 ~]# ldapmodify -x -D"uid=rdoadmin,cn=users,cn=accounts,dc=example,dc=com" -W <<EOF
+    > dn: cn=enabled_users,cn=openstack,dc=example,dc=com
+    > changetype: modify
+    > add: member
+    > member: uid=msolberg,cn=users,cn=accounts,dc=example,dc=com
+    > EOF
+    Enter LDAP Password: 
+    modifying entry "cn=enabled_users,cn=openstack,dc=example,dc=com"
+
+*   Add the account to the appropriate tenant
+
+<!-- -->
+
+    [root@ipa01 ~]# ldapmodify -x -D"uid=rdoadmin,cn=users,cn=accounts,dc=example,dc=com" -W <<EOF
+    dn: cn=573429b5b7cc4312b981117890c1e9d8,ou=tenants,cn=openstack,dc=example,dc=com 
+    changetype: modify
+    add: member                                                               
+    member: uid=msolberg,cn=users,cn=accounts,dc=example,dc=com
+    EOF
+
+    Enter LDAP Password: 
+    modifying entry "cn=573429b5b7cc4312b981117890c1e9d8,ou=tenants,cn=openstack,dc=example,dc=com"
+
+*   Add the the appropriate role to the tenant in Keystone
+
+<!-- -->
+
+    [root@keystone ~]# keystone user-role-add --user-id msolberg --tenant-id 573429b5b7cc4312b981117890c1e9d8 --role-id 69dd03c5b0fb43c38da33c0af7b52cfc
