@@ -34,7 +34,7 @@ For more information on SELinux troubleshooting, see <http://fedoraproject.org/w
 
 ### PackStack fails if SELinux is disabled
 
-It has been reported that [/forum/discussion/46/install-on-centos-6-4-and-selinux-disabled/p1 PackStack will fail if SELinux is disabled].
+It has been reported that [PackStack will fail if SELinux is disabled](http://{{SERVERNAME}}/forum/discussion/46/install-on-centos-6-4-and-selinux-disabled/p1).
 
 The error observed is:
 
@@ -56,6 +56,6 @@ If you have previously disabled SELinux, you will need to re-label the filesyste
     touch /.autorelabel
     reboot
 
-This issue is being tracked in [//bugzilla.redhat.com/show_bug.cgi?id=954188 Red Hat Bugzilla bug #954188
+This issue is being tracked in [Red Hat Bugzilla bug #954188](http://bugzilla.redhat.com/show_bug.cgi?id=954188)
 
 <Category:Documentation>
