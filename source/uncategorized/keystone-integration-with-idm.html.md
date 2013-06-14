@@ -205,3 +205,33 @@ Then, configure the `ldap` section to use the Red Hat IDM LDAP database.
     # role_allow_create = True
     # role_allow_update = True
     # role_allow_delete = True
+
+Change the above suffixes to reflect the IDM installation (i.e. dc=example,dc=com). Note that this configuration uses the `rdoadmin` account created above to authenticate Keystone to IPA. If a different account was created for that purpose above, change the `user` and `password` value in the configuration file.
+
+Here are some possible variations on the configuration values above:
+
+*   The `user_id_attribute` and `user_name_attribute` could be mapped to other LDAP attributes in IDM. For example, to get a UUID for a user_id, `user_id_attribute` could be set to the `ipaUniqueId` attribute. The `uidNumber` attribute would be another good candidate for the `user_id_attribute` mapping. To get human readible user names, the `user_name_attribute` could be mapped to the `cn` attribute. Note that most authentication and role assignments are performed against the user <em>name</em> and not the user <em>id</em>. In most installations, both `user_id_attribute` and `user_id_attribute` should be set to `uid`.
+*   As discussed above, the `user_enabled_emulation_dn` setting could be assigned to an existing IDM group. This simplifies new OpenStack account creation somewhat.
+
+### Testing the configuration
+
+Once the `keystone.conf` file has the correct mappings to the IDM database, restart the `openstack-keystone` service. Set the `SERVICE_TOKEN` and `SERVICE_ENDPOINT` environment variables to match the settings in `keystone.conf`:
+
+    [root@keystone ~]# export SERVICE_TOKEN=012345SECRET99TOKEN012345
+    [root@keystone ~]# export SERVICE_ENDPOINT=http://127.0.0.1:35357/v2.0/
+
+If the LDAP mappings are correct in `keystone.conf`, the `user-list` command should show the list of users in the IDM database, including the one we enabled above.
+
+    [root@keystone ~]# keystone user-list
+    +------------+------------+---------+-------------------------------+
+    |     id     |    name    | enabled |             email             |
+    +------------+------------+---------+-------------------------------+
+    |   admin    |   admin    |  False  |                               |
+    ....
+    |  rdoadmin  |  rdoadmin  |   True  | rdoadmin@atl.salab.redhat.com |
+    ...
+    +------------+------------+---------+-------------------------------+
+
+If keystone returns a 401 error or a 404 error, confirm the settings in `/etc/keystone/keystone.conf`. Also consider setting `debug = True` in the `[DEFAULT]` section. This will print the actual LDAP queries being run against the IDM server and their return codes in `/var/log/keystone/keystone.log`.
+
+### Creating Tenants
