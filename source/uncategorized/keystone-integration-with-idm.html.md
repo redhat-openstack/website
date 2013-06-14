@@ -12,18 +12,18 @@ __NOTOC__
 
 ## Overview
 
-This page describes a possible Keystone and Red Hat IDM integration scenario. There are many possible ways to integrate the two technologies. This scenario meets the following requirements:
+This page describes a possible Keystone and Red Hat IdM integration scenario. There are many possible ways to integrate the two technologies. This scenario meets the following requirements:
 
-*   Keystone Accounts, Tenants, and Roles are stored in the Red Hat IDM database.
-*   User accounts are managed by Red Hat IDM.
+*   Keystone Accounts, Tenants, and Roles are stored in the Red Hat IdM database.
+*   User accounts are managed by Red Hat IdM.
 *   Tenants and Roles are managed by Keystone.
 *   The Keystone service catalog is stored in MySQL.
 
-Roles and privileges are created so that a Keystone administrator (or service) can not inadvertantly write to objects in the standard Red Hat IDM tree.
+Roles and privileges are created so that a Keystone administrator (or service) can not inadvertantly write to objects in the standard Red Hat IdM tree.
 
 ## Example Architecture
 
-In this example, two systems will be used. The first (`ipa01`) is an IDM master server. Information on initial installation and configuration of the IDM software is here:
+In this example, two systems will be used. The first (`ipa01`) is an IdM master server. Information on initial installation and configuration of the IdM software is here:
 
 <https://access.redhat.com/site/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Identity_Management_Guide/installing-ipa.html>
 
@@ -33,9 +33,9 @@ The second system (`keystone`) is a RDO Keystone server. Information on the init
 
 This guide assumes a manual installation of RDO and its services (i.e. not using packstack).
 
-## IDM Preparation
+## IdM Preparation
 
-Either install Red Hat IDM from scratch or start with an existing Red Hat IDM directory. In this example, we have an existing directory rooted at `dc=example,dc=com` User accounts are stored in `cn=users,cn=accounts,dc=example,dc=com` as per the default.
+Either install Red Hat IdM from scratch or start with an existing Red Hat IdM directory. In this example, we have an existing directory rooted at `dc=example,dc=com` User accounts are stored in `cn=users,cn=accounts,dc=example,dc=com` as per the default.
 
 ### Install the Keystone schema
 
@@ -66,15 +66,15 @@ Keystone will pull user account information from `cn=users,cn=accounts`, but we'
     objectClass: organizationalUnit
     ou: roles
 
-The `enabled_users` and `enabled_tenants` groups are used to emulate the "enabled" attribute, since it is unsupported in Red Hat IDM's default schema. It is possible to use any groupOfNames for the "enabled emulation" feature. Implementations may wish to use an existing group in IDM instead. For example, using the `cn=ipausers,cn=groups,cn=accounts,dc=example,dc=com` group will automatically "enable" all IDM users in Keystone.
+The `enabled_users` and `enabled_tenants` groups are used to emulate the "enabled" attribute, since it is unsupported in Red Hat IdM's default schema. It is possible to use any groupOfNames for the "enabled emulation" feature. Implementations may wish to use an existing group in IdM instead. For example, using the `cn=ipausers,cn=groups,cn=accounts,dc=example,dc=com` group will automatically "enable" all IdM users in Keystone.
 
-To add the schema to the Red Hat IDM database, first save the LDIF above into a text file in root's home directory on `ipa01`. Edit the file, replacing `dc=example,dc=com` with the correct domain suffix. Then load the schema with `ldapadd`:
+To add the schema to the Red Hat IdM database, first save the LDIF above into a text file in root's home directory on `ipa01`. Edit the file, replacing `dc=example,dc=com` with the correct domain suffix. Then load the schema with `ldapadd`:
 
     [admin@ipa01 ~]$ ldapadd -x -D"cn=Directory Manager" -W < openstack.ldif
 
 You will be prompted for the Directory Manager password.
 
-Next, create an "OpenStack Administrator" role with permission to edit that subtree. Before running these or any other `ipa` commands, authenticate to IDM as a user which has administrative privileges.
+Next, create an "OpenStack Administrator" role with permission to edit that subtree. Before running these or any other `ipa` commands, authenticate to IdM as a user which has administrative privileges.
 
     [admin@ipa01 ~]$ ipa role-add --desc="OpenStack Administrator" "OpenStack Administrator"
     [admin@ipa01 ~]$ ipa permission-add "Manage OpenStack Tenants and Roles" \
@@ -93,7 +93,7 @@ Last, create a group named `osadmins` with the role that was created above.
 
 ### Creating the OpenStack administrator account
 
-User accounts in OpenStack will be drawn from the IDM user list. The following steps will create an initial administration account to use in creating the initial Keystone Tenants, Roles, and Service Catalog. An existing administrator or human account could be used as well - add the account to the `osadmins` group to inherit the "OpenStack Administrator" role which grants write access to the subtree.
+User accounts in OpenStack will be drawn from the IdM user list. The following steps will create an initial administration account to use in creating the initial Keystone Tenants, Roles, and Service Catalog. An existing administrator or human account could be used as well - add the account to the `osadmins` group to inherit the "OpenStack Administrator" role which grants write access to the subtree.
 
     [admin@ipa01 ~]$ ipa user-add
     First name: RDO
@@ -120,7 +120,7 @@ Next, add the user to the `enabled_users` group in the `cn=openstack` tree. Use 
 
 If the `ldapmodify` command does not succeed, troubleshoot the role, permission, and privilege created in the first step.
 
-If using an existing IDM group to determine whether or not an account is "enabled" for OpenStack, the administrative user will need to be added to that group instead of `cn=enabled_users,cn=openstack`.
+If using an existing IdM group to determine whether or not an account is "enabled" for OpenStack, the administrative user will need to be added to that group instead of `cn=enabled_users,cn=openstack`.
 
 ## Keystone Configuration
 
@@ -136,7 +136,7 @@ After running `keystone-manage db_sync`, edit `/etc/keystone/keystone.conf`. In 
     #driver = keystone.identity.backends.sql.Identity
     driver = keystone.identity.backends.ldap.Identity
 
-Then, configure the `ldap` section to use the Red Hat IDM LDAP database.
+Then, configure the `ldap` section to use the Red Hat IdM LDAP database.
 
     [ldap]
     url = ldap://ipa01.example.com
@@ -204,21 +204,21 @@ Then, configure the `ldap` section to use the Red Hat IDM LDAP database.
     # role_allow_update = True
     # role_allow_delete = True
 
-Change the above suffixes to reflect the IDM installation (i.e. dc=example,dc=com). Note that this configuration uses the `rdoadmin` account created above to authenticate Keystone to IPA. If a different account was created for that purpose above, change the `user` and `password` value in the configuration file.
+Change the above suffixes to reflect the IdM installation (i.e. dc=example,dc=com). Note that this configuration uses the `rdoadmin` account created above to authenticate Keystone to IPA. If a different account was created for that purpose above, change the `user` and `password` value in the configuration file.
 
 Here are some possible variations on the configuration values above:
 
-*   The `user_id_attribute` and `user_name_attribute` could be mapped to other LDAP attributes in IDM. For example, to get a UUID for a user_id, `user_id_attribute` could be set to the `ipaUniqueId` attribute. The `uidNumber` attribute would be another good candidate for the `user_id_attribute` mapping. To get human readible user names, the `user_name_attribute` could be mapped to the `cn` attribute. Note that most authentication and role assignments are performed against the user <em>name</em> and not the user <em>id</em>. In most installations, both `user_id_attribute` and `user_id_attribute` should be set to `uid`.
-*   As discussed above, the `user_enabled_emulation_dn` setting could be assigned to an existing IDM group. This simplifies new OpenStack account creation somewhat.
+*   The `user_id_attribute` and `user_name_attribute` could be mapped to other LDAP attributes in IdM. For example, to get a UUID for a user_id, `user_id_attribute` could be set to the `ipaUniqueId` attribute. The `uidNumber` attribute would be another good candidate for the `user_id_attribute` mapping. To get human readible user names, the `user_name_attribute` could be mapped to the `cn` attribute. Note that most authentication and role assignments are performed against the user <em>name</em> and not the user <em>id</em>. In most installations, both `user_id_attribute` and `user_id_attribute` should be set to `uid`.
+*   As discussed above, the `user_enabled_emulation_dn` setting could be assigned to an existing IdM group. This simplifies new OpenStack account creation somewhat.
 
 ### Testing the configuration
 
-Once the `keystone.conf` file has the correct mappings to the IDM database, restart the `openstack-keystone` service. Set the `SERVICE_TOKEN` and `SERVICE_ENDPOINT` environment variables to match the settings in `keystone.conf`:
+Once the `keystone.conf` file has the correct mappings to the IdM database, restart the `openstack-keystone` service. Set the `SERVICE_TOKEN` and `SERVICE_ENDPOINT` environment variables to match the settings in `keystone.conf`:
 
     [root@keystone ~]# export SERVICE_TOKEN=012345SECRET99TOKEN012345
     [root@keystone ~]# export SERVICE_ENDPOINT=http://127.0.0.1:35357/v2.0/
 
-If the LDAP mappings are correct in `keystone.conf`, the `user-list` command should show the list of users in the IDM database, including the one we enabled above.
+If the LDAP mappings are correct in `keystone.conf`, the `user-list` command should show the list of users in the IdM database, including the one we enabled above.
 
     [root@keystone ~]# keystone user-list
     +------------+------------+---------+-------------------------------+
@@ -230,7 +230,7 @@ If the LDAP mappings are correct in `keystone.conf`, the `user-list` command sho
     ...
     +------------+------------+---------+-------------------------------+
 
-If keystone returns a 401 error or a 404 error, confirm the settings in `/etc/keystone/keystone.conf`. Also consider setting `debug = True` in the `[DEFAULT]` section. This will print the actual LDAP queries being run against the IDM server and their return codes in `/var/log/keystone/keystone.log`.
+If keystone returns a 401 error or a 404 error, confirm the settings in `/etc/keystone/keystone.conf`. Also consider setting `debug = True` in the `[DEFAULT]` section. This will print the actual LDAP queries being run against the IdM server and their return codes in `/var/log/keystone/keystone.log`.
 
 ### Creating Tenants and Roles
 
@@ -249,7 +249,7 @@ Verify that the tenants were created:
     | a459741dfa8f4a8cb74306f001c564e3 | service |   True  |
     +----------------------------------+---------+---------+
 
-Once the initial tenants have been created, add the `rdoadmin` user to the `demo` tenant on the IDM server:
+Once the initial tenants have been created, add the `rdoadmin` user to the `demo` tenant on the IdM server:
 
     [admin@ipa01 ~]$ ldapmodify -x -D"uid=rdoadmin,cn=users,cn=accounts,dc=example,dc=com" -W <<EOF
     dn: cn=573429b5b7cc4312b981117890c1e9d8,ou=tenants,cn=openstack,dc=example,dc=com
@@ -311,9 +311,9 @@ The `rdoadmin` user should also be able to list all users as it was granted the 
 
 ## Creating Service Users
 
-The glance, nova, ec2, cinder, and swift services all have service accounts in IDM to authenticate to Keystone. To create these accounts, use the following proceedure:
+The glance, nova, ec2, cinder, and swift services all have service accounts in IdM to authenticate to Keystone. To create these accounts, use the following proceedure:
 
-*   Create the user account in IDM
+*   Create the user account in IdM
 
 <!-- -->
 
@@ -384,7 +384,7 @@ The glance, nova, ec2, cinder, and swift services all have service accounts in I
 
     [root@keystone ~]# keystone user-role-add --user-id glance --tenant-id a459741dfa8f4a8cb74306f001c564e3 --role-id d797691eb43640adb401c9b698fb4cef
 
-Repeat this process with each of the other services which will be enabled in this OpenStack instance. For each of those services, edit the appropriate configuration file and set the `keystone_authtoken` attributes to match the IDM user account. For example:
+Repeat this process with each of the other services which will be enabled in this OpenStack instance. For each of those services, edit the appropriate configuration file and set the `keystone_authtoken` attributes to match the IdM user account. For example:
 
     [keystone_authtoken]
     auth_host = <your keystone IP>
@@ -402,9 +402,9 @@ The last step in Keystone configuration is to populate the Service Catalog. In t
 
 ## Managing User Accounts
 
-### Granting OpenStack privileges to an existing Red Hat IDM user
+### Granting OpenStack privileges to an existing Red Hat IdM user
 
-To grant privileges to an existing IDM user, use the following process:
+To grant privileges to an existing IdM user, use the following process:
 
 *   Add the account to the OpenStack enabled_users group:
 
@@ -441,7 +441,7 @@ To grant privileges to an existing IDM user, use the following process:
 
 ## Securing OpenStack Services
 
-By default, communication between the services which comprise RDO is not encrypted or authenticated. The following steps walk through creating certificates for these services using the Red Hat IDM certificate infrastructure. It is assumed that each service is already configured as per the OpenStack Installation Guide:
+By default, communication between the services which comprise RDO is not encrypted or authenticated. The following steps walk through creating certificates for these services using the Red Hat IdM certificate infrastructure. It is assumed that each service is already configured as per the OpenStack Installation Guide:
 
 <http://docs.openstack.org/grizzly/openstack-compute/install/yum/content/>
 
@@ -449,20 +449,20 @@ By default, communication between the services which comprise RDO is not encrypt
 
 OpenStack end users communicate with the Horizon dashbard over HTTP using a web browser. The following steps will encrypt that communication:
 
-*   Join the host to IDM (if you haven't already)
+*   Join the host to IdM (if you haven't already)
 
 <!-- -->
 
     [root@dashboard]# yum -y install ipa-client
     [root@dashboard]# ipa-client-install
 
-*   Test IDM
+*   Test IdM
 
 <!-- -->
 
     [root@dashboard]# getent group ipausers
 
-*   On the IDM server, create a service principal for the host, substituting the hostname of the service which runs the dashboard:
+*   On the IdM server, create a service principal for the host, substituting the hostname of the service which runs the dashboard:
 
 <!-- -->
 
@@ -504,7 +504,7 @@ OpenStack end users communicate with the Horizon dashbard over HTTP using a web 
 
     [root@dashboard ~]# service httpd restart
 
-Requests to the web service on dashboard.example.com now be redirected to the SSL virtual host on that server. Ensure that the certificate presented to the web browser is valid and signed by the IDM master server.
+Requests to the web service on dashboard.example.com now be redirected to the SSL virtual host on that server. Ensure that the certificate presented to the web browser is valid and signed by the IdM master server.
 
 ## Securing Keystone
 
@@ -528,10 +528,10 @@ Support for LDAP with StartTLS in Keystone should be available in the Havana rel
 
 ## Other Considerations
 
-*   The default password policy for IDM users requires them to change their password every 90 days. This will wreak havok upon most OpenStack environments. To mitigate this, create a "Service Account" group in IDM and assign a new password policy to that group. Add cinder, nova, etc. to that group.
-*   In the same vein, the account that Keystone uses to authenticate to IDM (set in `/etc/keystone/keystone.conf` is also a service account. It probably makes more sense to name the user `uid=keystone` and add the user to the "Service Account" IDM group as well. Make sure that this service account also has the "OpenStack Administrator" privilege created above.
-*   This example architecture is not highly available. It probably makes sense to use a load balancer instead of a direct LDAP connection to the IDM master.
-*   It is tempting to use the groups defined in IDM as tenants in OpenStack. This cuts down on the amount of LDIF typing required. Note that OpenStack roles are created underneath tenants, which is probably not what we want in the IDM tree:
+*   The default password policy for IdM users requires them to change their password every 90 days. This will wreak havok upon most OpenStack environments. To mitigate this, create a "Service Account" group in IdM and assign a new password policy to that group. Add cinder, nova, etc. to that group.
+*   In the same vein, the account that Keystone uses to authenticate to IdM (set in `/etc/keystone/keystone.conf` is also a service account. It probably makes more sense to name the user `uid=keystone` and add the user to the "Service Account" IdM group as well. Make sure that this service account also has the "OpenStack Administrator" privilege created above.
+*   This example architecture is not highly available. It probably makes sense to use a load balancer instead of a direct LDAP connection to the IdM master.
+*   It is tempting to use the groups defined in IdM as tenants in OpenStack. This cuts down on the amount of LDIF typing required. Note that OpenStack roles are created underneath tenants, which is probably not what we want in the IdM tree:
 
 <!-- -->
 
