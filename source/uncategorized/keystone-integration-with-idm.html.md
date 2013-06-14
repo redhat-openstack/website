@@ -70,47 +70,45 @@ The `enabled_users` and `enabled_tenants` groups are used to emulate the "enable
 
 To add the schema to the Red Hat IDM database, first save the LDIF above into a text file in root's home directory on `ipa01`. Edit the file, replacing `dc=example,dc=com` with the correct domain suffix. Then load the schema with `ldapadd`:
 
-    [root@ipa01 ~]# ldapadd -x -D"cn=Directory Manager" -W < openstack.ldif
+    [admin@ipa01 ~]$ ldapadd -x -D"cn=Directory Manager" -W < openstack.ldif
 
 You will be prompted for the Directory Manager password.
 
-Next, create an "OpenStack Administrator" role with permission to edit that subtree. Before running these or any other `ipa` commands, authenticate as the IDM administrator using `kinit`:
+Next, create an "OpenStack Administrator" role with permission to edit that subtree. Before running these or any other `ipa` commands, authenticate to IDM as a user which has administrative privileges.
 
-    [root@ipa01 ~]# kinit admin
-    [root@ipa01 ~]# ipa role-add --desc="OpenStack Administrator" "OpenStack Administrator"
-    [root@ipa01 ~]# ipa permission-add "Manage OpenStack Tenants and Roles" \
+    [admin@ipa01 ~]$ ipa role-add --desc="OpenStack Administrator" "OpenStack Administrator"
+    [admin@ipa01 ~]$ ipa permission-add "Manage OpenStack Tenants and Roles" \
      --subtree="ldap:///cn=openstack,dc=example,dc=com" \
      --permissions=write,add,delete \
      --attrs=member,roleOccupant
-    [root@ipa01 ~]# ipa privilege-add "Manage OpenStack" --desc "Manage OpenStack Tenants and Roles"
-    [root@ipa01 ~]# ipa privilege-add-permission "Manage OpenStack" \
+    [admin@ipa01 ~]$ ipa privilege-add "Manage OpenStack" --desc "Manage OpenStack Tenants and Roles"
+    [admin@ipa01 ~]$ ipa privilege-add-permission "Manage OpenStack" \
       --permissions="Manage OpenStack Tenants and Roles"
-    [root@ipa01 ~]# ipa role-add-privilege --privileges "Manage OpenStack" "OpenStack Administrator"
+    [admin@ipa01 ~]$ ipa role-add-privilege --privileges "Manage OpenStack" "OpenStack Administrator"
 
 Last, create a group named `osadmins` with the role that was created above.
 
-    [root@ipa01 ~]# ipa group-add --desc="OpenStack Admins" osadmins
-    [root@ipa01 ~]# ipa role-add-member --groups=osadmins "OpenStack Administrator"
+    [admin@ipa01 ~]$ ipa group-add --desc="OpenStack Admins" osadmins
+    [admin@ipa01 ~]$ ipa role-add-member --groups=osadmins "OpenStack Administrator"
 
 ### Creating the OpenStack administrator account
 
 User accounts in OpenStack will be drawn from the IDM user list. The following steps will create an initial administration account to use in creating the initial Keystone Tenants, Roles, and Service Catalog. An existing administrator or human account could be used as well - add the account to the `osadmins` group to inherit the "OpenStack Administrator" role which grants write access to the subtree.
 
-    [root@ipa01 ~]# kinit admin
-    [root@ipa01 ~]# ipa user-add
+    [admin@ipa01 ~]$ ipa user-add
     First name: RDO
     Last name: Administrator
     User login [radministrator]: rdoadmin
     ---------------------
     Added user "rdoadmin"
     ---------------------
-    [root@ipa01 ~]# ipa user-mod --email=rdoadmin@example.com rdoadmin
-    [root@ipa01 ~]# ipa passwd rdoadm
-    [root@ipa01 ~]# ipa group-add-member --users=rdoadmin osadmins
+    [admin@ipa01 ~]$ ipa user-mod --email=rdoadmin@example.com rdoadmin
+    [admin@ipa01 ~]$ ipa passwd rdoadm
+    [admin@ipa01 ~]$ ipa group-add-member --users=rdoadmin osadmins
 
 Next, add the user to the `enabled_users` group in the `cn=openstack` tree. Use the account which was added to the `osadmins` group to verify that the privilege was inherited correctly:
 
-    [root@ipa01 ~]# ldapmodify -x -D"uid=rdoadmin,cn=users,cn=accounts,dc=example,dc=com" -W <<EOF
+    [admin@ipa01 ~]$ ldapmodify -x -D"uid=rdoadmin,cn=users,cn=accounts,dc=example,dc=com" -W <<EOF
     > dn: cn=enabled_users,cn=openstack,dc=example,dc=com
     > changetype: modify
     > add: member
@@ -253,7 +251,7 @@ Verify that the tenants were created:
 
 Once the initial tenants have been created, add the `rdoadmin` user to the `demo` tenant on the IDM server:
 
-    [root@ipa01 ~]# ldapmodify -x -D"uid=rdoadmin,cn=users,cn=accounts,dc=example,dc=com" -W <<EOF
+    [admin@ipa01 ~]$ ldapmodify -x -D"uid=rdoadmin,cn=users,cn=accounts,dc=example,dc=com" -W <<EOF
     dn: cn=573429b5b7cc4312b981117890c1e9d8,ou=tenants,cn=openstack,dc=example,dc=com
     changetype: modify
     add: member
@@ -319,7 +317,7 @@ The glance, nova, ec2, cinder, and swift services all have service accounts in I
 
 <!-- -->
 
-    [root@ipa01 ~]# ipa user-add glance --cn=glance --first=glance --last=service
+    [admin@ipa01 ~]$ ipa user-add glance --cn=glance --first=glance --last=service
     -------------------
     Added user "glance"
     -------------------
@@ -342,13 +340,13 @@ The glance, nova, ec2, cinder, and swift services all have service accounts in I
 
 <!-- -->
 
-    [root@ipa01 ~]# ipa passwd glance
+    [admin@ipa01 ~]$ ipa passwd glance
     New Password: 
     Enter New Password again to verify: 
     --------------------------------------------------
     Changed password for "glance@EXAMPLE.COM"
     --------------------------------------------------
-    [root@ipa01 ~]$ kinit glance@EXAMPLE.COM
+    [admin@ipa01 ~]$ kinit glance@EXAMPLE.COM
     Password for glance@EXAMPLE.COM: 
     Password expired.  You must change it now.
     Enter new password: 
@@ -358,7 +356,7 @@ The glance, nova, ec2, cinder, and swift services all have service accounts in I
 
 <!-- -->
 
-    [root@ipa01 ~]# ldapmodify -x -D"uid=rdoadmin,cn=users,cn=accounts,dc=example,dc=com" -W <<EOF
+    [admin@ipa01 ~]$ ldapmodify -x -D"uid=rdoadmin,cn=users,cn=accounts,dc=example,dc=com" -W <<EOF
     > dn: cn=enabled_users,cn=openstack,dc=example,dc=com
     > changetype: modify
     > add: member
@@ -371,7 +369,7 @@ The glance, nova, ec2, cinder, and swift services all have service accounts in I
 
 <!-- -->
 
-    [root@ipa01 ~]# ldapmodify -x -D"uid=rdoadmin,cn=users,cn=accounts,dc=example,dc=com" -W <<EOF
+    [admin@ipa01 ~]$ ldapmodify -x -D"uid=rdoadmin,cn=users,cn=accounts,dc=example,dc=com" -W <<EOF
     > dn: cn=a459741dfa8f4a8cb74306f001c564e3,ou=tenants,cn=openstack,dc=example,dc=com
     > changetype: modify
     > add: member
@@ -412,7 +410,7 @@ To grant privileges to an existing IDM user, use the following process:
 
 <!-- -->
 
-    [root@ipa01 ~]# ldapmodify -x -D"uid=rdoadmin,cn=users,cn=accounts,dc=example,dc=com" -W <<EOF
+    [admin@ipa01 ~]$ ldapmodify -x -D"uid=rdoadmin,cn=users,cn=accounts,dc=example,dc=com" -W <<EOF
     > dn: cn=enabled_users,cn=openstack,dc=example,dc=com
     > changetype: modify
     > add: member
@@ -425,7 +423,7 @@ To grant privileges to an existing IDM user, use the following process:
 
 <!-- -->
 
-    [root@ipa01 ~]# ldapmodify -x -D"uid=rdoadmin,cn=users,cn=accounts,dc=example,dc=com" -W <<EOF
+    [admin@ipa01 ~]$ ldapmodify -x -D"uid=rdoadmin,cn=users,cn=accounts,dc=example,dc=com" -W <<EOF
     dn: cn=573429b5b7cc4312b981117890c1e9d8,ou=tenants,cn=openstack,dc=example,dc=com 
     changetype: modify
     add: member                                                               
