@@ -17,5 +17,6 @@ Every piece of software as complex as OpenStack has some pitfalls in its usage. 
 *   [Accessing Nagios](Accessing Nagios)
 *   [Installation errors](Installation errors)
 *   [Uninstalling RDO](Uninstalling RDO)
+*   [Integration with Red Hat IDM](KeystoneIDMIntegration)
 
 <Category:Documentation>
