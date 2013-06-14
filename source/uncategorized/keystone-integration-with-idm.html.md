@@ -19,8 +19,6 @@ This page describes a possible Keystone and Red Hat IDM integration scenario. Th
 
 Roles and privileges are created so that a Keystone administrator (or service) can not inadvertantly write to objects in the standard Red Hat IDM tree.
 
-This page does not yet cover creating Host or Service objects in Red Hat IDM for OpenStack.
-
 ## Example Architecture
 
 In this example, two systems will be used. The first (`ipa01`) is an IDM master server. Information on initial installation and configuration of the IDM software is here:
@@ -438,6 +436,73 @@ To grant privileges to an existing IDM user, use the following process:
 <!-- -->
 
     [root@keystone ~]# keystone user-role-add --user-id msolberg --tenant-id 573429b5b7cc4312b981117890c1e9d8 --role-id 69dd03c5b0fb43c38da33c0af7b52cfc
+
+## Securing OpenStack Services
+
+By default, communication between the services which comprise RDO is not encrypted or authenticated. The following steps walk through creating certificates for these services using the Red Hat IDM certificate infrastructure. It is assumed that each service is already configured as per the OpenStack Installation Guide:
+
+<http://docs.openstack.org/grizzly/openstack-compute/install/yum/content/>
+
+### Securing Horizon
+
+OpenStack end users communicate with the Horizon dashbard over HTTP using a web browser. The following steps will encrypt that communication:
+
+*   Join the host to IDM (if you haven't already)
+
+<!-- -->
+
+    [root@dashboard]# yum -y install ipa-client
+    [root@dashboard]# ipa-client-install
+
+*   Test IDM
+
+<!-- -->
+
+    [root@dashboard]# getent group ipausers
+
+*   On the IDM server, create a service principal for the host, substituting the hostname of the service which runs the dashboard:
+
+<!-- -->
+
+    [admin@ipa01]$ ipa service-add HTTP/dashboard.example.com
+
+*   On the dashboard host, install mod_ssl on the system:
+
+<!-- -->
+
+    [root@dashboard ~]# yum -y install mod_ssl
+
+*   Request a web certificate
+
+<!-- -->
+
+    [root@dashboard ~]# ipa-getcert request -r -f /etc/pki/tls/certs/`hostname -s`.crt -k /etc/pki/tls/private/`hostname -s`.key -N CN=`hostname --fqdn` -D `hostname` -U id-kp-serverAuth -K HTTP/`hostname -fqdn`
+
+*   Edit ssl.conf and point httpd to the new cert and key:
+
+<!-- -->
+
+    [root@dashboard ~]# vi /etc/httpd/conf.d/ssl.conf
+
+*   Optionally create a VirtualHost entry which redirects clients to the SSL. Substitute the hostname of the server running the dashboard in this example.
+
+<!-- -->
+
+    [root@dashboard ~]# cat >> /etc/httpd/conf.d/redirect.conf <<EOF
+    > NameVirtualHost *:80
+    > <VirtualHost *:80>
+    >    ServerName dashboard.example.com
+    >    Redirect permanent / https://dashboard.example.com/
+    > </VirtualHost>
+    EOF
+
+*   Restart apache
+
+<!-- -->
+
+    [root@dashboard ~]# service httpd restart
+
+Requests to the web service on dashboard.example.com now be redirected to the SSL virtual host on that server. Ensure that the certificate presented to the web browser is valid and signed by the IDM master server.
 
 ## Other Considerations
 
