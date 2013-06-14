@@ -506,6 +506,26 @@ OpenStack end users communicate with the Horizon dashbard over HTTP using a web 
 
 Requests to the web service on dashboard.example.com now be redirected to the SSL virtual host on that server. Ensure that the certificate presented to the web browser is valid and signed by the IDM master server.
 
+## Securing Keystone
+
+When a server joins an IdM domain, the OpenLDAP client libraries are configured to communicate with the IdM server over LDAPS. To verify that the system has been configured correctly, check `/etc/openldap/ldap.conf`. It should contain a reference to a certificate file:
+
+     [root@keystone]# cat /etc/openldap/ldap.conf
+    #File modified by ipa-client-install
+
+    URI ldaps://ipa01.example.com
+    BASE dc=example,dc=com
+    TLS_CACERT /etc/ipa/ca.crt
+
+If this is configured correctly, the connection between Keystone and the IdM server can be encrypted by changing the protocol from `ldap://` to `ldaps://` in `/etc/keystone/keystone.conf`. For example:
+
+    [ldap]
+    url = ldaps://ipa01.example.com
+    user = uid=rdoadmin,cn=users,cn=accounts,dc=example,dc=com
+    ...
+
+Support for LDAP with StartTLS in Keystone should be available in the Havana release. That functionality can be tracked here: <https://bugs.launchpad.net/keystone/+bug/1040115>
+
 ## Other Considerations
 
 *   The default password policy for IDM users requires them to change their password every 90 days. This will wreak havok upon most OpenStack environments. To mitigate this, create a "Service Account" group in IDM and assign a new password policy to that group. Add cinder, nova, etc. to that group.
