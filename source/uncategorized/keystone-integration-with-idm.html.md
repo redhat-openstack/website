@@ -440,3 +440,25 @@ To grant privileges to an existing IDM user, use the following process:
 <!-- -->
 
     [root@keystone ~]# keystone user-role-add --user-id msolberg --tenant-id 573429b5b7cc4312b981117890c1e9d8 --role-id 69dd03c5b0fb43c38da33c0af7b52cfc
+
+## Other Considerations
+
+*   The default password policy for IDM users requires them to change their password every 90 days. This will wreak havok upon most OpenStack environments. To mitigate this, create a "Service Account" group in IDM and assign a new password policy to that group. Add cinder, nova, etc. to that group.
+*   In the same vein, the account that Keystone uses to authenticate to IDM (set in `/etc/keystone/keystone.conf` is also a service account. It probably makes more sense to name the user `uid=keystone` and add the user to the "Service Account" IDM group as well. Make sure that this service account also has the "OpenStack Administrator" privilege created above.
+*   This example architecture is not highly available. It probably makes sense to use a load balancer instead of a direct LDAP connection to the IDM master.
+*   It is tempting to use the groups defined in IDM as tenants in OpenStack. This cuts down on the amount of LDIF typing required. Note that OpenStack roles are created underneath tenants, which is probably not what we want in the IDM tree:
+
+<!-- -->
+
+     # d797691eb43640adb401c9b698fb4cef, a459741dfa8f4a8cb74306f001c564e3, tenants
+     , openstack, example.com
+    dn: cn=d797691eb43640adb401c9b698fb4cef,cn=a459741dfa8f4a8cb74306f001c564e3,ou
+     =tenants,cn=openstack,dc=example,dc=com
+    objectClass: organizationalRole
+    objectClass: top
+    roleOccupant: uid=glance,cn=users,cn=accounts,dc=example,dc=com
+    roleOccupant: uid=nova,cn=users,cn=accounts,dc=example,dc=com
+    roleOccupant: uid=cinder,cn=users,cn=accounts,dc=example,dc=com
+    roleOccupant: uid=ec2,cn=users,cn=accounts,dc=example,dc=com
+    roleOccupant: uid=swift,cn=users,cn=accounts,dc=example,dc=com
+    cn: d797691eb43640adb401c9b698fb4cef
