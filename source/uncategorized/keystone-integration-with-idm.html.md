@@ -8,6 +8,8 @@ wiki_last_updated: 2014-04-17
 
 # Keystone integration with IDM
 
+__NOTOC__
+
 ## Overview
 
 This page describes a possible Keystone and Red Hat IDM integration scenario. There are many possible ways to integrate the two technologies. This scenario meets the following requirements:
