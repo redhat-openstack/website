@@ -39,6 +39,10 @@ Check in `/etc/heat/heat-engine.conf` that your database connection string is co
 
       sql_connection = mysql://heat:${HEAT_DB_PASSWORD}@localhost/heat
 
+`/etc/heat/heat-engine.conf` contains a placeholder value for `auth_encryption_key` which needs to be replaced with a randomly generated key::
+
+      ` sed -i "s/%ENCRYPTION_KEY%/`hexdump -n 16 -v -e '/1 "%02x"' /dev/random`/" /etc/heat/heat-engine.conf `
+
 Now go trough the \*usual\* steps needed to create a new user, service and endpoint with Keystone and don't forget to source the admin credentials before starting (which are in `/root/keystonerc_admin` if you've used Packstack)::
 
       $ keystone user-create --name heat --pass ${HEAT_USER_PASSWORD_OF_CHOICE}
