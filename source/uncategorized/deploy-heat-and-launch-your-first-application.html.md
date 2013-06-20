@@ -31,7 +31,7 @@ You'll get four new services installed: an engine, a native api, a cloudformatio
 
 ### Configuration
 
-Heat comes with a script which creates (and populates) the needed database for it to work but you need to know your MySQL's `root` account password. If you've used Packstack, than that is saved as `CONFIG_MYSQL_PW` in the answers file (`/root/packstack-answers*` by default). Now run the prepare script:
+Heat comes with a script which creates (and populates) the needed database for it to work but you need to know your MySQL's `root` account password. If you've used PackStack, than that is saved as `CONFIG_MYSQL_PW` in the answers file (`/root/packstack-answers*` by default). Now run the prepare script:
 
       $ sudo heat-db-setup rpm -y -r ${MYSQL_ROOT_PASSWORD} -p ${HEAT_DB_PASSWORD_OF_CHOICE}
 
@@ -43,14 +43,14 @@ Check in `/etc/heat/heat-engine.conf` that your database connection string is co
 
       ` sed -i "s/%ENCRYPTION_KEY%/`hexdump -n 16 -v -e '/1 "%02x"' /dev/random`/" /etc/heat/heat-engine.conf `
 
-Now go trough the \*usual\* steps needed to create a new user, service and endpoint with Keystone and don't forget to source the admin credentials before starting (which are in `/root/keystonerc_admin` if you've used Packstack)::
+Now go trough the usual steps needed to create a new user, service and endpoint with Keystone and don't forget to source the admin credentials before starting (which are in `/root/keystonerc_admin` if you've used PackStack)::
 
       $ keystone user-create --name heat --pass ${HEAT_USER_PASSWORD_OF_CHOICE}
       $ keystone user-role-add --user heat --role admin --tenant ${SERVICES_TENANT_NAME}
       $ keystone service-create --name heat --type orchestration
       $ keystone service-create --name heat-cfn --type cloudformation
-      $ keystone endpoint-create --region RegionOne --service-id ${HEAT-CFN-SERVICE-ID} --publicurl "`[`http://`](http://)`${HEAT-CFN-HOSTNAME}:8000/v1" --adminurl "`[`http://`](http://)`${HEAT-CFN-HOSTNAME}:8000/v1" --internalurl "`[`http://`](http://)`${HEAT-CFN-HOSTNAME}:8000/v1"
-      $ keystone endpoint-create --region RegionOne --service-id ${HEAT-SERVICE-ID} --publicurl "`[`http://`](http://)`${HEAT-HOSTNAME}:8004/v1/%(tenant_id)s" --adminurl "`[`http://`](http://)`${HEAT-HOSTNAME}:8004/v1/%(tenant_id)s --internalurl "`[`http://`](http://)`${HEAT-HOSTNAME}:8004/v1/%(tenant_id)s"
+      $ keystone endpoint-create --region RegionOne --service-id ${HEAT_CFN_SERVICE-ID} --publicurl "`[`http://`](http://)`${HEAT_CFN_HOSTNAME}:8000/v1" --adminurl "`[`http://`](http://)`${HEAT_CFN_HOSTNAME}:8000/v1" --internalurl "`[`http://`](http://)`${HEAT_CFN_HOSTNAME}:8000/v1"
+      $ keystone endpoint-create --region RegionOne --service-id ${HEAT_SERVICE_ID} --publicurl "`[`http://`](http://)`${HEAT_HOSTNAME}:8004/v1/%(tenant_id)s" --adminurl "`[`http://`](http://)`${HEAT_HOSTNAME}:8004/v1/%(tenant_id)s --internalurl "`[`http://`](http://)`${HEAT_HOSTNAME}:8004/v1/%(tenant_id)s"
 
 Update the paste files at `/etc/heat/heat-api{,-cfn,-cloudwatch}-paste.ini` with the credentials just created::
 
@@ -58,18 +58,18 @@ Update the paste files at `/etc/heat/heat-api{,-cfn,-cloudwatch}-paste.ini` with
       admin_user = heat
       admin_password = ${HEAT_USER_PASSWORD}
 
-In there you also need to make sure that the following variables are pointing to your Keystone host (127.0.0.1 should just work if you've used Packstack as Keystone is probably installed on the same host)::
+In there you also need to make sure that the following variables are pointing to your Keystone host (127.0.0.1 should just work if you've used PackStack as Keystone is probably installed on the same host)::
 
-      service_host = ${KEYSTONE-HOSTNAME}
-      auth_host = ${KEYSTONE-HOSTNAME}
-      auth_uri = `[`http://`](http://)`${KEYSTONE-HOSTNAME}:35357/v2.0
-      keystone_ec2_uri = `[`http://`](http://)`${KEYSTONE-HOSTNAME}:5000/v2.0/ec2tokens
+      service_host = ${KEYSTONE_HOSTNAME}
+      auth_host = ${KEYSTONE_HOSTNAME}
+      auth_uri = `[`http://`](http://)`${KEYSTONE_HOSTNAME}:35357/v2.0
+      keystone_ec2_uri = `[`http://`](http://)`${KEYSTONE_HOSTNAME}:5000/v2.0/ec2tokens
 
 In `/etc/heat/heat-engine.conf` you've to make instead sure that the following variables \*\*do not\*\* point to 127.0.0.1 even though the services are actually hosted on the same system because URLs will be passed over to the VMs, which don't have them available locally::
 
-      heat_metadata_server_url = `[`http://`](http://)`${HEAT-CFN-HOSTNAME}:8000
-      heat_waitcondition_server_url = `[`http://`](http://)`${HEAT-CFN-HOSTNAME}:8000/v1/waitcondition
-      heat_watch_server_url = `[`http://`](http://)`${HEAT-CLOUDWATCH-HOSTNAME}:8003
+      heat_metadata_server_url = `[`http://`](http://)`${HEAT_CFN_HOSTNAME}:8000
+      heat_waitcondition_server_url = `[`http://`](http://)`${HEAT_CFN_HOSTNAME}:8000/v1/waitcondition
+      heat_watch_server_url = `[`http://`](http://)`${HEAT_CLOUDWATCH_HOSTNAME}:8003
 
 The application templates can use wait conditions and signaling for the orchestration, Heat needs to create special users to receive the progress data and these users are, by default, given the role of `heat_stack_user`. You can configure the role name in `heat-engine.conf` or just create a so called role::
 
