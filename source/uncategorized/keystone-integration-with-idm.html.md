@@ -478,13 +478,21 @@ OpenStack end users communicate with the Horizon dashbard over HTTP using a web 
 
 <!-- -->
 
-    [root@dashboard ~]# ipa-getcert request -r -f /etc/pki/tls/certs/`hostname -s`.crt -k /etc/pki/tls/private/`hostname -s`.key -N CN=`hostname --fqdn` -D `hostname` -U id-kp-serverAuth -K HTTP/`hostname -fqdn`
+    [root@dashboard ~]# ipa-getcert request -r -f /etc/pki/tls/certs/`hostname -s`-http.crt -k /etc/pki/tls/private/`hostname -s`-http.key -N CN=`hostname --fqdn` -D `hostname` -U id-kp-serverAuth -K HTTP/`hostname --fqdn`
 
 *   Edit ssl.conf and point httpd to the new cert and key:
 
 <!-- -->
 
     [root@dashboard ~]# vi /etc/httpd/conf.d/ssl.conf
+
+*   Configure it like:
+
+<!-- -->
+
+    SSLCertificateFile /etc/pki/tls/certs/<host>-http.crt
+    SSLCertificateKeyFile /etc/pki/tls/private/<host>-http.key
+    SSLCertificateChainFile /etc/ipa/ca.crt
 
 *   Optionally create a VirtualHost entry which redirects clients to the SSL. Substitute the hostname of the server running the dashboard in this example.
 
