@@ -514,6 +514,97 @@ OpenStack end users communicate with the Horizon dashbard over HTTP using a web 
 
 Requests to the web service on dashboard.example.com now be redirected to the SSL virtual host on that server. Ensure that the certificate presented to the web browser is valid and signed by the IdM master server.
 
+## Securing MySQL
+
+*   On the IdM server, create a service principal for the host, substituting the hostname of the server running MySQL:
+
+<!-- -->
+
+    [admin@ipa01]$ ipa service-add mysql/mysql.example.com
+
+*   Request a certificate
+
+<!-- -->
+
+    [root@mysql ~]# ipa-getcert request -r -f /etc/pki/tls/certs/`hostname -s`-mysql.crt -k /etc/pki/tls/private/`hostname -s`-mysql.key -N CN=`hostname --fqdn` -D `hostname` -U id-kp-serverAuth -K mysql/`hostname --fqdn`
+
+*   Edit /etc/my.conf and point mysqld to the new cert and key:
+
+<!-- -->
+
+    [client]
+    ssl_ca=/etc/ipa/ca.crt
+    ...
+    [mysqld]
+    ssl_ca=/etc/ipa/ca.crt
+    ssl_cert=/etc/pki/tls/certs/<host>-mysql.crt
+    ssl-key=/etc/pki/tls/private/<host>-mysql.key
+
+*   Restart mysqld:
+
+<!-- -->
+
+    [root@mysql ~]# service mysqld restart
+
+*   Test that SSL is working:
+
+<!-- -->
+
+    [root@mysql ~]# mysql -e "\s"
+    --------------
+    mysql  Ver 14.14 Distrib 5.5.31, for Linux (x86_64) using readline 5.1
+
+    Connection id:          487
+    Current database:
+    Current user:           root@localhost
+    SSL:                    Cipher in use is DHE-RSA-AES256-SHA
+    Current pager:          stdout
+    Using outfile:          ''
+    Using delimiter:        ;
+    Server version:         5.5.31 MySQL Community Server (GPL)
+    Protocol version:       10
+    Connection:             Localhost via UNIX socket
+    Server characterset:    latin1
+    Db     characterset:    latin1
+    Client characterset:    utf8
+    Conn.  characterset:    utf8
+    UNIX socket:            /var/lib/mysql/mysql.sock
+    Uptime:                 2 sec
+
+    Threads: 10  Questions: 791702  Slow queries: 0  Opens: 91  Flush tables: 1  Open tables: 84  Queries per second avg: 4.800
+
+*   Configure the OpenStack services to use SSL. Set the SQL connection (either connection or sql_connection, depending on the service) . **Note**: that this also changes from addressing the host by IP address to FQDN:
+
+<!-- -->
+
+    connection = mysql://keystone_admin:a3a9e1219b81473e@mysql.example.com/keystone?ssl_ca=/etc/ipa/ca.crt
+
+*   To these files:
+    -   /etc/glance/glance-api.conf
+    -   /etc/glance/glance-registry.conf
+    -   /etc/cinder/cinder.conf
+    -   /etc/nova/nova.conf
+    -   /etc/keystone/keystone.conf
+
+<!-- -->
+
+*   Restart the services:
+
+<!-- -->
+
+    [root@mysql ~]# service openstack-glance-api restart
+    [root@mysql ~]# service openstack-glance-registry restart
+    [root@mysql ~]# service openstack-cinder restart
+    [root@mysql ~]# service openstack-nova-api restart
+    [root@mysql ~]# service openstack-nova-cert restart
+    [root@mysql ~]# service openstack-nova-compute restart
+    [root@mysql ~]# service openstack-nova-conductor restart
+    [root@mysql ~]# service openstack-nova-consoleauth restart
+    [root@mysql ~]# service openstack-nova-network restart
+    [root@mysql ~]# service openstack-nova-novncproxy restart
+    [root@mysql ~]# service openstack-nova-scheduler restart
+    [root@mysql ~]# service openstack-keystone restart
+
 ## Securing Keystone
 
 When a server joins an IdM domain, the OpenLDAP client libraries are configured to communicate with the IdM server over LDAPS. To verify that the system has been configured correctly, check `/etc/openldap/ldap.conf`. It should contain a reference to a certificate file:
