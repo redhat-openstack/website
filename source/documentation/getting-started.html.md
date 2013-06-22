@@ -12,9 +12,7 @@ wiki_last_updated: 2013-06-22
 
 ## What's the admin password?
 
-The admin dashboard (aka Horizon) is located at <http://CONTROL_IP/dashboard> The default admin username is 'admin' and the initial password is located in /root/keystonerc_admin
-
-Following the instructions on the QuickStart page:
+The admin dashboard (aka Horizon) is located at <http://CONTROL_NODE/dashboard> The default admin username is 'admin' and the initial password is located in /root/keystonerc_admin
 
 ## Installing on RHEL - Prerequisites
 
