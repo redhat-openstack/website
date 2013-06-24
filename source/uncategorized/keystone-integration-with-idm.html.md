@@ -514,7 +514,7 @@ OpenStack end users communicate with the Horizon dashbard over HTTP using a web 
 
 Requests to the web service on dashboard.example.com now be redirected to the SSL virtual host on that server. Ensure that the certificate presented to the web browser is valid and signed by the IdM master server.
 
-## Securing MySQL
+## Securing MySQL (WIP)
 
 *   On the IdM server, create a service principal for the host, substituting the hostname of the server running MySQL:
 
