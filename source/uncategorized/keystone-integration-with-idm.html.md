@@ -605,6 +605,88 @@ Requests to the web service on dashboard.example.com now be redirected to the SS
     [root@mysql ~]# service openstack-nova-scheduler restart
     [root@mysql ~]# service openstack-keystone restart
 
+## Securing qpidd (WIP)
+
+Configuring qpidd does not currently work without making some manual changes, depending on the version of OpenStack you are running. nova and glance do not properly allow SSL configuration due to launchpad bug <https://bugs.launchpad.net/oslo/+bug/1158807> . It is a one-line change to make in the nova and cinder python files.
+
+A second bug prevents one one from configuring a separate port for SSL, <https://bugs.launchpad.net/nova/+bug/1194237> . The workaround is to use the standard AMPQ port, 5672 for SSL.
+
+*   Install the qpid-cpp-server-ssl package
+
+      # yum install qpid-cpp-server-ssl
+
+*   Create the IPA service
+
+<!-- -->
+
+    # ipa service-add qpid/qpid.example.com
+
+*   Create a directory to store the NSS certificate database for qpidd
+
+<!-- -->
+
+    # mkdir /etc/pki/qpid
+    # certutil -N -d /etc/pki/qpid (note the password you use)
+
+*   Create a password file containing the password you set on the NSS database
+
+<!-- -->
+
+    # echo password > /etc/pki/qpid/password.conf
+
+*   Fix permissions and ownership of files
+
+<!-- -->
+
+    # chown -R qpidd /etc/pki/qpid
+    # chmod 600 /etc/pki/qpid/password.conf
+    # restorecon /etc/pki/qpid/*
+
+*   Request an SSL certificate
+
+<!-- -->
+
+    # ipa-getcert request -d /etc/pki/qpid -n broker -p /etc/pki/qpid/password.conf -N CN=`hostname --fqdn` -D `hostname` -U id-kp-serverAuth -K qpidl/`hostname --fqdn`
+
+*   Add configuration options to /etc/qpidd.conf
+
+<!-- -->
+
+    require-encryption=yes
+    ssl-require-client-authentication=no
+    ssl-cert-db=/etc/pki/qpid
+    ssl-cert-password-file=/etc/pki/qpid/password.conf
+    ssl-cert-name=broker
+    #ssl-port=5671
+    ssl-port=5672
+
+*   Configure nova to use ssl in /etc/nova/nova.conf
+
+      qpid_protocol=ssl
+
+*   Configure cinder to use ssl in /etc/cinder/cinder.conf
+
+      qpid_protocol=ssl
+
+*   Restart the nova and cinder services
+
+<!-- -->
+
+    # service openstack-cinder-api restart
+    # service openstack-cinder-scheduler restart
+    # service openstack-cinder-volume restart
+    # service openstack-glance-api restart
+    # service openstack-glance-registry restart
+    # service openstack-keystone restart
+    # service openstack-nova-api restart
+    # service openstack-nova-cert restart
+    # service openstack-nova-compute restart
+    # service openstack-nova-conductor restart
+    # service openstack-nova-consoleauth restart
+    # service openstack-nova-network restart
+    # service openstack-nova-novncproxy restart
+    # service openstack-nova-scheduler restart
+
 ## Securing Keystone
 
 When a server joins an IdM domain, the OpenLDAP client libraries are configured to communicate with the IdM server over LDAPS. To verify that the system has been configured correctly, check `/etc/openldap/ldap.conf`. It should contain a reference to a certificate file:
