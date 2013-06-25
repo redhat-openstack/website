@@ -609,8 +609,6 @@ Requests to the web service on dashboard.example.com now be redirected to the SS
 
 Configuring qpidd does not currently work without making some manual changes, depending on the version of OpenStack you are running. nova and glance do not properly allow SSL configuration due to launchpad bug <https://bugs.launchpad.net/oslo/+bug/1158807> . It is a one-line change to make in the nova and cinder python files.
 
-A second bug prevents one one from configuring a separate port for SSL, <https://bugs.launchpad.net/nova/+bug/1194237> . The workaround is to use the standard AMPQ port, 5672 for SSL.
-
 *   Install the qpid-cpp-server-ssl package
 
       # yum install qpid-cpp-server-ssl
@@ -657,16 +655,17 @@ A second bug prevents one one from configuring a separate port for SSL, <https:/
     ssl-cert-db=/etc/pki/qpid
     ssl-cert-password-file=/etc/pki/qpid/password.conf
     ssl-cert-name=broker
-    #ssl-port=5671
-    ssl-port=5672
+    ssl-port=5671
 
 *   Configure nova to use ssl in /etc/nova/nova.conf
 
       qpid_protocol=ssl
+      qpid_port=5671
 
 *   Configure cinder to use ssl in /etc/cinder/cinder.conf
 
       qpid_protocol=ssl
+      qpid_port=5671
 
 *   Restart the nova and cinder services
 
