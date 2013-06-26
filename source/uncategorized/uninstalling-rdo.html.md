@@ -14,7 +14,7 @@ There is no automated uninstall process for RDO. If you have a previously instal
 
 To completely uninstall RDO, including all application data, and all packages which are installed on a base system, run the following script. This assumes that you are only running OpenStack on this machine - if you are using this machine for anything else, STOP! And go to the [ "Slightly smaller hammer"](uninstalling RDO#Slightly_smaller_hammer_method) section below
 
-WARNING: This script will remove packages including Puppet, httpd, Nagios and others which you may require for other packages. The script will also delete all MySQL databases and Nagios application data. Use at your own risk.
+WARNING: This script will remove packages including Puppet, httpd, Nagios and others which you may require for other packages. The script will also delete all MySQL databases and Nagios application data. Use at your own risk. <b>DO NOT use this on systems that are doing anything other than RDO</b>, as it will install a large number of unrelated packages.
 
     # Warning! Dangerous step! Destroys VMs
     for x in $(virsh list --all | grep instance- | awk '{print $2}') ; do
