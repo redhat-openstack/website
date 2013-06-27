@@ -40,6 +40,7 @@ If you've come across useful tips for resolving issues on OpenStack, or if you'r
 *   [ Setting a Floating IP Range ](Floating IP range)
 *   [ Deploy Heat and launch your first Application ](Deploy Heat and launch your first Application)
 *   [Using RDO on TryStack](Using RDO on TryStack)
+*   [ Repository information ](Repositories)
 
 </div>
 <div class="span3">
