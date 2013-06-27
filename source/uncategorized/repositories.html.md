@@ -18,7 +18,7 @@ The RDO packages can be browsed at [RDO repositories](http://rdo.fedorapeople.or
 
 ## EPEL
 
-The RDOrepositories in turn depend on [EPEL](http://fedoraproject.org/wiki/EPEL)
+The RDO repositories for Enterprise Linux distributions in turn depend on [EPEL](http://fedoraproject.org/wiki/EPEL)
 
 The packstack version in the RDO repositories, will auto enable EPEL
 
@@ -26,7 +26,7 @@ The packstack version in the RDO repositories, will auto enable EPEL
 
 If using RHEL, then RDO and EPEL need the "Optional channel" enabled.
 
-If using Centos or Scientific Linux, there is no such optional repository, as those packages are included in the main repos.
+If using CentOS or Scientific Linux, there is no such optional repository, as those packages are included in the main repositories for those distributions.
 
 For completeness, currently on RHEL, the Optional channel is used for:
 
