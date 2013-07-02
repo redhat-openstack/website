@@ -30,7 +30,7 @@ Come and chat real-time with RDO users on **IRC** - you can usually find us in t
 
 If you want to help with our packaging and integration work, consider [joining our contributor **mailing list**](//www.redhat.com/mailman/listinfo/rdo-list), and check out [Red Hat's OpenStack pages on github](//github.com/redhat-openstack).
 
-Join our [newsletter mailing list](https://www.redhat.com/mailman/listinfo/rdo-newsletter) for monthly updates on RDO and the larger OpenStack world.
+Join our [newsletter mailing list](//www.redhat.com/mailman/listinfo/rdo-newsletter) for monthly updates on RDO and the larger OpenStack world.
 
 ### Solve
 
