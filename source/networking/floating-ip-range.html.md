@@ -11,11 +11,7 @@ wiki_last_updated: 2015-07-22
 
 # Floating IP range
 
-This documentation applies to the use of nova-network. If you are using Neutron (formerly known as Quantum) the process involved in setting up a network is different. [This page in the OpenStack documentation](http://docs.openstack.org/trunk/openstack-network/admin/content/l3_workflow.html) will help with the basic concepts involved in Neutron. To use nova-network instead of Neutron/Quantum for networking services, set
-
-    <code>CONFIG_INSTALL_QUANTUM=N</code>
-
-in your Packstack answers file, and rerun Packstack.
+This documentation applies to the use of nova-network. If you are using Neutron (formerly known as Quantum) the process involved in setting up a network is different. [This page in the OpenStack documentation](http://docs.openstack.org/trunk/openstack-network/admin/content/l3_workflow.html) will help with the basic concepts involved in Neutron. To use nova-network instead of Neutron/Quantum for networking services, set "CONFIG_INSTALL_QUANTUM=N" in your Packstack answers file, and rerun Packstack.
 
 OpenStack instances receive a private IP address through which they can reach each other and through which hosts can reach them. In order to access these instances from other machines in your network, such as your workstation, the instances will need to be allocated a "floating IP." Packstack automatically configures this with a default that may well be wrong for your network. You'll want to configure your OpenStack install with a range of free IP addresses that's correct for your network.
 
