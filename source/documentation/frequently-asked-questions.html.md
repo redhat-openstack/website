@@ -25,7 +25,7 @@ OpenStack is an open source project for building a private or public infrastruct
 
 ## Why is RDO needed?
 
-Just as a traditional operating system relies on the hardware beneath it, so too does the OpenStack cloud operating system rely on the foundation of a hypervisor and OS platform. RDO makes it easy to install and deploy the most up-to-date OpenStack components on the industry's most trusted Linux platform, Red Hat Enterprise Linux.
+Just as a traditional operating system relies on the hardware beneath it, so too does the OpenStack cloud operating system rely on the foundation of a hypervisor and OS platform. RDO makes it easy to install and deploy the most up-to-date OpenStack components on the industry's most trusted Linux platform, Red Hat Enterprise Linux. and on RHEL derivatives like Fedora, CentOS, and Scientific Linux.
 
 ## Why should I use an OpenStack distribution from Red Hat?
 
