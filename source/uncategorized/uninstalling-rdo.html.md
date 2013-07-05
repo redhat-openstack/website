@@ -56,7 +56,7 @@ The following script removes only OpenStack specific application data and packag
         virsh undefine $x ;
     done ;
 
-    yum remove -y "*openstack*" "*nova*" "*keystone*" "*glance*" "*cinder*" "*swift*";
+    yum remove -y "*openstack*" "*nova*" "*keystone*" "*glance*" "*cinder*" "*swift*" "*rdo-release*";
 
     ps -ef | grep -i repli | grep swift | awk '{print $2}' | xargs kill ;
 
