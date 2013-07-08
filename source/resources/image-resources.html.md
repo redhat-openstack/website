@@ -24,7 +24,7 @@ See also [the oz-image-build list on Github](https://github.com/rackerjoe/oz-ima
 
 You can load an image from the command line with glance, eg:
 
-\` glance image-create --name "Fedora 19 x86_64" --disk-format qcow2 --container-format bare --is-public true --copy-from <http://cloud.fedoraproject.org/fedora-19.x86_64.qcow2> \`
+`   glance image-create --name "Fedora 19 x86_64" --disk-format qcow2 --container-format bare --is-public true --copy-from  `[`http://cloud.fedoraproject.org/fedora-19.x86_64.qcow2`](http://cloud.fedoraproject.org/fedora-19.x86_64.qcow2)
 
 ... or go to the 'Images and Snapshots' tab in your OpenStack dashboard to add them via the gui.
 
