@@ -22,4 +22,6 @@ This page is a collection of various OpenStack-ready images of different distrib
 
 See also [the oz-image-build list on Github](https://github.com/rackerjoe/oz-image-build)
 
+See the [glance documentation](http://docs.openstack.org/trunk/openstack-compute/admin/content/adding-images.html) for information about loading these images from the command line, or go to the 'Images and Snapshots' tab in your OpenStack dashboard to add them via the gui.
+
 <Category:Resources> <Category:Documentation>
