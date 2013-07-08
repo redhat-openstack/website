@@ -20,6 +20,6 @@ This page is a collection of various OpenStack-ready images of different distrib
 *   [OpenSuSE 12.1 image](http://susestudio.com/a/YRUrwO/testing-instance-for-openstack-opensuse-121)
 *   [Windows Server 2012 test image](http://www.cloudbase.it/ws2012/)
 
-See also [1](https://github.com/rackerjoe/oz-image-build)
+See also [the oz-image-build list on Github](https://github.com/rackerjoe/oz-image-build)
 
 <Category:Resources> <Category:Documentation>
