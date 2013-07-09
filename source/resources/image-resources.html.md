@@ -12,8 +12,8 @@ wiki_last_updated: 2015-07-22
 
 This page is a collection of various OpenStack-ready images of different distributions and operating systems.
 
-*   Fedora 19: [32 bit](http://cloud.fedoraproject.org/fedora-latest.i386.qcow2) [64 bit](//download.fedoraproject.org/pub/fedora/linux/releases/19/Images/x86_64/Fedora-x86_64-19-20130627-sda.qcow2)
-*   Fedora 18: [64 bit](http://cloud.fedoraproject.org/fedora-19.x86_64.qcow2)
+*   Fedora 19: [32-bit](http://cloud.fedoraproject.org/fedora-19.i386.qcow2) / [64 bit](http://cloud.fedoraproject.org/fedora-19.x86_64.qcow2) ([*more info*](http://cloud.fedoraproject.org/))
+*   Fedora 18: [64-bit](http://cloud.fedoraproject.org/fedora-19.x86_64.qcow2)
 *   CentOS 6.3: [Various cloud ready images](//wiki.centos.org/Cloud/OpenNebula)
 *   [Ubuntu cloud images](//cloud-images.ubuntu.com/)
 *   [RHEL 6 image](https://rhn.redhat.com/rhn/software/channel/downloads/Download.do?cid=16952) (Requires RHEL subscription)
