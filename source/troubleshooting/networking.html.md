@@ -10,11 +10,9 @@ wiki_last_updated: 2013-12-19
 
 # Networking
 
-__NOTOC__ __NOTITLE__
+__NOTOC__
 
-## Troubleshooting network issues
-
-### Toolchain
+## Toolchain
 
 A number of tools come in handy when troubleshooting Neutron/Quantum networking issues.
 
@@ -26,18 +24,18 @@ A number of tools come in handy when troubleshooting Neutron/Quantum networking 
     -   [iproute2 HOWTO](//www.policyrouting.org/iproute2.doc.html)
     -   [iproute2 examples](//www.linuxfoundation.org/collaborate/workgroups/networking/iproute2_examples)
 
-#### Useful commands
+### Useful commands
 
 ...
 
-### Common issues
+## Common issues
 
 *   I can create an instance, but cannot SSH or ping it
 *   I cannot associate a floating IP with an instance
 
 ...
 
-### Useful resources
+## Useful resources
 
 *   [Quantum L3 workflow](//docs.openstack.org/trunk/openstack-network/admin/content/l3_workflow.html)
 *   [Network troubleshooting](//docs.openstack.org/trunk/openstack-ops/content/network_troubleshooting.html)
