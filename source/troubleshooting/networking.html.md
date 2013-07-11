@@ -10,7 +10,7 @@ wiki_last_updated: 2013-12-19
 
 # Networking
 
-__NOTOC__
+__NOTOC__ __NOTITLE__
 
 ## Troubleshooting network issues
 
