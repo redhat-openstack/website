@@ -24,8 +24,6 @@ A number of tools come in handy when troubleshooting Neutron/Quantum networking 
     -   [iproute2 HOWTO](//www.policyrouting.org/iproute2.doc.html)
     -   [iproute2 examples](//www.linuxfoundation.org/collaborate/workgroups/networking/iproute2_examples)
 
-### Useful commands
-
 ### tcpdump
 
 tcpdump will be your best friend so it's best to learn and understand how to use it. When debugging routing issues with quantum, tcpdump can be used to investigate the ingress and egress of traffic. For example:
