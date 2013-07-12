@@ -49,8 +49,19 @@ The above command will capture all traffic on any interface. ...
 ## Common issues
 
 *   I can create an instance, but cannot SSH or ping it
+    -   **Each of the following needs a description and some commands you can run to check**
+    -   Verify that traffic to port 22 and ICMP traffic of any type (-1:-1) is allowed in the default security group
+    -   Verify that you can ping and SSH the host where the instance is running
+    -   Ensure that the router is correctly created, that the internal subnet and external subnet are attached to it, and that it can route traffic from your IP to the instance IP
+    -   Check the OVS routing table to ensure that it is correctly routing traffic from internal to external
+    -   Verify that br-ex is associated with the physical NIC, and that the virtual router can route traffic to the IP address of the host
+
+<!-- -->
+
 *   I cannot associate a floating IP with an instance
+    -   If the error is that the external network is not visible from the subnet: Check that br-ex has its MAC address set correctly. Check for the error "Device or resource busy" in /var/log/messages - if it's present, you will need to bring down br-ex, set its MAC address to match that of the physical NIC, and bring it back up.
 *   I can create an instance, however, it does not get a DHCP address
+    -   See [network troubleshooting](http://docs.openstack.org/trunk/openstack-ops/content/network_troubleshooting.html) for information on sniffing the various steps of the allocation of an IP address by DHCP - verify that your DHCP agent is running, is receiving the DHCPDISCOVER request, and is replying to it - and verify that your host is receiving the DHCP reply.
 
 ...
 
