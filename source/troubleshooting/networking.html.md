@@ -32,6 +32,7 @@ A number of tools come in handy when troubleshooting Neutron/Quantum networking 
 
 *   I can create an instance, but cannot SSH or ping it
 *   I cannot associate a floating IP with an instance
+*   I can create an instance, however, it does not get a DHCP address
 
 ...
 
