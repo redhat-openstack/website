@@ -28,7 +28,8 @@ A number of tools come in handy when troubleshooting Neutron/Quantum networking 
 
 ## **tcpdump**
 
-      will be your best friend so it's best to learn and understand how to use it.  When debugging routing issues with quantum, tcpdump can be used to investigate the ingress and egress of traffic.  For example:
+tcpdump will be your best friend so it's best to learn and understand how to use it. When debugging routing issues with quantum, tcpdump can be used to investigate the ingress and egress of traffic. For example:
+
            tcpdump -n -i br-int  
 
 The above command will capature all traffic on the internal bridge interface.
