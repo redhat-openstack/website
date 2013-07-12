@@ -23,6 +23,8 @@ A number of tools come in handy when troubleshooting Neutron/Quantum networking 
 *   [iproute tools](//www.linuxfoundation.org/collaborate/workgroups/networking/iproute2)
     -   [iproute2 HOWTO](//www.policyrouting.org/iproute2.doc.html)
     -   [iproute2 examples](//www.linuxfoundation.org/collaborate/workgroups/networking/iproute2_examples)
+*   [tcpdump](//www.tcpdump.org/) (see next section)
+    -   [tcpdump documentation](//www.tcpdump.org/#documentation)
 
 ### tcpdump
 
