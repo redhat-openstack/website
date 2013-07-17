@@ -116,7 +116,7 @@ It is time for the real fun now, launch your first composed application with::
 
       $ heat-cfn create wordpress --template-file=WordPress_Composed_Instances.template --parameters="DBUsername=wp;DBPassword=wp;KeyName=userkey;LinuxDistribution=F17"
 
-More parameters could have passed, note for instance the LinuxDistribution parameter discussed above. Now the interesting stuff::
+More parameters could have passed, note for instance the LinuxDistribution parameter discussed above. Now the interesting stuff:
 
       $ heat-cfn list
       $ heat-cfn event-list wordpress
