@@ -62,6 +62,8 @@ The above command will capture all traffic on any interface. ...
     -   If the error is that the external network is not visible from the subnet: Check that br-ex has its MAC address set correctly. Check for the error "Device or resource busy" in /var/log/messages - if it's present, you will need to bring down br-ex, set its MAC address to match that of the physical NIC, and bring it back up.
 *   I can create an instance, however, it does not get a DHCP address
     -   See [network troubleshooting](http://docs.openstack.org/trunk/openstack-ops/content/network_troubleshooting.html) for information on sniffing the various steps of the allocation of an IP address by DHCP - verify that your DHCP agent is running, is receiving the DHCPDISCOVER request, and is replying to it - and verify that your host is receiving the DHCP reply.
+    -   Make sure that IPv6 is enabled. Disabling IPv6 will give an error such as "Address family not supported".
+    -   If you are using OpenvSwitch with VLAN, make sure that the network created includes VLAN information.
 
 ...
 
