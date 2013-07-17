@@ -50,7 +50,7 @@ Now go through the usual steps needed to create a new user, service and endpoint
       $ keystone service-create --name heat --type orchestration
       $ keystone service-create --name heat-cfn --type cloudformation
       $ keystone endpoint-create --region RegionOne --service-id ${HEAT_CFN_SERVICE_ID} --publicurl "`[`http://`](http://)`${HEAT_CFN_HOSTNAME}:8000/v1" --adminurl "`[`http://`](http://)`${HEAT_CFN_HOSTNAME}:8000/v1" --internalurl "`[`http://`](http://)`${HEAT_CFN_HOSTNAME}:8000/v1"
-      $ keystone endpoint-create --region RegionOne --service-id ${HEAT_SERVICE_ID} --publicurl "`[`http://`](http://)`${HEAT_HOSTNAME}:8004/v1/%(tenant_id)s" --adminurl "`[`http://`](http://)`${HEAT_HOSTNAME}:8004/v1/%(tenant_id)s --internalurl "`[`http://`](http://)`${HEAT_HOSTNAME}:8004/v1/%(tenant_id)s"
+      $ keystone endpoint-create --region RegionOne --service-id ${HEAT_SERVICE_ID} --publicurl "`[`http://`](http://)`${HEAT_HOSTNAME}:8004/v1/%(tenant_id)s" --adminurl "`[`http://`](http://)`${HEAT_HOSTNAME}:8004/v1/%(tenant_id)s" --internalurl "`[`http://`](http://)`${HEAT_HOSTNAME}:8004/v1/%(tenant_id)s"
 
 You can obtain the tenant ID via the command `keystone tenant-list`, and the service IDs via `keystone service-list`.
 
