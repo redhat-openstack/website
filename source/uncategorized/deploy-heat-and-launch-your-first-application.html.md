@@ -99,7 +99,7 @@ Now you would need to create JEOS image and you can do it through the `heat_jeos
 
 `$ glance image-create --name F17-x86_64-cfntools --disk-format qcow2 --container-format bare --is-public True --copy-from `[`http://fedorapeople.org/groups/heat/prebuilt-jeos-images/F17-x86_64-cfntools.qcow2`](http://fedorapeople.org/groups/heat/prebuilt-jeos-images/F17-x86_64-cfntools.qcow2)
 
-While that is downloading, create a new keypair or upload you public key in nova to make sure you'll be able to login on the VMs using SSH::
+While that is downloading, create a new keypair or upload your public key in nova to make sure you'll be able to login on the VMs using SSH::
 
       $ nova keypair-add --pub_key ~/.ssh/id_rsa.pub userkey
 
