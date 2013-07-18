@@ -127,14 +127,44 @@ You should see something like:
     | tenant_id                 | fc7c56953d114e5db556b927b0268fb2     |
     +---------------------------+--------------------------------------+
 
+The external network needs a set of assignable IP addresses so let's create it now:
+
+     quantum subnet-create extnet --allocation-pool start=192.168.21.10,end=192.168.21.25  --gateway 192.168.21.1 --enable_dhcp=False  192.168.21.0/24 
+
+which should produce results that look like:
+
+    +------------------+----------------------------------------------------+
+    | Field            | Value                                              |
+    +------------------+----------------------------------------------------+
+    | allocation_pools | {"start": "192.168.21.10", "end": "192.168.21.25"} |
+    | cidr             | 192.168.21.0/24                                    |
+    | dns_nameservers  |                                                    |
+    | enable_dhcp      | False                                              |
+    | gateway_ip       | 192.168.21.1                                       |
+    | host_routes      |                                                    |
+    | id               | c4e92c69-1621-4acc-9196-899e2989c1b1               |
+    | ip_version       | 4                                                  |
+    | name             |                                                    |
+    | network_id       | 1c211b3b-dcf9-4731-8827-47d14d59e4ee               |
+    | tenant_id        | fc7c56953d114e5db556b927b0268fb2                   |
+    +------------------+----------------------------------------------------+
+
+### Create the Router
+
+    quantum router-create rdorouter
+
+    quantum router-interface-add 6e6f71df-cca2-4959-bdc5-ff97adf8fc8e 113f6dd2-f751-4eb4-85f1-0a107beb51a8
+
+### Connect Network to Router
+
+    quantum router-gateway-set 6e6f71df-cca2-4959-bdc5-ff97adf8fc8e 1c211b3b-dcf9-4731-8827-47d14d59e4ee 
+
 ## Step 3. Create a Tenant
 
     keystone tenant-create --name rdotest
     keystone user-create --name rdotest --tenant-id 1b45f7d3e99f49ebb764851457a0755b --pass rdotest --enabled true
     keystone user-role-list
-    keystone user-role-add --name Member --tenant-id 1b45f7d3e99f49ebb764851457a0755b --user-id 1d6cc3e03e66484a847ba8b4a6e765f8
     keystone user-role-add --role Member --tenant 1b45f7d3e99f49ebb764851457a0755b --user 1d6cc3e03e66484a847ba8b4a6e765f8
-    keystone user-role-list
     keystone user-role-list --tenant-id 1b45f7d3e99f49ebb764851457a0755b
     cp keystonerc_admin rdotest
     vim rdotest <- new env file for tenant
@@ -184,5 +214,3 @@ You should see something like:
 ### Libvirt Network Trick
 
 ## Conclusion and Next Steps
-
-== Stpe
