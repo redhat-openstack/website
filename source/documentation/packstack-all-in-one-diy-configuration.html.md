@@ -126,3 +126,63 @@ You should see something like:
     | subnets                   | c4e92c69-1621-4acc-9196-899e2989c1b1 |
     | tenant_id                 | fc7c56953d114e5db556b927b0268fb2     |
     +---------------------------+--------------------------------------+
+
+## Step 3. Create a Tenant
+
+    keystone tenant-create --name rdotest
+    keystone user-create --name rdotest --tenant-id 1b45f7d3e99f49ebb764851457a0755b --pass rdotest --enabled true
+    keystone user-role-list
+    keystone user-role-add --name Member --tenant-id 1b45f7d3e99f49ebb764851457a0755b --user-id 1d6cc3e03e66484a847ba8b4a6e765f8
+    keystone user-role-add --role Member --tenant 1b45f7d3e99f49ebb764851457a0755b --user 1d6cc3e03e66484a847ba8b4a6e765f8
+    keystone user-role-list
+    keystone user-role-list --tenant-id 1b45f7d3e99f49ebb764851457a0755b
+    cp keystonerc_admin rdotest
+    vim rdotest <- new env file for tenant
+    source /root/rdotest
+
+## Step 4. Create the Private Network
+
+    source /root/rdotest
+    quantum net-create rdonet
+    quantum subnet-create rdonet 192.168.90.0/24
+    ip netns
+
+## Step 5. Create an Image
+
+    source /root/keystonerc_admin 
+    glance image-create --container-format=bare --disk-format=qcow2 --is-public=True --name=cirros < cirros-0.3.0-x86_64-disk.img 
+    glance image-list
+
+## Step 6. Create and Import SSH Key
+
+## Step 7. Create Security Group Rules
+
+## Step 8. Boot the VM
+
+    source /root/rdotest 
+    nova network-list
+    nova boot --flavor 1 --image 26edf158-8c36-4627-9ce1-7a612065e5a9 gee
+    nova list
+    ip netns
+    ifconfig
+    brctl show
+    ip netns exec qdhcp-51ccbe0f-11fd-4fbf-894a-ac1ee1809b75 iptables-save
+    ip netns exec qdhcp-51ccbe0f-11fd-4fbf-894a-ac1ee1809b75 ifconfig
+
+## Step 9. Allocate a Floating IP
+
+    quantum port-list -- --device_id 2e108e64-2833-4915-8761-c9b2abac8fe8
+    quantum floatingip-create extnet
+    quantum floatingip-associate c8f42335-6832-477a-96d2-e817cb0e389c 2c1f85af-d798-49f6-863f-722b963cf271
+    quantum floatingip-show c8f42335-6832-477a-96d2-e817cb0e389c
+    ip netns exec qrouter-6e6f71df-cca2-4959-bdc5-ff97adf8fc8e ifconfig
+
+## Step 10. Configure External Access
+
+### NAT Trick
+
+### Libvirt Network Trick
+
+## Conclusion and Next Steps
+
+== Stpe
