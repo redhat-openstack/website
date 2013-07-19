@@ -58,6 +58,10 @@ The following script removes only OpenStack specific application data and packag
 
     yum remove -y "*openstack*" "*nova*" "*keystone*" "*glance*" "*cinder*" "*swift*" "*rdo-release*";
 
+    # Optional - makes database cleanup cleaner.
+    # If you do this bit, the database cleanup stuff below is superfluous.
+    # yum remove -u "*mysql*"
+
     ps -ef | grep -i repli | grep swift | awk '{print $2}' | xargs kill ;
 
     rm -rf  /etc/yum.repos.d/packstack_* /var/lib/glance /var/lib/nova /etc/nova /etc/swift \
