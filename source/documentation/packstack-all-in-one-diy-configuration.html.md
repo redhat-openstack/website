@@ -10,6 +10,8 @@ wiki_last_updated: 2014-09-01
 
 # PackStack All-in-One DIY Configuration
 
+__NOTOC__
+
 First draft. Formatting bug fixes in progress. More Checkpoints to come.
 
 If you are interested in getting into the details of how OpenStack Networking with Neutron works and do not mind "getting your hands dirty", configuring the network in an all-in-one Packstack deployment is a great way to get familiar with how it works. In this set of instructions for configuring a working all-in-one with a single private network, a single router with two test VM instances, each step is described as well as checkpoints advising how to verify each step in the logs as well as immediate side-effects in the system.
@@ -1147,3 +1149,5 @@ You should now be able to SSH and ping from your VMs to the outside world!
 While not a production deployment, this exercise provided a useful evaluation system as well as unravelled some of the details and mystery of what Neutron does when it configures networking. Hopefully this will help people using Neutron for the first time, particularly with packstack, get more comfortable with configuring networks as enough background to get started on creating something more like a real production deployment.
 
 A follow up to configuring the all-in-one setup, [Packstack with Multiple Compute nodes](Packstack with Multiple Compute nodes) works through connecting br-ex and br-int to actual networks. Cross node data networks are discussed as well as VLANs. [Dumb Tricks with Neutron](Dumb Tricks with Neutron) explores configurations that are not **quite** in the scope of cloud networking but may inspire solutions to non-obvious integration problems or possibly even techniques that are directly useful!
+
+<Category:Documentation>
