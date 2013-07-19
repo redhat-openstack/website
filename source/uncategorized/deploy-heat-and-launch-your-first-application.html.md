@@ -89,10 +89,6 @@ It is time now to launch your first multi-instance cloud application! There are 
 
 `$ wget `[`https://raw.github.com/openstack/heat-templates/master/cfn/WordPress_Composed_Instances.template`](https://raw.github.com/openstack/heat-templates/master/cfn/WordPress_Composed_Instances.template)
 
-Heat_ can use the templates distributed for [AWS CloudFormation](http://aws.amazon.com/cloudformation/). These expect you to have a well known set of flavor types defined while the default flavors available in OpenStack don't match strictly such a collection. To avoid the need of hack the templates, you can use a helpful script which recreates in OpenStack the same flavors from AWS::
-
-      $ curl `[`https://raw.github.com/openstack/heat/master/tools/nova_create_flavors.sh`](https://raw.github.com/openstack/heat/master/tools/nova_create_flavors.sh)` | bash
-
 Every template also provides you with a list of usable distros and map these into an AMI string, for each arch. You will have to populate Glance with an image matching the AMI string that the template file is expecting to find.
 
 Now you would need to create JEOS image and you can do it through the `heat_jeos.sh` script from : <https://github.com/openstack/heat-templates> . This can be used to create the JEOS images and upload them to Glance but there is also a collection of prebuilt images at: <http://fedorapeople.org/groups/heat/prebuilt-jeos-images/> so I suggest you to just download one from `F17-x86_64-cfntools.qcow2` or `U10-x86_64-cfntools.qcow2` (which are referred by many if not all the templates available in the Heat's repo). To upload the F17 x86_64 image in Glance::
