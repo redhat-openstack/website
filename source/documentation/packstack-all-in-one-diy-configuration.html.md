@@ -538,7 +538,7 @@ Something new there! Take a look at qr-95c9c6a6-cb. You might notice it that it 
 
 ## Step 5. Create an Image
 
-This is run-of-the-mill OpenStack stuff so we will bull through it pretty much like we did when creating the new tenant.
+This is run-of-the-mill OpenStack stuff.
 
     wget http://cloud.fedoraproject.org/fedora-19.x86_64.qcow2
     source rdotest
@@ -601,7 +601,7 @@ More standard fare. Creating an SSH key allows you to have it set in a VM when y
 
 ## Step 7. Create Security Group Rules
 
-Forgetting to create security group rules can cause a great deal of frustration. These rules control the network filter tables that allow or prevent access to and from your VMs. Create them now so you can test access to your new VMs as soon as possible after they are booted.
+Forgetting to create security group rules can cause a great deal of frustration. These rules map to iptables filter table rules that control access to and from your VMs. Creating them now allows you to to test your new VMs as soon as possible after they are booted.
 
     # quantum security-group-rule-create --protocol [protocol type] --direction [ingress|egress] --port-range-min [minimum port range] \
     #    --port-range-max [maximum port range] default
@@ -637,7 +637,19 @@ Forgetting to create security group rules can cause a great deal of frustration.
     | tenant_id         | 1b45f7d3e99f49ebb764851457a0755b     |
     +-------------------+--------------------------------------+
 
+    quantum security-group-rule-list
+    +--------------------------------------+----------------+-----------+----------+------------------+--------------+
+    | id                                   | security_group | direction | protocol | remote_ip_prefix | remote_group |
+    +--------------------------------------+----------------+-----------+----------+------------------+--------------+
+    | 3f7bcde0-81d5-478a-a2e9-1cec4238bd9f | default        | ingress   |          |                  | default      |
+    | 712d2c6c-70a3-4dd1-8255-502a815f3f6b | default        | ingress   |          |                  | default      |
+    | 7f712814-7624-4246-9a31-10414a8ff8bc | default        | ingress   | icmp     |                  |              |
+    | f3188128-9b4d-4947-8998-aa64aea744ff | default        | ingress   | tcp      |                  |              |
+    +--------------------------------------+----------------+-----------+----------+------------------+--------------+
+
 ## Step 8. Boot the VM
+
+For a lot of people, this is justifiably the moment of truth. If you have everything configured properly, your new instance will boot, have a network interface **with** an IP address and, thanks to already having the security group rules in place, you can ping it and SSH to it.
 
     nova boot --flavor 1 --image 26edf158-8c36-4627-9ce1-7a612065e5a9 --key-name rdokey lookit
     +-----------------------------+--------------------------------------+
@@ -668,18 +680,446 @@ Forgetting to create security group rules can cause a great deal of frustration.
     | config_drive                |                                      |
     +-----------------------------+--------------------------------------+
 
-nova list ip netns ifconfig brctl show ip netns exec qdhcp-51ccbe0f-11fd-4fbf-894a-ac1ee1809b75 iptables-save ip netns exec qdhcp-51ccbe0f-11fd-4fbf-894a-ac1ee1809b75 ifconfig
+Depending on the speed of your host system, this can take anywhere from less than one to several minutes. If you are the patient sort, wait around 20-30 seconds and check how things are going.
 
-</pre>
-## Step 9. Allocate a Floating IP
+    nova list
+    +--------------------------------------+-----------+--------+--------------------------------------------+
+    | ID                                   | Name      | Status | Networks                                   |
+    +--------------------------------------+-----------+--------+--------------------------------------------+
+    | 2e108e64-2833-4915-8761-c9b2abac8fe8 | lookit    | ACTIVE | rdonet=192.168.90.2                        |
+    +--------------------------------------+-----------+--------+--------------------------------------------+
 
+Status might be something other than ACTIVE, but basically anything other than ERROR is a good sign. If the output has a value in the "Networks" column and it is consistent with how you configured your private network, things are shiny.
+
+NOW is a great time to take a look around. We are going to take a different approach this time, starting from the VM and working our way back. It is the first time some of these commands appear in this document and we will not be discussing them in depth, but you are encouraged to do a bit of extra research on them as they are valuable parts of your diagnostic and troubleshooting toolbox.
+
+We start with getting information from libvirt about the VM. You will need to be root or use sudo for this part.
+
+    virsh list
+     Id    Name                           State
+    ----------------------------------------------------
+     1     instance-00000001              running
+
+    virsh dumpxml instance-00000001
+    <domain type='qemu' id='1'>
+      <name>instance-00000001</name>
+      <uuid>2e108e64-2833-4915-8761-c9b2abac8fe8</uuid>
+      <memory unit='KiB'>524288</memory>
+      <currentMemory unit='KiB'>524288</currentMemory>
+      <vcpu placement='static'>1</vcpu>
+      <sysinfo type='smbios'>
+        <system>
+          <entry name='manufacturer'>Red Hat Inc.</entry>
+          <entry name='product'>OpenStack Nova</entry>
+          <entry name='version'>2013.1.2-1.el6</entry>
+          <entry name='serial'>e2e26c6a-f0ab-f494-f985-830bb79f69f2</entry>
+          <entry name='uuid'>2e108e64-2833-4915-8761-c9b2abac8fe8</entry>
+        </system>
+      </sysinfo>
+      <os>
+        <type arch='x86_64' machine='rhel6.4.0'>hvm</type>
+        <boot dev='hd'/>
+        <smbios mode='sysinfo'/>
+      </os>
+      <features>
+        <acpi/>
+        <apic/>
+      </features>
+      <clock offset='utc'/>
+      <on_poweroff>destroy</on_poweroff>
+      <on_reboot>restart</on_reboot>
+      <on_crash>destroy</on_crash>
+      <devices>
+        <emulator>/usr/libexec/qemu-kvm</emulator>
+        <disk type='file' device='disk'>
+          <driver name='qemu' type='qcow2' cache='none'/>
+          <source file='/var/lib/nova/instances/2e108e64-2833-4915-8761-c9b2abac8fe8/disk'/>
+          <target dev='vda' bus='virtio'/>
+          <alias name='virtio-disk0'/>
+          <address type='pci' domain='0x0000' bus='0x00' slot='0x04' function='0x0'/>
+        </disk>
+        <controller type='usb' index='0'>
+          <alias name='usb0'/>
+          <address type='pci' domain='0x0000' bus='0x00' slot='0x01' function='0x2'/>
+        </controller>
+        <interface type='bridge'>
+          <mac address='fa:16:3e:1c:0b:36'/>
+          <source bridge='qbr2c1f85af-d7'/>
+          <target dev='tap2c1f85af-d7'/>
+          <model type='virtio'/>
+          <driver name='qemu'/>
+          <alias name='net0'/>
+          <address type='pci' domain='0x0000' bus='0x00' slot='0x03' function='0x0'/>
+        </interface>
+        <serial type='file'>
+          <source path='/var/lib/nova/instances/2e108e64-2833-4915-8761-c9b2abac8fe8/console.log'/>
+          <target port='0'/>
+          <alias name='serial0'/>
+        </serial>
+        <serial type='pty'>
+          <source path='/dev/pts/0'/>
+          <target port='1'/>
+          <alias name='serial1'/>
+        </serial>
+        <console type='file'>
+          <source path='/var/lib/nova/instances/2e108e64-2833-4915-8761-c9b2abac8fe8/console.log'/>
+          <target type='serial' port='0'/>
+          <alias name='serial0'/>
+        </console>
+        <input type='tablet' bus='usb'>
+          <alias name='input0'/>
+        </input>
+        <input type='mouse' bus='ps2'/>
+        <graphics type='vnc' port='5900' autoport='yes' listen='192.168.122.134' keymap='en-us'>
+          <listen type='address' address='192.168.122.134'/>
+        </graphics>
+        <video>
+          <model type='cirrus' vram='9216' heads='1'/>
+          <alias name='video0'/>
+          <address type='pci' domain='0x0000' bus='0x00' slot='0x02' function='0x0'/>
+        </video>
+        <memballoon model='virtio'>
+          <alias name='balloon0'/>
+          <address type='pci' domain='0x0000' bus='0x00' slot='0x05' function='0x0'/>
+        </memballoon>
+      </devices>
+      <seclabel type='dynamic' model='selinux' relabel='yes'>
+        <label>system_u:system_r:svirt_t:s0:c101,c299</label>
+        <imagelabel>system_u:object_r:svirt_image_t:s0:c101,c299</imagelabel>
+      </seclabel>
+    </domain>
+
+*If you pick through that output you may notice that there are some inconsistencies with the previous step. Please ignore them for now. I have been playing around with my demo system and some of the values may have changed.*
+
+Take note of the interface description part:
+
+        <interface type='bridge'>
+          <mac address='fa:16:3e:1c:0b:36'/>
+          <source bridge='qbr2c1f85af-d7'/>
+          <target dev='tap2c1f85af-d7'/>
+          <model type='virtio'/>
+          <driver name='qemu'/>
+          <alias name='net0'/>
+          <address type='pci' domain='0x0000' bus='0x00' slot='0x03' function='0x0'/>
+        </interface>
+
+This indicates that an interface named tap2c1f85af-d7 is created which is the host side of the primary network interface in the VM. tap2c1f85af-d7 is immediately added to the linux bridge named qbr2c1f85af-d7. If we are using Open vSwitch, why does use a linux bridge? If you are familiar with libvirt, you know that it natively supports Open vSwitch bridges. The reason is that the iptables rules manipulated by security groups does not work with Open vSwitch, so Neutron uses a linux bridge/Open vSwitch hybrid bridge to connect VMs to the integration bridge. While we are on the topic of linux bridges:
+
+    brctl show 
+    bridge name         bridge id           STP enabled interfaces
+    qbr2c1f85af-d7      8000.c6b118a3dbc8   no          qvb2c1f85af-d7
+                                                        tap2c1f85af-d7
+
+So there's the aforementioned bridge, qbr2c1f85af-d7 and the tap2c1f85af-d7 interface for the VM. So what about qvb2c1f85af-d7? We can look at it:
+
+    ifconfig qvb2c1f85af-d7
+    qvb2c1f85af-d7 Link encap:Ethernet  HWaddr C6:B1:18:A3:DB:C8  
+              inet6 addr: fe80::c4b1:18ff:fea3:dbc8/64 Scope:Link
+              UP BROADCAST RUNNING PROMISC MULTICAST  MTU:1500  Metric:1
+              RX packets:12447 errors:0 dropped:0 overruns:0 frame:0
+              TX packets:20214 errors:0 dropped:0 overruns:0 carrier:0
+              collisions:0 txqueuelen:1000 
+              RX bytes:2218555 (2.1 MiB)  TX bytes:4101811 (3.9 MiB)
+
+Cool, but that does not tell us much. What about Open vSwitch?
+
+    ovs-vsctl show
+    74613231-71bb-4bc9-81ab-22f2bc04d53a
+        Bridge br-int
+            Port "tapc328b9a9-3c"
+                tag: 1
+                Interface "tapc328b9a9-3c"
+           Port "qvo2c1f85af-d7"
+                tag: 1
+                Interface "qvo2c1f85af-d7"
+            Port br-int
+                Interface br-int
+                    type: internal
+            Port "tap95c9c6a6-cb"
+                tag: 1
+                Interface "tap95c9c6a6-cb"
+       Bridge br-ex
+            Port "tap0f7a05c3-8c"
+                Interface "tap0f7a05c3-8c"
+            Port br-ex
+                Interface br-ex
+                    type: internal
+        ovs_version: "1.10.0"
+
+Mmmm.. close, but wait! We are looking for qvb2c1f85af-d7 and ovs-vsctl does not show an interface of that name, but if you look at the one new interface that is there you will notice that qvo2c1f85af-d7 shares everything but the first three letters. This is because qvb2c1f85af-d7 and qvb2c1f85af-d7 are two ends of *veth pair*. The qvo prefix stands for *quantum veth Open vSwitch side* and the qvb prefix stands for *quantum veth linux bridge side*. Nice! You will also notice that from the virtual machine's VIF right down to interface and port added to the br-int integration bridge, everything shares the same "suffix", e.g. 2c1f85af-d7. Once you have one, you know what to look for in Open vSwitch, the linux bridge list, the interface lists and libvirt! That is the entire chain of connecting a VM to the integration bridge!
+
+But wait! There is more! This is DHCP enabled subnet, so how does that work? Neutron uses dnsmasq for DHCP so looking for it in the process table may tell us something.
+
+    ps ax | grep dnsmasq
+    7490 ?        S      0:04 dnsmasq --no-hosts --no-resolv --strict-order --bind-interfaces --interface=ns-c328b9a9-3c --except-interface=lo --pid-file=/var/lib/quantum/dhcp/51ccbe0f-11fd-4fbf-894a-ac1ee1809b75/pid --dhcp-hostsfile=/var/lib/quantum/dhcp/51ccbe0f-11fd-4fbf-894a-ac1ee1809b75/host --dhcp-optsfile=/var/lib/quantum/dhcp/51ccbe0f-11fd-4fbf-894a-ac1ee1809b75/opts --dhcp-script=/usr/bin/quantum-dhcp-agent-dnsmasq-lease-update --leasefile-ro --dhcp-range=tag0,192.168.90.0,static,120s --conf-file= --domain=openstacklocal
+    7491 ?        S      0:01 dnsmasq --no-hosts --no-resolv --strict-order --bind-interfaces --interface=ns-c328b9a9-3c --except-interface=lo --pid-file=/var/lib/quantum/dhcp/51ccbe0f-11fd-4fbf-894a-ac1ee1809b75/pid --dhcp-hostsfile=/var/lib/quantum/dhcp/51ccbe0f-11fd-4fbf-894a-ac1ee1809b75/host --dhcp-optsfile=/var/lib/quantum/dhcp/51ccbe0f-11fd-4fbf-894a-ac1ee1809b75/opts --dhcp-script=/usr/bin/quantum-dhcp-agent-dnsmasq-lease-update --leasefile-ro --dhcp-range=tag0,192.168.90.0,static,120s --conf-file= --domain=openstacklocal
+
+Dissecting the output, we find clues that tell us how dnsmasq is run and how each instance maps to Neutron. First start with the UUID that appears everywhere: 51ccbe0f-11fd-4fbf-894a-ac1ee1809b75. If we look at the network list:
+
+    quantum net-list
+    +--------------------------------------+---------+-------------------------------------------------------+
+    | id                                   | name    | subnets                                               |
+    +--------------------------------------+---------+-------------------------------------------------------+
+    | 1c211b3b-dcf9-4731-8827-47d14d59e4ee | extnet  | c4e92c69-1621-4acc-9196-899e2989c1b1                  |
+    | 51ccbe0f-11fd-4fbf-894a-ac1ee1809b75 | rdonet  | 113f6dd2-f751-4eb4-85f1-0a107beb51a8 192.168.90.0/24  |
+    +--------------------------------------+---------+-------------------------------------------------------+
+
+There it is! The id for rdonet.
+
+The --dhcp-range obviously matches the subnet, so that makes sense. Now take a look at the --interface option. The interface name is ns-c328b9a9-3c, what happens if run ifconfig?
+
+    ifconfig ns-c328b9a9-3c 
+    ns-c328b9a9-3c: error fetching interface information: Device not found
+
+Okay so it appears not to exist, but leave that alone for a minute and revisit the Open vSwitch database.
+
+    ovs-vsctl show
+    74613231-71bb-4bc9-81ab-22f2bc04d53a
+        Bridge br-int
+            Port "tapc328b9a9-3c"
+                tag: 1
+                Interface "tapc328b9a9-3c"
+            Port "qvo2c1f85af-d7"
+                tag: 1
+                Interface "qvo2c1f85af-d7"
+            Port br-int
+                Interface br-int
+                    type: internal
+            Port "tap95c9c6a6-cb"
+                tag: 1
+                Interface "tap95c9c6a6-cb"
+        Bridge br-ex
+            Port "tap0f7a05c3-8c"
+                Interface "tap0f7a05c3-8c"
+            Port br-ex
+                Interface br-ex
+                    type: internal
+        ovs_version: "1.10.0"
+
+The first entry on the br-int integration bridge is tapc328b9a9-3c which, once again, differs from the interface we are looking for but only by the first three characters. So by Neutron convention we can expect that they are related, but where is ns-c328b9a9-3c? Checking the namespaces gives us a new clue.
+
+    ip netns
+    qrouter-6e6f71df-cca2-4959-bdc5-ff97adf8fc8e
+    qdhcp-51ccbe0f-11fd-4fbf-894a-ac1ee1809b75
+
+A new namespace and it has dhcp **and** the UUID of the network we are looking at in its name!
+
+    ip netns exec qdhcp-51ccbe0f-11fd-4fbf-894a-ac1ee1809b75 ifconfig
+    lo        Link encap:Local Loopback  
+              inet addr:127.0.0.1  Mask:255.0.0.0
+              inet6 addr: ::1/128 Scope:Host
+              UP LOOPBACK RUNNING  MTU:16436  Metric:1
+              RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+              TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+              collisions:0 txqueuelen:0 
+              RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+    ns-c328b9a9-3c Link encap:Ethernet  HWaddr FA:16:3E:73:5C:8E  
+              inet addr:192.168.90.3  Bcast:192.168.90.255  Mask:255.255.255.0
+              inet6 addr: fe80::f816:3eff:fe73:5c8e/64 Scope:Link
+              UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+              RX packets:19567 errors:0 dropped:0 overruns:0 frame:0
+              TX packets:10119 errors:0 dropped:0 overruns:0 carrier:0
+              collisions:0 txqueuelen:1000 
+              RX bytes:4006741 (3.8 MiB)  TX bytes:2005045 (1.9 MiB)
+
+And there it is! It has the proper name and proper subnet and exists in a namespace with name that strong implicates that this is what we are looking for. If it is out here in the namespace and dnsmasq is configured to only use this interface, how does it work? Remember the tapc328b9a9-3c interface registered on the br-int integration bridge in Open vSwitch? ns-c328b9a9-3c and tapc328b9a9-3c are directly linked network interfaces. Packets appearing on one, appear on the other. So in the case of DHCP, the VM sends a DHCP Request packet through its chain of connections to the integration bridge, it is broadcasted to all all associated interfaces on the integration bridge (let's ignore VLANs and they part the play in isolating networks and broadcasts for now). The packet appears on tapc328b9a9-3c which is directly linked to ns-c328b9a9-3c which is what dnsmasq is listening on. The DHCP Reply packet goes back the same way. If you run tcpdump on any of these interfaces, you can watch it happen.
+
+If for some reason your VM did not get its address, then some part of the process of making all of the connections most likely failed. If you are having trouble with DHCP, examining this chain is an excellent place to start.
+
+We can often link the information we get from running ifconfig, etc with information available from Neutron itself. We have already seen how id's are often used in naming. Another example is the Neutron's port list.
+
+    quantum port-list
+    +--------------------------------------+------+-------------------+--------------------------------------------------------------------------------------+
+    | id                                   | name | mac_address       | fixed_ips                                                                            |
+    +--------------------------------------+------+-------------------+--------------------------------------------------------------------------------------+
+    | 2c1f85af-d798-49f6-863f-722b963cf271 |      | fa:16:3e:1c:0b:36 | {"subnet_id": "113f6dd2-f751-4eb4-85f1-0a107beb51a8", "ip_address": "192.168.90.2"}  |
+    | c328b9a9-3cb0-4e46-ab22-7c0d27eb5b2f |      | fa:16:3e:73:5c:8e | {"subnet_id": "113f6dd2-f751-4eb4-85f1-0a107beb51a8", "ip_address": "192.168.90.3"}  |
+    +--------------------------------------+------+-------------------+--------------------------------------------------------------------------------------+
+
+The last entry matches the MAC and IP address of ns-c328b9a9-3c, the first entry matches the MAC address of the VMs interface.
+
+That is a lot to digest, but we have one more thing to do. We want our new VM to have a public IP address associated with it as well.
+
+    nova list
+    +--------------------------------------+---------+--------+------------------------------------+
+    | ID                                   | Name    | Status | Networks                           |
+    +--------------------------------------+---------+--------+------------------------------------+
+    | 2e108e64-2833-4915-8761-c9b2abac8fe8 | lookit  | ACTIVE | rdonet=192.168.90.2                |
+    +--------------------------------------+---------+--------+------------------------------------+
+
+    # quantum port-list -- --device_id [ID for VM]
     quantum port-list -- --device_id 2e108e64-2833-4915-8761-c9b2abac8fe8
-    quantum floatingip-create extnet
-    quantum floatingip-associate c8f42335-6832-477a-96d2-e817cb0e389c 2c1f85af-d798-49f6-863f-722b963cf271
-    quantum floatingip-show c8f42335-6832-477a-96d2-e817cb0e389c
-    ip netns exec qrouter-6e6f71df-cca2-4959-bdc5-ff97adf8fc8e ifconfig
+    +--------------------------------------+------+-------------------+-------------------------------------------------------------------------------------+
+    | id                                   | name | mac_address       | fixed_ips                                                                           |
+    +--------------------------------------+------+-------------------+-------------------------------------------------------------------------------------+
+    | 2c1f85af-d798-49f6-863f-722b963cf271 |      | fa:16:3e:1c:0b:36 | {"subnet_id": "113f6dd2-f751-4eb4-85f1-0a107beb51a8", "ip_address": "192.168.90.2"} |
+    +--------------------------------------+------+-------------------+-------------------------------------------------------------------------------------+
 
-## Step 10. Configure External Access
+    # quantum floatingip-create [network name]
+    quantum floatingip-create extnet
+    +---------------------+--------------------------------------+
+    | Field               | Value                                |
+    +---------------------+--------------------------------------+
+    | fixed_ip_address    |                                      |
+    | floating_ip_address | 192.168.21.11                        |
+    | floating_network_id | 1c211b3b-dcf9-4731-8827-47d14d59e4ee |
+    | id                  | c8f42335-6832-477a-96d2-e817cb0e389c |
+    | port_id             |                                      |
+    | router_id           |                                      |
+    | tenant_id           | 1b45f7d3e99f49ebb764851457a0755b     |
+    +---------------------+--------------------------------------+
+
+    # quantum floatingip-associate [floating IP id] [port id]
+    quantum floatingip-associate c8f42335-6832-477a-96d2-e817cb0e389c 2c1f85af-d798-49f6-863f-722b963cf271
+
+    # quantum floatingip-show [floating IP id]
+    quantum floatingip-show c8f42335-6832-477a-96d2-e817cb0e389c
+    +---------------------+--------------------------------------+
+    | Field               | Value                                |
+    +---------------------+--------------------------------------+
+    | fixed_ip_address    | 192.168.90.2                         |
+    | floating_ip_address | 192.168.21.11                        |
+    | floating_network_id | 1c211b3b-dcf9-4731-8827-47d14d59e4ee |
+    | id                  | c8f42335-6832-477a-96d2-e817cb0e389c |
+    | port_id             | 2c1f85af-d798-49f6-863f-722b963cf271 |
+    | router_id           | 6e6f71df-cca2-4959-bdc5-ff97adf8fc8e |
+    | tenant_id           | 1b45f7d3e99f49ebb764851457a0755b     |
+    +---------------------+--------------------------------------+
+
+    nova list
+    +--------------------------------------+------+--------+------------------------------------+
+    | ID                                   | Name | Status | Networks                           |
+    +--------------------------------------+------+--------+------------------------------------+
+    | 2e108e64-2833-4915-8761-c9b2abac8fe8 | gee  | ACTIVE | rdonet=192.168.90.2, 192.168.21.11 |
+    +--------------------------------------+------+--------+------------------------------------+
+
+As you might come to except, when you do things with the network there are discernable changes! Start with Open vSwitch
+
+    ovs-vsctl show
+    74613231-71bb-4bc9-81ab-22f2bc04d53a
+        Bridge br-int
+            Port "tapc328b9a9-3c"
+                tag: 1
+                Interface "tapc328b9a9-3c"
+            Port "qvo2c1f85af-d7"
+                tag: 1
+                Interface "qvo2c1f85af-d7"
+            Port br-int
+                Interface br-int
+                    type: internal
+            Port "tap95c9c6a6-cb"
+                tag: 1
+                Interface "tap95c9c6a6-cb"
+        Bridge br-ex
+            Port "tap0f7a05c3-8c"
+                Interface "tap0f7a05c3-8c"
+            Port br-ex
+                Interface br-ex
+                    type: internal
+        ovs_version: "1.10.0"
+
+Nothing new there! The IP address might be a clue. It is reasonable to expect that an interface with an IP from a private subnet can only be found in a VM, but this is a public address so there should be an interface with it somewhere in the system. If you run ifconfig with no arguments and grep for the address, you will not find it there either.
+
+    ifconfig | grep 192.168.21.11 | wc -l
+    0
+
+This is an address associated with a network that *routes* to the external network, so check the router namespace.
+
+    ip netns
+    qrouter-6e6f71df-cca2-4959-bdc5-ff97adf8fc8e
+    qdhcp-51ccbe0f-11fd-4fbf-894a-ac1ee1809b75
+
+    ip netns exec qrouter-6e6f71df-cca2-4959-bdc5-ff97adf8fc8e ifconfig
+    lo        Link encap:Local Loopback  
+              inet addr:127.0.0.1  Mask:255.0.0.0
+              inet6 addr: ::1/128 Scope:Host
+              UP LOOPBACK RUNNING  MTU:16436  Metric:1
+              RX packets:44 errors:0 dropped:0 overruns:0 frame:0
+              TX packets:44 errors:0 dropped:0 overruns:0 carrier:0
+              collisions:0 txqueuelen:0 
+              RX bytes:4554 (4.4 KiB)  TX bytes:4554 (4.4 KiB)
+
+    qg-0f7a05c3-8c Link encap:Ethernet  HWaddr FA:16:3E:56:BB:E8  
+              inet addr:192.168.21.10  Bcast:192.168.21.255  Mask:255.255.255.0
+              inet6 addr: fe80::f816:3eff:fe56:bbe8/64 Scope:Link
+              UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+              RX packets:1082 errors:0 dropped:0 overruns:0 frame:0
+              TX packets:12 errors:0 dropped:0 overruns:0 carrier:0
+              collisions:0 txqueuelen:1000 
+              RX bytes:71484 (69.8 KiB)  TX bytes:720 (720.0 b)
+
+    qr-95c9c6a6-cb Link encap:Ethernet  HWaddr FA:16:3E:32:96:1B  
+              inet addr:192.168.90.1  Bcast:192.168.90.255  Mask:255.255.255.0
+              inet6 addr: fe80::f816:3eff:fe32:961b/64 Scope:Link
+              UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+              RX packets:2105 errors:0 dropped:0 overruns:0 frame:0
+              TX packets:9 errors:0 dropped:0 overruns:0 carrier:0
+              collisions:0 txqueuelen:1000 
+              RX bytes:424450 (414.5 KiB)  TX bytes:594 (594.0 b)
+
+Nope, it is not there either. Sorry, wild goose chase! You can look for an interface all day, but you won't find it. It does not actually exist. Associating a floating IP address with a VM creates a *mapping* from one to the other and produces network address translation (NAT) rules to do source and destination translation on communications on the external network. Since this is a routing function, examine the iptables in the router namespace.
+
+    ip netns exec qrouter-6e6f71df-cca2-4959-bdc5-ff97adf8fc8e iptables-save
+    # Generated by iptables-save v1.4.7 on Fri Jul 19 14:48:09 2013
+    *filter
+    :INPUT ACCEPT [1403:249136]
+    :FORWARD ACCEPT [0:0]
+    :OUTPUT ACCEPT [0:0]
+    :quantum-filter-top - [0:0]
+    :quantum-l3-agent-FORWARD - [0:0]
+    :quantum-l3-agent-INPUT - [0:0]
+    :quantum-l3-agent-OUTPUT - [0:0]
+    :quantum-l3-agent-local - [0:0]
+    -A INPUT -j quantum-l3-agent-INPUT 
+    -A FORWARD -j quantum-filter-top 
+    -A FORWARD -j quantum-l3-agent-FORWARD 
+    -A OUTPUT -j quantum-filter-top 
+    -A OUTPUT -j quantum-l3-agent-OUTPUT 
+    -A quantum-filter-top -j quantum-l3-agent-local 
+    -A quantum-l3-agent-INPUT -d 127.0.0.1/32 -p tcp -m tcp --dport 9697 -j ACCEPT 
+    COMMIT
+    # Completed on Fri Jul 19 14:48:09 2013
+    # Generated by iptables-save v1.4.7 on Fri Jul 19 14:48:09 2013
+    *nat
+    :PREROUTING ACCEPT [740:227920]
+    :POSTROUTING ACCEPT [0:0]
+    :OUTPUT ACCEPT [0:0]
+    :quantum-l3-agent-OUTPUT - [0:0]
+    :quantum-l3-agent-POSTROUTING - [0:0]
+    :quantum-l3-agent-PREROUTING - [0:0]
+    :quantum-l3-agent-float-snat - [0:0]
+    :quantum-l3-agent-snat - [0:0]
+    :quantum-postrouting-bottom - [0:0]
+    -A PREROUTING -j quantum-l3-agent-PREROUTING 
+    -A POSTROUTING -j quantum-l3-agent-POSTROUTING 
+    -A POSTROUTING -j quantum-postrouting-bottom 
+    -A OUTPUT -j quantum-l3-agent-OUTPUT 
+    1 => -A quantum-l3-agent-OUTPUT -d 192.168.21.11/32 -j DNAT --to-destination 192.168.90.2   
+    2 => -A quantum-l3-agent-POSTROUTING ! -i qg-0f7a05c3-8c ! -o qg-0f7a05c3-8c -m conntrack ! --ctstate DNAT -j ACCEPT 
+    -A quantum-l3-agent-PREROUTING -d 169.254.169.254/32 -p tcp -m tcp --dport 80 -j REDIRECT --to-ports 9697 
+    3 => -A quantum-l3-agent-PREROUTING -d 192.168.21.11/32 -j DNAT --to-destination 192.168.90.2 
+    4 => -A quantum-l3-agent-float-snat -s 192.168.90.2/32 -j SNAT --to-source 192.168.21.11 
+    -A quantum-l3-agent-snat -j quantum-l3-agent-float-snat 
+    5 => -A quantum-l3-agent-snat -s 192.168.90.0/24 -j SNAT --to-source 192.168.21.10 
+    -A quantum-postrouting-bottom -j quantum-l3-agent-snat 
+    COMMIT
+    # Completed on Fri Jul 19 14:48:09 2013
+    # Generated by iptables-save v1.4.7 on Fri Jul 19 14:48:09 2013
+    *mangle
+    :PREROUTING ACCEPT [12277:1946878]
+    :INPUT ACCEPT [9346:1658758]
+    :FORWARD ACCEPT [2781:276800]
+    :OUTPUT ACCEPT [140:11986]
+    :POSTROUTING ACCEPT [2921:288786]
+    COMMIT
+    # Completed on Fri Jul 19 14:48:09 2013
+
+I messed up the output a little bit and prefixed the relevant lines with '=>' to highlight the ones worth mentioning. The first highlighted rule converts packets that are at the end of the rule chain that addressed to 192.168.21.11, the floating IP address allocated to lookit, and translates it 192.168.90.2, the private IP. The regular network rules will take care of the rest after that. The second highlighted rule allows any communication between any interface other than the routers gateway. The third highlighted rule translates the floating IP for lookit to the private IP before routing rules are applied. The fourth rule translates the source address for packets coming from lookit, but going out onto the external network to the floating IP address so the return path is to a publicly accessible address. Finally the fifth rule translates the source address from ANY VM on the same subnet as lookit to have a publicly addressible return path. The implication here is that a VM does not need a floating IP to communicate with the public network, just the other way around.
+
+You could say that a lot goes on when you boot a VM!
+
+## Step 10. Using that Public Network
 
 ### NAT Trick
 
