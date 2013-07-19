@@ -10,7 +10,7 @@ wiki_last_updated: 2014-09-01
 
 # PackStack All-in-One DIY Configuration
 
-First draft. Formatting bug fixes in progress.
+First draft. Formatting bug fixes in progress. More Checkpoints to come.
 
 If you are interested in getting into the details of how OpenStack Networking with Neutron works and do not mind "getting your hands dirty", configuring the network in an all-in-one Packstack deployment is a great way to get familiar with how it works. In this set of instructions for configuring a working all-in-one with a single private network, a single router with two test VM instances, each step is described as well as checkpoints advising how to verify each step in the logs as well as immediate side-effects in the system.
 
@@ -30,7 +30,7 @@ Running OpenStack commands are described in three parts:
 *   An example line.
 *   Example output.
 
-***packstack*' is the exception to this convention. The general form of the command is not relevant and the volume of output is quite large.**
+'' **packstack** is the exception to this convention. The general form of the command is not relevant and the volume of output is quite large.''
 
 #### Non-OpenStack Commands
 
@@ -57,7 +57,7 @@ If you have available screen real estate, you may want to tail the log files in 
 
 ### Before Starting
 
-... some words of encouragement! Not many people would argue that configuring Neutron the first time is intuitive or easy. However, the OpenStack community has endeavored to produce tools for software defined networking (SDN) that do not add unnecessary complexity. That being said, SDN \*is\* meant to tackle difficult problems and, like any tool that can handle an enormous variety of problems, SDN solutions often seem more complex than what is necessary for a simple single network deployment. If you run packstack and try to piece together instructions to setup a working network from the information available on the Internet and end up feeling that everything is magic and shrouded in mystery, you are not alone. If you are familiar with Nova Networking, the precursor to Quantum/Neutron, and you have tried and failed to get a Neutron network up and running, you may even be of the opinion that it is broken. At this point, you are probably wondering where those "words of encouragement" are... well, here they are: once you see what Neutron does and someone dispells some of the mystery for you, managing networks with Neutron is going to be \*easy\*. Furthermore, as you progress to creating more complicated network topologies, the abstractions that Neutron gives you to work with will readily map to the problem domain and feel quite natural. Follow up guides that describe deploying multiple compute nodes and experimenting with weird network integration trick should convince you that this learning curve is well worth it.
+* some words of encouragement! Not many people would argue that configuring Neutron the first time is intuitive or easy. However, the OpenStack community has endeavored to produce tools for software defined networking (SDN) that do not add unnecessary complexity. That being said, SDN \*is\* meant to tackle difficult problems and, like any tool that can handle an enormous variety of problems, SDN solutions often seem more complex than what is necessary for a simple single network deployment. If you run packstack and try to piece together instructions to setup a working network from the information available on the Internet and end up feeling that everything is magic and shrouded in mystery, you are not alone. If you are familiar with Nova Networking, the precursor to Quantum/Neutron, and you have tried and failed to get a Neutron network up and running, you may even be of the opinion that it is broken. At this point, you are probably wondering where those "words of encouragement" are... well, here they are: once you see what Neutron does and someone dispells some of the mystery for you, managing networks with Neutron is going to be \*easy\*. Furthermore, as you progress to creating more complicated network topologies, the abstractions that Neutron gives you to work with will readily map to the problem domain and feel quite natural. Follow up guides that describe deploying multiple compute nodes and experimenting with weird network integration trick should convince you that this learning curve is well worth it.
 
 Upcoming updates to Packstack all-in-one will actually take of these steps for you in the future. When that day comes, you can either walk through these steps and create separate networks, etc. or you run Packstack without the "--all-in-one" option to pick the deployment options interactively.
 
@@ -70,7 +70,7 @@ If you have not already done so, run through the steps on the [Quickstart](Quick
 
 If this is a relatively clean system that has never had OpenStack installed on it, you will probably see a few network devices for the first command. They will most likely have names like "eth0", "lo" or "p1p1". You may have a "virbr0" as well. In any case, there might be 4 or 5 interfaces displayed. If you like the short, tidyness of this output with all of the nice short names, assigned IP addresses, etc. and take comfort in that kind of thing: take a good last, fond look. If all goes well, this is the last time it will be like that. In contrast, ` ip netns ` probably displays nothing or an error.
 
-Now, let's setup our baseline OpenStack install with Neutron enabled
+Now, let's setup our baseline OpenStack install with Neutron enabled.
 
     packstack --allinone --os-quantum-install=y
 
@@ -90,7 +90,7 @@ Using your favorite method, make sure that the l3 and dhcp agents are still runn
 </div>
 Network namespaces create new "virtual" network environments that are isolated from each other. Each network namespace has its own network devices, IP addresses, routing tables, ports, etc.. Neutron uses network namespaces to isolate network devices (including VIFs), DHCP and routing services for different networks and tenants. Neutron also uses something called a *veth pair*. A veth pair is two ethernet interfaces connected back-to-back and simplifies connecting things together that cannot be connected directly. We examine how veth pairs and namespaces are used we make our way through the steps. For now it is important to verify that Neutron was configured to enable these features. Your version of Packstack may or may not have modified the configuration files properly. It is better to be safe and check them before proceeding. Since we are modifying configuration files, please be careful not to accidentally modify configuration. You will need root or sudo access to modify them. You could use your favorite text editor to modify the files, but we'll use the openstack-config tool for simplicity.
 
-    #openstack-config --set [config file name] [config file section] [config variable name] [value]
+    # openstack-config --set [config file name] [config file section] [config variable name] [value]
     openstack-config --set /etc/quantum/dhcp_agent.ini DEFAULT ovs_use_veth True
     openstack-config --set /etc/quantum/l3_agent.ini DEFAULT ovs_use_veth True
 
