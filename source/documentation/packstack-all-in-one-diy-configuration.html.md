@@ -45,7 +45,7 @@ Some steps include one or more sets of suggestions for optional steps aimed at v
 
 #### Checkpoint: OpenStack Guru Health Check
 
-<div style="background-color:#f0f0f0; padding-left:2em">
+<div style="background-color:#e0e0f0; padding-left:2em;padding-right:2em;padding-top:5px;padding-bottom:5px;">
 Visually confirm your pants are not on fire. Evident combustion indicates a time critical condition. Due to potential time zone variability and general apathy of core developers and PTLs, seeking assistance on the mailing lists or IRC is not recommended. Suggested courses of action include: immediate immersion in a NON-flammable fluid; or immediate cessation of forward locomation, adoption of a prone position followed by vigorous twisting of the body on a NON-flammable surface. Vocalizations including expletives, entreaties for immediate assistance from nearby entities corporeal or otherwise, or long strings of vowels are recommended, but optional.
 
 </div>
@@ -84,7 +84,7 @@ It is recommended that you run Packstack from a regular user account and not as 
 
 ### Checkpoint: Check Service Health and Logs
 
-<div style="background-color:#f0f0f0; padding-left:2em">
+<div style="background-color:#e0e0f0; padding-left:2em;padding-right:2em;padding-top:5px;padding-bottom:5px;">
 Using your favorite method, make sure that the l3 and dhcp agents are still running after restarting. Now is a good time to look for unusual errors in your log files. Any of the the log files in the /var/log/quantum directory are relevant, but the dhcp-agent.log, l3-agent.log, and openvswitch-agent.log files are directly relevant to this stage. `grep -i error *.log` works well, but be mindful of the timestamps. Errors that were logged before starting these steps are not necessarily relevant.
 
 </div>
@@ -96,7 +96,7 @@ Network namespaces create new "virtual" network environments that are isolated f
 
 ### Checkpoint: Other Namespace Related Configuration
 
-<div style="background-color:#f0f0f0; padding-left:2em">
+<div style="background-color:#e0e0f0; padding-left:2em;padding-right:2em;padding-top:5px;padding-bottom:5px;">
 Packstack should have configured the other namespace related variables, but if you want to see for yourself check the `DEFAULT` section in `dhcp_agent.ini` for `enable_isolated_metadata` and `use_namespaces`, both of which should be `True`. You can also verify that `interface_driver` is `quantum.agent.linux.interface.OVSInterfaceDriver`. In `l3_agent.ini`, check that `use_namespaces` is `True` and `external_network_bridge` is `br-ex` and `interface_driver` is `quantum.agent.linux.interface.OVSInterfaceDriver`.
 
 </div>
@@ -112,7 +112,7 @@ You need to restart the services to pick up the new settings so run:
 
 ### Checkpoint: Check Service Health and Logs
 
-<div style="background-color:#f0f0f0; padding-left:2em">
+<div style="background-color:#e0e0f0; padding-left:2em;padding-right:2em;padding-top:5px;padding-bottom:5px;">
 Using your favorite method, make sure that the L3 and dhcp agents are still running after restarting. Now is a good time to look for unusual errors in your log files. Any of the the log files in the /var/log/quantum directory are relevant, but the dhcp-agent.log, l3-agent.log, and openvswitch-agent.log files are directly relevant to this stage. `grep -i error *.log` works well, but be mindful of the timestamps. Errors that were logged before starting these steps are not necessarily relevant.
 
 </div>
