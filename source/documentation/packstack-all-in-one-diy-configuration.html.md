@@ -10,7 +10,7 @@ wiki_last_updated: 2014-09-01
 
 # PackStack All-in-One DIY Configuration
 
-In progress.
+First draft. Formatting bug fixes in progress.
 
 If you are interested in getting into the details of how OpenStack Networking with Neutron works and do not mind "getting your hands dirty", configuring the network in an all-in-one Packstack deployment is a great way to get familiar with how it works. In this set of instructions for configuring a working all-in-one with a single private network, a single router with two test VM instances, each step is described as well as checkpoints advising how to verify each step in the logs as well as immediate side-effects in the system.
 
@@ -1119,10 +1119,31 @@ I messed up the output a little bit and prefixed the relevant lines with '=>' to
 
 You could say that a lot goes on when you boot a VM!
 
-## Step 10. Using that Public Network
+## Step 10. Getting VMs to Communicate with the Outside World
+
+Chances are you want to be able to do things with these VMs, like communicate with other hosts, etc. While we technically have followed the steps of setting up external communications, we have only been dealing with an external network as a conceptual entity. Unfortunately getting access to the public network we have defined as if it were an actual external network is problematic. Making it so those VMs can communicate with the outside world through that public network is straighforward, if a little hackish.
 
 ### NAT Trick
 
-### Libvirt Network Trick
+To allow communications to occur between your Neutron public network and your host network as well as all of the networks outside of the host network, you basically need to configure a NAT based router. Some simple rules are all that is required. However, first verify that IP forwarding is actually enabled.
+
+    sysctl -w net.ipv4.ip_forward = 1
+
+To make it persistent, edit the /etc/sysctl.conf file and change it there as well.
+
+Now add iptables rules to allow forwarding in and out of the br-ex interface.
+
+    iptables -I FORWARD -i br-ex -j ACCEPT
+    iptables -I FORWARD -o br-ex -j ACCEPT
+
+Finally, to ensure a valid reverse-path, add a MASQUERADE rule so that any connections from the Neutron public network will appear as though they came from the host system.
+
+    iptables -t NAT -I POSTROUTING -s 192.168.21.0/24 ! -d 192.168.21.0/24 -j MASQUERADE
+
+You should now be able to SSH and ping from your VMs to the outside world!
 
 ## Conclusion and Next Steps
+
+While not a production deployment, this exercise provided a useful evaluation system as well as unravelled some of the details and mystery of what Neutron does when it configures networking. Hopefully this will help people using Neutron for the first time, particularly with packstack, get more comfortable with configuring networks as enough background to get started on creating something more like a real production deployment.
+
+A follow up to configuring the all-in-one setup, [Packstack with Multiple Compute nodes](Packstack with Multiple Compute nodes) works through connecting br-ex and br-int to actual networks. Cross node data networks are discussed as well as VLANs. [Dumb Tricks with Neutron](Dumb Tricks with Neutron) explores configurations that are not **quite** in the scope of cloud networking but may inspire solutions to non-obvious integration problems or possibly even techniques that are directly useful!
