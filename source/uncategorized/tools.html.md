@@ -8,6 +8,8 @@ wiki_last_updated: 2013-07-22
 
 # Tools
 
+## Neutron (Quantum) Cleanup Tools
+
 The following shell functions can be added to your ~/.bashrc to provide some tools to clean up Neutron (Quantum) objects:
 
     function purge_port()
