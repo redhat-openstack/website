@@ -60,7 +60,7 @@ The following script removes only OpenStack specific application data and packag
 
     # Optional - makes database cleanup cleaner.
     # If you do this bit, the database cleanup stuff below is superfluous.
-    # yum remove -u "*mysql*"
+    # yum remove -y "*mysql*"
 
     ps -ef | grep -i repli | grep swift | awk '{print $2}' | xargs kill ;
 
