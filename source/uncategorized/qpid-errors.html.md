@@ -14,7 +14,7 @@ If you see something like the following message in your system log when the qpid
 
     Jul 22 15:39:08 localhost qpidd[8631]: 2013-07-22 15:39:08 [Broker] critical Unexpected error: Error in configuration file /etc/qpidd.conf: Bad argument: |cluster-mechanism=DIGEST-MD5 ANONYMOUS|
 
-Replace 'cluster-mechanism' with 'ha-mechanism' in /etc/qpidd.conf
+Replace 'cluster-mechanism' with 'ha-mechanism' in /etc/qpidd.conf then restart the qpidd service, or reboot.
 
 ## sasldb errors
 
