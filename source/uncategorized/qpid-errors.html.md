@@ -8,9 +8,17 @@ wiki_last_updated: 2015-03-13
 
 # Qpid errors
 
-After several uninstall/reinstall cycles, certain parts of the system can get broken. One of these appears to be qpidd.
+## Config file errors
 
-In particular, as discussed in [forum thread](http://openstack.redhat.com/forum/discussion/293/error-on-openstack-status#Item_5|this), the qpid user database may become corrupted. This may be evidenced by error messages such as:
+If you see something like the following message in your system log when the qpidd service attempts to start:
+
+    Jul 22 15:39:08 localhost qpidd[8631]: 2013-07-22 15:39:08 [Broker] critical Unexpected error: Error in configuration file /etc/qpidd.conf: Bad argument: |cluster-mechanism=DIGEST-MD5 ANONYMOUS|
+
+Replace 'cluster-mechanism' with 'ha-mechanism' in /etc/qpidd.conf
+
+## sasldb errors
+
+As discussed in [forum thread](http://openstack.redhat.com/forum/discussion/293/error-on-openstack-status#Item_5|this), the qpid user database may become corrupted. This may be evidenced by error messages such as:
 
          qpidd: unable to open Berkeley db /var/lib/qpidd/qpidd.sasldb: No such file or directory
 
