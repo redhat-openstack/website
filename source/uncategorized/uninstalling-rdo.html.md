@@ -75,9 +75,9 @@ The following script removes only OpenStack specific application data and packag
     FLUSH PRIVILEGES;
     EOF
 
+    # mysql cleanup
     /usr/bin/mysqld_safe --init-file=/tmp/set_mysql_root_pwd &
     rm /tmp/set_mysql_root_pwd
-
     mysql -uroot -pMyNewPass -e "drop database nova; drop database cinder; drop database keystone; drop database glance;"
 
     umount /srv/node/device* ;
