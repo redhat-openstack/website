@@ -30,6 +30,7 @@ If you've come across useful tips for resolving issues on OpenStack, or if you'r
 *   [Frequently Asked Questions](Frequently Asked Questions)
 *   [Troubleshooting](Troubleshooting)
 *   [Case studies](Case studies)
+*   [Tools](Tools)
 
 </div>
 <div class="span4">
