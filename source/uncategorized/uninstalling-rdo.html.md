@@ -66,7 +66,7 @@ The following script removes only OpenStack specific application data and packag
 
     rm -rf  /etc/yum.repos.d/packstack_* /var/lib/glance /var/lib/nova /etc/nova /etc/swift \
     /srv/node/device*/* /var/lib/cinder/ /etc/rsync.d/frag* \
-    /var/cache/swift /var/log/keystone ;
+    /var/cache/swift /var/log/keystone /tmp/keystone-signing-nova ;
 
     # Ensure there is a root user and that we know the password
     service mysql stop
