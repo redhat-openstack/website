@@ -52,3 +52,12 @@ The following shell functions can be added to your ~/.bashrc to provide some too
 ## Uninstall
 
 See [Uninstalling_RDO](Uninstalling_RDO)
+
+## Reinstalling
+
+Installing RDO all at one go, from the <http://openstack.redhat.com/Quickstart> instructions:
+
+    #!/bin/sh
+    sudo yum install -y http://rdo.fedorapeople.org/openstack/openstack-grizzly/rdo-release-grizzly.rpm
+    sudo yum install -y openstack-packstack
+    packstack --allinone --os-quantum-install=n
