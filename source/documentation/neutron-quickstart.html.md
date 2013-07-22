@@ -61,7 +61,7 @@ Once the process is complete, you can log in to the OpenStack web interface "Hor
 
 ## Next Steps
 
-Now that your single node OpenStack instance is up and running, you can read on about [running an instance](running an instance), configuring a [floating IP range](floating IP range), or about expanding your installation by [adding a compute node](adding a compute node).
+Now that your single node OpenStack instance is up and running, you can read on about [running an instance with Neutron](running an instance with Neutron), configuring a [floating IP range](floating IP range), or about expanding your installation by [adding a compute node](adding a compute node).
 
 </div>
 </div>
