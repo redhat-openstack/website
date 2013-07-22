@@ -48,3 +48,7 @@ The following shell functions can be added to your ~/.bashrc to provide some too
             quantum net-delete ${net}
         done
     }
+
+## Uninstall
+
+See [Uninstalling_RDO](Uninstalling_RDO)
