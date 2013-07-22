@@ -55,7 +55,7 @@ See [Uninstalling_RDO](Uninstalling_RDO)
 
 ## Reinstalling
 
-Installing RDO all at one go, from the <http://openstack.redhat.com/Quickstart> instructions:
+Installing RDO all at one go, from the [Quickstart](http://openstack.redhat.com/Quickstart) instructions:
 
     #!/bin/sh
     sudo yum install -y http://rdo.fedorapeople.org/openstack/openstack-grizzly/rdo-release-grizzly.rpm
