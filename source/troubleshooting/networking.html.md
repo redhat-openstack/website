@@ -49,9 +49,15 @@ The above command will capture all traffic on any interface. ...
 ## Common issues
 
 *   I can create an instance, but cannot SSH or ping it
-    -   **Each of the following needs a description and some commands you can run to check**
     -   Verify that traffic to port 22 and ICMP traffic of any type (-1:-1) is allowed in the default security group
-    -   Verify that you can ping and SSH the host where the instance is running
+
+In the dashboard, in the Project tab, under "Access and Security", check the rules which are active on the security group you are using with your instances (typically "default"). You should see a rule allowing traffic to port 22 over tcp from all hosts, and a port enabling icmp traffic of all types (-1). If you don't, create the necessary rules, and try again.
+
+*   -   Verify that you can ping and SSH the host where the instance is running
+
+From the host where you are attempting to connect to your instance, verify that network traffic is being correctly routed to the compute node in question.
+
+*   -   Check that you can ping an instance from inside its network namespace
     -   Ensure that the router is correctly created, that the internal subnet and external subnet are attached to it, and that it can route traffic from your IP to the instance IP
     -   Check the OVS routing table to ensure that it is correctly routing traffic from internal to external
     -   Verify that br-ex is associated with the physical NIC, and that the virtual router can route traffic to the IP address of the host
