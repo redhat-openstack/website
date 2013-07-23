@@ -31,7 +31,7 @@ The "Import Keypair" option will prompt you to provide a name and a public key t
 
 ### Step 4: Launch the instance.
 
-In the main portion of the screen, under the "Images" heading, click the "Launch" button for the "cirros" image. In the resulting dialog, provide a name in the "Instance Name" field. Under the "Network" tab add the "private" network and click the "Launch" button.
+In the main portion of the screen, under the "Images" heading, click the "Launch" button for the "cirros" image. In the resulting dialog, provide a name in the "Instance Name" field. Under the "Network" tab, add the "private" network and click the "Launch" button.
 
 ### Step 5: Associate Floating IP
 
