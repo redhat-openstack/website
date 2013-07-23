@@ -43,4 +43,4 @@ For additional details, please read [how to set a floating IP range](Floating IP
 
 Using the key pair file from step 3, ssh into the running vm using its floating ip address:
 
-    $ ssh -l root -i my_key_pair.pem floating_ip_address
+    $ ssh -l cirros -i my_key_pair.pem floating_ip_address
