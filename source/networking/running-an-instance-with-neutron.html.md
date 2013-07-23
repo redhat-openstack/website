@@ -35,7 +35,7 @@ In the main portion of the screen, under the "Images" heading, click the "Launch
 
 ### Step 5: Associate Floating IP
 
-In the main portion of the screen, under the "Instances" heading, click the "More" button, followed by the "Associate Floating IP" link for the instance you just launched. You should see both public and private IP addresses listed in the "IP Address" column for your instance.
+In the main portion of the screen, under the "Instances" heading, click the "More" button, followed by the "Associate Floating IP" link for the instance you just launched. Click the "+" by the "IP Address" field. Select "Allocate IP". Now, select "Associate". You should see both public and private IP addresses listed in the "IP Address" column for your instance.
 
 For additional details, please read [how to set a floating IP range](Floating IP range).
 
