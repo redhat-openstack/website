@@ -82,12 +82,14 @@ or simply:
 
 It is recommended that you run Packstack from a regular user account and not as 'root'. You will be prompted for the root account password when Packstack needs it. The installation may take awhile. Once completed, Packstack may have installed kernel updates requiring a reboot. These updates are critical so it is best that you do not skip the reboot step. It's okay, we'll wait for you at Step 1.
 
+    reboot
+
 ## Step 1. Verify and Modify Neutron Configuration
 
 ### Checkpoint: Check Service Health and Logs
 
 <div style="background-color:#e0e0f0; padding-left:2em;padding-right:2em;padding-top:5px;padding-bottom:5px;">
-Using your favorite method, make sure that the l3 and dhcp agents are still running after restarting. Now is a good time to look for unusual errors in your log files. Any of the the log files in the /var/log/quantum directory are relevant, but the dhcp-agent.log, l3-agent.log, and openvswitch-agent.log files are directly relevant to this stage. `grep -i error *.log` works well, but be mindful of the timestamps. Errors that were logged before starting these steps are not necessarily relevant.
+Using your favorite method, make sure that the l3 and dhcp agents are still running after rebooting. Now is a good time to look for unusual errors in your log files. Any of the the log files in the /var/log/quantum directory are relevant, but the dhcp-agent.log, l3-agent.log, and openvswitch-agent.log files are directly relevant to this stage. `grep -i error *.log` works well, but be mindful of the timestamps. Errors that were logged before starting these steps are not necessarily relevant.
 
 </div>
 Network namespaces create new "virtual" network environments that are isolated from each other. Each network namespace has its own network devices, IP addresses, routing tables, ports, etc.. Neutron uses network namespaces to isolate network devices (including VIFs), DHCP and routing services for different networks and tenants. Neutron also uses something called a *veth pair*. A veth pair is two ethernet interfaces connected back-to-back and simplifies connecting things together that cannot be connected directly. We examine how veth pairs and namespaces are used we make our way through the steps. For now it is important to verify that Neutron was configured to enable these features. Your version of Packstack may or may not have modified the configuration files properly. It is better to be safe and check them before proceeding. Since we are modifying configuration files, please be careful not to accidentally modify configuration. You will need root or sudo access to modify them. You could use your favorite text editor to modify the files, but we'll use the openstack-config tool for simplicity.
