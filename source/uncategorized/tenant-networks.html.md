@@ -19,6 +19,8 @@ The openvswitch, linuxbridge, and ml2 plugins support several tenant network typ
 *   gre - Provide connectivity between nodes using GRE tunnels. Requires L3 connectivity between nodes, but no special interface or switch configuration. Supported by openvswitch and ml2 plugins, but not available on RHEL 6.4 without installing unsupported OVS kernel modules.
 *   vxlan - ...
 
-Given that local networks do not provide connectivity between nodes, and that gre and vxlan networks are not available on RHEL 6.4, the only workable option for tenant networks at the moment is vlan.
+Given that local networks do not provide connectivity between nodes, and that gre and vxlan networks are not available on RHEL 6.4, vlan tenant networks are the only current workable option in multi-node deployments.
+
+In order to use vlan tenant networks, one or more physical networks configured to trunk ranges of VLANs must connect all compute and network nodes.
 
 Utilizing vlan tenant networks requires [plugin configuration](Plugin_Configuration) to select vlan as the tenant network type and to specify the range(s) of VLAN tags available for tenant networks, and [L2 agent configuration](L2_Agent_Configuration) to map the physical networks carrying the tenant networks.
