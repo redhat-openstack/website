@@ -8,8 +8,6 @@ wiki_revision_count: 27
 wiki_last_updated: 2013-12-18
 ---
 
-<<TableOfContents(3)>>
-
 # Neutron Installation with OVS and VLANs (Grizzly)
 
 ### Preface
