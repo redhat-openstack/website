@@ -1,0 +1,144 @@
+---
+title: Neutron with OVS and VLANs
+category: networking
+authors: adarazs, dneary, jlewis, rbowen, rkukura, rvaknin
+wiki_category: Networking
+wiki_title: Neutron with OVS and VLANs
+wiki_revision_count: 27
+wiki_last_updated: 2013-12-18
+---
+
+<<TableOfContents(3)>>
+
+# Neutron Installation with OVS and VLANs (Grizzly)
+
+### Preface
+
+#### Components
+
+Neutron consists of the following components:
+
+**`Neutron` `service`**` - the API service.`
+**`Neutron` `metadata`**` - proxies metadata requests from instances even in isolated networks to nova-api.`
+**`L2` `agent`**` - agent which talks with the layer 2 plugin like OVS (Open vSwitch) or LB (Linux bridge) etc.`
+**`L3` `server`**` - layer 3 server which mainly responsible for the routing and nat (used for floating ip <--> private ip convertions).`
+**`DHCP` `server`**` - responsible to provide a private ip address to an instance that looks for his address.`
+
+#### Some Notes
+
+All components can be installed in one machine or distrubed to different machines (and all the in-between variants).
+
+L2 agent should run on all machines except for the Neutron service machine (unless Neutron service resides with other component in the same machine).
+
+It's possible to install multiple L3/DHCP/metadata servers.
+
+### Installation (packstack)
+
+#### Installation Machines
+
+The following packstack configuration define where each component is installed:
+
+      CONFIG_QUANTUM_SERVER_HOST=ip
+      CONFIG_QUANTUM_L3_HOSTS=ip_or_comma_separated_ips
+      CONFIG_QUANTUM_DHCP_HOSTS=ip_or_comma_separated_ips
+      CONFIG_QUANTUM_METADATA_HOSTS=ip_or_comma_separated_ips
+
+#### Layer 2 configuration
+
+The following packstack configuration define the L2, for vlan configuration you will need an interface that configured as trunk on a vlan or range of vlans (in the lab's switch) and names for a bridge that will be connected to that interface and for the vlans range:
+
+      CONFIG_QUANTUM_OVS_TENANT_NETWORK_TYPE=vlan
+      CONFIG_QUANTUM_OVS_VLAN_RANGES=inter-vlan:1200:1205
+      # inter-vlan - the vlans range name
+      # 1200:1205 - the vlans range
+      CONFIG_QUANTUM_OVS_BRIDGE_IFACES=br-instances:eth0
+      # mapping between the bridge to the physical interface
+      # br-instances - the bridge name
+      # eth0 - the interface name
+      CONFIG_QUANTUM_OVS_BRIDGE_MAPPINGS=inter-vlan:br-instances
+      # mapping between the vlans range name to the bridge name
+
+Note: You can specify non-continuous ranges of VLANs in this form:
+
+      CONFIG_QUANTUM_OVS_VLAN_RANGES=inter-vlan:182:182,inter-vlan:206:207
+
+This specifies the vlan 182, and 206-207 as part of "inter-vlan".
+
+#### Other - get familiar with, no changes required
+
+Keep the following parameters with their default values:
+
+      CONFIG_QUANTUM_INSTALL=y
+      CONFIG_QUANTUM_USE_NAMESPACES=y
+      # namespaces allow you to create 2 subnets with the same IPs without any collisions.
+      CONFIG_QUANTUM_L2_PLUGIN=openvswitch
+      CONFIG_QUANTUM_L3_EXT_BRIDGE=br-ex
+      # just a name, no change requied unless VLAN Splinters required (read the next section).
+
+#### Workaround for unsupported nic driver
+
+Working with unsupported NIC drivers (like "be2net") might lead to hangs in TCP traffic. in order to workaround that you can enable "VLAN Splinters" which will take care of the vlan tagging instead of OVS:
+
+Change the following in packstack's answer file:
+
+      CONFIG_QUANTUM_L3_EXT_BRIDGE=provider
+
+Run the following command on all L2 agent machines after packstack installation:
+
+      ovs-vsctl set interface eth0 other-config:enable-vlan-splinters=true
+
+### Configuration
+
+Basic Neutron configuration includes networks and subnets creation, association with routers, security group rules creation and floating IPs association.
+
+Post packstack installation, you'll need to create a router and set its gateway, external network and subnet + network and subnet and per tenant, and connect the subnets to the router.
+
+#### Networks and Subnets
+
+Typical vlan network creation:
+
+      quantum net-create net_name --provider:network_type vlan --provider:physical_network inter-vlan --provider:segmentation_id 1200
+
+Typical subnet creation (associated with the newly-created network "net_name"):
+
+      quantum subnet-create netname 10.0.0.0/24 --name subnet_name
+
+External network creation is the same as above, with the additional "--router:external=True" parameter, for instance
+
+      quantum net-create ext_net --provider:network_type vlan --provider:physical_network inter-vlan --provider:segmentation_id 1205 --router:external=True
+
+External subnet creation for instance:
+
+      quantum subnet-create ext_net --gateway 10.35.1.254 10.35.1.0/24 -- --enable_dhcp=False
+
+#### Routers
+
+Router creation:
+
+      quantum router-create router_name
+
+Add interface (subnet) to the router
+
+      quantum router-interface-add router_name subnet_name
+
+Set the external network ("ext_net") as the router's gateway:
+
+      quantum router-gateway-set router1 ext_net
+
+#### Security Group Rules
+
+By default, all traffic that goes out from the instances is allowed, in order to also allow traffic from outside of the tenant into the instance (you should create it per tenant):
+
+      quantum security-group-rule-create --direction ingress --protocol icmp  default
+
+#### Floating IPs
+
+Floating IP is an IP that the instance uses when it goes out of the L3 machine, this is done by iptables NAT rules (you won't find it by running "ifconfig"/"ip addr" inside the instance).
+
+Create a Floating IP:
+
+      floatingip-create ext_net
+
+Associate a Floating IP with an instance:
+
+      quantum floatingip-associate floatingip_id port_id
