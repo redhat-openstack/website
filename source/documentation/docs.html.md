@@ -50,7 +50,7 @@ If you've come across useful tips for resolving issues on OpenStack, or if you'r
 *   [PackStack documentation](https://access.redhat.com/knowledge/docs/en-US/Red_Hat_OpenStack_Preview/2/html/Getting_Started_Guide/part-Deploying_OS_using_PackStack.html)
 *   [GlusterFS with Keystone Quickstart](http://www.gluster.org/community/documentation/index.php/GlusterFS_Keystone_Quickstart)
 *   [Using Gluster for Cinder Block Storage](http://www.gluster.org/community/documentation/index.php/GlusterFS_Cinder)
-*   [Using Ceph for Block Storage with RDO]
+*   [Using Ceph for Block Storage with RDO](Using Ceph for Block Storage with RDO)
 
 </div>
 <div class="offset1 span10">
