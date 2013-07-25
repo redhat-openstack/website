@@ -101,7 +101,18 @@ Network namespaces create new "virtual" network environments that are isolated f
 ### Checkpoint: Other Namespace Related Configuration
 
 <div style="background-color:#e0e0f0; padding-left:2em;padding-right:2em;padding-top:5px;padding-bottom:5px;">
-Packstack should have configured the other namespace related variables, but if you want to see for yourself check the `DEFAULT` section in `dhcp_agent.ini` for `enable_isolated_metadata` and `use_namespaces`, both of which should be `True`. You can also verify that `interface_driver` is `quantum.agent.linux.interface.OVSInterfaceDriver`. In `l3_agent.ini`, check that `use_namespaces` is `True` and `external_network_bridge` is `br-ex` and `interface_driver` is `quantum.agent.linux.interface.OVSInterfaceDriver`.
+Packstack should have configured the other namespace related variables, but if you want to see for yourself check the `DEFAULT` section in both the `dhcp_agent.ini` and the `l3_agent.ini` configuration files.
+In `dhcp_agent.ini`, check for the following settings:
+
+      enable_isolated_metadata = True
+      use_namespaces = True
+      interface_driver =quantum.agent.linux.interface.OVSInterfaceDriver
+
+In `l3_agent.ini`, check the following settings:
+
+      use_namespaces = True
+      external_network_bridge = br-ex
+      interface_driver = quantum.agent.linux.interface.OVSInterfaceDriver
 
 </div>
 You need to restart the services to pick up the new settings so run:
