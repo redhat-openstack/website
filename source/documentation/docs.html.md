@@ -37,6 +37,7 @@ If you've come across useful tips for resolving issues on OpenStack, or if you'r
 ### Install
 
 *   [ Quick start guide ](Quickstart)
+*   [ The Quickstart but with Neutron Networking instead of Nova Networking](Neutron-Quickstart)
 *   [ Launching your first VM ](Running an instance)
 *   [ Setting a Floating IP Range ](Floating IP range)
 *   [ Deploy Heat and launch your first Application ](Deploy Heat and launch your first Application)
