@@ -45,6 +45,12 @@ Run the following command:
 
     sudo yum install -y http://rdo.fedorapeople.org/openstack/openstack-grizzly/rdo-release-grizzly.rpm
 
+Right now, there is a test build of Packstack required to enable Neutron to be properly deployed. The test build can be found here: <http://koji.fedoraproject.org/koji/buildinfo?buildID=437715>
+
+Or you can just run this command:
+
+    sudo yum install -y http://kojipkgs.fedoraproject.org//packages/openstack-packstack/2013.1.1/0.21.dev651.el6/noarch/openstack-packstack-2013.1.1-0.21.dev651.el6.noarch.rpm
+
 ### Step 2: Install Packstack Installer
 
     sudo yum install -y openstack-packstack
