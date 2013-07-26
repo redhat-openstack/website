@@ -37,8 +37,10 @@ If you've come across useful tips for resolving issues on OpenStack, or if you'r
 ### Install
 
 *   [ Quick start guide ](Quickstart)
-*   [ The Quickstart but with Neutron Networking instead of Nova Networking](Neutron-Quickstart)
 *   [ Launching your first VM ](Running an instance)
+*   [ Quick start guide with Neutron](Neutron-Quickstart)
+*   [ Launching your first VM with Neutron](Running_an_instance_with_Neutron)
+*   [ Configuring Neutron to use VLANs](Neutron-ovs_with_vlans)
 *   [ Setting a Floating IP Range ](Floating IP range)
 *   [ Deploy Heat and launch your first Application ](Deploy Heat and launch your first Application)
 *   [Using RDO on TryStack](Using RDO on TryStack)
