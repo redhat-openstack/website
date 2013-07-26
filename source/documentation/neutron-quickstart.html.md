@@ -8,14 +8,12 @@ wiki_revision_count: 37
 wiki_last_updated: 2015-04-01
 ---
 
-# Neutron-Quickstart
-
 __NOTOC__
 
 <div class="bg-boxes bg-boxes-single">
 <div class="row">
 <div class="offset3 span8">
-## RDO Quickstart
+# RDO Neutron Quickstart
 
 Deploying RDO is a quick and easy process. Setting up an OpenStack Grizzly cloud takes approximately 15 minutes, and can be as short as 3 steps.
 
@@ -63,7 +61,7 @@ The installer will ask you to enter the root password for each host node you are
 
 Once the process is complete, you can log in to the OpenStack web interface "Horizon" by going to <http://$YOURIP/dashboard>. The username is "demo". The password can be found in the file keystonerc_demo in the /root/ directory of the control node.
 
-## Next Steps
+# Next Steps
 
 Now that your single node OpenStack instance is up and running, you can read on about [running an instance with Neutron](running an instance with Neutron), configuring a [floating IP range](floating IP range), or about expanding your installation by [adding a compute node](adding a compute node).
 
