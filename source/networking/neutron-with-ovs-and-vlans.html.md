@@ -17,10 +17,10 @@ wiki_last_updated: 2013-12-18
 Neutron consists of the following components:
 
 **`Neutron` `service`**` - the API service.`
-**`Neutron` `metadata`**` - proxies metadata requests from instances even in isolated networks to nova-api.`
+**`Neutron` `metadata` `agent`**` - proxies metadata requests from instances even in isolated networks to nova-api.`
 **`L2` `agent`**` - agent which talks with the layer 2 plugin like OVS (Open vSwitch) or LB (Linux bridge) etc.`
-**`L3` `server`**` - layer 3 server which mainly responsible for the routing and nat (used for floating ip <--> private ip convertions).`
-**`DHCP` `server`**` - responsible to provide a private ip address to an instance that looks for his address.`
+**`L3` `agent`**` - layer 3 agent which mainly responsible for the routing and NAT (used for floating IP <--> private IP convertions).`
+**`DHCP` `agent`**` - responsible to provide a private IP address to an instance that looks for his address.`
 
 #### Some Notes
 
