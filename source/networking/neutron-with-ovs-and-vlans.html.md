@@ -129,9 +129,9 @@ Typical tenant subnet creation (associated with the newly-created network "net_n
 
 #### External Network and Subnet
 
-External network creation is similar to the above, with the additional "--router:external=True" and the appropriate provider network parameters. For instance, if the external network is VLAN 1205:
+External network creation is similar to the above, with the additional "--router:external=True" and the appropriate provider network parameters. For instance, if the external network is VLAN 1000 (any VLAN tag not used for tenant networks):
 
-      quantum net-create ext_net --provider:network_type vlan --provider:physical_network inter-vlan --provider:segmentation_id 1205 --router:external=True
+      quantum net-create ext_net --provider:network_type vlan --provider:physical_network inter-vlan --provider:segmentation_id 1000 --router:external=True
 
 Or, if the external network is untagged:
 
