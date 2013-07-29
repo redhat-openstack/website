@@ -99,7 +99,7 @@ Keep the following parameters with their default values:
       # namespaces allow you to create 2 subnets with the same IPs without any collisions.
       CONFIG_QUANTUM_L2_PLUGIN=openvswitch
 
-### Configuration
+### Post-install configuration
 
 Basic Neutron post-install configuration includes networks and subnets creation, association with routers, security group rules creation and floating IPs association. After running packstack, you'll need to create a router and set its gateway, external network and subnet. Typically, you'll also create a private network and subnet for each tenant, and connect these private subnets to the router.
 
