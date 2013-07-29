@@ -43,7 +43,7 @@ The following packstack configuration define where each component is installed:
 
 Can hostnames be used instead of IPs?
 
-#### Layer 2 configuration
+#### Layer 2 Configuration
 
 The following packstack configuration defines L2 tenant network allocation as VLANs. For VLAN configuration you will need:
 
@@ -73,7 +73,7 @@ This specifies that the VLANs 182 and 206-207 on physical_network "inter-vlan" a
 
 It is also possible to configure multiple physical_networks, each with separate ranges of VLANs available for tenant networks on each, by mapping them to separate OVS bridges and interfaces, but details are not covered here.
 
-#### Workaround for unsupported NIC driver
+#### Workaround for Unsupported NIC Driver
 
 Working with unsupported NIC drivers (like "be2net") might lead to hangs in TCP connections when VLANs are used with OVS. In order to workaround this issue, you can enable "VLAN Splinters" for the interface:
 
@@ -83,7 +83,7 @@ Run the following command on all L2 agent machines after packstack installation:
 
 Need link to BZ listing drivers needing VLAN splinters.
 
-#### External network access method
+#### External Network Access Method
 
 By default, the L3 agent uses a separate bridge ("br-ex") to access the external network, which works fine for simple cases where the external network is on a separate interface from the tenant networks and is not VLAN tagged. In this example, we instead use a provider network on the same bridge and interface as the tenant networks for the external network. Change the following in packstack's answer file:
 
@@ -99,7 +99,7 @@ Keep the following parameters with their default values:
       # namespaces allow you to create 2 subnets with the same IPs without any collisions.
       CONFIG_QUANTUM_L2_PLUGIN=openvswitch
 
-### Post-install configuration
+### Post-Install Configuration
 
 Basic Neutron post-install configuration includes:
 
@@ -111,7 +111,7 @@ Basic Neutron post-install configuration includes:
 
 After running packstack, you'll need to create a router and set its gateway, external network and subnet. Typically, you'll also create a private network and subnet for each tenant, and connect these private subnets to the router.
 
-#### Tenant networks and subnets
+#### Tenant Networks and Subnets
 
 Typical tenant network creation (run with tenant's credentials, or also specify --tenant-id):
 
@@ -125,13 +125,13 @@ Typical tenant subnet creation (associated with the newly-created network "net_n
 
       quantum subnet-create net_name 10.0.0.0/24 --name subnet_name
 
-#### External network and subnet
+#### External Network and Subnet
 
 External network creation is similar to the above, with the additional "--router:external=True" and the appropriate provider network parameters. For instance, if the external network is VLAN 1205:
 
       quantum net-create ext_net --provider:network_type vlan --provider:physical_network inter-vlan --provider:segmentation_id 1205 --router:external=True
 
-Or if the external network is untagged:
+Or, if the external network is untagged:
 
       quantum net-create ext_net --provider:network_type flat --provider:physical_network inter-vlan --router:external=True
 
@@ -179,7 +179,7 @@ Associate a floating IP with an instance:
 
 ### Troubleshooting
 
-#### VLAN issues
+#### VLAN Issues
 
 It's possible that your computer's ports are not set up correctly. You can check your current port configuration by running the following command on your host, and wait a few seconds (sometimes even a minute) to get an LLDP packet that describes the switch's port config (shortened sample included):
 
