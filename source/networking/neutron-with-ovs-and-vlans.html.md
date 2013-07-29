@@ -101,9 +101,17 @@ Keep the following parameters with their default values:
 
 ### Post-install configuration
 
-Basic Neutron post-install configuration includes networks and subnets creation, association with routers, security group rules creation and floating IPs association. After running packstack, you'll need to create a router and set its gateway, external network and subnet. Typically, you'll also create a private network and subnet for each tenant, and connect these private subnets to the router.
+Basic Neutron post-install configuration includes:
 
-#### Networks and Subnets
+*   creation of tenants' private networks and subnets
+*   creation of the external network and subnet
+*   creation and configuration of routers
+*   security group rule creation
+*   floating IP association
+
+After running packstack, you'll need to create a router and set its gateway, external network and subnet. Typically, you'll also create a private network and subnet for each tenant, and connect these private subnets to the router.
+
+#### Tenant networks and subnets
 
 Typical tenant network creation (run with tenant's credentials, or also specify --tenant-id):
 
@@ -117,6 +125,8 @@ Typical tenant subnet creation (associated with the newly-created network "net_n
 
       quantum subnet-create net_name 10.0.0.0/24 --name subnet_name
 
+#### External network and subnet
+
 External network creation is similar to the above, with the additional "--router:external=True" and the appropriate provider network parameters. For instance, if the external network is VLAN 1205:
 
       quantum net-create ext_net --provider:network_type vlan --provider:physical_network inter-vlan --provider:segmentation_id 1205 --router:external=True
@@ -129,7 +139,13 @@ External subnet creation requires specifying the routable CIDR from which floati
 
       quantum subnet-create ext_net --gateway 10.35.1.254 10.35.1.0/24 -- --enable_dhcp=False
 
-#### Routers
+#### Router
+
+The L3 agent hosts virtual routers that serve several purposes:
+
+*   Route traffic among connected interfaces (tenant subnets)
+*   Route outgoing traffic from tenant subnets to an external network, using iptables SNAT rules
+*   Route incoming traffic from an external network to instances with which floating IPs are associated, using iptables DNAT rules
 
 Router creation:
 
@@ -151,13 +167,13 @@ By default, all traffic that goes out from the instances is allowed, in order to
 
 #### Floating IPs
 
-Floating IP is an IP that the instance uses when it goes out of the L3 machine, this is done by iptables NAT rules (you won't find it by running "ifconfig"/"ip addr" inside the instance).
+A floating IP is an IP that the instance can be accessed at from outside the tenant's private network. This is done by the L3 agent using iptables DNAT rules (you won't find it by running "ifconfig"/"ip addr" inside the instance).
 
-Create a Floating IP:
+Create a floating IP:
 
       floatingip-create ext_net
 
-Associate a Floating IP with an instance:
+Associate a floating IP with an instance:
 
       quantum floatingip-associate floatingip_id port_id
 
