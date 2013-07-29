@@ -43,7 +43,11 @@ The following packstack configuration define where each component is installed:
 
 #### Layer 2 configuration
 
-The following packstack configuration defines L2 tenant network allocation as VLANs. For VLAN configuration you will need a network interface (i.e. "eth0") on each compute and network node connected to a switch that is configured to trunk a set of VLANs, a name (i.e."'inter-vlan") for the physical network (i.e. the switch) to which these interfaces are connected, and a name (i.e. "br-instances") for the OVS bridge that will be connected to these interfaces on each node:
+The following packstack configuration defines L2 tenant network allocation as VLANs. For VLAN configuration you will need:
+
+1.  a network interface (i.e. "eth0") on each compute and network node connected to a switch that is configured to trunk a set of VLANs (i.e. 1200-1205)
+2.  a name (i.e."'inter-vlan") for the physical_network (the switch or set of switches) to which these interfaces are connected
+3.  a name (i.e. "br-instances") for the OVS bridge that will be connected to these interfaces on each node
 
       CONFIG_QUANTUM_OVS_TENANT_NETWORK_TYPE=vlan
       CONFIG_QUANTUM_OVS_VLAN_RANGES=inter-vlan:1200:1205
