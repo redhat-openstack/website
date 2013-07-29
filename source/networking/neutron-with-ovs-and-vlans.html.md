@@ -83,7 +83,7 @@ Run the following command on all L2 agent machines after packstack installation:
 
 Need link to BZ listing drivers needing VLAN splinters.
 
-#### External network configuration
+#### External network access method
 
 By default, the L3 agent uses a separate bridge ("br-ex") to access the external network, which works fine for simple cases where the external network is on a separate interface from the tenant networks and is not VLAN tagged. In this example, we instead use a provider network on the same bridge and interface as the tenant networks for the external network. Change the following in packstack's answer file:
 
