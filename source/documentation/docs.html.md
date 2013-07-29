@@ -68,6 +68,7 @@ If you've come across useful tips for resolving issues on OpenStack, or if you'r
 *   [OpenStack CLI Clients documentation](http://docs.openstack.org/cli/quick-start/content/index.html)
 *   [OpenStack API docs](http://docs.openstack.org/api/)
 *   [OpenStack Glossary](http://docs.openstack.org/glossary/content/glossary.html)
+*   [Books](Books)
 
 </div>
 </div>
