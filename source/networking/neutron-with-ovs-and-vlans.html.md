@@ -24,11 +24,11 @@ Neutron consists of the following components:
 
 #### Some Notes
 
-All components can be installed in one machine or distrubed to different machines (and all the in-between variants).
+All components can be installed in one machine or distributed to different machines (and all the in-between variants).
 
 L2 agent should run on all machines except for the Neutron service machine (unless Neutron service resides with other component in the same machine).
 
-It's possible to install multiple L3/DHCP/metadata servers.
+It's possible to install multiple L3/DHCP/metadata agents.
 
 ### Installation (packstack)
 
