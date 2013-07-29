@@ -45,11 +45,7 @@ Can hostnames be used instead of IPs?
 
 #### Layer 2 Configuration
 
-The following packstack configuration defines L2 tenant network allocation as VLANs. For VLAN configuration you will need:
-
-1.  a network interface (i.e. "eth0") on each compute and network node connected to a switch that is configured to trunk a set of VLANs (i.e. 1200-1205)
-2.  a name (i.e."'inter-vlan") for the physical_network (the switch or set of switches) to which these interfaces are connected
-3.  a name (i.e. "br-instances") for the OVS bridge that will be connected to these interfaces on each node
+The following packstack configuration defines L2 tenant network allocation as VLANs:
 
       CONFIG_QUANTUM_OVS_TENANT_NETWORK_TYPE=vlan
       CONFIG_QUANTUM_OVS_VLAN_RANGES=inter-vlan:1200:1205
@@ -64,6 +60,12 @@ The following packstack configuration defines L2 tenant network allocation as VL
       # mapping from the bridge name to the physical interface name
       # br-instances - the bridge name
       # eth0 - the interface name
+
+For a VLAN configuration you will need:
+
+*   a network interface (i.e. "eth0") on each compute and network node connected to a switch that is configured to trunk a set of VLANs (i.e. 1200-1205)
+*   a name (i.e."'inter-vlan") for the physical_network (the switch or set of switches) to which these interfaces are connected
+*   a name (i.e. "br-instances") for the OVS bridge that will be connected to these interfaces on each node
 
 Note: You can specify non-continuous ranges of VLANs in this form:
 
