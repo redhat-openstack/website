@@ -85,7 +85,7 @@ Need link to BZ listing drivers needing VLAN splinters.
 
 #### External network configuration
 
-By default, the L3 agent uses a separate bridge ("br-ex") to access the external network. In this example, we instead use a provider network on the same bridge as the tenant networks for the external network. Change the following in packstack's answer file:
+By default, the L3 agent uses a separate bridge ("br-ex") to access the external network, which works fine for simple cases where the external network is on a separate interface from the tenant networks and is not VLAN tagged. In this example, we instead use a provider network on the same bridge and interface as the tenant networks for the external network. Change the following in packstack's answer file:
 
       CONFIG_QUANTUM_L3_EXT_BRIDGE=provider
       # Special value "provider" disables use of external bridge
