@@ -69,6 +69,8 @@ Note: You can specify non-continuous ranges of VLANs in this form:
 
 This specifies that the VLANs 182 and 206-207 on physical_network "inter-vlan" are available for allocation as tenant networks.
 
+It is also possible to configure multiple physical_networks, each with separate ranges of VLANs available for tenant networks on each, by mapping them to separate OVS bridges and interfaces, but details are not covered here.
+
 #### Other - get familiar with, no changes required
 
 Keep the following parameters with their default values:
