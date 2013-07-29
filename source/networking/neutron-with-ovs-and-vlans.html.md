@@ -140,3 +140,71 @@ Create a Floating IP:
 Associate a Floating IP with an instance:
 
       quantum floatingip-associate floatingip_id port_id
+
+### Troubleshooting
+
+#### VLAN issues
+
+It's possible that your computer's ports are not set up correctly. You can check your current port configuration by running the following command on your host, and wait a few seconds (sometimes even a minute) to get an LLDP packet that describes the switch's port config (shortened sample included):
+
+      $ tcpdump -vvv -s 1500 ether proto 0x88cc -i eth0
+      tcpdump: listening on eth0, link-type EN10MB (Ethernet), capture size 1500 bytes
+      17:42:50.740544 LLDP, length 240
+      [..]
+          System Name TLV (5), length 18: sw01-dist-lab.com
+            0x0000:  7377 3031 2d64 6973 742d 6c61 6233 2e74
+            0x0010:  6c76
+      [..]
+          Port Description TLV (4), length 11: xe-4/0/21.0
+            0x0000:  7865 2d34 2f30 2f32 312e 30
+      [..]
+          Organization specific TLV (127), length 14: OUI Ethernet bridged (0x0080c2)
+            VLAN name Subtype (3)
+              vlan id (VID): 174
+              vlan name: vlan174
+            0x0000:  0080 c203 00ae 0776 6c61 6e31 3734
+      [..]
+      ^C
+      1 packets captured
+      1 packets received by filter
+      0 packets dropped by kernel
+
+Important informations regarding the port on the switch:
+
+      ` * the switch is named `sw01-dist-lab.com` `
+      ` * the machine is connected on port `xe-4/0/21.0` `
+      ` * the port is configured to use `vlan174` `
+
+You should see the vlans that you're planning to use in the list, but if you have too many (>6) then the list might be truncated.
+
+#### Diagnose the network settings
+
+You can actually look around what your OVS router and other elements see using namespaces.
+
+Check what namespaces you have:
+
+      $ ip netns
+      qrouter-42b4f31a-23ad-436b-a25c-7a96cff29a8e
+      qdhcp-8751655e-2b8e-4e52-a19d-3f038bce1192
+
+Do diagnostic stuff:
+
+Check your IP addresses
+
+      $ ip netns exec qrouter-42b4f31a-23ad-436b-a25c-7a96cff29a8e ip a
+
+Check the routing table
+
+      $ ip netns exec qrouter-42b4f31a-23ad-436b-a25c-7a96cff29a8e ip r
+
+check your iptables
+
+      $ ip netns exec qrouter-42b4f31a-23ad-436b-a25c-7a96cff29a8e iptables -t nat -L -nv
+
+Check the NAT table
+
+      $ ip netns exec qrouter-42b4f31a-23ad-436b-a25c-7a96cff29a8e iptables -S -t nat
+
+Ping to verify network connections
+
+      $  ip netns exec qrouter-42b4f31a-23ad-436b-a25c-7a96cff29a8e ping 8.8.8.8
