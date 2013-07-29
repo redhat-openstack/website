@@ -101,23 +101,29 @@ Keep the following parameters with their default values:
 
 ### Configuration
 
-Basic Neutron configuration includes networks and subnets creation, association with routers, security group rules creation and floating IPs association.
-
-Post packstack installation, you'll need to create a router and set its gateway, external network and subnet + network and subnet and per tenant, and connect the subnets to the router.
+Basic Neutron post-install configuration includes networks and subnets creation, association with routers, security group rules creation and floating IPs association. After running packstack, you'll need to create a router and set its gateway, external network and subnet. Typically, you'll also create a private network and subnet for each tenant, and connect these private subnets to the router.
 
 #### Networks and Subnets
 
-Typical vlan network creation:
+Typical tenant network creation (run with tenant's credentials, or also specify --tenant-id):
 
-      quantum net-create net_name --provider:network_type vlan --provider:physical_network inter-vlan --provider:segmentation_id 1200
+      quantum net-create net_name
+
+The tenant network will be allocated a VLAN tag on "inter-vlan", as can be seen by running (with admin credentials):
+
+      quantum net-show net_name
 
 Typical subnet creation (associated with the newly-created network "net_name"):
 
-      quantum subnet-create netname 10.0.0.0/24 --name subnet_name
+      quantum subnet-create net_name 10.0.0.0/24 --name subnet_name
 
-External network creation is the same as above, with the additional "--router:external=True" parameter, for instance
+External network creation is similar to the above, with the additional "--router:external=True" and the appropriate provider network parameters. For instance, if the external network is VLAN 1205:
 
       quantum net-create ext_net --provider:network_type vlan --provider:physical_network inter-vlan --provider:segmentation_id 1205 --router:external=True
+
+Or if the external network is untagged:
+
+      quantum net-create ext_net --provider:network_type flat --provider:physical_network inter-vlan --router:external=True
 
 External subnet creation for instance:
 
@@ -129,13 +135,13 @@ Router creation:
 
       quantum router-create router_name
 
-Add interface (subnet) to the router
-
-      quantum router-interface-add router_name subnet_name
-
 Set the external network ("ext_net") as the router's gateway:
 
       quantum router-gateway-set router1 ext_net
+
+Add interface (subnet) for each tenant network to the router:
+
+      quantum router-interface-add router1 subnet_name
 
 #### Security Group Rules
 
