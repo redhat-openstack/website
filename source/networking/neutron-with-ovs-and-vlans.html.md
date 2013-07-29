@@ -43,24 +43,27 @@ The following packstack configuration define where each component is installed:
 
 #### Layer 2 configuration
 
-The following packstack configuration define the L2, for vlan configuration you will need an interface that configured as trunk on a vlan or range of vlans (in the lab's switch) and names for a bridge that will be connected to that interface and for the vlans range:
+The following packstack configuration defines L2 tenant network allocation as VLANs. For VLAN configuration you will need a network interface (i.e. "eth0") on each compute and network node connected to a switch that is configured to trunk a set of VLANs, a name (i.e."'inter-vlan") for the physical network (i.e. the switch) to which these interfaces are connected, and a name (i.e. "br-instances") for the OVS bridge that will be connected to these interfaces on each node:
 
       CONFIG_QUANTUM_OVS_TENANT_NETWORK_TYPE=vlan
       CONFIG_QUANTUM_OVS_VLAN_RANGES=inter-vlan:1200:1205
-      # inter-vlan - the vlans range name
-      # 1200:1205 - the vlans range
+      # inter-vlan - the name of the physical_network used for the VLANs
+      # 1200:1205 - the range of VLANs available for tenant network allocation
+       
+      CONFIG_QUANTUM_OVS_BRIDGE_MAPPINGS=inter-vlan:br-instances
+      # mapping from the physical_network name to the bridge name
+      # inter-vlan - the name of the physical_network used for the VLANs
+      # br-instances - the bridge name
       CONFIG_QUANTUM_OVS_BRIDGE_IFACES=br-instances:eth0
-      # mapping between the bridge to the physical interface
+      # mapping from the bridge name to the physical interface name
       # br-instances - the bridge name
       # eth0 - the interface name
-      CONFIG_QUANTUM_OVS_BRIDGE_MAPPINGS=inter-vlan:br-instances
-      # mapping between the vlans range name to the bridge name
 
 Note: You can specify non-continuous ranges of VLANs in this form:
 
       CONFIG_QUANTUM_OVS_VLAN_RANGES=inter-vlan:182:182,inter-vlan:206:207
 
-This specifies the vlan 182, and 206-207 as part of "inter-vlan".
+This specifies that the VLANs 182 and 206-207 on physical_network "inter-vlan" are available for allocation as tenant networks.
 
 #### Other - get familiar with, no changes required
 
