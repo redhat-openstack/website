@@ -113,7 +113,7 @@ The tenant network will be allocated a VLAN tag on "inter-vlan", as can be seen 
 
       quantum net-show net_name
 
-Typical subnet creation (associated with the newly-created network "net_name"):
+Typical tenant subnet creation (associated with the newly-created network "net_name"):
 
       quantum subnet-create net_name 10.0.0.0/24 --name subnet_name
 
@@ -125,7 +125,7 @@ Or if the external network is untagged:
 
       quantum net-create ext_net --provider:network_type flat --provider:physical_network inter-vlan --router:external=True
 
-External subnet creation for instance:
+External subnet creation requires specifying the routable CIDR from which floating IPs will be allocated, specifying the gateway IP on this external subnet to which outgoing traffic will be forwarded, and disabling neutron's DHCP service. For instance:
 
       quantum subnet-create ext_net --gateway 10.35.1.254 10.35.1.0/24 -- --enable_dhcp=False
 
