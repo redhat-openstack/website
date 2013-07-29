@@ -71,6 +71,23 @@ This specifies that the VLANs 182 and 206-207 on physical_network "inter-vlan" a
 
 It is also possible to configure multiple physical_networks, each with separate ranges of VLANs available for tenant networks on each, by mapping them to separate OVS bridges and interfaces, but details are not covered here.
 
+#### Workaround for unsupported NIC driver
+
+Working with unsupported NIC drivers (like "be2net") might lead to hangs in TCP connections when VLANs are used with OVS. In order to workaround this issue, you can enable "VLAN Splinters" for the interface:
+
+Run the following command on all L2 agent machines after packstack installation:
+
+      ovs-vsctl set interface eth0 other-config:enable-vlan-splinters=true
+
+Need link to BZ listing drivers needing VLAN splinters.
+
+#### External network configuration
+
+By default, the L3 agent uses a separate bridge ("br-ex") to access the external network. In this example, we instead use a provider network on the same bridge as the tenant networks for the external network. Change the following in packstack's answer file:
+
+      CONFIG_QUANTUM_L3_EXT_BRIDGE=provider
+      # Special value "provider" disables use of external bridge
+
 #### Other - get familiar with, no changes required
 
 Keep the following parameters with their default values:
@@ -79,20 +96,6 @@ Keep the following parameters with their default values:
       CONFIG_QUANTUM_USE_NAMESPACES=y
       # namespaces allow you to create 2 subnets with the same IPs without any collisions.
       CONFIG_QUANTUM_L2_PLUGIN=openvswitch
-      CONFIG_QUANTUM_L3_EXT_BRIDGE=br-ex
-      # just a name, no change requied unless VLAN Splinters required (read the next section).
-
-#### Workaround for unsupported nic driver
-
-Working with unsupported NIC drivers (like "be2net") might lead to hangs in TCP traffic. in order to workaround that you can enable "VLAN Splinters" which will take care of the vlan tagging instead of OVS:
-
-Change the following in packstack's answer file:
-
-      CONFIG_QUANTUM_L3_EXT_BRIDGE=provider
-
-Run the following command on all L2 agent machines after packstack installation:
-
-      ovs-vsctl set interface eth0 other-config:enable-vlan-splinters=true
 
 ### Configuration
 
