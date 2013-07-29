@@ -41,6 +41,8 @@ The following packstack configuration define where each component is installed:
       CONFIG_QUANTUM_DHCP_HOSTS=ip_or_comma_separated_ips
       CONFIG_QUANTUM_METADATA_HOSTS=ip_or_comma_separated_ips
 
+Can hostnames be used instead of IPs?
+
 #### Layer 2 configuration
 
 The following packstack configuration defines L2 tenant network allocation as VLANs. For VLAN configuration you will need:
