@@ -32,6 +32,8 @@ If you want to help with our packaging and integration work, consider [joining o
 
 Join our [newsletter mailing list](//www.redhat.com/mailman/listinfo/rdo-newsletter) for monthly updates on RDO and the larger OpenStack world.
 
+Follow us on Twitter at [@rdocommunity](//twitter.com/rdocommunity).
+
 ### Solve
 
 *   Check our [Frequently Asked Questions (FAQ) page](Frequently Asked Questions) for the answer to common questions
