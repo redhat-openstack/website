@@ -31,6 +31,7 @@ With Neutron, no floating IPs are created by default. You must first create a pu
 1.  source /root/keystonerc_admin
 2.  quantum net-create public --router:external=True
 3.  quantum subnet-create public 192.168.1.0/24 --name vlan --enable_dhcp False --allocation_pool start=192.168.1.57,end=192.168.1.62 --gateway 192.168.1.1 (use your network gateway here - change the IP addresses in the allocation range to match what is available on your network)
-4.  quantum floatingip-create public (repeat as necessary)
+4.  quantum router-gateway-set $router_id $vlan_id (use your router id and previous created vlan id)
+5.  quantum floatingip-create public (repeat as necessary)
 
 Neutron does not auto-create floating IPs or auto-assign them to new instances but this feature is planned for future inclusion.
