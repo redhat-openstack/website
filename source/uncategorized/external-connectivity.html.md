@@ -10,7 +10,7 @@ wiki_last_updated: 2013-07-30
 
 Work in progress!
 
-Neutron's [tenant networks](Tenant_Networks) provide connectivity between a tenant's instances within the cloud, but most deployments also require outgoing access from instances to resources outside the cloud and/or require incoming access from outside to resources hosted within the cloud. Two main approaches are available to provide external connectivity:
+Neutron's [tenant networks](Tenant_Networks) provide connectivity between a tenant's instances within the cloud. But most deployments also require outgoing connectivity from cloud instances to resources outside the cloud and/or incoming connectivity from outside the cloud to resources hosted within the cloud. Two top-level approaches are available to provide external connectivity:
 
 *   Direct - Instances connect directly to an external network, with routable IP addresses on an external subnet.
 *   Routed - A virtual router provides SNAT for outgoing connectivity and/or DNAT for incoming connectivity between a private network and an external network.
