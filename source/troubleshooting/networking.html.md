@@ -57,9 +57,9 @@ In the dashboard, in the Project tab, under "Access and Security", check the rul
 
 From the host where you are attempting to connect to your instance, verify that network traffic is being correctly routed to the compute node in question.
 
-*   -   Check that you can ping an instance from inside its network namespace
+*   -   Check that you can ping an instance from inside its network namespace. FIXME: Add a sample command.
     -   Ensure that the router is correctly created, that the internal subnet and external subnet are attached to it, and that it can route traffic from your IP to the instance IP
-    -   Check the OVS routing table to ensure that it is correctly routing traffic from internal to external
+    -   Check the OVS routing table to ensure that it is correctly routing traffic from internal to external. FIXME: Add a sample command.
     -   Verify that br-ex is associated with the physical NIC, and that the virtual router can route traffic to the IP address of the host
 
 <!-- -->
@@ -69,7 +69,13 @@ From the host where you are attempting to connect to your instance, verify that 
 *   I can create an instance, however, it does not get a DHCP address
     -   See [network troubleshooting](http://docs.openstack.org/trunk/openstack-ops/content/network_troubleshooting.html) for information on sniffing the various steps of the allocation of an IP address by DHCP - verify that your DHCP agent is running, is receiving the DHCPDISCOVER request, and is replying to it - and verify that your host is receiving the DHCP reply.
     -   Make sure that IPv6 is enabled. Disabling IPv6 will give an error such as "Address family not supported".
-    -   If you are using OpenvSwitch with VLAN, make sure that the network created includes VLAN information.
+    -   If you are using OpenvSwitch with VLAN, make sure that the network created includes VLAN information. You may need to restart the quantum-openvswitch-agent service and/or create a network using specific VLAN information.
+
+<!-- -->
+
+*   If you are using more than one node for OpenStack (i.e., not an all-in-one installation), then you must use VLANs.
+*   If you are using a virtual machine as a node in OpenStack, you must use the virtio network driver when using VLANs. The default rt8139 driver seems to drop VLAN information.
+*   You must have an external network set as the gateway to the router if you want to get network traffic out of the private instance network.
 
 ...
 
