@@ -19,9 +19,9 @@ __NOTOC__
 
 Log in to the Openstack dashboard at <http://CONTROL_NODE/dashboard> - the username is "demo". The password can be found in the file keystonerc_demo in the /root/ directory of the control node.
 
-### Step 2: Enable SSH on your default security group.
+### Step 2: Enable SSH and ICMP on your default security group.
 
-Once logged in to the OpenStack dashboard, click the "Project" tab in the left-side navigation menu, and then click "Access & Security" under the heading "Manage Compute." Under the "Security Groups" heading, click the "Edit Rules" button for the "default" security group. Click the "Add Rule" button, and in the resulting dialog, enter "22" in the "Port" field, and then click the "Add" button.
+Once logged in to the OpenStack dashboard, click the "Project" tab in the left-side navigation menu, and then click "Access & Security" under the heading "Manage Compute." Under the "Security Groups" heading, click the "Edit Rules" button for the "default" security group. Click the "Add Rule" button, and in the resulting dialog, enter "22" in the "Port" field, and then click the "Add" button. Add another rule selecting ICMP as the protocol and entering -1 for both the type and code fields.
 
 ### Step 3: Create or import a key pair.
 
