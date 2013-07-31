@@ -116,17 +116,7 @@ Before proceeding with a libvirt installation, ensure that you have QEMU install
 
 ## Install RDO
 
-1. Install the RDO packages:
-
-`   sudo yum install -y `[`http://rdo.fedorapeople.org/openstack/openstack-grizzly/rdo-release-grizzly.rpm`](http://rdo.fedorapeople.org/openstack/openstack-grizzly/rdo-release-grizzly.rpm)
-
-2. Install the pack installer:
-
-         sudo yum install -y openstack-packstack
-
-3. Run the pack installer.
-
-         packstack --allinone --os-quantum-install=n
+See [Quick Start page](//openstack.redhat.com/Quickstart) for details.
 
 ## Configure RDO for use with Ceph
 
