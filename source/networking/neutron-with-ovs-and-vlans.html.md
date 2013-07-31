@@ -36,14 +36,12 @@ It's possible to install multiple L3/DHCP/metadata agents.
 
 #### Installation Machines
 
-The following packstack configuration define where each component is installed:
+The following packstack configuration define where each component is installed (hostnames instead of IPs should work too):
 
       CONFIG_QUANTUM_SERVER_HOST=ip
       CONFIG_QUANTUM_L3_HOSTS=ip_or_comma_separated_ips
       CONFIG_QUANTUM_DHCP_HOSTS=ip_or_comma_separated_ips
       CONFIG_QUANTUM_METADATA_HOSTS=ip_or_comma_separated_ips
-
-Can hostnames be used instead of IPs?
 
 #### Layer 2 Configuration
 
