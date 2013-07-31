@@ -85,7 +85,7 @@ Run the following command on all L2 agent machines after packstack installation:
 
       ovs-vsctl set interface eth0 other-config:enable-vlan-splinters=true
 
-More infor can be found in: <https://www.redhat.com/archives/rhos-list/2013-June/msg00066.html>
+More info can be found in: <https://www.redhat.com/archives/rhos-list/2013-June/msg00066.html>
 
 #### External Network Access Method
 
