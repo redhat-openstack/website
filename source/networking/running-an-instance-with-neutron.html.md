@@ -25,7 +25,9 @@ Once logged in to the OpenStack dashboard, click the "Project" tab in the left-s
 
 ### Step 3: Create or import a key pair.
 
-In the left-side navigation menu, click "Access & Security" under the heading "Manage Compute." In the main portion of the screen, click the tab labeled "Keypairs," and choose either to "Create Keypair" or "Import Keypair." The "Create Keypair" dialog will prompt you to supply a keypair name before downloading a private key to your client.
+In the left-side navigation menu, click "Access & Security" under the heading "Manage Compute." In the main portion of the screen, click the tab labeled "Keypairs," and choose either to "Create Keypair" or "Import Keypair." The "Create Keypair" dialog will prompt you to supply a keypair name before downloading a private key to your client. To use the downloaded keypair, you will need to properly set its permissions:
+
+    chmod 600 /path/to/keypair.pem
 
 The "Import Keypair" option will prompt you to provide a name and a public key to use with an existing private key on your client. For name, choose something to identify that key (like your username, for example) and for key, use the contents of your public key file, usually in ~/.ssh/id_rsa.pub or ~/.ssh/id_dsa.pub on the machine from which you will be ssh-ing in.
 
