@@ -43,6 +43,8 @@ Run the following command:
 
     sudo yum install -y http://rdo.fedorapeople.org/openstack/openstack-grizzly/rdo-release-grizzly.rpm
 
+    Note: For Neutron to work properly, a network namespaces-enabled kernel is required. On RHEL systems, please do a yum -y update and reboot prior to continuing.
+
 ### Step 2: Install Packstack Installer
 
 Right now, there is a test build of Packstack required to enable Neutron to be properly deployed. The test build can be found here: <http://koji.fedoraproject.org/koji/buildinfo?buildID=437715>
