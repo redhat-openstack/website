@@ -57,7 +57,7 @@ Packstack takes the work out of manually setting up OpenStack. For a single node
 
     packstack --allinone
 
-The installer will ask you to enter the root password for each host node you are installing on the network, to enable remote configuration of the host so it can remotely configure each node using Puppet.
+The installer will ask you to enter the root password for each host node you are installing on the network, to enable remote configuration of the host so it can remotely configure each node using Puppet. If the installer had to upgrade your kernel, packstack will inform you that manual reboot will be required.
 
 Once the process is complete, you can log in to the OpenStack web interface "Horizon" by going to <http://$YOURIP/dashboard>. The username is "demo". The password can be found in the file keystonerc_demo in the /root/ directory of the control node.
 
