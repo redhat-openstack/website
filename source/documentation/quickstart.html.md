@@ -56,7 +56,7 @@ Packstack takes the work out of manually setting up OpenStack. For a single node
 
     packstack --allinone --os-quantum-install=n
 
-*Advanced users: Packstack does have some support for Neutron networking, however, until we have better support for Neutron and some documentation on the wiki for it, we recommend Nova Networking for now*
+*Advanced users: Packstack does have some support for Neutron networking, however, until we have better support for Neutron and some documentation on the wiki for it, we recommend Nova Networking for now. If you are interested in trying out Neutron in an all-in-one single host configuration, take a look at [ Quick start guide with Neutron](Neutron-Quickstart)*
 
 The installer will ask you to enter the root password for each host node you are installing on the network, to enable remote configuration of the host so it can remotely configure each node using Puppet.
 
