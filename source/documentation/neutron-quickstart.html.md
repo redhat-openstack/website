@@ -53,6 +53,8 @@ Or you can just run this command:
 
     sudo yum install -y http://kojipkgs.fedoraproject.org//packages/openstack-packstack/2013.1.1/0.21.dev651.el6/noarch/openstack-packstack-2013.1.1-0.21.dev651.el6.noarch.rpm
 
+NOTE: There is a more recent Packstack version announced in the forum: openstack-packstack-2013.1.1-0.22.dev653.el6. (Details at <https://www.redhat.com/archives/rdo-list/2013-August/msg00002.html>) Please update the above if this one is what we should be using now for Neutron. (or else warn us not to use it :)
+
 ### Step 3: Run Packstack to install OpenStack
 
 Packstack takes the work out of manually setting up OpenStack. For a single node OpenStack deployment, run the following command.
