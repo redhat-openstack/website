@@ -47,13 +47,7 @@ Run the following command:
 
 ### Step 2: Install Packstack Installer
 
-Right now, there is a test build of Packstack required to enable Neutron to be properly deployed. The test build can be found here: <http://koji.fedoraproject.org/koji/buildinfo?buildID=437715>
-
-Or you can just run this command:
-
-    sudo yum install -y http://kojipkgs.fedoraproject.org//packages/openstack-packstack/2013.1.1/0.21.dev651.el6/noarch/openstack-packstack-2013.1.1-0.21.dev651.el6.noarch.rpm
-
-NOTE: There is a more recent Packstack version announced in the forum: openstack-packstack-2013.1.1-0.22.dev653.el6. (Details at <https://www.redhat.com/archives/rdo-list/2013-August/msg00002.html>) Please update the above if this one is what we should be using now for Neutron. (or else warn us not to use it :)
+    sudo yum install -y openstack-packstack
 
 ### Step 3: Run Packstack to install OpenStack
 
