@@ -19,8 +19,7 @@ Because community-mysql requires mysql-libs not community-mysql-libs (I didn't c
 
 You need to add some lines /usr/lib/python2.7/site-packages/packstack/puppet/modules/keystone/manifests/init.pp
 
-file { '/var/log/keystone/keystone.log':
-
+       file { '/var/log/keystone/keystone.log':
          owner    => 'keystone',
          group    => 'keystone',
        }
