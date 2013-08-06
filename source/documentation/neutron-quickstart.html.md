@@ -43,9 +43,9 @@ Run the following command:
 
     sudo yum install -y http://rdo.fedorapeople.org/openstack/openstack-grizzly/rdo-release-grizzly.rpm
 
-    Note: Currently, Packstack has an issue with OpenStack Havana and Neutron due to naming and package issues.  If you wish to use Packstack to install Neutron, please stick to OpenStack Grizzly (see .http://openstack.redhat.com/forum/discussion/389/centos-6-4-openstack-packstack-2013-1-1-0-22-dev653-el6-issue)
+Note: Currently, Packstack has an issue with OpenStack Havana and Neutron due to naming and package issues. If you wish to use Packstack to install Neutron, please stick to OpenStack Grizzly (see .http://openstack.redhat.com/forum/discussion/389/centos-6-4-openstack-packstack-2013-1-1-0-22-dev653-el6-issue)
 
-    Note: For Neutron to work properly, a network namespaces-enabled kernel is required. On RHEL systems, please do a yum -y update and reboot prior to continuing.
+Note: For Neutron to work properly, a network namespaces-enabled kernel is required. On RHEL systems, please do a yum -y update and reboot prior to continuing.
 
 ### Step 2: Install Packstack Installer
 
