@@ -356,3 +356,25 @@ On the new controller nodes, enable and start the OpenStack Nova API service:
 
     # chkconfig openstack-nova-api on
     # service openstack-nova-api start
+
+#### Cinder
+
+On the new controller nodes, install the OpenStack Cinder service:
+
+    # yum install openstack-cinder
+
+Make the following modifications to the configuration files:
+
+/etc/cinder/cinder.conf
+
+    glance_host = 10.15.85.31
+
+/etc/cinder/api-paste.ini
+
+    service_host = 10.15.85.31
+    auth_host = 10.15.85.31
+
+On the new controller nodes, enable and start the OpenStack Cinder service:
+
+    # chkconfig openstack-cinder-api on
+    # service openstack-cinder-api start
