@@ -322,3 +322,37 @@ On the new controller nodes, enable and start the OpenStack Glance API and regis
     # chkconfig openstack-glance-api on
     # service openstack-glance-registry start
     # service openstack-glance-api start
+
+#### Nova
+
+On the new controller nodes, install the OpenStack Nova service and the Cinder client:
+
+    # yum install openstack-nova-api
+    # yum install python-cinderclient
+
+Make the following modifications to the configuration files:
+
+/etc/nova/nova.conf
+
+    metadata_host = 10.15.85.31
+    quantum_admin_auth_url = http://10.15.85.31:35357/v2.0
+    quantum_url = http://10.15.85.31:9696
+    glance_api_servers = 10.15.85.31:9292
+
+/etc/nova/api-paste.ini
+
+    auth_host = 10.15.85.31
+
+Copy the configuration files in the /etc/nova/ directory on the original controller node to the additional controller nodes:
+
+    /etc/nova
+    /etc/nova/api-paste.ini
+    /etc/nova/nova.conf
+    /etc/nova/policy.json
+    /etc/nova/release
+    /etc/nova/rootwrap.conf
+
+On the new controller nodes, enable and start the OpenStack Nova API service:
+
+    # chkconfig openstack-nova-api on
+    # service openstack-nova-api start
