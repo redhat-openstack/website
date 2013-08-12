@@ -211,7 +211,7 @@ The next step is to deploy additional OpenStack controller nodes and configure t
 
 #### Keystone
 
-On the new controller nodes, install the pacakges for OpenStack Keystone service:
+On the new controller nodes, install the OpenStack Keystone service:
 
     # yum install openstack-keystone
 
@@ -242,3 +242,47 @@ On the new controller nodes, enable and start the OpenStack Keystone service:
 
     # chkconfig openstack-keystone on
     # service openstack-keystone start
+
+#### Quantum
+
+On the new controller nodes, install the OpenStack Quantum service and the appropriate L2 plugin.:
+
+    # yum install openstack-quantum
+    # yum install openstack-quantum-openvswitch
+
+Since the Keystone and Nova services will also be load-balanced, make the following changes to our configuration files:
+
+/etc/quantum/quantum.conf
+
+    auth_host = 10.15.85.31
+
+/etc/quantum/api-paste.ini
+
+    auth_host = 10.15.85.31
+
+/etc/quantum/metadata_agent.ini
+
+    auth_url = http://10.15.85.31:35357/v2.0
+    nova_metadata_ip = 10.15.85.31
+
+Copy the configuration files in the /etc/quantum/ directory on the original controller node to the additional controller nodes:
+
+    /etc/quantum
+    /etc/quantum/api-paste.ini
+    /etc/quantum/dhcp_agent.ini
+    /etc/quantum/l3_agent.ini
+    /etc/quantum/lbaas_agent.ini
+    /etc/quantum/metadata_agent.ini
+    /etc/quantum/plugin.ini -> /etc/quantum/plugins/openvswitch/ovs_quantum_plugin.ini
+    /etc/quantum/plugins
+    /etc/quantum/plugins/openvswitch
+    /etc/quantum/plugins/openvswitch/ovs_quantum_plugin.ini
+    /etc/quantum/policy.json
+    /etc/quantum/quantum.conf
+    /etc/quantum/release
+    /etc/quantum/rootwrap.conf
+
+On the new controller nodes, enable and start the OpenStack Quantum service:
+
+    # chkconfig quantum-server on
+    # service quantum-server start
