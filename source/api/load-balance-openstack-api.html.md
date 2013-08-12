@@ -243,6 +243,10 @@ On the new controller nodes, enable and start the OpenStack Keystone service:
     # chkconfig openstack-keystone on
     # service openstack-keystone start
 
+On the original controller node, restart the OpenStack Keystone service:
+
+    #service openstack-keystone restart
+
 #### Quantum
 
 On the new controller nodes, install the OpenStack Quantum service and the appropriate L2 plugin:
@@ -287,6 +291,10 @@ On the new controller nodes, enable and start the OpenStack Quantum service:
     # chkconfig quantum-server on
     # service quantum-server start
 
+On the original controller node, restart the OpenStack Quantum service:
+
+    #service quantum-server restart
+
 #### Glance
 
 On the new controller nodes, install the OpenStack Glance service:
@@ -323,6 +331,11 @@ On the new controller nodes, enable and start the OpenStack Glance API and regis
     # service openstack-glance-registry start
     # service openstack-glance-api start
 
+On the original controller node, restart the OpenStack Glance API and registry services:
+
+    # service openstack-glance-registry restart
+    # service openstack-glance-api restart
+
 #### Nova
 
 On the new controller nodes, install the OpenStack Nova service and the Cinder client:
@@ -357,6 +370,10 @@ On the new controller nodes, enable and start the OpenStack Nova API service:
     # chkconfig openstack-nova-api on
     # service openstack-nova-api start
 
+On the original controller node, restart the OpenStack Nova service:
+
+    # service openstack-nova-api restart
+
 #### Cinder
 
 On the new controller nodes, install the OpenStack Cinder service:
@@ -378,3 +395,185 @@ On the new controller nodes, enable and start the OpenStack Cinder service:
 
     # chkconfig openstack-cinder-api on
     # service openstack-cinder-api start
+
+One the original controller node, restart the OpenStack Cinder service:
+
+    # service openstack-cinder-api restart
+
+### Create Service Endpoints
+
+Now that the OpenStack services running on multiple controller nodes and the load-balancer nodes are listening on our virtual IP address, return to the original OpenStack node and recreate our service endpoints. This is necessary so that endpoint discovery will direct clients to the virtual IP address.
+
+First, get the list of services from keystone:
+
+    # keystone service-list
+    +----------------------------------+----------+--------------+--------------------------------+
+    |                id                |   name   |     type     |          description           |
+    +----------------------------------+----------+--------------+--------------------------------+
+    | 79b92be20bec4a469725e8c5e2bb46a4 |  cinder  |    volume    |         Cinder Service         |
+    | a959fca8b65745d485131cff9d41480f |  glance  |    image     |    Openstack Image Service     |
+    | b2721815afab4c4784673029609cb84d | keystone |   identity   |   OpenStack Identity Service   |
+    | aa5220a1065b4992baf5cdfe309033e6 |   nova   |   compute    |   Openstack Compute Service    |
+    | 31ee714b590d41fc9833618abc349642 | nova_ec2 |     ec2      |          EC2 Service           |
+    | 976a816bcb29441b882d6cc01faf29ec | quantum  |   network    |   Quantum Networking Service   |
+    | 7a6df59033e54590a4e4fc8ec8225c56 |  swift   | object-store | Openstack Object-Store Service |
+    | e93698a466d144a58c5323a808dbf480 | swift_s3 |      s3      |      Openstack S3 Service      |
+    +----------------------------------+----------+--------------+--------------------------------+
+
+Next, get the list of service endpoint from keystone:
+
+      # keystone endpoint-list
+
+Notice that each URL for a given endpoint points to the original OpenStack controller node. In our example, this is 10.15.85.141. In order to load-balancer the OpenStack services, create a new endpoint for each service. Each URL for the new endpoints should point to the virtual IP address, which is 10.15.85.31 in our example.
+
+#### Keystone
+
+Create a new endpoint for the Keystone service that points to our virtual IP address:
+
+    # keystone endpoint-create --region RegionOne --service-id b2721815afab4c4784673029609cb84d \
+      --publicurl "http://10.15.85.31:5000/v2.0" \
+      --internalurl "http://10.15.85.31:5000/v2.0" \
+      --adminurl "http://10.15.85.31:35357/v2.0"
+    +-------------+----------------------------------+
+    |   Property  |              Value               |
+    +-------------+----------------------------------+
+    |   adminurl  |  http://10.15.85.31:35357/v2.0   |
+    |      id     | c58e5c86ceba47429c401456b2ba889b |
+    | internalurl |   http://10.15.85.31:5000/v2.0   |
+    |  publicurl  |   http://10.15.85.31:5000/v2.0   |
+    |    region   |            RegionOne             |
+    |  service_id | b2721815afab4c4784673029609cb84d |
+    +-------------+----------------------------------+
+
+Delete the old endpoint for the Keystone service:
+
+    # keystone endpoint-delete ca8676494d73487397f9223432cb8d07
+    Endpoint has been deleted.
+
+#### Quantum
+
+Create a new endpoint for the Quantum service that points to our virtual IP address:
+
+    # keystone endpoint-create --region RegionOne --service-id 976a816bcb29441b882d6cc01faf29ec \
+      --publicurl "http://10.15.85.31:9696" \
+      --internalurl "http://10.15.85.31:9696" \
+      --adminurl "http://10.15.85.31:9696"
+    +-------------+----------------------------------+
+    |   Property  |              Value               |
+    +-------------+----------------------------------+
+    |   adminurl  |     http://10.15.85.31:9696      |
+    |      id     | 81c6dafcd2814b8ab43fdd2296a110ee |
+    | internalurl |     http://10.15.85.31:9696      |
+    |  publicurl  |     http://10.15.85.31:9696      |
+    |    region   |            RegionOne             |
+    |  service_id | 976a816bcb29441b882d6cc01faf29ec |
+    +-------------+----------------------------------+
+
+Delete the old endpoint for the Quantum service:
+
+    # keystone endpoint-delete d3bc590da84042cb8f4df4296550d689
+    Endpoint has been deleted.
+
+#### Glance
+
+Create a new endpoint for the Glance service that points to our virtual IP address:
+
+    # keystone endpoint-create --region RegionOne --service-id a959fca8b65745d485131cff9d41480f \
+      --publicurl "http://10.15.85.31:9292" \
+      --internalurl "http://10.15.85.31:9292" \
+      --adminurl "http://10.15.85.31:9292"
+    +-------------+----------------------------------+
+    |   Property  |              Value               |
+    +-------------+----------------------------------+
+    |   adminurl  |     http://10.15.85.31:9292      |
+    |      id     | 16e5704be5cf48ff8fca4f608f72dd00 |
+    | internalurl |     http://10.15.85.31:9292      |
+    |  publicurl  |     http://10.15.85.31:9292      |
+    |    region   |            RegionOne             |
+    |  service_id | a959fca8b65745d485131cff9d41480f |
+    +-------------+----------------------------------+
+
+Delete the old endpoint for the Glance service:
+
+    # keystone endpoint-delete f66323395c394322b2e20fee63777927
+    Endpoint has been deleted.
+
+#### Nova
+
+Create a new endpoint for the Nova (compute) service that points to our virtual IP address:
+
+    # keystone endpoint-create --region RegionOne --service-id aa5220a1065b4992baf5cdfe309033e6 \
+      --publicurl "http://10.15.85.31:8774/v2/%(tenant_id)s" \
+      --internalurl "http://10.15.85.31:8774/v2/%(tenant_id)s" \
+      --adminurl "http://10.15.85.31:8774/v2/%(tenant_id)s"
+    +-------------+------------------------------------------+
+    |   Property  |                  Value                   |
+    +-------------+------------------------------------------+
+    |   adminurl  | http://10.15.85.31:8774/v2/%(tenant_id)s |
+    |      id     |     898a3207f41d4f9a942193f881e11b65     |
+    | internalurl | http://10.15.85.31:8774/v2/%(tenant_id)s |
+    |  publicurl  | http://10.15.85.31:8774/v2/%(tenant_id)s |
+    |    region   |                RegionOne                 |
+    |  service_id |     aa5220a1065b4992baf5cdfe309033e6     |
+    +-------------+------------------------------------------+
+
+Delete the old endpoint for the Nova (compute) service:
+
+    # keystone endpoint-delete f9cbe1df0eb244fbb76ac4dc4b06feb2
+    Endpoint has been deleted.
+
+Create a new endpoint for the Nova (EC2) service that points to our virtual IP address:
+
+    # keystone endpoint-create --region RegionOne --service-id 31ee714b590d41fc9833618abc349642 \
+      --publicurl "http://10.15.85.31:8773/services/Cloud" \
+      --internalurl "http://10.15.85.31:8773/services/Cloud" \
+      --adminurl "http://10.15.85.31:8773/services/Admin"
+    +-------------+----------------------------------------+
+    |   Property  |                 Value                  |
+    +-------------+----------------------------------------+
+    |   adminurl  | http://10.15.85.31:8773/services/Admin |
+    |      id     |    741b58300867430a812f485323d1bc30    |
+    | internalurl | http://10.15.85.31:8773/services/Cloud |
+    |  publicurl  | http://10.15.85.31:8773/services/Cloud |
+    |    region   |               RegionOne                |
+    |  service_id |    31ee714b590d41fc9833618abc349642    |
+    +-------------+----------------------------------------+
+
+Delete the old endpoint for the Nova (EC2) service:
+
+    # keystone endpoint-delete b51a4af8149b479b8856db85c6ea41ba
+    Endpoint has been deleted.
+
+#### Cinder
+
+Create a new endpoint for the Cinder (volume) service that points to our virtual IP address:
+
+    # keystone endpoint-create --region RegionOne --service-id 79b92be20bec4a469725e8c5e2bb46a4 \
+      --publicurl "http://10.15.85.31:8776/v1/%(tenant_id)s" \
+      --internalurl "http://10.15.85.31:8776/v1/%(tenant_id)s" \
+      --adminurl "http://10.15.85.31:8776/v1/%(tenant_id)s"
+    +-------------+------------------------------------------+
+    |   Property  |                  Value                   |
+    +-------------+------------------------------------------+
+    |   adminurl  | http://10.15.85.31:8776/v1/%(tenant_id)s |
+    |      id     |     70c27ea021044690841bca572e4023b1     |
+    | internalurl | http://10.15.85.31:8776/v1/%(tenant_id)s |
+    |  publicurl  | http://10.15.85.31:8776/v1/%(tenant_id)s |
+    |    region   |                RegionOne                 |
+    |  service_id |     79b92be20bec4a469725e8c5e2bb46a4     |
+    +-------------+------------------------------------------+
+
+Delete the old endpoint for the Cinder (volume) service:
+
+    # keystone endpoint-delete 0b52480b89964721bc2fc59cc41ad16c
+    Endpoint has been deleted.
+
+### Conclusion
+
+The final step is to edit the keystone_adminrc file on the client node(s). Specifically, change the OS_AUTH_URL variable such that is points to the virtual IP address:
+
+~/keystone_adminrc
+
+    OS_AUTH_URL=http://10.15.85.141:35357/v2.0/
+
+Any traffic between the clients and OpenStack API services should now pass through the load-balancer to one of the backend OpenStack controller nodes.
