@@ -98,6 +98,8 @@ Network namespaces create new "virtual" network environments that are isolated f
     openstack-config --set /etc/quantum/dhcp_agent.ini DEFAULT ovs_use_veth True
     openstack-config --set /etc/quantum/l3_agent.ini DEFAULT ovs_use_veth True
 
+The ovs_use_veth settings are primarily required to workaround some issues with the OpenStack RHEL kernel. If you are using recent versions of Fedora, you may not need to changes these settings.
+
 ### Checkpoint: Other Namespace Related Configuration
 
 <div style="background-color:#e0e0f0; padding-left:2em;padding-right:2em;padding-top:5px;padding-bottom:5px;">
