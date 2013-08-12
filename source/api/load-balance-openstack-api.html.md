@@ -7,6 +7,11 @@ wiki_revision_count: 11
 wiki_last_updated: 2013-09-13
 ---
 
+__NOTOC__
+
+<div class="bg-boxes bg-boxes-single">
+<div class="row">
+<div class="offset3 span8 pull-s">
 # Load-Balancing OpenStack API Services
 
 When running each of the OpenStack API services on a single controller node, there exists not only a single point of failure but also a potential bottleneck. This guide will show how to manually deploy additional OpenStack controller nodes and configure HAProxy to load-balance each OpenStack API service. In addition, keepalived will be used to provide high availability for the HAProxy load-balancer.
