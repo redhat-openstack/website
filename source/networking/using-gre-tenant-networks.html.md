@@ -32,7 +32,7 @@ If modifying an existing deployment to use GRE tenant networks, run the followin
 
       # openstack-config --set /etc/quantum/plugins/openvswitch/ovs_quantum_plugin.ini OVS tenant_network_type gre
 
-Then, for either a new or existing deployment, run the following commands on the controller node:
+Then, for either a new or existing deployment, run these commands on the controller node:
 
       # openstack-config --set /etc/quantum/plugins/openvswitch/ovs_quantum_plugin.ini OVS enable_tunneling True
       # openstack-config --set /etc/quantum/plugins/openvswitch/ovs_quantum_plugin.ini OVS tunnel_id_ranges 1:1000
