@@ -44,7 +44,7 @@ Finally, on each node where quantum-openvswitch-agent runs (all compute and netw
 `# openstack-config --set /etc/quantum/plugins/openvswitch/ovs_quantum_plugin.ini OVS local_ip `<IP address>
       # service quantum-openvswitch-agent restart
 
-Be sure to specify the IP address on each node of the network interface over which the GRE tunnel traffic should be routed, and make sure that each node's routing table is configured such that traffic to these IP addresses uses the desired interface.
+One each node, be sure to specify the local IP address of the network interface over which the GRE tunnel traffic should be routed. Also make sure that each node's routing table is configured so that outgoing traffic to the other nodes' local IP addresses use the desired interface. Production deployments would likely use a high bandwidth network interface and switch, with a dedicated subnet, for GRE traffic. For non-production deployments, each host's main (and probably only) IP address will suffice.
 
 Once the above is complete, newly created tenant networks should be GRE tunnels, which can be verified by running the following with admin credentials and looking at the provider:network_type attribute:
 
