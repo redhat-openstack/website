@@ -206,3 +206,39 @@ With both keepalived and haproxy configured on each node, enable and start each 
 At this point both services should be running on each node. The node with the highest priority should own the virtual IP address and HAProxy should be ready to load-balance traffic for our OpenStack API services to our controller nodes once they are configured.
 
 ### Configure OpenStack Controller Nodes
+
+The next step is to deploy additional OpenStack controller nodes and configure them to use our virtual IP address. The easiest way to do this is install the required packages on the additional controller nodes, edit the appropriate configuration files on the original single-node deployment, and finally copy the configuration files to the new controller nodes. When copying OpenStack configuration files between nodes, take care that the files have the correct owner, group and permissions.
+
+#### Keystone
+
+On the new controller nodes, install the pacakges for OpenStack Keystone service:
+
+    # yum install openstack-keystone
+
+Copy the configuration files in the /etc/keystone/ directory on the original controller node to the additional controller nodes.
+
+    /etc/keystone
+    /etc/keystone/default_catalog.templates
+    /etc/keystone/keystone.conf
+    /etc/keystone/logging.conf
+    /etc/keystone/policy.json
+    /etc/keystone/ssl
+    /etc/keystone/ssl/certs
+    /etc/keystone/ssl/certs/01.pem
+    /etc/keystone/ssl/certs/cakey.pem
+    /etc/keystone/ssl/certs/ca.pem
+    /etc/keystone/ssl/certs/index.txt
+    /etc/keystone/ssl/certs/index.txt.attr
+    /etc/keystone/ssl/certs/index.txt.old
+    /etc/keystone/ssl/certs/openssl.conf
+    /etc/keystone/ssl/certs/req.pem
+    /etc/keystone/ssl/certs/serial
+    /etc/keystone/ssl/certs/serial.old
+    /etc/keystone/ssl/certs/signing_cert.pem
+    /etc/keystone/ssl/private
+    /etc/keystone/ssl/private/signing_key.pem
+
+On the new controller nodes, enable and start the OpenStack Keystone service:
+
+    # chkconfig openstack-keystone on
+    # service openstack-keystone start
