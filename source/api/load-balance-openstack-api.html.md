@@ -245,7 +245,7 @@ On the new controller nodes, enable and start the OpenStack Keystone service:
 
 #### Quantum
 
-On the new controller nodes, install the OpenStack Quantum service and the appropriate L2 plugin.:
+On the new controller nodes, install the OpenStack Quantum service and the appropriate L2 plugin:
 
     # yum install openstack-quantum
     # yum install openstack-quantum-openvswitch
@@ -286,3 +286,39 @@ On the new controller nodes, enable and start the OpenStack Quantum service:
 
     # chkconfig quantum-server on
     # service quantum-server start
+
+#### Glance
+
+On the new controller nodes, install the OpenStack Glance service:
+
+    # yum install openstack-glance
+
+Make the following modifications to the configuration files:
+
+/etc/glance/glance-api.conf
+
+    registry_host = 10.15.85.31
+    auth_host = 10.15.85.31
+
+/etc/glance/glance-registry.conf
+
+    auth_host = 10.15.85.31
+
+Copy the configuration files in the /etc/glance/ directory on the original controller node to the additional controller nodes:
+
+    /etc/glance
+    /etc/glance/glance-api.conf
+    /etc/glance/glance-api-paste.ini
+    /etc/glance/glance-cache.conf
+    /etc/glance/glance-registry.conf
+    /etc/glance/glance-registry-paste.ini
+    /etc/glance/glance-scrubber.conf
+    /etc/glance/policy.json
+    /etc/glance/schema-image.json
+
+On the new controller nodes, enable and start the OpenStack Glance API and registry services:
+
+    # chkconfig openstack-glance-registry  on
+    # chkconfig openstack-glance-api on
+    # service openstack-glance-registry start
+    # service openstack-glance-api start
