@@ -59,7 +59,6 @@ If you've come across useful tips for resolving issues on OpenStack, or if you'r
 <div class="offset1 span10">
 ### Upstream documentation
 
-<div class="column-split">
 *   [OpenStack Compute Administration Manual](http://docs.openstack.org/trunk/openstack-compute/admin/content/index.html)
 *   [OpenStack Networking Administration Guide](http://docs.openstack.org/trunk/openstack-network/admin/content/index.html)
 *   [OpenStack Object Storage Administration Manual](http://docs.openstack.org/trunk/openstack-object-storage/admin/content/)
@@ -70,6 +69,8 @@ If you've come across useful tips for resolving issues on OpenStack, or if you'r
 *   [OpenStack Glossary](http://docs.openstack.org/glossary/content/glossary.html)
 *   [Books](Books)
 
+</div>
+<div class="offset3 span4">
 ### Ecosystem
 
 *   [PackStack documentation](https://access.redhat.com/knowledge/docs/en-US/Red_Hat_OpenStack_Preview/2/html/Getting_Started_Guide/part-Deploying_OS_using_PackStack.html)
@@ -77,7 +78,6 @@ If you've come across useful tips for resolving issues on OpenStack, or if you'r
 *   [Using Gluster for Cinder Block Storage](http://www.gluster.org/community/documentation/index.php/GlusterFS_Cinder)
 *   [Using Ceph for Block Storage with RDO](Using Ceph for Block Storage with RDO)
 
-</div>
 </div>
 </div>
 <Category:Documentation>
