@@ -23,17 +23,7 @@ If you've come across useful tips for resolving issues on OpenStack, or if you'r
 </div>
 </div>
 <div class="row">
-<div class="offset1 span3">
-### About
-
-*   [Get involved](Get involved)
-*   [Frequently Asked Questions](Frequently Asked Questions)
-*   [Troubleshooting](Troubleshooting)
-*   [Case studies](Case studies)
-*   [Tools](Tools)
-
-</div>
-<div class="span4">
+<div class="offset1 span4">
 ### Install
 
 *   [ Quick start guide ](Quickstart)
@@ -56,9 +46,28 @@ If you've come across useful tips for resolving issues on OpenStack, or if you'r
 *   [ Setting a Floating IP Range ](Floating IP range)
 
 </div>
+<div class="span3">
+### Storage
+
+*   [GlusterFS with Keystone Quickstart](http://www.gluster.org/community/documentation/index.php/GlusterFS_Keystone_Quickstart)
+*   [Using Gluster for Cinder Block Storage](http://www.gluster.org/community/documentation/index.php/GlusterFS_Cinder)
+*   [Using Ceph for Block Storage with RDO](Using Ceph for Block Storage with RDO)
+
+</div>
 </div>
 <div class="row">
-<div class="offset1 span5">
+<div class="span3">
+### About
+
+*   [Get involved](Get involved)
+*   [Frequently Asked Questions](Frequently Asked Questions)
+*   [Troubleshooting](Troubleshooting)
+*   [Case studies](Case studies)
+*   [Tools](Tools)
+*   [PackStack documentation](https://access.redhat.com/knowledge/docs/en-US/Red_Hat_OpenStack_Preview/2/html/Getting_Started_Guide/part-Deploying_OS_using_PackStack.html)
+
+</div>
+<div class="span4">
 ### Upstream documentation
 
 *   [OpenStack Compute Administration Manual](http://docs.openstack.org/trunk/openstack-compute/admin/content/index.html)
@@ -70,15 +79,6 @@ If you've come across useful tips for resolving issues on OpenStack, or if you'r
 *   [OpenStack API docs](http://docs.openstack.org/api/)
 *   [OpenStack Glossary](http://docs.openstack.org/glossary/content/glossary.html)
 *   [Books](Books)
-
-</div>
-<div class="span5">
-### Ecosystem
-
-*   [PackStack documentation](https://access.redhat.com/knowledge/docs/en-US/Red_Hat_OpenStack_Preview/2/html/Getting_Started_Guide/part-Deploying_OS_using_PackStack.html)
-*   [GlusterFS with Keystone Quickstart](http://www.gluster.org/community/documentation/index.php/GlusterFS_Keystone_Quickstart)
-*   [Using Gluster for Cinder Block Storage](http://www.gluster.org/community/documentation/index.php/GlusterFS_Cinder)
-*   [Using Ceph for Block Storage with RDO](Using Ceph for Block Storage with RDO)
 
 </div>
 </div>
