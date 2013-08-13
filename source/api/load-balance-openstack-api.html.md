@@ -44,6 +44,8 @@ Login to each of the load-balancer nodes and install both keepalived and haproxy
 
     # yum install keepalived haproxy
 
+#### HAProxy
+
 To configure the load-balancer, begin by editing the HAProxy configuration file /etc/haproxy/haproxy.cfg. In the example below shows a very simple haproxy.cfg file that defines a proxy for each OpenStack API service. Each proxy has a frontend and a backend. The frontend will define the IP address and port on which HAProxy will listen, as well that the default backend. A proxy's backend defines the pool of servers which traffic will be load-balanced across using a specific algorithm.
 
 Note that HAProxy has many powerful options. The example shown below is intended to be a very basic configuration. Please refer to the official HAProxy documentation for an exhaustive list of options.
@@ -151,6 +153,8 @@ Note that HAProxy has many powerful options. The example shown below is intended
 Notice that each server declaration has "check inter 10s" appended. This instructs HAProxy to perform a health-check of the server every 10 seconds. When a server fails a health-check it is considered "down" and traffic will not be forwarded to that. However the health-check will still be performed at 10 second intervals. Should the server resume responding to health-checks, it will be considered "active" and once again be considered for load-balancing traffic.
 
 The haproxy.cfg file should be identical on each of the load-balancer nodes, so copy that file to the all other load-balancer nodes.
+
+#### Keepalived
 
 Before we start the HAProxy service on our load-balancer nodes, configure keepalived. In our example, keepalived will be used to provide high-availability for our HAProxy load-balancer. Without keepalived, HAProxy would be a single point of failure.
 
