@@ -56,7 +56,7 @@ If you've come across useful tips for resolving issues on OpenStack, or if you'r
 </div>
 </div>
 <div class="row">
-<div class="offset1 span3">
+<div class="offset1 span5">
 ### About
 
 *   [Get involved](Get involved)
@@ -67,7 +67,7 @@ If you've come across useful tips for resolving issues on OpenStack, or if you'r
 *   [PackStack documentation](https://access.redhat.com/knowledge/docs/en-US/Red_Hat_OpenStack_Preview/2/html/Getting_Started_Guide/part-Deploying_OS_using_PackStack.html)
 
 </div>
-<div class="span4">
+<div class="span5">
 ### Upstream documentation
 
 *   [OpenStack Compute Administration Manual](http://docs.openstack.org/trunk/openstack-compute/admin/content/index.html)
