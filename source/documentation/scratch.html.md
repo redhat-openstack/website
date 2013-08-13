@@ -23,7 +23,7 @@ If you've come across useful tips for resolving issues on OpenStack, or if you'r
 </div>
 </div>
 <div class="row">
-<div class="offset1 span4">
+<div class="offset1 span3">
 ### Install
 
 *   [ Quick start guide ](Quickstart)
@@ -56,7 +56,7 @@ If you've come across useful tips for resolving issues on OpenStack, or if you'r
 </div>
 </div>
 <div class="row">
-<div class="span3">
+<div class="offset1 span3">
 ### About
 
 *   [Get involved](Get involved)
