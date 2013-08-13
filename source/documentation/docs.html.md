@@ -41,6 +41,7 @@ If you've come across useful tips for resolving issues on OpenStack, or if you'r
 *   [ Quick start guide with Neutron](Neutron-Quickstart)
 *   [ Launching your first VM with Neutron](Running_an_instance_with_Neutron)
 *   [ Configuring Neutron to use VLANs](Neutron with OVS and VLANs)
+*   [Using GRE Tenant Networks](Using GRE Tenant Networks)
 *   [ Setting a Floating IP Range ](Floating IP range)
 *   [ Deploy Heat and launch your first Application ](Deploy Heat and launch your first Application)
 *   [Using RDO on TryStack](Using RDO on TryStack)
