@@ -38,11 +38,6 @@ If you've come across useful tips for resolving issues on OpenStack, or if you'r
 
 *   [ Quick start guide ](Quickstart)
 *   [ Launching your first VM ](Running an instance)
-*   [ Quick start guide with Neutron](Neutron-Quickstart)
-*   [ Launching your first VM with Neutron](Running_an_instance_with_Neutron)
-*   [ Configuring Neutron to use VLANs](Neutron with OVS and VLANs)
-*   [Using GRE Tenant Networks](Using GRE Tenant Networks)
-*   [ Setting a Floating IP Range ](Floating IP range)
 *   [ Deploy Heat and launch your first Application ](Deploy Heat and launch your first Application)
 *   [Using RDO on TryStack](Using RDO on TryStack)
 *   [ Repository information ](Repositories)
@@ -52,12 +47,13 @@ If you've come across useful tips for resolving issues on OpenStack, or if you'r
 
 </div>
 <div class="span3">
-### Ecosystem
+### Networking
 
-*   [PackStack documentation](https://access.redhat.com/knowledge/docs/en-US/Red_Hat_OpenStack_Preview/2/html/Getting_Started_Guide/part-Deploying_OS_using_PackStack.html)
-*   [GlusterFS with Keystone Quickstart](http://www.gluster.org/community/documentation/index.php/GlusterFS_Keystone_Quickstart)
-*   [Using Gluster for Cinder Block Storage](http://www.gluster.org/community/documentation/index.php/GlusterFS_Cinder)
-*   [Using Ceph for Block Storage with RDO](Using Ceph for Block Storage with RDO)
+*   [ Quick start guide with Neutron](Neutron-Quickstart)
+*   [ Launching your first VM with Neutron](Running_an_instance_with_Neutron)
+*   [ Configuring Neutron to use VLANs](Neutron with OVS and VLANs)
+*   [Using GRE Tenant Networks](Using GRE Tenant Networks)
+*   [ Setting a Floating IP Range ](Floating IP range)
 
 </div>
 <div class="offset1 span10">
@@ -73,6 +69,13 @@ If you've come across useful tips for resolving issues on OpenStack, or if you'r
 *   [OpenStack API docs](http://docs.openstack.org/api/)
 *   [OpenStack Glossary](http://docs.openstack.org/glossary/content/glossary.html)
 *   [Books](Books)
+
+### Ecosystem
+
+*   [PackStack documentation](https://access.redhat.com/knowledge/docs/en-US/Red_Hat_OpenStack_Preview/2/html/Getting_Started_Guide/part-Deploying_OS_using_PackStack.html)
+*   [GlusterFS with Keystone Quickstart](http://www.gluster.org/community/documentation/index.php/GlusterFS_Keystone_Quickstart)
+*   [Using Gluster for Cinder Block Storage](http://www.gluster.org/community/documentation/index.php/GlusterFS_Cinder)
+*   [Using Ceph for Block Storage with RDO](Using Ceph for Block Storage with RDO)
 
 </div>
 </div>
