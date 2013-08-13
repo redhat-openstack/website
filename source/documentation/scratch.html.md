@@ -36,7 +36,7 @@ If you've come across useful tips for resolving issues on OpenStack, or if you'r
 *   [Load Balance OpenStack API](Load Balance OpenStack API)
 
 </div>
-<div class="span3">
+<div class="span4">
 ### Networking
 
 *   [ Quick start guide with Neutron](Neutron-Quickstart)
