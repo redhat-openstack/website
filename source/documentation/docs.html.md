@@ -23,30 +23,22 @@ This page links to general information about RDO, guides for getting your OpenSt
 If you've come across useful tips for resolving issues on OpenStack, or if you're interested in sharing details of your deployment, please consider sharing this information with the community at our [troubleshooting](troubleshooting) and [case studies](case studies) pages.
 
 </div>
-<div class="offset1 span3">
-### About
-
-*   [Get involved](Get involved)
-*   [Frequently Asked Questions](Frequently Asked Questions)
-*   [Troubleshooting](Troubleshooting)
-*   [Case studies](Case studies)
-*   [Tools](Tools)
-
 </div>
-<div class="span4">
+<div class="row">
+<div class="offset1 span3">
 ### Install
 
 *   [ Quick start guide ](Quickstart)
 *   [ Launching your first VM ](Running an instance)
 *   [ Deploy Heat and launch your first Application ](Deploy Heat and launch your first Application)
-*   [Using RDO on TryStack](Using RDO on TryStack)
 *   [ Repository information ](Repositories)
-*   [Uninstalling RDO](Uninstalling RDO)
 *   [Adding a compute node](Adding a compute node)
 *   [Load Balance OpenStack API](Load Balance OpenStack API)
+*   [Troubleshooting](Troubleshooting)
+*   [Uninstalling RDO](Uninstalling RDO)
 
 </div>
-<div class="span3">
+<div class="span4">
 ### Networking
 
 *   [ Quick start guide with Neutron](Neutron-Quickstart)
@@ -56,7 +48,28 @@ If you've come across useful tips for resolving issues on OpenStack, or if you'r
 *   [ Setting a Floating IP Range ](Floating IP range)
 
 </div>
-<div class="offset1 span10">
+<div class="span3">
+### Storage
+
+*   [GlusterFS with Keystone Quickstart](http://www.gluster.org/community/documentation/index.php/GlusterFS_Keystone_Quickstart)
+*   [Using Gluster for Cinder Block Storage](http://www.gluster.org/community/documentation/index.php/GlusterFS_Cinder)
+*   [Using Ceph for Block Storage with RDO](Using Ceph for Block Storage with RDO)
+
+</div>
+</div>
+<div class="row">
+<div class="offset1 span5">
+### About
+
+*   [Get involved](Get involved)
+*   [Frequently Asked Questions](Frequently Asked Questions)
+*   [Try out RDO on TryStack](Try out RDO on TryStack)
+*   [Case studies](Case studies)
+*   [Tools](Tools)
+*   [PackStack documentation](https://access.redhat.com/knowledge/docs/en-US/Red_Hat_OpenStack_Preview/2/html/Getting_Started_Guide/part-Deploying_OS_using_PackStack.html)
+
+</div>
+<div class="span5">
 ### Upstream documentation
 
 *   [OpenStack Compute Administration Manual](http://docs.openstack.org/trunk/openstack-compute/admin/content/index.html)
@@ -68,15 +81,6 @@ If you've come across useful tips for resolving issues on OpenStack, or if you'r
 *   [OpenStack API docs](http://docs.openstack.org/api/)
 *   [OpenStack Glossary](http://docs.openstack.org/glossary/content/glossary.html)
 *   [Books](Books)
-
-</div>
-<div class="offset3 span4">
-### Ecosystem
-
-*   [PackStack documentation](https://access.redhat.com/knowledge/docs/en-US/Red_Hat_OpenStack_Preview/2/html/Getting_Started_Guide/part-Deploying_OS_using_PackStack.html)
-*   [GlusterFS with Keystone Quickstart](http://www.gluster.org/community/documentation/index.php/GlusterFS_Keystone_Quickstart)
-*   [Using Gluster for Cinder Block Storage](http://www.gluster.org/community/documentation/index.php/GlusterFS_Cinder)
-*   [Using Ceph for Block Storage with RDO](Using Ceph for Block Storage with RDO)
 
 </div>
 </div>
