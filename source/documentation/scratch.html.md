@@ -29,11 +29,11 @@ If you've come across useful tips for resolving issues on OpenStack, or if you'r
 *   [ Quick start guide ](Quickstart)
 *   [ Launching your first VM ](Running an instance)
 *   [ Deploy Heat and launch your first Application ](Deploy Heat and launch your first Application)
-*   [Using RDO on TryStack](Using RDO on TryStack)
 *   [ Repository information ](Repositories)
-*   [Uninstalling RDO](Uninstalling RDO)
 *   [Adding a compute node](Adding a compute node)
 *   [Load Balance OpenStack API](Load Balance OpenStack API)
+*   [Troubleshooting](Troubleshooting)
+*   [Uninstalling RDO](Uninstalling RDO)
 
 </div>
 <div class="span4">
@@ -61,7 +61,7 @@ If you've come across useful tips for resolving issues on OpenStack, or if you'r
 
 *   [Get involved](Get involved)
 *   [Frequently Asked Questions](Frequently Asked Questions)
-*   [Troubleshooting](Troubleshooting)
+*   [Try out RDO on TryStack](Try out RDO on TryStack)
 *   [Case studies](Case studies)
 *   [Tools](Tools)
 *   [PackStack documentation](https://access.redhat.com/knowledge/docs/en-US/Red_Hat_OpenStack_Preview/2/html/Getting_Started_Guide/part-Deploying_OS_using_PackStack.html)
