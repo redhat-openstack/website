@@ -38,7 +38,7 @@ If you've come across useful tips for resolving issues on OpenStack, or if you'r
 *   [Uninstalling RDO](Uninstalling RDO)
 
 </div>
-<div class="span4">
+<div class="span3">
 ### Networking
 
 *   [ Quick start guide with Neutron](Neutron-Quickstart)
@@ -48,7 +48,7 @@ If you've come across useful tips for resolving issues on OpenStack, or if you'r
 *   [ Setting a Floating IP Range ](Floating IP range)
 
 </div>
-<div class="span3">
+<div class="span4">
 ### Storage
 
 *   [GlusterFS with Keystone Quickstart](http://www.gluster.org/community/documentation/index.php/GlusterFS_Keystone_Quickstart)
