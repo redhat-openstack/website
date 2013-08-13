@@ -46,6 +46,7 @@ If you've come across useful tips for resolving issues on OpenStack, or if you'r
 *   [ Configuring Neutron to use VLANs](Neutron with OVS and VLANs)
 *   [Using GRE Tenant Networks](Using GRE Tenant Networks)
 *   [ Setting a Floating IP Range ](Floating IP range)
+*   [ Other networking resources ](Networking)
 
 </div>
 <div class="span4">
