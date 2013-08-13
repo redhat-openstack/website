@@ -40,11 +40,13 @@ Below, we'll explain how to set up OpenStack on a single server. You'll be able 
 </div>
 ### Step 1: Software repositories
 
-Run the following command:
+Run the following command for Grizzly:
 
     sudo yum install -y http://rdo.fedorapeople.org/openstack/openstack-grizzly/rdo-release-grizzly.rpm
 
-You can change 'grizzly' to 'havana' in the command above to select the OpenStack release or pre-release to use.
+If you want to try out Havana instead:
+
+    sudo yum install -y http://rdo.fedorapeople.org/openstack/openstack-havana/rdo-release-havana.rpm
 
 ### Step 2: Install Packstack Installer
 
