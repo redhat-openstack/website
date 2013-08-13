@@ -17,7 +17,6 @@ This page is a collection of various OpenStack-ready images of different distrib
 *   CentOS 6.3: [Various cloud ready images](//wiki.centos.org/Cloud/OpenNebula)
 *   [Ubuntu cloud images](//cloud-images.ubuntu.com/)
 *   [RHEL 6 image](https://rhn.redhat.com/rhn/software/channel/downloads/Download.do?cid=16952) (Requires RHEL subscription)
-*   [OpenSuSE 12.2 image](http://susestudio.com/a/2hAGDJ/dk-openstack-testing-instance-opensuse-12-2-x86_64)
 *   [Windows Server 2012 test image](http://www.cloudbase.it/ws2012/)
 
 See also [the oz-image-build list on Github](https://github.com/rackerjoe/oz-image-build)
