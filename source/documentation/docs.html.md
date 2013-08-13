@@ -47,6 +47,7 @@ If you've come across useful tips for resolving issues on OpenStack, or if you'r
 *   [ Repository information ](Repositories)
 *   [Uninstalling RDO](Uninstalling RDO)
 *   [Adding a compute node](Adding a compute node)
+*   [Load Balance OpenStack API](Load Balance OpenStack API)
 
 </div>
 <div class="span3">
