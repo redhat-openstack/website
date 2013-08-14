@@ -12,8 +12,6 @@ wiki_last_updated: 2014-09-01
 
 __NOTOC__
 
-First draft. Formatting bug fixes in progress. More Checkpoints to come.
-
 If you are interested in getting into the details of how OpenStack Networking with Neutron works and do not mind "getting your hands dirty", configuring the network in an all-in-one Packstack deployment is a great way to get familiar with how it works. In this set of instructions for configuring a working all-in-one with a single private network, a single router with two test VM instances, each step is described as well as checkpoints advising how to verify each step in the logs as well as immediate side-effects in the system.
 
 Some preamble before we begin:
