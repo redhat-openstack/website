@@ -68,7 +68,7 @@ If you are trying out Havana, OpenStack Networking is called Neutron now, so you
 
 *Advanced users: Packstack does have some support for Neutron networking, however, until we have better support for Neutron and some documentation on the wiki for it, we recommend Nova Networking for now. If you are interested in trying out Neutron in an all-in-one single host configuration, take a look at [ Quick start guide with Neutron](Neutron-Quickstart)*
 
-''If you have run packstack previously, there will be a file in your home directory named something like packstack-answers-20130722-153728.txt You will probably want to use that file again, using the --answer-file option, so that any passwords you've already set (eg, mysql) will be reused."
+If you have run packstack previously, there will be a file in your home directory named something like packstack-answers-20130722-153728.txt You will probably want to use that file again, using the --answer-file option, so that any passwords you've already set (eg, mysql) will be reused.
 
 The installer will ask you to enter the root password for each host node you are installing on the network, to enable remote configuration of the host so it can remotely configure each node using Puppet.
 
