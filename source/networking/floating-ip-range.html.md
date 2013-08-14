@@ -15,7 +15,7 @@ OpenStack instances receive a private IP address through which they can reach ea
 
 If you don't know of an appropriate range of IP addresses on your network (best), and can't ask someone who does know (next best), you can make an intelligent guess by steering well clear of the range you typically get DHCP addresses in, by picking a fairly small range (/29 gives an 8 address range, 6 of which will be usable), and by using nmap to check if hosts are up in the range you're guessing at.
 
-For instance, 192.168.1.56/29 represents a small range of addresses (192.168.1.56-63, with 57-62 usable), and you could run the command "nmap 192.168.1.56/29" to check and see if that whole range was in fact unused (at the moment, at least).
+For instance, 192.168.1.56/29 represents a small range of addresses (192.168.1.56-63, with 57-62 usable), and you could run the command "nmap -sn 192.168.1.56/29" to check and see if that whole range was in fact unused (at the moment, at least).
 
 Steps to remove hard-coded floating IP and add a new one:
 
