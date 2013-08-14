@@ -68,6 +68,8 @@ For Havana, update the config files at `/etc/heat/heat-api{,-cfn,-cloudwatch}.co
       admin_user = heat
       admin_password = ${HEAT_USER_PASSWORD}
 
+**Note**: Check your value for ${SERVICES_TENANT_NAME} carefully, the packstack default tenant is "**services**", whereas some other install methods (which use /usr/share/openstack-keystone/sample_data.sh) name it "**service**"
+
 In there you also need to make sure that the following variables are pointing to your Keystone host (127.0.0.1 should just work if you've used PackStack as Keystone is probably installed on the same host)::
 
       service_host = ${KEYSTONE_HOSTNAME}
