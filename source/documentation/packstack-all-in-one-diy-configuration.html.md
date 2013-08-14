@@ -22,6 +22,10 @@ Some preamble before we begin:
 
 Neutron is simply the component-formerly-known-as-Quantum. While the commands and configuration files refer to Quantum, the documentation refers to Neutron. The name transition in software will be complete in the upcoming Havana release.
 
+### What is "all in one" for?
+
+Not everyone has a development or testing lab that they have control of for "proof-of-concept" evaluation, demos or simple curiousity. Packstack's "allinone" option installs and configures a single fully-loaded standalone OpenStack deployment. The term **standalone** is actually pretty significant here as everything is configured to run on a system that has only one network interface. That effectively puts multiple compute nodes, fault-tolerant dhcp servers, access to physical provider networks, etc. outside of the scope of the all-in-one configuration. If setting up this sort of deployment is your ultimate goal, you will not get **directly** there by running through the operations described here. Much of what is described here is relevant to all types of deployments, so if you are new to Neutron and are planning something more complex than an "all-in-one" there is some value to going through this document. However, keep in mind that the details relevant to more interesting deployments (e.g. multiple compute nodes, separate network gateways, etc) are
+
 ### Conventions
 
 #### OpenStack Commands
@@ -74,11 +78,17 @@ If this is a relatively clean system that has never had OpenStack installed on i
 
 Now, let's setup our baseline OpenStack install with Neutron enabled.
 
-    packstack --allinone --os-quantum-install=y
+    packstack --allinone --os-quantum-install=y --provision-demo=n --provision-all-in-one-ovs-bridge=n
 
-or simply:
+The
 
-    packstack --allinone
+    --provision-demo=n
+
+and
+
+    --provision-all-in-one-ovs-bridge=n
+
+options disable the default behavior of setting up the test networks when Neutron is selected. If packstack complains that these options aren't supported, then you have a version of packstack that does not include this functionality and you can skip these command line options.
 
 It is recommended that you run Packstack from a regular user account and not as 'root'. You will be prompted for the root account password when Packstack needs it. The installation may take awhile. Once completed, Packstack may have installed kernel updates requiring a reboot. These updates are critical so it is best that you do not skip the reboot step. It's okay, we'll wait for you at Step 1.
 
