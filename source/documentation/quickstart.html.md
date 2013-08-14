@@ -60,6 +60,8 @@ For Grizzly, the OpenStack Networking component was called Quantum, so you will 
 
     packstack --allinone --os-quantum-install=n
 
+(On Fedora 19, omit the *--os-quantum-install=n* argument.)
+
 If you are trying out Havana, OpenStack Networking is called Neutron now, so you should run:
 
     packstack --allinone --os-neutron-install=n
