@@ -47,7 +47,7 @@ Check in `/etc/heat/heat-engine.conf` that your database connection string is co
 
 Now go through the usual steps needed to create a new user, service and endpoint with Keystone and don't forget to source the admin credentials before starting (which are in `/root/keystonerc_admin` if you've used PackStack)::
 
-      $ keystone user-create --name heat --pass ${HEAT_USER_PASSWORD_OF_CHOICE}
+      $ keystone user-create --name heat --pass ${HEAT_USER_PASSWORD_OF_CHOICE} --tenant-id ${SERVICES_TENANT_ID}
       $ keystone user-role-add --user heat --role admin --tenant ${SERVICES_TENANT_NAME}
       $ keystone service-create --name heat --type orchestration
       $ keystone service-create --name heat-cfn --type cloudformation
@@ -56,7 +56,13 @@ Now go through the usual steps needed to create a new user, service and endpoint
 
 Note: `${HEAT_HOSTNAME}` should be replaced by the hostname or IP address of your Heat host, while `%(tenant_id)` should remain literally as is in these commands. The various service IDs may be obtained by running the `keystone service-list` command.
 
-Update the paste files at `/etc/heat/heat-api{,-cfn,-cloudwatch}-paste.ini` with the credentials just created::
+For Grizzly, update the paste files at `/etc/heat/heat-api{,-cfn,-cloudwatch}-paste.ini` with the credentials just created::
+
+      admin_tenant_name = ${SERVICES_TENANT_NAME}
+      admin_user = heat
+      admin_password = ${HEAT_USER_PASSWORD}
+
+For Havana, update the config files at `/etc/heat/heat-api{,-cfn,-cloudwatch}.conf` with the credentials just created::
 
       admin_tenant_name = ${SERVICES_TENANT_NAME}
       admin_user = heat
