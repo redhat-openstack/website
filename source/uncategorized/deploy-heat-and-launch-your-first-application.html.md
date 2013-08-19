@@ -25,7 +25,7 @@ This guide deploys a composite application (made up of more than a single instan
 
 Start by installing the required packages for Heat to work:
 
-      $ sudo yum install openstack-heat-* python-heatclient
+      $ sudo yum install "openstack-heat-*" python-heatclient
 
 You'll get four new services installed: an engine, a native api, a cloudformation compatible api, a cloudwatch compatible api. You don't have to deploy them all on a single host but for the purpose of this guide it will be fine to do so.
 
