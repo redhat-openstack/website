@@ -91,6 +91,12 @@ The configuration should now be complete and the services can be started::
 
       $ sudo -c "cd /etc/init.d && for s in $(ls openstack-heat-*); do chkconfig $s on && service $s start; done"
 
+Or, for systems running systemd (eg F19)
+
+      $ cd /usr/lib/systemd/system
+      $ ls openstack-heat* | sed 's/.service//'  | xargs sudo systemctl enable
+      $ ls openstack-heat* | sed 's/.service//'  | xargs sudo systemctl start
+
 Make sure by checking the logs that everything was started successfully. Specifically, in case the engine service reports `ImportError: cannot import name Random` then you're probably using an old version of `pycrypto`. A fix has been merged upstream to workaround the issue. It's [a trivial change](https://review.openstack.org/#/c/26759/) which you can apply manually to `heat/common/crypt.py`.
 
 ### Get the demo files
