@@ -20,7 +20,6 @@ Every piece of software as complex as OpenStack has some pitfalls in its usage. 
 *   [Uninstalling RDO](Uninstalling RDO)
 *   [Keystone integration with Red Hat IDM/FreeIPA](Keystone integration with IDM)
 *   [qpidd/AMQP troubleshooting](qpid errors)
-*   [<http://openstack.redhat.com/forum/discussion/124/fedora-19-issues># Fedora 19 Issues (Forum post)]
 *   [Fedora 19 issues](Fedora 19)
 
 <Category:Documentation>
