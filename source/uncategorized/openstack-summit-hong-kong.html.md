@@ -140,6 +140,8 @@ Because OpenStack Swift API is easily accessible over the network, it can cross 
 
 In this session, Ayal Baron will discuss extending the concept of unified storage to leverage the power of OpenStack Swift, bridging the datacenter and the mobile remote. Attendees will leave this session...
 
+[Vote](http://www.openstack.org/rate/Presentation/openstack-swift-beyond-pure-object-store)
+
 ## OpenStack Performance
 
 Mark Wagner
