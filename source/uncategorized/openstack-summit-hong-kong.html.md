@@ -150,6 +150,8 @@ In this session, Mark Wagner will detail the range of performance considerations
 
 Kernel-based Virtual Machine (KVM) hypervisor performance across a range of workloads Performance considerations for storing Nova instances including both direct-attached disks and locally attached SSD Performance of OpenStack networking based on Linux bridge and Open vSwitch Capacity planning for OpenStack provisioning services, including Nova, Cinder, Keystone, and Glance
 
+[Vote](http://www.openstack.org/rate/Presentation/openstack-performance)
+
 ## The Future Costs of Today’s OpenStack Decisions
 
 Greg Kleiman
