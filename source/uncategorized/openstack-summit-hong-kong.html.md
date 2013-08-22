@@ -196,6 +196,8 @@ Marconi is a multi-tenant cloud queuing and notification project, written in Pyt
 
 Session attendees will learn about Marconi’s architecture, design, patterns, and performance. They will also learn about the challenges the relatively new project has faced and how they were overcome. Join Flavio Percoco as he provides a review of Marconi.
 
+[Vote here](http://www.openstack.org/rate/Presentation/marconi-qns-queuing-and-notification-service-for-openstack)
+
 ## Oslo Messaging: Abstract RPC Library for OpenStack
 
 Flavio Percoco
