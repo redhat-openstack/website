@@ -90,6 +90,8 @@ When Neutron was integrated with PackStack and the RDO OpenStack distribution by
 
 If you are curious about SDN and what problems it solves, but you are not familiar with the Linux networking and virtualization toolchain, this session will answer many of your questions. Dave Neary will introduce you to some sample network topologies and describe how to implement them in Neutron. He will also discuss the toolchain and techniques you will need to troubleshoot any issues you might have along the way.
 
+[Vote here](http://www.openstack.org/rate/Presentation/openstack-neutron-and-ovs-concepts-for-non-networking-people)
+
 ## Unifying the Management of OpenStack, Public Cloud, and Datacenter Virtualization
 
 James Labocki and Oleg Barenboim
