@@ -78,6 +78,8 @@ Earlier this year, Dave Neary presented the theory of personas to OpenStack Summ
 
 Based on data from the user committee survey (still waiting for access!), a personas working group is being created to answer the question: "Who uses OpenStack?" In this session, Dave will return to present an initial set of OpenStack personas, discuss how they were created, and detail what conclusions we can draw from them.
 
+[Vote here](http://www.openstack.org/rate/Presentation/openstack-user-personas-6-months-on)
+
 ## OpenStack Neutron and OVS concepts for non-networking people
 
 Dave Neary
