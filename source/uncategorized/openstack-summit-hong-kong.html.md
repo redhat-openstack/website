@@ -108,7 +108,7 @@ James and Oleg will also provide an overview of Red Hat's open hybrid cloud-base
 
 ## A Deep Dive into the OpenStack Neutron Modular Layer 2 Plugin
 
-Robert Kukura + Cisco
+Robert Kukura + Kyle Mestery
 
 This presentation introduces the Havana release's new Modular Layer 2 (ML2) plugin for OpenStack Neutron. The ML2 plugin is a community-driven framework allowing OpenStack Neutron to simultaneously utilize the variety of layer 2 networking technologies found in complex, real-world datacenters. ML2 currently works with the Open vSwitch, Linux Bridge, and Hyper-V L2 agents, and is intended to replace and deprecate those agents' monolithic plugins. The ML2 plugin also works with SDN controllers and network hardware devices, and is designed to greatly simplify adding support for new L2 networking technologies into OpenStack Neutron.
 
@@ -117,6 +117,8 @@ In this session, Cisco and Red Hat representatives will:
 Introduce the Modular Layer 2 (ML2) plugin for OpenStack Neutron Provide an overview of ML2, discussing its design principles and detailing use case examples Describe ML2's architecture and its driver APIs Demonstrate an OpenStack deployment with ML2 utilizing multiple segmentation methods and multiple L2 networking mechanisms to show the power of the ML2 plugin
 
 Attendees will leave this session with an understanding of ML2, the use cases it was designed to solve, how to deploy ML2 in an OpenStack Havana environment, and how existing Neutron deployments can migrate to ML2.
+
+[Vote](http://www.openstack.org/rate/Presentation/openstack-neutron-modular-layer-2-plugin-deep-dive)
 
 ## Scaling OpenStack Storage Services with Distributed Storage Solutions
 
