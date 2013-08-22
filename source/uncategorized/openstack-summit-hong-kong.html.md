@@ -8,8 +8,6 @@ wiki_last_updated: 2013-08-22
 
 # OpenStack Summit Hong Kong
 
-*   OpenStack Summit proposals from Red Hat\*
-
 The following talks have been submitted by Red Hat employees for the [OpenStack Summit, November 5-8, in Hong Kong](http://www.openstack.org/summit/openstack-summit-hong-kong-2013/). We would be delighted if you would consider [voting for these talks](http://www.openstack.org/rate/). The vote closes on Sunday, November 25th.
 
 ===Ceilometer+Heat=Alarming=== Eoghan Glynn, Red Hat
