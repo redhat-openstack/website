@@ -170,6 +170,8 @@ Enterprise IT infrastructure is diverging. because of the growing business needs
 
 In this session, attendees will learn how a distributed, scale-out storage platform (such as GlusterFS) can be used for data availability across clouds built with OpenStack, public clouds (such as AWS), and traditional datacenters. They will also better understand the business and technical data availability challenges and will be presented with solution architectures and use cases.
 
+[Vote here](http://www.openstack.org/rate/Presentation/data-availability-across-openstack-clouds-public-clouds-and-traditional-datacenters-with-shared-storage)
+
 ## From Zero to Production: Provision and Manage OpenStack at Scale with Tuskar.
 
 Keith Basil & Martyn Taylor
