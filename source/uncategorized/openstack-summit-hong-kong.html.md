@@ -48,6 +48,8 @@ Dan Radez
 
 OpenStack has many moving parts that need to be taken into consideration when high availability control services are deployed. In this session, Dan Radez will walk attendees through the necessary considerations to deploy highly available control services, presenting multiple options where available. Attendees will leave the session better prepared to architect their OpenStack control nodes.
 
+[Vote here](http://www.openstack.org/rate/Presentation/highly-available-control-services)
+
 ## Customizing Horizon and extending Horizon through plugins
 
 Matthias Runge
