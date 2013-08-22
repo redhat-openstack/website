@@ -6,9 +6,9 @@ wiki_revision_count: 30
 wiki_last_updated: 2013-08-22
 ---
 
-__NOTOC__
+# OpenStack Summit Hong Kong
 
-# OpenStack Summit proposals from Red Hat
+OpenStack Summit proposals from Red Hat
 
 The following talks have been submitted by Red Hat employees for the [OpenStack Summit, November 5-8, in Hong Kong](http://www.openstack.org/summit/openstack-summit-hong-kong-2013/). We would be delighted if you would consider [voting for these talks](http://www.openstack.org/rate/). The vote closes on Sunday, November 25th.
 
@@ -20,7 +20,7 @@ Ceilometer can access decisive data and trigger the appropriate actions in Heat.
 
 In this session, speakers from eNovance and Red Hat will detail how the two projects work together to deliver autoscaling, providing both background information and a technical deep dive.
 
-### Getting started with OpenStack
+## Getting started with OpenStack
 
 Dan Radez
 
@@ -30,7 +30,7 @@ Adding new users Adding an image to glance Defining networks in Neutron Starting
 
 Dan will also provide a summary of each of these components and explain how they interact with each other.
 
-### TryStack :: Public OpenStack Cluster
+## TryStack :: Public OpenStack Cluster
 
 Dan Radez
 
@@ -38,13 +38,13 @@ TryStack is a publicly available OpenStack cluster and is available for anyone w
 
 In this session, Dan Radez from Red Hat will: Walk attendees through the cluster architecture and the Grizzly upgrade process Provide lessons learned over the past year Discuss Grizzly features Provide the roadmap to upgrade to Havanna
 
-### Highly Available Control Services
+## Highly Available Control Services
 
 Dan Radez
 
 OpenStack has many moving parts that need to be taken into consideration when high availability control services are deployed. In this session, Dan Radez will walk attendees through the necessary considerations to deploy highly available control services, presenting multiple options where available. Attendees will leave the session better prepared to architect their OpenStack control nodes.
 
-### Customizing Horizon and extending Horizon through plugins
+## Customizing Horizon and extending Horizon through plugins
 
 Matthias Runge
 
@@ -52,7 +52,7 @@ Currently, there is no plugin architecture for Horizon. In order to customize th
 
 This session will be broken into two parts. In the first, Red Hat’s Matthias Runge will describe how to customize the OpenStack dashboard both with and without RPM packages. In the second, Matthias will lead a brainstorming session in order to collect ideas for improving Horizon to enable plugins automatically.
 
-### OpenShift by Red Hat: The De facto PaaS for OpenStack
+## OpenShift by Red Hat: The De facto PaaS for OpenStack
 
 Krishnan Subramanian
 
@@ -62,7 +62,7 @@ In this session, Krishnan Subramanian will: Detail why the alignment of the Open
 
 This session will include roadmap and strategy information, beyond the infrastructure services. It is targeted at the developer community, vendors, and enterprise buyers. We expect the discussion to be a starting point for developing a framework where OpenShift and OpenStack can emerge as standards in the coming years.
 
-### OpenStack User Personas: An Update
+## OpenStack User Personas: An Update
 
 Dave Neary
 
@@ -70,7 +70,7 @@ Earlier this year, Dave Neary presented the theory of personas to OpenStack Summ
 
 Based on data from the user committee survey (still waiting for access!), a personas working group is being created to answer the question: "Who uses OpenStack?" In this session, Dave will return to present an initial set of OpenStack personas, discuss how they were created, and detail what conclusions we can draw from them.
 
-### OpenStack Neutron and OVS concepts for non-networking people
+## OpenStack Neutron and OVS concepts for non-networking people
 
 Dave Neary
 
@@ -80,7 +80,7 @@ When Neutron was integrated with PackStack and the RDO OpenStack distribution by
 
 If you are curious about SDN and what problems it solves, but you are not familiar with the Linux networking and virtualization toolchain, this session will answer many of your questions. Dave Neary will introduce you to some sample network topologies and describe how to implement them in Neutron. He will also discuss the toolchain and techniques you will need to troubleshoot any issues you might have along the way.
 
-### Unifying the Management of OpenStack, Public Cloud, and Datacenter Virtualization
+## Unifying the Management of OpenStack, Public Cloud, and Datacenter Virtualization
 
 James Labocki and Oleg Barenboim
 
@@ -92,7 +92,7 @@ Discover and monitor new and existing OpenStack environments Provide showback an
 
 James and Oleg will also provide an overview of Red Hat's open hybrid cloud-based architecture and CloudForms' upstream open source community. Attendees will leave this session with a better understanding of how to unify operations management of OpenStack with their existing datacenter virtualization and public clouds solutions.
 
-### A Deep Dive into the OpenStack Neutron Modular Layer 2 Plugin
+## A Deep Dive into the OpenStack Neutron Modular Layer 2 Plugin
 
 Robert Kukura + Cisco
 
@@ -104,7 +104,7 @@ Introduce the Modular Layer 2 (ML2) plugin for OpenStack Neutron Provide an over
 
 Attendees will leave this session with an understanding of ML2, the use cases it was designed to solve, how to deploy ML2 in an OpenStack Havana environment, and how existing Neutron deployments can migrate to ML2.
 
-### Scaling OpenStack Storage Services with Distributed Storage Solutions
+## Scaling OpenStack Storage Services with Distributed Storage Solutions
 
 Tushar Katarki and Vijay Bellur
 
@@ -114,7 +114,7 @@ In scaling OpenStack, a storage solution must scale the services themselves and 
 
 In this session, Tushar Katarki and Vijay Bellur from Red Hat will: Detail scaling storage, providing real-world examples Discuss relative advantages, primarily using GlusterFs as the storage backend Highlight current gaps to start a discussion around future design and development within the OpenStack community
 
-### OpenStack Swift Beyond Pure Object Store
+## OpenStack Swift Beyond Pure Object Store
 
 Ayal Baron
 
@@ -122,7 +122,7 @@ Because OpenStack Swift API is easily accessible over the network, it can cross 
 
 In this session, Ayal Baron will discuss extending the concept of unified storage to leverage the power of OpenStack Swift, bridging the datacenter and the mobile remote. Attendees will leave this session...
 
-### OpenStack Performance
+## OpenStack Performance
 
 Mark Wagner
 
@@ -130,7 +130,7 @@ In this session, Mark Wagner will detail the range of performance considerations
 
 Kernel-based Virtual Machine (KVM) hypervisor performance across a range of workloads Performance considerations for storing Nova instances including both direct-attached disks and locally attached SSD Performance of OpenStack networking based on Linux bridge and Open vSwitch Capacity planning for OpenStack provisioning services, including Nova, Cinder, Keystone, and Glance
 
-### The Future Costs of Today’s OpenStack Decisions
+## The Future Costs of Today’s OpenStack Decisions
 
 Greg Kleiman
 
@@ -138,7 +138,7 @@ While you have many choices as you architect and implement your OpenStack infras
 
 In this session, representatives from Red Hat and an independent consultant will present a comprehensive cost model for OpenStack deployments. They will then compare different design approaches to highlight the impact on the overall cost of the solution.
 
-### Shared Storage: Data Availability Across Different Clouds and Traditional Datacenters
+## Shared Storage: Data Availability Across Different Clouds and Traditional Datacenters
 
 Tushar Katarki
 
@@ -146,7 +146,7 @@ Enterprise IT infrastructure is diverging. because of the growing business needs
 
 In this session, attendees will learn how a distributed, scale-out storage platform (such as GlusterFS) can be used for data availability across clouds built with OpenStack, public clouds (such as AWS), and traditional datacenters. They will also better understand the business and technical data availability challenges and will be presented with solution architectures and use cases.
 
-### From Zero to Production: Provision and Manage OpenStack at Scale with Tuskar.
+## From Zero to Production: Provision and Manage OpenStack at Scale with Tuskar.
 
 Keith Basil & Martyn Taylor
 
@@ -158,7 +158,7 @@ Tuskar services are available via a RESTful API and management console through w
 
 In this session, Keith Basil and Martyn Taylor will: Introduce Tuskar and describe its core concepts and functionality Provide a brief architectural overview of Tuskar's approach to managing OpenStack services Show (with a working demo) the deployment of an OpenStack environment onto bare metal through the orchestration of Heat, TripleO, and Nova bare metal
 
-### Marconi (QNS): Queuing and Notification Service for OpenStack
+## Marconi (QNS): Queuing and Notification Service for OpenStack
 
 Flavio Percoco
 
@@ -168,7 +168,7 @@ Marconi is a multi-tenant cloud queuing and notification project, written in Pyt
 
 Session attendees will learn about Marconi’s architecture, design, patterns, and performance. They will also learn about the challenges the relatively new project has faced and how they were overcome. Join Flavio Percoco as he provides a review of Marconi.
 
-### Oslo Messaging: Abstract RPC Library for OpenStack
+## Oslo Messaging: Abstract RPC Library for OpenStack
 
 Flavio Percoco
 
@@ -176,7 +176,7 @@ Oslo messaging is the new RPC library that was created as an evolution of OpenSt
 
 Although Oslo messaging is still under development, it has reached its API maturity. In this session, Flavio Percoco will introduce Oslo messaging, detailing the current library and providing a planned roadmap.
 
-### Bridging the Virtualization and Cloud Gap with OpenStack and oVirt
+## Bridging the Virtualization and Cloud Gap with OpenStack and oVirt
 
 Ayal Baron
 
@@ -186,7 +186,7 @@ oVirt, the community project for the development of open virtualization platform
 
 In this session, Ayal Baron will detail oVirt's integration with Neutron and Glance and discuss future plans for oVirt and OpenStack project integration.
 
-### Real-world GlusterFS + OpenStack Deployments
+## Real-world GlusterFS + OpenStack Deployments
 
 Eric Harney & John Mark Walker
 
@@ -200,7 +200,7 @@ Following simple examples, Eric and John Mark will demonstrate: How to deploy a 
 
 In addition, they will provide a brief GlusterFS roadmap tour, discussing upcoming enhancements that will benefit OpenStack operators and developers.
 
-### OpenStack Storage Roadmap: A Community Conversation
+## OpenStack Storage Roadmap: A Community Conversation
 
 Ayal Baron, Doug Williams, Sean Cohen, Greg Kleiman
 
