@@ -130,6 +130,8 @@ In scaling OpenStack, a storage solution must scale the services themselves and 
 
 In this session, Tushar Katarki and Vijay Bellur from Red Hat will: Detail scaling storage, providing real-world examples Discuss relative advantages, primarily using GlusterFs as the storage backend Highlight current gaps to start a discussion around future design and development within the OpenStack community
 
+[Vote](http://www.openstack.org/rate/Presentation/scaling-openstack-storage-services-with-distributed-storage-solutions)
+
 ## OpenStack Swift Beyond Pure Object Store
 
 Ayal Baron
