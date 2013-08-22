@@ -120,61 +120,33 @@ Because OpenStack Swift API is easily accessible over the network, it can cross 
 
 In this session, Ayal Baron will discuss extending the concept of unified storage to leverage the power of OpenStack Swift, bridging the datacenter and the mobile remote. Attendees will leave this session...
 
-13) OpenStack Performance Mark Wagner
+### OpenStack Performance
 
-This session explores the range of performance considerations important when sizing and deploying and OpenStack configurations. Specific topics to be explored include:
-
-Performance of KVM hypervisor across a range of workloads Performance considerations for Nova Instance storage, including both disict-attached disks and locally attached SSD Performance of OpenStack networking based on Linux bridge and OpenVSwitch Capacity planning for OpenStack provisioning services including Nova, Cinder, KeyStone and Glance.
-
-Updated version:
-
-OpenStack Performance
+Mark Wagner
 
 In this session, Mark Wagner will detail the range of performance considerations important when sizing and deploying OpenStack configurations. Specifically, he will discuss:
 
 Kernel-based Virtual Machine (KVM) hypervisor performance across a range of workloads Performance considerations for storing Nova instances including both direct-attached disks and locally attached SSD Performance of OpenStack networking based on Linux bridge and Open vSwitch Capacity planning for OpenStack provisioning services, including Nova, Cinder, Keystone, and Glance
 
-14) Future cost impact of your decisions today Red Hat + Independent consultant (Greg Kleiman created)
+### The Future Costs of Today’s OpenStack Decisions
 
-You have many choices to make as you architect and implement your OpenStack infrastructure, but it is not always clear what impact these decisions have on the overall cost of the solution. Using a comprehensive model that captures the true cost of operating OpenStack at cloud scale can help you make better decisions.
-
-In this session, Red Hat and an independent consultant will present a comprehensive cost model for OpenStack deployments and then compare different design approaches to highlight the impact on the overall cost of the solution
-
-Updated version:
-
-The Future Costs of Today’s OpenStack Decisions Greg Kleiman
+Greg Kleiman
 
 While you have many choices as you architect and implement your OpenStack infrastructure, it’s not always clear what impact these decisions have on the overall cost of the solution. Using a comprehensive model that captures the true cost of operating OpenStack at cloud scale, you can make better decisions.
 
 In this session, representatives from Red Hat and an independent consultant will present a comprehensive cost model for OpenStack deployments. They will then compare different design approaches to highlight the impact on the overall cost of the solution.
 
-15) Data availability across OpenStack clouds, public clouds and traditional datacenters with shared storage Tushar Katarki
+### Shared Storage: Data Availability Across Different Clouds and Traditional Datacenters
 
-Enterprise IT is diverging because of growing business needs with deployments in OpenStack clouds, traditional virtualized datacenters and various public clouds. This raises the question of data availability across these platforms and is a growing challenge for architects and administrators in IT organizations. Essential to addressing this challenge is to build upon an open and highly-scalable storage platform.
-
-Come learn how a distributed scale-out storage platform (such as glusterfs) can be used for data availability across OpenStack clouds, public clouds (such as Amazon Web Services) and traditional datacenters. Key takeaways will be recognizing business and technical challenges and solution architectures with use cases.
-
-Updated version:
-
-Shared Storage: Data Availability Across Different Clouds and Traditional Datacenters
+Tushar Katarki
 
 Enterprise IT infrastructure is diverging. because of the growing business needs associated with cloud deployments using OpenStack, traditional virtualized datacenters, and various public clouds. Because of this, data availability across these platforms is becoming a growing challenge for IT architects and administrators. Essential to addressing this challenge is to build upon an open and highly scalable storage platform.
 
 In this session, attendees will learn how a distributed, scale-out storage platform (such as GlusterFS) can be used for data availability across clouds built with OpenStack, public clouds (such as AWS), and traditional datacenters. They will also better understand the business and technical data availability challenges and will be presented with solution architectures and use cases.
 
-16) From zero to production: Using Tuskar to provision and manage OpenStack at scale. Keith Basil & Martyn Taylor
+### From Zero to Production: Provision and Manage OpenStack at Scale with Tuskar.
 
-Tuskar provides administrators with the ability to control how and where OpenStack services are deployed across the data center. Using Tuskar, administrators divide hardware into "resource classes" that allow predictable elastic scaling as demand for your cloud grows. This resource orchestration allows Tuskar to help ensure SLAs, performance and maximum utilization across the data center.
-
-Tuskar builds on top of Heat, TripleO, Nova Bare Metal/Ironic and Ceilometer. It adds a layer which allows users to define requirements while providing business logic used to realize those requirements into a robust, efficient and performant OpenStack topology.
-
-Tuskar services are available via a RESTful API and management console through which adminsistrators are able classify their hardware and define their data center. In addition, Tuskar components provide adminstrators with performance monitoring, health statistics, and usage metrics, aiding in capacity planning and hardware procurement decisions.
-
-This session will introduce Tuskar and describe core concepts and functionality. It will provide a brief architectural overview of Tuskar's approach to managing OpenStack services. A full working demo will show the deployment of an OpenStack environment onto bare metal through the orchestration of Heat, TripleO and Nova Bare Metal.
-
-Updated version:
-
-From Zero to Production: Provision and Manage OpenStack at Scale with Tuskar
+Keith Basil & Martyn Taylor
 
 Tuskar gives administrators the ability to control how and where OpenStack services are deployed across the datacenter. Using Tuskar, administrators divide hardware into "resource classes" that allow predictable elastic scaling as cloud demands grow. This resource orchestration allows Tuskar users to ensure SLAs, improve performance, and maximize utilization across the datacenter.
 
