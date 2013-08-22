@@ -6,11 +6,11 @@ wiki_revision_count: 30
 wiki_last_updated: 2013-08-22
 ---
 
-## OpenStack Summit proposals from Red Hat
+# OpenStack Summit proposals from Red Hat
 
 The following talks have been submitted by Red Hat employees for the [OpenStack Summit, November 5-8, in Hong Kong](http://www.openstack.org/summit/openstack-summit-hong-kong-2013/). We would be delighted if you would consider [voting for these talks](http://www.openstack.org/rate/). The vote closes on Sunday, November 25th.
 
-1) Ceilometer+Heat=Alarming Eoghan Glynn, Red Hat
+===Ceilometer+Heat=Alarming=== Eoghan Glynn, Red Hat
 
 Ceilometer is a tool that collects usage and performance data, while Heat orchestrates complex deployments on top of OpenStack. Heat aims to autoscale its deployments, scaling up when they're running hot and scaling back when idle.
 
@@ -18,7 +18,9 @@ Ceilometer can access decisive data and trigger the appropriate actions in Heat.
 
 In this session, speakers from eNovance and Red Hat will detail how the two projects work together to deliver autoscaling, providing both background information and a technical deep dive.
 
-2) Getting started with OpenStack Dan Radez
+### Getting started with OpenStack
+
+Dan Radez
 
 In this session, Red Hat’s Dan Radez will demonstrate how to set up a multi-node OpenStack cloud using the Packstack utility. He will perform the installation on an RPM-based system. Participants will be introduced to a range of cloud functionality, including:
 
@@ -26,23 +28,31 @@ Adding new users Adding an image to glance Defining networks in Neutron Starting
 
 Dan will also provide a summary of each of these components and explain how they interact with each other.
 
-3) TryStack :: Public OpenStack Cluster Dan Radez
+### TryStack :: Public OpenStack Cluster
+
+Dan Radez
 
 TryStack is a publicly available OpenStack cluster and is available for anyone who wants to try OpenStack. The deployment is managed by Foreman and includes a pair of highly available control nodes. Both Cinder and Swift are deployed. TryStack has been installed with Folsom and upgraded to Grizzly this year.
 
 In this session, Dan Radez from Red Hat will: Walk attendees through the cluster architecture and the Grizzly upgrade process Provide lessons learned over the past year Discuss Grizzly features Provide the roadmap to upgrade to Havanna
 
-4) Highly Available Control Services Dan Radez
+### Highly Available Control Services
+
+Dan Radez
 
 OpenStack has many moving parts that need to be taken into consideration when high availability control services are deployed. In this session, Dan Radez will walk attendees through the necessary considerations to deploy highly available control services, presenting multiple options where available. Attendees will leave the session better prepared to architect their OpenStack control nodes.
 
-5) Customizing Horizon and extending Horizon through plugins Matthias Runge
+### Customizing Horizon and extending Horizon through plugins
+
+Matthias Runge
 
 Currently, there is no plugin architecture for Horizon. In order to customize the OpenStack dashboard, a user has to change his/her source code and/or configuration files, which is nearly impossible when using software packages managed by RPM.
 
 This session will be broken into two parts. In the first, Red Hat’s Matthias Runge will describe how to customize the OpenStack dashboard both with and without RPM packages. In the second, Matthias will lead a brainstorming session in order to collect ideas for improving Horizon to enable plugins automatically.
 
-6) OpenShift by Red Hat: The De facto PaaS for OpenStack Krishnan Subramanian
+### OpenShift by Red Hat: The De facto PaaS for OpenStack
+
+Krishnan Subramanian
 
 As OpenStack matures and grows in the infrastructure market, the next logical step will be to focus on the Platform-as-a-Service (PaaS) layer. PaaS is emerging as a logical choice as enterprises understand the value of container-based application delivery platforms over virtual machines.
 
@@ -50,13 +60,17 @@ In this session, Krishnan Subramanian will: Detail why the alignment of the Open
 
 This session will include roadmap and strategy information, beyond the infrastructure services. It is targeted at the developer community, vendors, and enterprise buyers. We expect the discussion to be a starting point for developing a framework where OpenShift and OpenStack can emerge as standards in the coming years.
 
-7) OpenStack User Personas: An Update Dave Neary
+### OpenStack User Personas: An Update
+
+Dave Neary
 
 Earlier this year, Dave Neary presented the theory of personas to OpenStack Summit Portland attendees. Attendees were excited about creating a set of personas for the OpenStack project, as they allow you to have a much clearer idea of your target audience, what their needs are, and how you can reach them. They also allow much easier communication around feature discussions, user interface design, and marketing strategy.
 
 Based on data from the user committee survey (still waiting for access!), a personas working group is being created to answer the question: "Who uses OpenStack?" In this session, Dave will return to present an initial set of OpenStack personas, discuss how they were created, and detail what conclusions we can draw from them.
 
-8) OpenStack Neutron and OVS concepts for non-networking people Dave Neary
+### OpenStack Neutron and OVS concepts for non-networking people
+
+Dave Neary
 
 Not everyone is a networking expert. If you're not sure what the difference between L2 and L3 networking concepts are, or if you're confused about the roles filled by OVS, OpenFlow and Neutron, this talk might be for you.
 
@@ -64,7 +78,9 @@ When Neutron was integrated with PackStack and the RDO OpenStack distribution by
 
 If you are curious about SDN and what problems it solves, but you are not familiar with the Linux networking and virtualization toolchain, this session will answer many of your questions. Dave Neary will introduce you to some sample network topologies and describe how to implement them in Neutron. He will also discuss the toolchain and techniques you will need to troubleshoot any issues you might have along the way.
 
-9) Unifying the Management of OpenStack, Public Cloud, and Datacenter Virtualization James Labocki and Oleg Barenboim
+### Unifying the Management of OpenStack, Public Cloud, and Datacenter Virtualization
+
+James Labocki and Oleg Barenboim
 
 Adding an OpenStack environment into an already complex IT architecture threatens to overwhelm IT staff who are already spending countless hours managing existing IT architectures. Is it possible to unify the operational management of existing datacenter virtualization with an OpenStack deployment? What about adding a public cloud provider into the mix? What about adding a Platform-as-a-Service (PaaS)?
 
@@ -74,7 +90,9 @@ Discover and monitor new and existing OpenStack environments Provide showback an
 
 James and Oleg will also provide an overview of Red Hat's open hybrid cloud-based architecture and CloudForms' upstream open source community. Attendees will leave this session with a better understanding of how to unify operations management of OpenStack with their existing datacenter virtualization and public clouds solutions.
 
-10) A Deep Dive into the OpenStack Neutron Modular Layer 2 Plugin Robert Kukura + Cisco
+### A Deep Dive into the OpenStack Neutron Modular Layer 2 Plugin
+
+Robert Kukura + Cisco
 
 This presentation introduces the Havana release's new Modular Layer 2 (ML2) plugin for OpenStack Neutron. The ML2 plugin is a community-driven framework allowing OpenStack Neutron to simultaneously utilize the variety of layer 2 networking technologies found in complex, real-world datacenters. ML2 currently works with the Open vSwitch, Linux Bridge, and Hyper-V L2 agents, and is intended to replace and deprecate those agents' monolithic plugins. The ML2 plugin also works with SDN controllers and network hardware devices, and is designed to greatly simplify adding support for new L2 networking technologies into OpenStack Neutron.
 
@@ -84,13 +102,9 @@ Introduce the Modular Layer 2 (ML2) plugin for OpenStack Neutron Provide an over
 
 Attendees will leave this session with an understanding of ML2, the use cases it was designed to solve, how to deploy ML2 in an OpenStack Havana environment, and how existing Neutron deployments can migrate to ML2.
 
-11) Scaling OpenStack Storage Services with distributed storage such as GlusterFs Tushar Katarki and Vijay Bellur
+### Scaling OpenStack Storage Services with Distributed Storage Solutions
 
-Scalablity is one of the key design goals for OpenStack including for OpenStack storage services such as Block Storage Service (Cinder) and Object Storage Service (Swift). In scaling OpenStack storage one has to consider scaling the services themselves and in conjunction with other services - particularly the Compute Service (Nova) as well as scaling the storage backends deployed. There are several alternative approaches for OpenStack developers and OpenStack datacenter architects to consider. We discuss these approaches with real-world examples and discuss relative advantages primarily using GlusterFs as the storage backend. We also discuss open questions and gaps so that they serve to start a discussion for future design and development within the OpenStack community.
-
-Updated version:
-
-Scaling OpenStack Storage Services with Distributed Storage Solutions
+Tushar Katarki and Vijay Bellur
 
 Scalablity is one of the key design goals for OpenStack, especially for its block storage service (Cinder) and object storage service (Swift) technologies.
 
@@ -98,13 +112,9 @@ In scaling OpenStack, a storage solution must scale the services themselves and 
 
 In this session, Tushar Katarki and Vijay Bellur from Red Hat will: Detail scaling storage, providing real-world examples Discuss relative advantages, primarily using GlusterFs as the storage backend Highlight current gaps to start a discussion around future design and development within the OpenStack community
 
-12) OpenStack Swift beyond pure object store Ayal Baron
+### OpenStack Swift Beyond Pure Object Store
 
-The power of OpenStack Swift API is it's easily accessible over the network, can cross firewalls integrated with CDNs and accessible via mobile devices by simply d/l a Swift app and immediately gaining access to your data. Traditional storage protocols such as iSCSI, NFS, SMB assume a file system (Posix) interface generally constrained to the data center. This discussion talks about extending the concept of unified storage to leverage the power of open stack swift, bridging the data center and the mobile remote.
-
-Updated version:
-
-OpenStack Swift Beyond Pure Object Store
+Ayal Baron
 
 Because OpenStack Swift API is easily accessible over the network, it can cross firewalls integrated with CDNs and is accessible via mobile devices by simply downloading a Swift app. Thus, you can immediately gain access to your data. Traditional storage protocols such as iSCSI, NFS, SMB assume a file system (POSIX) interface that is generally constrained to the datacenter.
 
