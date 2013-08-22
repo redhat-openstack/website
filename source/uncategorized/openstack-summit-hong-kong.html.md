@@ -160,6 +160,8 @@ While you have many choices as you architect and implement your OpenStack infras
 
 In this session, representatives from Red Hat and an independent consultant will present a comprehensive cost model for OpenStack deployments. They will then compare different design approaches to highlight the impact on the overall cost of the solution.
 
+[Vote here](http://www.openstack.org/rate/Presentation/the-future-costs-of-today-s-openstack-decisions)
+
 ## Shared Storage: Data Availability Across Different Clouds and Traditional Datacenters
 
 Tushar Katarki
