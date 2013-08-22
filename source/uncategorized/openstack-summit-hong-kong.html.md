@@ -247,3 +247,5 @@ During this session, Red Hat will facilitate a community conversation around Ope
 Storage flavors: What performance characteristics (e.g., rotating media and SSD) do you need for different types of workloads? QoS: How can we dynamically provision VMs by end user mandates so that infrastructures reach a higher level of resource control to prevent running out of resources? Unified storage: How can we leverage the power of OpenStack Swift to bridge the datacenter and the mobile remote? Virtual file shares: What direction should the existing community file share proposal take? Storage HA and disaster recovery: What are your future requirements?
 
 While Red Hat will help steer the discussion, attendees are encouraged to suggest discussion topic ideas. Help us shape the conversation and improve the roadmap.
+
+[Vote here](http://www.openstack.org/rate/Presentation/openstack-storage-roadmap-a-community-conversation)
