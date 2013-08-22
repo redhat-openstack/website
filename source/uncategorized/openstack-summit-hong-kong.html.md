@@ -184,6 +184,8 @@ Tuskar services are available via a RESTful API and management console through w
 
 In this session, Keith Basil and Martyn Taylor will: Introduce Tuskar and describe its core concepts and functionality Provide a brief architectural overview of Tuskar's approach to managing OpenStack services Show (with a working demo) the deployment of an OpenStack environment onto bare metal through the orchestration of Heat, TripleO, and Nova bare metal
 
+[Vote here](http://www.openstack.org/rate/Presentation/from-zero-to-production-provision-and-manage-openstack-at-scale-with-tuskar)
+
 ## Marconi (QNS): Queuing and Notification Service for OpenStack
 
 Flavio Percoco
