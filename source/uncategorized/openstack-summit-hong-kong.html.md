@@ -30,6 +30,8 @@ Adding new users Adding an image to glance Defining networks in Neutron Starting
 
 Dan will also provide a summary of each of these components and explain how they interact with each other.
 
+[Vote here](http://www.openstack.org/rate/Presentation/radez-getting-started-with-openstack)
+
 ## TryStack :: Public OpenStack Cluster
 
 Dan Radez
