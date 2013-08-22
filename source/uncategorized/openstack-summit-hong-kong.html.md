@@ -104,6 +104,8 @@ Discover and monitor new and existing OpenStack environments Provide showback an
 
 James and Oleg will also provide an overview of Red Hat's open hybrid cloud-based architecture and CloudForms' upstream open source community. Attendees will leave this session with a better understanding of how to unify operations management of OpenStack with their existing datacenter virtualization and public clouds solutions.
 
+[Vote here](http://www.openstack.org/rate/Presentation/operational-management-of-openstack-with-cloudforms)
+
 ## A Deep Dive into the OpenStack Neutron Modular Layer 2 Plugin
 
 Robert Kukura + Cisco
