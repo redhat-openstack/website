@@ -206,6 +206,8 @@ Oslo messaging is the new RPC library that was created as an evolution of OpenSt
 
 Although Oslo messaging is still under development, it has reached its API maturity. In this session, Flavio Percoco will introduce Oslo messaging, detailing the current library and providing a planned roadmap.
 
+[Vote here](http://www.openstack.org/rate/Presentation/oslo-messaging-abstract-rpc-library-made-by-and-for-openstack)
+
 ## Bridging the Virtualization and Cloud Gap with OpenStack and oVirt
 
 Ayal Baron
