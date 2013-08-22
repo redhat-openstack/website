@@ -10,6 +10,8 @@ wiki_last_updated: 2015-03-13
 
 # Using Ceph for Cinder with RDO Havana
 
+__NOTOC__
+
 You use Ceph as a storage back end for RDO. The process is nearly identical to the process for configuring OpenStack to use Ceph on Ubuntu. See [Ceph Block Devices and OpenStack](http://ceph.com/docs/master/rbd/rbd-openstack/) for details. Using RDO with Ceph requires you to install Ceph, QEMU, and libvirt. Once you configure QEMU and libvirt for Ceph, you can configure RDO to use Ceph via libvirt and QEMU.
 
 The main difference is that the current release of QEMU on RHEL doesn't support Ceph Block Devices, so you need to install QEMU packages from the Ceph repository.
