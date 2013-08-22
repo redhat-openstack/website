@@ -68,6 +68,8 @@ In this session, Krishnan Subramanian will: Detail why the alignment of the Open
 
 This session will include roadmap and strategy information, beyond the infrastructure services. It is targeted at the developer community, vendors, and enterprise buyers. We expect the discussion to be a starting point for developing a framework where OpenShift and OpenStack can emerge as standards in the coming years.
 
+[Vote here](http://www.openstack.org/rate/Presentation/why-openshift-should-be-defacto-paas-layer-for-openstack)
+
 ## OpenStack User Personas: An Update
 
 Dave Neary
