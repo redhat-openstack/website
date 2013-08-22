@@ -200,15 +200,9 @@ Following simple examples, Eric and John Mark will demonstrate: How to deploy a 
 
 In addition, they will provide a brief GlusterFS roadmap tour, discussing upcoming enhancements that will benefit OpenStack operators and developers.
 
-21) OpenStack Storage Directions Ayal Baron, Doug Williams, Sean Cohen, Greg Kleiman
+### OpenStack Storage Roadmap: A Community Conversation
 
-Storage is a critical and foundational element of any OpenStack infrastructure so we would like to engage the OpenStack community in a conversation about the direction of OpenStack storage and what you all need in terms of future capabilities.
-
-During this session, Red Hat will facilitate a community conversation around OpenStack storage so please feel free to email the presenters if you have ideas for discussion topics. As a start, we suggest the following topics if none surface before November: Storage Flavors - Providing different performance characteristics ((such as Rotating media & SSD) to different types of workloads requires storage and instance scheduling coordination. QoS - Being able to dynamically provision VMs by end user mandates that the infrastructure reach a higher level of resource control to prevent running out of resources. Unified Storage - how can we leverage the power of OpenStack Swift to bridge the data center and the mobile remote. Virtual File Shares - There is a file share proposal in the community today, what direction should it take? Storage High Availability & Disaster recovery - what are your future requirements?
-
-Updated version:
-
-OpenStack Storage Roadmap: A Community Conversation
+Ayal Baron, Doug Williams, Sean Cohen, Greg Kleiman
 
 Because storage is a foundational element for all OpenStack infrastructures, it is critical to engage the OpenStack community to discuss needed capabilities for storage solutions.
 
@@ -216,41 +210,4 @@ During this session, Red Hat will facilitate a community conversation around Ope
 
 Storage flavors: What performance characteristics (e.g., rotating media and SSD) do you need for different types of workloads? QoS: How can we dynamically provision VMs by end user mandates so that infrastructures reach a higher level of resource control to prevent running out of resources? Unified storage: How can we leverage the power of OpenStack Swift to bridge the datacenter and the mobile remote? Virtual file shares: What direction should the existing community file share proposal take? Storage HA and disaster recovery: What are your future requirements?
 
-While Red Hat will help steer the discussion, attendees are encouraged to suggest discussion topic ideas. Help us shape the conversation and improve the roadmap. Email suggestions to [x].
-
-Proposal ideas/plans
-
-How to minimize operating cost of OpenStack storage (from Greg Kleiman) CloudForms + OpenStack Integration (should be a CloudForms engineer) Red Hat product integrations with OpenStack (RHOS+CloudForms+RHS)--maybe as our sponsor slot File share services for OpenStack (jointly presented with NetApp) (Greg Kleiman+NetApp) Hadoop on OpenStack (Savanna) (Greg Kleiman+someone from Mirantis or Hortonworks) How to deliver highly available and scale-out storage services for OpenStack deployments with distributed storage systems such as GlusterFS (Tushar Katarki) OpenStack swift implementation (added by GregK; speaker is Doug Williams) Gluster roadmap for OpenStack integration (added by GregK; speaker is John Mark Walker) General storage strategy for OpenStack (added by GregK, speakers will be Doug Williams, Ayal Baron, Sean Cohen)
-
-Missing?
-
-Are we missing anything? If so, what and who should present it?
-
-OpenShift Related? (I thought the OpenShift Evangelists were going to submit so I'll check with them.) Thanks, Dan. Added Krish's proposal above.
-
-Greg wanted to make sure that the Openstack partners were identified so here they are: The list did not paste well but you get the idea.
-
-                                                                                                                          6wind                                                           Actuate                                                           Adaptive Computing                                                           Aicache                                                           Alcatel-Lucent                                                           Aldec                                                           All9s                                                           AMD                                                           Ansibel                                                           Anuta Networks                                                           APGTech                                                           Arista Networks                                                           Bacula                                                           Basis                                                           BigSwitch                                                           Bloombase                                                           Blue Data                                                           BlueCat Networks                                                           Brocade                                                           Bull                                                           Checkpoint                                                           Cisco                          
-                                                                                                                          Cloudbase                                                           CloudBolt                                                           Cloudian                                                           CloudRows                                                           CloudSigma                                                           Cognizant                                                           Commvault                                                           Continuent                                                           Coraid                                                           CTP                                                           DataGres                                                           DataStax                                                           Dell                                                           Dome9                                                           EMC                                                           eNovance                                                           Ezuce                          
-                                                                                                                          F5 Networks                                                           Fujitsu                                                           FusionIO                                                           
-                                                                                                                          
-                                                                                                                     General Dynamics                                                           Hitachi                                                           Hortonworks                                                           HP                                                           
-                                                                                                                          Huawei                                                           Hyve                                                           
-                                                                                                                          IBM                                                           Intel                                                           Interxion                                                           Jabil                                                           Juniper                                                           Lenovo                                                           Leostream                                                           
-                                                                                                                          Lockheed Martin                                                           M2Mi                                                           Macrosan                                                           
-                                                                                                                          Manage Operations                                                           McAfee                                                           Mellanox                                                           Midokura                                                           Mirantis                                                           
-                                                                                                                          Morph Labs                                                           Nebula                                                           
-                                                                                                                          NEC                                                           Neebula                                                           
-                                                                                                                          NetApp                                                
-
-Nexenta Nicira NimbleStorage Nova Ordis NTT Numecent One Convergence Palo Alto Networks Panzura Plexxi Pluribus
-
-      Puppet Labs                                                           Radware                                                           Safe-Net                                                          
-       Sai InfoSystem                                                           SaltStack                                                           Samsung                                                           Saviance                                                           Scaleio                                                           Seagate                                                           SEP                                                           
-      SGI                                                           Skybot                                                           SolarFlare                                                           Solidfire                                                           StackOps                                                           Storix                                                           
-
-Super Micro SwiftStack
-
-           Symantec                                                           Talligent                                                           Teamquest                                                           Tintri                                                           Trapezoid                                                           TreasureData                                                           
-
-TW Telecom UC4 Unitrends Uptime Software Virtustream Wei WhiteSourceSoft WiPro Zadara Storage Zerto
+While Red Hat will help steer the discussion, attendees are encouraged to suggest discussion topic ideas. Help us shape the conversation and improve the roadmap.
