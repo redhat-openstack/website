@@ -234,6 +234,8 @@ Following simple examples, Eric and John Mark will demonstrate: How to deploy a 
 
 In addition, they will provide a brief GlusterFS roadmap tour, discussing upcoming enhancements that will benefit OpenStack operators and developers.
 
+[Vote here](http://www.openstack.org/rate/Presentation/real-world-usage-of-glusterfs-openstack)
+
 ## OpenStack Storage Roadmap: A Community Conversation
 
 Ayal Baron, Doug Williams, Sean Cohen, Greg Kleiman
