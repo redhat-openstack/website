@@ -156,13 +156,9 @@ Tuskar services are available via a RESTful API and management console through w
 
 In this session, Keith Basil and Martyn Taylor will: Introduce Tuskar and describe its core concepts and functionality Provide a brief architectural overview of Tuskar's approach to managing OpenStack services Show (with a working demo) the deployment of an OpenStack environment onto bare metal through the orchestration of Heat, TripleO, and Nova bare metal
 
-17) Marconi (QNS): Queuing and Notification Service for OpenStack Flavio Percoco (maybe 1 guy from Rackspace)
+### Marconi (QNS): Queuing and Notification Service for OpenStack
 
-Marconi is a multi-tenant cloud queuing and notification system written in Python as part of the OpenStack project. It does not aim to be yet another message broker, instead, its main goal is to be a reliable, highly performant API on top of existing technologies. Marconi implements a new protocol, which is consistent throughtout its transport layer and allows it to provide both, notification and queues support.
-
-This talk aims to give the audience as much information as possible about Marconi’s architecture, design, patterns, performance, issues it faced and how / why it was built from scratch. Join me on this review of the first few months of development of this great and still young project.
-
-Updated version:
+Flavio Percoco
 
 Marconi (QNS): Queuing and Notification Service for OpenStack
 
@@ -170,27 +166,17 @@ Marconi is a multi-tenant cloud queuing and notification project, written in Pyt
 
 Session attendees will learn about Marconi’s architecture, design, patterns, and performance. They will also learn about the challenges the relatively new project has faced and how they were overcome. Join Flavio Percoco as he provides a review of Marconi.
 
-18) Oslo Messaging: Abstract RPC Library made by and for OpenStack Flavio Percoco
+### Oslo Messaging: Abstract RPC Library for OpenStack
 
-Oslo Messaging is the new RPC library being built by and for OpenStack. This library was born as an evolution of OpenStack's - Oslo's to be more precise - old RPC module, which was highly tight to AMPQ's standards. The idea behind Oslo Messaging is to provide a generic RPC library capable of talking to multiple transports regardless their protocol, nature and architecture. It aims to abstract all that from users perspective and ease the implementation of RPC-like commuications.
-
-Although, Oslo messaging is still under development, it's reached its API maturity. The aim of this talk is to present the underlying ideas, what has been done, where the library is headed and what's in the future of it.
-
-Updated version:
-
-Oslo Messaging: Abstract RPC Library for OpenStack
+Flavio Percoco
 
 Oslo messaging is the new RPC library that was created as an evolution of OpenStack's old RPC module and strictly follows AMPQ standards. Oslo messaging provides a generic RPC library capable of talking to multiple transports regardless of their protocols, origins, or architectures. It aims to abstract transports from users’ perspectives and ease the implementation of RPC-like communications.
 
 Although Oslo messaging is still under development, it has reached its API maturity. In this session, Flavio Percoco will introduce Oslo messaging, detailing the current library and providing a planned roadmap.
 
-19) Bridging the gap from virtualization to cloud - Leveraging OpenStack technologies in oVirt OR Converging infrastructure - leveraging OpenStack Technologies in the enterprise virtualization world Ayal Baron
+### Bridging the Virtualization and Cloud Gap with OpenStack and oVirt
 
-oVirt is the open-source management infrastructure for KVM today, and it's aim is to provide an enterprise virtualization framework. With the continued adoption of OpenStack it is clear that customers today are looking for new ways of moving from existing costly virtualization solutions to a cheaper more flexible solution. However, when evaluating what workloads are fit for migration into an Openstack private cloud today, there are many enterprise capabilities that are lacking or simply don't fit the architecture. By integrating oVirt with the underlying OpenStack projects, oVirt aims to fill that gap and provide a unified solution that solves both enterprise and cloud use cases without doubling the resources. This talk will cover oVirt's integration with Neutron and Glance as well as future plans of integration with other Openstack projects
-
-Updated version:
-
-Converged Infrastructure: OpenStack in Enterprise Virtualization OR Bridging the Virtualization and Cloud Gap with OpenStack and oVirt
+Ayal Baron
 
 With the continued adoption of OpenStack, it’s clear that enterprises are moving from proprietary, costly virtualization solutions to cost-effective, flexible, open ones. However, when evaluating which workloads to migrate to private clouds built with OpenStack, many solutions are lacking or simply don't fit the architecture.
 
@@ -198,22 +184,9 @@ oVirt, the community project for the development of open virtualization platform
 
 In this session, Ayal Baron will detail oVirt's integration with Neutron and Glance and discuss future plans for oVirt and OpenStack project integration.
 
-20) Real World Usage of GlusterFS + OpenStack Eric Harney & John Mark Walker
+### Real-world GlusterFS + OpenStack Deployments
 
-The Gluster Community has been hard at work over the past year integrating with every storage interface for OpenStack. With that integration, as well as the VM image management features that went into the 3.4 release, GlusterFS is now a first-class citizen of the OpenStack ecosystem.
-
-This talk will focus on all of the ways that you can deploy OpenStack with GlusterFS as the scale-out storage platform \*today\*, as well as some pointers to works in progress for future releases. There are four major areas of focus for integration:
-
-         OpenStack Object Storage (Swift) - We have implemented a GlusterFS-backed storage platform for the Swift API, using the upstream Swift proxy server/API layer. This has the benefit of providing a unified storage backend for object as well as POSIX data. We will demonstrate how to deploy a GlusterFS-backed object storage solution as well as pointers to when and why to use this in conjunction with or in lieu of the Swift object storage implementation. We will also demonstrate how to access the same data via NFS, libgfapi, the GlusterFS client, and the Swift API. 
-         OpenStack Glance - It has always been possible to use a mounted GlusterFS volume as the backend data store for Glance. Recent development work has also added the possibility of an integrated deployment with Cinder, significantly increasing the performance for deploying VM images on GlusterFS volumes.
-         OpenStack Cinder - We completed a Cinder integration for the Grizzly release that added an option for deploying live VM images on GlusterFS volumes. With recent contribuitions to the Havana release, you can now utilize the QEMU - libgfapi integration that was released in GlusterFS 3.4, greatly improving the performance of of VM image management on GlusterFS
-         Libgfapi - With the release of GlusterFS 3.4, the libgfapi client library is now the standard way of integrating applications with GlusterFS. We will follow some simple examples to demonstrate the power and flexibility of this new API
-
-In addition, we will take a brief tour of what's on the GlusterFS roadmap that will impact OpenStack operators and developers.
-
-Updated version:
-
-Real-world GlusterFS + OpenStack Deployments
+Eric Harney & John Mark Walker
 
 The Gluster community has been working hard to ensure GlusterFS is integrated with each OpenStack storage interface. With that integration, as well as the latest VM image management features, GlusterFS 3.4 is now a first-class citizen of the OpenStack ecosystem.
 
