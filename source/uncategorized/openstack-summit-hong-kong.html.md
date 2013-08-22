@@ -18,6 +18,8 @@ Ceilometer can access decisive data and trigger the appropriate actions in Heat.
 
 In this session, speakers from eNovance and Red Hat will detail how the two projects work together to deliver autoscaling, providing both background information and a technical deep dive.
 
+[Vote here](http://www.openstack.org/rate/Presentation/ceilometer-heat-alarming)
+
 ## Getting started with OpenStack
 
 Dan Radez
