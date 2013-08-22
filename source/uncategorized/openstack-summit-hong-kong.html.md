@@ -40,6 +40,8 @@ TryStack is a publicly available OpenStack cluster and is available for anyone w
 
 In this session, Dan Radez from Red Hat will: Walk attendees through the cluster architecture and the Grizzly upgrade process Provide lessons learned over the past year Discuss Grizzly features Provide the roadmap to upgrade to Havanna
 
+[Vote here](http://www.openstack.org/rate/Presentation/trystack-public-openstack-cluster)
+
 ## Highly Available Control Services
 
 Dan Radez
