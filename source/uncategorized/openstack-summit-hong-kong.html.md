@@ -218,6 +218,8 @@ oVirt, the community project for the development of open virtualization platform
 
 In this session, Ayal Baron will detail oVirt's integration with Neutron and Glance and discuss future plans for oVirt and OpenStack project integration.
 
+[Vote here](http://www.openstack.org/rate/Presentation/bridging-the-virtualization-and-cloud-gap-with-openstack-and-ovirt)
+
 ## Real-world GlusterFS + OpenStack Deployments
 
 Eric Harney & John Mark Walker
