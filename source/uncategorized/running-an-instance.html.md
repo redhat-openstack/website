@@ -36,7 +36,7 @@ For a collection of links to alternative cloud-ready images, check out [image re
 
 ### Step 5: Launch the instance.
 
-In the main portion of the screen, under the "Images" heading, click the "Launch" button for the "F18" image. In the resulting dialog, provide a name in the "Instance Name" field, and click the "Launch" button.
+In the main portion of the screen, under the "Images" heading, click the "Launch" button for the "F19" image. In the resulting dialog, provide a name in the "Instance Name" field, and click the "Launch" button.
 
 ### Step 6: Associate Floating IP
 
