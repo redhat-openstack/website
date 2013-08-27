@@ -82,6 +82,7 @@ If you've come across useful tips for resolving issues on OpenStack, or if you'r
 *   [OpenStack API docs](http://docs.openstack.org/api/)
 *   [OpenStack Glossary](http://docs.openstack.org/glossary/content/glossary.html)
 *   [Books](Books)
+*   [OpenStack End User Guide](http://docs.openstack.org/user-guide/content/)
 
 </div>
 </div>
