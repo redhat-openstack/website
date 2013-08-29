@@ -12,7 +12,7 @@ When running OpenStack API services with MySQL on a single node, the database is
 
 ### Prerequisites
 
-This guide assumes that OpenStack has been deployed in a configuration with two or more control nodes. One way to do this would be to re-use the answerfile from your packstack install to run the installer on multiple nodes. Another would be to use foreman to provision multiple control nodes. See the RDO QuickStart guide for more information. For this guide we'll assume all control services run on two nodes.
+This guide assumes that OpenStack has been deployed with a single database node and that a second node has an unused mysql server install on it. An all in one install will be fine for demonstration purposes. See the RDO QuickStart guide to get OpenStack installed.
 
 ### Overview
 
