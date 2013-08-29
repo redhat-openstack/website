@@ -47,3 +47,5 @@ On each node, be sure to specify the local IP address of the network interface o
 Once the above steps are complete, newly created tenant networks should be GRE tunnels, which can be verified by running the following with admin credentials and looking at the provider:network_type attribute:
 
 `# quantum net-show `<network name or UUID>
+
+NOTE: When using GRE, set the MTU in the Guest to 1400, this will allow for the GRE header and no packet fragmentation.
