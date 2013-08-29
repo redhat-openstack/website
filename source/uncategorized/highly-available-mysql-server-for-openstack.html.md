@@ -6,9 +6,9 @@ wiki_revision_count: 40
 wiki_last_updated: 2013-10-07
 ---
 
-# Highly Available OpenStack API
+# Highly Available MySQL with RDO
 
-When running each of the OpenStack API services on a single controller node, there exists a single point of failure. This guide will show how to manually deploy pacemaker and and use it to run your OpenStack controller services in an HA configuration across multiple control nodes.
+When running OpenStack API services with MySQL on a single node, the database is a single point of failure. This guide will show how to manually deploy pacemaker and and use it to manage your MySQL cluster across multiple nodes.
 
 ### Prerequisites
 
