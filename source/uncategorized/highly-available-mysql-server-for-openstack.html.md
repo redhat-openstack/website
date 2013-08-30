@@ -18,10 +18,31 @@ This guide assumes that OpenStack has been deployed with a single database node 
 
 MySQL will be configured in an active/passive configuration. Pacemaker will manage a floating ip address across the two MySQL nodes. The ip address will live on the master node and the slave node will be configured to replicate all the activity on the master to the slave. In the event of a failure, Pacemaker will move the ip to the slave node. Once the slave starts to receive writes the master will be out of sync from the slave and will require a resync before replication can be reestablished.
 
-### Installing and configuring Pacemaker
+### Installing Pacemaker and creating a cluster
 
-On both MySQL nodes install pacemaker
+We'll use 10.11.12.1 (node1) and 10.11.12.2 (node2) as the two MySQL nodes
 
-    $ yum install pacemaker pcs
+On both nodes install pacemaker
+
+    node1$ yum install pacemaker pcs cman
+    node2$ yum install pacemaker pcs cman
 
 On both nodes setup the cluster
+
+    node1$ pcs cluster setup --name openstack_mysql node1 node2
+    node2$ pcs cluster setup --name openstack_mysql node1 node2
+
+If you use names instead of ip addresses like the example above be sure they resolve to the hosts.
+
+On both nodes start the cluster
+
+    node1$ pcs cluster cluster start
+    node2$ pcs cluster cluster start
+
+Now that the cluster is started commands only need to be run on one of the machines You'll need to add a stonith device for resources to start properly. For the demonstration it will be disabled instead.
+
+    node1$ pcs property set stonith-enabled=true
+
+Now add the floating ip address, lets use 10.11,12.37
+
+    node1$ pcs resource create ip-10.11,12.37 IPaddr2 ip=10.11,12.37 cidr_netmask=32 op monitor interval=30s
