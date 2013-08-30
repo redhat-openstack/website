@@ -14,3 +14,4 @@ There are lots of events, around the world, where you can hang out with people f
 *   [LinuxCon North America, New Orleans](http://events.linuxfoundation.org/events/linuxcon-north-america) - September 16-18
 *   [LinuxCon Europe, Edinburgh, Scotland](http://events.linuxfoundation.org/events/linuxcon-europe) - October 21-23, also co-located with the [KVM Forum](http://events.linuxfoundation.org/events/kvm-forum)
 *   [OpenStack Summit, Hong Kong](http://www.openstack.org/summit/openstack-summit-hong-kong-2013/) - November 5-8
+*   [<http://www.openstack-israel.org/>#!call4paper/cu3y OpenStack Israel] - December 3
