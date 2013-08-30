@@ -65,7 +65,7 @@ To verify the server ids are being used query mysql for the value
     +---------------+-------+
     | Variable_name | Value |
     +---------------+-------+
-    | server_id &nbsp &nbsp | &nbsp 1 &nbsp |
+    | server_id       |     3     |
     +---------------+-------+
 
     1 row in set (0.00 sec)
@@ -89,7 +89,7 @@ To do that you need the master's log name and position. On the master show the m
     +--------------+----------+--------------+------------------+
     | File | Position | Binlog_Do_DB | Binlog_Ignore_DB |
     +--------------+----------+--------------+------------------+
-    | node1.000003 | 107 | | |
+    | node1.000003 | 107  |                        |                                |
     +--------------+----------+--------------+------------------+
     1 row in set (0.00 sec)
 
@@ -126,4 +126,4 @@ Finally start the slave back up on the slave node
 
     mysql> START SLAVE;
 
-      == Summary ==
+### Summary
