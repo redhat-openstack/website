@@ -17,3 +17,11 @@ This guide assumes that OpenStack has been deployed with a single database node 
 ### Overview
 
 MySQL will be configured in an active/passive configuration. Pacemaker will manage a floating ip address across the two MySQL nodes. The ip address will live on the master node and the slave node will be configured to replicate all the activity on the master to the slave. In the event of a failure, Pacemaker will move the ip to the slave node. Once the slave starts to receive writes the master will be out of sync from the slave and will require a resync before replication can be reestablished.
+
+### Installing and configuring Pacemaker
+
+On both MySQL nodes install pacemaker
+
+    $ yum install pacemaker pcs
+
+On both nodes setup the cluster
