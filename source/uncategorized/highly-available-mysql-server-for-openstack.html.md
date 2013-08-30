@@ -89,13 +89,13 @@ To do that you need the master's log name and position. On the master show the m
     +--------------+----------+--------------+------------------+
     | File | Position | Binlog_Do_DB | Binlog_Ignore_DB |
     +--------------+----------+--------------+------------------+
-    | node1.000003 | 107      |              |                 |
+    | node1.000003 | 107      |              |                  |
     +--------------+----------+--------------+------------------+
     1 row in set (0.00 sec)
 
 Take the file name and the log position and configure the slave node with it
 
-    mysql> CHANGE MASTER TO master_host = '10.0.0.1', master_user='replication', master_password='password', master_log_file='node1.000003', master_log_pos=107;
+    mysql> CHANGE MASTER TO master_host = '10.11.12.1', master_user='replication', master_password='password', master_log_file='node1.000003', master_log_pos=107;
 
 Next start the slave on the slave node and check the slave status
 
