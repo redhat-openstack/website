@@ -12,7 +12,7 @@ When running OpenStack API services with MySQL on a single node, the database is
 
 ### Prerequisites
 
-This guide assumes that OpenStack has been deployed with a single database node and that a second node has an unused mysql server install on it. An all in one install will be fine for demonstration purposes. See the RDO QuickStart guide to get OpenStack installed.
+This guide assumes that OpenStack has been deployed on EL 6.5 with a single database node and that a second node has an unused mysql server installed on it. An all in one install will be fine for demonstration purposes. See the RDO QuickStart guide to get OpenStack installed.
 
 ### Overview
 
