@@ -39,7 +39,7 @@ On both nodes start the cluster
     node1$ pcs cluster cluster start
     node2$ pcs cluster cluster start
 
-Now that the cluster is started commands only need to be run on one of the machines You'll need to add a stonith device for resources to start properly. For the demonstration it will be disabled instead.
+Now that the cluster is started commands only need to be run on one of the machines to add resources and check status.</br> You'll need to add stonith devices for resources to start properly. For this demonstration stonith it will be disabled instead.
 
     node1$ pcs property set stonith-enabled=true
 
