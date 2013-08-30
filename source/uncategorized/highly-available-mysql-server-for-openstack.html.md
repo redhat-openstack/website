@@ -89,7 +89,7 @@ To do that you need the master's log name and position. On the master show the m
     +--------------+----------+--------------+------------------+
     | File | Position | Binlog_Do_DB | Binlog_Ignore_DB |
     +--------------+----------+--------------+------------------+
-    | node1.000003 | 107   |                |                      |
+    | node1.000003 | 107     |                |                      |
     +--------------+----------+--------------+------------------+
     1 row in set (0.00 sec)
 
@@ -125,5 +125,9 @@ Then use mysqldump and ssh on the master to do the sync. Note that this command 
 Finally start the slave back up on the slave node
 
     mysql> START SLAVE;
+
+### Summary
+
+This is the summary
 
 ### Summary
