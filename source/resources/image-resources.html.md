@@ -30,4 +30,6 @@ You can load an image from the command line with glance, eg:
 
 See the [glance documentation](http://docs.openstack.org/trunk/openstack-compute/admin/content/adding-images.html) for more details about the glance command line tools.
 
+Information on building an image via Oz for OpenStack (RHOS and RDO) is available in the [RHOS 3.0 Installation and Configuration Guide](https://access.redhat.com/site/documentation/en-US/Red_Hat_OpenStack/3/html/Installation_and_Configuration_Guide/Building_a_Custom_Disk_Image.html).
+
 <Category:Resources> <Category:Documentation>
