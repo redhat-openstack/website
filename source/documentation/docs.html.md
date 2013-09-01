@@ -30,7 +30,7 @@ If you've come across useful tips for resolving issues on OpenStack, or if you'r
 
 *   [ Quick start guide ](Quickstart)
 *   [ Launching your first VM ](Running an instance)
-*   [ Image Resources](Image Resources)
+*   [ Image Resources](Image_Resources)
 *   [ Deploy Heat and launch your first Application ](Deploy Heat and launch your first Application)
 *   [ Repository information ](Repositories)
 *   [Adding a compute node](Adding a compute node)
