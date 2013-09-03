@@ -21,3 +21,7 @@ There are lots of events, around the world, where you can hang out with people f
 *   [OpenStack Summit, Hong Kong](http://www.openstack.org/summit/openstack-summit-hong-kong-2013/) - November 5-8
     -   rbowen and dneary attending
 *   [<http://www.openstack-israel.org/>#!call4paper/cu3y OpenStack Israel] - December 3
+
+<!-- -->
+
+*   [Triangle Openstack Meetup](http://www.meetup.com/Triangle-OpenStack-Meetup/) Sept 10 2013
