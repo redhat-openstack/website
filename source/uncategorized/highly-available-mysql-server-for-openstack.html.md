@@ -130,6 +130,8 @@ Finally start the slave back up on the slave node
 
 ## Summary
 
-TBW
+At this point there is a floating ip address being managed by pacemaker and mysql is running on both database nodes and is replicating data from the master to the slave. The floating ip is pointing to the master.
+
+In the event of a failure pacemaker will move the floating ip to the slave node and database service would stay available. To move service back to the master node the master would need to be resynced with the slave and the ip would have to be moved back to the master node using pacemaker.
 
 ## Summary
