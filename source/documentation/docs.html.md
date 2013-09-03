@@ -60,7 +60,7 @@ If you've come across useful tips for resolving issues on OpenStack, or if you'r
 </div>
 </div>
 <div class="row">
-<div class="offset1 span5">
+<div class="offset1 span3">
 ### About
 
 *   [Get involved](Get involved)
@@ -72,7 +72,13 @@ If you've come across useful tips for resolving issues on OpenStack, or if you'r
 *   [Events](Events)
 
 </div>
-<div class="span5">
+<div class="span3">
+### Misc
+
+*   [Heat]
+
+</div>
+<div class="span4">
 ### Upstream documentation
 
 *   [OpenStack Compute Administration Manual](http://docs.openstack.org/trunk/openstack-compute/admin/content/index.html)
