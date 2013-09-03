@@ -75,7 +75,8 @@ If you've come across useful tips for resolving issues on OpenStack, or if you'r
 <div class="span3">
 ### Misc
 
-*   [Heat]
+*   [Heat](Heat)
+*   [OpenStack on TXT](https://fedoraproject.org/wiki/OpenStackOnTXT)
 
 </div>
 <div class="span4">
