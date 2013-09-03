@@ -122,6 +122,8 @@ Then use mysqldump and ssh on the master to do the sync. Note that this command 
 
     mysqldump --delete-master-logs --ignore-table=mysql.user --master-data --lock-all-tables --all-databases --hex-blob | ssh 10.11.12.2 "cat | mysql"
 
+All this is really doing is dumping the master database and importing it into the slave while writes are prevented. It does it all in one command over ssh, there's probably other methods to do this if you choose not to do it this way.
+
 Finally start the slave back up on the slave node
 
     mysql> START SLAVE;
