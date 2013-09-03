@@ -20,7 +20,7 @@ Deploying RDO is a quick and easy process. Setting up an OpenStack cloud takes a
 
 Below, we'll explain how to set up OpenStack on a single server. You'll be able to [add more nodes](Adding_a_compute_node) to your OpenStack cloud later, if you choose.
 
-*Note: If you want to run the OpenStack Folsom release, check out [Red Hat OpenStack Early Adopter Edition](//redhat.com/openstack) or install the openstack-packstack package from the Fedora 18 repository.*
+We'll show you how to deploy the latest stable release of OpenStack (code name: Grizzly). If you want to try out the development version (code name: Havana), see the [QuickStartLatest|Havana QuickStart]. If you want to run the OpenStack Folsom release, check out [Red Hat OpenStack Early Adopter Edition](//redhat.com/openstack) or install the openstack-packstack package from the Fedora 18 repository.
 
 </div>
 </div>
