@@ -8,7 +8,7 @@ wiki_title: RDO Test Day September 2013
 wiki_revision_count: 74
 wiki_last_updated: 2013-09-11
 wiki_conversion_fallback: true
-wiki_warnings: conversion-fallback, references
+wiki_warnings: conversion-fallback
 ---
 
 # RDO Test day, September, 2013
