@@ -48,21 +48,66 @@ The above command will capture all traffic on any interface. ...
 
 ## Common issues
 
-*   I can create an instance, but cannot SSH or ping it
-    -   Verify that traffic to port 22 and ICMP traffic of any type (-1:-1) is allowed in the default security group
+\* I can create an instance, but cannot SSH or ping it
+
+\*\* Verify that traffic to port 22 and ICMP traffic of any type (-1:-1) is allowed in the default security group
 
 In the dashboard, in the Project tab, under "Access and Security", check the rules which are active on the security group you are using with your instances (typically "default"). You should see a rule allowing traffic to port 22 over tcp from all hosts, and a port enabling icmp traffic of all types (-1). If you don't, create the necessary rules, and try again.
 
-*   -   Verify that you can ping and SSH the host where the instance is running
+\*\* Verify that you can ping and SSH the host where the instance is running
 
 From the host where you are attempting to connect to your instance, verify that network traffic is being correctly routed to the compute node in question.
 
-*   -   Check that you can ping an instance from inside its network namespace. FIXME: Add a sample command.
-    -   Ensure that the router is correctly created, that the internal subnet and external subnet are attached to it, and that it can route traffic from your IP to the instance IP
-    -   Check the OVS routing table to ensure that it is correctly routing traffic from internal to external. FIXME: Add a sample command.
-    -   Verify that br-ex is associated with the physical NIC, and that the virtual router can route traffic to the IP address of the host
+\*\* Ensure that the router is correctly created, that the internal subnet and external subnet are attached to it, and that it can route traffic from your IP to the instance IP
+
+If your VM is in the 192.168.1.x subnet, and the host from which you are trying to connect is in the 192.168.0.x subnet, then you will need to have a route from one to the other. Ensure that the subnet 192.168.1.x and 192.168.0.x are both added to a router which you create in Neutron
+
+\*\* Check that you can ping an instance from inside its network namespace.
+
+If you are using network namespaces, then each VLAN will have its own namespace, and entities inside that namespace will be invisible from outside. You can check whether you can ping an instance from inside the namespace by first finding the namespace identifier, and then using the iproute toolset to execute a "ping" inside that namespace:
+
+    <code>
+    ip netns list
+    # Identify virtual router to which your subnet is connected
+    ip netns exec qrouter-de0b9dbe-6b65-45ee-9ff2-c752c7937a9e ping 10.10.0.7
+    # IP address and qrouter ID correspond to the network namespace and private IP address for instance
+    </code>
+
+*   -   Check the OVS routing table to ensure that it is correctly routing traffic from internal to external.
+        You should see a route for each subnet attached to your virtual router, and you should see routing which will allow traffic from the VM to get to the subnet of the host from which you are trying to connect (or to a public gateway)
+
+            <code>ip netns exec qrouter-de0b9dbe-6b65-45ee-9ff2-c752c7937a9e route -n</code>
+
+    -   Verify that br-ex is associated with the physical NIC, and that the virtual router can route traffic to the IP address of the host. For a single NIC set-up, you will need to bring up br-ex at boot time, and connect eth0 to it.
+        To set up br-ex initially (on a host with static IP 192.168.0.2), the following will do the initial configuration:
 
 <!-- -->
+
+    <code>
+    ip addr flush eth0
+    ovs-vsctl add-port br-ex eth0
+    ip addr add 192.168.0.2 dev br-ex
+    ip link set br-ex up
+
+</code>
+
+To make changes persist after boot, you will need to create /etc/sysconfig/network-scripts/ifcfg-br-ex as follows (replace DNS, IP addresses for your local network):
+
+    <code>
+    DEVICE=br-ex
+    TYPE=Ethernet
+    BOOTPROTO=static
+    ONBOOT=yes
+    IPADDR=192.168.0.2
+    NETMASK=255.255.255.0
+    GATEWAY=192.168.0.1
+    DNS1=89.2.0.1
+    DNS2=89.2.0.1
+    DOMAIN=neary.home
+    NAME="System br-ex"
+    </code>
+
+After this, you will no longer need to bring up eth0, and all going well you will be able to access both instances and the management interface on the same host.
 
 *   I cannot associate a floating IP with an instance
     -   If the error is that the external network is not visible from the subnet: Check that br-ex has its MAC address set correctly. Check for the error "Device or resource busy" in /var/log/messages - if it's present, you will need to bring down br-ex, set its MAC address to match that of the physical NIC, and bring it back up.
