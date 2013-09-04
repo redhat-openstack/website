@@ -19,7 +19,7 @@ You can read about the previous test day at <https://fedoraproject.org/wiki/Test
 
 ### Who's Available
 
-The following cast of characters will be available testing, workarounds, bug fixes, and general discussion ...
+The following cast of characters will be available testing, workarounds, bug fixes, and general discussion. You can participate in the conversation on the #rdo IRC channel on the Freenode IRC network.
 
 Development
 
