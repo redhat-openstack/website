@@ -19,6 +19,7 @@ There are lots of events, around the world, where you can hang out with people f
     -   rbowen: attending
     -   mwagner: presenting on OpenStack - <http://sched.co/15MR98a>
     -   dmueller: Presenting on Openshift - <http://sched.co/15NfFG6>
+*   [Neutron Networking Google Hangout](https://plus.google.com/events/cph9aq3a6ag1lb17g3gsvaiiljg) - September 24, 2013
 *   [LinuxCon Europe, Edinburgh, Scotland](http://events.linuxfoundation.org/events/linuxcon-europe) - October 21-23, also co-located with the [KVM Forum](http://events.linuxfoundation.org/events/kvm-forum)
     -   dallan, mpyers, danpb, rjones, lpeer, rbowen, dneary attending
 *   [OpenStack Summit, Hong Kong](http://www.openstack.org/summit/openstack-summit-hong-kong-2013/) - November 5-8
