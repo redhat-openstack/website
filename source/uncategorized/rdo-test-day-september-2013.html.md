@@ -13,7 +13,7 @@ wiki_warnings: conversion-fallback
 
 # RDO Test day, September, 2013
 
-We plan to hold an RDO test day on September 10th and 11th, 2013.
+We plan to hold an RDO test day on September 10th and 11th, 2013. This will be coordinated through the #rdo channel on freenode, and through this wiki and RDO forums.
 
 You can read about the previous test day at <https://fedoraproject.org/wiki/Test_Day:2013-04-02_OpenStack> to get an idea of what's involved. More details will be posted here as they are available.
 
