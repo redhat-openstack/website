@@ -71,7 +71,7 @@ The above command will capture all traffic on any interface. ...
 *   -   Check the OVS routing table to ensure that it is correctly routing traffic from internal to external.
         You should see a route for each subnet attached to your virtual router, and you should see routing which will allow traffic from the VM to get to the subnet of the host from which you are trying to connect (or to a public gateway)
 
-            <code>ip netns exec qrouter-de0b9dbe-6b65-45ee-9ff2-c752c7937a9e route -n</code>
+            ip netns exec qrouter-de0b9dbe-6b65-45ee-9ff2-c752c7937a9e route -n
 
     -   Verify that br-ex is associated with the physical NIC, and that the virtual router can route traffic to the IP address of the host. For a single NIC set-up, you will need to bring up br-ex at boot time, and connect eth0 to it.
         To set up br-ex initially (on a host with static IP 192.168.0.2), the following will do the initial configuration:
