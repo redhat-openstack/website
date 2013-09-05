@@ -23,6 +23,8 @@ The following cast of characters will be available testing, workarounds, bug fix
 
 Development
 
+*   pixelbeat (Pádraig Brady)
+
 Testing
 
 *   rbowen (Rich Bowen)
