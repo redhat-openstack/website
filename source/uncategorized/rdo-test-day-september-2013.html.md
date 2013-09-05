@@ -24,6 +24,7 @@ The following cast of characters will be available testing, workarounds, bug fix
 Development
 
 *   pixelbeat (Pádraig Brady)
+*   jruzicka (Jakub Ruzicka)
 
 Testing
 
