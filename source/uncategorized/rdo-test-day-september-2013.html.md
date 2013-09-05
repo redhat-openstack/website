@@ -29,7 +29,7 @@ Testing
 
 *   rbowen (Rich Bowen)
 *   mosulica (Alin Calinciuc)
-*   whayutin ( Wes Hayutin)
+*   weshay ( Wes Hayutin)
 
 ### Prerequisite for Test Day
 
