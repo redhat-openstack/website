@@ -48,23 +48,20 @@ The above command will capture all traffic on any interface. ...
 
 ## Common issues
 
-\* I can create an instance, but cannot SSH or ping it
+*   I can create an instance, but cannot SSH or ping it
+    -   Verify that traffic to port 22 and ICMP traffic of any type (-1:-1) is allowed in the default security group
+        In the dashboard, in the Project tab, under "Access and Security", check the rules which are active on the security group you are using with your instances (typically "default"). You should see a rule allowing traffic to port 22 over tcp from all hosts, and a port enabling icmp traffic of all types (-1). If you don't, create the necessary rules, and try again.
 
-\*\* Verify that traffic to port 22 and ICMP traffic of any type (-1:-1) is allowed in the default security group
+    -   Verify that you can ping and SSH the host where the instance is running
+        From the host where you are attempting to connect to your instance, verify that network traffic is being correctly routed to the compute node in question.
 
-In the dashboard, in the Project tab, under "Access and Security", check the rules which are active on the security group you are using with your instances (typically "default"). You should see a rule allowing traffic to port 22 over tcp from all hosts, and a port enabling icmp traffic of all types (-1). If you don't, create the necessary rules, and try again.
+    -   Ensure that the router is correctly created, that the internal subnet and external subnet are attached to it, and that it can route traffic from your IP to the instance IP
+        If your VM is in the 192.168.1.x subnet, and the host from which you are trying to connect is in the 192.168.0.x subnet, then you will need to have a route from one to the other. Ensure that the subnet 192.168.1.x and 192.168.0.x are both added to a router which you create in Neutron
 
-\*\* Verify that you can ping and SSH the host where the instance is running
+    -   Check that you can ping an instance from inside its network namespace.
+        If you are using network namespaces, then each VLAN will have its own namespace, and entities inside that namespace will be invisible from outside. You can check whether you can ping an instance from inside the namespace by first finding the namespace identifier, and then using the iproute toolset to execute a "ping" inside that namespace:
 
-From the host where you are attempting to connect to your instance, verify that network traffic is being correctly routed to the compute node in question.
-
-\*\* Ensure that the router is correctly created, that the internal subnet and external subnet are attached to it, and that it can route traffic from your IP to the instance IP
-
-If your VM is in the 192.168.1.x subnet, and the host from which you are trying to connect is in the 192.168.0.x subnet, then you will need to have a route from one to the other. Ensure that the subnet 192.168.1.x and 192.168.0.x are both added to a router which you create in Neutron
-
-\*\* Check that you can ping an instance from inside its network namespace.
-
-If you are using network namespaces, then each VLAN will have its own namespace, and entities inside that namespace will be invisible from outside. You can check whether you can ping an instance from inside the namespace by first finding the namespace identifier, and then using the iproute toolset to execute a "ping" inside that namespace:
+<!-- -->
 
     ip netns list
     # Identify virtual router to which your subnet is connected
