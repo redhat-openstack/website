@@ -31,13 +31,11 @@ If you've come across useful tips for resolving issues on OpenStack, or if you'r
 *   [ Quick start guide (RDO Grizzly)](Quickstart)
 *   [ Quick start guide (RDO Havana)](QuickStartLatest)
 *   [ Deploying RDO Using Foreman](Deploying RDO Using Foreman)
-*   [ Securing Core RDO Services (https, qpid)](Securing Services)
 *   [ Launching your first VM ](Running an instance)
 *   [ Image Resources](Image resources)
 *   [ Deploy Heat and launch your first Application ](Deploy Heat and launch your first Application)
 *   [ Repository information ](Repositories)
 *   [Adding a compute node](Adding a compute node)
-*   [Load Balance OpenStack API](Load Balance OpenStack API)
 *   [Troubleshooting](Troubleshooting)
 *   [Uninstalling RDO](Uninstalling RDO)
 
@@ -78,7 +76,10 @@ If you've come across useful tips for resolving issues on OpenStack, or if you'r
 <div class="span3">
 ### Misc
 
+*   [ Tested RDO Configurations](TestedSetups)
 *   [Heat](Heat)
+*   [ Securing Core RDO Services (https, qpid)](Securing Services)
+*   [Load Balance OpenStack API](Load Balance OpenStack API)
 *   [OpenStack on TXT](https://fedoraproject.org/wiki/OpenStackOnTXT)
 
 </div>
