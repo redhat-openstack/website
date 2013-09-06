@@ -39,6 +39,8 @@ Testing
 
 *Hardware Requirements: You can do basic testing of OpenStack in a virtual machine, which is auto detected by the install script below*
 
+*   Run updates on your system or VM (*yum update*) so that everything is ready to go
+
 ## Test Cases
 
 <http://openstack.redhat.com/Quickstart> and <http://openstack.redhat.com/QuickStartLatest>
