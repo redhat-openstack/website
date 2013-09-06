@@ -43,6 +43,8 @@ Testing
 
 ## Test Cases
 
+### Various Install Scenarios
+
 <http://openstack.redhat.com/Quickstart> and <http://openstack.redhat.com/QuickStartLatest>
 
 *   All-in-One w/ Nova Networking RDO Grizzly
