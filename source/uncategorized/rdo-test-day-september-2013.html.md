@@ -41,13 +41,13 @@ Testing
 
 ## Test Cases
 
-<http://openstack.redhat.com/Quickstart> :
+<http://openstack.redhat.com/Quickstart> and <http://openstack.redhat.com/QuickStartLatest>
 
 *   All-in-One w/ Nova Networking RDO Grizzly
 *   All-in-One w/ Nova Networking RDO Havana
 *   All-in-One w/ Nova Networking RDO Trunk
 
-Multi-Node with Nova Networking :
+Multi-Node with Nova Networking
 
 *   Multi Host w/ Nova Networking RDO Grizzly
 *   Multi Host w/ Nova Networking RDO Havana
