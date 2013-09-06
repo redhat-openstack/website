@@ -45,6 +45,47 @@ Testing
 
 ## Test Cases
 
+<http://openstack.redhat.com/Quickstart> :
+
+*   All-in-One w/ Nova Networking RDO Grizzly
+*   All-in-One w/ Nova Networking RDO Havana
+*   All-in-One w/ Nova Networking RDO Trunk
+
+Multi-Node with Nova Networking :
+
+*   Multi Host w/ Nova Networking RDO Grizzly
+*   Multi Host w/ Nova Networking RDO Havana
+*   Multi Host w/ Nova Networking RDO Trunk
+
+<http://openstack.redhat.com/Neutron-Quickstart> :
+
+*   All-in-One w/ Quantum OVS (no tunnels, fake bridge) Networking RDO Grizzly
+*   All-in-One w/ Neutron OVS (no tunnels, fake bridge) Networking RDO Havana
+*   All-in-One w/ Neutron OVS (no tunnels, fake bridge) Networking RDO Trunk
+
+Terry and James Labocki's writeup on making hosts externally accessible:
+
+*   All-in-One w/ Quantum OVS (no tunnels, real provider net) Networking RDO Grizzly
+*   All-in-One w/ Neutron OVS (no tunnels, real provider net) Networking RDO Havana
+*   All-in-One w/ Neutron OVS (no tunnels, real provider net) Networking RDO Trunk
+
+<http://openstack.redhat.com/Using_GRE_Tenant_Networks> :
+
+*   Multi-host w/ Quantum OVS (GRE) Networking RDO Grizzly
+*   Multi-host w/ Neutron OVS (GRE) Networking RDO Havana
+*   Multi-host w/ Neutron OVS (GRE) Networking RDO Trunk
+
+<http://openstack.redhat.com/Load_Balance_OpenStack_API> :
+
+*   Multi-host w/ Load Balanced Services RDO Grizzly
+*   Multi-host w/ Load Balanced Services RDO Havana
+*   Multi-host w/ Load Balanced Services RDO Havana Trunk
+
+Stuff to check after you've installed one of the above environments:
+
+*   Boot cirros image (automatically imported into Glance by Packstack)
+*   Verify connectivity to the image after opening up sec groups
+
 <http://openstack.redhat.com/Securing_Services>
 
 ## Test Results
