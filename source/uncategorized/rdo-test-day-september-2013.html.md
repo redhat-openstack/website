@@ -93,3 +93,9 @@ Once you have completed the tests, add your results to the Results table below, 
 | User                                      | Test Case                                                                        | Results                                                       | References                    |
 |-------------------------------------------|----------------------------------------------------------------------------------|---------------------------------------------------------------|-------------------------------|
 | [Sample User](User:SampleUser) | All-in-One w/ Quantum OVS (no tunnels, real provider net) Networking RDO Grizzly | Test pass, but also encountered [bz12345](bz12345) | [bz12345](bz12345) |
+
+## Blogs
+
+We strongly encourage you to write narrative blogs about your test experiences, whether this is about the test day itself, or a howto style post about a particular install/test scenario. Link to those posts here.
+
+Also, if you'd like to do an audio interview for a podcast about this event, please contact Rich Bowen (rbowen at redhat dot com) to set something up.
