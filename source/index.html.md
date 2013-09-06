@@ -25,7 +25,7 @@ The most up-to-date OpenStack on the industry's most trusted Linux platform, now
 </div>
 <div class="row">
 <div class="offset4 span7 pad-sides begin-content pull-s">
-## Test Day
+## RDO Test Day, September 10
 
 Come participate in the [RDO Test Day](http://openstack.redhat.com/Test_Day_09_2013) on September 10th, as we get ready for the next major release of OpenStack in October.
 
