@@ -11,13 +11,13 @@ wiki_conversion_fallback: true
 wiki_warnings: conversion-fallback
 ---
 
-# RDO Test day, September, 2013
+# RDO Test Day September 2013
 
 We plan to hold an RDO test day on September 10th and 11th, 2013. This will be coordinated through the #rdo channel on freenode, and through this wiki and RDO forums.
 
 You can read about the previous test day at <https://fedoraproject.org/wiki/Test_Day:2013-04-02_OpenStack> to get an idea of what's involved. More details will be posted here as they are available.
 
-### Who's Available
+## Who's Available
 
 The following cast of characters will be available testing, workarounds, bug fixes, and general discussion. You can participate in the conversation on the #rdo IRC channel on the Freenode IRC network.
 
@@ -32,7 +32,7 @@ Testing
 *   mosulica (Alin Calinciuc)
 *   weshay ( Wes Hayutin)
 
-### Prerequisite for Test Day
+## Prerequisite for Test Day
 
 *   Hardware virtualization support (e.g. Intel VT or AMD-V).
 *   Up to 10-20Gb free disk space. Guest images take up a lot of space.
@@ -40,11 +40,11 @@ Testing
 
 *Hardware Requirements: You can do basic testing of OpenStack in a virtual machine, which is auto detected by the install script below*
 
-### How To Test
+## How To Test
 
-### Test Cases
+## Test Cases
 
-### Test Results
+## Test Results
 
 If you have problems with any of the tests, report a bug to [Bugzilla](https://bugzilla.redhat.com) usually for one of the [openstack-nova](https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&version=18&component=openstack-nova), [openstack-glance](https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&version=18&component=openstack-glance), [openstack-keystone](https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&version=18&component=openstack-keystone), [openstack-cinder](https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&version=18&component=openstack-cinder),[openstack-quantum](https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&version=18&component=openstack-quantum), [openstack-swift](https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&version=18&component=openstack-swift) or [openstack-heat](https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&version=18&component=openstack-heat) or [openstack-ceilometer](https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&version=18&component=openstack-ceilometer) components. If you are unsure about exactly how to file the report or what other information to include, just ask on IRC and we will help you.
 
