@@ -28,7 +28,10 @@ If you've come across useful tips for resolving issues on OpenStack, or if you'r
 <div class="offset1 span3">
 ### Install
 
-*   [ Quick start guide ](Quickstart)
+*   [ Quick start guide (RDO Grizzly)](Quickstart)
+*   [ Quick start guide (RDO Havana)](QuickStartLatest)
+*   [ Deploying RDO Using Foreman](Deploying RDO Using Foreman)
+*   [ Securing Core RDO Services (https, qpid)](Securing Services)
 *   [ Launching your first VM ](Running an instance)
 *   [ Image Resources](Image resources)
 *   [ Deploy Heat and launch your first Application ](Deploy Heat and launch your first Application)
