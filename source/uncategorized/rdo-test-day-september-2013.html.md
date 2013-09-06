@@ -84,7 +84,20 @@ Stuff to check after you've installed one of the above environments:
 *   Boot cirros image (automatically imported into Glance by Packstack)
 *   Verify connectivity to the image after opening up sec groups
 
-<http://openstack.redhat.com/Securing_Services>
+Securing Services: <http://openstack.redhat.com/Securing_Services>
+
+### Basic setup
+
+1.  [Add SSH keypair](https://fedoraproject.org/wiki/QA:Testcase_add_SSH_keypair_to_OpenStack)
+2.  [guest images](https://fedoraproject.org/wiki/QA:Testcase_register_images_with_OpenStack|Register)
+3.  [nova network](https://fedoraproject.org/wiki/QA:Testcase_create_OpenStack_nova_network|Create)
+
+### Core functionality
+
+1.  [an instance](https://fedoraproject.org/wiki/QA:Testcase_launch_an_instance_on_OpenStack|Launch)
+2.  [a volume](https://fedoraproject.org/wiki/QA:Testcase_attach_a_cinder_volume_to_an_instance|Attach)
+3.  [IPs](https://fedoraproject.org/wiki/QA:Testcase_OpenStack_floating_IPs|Floating)
+4.  [compute node](https://fedoraproject.org/wiki/QA:Testcase_separate_OpenStack_compute_node|Separate)
 
 ## Test Results
 
