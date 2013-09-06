@@ -31,6 +31,7 @@ Testing
 *   rbowen (Rich Bowen)
 *   mosulica (Alin Calinciuc)
 *   weshay ( Wes Hayutin)
+*   dneary (Dave Neary)
 
 ## Prerequisite for Test Day
 
