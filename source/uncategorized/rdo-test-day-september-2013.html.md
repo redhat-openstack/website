@@ -31,6 +31,7 @@ Testing
 *   weshay ( Wes Hayutin)
 *   dneary (Dave Neary)
 *   pmyers (Perry Myers)
+*   ichavero (Ivan Chavero)
 
 ## Prerequisite for Test Day
 
