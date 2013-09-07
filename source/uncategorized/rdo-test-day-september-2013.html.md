@@ -30,6 +30,7 @@ Testing
 *   mosulica (Alin Calinciuc)
 *   weshay ( Wes Hayutin)
 *   dneary (Dave Neary)
+*   pmyers (Perry Myers)
 
 ## Prerequisite for Test Day
 
