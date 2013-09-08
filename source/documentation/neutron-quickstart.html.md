@@ -47,7 +47,12 @@ or to try the Havana release:
 
     sudo yum install -y http://rdo.fedorapeople.org/openstack-havana/rdo-release-havana.rpm
 
-Note: For Neutron to work properly, a network namespaces-enabled kernel is required. On RHEL systems, please do a yum -y update and reboot prior to continuing. Due to the quantum/neutron rename, SELinux policies are currently broken for Havana, so SELinux must be disabled/permissive on machines running neutron services.
+Note: For Neutron to work properly, a network namespaces-enabled kernel is required. On RHEL systems, please do an update and reboot prior to continuing.
+
+    yum -y update
+    reboot
+
+Due to the quantum/neutron rename, SELinux policies are currently broken for Havana, so SELinux must be disabled/permissive on machines running neutron services, edit /etc/selinux/config to set SELINUX=permissive.
 
 ### Step 2: Install Packstack Installer
 
