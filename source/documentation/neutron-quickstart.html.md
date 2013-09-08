@@ -68,6 +68,8 @@ The installer will ask you to enter the root password for each host node you are
 
 Once the process is complete, you can log in to the OpenStack web interface "Horizon" by going to <http://$YOURIP/dashboard>. The username is "demo". The password can be found in the file keystonerc_demo in the /root/ directory of the control node.
 
+You can find the demo network topology here: <http://$YOURIP/dashboard/project/network_topology/>
+
 # Next Steps
 
 Now that your single node OpenStack instance is up and running, you can read on about [running an instance with Neutron](running an instance with Neutron), configuring a [floating IP range](floating IP range), or about expanding your installation by [adding a compute node](adding a compute node).
