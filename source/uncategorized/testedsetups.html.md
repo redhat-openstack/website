@@ -40,8 +40,8 @@ wiki_last_updated: 2014-01-06
 
 ## Advanced Installs (Foreman Based) -- Work in Progress
 
-| Config Name                                           | Status | HOWTO                                                                      | Person who made last attempt | Date of last attempt | BZ/LP | Notes Page |
-|-------------------------------------------------------|--------|----------------------------------------------------------------------------|------------------------------|----------------------|-------|------------|
-| Multi-host w/ Load Balanced Services RDO Grizzly      | ??     | [Load Balance API](http://openstack.redhat.com/Load_Balance_OpenStack_API) | ??                           | ??                   | None  | None       |
-| Multi-host w/ Load Balanced Services RDO Havana       | ??     | [Load Balance API](http://openstack.redhat.com/Load_Balance_OpenStack_API) | ??                           | ??                   | None  | None       |
-| Multi-host w/ Load Balanced Services RDO Havana Trunk | ??     | [Load Balance API](http://openstack.redhat.com/Load_Balance_OpenStack_API) | ??                           | ??                   | None  | None       |
+| Config Name                                           | Status | HOWTO                                                      | Who | Date | BZ/LP | Notes Page |
+|-------------------------------------------------------|--------|------------------------------------------------------------|-----|------|-------|------------|
+| Multi-host w/ Load Balanced Services RDO Grizzly      | ??     | [ Load Balance API](Load_Balance_OpenStack_API) | ??  | ??   | None  | None       |
+| Multi-host w/ Load Balanced Services RDO Havana       | ??     | [ Load Balance API](Load_Balance_OpenStack_API) | ??  | ??   | None  | None       |
+| Multi-host w/ Load Balanced Services RDO Havana Trunk | ??     | [ Load Balance API](Load_Balance_OpenStack_API) | ??  | ??   | None  | None       |
