@@ -10,6 +10,8 @@ wiki_last_updated: 2014-01-06
 
 # Tested Setups
 
+## Packstack/Quickstart Based Installation
+
 | Config Name                               | Status | HOWTO                                                | Person who made last attempt | Date of last attempt | BZ/LP | Notes Page |
 |-------------------------------------------|--------|------------------------------------------------------|------------------------------|----------------------|-------|------------|
 | All-in-One w/ Nova Networking RDO Grizzly | ??     | [Quickstart](http://openstack.redhat.com/Quickstart) | ??                           | ??                   | None  | None       |
@@ -18,6 +20,8 @@ wiki_last_updated: 2014-01-06
 | Multi Host w/ Nova Networking RDO Grizzly | ??     | [Quickstart](http://openstack.redhat.com/Quickstart) | ??                           | ??                   | None  | None       |
 | Multi Host w/ Nova Networking RDO Havana  | ??     | [Quickstart](http://openstack.redhat.com/Quickstart) | ??                           | ??                   | None  | None       |
 | Multi Host w/ Nova Networking RDO Trunk   | ??     | [Quickstart](http://openstack.redhat.com/Quickstart) | ??                           | ??                   | None  | None       |
+
+## Neutron-Quickstart Based Installation
 
 | Config Name                                                                      | Status | HOWTO                                                                        | Person who made last attempt | Date of last attempt | BZ/LP | Notes Page |
 |----------------------------------------------------------------------------------|--------|------------------------------------------------------------------------------|------------------------------|----------------------|-------|------------|
@@ -33,6 +37,8 @@ wiki_last_updated: 2014-01-06
 | Multi-host w/ Neutron OVS (GRE) Networking RDO Havana                            | ??     | [GRE Tenant Networks](http://openstack.redhat.com/Using_GRE_Tenant_Networks) | ??                           | ??                   | None  | None       |
 
 | Multi-host w/ Neutron OVS (GRE) Networking RDO Trunk                             | ??     | [GRE Tenant Networks](http://openstack.redhat.com/Using_GRE_Tenant_Networks) | ??                           | ??                   | None  | None       |
+
+## Advanced Installs (Foreman Based) -- Work in Progress
 
 | Config Name                                           | Status | HOWTO                                                                      | Person who made last attempt | Date of last attempt | BZ/LP | Notes Page |
 |-------------------------------------------------------|--------|----------------------------------------------------------------------------|------------------------------|----------------------|-------|------------|
