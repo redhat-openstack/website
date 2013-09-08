@@ -10,16 +10,16 @@ wiki_last_updated: 2014-01-06
 
 # Tested Setups
 
-## Packstack/Quickstart Based Installation
+## Packstack/Quickstart Based Installation (Nova Networking)
 
 | Config Name                               | Status | HOWTO                                                | Person who made last attempt | Date of last attempt | BZ/LP | Notes Page |
 |-------------------------------------------|--------|------------------------------------------------------|------------------------------|----------------------|-------|------------|
 | All-in-One w/ Nova Networking RDO Grizzly | ??     | [Quickstart](http://openstack.redhat.com/Quickstart) | ??                           | ??                   | None  | None       |
 | All-in-One w/ Nova Networking RDO Havana  | ??     | [Quickstart](http://openstack.redhat.com/Quickstart) | ??                           | ??                   | None  | None       |
 | All-in-One w/ Nova Networking RDO Trunk   | ??     | [Quickstart](http://openstack.redhat.com/Quickstart) | ??                           | ??                   | None  | None       |
-| Multi Host w/ Nova Networking RDO Grizzly | ??     | [Quickstart](http://openstack.redhat.com/Quickstart) | ??                           | ??                   | None  | None       |
-| Multi Host w/ Nova Networking RDO Havana  | ??     | [Quickstart](http://openstack.redhat.com/Quickstart) | ??                           | ??                   | None  | None       |
-| Multi Host w/ Nova Networking RDO Trunk   | ??     | [Quickstart](http://openstack.redhat.com/Quickstart) | ??                           | ??                   | None  | None       |
+| Multi Host w/ Nova Networking RDO Grizzly | ??     | ??                                                   | ??                           | ??                   | None  | None       |
+| Multi Host w/ Nova Networking RDO Havana  | ??     | ??                                                   | ??                           | ??                   | None  | None       |
+| Multi Host w/ Nova Networking RDO Trunk   | ??     | ??                                                   | ??                           | ??                   | None  | None       |
 
 ## Neutron-Quickstart Based Installation
 
