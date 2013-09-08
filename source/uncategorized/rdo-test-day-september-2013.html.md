@@ -33,7 +33,7 @@ Testing
 *   pmyers (Perry Myers)
 *   ichavero (Ivan Chavero)
 *   oblaut (Ofer Blaut)
-*   rvknin (Rami Vaknin)
+*   rvaknin (Rami Vaknin)
 
 ## Prerequisite for Test Day
 
