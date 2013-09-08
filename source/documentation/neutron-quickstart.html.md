@@ -57,6 +57,7 @@ Due to the quantum/neutron rename, SELinux policies are currently broken for Hav
 ### Step 2: Install Packstack Installer
 
     sudo yum install -y openstack-packstack
+    yum install python-netaddr 
 
 ### Step 3: Run Packstack to install OpenStack
 
