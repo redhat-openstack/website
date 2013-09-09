@@ -45,3 +45,9 @@ wiki_last_updated: 2014-01-06
 | Multi-host w/ Load Balanced Services RDO Grizzly      | ??     | [ Load Balance API](Load_Balance_OpenStack_API) | ??  | ??   | None  | None       |
 | Multi-host w/ Load Balanced Services RDO Havana       | ??     | [ Load Balance API](Load_Balance_OpenStack_API) | ??  | ??   | None  | None       |
 | Multi-host w/ Load Balanced Services RDO Havana Trunk | ??     | [ Load Balance API](Load_Balance_OpenStack_API) | ??  | ??   | None  | None       |
+
+## Other
+
+| Config Name       | Status | HOWTO                                              | Who | Date | BZ/LP | Notes Page |
+|-------------------|--------|----------------------------------------------------|-----|------|-------|------------|
+| Securing Services | ??     | [Securing_Services](Securing_Services) | ??  | ??   | None  | None       |
