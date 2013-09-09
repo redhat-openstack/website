@@ -34,7 +34,7 @@ Your second NIC may have a different name. You can find the names of your device
 
 #### Change IP addresses
 
-Change the value for `CONFIG_NOVA_COMPUTE_HOSTS` from your the value of first host IP address to the value of your second host IP address.
+Change the value for `CONFIG_NOVA_COMPUTE_HOSTS` from the value of your first host IP address to the value of your second host IP address.
 
 ### Re-run packstack with the new values
 
