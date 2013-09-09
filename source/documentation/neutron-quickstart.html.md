@@ -29,7 +29,7 @@ Below, we'll explain how to set up OpenStack on a single server. You'll be able 
 
 <div class="row">
 <div class="span4">
-**Software:** Red Hat Enterprise Linux (RHEL) 6.4, or the equivalent version of one of the RHEL-based Linux distributions such as CentOS, Scientific Linux, etc., or Fedora 18 or later. See also [ RDO repository info](Repositories) for details on required repositories.
+**Software:** Red Hat Enterprise Linux (RHEL) 6.4, or the equivalent version of one of the RHEL-based Linux distributions such as CentOS, Scientific Linux, etc., or Fedora 18 or later. See also [ RDO repository info](Repositories) for details on required repositories. Start from a minimal installation.
 
 </div>
 <div class="span4">
