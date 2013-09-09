@@ -71,8 +71,10 @@ If you have problems with any of the tests, report a bug to [Bugzilla](https://b
 
 Once you have completed the tests, add your results to the table on the [TestedSetups](TestedSetups) page, following the examples already there.
 
-## Blogs
+## Blogs, Screencasts
 
 We strongly encourage you to write narrative blogs about your test experiences, whether this is about the test day itself, or a howto style post about a particular install/test scenario. Link to those posts here.
 
 Also, if you'd like to do an audio interview for a podcast about this event, please contact Rich Bowen (rbowen at redhat dot com) to set something up.
+
+Use something like RecordMyDesktop to record a screencast of your tests, and let me (rbowen) know if you have any video that you think would make useful HowTo videos.
