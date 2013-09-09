@@ -56,7 +56,7 @@ Testing
 
 The things that should be tested are listed on the [Tested Setups](TestedSetups) page.
 
-*   Pick something from the list
+*   Pick an **RDO Havana** item from the list
 *   Go through the scenario as though you were a beginner just following the instructions
 *   KEEP GOOD NOTES
 
