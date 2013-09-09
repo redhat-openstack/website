@@ -28,6 +28,7 @@ Development
 *   jpichon (Julie Pichon)
 *   mrunge (Matthias Runge)
 *   xqueralt (Xavier Queralt)
+*   otherwiseguy (Terry Wilson) [Neutron/Packstack]
 
 Testing
 
