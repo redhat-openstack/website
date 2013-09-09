@@ -48,6 +48,7 @@ wiki_last_updated: 2014-01-06
 
 ## Other
 
-| Config Name       | Status | HOWTO                                              | Who | Date | BZ/LP | Notes Page |
-|-------------------|--------|----------------------------------------------------|-----|------|-------|------------|
-| Securing Services | ??     | [Securing_Services](Securing_Services) | ??  | ??   | None  | None       |
+| Config Name                   | Status | HOWTO                                                                        | Who | Date | BZ/LP | Notes Page |
+|-------------------------------|--------|------------------------------------------------------------------------------|-----|------|-------|------------|
+| Securing Services             | ??     | [Securing_Services](Securing_Services)                           | ??  | ??   | None  | None       |
+| Keystone integration with IDM | ??     | [Keystone_integration_with_IDM](Keystone_integration_with_IDM) | ??  | ??   | None  | None       |
