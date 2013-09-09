@@ -38,7 +38,7 @@ Change the value for `CONFIG_NOVA_COMPUTE_HOSTS` from your the value of first ho
 
 ### Re-run packstack with the new values
 
-Run packstack again, specifiying your modified answer file:
+Run packstack again, specifying your modified answer file:
 
 NOTE: by default $youranswerfile is called packstack-answer-$date-$time.txt
 
