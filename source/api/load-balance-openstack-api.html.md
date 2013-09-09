@@ -22,9 +22,9 @@ This guide assumes that OpenStack has been deployed on a single node via the pac
 
 ### Overview
 
-The general approach is to install and configure the load-balancer nodes, followed by deploying the additional OpenStack controller nodes. This may seem backwards, but it is better to do configure our OpenStack controller nodes after our virtual IP address is active.
+The general approach is to install and configure the load-balancer nodes, followed by deploying the additional OpenStack controller nodes. This may seem backwards, but it is better to configure our OpenStack controller nodes after our virtual IP address is active.
 
-Note that in the example given in this guide the load-balancer is not co-located on the OpenStack controller nodes. While it may be possible to merge the load-balance and controller nodes, it requires extra care to ensure that HAProxy and the various OpenStack API services are not listening on the same ports.
+Note that in the example given in this guide the load-balancer is not co-located on the OpenStack controller nodes. While it may be possible to merge the load-balancer and controller nodes, it requires extra care to ensure that HAProxy and the various OpenStack API services are not listening on the same ports.
 
 ### Configure Load-Balancer Nodes
 
