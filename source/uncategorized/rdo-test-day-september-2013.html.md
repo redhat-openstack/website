@@ -11,7 +11,7 @@ wiki_last_updated: 2013-09-11
 
 # RDO Test Day September 2013
 
-We plan to hold an RDO test day on September 10th and 11th, 2013. This will be coordinated through the #rdo channel on freenode, and through this wiki and RDO forums.
+We plan to hold a RDO **Havana** test day on September 10th and 11th, 2013. This will be coordinated through the #rdo channel on freenode, and through this wiki and RDO forums.
 
 You can read about the previous test day at <https://fedoraproject.org/wiki/Test_Day:2013-04-02_OpenStack> to get an idea of what's involved. More details will be posted here as they are available.
 
@@ -53,41 +53,29 @@ Testing
 
 ### Various Install Scenarios
 
-<http://openstack.redhat.com/Quickstart> and <http://openstack.redhat.com/QuickStartLatest>
+<http://openstack.redhat.com/QuickStartLatest>
 
-*   All-in-One w/ Nova Networking RDO Grizzly
 *   All-in-One w/ Nova Networking RDO Havana
-*   All-in-One w/ Nova Networking RDO Trunk
 
 Multi-Node with Nova Networking
 
-*   Multi Host w/ Nova Networking RDO Grizzly
 *   Multi Host w/ Nova Networking RDO Havana
-*   Multi Host w/ Nova Networking RDO Trunk
 
 <http://openstack.redhat.com/Neutron-Quickstart> :
 
-*   All-in-One w/ Quantum OVS (no tunnels, fake bridge) Networking RDO Grizzly
 *   All-in-One w/ Neutron OVS (no tunnels, fake bridge) Networking RDO Havana
-*   All-in-One w/ Neutron OVS (no tunnels, fake bridge) Networking RDO Trunk
 
 Terry and James Labocki's writeup on making hosts externally accessible:
 
-*   All-in-One w/ Quantum OVS (no tunnels, real provider net) Networking RDO Grizzly
 *   All-in-One w/ Neutron OVS (no tunnels, real provider net) Networking RDO Havana
-*   All-in-One w/ Neutron OVS (no tunnels, real provider net) Networking RDO Trunk
 
 <http://openstack.redhat.com/Using_GRE_Tenant_Networks> :
 
-*   Multi-host w/ Quantum OVS (GRE) Networking RDO Grizzly
 *   Multi-host w/ Neutron OVS (GRE) Networking RDO Havana
-*   Multi-host w/ Neutron OVS (GRE) Networking RDO Trunk
 
 <http://openstack.redhat.com/Load_Balance_OpenStack_API> :
 
-*   Multi-host w/ Load Balanced Services RDO Grizzly
 *   Multi-host w/ Load Balanced Services RDO Havana
-*   Multi-host w/ Load Balanced Services RDO Havana Trunk
 
 Stuff to check after you've installed one of the above environments:
 
