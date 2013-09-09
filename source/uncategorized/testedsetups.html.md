@@ -10,7 +10,7 @@ wiki_last_updated: 2014-01-06
 
 # Tested Setups
 
-## Packstack/Quickstart Based Installation (Nova Networking)
+## Packstack Based Installation (Nova Networking)
 
 | Config Name                               | Status | HOWTO                                              | Who | Date | BZ/LP | Notes Page |
 |-------------------------------------------|--------|----------------------------------------------------|-----|------|-------|------------|
