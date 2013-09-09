@@ -47,7 +47,9 @@ Testing
 *   Hardware virtualization support (e.g. Intel VT or AMD-V).
 *   Up to 10-20Gb free disk space. Guest images take up a lot of space.
 
-¹ It's advisable to have the install images downloaded and the system prepared before the test day ² You can do basic testing of OpenStack in a virtual machine, which is auto detected by the installer'
+¹ It's advisable to have the install images downloaded and the system prepared before the test day
+
+² You can do basic testing of OpenStack in a virtual machine, which is auto detected by the installer
 
 ## Test Cases
 
