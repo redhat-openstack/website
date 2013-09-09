@@ -52,63 +52,17 @@ Testing
 
 ² You can do basic testing of OpenStack in a virtual machine, which is auto detected by the installer
 
-## Test Cases
+## How To Test
 
-### Various Install Scenarios
+The things that should be tested are listed on the [Tested Setups](TestedSetups) page.
 
-<http://openstack.redhat.com/QuickStartLatest>
-
-*   All-in-One w/ Nova Networking RDO Havana
-
-Multi-Node with Nova Networking
-
-*   Multi Host w/ Nova Networking RDO Havana
-
-<http://openstack.redhat.com/Neutron-Quickstart> :
-
-*   All-in-One w/ Neutron OVS (no tunnels, fake bridge) Networking RDO Havana
-
-Terry and James Labocki's writeup on making hosts externally accessible:
-
-*   All-in-One w/ Neutron OVS (no tunnels, real provider net) Networking RDO Havana
-
-<http://openstack.redhat.com/Using_GRE_Tenant_Networks> :
-
-*   Multi-host w/ Neutron OVS (GRE) Networking RDO Havana
-
-<http://openstack.redhat.com/Load_Balance_OpenStack_API> :
-
-*   Multi-host w/ Load Balanced Services RDO Havana
-
-Stuff to check after you've installed one of the above environments:
-
-*   Boot cirros image (automatically imported into Glance by Packstack)
-*   Verify connectivity to the image after opening up sec groups
-
-Securing Services: <http://openstack.redhat.com/Securing_Services>
-
-### Basic setup
-
-1.  [Add SSH keypair](https://fedoraproject.org/wiki/QA:Testcase_add_SSH_keypair_to_OpenStack)
-2.  [guest images](https://fedoraproject.org/wiki/QA:Testcase_register_images_with_OpenStack|Register)
-3.  [nova network](https://fedoraproject.org/wiki/QA:Testcase_create_OpenStack_nova_network|Create)
-
-### Core functionality
-
-1.  [an instance](https://fedoraproject.org/wiki/QA:Testcase_launch_an_instance_on_OpenStack|Launch)
-2.  [a volume](https://fedoraproject.org/wiki/QA:Testcase_attach_a_cinder_volume_to_an_instance|Attach)
-3.  [IPs](https://fedoraproject.org/wiki/QA:Testcase_OpenStack_floating_IPs|Floating)
-4.  [compute node](https://fedoraproject.org/wiki/QA:Testcase_separate_OpenStack_compute_node|Separate)
-
-## Test Results
+*   Pick something from the list
+*   Go through the scenario as though you were a beginner just following the instructions
+*   KEEP GOOD NOTES
 
 If you have problems with any of the tests, report a bug to [Bugzilla](https://bugzilla.redhat.com) usually for one of the [openstack-nova](https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&version=18&component=openstack-nova), [openstack-glance](https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&version=18&component=openstack-glance), [openstack-keystone](https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&version=18&component=openstack-keystone), [openstack-cinder](https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&version=18&component=openstack-cinder),[openstack-quantum](https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&version=18&component=openstack-quantum),[openstack-neutron](https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&version=18&component=openstack-neutron),[openstack-swift](https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&version=18&component=openstack-swift) or [openstack-heat](https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&version=18&component=openstack-heat) or [openstack-ceilometer](https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&version=18&component=openstack-ceilometer) components. If you are unsure about exactly how to file the report or what other information to include, just ask on IRC (#rdo, freenode.net) and we will help you.
 
-Once you have completed the tests, add your results to the Results table below, following the example results from the first line as a template. The first column should be your name with a link to your User page in the Wiki if you have one. For each test case, use the [result template](Template:result) to enter your result, as shown in the example result line.
-
-| User                                      | Test Case                                                                        | Results                                                       | References                    |
-|-------------------------------------------|----------------------------------------------------------------------------------|---------------------------------------------------------------|-------------------------------|
-| [Sample User](User:SampleUser) | All-in-One w/ Quantum OVS (no tunnels, real provider net) Networking RDO Grizzly | Test pass, but also encountered [bz12345](bz12345) | [bz12345](bz12345) |
+Once you have completed the tests, add your results to the table on the [TestedSetups](TestedSetups) page, following the examples already there.
 
 ## Blogs
 
