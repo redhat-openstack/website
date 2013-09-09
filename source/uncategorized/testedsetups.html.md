@@ -21,7 +21,7 @@ wiki_last_updated: 2014-01-06
 | Multi Host w/ Nova Networking RDO Havana  | ??     | ??                                                 | ??  | ??   | None  | None       |
 | Multi Host w/ Nova Networking RDO Trunk   | ??     | ??                                                 | ??  | ??   | None  | None       |
 
-## Neutron-Quickstart Based Installation
+## Packstack Based Installation (Quantum & Neutron Networking)
 
 | Config Name                                                                      | Status                                                      | HOWTO                                                                                                                                           | Who    | Date       | BZ/LP                                                          | Notes Page                                    |
 |----------------------------------------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|--------|------------|----------------------------------------------------------------|-----------------------------------------------|
