@@ -23,6 +23,7 @@ Development
 
 *   pixelbeat (Pádraig Brady)
 *   jruzicka (Jakub Ruzicka)
+*   tgraf (Thomas Graf) [kernel, Open vSwitch, network namespaces]
 
 Testing
 
