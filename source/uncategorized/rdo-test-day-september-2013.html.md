@@ -36,6 +36,7 @@ Testing
 *   ichavero (Ivan Chavero)
 *   oblaut (Ofer Blaut)
 *   rvaknin (Rami Vaknin)
+*   jlibosva (Jakub Libosvar)
 
 ## Prerequisite for Test Day
 
