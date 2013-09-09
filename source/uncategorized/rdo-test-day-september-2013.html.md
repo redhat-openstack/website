@@ -42,6 +42,7 @@ Testing
 *   rvaknin (Rami Vaknin)
 *   jlibosva (Jakub Libosvar)
 *   rcritten (Rob Crittenden)
+*   bdperkin (Brandon Perkins)
 
 ## Prerequisite for Test Day
 
