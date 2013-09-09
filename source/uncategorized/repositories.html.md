@@ -37,3 +37,10 @@ For completeness, currently on RHEL, the Optional channel is used for:
 ## RHOS
 
 The separate [Red Hat OpenStack](http://redhat.com/openstack) product does **not** require the Optional channel or EPEL enabled.
+
+## Testing
+
+To get the very latest packages for testing, like when participating in an RDO test day for example, please ensure you have the testing repositories enabled as follows.
+
+*   Fedora: yum-config-manager --enable updates-testing
+*   RHEL (derivatives): yum-config-manager --enable epel-testing
