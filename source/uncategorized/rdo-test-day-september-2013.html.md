@@ -41,13 +41,12 @@ Testing
 
 ## Prerequisite for Test Day
 
+*   A newly installed Fedora 19, Centos 6.4 or RHEL 6.4 VM¹ or baremetal system
+*   With the updates-testing repositories enabled and fully yum updated
 *   Hardware virtualization support (e.g. Intel VT or AMD-V).
 *   Up to 10-20Gb free disk space. Guest images take up a lot of space.
-*   ...
 
-*Hardware Requirements: You can do basic testing of OpenStack in a virtual machine, which is auto detected by the install script below*
-
-*   Run updates on your system or VM (*yum update*) so that everything is ready to go
+¹ You can do basic testing of OpenStack in a virtual machine, which is auto detected by the installer'
 
 ## Test Cases
 
