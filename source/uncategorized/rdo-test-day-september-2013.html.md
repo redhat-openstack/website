@@ -27,6 +27,7 @@ Development
 *   eglynn (Eoghan Glynn)
 *   jpichon (Julie Pichon)
 *   mrunge (Matthias Runge)
+*   xqueralt (Xavier Queralt)
 
 Testing
 
