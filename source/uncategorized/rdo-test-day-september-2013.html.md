@@ -25,6 +25,7 @@ Development
 *   jruzicka (Jakub Ruzicka)
 *   tgraf (Thomas Graf) [kernel, Open vSwitch, network namespaces]
 *   eglynn (Eoghan Glynn)
+*   jpichon (Julie Pichon)
 
 Testing
 
