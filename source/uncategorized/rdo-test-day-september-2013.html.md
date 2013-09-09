@@ -39,6 +39,7 @@ Testing
 *   oblaut (Ofer Blaut)
 *   rvaknin (Rami Vaknin)
 *   jlibosva (Jakub Libosvar)
+*   rcritten (Rob Crittenden)
 
 ## Prerequisite for Test Day
 
