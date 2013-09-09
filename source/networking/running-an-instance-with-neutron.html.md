@@ -25,9 +25,9 @@ Once logged in to the OpenStack dashboard, click the "Project" tab in the left-s
 
 Optionally, from the command line, instead of using horizon:
 
-        source /root/keystonerc_demo
-        neutron security-group-rule-create --protocol icmp --direction ingress default
-        neutron security-group-rule-create --protocol tcp --port-range-min 22 --port-range-max 22 --direction ingress default
+    source /root/keystonerc_demo
+    neutron security-group-rule-create --protocol icmp --direction ingress default
+    neutron security-group-rule-create --protocol tcp --port-range-min 22 --port-range-max 22 --direction ingress default
 
 ### Step 3: Create or import a key pair.
 
