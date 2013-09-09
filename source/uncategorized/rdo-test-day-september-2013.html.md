@@ -26,6 +26,7 @@ Development
 *   tgraf (Thomas Graf) [kernel, Open vSwitch, network namespaces]
 *   eglynn (Eoghan Glynn)
 *   jpichon (Julie Pichon)
+*   mrunge (Matthias Runge)
 
 Testing
 
