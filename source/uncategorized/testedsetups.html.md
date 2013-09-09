@@ -40,6 +40,8 @@ wiki_last_updated: 2014-01-06
 
 ## Advanced Installs (Foreman Based) -- Work in Progress
 
+Please see [Deploying RDO Using Foreman](Deploying RDO Using Foreman) for directions on setting up compute and controller nodes using forman.
+
 | Config Name                                           | Status | HOWTO                                                      | Who | Date | BZ/LP | Notes Page |
 |-------------------------------------------------------|--------|------------------------------------------------------------|-----|------|-------|------------|
 | Multi-host w/ Load Balanced Services RDO Grizzly      | ??     | [ Load Balance API](Load_Balance_OpenStack_API) | ??  | ??   | None  | None       |
