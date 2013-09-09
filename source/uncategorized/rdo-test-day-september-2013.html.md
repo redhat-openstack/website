@@ -44,7 +44,7 @@ Testing
 ## Prerequisite for Test Day
 
 *   A newly¹ installed Fedora 19, Centos 6.4 or RHEL 6.4 VM² or baremetal system
-*   With the updates-testing repositories enabled and fully yum updated
+*   With the updates-[testing repositories enabled](http://openstack.redhat.com/Repositories#Testing) and fully updated with: yum update
 *   Hardware virtualization support (e.g. Intel VT or AMD-V).
 *   Up to 10-20Gb free disk space. Guest images take up a lot of space.
 
