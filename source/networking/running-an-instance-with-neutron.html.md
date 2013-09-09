@@ -35,7 +35,15 @@ In the left-side navigation menu, click "Access & Security" under the heading "M
 
     chmod 600 /path/to/keypair.pem
 
+Optionally, from the command line:
+
+    nova keypair-add KEY_NAME > MY_KEY.pem && chmod 600 MY_KEY.pem
+
 The "Import Keypair" option will prompt you to provide a name and a public key to use with an existing private key on your client. For name, choose something to identify that key (like your username, for example) and for key, use the contents of your public key file, usually in ~/.ssh/id_rsa.pub or ~/.ssh/id_dsa.pub on the machine from which you will be ssh-ing in.
+
+from the command line:
+
+    nova keypair-add --pub_key ~/.ssh/id_rsa.pub KEY_NAME
 
 ### Step 4: Launch the instance.
 
