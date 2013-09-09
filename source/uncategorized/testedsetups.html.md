@@ -40,7 +40,7 @@ wiki_last_updated: 2014-01-06
 
 ## Advanced Installs (Foreman Based) -- Work in Progress
 
-Please see [Deploying RDO Using Foreman](Deploying RDO Using Foreman) for directions on setting up compute and controller nodes using forman.
+Please see [Deploying RDO Using Foreman](Deploying RDO Using Foreman) for directions on setting up compute and controller nodes using foreman (only RHEL (derivatives) for now)
 
 | Config Name                                           | Status | HOWTO                                                      | Who | Date | BZ/LP | Notes Page |
 |-------------------------------------------------------|--------|------------------------------------------------------------|-----|------|-------|------------|
