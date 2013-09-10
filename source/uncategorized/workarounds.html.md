@@ -27,7 +27,7 @@ wiki_last_updated: 2015-05-07
 
 ## Could not start Service[ovs-cleanup-service]
 
-*   **Bug:** [1006342](https://bugzilla.redhat.com/show_bug.cgi?id=1006342)
+*   **Bug:** [1006342](https://bugzilla.redhat.com/show_bug.cgi?id=1006342) (should be solved)
 *   **Affects:** Fedora 19
 
 #### symptoms
