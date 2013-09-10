@@ -55,12 +55,12 @@ wiki_last_updated: 2014-01-06
 
 Please see [Deploying RDO Using Foreman](Deploying RDO Using Foreman) for directions on setting up compute and controller nodes using foreman (only RHEL (derivatives) for now)
 
-| Config Name                          | Release     | BaseOS     | Status | HOWTO                                                      | Who | Date | BZ/LP | Notes Page |
-|--------------------------------------|-------------|------------|--------|------------------------------------------------------------|-----|------|-------|------------|
-| Multi-host w/ Load Balanced Services | RDO Grizzly | RHEL 6.4   | ??     | [ Load Balance API](Load_Balance_OpenStack_API) | ??  | ??   | None  | None       |
-|                                      | RDO Grizzly | CentOS 6.4 | ??     | [ Load Balance API](Load_Balance_OpenStack_API) | ??  | ??   | None  | None       |
-| Multi-host w/ Load Balanced Services | RDO Havana  | RHEL 6.4   | ??     | [ Load Balance API](Load_Balance_OpenStack_API) | ??  | ??   | None  | None       |
-|                                      | RDO Havana  | CentOS 6.4 | ??     | [ Load Balance API](Load_Balance_OpenStack_API) | ??  | ??   | None  | None       |
+| Config Name                          | Release          | BaseOS     | Status | HOWTO                                                      | Who | Date | BZ/LP | Notes Page |
+|--------------------------------------|------------------|------------|--------|------------------------------------------------------------|-----|------|-------|------------|
+| Multi-host w/ Load Balanced Services | Grizzly 2013.1.3 | RHEL 6.4   | ??     | [ Load Balance API](Load_Balance_OpenStack_API) | ??  | ??   | None  | None       |
+|                                      |                  | CentOS 6.4 | ??     | [ Load Balance API](Load_Balance_OpenStack_API) | ??  | ??   | None  | None       |
+|                                      | Havana H-3       | RHEL 6.4   | ??     | [ Load Balance API](Load_Balance_OpenStack_API) | ??  | ??   | None  | None       |
+|                                      |                  | CentOS 6.4 | ??     | [ Load Balance API](Load_Balance_OpenStack_API) | ??  | ??   | None  | None       |
 
 ## Other
 
