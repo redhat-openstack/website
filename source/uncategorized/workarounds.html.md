@@ -37,3 +37,22 @@ wiki_last_updated: 2015-05-07
 #### workaround
 
       yum install -y python-pbr
+
+## Couldn't prefetch glannce provider glance_image
+
+*   **Bug:** none yet?
+*   **Affects:** Fedora 19
+
+#### symptoms
+
+      ERROR : Error during puppet run : Error: Could not prefetch glance_image provider 'glance': Execution of '/usr/bin/glance -T services -I glance -K da3cb42f56224b0
+
+#### workaround
+
+Just run packstack once again on the generated answer file, for example:
+
+      packstack --answer-file packstack-answers-20130910-113355.txt
+
+#### more info
+
+<dneary>`  Seems like it's a time out on testing Puppet module application which is funky.`
