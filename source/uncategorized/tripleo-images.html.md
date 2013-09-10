@@ -20,4 +20,4 @@ this is an experimental setup and should probably only be attempted if your alre
 
 ## Current Status
 
-overcloud wont boot because of <https://bugs.launchpad.net/nova/+bug/1221620>
+~~overcloud wont boot because of <https://bugs.launchpad.net/nova/+bug/1221620>~~ Nova updated no longer a problem.
