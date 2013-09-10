@@ -28,6 +28,7 @@ Development
 *   jpichon (Julie Pichon)
 *   mrunge (Matthias Runge)
 *   xqueralt (Xavier Queralt)
+*   ndipanov (Nikola Dipanov)
 *   otherwiseguy (Terry Wilson) [Neutron/Packstack]
 *   ayoung (Adam Young) [Keystone]
 
