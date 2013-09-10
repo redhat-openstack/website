@@ -59,7 +59,7 @@ Just run packstack once again on the generated answer file, for example:
 
 ## glance: Error communicating with <http://192.168.8.96:9292> timed out
 
-*   **Bug:** none yet?
+*   **Bug:** <https://bugzilla.redhat.com/1006484>
 *   **Affects:** Fedora 19
 
 #### symptoms
