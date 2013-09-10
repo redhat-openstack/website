@@ -44,6 +44,10 @@ Testing
 *   jlibosva (Jakub Libosvar)
 *   rcritten (Rob Crittenden)
 *   bdperkin (Brandon Perkins)
+*   nmagnezi (Nir Magnezi)
+*   ajeain (Ami Jeain)
+*   ohochman (Omri Hochman)
+*   dkorn (Daniel Korn)
 *   jdennis (John Dennis)
 *   yrabl (Yogev Rabl)
 
