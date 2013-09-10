@@ -75,3 +75,12 @@ Please see [Deploying RDO Using Foreman](Deploying RDO Using Foreman) for direct
 |                                                             | Havana H-3       | RHEL 6.4   | ??           | [Keystone_integration_with_IDM](Keystone_integration_with_IDM) | ??     | ??         | None                                                                                                                          | None       |
 |                                                             |                  | CentOS 6.4 | ??           | [Keystone_integration_with_IDM](Keystone_integration_with_IDM) | ??     | ??         | None                                                                                                                          | None       |
 | TripleO                                                     | Havana H-3       | Fedora 19  | experimental | [TripleO_images](TripleO_images)                                 | derekh | 2013-09-10 | [1006241](https://bugzilla.redhat.com/show_bug.cgi?id=1006241) [~~1221620~~](https://bugs.launchpad.net/tripleo/+bug/1221620) | None       |
+
+## How to Test
+
+So, now you've followed one of the guides above and have a working RDO install. What next? How do you verify that things worked properly?
+
+Following these two guides would be a good start:
+
+*   [ Running_an_instance | Running an Instance ]
+*   [ Floating_IP_range | Creating a Floating IP Range and associating it to your instance ]
