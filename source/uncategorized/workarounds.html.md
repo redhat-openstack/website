@@ -24,3 +24,16 @@ wiki_last_updated: 2015-05-07
 #### workaround
 
       mkdir /var/lock/subsys
+
+## Could not start Service[ovs-cleanup-service]
+
+*   **Bug:** [1006342](https://bugzilla.redhat.com/show_bug.cgi?id=1006342)
+*   **Affects:** Fedora 19
+
+#### symptoms
+
+      ERROR : Error during puppet run : Error: Could not start Service[ovs-cleanup-service]: Execution of '/sbin/service neutron-ovs-cleanup start' returned 1:
+
+#### workaround
+
+      yum install -y python-pbr
