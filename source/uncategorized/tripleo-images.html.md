@@ -18,12 +18,6 @@ this is an experimental setup and should probably only be attempted if your alre
 
 ## Workarounds
 
-Edit the file elements/nova/manifests/nova.pp and add
-
-         package {["python-babel", "python-jinja2"]:
-           ensure => present,
-         }
-
 ## Current Status
 
 overcloud wont boot because of <https://bugs.launchpad.net/nova/+bug/1221620>
