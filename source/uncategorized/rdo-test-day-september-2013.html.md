@@ -51,6 +51,7 @@ Testing
 *   dkorn (Daniel Korn)
 *   jdennis (John Dennis)
 *   yrabl (Yogev Rabl)
+*   mlessard (Michael Lessard)
 
 ## Prerequisite for Test Day
 
