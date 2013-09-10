@@ -32,6 +32,7 @@ Development
 *   otherwiseguy (Terry Wilson) [Neutron/Packstack]
 *   ayoung (Adam Young) [Keystone]
 *   rkukura (Bob Kukura) [Neutron]
+*   nsantos (Nuno Santos)
 
 Testing
 
