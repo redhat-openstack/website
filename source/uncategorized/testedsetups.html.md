@@ -82,5 +82,5 @@ So, now you've followed one of the guides above and have a working RDO install. 
 
 Following these two guides would be a good start:
 
-*   [ Running_an_instance | Running an Instance ]
-*   [ Floating_IP_range | Creating a Floating IP Range and associating it to your instance ]
+*   [ Running an Instance ](Running_an_instance)
+*   [ Creating a Floating IP Range and associating it to your instance ](Floating_IP_range)
