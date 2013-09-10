@@ -45,6 +45,7 @@ Testing
 *   rcritten (Rob Crittenden)
 *   bdperkin (Brandon Perkins)
 *   jdennis (John Dennis)
+*   yrabl (Yogev Rabl)
 
 ## Prerequisite for Test Day
 
