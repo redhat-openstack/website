@@ -10,6 +10,8 @@ wiki_last_updated: 2014-01-06
 
 # Tested Setups
 
+September 10 Test Day details at [RDO_Test_Day_September_2013](RDO_Test_Day_September_2013)
+
 ## Packstack Based Installation (Nova Networking)
 
 | Config Name                   | Release          | BaseOS     | Status                                               | HOWTO                                              | Who      | Date       | BZ/LP                                                          | Notes Page |
