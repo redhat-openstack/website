@@ -29,6 +29,7 @@ Development
 *   mrunge (Matthias Runge)
 *   xqueralt (Xavier Queralt)
 *   otherwiseguy (Terry Wilson) [Neutron/Packstack]
+*   ayoung (Adam Young) [Keystone]
 
 Testing
 
@@ -43,6 +44,7 @@ Testing
 *   jlibosva (Jakub Libosvar)
 *   rcritten (Rob Crittenden)
 *   bdperkin (Brandon Perkins)
+*   jdennis (John Dennis)
 
 ## Prerequisite for Test Day
 
