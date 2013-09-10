@@ -12,14 +12,14 @@ wiki_last_updated: 2014-01-06
 
 ## Packstack Based Installation (Nova Networking)
 
-| Config Name                               | Status | HOWTO                                              | Who      | Date          | BZ/LP        | Notes Page |
-|-------------------------------------------|--------|----------------------------------------------------|----------|---------------|--------------|------------|
-| All-in-One w/ Nova Networking RDO Grizzly | ??     | [Quickstart](Quickstart)                | ??       | ??            | None         | None       |
-| All-in-One w/ Nova Networking RDO Havana  | ??     | [ Havana Quickstart ](QuickStartLatest) | nmagnezi | Sep 10th 2013 | BZ #1006214 | None       |
-| All-in-One w/ Nova Networking RDO Trunk   | ??     | ??                                                 | ??       | ??            | None         | None       |
-| Multi Host w/ Nova Networking RDO Grizzly | ??     | ??                                                 | ??       | ??            | None         | None       |
-| Multi Host w/ Nova Networking RDO Havana  | ??     | ??                                                 | ??       | ??            | None         | None       |
-| Multi Host w/ Nova Networking RDO Trunk   | ??     | ??                                                 | ??       | ??            | None         | None       |
+| Config Name                               | Status  | HOWTO                                              | Who      | Date          | BZ/LP        | Notes Page |
+|-------------------------------------------|---------|----------------------------------------------------|----------|---------------|--------------|------------|
+| All-in-One w/ Nova Networking RDO Grizzly | ??      | [Quickstart](Quickstart)                | ??       | ??            | None         | None       |
+| All-in-One w/ Nova Networking RDO Havana  | Blocked | [ Havana Quickstart ](QuickStartLatest) | nmagnezi | Sep 10th 2013 | BZ #1006214 | None       |
+| All-in-One w/ Nova Networking RDO Trunk   | ??      | ??                                                 | ??       | ??            | None         | None       |
+| Multi Host w/ Nova Networking RDO Grizzly | ??      | ??                                                 | ??       | ??            | None         | None       |
+| Multi Host w/ Nova Networking RDO Havana  | ??      | ??                                                 | ??       | ??            | None         | None       |
+| Multi Host w/ Nova Networking RDO Trunk   | ??      | ??                                                 | ??       | ??            | None         | None       |
 
 ## Packstack Based Installation (Quantum & Neutron Networking)
 
