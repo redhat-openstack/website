@@ -86,3 +86,36 @@ Disabling glance notifications:
 
       sudo sed -i 's/notifier_strategy = qpid/notifier_strategy = noop/' /etc/glance/glance-api.conf
       sudo service openstack-glance-api restart
+
+## /usr/sbin/tuned-adm profile virtual-host returned 2 instead of one of [0]
+
+*   **Bug:** none yet?
+*   **Affects:** Fedora 19
+
+#### symptoms
+
+ERROR : Error during puppet run : Error: /usr/sbin/tuned-adm profile virtual-host returned 2
+
+#### workaround
+
+**unknown**
+
+#### more info
+
+      # service tuned status
+       tuned.service - Dynamic System Tuning Daemon
+         Loaded: loaded (/usr/lib/systemd/system/tuned.service; disabled)
+         Active: active (running) since Út 2013-09-10 13:35:22 EDT; 1min 22s ago
+       Main PID: 16101 (tuned)
+         CGroup: name=systemd:/system/tuned.service
+                 └─16101 /usr/bin/python -Es /usr/sbin/tuned -l -P
+      zář 10 13:35:22 rdo-havana systemd[1]: Starting Dynamic System Tuning Daemon...
+      zář 10 13:35:22 rdo-havana systemd[1]: Started Dynamic System Tuning Daemon.
+
+      # /usr/sbin/tuned-adm profile virtual-host
+      2013-09-10 13:44:22,474 ERROR    dbus.proxies: Introspect error on :1.245:/Tuned: dbus.exceptions.DBusException: org.freedesktop.DBus.Error.NoReply: Did not receive a reply. Possible causes include: the remote application did not send a reply, the message bus security policy blocked the reply, the reply timeout expired, or the network connection was broken.
+      ERROR:dbus.proxies:Introspect error on :1.245:/Tuned: dbus.exceptions.DBusException: org.freedesktop.DBus.Error.NoReply: Did not receive a reply. Possible causes include: the remote application did not send a reply, the message bus security policy blocked the reply, the reply timeout expired, or the network connection was broken.
+      DBus call to Tuned daemon failed (org.freedesktop.DBus.Error.NoReply: Did not receive a reply. Possible causes include: the remote application did not send a reply, the message bus security policy blocked the reply, the reply timeout expired, or the network connection was broken.).
+
+*   setneforce 0 doesn't help.
+*   dbus is running
