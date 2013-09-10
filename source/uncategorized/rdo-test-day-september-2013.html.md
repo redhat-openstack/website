@@ -52,6 +52,8 @@ Testing
 *   dkorn (Daniel Korn)
 *   jdennis (John Dennis)
 *   yrabl (Yogev Rabl)
+*   dron (Dafna Ron)
+*   gifedente (Giulio Fidente)
 *   mlessard (Michael Lessard)
 
 ## Prerequisite for Test Day
