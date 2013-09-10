@@ -92,3 +92,7 @@ Following these two guides would be a good start:
 
 *   [ Running an Instance ](Running_an_instance)
 *   [ Creating a Floating IP Range and associating it to your instance ](Floating_IP_range)
+
+## Workarounds
+
+When you hit a problem, check out the [Workarounds](Workarounds) page. Maybe the problem is already there including a workaround. If not, please add it to prevent duplicating effort.
