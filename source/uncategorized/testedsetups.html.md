@@ -12,20 +12,20 @@ wiki_last_updated: 2014-01-06
 
 ## Packstack Based Installation (Nova Networking)
 
-| Config Name                   | Release     | BaseOS     | Status  | HOWTO                                              | Who      | Date       | BZ/LP                                                          | Notes Page |
-|-------------------------------|-------------|------------|---------|----------------------------------------------------|----------|------------|----------------------------------------------------------------|------------|
-| All-in-One w/ Nova Networking | RDO Grizzly | RHEL 6.4   | ??      | [Quickstart](Quickstart)                | ??       | ??         | None                                                           | None       |
-| All-in-One w/ Nova Networking | RDO Grizzly | CentOS 6.4 | ??      | [Quickstart](Quickstart)                | ??       | ??         | None                                                           | None       |
-| All-in-One w/ Nova Networking | RDO Grizzly | Fedora 19  | ??      | [Quickstart](Quickstart)                | ??       | ??         | None                                                           | None       |
-| All-in-One w/ Nova Networking | RDO Havana  | RHEL 6.4   | Blocked | [ Havana Quickstart ](QuickStartLatest) | nmagnezi | 2013-09-10 | [1006214](https://bugzilla.redhat.com/show_bug.cgi?id=1006214) | None       |
-| All-in-One w/ Nova Networking | RDO Havana  | CentOS 6.4 | ??      | [ Havana Quickstart ](QuickStartLatest) | ??       | ??         | None                                                           | None       |
-| All-in-One w/ Nova Networking | RDO Havana  | Fedora 19  | ??      | [ Havana Quickstart ](QuickStartLatest) | ??       | ??         | None                                                           | None       |
-| Multi Host w/ Nova Networking | RDO Grizzly | RHEL 6.4   | ??      | ??                                                 | ??       | ??         | None                                                           | None       |
-| Multi Host w/ Nova Networking | RDO Grizzly | CentOS 6.4 | | ??    | ??                                                 | ??       | ??         | None                                                           | None       |
-| Multi Host w/ Nova Networking | RDO Grizzly | Fedora 19  | ??      | ??                                                 | ??       | ??         | None                                                           | None       |
-| Multi Host w/ Nova Networking | RDO Havana  | RHEL 6.4   | ??      | ??                                                 | ??       | ??         | None                                                           | None       |
-| Multi Host w/ Nova Networking | RDO Havana  | CentOS 6.4 | ??      | ??                                                 | ??       | ??         | None                                                           | None       |
-| Multi Host w/ Nova Networking | RDO Havana  | Fedora 19  | ??      | ??                                                 | ??       | ??         | None                                                           | None       |
+| Config Name                   | Release     | BaseOS     | Status                                          | HOWTO                                              | Who      | Date       | BZ/LP                                                          | Notes Page |
+|-------------------------------|-------------|------------|-------------------------------------------------|----------------------------------------------------|----------|------------|----------------------------------------------------------------|------------|
+| All-in-One w/ Nova Networking | RDO Grizzly | RHEL 6.4   | ??                                              | [Quickstart](Quickstart)                | ??       | ??         | None                                                           | None       |
+| All-in-One w/ Nova Networking | RDO Grizzly | CentOS 6.4 | ??                                              | [Quickstart](Quickstart)                | ??       | ??         | None                                                           | None       |
+| All-in-One w/ Nova Networking | RDO Grizzly | Fedora 19  | ??                                              | [Quickstart](Quickstart)                | ??       | ??         | None                                                           | None       |
+| All-in-One w/ Nova Networking | RDO Havana  | RHEL 6.4   | <span style="background:#ff0000">Blocked</span> | [ Havana Quickstart ](QuickStartLatest) | nmagnezi | 2013-09-10 | [1006214](https://bugzilla.redhat.com/show_bug.cgi?id=1006214) | None       |
+| All-in-One w/ Nova Networking | RDO Havana  | CentOS 6.4 | ??                                              | [ Havana Quickstart ](QuickStartLatest) | ??       | ??         | None                                                           | None       |
+| All-in-One w/ Nova Networking | RDO Havana  | Fedora 19  | ??                                              | [ Havana Quickstart ](QuickStartLatest) | ??       | ??         | None                                                           | None       |
+| Multi Host w/ Nova Networking | RDO Grizzly | RHEL 6.4   | ??                                              | ??                                                 | ??       | ??         | None                                                           | None       |
+| Multi Host w/ Nova Networking | RDO Grizzly | CentOS 6.4 | | ??                                            | ??                                                 | ??       | ??         | None                                                           | None       |
+| Multi Host w/ Nova Networking | RDO Grizzly | Fedora 19  | ??                                              | ??                                                 | ??       | ??         | None                                                           | None       |
+| Multi Host w/ Nova Networking | RDO Havana  | RHEL 6.4   | ??                                              | ??                                                 | ??       | ??         | None                                                           | None       |
+| Multi Host w/ Nova Networking | RDO Havana  | CentOS 6.4 | ??                                              | ??                                                 | ??       | ??         | None                                                           | None       |
+| Multi Host w/ Nova Networking | RDO Havana  | Fedora 19  | ??                                              | ??                                                 | ??       | ??         | None                                                           | None       |
 
 ## Packstack Based Installation (Quantum & Neutron Networking)
 
