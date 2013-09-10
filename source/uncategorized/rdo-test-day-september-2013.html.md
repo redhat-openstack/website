@@ -31,6 +31,7 @@ Development
 *   ndipanov (Nikola Dipanov)
 *   otherwiseguy (Terry Wilson) [Neutron/Packstack]
 *   ayoung (Adam Young) [Keystone]
+*   rkukura (Bob Kukura) [Neutron]
 
 Testing
 
