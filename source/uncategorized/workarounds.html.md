@@ -38,7 +38,7 @@ wiki_last_updated: 2015-05-07
 
       yum install -y python-pbr
 
-## Couldn't prefetch glannce provider glance_image
+## Couldn't prefetch glance provider glance_image
 
 *   **Bug:** none yet?
 *   **Affects:** Fedora 19
