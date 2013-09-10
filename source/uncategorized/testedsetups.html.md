@@ -50,8 +50,8 @@ Please see [Deploying RDO Using Foreman](Deploying RDO Using Foreman) for direct
 
 ## Other
 
-| Config Name                   | Status       | HOWTO                                                                        | Who    | Date | BZ/LP | Notes Page |
-|-------------------------------|--------------|------------------------------------------------------------------------------|--------|------|-------|------------|
-| Securing Services             | ??           | [Securing_Services](Securing_Services)                           | ??     | ??   | None  | None       |
-| Keystone integration with IDM | ??           | [Keystone_integration_with_IDM](Keystone_integration_with_IDM) | ??     | ??   | None  | None       |
-| TripleO                       | experimental | [TripleO_images](TripleO_images)                                 | derekh | ??   | None  | None       |
+| Config Name                   | Status       | HOWTO                                                                        | Who    | Date       | BZ/LP                                                                                                                     | Notes Page |
+|-------------------------------|--------------|------------------------------------------------------------------------------|--------|------------|---------------------------------------------------------------------------------------------------------------------------|------------|
+| Securing Services             | ??           | [Securing_Services](Securing_Services)                           | ??     | ??         | None                                                                                                                      | None       |
+| Keystone integration with IDM | ??           | [Keystone_integration_with_IDM](Keystone_integration_with_IDM) | ??     | ??         | None                                                                                                                      | None       |
+| TripleO                       | experimental | [TripleO_images](TripleO_images)                                 | derekh | 2013-09-10 | [1006241](https://bugzilla.redhat.com/show_bug.cgi?id=1006241) [1221620](https://bugs.launchpad.net/tripleo/+bug/1221620) | None       |
