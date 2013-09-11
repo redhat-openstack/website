@@ -98,7 +98,10 @@ ERROR : Error during puppet run : Error: /usr/sbin/tuned-adm profile virtual-hos
 
 #### workaround
 
-**unknown**
+Your mileage may vary, but I found this issue disappeared after I started doing a full update **before** installing openstack, packstack etc.
+
+       sudo yum --enablerepo=updates-testing clean all
+       sudo yum update -y
 
 #### more info
 
