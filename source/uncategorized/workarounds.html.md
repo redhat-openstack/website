@@ -103,6 +103,8 @@ Your mileage may vary, but I found this issue disappeared after I started doing 
        sudo yum --enablerepo=updates-testing clean all
        sudo yum update -y
 
+jruzicka: I always fully \`yum update\` my VM as part of provisioning so this is definitely **not working** for me.
+
 #### more info
 
       # service tuned status
