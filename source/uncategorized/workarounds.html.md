@@ -122,3 +122,21 @@ Your mileage may vary, but I found this issue disappeared after I started doing 
 
 *   setenforce 0 doesn't help.
 *   dbus is running
+
+## heat-api and heat-engine fail to start
+
+*   **Bug:** <https://bugzilla.redhat.com/1006868>
+*   **Affects:** RHEL/SLC 6.4
+
+#### symptoms
+
+*   ERROR : Error during puppet run : Error: Could not start Service[heat-api]: Execution of '/sbin/service openstack-heat-api start' returned 6
+*   ERROR : Error during puppet run : Error: Could not start Service[heat-engine]: Execution of '/sbin/service openstack-heat-engine start' returned 6:
+
+#### workaround
+
+init scripts still expect heat-api.conf and heat-engine.conf to be present.
+
+      # cd /etc/heat
+      # ln -s heat.conf heat-api.conf
+      # ln -s heat.conf heat-engine.conf
