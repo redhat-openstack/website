@@ -143,7 +143,7 @@ init scripts still expect heat-api.conf and heat-engine.conf to be present.
 
 ## heat-engine fail to start
 
-*   **Bug:** Not yet
+*   **Bug:** <https://bugzilla.redhat.com/1006911>
 *   **Affects:** RHEL/SLC 6.4
 
 #### symptoms
