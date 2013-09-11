@@ -140,3 +140,19 @@ init scripts still expect heat-api.conf and heat-engine.conf to be present.
       # cd /etc/heat
       # ln -s heat.conf heat-api.conf
       # ln -s heat.conf heat-engine.conf
+
+## heat-engine fail to start
+
+*   **Bug:** Not yet
+*   **Affects:** RHEL/SLC 6.4
+
+#### symptoms
+
+*   Starting heat-engine: [FAILED]
+*   2013-09-11 15:02:04.115 14992 ERROR heat.openstack.common.threadgroup [-] (ProgrammingError) (1146, "Table 'heat.stack' doesn't exist") 'SELECT stack.created_at AS stack_created_at, stack.updated_at AS stack_updated_at, stack.deleted_at AS stack_deleted_at, stack.id AS stack_id, stack.name AS stack_name, stack.raw_template_id AS stack_raw_template_id, stack.username AS stack_username, stack.tenant AS stack_tenant, stack.action AS stack_action, stack.status AS stack_status, stack.status_reason AS stack_status_reason, stack.parameters AS stack_parameters, stack.user_creds_id AS stack_user_creds_id, stack.owner_id AS stack_owner_id, stack.timeout AS stack_timeout, stack.disable_rollback AS stack_disable_rollback \\nFROM stack \\nWHERE stack.deleted_at IS NULL AND stack.owner_id IS NULL' ()
+
+#### workaround
+
+heat does not install python-pbr and so heat-db-setup fails to create mysql tables
+
+      # yum install python-pbr
