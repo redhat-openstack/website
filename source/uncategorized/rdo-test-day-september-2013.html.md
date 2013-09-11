@@ -58,6 +58,7 @@ Testing
 *   gifedente (Giulio Fidente)
 *   mlessard (Michael Lessard)
 *   vaneldik (Jan van Eldik)
+*   red_trela (Sandro Mathys)
 
 ## Prerequisite for Test Day
 
