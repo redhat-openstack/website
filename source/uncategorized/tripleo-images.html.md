@@ -12,9 +12,9 @@ wiki_last_updated: 2013-09-11
 
 Follow the instructions for tripleo setup <https://github.com/openstack/tripleo-incubator/blob/master/devtest.md>
 
-But swap out the trippleo-image-element for this fork <https://github.com/agroup/tripleo-puppet-elements> which uses puppet modules to install the RDO packages
+But swap out the tripleo-image-element for this fork <https://github.com/agroup/tripleo-puppet-elements> which uses puppet modules to install the RDO packages
 
-this is an experimental setup and should probably only be attempted if your already familiar with tripleo, expect problems unrelated to the packages
+This is an experimental setup and should probably only be attempted if your already familiar with tripleo, expect problems unrelated to the packages
 
 ## Workarounds
 
