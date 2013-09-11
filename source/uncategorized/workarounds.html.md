@@ -207,3 +207,25 @@ Edit /etc/openstack-dashboard/local_settings and add one of the following in the
 or
 
       ALLOWED_HOSTS = ['`<host ip>`']
+
+## /usr/sbin/service mongod start returns 2 instead of one of [0]
+
+*   **Bug:** none yet?
+*   **Affects:** Fedora 19 (on resource-constrained VMs)
+
+#### symptoms
+
+The eager mongodb journal file pre-allocation takes longer than the default 90 second timeout imposed by systemd.
+
+#### workaround
+
+Pre-install mongod before running packstack, editing the systemd config for mongod to override the default timeout.
+
+         sudo yum install -y mongodb-server mongodb
+
+         # add the line TimeoutStartSec=360 to the [Service] section:
+         sudo vi /usr/lib/systemd/system/mongod.service
+
+         sudo service mongod start
+         sudo service mongod status
+         sudo service mongod stop
