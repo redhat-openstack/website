@@ -159,8 +159,8 @@ heat does not install python-pbr and so heat-db-setup fails to create mysql tabl
 
 ## horizon: no image format
 
-*   **Bug:** [1006766](https://bugzilla.redhat.com/1006766)
-*   **Affects:** all
+*   **Bug:** [1006766](https://bugzilla.redhat.com/1006766), [1006483](https://bugzilla.redhat.com/1006483)
+*   **Affects:** all (Havana)
 
 #### symptoms
 
