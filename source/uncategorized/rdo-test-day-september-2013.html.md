@@ -33,6 +33,7 @@ Development
 *   ayoung (Adam Young) [Keystone]
 *   rkukura (Bob Kukura) [Neutron]
 *   nsantos (Nuno Santos)
+*   shardy (Steve Hardy)[Heat]
 
 Testing
 
