@@ -41,7 +41,7 @@ wiki_last_updated: 2015-05-07
 ## Could not prefetch glance_image provider 'glance'
 
 *   **Bug:** none yet?
-*   **Affects:** Fedora 19
+*   **Affects:** Fedora 19, RHEL 6.4
 
 #### symptoms
 
