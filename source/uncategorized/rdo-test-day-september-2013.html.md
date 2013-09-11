@@ -56,6 +56,7 @@ Testing
 *   dron (Dafna Ron)
 *   gifedente (Giulio Fidente)
 *   mlessard (Michael Lessard)
+*   vaneldik (Jan van Eldik)
 
 ## Prerequisite for Test Day
 
