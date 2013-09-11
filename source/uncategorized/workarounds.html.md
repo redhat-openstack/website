@@ -208,7 +208,7 @@ or
 
       ALLOWED_HOSTS = ['`<host ip>`']
 
-## /usr/sbin/service mongod start returns 2 instead of one of [0]
+## /usr/sbin/service mongod start returned 2 instead of one of [0]
 
 *   **Bug:** none yet?
 *   **Affects:** Fedora 19 (on resource-constrained VMs)
