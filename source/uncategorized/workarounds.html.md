@@ -156,3 +156,50 @@ init scripts still expect heat-api.conf and heat-engine.conf to be present.
 heat does not install python-pbr and so heat-db-setup fails to create mysql tables
 
       # yum install python-pbr
+
+## horizon: no image format
+
+*   **Bug:** [1006766](https://bugzilla.redhat.com/1006766)
+*   **Affects:** all
+
+#### symptoms
+
+The dropdown list in the 'Create An Image" is empty and no image can be created.
+
+#### workaround
+
+Edit /etc/openstack-dashboard/local_settings and add the following in the end:
+
+      OPENSTACK_IMAGE_BACKEND = {
+         'image_formats': [
+             ('', ''),
+             ('aki', _('AKI - Amazon Kernel Image')),
+             ('ami', _('AMI - Amazon Machine Image')),
+             ('ari', _('ARI - Amazon Ramdisk Image')),
+             ('iso', _('ISO - Optical Disk Image')),
+             ('qcow2', _('QCOW2 - QEMU Emulator')),
+             ('raw', _('Raw')),
+             ('vdi', _('VDI')),
+             ('vhd', _('VHD')),
+             ('vmdk', _('VMDK'))
+         ]
+      }
+
+## horizon: internal error accessing the login page
+
+*   **Bug:** [1006766](https://bugzilla.redhat.com/1006766)
+*   **Affects:** Fedora 19
+
+#### symptoms
+
+Just after installing with packstack it's impossible to access the login page of the dashboard which shows a generic error page.
+
+#### workaround
+
+Edit /etc/openstack-dashboard/local_settings and add one of the following in the end:
+
+      ALLOWED_HOSTS = ['*'] 
+
+or
+
+      ALLOWED_HOSTS = ['`<host ip>`']
