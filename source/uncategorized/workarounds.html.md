@@ -120,5 +120,32 @@ Your mileage may vary, but I found this issue disappeared after I started doing 
       ERROR:dbus.proxies:Introspect error on :1.245:/Tuned: dbus.exceptions.DBusException: org.freedesktop.DBus.Error.NoReply: Did not receive a reply. Possible causes include: the remote application did not send a reply, the message bus security policy blocked the reply, the reply timeout expired, or the network connection was broken.
       DBus call to Tuned daemon failed (org.freedesktop.DBus.Error.NoReply: Did not receive a reply. Possible causes include: the remote application did not send a reply, the message bus security policy blocked the reply, the reply timeout expired, or the network connection was broken.).
 
-*   setneforce 0 doesn't help.
+*   setenforce 0 doesn't help.
 *   dbus is running
+
+## keystone-manage db_sync fails
+
+*   **Bug:** [1006768](https://bugzilla.redhat.com/show_bug.cgi?id=1006768)
+*   **Affects:** RHEL / SLC 6.4
+
+#### symptoms
+
+      # keystone-manage db_sync
+
+Traceback (most recent call last):
+
+` File "/usr/bin/keystone-manage", line 31, in `<module>
+         from keystone.openstack.common import gettextutils
+` File "/usr/lib/python2.6/site-packages/keystone/__init__.py", line 20, in `<module>
+         replace_dist("WebOb >= 1.2")
+       File "/usr/lib/python2.6/site-packages/keystone/__init__.py", line 18, in replace_dist
+         return pkg_resources.require(requirement)
+       File "/usr/lib/python2.6/site-packages/pkg_resources.py", line 648, in require
+         needed = self.resolve(parse_requirements(requirements))
+       File "/usr/lib/python2.6/site-packages/pkg_resources.py", line 546, in resolve
+         raise DistributionNotFound(req)
+      pkg_resources.DistributionNotFound: WebOb>=1.2
+
+#### workaround
+
+yum install python-webob1.2.noarch --enablerepo=epel
