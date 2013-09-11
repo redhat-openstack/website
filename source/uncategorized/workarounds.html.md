@@ -57,6 +57,8 @@ Just run packstack once again on the generated answer file, for example:
 
 <dneary>`  Seems like it's a time out on testing Puppet module application which is funky.`
 
+<rbowen> The workaround didn't work for me - I get that same failure repeatedly on subsequent runs.
+
 ## glance: Error communicating with <http://192.168.8.96:9292> timed out
 
 *   **Bug:** <https://bugzilla.redhat.com/1006484>
