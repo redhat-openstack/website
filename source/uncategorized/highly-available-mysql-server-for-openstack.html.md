@@ -32,14 +32,14 @@ On both nodes setup the cluster
     node1$ pcs cluster setup --name openstack_mysql node1 node2
     node2$ pcs cluster setup --name openstack_mysql node1 node2
 
-If you use names instead of ip addresses like the example above be sure they resolve to the hosts.
+The example above uses ip addresses instead of dns names. If you use names instead of ip addresses be sure they resolve to the hosts before performing this step.
 
 On both nodes start the cluster
 
     node1$ pcs cluster cluster start
     node2$ pcs cluster cluster start
 
-Now that the cluster is started commands only need to be run on one of the machines to add resources and check status.</br> You'll need to add stonith devices for resources to start properly. For this demonstration stonith it will be disabled instead.
+Now that the cluster is started commands only need to be run on one of the machines to add resources and check status.</br> You'll need to add stonith devices for resources to start properly. For this demonstration stonith it will be disabled instead. For a properly configured highly available cluster stonith must be configured, do not disable it in that case.
 
     node1$ pcs property set stonith-enabled=true
 
