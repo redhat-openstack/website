@@ -204,3 +204,32 @@ For clients with puppet 2.6, you need to add to /etc/puppet/puppet.conf "report 
 This is going to work largely the same as the non-provisioning mode, with the exception of changing the environment file we used earlier to configure the setup script a bit. For instance, you would enable the foreman gateway and set provisioning to true, as well as configure the appropriate eth\* devices on the foreman server to allow it to provision.
 
 The Foreman server should have eth0 and eth1 (foreman1) up. The clients are going to pxeboot off of foreman1 Those clients are not going to have an OS on them. foreman will actually do the provisioning The foreman server is on the default network and the foreman provisioning network. the clients are *not* on the default network, but just their eth0 is going to be the foreman provisioning network (eg foreman1) and eth1 and eth2 on the openstack networks vftool creates 3 sets of networks (3 networks in each set) just for convenience. so if you have vm's working on the networks `foreman1`, `openstackvms1_1`, `openstack1_2` and you wanted to try out something new without screwing those up, you could bring up more test vm's on a different "set" of networks e.g., `foreman2`, `openstackvms2_1`, `openstack2_2`.
+
+### Using other types of Hostgroups
+
+This describes (and still needs more detail) a setup of hostgroups including a Controller, Compute, and Networker nodes, using Neutron. At the current time, these hostgroups are pushed to master of the astapor project in github, and should go into the next rpm release sometime during September. Thanks to gdubreuil for the initial work on this and beginning docs below .
+
+#### Notes
+
+*   This is for GRE Tunnel only (for now)
+*   Minimum 3 hosts - 4 are needed for full validation (VMs communication across compute hosts)
+
+#### Prerequisites
+
+*   rhel6.4+ core build
+*   rhel + rhel optional + rdo havana + epel6 + puppetlabs repos
+*   2 x physical networks: 1 private, 1 public. (Assuming consistent network interface name across hosts.)
+*   1 x Controller
+*   1 x Networker
+    -   Network node needs to have br-ex setup:
+        -   aspora/bin/bridge-create.sh can help:
+        -   \`yum install openvswitch\`
+        -   \`service openvswitch start\`
+        -   \`bridge-create.sh br-ex eth0\`
+*   N x Computer(s)
+
+#### Setup
+
+Set quickstack/params.pp values (directly or though foreman globals/hostgroups/smart variables).
+
+Assign hosts to their respective target Quickstack Puppet module classes (hostgroups): Controller -> neutron_controller.pp Networker -> neutron_network.pp Computer -> neutron_compute.pp
