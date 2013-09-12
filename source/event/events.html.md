@@ -21,4 +21,5 @@ There are lots of events, around the world, where you can hang out with people f
     -   dallan, mpyers, danpb, rjones, lpeer, rbowen, dneary attending
 *   [OpenStack Summit, Hong Kong](http://www.openstack.org/summit/openstack-summit-hong-kong-2013/) - November 5-8
     -   rbowen and dneary attending
+*   October 29-30. RDO Havana Test Day (Tentative)
 *   [<http://www.openstack-israel.org/>#!call4paper/cu3y OpenStack Israel] - December 3
