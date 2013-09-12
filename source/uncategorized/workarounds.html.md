@@ -210,7 +210,7 @@ or
 
 ## /usr/sbin/service mongod start returned 2 instead of one of [0]
 
-*   **Bug:** related to <https://bugzilla.redhat.com/824405#c2>
+*   **Bug:** related to <https://bugzilla.redhat.com/824405#c2>, <https://bugzilla.redhat.com/967284#c3>
 *   **Affects:** Fedora 19 (on resource-constrained VMs)
 
 #### symptoms
