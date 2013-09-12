@@ -36,10 +36,10 @@ The example above uses ip addresses instead of dns names. If you use names inste
 
 On both nodes start the cluster
 
-    node1$ pcs cluster cluster start
-    node2$ pcs cluster cluster start
+    node1$ pcs cluster start
+    node2$ pcs cluster start
 
-Now that the cluster is started commands only need to be run on one of the machines to add resources and check status.</br> You'll need to add stonith devices for resources to start properly. For this demonstration stonith it will be disabled instead. For a properly configured highly available cluster stonith must be configured, do not disable it in that case.
+Now that the cluster is started commands only need to be run on one of the machines to add resources and check status. You'll need to add stonith devices for resources to start properly. For this demonstration stonith it will be disabled instead. For a properly configured highly available cluster stonith must be configured, do not disable it in that case.
 
     node1$ pcs property set stonith-enabled=true
 
