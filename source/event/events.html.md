@@ -11,9 +11,6 @@ wiki_last_updated: 2015-08-31
 
 There are lots of events, around the world, where you can hang out with people from the RDO community. Some upcoming events are:
 
-*   [Triangle Openstack Meetup](http://www.meetup.com/Triangle-OpenStack-Meetup/) - September 10, 2013
-*   [SFBay OpenStack Meetup](http://www.meetup.com/openstack/events/137539232/) - September 10, 2013
-*   [<http://openstack.redhat.com/forum/discussion/529/rdo-havana-test-day-september-10-11># RDO Test Day] - September 10 and 11, 2013
 *   [LinuxCon North America, New Orleans](http://events.linuxfoundation.org/events/linuxcon-north-america) - September 16-18
     -   sdake: presenting on Heat - <http://sched.co/15MTbVP>
     -   rbowen: attending
