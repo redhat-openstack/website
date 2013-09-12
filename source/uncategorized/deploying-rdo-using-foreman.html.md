@@ -209,12 +209,14 @@ The Foreman server should have eth0 and eth1 (foreman1) up. The clients are goin
 
 This describes (and still needs more detail) a setup of hostgroups including a Controller, Compute, and Networker nodes, using Neutron. At the current time, these hostgroups are pushed to master of the astapor project in github, and should go into the next rpm release sometime during September. Thanks to gdubreuil for the initial work on this and beginning docs below .
 
-#### Notes
+#### Neutron with Networker Node
+
+##### Notes
 
 *   This is for GRE Tunnel only (for now)
 *   Minimum 3 hosts - 4 are needed for full validation (VMs communication across compute hosts)
 
-#### Prerequisites
+##### Prerequisites
 
 *   rhel6.4+ core build
 *   rhel + rhel optional + rdo havana + epel6 + puppetlabs repos
@@ -228,7 +230,7 @@ This describes (and still needs more detail) a setup of hostgroups including a C
         -   \`bridge-create.sh br-ex eth0\`
 *   N x Computer(s)
 
-#### Setup
+##### Setup
 
 Set quickstack/params.pp values (directly or though foreman globals/hostgroups/smart variables).
 
