@@ -47,86 +47,15 @@ Now add the floating ip address, lets use 10.11,12.37
 
     node1$ pcs resource create ip-10.11,12.37 IPaddr2 ip=10.11,12.37 cidr_netmask=32 op monitor interval=30s
 
-## Setting up MySQL Master / Slave Replication
+## Adding MySQL as a Pacemaker resource
 
-Start by adding a few lines to the my.cnf file on both nodes. Both nodes need a unique server-id. On node1 also define the binary log name. node1:
+For MySql to be highly available we need to add it as a resource for pacemaker to manage and be sure that the service is running on the same node as the floating ip address. Start by adding mysql as an LSB (linux standard build) resource.
 
-    server-id = 1
-    log-bin=node1
+    pcs resource create lsb-mysql lsb:mysql op monitor interval=30s
 
-node2:
+Next MySQL needs to be grouped with the ip address resource so that they always run on the same node.
 
-    server-id = 2
-
-To verify the server ids are being used query mysql for the value
-
-    mysql> SHOW VARIABLES LIKE "server_id";
-
-    +---------------+-------+
-    | Variable_name | Value |
-    +---------------+-------+
-    | server_id     |   3   |
-    +---------------+-------+
-
-    1 row in set (0.00 sec)
-
-Here's some optional directives to add to my.cnf. You'll have to do more research on them to decide if you want them or not.
-
-    binlog-ignore-db = mysql
-    max_binlog_size=200M
-    expire_logs_days = 2
-    binlog_cache_size = 64M
-
-Next create a replication user on node1
-
-    mysql> GRANT REPLICATION SLAVE, REPLICATION CLIENT ON *.* TO 'replication'@'10.11.12.2' IDENTIFIED BY 'password';
-    mysql> FLUSH PRIVILEGES;
-
-Now that there is a replication user and the nodes have unique ids the slave can be told to replicate from the master node.
-To do that you need the master's log name and position. On the master show the master status to get these.
-
-    mysql> SHOW MASTER STATUS;
-    +--------------+----------+--------------+------------------+
-    | File | Position | Binlog_Do_DB | Binlog_Ignore_DB |
-    +--------------+----------+--------------+------------------+
-    | node1.000003 | 107      |              |                  |
-    +--------------+----------+--------------+------------------+
-    1 row in set (0.00 sec)
-
-Take the file name and the log position and configure the slave node with it
-
-    mysql> CHANGE MASTER TO master_host = '10.11.12.1', master_user='replication', master_password='password', master_log_file='node1.000003', master_log_pos=107;
-
-Next start the slave on the slave node and check the slave status
-
-    mysql> START SLAVE;
-    mysql> SHOW SLAVE STATUS\G;
-    *************************** 1. row ***************************
-    Slave_IO_State: Waiting for master to send event
-    Master_Host: 10.11.12.1
-    Master_User: replication
-    ...
-    Slave_IO_Running: Yes
-    Slave_SQL_Running: Yes
-    ...
-    Seconds_Behind_Master: 0
-    1 row in set (0.00 sec)
-
-A good indicator that things are in good shape is the Seconds_Behind_Master value. If that number is 0 or approaching 0 then your in replicating business.
-
-The last thing to do is to seed the slave with all the master's data so they're in sync. All the data that existed before binary logging was turned on for repliciation does not exist in the binary logs, so you have to replicate it manually. Fortunatly with some ssh goodness this can be done fairly easily. Stop the slave on the slave node
-
-    mysql> STOP SLAVE;
-
-Then use mysqldump and ssh on the master to do the sync. Note that this command locks all the tables on the master while it's dumping.
-
-    mysqldump --delete-master-logs --ignore-table=mysql.user --master-data --lock-all-tables --all-databases --hex-blob | ssh 10.11.12.2 "cat | mysql"
-
-All this is really doing is dumping the master database and importing it into the slave while writes are prevented. It does it all in one command over ssh, there's probably other methods to do this if you choose not to do it this way.
-
-Finally start the slave back up on the slave node
-
-    mysql> START SLAVE;
+    create group here
 
 ## Summary
 
