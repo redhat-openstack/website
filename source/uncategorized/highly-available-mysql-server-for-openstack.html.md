@@ -55,7 +55,9 @@ For MySql to be highly available we need to add it as a resource for pacemaker t
 
 Next MySQL needs to be grouped with the ip address resource so that they always run on the same node.
 
-    create group here
+    node1$ pcs resource group add test-group ip-192.168.122.203 lsb-mysqld
+
+Now the ip address and the MySQL service will always run on the same host together.
 
 ## Summary
 
