@@ -224,10 +224,10 @@ This describes (and still needs more detail) a setup of hostgroups including a C
 *   1 x Controller
 *   1 x Networker
     -   Network node needs to have br-ex setup:
-        -   aspora/bin/bridge-create.sh can help:
+        -   scp /usr/share/openstack-foreman-installer/bin/bridge-create.sh from Foreman node to Network node and run these commands on the Network node:
         -   \`yum install openvswitch\`
         -   \`service openvswitch start\`
-        -   \`bridge-create.sh br-ex eth0\`
+        -   \`bridge-create.sh br-ex eth0\` (assuming eth0 is your private interface)
 *   N x Computer(s)
 
 ##### Setup
