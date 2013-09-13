@@ -45,7 +45,7 @@ Now that the cluster is started commands only need to be run on one of the machi
 
 Now add the floating ip address, lets use 10.11,12.37
 
-    node1$ pcs resource create ip-10.11,12.37 IPaddr2 ip=10.11,12.37 cidr_netmask=32 op monitor interval=30s
+    node1$ pcs resource create ip-10.11,12.37 IPaddr2 ip=10.11,12.37
 
 ## Adding MySQL as a Pacemaker resource
 
