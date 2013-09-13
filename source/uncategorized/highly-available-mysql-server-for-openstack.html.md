@@ -60,9 +60,3 @@ Next MySQL needs to be grouped with the ip address resource so that they always 
 Now the ip address and the MySQL service will always run on the same host together.
 
 ## Summary
-
-At this point there is a floating ip address and the MySQL service are being managed by pacemaker.
-
-In the event of a failure pacemaker will move the floating ip and the MySQL service the other node and database service would stay available.
-
-## Summary
