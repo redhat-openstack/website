@@ -8,8 +8,14 @@ wiki_last_updated: 2014-10-22
 
 # RDO videos
 
+## Introducing RDO
+
 <iframe width="630" src="//youtube.com/embed/OsQJmipzBYI" frameborder="0" align="center" allowfullscreen="true"> </iframe>
 
+## Installing OpenStack with PackStack and RDO
+
 <iframe width="630" src="//youtube.com/embed/ViVMQ70umq0" frameborder="0" align="center" allowfullscreen="true"> </iframe>
+
+## Automating OpenStack with Red Hat & Pupet
 
 <iframe width="630" src="//youtube.com/embed/P1dfxfbu3UA" frameborder="0" align="center" allowfullscreen="true"> </iframe>
