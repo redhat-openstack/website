@@ -43,9 +43,9 @@ Now that the cluster is started commands only need to be run on one of the machi
 
     node1$ pcs property set stonith-enabled=true
 
-Now add the floating ip address, lets use 10.11,12.37
+Now add the floating ip address, lets use 192.168.122.203
 
-    node1$ pcs resource create ip-10.11,12.37 IPaddr2 ip=10.11,12.37
+    node1$ pcs resource create ip-192.168.122.203 IPaddr2 ip=192.168.122.203
 
 ## Adding MySQL as a Pacemaker resource
 
