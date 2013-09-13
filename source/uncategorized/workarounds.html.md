@@ -107,6 +107,8 @@ Your mileage may vary, but I found this issue disappeared after I started doing 
 
 jruzicka: I always fully \`yum update\` my VM as part of provisioning so this is definitely **not working** for me.
 
+xqueralt: installing and enabling the tuned service before running packstack solved the issue for me.
+
 #### more info
 
       # service tuned status
