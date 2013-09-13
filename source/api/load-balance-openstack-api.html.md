@@ -249,7 +249,7 @@ On the new controller nodes, enable and start the OpenStack Keystone service:
 
 On the original controller node, restart the OpenStack Keystone service:
 
-    #service openstack-keystone restart
+    # service openstack-keystone restart
 
 #### Quantum
 
@@ -297,7 +297,7 @@ On the new controller nodes, enable and start the OpenStack Quantum service:
 
 On the original controller node, restart the OpenStack Quantum service:
 
-    #service quantum-server restart
+    # service quantum-server restart
 
 #### Glance
 
