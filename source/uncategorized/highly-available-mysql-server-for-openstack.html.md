@@ -20,7 +20,7 @@ MySQL will be configured in an active/passive configuration. Pacemaker will mana
 
 ## Installing Pacemaker and creating a cluster
 
-We'll use 10.11.12.1 (node1) and 10.11.12.2 (node2) as the two MySQL nodes
+We'll use 192.168.122.3 (node1) and 192.168.122.7 (node2) as the two MySQL nodes
 
 On both nodes install pacemaker
 
@@ -29,8 +29,8 @@ On both nodes install pacemaker
 
 On both nodes setup the cluster
 
-    node1$ pcs cluster setup --name openstack_mysql node1 node2
-    node2$ pcs cluster setup --name openstack_mysql node1 node2
+    node1$ pcs cluster setup --name openstack_mysql 192.168.122.3 192.168.122.7
+    node2$ pcs cluster setup --name openstack_mysql 192.168.122.3 192.168.122.7
 
 The example above uses ip addresses instead of dns names. If you use names instead of ip addresses be sure they resolve to the hosts before performing this step.
 
