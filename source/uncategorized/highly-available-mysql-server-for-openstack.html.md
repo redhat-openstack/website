@@ -51,7 +51,7 @@ Now add the floating ip address, lets use 192.168.122.203
 
 For MySql to be highly available we need to add it as a resource for pacemaker to manage and be sure that the service is running on the same node as the floating ip address. Start by adding mysql as an LSB (linux standard build) resource.
 
-    node1$ pcs resource create lsb-mysqld lsb:mysqld op monitor interval=30s
+    node1$ pcs resource create lsb-mysqld lsb:mysqld
 
 Next MySQL needs to be grouped with the ip address resource so that they always run on the same node.
 
