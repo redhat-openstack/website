@@ -32,7 +32,7 @@ For completeness, currently on RHEL, the Optional channel is used for:
 
 *   yum-plugin-priorities (packstack)
 *   dnsmasq-utils (nova)
-*   python-sphinx, python-docutils, python-jinja2 (ceilometer (only to support v1 api))
+*   python-sphinx, python-docutils, python-jinja2 (ceilometer (only to support v1 api), nova (since havana))
 
 ## RHOS
 
