@@ -81,6 +81,7 @@ If you've come across useful tips for resolving issues on OpenStack, or if you'r
 *   [ Securing Core RDO Services (https, qpid)](Securing Services)
 *   [Load Balance OpenStack API](Load Balance OpenStack API)
 *   [OpenStack on TXT](https://fedoraproject.org/wiki/OpenStackOnTXT)
+*   [RDO Videos](RDO Videos)
 
 </div>
 <div class="span4">
