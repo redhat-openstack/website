@@ -129,6 +129,8 @@ xqueralt: installing and enabling the tuned service before running packstack sol
 *   setenforce 0 doesn't help.
 *   dbus is running
 
+hma: I have the exact same problem. My tuned is up and I did "yum update -y". but, the problem is still persistent. I am following RDO quick start to install OpenStack (Grizzly) on Fedora 19 which is on VMware (VMware player). I also changed IP address in /etc/libvirt/qemu/networks/default.xml as other post suggests, But, it does not help.
+
 ## heat-api and heat-engine fail to start
 
 *   **Bug:** <https://bugzilla.redhat.com/1006868>
