@@ -151,7 +151,8 @@ init scripts still expect heat-api.conf and heat-engine.conf to be present.
 
 ## heat-engine fail to start
 
-*   **Bug:** <https://bugzilla.redhat.com/1006911>
+*   **Bug:** <https://bugzilla.redhat.com/1006911> (FIXED)
+*   **Bug:** <https://bugzilla.redhat.com/1007497>
 *   **Affects:** RHEL/SLC 6.4
 
 #### symptoms
@@ -161,9 +162,10 @@ init scripts still expect heat-api.conf and heat-engine.conf to be present.
 
 #### workaround
 
-heat does not install python-pbr and so heat-db-setup fails to create mysql tables
+packstack does not sync the DB in install, you can manually work around via:
 
-      # yum install python-pbr
+1.  heat-manage db_sync
+2.  systemctl start openstack-heat-engine.service
 
 ## horizon: no image format
 
