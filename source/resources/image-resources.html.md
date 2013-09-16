@@ -38,4 +38,13 @@ See the [glance documentation](http://docs.openstack.org/trunk/openstack-compute
 *   Information on building an image via Oz for OpenStack (RHOS and RDO) is available in the [RHOS 3.0 Installation and Configuration Guide](https://access.redhat.com/site/documentation/en-US/Red_Hat_OpenStack/3/html/Installation_and_Configuration_Guide/Building_a_Custom_Disk_Image.html).
 *   [Building a Windows Image for OpenStack](http://poolsidemenace.wordpress.com/2011/06/16/porting-windows-to-openstack/)
 
+Alternatively, one can use diskimage-builder, which is available in the RDO repository:
+
+    $ yum install diskimage-builder
+    $ disk-image-create -a amd64 fedora vm -o fedora-image.qcow2
+
+The resulting image file can be imported into glance similar to any other image:
+
+    $ glance image-create --name F19-x86_64 --disk-format qcow2 --container-format bare --is-public True < fedora-image.qcow2
+
 <Category:Resources> <Category:Documentation>
