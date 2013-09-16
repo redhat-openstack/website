@@ -42,7 +42,7 @@ The application templates can use wait conditions and signaling for the orchestr
 
       $ keystone role-create --name heat_stack_user
 
-The configuration should now be complete and you can launch your first Heat application::
+The configuration should now be complete and you can [ launch your first Heat application](LaunchHeatApplication)::
 
 ### Get the demo files
 
