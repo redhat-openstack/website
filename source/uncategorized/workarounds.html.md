@@ -153,7 +153,7 @@ init scripts still expect heat-api.conf and heat-engine.conf to be present.
 
 *   **Bug:** <https://bugzilla.redhat.com/1006911> (FIXED)
 *   **Bug:** <https://bugzilla.redhat.com/1007497>
-*   **Affects:** RHEL/SLC 6.4
+*   **Affects:** all (Havana)
 
 #### symptoms
 
