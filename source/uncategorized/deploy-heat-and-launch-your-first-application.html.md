@@ -12,9 +12,9 @@ __NOTOC__
 
 ## Deploy OpenStack Heat on RHEL (and derivatives)
 
-[Heat](http://wiki.openstack.org/wiki/Heat) provides orchestration of composite cloud applications using the CloudFormation API and templates; it is an incubated project of OpenStack. Its development cycle is to be Integrated in Havana and follow the full OpenStack release process.
+[Heat](http://wiki.openstack.org/wiki/Heat) provides orchestration of composite cloud applications. Heat is an officially integrated OpenStack project from the Havana release.
 
-> Heat is a service to orchestrate multiple composite cloud applications using the AWS CloudFormation template format, through both an OpenStack-native ReST API and a CloudFormation-compatible Query API.
+> Heat is a service to orchestrate multiple composite cloud applications using either native "HOT" templates, or AWS CloudFormation template format. Heat provides both an OpenStack-native ReST API and a CloudFormation-compatible Query API.
 
 This guide deploys a composite application (made up of more than a single instance) on the cloud infrastructure. This also involves launch-time customization of the VMs. This guide makes some assumptions:
 
