@@ -12,7 +12,18 @@ wiki_last_updated: 2014-04-11
 
 The ability to use GRE tunnels with Open vSwitch has finally arrived in RHEL! GRE tunnels encapsulate isolated layer 2 network traffic in IP packets that are routed between compute and networking nodes using the hosts' network connectivity and routing tables. Using GRE tunnels as tenant networks in Neutron avoids the need for a network interface connected to a switch configured to trunk a range of VLANs. Here are simple instructions for taking advantage of GRE for tenant networks.
 
-Packstack does not yet have support for configuring GRE tunnels, so start out with a normal multi-node openvswitch-based deployment, such as is described in [Neutron_with_OVS_and_VLANs](Neutron_with_OVS_and_VLANs).
+## Packstack GRE Tenant Network Configuration
+
+Recent packstack versions support GRE tenant networks by specifying the following during deployment:
+
+      CONFIG_NEUTRON_OVS_TENANT_NETWORK_TYPE=gre
+      CONFIG_NEUTRON_OVS_TUNNEL_RANGES=1:1000
+
+Note that if you are using provider flat or VLAN networks (i.e. as the external network) in conjunction with GRE tenant networks, due to [bug 1006534](https://bugzilla.redhat.com/show_bug.cgi?id=1006534), the configuration of the physical_networks and their mappings to bridges and/or interfaces will be ignored. In this case, it might be easier to do the initial packstack deployment with VLAN tenant networks, and convert to GRE manually as shown below.
+
+## Manual Conversion to GRE Tenant Networks
+
+Older versions of packstack did not have support for configuring GRE tunnels, so if GRE support is not available, start out with a normal multi-node openvswitch-based deployment, such as is described in [Neutron_with_OVS_and_VLANs](Neutron_with_OVS_and_VLANs).
 
 New packstack deployments should install the GRE-enabled kernel and openvswitch packages by default. Existing deployments may need "yum update" run on each node. Make sure the following packages (or newer) are present:
 
@@ -42,7 +53,13 @@ Finally, on each node where quantum-openvswitch-agent runs (all compute and netw
 `# openstack-config --set /etc/quantum/plugins/openvswitch/ovs_quantum_plugin.ini OVS local_ip `<IP address>
       # service quantum-openvswitch-agent restart
 
+## Additional Configuration
+
 On each node, be sure to specify the local IP address of the network interface over which the GRE tunnel traffic should be routed. Also make sure that each node's routing table is configured so that outgoing traffic to the other nodes' specified local IP addresses uses the desired interface. Production deployments would likely use a high bandwidth network interface and switch, with a dedicated subnet, for GRE traffic. For non-production deployments, each host's main (and probably only) IP address will suffice.
+
+New packstack deployments can specify the interface whose IP address will be used as the local tunnel endpoint IP with:
+
+      CONFIG_NEUTRON_OVS_TUNNEL_IF=eth1
 
 Once the above steps are complete, newly created tenant networks should be GRE tunnels, which can be verified by running the following with admin credentials and looking at the provider:network_type attribute:
 
