@@ -8,7 +8,7 @@ wiki_last_updated: 2013-11-19
 
 # Deploying Heat on Havana
 
-## Deploy OpenStack Heat on RHEL (and derivatives)
+## Deploy OpenStack Heat
 
 [Heat](http://wiki.openstack.org/wiki/Heat) provides orchestration of composite cloud applications. Heat is an officially integrated OpenStack project from the Havana release.
 
