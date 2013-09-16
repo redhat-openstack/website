@@ -31,7 +31,7 @@ Note that the cloudformation-compatible API is required for some Heat functional
 
 python-heatclient will be installed, which provides python CLI tool "heat", which is used to interact with the heat native API
 
-*   Note\*: There is currently [A packstack bug](https://bugzilla.redhat.com/show_bug.cgi?id=1007497) which requires the following additional steps, until the fix is released
+**Note**: There is currently [A packstack bug](https://bugzilla.redhat.com/show_bug.cgi?id=1007497) which requires the following additional steps, until the fix is released
 
 $ heat-manage db_sync $ systemctl start openstack-heat-engine.service
 
