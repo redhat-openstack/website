@@ -10,7 +10,7 @@ wiki_last_updated: 2013-10-01
 
 __NOTOC__
 
-## Deploy OpenStack Heat on RHEL (and derivatives)
+## Deploy OpenStack Heat on RDO Grizzly
 
 [Heat](http://wiki.openstack.org/wiki/Heat) provides orchestration of composite cloud applications. Heat is an officially integrated OpenStack project from the Havana release.
 
@@ -19,7 +19,7 @@ __NOTOC__
 This guide deploys a composite application (made up of more than a single instance) on the cloud infrastructure. This also involves launch-time customization of the VMs. This guide makes some assumptions:
 
 *   OpenStack has already been configured via PackStack as described in the QuickStart guide
-*   OpenStack is deployed on RHEL 6.4
+*   OpenStack is deployed on RHEL 6.4 or Fedora 19
 
 ### Installation
 
