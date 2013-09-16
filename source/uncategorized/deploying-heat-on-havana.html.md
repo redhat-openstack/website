@@ -33,9 +33,8 @@ python-heatclient will be installed, which provides python CLI tool "heat", whic
 
 **Note**: There is currently [A packstack bug](https://bugzilla.redhat.com/show_bug.cgi?id=1007497) which requires the following additional steps, until the fix is released
 
-$ sudo heat-manage db_sync
-
-$ sudo systemctl start openstack-heat-engine.service
+      $ sudo heat-manage db_sync
+      $ sudo systemctl start openstack-heat-engine.service
 
 ### Configuration
 
