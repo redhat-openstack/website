@@ -43,6 +43,8 @@ Alternatively, one can use diskimage-builder, which is available in the RDO repo
     $ yum install diskimage-builder
     $ disk-image-create -a amd64 fedora vm -o fedora-image.qcow2
 
+Note: using the vm element as shown above is currently required for EPEL. Otherwise, one may instead not specify the vm element and extract the kernel and ramdisk as documented here: <https://wiki.openstack.org/wiki/Baremetal#Image_Requirements>
+
 The resulting image file can be imported into glance similar to any other image:
 
     $ glance image-create --name F19-x86_64 --disk-format qcow2 --container-format bare --is-public True < fedora-image.qcow2
