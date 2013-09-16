@@ -10,7 +10,7 @@ wiki_last_updated: 2014-12-12
 
 This guide deploys a composite application (made up of more than a single instance) on the cloud infrastructure. This also involves launch-time customization of the VMs. This guide makes some assumptions:
 
-*   OpenStack, including Heat have been deployed, using either [[DeployHeatOnHavana | RDO Havana] or [ RDO Grizzly](Deploy_Heat_and_launch_your_first_Application) instructions
+*   OpenStack, including Heat have been deployed, using either [ RDO Havana](DeployHeatOnHavana) or [ RDO Grizzly](Deploy_Heat_and_launch_your_first_Application) instructions
 *   OpenStack is deployed on RHEL 6.4 or Fedora 19
 
 ### Get the demo files
