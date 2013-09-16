@@ -78,7 +78,8 @@ If you've come across useful tips for resolving issues on OpenStack, or if you'r
 ### Misc
 
 *   [ Tested RDO Configurations](TestedSetups)
-*   [Heat](Heat)
+*   [ Heat Links](Heat)
+*   [ Launch a demo Heat application](LaunchHeatApplication)
 *   [ Securing Core RDO Services (https, qpid)](Securing Services)
 *   [Load Balance OpenStack API](Load Balance OpenStack API)
 *   [OpenStack on TXT](https://fedoraproject.org/wiki/OpenStackOnTXT)
