@@ -23,11 +23,13 @@ This guide deploys a composite application (made up of more than a single instan
 
 Start by installing OpenStack, and Heat via packstack
 
-      $ sudo yum install "openstack-heat-*" python-heatclient
+      $ sudo packstack --allinone --os-neutron-install=n --os-heat-install=y --os-heat-cfn-install=y
 
-You'll get four new services installed: an engine, a native api, a cloudformation compatible api, a cloudwatch compatible api. You don't have to deploy them all on a single host but for the purpose of this guide it will be fine to do so.
+You'll get three new services installed: an engine, a native api, and a cloudformation compatible api. You don't have to deploy them all on a single host but for the purpose of this guide it will be fine to do so.
 
-python-heatclient installs a python CLI tool "heat", which is used to interact with the heat native API
+Note that the cloudformation-compatible API is required for some Heat functionality (in particular WaitConditions and metadata update) so you should install it even if you do not care about cloudformation compatibility.
+
+python-heatclient will be installed, which provides python CLI tool "heat", which is used to interact with the heat native API
 
 ### Configuration
 
