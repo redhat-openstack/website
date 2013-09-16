@@ -31,6 +31,10 @@ Note that the cloudformation-compatible API is required for some Heat functional
 
 python-heatclient will be installed, which provides python CLI tool "heat", which is used to interact with the heat native API
 
+*   Note\*: There is currently [A packstack bug](https://bugzilla.redhat.com/show_bug.cgi?id=1007497) which requires the following additional steps, until the fix is released
+
+$ heat-manage db_sync $ systemctl start openstack-heat-engine.service
+
 ### Configuration
 
 The application templates can use wait conditions and signaling for the orchestration, Heat needs to create special users to receive the progress data and these users are, by default, given the role of `heat_stack_user`. You can configure the role name in `/etc/heat/heat.conf` or just create a so called role::
