@@ -229,7 +229,7 @@ This describes (and still needs more detail) a setup of hostgroups including a C
         -   scp /usr/share/openstack-foreman-installer/bin/bridge-create.sh from Foreman node to Network node and run these commands on the Network node:
         -   \`yum install openvswitch\`
         -   \`service openvswitch start\`
-        -   \`bridge-create.sh br-ex eth0\` (assuming eth0 is your private interface)
+        -   \`bridge-create.sh br-ex eth0\` (assuming eth0 is your public interface)
 *   N x Computer(s)
 
 ##### Setup
