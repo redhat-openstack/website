@@ -241,6 +241,12 @@ It is recommended that you provision the controller before the compute node, as 
 
 Repeat for all of your nodes. Both Controller and Compute nodes take quite a while to setup. After about 10 minutes on each host, you will have a working OpenStack installation! Add more Compute nodes at any time with Foreman.
 
+#### Running Nova instances when compute node is a VM
+
+For running Nova instances inside a VM, you'll either need to set up nested virtualization, or make Nova use QEMU instead of KVM.
+
+To use QEMU in Nova, set `libvirt_type=qemu` in `/etc/nova/nova.conf` on the compute node. Then run `service openstack-nova-compute restart`.
+
 ### Usage notes for vftool
 
 To revert a given host to a previous snapshot you can use: SNAPNAME=$mysnap bash -x vftool.bash reboot_snap_revert set2fore1
