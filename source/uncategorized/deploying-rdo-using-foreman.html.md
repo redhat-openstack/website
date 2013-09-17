@@ -39,6 +39,59 @@ INITIMAGE defines the name of the base image. VMSET is a space-delimited list of
 
 Then, follow the directions in [the vftool README](https://github.com/cwolferh/vms-and-foreman/) through the end of the first set of example commands, with one exception. When you reach the step '$ bash -x vftool.bash create_images', it may be helpful to do a little additional base configuration on your init image before creating the test VMs. For instance, assuming RHEL, you may wish to register with subscription-manager (or RHN) and attach to the appropriate pools, or any other steps you will take on each instance. Also complete the "Repo setup" step below here.
 
+### Manual VM setup
+
+You can also set up your VM playground manually. You'll need a set of VMs (3 for Nova Network setup, 4 for Neutron setup) linked together with at least two networks.
+
+#### Networking Setup
+
+In virt-manager, under Edit -> Connection Details -> Virtual Networks create two new virtual networks, you can name them "openstack-private" and "openstack-public". Don't enable DHCP on the new networks.
+
+Create new VMs and give them network interfaces to those networks. Assign IPs manually on those network interfaces. You can save time by creating just one VM, then cloning it and editing network settings on the clones.
+
+For altering network interface setup on RHEL 6 / CentOS 6, look into `/etc/sysconfig/network-interfaces/ifcfg-eth*` and into `/etc/udev/rules.d/70-persistent-net.rules`.
+
+Make sure that interfaces to a particular network are named the same on all VMs. (E.g. `eth0` for private network and `eth1` for public network.)
+
+Eventually you should have a VM setup similar to this:
+
+    Foreman VM
+    eth0: 192.168.200.20 (on openstack-private network)
+    eth1: 192.168.201.20 (on openstack-public network)
+
+    Controller VM
+    eth0: 192.168.200.10
+    eth1: 192.168.201.10
+
+    Compute VM
+    eth0: 192.168.200.11
+    eth1: 192.168.201.11
+
+    Neutron VM (if you want the Neutron setup)
+    eth0: 192.168.200.12
+    eth1: 192.168.201.12
+
+#### Hostname and FQDN setup
+
+Each VM should have hostname and FQDN configured, and it should be able to reach other VMs by their full FQDNs.
+
+*   Set up hostname on each VM in `/etc/sysconfig/network`.
+
+<!-- -->
+
+*   Put a complete set of FQDN configuration into `/etc/hosts`. The last item on each line matches respective VM hostnames. This config will be the same on all VMs:
+
+<!-- -->
+
+    192.168.200.20 foreman.example.org foreman
+    192.168.200.10 control.example.org control
+    192.168.200.11 compute.example.org compute
+    192.168.200.12 neutron.example.org neutron
+
+Now `hostname -f` should print a FQDN of the VM and you should be able to ping other VMs using their FQDNs.
+
+Congratulations! You're ready to install Foreman. It's a good idea to back up all VMs in this state in case you want to revert to the initial configuration later.
+
 ### Initial setup
 
 #### Repo setup
