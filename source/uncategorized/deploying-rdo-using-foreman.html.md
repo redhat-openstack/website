@@ -15,17 +15,19 @@ __NOTOC__
 
 This guide is meant to help you set up [Foreman](http://theforeman.org/) to deploy RDO. We have wrapped this up in an installer with some predefined Foreman Host Groups to get you started. You can, of course, add your own to do thing we havenot yet added. If you do, please feel free to contribute them to our upstream [installer](https://github.com/redhat-openstack/astapor) project!
 
-### Using vftool
+### Deploying on VMs
 
-[vftool](https://github.com/cwolferh/vms-and-foreman/) is a tool to build and configure multiple VMs. We will be using it in this example to allow you to test this process within virtual machines on a single physical host. For a real deployment, of course, you will want to use multiple bare metal servers. If you are using bare metal servers, you may skip this section.
+Before using Foreman to deploy OpenStack on your bare metal machines, you might want to do a test drive using virtual machines. You can use vftool to set up the machines, or you can do it manually. For a real deployment, of course, you will want to use multiple bare metal servers. If you are using bare metal servers, you may skip this section.
 
-#### Intro to vftool
+#### Using vftool
 
-This is a completely optional tool, with the purpose of making it a bit easier to set up and get a base configuration for a set of VMs to test with a multi-machine OpenStack setup, using Foreman. IOW, this is for PoC/disposable setups just to try things out. Anything done in/with this tool can also be done manually using your virtualization commands of choice/preference. If you choose to use this tool, first, clone it from:
+[vftool](https://github.com/cwolferh/vms-and-foreman/) is a tool to build and configure multiple VMs. We will be using it in this example to allow you to test this process within virtual machines on a single physical host.
+
+Vftool is completely optional, with the purpose of making it a bit easier to set up and get a base configuration for a set of VMs to test with a multi-machine OpenStack setup, using Foreman. IOW, this is for PoC/disposable setups just to try things out. Anything done in/with this tool can also be done manually using your virtualization commands of choice/preference. If you choose to use this tool, first, clone it from:
 
 <https://github.com/cwolferh/vms-and-foreman/>
 
-#### RHEL/RHOS install/setup with vftool
+##### RHEL/RHOS install/setup with vftool
 
 create a .rhel_vftoolrc with:
 
@@ -37,13 +39,13 @@ Then, source this file (`source .rhel_vftoolrc`).
 
 INITIMAGE defines the name of the base image. VMSET is a space-delimited list of virtual machine names; we will, below, use 'set1fore1' as the Foreman server, and 'set1client1' and 'set1client2' as clients managed by Foreman. INSTALLURL should point to your OS install tree.
 
-Then, follow the directions in [the vftool README](https://github.com/cwolferh/vms-and-foreman/) through the end of the first set of example commands, with one exception. When you reach the step '$ bash -x vftool.bash create_images', it may be helpful to do a little additional base configuration on your init image before creating the test VMs. For instance, assuming RHEL, you may wish to register with subscription-manager (or RHN) and attach to the appropriate pools, or any other steps you will take on each instance. Also complete the "Repo setup" step below here.
+Then, follow the directions in [the vftool README](https://github.com/cwolferh/vms-and-foreman/) through the end of the first set of example commands, with one exception. When you reach the step '$ bash -x vftool.bash create_images', it may be helpful to do a little additional base configuration on your init image before creating the test VMs. For instance, assuming RHEL, you may wish to register with subscription-manager (or RHN) and attach to the appropriate pools, or any other steps you will take on each instance. Also complete the "Repo setup" step below.
 
-### Manual VM setup
+#### Manual setup without vftool
 
 You can also set up your VM playground manually. You'll need a set of VMs (3 for Nova Network setup, 4 for Neutron setup) linked together with at least two networks.
 
-#### Networking Setup
+##### Networking
 
 In virt-manager, under Edit -> Connection Details -> Virtual Networks create two new virtual networks, you can name them "openstack-private" and "openstack-public". Don't enable DHCP on the new networks.
 
@@ -71,7 +73,7 @@ Eventually you should have a VM setup similar to this:
     eth0: 192.168.200.12
     eth1: 192.168.201.12
 
-#### Hostname and FQDN setup
+##### Hostname and FQDN
 
 Each VM should have hostname and FQDN configured, and it should be able to reach other VMs by their full FQDNs.
 
@@ -88,9 +90,9 @@ Each VM should have hostname and FQDN configured, and it should be able to reach
     192.168.200.11 compute.example.org compute
     192.168.200.12 neutron.example.org neutron
 
-Now `hostname -f` should print a FQDN of the VM and you should be able to ping other VMs using their FQDNs.
+Now `hostname -f` should print a FQDN of the VM and you should be able to `ping` other VMs using their FQDNs.
 
-Congratulations! You're ready to install Foreman. It's a good idea to back up all VMs in this state in case you want to revert to the initial configuration later.
+Now you have a set of VMs networked together and suitable for deploying OpenStack. Congratulations!
 
 ### Initial setup
 
