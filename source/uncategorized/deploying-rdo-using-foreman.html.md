@@ -75,13 +75,13 @@ Eventually you should have a VM setup similar to this:
 
 ##### Hostname and FQDN
 
-Each VM should have hostname and FQDN configured, and it should be able to reach other VMs by their full FQDNs.
+Each VM should have hostname and FQDN configured, and it should be able to reach other VMs by their FQDNs.
 
-*   Set up hostname on each VM in `/etc/sysconfig/network`.
+*   Set up hostname on each VM in `/etc/sysconfig/network`. Also run `hostname <new name>` so that the changes take effect immediately.
 
 <!-- -->
 
-*   Put a complete set of FQDN configuration into `/etc/hosts`. The last item on each line matches respective VM hostnames. This config will be the same on all VMs:
+*   Put a complete set of FQDN configuration into `/etc/hosts` on each VM. The last item on each line matches respective VM hostnames. This config will be exactly the same on all VMs:
 
 <!-- -->
 
@@ -92,7 +92,7 @@ Each VM should have hostname and FQDN configured, and it should be able to reach
 
 Now `hostname -f` should print a FQDN of the VM and you should be able to `ping` other VMs using their FQDNs.
 
-Now you have a set of VMs networked together and suitable for deploying OpenStack. Congratulations!
+You have a set of VMs networked together and suitable for deploying OpenStack. Congratulations!
 
 ### Initial setup
 
