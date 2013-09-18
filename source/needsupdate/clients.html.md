@@ -15,8 +15,8 @@ wiki_last_updated: 2015-07-16
 ### Basic Information
 
 *   Clients provide **python library** and **CLI executable** for communicating with respective service API.
-*   Client packages are named **python-${PROJECT}client** and contain **${PROJECT}client** python module and **$PROJECT** executable.
-    -   example: **python-novaclient** provides **novaclient** python module and **nova** executable for communicating with Nova API
+*   Client packages are named `python-${PROJECT}client` and contain `${PROJECT}client` python module and `$PROJECT` executable.
+    -   example: `python-novaclient` provides `novaclient` python module and `nova` executable for communicating with Nova API
 *   `jruzicka` maintains all the RDO client packages. You can talk to him on `#rdo` IRC channel @ Freenode.
 
 ### Client releases are independent
