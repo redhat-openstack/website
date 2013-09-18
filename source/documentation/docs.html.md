@@ -78,6 +78,7 @@ If you've come across useful tips for resolving issues on OpenStack, or if you'r
 ### Misc
 
 *   [ Tested RDO Configurations](TestedSetups)
+*   [ RDO stable client branches](Clients)
 *   [ Heat Links](Heat)
 *   [ Launch a demo Heat application](LaunchHeatApplication)
 *   [ Securing Core RDO Services (https, qpid)](Securing Services)
@@ -85,8 +86,6 @@ If you've come across useful tips for resolving issues on OpenStack, or if you'r
 *   [OpenStack on TXT](https://fedoraproject.org/wiki/OpenStackOnTXT)
 *   [RDO Videos](RDO Videos)
 
-</div>
-<div class="span4">
 ### Upstream documentation
 
 *   [OpenStack Compute Administration Manual](http://docs.openstack.org/trunk/openstack-compute/admin/content/index.html)
