@@ -10,7 +10,7 @@ wiki_last_updated: 2015-07-16
 
 # Clients
 
-## OpenStack clients
+## RDO OpenStack clients
 
 ### Basic Information
 
