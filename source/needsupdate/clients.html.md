@@ -31,3 +31,5 @@ wiki_last_updated: 2015-07-16
     -   example: [novaclient stable/havana](https://github.com/redhat-openstack/python-novaclient/tree/stable/havana)
 *   Generally, stable clients are **frozen at latest upstream version available at OpenStack release**.
 *   Patches are backported to stable branches if needed.
+
+![](clients-stable-branches.png "fig:clients-stable-branches.png")
