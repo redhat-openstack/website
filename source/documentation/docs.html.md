@@ -86,6 +86,8 @@ If you've come across useful tips for resolving issues on OpenStack, or if you'r
 *   [OpenStack on TXT](https://fedoraproject.org/wiki/OpenStackOnTXT)
 *   [RDO Videos](RDO Videos)
 
+</div>
+<div class="span4">
 ### Upstream documentation
 
 *   [OpenStack Compute Administration Manual](http://docs.openstack.org/trunk/openstack-compute/admin/content/index.html)
