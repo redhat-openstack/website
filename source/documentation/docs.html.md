@@ -52,6 +52,7 @@ If you've come across useful tips for resolving issues on OpenStack, or if you'r
 *   [ Setting a Floating IP Range ](Floating IP range)
 *   [ Other networking resources ](Networking)
 *   [ Setting up a virtualized multi-node dev environment for Neutron ](NeutronLibvirtMultinodeDevEnvironment)
+*   [Configuring Neutron with existing external network](Neutron_with_existing_external_network)
 
 </div>
 <div class="span4">
