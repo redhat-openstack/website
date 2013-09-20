@@ -31,6 +31,8 @@ On Tuesday, September 24th, we'll have a Google Hangout where we'll be covering 
 
 The presentation will be a short overview of networking in OpenStack, the relative roles of Neutron, OVS, a little bit on where OpenDaylight and OpenFlow fit into the equation, and then a walk-through of the basic L2 & L3 workflows that people usually want to do in Neutron, and work through a couple of common situations where people have trouble ("Can't ping my VM, can't associate floating IP") and the tools you might use to debug and fix these problems.
 
+Come [<http://openstack.redhat.com/forum/discussion/564/google-hangout-neutron-september-24th># hang out]!
+
 ## Introducing RDO
 
 ![`openstack-distribution.png`](openstack-distribution.png "openstack-distribution.png")
