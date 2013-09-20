@@ -19,7 +19,7 @@ wiki_last_updated: 2015-07-16
     -   example: `python-novaclient` provides `novaclient` python module and `nova` executable for communicating with Nova API
 *   `jruzicka` maintains all the RDO client packages. You can talk to him on `#rdo` IRC channel @ Freenode.
 
-### Client releases are independent
+### Client releases are independent
 
 *   Upstream client releases are **independent** on OpenStack releases and milestones.
 *   Clients are supposed to be backward compatible, but this **isn't** enforced/ensured.
