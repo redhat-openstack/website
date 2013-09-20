@@ -48,6 +48,7 @@ If you've come across useful tips for resolving issues on OpenStack, or if you'r
 *   [ Launching your first VM with Neutron](Running_an_instance_with_Neutron)
 *   [ Configuring Neutron to use VLANs](Neutron with OVS and VLANs)
 *   [Using GRE Tenant Networks](Using GRE Tenant Networks)
+*   [Neutron with existing external network](Neutron with existing external network)
 *   [ Setting a Floating IP Range ](Floating IP range)
 *   [ Other networking resources ](Networking)
 *   [ Setting up a virtualized multi-node dev environment for Neutron ](NeutronLibvirtMultinodeDevEnvironment)
