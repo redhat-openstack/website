@@ -11,6 +11,7 @@ wiki_last_updated: 2015-08-31
 
 There are lots of events, around the world, where you can hang out with people from the RDO community. Some upcoming events are:
 
+*   [OpenStack India Day](http://openstackindia.wordpress.com/2013/09/19/agenda/#%21) - September 21, 2013
 *   [Neutron Networking Google Hangout](https://plus.google.com/events/cph9aq3a6ag1lb17g3gsvaiiljg) - September 24, 2013
 *   [LinuxCon Europe, Edinburgh, Scotland](http://events.linuxfoundation.org/events/linuxcon-europe) - October 21-23, also co-located with the [KVM Forum](http://events.linuxfoundation.org/events/kvm-forum)
     -   dallan, mpyers, danpb, rjones, lpeer, rbowen, dneary attending
