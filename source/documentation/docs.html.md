@@ -50,6 +50,7 @@ If you've come across useful tips for resolving issues on OpenStack, or if you'r
 *   [Using GRE Tenant Networks](Using GRE Tenant Networks)
 *   [ Setting a Floating IP Range ](Floating IP range)
 *   [ Other networking resources ](Networking)
+*   [ Setting up a virtualized multi-node dev environment for Neutron ](NeutronLibvirtMultinodeDevEnvironment)
 
 </div>
 <div class="span4">
