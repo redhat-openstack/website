@@ -22,7 +22,7 @@ A floating IP address is a service provided by Neutron. It's not using any DHCP 
 
 ------------------------------------------------------------------------
 
-Floating IP address and a private IP address can be used at the same time on a single network-interface. The private IP address is likely to be used for accessing the instance by other instances in the private network while the floating IP address would be used for accessing the instance from a public network.
+Floating IP address and a private IP address can be used at the same time on a single network-interface. The private IP address is likely to be used for accessing the instance by other instances in the private network while the floating IP address would be used for accessing the instance from a public network. How to configure floating IP range describes [Floating IP range](http://openstack.redhat.com/Floating_IP_range) document.
 
 ## Example
 
