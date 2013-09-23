@@ -14,7 +14,7 @@ Were you wondering what's the difference between a private IP address and a floa
 
 ## Private IP Adress
 
-A private IP address is assigned to an instance's network-interface by the DHCP server. The address is visible from within the instance by using command like “ip a” . The address is typically part of a private network and is used for communication between instances in the same broadcast domain via virtual switch (L2 agent on each compute node).
+A private IP address is assigned to an instance's network-interface by the DHCP server. The address is visible from within the instance by using command like “ip a”. The address is typically part of a private network and is used for communication between instances in the same broadcast domain via virtual switch (L2 agent on each compute node).
 
 ## Floating IP Address
 
@@ -22,7 +22,7 @@ A floating IP address is a service provided by Neutron. It's not using any DHCP 
 
 ------------------------------------------------------------------------
 
-Floating IP address and a private IP address can be used at the same time on a single network-interface. The private IP address is likely to be used for accessing the instance by other instances in the private network while the floating IP address would be used for accessing the instance from a public network. How to configure floating IP range describes [Floating IP range](http://openstack.redhat.com/Floating_IP_range) document.
+Floating IP address and a private IP address can be used at the same time on a single network-interface. The private IP address is likely to be used for accessing the instance by other instances in the private network while the floating IP address would be used for accessing the instance from a public network. How to configure floating IP range describes [Floating IP range](Floating IP range) document.
 
 ## Example
 
