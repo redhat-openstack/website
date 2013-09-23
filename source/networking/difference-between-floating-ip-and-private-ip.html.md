@@ -20,10 +20,12 @@ A private IP address is assigned to an instance's network-interface by the DHCP 
 
 A floating IP address is a service provided by Neutron. It's not using any DHCP service nor being set statically within the guest. As a matter of fact the guest's operating system has completely no idea that it was assigned a floating IP address. The delivery of packets to the interface with the assigned floating address is the responsibility of Neutron's L3 agent. Instances with assigned floating IP address can be accessed from the public network by the floating IP.
 
+------------------------------------------------------------------------
+
 Floating IP address and a private IP address can be used at the same time on a single network-interface. The private IP address is likely to be used for accessing the instance by other instances in the private network while the floating IP address would be used for accessing the instance from a public network.
 
 ## Example
 
-A setup with 2 compute nodes, one Neutron controller (where Neutron service, dhcp agent and l3 agent run), a physical router and a user. Let the physical subnet be 10.0.0.0/24. On the compute nodes instances are running using the private IP range 192.168.1.0/24. One of the instances is a webserver that should be reachable from a public network. Network outline:
+A setup with 2 compute nodes, one Neutron controller (where Neutron service, dhcp agent and l3 agent run), a physical router and a user. Let the physical subnet be 10.0.0.0/24. On the compute nodes instances are running using the private IP range 192.168.1.0/24. One of the instances is a webserver that should be reachable from a public network. Network outline: ![](neutron_private_floaring_ip.png "fig:neutron_private_floaring_ip.png")
 
 As shows in the picture above, the webserver is running on an instance with a fixed IP 192.168.1.2. User from network 10.0.0.0/24 wants to access the webserver but he's not part of private network 192.168.1.0/24. Using floating IP address 10.0.0.100 enables the user fetching webpages from the webserver. The destination address is translated by NAT table (iptables) within the virtual router deployed on the controller (?) .
