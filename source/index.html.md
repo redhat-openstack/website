@@ -29,7 +29,7 @@ The most up-to-date OpenStack on the industry's most trusted Linux platform, now
 
 On **Tuesday, September 24th**, we'll have a Google Hangout where we'll be covering Neutron Networking for beginners.
 
-You can follow along on the live YouTube feed at [1](https://www.youtube.com/watch?v=afImoFeuDnY#t=275)
+You can follow along on the live YouTube feed at <https://www.youtube.com/watch?v=afImoFeuDnY#t=275>
 
 ## Introducing RDO
 
