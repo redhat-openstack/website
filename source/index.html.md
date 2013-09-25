@@ -27,7 +27,7 @@ The most up-to-date OpenStack on the industry's most trusted Linux platform, now
 <div class="offset4 span7 pad-sides begin-content pull-s">
 ## Neutron Networking Google Hangout
 
-On **Tuesday, September 24th**, we'll had a Google Hangout where we'll be covering Neutron Networking for beginners. If you missed it, you can still watch it on YouTube at <https://www.youtube.com/watch?v=afImoFeuDnY#t=275> and bring your followup questions to the [RDO Forum](//openstack.redhat.com/forum)(//openstack.redhat.com/forum RDO Forum)
+On **Tuesday, September 24th**, we'll had a Google Hangout where we'll be covering Neutron Networking for beginners. If you missed it, you can still watch it on YouTube at <https://www.youtube.com/watch?v=afImoFeuDnY#t=275> and bring your followup questions to the [RDO Forum](//openstack.redhat.com/forum)
 
 ## Introducing RDO
 
