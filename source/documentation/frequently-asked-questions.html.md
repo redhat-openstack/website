@@ -33,7 +33,7 @@ The OpenStack project benefits from a broad group of providers and distributors,
 
 ## For which distributions does RDO provide packages?
 
-RDO targets Red Hat Enterprise Linux, Fedora, and their derivatives. Specifically, RDO packages are available for RHEL 6.3 or later (and CentOS 6.3+, ScientificLinux 6.3+ and other similar derivatives), as well as Fedora 18 and later. Please note that el6.3 does not have [Open vSwitch](http://www.openvswitch.org) in its kernel - for Open vSwitch support in Quantum, you should install kernel version 2.6.32-343 or later.
+RDO targets Red Hat Enterprise Linux, Fedora, and their derivatives. Specifically, RDO packages are available for RHEL 6.3 or later (and CentOS 6.3+, ScientificLinux 6.3+ and other similar derivatives), as well as Fedora 18 and later. Please note that el6.3 does not have [Open vSwitch](http://www.openvswitch.org) in its kernel - for Open vSwitch support in Neutron, you should install kernel version 2.6.32-343 or later.
 
 Additionally note that the kernel included in el6.3 and el6.4 does not include support for network namespaces. Network namespaces are heavily relied upon by OpenStack Networking functionality. A kernel with network namespaces support is available in the RDO repositories. Run this command to install the RDO-supplied kernel once the RDO software repository has been enabled:
 
@@ -95,7 +95,7 @@ RDO aims to be the natural option for anyone that wants to run the most recently
 
 ## Which OpenStack components does RDO include?
 
-RDO includes all "integrated" OpenStack components (Nova, Glance, Keystone, Cinder, Quantum and Horizon), OpenStack client libraries and CLIs, as well as the PackStack installer and assoicated puppet modules. In addition, RDO includes those projects which are Incubating in Grizzly, i.e. Heat and Ceilometer. You can find out more about the OpenStack components included, and about RDO, at [about RDO](about RDO).
+RDO includes all "integrated" OpenStack components (Nova, Glance, Keystone, Cinder, Neutron and Horizon), OpenStack client libraries and CLIs, as well as the PackStack installer and assoicated puppet modules. In addition, RDO includes those projects which are Incubating in Grizzly, i.e. Heat and Ceilometer. You can find out more about the OpenStack components included, and about RDO, at [about RDO](about RDO).
 
 ## Where is RDO built?
 
