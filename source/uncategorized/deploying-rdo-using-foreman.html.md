@@ -298,3 +298,21 @@ This describes (and still needs more detail) a setup of hostgroups including a C
 Set quickstack/params.pp values (directly or though foreman globals/hostgroups/smart variables).
 
 Assign hosts to their respective target Quickstack Puppet module classes (hostgroups): Controller -> neutron_controller.pp Networker -> neutron_network.pp Computer -> neutron_compute.pp
+
+#### Cinder Storage Nodes
+
+The controller node contains Cinder API and scheduler. For deploying storage capacity nodes there is "OpenStack Block Storage" hostgroup.
+
+The nodes assigned to the "OpenStack Block Storage" hostgroup need to have a `cinder-volumes` LVM volume group before you run puppet on them. This should be considered before you install operating system on the node and you should partition your disk if needed. (LVM volume group needs to be backed by at least one physical volume, which means you'll need to dedicate at least one disk partition to it.) You might use Kickstart to partition the disk and set up the LVM volume group automatically during OS installation.
+
+For more information regarding LVM setup see [LVM Administration Guide](https://access.redhat.com/site/documentation/en-US/Red_Hat_Enterprise_Linux/6/html-single/Logical_Volume_Manager_Administration/index.html) and [Kickstart docs](http://fedoraproject.org/wiki/Anaconda/Kickstart).
+
+##### Quick volume group creation for testing
+
+If you just want to give Cinder a quick try, there is a script that sets up a `cinder-volumes` volume group backed by a loop file. This means you will not have to do any special partitioning and the data will be saved in file `/var/lib/cinder/cinder-volumes`. You'll find the script on the node where you installed Foreman at `/usr/share/openstack-foreman-installer/bin/cinder-testing-volume.sh`. Steps to use the script:
+
+1. SCP `cinder-testing-volume.sh` script from the Foreman node to nodes that you want to use for block storage.
+
+2. Run `bash cinder-testing-volume.sh 5G` on the storage nodes. The parameter is the desired size of loop file to be created (5 gigabytes in the example).
+
+Note that `cinder-testing-volume.sh` script is meant for testing only, and the volume group will not persist between reboots. In production environment Cinder storage should always be backed by disks or disk partitions, not by loop files.
