@@ -315,4 +315,4 @@ If you just want to give Cinder a quick try, there is a script that sets up a `c
 
 2. Run `bash cinder-testing-volume.sh 5G` on the storage nodes. The parameter is the desired size of loop file to be created (5 gigabytes in the example).
 
-Note that `cinder-testing-volume.sh` script is meant for testing only, and the volume group will not persist between reboots. In production environment Cinder storage should always be backed by disks or disk partitions, not by loop files.
+Note that `cinder-testing-volume.sh` script is meant for testing only, and the volume group will not persist between reboots. In production environment Cinder storage should be always backed by disks or disk partitions, not by loop files.
