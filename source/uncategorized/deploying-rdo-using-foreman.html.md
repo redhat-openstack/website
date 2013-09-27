@@ -262,8 +262,6 @@ For clients with puppet 2.6, you need to add to /etc/puppet/puppet.conf "report 
 
 ### Foreman Provisioning setup with vftool
 
-*(Provisioning mode is not tested with Havana at this point.)*
-
 This is going to work largely the same as the non-provisioning mode, with the exception of changing the environment file we used earlier to configure the setup script a bit. For instance, you would enable the foreman gateway and set provisioning to true, as well as configure the appropriate eth\* devices on the foreman server to allow it to provision.
 
 The Foreman server should have eth0 and eth1 (foreman1) up. The clients are going to pxeboot off of foreman1 Those clients are not going to have an OS on them. foreman will actually do the provisioning The foreman server is on the default network and the foreman provisioning network. the clients are *not* on the default network, but just their eth0 is going to be the foreman provisioning network (eg foreman1) and eth1 and eth2 on the openstack networks vftool creates 3 sets of networks (3 networks in each set) just for convenience. so if you have vm's working on the networks `foreman1`, `openstackvms1_1`, `openstack1_2` and you wanted to try out something new without screwing those up, you could bring up more test vm's on a different "set" of networks e.g., `foreman2`, `openstackvms2_1`, `openstack2_2`.
