@@ -253,6 +253,7 @@ To revert a given host to a previous snapshot you can use: SNAPNAME=$mysnap bash
 
 ### Troubleshooting with foreman/puppet
 
+*   If you have mod_nss installed, foreman-proxy will not start, as they both attempt to use port 8443. This is something we will try to address in the near future, but in the meantime, you can easily edit your httpd conf file for either of these modules to get around this issue.
 *   foreman-proxy restart is needed if you change certificates, or change Puppet versions (as it's loaded), or its settings file
 *   httpd restart emcompasses both the puppetmaster and Foreman as they run inside with passenger, so it's a quick way to restart both.
 *   Restart after changing certs (mod_ssl configuration), upgrading Puppet, changing Foreman's settings file and sometimes editing puppet.conf (especially if modifying environments).
