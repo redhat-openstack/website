@@ -9,4 +9,6 @@ wiki_last_updated: 2013-10-30
 
 # RDO Test Day October 2013
 
-We plan to hold a RDO Havana test day on October 29th and 30th, 2013. This will be coordinated through the #rdo channel on freenode, and through this wiki and RDO forums.
+We plan to hold a RDO Havana test day on October 29th and 30th, 2013. This will be coordinated through the #rdo channel on Freenode, and through this wiki and RDO forums.
+
+Results from the testing will continue to update the [TestedSetups](TestedSetups) page.
