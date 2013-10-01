@@ -85,8 +85,8 @@ To install QEMU for Ceph using "sudo yum install", you must add the appropriate 
 `  baseurl=`[`http://ceph.com/packages/ceph-extras/rpm/centos6/noarch`](http://ceph.com/packages/ceph-extras/rpm/centos6/noarch)
         enabled=1
         gpgcheck=1
-       type=rpm-md
-` gpgkey=`[`https://ceph.com/git/?p=ceph.git;a=blob_plain;f=keys/release.asc`](https://ceph.com/git/?p=ceph.git;a=blob_plain;f=keys/release.asc)
+        type=rpm-md
+`  gpgkey=`[`https://ceph.com/git/?p=ceph.git;a=blob_plain;f=keys/release.asc`](https://ceph.com/git/?p=ceph.git;a=blob_plain;f=keys/release.asc)
 
        [ceph-extras-source]
        name=Ceph Extra Packages and Backports Sources
