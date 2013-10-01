@@ -99,4 +99,4 @@ Or, for systems running systemd (eg F19)
 
 Make sure by checking the logs that everything was started successfully. Specifically, in case the engine service reports `ImportError: cannot import name Random` then you're probably using an old version of `pycrypto`. A fix has been merged upstream to workaround the issue. It's [a trivial change](https://review.openstack.org/#/c/26759/) which you can apply manually to `heat/common/crypt.py`.
 
-You are now ready to [ launch your first Heat application](LaunchHeatApplication)!
+You are now ready to [deploy an application with Heat](deploy an application with Heat)!
