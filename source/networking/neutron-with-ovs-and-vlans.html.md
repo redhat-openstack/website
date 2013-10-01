@@ -52,11 +52,11 @@ The following packstack configuration defines L2 tenant network allocation as VL
       # inter-vlan - the name of the physical_network used for the VLANs
       # 1200:1205 - the range of VLANs available for tenant network allocation
        
-      CONFIG_QUANTUM_OVS_BRIDGE_MAPPINGS=inter-vlan:br-instances
+      CONFIG_QUANTUM_OVS_BRIDGE_MAPPINGS=inter-vlan:br-inst
       # mapping from the physical_network name to the bridge name
       # inter-vlan - the name of the physical_network used for the VLANs
       # br-instances - the bridge name
-      CONFIG_QUANTUM_OVS_BRIDGE_IFACES=br-instances:eth0
+      CONFIG_QUANTUM_OVS_BRIDGE_IFACES=br-inst:eth0
       # mapping from the bridge name to the physical interface name
       # br-instances - the bridge name
       # eth0 - the interface name
