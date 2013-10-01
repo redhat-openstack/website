@@ -260,3 +260,9 @@ Repeat, cloning rhel-6.4-compute1 (192.168.100.20), rhel-6.4-compute2 (192.168.1
     $ sudo virt-sysprep -d rhel-6.4-controller
 
 before each clone.
+
+### Reverting to a snapshot
+
+For example, to revert the controller to the base snapshot:
+
+    sudo virsh snapshot-revert --force rhel-6.4-controller base
