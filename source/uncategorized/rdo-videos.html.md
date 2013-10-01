@@ -8,6 +8,10 @@ wiki_last_updated: 2014-10-22
 
 # RDO videos
 
+## OpenStack Networking for Dummies
+
+<iframe width="630" src="//youtube.com/embed/afImoFeuDnY" frameborder="0" align="center" allowfullscreen="true"> </iframe>
+
 ## Introducing RDO
 
 <iframe width="630" src="//youtube.com/embed/OsQJmipzBYI" frameborder="0" align="center" allowfullscreen="true"> </iframe>
