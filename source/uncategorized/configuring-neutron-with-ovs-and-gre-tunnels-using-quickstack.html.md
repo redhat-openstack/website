@@ -32,8 +32,7 @@ Besides the other parameters, the values required via params.pp or foreman varia
 *   The allocation pools, will provide a range of foating IPs
 
 The external/public bridge setup (br-ex) must be configured at the end of the deployment process.
-
-If not then run this command with your values (here I'm using above values):
+If not then run this command with your values:
 
     neutron net-create external --provider:network_type local --router:external true --shared  
     neutron subnet-create external 10.16.16.0/22 --disable-dhcp --allocation-pool start=10.16.18.1,end=10.16.18.254 --gateway=10.16.19.254
