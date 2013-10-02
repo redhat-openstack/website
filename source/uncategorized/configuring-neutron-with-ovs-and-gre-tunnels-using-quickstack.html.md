@@ -23,10 +23,10 @@ Besides other needed parameters, make sure you have the values required, for exa
 
     # Floating IPs (external network br-ex)
     $public_network_name = 'public'
-    $public_cidr = '10.16.16.0/22'
-    $public_gateway_ip = '10.16.19.254'
-    $public_allocation_pools_start = '10.16.18.1'
-    $public_allocation_pools_end  = '10.16.18.254'
+    $public_cidr = '10.0.0.0/22'
+    $public_gateway_ip = '10.1.1.254'
+    $public_allocation_pools_start = '10.0.3.1'
+    $public_allocation_pools_end  = '10.0.3.254'
 
 ## Notes
 
@@ -38,7 +38,7 @@ The external/public bridge setup (br-ex) must be configured at the end of the de
 If not then run this command with your values:
 
     neutron net-create external --provider:network_type local --router:external true --shared  
-    neutron subnet-create external 10.16.16.0/22 --disable-dhcp --allocation-pool start=10.16.18.1,end=10.16.18.254 --gateway=10.16.19.254
+    neutron subnet-create external 10.0.0.0/22 --disable-dhcp --allocation-pool start=10.0.3.1,end=10.0.3.254 --gateway=10.1.1.254
 
 ## What else?
 
