@@ -44,10 +44,9 @@ If not then run this command as openstack admin, with your values:
 
 Workflow for a Per Tenant networks/routers environment
 
-*   Create external network and subnet (admin)
 *   For each tenant
-    -   Create a network/subnet/router (admin)
-    -   Add Security Groups rules for the tenant (tenant)
+    -   Create a network/subnet/router (admin user)
+    -   Add Security Groups rules for the tenant (tenant user)
 
 <!-- -->
 
