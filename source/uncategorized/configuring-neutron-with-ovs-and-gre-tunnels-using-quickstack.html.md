@@ -12,20 +12,18 @@ For now, quickstack neutron-controller is doing only GRE, it will therefore mana
 
 1. Assuming two NICs 2. The physical interface (public/external network) IP will be moved to the br-ex OVS bridge 3. The br-ex should be activated as well
 
-Besides the other parameters, the values required via params.pp or foreman variables must be also have: \`
+Besides the other parameters, the values required via params.pp or foreman variables must be also have:
 
-      $private_interface             = 'eth1'
-       $public_interface              = 'eth2'
-       $metadata_proxy_shared_secret  = 'CHANGEME'
+    $private_interface             = 'eth1'
+    $public_interface              = 'eth2'
+    $metadata_proxy_shared_secret  = 'CHANGEME'
 
-       # Floating IPs (external network br-ex)
-       $public_network_name = 'public'
-       $public_cidr = '10.16.16.0/22'
-       $public_gateway_ip = '10.16.19.254'
-       $public_allocation_pools_start = '10.16.18.1'
-       $public_allocation_pools_end  = '10.16.18.254'
-
-\`
+    # Floating IPs (external network br-ex)
+    $public_network_name = 'public'
+    $public_cidr = '10.16.16.0/22'
+    $public_gateway_ip = '10.16.19.254'
+    $public_allocation_pools_start = '10.16.18.1'
+    $public_allocation_pools_end  = '10.16.18.254'
 
 ## Notes
 
@@ -35,7 +33,8 @@ Besides the other parameters, the values required via params.pp or foreman varia
 
 The external/public bridge setup (br-ex) must be configured at the end of the deployment process. If not then run this command with your values (here I'm using above values):
 
-'neutron net-create external --provider:network_type local --router:external true --shared neutron subnet-create external 10.16.16.0/22 --disable-dhcp --allocation-pool start=10.16.18.1,end=10.16.18.254 --gateway=10.16.19.254'
+    neutron net-create external --provider:network_type local --router:external true --shared  
+    neutron subnet-create external 10.16.16.0/22 --disable-dhcp --allocation-pool start=10.16.18.1,end=10.16.18.254 --gateway=10.16.19.254
 
 ## What else?
 
