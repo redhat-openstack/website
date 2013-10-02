@@ -18,7 +18,7 @@ Besides other needed parameters, make sure you have the values required, for exa
 
     # params.pp excerpt but could be via foreman variables
     $private_interface             = 'eth1'
-    $public_interface              = 'eth2'
+    $public_interface              = 'eth0'
     $metadata_proxy_shared_secret  = 'CHANGEME'
 
     # Floating IPs (external network br-ex)
