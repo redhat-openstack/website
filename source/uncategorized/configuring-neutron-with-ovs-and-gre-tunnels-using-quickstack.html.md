@@ -38,7 +38,10 @@ The external/public bridge setup (br-ex) must be configured at the end of the de
 
 ## What else?
 
-Workflow for a Per Tenant networks/routers environment 1. Create external network and subnet (admin) 2. For each tenant
+Workflow for a Per Tenant networks/routers environment
+
+*   1. Create external network and subnet (admin)
+*   2. For each tenant
 
          * Create a network/subnet/router (admin)  
          * Add Security Groups rules for the tenant (tenant)
