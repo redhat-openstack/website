@@ -17,7 +17,7 @@ These installation steps are general purpose and can be used by anyone who would
 ## Installation Environment
 
 To do this installation two virtual machines running el6 are needed, RHEL, Fedora, CentOS, Scientific are a few options to meet this requirement.
-* Each VM should have 2 network interfaces each configured with static IP addresses. For this installation eth0 will be "public traffic" and eth1 will be "provate traffic". The following IP addresses will be used:
+* Each VM should have 2 network interfaces each configured with static IP addresses. For this installation eth0 will be "public traffic" and eth1 will be "private traffic". The following IP addresses will be used:
 -- control host eth0 192.168.123.2, eth1 192.168.124.2
 -- compute host eth0 192.168.123.3, eth1 192.168.124.3
  Each visualization environment is different. [NeutronLibvirtMultinodeDevEnvironment](NeutronLibvirtMultinodeDevEnvironment) shows an example of how to setup these two hosts using libvirt.
