@@ -25,9 +25,11 @@ The most up-to-date OpenStack on the industry's most trusted Linux platform, now
 </div>
 <div class="row">
 <div class="offset4 span7 pad-sides begin-content pull-s">
-## Neutron Networking Google Hangout
+## LinuxCon Europe
 
-On **Tuesday, September 24th**, we had a Google Hangout where we'll be covering Neutron Networking for beginners. If you missed it, you can still watch it on YouTube at <https://www.youtube.com/watch?v=afImoFeuDnY> and bring your followup questions to the [RDO Forum](//openstack.redhat.com/forum)
+A bunch of the RDO engineering team will be at [http://events.linuxfoundation.org/events/linuxcon-europe LinuxCon](http://events.linuxfoundation.org/events/linuxcon-europe LinuxCon) in Edinburgh, October 21-23. Come to the co-located [http://events.linuxfoundation.org/events/kvm-forum KVM Forum](http://events.linuxfoundation.org/events/kvm-forum KVM Forum) and [http://events.linuxfoundation.org/events/cloudopen-europe CloudOpen](http://events.linuxfoundation.org/events/cloudopen-europe CloudOpen) to learn more about RDO, OpenStack, and the ecosystem of cloud technologies.
+
+There's always something going on in the RDO community. See the [Events](Events) page for other upcoming events.
 
 ## Introducing RDO
 
@@ -43,11 +45,13 @@ OpenStack relies on the underlying operating system and hypervisor — and what 
 </div>
 <div class="row">
 <div class="span7 offset4 pad-sides begin-content pull-m">
-## Red Hat loves OpenStack
+## Neutron Networking Google Hangout
 
-The [OpenStack project](//openstack.org) has a diverse and growing community of contributors, but none match Red Hat's combination of production experience, technical expertise, and commitment to the open source way of producing software.
+On **Tuesday, September 24th**, we had a Google Hangout covering Neutron Networking for beginners. And we're planning one for October 31st to take you to the next step of networking.
 
-<iframe width="630" src="//youtube.com/embed/OsQJmipzBYI" frameborder="0" align="center" allowfullscreen="true"> </iframe>
+Here's the video from our first Hangout event. You can see other videos in the [RDO Videos](RDO Videos) section of the site.
+
+<iframe width="630" src="//youtube.com/embed/afImoFeuDnY" frameborder="0" align="center" allowfullscreen="true"> </iframe>
 
 From the Linux kernel and the KVM hypervisor to the top level OpenStack project components, Red Hat has expertise at every level of the stack. Whether you want to run a proof of concept of OpenStack on CentOS, or you want to prepare a production cloud and you are evaluating partners for your deployment, who better to go to than the number one contributor to OpenStack?
 
