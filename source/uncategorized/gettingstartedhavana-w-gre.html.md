@@ -60,4 +60,4 @@ The install takes at least 10 minutes, more depending on your network connection
 ### Next Steps
 
 Come to the session for a hands on demonstration of what to do next with the freshly installed OpenStack Cluster.
- <http://openstacksummitnovember2013.sched.org/event/e08eb32425f2031003dcbc36c3b177bf>
+ [1](http://openstacksummitnovember2013.sched.org/event/e08eb32425f2031003dcbc36c3b177bf)
