@@ -47,4 +47,9 @@ Workflow for a Per Tenant networks/routers environment
 *   Create external network and subnet (admin)
 *   For each tenant
     -   Create a network/subnet/router (admin)
-    -   Add Security Groups rules for the tenant (tenant)
+    -   Add Security Groups rules for the tenant (tenant):
+
+<!-- -->
+
+    neutron security-group-rule-create --protocol icmp --direction ingress default
+    neutron security-group-rule-create --protocol tcp --port-range-min 22 --port-range-max 22 --direction ingress default
