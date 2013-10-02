@@ -25,7 +25,9 @@ The most up-to-date OpenStack on the industry's most trusted Linux platform, now
 </div>
 <div class="row">
 <div class="offset4 span7 pad-sides begin-content pull-s">
-## LinuxCon Europe
+## Upcoming Events
+
+This week, you can catch Dave Neary and Steve Dake speaking at the [Open World Forum](http://www.openworldforum.org/) in Paris.
 
 A bunch of the RDO engineering team will be at [LinuxCon](http://events.linuxfoundation.org/events/linuxcon-europe) in Edinburgh, October 21-23. Come to the co-located [KVM Forum](http://events.linuxfoundation.org/events/kvm-forum) and [CloudOpen](http://events.linuxfoundation.org/events/cloudopen-europe) to learn more about RDO, OpenStack, and the ecosystem of cloud technologies.
 
