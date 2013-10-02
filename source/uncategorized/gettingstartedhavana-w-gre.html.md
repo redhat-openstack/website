@@ -10,7 +10,7 @@ wiki_last_updated: 2014-01-10
 
 ## Purpose
 
-This document is written to prepare participants at the OpenStack Summit in Hong Kong for the hand on section of the Getting Started with OpenStack session. During the session the installation environment will be assumed. Installation will be demonstrated, though, a pre-installed cluster may be used for the hands on demonstration. To follow along with the setup and use demonstration both the Installation Environment and the Installation sections should be completed.
+This document is written to prepare participants at the OpenStack Summit in Hong Kong for the hand on section of the [Getting Started with Openstack](http://openstacksummitnovember2013.sched.org/event/e08eb32425f2031003dcbc36c3b177bf) session. During the session the installation environment will be assumed. Installation will be demonstrated, though, a pre-installed cluster may be used for the hands on demonstration. To follow along with the setup and use demonstration both the Installation Environment and the Installation sections should be completed.
 
 These installation steps are general purpose and can be used by anyone who would like to setup a multi-node havana openstack cluster using GRE tunnels.
 
