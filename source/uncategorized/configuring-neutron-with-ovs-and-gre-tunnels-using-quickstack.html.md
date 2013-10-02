@@ -12,7 +12,7 @@ For now, quickstack neutron-controller is doing only GRE, it will therefore mana
 
 1. Assuming two NICs 2. The physical interface (public/external network) IP will be moved to the br-ex OVS bridge 3. The br-ex should be activated as well
 
-Besides the other parameters, the values required via params.pp or foreman variables must be also have: \` $private_interface = 'eth1'
+Besides the other parameters, the values required via params.pp or foreman variables must be also have: '$private_interface = 'eth1'
 
        $public_interface              = 'eth2'
        $metadata_proxy_shared_secret  = 'CHANGEME'
@@ -22,7 +22,7 @@ Besides the other parameters, the values required via params.pp or foreman varia
        $public_cidr                           = '10.16.16.0/22'
        $public_gateway_ip                = '10.16.19.254'
        $public_allocation_pools_start = '10.16.18.1'
-      `  $public_allocation_pools_end  = '10.16.18.254'` `
+       $public_allocation_pools_end  = '10.16.18.254''
 
 ## Notes
 
