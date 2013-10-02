@@ -35,7 +35,7 @@ Besides other needed parameters, make sure you have the values required, for exa
 *   The allocation pools, will provide a range of foating IPs
 
 The external/public bridge setup (br-ex) must be configured at the end of the deployment process.
-If not then run this command with your values:
+If not then run this command as openstack admin, with your values:
 
     neutron net-create external --provider:network_type local --router:external true --shared  
     neutron subnet-create external 10.0.0.0/22 --disable-dhcp --allocation-pool start=10.0.3.1,end=10.0.3.254 --gateway=10.1.1.254
