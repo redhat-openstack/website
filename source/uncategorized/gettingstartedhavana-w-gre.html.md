@@ -38,7 +38,7 @@ Next install the Packstack OpenStack Installer:
 
     sudo yum install openstack-packstack
 
-Generate an answer file. It will be prepopulated with the configuration parameters before installation is started:
+Generate an answer file. It will be altered to include the GRE configuration before installation is started:
 
     packstack --gen-answer-file my_answers.txt
 
