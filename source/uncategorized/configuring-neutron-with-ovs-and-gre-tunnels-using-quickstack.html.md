@@ -43,5 +43,5 @@ Workflow for a Per Tenant networks/routers environment
 *   1. Create external network and subnet (admin)
 *   2. For each tenant
 
-         * Create a network/subnet/router (admin)  
-         * Add Security Groups rules for the tenant (tenant)
+       ** Create a network/subnet/router (admin)  
+       ** Add Security Groups rules for the tenant (tenant)
