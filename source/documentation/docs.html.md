@@ -76,6 +76,7 @@ If you've come across useful tips for resolving issues on OpenStack, or if you'r
 *   [Tools](Tools)
 *   [PackStack documentation](https://access.redhat.com/knowledge/docs/en-US/Red_Hat_OpenStack_Preview/2/html/Getting_Started_Guide/part-Deploying_OS_using_PackStack.html)
 *   [Events](Events)
+*   [Continuous Integration](Continuous Integration)
 
 </div>
 <div class="span3">
