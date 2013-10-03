@@ -46,6 +46,7 @@ Generate an answer file. It will be altered to include the GRE configuration bef
 
 Edit the packstack answerfile and update the following configuration parameters. Leave all other parameters just as they are, only the lines listed should be changed.
 
+    CONFIG_NOVA_COMPUTE_HOSTS=192.168.123.3
     CONFIG_NEUTRON_OVS_TENANT_NETWORK_TYPE=gre
     CONFIG_NEUTRON_OVS_VLAN_RANGES=physnet1
     CONFIG_NEUTRON_OVS_TUNNEL_RANGES=1:1000
