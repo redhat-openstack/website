@@ -8,6 +8,6 @@ wiki_last_updated: 2013-10-04
 
 # Continuous Integration
 
-New CI system is being deployed for RDO:
+The CI system being deployed for RDO, is currently internal to Red Hat, and is structured as follows:
 
 ![](rdo-update.png "fig:rdo-update.png")
