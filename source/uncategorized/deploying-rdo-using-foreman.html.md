@@ -11,6 +11,8 @@ wiki_last_updated: 2015-07-16
 
 __NOTOC__
 
+__TOC__
+
 ## Foreman with RDO
 
 This guide is meant to help you set up [Foreman](http://theforeman.org/) to deploy RDO. We have wrapped this up in an installer with some predefined Foreman Host Groups to get you started. You can, of course, add your own to do thing we havenot yet added. If you do, please feel free to contribute them to our upstream [installer](https://github.com/redhat-openstack/astapor) project!
