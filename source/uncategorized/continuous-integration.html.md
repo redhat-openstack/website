@@ -8,6 +8,6 @@ wiki_last_updated: 2013-10-04
 
 # Continuous Integration
 
-The CI system being deployed for RDO, is currently internal to Red Hat, and is structured as follows:
+The [CI system](https://prod-rdojenkins.rhcloud.com/) being deployed for RDO, is currently under development, and is structured as follows:
 
 ![](rdo-update.png "fig:rdo-update.png")
