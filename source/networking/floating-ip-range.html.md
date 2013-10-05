@@ -26,7 +26,9 @@ Steps to remove hard-coded floating IP and add a new one:
 3.  nova floating-ip-bulk-create CORRECT-RANGE (in the above example, this would be 192.168.1.56/29)
 4.  nova-manage floating list (to see your new list of floating IPs)
 
-With Neutron, no floating IPs are created by default. You must first create a public network and subnet, defining the IP address range for floating IPs at that time.
+**With Neutron:**
+
+No floating IPs are created by default. You must first create a public network and subnet, defining the IP address range for floating IPs at that time.
 
 1.  source /root/keystonerc_admin
 2.  quantum net-create public --router:external=True
