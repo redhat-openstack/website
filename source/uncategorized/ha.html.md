@@ -36,4 +36,4 @@ WARNING: This method of managing qpid through pacemaker makes the service highly
 
 ## Load Balancing
 
-Next step
+[Load_Balance_OpenStack_API#HAProxy](Load_Balance_OpenStack_API#HAProxy)
