@@ -23,3 +23,7 @@ Start by setting each control node up as you would a non-HA/LB control node. Onc
 ## High Availability Configuration
 
 Now that the control nodes are installed, the next step is to cluster them. This is accomplished by having them share a database store and ensuring that messaging is highly available.
+
+[Highly_Available_MySQL_server_for_OpenStack](Highly_Available_MySQL_server_for_OpenStack) will get pacemaker installed and configured so that the nodes are highly available and MySQL is HA.
+
+Once MySQL is HA, Qpid and nova-consoleauth also need do be added to pacemaker.
