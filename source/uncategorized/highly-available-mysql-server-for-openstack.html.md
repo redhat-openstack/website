@@ -16,7 +16,7 @@ This guide assumes that OpenStack has been deployed on EL 6.5. There should be t
 
 ## Overview
 
-MySQL will be configured in an active/passive configuration. Pacemaker will manage a floating ip address and the MySQL service across the two MySQL nodes. In the event of a failure, Pacemaker will move the ip to the passive node and start the MySQL service on the passive node.
+MySQL will be configured in an active/passive configuration. Pacemaker will manage a floating ip address and the MySQL service across the two MySQL nodes. In the event of a failure, Pacemaker will move the ip and shared storage to another node and start the MySQL service on that node.
 
 ## Installing Pacemaker and creating a cluster
 
