@@ -24,7 +24,7 @@ To do this installation two virtual machines running el6 are needed, RHEL, Fedor
 
 ## Installation
 
-The multi-node installation follows [QuickStartLatest](QuickStartLatest) for the most part. The main difference is how packstack is invoked.
+The multi-node installation follows [QuickStartLatest](QuickStartLatest) for the most part. The main difference is how packstack is invoked. Run the commands for installation on the control node.
 
 ### Yum Repo Setup
 
