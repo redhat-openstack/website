@@ -18,9 +18,7 @@ __NOTOC__
 <div class="offset1 span10">
 ## RDO documentation
 
-This page links to general information about RDO, guides for getting your OpenStack cloud up and running, and information on using RDO with other Red Hat ecosystem technologies. Since RDO sticks closely to the upstream OpenStack project, the documentation at docs.openstack.org will also prove helpful.
-
-If you've come across useful tips for resolving issues on OpenStack, or if you're interested in sharing details of your deployment, please consider sharing this information with the community at our [troubleshooting](troubleshooting) and [case studies](case studies) pages.
+Since RDO sticks closely to the upstream OpenStack project, the documentation at [docs.openstack.org](http://docs.openstack.org) will also prove helpful. If you've come across useful tips for resolving issues on OpenStack, or if you're interested in sharing details of your deployment, please consider sharing this information with the community at our [troubleshooting](troubleshooting) and [case studies](case studies) pages.
 
 </div>
 </div>
