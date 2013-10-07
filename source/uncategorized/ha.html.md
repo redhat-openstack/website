@@ -24,6 +24,16 @@ Start by setting each control node up as you would a non-HA/LB control node. Onc
 
 Now that the control nodes are installed, the next step is to cluster them. This is accomplished by having them share a database store and ensuring that messaging is highly available.
 
-[Highly_Available_MySQL_server_for_OpenStack](Highly_Available_MySQL_server_for_OpenStack) will get pacemaker installed and configured so that the nodes are highly available and MySQL is HA.
+[ Highly Available MySQL server for OpenStack ](Highly_Available_MySQL_server_for_OpenStack) will get pacemaker installed and configured so that the nodes are highly available and MySQL is HA.
 
-Once MySQL is HA, Qpid and nova-consoleauth also need do be added to pacemaker.
+Once MySQL is HA, Qpid and nova-consoleauth also need do be added to pacemaker. You could give each of them their own floating ip or just put them in the same group as mysql and have them all listen to the same floating ip. For this demonstration they will be added to the group with the existing ip and MySQL.
+
+    node1$ pcs resource create qpidd lsb:qpidd --group test-group
+
+    node1$ pcs resource create consoleauth lsb:openstack-nova-consoleauth --group test-group
+
+WARNING: This method of managing qpid through pacemaker makes the service highly available but does not prevent message loss. This document will be updated in the future to include instructions on clustering qpid with will prevent message loss.
+
+## Load Balancing
+
+Next step
