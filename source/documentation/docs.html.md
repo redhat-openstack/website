@@ -31,7 +31,7 @@ If you've come across useful tips for resolving issues on OpenStack, or if you'r
 *   [ Quick start guide (RDO Grizzly)](Quickstart)
 *   [ Quick start guide (RDO Havana)](QuickStartLatest)
 *   [ Deploying RDO Using Foreman](Deploying RDO Using Foreman)
-*   [ Multinode Havana using GRE Tunnels](GettingStartedHavana_w_GRE)
+*   [ Multinode Havana using GRE](GettingStartedHavana_w_GRE)
 *   [ Launching your first VM ](Running an instance)
 *   [ Image Resources](Image resources)
 *   [ Deploy Heat and launch your first Application (RDO Grizzly)](Deploy Heat and launch your first Application)
