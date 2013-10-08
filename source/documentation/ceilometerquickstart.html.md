@@ -8,8 +8,6 @@ wiki_revision_count: 43
 wiki_last_updated: 2014-11-26
 ---
 
-__NOTOC__
-
 <div class="bg-boxes bg-boxes-single">
 <div class="row">
 <div class="offset3 span8">
