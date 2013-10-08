@@ -25,7 +25,7 @@ This guide is intended to get you up and running quickly with Ceilometer:
 
 *This guide is predicated on at least the Havana RC1 version of the packages being used (the service start-up instructions for older versions of the packages from the H cycle would differ somewhat).*
 
-### Step 0. Prerequites
+### Prerequites
 
 The general prerequsites are identical to the [Havana QuickStart](QuickStartLatest), and in fact if you follow that guide right now you will end up with Ceilometer installed by default once your `packstack` run completes .
 
@@ -38,7 +38,7 @@ However, if you are installing on a resource-constrained VM, some prior setup ca
          sudo service mongod status
          sudo service mongod stop
 
-### Step 1. Verification
+### Verification
 
 Once your `packstack` run is complete, you're probably eager to verify that Ceilometer is properly installed and working it should.
 
@@ -58,7 +58,7 @@ For your peace of mind, ensure that there are no errors in the Ceilometer logs a
 
        for svc in $CEILO_SVCS ; do sudo grep ERROR /var/log/ceilometer/${svc}.log ; done
 
-### Step 2. Basic Concepts
+### Basic Concepts
 
 Getting up to speed with Ceilometer involves getting to grips a few basic concepts and terms.
 
@@ -120,7 +120,7 @@ We also support the concept of a meta-alarm, which aggregates over the current s
 
 A key associated concept is the notion of *dimensioning* which defines the set of matching meters that feed into an alarm evaluation. Recall that meters are per-resource-instance, so in the simplest case an alarm might be defined over a particular meter applied to *all* resources visible to a particular user. More useful however would the option to explicitly select which specific resources we're interested in alarming on. On one extreme we would have narrowly dimensioned alarms where this selection would have only a single target (identified by resource ID). On the other extreme, we'd have widely dimensioned alarms where this selection identifies many resources over which the statistic is aggregated, for example all instances booted from a particular image or all instances with matching user metadata (the latter is how Heat identifies autoscaling groups).
 
-### Step 3. Configuration of Ceilometer
+### Configuration
 
 The shipped Ceilometer configuration is intended to be usable out-of-the-box. However, there are a few tweaks you may want to make while exploring Ceilometer functionality.
 
@@ -174,7 +174,7 @@ An example modification would be something like increasing the cadence of `cpu_u
 
 Note that we only need to restart the `compute` and not the `central` even though both share the same pipeline config by default, because the particular meter impacted by the change is only gathered by the former agent.
 
-#### Ceilometer service configuration
+#### Service configuration
 
 The service configuration is read by default from two sources, via the same pattern as you've encountered with the other openstack services in RDO:
 
@@ -188,6 +188,40 @@ As always, you can choose to manually edit this file or else use the convenient 
        sudo openstack-config --set /etc/ceilometer/ceilometer.conf DEFAULT debug true
 
 to set the logging level to debug as opposed to the default warning. As always, services must be restarted for config changes to take effect.
+
+### Exploring with the CLI
+
+First ensure that the latest version of CLI package is installed:
+
+       sudo rpm -qa | awk -F- '/python-ceilometerclient/ {print $3}'
+       1.0.6
+
+which will allow you to access the latest API additions, for example alarm history and the separation of alarm representation from the encapsulated rules.
+
+We will proceed to explore each of the basic concepts described earlier in this guide. But before we do so, it's worth mentioning a common conceptual banana skin that often confuses new Ceilometer users at this early stage. Recall that metering is all about measuring user-visible cloud resource usage - if there ain't any user-visible resources in your cloud, no metering data will be generated. So let's start by ensuring some resources are actually present, firstly the basic building blocks, some VM images in `glance`:
+
+       glance image-list
+
+If this list empty, let's quickly grab a small basic `cirros` image that we'll later use to spin up some instances:
+
+       sudo yum install -y wget
+` wget `[`http://launchpad.net/cirros/trunk/0.3.0/+download/cirros-0.3.0-x86_64-uec.tar.gz`](http://launchpad.net/cirros/trunk/0.3.0/+download/cirros-0.3.0-x86_64-uec.tar.gz)
+       tar zxvf cirros-0.3.0-x86_64-uec.tar.gz 
+       glance add name=cirros-aki is_public=true container_format=aki disk_format=aki < cirros-0.3.0-x86_64-vmlinuz 
+       glance add name=cirros-ari is_public=true container_format=ari disk_format=ari < cirros-0.3.0-x86_64-initrd 
+       glance add name=cirros-ami is_public=true container_format=ami disk_format=ami \
+           "kernel_id=$(glance index | awk '/cirros-aki/ {print $1}')" \
+           "ramdisk_id=$(glance index | awk '/cirros-ari/ {print $1}')" < cirros-0.3.0-x86_64-blank.img  
+       
+
+Then spin up an instance booted from that image:
+
+       IMAGE_ID=$(glance index | awk '/cirros-ami/ {print $1}')
+       nova boot --image $IMAGE_ID --flavor 1 test_instance
+
+Wait for that instance to become active and we're good to go!
+
+       watch 'nova show test_instance'
 
 </div>
 </div>
