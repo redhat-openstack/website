@@ -27,9 +27,9 @@ This guide is intended to get you up and running quickly with Ceilometer:
 
 ### Step 0. Prerequites
 
-The general prerequsites are identical to the [Havana QuickStart](QuickStartLatest), and in fact if you follow that guide right now you will end up with Ceilometer installed by default once your packstack run completes .
+The general prerequsites are identical to the [Havana QuickStart](QuickStartLatest), and in fact if you follow that guide right now you will end up with Ceilometer installed by default once your `packstack` run completes .
 
-However, if you are installing on a resource-constrained VM, some prior setup can make your life easier. The default & most feature-complete storage driver used by Ceilometer is mongodb, which on installation eagerly pre-allocates large journal files *etc*. This is normally not an issue, but the default service timeout of 90 seconds imposed by systemd *may* not suffice for this preallocation to complete on resource-starved VMs. However this can be easily worked around in that scenarion by preinstalling mongo with a modified startup timeout, as follows:
+However, if you are installing on a resource-constrained VM, some prior setup can make your life easier. The default & most feature-complete storage driver used by Ceilometer is `mongodb`, which on installation eagerly pre-allocates large journal files *etc*. This is normally not an issue, but the default service timeout of 90 seconds imposed by systemd *may* not suffice for this preallocation to complete on resource-starved VMs. However this can be easily worked around in that scenarion by preinstalling mongo with a modified startup timeout, as follows:
 
          sudo yum install -y mongodb-server mongodb
          sudo sed -i '/^`\[Service\]`$/ a\
@@ -40,7 +40,7 @@ However, if you are installing on a resource-constrained VM, some prior setup ca
 
 ### Step 1. Verification
 
-Once your packstack run is complete, you're probably eager to verify that Ceilometer is properly installed and working it should.
+Once your `packstack` run is complete, you're probably eager to verify that Ceilometer is properly installed and working it should.
 
 Before we do that, a few words on how Ceilometer is realized as a set of agents and services. It comprises at least four separate daemons, each with a specific function in the metering pipeline:
 
@@ -49,7 +49,7 @@ Before we do that, a few words on how Ceilometer is realized as a set of agents 
 *   **collector** service: consumes AMQP notifications from the agents and other openstack services, then dispatch these data to the metering store
 *   **API** service: presents aggregated metering data to consumers (such as billing engines, analytics tools *etc*.)
 
- In a packstack "all in one" installation, all of these services will be running on your single node. In a wider deployment, the main location constraint is that the compute agent is required to run on all nova compute nodes. Assuming "all in one" for now, check that all services are running smoothly:
+ In a `packstack` "all in one" installation, all of these services will be running on your single node. In a wider deployment, the main location constraint is that the compute agent is required to run on all nova compute nodes. Assuming "all in one" for now, check that all services are running smoothly:
 
        export CEILO_SVCS='compute central collector api'
        for svc in $CEILO_SVCS ; do sudo service openstack-ceilometer-$svc status ; done
@@ -64,9 +64,9 @@ Getting up to speed with Ceilometer involves getting to grips a few basic concep
 
 #### Meters
 
-Meters simply measure a particular aspect of resource usage (e.g. the existence of a running instance) or of ongoing performance (e.g. the current CPU utilization % for that instance). As such meters exist per-resource, in that there is a separate cpu_util meter for example for each instance. The lifecycle of meters is also decoupled from the existence of the related resources, in the sense that the meter continues to exist *after* the resource has been terminated. While that may seem strange initially, think about how otherwise you could avoid being billed simply by shutting down all your instances the day before your cloud provider kicks off their monthly billing run!
+Meters simply measure a particular aspect of resource usage (e.g. the existence of a running instance) or of ongoing performance (e.g. the current CPU utilization % for that instance). As such meters exist per-resource, in that there is a separate `cpu_util` meter for example for each instance. The lifecycle of meters is also decoupled from the existence of the related resources, in the sense that the meter continues to exist *after* the resource has been terminated. While that may seem strange initially, think about how otherwise you could avoid being billed simply by shutting down all your instances the day before your cloud provider kicks off their monthly billing run!
 
-All meters have a string name, a unit of measurement, and a type indicating whether values are monotonically increasing ('cumulative'), interpreted as a change from the previous value ('delta'), or a standalone value relating only to the current duration ('gauge').
+All meters have a string name, a unit of measurement, and a type indicating whether values are monotonically increasing (`cumulative`), interpreted as a change from the previous value (`delta`), or a standalone value relating only to the current duration (`gauge`).
 
 In earlier iterations of Ceilometer, we often used 'counter' as a synonym for 'meter', and this usage though now deprecated persists in some older documentation and deprecated aspects of the command line interpreter.
 
@@ -90,7 +90,7 @@ Also there is some potential confusion in there being both a duration *and* a pe
 
 #### Pipelines
 
-Pipelines are composed of a metering data source that produces certain enumerated or wildcarded meters, which are fed through a chain of zero or more transformers to massage the data in various ways, before being emitted to the collector via a publisher.
+Pipelines are composed of a metering data source that produces certain enumerated or wildcarded meters at a certain cadence, which are fed through a chain of zero or more transformers to massage the data in various ways, before being emitted to the collector via a publisher.
 
 Example of transformers shipped with Ceilometer include:
 
@@ -111,6 +111,61 @@ These pipelines are configured via a YAML file which is explained in detail belo
 The shipped Ceilometer configuration is intended to be usable out-of-the-box. However, there are a few tweaks you may want to make while exploring Ceilometer functionality.
 
 #### Pipeline configuration
+
+The pipeline definitions are read by default from `/etc/ceilometer/pipeline.yaml` though this location may be overridden via the `pipeline_cfg_file` config option (for example to allow different ceilometer services use different pipelines.
+
+The most likely pipeline config elements you might want to experiment initially initially would be:
+
+*   **`interval`**: defines the cadence of data acquisition by controlling the polling period, which default to 600 seconds (10 minutes).
+*   **`meters`**: a list of meters that the current pipeline applies to, either explicitly enumerated with negation via `!` or wildcarded.
+*   **`transformers`**: a list of named transformers and their parameters, to be loaded as `stevedore` extensions.
+
+To become more familiar with the possibilities offered by this configuration file, let's examine the shipped `pipeline.yaml`:
+
+       ---
+       -
+           name: meter_pipeline
+           interval: 600
+           meters:
+               - "*"
+           transformers:
+           publishers:
+               - rpc://
+       -
+           name: cpu_pipeline
+           interval: 600
+           meters:
+               - "cpu"
+           transformers:
+               - name: "rate_of_change"
+                 parameters:
+                     target:
+                         name: "cpu_util"
+                         unit: "%"
+                         type: "gauge"
+                         scale: "100.0 / (10**9 * (resource_metadata.cpu_number or 1))"
+           publishers:
+               - rpc://
+
+This file defines two separate pipeline, named `meter_pipeline` and `cpu_pipeline`,
+
+The first is very straight-forward, running at the default cadence of 600s and applying to all primary meters (`meters: - "*"`) which are emitted unchanged over AMQP.
+
+The second is more interesting, applying to only the `cpu` meter, transforming this via the `rate_of_change` transformer into the derived `cpu_util` meter. The effect here is to transformer the primary observation of cumulative CPU time in nanosecond into a gauge value as a percentage of the notional maximum total CPU time over that preceding duration scaled by the number of vCPUs allocated to the instance. The scaling rule is expressed as a fragment of python which handles the percentage conversion, nanosecond scaling and taking the number of CPUs into account, all defined very concisely in configuration.
+
+An example modification would be something like increasing the cadence of `cpu_util` from once per 10 minutes to once a minute:
+
+       sudo sed -i '/^ *name: cpu_pipeline$/ { n ; s/interval: 600$/interval: 60/ }' /etc/ceilometer/pipeline.yaml
+       sudo service openstack-ceilometer-compute restart
+
+Note that we only need to restart the `compute` and not the `central` even though both share the same pipeline config by default, because the particular meter impacted by the change is only gathered by the former agent.
+
+#### Ceilometer service configuration
+
+The service configuration is read by default from two sources, via the same pattern as you've encountered with the other openstack services in RDO:
+
+*   **distribution config**: `/usr/share/ceilometer/ceilometer-dist.conf` containing the distro-specific overrides over upstream defaults
+*   **user-editable config**: `/etc/ceilometer/ceilometer.conf` containing commented-out setting for the all configuration options with help strings and default values
 
 </div>
 </div>
