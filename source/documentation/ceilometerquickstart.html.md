@@ -223,6 +223,36 @@ Wait for that instance to become active and we're good to go!
 
        watch 'nova show test_instance'
 
+#### Displaying meters
+
+Meters are displayed via the CLI `meter-list` command:
+
+       $ ceilometer meter-list
+       +----------------------------+------------+-----------+---------------+-----------+--------------+
+       | Name                       | Type       | Unit      | Resource ID   | User ID   | Project ID   |
+       +----------------------------+------------+-----------+---------------+-----------+--------------+
+       | cpu                        | cumulative | ns        | INSTANCE_ID_1 | USER_ID_A | PROJECT_ID_X |
+       | cpu                        | cumulative | ns        | INSTANCE_ID_2 | USER_ID_B | PROJECT_ID_Y |
+       | cpu                        | cumulative | ns        | INSTANCE_ID_3 | USER_ID_C | PROJECT_ID_Z |
+       | cpu_util                   | gauge      | %         | INSTANCE_ID_1 | USER_ID_A | PROJECT_ID_X |
+       | cpu_util                   | gauge      | %         | INSTANCE_ID_3 | USER_ID_C | PROJECT_ID_Z |
+       | disk.ephemeral.size        | gauge      | GB        | INSTANCE_ID_1 | USER_ID_A | PROJECT_ID_X |
+       | disk.ephemeral.size        | gauge      | GB        | INSTANCE_ID_2 | USER_ID_B | PROJECT_ID_Y |
+       | disk.ephemeral.size        | gauge      | GB        | INSTANCE_ID_3 | USER_ID_C | PROJECT_ID_Z |
+       | ... [snip]                                                                                     |
+       +----------------------------+------------+-----------+---------------+-----------+--------------+
+
+As you can see in the example output above, all meters are list for all resources that existed since metering began (modulo data expiry if configured). We can use the `--query` option to limit the output to a specific resource, project or user for example.
+
+       $ ceilometer meter-list --query project=PROJECT_ID_Y;user=USER_ID_B
+       +----------------------------+------------+-----------+---------------+-----------+--------------+
+       | Name                       | Type       | Unit      | Resource ID   | User ID   | Project ID   |
+       +----------------------------+------------+-----------+---------------+-----------+--------------+
+       | cpu                        | cumulative | ns        | INSTANCE_ID_2 | USER_ID_B | PROJECT_ID_Y |
+       | disk.ephemeral.size        | gauge      | GB        | INSTANCE_ID_2 | USER_ID_B | PROJECT_ID_Y |
+       | ... [snip]                                                                                     |
+       +----------------------------+------------+-----------+---------------+-----------+--------------+
+
 </div>
 </div>
 <Category:Documentation>
