@@ -64,15 +64,15 @@ Getting up to speed with Ceilometer involves getting to grips a few basic concep
 
 #### Meters
 
-Meters simply measure a particular aspect of resource usage (e.g. existence of running instance) or ongoing performance (e.g. the current CPU utilization % for that instance). As such meters exist per-resource, in that there is a separate cpu_util meter for example for each instance. The lifecycle of meters is also decoupled from the existence of the resource in the sense that the meter continues to exist *after* the resource has been terminated. While that may seem strange initially, think about how otherwise you could avoid being billed simply by shutting down all instances the day before your cloud provider kicks off their monthly billing run!
+Meters simply measure a particular aspect of resource usage (e.g. the existence of a running instance) or of ongoing performance (e.g. the current CPU utilization % for that instance). As such meters exist per-resource, in that there is a separate cpu_util meter for example for each instance. The lifecycle of meters is also decoupled from the existence of the related resources, in the sense that the meter continues to exist *after* the resource has been terminated. While that may seem strange initially, think about how otherwise you could avoid being billed simply by shutting down all your instances the day before your cloud provider kicks off their monthly billing run!
 
-All meters have a string name, a unit of measurement, and a type indicating whether values are monotonically increasing ('cumulative'), interpreted a change from the previous value ('delta'), a standalone value relating only to the current duration ('gauge').
+All meters have a string name, a unit of measurement, and a type indicating whether values are monotonically increasing ('cumulative'), interpreted as a change from the previous value ('delta'), or a standalone value relating only to the current duration ('gauge').
 
 In earlier iterations of Ceilometer, we often used 'counter' as a synonym for 'meter', and this usage though now deprecated persists in some older documentation and deprecated aspects of the command line interpreter.
 
 #### Samples
 
-Sample are simply individual data point associated with a particular meter. As such, all sample encompass the same attributes as the meter itself, but with the addition of a timestamp and and a value (otherwise known as the sample 'volume').
+Sample are simply individual datapoints associated with a particular meter. As such, all samples encompass the same attributes as the meter itself, but with the addition of a timestamp and and a value (otherwise known as the sample 'volume').
 
 #### Statistics
 
