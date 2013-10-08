@@ -242,7 +242,7 @@ Meters are displayed via the CLI `meter-list` command:
        | ... [snip]                                                                                     |
        +----------------------------+------------+-----------+---------------+-----------+--------------+
 
-As you can see in the example output above, all meters are list for all resources that existed since metering began (modulo data expiry if configured). We can use the `--query` option to limit the output to a specific resource, project or user for example.
+As you can see in the example output above, all meters are listed for all resources that existed since metering began (modulo data expiry if configured). We can use the `--query` option to limit the output to a specific resource, project or user for example.
 
        $ ceilometer meter-list --query project=PROJECT_ID_Y;user=USER_ID_B
        +----------------------------+------------+-----------+---------------+-----------+--------------+
@@ -252,6 +252,12 @@ As you can see in the example output above, all meters are list for all resource
        | disk.ephemeral.size        | gauge      | GB        | INSTANCE_ID_2 | USER_ID_B | PROJECT_ID_Y |
        | ... [snip]                                                                                     |
        +----------------------------+------------+-----------+---------------+-----------+--------------+
+
+The syntax of that `--query` (or `-q`) option is common across several CLI commands target'ing the v2 API, the syntax being:
+
+` -q `<field1><operator1><value1>`;`<field2><operator2><value2>`;...;`<field_n><operator_n><value_n>
+
+which are translated by the CLI to a sequence of [WSME](//pypi.python.org/pypi/WSME) query parameters.
 
 </div>
 </div>
