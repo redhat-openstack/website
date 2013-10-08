@@ -106,6 +106,20 @@ Example of transformers shipped with Ceilometer include:
 
 These pipelines are configured via a YAML file which is explained in detail below.
 
+#### Alarms
+
+Alarms are a new feature in Ceilometer for Havana intended to provide user-oriented Monitoring-as-a-Service for Openstack, with Heat autoscaling being the main motivating use-case, but also having general purpose utility. Essentially an alarm is just a set of rules defining a monitor, plus a current state, with edge-triggered actions associated with target states. These alarms follow a tri-state model of `ok`, `alarm`, and `insufficient data`.
+
+For conventional threshold-oriented alarms, state transitions are governed by:
+
+*   a *static* threshold value & comparison operator
+*   against which a selected meter statistic is compared
+*   over an evaluation window of configurable length into the recent past.
+
+We also support the concept of a meta-alarm, which aggregates over the current state of a set of other basic alarms combined via a logical operator (AND/OR).
+
+A key associated concept is the notion of *dimensioning* which defines the set of matching meters that feed into an alarm evaluation. Recall that meters are per-resource-instance, so in the simplest case an alarm might be defined over a particular meter applied to *all* resources visible to a particular user. More useful however would the option to explicitly select which specific resources we're interested in alarming on. On one extreme we would have narrowly dimensioned alarms where this selection would have only a single target (identified by resource ID). On the other extreme, we'd have widely dimensioned alarms where this selection identifies many resources over which the statistic is aggregated, for example all instances booted from a particular image or all instances with matching user metadata (the latter is how Heat identifies autoscaling groups).
+
 ### Step 3. Configuration of Ceilometer
 
 The shipped Ceilometer configuration is intended to be usable out-of-the-box. However, there are a few tweaks you may want to make while exploring Ceilometer functionality.
@@ -169,7 +183,7 @@ The service configuration is read by default from two sources, via the same patt
 
  If you wish to change some configuration option, the latter file is one to edit. This is laid out in the familiar sectioned format as provided by the Olso config library, with configuration options under `[DEFAULT]`, `[database]`, `[api]`, `[alarm]` *etc*.
 
-As always, you can choose to manually edit this file or else use the convenient `openstack-config` utility from the `openstack` package, for example:
+As always, you can choose to manually edit this file or else use the convenient `openstack-config` utility from the `openstack-utils` package, for example:
 
        sudo openstack-config --set /etc/ceilometer/ceilometer.conf DEFAULT debug true
 
