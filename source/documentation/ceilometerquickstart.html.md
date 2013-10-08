@@ -49,6 +49,45 @@ Before we do that, a few words on how Ceilometer is realized as a set of agents 
 *   **collector** service: consumes AMQP notifications from the agents and other openstack services, then dispatch these data to the metering store
 *   **API** service: presents aggregated metering data to consumers (such as billing engines, analytics tools *etc*.)
 
+ In a packstack "all in one" installation, all of these services will be running on your single node. In a wider deployment, the main location constraint is that the compute agent is required to run on all nova compute nodes. Assuming "all in one" for now, check that all services are running smoothly:
+
+       export CEILO_SVCS='compute central collector api'
+       for svc in $CEILO_SVCS ; do sudo service openstack-ceilometer-$svc status ; done
+
+For your peace of mind, ensure that there are no errors in the Ceilometer logs at this time:
+
+       for svc in $CEILO_SVCS ; do sudo grep ERROR /var/log/ceilometer/${svc}.log ; done
+
+### Step 2. Basic Concepts
+
+Getting up to speed with Ceilometer involves getting to grips a few basic concepts and terms.
+
+#### Meters
+
+Meters simply measure a particular aspect of resource usage (e.g. existence of running instance) or ongoing performance (e.g. the current CPU utilization % for that instance). As such meters exist per-resource, in that there is a separate cpu_util meter for example for each instance. The lifecycle of meters is also decoupled from the existence of the resource in the sense that the meter continues to exist *after* the resource has been terminated. While that may seem strange initially, think about how otherwise you could avoid being billed simply by shutting down all instances the day before your cloud provider kicks off their monthly billing run!
+
+All meters have a string name, a unit of measurement, and a type indicating whether values are monotonically increasing ('cumulative'), interpreted a change from the previous value ('delta'), a standalone value relating only to the current duration ('gauge').
+
+In earlier iterations of Ceilometer, we often used 'counter' as a synonym for 'meter', and this usage though now deprecated persists in some older documentation and deprecated aspects of the command line interpreter.
+
+#### Samples
+
+Sample are simply individual data point associated with a particular meter. As such, all sample encompass the same attributes as the meter itself, but with the addition of a timestamp and and a value (otherwise known as the sample 'volume').
+
+#### Statistics
+
+If a sample is a single datapoint, then a statistic is a set of such datapoints aggregates over a time duration. Ceilometer currently employs 5 different aggregation functions:
+
+*   **count**: the number of samples in each period
+*   **max**: the maxima of the sample volumes in each period
+*   **min**: the maxima of the sample volumes in each period
+*   **avg**: the maxima of the sample volumes over each period
+*   **sum**: the sum of the sample volumes over each period
+
+ Note that *all* of these aggregation functions are applied for every statistic calculated. This may seem wasteful if you're only interested in one of the values, but it practice hardly any extra computation cost is incurred due to the map-reduce scheme used to calculate these values.
+
+Also there is some potential confusion in there being both a duration *and* a period associated with these statistics. The duration is simply the overall time-span over which a single query applies, where the period is the time-slice length into which this duration is divided for aggregation purposes. So for example, if I was interested in the hourly average CPU utilization over a day, I would provide midnight-to-midnight start and end timestamps on my query giving a duration of 24 hours, while also specifying a period of 3600 seconds to indicate that the finegrained samples should be aggregated over each hour within that day.
+
 </div>
 </div>
 <Category:Documentation>
