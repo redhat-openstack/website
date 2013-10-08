@@ -8,6 +8,8 @@ wiki_revision_count: 43
 wiki_last_updated: 2014-11-26
 ---
 
+__NOTOC__
+
 <div class="bg-boxes bg-boxes-single">
 <div class="row">
 <div class="offset3 span8">
@@ -164,6 +166,14 @@ The service configuration is read by default from two sources, via the same patt
 
 *   **distribution config**: `/usr/share/ceilometer/ceilometer-dist.conf` containing the distro-specific overrides over upstream defaults
 *   **user-editable config**: `/etc/ceilometer/ceilometer.conf` containing commented-out setting for the all configuration options with help strings and default values
+
+ If you wish to change some configuration option, the latter file is one to edit. This is laid out in the familiar sectioned format as provided by the Olso config library, with configuration options under `[DEFAULT]`, `[database]`, `[api]`, `[alarm]` *etc*.
+
+As always, you can choose to manually edit this file or else use the convenient `openstack-config` utility from the `openstack` package, for example:
+
+       sudo openstack-config --set /etc/ceilometer/ceilometer.conf DEFAULT debug true
+
+to set the logging level to debug as opposed to the default warning. As always, services must be restarted for config changes to take effect.
 
 </div>
 </div>
