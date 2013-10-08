@@ -88,6 +88,30 @@ If a sample is a single datapoint, then a statistic is a set of such datapoints 
 
 Also there is some potential confusion in there being both a duration *and* a period associated with these statistics. The duration is simply the overall time-span over which a single query applies, where the period is the time-slice length into which this duration is divided for aggregation purposes. So for example, if I was interested in the hourly average CPU utilization over a day, I would provide midnight-to-midnight start and end timestamps on my query giving a duration of 24 hours, while also specifying a period of 3600 seconds to indicate that the finegrained samples should be aggregated over each hour within that day.
 
+#### Pipelines
+
+Pipelines are composed of a metering data source that produces certain enumerated or wildcarded meters, which are fed through a chain of zero or more transformers to massage the data in various ways, before being emitted to the collector via a publisher.
+
+Example of transformers shipped with Ceilometer include:
+
+*   **unit_conversion**: apply a scaling conversion to allow a different to be unit that originally supplied with the observed data, for example converting a temperature from °F to °C (the scaling rule is configurable, so that any reasonable unit conversion expessable in python may be implemented)
+*   **rate_of_change**: derives a secondary meter from directly observed data based on the calculated rate of change by sampling the sequence of datapoint, with an associated scaling rule
+*   **accumulator**: gather several datapoints before emitting in a batch
+
+ Multiple publishers are also supported, including:
+
+*   **rpc://**: emit metering data for collector over AMQP
+*   **<udp://>**: emit metering data for collector over lossy UDP (useful for metric data collected for alarming purposes, but not suitable for metering data to feed into a billing system due to the obviously retention requirements)
+*   **<file://>**: emit metering data into a file
+
+These pipelines are configured via a YAML file which is explained in detail below.
+
+### Step 3. Configuration of Ceilometer
+
+The shipped Ceilometer configuration is intended to be usable out-of-the-box. However, there are a few tweaks you may want to make while exploring Ceilometer functionality.
+
+#### Pipeline configuration
+
 </div>
 </div>
 <Category:Documentation>
