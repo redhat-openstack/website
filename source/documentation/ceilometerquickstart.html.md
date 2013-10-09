@@ -366,11 +366,11 @@ This creates an alarm that will fire when the average CPU utilization for an ind
 You can display all your alarms via:
 
        $ ceilometer alarm-list 
-       +----------+-----------------------+-------------------+---------+------------+---------------------------------+
-       | Alarm ID | Name                  | State             | Enabled | Continuous | Alarm condition                 |
-       +----------+-----------------------+-------------------+---------+------------+---------------------------------+
-       | ALARM_ID | cpu_high              | insufficient data | True    | False      | cpu_util > 70.0 during 3 x 300s |
-       +----------+-----------------------+-------------------+---------+------------+---------------------------------+
+       +----------+----------+-------------------+---------+------------+---------------------------------+
+       | Alarm ID | Name     | State             | Enabled | Continuous | Alarm condition                 |
+       +----------+----------+-------------------+---------+------------+---------------------------------+
+       | ALARM_ID | cpu_high | insufficient data | True    | False      | cpu_util > 70.0 during 3 x 300s |
+       +----------+----------+-------------------+---------+------------+---------------------------------+
 
 In this case, the state is reported as `insufficient data` which could indicate that:
 
