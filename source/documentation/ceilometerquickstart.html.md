@@ -322,6 +322,24 @@ Individual datapoints for a particular meter may be aggregated into consolidated
        | ...[snip]
        +--------+--------------+------------+-------+-----+-----+-----+-----+----------+----------------+----
 
+#### Using alarms
+
+Before creating any alarms, you'll need to ensure the Ceilometer alarming services are running (at the time of writing, these new services are not yet fired up during a `packstack` install:
+
+       sudo yum install -y openstack-ceilometer-alarm
+       export CEILO_ALARM_SVCS='evaluator notifier'
+       for svc in $CEILO_ALARM_SVCS; do sudo service openstack-ceilometer-alarm-$svc start; done
+
+An example of creating an threshold oriented alarm, based on a upper bound on the CPU utilization for a particular instance:
+
+       alarm-threshold-create --name cpu_high --description 'instance running hot'  \
+         --meter-name cpu_util  --threshold 70.0 --comparison-operator gt  --statistic avg \
+         --period 300 --evaluation-periods 3 \
+         --alarm-action 'log://' \
+         --query resource_id=INSTANCE_ID
+
+This creates an alarm that will fire when the average CPU utilization for an individual instance exceeds 70% for three consecutive 5 minute periods. The notification is this is simply a log message, though it could alternatively be a webhook URL.
+
 </div>
 </div>
 <Category:Documentation>
