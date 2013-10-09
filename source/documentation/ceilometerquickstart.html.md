@@ -259,6 +259,39 @@ The syntax of that `--query` (or `-q`) option is common across several CLI comma
 
 which are translated by the CLI to a sequence of [WSME](//pypi.python.org/pypi/WSME) query parameters.
 
+Individual datapoints for a particular meter name are displayed via the CLI `samples-list` command:
+
+       $ ceilometer sample-list --meter cpu
+       +---------------+------+------------+---------------+------+---------------------+
+       | Resource ID   | Name | Type       | Volume        | Unit | Timestamp           |
+       +---------------+------+------------+---------------+------+---------------------+
+       | INSTANCE_ID_1 | cpu  | cumulative | 1.6844e+11    | ns   | 2013-10-01T08:48:29 |
+       | INSTANCE_ID_1 | cpu  | cumulative | 1.7039e+11    | ns   | 2013-10-01T08:58:28 |
+       | INSTANCE_ID_1 | cpu  | cumulative | 1.7234e+11    | ns   | 2013-10-01T09:08:28 |
+       | INSTANCE_ID_1 | cpu  | cumulative | 1.743e+11     | ns   | 2013-10-01T09:18:28 |
+       | INSTANCE_ID_1 | cpu  | cumulative | 1.7626e+11    | ns   | 2013-10-01T09:28:28 |
+       | ... [snip]                                                                     |
+       | INSTANCE_ID_2 | cpu  | cumulative | 2.9833e+11    | ns   | 2013-10-01T08:48:29 |
+       | INSTANCE_ID_2 | cpu  | cumulative | 2.6028e+11    | ns   | 2013-10-01T08:58:28 |
+       | INSTANCE_ID_2 | cpu  | cumulative | 3.7156e+11    | ns   | 2013-10-01T09:08:28 |
+       | INSTANCE_ID_2 | cpu  | cumulative | 3.7987e+11    | ns   | 2013-10-01T09:18:28 |
+       | INSTANCE_ID_2 | cpu  | cumulative | 2.6555e+11    | ns   | 2013-10-01T09:28:28 |
+       | ... [snip]                                                                     |
+       +---------------+------+------------+---------------+------+---------------------+
+
+Note that the samples relate to multiple resources (assuming more than one instances was spun up in this case) and are grouped by resource ID, and sorted by timestamp. Since the query applies to this meter name as it pertains to *all* resources, if metering has been running for any reasonable duration, this command unadorned can turn into a bit of a firehose in terms the sheer volume of data returned. As before, we can rely on the `-q` option to constrain the query, for example by resource id and timestamp:
+
+       $ ceilometer sample-list --meter cpu -q 'resource_id=INSTANCE_ID_1;timestamp>2013-10-01T09:00:00;timestamp<=2013-10-01T09:30:00'
+       +---------------+------+------------+---------------+------+---------------------+
+       | Resource ID   | Name | Type       | Volume        | Unit | Timestamp           |
+       +---------------+------+------------+---------------+------+---------------------+
+       | INSTANCE_ID_1 | cpu  | cumulative | 1.7234e+11    | ns   | 2013-10-01T09:08:28 |
+       | INSTANCE_ID_1 | cpu  | cumulative | 1.743e+11     | ns   | 2013-10-01T09:18:28 |
+       | INSTANCE_ID_1 | cpu  | cumulative | 1.7626e+11    | ns   | 2013-10-01T09:28:28 |
+       +---------------+------+------------+---------------+------+---------------------+
+
+to restrict the query to samples for a particular instance that occurred within the specified half hour time window,
+
 </div>
 </div>
 <Category:Documentation>
