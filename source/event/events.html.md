@@ -11,7 +11,7 @@ wiki_last_updated: 2015-08-31
 
 There are lots of events, around the world, where you can hang out with people from the RDO community. Some upcoming events are:
 
-*   [OpenStack 2013.2 (Havana) release](https://wiki.openstack.org/wiki/Releases) - October 17
+*   [OpenStack 2013.2 (Havana) release](https://wiki.openstack.org/wiki/Havana_Release_Schedule) - October 17
 *   [OpenStack Netherlands Meetup](http://www.meetup.com/Openstack-Amsterdam/events/137087002/) - October 17
 *   [LinuxCon Europe, Edinburgh, Scotland](http://events.linuxfoundation.org/events/linuxcon-europe) - October 21-23, also co-located with the [KVM Forum](http://events.linuxfoundation.org/events/kvm-forum)
 *   [RDO_Test_Day_October_2013 RDO Havana Release Test Day](RDO_Test_Day_October_2013 RDO Havana Release Test Day) - October 29-30
