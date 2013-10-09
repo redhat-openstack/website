@@ -324,13 +324,13 @@ Individual datapoints for a particular meter may be aggregated into consolidated
 
 #### Using alarms
 
-Before creating any alarms, you'll need to ensure the Ceilometer alarming services are running (at the time of writing, these new services are not yet fired up during a `packstack` install:
+Before creating any alarms, you'll need to ensure the Ceilometer alarming services are running (at the time of writing, these new services are not yet fired up during a `packstack` install):
 
        sudo yum install -y openstack-ceilometer-alarm
        export CEILO_ALARM_SVCS='evaluator notifier'
        for svc in $CEILO_ALARM_SVCS; do sudo service openstack-ceilometer-alarm-$svc start; done
 
-An example of creating an threshold oriented alarm, based on a upper bound on the CPU utilization for a particular instance:
+An example of creating a threshold-oriented alarm, based on a upper bound on the CPU utilization for a particular instance:
 
        $ ceilometer alarm-threshold-create --name cpu_high --description 'instance running hot'  \
          --meter-name cpu_util  --threshold 70.0 --comparison-operator gt  --statistic avg \
@@ -374,9 +374,9 @@ You can display all your alarms via:
 
 In this case, the state is reported as `insufficient data` which could indicate that:
 
-*   the metrics have been gathered about this instance for the evaluation window into the recent past
-*   or the identified instance is not visible to the user/tenant owning the alarm
-*   or simply that an alarm evaluation cycle hasn't kicked off since the alarm was created (by default alarm are evaluated once per minute).
+*   metrics have not yet been gathered about this instance over the evaluation window into the recent past (e.g. a brand-new instance)
+*   or, that the identified instance is not visible to the user/tenant owning the alarm
+*   or, simply that an alarm evaluation cycle hasn't kicked off since the alarm was created (by default, alarms are evaluated once per minute).
 
 </div>
 </div>
