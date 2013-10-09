@@ -299,11 +299,28 @@ to restrict the query to samples for a particular instance that occurred within 
 Individual datapoints for a particular meter may be aggregated into consolidated statistics via the CLI `statistics` command:
 
        $ ceilometer statistics --meter cpu_util
-       +--------+--------------+--------------+-------+------+-----+-----+-----+----------+----------------+--------------+
-       | Period | Period Start | Period End | Count | Min  | Max | Sum | Avg | Duration | Duration Start | Duration End |
-       +--------+--------------+--------------+-------+------+-----+-----+-----+----------+----------------+--------------+
-       | 0      | PERIOD_START | PERIOD_END | 2024  | 0.25 | 6.2 | 5985.4 | 2.9 | 85196.0  | DURATION_START | DURATION_END |
-       +--------+--------------+--------------+-------+------+-----+-----+-----+----------+----------------+--------------+
+       +--------+--------------+------------+-------+------+-----+-----+-----+----------+----------------+----
+       | Period | Period Start | Period End | Count | Min  | Max | Sum | Avg | Duration | Duration Start | ...
+       +--------+--------------+------------+-------+------+-----+-----+-----+----------+----------------+----
+       | 0      | PERIOD_START | PERIOD_END | 2024  | 0.25 | 6.2 | 550 | 2.9 | 85196.0  | DURATION_START | ...
+       +--------+--------------+------------+-------+------+-----+-----+-----+----------+----------------+----
+
+(output is narrowed for brevity here). The thing to notice here is that by default *all* samples for *all* meters matching the given name are aggregated for *all* time. It would be more normal to require that:
+
+1.  the samples feeding into the statistics are constrained by resource or some other attribute
+2.  the overall duration is bounded by start and end timestamp
+3.  this bounded duration is further subdivided into timeslices
+
+ These extra constraints may all be expressed on the command line:
+
+       $ ceilometer --debug statistics -m cpu_util -q 'timestamp>START;timestamp<=END' --period 60
+       +--------+--------------+------------+-------+-----+-----+-----+-----+----------+----------------+----
+       | Period | Period Start | Period End | Count | Min | Max | Sum | Avg | Duration | Duration Start | ...
+       +--------+--------------+------------+-------+-----+-----+-----+-----+----------+----------------+----
+       | 60     | START        | START+60   | 2     | 1.5 | 2.5 | 4.0 | 2.0 | 0.0      | DURATION_START | ...
+       | 60     | START+60     | START+120  | 2     | 2.5 | 3.5 | 6.0 | 3.0 | 0.0      | DURATION_START | ...
+       | ...[snip]
+       +--------+--------------+------------+-------+-----+-----+-----+-----+----------+----------------+----
 
 </div>
 </div>
