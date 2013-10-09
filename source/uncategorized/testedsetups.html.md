@@ -12,6 +12,10 @@ wiki_last_updated: 2014-01-06
 
 October Test Day information at [RDO_Test_Day_October_2013](RDO_Test_Day_October_2013). September 10 Test Day information at [RDO_Test_Day_September_2013](RDO_Test_Day_September_2013)
 
+## Workarounds
+
+When you hit a problem, check out the [Workarounds](Workarounds) page first. Maybe the problem is already there including a workaround. If not, please add it to prevent duplicating effort.
+
 ## Packstack Based Installation (Nova Networking)
 
 | Config Name                   | Release          | BaseOS     | Status                                               | HOWTO                                              | Who                | Date       | BZ/LP                                                                                                                                                                                                                                                                                                                   | Notes Page                                                                                                                                                                      |
@@ -100,7 +104,3 @@ Following these two guides would be a good start:
 
 *   [ Running an Instance ](Running_an_instance)
 *   [ Creating a Floating IP Range and associating it to your instance ](Floating_IP_range)
-
-## Workarounds
-
-When you hit a problem, check out the [Workarounds](Workarounds) page. Maybe the problem is already there including a workaround. If not, please add it to prevent duplicating effort.
