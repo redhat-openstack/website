@@ -332,7 +332,7 @@ Before creating any alarms, you'll need to ensure the Ceilometer alarming servic
 
 An example of creating an threshold oriented alarm, based on a upper bound on the CPU utilization for a particular instance:
 
-       alarm-threshold-create --name cpu_high --description 'instance running hot'  \
+       ceilometer alarm-threshold-create --name cpu_high --description 'instance running hot'  \
          --meter-name cpu_util  --threshold 70.0 --comparison-operator gt  --statistic avg \
          --period 300 --evaluation-periods 3 \
          --alarm-action 'log://' \
