@@ -52,4 +52,6 @@ Next use the configuration from [ HA Proxy Configuration](Load_Balance_OpenStack
 
 In this example, HA Proxy is added to the same test-group as before. That way it will run on the same host as the floating ip.
 
-# In progress... More coming.
+## Finishing up
+
+At this point all the services are being managed by either pacemaker or HAProxy. The final step is to point all the config files for the OpenStack cluster to use the floating ip address. There are quite a few places this should be updated.
