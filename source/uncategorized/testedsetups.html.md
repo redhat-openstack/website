@@ -10,7 +10,7 @@ wiki_last_updated: 2014-01-06
 
 # Tested Setups
 
-September 10 Test Day details at [RDO_Test_Day_September_2013](RDO_Test_Day_September_2013)
+October Test Day information at [RDO_Test_Day_October_2013](RDO_Test_Day_October_2013). September 10 Test Day information at [RDO_Test_Day_September_2013](RDO_Test_Day_September_2013)
 
 ## Packstack Based Installation (Nova Networking)
 
