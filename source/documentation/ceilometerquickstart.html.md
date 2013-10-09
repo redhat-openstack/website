@@ -225,7 +225,7 @@ Wait for that instance to become active and we're good to go!
 
 #### Displaying meters
 
-Meters are displayed via the CLI `meter-list` command:
+Individual meters are displayed via the CLI `meter-list` command:
 
        $ ceilometer meter-list
        +----------------------------+------------+-----------+---------------+-----------+--------------+
@@ -259,6 +259,8 @@ The syntax of that `--query` (or `-q`) option is common across several CLI comma
 
 which are translated by the CLI to a sequence of [WSME](//pypi.python.org/pypi/WSME) query parameters.
 
+#### Displaying datapoints
+
 Individual datapoints for a particular meter name are displayed via the CLI `samples-list` command:
 
        $ ceilometer sample-list --meter cpu
@@ -291,6 +293,17 @@ Note that the samples relate to multiple resources (assuming more than one insta
        +---------------+------+------------+---------------+------+---------------------+
 
 to restrict the query to samples for a particular instance that occurred within the specified half hour time window,
+
+#### Aggregating statistics
+
+Individual datapoints for a particular meter may be aggregated into consolidated statistics via the CLI `statistics` command:
+
+       $ ceilometer statistics --meter cpu_util
+       +--------+--------------+--------------+-------+------+-----+-----+-----+----------+----------------+--------------+
+       | Period | Period Start | Period End | Count | Min  | Max | Sum | Avg | Duration | Duration Start | Duration End |
+       +--------+--------------+--------------+-------+------+-----+-----+-----+----------+----------------+--------------+
+       | 0      | PERIOD_START | PERIOD_END | 2024  | 0.25 | 6.2 | 5985.4 | 2.9 | 85196.0  | DURATION_START | DURATION_END |
+       +--------+--------------+--------------+-------+------+-----+-----+-----+----------+----------------+--------------+
 
 </div>
 </div>
