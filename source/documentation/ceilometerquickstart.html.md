@@ -347,7 +347,7 @@ An example of creating an threshold oriented alarm, based on a upper bound on th
        | evaluation_periods        | 3                                                   |
        | statistic                 | avg                                                 |
        | enabled                   | True                                                |
-       | period                    | 300                                                 |
+       | period                    | 600                                                 |
        | alarm_id                  | ALARM_ID                                            |
        | state                     | insufficient data                                   |
        | query                     | resource_id == INSTANCE_ID                          |
@@ -361,7 +361,22 @@ An example of creating an threshold oriented alarm, based on a upper bound on th
        | description               | instance running hot                                |
        +---------------------------+-----------------------------------------------------+
 
-This creates an alarm that will fire when the average CPU utilization for an individual instance exceeds 70% for three consecutive 5 minute periods. The notification is this is simply a log message, though it could alternatively be a webhook URL.
+This creates an alarm that will fire when the average CPU utilization for an individual instance exceeds 70% for three consecutive 10 minute periods. The notification is this case is simply a log message, though it could alternatively be a webhook URL.
+
+You can display all your alarms via:
+
+       $ ceilometer alarm-list 
+       +----------+-----------------------+-------------------+---------+------------+---------------------------------+
+       | Alarm ID | Name                  | State             | Enabled | Continuous | Alarm condition                 |
+       +----------+-----------------------+-------------------+---------+------------+---------------------------------+
+       | ALARM_ID | cpu_high              | insufficient data | True    | False      | cpu_util > 70.0 during 3 x 300s |
+       +----------+-----------------------+-------------------+---------+------------+---------------------------------+
+
+In this case, the state is reported as `insufficient data` which could indicate that:
+
+*   the metrics have been gathered about this instance for the evaluation window into the recent past
+*   or the identified instance is not visible to the user/tenant owning the alarm
+*   or simply that an alarm evaluation cycle hasn't kicked off since the alarm was created (by default alarm are evaluated once per minute).
 
 </div>
 </div>
