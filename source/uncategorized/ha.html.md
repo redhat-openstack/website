@@ -20,6 +20,9 @@ Start by setting each control node up as you would a non-HA/LB control node. Onc
 
 [ Installing Multinode Havana w/GRE](GettingStartedHavana_w_GRE) will walk through a multinode installation using GRE. This is the installation needed to proceed with HA and LB configuration. Use that document to install each of your control nodes. The number of compute nodes is up to you. You can specify the same or different compute node(s) for each install. You will update their settings later to make sure they're talking to the control nodes properly. The important piece in this installation is to separate your control from your compute nodes, that you do multiple control node installations (run that doc once for each control node) and that GRE is setup.
 
+Be sure to provision your nodes with RHEL 6.5+
+The pacemaker features in this document require the version of pacemaker in 6.5.
+
 ## High Availability Configuration
 
 Now that the control nodes are installed, the next step is to cluster them. This is accomplished by having them share a database store and ensuring that messaging is highly available.
