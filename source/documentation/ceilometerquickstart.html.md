@@ -332,11 +332,34 @@ Before creating any alarms, you'll need to ensure the Ceilometer alarming servic
 
 An example of creating an threshold oriented alarm, based on a upper bound on the CPU utilization for a particular instance:
 
-       ceilometer alarm-threshold-create --name cpu_high --description 'instance running hot'  \
+       $ ceilometer alarm-threshold-create --name cpu_high --description 'instance running hot'  \
          --meter-name cpu_util  --threshold 70.0 --comparison-operator gt  --statistic avg \
          --period 300 --evaluation-periods 3 \
          --alarm-action 'log://' \
          --query resource_id=INSTANCE_ID
+       +---------------------------+-----------------------------------------------------+
+       | Property                  | Value                                               |
+       +---------------------------+-----------------------------------------------------+
+       | meter_name                | cpu_util                                            |
+       | alarm_actions             | [u'log://']                                         |
+       | user_id                   | USER_ID                                             |
+       | name                      | cpu_high                                            |
+       | evaluation_periods        | 3                                                   |
+       | statistic                 | avg                                                 |
+       | enabled                   | True                                                |
+       | period                    | 300                                                 |
+       | alarm_id                  | ALARM_ID                                            |
+       | state                     | insufficient data                                   |
+       | query                     | resource_id == INSTANCE_ID                          |
+       | insufficient_data_actions | []                                                  |
+       | repeat_actions            | False                                               |
+       | threshold                 | 70.0                                                |
+       | ok_actions                | []                                                  |
+       | project_id                | PROJECT_ID                                          |
+       | type                      | threshold                                           |
+       | comparison_operator       | gt                                                  |
+       | description               | instance running hot                                |
+       +---------------------------+-----------------------------------------------------+
 
 This creates an alarm that will fire when the average CPU utilization for an individual instance exceeds 70% for three consecutive 5 minute periods. The notification is this is simply a log message, though it could alternatively be a webhook URL.
 
