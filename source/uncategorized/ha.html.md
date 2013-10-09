@@ -40,9 +40,10 @@ HA Proxy is used to load balance the services. It should be installed on each of
 
     # yum install -y haproxy
 
-Next use the configuration from [ HA Proxy Configuration](Load_Balance_OpenStack_API#HAProxy) for HA Proxy. - Keepalived will not be used, pacemaker will handle keeping HA Proxy highly available. - The configuration on that wiki doc refers to quantum. The ports are the same in neutron, replace quantum with neutron if you want to.
-
-Once HA Proxy is configured it can be added to pacemaker as a resource to ensure that it's kept highly available.
+Next use the configuration from [ HA Proxy Configuration](Load_Balance_OpenStack_API#HAProxy) for HA Proxy.
+* Keepalived will not be used, pacemaker will handle keeping HA Proxy highly available.
+* The configuration on that wiki doc refers to quantum. The ports are the same in neutron, replace quantum with neutron if you want to.
+ Once HA Proxy is configured it can be added to pacemaker as a resource to ensure that it's kept highly available.
 
     node1$ pcs resource create qpidd lsb:qpidd --group test-group
 
