@@ -378,6 +378,47 @@ In this case, the state is reported as `insufficient data` which could indicate 
 *   or, that the identified instance is not visible to the user/tenant owning the alarm
 *   or, simply that an alarm evaluation cycle hasn't kicked off since the alarm was created (by default, alarms are evaluated once per minute).
 
+ Once the state of the alarm has settled down, we might decide that we set that bar too low with 70%, in which case the threshold (or most any other alarm attribute) can be updated as follows:
+
+       $ ceilometer alarm-update --threshold 75 -a ALARM_ID
+       +---------------------------+-----------------------------------------------------+
+       | Property                  | Value                                               |
+       +---------------------------+-----------------------------------------------------+
+       | meter_name                | cpu_util                                            |
+       | alarm_actions             | [u'log://']                                         |
+       | user_id                   | USER_ID                                             |
+       | name                      | cpu_high                                            |
+       | evaluation_periods        | 3                                                   |
+       | statistic                 | avg                                                 |
+       | enabled                   | True                                                |
+       | period                    | 600                                                 |
+       | alarm_id                  | ALARM_ID                                            |
+       | state                     | insufficient data                                   |
+       | query                     | resource_id == INSTANCE_ID                          |
+       | insufficient_data_actions | []                                                  |
+       | repeat_actions            | False                                               |
+       | threshold                 | 75.0                                                |
+       | ok_actions                | []                                                  |
+       | project_id                | PROJECT_ID                                          |
+       | type                      | threshold                                           |
+       | comparison_operator       | gt                                                  |
+       | description               | instance running hot                                |
+       +---------------------------+-----------------------------------------------------+
+
+Over time the state of the alarm may change often, especially if the threshold is chosen to be close to the trending value of the statistic. We can follow the history of an alarm over its lifecycle via the audit API:
+
+       $ ceilometer alarm-history -a ALARM_ID
+       +------------------+----------------------------+---------------------------------------+
+       | Type             | Timestamp                  | Detail                                |
+       +------------------+----------------------------+---------------------------------------+
+       | creation         | 2013-10-01T16:20:29.238000 | name: cpu_high                        |
+       |                  |                            | description: instance running hot     |
+       |                  |                            | type: threshold                       |
+       |                  |                            | rule: cpu_util > 70.0 during 3 x 600s |
+       | state transition | 2013-10-01T16:20:40.626000 | state: ok                             |
+       | rule change      | 2013-10-01T16:22:40.718000 | rule: cpu_util > 75.0 during 3 x 600s |
+       +------------------+----------------------------+---------------------------------------+
+
 </div>
 </div>
 <Category:Documentation>
