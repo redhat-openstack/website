@@ -334,7 +334,7 @@ An example of creating a threshold-oriented alarm, based on a upper bound on the
 
        $ ceilometer alarm-threshold-create --name cpu_high --description 'instance running hot'  \
          --meter-name cpu_util  --threshold 70.0 --comparison-operator gt  --statistic avg \
-         --period 300 --evaluation-periods 3 \
+         --period 600 --evaluation-periods 3 \
          --alarm-action 'log://' \
          --query resource_id=INSTANCE_ID
        +---------------------------+-----------------------------------------------------+
@@ -369,7 +369,7 @@ You can display all your alarms via:
        +----------+----------+-------------------+---------+------------+---------------------------------+
        | Alarm ID | Name     | State             | Enabled | Continuous | Alarm condition                 |
        +----------+----------+-------------------+---------+------------+---------------------------------+
-       | ALARM_ID | cpu_high | insufficient data | True    | False      | cpu_util > 70.0 during 3 x 300s |
+       | ALARM_ID | cpu_high | insufficient data | True    | False      | cpu_util > 70.0 during 3 x 600s |
        +----------+----------+-------------------+---------+------------+---------------------------------+
 
 In this case, the state is reported as `insufficient data` which could indicate that:
