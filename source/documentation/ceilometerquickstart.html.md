@@ -134,7 +134,7 @@ The most likely pipeline config elements you might want to experiment initially 
 *   **`meters`**: a list of meters that the current pipeline applies to, either explicitly enumerated with negation via `!` or wildcarded.
 *   **`transformers`**: a list of named transformers and their parameters, to be loaded as `stevedore` extensions.
 
-To become more familiar with the possibilities offered by this configuration file, let's examine the shipped `pipeline.yaml`:
+ To become more familiar with the possibilities offered by this configuration file, let's examine the shipped `pipeline.yaml`:
 
        ---
        -
