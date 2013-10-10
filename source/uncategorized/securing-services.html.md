@@ -173,3 +173,33 @@ Configuring qpidd does not currently work without making some manual changes, de
       qpid_port=5671
 
 *   Restart the nova and cinder services
+
+## horizon/dashboard
+
+The actual configuration files may vary greatly depending on the mechanism used to install the Openstack service. These instructions are for a Foreman-managed installation. One may need to vary the configuration file used.
+
+To manually configure the horizon/dashboard service you will need to obtain an SSL server certificate and private key, and the CA certificate in a file.
+
+*   Install the mod_ssl package
+
+      # yum install mod_ssl
+
+*   Modify /etc/httpd/conf/httpd.conf and add
+
+      Listen 0.0.0.0:443
+      SSLEngine on
+      SSLCertificateKeyFile /path/to/server.key
+      SSLCertificateFile /path/to/server.crt
+      SSLCertificateCAFile /path/to/ca.crt
+
+*   Restart httpd
+
+Some care is needed depending on your configuration. You may already have a default VirtualHost configured for port 443. It very much depends on your distribution and how Openstack was installed.
+
+You can optionally remove the listener on port 80, or always forward requests made on the non-secure port to the secure port by adding this to your configuration file and restarting httpd:
+
+      RewriteEngine On
+      RewriteCond %{HTTPS} !=on
+      RewriteRule ^/?(.*) `[`https://`](https://)`%{SERVER_NAME}/$1 [R,L]
+
+Automating this configuration relies on upstream patch <https://review.openstack.org/49799> . The current horizon puppet module includes a listen_ssl option which makes Apache listen on port 443 but it doesn't require the mod_ssl package or enable the other SSL configuration options.
