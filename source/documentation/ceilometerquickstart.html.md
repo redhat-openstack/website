@@ -405,6 +405,8 @@ In this case, the state is reported as `insufficient data` which could indicate 
        | description               | instance running hot                                |
        +---------------------------+-----------------------------------------------------+
 
+The change will take effect from the next evaluation cycle, which by default occurs every minute.
+
 Over time the state of the alarm may change often, especially if the threshold is chosen to be close to the trending value of the statistic. We can follow the history of an alarm over its lifecycle via the audit API:
 
        $ ceilometer alarm-history -a ALARM_ID
@@ -418,6 +420,14 @@ Over time the state of the alarm may change often, especially if the threshold i
        | state transition | 2013-10-01T16:20:40.626000 | state: ok                             |
        | rule change      | 2013-10-01T16:22:40.718000 | rule: cpu_util > 75.0 during 3 x 600s |
        +------------------+----------------------------+---------------------------------------+
+
+Finally, an alarm that's no longer required can be disabled:
+
+      $ ceilometer alarm-update --enabled False -a ALARM_ID
+
+or deleted permanently:
+
+      $ ceilometer alarm-delete -a ALARM_ID
 
 </div>
 </div>
