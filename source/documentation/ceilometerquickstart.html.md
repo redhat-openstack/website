@@ -12,7 +12,7 @@ __NOTOC__
 
 <div class="bg-boxes bg-boxes-single">
 <div class="row">
-<div class="offset3 span8">
+<div class="offset3 span8 pull-s">
 # Ceilometer Quickstart
 
 This guide is intended to get you up and running quickly with Ceilometer:
