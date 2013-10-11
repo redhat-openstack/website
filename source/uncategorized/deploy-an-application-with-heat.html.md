@@ -19,8 +19,6 @@ It is time now to launch your first multi-instance cloud application! There are 
 
 `$ wget `[`https://raw.github.com/openstack/heat-templates/master/cfn/F17/WordPress_Composed_Instances.template`](https://raw.github.com/openstack/heat-templates/master/cfn/F17/WordPress_Composed_Instances.template)
 
-Every template also provides you with a list of usable distros and map these into an AMI string, for each arch. You will have to populate Glance with an image matching the AMI string that the template file is expecting to find.
-
 Next, register a pre-built cfntools image with glance. Note the command automatically downloads the image. For reference, pre-built Fedora images are available from: <http://fedorapeople.org/groups/heat/prebuilt-jeos-images/>.
 
 `$ glance image-create --name F17-x86_64-cfntools --disk-format qcow2 --container-format bare --is-public True --copy-from `[`http://fedorapeople.org/groups/heat/prebuilt-jeos-images/F17-x86_64-cfntools.qcow2`](http://fedorapeople.org/groups/heat/prebuilt-jeos-images/F17-x86_64-cfntools.qcow2)
