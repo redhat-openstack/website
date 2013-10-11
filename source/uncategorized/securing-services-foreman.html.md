@@ -53,22 +53,22 @@ As an example, with 3 machines: a foreman server, a controller node and a comput
 
 ## Initial Node installation
 
-Run the foreman_client.sh on your compute and controller node to register the hosts with Foreman. Before you assign the nodes to a hostgroup, you'll need to do some pre-configuration work, one of the following:
+Before running the foreman_client.sh on your compute and controller node to register the hosts with Foreman you'll need to do some pre-configuration work, one of the following:
 
 ### Manual SSL Configuration
 
 For a manual installation the SSL certificates need to be pre-positioned on the controller node.
 
-The default location for the certificates are defined in the controller configuration. They are:
+The default location for the certificates are defined in the controller configuration. The defaults are:
 
-       "mysql_ca"                   => "/etc/ipa/ca.crt",
-       "mysql_cert"                 => "/etc/pki/tls/certs/FQDN-mysql.crt",
-       "mysql_key"                  => "/etc/pki/tls/private/FQDN-mysql.key",
-       "qpid_ca"                    => "/etc/ipa/ca.crt",
-       "qpid_cert"                  => "/etc/pki/tls/certs/FQDN-qpid.crt",
-       "qpid_key"                   => "/etc/pki/tls/private/FQDN-qpid.key",
+      mysql_ca     /etc/ipa/ca.crt
+      mysql_cert  /etc/pki/tls/certs/FQDN-mysql.crt
+      mysql_key   /etc/pki/tls/private/FQDN-mysql.key
+      qpid_ca       /etc/ipa/ca.crt
+      qpid_cert    /etc/pki/tls/certs/FQDN-qpid.crt
+      qpid_key     /etc/pki/tls/private/FQDN-qpid.key
 
-Where FQDN is the fully-qualfied domain name of the private interface of the controller node. Change these as needed.
+Where FQDN is the fully-qualfied domain name of the private interface of the controller node. Change these as needed. These settings are found in the Foreman UI under More -> Configuration -> Host groups. Select each hostgroup then look in Parameters for the SSL options. To change a value select override, then add a new value at the bottom of the page.
 
 The certificate and private key location for Apache for a secured Horizon/dashboard are not currently configurable. The need to be in:
 
@@ -80,7 +80,7 @@ Don't worry about file ownership, applying the controller node should set them a
 
 Enroll the compute and controller nodes as IPA client machines (ipa-client-install).
 
-Now you need to pre-create the services that IPA will need to generate the SSL certificates. ON the IPA master run:
+Now you need to pre-create the services that IPA will need to generate the SSL certificates. On the IPA master run:
 
       $ kinit admin
       $ ipa service-add mysql/controller.example.com
@@ -88,6 +88,8 @@ Now you need to pre-create the services that IPA will need to generate the SSL c
       $ ipa service-add HTTP/controller.example.com
 
 The controller node configuration will automatically obtain the SSL certificates for qpid and mysql. For Horizon/dashboard you'll need to request it manually.
+
+On the controller node run:
 
       ` # ipa-getcert request -r -f /etc/pki/tls/certs/httpd.crt -k /etc/pki/tls/private/httpd.key -N CN=`hostname --fqdn` -D `hostname` -U id-kp-serverAuth -K HTTP/`hostname --fqdn` `
 
@@ -99,11 +101,11 @@ Next, you’ll need to assign the correct puppet classes to each of your hosts. 
 
 ### Manual SSL Configuration
 
-Set ssl to true and freeipa to false
+The default settings are ssl = true and freeipa = false. It is ok to leave things as-is.
 
 ### IPA Configuration
 
-Set ssl to true and freeipa to true
+ssl is enabled by default. Override the freeipa value and set it to true.
 
 ## Apply Configuration
 
@@ -119,7 +121,11 @@ First confirm that the certificates for qpid and mysql were retrieve and are bei
 
       ipa-getcert list
 
-The output should contain 3 Request IDs in a monitoring state.
+The output should contain 3 Request IDs in a monitoring state. These include:
+
+*   the host certificate
+*   the qpid certificate
+*   the mysql certificate
 
 ### Common for Manual and IPA Configuration
 
