@@ -15,7 +15,9 @@ This guide deploys a composite application (made up of more than a single instan
 
 ### Get the demo files
 
-It is time now to launch your first multi-instance cloud application! There are a number of sample templates available in the [github repo](https://github.com/openstack/heat), download the composed Wordpress example with::
+It is time now to launch your first multi-instance cloud application! There are a number of sample templates available in the [github repo](https://github.com/openstack/heat).
+
+First, download the composed Wordpress example with::
 
 `$ wget `[`https://raw.github.com/openstack/heat-templates/master/cfn/F17/WordPress_Composed_Instances.template`](https://raw.github.com/openstack/heat-templates/master/cfn/F17/WordPress_Composed_Instances.template)
 
