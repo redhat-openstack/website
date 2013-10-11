@@ -21,11 +21,11 @@ It is time now to launch your first multi-instance cloud application! There are 
 
 Every template also provides you with a list of usable distros and map these into an AMI string, for each arch. You will have to populate Glance with an image matching the AMI string that the template file is expecting to find.
 
-Now you would need to create JEOS image and you can do it through the `heat_jeos.sh` script from : <https://github.com/openstack/heat-templates> . This can be used to create the JEOS images and upload them to Glance but there is also a collection of prebuilt images at: <http://fedorapeople.org/groups/heat/prebuilt-jeos-images/> so I suggest you to just download one from `F17-x86_64-cfntools.qcow2` or `U10-x86_64-cfntools.qcow2` (which are referred by many if not all the templates available in the Heat's repo). To upload the F17 x86_64 image in Glance::
+Now you would need to create JEOS image and you can do it through the `heat_jeos.sh` script from : <https://github.com/openstack/heat-templates> . This can be used to create the JEOS images and upload them to Glance but there is also a collection of prebuilt images at: <http://fedorapeople.org/groups/heat/prebuilt-jeos-images/> so I suggest you to just download one from `F17-x86_64-cfntools.qcow2` . To upload the F17 x86_64 image in Glance::
 
 `$ glance image-create --name F17-x86_64-cfntools --disk-format qcow2 --container-format bare --is-public True --copy-from `[`http://fedorapeople.org/groups/heat/prebuilt-jeos-images/F17-x86_64-cfntools.qcow2`](http://fedorapeople.org/groups/heat/prebuilt-jeos-images/F17-x86_64-cfntools.qcow2)
 
-While that is downloading, create a new keypair or upload your public key in nova to make sure you'll be able to login on the VMs using SSH::
+Upload your public key in nova to make sure you'll be able to login on the VMs using SSH::
 
       $ nova keypair-add --pub_key ~/.ssh/id_rsa.pub userkey
 
