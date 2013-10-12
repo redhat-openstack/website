@@ -25,11 +25,11 @@ This guide is intended to get you up and running quickly with Ceilometer:
 
 *This guide is predicated on at least the Havana RC1 version of the packages being used (the service start-up instructions for older versions of the packages from the H cycle would differ somewhat).*
 
-### Prerequites
+### Prerequisites
 
-The general prerequsites are identical to the [Havana QuickStart](QuickStartLatest), and in fact if you follow that guide right now you will end up with Ceilometer installed by default once your `packstack` run completes .
+The general prerequisites are identical to the [Havana QuickStart](QuickStartLatest), and in fact if you follow that guide right now you will end up with Ceilometer installed by default once your `packstack` run completes .
 
-However, if you are installing on a resource-constrained VM, some prior setup can make your life easier. The default & most feature-complete storage driver used by Ceilometer is `mongodb`, which on installation eagerly pre-allocates large journal files *etc*. This is normally not an issue, but the default service timeout of 90 seconds imposed by systemd *may* not suffice for this preallocation to complete on resource-starved VMs. However this can be easily worked around in that scenarion by preinstalling mongo with a modified startup timeout, as follows:
+However, if you are installing on a resource-constrained VM, some prior setup can make your life easier. The default & most feature-complete storage driver used by Ceilometer is `mongodb`, which on installation eagerly pre-allocates large journal files *etc*. This is not normally an issue, but the default service timeout of 90 seconds imposed by systemd *may* not suffice for the pre-allocation to complete on resource-starved VMs. However this can be easily worked around in that scenarion by pre-installing mongo with a modified startup timeout, as follows:
 
          sudo yum install -y mongodb-server mongodb
          sudo sed -i '/^`\[Service\]`$/ a\
