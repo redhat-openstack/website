@@ -470,7 +470,7 @@ Unlike relational databases which have static schemata requiring careful managem
 
 Now you could of course continue your exploration by looking at the raw documents stored in each of the Ceilometer collections, but these data are usually more conveniently retrieved via the API layer. However, there are cases were these data can be usefully processed directly, generally to aggregate in ways not currently supported by the Ceilometer API.
 
-Say for example you wanted to see how much variance in CPU utilization there has been across the instances owned by a certain tenant. Such a requirement can be analyzed via the familiar standard deviation, calculated directly in `mongo` via map-reduce with some simple javascript:
+Say for example you wanted to see how much variance in CPU utilization there has been across the instances owned by a certain tenant. Casting your mind back to stats 101, you recall that such a question can be answered with the familiar concept of standard deviation. Now since standard deviation is not currently included in the set of statistical aggregates exposed in the v2 Ceilometer API, you could proceed to calculate it directly in `mongo` via map-reduce with some simple javascript:
 
        > function map() {
              var v = this.counter_volume;
