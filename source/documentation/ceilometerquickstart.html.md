@@ -445,7 +445,6 @@ The top-level structure can be seen by showing the available collections:
        > show collections
        alarm
        alarm_history
-       cpu_util_deviation
        meter
        project
        resource
@@ -476,14 +475,13 @@ Say for example you wanted to see how much variance in CPU utilization there has
        > function reduce(key, values) { 
              var merge = values[0];
              for (var i = 1 ; i < values.length ; i++) {
-                 var curr = values[i];
-                 var deviance = (merge.sum / merge.count) - curr.sum;
+                 var deviance = (merge.sum / merge.count) - values[i].sum;
                  var weight = merge.count / (merge.count + 1);
                  merge.diff += (Math.pow(deviance, 2) * weight);
-                 merge.sum += curr.sum;
+                 merge.sum += values[i].sum;
                  merge.count++;
-                 merge.min = Math.min(merge.min, curr.min);
-                 merge.max = Math.max(merge.max, curr.max);
+                 merge.min = Math.min(merge.min, values[i].min);
+                 merge.max = Math.max(merge.max, values[i].max);
              }      
              return merge; 
          }
@@ -493,7 +491,7 @@ Say for example you wanted to see how much variance in CPU utilization there has
         }
        > db.meter.mapReduce(map,
                             reduce,
-                            {finalize:complete,
+                            {finalize: complete,
                              out: {merge: 'cpu_util_deviation'},
                              query: {'counter_name': 'cpu_util',
                                      'project_id': PROJECT_ID}})
