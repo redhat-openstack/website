@@ -451,7 +451,9 @@ The top-level structure can be seen by showing the available collections:
        system.indexes
        user
 
-Note the default indices, which are created on demand:
+The key collection is `meter` which contains the actual metering datapoints, and from which queries on meters, samples and statistics are satisfied. The `alarm` and `alarm_history` collections contain alarm rules & state and audit trails respectively. The `project` and `user` collections concern identity, referring to the known tenants and users respectively. Whereas the `resource` collection contains an entry per unique metered resource (instance, image, volume etc.), storing the metadata thereof and linking back to the related meters.
+
+Note also the default indices, which are created on demand:
 
        > db.system.indexes.find()
        { "v" : 1, "key" : { "_id" : 1 }, "ns" : "ceilometer.resource", "name" : "_id_" }
@@ -464,7 +466,9 @@ Note the default indices, which are created on demand:
        { "v" : 1, "key" : { "_id" : 1 }, "ns" : "ceilometer.alarm", "name" : "_id_" }
        { "v" : 1, "key" : { "_id" : 1 }, "ns" : "ceilometer.alarm_history", "name" : "_id_" }
 
-Now you could of course continue by looking at the raw data stored in each of the Ceilometer collections, but these data are usually more conveniently retrieved via the API layer. However, there are cases were these data can be usefully processed directly, generally to aggregate in ways not currently supported by the API.
+Unlike relational databases which have static schemata requiring careful management as they evolve, `mongo` is much more flexible and allows the structure of documents in a collection to change over time. Hence for this storage layer we do not have an analogue for the familiar sqlalchemy-migrate and/or alembic schema upgrade/downgrade scripts that are widely used across the OpenStack services. However there are several [tools available](http://skratchdot.com/projects/mongodb-schema) that allow a schema to be inferred from the observed document structure, if that would enhance your understanding of the store structure.
+
+Now you could of course continue your exploration by looking at the raw documents stored in each of the Ceilometer collections, but these data are usually more conveniently retrieved via the API layer. However, there are cases were these data can be usefully processed directly, generally to aggregate in ways not currently supported by the Ceilometer API.
 
 Say for example you wanted to see how much variance in CPU utilization there has been across the instances owned by a certain tenant. Such a requirement can be analyzed via the familiar standard deviation, calculated directly in `mongo` via map-reduce with some simple javascript:
 
