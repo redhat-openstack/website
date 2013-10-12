@@ -429,6 +429,82 @@ or deleted permanently:
 
       $ ceilometer alarm-delete -a ALARM_ID
 
+### Exploring the metering store
+
+Ceilometer uses `mongodb` by default to store metering data, though alternative pluggable storage drivers are also provided for sqlalchemy, db2 and HBase. Only the `mongodb` storage driver is considered feature-complete at this time, so this is the recommended choice for production.
+
+Before we begin to explore the datastore, ensure that the `mongo` client is installed locally:
+
+       sudo yum install -y mongodb
+
+The top-level structure can be seen by showing the available collections:
+
+       $ mongo ceilometer
+       MongoDB shell version: 2.4.6
+       connecting to: ceilometer
+       > show collections
+       alarm
+       alarm_history
+       cpu_util_deviation
+       meter
+       project
+       resource
+       system.indexes
+       user
+
+Note the default indices, which are created on demand:
+
+       > db.system.indexes.find()
+       { "v" : 1, "key" : { "_id" : 1 }, "ns" : "ceilometer.resource", "name" : "_id_" }
+       { "v" : 1, "key" : { "user_id" : 1, "source" : 1 }, "ns" : "ceilometer.resource", "name" : "resource_idx" }
+       { "v" : 1, "key" : { "_id" : 1 }, "ns" : "ceilometer.meter", "name" : "_id_" }
+       { "v" : 1, "key" : { "resource_id" : 1, "user_id" : 1, "counter_name" : 1, "timestamp" : 1, "source" : 1 }, "ns" : "ceilometer.meter", "name" : "meter_idx" }
+       { "v" : 1, "key" : { "timestamp" : -1 }, "ns" : "ceilometer.meter", "name" : "timestamp_idx" }
+       { "v" : 1, "key" : { "_id" : 1 }, "ns" : "ceilometer.user", "name" : "_id_" }
+       { "v" : 1, "key" : { "_id" : 1 }, "ns" : "ceilometer.project", "name" : "_id_" }
+       { "v" : 1, "key" : { "_id" : 1 }, "ns" : "ceilometer.alarm", "name" : "_id_" }
+       { "v" : 1, "key" : { "_id" : 1 }, "ns" : "ceilometer.alarm_history", "name" : "_id_" }
+
+Now you could of course continue by looking at the raw data stored in each of the Ceilometer collections, but these data are usually more conveniently retrieved via the API layer. However, there are cases were these data can be usefully processed directly, generally to aggregate in ways not currently supported by the API.
+
+Say for example you wanted to see how much variance in CPU utilization there has been across the instances owned by a certain tenant. Such a requirement can be analyzed via the familiar standard deviation, calculated directly in `mongo` via map-reduce with some simple javascript:
+
+       > function map() {
+             var v = this.counter_volume;
+             emit(this.resource_id, {sum: v, min: v, max: v, count: 1, diff: 0});
+         }
+       > function reduce(key, values) { 
+             var merge = values[0];
+             for (var i = 1 ; i < values.length ; i++) {
+                 var curr = values[i];
+                 var deviance = (merge.sum / merge.count) - curr.sum;
+                 var weight = merge.count / (merge.count + 1);
+                 merge.diff += (Math.pow(deviance, 2) * weight);
+                 merge.sum += curr.sum;
+                 merge.count++;
+                 merge.min = Math.min(merge.min, curr.min);
+                 merge.max = Math.max(merge.max, curr.max);
+             }      
+             return merge; 
+         }
+       > function complete(key, value) {
+             value.stddev = Math.sqrt(value.diff / value.count);
+             return value;
+        }
+       > db.meter.mapReduce(map,
+                            reduce,
+                            {finalize:complete,
+                             out: {merge: 'cpu_util_deviation'},
+                             query: {'counter_name': 'cpu_util',
+                                     'project_id': PROJECT_ID}})
+        ...
+       > db.cpu_util_deviation.find()
+       { "_id" : "INSTANCE_ID_1", "value" : { "sum" : 1919.2769446004427, "min" : 0.2033898305084746, "max" : 1.0166666666666666, "count" : 5718, "diff" : 5.15805440622775, "stddev" : 0.030034533016630435 } }
+       { "_id" : "INSTANCE_ID_2", "value" : { "sum" : 32587.64270073976, "min" : 0, "max" : 6.813559322033898, "count" : 5642, "diff" : 659.2932445207676, "stddev" : 0.3418399151135359 } }
+       ...
+
+We leave it as an exercise for the reader to compare the aggregate values directly calculated above (baring standard deviation) with those reported via the statistics API.
+
 </div>
 </div>
 <Category:Documentation>
