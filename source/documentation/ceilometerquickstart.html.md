@@ -451,7 +451,7 @@ The top-level structure can be seen by showing the available collections:
        system.indexes
        user
 
-The key collection is `meter` which contains the actual metering datapoints, and from which queries on meters, samples and statistics are satisfied. The `alarm` and `alarm_history` collections contain alarm rules & state and audit trails respectively. The `project` and `user` collections concern identity, referring to the known tenants and users respectively. Whereas the `resource` collection contains an entry per unique metered resource (instance, image, volume etc.), storing the metadata thereof and linking back to the related meters.
+At the heart of the datastore is the `meter` collection containing the actual metering datapoints, and from which queries on meters, samples and statistics are satisfied. The `alarm` and `alarm_history` collections contain alarm rules & state and audit trails respectively. The `project` and `user` collections concern identity, referring to the known tenants and users respectively. Whereas the `resource` collection contains an entry per unique metered resource (instance, image, volume etc.), storing the metadata thereof and linking back to the related meters.
 
 Note also the default indices, which are created on demand:
 
@@ -466,7 +466,7 @@ Note also the default indices, which are created on demand:
        { "v" : 1, "key" : { "_id" : 1 }, "ns" : "ceilometer.alarm", "name" : "_id_" }
        { "v" : 1, "key" : { "_id" : 1 }, "ns" : "ceilometer.alarm_history", "name" : "_id_" }
 
-Unlike relational databases which have static schemata requiring careful management as they evolve, `mongo` is much more flexible and allows the structure of documents in a collection to change over time. Hence for this storage layer we do not have an analogue for the familiar sqlalchemy-migrate and/or alembic schema upgrade/downgrade scripts that are widely used across the OpenStack services. However there are several [tools available](http://skratchdot.com/projects/mongodb-schema) that allow a schema to be inferred from the observed document structure, if that would enhance your understanding of the store structure.
+Unlike relational databases which have static schemata requiring careful management as they evolve, `mongo` is much more flexible and allows the structure of documents in a collection to change over time. Hence for this storage layer we do not have an analogue of the familiar `sqlalchemy-migrate` and/or `alembic` schema upgrade/downgrade scripts that are widely used across the OpenStack services. However there are several [tools available](http://skratchdot.com/projects/mongodb-schema) that allow a schema to be inferred from the observed document structure, if that would enhance your understanding of the store structure.
 
 Now you could of course continue your exploration by looking at the raw documents stored in each of the Ceilometer collections, but these data are usually more conveniently retrieved via the API layer. However, there are cases were these data can be usefully processed directly, generally to aggregate in ways not currently supported by the Ceilometer API.
 
@@ -500,12 +500,12 @@ Say for example you wanted to see how much variance in CPU utilization there has
                              query: {'counter_name': 'cpu_util',
                                      'project_id': PROJECT_ID}})
         ...
-       > db.cpu_util_deviation.find()
-       { "_id" : "INSTANCE_ID_1", "value" : { "sum" : 1919.2769446004427, "min" : 0.2033898305084746, "max" : 1.0166666666666666, "count" : 5718, "diff" : 5.15805440622775, "stddev" : 0.030034533016630435 } }
-       { "_id" : "INSTANCE_ID_2", "value" : { "sum" : 32587.64270073976, "min" : 0, "max" : 6.813559322033898, "count" : 5642, "diff" : 659.2932445207676, "stddev" : 0.3418399151135359 } }
+       > db.cpu_util_deviation.find( {}, { 'value.stddev': 1 } )
+       { "_id" : "INSTANCE_ID_1", "value" : { "stddev" : 0.030034533016630435 } }
+       { "_id" : "INSTANCE_ID_2", "value" : { "stddev" : 0.3418399151135359 } }
        ...
 
-We leave it as an exercise for the reader to compare the aggregate values directly calculated above (baring standard deviation) with those reported via the statistics API.
+We leave it as an exercise for the reader to compare the aggregate values directly calculated above in the partial results (min, max, sum, count) with those reported via the statistics API.
 
 </div>
 </div>
