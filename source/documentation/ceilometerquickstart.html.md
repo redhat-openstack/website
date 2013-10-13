@@ -455,7 +455,9 @@ At the heart of the datastore is the `meter` collection containing the actual me
 
 Note also the explicitly established system indices, which are created on demand by the storage driver:
 
-       > db.system.indexes.find( {'name': {$ne: '_id_'}}, {'key': 1, 'ns': 1, 'name': 1})
+       > query = {'name': {$ne: '_id_'}}             // only include explicitly named indices
+       > projection = {'key': 1, 'ns': 1, 'name': 1} // project onto key, namespace, name
+       > db.system.indexes.find(query, projection)
        { "key" : { "user_id" : 1, "source" : 1 }, "ns" : "ceilometer.resource", "name" : "resource_idx" }
        { "key" : { "resource_id" : 1, "user_id" : 1, "counter_name" : 1, "timestamp" : 1, "source" : 1 }, "ns" : "ceilometer.meter", "name" : "meter_idx" }
        { "key" : { "timestamp" : -1 }, "ns" : "ceilometer.meter", "name" : "timestamp_idx" }
@@ -469,25 +471,21 @@ Now you could of course continue your exploration by looking at the raw document
 Say for example you wanted to see how much variance in CPU utilization there has been across the instances owned by a certain tenant. Casting your mind back to stats 101, you recall that such a question can be answered with the familiar concept of standard deviation. Now since standard deviation is not currently included in the set of statistical aggregates exposed in the v2 Ceilometer API, you could proceed to calculate it directly in `mongo` via map-reduce with some simple javascript:
 
        > function map() {
-             var v = this.counter_volume;
-             emit(this.resource_id, {sum: v, min: v, max: v, count: 1, diff: 0});
+             emit(this.resource_id, {sum: this.counter_volume, count: 1, weighted_distances: 0});
          }
-       > function reduce(key, values) { 
-             var merge = values[0];
-             for (var i = 1 ; i < values.length ; i++) {
-                 var deviance = (merge.sum / merge.count) - values[i].sum;
-                 var weight = merge.count / (merge.count + 1);
-                 merge.diff += (Math.pow(deviance, 2) * weight);
-                 merge.sum += values[i].sum;
-                 merge.count++;
-                 merge.min = Math.min(merge.min, values[i].min);
-                 merge.max = Math.max(merge.max, values[i].max);
+       > function reduce(key, mapped) { 
+             var merge = mapped[0];
+             for (var i = 1 ; i < mapped.length ; i++) {
+                 var deviance = (merge.sum / merge.count) - mapped[i].sum;
+                 var weight = merge.count / ++merge.count;
+                 merge.weighted_distances += (Math.pow(deviance, 2) * weight);
+                 merge.sum += mapped[i].sum;
              }      
              return merge; 
          }
-       > function complete(key, value) {
-             value.stddev = Math.sqrt(value.diff / value.count);
-             return value;
+       > function complete(key, reduced) {
+             reduced.stddev = Math.sqrt(reduced.weighted_distances / reduced.count);
+             return reduced;
         }
        > db.meter.mapReduce(map,
                             reduce,
@@ -496,12 +494,13 @@ Say for example you wanted to see how much variance in CPU utilization there has
                              query: {'counter_name': 'cpu_util',
                                      'project_id': PROJECT_ID}})
         ...
-       > db.cpu_util_deviation.find( {}, { 'value.stddev': 1 } )
+       > projection = { 'value.stddev': 1 }  // ignore partial results 
+       > db.cpu_util_deviation.find({}, projection)
        { "_id" : "INSTANCE_ID_1", "value" : { "stddev" : 0.030034533016630435 } }
        { "_id" : "INSTANCE_ID_2", "value" : { "stddev" : 0.3418399151135359 } }
        ...
 
-We leave it as an exercise for the reader to compare the aggregate values directly calculated above in the partial results (min, max, sum, count) with those reported via the statistics API.
+We leave it as an exercise for the reader to compare the aggregate values directly calculated above in the partial results (sum, count) with those reported via the statistics API.
 
 </div>
 </div>
