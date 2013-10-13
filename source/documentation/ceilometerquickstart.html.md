@@ -453,18 +453,14 @@ The top-level structure can be seen by showing the available collections:
 
 At the heart of the datastore is the `meter` collection containing the actual metering datapoints, and from which queries on meters, samples and statistics are satisfied. The `alarm` and `alarm_history` collections contain alarm rules & state and audit trails respectively. The `project` and `user` collections concern identity, referring to the known tenants and users respectively. Whereas the `resource` collection contains an entry per unique metered resource (instance, image, volume etc.), storing the metadata thereof and linking back to the related meters.
 
-Note also the default indices, which are created on demand:
+Note also the explicitly established system indices, which are created on demand by the storage driver:
 
-       > db.system.indexes.find()
-       { "v" : 1, "key" : { "_id" : 1 }, "ns" : "ceilometer.resource", "name" : "_id_" }
-       { "v" : 1, "key" : { "user_id" : 1, "source" : 1 }, "ns" : "ceilometer.resource", "name" : "resource_idx" }
-       { "v" : 1, "key" : { "_id" : 1 }, "ns" : "ceilometer.meter", "name" : "_id_" }
-       { "v" : 1, "key" : { "resource_id" : 1, "user_id" : 1, "counter_name" : 1, "timestamp" : 1, "source" : 1 }, "ns" : "ceilometer.meter", "name" : "meter_idx" }
-       { "v" : 1, "key" : { "timestamp" : -1 }, "ns" : "ceilometer.meter", "name" : "timestamp_idx" }
-       { "v" : 1, "key" : { "_id" : 1 }, "ns" : "ceilometer.user", "name" : "_id_" }
-       { "v" : 1, "key" : { "_id" : 1 }, "ns" : "ceilometer.project", "name" : "_id_" }
-       { "v" : 1, "key" : { "_id" : 1 }, "ns" : "ceilometer.alarm", "name" : "_id_" }
-       { "v" : 1, "key" : { "_id" : 1 }, "ns" : "ceilometer.alarm_history", "name" : "_id_" }
+       > db.system.indexes.find( {'name': {$ne: '_id_'}}, {'key': 1, 'ns': 1, 'name': 1})
+       { "key" : { "user_id" : 1, "source" : 1 }, "ns" : "ceilometer.resource", "name" : "resource_idx" }
+       { "key" : { "resource_id" : 1, "user_id" : 1, "counter_name" : 1, "timestamp" : 1, "source" : 1 }, "ns" : "ceilometer.meter", "name" : "meter_idx" }
+       { "key" : { "timestamp" : -1 }, "ns" : "ceilometer.meter", "name" : "timestamp_idx" }
+
+The keys over which each index extends, in addition to the sort order (1 indicating ascending, -1 indicating decending) is revealed in the query result above. So for example, we see there's an index over the meter collection based on the timestamp attribute, ordered from most to least recent.
 
 Unlike relational databases which have static schemata requiring careful management as they evolve, `mongo` is much more flexible and allows the structure of documents in a collection to change over time. Hence for this storage layer we do not have an analogue of the familiar `sqlalchemy-migrate` and/or `alembic` schema upgrade/downgrade scripts that are widely used across the OpenStack services. However there are several [tools available](http://skratchdot.com/projects/mongodb-schema) that allow a schema to be inferred from the observed document structure, if that would enhance your understanding of the store structure.
 
