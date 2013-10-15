@@ -235,13 +235,13 @@ Assuming everything has been successful up to this point, now you just have a bi
 
 First, log in to your Foreman instance (https://{foreman_fqdn}). The default login and password are admin/changeme; we recommend changingthis if you plan on keeping this host around.
 
-Next, you’ll need to assign the correct puppet classes to each of your hosts. Click the HOSTS link and select your host from the list. Select EDIT HOST and add the appropriate Host Group (OpenStack Controller or OpenStack Compute). When applying host groups, you can override any values (such as service passwords) in the Foreman UI. Hit save, and run puppet on the host (client1 and client2 in our examples) in question:
+Next, you’ll need to assign the correct puppet classes to each of your hosts. Click the 'Hosts' link and select your host from the list. Select 'Change Group' in the dropdown menu above the host list, select the appropriate Host Group, and Click 'submit'. When applying host groups, you can override any values (such as service passwords) in the Foreman UI. This can either be done on a per-host basis (by clicking the host link, and then clicking the 'edit host' button'), or at the Host Group level, which will affect all hosts assigned to that hostgroup. To have the change pick up immediately, run puppet on the host (client1 and client2 in our examples) in question (or just wait for the next puppet run, which defaults to every 30 minutes):
 
     puppet agent -tv
 
 It is recommended that you provision the controller before the compute node, as the compute node has dependencies on the controller.
 
-Repeat for all of your nodes. Both Controller and Compute nodes take quite a while to setup. After about 10 minutes on each host, you will have a working OpenStack installation! Add more Compute nodes at any time with Foreman.
+Repeat for all of your nodes. Both Controller and Compute nodes take quite a while to setup. After about <some number of> minutes on each host, you will have a working OpenStack installation! Add more Compute nodes at any time with Foreman.
 
 #### Running Nova instances when compute node is a VM
 
