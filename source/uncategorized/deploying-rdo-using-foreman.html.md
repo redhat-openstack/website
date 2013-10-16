@@ -245,7 +245,7 @@ Repeat for all of your nodes. Both Controller and Compute nodes take quite a whi
 
 #### Optional Heat APIs
 
-By default, the controller nodes will install without CloudFormations and CloudWatch APIs enabled. To enable one or both of them:
+By default, the controller node will install without CloudFormations and CloudWatch APIs enabled. To enable one or both of them:
 
 *   In Foreman UI navigate to More -> Configuration -> Host Groups and click on the Controller host group (Neutron Controller or Nova Network Controller, depending on which one you use).
 
@@ -255,7 +255,7 @@ By default, the controller nodes will install without CloudFormations and CloudW
 
 <!-- -->
 
-*   Click the Override button next to `heat_cfn` and/or `heat_cloudwatch` variables.
+*   Click the Override button next to `heat_cfn` and/or `heat_cloudwatch` parameters.
 
 <!-- -->
 
