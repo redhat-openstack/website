@@ -259,7 +259,7 @@ By default, the controller node will install without CloudFormations and CloudWa
 
 <!-- -->
 
-*   Change the value(s) "false" to "true" (you might need to scroll down if you don't see the form right away) and submit the form.
+*   Change the value(s) from "false" to "true" (you might need to scroll down if you don't see the form right away) and submit the form.
 
 When Puppet runs on the controller node, it will install the optional APIs you enabled.
 
