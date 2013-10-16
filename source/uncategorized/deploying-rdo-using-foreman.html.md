@@ -243,6 +243,26 @@ It is recommended that you provision the controller before the compute node, as 
 
 Repeat for all of your nodes. Both Controller and Compute nodes take quite a while to setup. After about <some number of> minutes on each host, you will have a working OpenStack installation! Add more Compute nodes at any time with Foreman.
 
+#### Optional Heat APIs
+
+By default, the controller nodes will install without CloudFormations and CloudWatch APIs enabled. To enable one or both of them:
+
+*   In Foreman UI navigate to More -> Configuration -> Host Groups and click on the Controller host group (Neutron Controller or Nova Network Controller, depending on which one you use).
+
+<!-- -->
+
+*   Switch to the Parameters tab.
+
+<!-- -->
+
+*   Click the Override button next to `heat_cfn` and/or `heat_cloudwatch` variables.
+
+<!-- -->
+
+*   Change the value(s) "false" to "true" (you might need to scroll down if you don't see the form right away) and submit the form.
+
+When Puppet runs on the controller node, it will install the optional APIs you enabled.
+
 #### Running Nova instances when compute node is a VM
 
 For running Nova instances inside a VM, you'll either need to set up nested virtualization, or make Nova use QEMU instead of KVM.
