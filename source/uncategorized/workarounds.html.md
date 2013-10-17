@@ -235,3 +235,27 @@ Pre-install mongod before running packstack, editing the systemd config for mong
          sudo service mongod start
          sudo service mongod status
          sudo service mongod stop
+
+## horizon: logs are empty even in case of internal server error
+
+*   **Bug:** [LP#1236423](https://bugs.launchpad.net/horizon/+bug/1236423)
+
+#### symptoms
+
+The logs in /var/log/httpd and /var/log/horizon do not contain any useful information or traceback, even when the UI fails with an Error 500 / Internal Server Error.
+
+#### workaround
+
+Edit /etc/openstack-dashboard/local_settings and add the 'django' logger to the LOGGING dictionary, after 'nose.plugins.managers':
+
+             'nose.plugins.manager': {
+                 'handlers': ['file'],
+                 'propagate': False,
+             },
+             'django': {
+                 'handlers': ['file'], # This should match the handler name used in the other 'loggers'
+                 'level': 'DEBUG',
+                 'propagate': False,
+             },
+
+Here's an example of a [fully configured LOGGING dictionary](https://github.com/openstack/horizon/blob/3ccd927251a69905b2c3f1ee496c174eaeb1f8eb/openstack_dashboard/local/local_settings.py.example#L241).
