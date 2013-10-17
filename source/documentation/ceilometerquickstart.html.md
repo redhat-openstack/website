@@ -101,7 +101,7 @@ Example of transformers shipped with Ceilometer include:
  Multiple publishers are also supported, including:
 
 *   **rpc://**: emit metering data for collector over AMQP
-*   **<udp://>**: emit metering data for collector over lossy UDP (useful for metric data collected for alarming purposes, but not suitable for metering data to feed into a billing system due to the obviously retention requirements)
+*   **<udp://>**: emit metering data for collector over lossy UDP (useful for metric data collected for alarming purposes, but not suitable for metering data to feed into a billing system due to the obvious retention requirements)
 *   **<file://>**: emit metering data into a file
 
 These pipelines are configured via a YAML file which is explained in detail below.
