@@ -258,4 +258,4 @@ Edit /etc/openstack-dashboard/local_settings and add the 'django' logger to the 
                  'propagate': False,
              },
 
-Here's an example of a [fully configured LOGGING dictionary](https://github.com/openstack/horizon/blob/3ccd927251a69905b2c3f1ee496c174eaeb1f8eb/openstack_dashboard/local/local_settings.py.example#L241).
+Here's an example of a [working logging configuration](https://github.com/openstack/horizon/blob/3ccd927251a69905b2c3f1ee496c174eaeb1f8eb/openstack_dashboard/local/local_settings.py.example#L241).
