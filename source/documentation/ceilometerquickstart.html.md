@@ -94,7 +94,7 @@ Pipelines are composed of a metering data source that produces certain enumerate
 
 Example of transformers shipped with Ceilometer include:
 
-*   **unit_conversion**: apply a scaling conversion to allow a different to be unit that originally supplied with the observed data, for example converting a temperature from °F to °C (the scaling rule is configurable, so that any reasonable unit conversion expessable in python may be implemented)
+*   **unit_conversion**: apply a scaling conversion to use a different unit than originally supplied with the observed data, for example converting a temperature from °F to °C (the scaling rule is configurable, so that any reasonable unit conversion expressible in python may be implemented)
 *   **rate_of_change**: derives a secondary meter from directly observed data based on the calculated rate of change by sampling the sequence of datapoint, with an associated scaling rule
 *   **accumulator**: gather several datapoints before emitting in a batch
 
