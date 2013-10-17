@@ -44,7 +44,7 @@ Once your `packstack` run is complete, you're probably eager to verify that Ceil
 
 Before we do that, a few words on how Ceilometer is realized as a set of agents and services. It comprises at least four separate daemons, each with a specific function in the metering pipeline:
 
-*   **compute** agent: polls the local libvirt daemon to acquire performance data for the local instances, massages and emits these data as AMQP notifications
+*   **compute** agent: polls the local libvirt daemon to acquire performance data for the local instances, messages and emits these data as AMQP notifications
 *   **central** agent: polls the public RESTful APIs of other openstack services such as nova and glance, in order to keep tabs on resource existence
 *   **collector** service: consumes AMQP notifications from the agents and other openstack services, then dispatch these data to the metering store
 *   **API** service: presents aggregated metering data to consumers (such as billing engines, analytics tools *etc*.)
