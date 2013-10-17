@@ -84,7 +84,7 @@ If a sample is a single datapoint, then a statistic is a set of such datapoints 
 *   **avg**: the average of the sample volumes over each period
 *   **sum**: the sum of the sample volumes over each period
 
- Note that *all* of these aggregation functions are applied for every statistic calculated. This may seem wasteful if you're only interested in one of the values, but it practice hardly any extra computation cost is incurred due to the map-reduce scheme used to calculate these values.
+ Note that *all* of these aggregation functions are applied for every statistic calculated. This may seem wasteful if you're only interested in one of the values, but in practice hardly any extra computation cost is incurred due to the map-reduce scheme used to calculate these values.
 
 Also there is some potential confusion in there being both a duration *and* a period associated with these statistics. The duration is simply the overall time-span over which a single query applies, whereas the period is the time-slice length into which this duration is divided for aggregation purposes. So for example, if I was interested in the hourly average CPU utilization over a day, I would provide midnight-to-midnight start and end timestamps on my query giving a duration of 24 hours, while also specifying a period of 3600 seconds to indicate that the finegrained samples should be aggregated over each hour within that day.
 
