@@ -80,8 +80,8 @@ If a sample is a single datapoint, then a statistic is a set of such datapoints 
 
 *   **count**: the number of samples in each period
 *   **max**: the maxima of the sample volumes in each period
-*   **min**: the maxima of the sample volumes in each period
-*   **avg**: the maxima of the sample volumes over each period
+*   **min**: the minima of the sample volumes in each period
+*   **avg**: the average of the sample volumes over each period
 *   **sum**: the sum of the sample volumes over each period
 
  Note that *all* of these aggregation functions are applied for every statistic calculated. This may seem wasteful if you're only interested in one of the values, but it practice hardly any extra computation cost is incurred due to the map-reduce scheme used to calculate these values.
