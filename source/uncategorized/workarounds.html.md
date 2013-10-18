@@ -238,7 +238,7 @@ Pre-install mongod before running packstack, editing the systemd config for mong
 
 ## horizon: logs are empty even in case of internal server error
 
-*   **Bug:** [LP#1236423](https://bugs.launchpad.net/horizon/+bug/1236423)
+*   **Bug:** [LP#1236423](https://bugs.launchpad.net/horizon/+bug/1236423) . This should be fixed in packstack when [this review](https://review.openstack.org/#/c/51222/) is merged.
 
 #### symptoms
 
