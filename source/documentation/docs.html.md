@@ -31,6 +31,7 @@ Since RDO sticks closely to the upstream OpenStack project, the documentation at
 *   [ Deploying RDO Using Foreman](Deploying RDO Using Foreman)
 *   [ Multinode Havana using GRE](GettingStartedHavana_w_GRE)
 *   [ Configuring Horizon to use SSL](HorizonSSL)
+*   [ Getting started with Ceilometer](CeilometerQuickStart)
 *   [ Launching your first VM ](Running an instance)
 *   [ Image Resources](Image resources)
 *   [ Deploy Heat and launch your first Application (RDO Grizzly)](Deploy Heat and launch your first Application)
