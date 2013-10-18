@@ -20,17 +20,13 @@ Deploying RDO is a quick and easy process. Setting up an OpenStack cloud takes a
 
 Below, we'll explain how to set up OpenStack on a single server. You'll be able to [add more nodes](Adding_a_compute_node) to your OpenStack cloud later, if you choose.
 
-*If you want to try out the development version (code name: Havana), see the [Havana QuickStart](QuickStartLatest).*
-
-</div>
-</div>
 <div class="row">
 <div class="offset3 span8 pull-s">
 ### Step 0: Prerequisites
 
 <div class="row">
 <div class="span4">
-**Software:** Red Hat Enterprise Linux (RHEL) 6.4, or the equivalent version of one of the RHEL-based Linux distributions such as CentOS, Scientific Linux, etc., or Fedora 18 or later. See also [ RDO repository info](Repositories) for details on required repositories. Please name the host with a fully qualified domain name rather than a short-form name to avoid DNS issues with Packstack.
+**Software:** Red Hat Enterprise Linux (RHEL) 6.4, or the equivalent version of one of the RHEL-based Linux distributions such as CentOS, Scientific Linux, etc., or Fedora 19 or later. See also [ RDO repository info](Repositories) for details on required repositories. Please name the host with a fully qualified domain name rather than a short-form name to avoid DNS issues with Packstack.
 
 </div>
 <div class="span4">
@@ -42,7 +38,7 @@ Below, we'll explain how to set up OpenStack on a single server. You'll be able 
 
 Run the following command to install RDO:
 
-    sudo yum install -y http://rdo.fedorapeople.org/openstack-grizzly/rdo-release-grizzly.rpm
+    sudo yum install -y http://rdo.fedorapeople.org/openstack-havana/rdo-release-havana.rpm
 
 ### Step 2: Install Packstack Installer
 
@@ -52,9 +48,7 @@ Run the following command to install RDO:
 
 Packstack takes the work out of manually setting up OpenStack. For a single node OpenStack deployment, run the following command.
 
-    packstack --allinone --os-quantum-install=n
-
-*Advanced users: Packstack does have some support for Neutron (formerly called Quantum) networking, however, until we have better support for Neutron and some documentation on the wiki for it, we recommend Nova Networking for now. If you are interested in trying out Neutron in an all-in-one single host configuration, take a look at [ Quick start guide with Neutron](Neutron-Quickstart)*
+    packstack --allinone
 
 If you have run packstack previously, there will be a file in your home directory named something like packstack-answers-20130722-153728.txt You will probably want to use that file again, using the --answer-file option, so that any passwords you've already set (eg, mysql) will be reused.
 
