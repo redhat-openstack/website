@@ -39,6 +39,7 @@ Since RDO sticks closely to the upstream OpenStack project, the documentation at
 *   [ Repository information ](Repositories)
 *   [Adding a compute node](Adding a compute node)
 *   [Troubleshooting](Troubleshooting)
+*   [ Upgrading from Grizzly to Havana](Upgrading_RDO)
 *   [Uninstalling RDO](Uninstalling RDO)
 
 </div>
