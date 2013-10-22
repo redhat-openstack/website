@@ -35,61 +35,6 @@ nova-consoleauth also needs to be added to pacemaker, this will ensure that it o
 
     node1$ pcs resource create consoleauth lsb:openstack-nova-consoleauth --group test-group
 
-## Alternate clustered Qpid deployment
-
-The previous example of setting qpid up highly available lets it co-exist with pacemaker but doesn't prevent message loss. If you setup a separate set of nodes to run a qpid cluster then message loss can be prevented.
-
-To do this, do the following on each qpid cluster node. First install the qpid cluster packages.
-
-    # yum install -y qpid-cpp-server-cluster qpid-tools
-
-Ensure that the corosync uidgid.d directory has a qpidd file with the following contents:
-
-    # cat /etc/corosync/uidgid.d/qpidd 
-    uidgid {
-            uid: qpidd
-            gid: qpidd
-    }
-
-copy the corosync.conf sample file into place
-
-    # cp /etc/corosync/corosync.conf.sample /etc/corosync/corosync.conf
-
-Set the corosync.conf bindnetaddr property to the respective node's ip address
-update the multicast address too if necessary.
-
-            bindnetaddr: 192.168.122.101
-
-Open up a bunch of ports for the cluster to talk
-
-    iptables -I INPUT -p udp -m udp --dport 5405  -j ACCEPT
-    iptables -I INPUT -p tcp -m tcp --dport 5405  -j ACCEPT
-    iptables -I INPUT -p tcp -m tcp --dport 8084  -j ACCEPT
-    iptables -I INPUT -p tcp -m tcp --dport 11111  -j ACCEPT
-    iptables -I INPUT -p tcp -m tcp --dport 14567  -j ACCEPT
-    iptables -I INPUT -p tcp -m tcp --dport 16851  -j ACCEPT
-    iptables -I INPUT -p tcp -m tcp --dport 21064  -j ACCEPT
-    iptables -I INPUT -p tcp -m tcp --dport 50006  -j ACCEPT
-    iptables -I INPUT -p udp -m udp --dport 50007  -j ACCEPT
-    iptables -I INPUT -p tcp -m tcp --dport 50008  -j ACCEPT
-    iptables -I INPUT -p tcp -m tcp --dport 50009  -j ACCEPT
-    service iptables save
-    service iptables restart
-
-start corosync and then qpid
-
-    # service corosync start
-    # service qpidd start
-
-Finally replace all the qpid settings in the openstack components to use the qpid_hosts parameter instead of the qpid_hostname and qpid_port parameters
-
-    # Qpid broker hostname (string value)
-    #qpid_hostname=localhost
-    # Qpid broker port (integer value)
-    #qpid_port=5672
-    # Qpid HA cluster host:port pairs (list value)
-    qpid_hosts=192.168.122.101:5672,192.168.122.102:5672
-
 ## Load Balancing
 
 HA Proxy is used to load balance the services. It should be installed on each of the control nodes.
