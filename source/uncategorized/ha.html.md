@@ -107,6 +107,11 @@ Next use the configuration from [ HA Proxy Configuration](Load_Balance_OpenStack
 
 In this example, HA Proxy is added to the same test-group as before. That way it will run on the same host as the floating ip.
 
-## Finishing up
+## Securing endpoints
 
-At this point all the services are being managed by either pacemaker or HAProxy. The final step is to point all the config files for the OpenStack cluster to use the floating ip address. There are quite a few places this should be updated.
+To add SSL to Horizon follow this doc:
+<http://openstack.redhat.com/RDO_HighlyAvailable_and_LoadBalanced_Control_Services>
+
+## Updating OpenStack
+
+At this point all the services are being managed by either pacemaker or HAProxy. The final step is to point all the config files for the OpenStack cluster to use the floating ip address to connect to the API endpoints. Do this both in the config files and in the keystone endpoints. There are quite a few config files this should be updated. An update to a keystone endpoint is a delete then re-add, There is not an actual update method.
