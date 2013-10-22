@@ -32,6 +32,7 @@ Since RDO sticks closely to the upstream OpenStack project, the documentation at
 *   [ Multinode Havana using GRE](GettingStartedHavana_w_GRE)
 *   [ Configuring Horizon to use SSL](HorizonSSL)
 *   [ Securing Services](Securing_Services)
+*   [ RDO_HighlyAvailable_and_LoadBalanced_Control_Services](HA and LB Control Services)
 *   [ Getting started with Ceilometer](CeilometerQuickStart)
 *   [ Launching your first VM ](Running an instance)
 *   [ Image Resources](Image resources)
