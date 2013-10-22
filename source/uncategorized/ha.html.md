@@ -29,13 +29,11 @@ Now that the control nodes are installed, the next step is to cluster them. This
 
 [ Highly Available MySQL server for OpenStack ](Highly_Available_MySQL_server_for_OpenStack) will get pacemaker installed and configured so that the nodes are highly available and MySQL is HA.
 
-Once MySQL is HA, Qpid and nova-consoleauth also need do be added to pacemaker. You could give each of them their own floating ip or just put them in the same group as mysql and have them all listen to the same floating ip. For this demonstration they will be added to the group with the existing ip and MySQL.
+[ Highly Available Qpid for OpenStack](Highly_Available_Qpid_for_OpenStack) will get qpid clustered and/or added to pacemaker.
 
-    node1$ pcs resource create qpidd lsb:qpidd --group test-group
+nova-consoleauth also needs to be added to pacemaker, this will ensure that it only runs on one node. Your remote console will not work if consoleauth is running in more than one place.
 
     node1$ pcs resource create consoleauth lsb:openstack-nova-consoleauth --group test-group
-
-WARNING: This method of managing qpid through pacemaker makes the service highly available but does not prevent message loss. This document will be updated in the future to include instructions on clustering qpid with will prevent message loss.
 
 ## Alternate clustered Qpid deployment
 
