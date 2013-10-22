@@ -50,10 +50,9 @@ Next use the configuration from [ HA Proxy Configuration](Load_Balance_OpenStack
 
 In this example, HA Proxy is added to the same test-group as before. That way it will run on the same host as the floating ip.
 
-## Securing endpoints
+## Securing Services
 
-To add SSL to Horizon follow this doc:
-<http://openstack.redhat.com/RDO_HighlyAvailable_and_LoadBalanced_Control_Services>
+Use [ Securing Services](Securing_Services) to secure your MySQL, qpid and Apache services
 
 ## Updating OpenStack
 
