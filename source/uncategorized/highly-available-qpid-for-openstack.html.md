@@ -62,10 +62,7 @@ copy the corosync.conf sample file into place
     # cp /etc/corosync/corosync.conf.sample /etc/corosync/corosync.conf
 
 Set the corosync.conf bindnetaddr property to the network address for the interface.
-This can be calculated by doing a bitwise AND of the inet addr. For example a 172.16.44.123/255.255.248.0 would result in bindnetaddr being set to 172.16.40.0. In this example 192.168.122.101/255.255.255.0 and 192.168.122.102/255.255.255.0 result in the bindnetaddr value of 192.168.122.0.
-
-      the respective node's ip address
-      update the multicast address too if necessary.
+This can be calculated by doing a bitwise AND of the inet addr. For example a 172.16.44.123/255.255.248.0 would result in bindnetaddr being set to 172.16.40.0. In this example 192.168.122.101/255.255.255.0 and 192.168.122.102/255.255.255.0 result in the bindnetaddr value of 192.168.122.0 for both nodes in the qpid cluster.
 
             bindnetaddr: 192.168.122.0
 
