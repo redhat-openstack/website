@@ -18,7 +18,7 @@ Upstream [blueprint](https://blueprints.launchpad.net/ceilometer/+spec/alarm-aud
 
 ### Prerequistes
 
-      Install packstack allinone, then spin up an instance in the usual way. 
+Install packstack allinone, then spin up an instance in the usual way.
 
 Ensure the compute agent is gathering metrics at a reasonable cadence (every 60s for example instead of every 10mins as per the default):
 
