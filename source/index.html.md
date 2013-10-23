@@ -37,7 +37,7 @@ There's always something going on in the RDO community. See the [Events](Events)
 
 RDO is a community of people using and deploying OpenStack on Red Hat and Red Hat-based platforms. We have [ documentation to help get started](Docs), [/forum forums] where you can connect with other users, and [ community-supported packages](Quickstart) of the most up-to-date OpenStack releases available for download.
 
-If you are looking for enterprise-level support, or information on partner certification, Red Hat also offers [Red Hat OpenStack Early Adopter Edition](//redhat.com/openstack).
+If you are looking for enterprise-level support, or information on partner certification, Red Hat also offers [Red Hat Enterprise Linux OpenStack Platform](//redhat.com/openstack).
 
 OpenStack relies on the underlying operating system and hypervisor — and what better operating system to build on than the industry's leading enterprise operating system? The RDO community is your one-stop community site for all things related to using OpenStack on Red Hat based platforms.
 
@@ -55,7 +55,7 @@ Here's the video from our first Hangout event. You can see other videos in the [
 
 From the Linux kernel and the KVM hypervisor to the top level OpenStack project components, Red Hat has expertise at every level of the stack. Whether you want to run a proof of concept of OpenStack on CentOS, or you want to prepare a production cloud and you are evaluating partners for your deployment, who better to go to than the number one contributor to OpenStack?
 
-When you're ready for production, and you want support from a partner you know, Red Hat offers you the [Red Hat OpenStack Early Adopter Edition](//redhat.com/openstack), with its partner certification program.
+When you're ready for production, and you want support from a partner you know, Red Hat offers you the [Red Hat Enterprise Linux OpenStack Platform](//redhat.com/openstack), with its partner certification program.
 
 </div>
 </div>
@@ -93,7 +93,7 @@ In just a few short steps, you can transform any machine running Fedora, Red Hat
 
 There are many ways to [get involved](get involved) with the RDO community once you [ get started](quickstart). The simplest way is to join [/forum the RDO forums] and help out other users by sharing your experiences.
 
-For a commercially-supported enterprise ready OpenStack solution, Red Hat provides [Red Hat OpenStack Early Adopter Edition](//redhat.com/openstack), an enterprise-class cloud platform based on OpenStack Folsom.
+For a commercially-supported enterprise ready OpenStack solution, Red Hat provides [Red Hat Enterprise Linux OpenStack Platform](//redhat.com/openstack), an enterprise-class cloud platform based on OpenStack Grizzly.
 
 </div>
 </div>
