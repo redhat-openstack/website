@@ -52,7 +52,7 @@ Edit the packstack answerfile and update the following configuration parameters.
     CONFIG_NEUTRON_OVS_TUNNEL_RANGES=1:1000
     CONFIG_NEUTRON_OVS_TUNNEL_IF=eth1
 
-Note: Packstack will pre-populate the ip addresses and network interfaces based on the system you are installing from. For the Fedora install the following search and replace commands were run to update the 192.168.122 addresses to the 123 addresses (using the private subnet) and to replace the em devices with eth devices. This is specific to Fedora 19 and may not me necessary for your install.
+Note: Packstack will pre-populate the ip addresses and network interfaces based on the system you are installing from. For the Fedora install the following search and replace commands were run to update the 192.168.122 addresses to the 123 addresses (using the private subnet) and to replace the em devices with eth devices. This is specific to Fedora 19 and may not be necessary for your install.
 
     %s/192.168.122/192.168.123/g
     %s/em1/eth0/g
