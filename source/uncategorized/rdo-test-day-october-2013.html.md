@@ -26,7 +26,7 @@ Testing:
 
 ## Prerequisite for Test Day
 
-*   A newly¹ installed and fully updated Fedora 19, Fedora 20 (pre-release) Centos 6.4, Scientific Linux 6.4, RHEL 6.4 or RHEL 6.5 Beta VM² or baremetal system
+*   A newly¹ installed Fedora 19, Fedora 20 (pre-release) Centos 6.4, Scientific Linux 6.4, RHEL 6.4 or RHEL 6.5 Beta VM² or baremetal system
 *   With the updates-[testing repositories enabled](http://openstack.redhat.com/Repositories#Testing) and fully updated with: yum update
 
          yum-config-manager --enable updates-testing 
