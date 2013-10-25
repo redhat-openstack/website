@@ -22,6 +22,7 @@ Development:
 Testing:
 
 *   rbowen (Rich Bowen)
+*   red_trela (Sandro Mathys)
 
 ## Prerequisite for Test Day
 
