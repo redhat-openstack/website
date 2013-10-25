@@ -27,7 +27,7 @@ The most up-to-date OpenStack on the industry's most trusted Linux platform, now
 <div class="offset4 span7 pad-sides begin-content pull-s">
 ## Upcoming Events
 
-A bunch of the RDO engineering team will be at [LinuxCon](http://events.linuxfoundation.org/events/linuxcon-europe) in Edinburgh, October 21-23. Come to the co-located [KVM Forum](http://events.linuxfoundation.org/events/kvm-forum) and [CloudOpen](http://events.linuxfoundation.org/events/cloudopen-europe) to learn more about RDO, OpenStack, and the ecosystem of cloud technologies.
+This week we'll be conducting another test day for the RDO Havana release. See details at [RDO_Test_Day_October_2013](RDO_Test_Day_October_2013). And on Thursday, please come to the [Networking Google Hangout, Part II](https://plus.google.com/events/cfgnq5t8it7uvksrtpd00s2fcmg).
 
 There's always something going on in the RDO community. See the [Events](Events) page for other upcoming events.
 
