@@ -22,7 +22,7 @@ The high level task of upgrading everything in place looks like this:
 The first step depends on how your services are distributed among your nodes, but something like this should work for a nova node, which can be extended for the other services:
 
       cd /etc/init.d
-      for service in openstack-nova*; do service $i stop; done
+      for service in openstack-nova*; do service $service stop; done
 
 Upgrading the packages means installing the new version of rdo-release and running "yum update":
 
