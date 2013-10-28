@@ -20,6 +20,7 @@ The following cast of characters will be available testing, workarounds, bug fix
 Development:
 
 *   shardy (Steve Hardy, Heat Project)
+*   jayg (Jason Guiditta, Foreman/Openstack integration)
 
 Testing:
 
