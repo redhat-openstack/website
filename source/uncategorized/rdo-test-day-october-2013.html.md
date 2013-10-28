@@ -24,6 +24,7 @@ Testing:
 *   rbowen (Rich Bowen)
 *   red_trela (Sandro Mathys)
 *   kashyap (Kashyap Chamarthy)
+*   rdo (Rhys Oxenham)
 
 ## Prerequisite for Test Day
 
