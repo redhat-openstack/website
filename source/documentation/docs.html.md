@@ -58,6 +58,7 @@ Since RDO sticks closely to the upstream OpenStack project, the documentation at
 *   [ Other networking resources ](Networking)
 *   [ Setting up a virtualized multi-node dev environment for Neutron ](NeutronLibvirtMultinodeDevEnvironment)
 *   [Configuring Neutron with existing external network](Neutron_with_existing_external_network)
+*   [OpenStack Networking in Too Much Detail](Networking_in_too_much_detail)
 
 </div>
 <div class="span4">
