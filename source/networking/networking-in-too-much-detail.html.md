@@ -26,7 +26,7 @@ The examples in this document were generated on a system with Quantum networking
 
 This is a simplified architecture diagram of network connectivity in a quantum/neutron managed world:
 
-[[1](File:neutron_architecture.png)
+![](neutron_architecture.png "neutron_architecture.png")
 
 Section names in this document include parenthetical references to the nodes on the map relevant to that particular section.
 
