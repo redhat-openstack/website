@@ -27,6 +27,7 @@ Testing:
 *   red_trela (Sandro Mathys)
 *   kashyap (Kashyap Chamarthy)
 *   rdo (Rhys Oxenham)
+*   gfidente (Giulio Fidente)
 
 ## Prerequisite for Test Day
 
