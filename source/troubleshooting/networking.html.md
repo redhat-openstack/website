@@ -50,6 +50,42 @@ The above command will read in a previously created tcpdump file
 
 The above command will capture all traffic on any interface. ...
 
+## iproute2
+
+iproute2 provides a tool called ip which allows you to debug what is going on.
+
+Here are some diagnostics commands for networking (assuming you are using Neutron). Of-course, you'll replace the router namespace, dhcp namespace IDs , IP addresses accordingly:
+
+    # List namespaces
+    $ ip netns
+    qdhcp-4a04382f-03bf-49a9-9d4a-35ab9ffc22ad
+    qrouter-1fabd5f0-f80b-468d-b733-1b80d0c3e80f
+
+    # Show all interfaces inside the namespace
+    $ ip netns exec qrouter-1fabd5f0-f80b-468d-b733-1b80d0c3e80f \
+      ip a
+
+    # Check routing table inside the router namespace     
+    $ ip netns exec qrouter-1fabd5f0-f80b-468d-b733-1b80d0c3e80f \
+      ip r
+
+    # IP config inside the router namesapce 
+    $ ip netns exec qrouter-1fabd5f0-f80b-468d-b733-1b80d0c3e80f \
+      ifconfig
+
+    # IP configu inside the dhcp namesace
+    $ ip netns exec qrouter-1fabd5f0-f80b-468d-b733-1b80d0c3e80f \
+      ifconfig
+
+    # Ping the private IP (of the cirros guest)
+    $ ip netns exec qrouter-1fabd5f0-f80b-468d-b733-1b80d0c3e80f \
+      ping -c2 30.0.0.7
+    $ ip netns exec qrouter-1fabd5f0-f80b-468d-b733-1b80d0c3e80f \
+      ping -c2 192.168.122.14
+
+    # ssh into cirros guest
+    $ ip netns exec qdhcp-4a04382f-03bf-49a9-9d4a-35ab9ffc22ad ssh   cirros@30.0.0.7
+
 ## Common issues
 
 *   I can create an instance, but cannot SSH or ping it
