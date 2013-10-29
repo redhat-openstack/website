@@ -158,6 +158,25 @@ This describes (and still needs more detail) how to use various host groups incl
 
 All Host Groups can have their default values edited in the Foreman UI by going to 'More -> Configuration -> Host Groups'. Do verify these settings are as desired before proceeding to configure any client machines via Foreman.
 
+#### 2 Node install with Nova Networking
+
+*   First, verify the settings for the 'Openstack Controller' and 'Openstack Nova Compute' hostgroups are correct, especially the public and private openstack network IPs/ranges.
+*   Select the Host (checkbox) from the list on the 'Hosts' tab of Foreman UI that you wish to configure as your controller.
+*   From the Dropdown menu directly above the table, select 'Change Group', and pick 'Openstack Controller', then 'Submit'
+*   Next, either wait for that machine to check in via puppet, or kick off a put run the using 'puppet agent -tv'
+*   Once that has completed successfully, make sure you can get to Horizon on the new controller node. Your password, unless you changed it for this host, is the admin_password on the paramters tab of the host group. You can also check cli services for the controller using standard openstack commands. All passwords and environment variables you need to set to do so can be found in this same Parameters tab. As an example, you could create a .keystonerc like so:
+
+<!-- -->
+
+    export OS_USERNAME=admin 
+    export OS_TENANT_NAME=admin
+    export OS_PASSWORD=<admin_password>
+    export OS_AUTH_URL=http://<controller_ip>:35357/v2.0/
+
+Then you can source it and do a 'nova service-list'. This should show most services running, modulo compute, since you didnt set that up yet.
+
+*   Assuming that went well, your next step woudl be to do the assignment of a host groupt to your node, this time choosing 'Openstack Nova Compute'. Once that finishes, if you run the service-list command again from your controller, you shoudl see the newly added compute node running.
+
 #### Neutron with Networker Node
 
 ##### Notes
