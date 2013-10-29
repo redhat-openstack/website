@@ -261,3 +261,20 @@ Edit /etc/openstack-dashboard/local_settings and add the 'django' logger to the 
 You should then restart httpd.
 
 Here's an example of a [working logging configuration](https://github.com/openstack/horizon/blob/3ccd927251a69905b2c3f1ee496c174eaeb1f8eb/openstack_dashboard/local/local_settings.py.example#L241).
+
+## cinder: volume lifecycle not metered
+
+*   **Affects:** All
+
+#### symptoms
+
+Newly created volumes are not metered:
+
+       cinder create 1 ; ceilometer meter-list | grep volume 
+
+#### workaround
+
+The root cause of the problem is that cinder does not override the control_exchange config option from the oslo standard "openstack" setting. This config setting (normally set directly in the code) can be specified as follows:
+
+       sudo openstack-config --set /etc/cinder/cinder.conf DEFAULT control_exchange cinder
+       sudo service openstack-cinder-volume restart
