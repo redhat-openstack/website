@@ -22,6 +22,7 @@ Development:
 *   shardy (Steve Hardy, Heat Project)
 *   jayg (Jason Guiditta, Foreman/Openstack integration)
 *   cwolferh (Crag Wolfe, Foreman/Openstack integration)
+*   pixelbeat (Pádraig Brady)
 
 Testing:
 
