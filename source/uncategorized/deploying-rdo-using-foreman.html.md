@@ -108,7 +108,7 @@ For RHEL systems, make sure you are registered to both rhel-6-server-rpms and th
 For all systems, you will also want the following two repositories:
 
     yum install http://download.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm
-    yum install http://repos.fedorapeople.org/repos/openstack/openstack-havana/rdo-release-havana-6.noarch.rpm
+    yum install http://repos.fedorapeople.org/repos/openstack/openstack-havana/rdo-release-havana-7.noarch.rpm
 
 These steps should be run on each system.
 
