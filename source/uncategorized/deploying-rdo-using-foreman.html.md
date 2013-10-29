@@ -78,11 +78,11 @@ After a brief time, this will leave you with a working Foreman install. Further 
 
 #### Steps for controller/compute nodes
 
-You will want to run `foreman_client.sh` on each client.
+Next, you need to run `foreman_client.sh` on each client.
 
-This is located in `/tmp` on the Foreman server. You'll want to copy this to each machine.
+This is located in `/tmp` on the Foreman server. Copy this to each machine.
 
-Once it's in place, run it on each machine:
+Once it is in place, run it on each machine:
 
     sh <path>/foreman_client.sh
 
