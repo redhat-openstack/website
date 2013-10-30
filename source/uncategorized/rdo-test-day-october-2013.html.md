@@ -44,7 +44,7 @@ Testing:
          yum update
 
 *   If using a RHEL system please ensure the **optional** repo is enabled.
-*   If using a Scientific Linux system please ensure the "sl-fastbugs" repo is enabled.
+*   If using a Scientific Linux system please ensure the **sl-fastbugs** repo is enabled.
 *   Hardware virtualization support (e.g. Intel VT or AMD-V).
 *   Up to 10-20Gb free disk space. Guest images take up a lot of space.
 
