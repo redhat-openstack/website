@@ -75,3 +75,4 @@ Use something like RecordMyDesktop to record a screencast of your tests, and let
 
 *   Etherpad for quick notes from participants, to be edited/collated later
 *   Better promotion to the various mailing lists prior to event (2 weeks, 1 week, 2 days, day of event)
+*   Reference <http://openstack.redhat.com/HowToTest> for folks who want to test that way
