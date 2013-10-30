@@ -20,6 +20,8 @@ Deploying RDO is a quick and easy process. Setting up an OpenStack cloud takes a
 
 Below, we'll explain how to set up OpenStack on a single server. You'll be able to [add more nodes](Adding_a_compute_node) to your OpenStack cloud later, if you choose.
 
+*If you want to try out the previous version (code name: Grizzly), replace 'havana' with 'grizzly' in step 1 below.*
+
 </div>
 </div>
 <div class="row">
