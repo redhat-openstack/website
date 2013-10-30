@@ -68,3 +68,8 @@ We strongly encourage you to write narrative blogs about your test experiences, 
 Also, if you'd like to do an audio interview for a podcast about this event, please contact Rich Bowen (rbowen at redhat dot com) to set something up.
 
 Use something like RecordMyDesktop to record a screencast of your tests, and let me (rbowen) know if you have any video that you think would make useful HowTo videos.
+
+## Notes for future test days
+
+*   Etherpad for quick notes from participants, to be edited/collated later
+*   Better promotion to the various mailing lists prior to event (2 weeks, 1 week, 2 days, day of event)
