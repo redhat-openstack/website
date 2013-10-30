@@ -31,6 +31,10 @@ The HA Mysql Host Group is responsible for starting Pacemaker and configuring th
           fs-varlibmysql     (ocf::heartbeat:Filesystem):    Started 192.168.202.11
           mysql-ostk-mysql   (ocf::heartbeat:mysql): Started 192.168.202.11
 
+**Repository Requirements**
+
+The cluster nodes must be subscribed to the rhel-ha-for-rhel-6-server-rpms repository, or equivalent (before being subscribed to the HA Mysql Host Group).
+
 **HA Mysql Host Group Parameters**
 
 To edit the Host Group Parameters in the Foreman web UI, click More (on the top right), then Configuration, then Host Groups. Click HA Mysql Node. Click the tab on the right, Parameters. For any parameter you want to override (which very well could be all of them), click on the override button and edit the value at the bottom of the page.
