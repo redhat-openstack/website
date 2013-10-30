@@ -13,6 +13,8 @@ We plan to hold a RDO Havana test day on October 29th and 30th, 2013. This will 
 
 Results from the testing will continue to update the [TestedSetups](TestedSetups) page. Join the #rdo channel on the freenode.net IRC network for the live event.
 
+You can also make quick notes at <https://etherpad.openstack.org/p/rdo-test-day-30OCT2013> which we will collate and make more permanent after the event.
+
 ## Who's Available
 
 The following cast of characters will be available testing, workarounds, bug fixes, and general discussion. You can participate in the conversation on the #rdo IRC channel on the Freenode IRC network.
