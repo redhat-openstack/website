@@ -45,13 +45,11 @@ OpenStack relies on the underlying operating system and hypervisor — and what 
 </div>
 <div class="row">
 <div class="span7 offset4 pad-sides begin-content pull-m">
-## Neutron Networking Google Hangout
+## Networking with OpenStack
 
-On **Tuesday, September 24th**, we had a Google Hangout covering Neutron Networking for beginners. And we're planning one for October 31st to take you to the next step of networking.
+On **Thursday, October 31st**, Brent Eagles gave a presentation on advanced networking with OpenStack. You can watch the video from that presentation, and other earlier presentations on the [RDO Video](RDO Video) page.
 
-Here's the video from our first Hangout event. You can see other videos in the [RDO Videos](RDO Videos) section of the site.
-
-<iframe width="630" src="//youtube.com/embed/afImoFeuDnY" frameborder="0" align="center" allowfullscreen="true"> </iframe>
+## Red Hat Expertise
 
 From the Linux kernel and the KVM hypervisor to the top level OpenStack project components, Red Hat has expertise at every level of the stack. Whether you want to run a proof of concept of OpenStack on CentOS, or you want to prepare a production cloud and you are evaluating partners for your deployment, who better to go to than the number one contributor to OpenStack?
 
