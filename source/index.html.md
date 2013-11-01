@@ -27,7 +27,7 @@ The most up-to-date OpenStack on the industry's most trusted Linux platform, now
 <div class="offset4 span7 pad-sides begin-content pull-s">
 ## Upcoming Events
 
-Many of the RDO team will be in Hong Kong next week for the [| OpenStack Summit](http://www.openstack.org/summit/openstack-summit-hong-kong-2013/). See what talks we'll be giving on the [community.redhat.com](http://community.redhat.com/events/#OpenStack%20Summit%20Hong%20Kong).
+Many of the RDO team will be in Hong Kong next week for the [OpenStack Summit](http://www.openstack.org/summit/openstack-summit-hong-kong-2013/). See what talks we'll be giving on the [community.redhat.com](http://community.redhat.com/events/#OpenStack%20Summit%20Hong%20Kong).
 
 There's always something going on in the RDO community. See the [Events](Events) page for other upcoming events.
 
