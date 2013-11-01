@@ -41,6 +41,13 @@ Make /etc/sysconfig/network-scripts/ifcfg-eth0 resemble (no BOOTPROTO!):
     OVS_BRIDGE=br-ex
     ONBOOT=yes
 
+Add to the /etc/neutron/plugin.ini file these lines:
+
+    network_vlan_ranges = physnet1
+    bridge_mappings = physnet1:br-ex
+
+Restart the network service
+
     # service network restart
 
 NOTE: It is important to do the network restart before setting up the router gateway below, because a network restart takes destroys and recreates br-ex which causes the router's interface in the qrouter-\* netns to be deleted, and it won't be recreated without clearing and re-setting the gateway.
