@@ -46,13 +46,13 @@ Make /etc/sysconfig/network-scripts/ifcfg-eth0 resemble (no BOOTPROTO!):
 NOTE: It is important to do the network restart before setting up the router gateway below, because a network restart takes destroys and recreates br-ex which causes the router's interface in the qrouter-\* netns to be deleted, and it won't be recreated without clearing and re-setting the gateway.
 
     # . keystonerc_admin
-    # quantum router-gateway-clear router1
-    # quantum subnet-delete public_subnet
+    # neutron router-gateway-clear router1
+    # neutron subnet-delete public_subnet
 
 You need to recreate the public subnet with an allocation range outside of your external DHCP range and set the gateway to the default gateway of the external network.
 
-    # quantum subnet-create --name public_subnet --enable_dhcp=False --allocation-pool=start=192.168.122.10,end=192.168.122.20 --gateway=192.168.122.1 public 192.168.122.0/24
-    # quantum router-gateway-set router1 public
+    # neutron subnet-create --name public_subnet --enable_dhcp=False --allocation-pool=start=192.168.122.10,end=192.168.122.20 --gateway=192.168.122.1 public 192.168.122.0/24
+    # neutron router-gateway-set router1 public
 
 You should now be able to follow the steps at [running an instance with Neutron](running an instance with Neutron) to launch an instance with external network access.
 
