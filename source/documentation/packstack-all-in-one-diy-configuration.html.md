@@ -30,7 +30,7 @@ Not everyone has a development or testing lab that they have control of for "pro
 
 Running OpenStack commands are described in three parts:
 
-*   A reference line prefixed with a '#' that provides the general form of the command. Parameters that are variable relative to the discussion are enclosed in square brackets where required parameter values are unadorned. Feel free to use values different than the ones used in the examples, but remember to keep track of them. Keep an eye out for slip-ups where we may have forgotten to put square brackets around something too! If there are no optional arguments at all, the reference line is omitted.
+*   A reference line prefixed with a '#' provides the general form of the command. Parameters that are variable relative to the discussion are enclosed in square brackets whereas required parameter values are unadorned. Feel free to use values different than the ones used in the examples, but remember to keep track of them. Keep an eye out for slip-ups where we may have forgotten to put square brackets around something too! If there are no optional arguments at all, the reference line is omitted.
 *   An example line.
 *   Example output.
 
