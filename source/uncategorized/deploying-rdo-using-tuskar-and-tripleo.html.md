@@ -16,9 +16,16 @@ NOTE: This install process is **NOT** suitable for production deployment, in fac
 
 Deploy a virtualized OpenStack installation consisting of a single Controller Node and single Compute Node. The instructions walk you through installing Tuskar and TripleO themselves then deploying this OpenStack install using the Tuskar UI.
 
-## Files to down
+## Files to download
 
-deploy-ramdisk.initramfs [3](http://goo.gl/l07AMB) deploy-ramdisk.kernel [4](http://goo.gl/86tTQw) fedora-cloud.qcow2 [5](http://goo.gl/ypXGZO) Fedora-Undercloud-Control-2013-10-25-11_34_41.iso [6](http://goo.gl/VmBwkA) Fedora-Undercloud-Leaf-2013-10-23-18_40_22.iso [7](http://goo.gl/yebuwc) overcloud-compute.qcow2 [8](http://goo.gl/OBywFQ) overcloud-control.qcow2 [9](http://goo.gl/wQ5E7R) hash.md5 [10](http://ccrouch.fedorapeople.org/hash.md5)
+1.  deploy-ramdisk.initramfs [3](http://goo.gl/l07AMB)
+2.  deploy-ramdisk.kernel [4](http://goo.gl/86tTQw)
+3.  fedora-cloud.qcow2 [5](http://goo.gl/ypXGZO)
+4.  Fedora-Undercloud-Control-2013-10-25-11_34_41.iso [6](http://goo.gl/VmBwkA)
+5.  Fedora-Undercloud-Leaf-2013-10-23-18_40_22.iso [7](http://goo.gl/yebuwc)
+6.  overcloud-compute.qcow2 [8](http://goo.gl/OBywFQ)
+7.  overcloud-control.qcow2 [9](http://goo.gl/wQ5E7R)
+8.  hash.md5 [10](http://ccrouch.fedorapeople.org/hash.md5)
 
 ## Instructions
 
