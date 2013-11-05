@@ -50,3 +50,11 @@ Can be found here [11](https://github.com/mtaylor/tuskar_install/blob/master/REA
 
 </div>
 </div>
+<div class="row">
+<div class="offset3 span8 pull-s">
+# Future
+
+The Tuskar and TripleO communities are continually extending the capabilities of the two projects. Over the course of the OpenStack Icehouse release we intend to reduce the complexity of the installation process. If you would like to help contribute please get in touch on #tuskar on freenode irc.
+
+</div>
+</div>
