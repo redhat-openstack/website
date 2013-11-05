@@ -50,7 +50,7 @@ Download these files to the machine which you will use to host the virtual envir
 <div class="offset3 span8 pull-s">
 # Instructions
 
-Can be found here [1](https://github.com/mtaylor/tuskar_install/blob/master/README.md). If you run into issues please reach out on #tuskar on freenode irc.
+Can be found [here](//github.com/mtaylor/tuskar_install/blob/master/README.md). If you run into issues please reach out on #tuskar on freenode irc.
 
 </div>
 </div>
