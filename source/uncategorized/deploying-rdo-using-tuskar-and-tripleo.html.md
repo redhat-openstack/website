@@ -31,14 +31,14 @@ Deploy a virtualized OpenStack installation consisting of a single Controller No
 <div class="offset3 span8 pull-s">
 # Files to download
 
-1.  deploy-ramdisk.initramfs [1](http://goo.gl/l07AMB)
-2.  deploy-ramdisk.kernel [2](http://goo.gl/86tTQw)
-3.  fedora-cloud.qcow2 [3](http://goo.gl/ypXGZO)
-4.  Fedora-Undercloud-Control-2013-10-25-11_34_41.iso [4](http://goo.gl/VmBwkA)
-5.  Fedora-Undercloud-Leaf-2013-10-23-18_40_22.iso [5](http://goo.gl/yebuwc)
-6.  overcloud-compute.qcow2 [6](http://goo.gl/OBywFQ)
-7.  overcloud-control.qcow2 [7](http://goo.gl/wQ5E7R)
-8.  hash.md5 [8](http://ccrouch.fedorapeople.org/hash.md5)
+1.  [deploy-ramdisk.initramfs](//goo.gl/l07AMB)
+2.  [deploy-ramdisk.kernel](//goo.gl/86tTQw)
+3.  [fedora-cloud.qcow2](//goo.gl/ypXGZO)
+4.  [Fedora-Undercloud-Control-2013-10-25-11_34_41.iso](//goo.gl/VmBwkA)
+5.  [Fedora-Undercloud-Leaf-2013-10-23-18_40_22.iso](//goo.gl/yebuwc)
+6.  [overcloud-compute.qcow2](//goo.gl/OBywFQ)
+7.  [overcloud-control.qcow2](//goo.gl/wQ5E7R)
+8.  [hash.md5](//ccrouch.fedorapeople.org/hash.md5)
 
 </div>
 </div>
@@ -46,7 +46,7 @@ Deploy a virtualized OpenStack installation consisting of a single Controller No
 <div class="offset3 span8 pull-s">
 # Instructions
 
-Can be found here [9](https://github.com/mtaylor/tuskar_install/blob/master/README.md). If you run into issues please reach out on #tuskar on freenode irc.
+Can be found here [1](https://github.com/mtaylor/tuskar_install/blob/master/README.md). If you run into issues please reach out on #tuskar on freenode irc.
 
 </div>
 </div>
