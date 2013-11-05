@@ -13,7 +13,7 @@ __NOTOC__
 <div class="offset3 span8">
 # Deploying RDO Using Tuskar and TripleO
 
-The following page describes a process for deploying RDO Havana using the [Tuskar](//github.com/openstack/tuskar/) and [TripleO](//wiki.openstack.org/wiki/TripleO) projects.
+The following page describes a process for deploying RDO Havana using the [Tuskar](//wiki.openstack.org/wiki/TripleO/Tuskar) and [TripleO](//wiki.openstack.org/wiki/TripleO) projects.
 
 NOTE: This install process is **NOT** suitable for production deployment, in fact it has **only** been tested as part of a demonstration for the OpenStack Icehouse summit in Hong Kong. The images used are in **NO** way secure and should only be utilized in a private, local environment where they will not be externally reachable.
 
