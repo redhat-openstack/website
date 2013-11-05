@@ -10,7 +10,9 @@ wiki_last_updated: 2013-11-05
 
 **The HA Mysql Host Group** provides a mechanism to set up a HA active/passive Mysql cluster which may be pointed to as the database backend for the various OpenStack service endpoints.
 
-To use HA/Mysql within an OpenStack deployment, you need to make sure to have your Mysql cluster up and running \*before\* spinning up the controller node(s), and make sure the controller Host Group has correct database IP (the virtual Mysql cluster IP) specified.
+To use HA/Mysql within an OpenStack deployment, you need to make sure to have your Mysql cluster up and running \*before\* spinning up the controller node(s), and make sure the controller Host Group has correct database IP (the virtual Mysql cluster IP) specified. You also need the HA channel enabled if you are on RHEL. Centos should not need this.
+
+      # yum-config-manager --enable rhel-ha-for-rhel-6-server-rpms
 
 At a high level, the required steps are:
 
