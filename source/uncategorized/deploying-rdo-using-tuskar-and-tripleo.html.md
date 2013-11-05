@@ -14,7 +14,7 @@ NOTE: This install process is **NOT** suitable for production deployment, in fac
 
 ## Goal
 
-Deploy a virtualized OpenStack installation consisting of a single Controller Node and single Compute Node. The instructions walk you through installing Tuskar and TripleO themselves then deploying this OpenStack install using the Tuskar UI.
+Deploy a virtualized OpenStack installation consisting of a single Controller Node and single Compute Node (known as the Overcloud). The instructions walk you through installing first Tuskar and TripleO (known as the Undercloud) then deploying this OpenStack install using the Tuskar UI.
 
 ## Files to download
 
