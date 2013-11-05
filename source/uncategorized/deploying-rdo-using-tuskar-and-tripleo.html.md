@@ -31,6 +31,8 @@ Deploy a virtualized OpenStack installation consisting of a single Controller No
 <div class="offset3 span8 pull-s">
 # Files to download
 
+Download these files to the machine which you will use to host the virtual environment.
+
 1.  [deploy-ramdisk.initramfs](//goo.gl/l07AMB)
 2.  [deploy-ramdisk.kernel](//goo.gl/86tTQw)
 3.  [fedora-cloud.qcow2](//goo.gl/ypXGZO)
