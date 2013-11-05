@@ -13,7 +13,7 @@ __NOTOC__
 <div class="offset3 span8">
 # Deploying RDO Using Tuskar and TripleO
 
-The following page describes a process for deploying RDO Havana using the Tuskar [1](https://github.com/openstack/tuskar/) and TripleO [2](https://wiki.openstack.org/wiki/TripleO) projects.
+The following page describes a process for deploying RDO Havana using the [Tuskar | <https://github.com/openstack/tuskar/>] and TripleO [1](https://wiki.openstack.org/wiki/TripleO) projects.
 
 NOTE: This install process is **NOT** suitable for production deployment, in fact it has **only** been tested as part of a demonstration for the OpenStack Icehouse summit in Hong Kong. The images used are in **NO** way secure and should only be utilized in a private, local environment where they will not be externally reachable.
 
@@ -31,14 +31,14 @@ Deploy a virtualized OpenStack installation consisting of a single Controller No
 <div class="offset3 span8 pull-s">
 # Files to download
 
-1.  deploy-ramdisk.initramfs [3](http://goo.gl/l07AMB)
-2.  deploy-ramdisk.kernel [4](http://goo.gl/86tTQw)
-3.  fedora-cloud.qcow2 [5](http://goo.gl/ypXGZO)
-4.  Fedora-Undercloud-Control-2013-10-25-11_34_41.iso [6](http://goo.gl/VmBwkA)
-5.  Fedora-Undercloud-Leaf-2013-10-23-18_40_22.iso [7](http://goo.gl/yebuwc)
-6.  overcloud-compute.qcow2 [8](http://goo.gl/OBywFQ)
-7.  overcloud-control.qcow2 [9](http://goo.gl/wQ5E7R)
-8.  hash.md5 [10](http://ccrouch.fedorapeople.org/hash.md5)
+1.  deploy-ramdisk.initramfs [2](http://goo.gl/l07AMB)
+2.  deploy-ramdisk.kernel [3](http://goo.gl/86tTQw)
+3.  fedora-cloud.qcow2 [4](http://goo.gl/ypXGZO)
+4.  Fedora-Undercloud-Control-2013-10-25-11_34_41.iso [5](http://goo.gl/VmBwkA)
+5.  Fedora-Undercloud-Leaf-2013-10-23-18_40_22.iso [6](http://goo.gl/yebuwc)
+6.  overcloud-compute.qcow2 [7](http://goo.gl/OBywFQ)
+7.  overcloud-control.qcow2 [8](http://goo.gl/wQ5E7R)
+8.  hash.md5 [9](http://ccrouch.fedorapeople.org/hash.md5)
 
 </div>
 </div>
@@ -46,7 +46,7 @@ Deploy a virtualized OpenStack installation consisting of a single Controller No
 <div class="offset3 span8 pull-s">
 # Instructions
 
-Can be found here [11](https://github.com/mtaylor/tuskar_install/blob/master/README.md). If you run into issues please reach out on #tuskar on freenode irc.
+Can be found here [10](https://github.com/mtaylor/tuskar_install/blob/master/README.md). If you run into issues please reach out on #tuskar on freenode irc.
 
 </div>
 </div>
