@@ -47,7 +47,7 @@ OpenStack relies on the underlying operating system and hypervisor — and what 
 <div class="span7 offset4 pad-sides begin-content pull-m">
 ## Networking with OpenStack
 
-On **Thursday, October 31st**, Brent Eagles gave a presentation on advanced networking with OpenStack. You can watch the video from that presentation, and other earlier presentations on the [RDO Video](RDO Video) page.
+On **Thursday, October 31st**, Brent Eagles gave a presentation on advanced networking with OpenStack. You can watch the video from that presentation, and other earlier presentations on the [RDO Videos](RDO Videos) page.
 
 ## Red Hat Expertise
 
