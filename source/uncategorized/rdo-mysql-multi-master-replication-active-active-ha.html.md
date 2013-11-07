@@ -14,19 +14,7 @@ There are 3 tasks to accomplish:
 
 **Conventions used:** The load balancers and mysql servers must be on the same network segment, have the same netmask and gateway and be able to receive the same broadcasts.
 
-sql1 and lb1 are the first mysql and load balancer servers, respectively.
-
-sql2 and lb2 are the second mysql and load balancer servers, respectively.
-
-10.0.0.1 is the IP of the primary load balancer, lb1.example.com.
-
-10.0.0.2 is the IP of the secondary load balancer, lb2.example.com.
-
-10.0.0.3 is the IP of the VIP for the mysql server, sql.example.com.
-
-10.0.0.4 is the IP of the first mysql Real Server, sql1.example.com.
-
-10.0.0.5 is the IP of the second mysql Real Server, sql2.example.com.
+sql1 and lb1 are the first mysql and load balancer servers, respectively. sql2 and lb2 are the second mysql and load balancer servers, respectively. 10.0.0.1 is the IP of the primary load balancer, lb1.example.com. 10.0.0.2 is the IP of the secondary load balancer, lb2.example.com. 10.0.0.3 is the IP of the VIP for the mysql server, sql.example.com. 10.0.0.4 is the IP of the first mysql Real Server, sql1.example.com. 10.0.0.5 is the IP of the second mysql Real Server, sql2.example.com.
 
 ## 1. VM Deployment
 
@@ -88,17 +76,13 @@ DEVICE=lo:3 BOOTPROTO=none ONPARENT=yes TYPE=Ethernet IPADDR=10.0.0.3 NETMASK=25
 
 In this set up, replication is performed at the query level - that is, the binary logs are replayed, query by query, to produce the replication between each system.
 
-The following guide are based on the "Advanced MySQL Replication Techniques" (http%3A%2F%2Fwww.onlamp.com%2Fpub%2Fa%2Fonlamp%2F2006%2F04%2F20%2Fadvanced-mysql-replication.html&sa=D&sntz=1&usg=AFQjCNGy-p0Wl41m7DxoLeACYaksXnrupQ) OnLamp article written by Giuseppe Maxia, "How To Set Up Database Replication in MySQL" (http%3A%2F%2Fwww.howtoforge.com%2Fmysql_database_replication&sa=D&sntz=1&usg=AFQjCNH8Kaa0MY1e6Gb-Z5jgJZ2_bT4z7Q) by Falko Timme, and Chapter 16, "Replication of the MySQL 5.1 Reference Manual" (http://dev.mysql.com/doc/refman/5.1/en/replication.html). This guide is only valid for MySQL v5.1 and later.
+The following guide are based on the "Advanced MySQL Replication Techniques" ([http%3A%2F%2Fwww.onlamp.com%2Fpub%2Fa%2Fonlamp%2F2006%2F04%2F20%2Fadvanced-mysql-replication.html&sa=D&sntz=1&usg=AFQjCNGy-p0Wl41m7DxoLeACYaksXnrupQ]) OnLamp article written by Giuseppe Maxia, "How To Set Up Database Replication in MySQL" ([http%3A%2F%2Fwww.howtoforge.com%2Fmysql_database_replication&sa=D&sntz=1&usg=AFQjCNH8Kaa0MY1e6Gb-Z5jgJZ2_bT4z7Q]) by Falko Timme, and Chapter 16, "Replication of the MySQL 5.1 Reference Manual" ([2](http://dev.mysql.com/doc/refman/5.1/en/replication.html)). This guide is only valid for MySQL v5.1 and later.
 
 1) On each system, install the mysql client and server:
 
-yum -y install mysql mysql-server
+yum -y install mysql mysql-server 2) Stop the mysql server on each system:
 
-2) Stop the mysql server on each system:
-
-service mysqld stop
-
-3) Edit the /etc/my.cnf file on each system (NB: the my.cnf on each system will be slightly different).
+service mysqld stop 3) Edit the /etc/my.cnf file on each system (NB: the my.cnf on each system will be slightly different).
 
 On sql1, my.cnf should look like the following:
 
@@ -169,60 +153,50 @@ On sql2, my.cnf should look like the following:
 
 5) Start the mysql client on sql1 and issue the following commands:
 
-mysql> grant replication slave, replication client on \*.\* to 'replication'@'sql2.example.com' identified by 'secret_pw';
-
-mysql> grant replication slave, replication client on \*.\* to 'replication'@'sql1.example.com' identified by 'secret_pw';
-
-mysql> flush privileges;
+mysql> grant replication slave, replication client on \*.\* to 'replication'@'sql2.example.com' identified by 'secret_pw'; mysql> grant replication slave, replication client on \*.\* to'replication'@'sql1.example.com' identified by 'secret_pw'; mysql> flush privileges;
 
 6) Remain logged into the mysql client and issue the following command to obtain the log file name and log position - record these values. (NB: do NOT terminate the mysql client session after you complete these commands - remain logged in to maintain the read lock):
 
        mysql> slave stop;
-       mysql> flush tables with read lock;
-       mysql> show master status;
+       
+        mysql> flush tables with read lock;
+       
+        mysql> show master status;
 
 7) Start another login session into sql1 as root and rsync the mysql database directory from sql1 to sql2, excluding and deleting several files that are node specific:
 
-[root sql1 ]# rsync -av -e ssh --delete --exclude=\*relay-bin\* --exclude=mysql-bin.\* --exclude=\*.info /var/lib/mysql/ sql2.example.com:/var/lib/mysql
-
-8) You may now safely log out of the mysql client on sql1.
+[root sql1 ]# rsync -av -e ssh --delete --exclude=\*relay-bin\* --exclude=mysql-bin.\* --exclude=\*.info /var/lib/mysql/sql2.example.com:/var/lib/mysql 8) You may now safely log out of the mysql client on sql1.
 
 9) On sql2, start the mysqld:
 
-       service mysqld start
+       service mysqld start 
 
 10) Start a mysql client session on sql2 and perform the following commands using the log file name and position recorded, above. NB: punctuation is very important:
 
-       mysql> slave stop;
-       mysql> change master to
-       -> master_log_file='`<recorded log file name, above>`',
-       -> master_log_pos=`<recorded log position, above>`; # <- note lack
-
-of quotes
-
-       mysql> start slave;
+       mysql> slave stop; 
+        mysql> change master to
+        -> master_log_file='<recorded log file name, above>',
+        -> master_log_pos=<recorded log position, above>; # <- note lack of quotes
+        mysql> start slave;
 
 11) As with sql1, issue the following command to obtain the log file name and log position - record these values. (NB: do NOT terminate the mysql client session after you complete these commands - remain logged in to maintain the read lock):
 
        mysql> flush tables with read lock;
-       mysql> show master status;
+        mysql> show master status;
 
 12) Log into sql1, start a mysql client session, and issue the following commands:
 
        mysql> slave stop;
-       mysql> change master to
-       -> master_log_file='`<recorded log file name, above>`',
-       -> master_log_pos=`<recorded log position, above>`; # <- note lack
-
-of quotes
-
-       mysql> start slave;
+        mysql> change master to
+        -> master_log_file='<recorded log file name, above>',
+        -> master_log_pos=<recorded log position, above>; # <- note lack of quotes
+        mysql> start slave;
 
 13) It is now safe to exit any mysql client sessions that may be open to unlock the databases.
 
 14) Each database should now be in sync with each other, but to verify this, start a mysql client session on each system and issue the following command:
 
-       mysql> show slave status\G;
+       mysql> show slave status\G; 
 
 15) Look at the values of Slave_IO_State, Slave_IO_Running, Slave_SQL_Running, and Seconds_Behind_Master. There should be no errors. If there are errors, then re-start the procedure at step 6.
 
