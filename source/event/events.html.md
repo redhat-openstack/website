@@ -9,7 +9,7 @@ wiki_last_updated: 2015-08-31
 
 # Events
 
-There are lots of events, around the world, where you can hang out with people from the RDO community. Some upcoming events are:
+There are lots of events, around the world, where you can hang out with people from the RDO community. Some recent and upcoming events are:
 
 *   [OpenStack 2013.2 (Havana) release](https://wiki.openstack.org/wiki/Havana_Release_Schedule) - October 17
 *   [OpenStack Netherlands Meetup](http://www.meetup.com/Openstack-Amsterdam/events/137087002/) - October 17
