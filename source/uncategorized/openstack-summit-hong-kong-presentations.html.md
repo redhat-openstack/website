@@ -42,4 +42,8 @@ These are some of the presentations that were given at the OpenStack Summit in H
 
 <!-- -->
 
+*   jlabocki, obarenbo - Unifying the Management of OpenStack, Public Cloud, Data Center Virtualization - <http://goo.gl/bSZU3Q>
+
+<!-- -->
+
 *   kbasil - Roundtable: Deploying and Upgrading OpenStack - <http://goo.gl/KWS98t>
