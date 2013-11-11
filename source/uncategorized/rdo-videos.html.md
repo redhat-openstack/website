@@ -8,6 +8,8 @@ wiki_last_updated: 2014-10-22
 
 # RDO videos
 
+See also the [OpenStack_Summit_Hong_Kong_Presentations](OpenStack_Summit_Hong_Kong_Presentations).
+
 ## OpenStack Networking Part II
 
 <iframe width="630" src="//youtube.com/embed/wEa_8ESxPAY" frameborder="0" align="center" allowfullscreen="true"> </iframe>
