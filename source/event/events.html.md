@@ -11,7 +11,7 @@ wiki_last_updated: 2015-08-31
 
 There are lots of events, around the world, where you can hang out with people from the RDO community. Some recent and upcoming events are:
 
-*   [Interview with FLOSS Weekly](https://plus.google.com/109324203153530830791/posts/Uzu5MJ61pzL) - November 13th
+*   [RDO Interview with FLOSS Weekly](https://plus.google.com/109324203153530830791/posts/Uzu5MJ61pzL) - November 13th
 *   [OpenStack Hands On Lab, Philadelphia, PA](http://www.meetup.com/Philly-OpenStack-Meetup-Group/events/144907072/) - November 19
 *   [OpenStack Hands On Lab, Rocky Hill, Connecticut](http://www.meetup.com/Openstack-Connecticut/events/143713952/) - November 20
 *   [OpenStack Hands On Lab, New York, NY](http://www.meetup.com/OpenStack-New-York-Meetup/events/144883832/) - November 21
