@@ -10,6 +10,8 @@ wiki_last_updated: 2013-11-15
 
 These are some of the presentations that were given at the OpenStack Summit in Hong Kong, in November 2013.
 
+See also the main [RDO Videos](RDO Videos) page for presentations from other events.
+
 *   dradez - Getting Started with OpenStack - <http://goo.gl/d8rGXt>
 
 <!-- -->
