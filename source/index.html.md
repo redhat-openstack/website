@@ -31,6 +31,8 @@ There's always something going on in the RDO community. See the [Events](Events)
 
 Next week, Dan Radez will be presenting at OpenStack Meetups in New York, Connecticut, and Pennsylvania. If you're in that area, plan to attend. Details on the [Events](Events) page.
 
+Meanwhile, if you missed the OpenStack Summit last week in Hong Kong, you can watch some of what you missed on the [OpenStack Summit Hong Kong Presentations](OpenStack Summit Hong Kong Presentations) page.
+
 ## Introducing RDO
 
 ![`openstack-distribution.png`](openstack-distribution.png "openstack-distribution.png")
