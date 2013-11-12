@@ -29,6 +29,8 @@ The most up-to-date OpenStack on the industry's most trusted Linux platform, now
 
 There's always something going on in the RDO community. See the [Events](Events) page what's coming up.
 
+On Wednesday, November 13, Rich Bowen and Dave Neary will be on the FLOSS Weekly show, talking about RDO and OpenStack. You can get more details at <https://plus.google.com/109324203153530830791/posts/Uzu5MJ61pzL>
+
 Next week, Dan Radez will be presenting at OpenStack Meetups in New York, Connecticut, and Pennsylvania. If you're in that area, plan to attend. Details on the [Events](Events) page.
 
 Meanwhile, if you missed the OpenStack Summit last week in Hong Kong, you can watch some of what you missed on the [OpenStack Summit Hong Kong Presentations](OpenStack Summit Hong Kong Presentations) page.
