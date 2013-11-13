@@ -14,7 +14,7 @@ Here we expand on the details of the various repositories involved.
 
 ## Browsing
 
-The RDO packages can be browsed at [RDO repositories](http://rdo.fedorapeople.org/openstack/)
+The RDO packages can be browsed at [RDO repositories?testing](http://rdo.fedorapeople.org/openstack/)
 
 ## EPEL
 
