@@ -46,6 +46,7 @@ Follow us on Twitter at [@rdocommunity](//twitter.com/rdocommunity), or on [Goog
 
 *   Help improve our knowledge base by turning the best answers to forum questions into a page in our [troubleshooting section](troubleshooting)
 *   Blog about how you're using RDO. If you blog frequently about RDO and OpenStack, consider [requesting that your blog be added](https://wiki.openstack.org/wiki/AddingYourBlog) to the upstream [Planet OpenStack](http://planet.openstack.org/).
+*   Here's some tips on [Adding_new_content adding new content]
 
 ### Contribute to OpenStack
 
