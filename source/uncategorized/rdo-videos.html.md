@@ -8,7 +8,10 @@ wiki_last_updated: 2014-10-22
 
 # RDO videos
 
-See also the [OpenStack Summit Hong Kong presentations](OpenStack Summit Hong Kong presentations).
+See also:
+
+*   [OpenStack Summit Hong Kong presentations](OpenStack Summit Hong Kong presentations).
+*   [FLOSS Weekly, November 13, 2013, with Rich Bowen and Dave Neary](http://twit.tv/show/floss-weekly/273)
 
 ## OpenStack Networking Part II
 
