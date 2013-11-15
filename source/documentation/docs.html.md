@@ -94,7 +94,7 @@ Since RDO sticks closely to the upstream OpenStack project, the documentation at
 *   [ Securing Core RDO Services (https, qpid)](Securing Services)
 *   [Load Balance OpenStack API](Load Balance OpenStack API)
 *   [OpenStack on TXT](https://fedoraproject.org/wiki/OpenStackOnTXT)
-*   [RDO Videos](RDO Videos)
+*   [RDO videos](RDO videos)
 
 </div>
 <div class="span4">
