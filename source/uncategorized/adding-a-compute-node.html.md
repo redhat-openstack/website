@@ -36,7 +36,7 @@ Your second NIC may have a different name. You can find the names of your device
 
 #### Change IP addresses
 
-Change the value for `CONFIG_NOVA_COMPUTE_HOSTS` from the value of your first host IP address to the value of your second host IP address.
+Change the value for `CONFIG_NOVA_COMPUTE_HOSTS` from the value of your first host IP address to the value of your second host IP address. Ensure that the key `CONFIG_NOVA_NETWORK_HOSTS` exists and is set to the IP address of your first host.
 
 In case you do not use neutron but rather flat_dhcp nova network, there may be as well a need to change the key `CONFIG_NOVA_NETWORK_HOST` to `CONFIG_NOVA_NETWORK_HOSTS` and provide corresponding IP address.
 
