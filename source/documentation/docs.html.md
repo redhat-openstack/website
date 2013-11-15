@@ -27,10 +27,10 @@ Since RDO sticks closely to the upstream OpenStack project, the documentation at
 ### Install
 
 *   [ Quick start guide (RDO Havana)](Quickstart)
-*   [ Deploying RDO Using Foreman](Deploying RDO Using Foreman)
+*   [ Deploying RDO using Foreman](Deploying RDO using Foreman)
 *   [ Multinode Havana using GRE](GettingStartedHavana_w_GRE)
 *   [ Configuring Horizon to use SSL](HorizonSSL)
-*   [ Securing Services](Securing_Services)
+*   [ Securing services](Securing_services)
 *   [ HA and LB Control Services ](RDO_HighlyAvailable_and_LoadBalanced_Control_Services)
 *   [ Getting started with Ceilometer](CeilometerQuickStart)
 *   [ Launching your first VM ](Running an instance)
