@@ -26,8 +26,7 @@ Since RDO sticks closely to the upstream OpenStack project, the documentation at
 <div class="offset1 span3">
 ### Install
 
-*   [ Quick start guide (RDO Grizzly)](Quickstart)
-*   [ Quick start guide (RDO Havana)](QuickStartLatest)
+*   [ Quick start guide (RDO Havana)](Quickstart)
 *   [ Deploying RDO Using Foreman](Deploying RDO Using Foreman)
 *   [ Multinode Havana using GRE](GettingStartedHavana_w_GRE)
 *   [ Configuring Horizon to use SSL](HorizonSSL)
