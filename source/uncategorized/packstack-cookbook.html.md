@@ -20,4 +20,12 @@ Recipes for setting up various kinds of OpenStack installations using the packst
 
          packstack --allinone
 
-Shorthand for <code>--install-hosts=<local ipaddr> --novanetwork-pubif=<dev> --novacompute-privif=lo --novanetwork-privif=lo --os-swift-install=y --nagios--install=y , this option can be used to install an all in one OpenStack on this host.
+Shorthand for `--install-hosts=&lt;local ipaddr&gt; --novanetwork-pubif=&lt;dev&gt; --novacompute-privif=lo --novanetwork-privif=lo --os-swift-install=y --nagios--install=y`, this option can be used to install an all in one OpenStack on this host.
+
+#### Generate answer file
+
+         packstack --gen-answer-file
+
+#### Reuse an answer file
+
+         packstack --answer-file=/path/to/packstack_answers.txt
