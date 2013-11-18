@@ -26,6 +26,8 @@ Shorthand for `--install-hosts=&lt;local ipaddr&gt; --novanetwork-pubif=&lt;dev&
 
          packstack --gen-answer-file
 
+Any other command line options may be provided with this one, to produce a reusable answer file.
+
 #### Reuse an answer file
 
          packstack --answer-file=/path/to/packstack_answers.txt
