@@ -32,3 +32,9 @@ See also:
 ## Automating OpenStack with Red Hat & Puppet
 
 <iframe width="630" src="//youtube.com/embed/P1dfxfbu3UA" frameborder="0" align="center" allowfullscreen="true"> </iframe>
+
+## Heat, OpenStack and Red Hat
+
+Interview with Steve Hardy at [Open World Forum 2013](//www.openworldforum.org/en/).
+
+<iframe width="630" src="//youtube.com/embed/I3V6MFUg3vk" frameborder="0" align="center" allowfullscreen="true"> </iframe>
