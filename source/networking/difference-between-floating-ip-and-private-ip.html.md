@@ -12,7 +12,7 @@ wiki_last_updated: 2013-12-18
 
 Were you wondering what's the difference between a private IP address and a floating IP address in OpenStack? Here is a short explanation that could make it clear.
 
-## Private IP Adress
+## Private IP Address
 
 A private IP address is assigned to an instance's network-interface by the DHCP server. The address is visible from within the instance by using command like “ip a”. The address is typically part of a private network and is used for communication between instances in the same broadcast domain via virtual switch (L2 agent on each compute node).
 
