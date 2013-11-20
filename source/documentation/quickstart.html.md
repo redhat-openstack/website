@@ -46,7 +46,7 @@ Run the following command to install RDO:
 
     sudo yum install -y http://rdo.fedorapeople.org/rdo-release.rpm
 
-Looking for an older version? See <http://rdo.fedorapeople.org/> for the full listing.
+*Looking for an older version? See <http://rdo.fedorapeople.org/> for the full listing.*
 
 ### Step 2: Install Packstack Installer
 
