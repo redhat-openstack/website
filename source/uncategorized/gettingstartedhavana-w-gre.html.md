@@ -46,6 +46,7 @@ Generate an answer file. It will be altered to include the GRE configuration bef
 
 Edit the packstack answerfile and update the following configuration parameters. Leave all other parameters just as they are, only the lines listed should be changed.
 
+    CONFIG_SWIFT_INSTALL=y
     CONFIG_NOVA_COMPUTE_HOSTS=192.168.123.3
     CONFIG_NEUTRON_OVS_TENANT_NETWORK_TYPE=gre
     CONFIG_NEUTRON_OVS_TUNNEL_RANGES=1:1000
@@ -57,7 +58,7 @@ Note that the interface identified in \`CONFIG_NEUTRON_OVS_TUNNEL_IF\` must be c
 
 Save and close the answer file and feed it into packstack to start the installation.
 
-    sudo packstack --answer-file my_answers.txt --os-install-swift=y
+    sudo packstack --answer-file my_answers.txt
 
 The install takes at least 10 minutes, more depending on your network connection and computer resources. When it completes you will have a basic OpenStack Install ready to be populated with users, images, networks, storage and more.
 
