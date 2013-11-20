@@ -22,8 +22,6 @@ Below, we'll explain how to set up OpenStack on a single server. You'll be able 
 
 If you just want to try it out without installing anything, check out [TryStack](http://trystack.org).
 
-*If you want to try out the previous version (code name: Grizzly), replace 'havana' with 'grizzly' in step 1 below.*
-
 </div>
 </div>
 <div class="row">
