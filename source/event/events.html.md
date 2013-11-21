@@ -13,5 +13,5 @@ There are lots of events, around the world, where you can hang out with people f
 
 *   [OpenStack Hands On Lab, New York, NY](http://www.meetup.com/OpenStack-New-York-Meetup/events/144883832/) - November 21
 *   [OpenStack Israel](http://www.openstack-israel.org/) - December 3
-*   [Swiss OpenStack User Group meetup, CERN](http://www.meetup.com/openstack-ch/events/138151562/) - December 6
 *   [OpenStack In Action, Paris](https://openstackinaction4.eventbrite.com/) - December 5
+*   [Swiss OpenStack User Group meetup, CERN](http://www.meetup.com/openstack-ch/events/138151562/) - December 6
