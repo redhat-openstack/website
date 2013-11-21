@@ -22,6 +22,8 @@ To do this installation two virtual machines running a RedHat based install of l
 -- compute host eth0 192.168.122.3, eth1 192.168.123.3
  Each visualization environment is different. [NeutronLibvirtMultinodeDevEnvironment](NeutronLibvirtMultinodeDevEnvironment) shows an example of how to setup these two hosts using libvirt.
 
+Ensure NetworkManager and firewalld are disabled. You may also have to set selinux to permissive, there has been a dhcp-agent bug that selinux had to be disabled because of.
+
 ## Installation
 
 The multi-node installation follows [QuickStartLatest](QuickStartLatest) for the most part. The main difference is how packstack is invoked. Run the commands for installation on the control node.
