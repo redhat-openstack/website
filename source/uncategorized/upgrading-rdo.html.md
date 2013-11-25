@@ -10,7 +10,11 @@ wiki_last_updated: 2014-06-02
 
 There are basically two methods for upgrading RDO. Which you use depends on your tolerance for downtime and complexity. Note that all of the below assumes a nova-network installation. If you are moving from quantum to neutron, there may be other steps involved.
 
-## Option 1: In-place Upgrade
+## Option 0: Parallel Cloud
+
+The easiest way to do an upgrade is to deploy a completely separate OpenStack environment on Havana and slowly migrate resources over. This is likely overkill for a lot of users, but it is something that may be considered as the least-intrusive alternative to the options below.
+
+## Option 1: Atomic Offline Upgrade
 
 The high level task of upgrading everything in place looks like this:
 
