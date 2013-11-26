@@ -51,16 +51,22 @@ Begin by installing openstack-foreman-installer:
 
     yum install openstack-foreman-installer
 
+**Terms**
+
+*   **Netmask** This is merely another term for a Subnetwork, see <http://en.wikipedia.org/wiki/Netmask> for more detail. It should be in CIDR format.
+*   **Public Openstack Network** This is where api services, for example, are accessible
+*   **Private Openstack Network** This is used for inter-component communication within openstack (for instance, if nova needs to talk to glance).
+
 The following is an example environment file for non-provisioning mode. Obviously, you will change the IPs based on your own network setup. You may set this directly from the command line, or save it in a file and source it:
 
-    export PRIVATE_CONTROLLER_IP=192.168.200.10
-    export PRIVATE_INTERFACE=eth1
-    export PRIVATE_NETMASK=192.168.200.0/24
-    export PUBLIC_CONTROLLER_IP=192.168.201.10
-    export PUBLIC_INTERFACE=eth2
-    export PUBLIC_NETMASK=192.168.201.0/24
-    export FOREMAN_GATEWAY=false
-    export FOREMAN_PROVISIONING=false 
+    export PRIVATE_CONTROLLER_IP=192.168.200.10  # Where the controller can be reached on your private openstack network
+    export PRIVATE_INTERFACE=eth1 # Which NIC will be used to access the private openstack network
+    export PRIVATE_NETMASK=192.168.200.0/24  # The Subnet for the private openstack network, used for nova floating ip range
+    export PUBLIC_CONTROLLER_IP=192.168.201.10 # Where the controller can be reached on your public  openstack network
+    export PUBLIC_INTERFACE=eth2 # Which NIC will be used to access the public openstack network
+    export PUBLIC_NETMASK=192.168.201.0/24 # The Subnet for the public openstack network, used for nova floating ip range
+    export FOREMAN_GATEWAY=false # The Gateway set up for foreman provisioning (or 'false' when no provisioning)
+    export FOREMAN_PROVISIONING=false # Will foreman be used for provisioning?
 
 Check that `hostname --fqdn` returns an actual FQDN (i.e., it includes one or more dots, not just a hostname), and that `facter fqdn` is not blank. If it does not, see our dev setup page for some [troubleshooting help](Virtualized_Foreman_Dev_Setup#Hostname_and_FQDN).
 
