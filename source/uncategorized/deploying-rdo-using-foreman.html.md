@@ -222,6 +222,24 @@ If you just want to give Cinder a quick try, there is a script that sets up a `c
 
 Note that `cinder-testing-volume.sh` script is meant for testing only, and the volume group will not persist between reboots. In production environment Cinder storage should be always backed by disks or disk partitions, not by loop files.
 
+#### Load Balancer
+
+Note that the Load Balancer itself is not yet HA, but will be part or a Pacemaker cluster group in the near future.
+
+1.  Install a controller node.
+2.  Install a load-balancer node (ie. add a host to this host group). The needed parameters to be set in foreman are:
+    -   **lb_private_vip** Supply the internal (private) VIP address.
+    -   **lb_public_vip** Supply the external (public) VIP address.
+    -   **lb_member_names** and **lb_member_addrs** Supply a name and internal IP address of each controller. The name is actually arbitrary, but haproxy requires a name for each real server (in this case each controller). These are comma-separated strings.
+
+3.  Edit your controller Host Group.
+    -   Change the **controller_public_floating_ip** and **controller_private_floating_ip** parameters. These need to be the public and private VIP that the load-balancer is listening on.
+    -   Set the **mysql_host** and **qpid_host** params in the controller(s) appropriately. Each controller should have same values here. In the simple case, you merely point all controllers to use the database or qpid setup installed on a single one of your load balanced controllers. More likely, you will point these at your HA Mysql cluster (see host group below), and HA qpid cluster (coming soon). In the latter case, you would use the Virtual IP managed by Pacemaker for the relevant clusters as the value for these parameters.
+
+4.  Add more controllers nodes to your deployment. There are some certificates you need to copy over. These will be listed below shortly.
+
+If you know that you want to load balance your Controllers from the beginning, you could also set the correct **controller_public_floating_ip** and **controller_private_floating_ip** on your controller host group before deploying either the controllers or a load balancer (assuming you know the address of the load balancer at this time).
+
 #### HA Database Cluster
 
 This sets up up a cluster for (currently) mysql via pacemaker, details [here](Foreman_HA_Database).
