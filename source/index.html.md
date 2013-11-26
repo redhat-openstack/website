@@ -25,13 +25,13 @@ The most up-to-date OpenStack on the industry's most trusted Linux platform, now
 </div>
 <div class="row">
 <div class="offset4 span7 pad-sides begin-content pull-s">
-## Upcoming Events
+## Stay up to date with RDO
 
-There's always something going on in the RDO community. See the [Events](Events) page what's coming up.
+There's lots of ways to stay in touch with the RDO community.
 
-On Wednesday, November 13, Rich Bowen and Dave Neary were on the FLOSS Weekly show, talking about RDO and OpenStack. You can watch the show at <http://twit.tv/show/floss-weekly/273>
+Come to one of the main [Events](Events) where some of us will be. Follow us on [Twitter](http://twitter.com/rdocommunity/) or our [Google+ community](https://plus.google.com/communities/110409030763231732154). Subscribe to the [rdo-list mailing list](http://www.redhat.com/mailman/listinfo/rdo-list) for technical questions, or to the [newsletter mailing list](http://www.redhat.com/mailman/listinfo/rdo-newsletter) for monthly community updates.
 
-Meanwhile, if you missed the OpenStack Summit last week in Hong Kong, you can watch some of what you missed on the [OpenStack Summit Hong Kong Presentations](OpenStack Summit Hong Kong Presentations) page.
+And there's a variety of presentations on the [RDO videos](RDO videos) page from our hangouts and conference presentations you may have missed.
 
 ## Introducing RDO
 
