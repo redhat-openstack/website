@@ -242,7 +242,11 @@ Note that the Load Balancer itself is not yet HA, but will be part or a Pacemake
     -   Change the **controller_public_floating_ip** and **controller_private_floating_ip** parameters. These need to be the public and private VIP that the load-balancer is listening on.
     -   Set the **mysql_host** and **qpid_host** params in the controller(s) appropriately. Each controller should have same values here. In the simple case, you merely point all controllers to use the database or qpid setup installed on a single one of your load balanced controllers. More likely, you will point these at your HA Mysql cluster (see host group below), and HA qpid cluster (coming soon). In the latter case, you would use the Virtual IP managed by Pacemaker for the relevant clusters as the value for these parameters.
 
-4.  Add more controllers nodes to your deployment. There are some certificates you need to copy over. These will be listed below shortly.
+4.  Add more controllers nodes to your deployment. There are some certificates you need to copy over from the first deployed controller:
+
+       /etc/keystone/ssl/certs/ca.pem
+       /etc/keystone/ssl/certs/signing_cert.pem
+       /etc/keystone/ssl/private/signing_key.pem
 
 If you know that you want to load balance your Controllers from the beginning, you could also set the correct **controller_public_floating_ip** and **controller_private_floating_ip** on your controller host group before deploying either the controllers or a load balancer (assuming you know the address of the load balancer at this time).
 
