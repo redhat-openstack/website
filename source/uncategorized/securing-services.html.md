@@ -30,31 +30,44 @@ The certmonger puppet modules works with IPA, if you choosenot to manager your o
 
 #### Set up server
 
-Note that this example uses 192.168.200.x as the openstack private network for example purposes, and assumes your ipa server can manage DNS there. Oviously when using such a setup, the confiugration options are nearly endless, this is meant merely to get you started, using the setup we have described [here](Virtualized_Foreman_Dev_Setup). Adjust the values according to your own setup.
+Note that this example uses 192.168.200.x as the OpenStack private network for example purposes, and assumes your IPA server can manage DNS there. Obviously when using such a setup, the configuration options are nearly endless,. This is meant merely to get you started, using the setup we have described [here](Virtualized_Foreman_Dev_Setup). Adjust the values according to your own setup.
+
+Ensure the hostname of your IPA server is the FQDN on the private network:
 
       echo "$(hostname -s).openstack.priv" > /etc/hostname
       echo "$(hostname -i) $(hostname -s).openstack.priv" >> /etc/hosts
       sed -i "s/^`\(HOSTNAME=\)`.*$/\1$(hostname -s).openstack.priv/" \
          /etc/sysconfig/network
          hostname $(hostname -s).openstack.priv
-      yum install freeipa-server
+
+Instal the IPA server:
+
+      yum install freeipa-server bind bind-dyndb-ldap
       ipa-server-install --setup-dns --forwarder=192.168.200.1 \
         --hostname=$(hostname -s).openstack.priv -r OPENSTACK.PRIV \
         -n openstack.priv -p Secret123 -P Secret123 -a Secret123 -U
-      verify the IP for the subnet you are using (192.168.200.1, in our example), is
-       in /etc/resolv.conf
+
+Verify the IP for the subnet you are using (192.168.200.1, in our example), is in /etc/resolv.conf.
+
+Create your controller host entry:
+
       ipa dnsrecord-add openstack.priv v3controller --a-rec=192.168.200.10
        --a-create-reverse
 
-#### On client
+#### On OpenStack Controller
 
-      make sure the ipa server is in resolv.conf (listed first)
+Make sure the ipa server is in resolv.conf (listed first)
+
+Install and configure the IPA client software. If you are using the IPA DNS then the domain and server will be autodiscovered. For authentication you can use the IPA admin user and password.
+
       yum install ipa-client
       ipa-client-install
 
 If you have dhclient running on your machine(s), you will also want to update the config in /etc/dhcp/dhclient-<nic>.conf to have the line:
 
       option domain-name-servers 192.168.200.1, `<domain-server-ip-2>`, `<etc>`;
+
+Otherwise dhclient will overwrite /etc/resolv.conf causing DNS resolution to fail.
 
 ## MySQL
 
