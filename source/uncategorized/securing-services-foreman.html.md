@@ -179,25 +179,12 @@ Use curl to verify that Horizon is up and SSL works:
 
 You'll get a redirect which will confirm that SSL is a-ok:
 
-<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
-<html>
-<head>
-<title>
-301 Moved Permanently
-
-</title>
-</head>
-<body>
-<h1>
-Moved Permanently
-
-</h1>
-The document has moved <a href="https://controller.example.com/dashboard/">here</a>.
-
-<hr>
-<address>
-Apache/2.2.15 (Red Hat) Server at controller.example.com Port 443
-
-</address>
-</body>
-</html>
+     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+     <html><head>
+     <title>301 Moved Permanently</title>
+     </head><body>
+     <h1>Moved Permanently</h1>
+     <p>The document has moved <a href="https://controller.example.com/dashboard/">here</a>.</p>
+     <hr>
+     <address>Apache/2.2.15 (Red Hat) Server at controller.example.com Port 443</address>
+     </body></html>
