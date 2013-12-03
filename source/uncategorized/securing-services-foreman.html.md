@@ -83,15 +83,12 @@ Enroll the compute and controller nodes as IPA client machines (ipa-client-insta
 Now you need to pre-create the services that IPA will need to generate the SSL certificates. On the IPA master run:
 
       $ kinit admin
-      $ ipa service-add mysql/controller.example.com
-      $ ipa service-add qpid/controller.example.com
-      $ ipa service-add HTTP/controller.example.com
+      $ ipa service-add mysql/controller.private.example.com
+      $ ipa service-add qpid/controller.private.example.com
+      $ ipa service-add horizon/controller.public.example.com
+      $ ipa service-add-host --hosts=controller.private.example.com horizon/controller.public.example.com
 
-The controller node configuration will automatically obtain the SSL certificates for qpid and mysql. For Horizon/dashboard you'll need to request it manually.
-
-On the controller node run:
-
-      ` # ipa-getcert request -r -f /etc/pki/tls/certs/httpd.crt -k /etc/pki/tls/private/httpd.key -N CN=`hostname --fqdn` -D `hostname` -U id-kp-serverAuth -K HTTP/`hostname --fqdn` `
+The controller node configuration will automatically obtain the SSL certificate.
 
 ## Node Configuration
 
