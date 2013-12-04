@@ -73,10 +73,6 @@ The default location for the certificates are defined in the controller configur
 
 Where FQDN is the fully-qualfied domain name of the private interface of the controller node. Change these as needed. These settings are found in the Foreman UI under More -> Configuration -> Host groups. Select each hostgroup then look in Parameters for the SSL options. To change a value select override, then add a new value at the bottom of the page.
 
-The certificate and private key location for Apache for a secured Horizon/dashboard are not currently configurable. The need to be in:
-
-/etc/pki/tls/private/httpd.key /etc/pki/tls/certs/httpd.crt
-
 Don't worry about file ownership, applying the controller node should set them as needed.
 
 ### IPA Configuration
