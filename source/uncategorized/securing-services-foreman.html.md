@@ -61,12 +61,15 @@ For a manual installation the SSL certificates need to be pre-positioned on the 
 
 The default location for the certificates are defined in the controller configuration. The defaults are:
 
-      mysql_ca     /etc/ipa/ca.crt
-      mysql_cert  /etc/pki/tls/certs/FQDN-mysql.crt
-      mysql_key   /etc/pki/tls/private/FQDN-mysql.key
-      qpid_ca       /etc/ipa/ca.crt
-      qpid_cert    /etc/pki/tls/certs/FQDN-qpid.crt
-      qpid_key     /etc/pki/tls/private/FQDN-qpid.key
+      mysql_ca        /etc/ipa/ca.crt
+      mysql_cert     /etc/pki/tls/certs/FQDN-mysql.crt
+      mysql_key      /etc/pki/tls/private/FQDN-mysql.key
+      qpid_ca          /etc/ipa/ca.crt
+      qpid_cert       /etc/pki/tls/certs/FQDN-qpid.crt
+      qpid_key        /etc/pki/tls/private/FQDN-qpid.key
+      horizon_ca    /etc/ipa/ca.crt
+      horizon_cert /etc/pki/tls/certs/FQDN-horizon.crt
+      horizon_key  /etc/pki/tls/certs/FQDN-horizon.key
 
 Where FQDN is the fully-qualfied domain name of the private interface of the controller node. Change these as needed. These settings are found in the Foreman UI under More -> Configuration -> Host groups. Select each hostgroup then look in Parameters for the SSL options. To change a value select override, then add a new value at the bottom of the page.
 
