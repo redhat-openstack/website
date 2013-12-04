@@ -95,13 +95,19 @@ First, log in to your Foreman instance (https://{foreman_fqdn}). The default log
 
 Next, you’ll need to assign the correct puppet classes to each of your hosts. Click the HOSTS link and select your host from the list. Select EDIT HOST and add the appropriate Host Group (OpenStack Controller or OpenStack Compute).
 
-### Manual SSL Configuration
+### Controller
+
+#### Manual SSL Configuration
 
 The default settings are ssl = true and freeipa = false. It is ok to leave things as-is.
 
-### IPA Configuration
+#### IPA Configuration
 
 ssl is enabled by default. Override the freeipa value and set it to true.
+
+### Compute
+
+In both cases (manual or IPA SSL configuration) only ssl needs to be set to true if the Controller node has ssl enabled.
 
 ## Apply Configuration
 
