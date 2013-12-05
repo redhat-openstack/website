@@ -16,7 +16,7 @@ IMPORTANT: OpenStack is built to resend messages, clustering is not necessary. T
 
 1. Pacemaker managed without Clustering
 
-This configuration will make the qpid broker highly available but does not prevent message loss within the messaging brokers. Though, OpenStack is built to resend messages, so losing a message due to a broker loss should not be an issue, OpenStack will recover. Qpid will run on only one of the pacemaker nodes at a time, grouped with a floating ip. In the event of a node failure pacemaker will start the qpid broker and floating ip on another node. All openstack components will point to the floating ip grouped with the qpid broker for messaging services.
+This configuration will make the qpid broker highly available but does not prevent message loss within the messaging brokers; however, OpenStack is built to resend messages and therefore can recover from this situation, so losing a message due to a broker loss should not present a problem. Qpid will run on only one of the pacemaker nodes at a time, grouped with a floating ip. In the event of a node failure pacemaker will start the qpid broker and floating ip on another node. All openstack components will point to the floating ip grouped with the qpid broker for messaging services.
 
 2. Clustered without pacemaker
 
