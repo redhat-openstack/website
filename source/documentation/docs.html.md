@@ -53,6 +53,7 @@ Since RDO sticks closely to the upstream OpenStack project, the documentation at
 *   [ Launching your first VM with Neutron](Running_an_instance_with_Neutron)
 *   [ Configuring Neutron to use VLANs](Neutron with OVS and VLANs)
 *   [Using GRE Tenant Networks](Using GRE Tenant Networks)
+*   [Modular Layer 2 (ML2) Plugin](Modular Layer 2 (ML2) Plugin)
 *   [ Difference between Floating IP and private IP ](Difference between Floating IP and private IP)
 *   [ Setting a Floating IP Range ](Floating IP range)
 *   [ Other networking resources ](Networking)
