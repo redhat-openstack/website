@@ -10,7 +10,7 @@ wiki_last_updated: 2014-06-04
 
 # ML2 plugin
 
-The Modular Layer 2 plugin (ML2) is new in havana. Unlike existing monolithic plugins, ML2:
+The Modular Layer 2 plugin (ML2) is new in havana. Unlike previous monolithic plugins, ML2:
 
 *   Supports an extensible set of network types, each implemented as a TypeDriver
 *   Works with a variety of virtual networking mechanisms (simultaneously), each supported via a MechanismDriver
