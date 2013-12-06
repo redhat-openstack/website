@@ -27,6 +27,8 @@ Start with a working packstack installation with neutron and openvswitch.
 
 Delete any neutron resources that have been created by packstack or otherwise, including networks, subnets, routers, and floatingips. The ML2 plugin will use a new clean database.
 
+The remaining steps are all executed as root on the neutron controller node(s) where neutron-server runs. No changes are needed on compute or network nodes.
+
 Stop neutron-server:
 
       service neutron-server stop
@@ -34,5 +36,23 @@ Stop neutron-server:
 Install the ML2 plugin:
 
       yum install openstack-neutron-ml2
+
+Switch to ML2's config file:
+
+      ln -s /etc/neutron/plugins/ml2/ml2_conf.ini /etc/neutron/plugin.ini
+
+Configure neutron-server to load the ML2 core plugin and the L3Router service plugin:
+
+      crudini --set /etc/neutron/neutron.conf DEFAULT core_plugin neutron.plugins.ml2.plugin.Ml2Plugin
+      crudini --set /etc/neutron/neutron.conf DEFAULT service_plugins neutron.services.l3_router.l3_router_plugin.L3RouterPlugin
+
+Note - if you are using LBaaS, FWaaS, or VPNaaS, you will also need to include them in service_plugins.
+
+Configure ML2:
+
+      crudini --set /etc/neutron/plugins/ml2/ml2_conf.ini ml2 mechanism_drivers openvswitch
+`crudini --set /etc/neutron/plugins/ml2/ml2_conf.ini ml2 tenant_network_types `<one or more of local,vlan,gre,vxlan>
+      crudini --set /etc/neutron/plugins/ml2/ml2_conf.ini database sql_connection mysql://neutron:`<password>`@`<host>`/neutron_ml2
+      crudini --set /etc/neutron/plugins/ml2/ml2_conf.ini securitygroup firewall_driver dummy_value_to_enable_security_groups_in_server
 
 To be continued...
