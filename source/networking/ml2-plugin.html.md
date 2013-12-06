@@ -89,3 +89,7 @@ Check /var/log/neutron/server.log and make sure it started OK. Then run the foll
 You should see "Open vSwitch agent" alive on all compute and network nodes, as well as all other agents (DHCP, L3, LBaaS) you've deployed.
 
 Now you can create any needed networks, subnets, routers, floatingips, ...
+
+## Advanced ML2 Features
+
+Information will be added here describing use of L2 population, Arista, and Cisco mechanism drivers, etc.
