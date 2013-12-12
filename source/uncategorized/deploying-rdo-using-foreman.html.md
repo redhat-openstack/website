@@ -250,6 +250,22 @@ Note that the Load Balancer itself is not yet HA, but will be part or a Pacemake
 
 If you know that you want to load balance your Controllers from the beginning, you could also set the correct **controller_public_floating_ip** and **controller_private_floating_ip** on your controller host group before deploying either the controllers or a load balancer (assuming you know the address of the load balancer at this time).
 
+#### Swift Storage
+
+The **Swift Storage Host Group** may be used to configure your Swift storage nodes. Note that this applies to the Swift back-end nodes only, not the Swift Proxy which is included in the Controller (Nova Network or Neutron) Host Group.
+
+##### Swift Storage Host Group Parameters
+
+***swift_all_ips*** An array of ip addresses. It must include all the IP's in your Swift Storage Host Group as well as the Swift Proxy IP(s). This ensures the relevant firewall rules are in place.
+
+***swift_ext4_device*** The ext4 device where blobs are actually stored
+
+***swift_local_interface*** The interface used for swift network traffic. This is assumed to have an IP address.
+
+***swift_loopback*** Set to "true" or "false" which indicates whether to use loopback device instead of an ext4 device. The parameter swift_ext4_device becomes irrelevant if swift_loopback is true. Using a loopback device is primarily useful for testing.
+
+***swift_ring_server*** The IP address of the swift ring server which is typically the swift proxy/controller node.
+
 #### HA Database Cluster
 
 This sets up up a cluster for (currently) mysql via pacemaker, details [here](Foreman_HA_Database).
