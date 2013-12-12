@@ -91,7 +91,7 @@ Disabling glance notifications:
 
 ## /usr/sbin/tuned-adm profile virtual-host returned 2 instead of one of [0]
 
-*   **Bug:** none yet?
+*   **Bug:** <https://bugzilla.redhat.com/show_bug.cgi?id=1041350>
 *   **Affects:** Fedora 19
 
 #### symptoms
