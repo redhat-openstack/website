@@ -12,7 +12,7 @@ wiki_last_updated: 2014-10-06
 
 We don't know. Please use ssh keys to authenticate to the hosts. A how-to on this would be a great doc for someone to contribute to TryStack.
 
-## Can't ssh / ping
+## Followed getting started video but can't ssh / ping
 
 The way this is usually resolved is by resetting your router.
 Unfortunately a router has a collection of steps to be reset. Follow these steps and see if if helps:
