@@ -258,13 +258,15 @@ The **Swift Storage Host Group** may be used to configure your Swift storage nod
 
 ***swift_all_ips*** An array of ip addresses. It must include all the IP's in your Swift Storage Host Group as well as the Swift Proxy IP(s). This ensures the relevant firewall rules are in place.
 
-***swift_ext4_device*** The ext4 device where blobs are actually stored
+***swift_ext4_device*** The ext4 device where blobs are actually stored. There must be an ext4 filesystem already present on the device.
 
 ***swift_local_interface*** The interface used for swift network traffic. This is assumed to have an IP address.
 
 ***swift_loopback*** Set to "true" or "false" which indicates whether to use loopback device instead of an ext4 device. The parameter swift_ext4_device becomes irrelevant if swift_loopback is true. Using a loopback device is primarily useful for testing.
 
 ***swift_ring_server*** The IP address of the swift ring server which is typically the swift proxy/controller node.
+
+***swift_shared_secret*** A random hashing string that must be consistent across Swift nodes.
 
 #### HA Database Cluster
 
