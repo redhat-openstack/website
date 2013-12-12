@@ -16,7 +16,7 @@ wiki_last_updated: 2014-05-21
 
 ## Bugzilla workflow
 
-### Initial Triage (NEW)
+### Initial Triage (NEW) -- FIXME
 
 When a reporter files a bug, the report automatically starts out in a NEW state. If a bug/RFE has already been fixed in the 'current' current stable RDO release (Say Havana), then
 
@@ -24,6 +24,12 @@ When a reporter files a bug, the report automatically starts out in a NEW state.
 *   Move the bug to CLOSED->CURRENTRELEASE
 
 ## References
+
+Upstream OpenStack bug triage
+
+*   <https://wiki.openstack.org/wiki/BugTriage>
+
+Some existing community projects which use Red Hat bugzilla, and their workflows for bug triage:
 
 *   <http://fedoraproject.org/wiki/BugZappers/BugStatusWorkFlow>
 *   <http://fedoraproject.org/wiki/BugZappers/StockBugzillaResponses>
