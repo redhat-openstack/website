@@ -10,7 +10,9 @@ wiki_last_updated: 2014-05-21
 
 ## Bugzilla queries
 
-List of un-triaged bugs (NEW state) for RDO component in bugzilla.redhat.com -- <http://goo.gl/NqW2LN>
+*   List of un-triaged bugs (NEW state) -- <http://goo.gl/NqW2LN>
+*   List of all ASSIGNED bugs (with and without Keyword 'Triaged') -- <http://goo.gl/oFY9vX>
+*   List of all ON_QA bugs -- <http://goo.gl/CZX92r>
 
 ## Bugzilla workflow
 
@@ -19,9 +21,10 @@ List of un-triaged bugs (NEW state) for RDO component in bugzilla.redhat.com -- 
 When a reporter files a bug, the report automatically starts out in a NEW state. If a bug/RFE has already been fixed in the 'current' current stable RDO release (Say Havana), then
 
 *   Update the "Fixed In Version" field with the NVR (Name-Version-Release) of the package
-*   Move the bug to CLOSED->CURRENTRELEASE, and
+*   Move the bug to CLOSED->CURRENTRELEASE
 
 ## References
 
 *   <http://fedoraproject.org/wiki/BugZappers/BugStatusWorkFlow>
 *   <http://fedoraproject.org/wiki/BugZappers/StockBugzillaResponses>
+*   <https://fedoraproject.org/wiki/BugZappers/How_to_Triage>
