@@ -14,6 +14,6 @@ We don't know. Please use ssh keys to authenticate to the hosts. A how-to on thi
 
 ## Can't ssh / ping
 
-The way this is usually resolved is by resetting your router. Unfortunately a router has a collection of steps to be reset. Follow these steps and see if if helps: 1. disassociate and release all your floating ips on the access and security / Floating IPs tab 2. clear the gateway on your router on the router menu 3. click the router to see the interface list 4. remove the interface 5. terminate your instance (in case it didn't get an ip)
+The way this is usually resolved is by resetting your router.</br> Unfortunately a router has a collection of steps to be reset. Follow these steps and see if if helps:</br> 1. disassociate and release all your floating ips on the access and security / Floating IPs tab</br> 2. clear the gateway on your router on the router menu</br> 3. click the router to see the interface list</br> 4. remove the interface</br> 5. terminate your instance (in case it didn't get an ip)
 
-Now you have an empty router. 1. relaunch your instance 2. add the interface back to your router 3. set the gateway on your router 4. allocate and associate the floating ip to the new instance
+Now you have an empty router.</br> 1. relaunch your instance</br> 2. add the interface back to your router</br> 3. set the gateway on your router</br> 4. allocate and associate the floating ip to the new instance</br>
