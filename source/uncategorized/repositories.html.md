@@ -34,6 +34,14 @@ For completeness, currently on RHEL, the Optional channel is used for:
 *   dnsmasq-utils (nova)
 *   python-sphinx, python-docutils, python-jinja2 (ceilometer (only to support v1 api), nova (since havana))
 
+## RHEL-Z
+
+If using RHEL, then rhel-z must be enabled. In CentOS or Scientific Linux, that's not necessary.
+
+The packages used from rhel-z channel are:
+
+*   rubygems
+
 ## RHOS
 
 The separate [Red Hat OpenStack](http://redhat.com/openstack) product does **not** require the Optional channel or EPEL enabled.
