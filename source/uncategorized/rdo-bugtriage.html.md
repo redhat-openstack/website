@@ -18,7 +18,7 @@ wiki_last_updated: 2014-05-21
 
 ### Initial Triage (NEW) -- FIXME
 
-When a reporter files a bug, the report automatically starts out in a NEW state. If a bug/RFE has already been fixed in the 'current' current stable RDO release (Say Havana), then
+If a bug/RFE has already been fixed in the 'current' current stable RDO release (Say Havana), then
 
 *   Update the "Fixed In Version" field with the NVR (Name-Version-Release) of the package
 *   Move the bug to CLOSED->CURRENTRELEASE
