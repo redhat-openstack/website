@@ -1,5 +1,6 @@
 ---
 pageable: true
+no_container: true
 ---
 
 - content_for :head do
@@ -8,18 +9,12 @@ pageable: true
 .bg-boxes
   .foo
     / content
-    %section#content.mw-body.container.0
+    /%section#content.mw-body.container.0
+    %section
       #top
       #mw-js-message{:style => "display:none;"}
       / bodyContent
       #bodyContent
-        / jumpto
-        #jump-to-nav.mw-jump
-          Jump to:
-          = succeed "," do
-            %a{:href => "#mw-head"} navigation
-          %a{:href => "#p-search"} search
-        / /jumpto
         / innerbodycontent
         #innerbodycontent.layout
           %h1#firstHeading.firstHeading.page-header
@@ -32,92 +27,138 @@ pageable: true
               .hero-unit.row
                 .intro-stack  
                 .col-md-offset-3.col-md-8.intro-text
-                  %p
+
+                  :markdown
                     The most up-to-date OpenStack on the industry's most trusted Linux platform, now easy to install and deploy.
+
                   %p
                     %span.btn
                       %a{:href => "/Quickstart", :title => "Quickstart"} Quick start →
               .row
                 .col-md-offset-4.col-md-7.pad-sides.begin-content.pull-s
                   %h2
-                    %span#Stay_up_to_date_with_RDO.mw-headline Stay up to date with RDO
-                  %p
-                    There's lots of ways to stay in touch with the RDO community.
-                  %p
+                    %span.mw-headline
+                      Stay up to date with RDO
+
+                  :markdown
+                    There's lots of ways to stay in touch with the RDO
+                    community.
+
                     Come to one of the main
-                    %a{:href => "/Events", :title => "Events"} Events
+                    [Events](/Events "Events")
                     where some of us will be. Follow us on
-                    %a.external.text{:href => "http://twitter.com/rdocommunity/", :rel => "nofollow"} Twitter
+                    [Twitter](http://twitter.com/rdocommunity/)
                     or our
-                    = succeed "." do
-                      %a.external.text{:href => "https://plus.google.com/communities/110409030763231732154", :rel => "nofollow"} Google+ community
+                    [Google+ community](https://plus.google.com/communities/110409030763231732154).
                     Subscribe to the
-                    %a.external.text{:href => "http://www.redhat.com/mailman/listinfo/rdo-list", :rel => "nofollow"} rdo-list mailing list
+                    [rdo-list mailing list](http://www.redhat.com/mailman/listinfo/rdo-list)
                     for technical questions, or to the
-                    %a.external.text{:href => "http://www.redhat.com/mailman/listinfo/rdo-newsletter", :rel => "nofollow"} newsletter mailing list
+                    [newsletter mailing list](http://www.redhat.com/mailman/listinfo/rdo-newsletter)
                     for monthly community updates.
-                  %p
+
                     And there's a variety of presentations on the
-                    %a{:href => "/RDO_videos", :title => "RDO videos"} RDO videos
-                    page from our hangouts and conference presentations you may have missed.
+                    [RDO videos](/RDO_videos "RDO videos") page from our
+                    hangouts and conference presentations you may have
+                    missed.
+
                   %h2
-                    %span#Introducing_RDO.mw-headline Introducing RDO
+                    %span.mw-headline
+                      Introducing RDO
+
                   .floatright
                     %a{:href => "//openstack.org", :rel => "nofollow"}
-                      %img.openstack-distribution-logo{:alt => "An OpenStack distribution", :height => "70", :src => "/images/8/83/Openstack-distribution.png", :width => "155"}/
+                      %img.openstack-distribution-logo{:alt => "An OpenStack distribution", :height => "70", :src => "/images/Openstack-distribution.png", :width => "155"}/
                   %p.text-focus
-                    RDO is a community of people using and deploying OpenStack on Red Hat Enterprise Linux, Fedora and distributions derived from these (such as CentOS, Scientific Linux and others). We have
-                    = succeed "," do
-                      %a{:href => "/Docs", :title => "Docs"} documentation to help get started
-                    %a.external.text{:href => "http://openstack.redhat.com/forum", :rel => "nofollow"} forums
-                    where you can connect with other users, and
-                    %a{:href => "/Quickstart", :title => "Quickstart"} community-supported  packages
-                    of the most up-to-date OpenStack releases available for download.
-                  %p.text-focus
-                    If you are looking for enterprise-level support, or information on partner certification, Red Hat also offers
-                    = succeed "." do
-                      %a.external.text{:href => "//redhat.com/openstack", :rel => "nofollow"} Red Hat Enterprise Linux OpenStack Platform
-                  %p.text-secondary OpenStack relies on the underlying operating system and hypervisor — and what better operating system to build on than the industry's leading enterprise operating system? The RDO community is your one-stop community site for all things related to using OpenStack on Red Hat based platforms.
+                    RDO is a community of people using and deploying
+                    OpenStack on Red Hat Enterprise Linux, Fedora and
+                    distributions derived from these (such as CentOS,
+                    Scientific Linux and others). We have
+
+                    :markdown
+                      RDO is a community of people using and deploying
+                      OpenStack on Red Hat Enterprise Linux, Fedora and
+                      distributions derived from these (such as CentOS,
+                      Scientific Linux and others). We have
+                      [documentation to help get started](/Docs "Docs"),
+                      [forums](http://openstack.redhat.com/forum)
+                      where you can connect with other users, and
+                      [community-supported packages](/Quickstart "Quickstart")
+                      of the most up-to-date OpenStack releases
+                      available for download.
+
+                      If you are looking for enterprise-level support,
+                      or information on partner certification, Red Hat
+                      also offers
+                      [Red Hat Enterprise Linux OpenStack Platform](//redhat.com/openstack).
+
+                    .focus
+                      :markdown
+                        OpenStack relies on the underlying operating
+                        system and hypervisor — and what better
+                        operating system to build on than the industry's
+                        leading enterprise operating system? The RDO
+                        community is your one-stop community site for
+                        all things related to using OpenStack on Red Hat
+                        based platforms.
+
               .row
                 .col-md-7.col-md-offset-4.pad-sides.begin-content.pull-m
+
                   %h2
                     %span#Networking_with_OpenStack.mw-headline Networking with OpenStack
-                  %p
-                    On
-                    = succeed "," do
-                      %b Thursday, October 31st
-                    Brent Eagles gave a presentation on advanced networking with OpenStack.
+
+                  :markdown
+                    On **Thursday, October 31st**, Brent Eagles gave
+                    a presentation on advanced networking with
+                    OpenStack.
+
                   .thumb.center
                     .thumbinner{:style => "width: 630px;"}
                       %iframe{:allowfullscreen => "true", :frameborder => "0", :height => "473", :src => "http://www.youtube.com/embed/wEa_8ESxPAY?showsearch=0&amp;modestbranding=1", :width => "630"}
-                      .thumbcaption
-                        .thumbcaption
-                  %p
-                    You can see some earlier presentations on the
-                    %a.mw-redirect{:href => "/RDO_Videos", :title => "RDO Videos"} RDO Videos
-                    page.
+
+                  :markdown
+                    You can see some earlier presentations on the [RDO
+                    Videos](/RDO_Videos "RDO Videos") page.
+
+
                   %h2
                     %span#Red_Hat_Expertise.mw-headline Red Hat Expertise
-                  %p.text-secondary
-                    From the Linux kernel and the KVM hypervisor to the top level OpenStack project components, Red Hat has expertise at every level of the stack.
-                    Whether you want to run a proof of concept of OpenStack on CentOS, or you want to prepare a production cloud and you are evaluating partners for your deployment, who better to go to than the number one contributor to OpenStack?
-                  %p.text-secondary
-                    When you're ready for production, and you want support from a partner you know,  Red Hat offers you the
-                    = succeed "," do
-                      %a.external.text{:href => "//redhat.com/openstack", :rel => "nofollow"} Red Hat Enterprise Linux OpenStack Platform
-                    with its partner certification program.
+
+                  :markdown
+                    From the Linux kernel and the KVM hypervisor to the
+                    top level OpenStack project components, Red Hat has
+                    expertise at every level of the stack. Whether you
+                    want to run a proof of concept of OpenStack on
+                    CentOS, or you want to prepare a production cloud
+                    and you are evaluating partners for your deployment,
+                    who better to go to than the number one contributor
+                    to OpenStack?
+
+                    When you're ready for production, and you want
+                    support from a partner you know, Red Hat offers you
+                    the [Red Hat Enterprise Linux OpenStack
+                    Platform](//redhat.com/openstack), with its partner
+                    certification program.
+
               .row
                 .col-md-7.col-md-offset-4.pad-sides.begin-content.pull-l
+
                   %h2
                     %span.mw-headline{:id => "Download_and_get_started.21"} Download and get started!
+
                   .text-focus
                     %p
                       In just a few short steps, you can transform any machine running Fedora, Red Hat Enterprise Linux, CentOS, Scientific Linux, or any other Red Hat Enterprise Linux based distribution into an OpenStack powerhouse.
+
                   .button-wrap
                     %p
                       %span.btn
                         %a{:href => "/Quickstart", :title => "Quickstart"} QUICK START →
+
                       We'll help you get set up
+
+
+              -# FIXME: Make this dynamic content
               .block-highlight
                 .row
                   .col-md-7.col-md-offset-4.pad-sides.begin-content.pull-m
@@ -156,19 +197,20 @@ pageable: true
                 .col-md-7.col-md-offset-4.pad-sides.begin-content.pull-m
                   %h2
                     %span#Join_the_community.mw-headline Join the community
-                  %p.text-focus
+
+
+                  :markdown
                     There are many ways to
-                    %a{:href => "/Get_involved", :title => "Get involved"} get involved
+                    [get involved](/Get_involved "Get involved")
                     with the RDO community once you
-                    = succeed "." do
-                      %a{:href => "/Quickstart", :title => "Quickstart"} get started
+                    [get started](/Quickstart "Quickstart").
                     The simplest way is to join
-                    %a.external.text{:href => "http://openstack.redhat.com/forum", :rel => "nofollow"} the RDO forums
-                    and help out other users by sharing your experiences.
-                  %p
-                    For a commercially-supported enterprise ready OpenStack solution, Red Hat provides
-                    = succeed "," do
-                      %a.external.text{:href => "//redhat.com/openstack", :rel => "nofollow"} Red Hat Enterprise Linux OpenStack Platform
-                    an enterprise-class cloud platform based on OpenStack Grizzly.
-                  %p
-                    %br/
+                    [the RDO forums](http://openstack.redhat.com/forum)
+                    and help out other users by sharing your
+                    experiences.
+
+                    For a commercially-supported enterprise ready
+                    OpenStack solution, Red Hat provides
+                    [Red Hat Enterprise Linux OpenStack Platform](//redhat.com/openstack),
+                    an enterprise-class cloud platform based on
+                    OpenStack Grizzly.
