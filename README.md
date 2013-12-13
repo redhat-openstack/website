@@ -1,7 +1,4 @@
-# Middleman-Springboard
-
-Springboard is a starter-pack for [Middleman](https://middlemanapp.com/), 
-for quickly whipping together static-based websites.
+# RDO website
 
 To get started, you need to have Ruby and Ruby Gems installed, as well
 as "bundler".
@@ -9,38 +6,10 @@ as "bundler".
 
 ## Initial setup
 
-Before you do anything else, remember this: 
-
-When you use `middleman-springboard`, remember that sites are a fork of this
-repository. Be sure you change your origin before you push. You can do this
-automatically when forking this repository.
-
-You can push small changes back upream to this repository, as well as pull in
-changes made too — but try to keep forks separate. _Thanks!_
-
-
-### Fedora, RHEL, & CentOS
-
 ```
-git clone https://github.com/OSAS/middleman-springboard.git YOUR_PROJECT
-cd YOUR_PROJECT
-./setup.sh # This script assumes your user account has sudo rights
-```
-
-### Other Linux distributions
-
-Currently, `setup.sh` is a super-simple script that only has support for
-Fedora, RHEL, and CentOS. 
-
-(Pull requests to add support for other distributions and operating systems
-are welcome.)
-
-Be sure you have a C++ and Ruby development environment, as well as Ruby Gems
-and Bundler, then run the following:
-
-```
-git clone https://github.com/OSAS/middleman-springboard.git YOUR_PROJECT
-cd YOUR_PROJECT
+sudo yum install -y ruby-devel rubygems gcc-c++ curl-devel rubygem-bundler
+git clone git@gitlab.osas.lab.eng.rdu2.redhat.com:garrett/rdo-middleman.git
+cd rdo-middleman
 bundle install
 ```
 
@@ -88,25 +57,15 @@ After getting it how you want, you can build the static site by running:
 
 ### Setting up deployment
 
-FIXME: Right now, please reference <data/site.yml>
+FIXME: Right now, please reference data/site.yml
 
 ### Actual deployment
 
-After copying your public key to the remote server and configuring your
-site in <data/site.yml>, deployment is one simple command:
+You'll need to be added to the `osasteam` group on OpenShift and have
+your public key added to your profile.
+
+Afterward, deployment is a simple single command:
 
 ```
 bundle exec middleman deploy
 ```
-
-
-### Add new features (parsers, etc.)
-
-Simply add a new `gem 'some-gem-here'` line in the `Gemfile` and run
-`bundle install`
-
-
-## More info
-
-For more information, please check the excellent
-[Middleman documentation](https://middlemanapp.com/basics/install/).
