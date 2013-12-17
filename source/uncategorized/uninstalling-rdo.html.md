@@ -24,7 +24,7 @@ WARNING: This script will remove packages including Puppet, httpd, Nagios and ot
 
     # Warning! Dangerous step! Removes lots of packages, including many
     # which may be unrelated to RDO.
-    yum remove -y nrpe "*nagios*" puppet "*ntp*" "*openstack*" \
+    yum remove -y nrpe "*nagios*" puppet ntp ntp-perl ntpdate "*openstack*" \
     "*nova*" "*keystone*" "*glance*" "*cinder*" "*swift*" \
     mysql mysql-server httpd "*memcache*" scsi-target-utils \
     iscsi-initiator-utils perl-DBI perl-DBD-MySQL ;
