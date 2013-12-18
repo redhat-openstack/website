@@ -12,7 +12,7 @@ wiki_last_updated: 2015-07-16
 <div class="offset1 span10">
 ## Installing and Configuring RDO
 
-[ <-- Docs](Docs)
+[ ← Docs](Docs)
 
 While the [Quickstart](Quickstart) is sufficient for an initial test deployment, there are many other ways that you may wish to deploy OpenStack with RDO. Documents here also cover configuring your deployment.
 
