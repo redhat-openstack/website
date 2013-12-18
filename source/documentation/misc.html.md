@@ -8,6 +8,8 @@ wiki_revision_count: 11
 wiki_last_updated: 2015-08-07
 ---
 
+<div class="row">
+<div class="offset1 span10">
 ## Miscellaneous Docs
 
 *   [ Tested RDO Configurations](TestedSetups)
@@ -19,4 +21,6 @@ wiki_last_updated: 2015-08-07
 *   [OpenStack on TXT](https://fedoraproject.org/wiki/OpenStackOnTXT)
 *   [RDO videos](RDO videos)
 
+</div>
+</div>
 <Category:Documentation>
