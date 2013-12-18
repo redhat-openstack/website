@@ -8,7 +8,9 @@ wiki_revision_count: 20
 wiki_last_updated: 2015-07-16
 ---
 
-## Installing RDO
+<div class="row">
+<div class="offset1 span10">
+## Installing and Configuring RDO
 
 [ <-- Docs](Docs)
 
@@ -33,4 +35,6 @@ While the [Quickstart](Quickstart) is sufficient for an initial test deployment,
 *   [ Deploying RDO Using Tuskar and TripleO](Deploying_RDO_Using_Tuskar_And_TripleO)
 *   [ Packstack Cookbook](Packstack_cookbook)
 
+</div>
+</div>
 <Category:Documentation> <Category:Install>
