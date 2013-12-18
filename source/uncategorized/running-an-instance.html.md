@@ -18,7 +18,7 @@ __NOTOC__
 
 Log in to the Openstack dashboard at <http://CONTROL_NODE/dashboard> - the username is "demo". The password can be found in the file keystonerc_demo in the /root/ directory of the control node.
 
-Note: make sure you use the "demo" username here.
+**Note: make sure you use the "demo" username here.**
 
 ### Step 2: Enable SSH on your default security group.
 
