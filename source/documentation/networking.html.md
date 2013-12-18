@@ -21,10 +21,10 @@ wiki_last_updated: 2015-05-26
 *   [Modular Layer 2 (ML2) Plugin](Modular Layer 2 (ML2) Plugin)
 *   [ Difference between Floating IP and private IP ](Difference between Floating IP and private IP)
 *   [ Setting a Floating IP Range ](Floating IP range)
-*   [ Other networking resources ](Networking)
 *   [ Setting up a virtualized multi-node dev environment for Neutron ](NeutronLibvirtMultinodeDevEnvironment)
 *   [Configuring Neutron with existing external network](Neutron_with_existing_external_network)
 *   [OpenStack Networking in Too Much Detail](Networking_in_too_much_detail)
+*   [ Other networking resources ](Networking)
 
 </div>
 </div>
