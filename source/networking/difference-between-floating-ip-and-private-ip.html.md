@@ -12,7 +12,7 @@ wiki_last_updated: 2013-12-18
 
 Were you wondering what's the difference between a private IP address and a floating IP address in OpenStack? Here is a short explanation that could make it clear.
 
-(See also: [ Setting a floating IP range](Floating_IP_range)
+(See also: [ Setting a floating IP range](Floating_IP_range))
 
 ## Private IP Address
 
