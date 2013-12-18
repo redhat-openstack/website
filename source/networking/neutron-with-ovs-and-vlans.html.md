@@ -246,3 +246,5 @@ Check the NAT table
 Ping to verify network connections
 
       $  ip netns exec qrouter-42b4f31a-23ad-436b-a25c-7a96cff29a8e ping 8.8.8.8
+
+<Category:Networking> <Category:Neutron>
