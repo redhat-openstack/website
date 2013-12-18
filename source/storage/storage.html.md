@@ -8,6 +8,8 @@ wiki_revision_count: 34
 wiki_last_updated: 2014-10-30
 ---
 
+<div class="row">
+<div class="offset1 span10">
 ## Storage
 
 [ <-- Docs ](Docs)
@@ -15,3 +17,6 @@ wiki_last_updated: 2014-10-30
 *   [GlusterFS with Keystone Quickstart](http://www.gluster.org/community/documentation/index.php/GlusterFS_Keystone_Quickstart)
 *   [Using Gluster for Cinder Block Storage](http://www.gluster.org/community/documentation/index.php/GlusterFS_Cinder)
 *   [Using Ceph for Block Storage with RDO](Using Ceph for Block Storage with RDO)
+
+</div>
+</div>
