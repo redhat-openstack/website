@@ -68,3 +68,5 @@ Once the above steps are complete, newly created tenant networks should be GRE t
 `# quantum net-show `<network name or UUID>
 
 NOTE: When using GRE, set the MTU in the Guest to 1400, this will allow for the GRE header and no packet fragmentation. Also you should set TSO to off on the instance machine for outbound traffic to work. This can be done by this command : ethtool -K eth0 tso off . You can create a bash script for init.d to run it at startup.
+
+<Category:Networking>
