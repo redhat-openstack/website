@@ -78,4 +78,4 @@ If you installed the updated kernel and rebooted prior to running packstack, eve
 
     packstack --answer-file=~/packstack-answers-*.txt
 
-<Category:Documentation>
+<Category:Documentation> <Category:Install> <Category:Networking>
