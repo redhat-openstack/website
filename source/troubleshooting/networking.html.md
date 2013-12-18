@@ -161,4 +161,4 @@ After this, you will no longer need to bring up eth0, and all going well you wil
 
 ...
 
-<Category:Troubleshooting> <Category:Documentation> [Category:In progress](Category:In progress)
+<Category:Troubleshooting> <Category:Documentation> [Category:In progress](Category:In progress) <Category:Networking>
