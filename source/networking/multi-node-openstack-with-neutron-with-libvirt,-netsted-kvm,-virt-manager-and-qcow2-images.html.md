@@ -266,3 +266,5 @@ before each clone.
 For example, to revert the controller to the base snapshot:
 
     sudo virsh snapshot-revert --force rhel-6.4-controller base
+
+<Category:Networking>
