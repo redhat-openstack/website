@@ -12,7 +12,7 @@ wiki_last_updated: 2015-05-26
 <div class="offset1 span10">
 ## Networking
 
-[ <-- Docs ](Docs)
+[ ← Docs ](Docs)
 
 *   [ Quick start guide with Neutron](Neutron-Quickstart)
 *   [ Launching your first VM with Neutron](Running_an_instance_with_Neutron)
@@ -28,3 +28,4 @@ wiki_last_updated: 2015-05-26
 
 </div>
 </div>
+<Category:Documentation> <Category:Networking>
