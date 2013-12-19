@@ -83,7 +83,7 @@ In just a few short steps, you can transform any machine running Fedora, Red Hat
 ## From the forums
 
 <div class="forum-blurbs">
-<rss max=4 date="Y-m-d"><http://openstack.redhat.com/forum/discussions/feed.rss></rss>
+<rss max=4 date="Y-m-d"><https://ask.openstack.org/feeds/rss/?q=rdo></rss>
 
 </div>
 [/forum Participate in the forum]
