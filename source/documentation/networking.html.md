@@ -18,6 +18,7 @@ wiki_last_updated: 2015-05-26
 *   [ Launching your first VM with Neutron](Running_an_instance_with_Neutron)
 *   [ Configuring Neutron to use VLANs](Neutron with OVS and VLANs)
 *   [Using GRE Tenant Networks](Using GRE Tenant Networks)
+*   [Using VXLAN Tenant Networks](Using VXLAN Tenant Networks)
 *   [Modular Layer 2 (ML2) Plugin](Modular Layer 2 (ML2) Plugin)
 *   [ Difference between Floating IP and private IP ](Difference between Floating IP and private IP)
 *   [ Setting a Floating IP Range ](Floating IP range)
