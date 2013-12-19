@@ -352,3 +352,5 @@ Then you can create forwarding and NAT rules that will cause "external" traffic 
 If you have an external router that will act as a gateway for your public network, you can add an interface on that network to the bridge. For example, assuming that `eth2` was on the same network as `172.24.4.225`:
 
     # ovs-vsctl add-port br-ex eth2
+
+<Category:Networking>
