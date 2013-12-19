@@ -10,7 +10,7 @@ wiki_last_updated: 2014-01-10
 <div class="offset1 span10">
 ## About RDO
 
-[ <-- Docs ](Docs)
+[ ← Docs ](Docs)
 
 *   [Get involved](Get involved)
 *   [Frequently Asked Questions](Frequently Asked Questions)
