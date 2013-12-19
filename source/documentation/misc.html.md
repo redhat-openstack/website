@@ -12,6 +12,8 @@ wiki_last_updated: 2015-08-07
 <div class="offset1 span10">
 ## Miscellaneous Docs
 
+[ ← Docs](Docs)
+
 *   [ Tested RDO Configurations](TestedSetups)
 *   [ RDO stable client branches](Clients)
 *   [ Heat Links](Heat)
