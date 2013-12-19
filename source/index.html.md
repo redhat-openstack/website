@@ -80,19 +80,6 @@ In just a few short steps, you can transform any machine running Fedora, Red Hat
 <div class="block-highlight">
 <div class="row">
 <div class="span7 offset4 pad-sides begin-content pull-m">
-## From the forums
-
-<div class="forum-blurbs">
-<rss max=4 date="Y-m-d"><https://ask.openstack.org/feeds/rss/?q=rdo></rss>
-
-</div>
-[/forum Participate in the forum]
-
-</div>
-</div>
-</div>
-<div class="row">
-<div class="span7 offset4 pad-sides begin-content pull-m">
 ## Join the community
 
 There are many ways to [get involved](get involved) with the RDO community once you [ get started](quickstart). The simplest way is to join [/forum the RDO forums] and help out other users by sharing your experiences.
