@@ -10,7 +10,7 @@ wiki_last_updated: 2013-12-19
 <div class="offset1 span10">
 ## Upstream documentation
 
-[ <-- Docs ](Docs)
+[ ← Docs ](Docs)
 
 *   [OpenStack Compute Administration Manual](http://docs.openstack.org/trunk/openstack-compute/admin/content/index.html)
 *   [OpenStack Networking Administration Guide](http://docs.openstack.org/trunk/openstack-network/admin/content/index.html)
