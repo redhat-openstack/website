@@ -30,3 +30,5 @@ Verify that the GRE tunnels are now VXLAN tunnels via:
     ovs-vsctl show
 
 *   Note: If you created any tenant networks after the GRE installation but before the transition to VXLAN, delete those networks and recreate them.
+
+<Category:Networking>
