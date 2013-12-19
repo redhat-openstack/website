@@ -181,3 +181,5 @@ Save the uuid of the secret for configuring nova-compute later.
 11. Set the UUID from the preceding step as the secret value, and delete the secret.xml file.
 
          sudo virsh secret-set-value --secret {uuid of secret} --base64 $(cat client.volumes.key) && rm client.volumes.key secret.xml
+
+<Category:Storage>
