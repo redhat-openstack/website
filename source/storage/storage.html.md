@@ -12,7 +12,7 @@ wiki_last_updated: 2014-10-30
 <div class="offset1 span10">
 ## Storage
 
-[ <-- Docs ](Docs)
+[ ← Docs ](Docs)
 
 *   [GlusterFS with Keystone Quickstart](http://www.gluster.org/community/documentation/index.php/GlusterFS_Keystone_Quickstart)
 *   [Using Gluster for Cinder Block Storage](http://www.gluster.org/community/documentation/index.php/GlusterFS_Cinder)
