@@ -8,7 +8,7 @@ wiki_last_updated: 2014-10-06
 
 # Try Stack FAQ
 
-The following questions are the most commonly asked questions for TryStack. Hopefully you can find your answer here. If you can't then ask it and add the answer here after you get one.
+The following questions are the most commonly asked questions for [TryStack](http://trystack.org). Hopefully you can find your answer here. If you can't then ask it and add the answer here after you get one.
 
 ## What's the root password to the instances?
 
