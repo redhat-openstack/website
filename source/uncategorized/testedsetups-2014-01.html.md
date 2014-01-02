@@ -11,6 +11,8 @@ wiki_last_updated: 2014-02-21
 
 # TestedSetups 2014 01
 
+Tested Setups for [RDO_test_day_January_2014](RDO_test_day_January_2014)
+
 *See [TestedSetups](TestedSetups) for the canonical list, including history and filed bugs.*
 
 ## Example Entry
