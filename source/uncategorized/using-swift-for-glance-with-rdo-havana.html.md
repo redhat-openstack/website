@@ -20,4 +20,6 @@ You will also need to add the "ResellerAdmin" role to the "glance" user or it wo
 
        # keystone user-role-add -tenant_id=[uuid of the services tenant] –user=[uuid of the glance account] –role=[uuid of the ResellerAdmin role]
 
-Feel free to create the "ResellerAdmin" role first if it's not found.
+Feel free to create the "ResellerAdmin" role first if it's not found and lastly restart the needed services:
+
+       # service openstack-glance-api restart
