@@ -52,9 +52,9 @@ Tested Setups for [RDO_test_day_January_2014](RDO_test_day_January_2014)
 |                                                               |         | Fedora 20   | ??     | [Quickstart](Quickstart) | ??  | ??   | None  | None       |
 |                                                               |         | RHEL 6.5    | ??     | [Quickstart](Quickstart) | ??  | ??   | None  | None       |
 | Full Distribution/ Different components on each server        |         | CentOS 6.5  | ??     | [Quickstart](Quickstart) | ??  | ??   | None  | None       |
-|                                                               |         | Fedora 19   | ??     | [[Quickstart]                       | ??  | ??   | None  | None       |
-|                                                               |         | Fedora 20   | ??     | [[Quickstart]                       | ??  | ??   | None  | None       |
-|                                                               |         | RHEL 6.5    | ??     | [[Quickstart]                       | ??  | ??   | None  | None       |
+|                                                               |         | Fedora 19   | ??     | [Quickstart](Quickstart) | ??  | ??   | None  | None       |
+|                                                               |         | Fedora 20   | ??     | [Quickstart](Quickstart) | ??  | ??   | None  | None       |
+|                                                               |         | RHEL 6.5    | ??     | [Quickstart](Quickstart) | ??  | ??   | None  | None       |
 
 ## Advanced Installs (Foreman Based) -- Work in Progress
 
