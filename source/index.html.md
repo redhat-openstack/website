@@ -17,7 +17,7 @@ __NOTOC__
 
 </div>
 <div class="offset3 span8 intro-text">
-RDO Test day, January 7th and 8th.
+RDO Test days, January 7th and 8th.
 
 <span class="btn">[Details →](RDO_test_day_January_2014)</span>
 
