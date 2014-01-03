@@ -37,7 +37,7 @@ OpenStack relies on the underlying operating system and hypervisor — and what 
 
 ## RDO Test Day (January 7th and 8th)
 
-Next week (January 7/8) we'll be doing our first [RDO_test_day_January_2014 | Icehouse test day], and we'd appreciate it if you could help us out with an hour or two of your time. Details on the test day can be found at [RDO_test_day_January_2014](RDO_test_day_January_2014) and a matrix of what we'd like to test is at [TestedSetups_2014_01](TestedSetups_2014_01).
+Next week (January 7/8) we'll be doing our first [RDO_test_day_January_2014 | Icehouse test day], and we'd appreciate it if you could help us out with an hour or two of your time. Details on the test day can be found on [ the test day page](RDO_test_day_January_2014) and a matrix of what we'd like to test is at [ TestedSetups ](TestedSetups_2014_01).
 
 Thanks for any time you can contribute to this testing effort, to help make RDO as solid as possible.
 
