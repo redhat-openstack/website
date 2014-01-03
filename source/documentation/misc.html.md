@@ -14,6 +14,7 @@ wiki_last_updated: 2015-08-07
 
 [ ← Docs](Docs)
 
+*   [ Tips for New Developers](DeveloperTips)
 *   [ Tested RDO Configurations](TestedSetups)
 *   [ RDO stable client branches](Clients)
 *   [ Heat Links](Heat)
