@@ -29,8 +29,8 @@ and other similar errors
          sed -i '/^nil$/d' /etc/heat/heat.conf
          test -e /var/log/nova/heat-manage.log && chown heat:heat /var/log/nova/heat-manage.log
        
-        openstack-db --service nova --rootpw redhat --password redhat --drop
-        openstack-db --service nova --rootpw redhat --password redhat --init
+          openstack-db --service nova --rootpw redhat --password redhat --drop
+          openstack-db --service nova --rootpw redhat --password redhat --init
 
 Then run packstack again:
 
