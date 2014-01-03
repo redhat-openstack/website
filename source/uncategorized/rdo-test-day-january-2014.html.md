@@ -46,12 +46,12 @@ You'll want a fresh install with latest updates installed. (Fresh so that there'
 The things that should be tested are listed on the [Tested Setups](TestedSetups_2014_01) page.
 
 *   Pick an item from the list
-*   Go through the scenario as though you were a beginner, just following the instructions. (Check the [Workarounds_2014_01](Workarounds_2014_01) page for problems that others may have encountered and resolved.)
+*   Go through the scenario as though you were a beginner, just following the instructions. (Check the [ Workarounds](Workarounds_2014_01) page for problems that others may have encountered and resolved.)
 *   KEEP GOOD NOTES. You can use <https://etherpad.openstack.org/p/rdo_test_day_jan_2014> for these notes. Reviewing other peoples' notes may help you avoid problems that they've already encountered.
 
 If you have problems with any of the tests, report a bug to [Bugzilla](https://bugzilla.redhat.com) usually for one of the [openstack-packstack](https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&version=18&component=openstack-packstack), [openstack-nova](https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&version=18&component=openstack-nova), [openstack-glance](https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&version=18&component=openstack-glance), [openstack-keystone](https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&version=18&component=openstack-keystone), [openstack-cinder](https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&version=18&component=openstack-cinder), [openstack-neutron](https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&version=18&component=openstack-neutron),[openstack-swift](https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&version=18&component=openstack-swift) or [openstack-heat](https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&version=18&component=openstack-heat) or [openstack-ceilometer](https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&version=18&component=openstack-ceilometer) components. If you are unsure about exactly how to file the report or what other information to include, just ask on IRC (#rdo, freenode.net) and we will help you.
 
-Once you have completed the tests, add your results to the table on the [TestedSetups_2014_01](TestedSetups_2014_01) page, following the examples already there. Be sure to check the [Workarounds_2014_01](Workarounds_2014_01) page for things that may have already have fixes or workarounds.
+Once you have completed the tests, add your results to the table on the [TestedSetups_2014_01](TestedSetups_2014_01) page, following the examples already there. Be sure to check the [ Workarounds](Workarounds_2014_01) page for things that may have already have fixes or workarounds.
 
 ## Blogs, Screencasts
 
