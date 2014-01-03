@@ -41,6 +41,7 @@ You'll want a fresh install with latest updates installed. (Fresh so that there'
 ## How To Test
 
 *   Quick Start -- <http://openstack.redhat.com/Quickstart>
+*   CI Results -- <https://prod-rdojenkins.rhcloud.com/>
 *   For RHEL & its community derivatives, Foreman based deployment -- <http://openstack.redhat.com/Virtualized_Foreman_Dev_Setup>
 
 The things that should be tested are listed on the [Tested Setups](TestedSetups_2014_01) page.
