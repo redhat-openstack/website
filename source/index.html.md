@@ -25,7 +25,7 @@ The most up-to-date OpenStack on the industry's most trusted Linux platform, now
 </div>
 <div class="row">
 <div class="offset4 span7 pad-sides begin-content pull-s">
-## RDO Test Day
+## RDO Test Day (January 7th and 8th)
 
 Next week (January 7/8) we'll be doing our first [RDO_test_day_January_2014 | Icehouse test day], and we'd appreciate it if you could help us out with an hour or two of your time. Details on the test day can be found at [RDO_test_day_January_2014] and a matrix of what we'd like to test is at [TestedSetups_2014_01].
 
