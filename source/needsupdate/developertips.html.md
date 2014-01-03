@@ -16,7 +16,7 @@ This page has a few handy tips for new developers to use. Developers should cont
 
 [Koji](https://fedoraproject.org/wiki/Koji) is the build system that Fedora uses, and is also used for EPEL and RDO builds. [Bodhi](https://fedoraproject.org/wiki/Bodhi) is the tool that is used to review new builds for inclusion into official repositories. There are handy command line tools that you can install in Fedora to query both Koji and Bodhi. Here's how to use them for some simple things:
 
-    sudo yum install -y koji bodhi
+    sudo yum install -y koji bodhi-client
 
 To find a list of the latest builds for a specific package across all releases:
 
