@@ -18,7 +18,7 @@ The default backend driver configured for Glance is the local filesystem but it 
 
 You will also need to add the "ResellerAdmin" role to the "glance" user or it won't be able to create containers.
 
-       # keystone user-role-add -tenant_id=[uuid of the services tenant] –user=[uuid of the glance account] –role=[uuid of the ResellerAdmin role]
+       # keystone user-role-add --tenant_id=$UUID_SERVICES_TENANT --user=$UUID_GLANCE_USER --role=$UUID_ResellerAdmin_ROLE
 
 Feel free to create the "ResellerAdmin" role first if it's not found and lastly restart the needed services:
 
