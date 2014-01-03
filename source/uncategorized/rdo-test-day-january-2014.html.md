@@ -21,6 +21,10 @@ We'll be testing the first Icehouse milestone release, and we'd like to test the
 *Add your name, and how you're able to help out*
 
 *   rbowen (Rich Bowen) - Testing, IRC, Documentation
+*   Dafna (Dafna Ron) - Testing storage components, IRC
+*   yrabel (Yogev Rabel) - Testing storage components, IRC
+*   tshefi (Tzach Shefi) - Testing storage components, IRC
+*   gfidente (Giulio Fidente) - Testing storage components, IRC
 
 ## Prerequisite for Test Day
 
