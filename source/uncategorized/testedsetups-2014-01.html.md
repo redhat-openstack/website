@@ -41,6 +41,26 @@ Tested Setups for [RDO_test_day_January_2014](RDO_test_day_January_2014)
 |                                                                      |         | RHEL 6.5    | ??     | [Using_GRE_Tenant_Networks](Using_GRE_Tenant_Networks)                                                                            | ??  | ??   | None  | None       |
 |                                                                      |         | RHEL 7 Beta | ??     | [Using_GRE_Tenant_Networks](Using_GRE_Tenant_Networks)                                                                            | ??  | ??   | None  | None       |
 
+## Packstack Based Installation (Storage Components) - work in progress
+
+| Config Name                                                   | Release | BaseOS      | Status | HOWTO                                        | Who | Date | BZ/LP | Notes Page |
+|---------------------------------------------------------------|---------|-------------|--------|----------------------------------------------|-----|------|-------|------------|
+| All-in-One                                                    |         | CentOS 6.5  | ??     | [Quickstart](Quickstart)          | ??  | ??   | None  | None       |
+|                                                               |         | Fedora 19   | ??     | [Quickstart](Quickstart)          | ??  | ??   | None  | None       |
+|                                                               |         | Fedora 20   | ??     | [Quickstart](Quickstart)          | ??  | ??   | None  | None       |
+|                                                               |         | RHEL 6.5    | ??     | [Quickstart](Quickstart)          | ??  | ??   | None  | None       |
+|                                                               |         | RHEL 7 Beta | ??     | [Quickstart](Quickstart)          | ??  | ??   | None  | None       |
+| semi destributed component/ AIO+component on different server |         | CentOS 6.5  | ??     | [1](http://openstack.redhat.com/Quickstart)  | ??  | ??   | None  | None       |
+|                                                               |         | Fedora 19   | ??     | [2](http://openstack.redhat.com/Quickstart)  | ??  | ??   | None  | None       |
+|                                                               |         | Fedora 20   | ??     | [3](http://openstack.redhat.com/Quickstart)  | ??  | ??   | None  | None       |
+|                                                               |         | RHEL 6.5    | ??     | [4](http://openstack.redhat.com/Quickstart)  | ??  | ??   | None  | None       |
+|                                                               |         | RHEL 7 Beta | ??     | [5](http://openstack.redhat.com/Quickstart)  | ??  | ??   | None  | None       |
+| Full Destribution/ Different components on each server        |         | CentOS 6.5  | ??     | <http://openstack.redhat.com/Quickstart>     | ??  | ??   | None  | None       |
+|                                                               |         | Fedora 19   | ??     | [[6](http://openstack.redhat.com/Quickstart) | ??  | ??   | None  | None       |
+|                                                               |         | Fedora 20   | ??     | [[7](http://openstack.redhat.com/Quickstart) | ??  | ??   | None  | None       |
+|                                                               |         | RHEL 6.5    | ??     | [[8](http://openstack.redhat.com/Quickstart) | ??  | ??   | None  | None       |
+|                                                               |         | RHEL 7 Beta | ??     | <http://openstack.redhat.com/Quickstart>     | ??  | ??   | None  | None       |
+
 ## Advanced Installs (Foreman Based) -- Work in Progress
 
 Please see [Deploying RDO Using Foreman](Deploying RDO Using Foreman) for directions on setting up compute and controller nodes using foreman (only RHEL (derivatives) for now)
