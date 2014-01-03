@@ -33,7 +33,6 @@ We'll have packages for the following platforms:
 *   F19
 *   F20
 *   RHEL 6.5
-*   RHEL 7 beta
 *   CentOS 6
 *   CentOS 6.5
 
