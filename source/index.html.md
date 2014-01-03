@@ -17,9 +17,9 @@ __NOTOC__
 
 </div>
 <div class="offset3 span8 intro-text">
-The most up-to-date OpenStack on the industry's most trusted Linux platform, now easy to install and deploy.
+RDO Test day, January 7th and 8th.
 
-<span class="btn">[Quick start →](quickstart)</span>
+<span class="btn">[Details →](RDO_test_day_January_2014)</span>
 
 </div>
 </div>
