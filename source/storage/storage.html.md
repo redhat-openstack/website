@@ -18,6 +18,7 @@ wiki_last_updated: 2014-10-30
 *   [Using Gluster for Cinder Block Storage](http://www.gluster.org/community/documentation/index.php/GlusterFS_Cinder)
 *   [Using Ceph for Block Storage with RDO](Using Ceph for Block Storage with RDO)
 *   [Using ThinLVM for Cinder with RDO Havana](Using ThinLVM for Cinder with RDO Havana)
+*   [Using GlusterFS for Cinder with RDO Havana](http://www.gluster.org/community/documentation/index.php/GlusterFS_Cinder)
 *   [Using Swift for Glance with RDO Havana](Using Swift for Glance with RDO Havana)
 
 </div>
