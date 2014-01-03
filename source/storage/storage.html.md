@@ -19,6 +19,7 @@ wiki_last_updated: 2014-10-30
 *   [Using ThinLVM for Cinder with RDO Havana](Using ThinLVM for Cinder with RDO Havana)
 *   [Using GlusterFS for Cinder with RDO Havana](Using GlusterFS for Cinder with RDO Havana)
 *   [Using GlusterFS for Cinder with RDO Grizzly](http://www.gluster.org/community/documentation/index.php/GlusterFS_Cinder)
+*   [Using GlusterFS for Glance with RDO Havana](Using GlusterFS for Glance with RDO Havana)
 *   [Using Swift for Glance with RDO Havana](Using Swift for Glance with RDO Havana)
 
 </div>
