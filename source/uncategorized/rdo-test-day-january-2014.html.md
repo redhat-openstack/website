@@ -27,6 +27,7 @@ We'll be testing the first Icehouse milestone release, and we'd like to test the
 *   gfidente (Giulio Fidente) - Testing storage components, IRC
 *   oblaut(Ofer Blaut) - Testing Network components, IRC
 *   yfried (Yair Fried) - Testing Network components, IRC
+*   nmagnezi (Nir Magnezi) - Testing Network and Core components, IRC
 
 ## Prerequisite for Test Day
 
