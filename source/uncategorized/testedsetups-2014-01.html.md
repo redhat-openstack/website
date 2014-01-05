@@ -39,6 +39,7 @@ Tested Setups for [RDO_test_day_January_2014](RDO_test_day_January_2014)
 |                                                                       |         | Fedora 20  | ??     | [Using_GRE_Tenant_Networks](Using_GRE_Tenant_Networks)                                                                            | ??         | ??   | None  | None       |
 | Distributed w/ Neutron OVS (VXLAN) Networking                         |         | RHEL 6.5   | ??     | [Using VXLAN Tenant Networks](Using VXLAN Tenant Networks)                                                                           | ??         | ??   | None  | None       |
 | Neutron VPNaaS Networking                                             |         | RHEL 6.5   | ??     |                                                                                                                                                 | ??         | ??   | None  | None       |
+| NeutronLBaaS Networking                                               |         | Fedora 19  | ??     |                                                                                                                                                 | ??         | ??   | None  | None       |
 
 ## Packstack Based Installation (Storage Components) - work in progress
 
