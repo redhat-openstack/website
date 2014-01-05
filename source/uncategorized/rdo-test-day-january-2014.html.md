@@ -25,6 +25,8 @@ We'll be testing the first Icehouse milestone release, and we'd like to test the
 *   yrabel (Yogev Rabel) - Testing storage components, IRC
 *   tshefi (Tzach Shefi) - Testing storage components, IRC
 *   gfidente (Giulio Fidente) - Testing storage components, IRC
+*   oblaut(Ofer Blaut) - Testing Network components, IRC
+*   yfried (Yair Fried) - Testing Network components, IRC
 
 ## Prerequisite for Test Day
 
