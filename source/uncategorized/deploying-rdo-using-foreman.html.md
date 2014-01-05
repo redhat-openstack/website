@@ -192,7 +192,7 @@ Then you can source it and do a 'nova service-list'. This should show most servi
 
 ##### Prerequisites
 
-*   rhel6.4+ core build
+*   rhel6.5+ core build
 *   rhel + rhel optional + rdo havana + epel6
 *   2 x physical networks: 1 private, 1 public. (Assuming consistent network interface name across hosts.)
 *   1 x Controller
