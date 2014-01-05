@@ -4,8 +4,6 @@ authors: gfidente, yrabl
 wiki_title: Tests/Storage/Cinder
 wiki_revision_count: 19
 wiki_last_updated: 2014-01-06
-wiki_conversion_fallback: true
-wiki_warnings: conversion-fallback
 ---
 
 # Cinder
@@ -26,20 +24,30 @@ The general idea for the Cinder's test is to test the actions of the component i
 
 ### AIO Packstack Installation
 
-Config Name
+## Packstack Based Installation (Storage Components) - work in progress
 
-Release
-
-BaseOS
-
-Status
-
-HOWTO
-
-Who
-
-Date
-
-BZ/LP
-
-Notes Page
+| Config Name                                                   | Release | BaseOS      | Status | HOWTO                                                                                                                                     | Who | Date | BZ/LP | Notes Page |
+|---------------------------------------------------------------|---------|-------------|--------|-------------------------------------------------------------------------------------------------------------------------------------------|-----|------|-------|------------|
+| All-in-One w/ Cinder backed by GlusterFS                      |         | CentOS 6.5  | ??     | [Quickstart](Quickstart) + [Using GlusterFS for Cinder with RDO Havana](Using GlusterFS for Cinder with RDO Havana) | ??  | ??   | None  | None       |
+|                                                               |         | Fedora 19   | ??     | [Quickstart](Quickstart) + [Using GlusterFS for Cinder with RDO Havana](Using GlusterFS for Cinder with RDO Havana) | ??  | ??   | None  | None       |
+|                                                               |         | Fedora 20   | ??     | [Quickstart](Quickstart) + [Using GlusterFS for Cinder with RDO Havana](Using GlusterFS for Cinder with RDO Havana) | ??  | ??   | None  | None       |
+|                                                               |         | RHEL 6.5    | ??     | [Quickstart](Quickstart) + [Using GlusterFS for Cinder with RDO Havana](Using GlusterFS for Cinder with RDO Havana) | ??  | ??   | None  | None       |
+|                                                               |         | RHEL 7 Beta | ??     | [Quickstart](Quickstart) + [Using GlusterFS for Cinder with RDO Havana](Using GlusterFS for Cinder with RDO Havana) | ??  | ??   | None  | None       |
+| All-in-One w/ Cinder ThinLVM                                  |         | CentOS 6.5  | ??     | [Quickstart](Quickstart) + [Using ThinLVM for Cinder with RDO Havana](Using ThinLVM for Cinder with RDO Havana)     | ??  | ??   | None  | None       |
+|                                                               |         | Fedora 19   | ??     | [Quickstart](Quickstart) + [Using ThinLVM for Cinder with RDO Havana](Using ThinLVM for Cinder with RDO Havana)     | ??  | ??   | None  | None       |
+|                                                               |         | Fedora 20   | ??     | [Quickstart](Quickstart) + [Using ThinLVM for Cinder with RDO Havana](Using ThinLVM for Cinder with RDO Havana)     | ??  | ??   | None  | None       |
+|                                                               |         | RHEL 6.5    | ??     | [Quickstart](Quickstart) + [Using ThinLVM for Cinder with RDO Havana](Using ThinLVM for Cinder with RDO Havana)     | ??  | ??   | None  | None       |
+|                                                               |         | RHEL 7 Beta | ??     | [Quickstart](Quickstart) + [Using ThinLVM for Cinder with RDO Havana](Using ThinLVM for Cinder with RDO Havana)     | ??  | ??   | None  | None       |
+| All-in-One w/ Glance backed by Swift                          |         | CentOS 6.5  | ??     | [Quickstart](Quickstart) + [Using Swift for Glance with RDO Havana](Using Swift for Glance with RDO Havana)         | ??  | ??   | None  | None       |
+|                                                               |         | Fedora 19   | ??     | [Quickstart](Quickstart) + [Using Swift for Glance with RDO Havana](Using Swift for Glance with RDO Havana)         | ??  | ??   | None  | None       |
+|                                                               |         | Fedora 20   | ??     | [Quickstart](Quickstart) + [Using Swift for Glance with RDO Havana](Using Swift for Glance with RDO Havana)         | ??  | ??   | None  | None       |
+|                                                               |         | RHEL 6.5    | ??     | [Quickstart](Quickstart) + [Using Swift for Glance with RDO Havana](Using Swift for Glance with RDO Havana)         | ??  | ??   | None  | None       |
+|                                                               |         | RHEL 7 Beta | ??     | [Quickstart](Quickstart) + [Using Swift for Glance with RDO Havana](Using Swift for Glance with RDO Havana)         | ??  | ??   | None  | None       |
+| semi destributed component/ AIO+component on different server |         | CentOS 6.5  | ??     | [Quickstart](Quickstart) but pass to Packstack either --cinder-host or --glance-host to use a remote system                    | ??  | ??   | None  | None       |
+|                                                               |         | Fedora 19   | ??     | [Quickstart](Quickstart) but pass to Packstack either --cinder-host or --glance-host to use a remote system                    | ??  | ??   | None  | None       |
+|                                                               |         | Fedora 20   | ??     | [Quickstart](Quickstart) but pass to Packstack either --cinder-host or --glance-host to use a remote system                    | ??  | ??   | None  | None       |
+|                                                               |         | RHEL 6.5    | ??     | [Quickstart](Quickstart) but pass to Packstack either --cinder-host or --glance-host to use a remote system                    | ??  | ??   | None  | None       |
+| Full Distribution/ Different components on each server        |         | CentOS 6.5  | ??     | [Quickstart](Quickstart) but pass to Packstack both --cinder-host or --glance-host to use remote systems                       | ??  | ??   | None  | None       |
+|                                                               |         | Fedora 19   | ??     | [Quickstart](Quickstart) but pass to Packstack both --cinder-host or --glance-host to use remote systems                       | ??  | ??   | None  | None       |
+|                                                               |         | Fedora 20   | ??     | [Quickstart](Quickstart) but pass to Packstack both --cinder-host or --glance-host to use remote systems                       | ??  | ??   | None  | None       |
+|                                                               |         | RHEL 6.5    | ??     | [Quickstart](Quickstart) but pass to Packstack both --cinder-host or --glance-host to use remote systems                       | ??  | ??   | None  | None       |
