@@ -28,6 +28,7 @@ We'll be testing the first Icehouse milestone release, and we'd like to test the
 *   oblaut(Ofer Blaut) - Testing Network components, IRC
 *   yfried (Yair Fried) - Testing Network components, IRC
 *   nmagnezi (Nir Magnezi) - Testing Network and Core components, IRC
+*   amuller (Assaf Muller) - Testing network components, IRC
 
 ## Prerequisite for Test Day
 
