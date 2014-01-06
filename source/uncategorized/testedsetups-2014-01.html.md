@@ -48,7 +48,7 @@ Tested Setups for [RDO_test_day_January_2014](RDO_test_day_January_2014)
 
 ## Packstack Based Installation (Storage Components)
 
-In the [Docs/Storage](Docs/Storage) wiki page you will find configuration guides as well as suggestions on what could be tested for both Cinder and Glance.
+Please see [Docs/Storage](Docs/Storage) for some configuration guides as well as suggestions on what could be tested for both Cinder and Glance.
 
 | Config Name                                                   | Release | BaseOS      | Status | HOWTO | Who | Date | BZ/LP | Notes Page |
 |---------------------------------------------------------------|---------|-------------|--------|-------|-----|------|-------|------------|
