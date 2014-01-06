@@ -14,16 +14,15 @@ Marker
 
 The general idea for the Cinder's test is to test the actions of the component in different environments and with different back ends. Cinder should be able to do the following actions with each back end and in every topology:
 
-*   Create a volume
-    -   Simple creation
-    -   From an image
-    -   From a snapshot
-    -   Copy of another volume
+*   Create a volume - for every type try different sizes (1 - 100 G).
+    -   Simple creation.
+    -   From an image.
+    -   From a snapshot.
+    -   Copy of another volume.
 *   Delete a volume.
 *   Create a snapshot.
-    -   A volume in the status of "available"
+    -   A volume in the status of "available".
     -   A volume in "in-use" status.
-*   Restore a volume to the
 *   Delete a snapshot.
 *   Upload the volume to an image.
 *   Backup the volume.
@@ -32,3 +31,4 @@ The general idea for the Cinder's test is to test the actions of the component i
 *   Attach a volume to a working instance:
     -   The instance has booted from an image.
     -   The instance has booted from a volume.
+*   Detach a volume from an instance.
