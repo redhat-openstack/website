@@ -33,7 +33,7 @@ Below you can find different guides and some test suggestions for the storage co
 *   [Using GlusterFS for Glance with RDO Havana](Using GlusterFS for Glance with RDO Havana)
 *   [Using Swift for Glance with RDO Havana](Using Swift for Glance with RDO Havana)
 
-[Tests suggestions](Tests suggestions)
+### Test Suggestions
 
 Please conatct the Red Hat storage team on RDO channel in IRC for any questions:
 
