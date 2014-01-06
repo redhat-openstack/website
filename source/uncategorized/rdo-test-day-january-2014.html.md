@@ -29,6 +29,10 @@ We'll be testing the first Icehouse milestone release, and we'd like to test the
 *   yfried (Yair Fried) - Testing Network components, IRC
 *   nmagnezi (Nir Magnezi) - Testing Network and Core components, IRC
 *   amuller (Assaf Muller) - Testing network components, IRC
+*   ajeain (Ami Jeain) - Testing Core components, IRC
+*   ohochman (Omri Hochman) - Testing Foreman and Core components, IRC
+*   ukalifon (Udi Kalifon ) - Testing Core components, IRC
+*   dkorn (Daniel Korn ) - Testing Core components, IRC
 
 ## Prerequisite for Test Day
 
