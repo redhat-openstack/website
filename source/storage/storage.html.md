@@ -22,9 +22,10 @@ Below you can find different guides and some test suggestions for the storage co
 
 ### Cinder Manuals
 
-*   [Using Ceph for Block Storage with RDO](Using Ceph for Block Storage with RDO)
 *   [Using ThinLVM for Cinder with RDO Havana](Using ThinLVM for Cinder with RDO Havana)
 *   [Using GlusterFS for Cinder with RDO Havana](Using GlusterFS for Cinder with RDO Havana)
+*   [Using EMC for Cinder with RDO](Using EMC for Cinder with RDO)
+*   [Using Ceph for Block Storage with RDO](Using Ceph for Block Storage with RDO)
 *   [Using GlusterFS for Cinder with RDO Grizzly](http://www.gluster.org/community/documentation/index.php/GlusterFS_Cinder)
 
 ### Glance Manuals
