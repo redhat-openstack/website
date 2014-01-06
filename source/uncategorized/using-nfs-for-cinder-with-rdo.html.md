@@ -12,7 +12,7 @@ wiki_last_updated: 2014-01-06
 
 `   packstack --cinder-backend=nfs --cinder-nfs-mounts=`<IP/hostname>`.:/`<shared directory>
 
-*   Create the directory on which the shares will be mounted:
+*   -   Create the directory on which the shares will be mounted:
 
          mkdir -p /var/lib/cinder/mnt
 
