@@ -34,7 +34,20 @@ To find the latest build available in Koji for a specific package:
     ----------------------------------------  --------------------  ----------------
     openstack-neutron-2014.1-0.1.b1.fc21      f21                   pbrady
 
-Some packages (like openstack-neutron) have sub-packages, you can list all sub-packages of a parent package by running:
+A few handy tags that can be to be used with koji build system: `f20`,`epel7`, `dist-6E-epel-testing-candidate`
+
+You can obtain all list of tags available by running:
+
+    $ koji list-tags
+
+And, query for builds:
+
+    $  koji latest-build dist-6E-epel-testing-candidate openstack-neutron
+    Build                                     Tag                   Built by
+    ----------------------------------------  --------------------  ----------------
+    openstack-neutron-2014.1-0.1.b1.el6       dist-6E-epel-testing-candidate  pbrady
+
+Some packages (like *openstack-neutron*) have sub-packages, you can list all sub-packages of a parent package by running:
 
     $ koji buildinfo openstack-neutron-2014.1-0.1.b1.fc21
     BUILD: openstack-neutron-2014.1-0.1.b1.fc21 [486743]
@@ -64,9 +77,3 @@ Some packages (like openstack-neutron) have sub-packages, you can list all sub-p
     /mnt/koji/packages/openstack-neutron/2014.1/0.1.b1.fc21/noarch/openstack-neutron-mellanox-2014.1-0.1.b1.fc21.noarch.rpm
     /mnt/koji/packages/openstack-neutron/2014.1/0.1.b1.fc21/noarch/openstack-neutron-cisco-2014.1-0.1.b1.fc21.noarch.rpm
     /mnt/koji/packages/openstack-neutron/2014.1/0.1.b1.fc21/src/openstack-neutron-2014.1-0.1.b1.fc21.src.rpm
-
-A few handy tags that can be to be used with koji build system: `f20`,`epel7`, `dist-6E-epel-testing-candidate`
-
-You can obtain all list of tags available by running:
-
-    $ koji list-tags
