@@ -51,7 +51,7 @@ If you've come across useful tips for resolving issues on OpenStack, or if you'r
 
 *   [GlusterFS with Keystone Quickstart](http://www.gluster.org/community/documentation/index.php/GlusterFS_Keystone_Quickstart)
 *   [Using Gluster for Cinder Block Storage](http://www.gluster.org/community/documentation/index.php/GlusterFS_Cinder)
-*   [Using Ceph for Block Storage with RDO](Using Ceph for Block Storage with RDO)
+*   [Using Ceph for Cinder with RDO Havana](Using Ceph for Cinder with RDO Havana)
 
 </div>
 </div>
