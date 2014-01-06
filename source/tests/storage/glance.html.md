@@ -4,8 +4,6 @@ authors: gfidente, tshefi
 wiki_title: Tests/Storage/Glance
 wiki_revision_count: 12
 wiki_last_updated: 2014-01-06
-wiki_conversion_fallback: true
-wiki_warnings: conversion-fallback
 ---
 
 # Glance
@@ -34,5 +32,3 @@ For command help: glance --help \\ glance -help image-create
 *   Fully distributed, local storage
 *   Fully distributed, remote storage
 *   Fully distributed, HA
-
-## Packstack Based Installation (Storage Components) - work in progress
