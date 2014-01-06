@@ -20,6 +20,7 @@ We'll be testing the first Icehouse milestone release, and we'd like to test the
 
 *Add your name, and how you're able to help out*
 
+*   adarazs (Attila Darazs) - Testing deployment, automated testing readiness
 *   ajeain (Ami Jeain) - Testing Core components, IRC
 *   amuller (Assaf Muller) - Testing network components, IRC
 *   Dafna (Dafna Ron) - Testing semi distributed system with gluster backend for cinder and glance, IRC
