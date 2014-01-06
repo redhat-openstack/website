@@ -40,7 +40,6 @@ We'll be testing the first Icehouse milestone release, and we'd like to test the
 
 We'll have packages for the following platforms:
 
-*   Fedora 19
 *   Fedora 20
 *   RHEL 6.5
 *   CentOS 6
