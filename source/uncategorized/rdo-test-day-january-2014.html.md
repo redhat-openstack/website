@@ -35,6 +35,7 @@ We'll be testing the first Icehouse milestone release, and we'd like to test the
 *   dkorn (Daniel Korn ) - Testing Core components, IRC
 *   yeylon (Yaniv Eylon) - Testing Foreman and Core components, IRC
 *   dneary (Dave Neary) - Testing install of all in one and 2 node set-up in virt-manager instances
+*   eharney (Eric Harney) - Testing Cinder, IRC
 
 ## Prerequisite for Test Day
 
