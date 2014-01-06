@@ -37,11 +37,11 @@ The general idea for the Cinder's test is to test the actions of the component i
 |                                                               |         | Fedora 20   | ??     | [Quickstart](Quickstart) + [Using ThinLVM for Cinder with RDO Havana](Using ThinLVM for Cinder with RDO Havana) | ??  | ??   | None  | None       |
 |                                                               |         | RHEL 6.5    | ??     | [Quickstart](Quickstart) + [Using ThinLVM for Cinder with RDO Havana](Using ThinLVM for Cinder with RDO Havana) | ??  | ??   | None  | None       |
 |                                                               |         | RHEL 7 Beta | ??     | [Quickstart](Quickstart) + [Using ThinLVM for Cinder with RDO Havana](Using ThinLVM for Cinder with RDO Havana) | ??  | ??   | None  | None       |
-| All-in-One w/ Cinder LVM                                      |         | CentOS 6.5  | ??     | [Quickstart](Quickstart) + [Using ThinLVM for Cinder with RDO Havana](Using ThinLVM for Cinder with RDO Havana) | ??  | ??   | None  | None       |
-|                                                               |         | Fedora 19   | ??     | [Quickstart](Quickstart) + [Using ThinLVM for Cinder with RDO Havana](Using ThinLVM for Cinder with RDO Havana) | ??  | ??   | None  | None       |
-|                                                               |         | Fedora 20   | ??     | [Quickstart](Quickstart) + [Using ThinLVM for Cinder with RDO Havana](Using ThinLVM for Cinder with RDO Havana) | ??  | ??   | None  | None       |
-|                                                               |         | RHEL 6.5    | ??     | [Quickstart](Quickstart) + [Using ThinLVM for Cinder with RDO Havana](Using ThinLVM for Cinder with RDO Havana) | ??  | ??   | None  | None       |
-|                                                               |         | RHEL 7 Beta | ??     | [Quickstart](Quickstart) + [Using ThinLVM for Cinder with RDO Havana](Using ThinLVM for Cinder with RDO Havana) | ??  | ??   | None  | None       |
+| All-in-One w/ Cinder LVM                                      |         | CentOS 6.5  | ??     | [Quickstart](Quickstart)                                                                                                   | ??  | ??   | None  | None       |
+|                                                               |         | Fedora 19   | ??     | [Quickstart](Quickstart)                                                                                                   | ??  | ??   | None  | None       |
+|                                                               |         | Fedora 20   | ??     | [Quickstart](Quickstart)                                                                                                   | ??  | ??   | None  | None       |
+|                                                               |         | RHEL 6.5    | ??     | [Quickstart](Quickstart)                                                                                                   | ??  | ??   | None  | None       |
+|                                                               |         | RHEL 7 Beta | ??     | [Quickstart](Quickstart)                                                                                                   | ??  | ??   | None  | None       |
 | semi destributed component/ AIO+component on different server |         | CentOS 6.5  | ??     | [Quickstart](Quickstart) but pass to Packstack either --cinder-host or --glance-host to use a remote system                | ??  | ??   | None  | None       |
 |                                                               |         | Fedora 19   | ??     | [Quickstart](Quickstart) but pass to Packstack either --cinder-host or --glance-host to use a remote system                | ??  | ??   | None  | None       |
 |                                                               |         | Fedora 20   | ??     | [Quickstart](Quickstart) but pass to Packstack either --cinder-host or --glance-host to use a remote system                | ??  | ??   | None  | None       |
@@ -50,3 +50,11 @@ The general idea for the Cinder's test is to test the actions of the component i
 |                                                               |         | Fedora 19   | ??     | [Quickstart](Quickstart) but pass to Packstack both --cinder-host or --glance-host to use remote systems                   | ??  | ??   | None  | None       |
 |                                                               |         | Fedora 20   | ??     | [Quickstart](Quickstart) but pass to Packstack both --cinder-host or --glance-host to use remote systems                   | ??  | ??   | None  | None       |
 |                                                               |         | RHEL 6.5    | ??     | [Quickstart](Quickstart) but pass to Packstack both --cinder-host or --glance-host to use remote systems                   | ??  | ??   | None  | None       |
+
+## Manuals
+
+### Cinder with NFS
+
+1.  Set the NFS share in the Cinder configuration:
+
+       # openstack-config --set /etc/cinder/cinder.conf DEFAULT nfs_shares_config /etc/cinder/shares.conf
