@@ -10,13 +10,13 @@ wiki_last_updated: 2014-10-30
 
 <div class="row">
 <div class="offset1 span10">
+[ ← Docs ](Docs)
+
 # Storage
 
 Welcome to Openstack RDO Storage page!
 
 Below you can find different guides and some test suggestions for the storage components.
-
-[ ← Docs ](Docs)
 
 *   [GlusterFS with Keystone Quickstart](http://www.gluster.org/community/documentation/index.php/GlusterFS_Keystone_Quickstart)
 
