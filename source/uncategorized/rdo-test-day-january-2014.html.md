@@ -21,10 +21,10 @@ We'll be testing the first Icehouse milestone release, and we'd like to test the
 *Add your name, and how you're able to help out*
 
 *   rbowen (Rich Bowen) - Testing, IRC, Documentation
-*   Dafna (Dafna Ron) - Testing storage components, IRC
-*   yrabl (Yogev Rabl) - Testing storage components, IRC
-*   tshefi (Tzach Shefi) - Testing storage components, IRC
-*   gfidente (Giulio Fidente) - Testing storage components, IRC
+*   Dafna (Dafna Ron) - Testing smi-deployed system with gluster backend for cinder and glance, IRC
+*   yrabl (Yogev Rabl) - Testin Fully deployed system with Guster backend for cinder, IRC
+*   tshefi (Tzach Shefi) - Testin Fully deployed system with local swift backend for Glance, IRC
+*   gfidente (Giulio Fidente) - Testing Fuly depolyed system with EMC backend for cinder, IRC
 *   oblaut(Ofer Blaut) - Testing Network components, IRC
 *   yfried (Yair Fried) - Testing Network components, IRC
 *   nmagnezi (Nir Magnezi) - Testing Network and Core components, IRC
