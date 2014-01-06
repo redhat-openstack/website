@@ -28,7 +28,7 @@ We'll be testing the first Icehouse milestone release, and we'd like to test the
 *   dneary (Dave Neary) - Testing install of all in one and 2 node set-up in virt-manager instances
 *   eharney (Eric Harney) - Testing cinder, IRC
 *   flaper87 (Flavio Percoco) - Testing glance All-in-One: different glance drivers only, IRC
-*   gfidente (Giulio Fidente) - Testing fully distributed system with EMC backend for cinder, IRC
+*   giulivo (Giulio Fidente) - Testing fully distributed system with EMC backend for cinder, IRC
 *   larsks (Lars Kellogg-Stedman) - Testing, IRC, Documentation
 *   nmagnezi (Nir Magnezi) - Testing Network and Core components, IRC
 *   oblaut(Ofer Blaut) - Testing Network components, IRC
