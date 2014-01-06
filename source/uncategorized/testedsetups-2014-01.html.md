@@ -11,7 +11,7 @@ wiki_last_updated: 2014-02-21
 
 # TestedSetups 2014 01
 
-Tested Setups for [RDO_test_day_January_2014](RDO_test_day_January_2014)
+Tested Setups for [RDO_test_day_January_2014](RDO_test_day_January_2014) . Tests should be executed against the Icehouse RDO **not** Havana, some steps from the official Quickstart guide **do not** apply to Icehouse; make sure to follow the steps described in the [RDO_test_day_January_2014#How_To_Test](RDO_test_day_January_2014#How_To_Test) page instead.
 
 *See [TestedSetups](TestedSetups) for the canonical list, including history and filed bugs.*
 
@@ -48,7 +48,7 @@ Tested Setups for [RDO_test_day_January_2014](RDO_test_day_January_2014)
 
 ## Packstack Based Installation (Storage Components)
 
-Please see [Docs/Storage](Docs/Storage) for configuration guides as well as suggestions on what could be tested for both Cinder and Glance.
+Please see [Docs/Storage](Docs/Storage) for configuration guides as well as suggestions on what could be tested for both Cinder and Glance and make sure to use the steps described in the [RDO_test_day_January_2014#How_To_Test](RDO_test_day_January_2014#How_To_Test) page when installing the base RDO system. **Do not** go trough the Quickstart steps unmodified which will instead give you an RDO Havana deployment.
 
 | Config Name                                                   | Release                                                              | BaseOS      | Status | HOWTO | Who | Date | BZ/LP | Notes Page |
 |---------------------------------------------------------------|----------------------------------------------------------------------|-------------|--------|-------|-----|------|-------|------------|
