@@ -57,4 +57,28 @@ The general idea for the Cinder's test is to test the actions of the component i
 
 1.  Set the NFS share in the Cinder configuration:
 
-       # openstack-config --set /etc/cinder/cinder.conf DEFAULT nfs_shares_config /etc/cinder/shares.conf
+         openstack-config --set /etc/cinder/cinder.conf DEFAULT nfs_shares_config /etc/cinder/shares.conf
+
+1.  Set the NFS driver as the Cinder’s default:
+
+        openstack-config --set /etc/cinder/cinder.conf DEFAULT volume_driver cinder.volume.nfs.NfsDriver
+
+1.  Create the shares file, in it the shares that the Cinder will connect to:
+
+         echo "localhost:/var/lib/nfs/share" > /etc/cinder/shares.conf
+
+1.  Create the directory on which the shares will be mounted:
+
+         mkdir -p /var/lib/cinder/mnt
+
+1.  Make the Cinder user the owner of the directory:
+
+        chown -v cinder.cinder /var/lib/cinder/mnt
+
+1.  Configure the SELINUX on the compute nodes to allow access from the instances to the shares:
+
+         /usr/sbin/setsebool -P virt_use_nfs on
+
+1.  Restart all the Cinder related services:
+
+         for i in $(chkconfig --list | awk ' /cinder/ { print $1 } ' ); do service $i restart; done
