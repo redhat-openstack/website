@@ -34,6 +34,37 @@ To find the latest build available in Koji for a specific package:
     ----------------------------------------  --------------------  ----------------
     openstack-neutron-2014.1-0.1.b1.fc21      f21                   pbrady
 
+Some packages (like openstack-neutron) have sub-packages, you can list all sub-packages of a parent package by running:
+
+    $ koji buildinfo openstack-neutron-2014.1-0.1.b1.fc21
+    BUILD: openstack-neutron-2014.1-0.1.b1.fc21 [486743]
+    State: COMPLETE
+    Built by: pbrady
+    Volume: DEFAULT
+    Task: 6331159 build (rawhide, /openstack-neutron:be96ca650ad6c02310875491d68bb64f139da543)
+    Finished: Tue, 24 Dec 2013 12:56:17 CET
+    Tags: f21
+    RPMs:
+    /mnt/koji/packages/openstack-neutron/2014.1/0.1.b1.fc21/noarch/openstack-neutron-nec-2014.1-0.1.b1.fc21.noarch.rpm
+    /mnt/koji/packages/openstack-neutron/2014.1/0.1.b1.fc21/noarch/python-neutron-2014.1-0.1.b1.fc21.noarch.rpm
+    /mnt/koji/packages/openstack-neutron/2014.1/0.1.b1.fc21/noarch/openstack-neutron-metering-agent-2014.1-0.1.b1.fc21.noarch.rpm
+    /mnt/koji/packages/openstack-neutron/2014.1/0.1.b1.fc21/noarch/openstack-neutron-vpn-agent-2014.1-0.1.b1.fc21.noarch.rpm
+    /mnt/koji/packages/openstack-neutron/2014.1/0.1.b1.fc21/noarch/openstack-neutron-midonet-2014.1-0.1.b1.fc21.noarch.rpm
+    /mnt/koji/packages/openstack-neutron/2014.1/0.1.b1.fc21/noarch/openstack-neutron-nicira-2014.1-0.1.b1.fc21.noarch.rpm
+    /mnt/koji/packages/openstack-neutron/2014.1/0.1.b1.fc21/noarch/openstack-neutron-brocade-2014.1-0.1.b1.fc21.noarch.rpm
+    /mnt/koji/packages/openstack-neutron/2014.1/0.1.b1.fc21/noarch/openstack-neutron-hyperv-2014.1-0.1.b1.fc21.noarch.rpm
+    /mnt/koji/packages/openstack-neutron/2014.1/0.1.b1.fc21/noarch/openstack-neutron-ml2-2014.1-0.1.b1.fc21.noarch.rpm
+    /mnt/koji/packages/openstack-neutron/2014.1/0.1.b1.fc21/noarch/openstack-neutron-linuxbridge-2014.1-0.1.b1.fc21.noarch.rpm
+    /mnt/koji/packages/openstack-neutron/2014.1/0.1.b1.fc21/noarch/openstack-neutron-openvswitch-2014.1-0.1.b1.fc21.noarch.rpm
+    /mnt/koji/packages/openstack-neutron/2014.1/0.1.b1.fc21/noarch/openstack-neutron-2014.1-0.1.b1.fc21.noarch.rpm
+    /mnt/koji/packages/openstack-neutron/2014.1/0.1.b1.fc21/noarch/openstack-neutron-ryu-2014.1-0.1.b1.fc21.noarch.rpm
+    /mnt/koji/packages/openstack-neutron/2014.1/0.1.b1.fc21/noarch/openstack-neutron-bigswitch-2014.1-0.1.b1.fc21.noarch.rpm
+    /mnt/koji/packages/openstack-neutron/2014.1/0.1.b1.fc21/noarch/openstack-neutron-metaplugin-2014.1-0.1.b1.fc21.noarch.rpm
+    /mnt/koji/packages/openstack-neutron/2014.1/0.1.b1.fc21/noarch/openstack-neutron-plumgrid-2014.1-0.1.b1.fc21.noarch.rpm
+    /mnt/koji/packages/openstack-neutron/2014.1/0.1.b1.fc21/noarch/openstack-neutron-mellanox-2014.1-0.1.b1.fc21.noarch.rpm
+    /mnt/koji/packages/openstack-neutron/2014.1/0.1.b1.fc21/noarch/openstack-neutron-cisco-2014.1-0.1.b1.fc21.noarch.rpm
+    /mnt/koji/packages/openstack-neutron/2014.1/0.1.b1.fc21/src/openstack-neutron-2014.1-0.1.b1.fc21.src.rpm
+
 A few handy tags that can be to be used with koji build system: `f20`,`epel7`, `dist-6E-epel-testing-candidate`
 
 You can obtain all list of tags available by running:
