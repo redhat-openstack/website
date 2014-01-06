@@ -14,14 +14,25 @@ wiki_warnings: conversion-fallback
 
 Glance testing should include image manipulation commands below, tested on different deployment scenarios\\back-ends and supported operating systems.
 
-*   Create image (file\\URL source)
-*   Handle different image formats (iso,qcow,vdi,vmdk..) as well as containers types (bare,ovf,..)
+*   Create images: image-create , upload images based on file and on URL, locations
+*   Upload different image formats (iso,qcow,vdi,vmdk..)
+*   Upload imaesg of differnt containers types (bare,ovf,..)
 *   Delete image
 *   Image list\\show specific detail of an image
-*   Image-update
-*   Boot instance from image
+*   Image-update, change image aparmanters check that it updated.
+*   Boot instance from image, using nova boot from image, to test a bootable image.
 *   Make image from instance
 *   Image share\\unshare\\show permissions
 *   Check multi project image access\\permissions
+*   Check Glance V2 API commands
+*   Check Glance with multiple backends, glance-api.conf,show_multiple_locations = True
+
+For command help: glance --help \\ glance -help image-create
+
+*   Semi distributed, local storage
+*   Semi distributed, remote storage
+*   Fully distributed, local storage
+*   Fully distributed, remote storage
+*   Fully distributed, HA
 
 ## Packstack Based Installation (Storage Components) - work in progress
