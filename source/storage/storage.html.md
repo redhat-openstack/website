@@ -14,9 +14,7 @@ wiki_last_updated: 2014-10-30
 
 # Storage
 
-Welcome to Openstack RDO Storage page!
-
-Below you can find different guides and some test suggestions for the storage components.
+Welcome to Openstack RDO Storage page! Below you can find different guides and some test suggestions for the storage components.
 
 *   [GlusterFS with Keystone Quickstart](http://www.gluster.org/community/documentation/index.php/GlusterFS_Keystone_Quickstart)
 
