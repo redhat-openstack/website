@@ -11,7 +11,7 @@ wiki_last_updated: 2014-02-21
 
 # TestedSetups 2014 01
 
-Tested Setups for [RDO_test_day_January_2014](RDO_test_day_January_2014) . Tests should be executed against the Icehouse RDO **not** Havana, some steps from the official Quickstart guide **do not** apply to Icehouse; make sure to follow the steps described in the [RDO_test_day_January_2014#How_To_Test](RDO_test_day_January_2014#How_To_Test) page instead.
+Tested Setups for [RDO_test_day_January_2014](RDO_test_day_January_2014). Tests should be executed against the Icehouse RDO **not** Havana, some steps from the official Quickstart guide **do not** apply to Icehouse; make sure to follow the steps described in the [RDO_test_day_January_2014#How_To_Test](RDO_test_day_January_2014#How_To_Test) page instead.
 
 *See [TestedSetups](TestedSetups) for the canonical list, including history and filed bugs.*
 
