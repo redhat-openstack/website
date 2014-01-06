@@ -48,28 +48,28 @@ Tested Setups for [RDO_test_day_January_2014](RDO_test_day_January_2014)
 
 ## Packstack Based Installation (Storage Components) - work in progress
 
-| Config Name                                                   | Release | BaseOS      | Status | HOWTO                                   | Who | Date | BZ/LP | Notes Page |
-|---------------------------------------------------------------|---------|-------------|--------|-----------------------------------------|-----|------|-------|------------|
-| Cinder - All-in-One w/ different Cinder drivers only          |         | CentOS 6.5  | ??     | [Docs/Storage](Docs/Storage) | ??  | ??   | None  | None       |
-|                                                               |         | Fedora 19   | ??     |                                         | ??  | ??   | None  | None       |
-|                                                               |         | Fedora 20   | ??     |                                         | ??  | ??   | None  | None       |
-|                                                               |         | RHEL 6.5    | ??     |                                         | ??  | ??   | None  | None       |
-|                                                               |         | RHEL 7 Beta | ??     |                                         | ??  | ??   | None  | None       |
-| Cinder - Semi/Fully distribured: GlusterFS, EMC, LVM, ThinLVM |         | CentOS 6.5  | ??     | [Docs/Storage](Docs/Storage) | ??  | ??   | None  | None       |
-|                                                               |         | Fedora 19   | ??     |                                         | ??  | ??   | None  | None       |
-|                                                               |         | Fedora 20   | ??     |                                         | ??  | ??   | None  | None       |
-|                                                               |         | RHEL 6.5    | ??     |                                         | ??  | ??   | None  | None       |
-|                                                               |         | RHEL 7 Beta | ??     |                                         | ??  | ??   | None  | None       |
-| Glance - All-in-One w/ different Glance drivers only          |         | CentOS 6.5  | ??     | [Docs/Storage](Docs/Storage) | ??  | ??   | None  | None       |
-|                                                               |         | Fedora 19   | ??     |                                         | ??  | ??   | None  | None       |
-|                                                               |         | Fedora 20   | ??     |                                         | ??  | ??   | None  | None       |
-|                                                               |         | RHEL 6.5    | ??     |                                         | ??  | ??   | None  | None       |
-|                                                               |         | RHEL 7 Beta | ??     |                                         | ??  | ??   | None  | None       |
-| Glance - Semi/Fully distribured: GlusterFS, Swift             |         | CentOS 6.5  | ??     | [Docs/Storage](Docs/Storage) | ??  | ??   | None  | None       |
-|                                                               |         | Fedora 19   | ??     |                                         | ??  | ??   | None  | None       |
-|                                                               |         | Fedora 20   | ??     |                                         | ??  | ??   | None  | None       |
-|                                                               |         | RHEL 6.5    | ??     |                                         | ??  | ??   | None  | None       |
-|                                                               |         | RHEL 7 Beta | ??     |                                         | ??  | ??   | None  | None       |
+| Config Name                                                     | Release | BaseOS      | Status | HOWTO                                   | Who | Date | BZ/LP | Notes Page |
+|-----------------------------------------------------------------|---------|-------------|--------|-----------------------------------------|-----|------|-------|------------|
+| [Cinder] All-in-One w/ different Cinder drivers only            |         | CentOS 6.5  | ??     | [Docs/Storage](Docs/Storage) | ??  | ??   | None  | None       |
+|                                                                 |         | Fedora 19   | ??     |                                         | ??  | ??   | None  | None       |
+|                                                                 |         | Fedora 20   | ??     |                                         | ??  | ??   | None  | None       |
+|                                                                 |         | RHEL 6.5    | ??     |                                         | ??  | ??   | None  | None       |
+|                                                                 |         | RHEL 7 Beta | ??     |                                         | ??  | ??   | None  | None       |
+| [Cinder] Semi/Fully Distributed w/ GlusterFS, EMC, LVM, ThinLVM |         | CentOS 6.5  | ??     | [Docs/Storage](Docs/Storage) | ??  | ??   | None  | None       |
+|                                                                 |         | Fedora 19   | ??     |                                         | ??  | ??   | None  | None       |
+|                                                                 |         | Fedora 20   | ??     |                                         | ??  | ??   | None  | None       |
+|                                                                 |         | RHEL 6.5    | ??     |                                         | ??  | ??   | None  | None       |
+|                                                                 |         | RHEL 7 Beta | ??     |                                         | ??  | ??   | None  | None       |
+| [Glance] All-in-One w/ different Glance drivers only            |         | CentOS 6.5  | ??     | [Docs/Storage](Docs/Storage) | ??  | ??   | None  | None       |
+|                                                                 |         | Fedora 19   | ??     |                                         | ??  | ??   | None  | None       |
+|                                                                 |         | Fedora 20   | ??     |                                         | ??  | ??   | None  | None       |
+|                                                                 |         | RHEL 6.5    | ??     |                                         | ??  | ??   | None  | None       |
+|                                                                 |         | RHEL 7 Beta | ??     |                                         | ??  | ??   | None  | None       |
+| [Glance] Semi/Fully Distributed w/ GlusterFS, Swift             |         | CentOS 6.5  | ??     | [Docs/Storage](Docs/Storage) | ??  | ??   | None  | None       |
+|                                                                 |         | Fedora 19   | ??     |                                         | ??  | ??   | None  | None       |
+|                                                                 |         | Fedora 20   | ??     |                                         | ??  | ??   | None  | None       |
+|                                                                 |         | RHEL 6.5    | ??     |                                         | ??  | ??   | None  | None       |
+|                                                                 |         | RHEL 7 Beta | ??     |                                         | ??  | ??   | None  | None       |
 
 ## Advanced Installs (Foreman Based) -- Work in Progress
 
