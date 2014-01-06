@@ -50,7 +50,7 @@ Tested Setups for [RDO_test_day_January_2014](RDO_test_day_January_2014). Tests 
 
 Please see [Docs/Storage](Docs/Storage) for configuration guides as well as suggestions on what could be tested for both Cinder and Glance and make sure to use the steps described in the [RDO_test_day_January_2014#How_To_Test](RDO_test_day_January_2014#How_To_Test) page when installing the base RDO system. **Do not** go trough the Quickstart steps unmodified which will instead give you an RDO Havana deployment.
 
-| Config Name                                                   | Release                                                              | BaseOS      | Status | HOWTO | Who | Date | BZ/LP | Notes Page |
+| Config Name                                                   | Backend                                                              | BaseOS      | Status | HOWTO | Who | Date | BZ/LP | Notes Page |
 |---------------------------------------------------------------|----------------------------------------------------------------------|-------------|--------|-------|-----|------|-------|------------|
 | [Cinder] All-in-One: different Cinder drivers only            | See [Docs/Storage](Docs/Storage) for guides and testables |
 |                                                               |                                                                      | CentOS 6.5  | ??     |       | ??  | ??   | None  | None       |
