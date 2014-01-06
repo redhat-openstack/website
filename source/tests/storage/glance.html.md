@@ -10,18 +10,25 @@ wiki_last_updated: 2014-01-06
 
 ## January 2014 Test Day
 
-Glance testing should include image manipulation commands below, tested on different deployment scenarios\\back-ends and supported operating systems.
+Glance testing should include image manipulation commands below, tested on different deployment scenarios\\back-ends.
 
-*   Create images: image-create , upload images based on file and on URL, locations
-*   Upload different image formats (iso,qcow,vdi,vmdk..)
-*   Upload images of differnt containers types (bare,ovf,..)
+*   Create images:
+    -   using image from file
+    -   using image from http
+*   Upload different types
+    -   Using different disk formats (iso,qcow,vdi,vmdk..)
+    -   Using different containers types (bare,ovf,..)
 *   Delete image
-*   Image list\\show specific detail of an image
+*   Image details
+    -   list images
+    -   show specific detail of an image
 *   Image-update, change image aparmanters check that it updated.
-*   Boot instance from image, using nova boot from image, to test a bootable image.
-*   Make image from instance
+*   Use images
+    -   Boot instance from image, using nova boot from image, to test a bootable image.
+    -   Make image from instance
+*   Create image from volume
+*   Create volume from image
 *   Image share\\unshare\\show permissions
 *   Check multi project image access\\permissions
-*   Create image from volume
 
 For command help: glance --help \\ glance -help image-create
