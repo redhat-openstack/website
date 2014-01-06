@@ -39,6 +39,7 @@ We'll be testing the first Icehouse milestone release, and we'd like to test the
 *   yeylon (Yaniv Eylon) - Testing foreman and Core components, IRC
 *   yfried (Yair Fried) - Testing Network components, IRC
 *   yrabl (Yogev Rabl) - Testin fully distributed system with guster backend for cinder, IRC
+*   jbernard (Jon Bernard) - Testing cinder All-in-One: LVM and Gluster drivers, IRC
 
 ## Prerequisite for Test Day
 
