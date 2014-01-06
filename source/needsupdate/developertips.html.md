@@ -14,7 +14,7 @@ This page has a few handy tips for new developers to use. Developers should cont
 
 ## Using virt-builder to quickly build a Fedora VM
 
-Ensure you have new enough libguestfs package
+Ensure you have new enough ( Fedora 19 and above) libguestfs package.
 
 Build it:
 
