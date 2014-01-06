@@ -50,27 +50,3 @@ The general idea for the Cinder's test is to test the actions of the component i
 |                                                               |         | Fedora 19   | ??     | [Quickstart](Quickstart) but pass to Packstack both --cinder-host or --glance-host to use remote systems                     | ??  | ??   | None  | None       |
 |                                                               |         | Fedora 20   | ??     | [Quickstart](Quickstart) but pass to Packstack both --cinder-host or --glance-host to use remote systems                     | ??  | ??   | None  | None       |
 |                                                               |         | RHEL 6.5    | ??     | [Quickstart](Quickstart) but pass to Packstack both --cinder-host or --glance-host to use remote systems                     | ??  | ??   | None  | None       |
-
-## Manuals
-
-### Cinder with NFS
-
-*   Set the NFS share in Packstack:
-
-`   packstack --cinder-backend=nfs --cinder-nfs-mounts=`<IP/hostname>`.:/`<shared directory>
-
-*   Create the directory on which the shares will be mounted:
-
-         mkdir -p /var/lib/cinder/mnt
-
-*   Make the Cinder user the owner of the directory:
-
-        chown -v cinder.cinder /var/lib/cinder/mnt
-
-*   Configure the SELINUX on the compute nodes to allow access from the instances to the shares:
-
-         /usr/sbin/setsebool -P virt_use_nfs on
-
-*   Restart all the Cinder related services:
-
-         for i in $(chkconfig --list | awk ' /cinder/ { print $1 } ' ); do service $i restart; done
