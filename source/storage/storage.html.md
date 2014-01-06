@@ -37,15 +37,17 @@ Below you can find different guides and some test suggestions for the storage co
 
 *   [Tests/Storage/Cinder](Tests/Storage/Cinder)
 
-Please conatct the Red Hat storage team on RDO channel in IRC for any questions:
+### Contact Us
 
-Dafna (Dafna Ron)
+= Please conatct the Red Hat storage team on RDO channel in IRC for any questions:
 
-yrabl (Yogev Rabl)
+Dafna Ron (Dafna)
 
-tshefi (Tzach Shefi)
+Yogev Rabl (yrabl)
 
-gfidente (Giulio Fidente)
+Tzach Shefi (tshefi)
+
+Giulio Fidente (gfidente)
 
 </div>
 </div>
