@@ -33,6 +33,7 @@ We'll be testing the first Icehouse milestone release, and we'd like to test the
 *   ohochman (Omri Hochman) - Testing Foreman and Core components, IRC
 *   ukalifon (Udi Kalifon ) - Testing Core components, IRC
 *   dkorn (Daniel Korn ) - Testing Core components, IRC
+*   yeylon (Yaniv Eylon) - Testing Foreman and Core components, IRC
 
 ## Prerequisite for Test Day
 
