@@ -12,7 +12,7 @@ This page documents workarounds that may be required for installing RDO Icehouse
 
 ## Failed to start glance api (Fedora 20)
 
-*   **Bug:** [1048946](https://bugzilla.redhat.com/show_bug.cgi?id=1048946)
+*   **Bug:** ~~[1048946](https://bugzilla.redhat.com/show_bug.cgi?id=1048946)~~
 *   **Affects:** Fedora 20
 
 #### symptoms
