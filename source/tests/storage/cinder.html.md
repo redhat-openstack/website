@@ -14,7 +14,7 @@ Marker
 
 The general idea for the Cinder's test is to test the actions of the component in different environments and with different back ends. Cinder should be able to do the following actions with each back end and in every topology:
 
-*   Create a volume - for every type try different sizes (1 - 100 G).
+*   Create a volume - for every type try different sizes (1 - ~100 G).
     -   Simple creation.
     -   From an image.
     -   From a snapshot.
