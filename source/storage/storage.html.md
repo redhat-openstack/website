@@ -35,6 +35,8 @@ Below you can find different guides and some test suggestions for the storage co
 
 ### Test Suggestions
 
+*   [Tests/Storage/Cinder](Tests/Storage/Cinder)
+
 Please conatct the Red Hat storage team on RDO channel in IRC for any questions:
 
 Dafna (Dafna Ron)
