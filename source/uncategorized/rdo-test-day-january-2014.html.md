@@ -75,10 +75,11 @@ If you have problems with any of the tests, report a bug to [Bugzilla](https://b
 
 Once you have completed the tests, add your results to the table on the [TestedSetups](TestedSetups_2014_01) page, following the examples already there. Be sure to check the [ Workarounds](Workarounds_2014_01) page for things that may have already have fixes or workarounds.
 
-## Blogs, Screencasts
+"Setting up Multi-Node OpenStack RDO Havana + Gluster Backend + Neutron VLAN" on CentOS 6.5 with both Controller and Compute nodes each one having just two Ethernet adapters per Andrew Lau
 
-We strongly encourage you to write narrative blogs about your test experiences, whether this is about the test day itself, or a howto style post about a particular install/test scenario. Link to those posts here.
+Setup
 
-Also, if you'd like to do an audio interview for a podcast about this event, please contact Rich Bowen (rbowen at redhat dot com) to set something up.
+* Controller node: Nova, Keystone, Cinder, Glance, Neutron (hv02)
+* Compute node: Nova (nova-compute), Neutron (openvswitch-agent) (hv01)
 
-Use something like [RecordMyDesktop](http://recordmydesktop.sourceforge.net/about.php) to record a screencast of your tests, and let rbowen know if you have any video that you think would make useful HowTo videos.
+<http://bderzhavets.blogspot.com/2013/12/attempt-to-reproduce-getting-started.html>
