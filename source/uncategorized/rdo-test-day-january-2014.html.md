@@ -12,7 +12,7 @@ wiki_last_updated: 2014-02-19
 
 # RDO test day January 2014
 
-We will be holding a RDO test day on January 7th and 8th, 2014. This will be coordinated through the #rdo channel on Freenode, and through this wiki and the [rdo-list mailing list](http://www.redhat.com/mailman/listinfo/rdo-list).
+We plan to hold a RDO test day on January 7th and 8th, 2014. This will be coordinated through the #rdo channel on Freenode, and through this wiki and the [rdo-list mailing list](http://www.redhat.com/mailman/listinfo/rdo-list).
 
 We'll be testing the first Icehouse milestone release, and we'd like to test the scenarios enumerated below. If you can do any testing on your own ahead of time, that will help ensure that everyone isn't encountering the same problems.
 
