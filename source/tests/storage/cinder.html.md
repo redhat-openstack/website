@@ -55,13 +55,9 @@ The general idea for the Cinder's test is to test the actions of the component i
 
 ### Cinder with NFS
 
-1.  Set the NFS share in the Cinder configuration:
+1.  Set the NFS share in Packstack:
 
-         openstack-config --set /etc/cinder/cinder.conf DEFAULT nfs_shares_config /etc/cinder/shares.conf
-
-1.  Set the NFS driver as the Cinder’s default:
-
-        openstack-config --set /etc/cinder/cinder.conf DEFAULT volume_driver cinder.volume.nfs.NfsDriver
+`   packstack --cinder-backend=nfs --cinder-nfs-mounts=`<IP/hostname>`.:/`<shared directory>
 
 1.  Create the shares file, in it the shares that the Cinder will connect to:
 
