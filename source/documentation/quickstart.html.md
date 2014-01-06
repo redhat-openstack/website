@@ -20,7 +20,9 @@ Deploying RDO is a quick and easy process. Setting up an OpenStack cloud takes a
 
 Below, we'll explain how to set up OpenStack on a single server. You'll be able to [add more nodes](Adding_a_compute_node) to your OpenStack cloud later, if you choose.
 
-If you just want to try it out without installing anything, check out [TryStack](http://trystack.org). If you'd like to try the development version of OpenStack ("Icehouse"), see [QuickStartDevelRelease](QuickStartDevelRelease).
+If you just want to try it out without installing anything, check out [TryStack](http://trystack.org).
+
+If you'd like to try the development version of OpenStack ("Icehouse"), please join us for this week's [test day](RDO_test_day_January_2014).
 
 </div>
 </div>
