@@ -23,6 +23,10 @@ avc denial when starting glance-api service
 
        setenforce 0
 
+#### notes
+
+Ticket is resolved. Workaround should no longer be necessary.
+
 ## Failed to start mysqld (Fedora 20)
 
 *   **Bug:** [981116](https://bugzilla.redhat.com/show_bug.cgi?id=981116)
