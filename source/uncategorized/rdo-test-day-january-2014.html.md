@@ -57,6 +57,7 @@ You'll want a fresh install with latest updates installed. (Fresh so that there'
 
     sudo yum install http://rdo.fedorapeople.org/openstack-icehouse/rdo-release-icehouse.rpm
 
+*   Check for any [ Workarounds](Workarounds_2014_01) required for your platform before the main installation
 *   For Packstack based deployment start at step 2 of -- <http://openstack.redhat.com/Quickstart>
 *   For Foreman based deployment on RHEL & its derivatives, -- <http://openstack.redhat.com/Virtualized_Foreman_Dev_Setup>
 
