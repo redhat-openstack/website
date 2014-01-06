@@ -25,6 +25,7 @@ Glance testing should include image manipulation commands below, tested on diffe
 *   Image-update, change image aparmanters check that it updated.
 *   Use images
     -   Boot instance from image, using nova boot from image, to test a bootable image.
+        -   Test several instances for diffrent operating systems (Linux\\Windows..)
     -   Make image from instance
 *   Create image from volume
 *   Create volume from image
