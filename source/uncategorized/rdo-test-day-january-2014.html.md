@@ -42,6 +42,7 @@ We'll be testing the first Icehouse milestone release, and we'd like to test the
 *   yrabl (Yogev Rabl) - Testin fully distributed system with guster backend for cinder, IRC
 *   jbernard (Jon Bernard) - Testing cinder All-in-One: LVM and Gluster drivers, IRC
 *   kashyap (Kashyap Chamarthy) - Testing, IRC, Documentation -- minimal, 2 node set-up, hand-configured, Neutron w/ GRE+OVS, on F20.
+*   zaitcev (Pete Zaitcev) - Testing, Swift
 
 ## Prerequisite for Test Day
 
