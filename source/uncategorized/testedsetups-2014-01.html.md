@@ -17,6 +17,8 @@ Tested Setups for [RDO_test_day_January_2014](RDO_test_day_January_2014). Tests 
 
 ## Example Entry
 
+Here's how you might fill out an entry once you've tested it. Mark a given test "Good" or "Fail", as appropriate, and link to any tickets that you've opened as a result, and to any place where you've written up your test notes.
+
 | Config Name                                                    | Release          | BaseOS   | Status                                       | HOWTO                                               | Who    | Date       | BZ/LP | Notes Page |
 |----------------------------------------------------------------|------------------|----------|----------------------------------------------|-----------------------------------------------------|--------|------------|-------|------------|
 | All-in-One w/ Quantum OVS (no tunnels, fake bridge) Networking | Grizzly 2013.1.3 | RHEL 6.4 | <span style="background:#00ff00">Good</span> | [Neutron-Quickstart](Neutron-Quickstart) | pmyers | 2013-09-08 | None  | None       |
