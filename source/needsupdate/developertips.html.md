@@ -12,7 +12,20 @@ wiki_last_updated: 2015-07-16
 
 This page has a few handy tips for new developers to use. Developers should continually add to this page, as they find things that would be useful to others.
 
-### Using koji and bodhi tools to find packages
+## Using virt-builder to quickly build a Fedora VM
+
+Ensure you have new enough libguestfs package
+
+Build it:
+
+    $ virt-builder fedora-20
+
+Import the guest:
+
+    $ virt-install --name f20vm1 --ram 2048 \
+      --disk path=/home/foo/fedora-20.img --import
+
+## Using koji and bodhi tools to find packages
 
 [Koji](https://fedoraproject.org/wiki/Koji) is the build system that Fedora uses, and is also used for EPEL and RDO builds. [Bodhi](https://fedoraproject.org/wiki/Bodhi) is the tool that is used to review new builds for inclusion into official repositories. There are handy command line tools that you can install in Fedora to query both Koji and Bodhi. Here's how to use them for some simple things:
 
