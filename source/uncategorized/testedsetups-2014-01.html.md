@@ -48,8 +48,6 @@ Tested Setups for [RDO_test_day_January_2014](RDO_test_day_January_2014)
 
 ## Packstack Based Installation (Storage Components) - work in progress
 
-For "Distributed" deployments add the `--cinder-host` or `--glance-host` arguments to Packstack as needed to distribute the installation of the storage component on a separate node.
-
 | Config Name                                                   | Release | BaseOS      | Status | HOWTO                                   | Who | Date | BZ/LP | Notes Page |
 |---------------------------------------------------------------|---------|-------------|--------|-----------------------------------------|-----|------|-------|------------|
 | Cinder - All-in-One w/ different Cinder drivers only          |         | CentOS 6.5  | ??     | [Docs/Storage](Docs/Storage) | ??  | ??   | None  | None       |
