@@ -78,6 +78,7 @@ Please see [Docs/Storage](Docs/Storage) for configuration guides as well as sugg
 | [Glance] Semi/Fully Distributed: GlusterFS, Swift             | See [Docs/Storage](Docs/Storage) for guides and testables |
 |                                                               |                                                                      | CentOS 6.5  | ??                                               |       | ??       | ??         | None  | None       |
 |                                                               |                                                                      | Fedora 20   | ??                                               |       | ??       | ??         | None  | None       |
+|                                                               | Swift                                                                | Fedora 20   | <span style="background:#00ff00">WIP</span>      |       | mpavlase | 01/07/2014 | None  | None       |
 |                                                               |                                                                      | RHEL 6.5    | ??                                               |       | ??       | ??         | None  | None       |
 |                                                               |                                                                      | RHEL 7 Beta | ??                                               |       | ??       | ??         | None  | None       |
 
