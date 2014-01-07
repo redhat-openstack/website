@@ -88,3 +88,21 @@ ERROR : Error appeared during Puppet run: ...ceilometer.pp: error starting mongo
 Then run packstack again:
 
        packstack --answer-file=$answerfile
+
+## Failed to start mongodb in an environment under heavy load (Fedora 20)
+
+*   **Bug:** [1040573](https://bugzilla.redhat.com/show_bug.cgi?id=1040573)
+*   **Affects:** Fedora 20
+
+#### symptoms
+
+ERROR : Error appeared during Puppet run: ...ceilometer.pp: error starting mongodb
+
+#### workaround (Before running packstack)
+
+       yum install -y mongodb-server
+       sed -e 's|`\(ExecStart.*\)`|\1\nTimeoutStartSec=10m|' -i /lib/systemd/system/mongod.service
+
+If you hit this during a packstack run, you can still apply the workaround and resume with:
+
+       packstack --answer-file=$answerfile
