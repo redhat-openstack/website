@@ -37,6 +37,7 @@ We'll be testing the first Icehouse milestone release, and we'd like to test the
 *   rbowen (Rich Bowen) - Testing, IRC, Documentation
 *   tshefi (Tzach Shefi) - Testin fully distributed system with local swift backend for glance, IRC
 *   ukalifon (Udi Kalifon ) - Testing Core components, IRC
+*   weshay ( Wes Hayutin ) - Testing various config, CI, IRC
 *   yeylon (Yaniv Eylon) - Testing foreman and Core components, IRC
 *   yfried (Yair Fried) - Testing Network components, IRC
 *   yrabl (Yogev Rabl) - Testin fully distributed system with guster backend for cinder, IRC
