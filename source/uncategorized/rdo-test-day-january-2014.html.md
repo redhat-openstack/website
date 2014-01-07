@@ -34,6 +34,7 @@ We'll be testing the first Icehouse milestone release, and we'd like to test the
 *   nmagnezi (Nir Magnezi) - Testing Network and Core components, IRC
 *   oblaut(Ofer Blaut) - Testing Network components, IRC
 *   ohochman (Omri Hochman) - Testing foreman and Core components, IRC
+*   panda (Gabriele Cerami) - Testing All-in-One RHEL, ML2 plugin, IRC
 *   pbrady (Pádraig Brady) - Testing Core components, IRC
 *   rbowen (Rich Bowen) - Testing, IRC, Documentation
 *   tshefi (Tzach Shefi) - Testin fully distributed system with local swift backend for glance, IRC
