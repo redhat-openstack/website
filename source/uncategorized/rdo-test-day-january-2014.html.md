@@ -66,7 +66,7 @@ We'll be testing the first Icehouse milestone release, and we'd like to test the
 *   jruzicka - Testing all-in-one RHEL6.5 and Fedora 20, IRC
 *   smanjara(Shilpa) - Testing cinder and glance with gluster backend on RHEL6.5
 *   kwhitney - Testing ceilometer on RHEL6.5, all-in-one, IRC
-*   shmcfarl (Shannon McFarland - Testing all-in-one - Neutron - Documentation - RHEL6.5
+*   shmcfarl (Shannon McFarland) - Testing all-in-one - Neutron - Documentation - RHEL6.5
 
 ## Prerequisite for Test Day
 
