@@ -62,6 +62,5 @@ Edit answers.txt and set
 
          nosetests --verbose --attr=type=smoke  --with-xunit
 
-         or 
-         
+         or a larger set of tests w/
          nosetests --verbose   --with-xunit
