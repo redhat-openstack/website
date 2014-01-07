@@ -23,6 +23,7 @@ wiki_last_updated: 2015-08-07
 *   [OpenStack on TXT](https://fedoraproject.org/wiki/OpenStackOnTXT)
 *   [GlusterFS with Keystone Quickstart](http://www.gluster.org/community/documentation/index.php/GlusterFS_Keystone_Quickstart)
 *   [RDO videos](RDO videos)
+*   [Testing IceHouse using Tempest](Testing IceHouse using Tempest)
 
 </div>
 </div>
