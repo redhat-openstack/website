@@ -41,7 +41,7 @@ We'll be testing the first Icehouse milestone release, and we'd like to test the
 *   ohochman (Omri Hochman) - Testing foreman and Core components, IRC
 *   panda (Gabriele Cerami) - Testing All-in-One RHEL, ML2 plugin, CI, IRC
 *   pbrady (Pádraig Brady) - Testing Core components, IRC
-*   rbowen (Rich Bowen) - Testing, IRC, Documentation
+*   rbowen (Rich Bowen) - Testing, IRC, Documentation, CentOS 6.5
 *   tshefi (Tzach Shefi) - Testin fully distributed system with local swift backend for glance, IRC
 *   ukalifon (Udi Kalifon ) - Testing Core components, IRC
 *   weshay ( Wes Hayutin ) - Testing various config, CI, IRC
