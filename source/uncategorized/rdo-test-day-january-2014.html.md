@@ -46,6 +46,7 @@ We'll be testing the first Icehouse milestone release, and we'd like to test the
 *   zaitcev (Pete Zaitcev) - Testing, Swift
 *   rlandy (Ronelle Landy) - (newbie) Testing all-in-one install, Documentation
 *   mrhodes (Marco Rhodes) - Testing all-in-one install, Documentation
+*   tkammer (Tal Kammer) - Testing deployment, automated testing readiness
 
 ## Prerequisite for Test Day
 
