@@ -157,4 +157,17 @@ neutron-openvswitch-agent fails to start with "No module named psutil"
 
 #### workaround
 
-     $ yum install python-psutil -y
+     $ yum install python-psutil -y 
+
+## openstack-nova-compute service fails with - libvirtError: internal error: CPU feature \`...' specified more than once
+
+*   **Bug:** [1049391](https://bugzilla.redhat.com/show_bug.cgi?id=1049391)
+*   **Affects:** Fedora 20
+
+#### symptoms
+
+When starting an instance the above exception is received
+
+#### workaround
+
+Edit nova compute with <http://www.fpaste.org/66395/13890996/> and restart
