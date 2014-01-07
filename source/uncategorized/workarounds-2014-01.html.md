@@ -38,7 +38,7 @@ ERROR : Error appeared during Puppet run: error running /sbin/chkconfig mysqld o
 
 #### workaround (Before running packstack)
 
-       yum install mariadb
+       yum install -y mariadb-server
        rm /usr/lib/systemd/system/mysqld.service
        cp /usr/lib/systemd/system/mariadb.service /usr/lib/systemd/system/mysqld.service
 
