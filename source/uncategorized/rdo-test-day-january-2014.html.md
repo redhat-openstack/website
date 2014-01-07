@@ -53,7 +53,7 @@ We'll be testing the first Icehouse milestone release, and we'd like to test the
 *   tkammer (Tal Kammer) - Testing deployment, automated testing readiness
 *   ewarszaw (edu) - [Cinder] All-in-One - RHEL 6.5
 *   eglynn (Eoghan Glynn) - Testing Ceilometer
-*   mbourvin (Meital Bourving) - Testing all-in-one
+*   mbourvin (Meital Bourvine) - Testing all-in-one
 
 ## Prerequisite for Test Day
 
