@@ -10,22 +10,20 @@ wiki_last_updated: 2014-05-23
 
 This page documents workarounds that may be required for installing RDO Icehouse Milestone 1. This page is associated with the [RDO_test_day_January_2014](RDO_test_day_January_2014). Please see [Workarounds](Workarounds) for a recommended format for writing up these workarounds.
 
-## Failed to start glance api (Fedora 20)
+## Failed to set up an ip address (Fedora 20)
 
-*   **Bug:** ~~[1048946](https://bugzilla.redhat.com/show_bug.cgi?id=1048946)~~
+*   **Bug:** [1049503](https://bugzilla.redhat.com/show_bug.cgi?id=1049503)
 *   **Affects:** Fedora 20
 
 #### symptoms
 
-avc denial when starting glance-api service
+avc denial when setting up an ip address for an instance or at service start up
 
 #### workaround (Before running packstack)
 
        setenforce 0
 
 #### notes
-
-Ticket is resolved. Workaround should no longer be necessary.
 
 ## Failed to start mysqld (Fedora 20)
 
