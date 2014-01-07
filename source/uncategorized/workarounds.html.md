@@ -292,4 +292,4 @@ Packstack fails trying to setup mysql
 
 #### workaround
 
-Changed /usr/lib/python2.7/site-packages/packstack/puppet/modules/mysql/manifests/params.pp to include "$service_name = 'mariadb'" in the Fedora >= 19 section, which seemed to fix this.
+       Changed /usr/lib/python2.7/site-packages/packstack/puppet/modules/mysql/manifests/params.pp to include "$service_name = 'mariadb'" in the Fedora >= 19 section, which seemed to fix this.
