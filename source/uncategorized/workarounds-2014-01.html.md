@@ -48,7 +48,7 @@ If you hit this during a packstack run, you can still apply the workaround and r
 
 ## Failed to parse /etc/nova/nova.conf (RHEL)
 
-*   **Bug:** [1047156](https://bugzilla.redhat.com/show_bug.cgi?id=1047156), ~~[1048315](https://bugzilla.redhat.com/show_bug.cgi?id=1048315)~~, ~~[1048319](https://bugzilla.redhat.com/show_bug.cgi?id=1048319)~~
+*   **Bug:** ~~[1047156](https://bugzilla.redhat.com/show_bug.cgi?id=1047156)~~, ~~[1048315](https://bugzilla.redhat.com/show_bug.cgi?id=1048315)~~, ~~[1048319](https://bugzilla.redhat.com/show_bug.cgi?id=1048319)~~
 *   **Affects:** RHEL, CentOS
 
 #### symptoms
