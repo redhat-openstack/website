@@ -26,7 +26,7 @@ Edit answers.txt and set
         CONFIG_PROVISION_TEMPEST=y
         CONFIG_PROVISION_TEMPEST_REPO_REVISION=stable/havana
 
-### Workaround the openstack-puppet-module bug
+### Workaround the openstack-puppet-module bug ( fedora only)
 
          sed -e 's/mysql/mariadb/g' -i  /usr/lib/python2.7/site-packages/packstack/puppet/modules/tempest/manifests/params.pp
 
