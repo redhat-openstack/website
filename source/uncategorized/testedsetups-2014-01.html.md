@@ -82,6 +82,14 @@ Please see [Docs/Storage](Docs/Storage) for configuration guides as well as sugg
 |                                                               |                                                                      | RHEL 6.5    | ??                                               |       | ??       | ??         | None  | None       |
 |                                                               |                                                                      | RHEL 7 Beta | ??                                               |       | ??       | ??         | None  | None       |
 
+## Packstack Based Installation (Misc Components)
+
+Various components which don't fit the large test efforts above.
+
+| Item/Area Name                                     | Release      | BaseOS   | Status                                      | HOWTO | Who      | Date      | BZ/LP                                                          | Notes Page |
+|----------------------------------------------------|--------------|----------|---------------------------------------------|-------|----------|-----------|----------------------------------------------------------------|------------|
+| Ceilometer: All-in-One w/ Neutron Networking, Heat | RDO icehouse | RHEL 6.5 | <span style="background:#00ff00">WIP</span> |       | kwhitney | 2014-0107 | [1049493](https://bugzilla.redhat.com/show_bug.cgi?id=1049493) | None       |
+
 ## Advanced Installs (Foreman Based) -- Work in Progress
 
 Please see [Deploying RDO Using Foreman](Deploying RDO Using Foreman) for directions on setting up compute and controller nodes using foreman (only RHEL (derivatives) for now)
