@@ -59,6 +59,7 @@ We'll be testing the first Icehouse milestone release, and we'd like to test the
 *   jpichon (Julie Pichon) - Testing all-in-one
 *   shardy (Steven Hardy) - Testing Heat
 *   ndipanov - Testing all-in-one nova, IRC
+*   verdurin - Testing all-in-one, IRC
 
 ## Prerequisite for Test Day
 
