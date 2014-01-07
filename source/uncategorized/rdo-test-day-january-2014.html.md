@@ -44,6 +44,7 @@ We'll be testing the first Icehouse milestone release, and we'd like to test the
 *   kashyap (Kashyap Chamarthy) - Testing, IRC, Documentation -- minimal, 2 node set-up, hand-configured, Neutron w/ GRE+OVS, on F20.
 *   zaitcev (Pete Zaitcev) - Testing, Swift
 *   rlandy (Ronelle Landy) - (newbie) Testing all-in-one install, Documentation
+*   mrhodes (Marco Rhodes) - Testing all-in-one install, Documentation
 
 ## Prerequisite for Test Day
 
