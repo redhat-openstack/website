@@ -65,6 +65,7 @@ We'll be testing the first Icehouse milestone release, and we'd like to test the
 *   jistr (Jiri Stransky) - Testing Foreman (2 node) on VMs, IRC
 *   jruzicka - Testing all-in-one RHEL6.5 and Fedora 20, IRC
 *   smanjara(Shilpa) - Testing cinder and glance with gluster backend on RHEL6.5
+*   kwhitney - Testing ceilometer on RHEL6.5, IRC
 
 ## Prerequisite for Test Day
 
