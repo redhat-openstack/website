@@ -294,7 +294,7 @@ Packstack fails trying to setup mysql
 
        Changed /usr/lib/python2.7/site-packages/packstack/puppet/modules/mysql/manifests/params.pp to include "$service_name = 'mariadb'" in the Fedora >= 19 section, which seemed to fix this.
 
-## ceilometer: notifications from openstack service not processed
+## ceilometer: notifications from openstack services not processed
 
 *   **Bug:** [1049369](https://bugzilla.redhat.com/1049369)
 *   **Affects:** All
@@ -306,3 +306,5 @@ Any meter derived from notifications emitted by the openstack services are not r
 #### workaround
 
 Explicitly start the new openstack-ceilometer-agent-notification service immediately post-installation:
+
+       sudo service openstack-ceilometer-agent-notification start
