@@ -60,6 +60,7 @@ We'll be testing the first Icehouse milestone release, and we'd like to test the
 *   shardy (Steven Hardy) - Testing Heat
 *   ndipanov - Testing all-in-one nova, IRC
 *   verdurin - Testing all-in-one, IRC
+*   jistr (Jiri Stransky) - Testing Foreman (2 node) on VMs, IRC
 
 ## Prerequisite for Test Day
 
