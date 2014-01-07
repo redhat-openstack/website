@@ -8,7 +8,7 @@ wiki_last_updated: 2015-04-01
 
 # Testing IceHouse using Tempest
 
-This page documents how to run tempest on an All-In-Once installation of RDO - IceHouse on Fedora 19/20.
+This page documents how to run tempest on an All-In-Once installation of RDO - IceHouse on RHEL, CentOS and Fedora 19/20.
 
 *   **Assumption:** packstack is already installed
 
