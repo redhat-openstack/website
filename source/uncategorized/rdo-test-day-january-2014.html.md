@@ -23,6 +23,7 @@ We'll be testing the first Icehouse milestone release, and we'd like to test the
 *   adarazs (Attila Darazs) - Testing deployment, automated testing readiness
 *   ajeain (Ami Jeain) - Testing Core components, IRC
 *   amuller (Assaf Muller) - Testing network components, IRC
+*   ayoung (Adam Young) - Keystone, IRC
 *   Dafna (Dafna Ron) - Testing semi distributed system with gluster backend for cinder and glance, IRC
 *   dkorn (Daniel Korn ) - Testing Core components, IRC
 *   dneary (Dave Neary) - Testing install of all in one and 2 node set-up in virt-manager instances
