@@ -52,25 +52,21 @@ Please see [Docs/Storage](Docs/Storage) for configuration guides as well as sugg
 |---------------------------------------------------------------|----------------------------------------------------------------------|-------------|--------|-------|-----|------|-------|------------|
 | [Cinder] All-in-One: different Cinder drivers only            | See [Docs/Storage](Docs/Storage) for guides and testables |
 |                                                               |                                                                      | CentOS 6.5  | ??     |       | ??  | ??   | None  | None       |
-|                                                               |                                                                      | Fedora 19   | ??     |       | ??  | ??   | None  | None       |
 |                                                               |                                                                      | Fedora 20   | ??     |       | ??  | ??   | None  | None       |
 |                                                               |                                                                      | RHEL 6.5    | ??     |       | ??  | ??   | None  | None       |
 |                                                               |                                                                      | RHEL 7 Beta | ??     |       | ??  | ??   | None  | None       |
 | [Cinder] Semi/Fully Distributed: GlusterFS, EMC, LVM, ThinLVM | See [Docs/Storage](Docs/Storage) for guides and testables |
 |                                                               |                                                                      | CentOS 6.5  | ??     |       | ??  | ??   | None  | None       |
-|                                                               |                                                                      | Fedora 19   | ??     |       | ??  | ??   | None  | None       |
 |                                                               |                                                                      | Fedora 20   | ??     |       | ??  | ??   | None  | None       |
 |                                                               |                                                                      | RHEL 6.5    | ??     |       | ??  | ??   | None  | None       |
 |                                                               |                                                                      | RHEL 7 Beta | ??     |       | ??  | ??   | None  | None       |
 | [Glance] All-in-One: different Glance drivers only            | See [Docs/Storage](Docs/Storage) for guides and testables |
 |                                                               |                                                                      | CentOS 6.5  | ??     |       | ??  | ??   | None  | None       |
-|                                                               |                                                                      | Fedora 19   | ??     |       | ??  | ??   | None  | None       |
 |                                                               |                                                                      | Fedora 20   | ??     |       | ??  | ??   | None  | None       |
 |                                                               |                                                                      | RHEL 6.5    | ??     |       | ??  | ??   | None  | None       |
 |                                                               |                                                                      | RHEL 7 Beta | ??     |       | ??  | ??   | None  | None       |
 | [Glance] Semi/Fully Distributed: GlusterFS, Swift             | See [Docs/Storage](Docs/Storage) for guides and testables |
 |                                                               |                                                                      | CentOS 6.5  | ??     |       | ??  | ??   | None  | None       |
-|                                                               |                                                                      | Fedora 19   | ??     |       | ??  | ??   | None  | None       |
 |                                                               |                                                                      | Fedora 20   | ??     |       | ??  | ??   | None  | None       |
 |                                                               |                                                                      | RHEL 6.5    | ??     |       | ??  | ??   | None  | None       |
 |                                                               |                                                                      | RHEL 7 Beta | ??     |       | ??  | ??   | None  | None       |
