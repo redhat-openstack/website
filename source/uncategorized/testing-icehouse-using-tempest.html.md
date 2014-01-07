@@ -56,9 +56,9 @@ Edit answers.txt and set
         export NOSE_OPENSTACK_COLOR=1
         export NOSE_OPENSTACK_RED=15.00
         export NOSE_OPENSTACK_YELLOW=3.00
-         export NOSE_OPENSTACK_SHOW_ELAPSED=1
-         export NOSE_OPENSTACK_STDOUT=1
-         export TEMPEST_PY26_NOSE_COMPAT=1
+        export NOSE_OPENSTACK_SHOW_ELAPSED=1
+        export NOSE_OPENSTACK_STDOUT=1
+        export TEMPEST_PY26_NOSE_COMPAT=1
 
          nosetests --verbose --attr=type=smoke  --with-xunit
 
