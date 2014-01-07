@@ -106,3 +106,20 @@ ERROR : Error appeared during Puppet run: ...ceilometer.pp: error starting mongo
 If you hit this during a packstack run, you can still apply the workaround and resume with:
 
        packstack --answer-file=$answerfile
+
+## Installation fails on Fedora 20 if tempest is enabled
+
+*   **Bug:** [1049114](https://bugzilla.redhat.com/show_bug.cgi?id=1049114)
+*   **Affects:** Fedora 20
+
+#### symptoms
+
+ERROR : Error appeared during Puppet run: ...provision.pp: mysql-devel does not exist
+
+#### workaround (Before running packstack)
+
+       sed -e 's/mysql/mariadb/g' -i  /usr/lib/python2.7/site-packages/packstack/puppet/modules/tempest/manifests/params.pp
+
+If you hit this during a packstack run, you can still apply the workaround and resume with:
+
+       packstack --answer-file=$answerfile
