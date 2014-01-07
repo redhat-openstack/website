@@ -43,7 +43,7 @@ Edit answers.txt and set
         source .venv/bin/activate
         pip install junitxml
 
-### configure testr
+### configure testr ( fedora )
 
         testr init
 
