@@ -54,6 +54,7 @@ We'll be testing the first Icehouse milestone release, and we'd like to test the
 *   ewarszaw (edu) - [Cinder] All-in-One - RHEL 6.5
 *   eglynn (Eoghan Glynn) - Testing Ceilometer
 *   mbourvin (Meital Bourvine) - Testing all-in-one
+*   jpichon (Julie Pichon) - Testing all-in-one
 
 ## Prerequisite for Test Day
 
