@@ -50,8 +50,18 @@ Edit answers.txt and set
            tee >(subunit2junitxml --output-to=results.xml) |
            subunit-2to1 | tools/colorizer.py
 
-### Run testr and capture test-result
+### configure and run nosetest ( RHEL/CentOS )
 
-        test run --subunit | 
-            tee >(subunit2junitxml --output-to=results.xml) |
-            subunit-2to1 | tools/colorizer.py
+        export NOSE_WITH_OPENSTACK=1
+        export NOSE_OPENSTACK_COLOR=1
+        export NOSE_OPENSTACK_RED=15.00
+        export NOSE_OPENSTACK_YELLOW=3.00
+         export NOSE_OPENSTACK_SHOW_ELAPSED=1
+         export NOSE_OPENSTACK_STDOUT=1
+         export TEMPEST_PY26_NOSE_COMPAT=1
+
+         nosetests --verbose --attr=type=smoke  --with-xunit
+
+         or 
+         
+         nosetests --verbose   --with-xunit
