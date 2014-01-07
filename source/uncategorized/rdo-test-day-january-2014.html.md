@@ -55,6 +55,7 @@ We'll be testing the first Icehouse milestone release, and we'd like to test the
 *   eglynn (Eoghan Glynn) - Testing Ceilometer
 *   mbourvin (Meital Bourvine) - Testing all-in-one
 *   jpichon (Julie Pichon) - Testing all-in-one
+*   shardy (Steven Hardy) - Testing Heat
 
 ## Prerequisite for Test Day
 
