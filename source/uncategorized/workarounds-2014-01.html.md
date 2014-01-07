@@ -44,8 +44,9 @@ ERROR : Error appeared during Puppet run: error running /sbin/chkconfig mysqld o
 
 If you hit this during a packstack run, you can still apply the workaround and resume with:
 
-       Changed /usr/lib/python2.7/site-packages/packstack/puppet/modules/mysql/manifests/params.pp to include "$service_name = 'mariadb'" in the Fedora >= 19 section, which seemed to fix this
        packstack --answer-file=$answerfile
+
+An alternative packstack workaround for this issue is to change /usr/lib/python2.7/site-packages/packstack/puppet/modules/mysql/manifests/params.pp to include "$service_name = 'mariadb'" in the Fedora >= 19 section
 
 ## Failed to parse /etc/nova/nova.conf (RHEL)
 
