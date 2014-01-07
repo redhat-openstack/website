@@ -11,6 +11,24 @@ wiki_last_updated: 2015-05-07
 
 # Workarounds
 
+## neutron-openvswitch-agent fails to start
+
+*   **Bug:** [1049235](https://bugzilla.redhat.com/show_bug.cgi?id=1049235)
+*   **Affects:** Fedora 20
+
+#### symptoms
+
+neutron-openvswitch-agent fails to start with "No module named psutil"
+
+    $ service neutron-openvswitch-agent restart
+    [. . .]
+    Jan 07 02:45:15 node2-compute neutron-openvswitch-agent[3471]: import psutil
+    Jan 07 02:45:15 node2-compute neutron-openvswitch-agent[3471]: ImportError: No module named psutil
+
+#### workaround
+
+     $ yum install python-psutil -y 
+
 ## openvswitch fails to start
 
 *   **Bug:** [1006412](https://bugzilla.redhat.com/show_bug.cgi?id=1006412)
