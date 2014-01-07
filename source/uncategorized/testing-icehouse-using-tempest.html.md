@@ -43,9 +43,12 @@ Edit answers.txt and set
         source .venv/bin/activate
         pip install junitxml
 
-### configure testr ( fedora )
+### configure and run testr ( fedora )
 
         testr init
+        test run --subunit | 
+           tee >(subunit2junitxml --output-to=results.xml) |
+           subunit-2to1 | tools/colorizer.py
 
 ### Run testr and capture test-result
 
