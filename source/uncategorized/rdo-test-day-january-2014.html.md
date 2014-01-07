@@ -35,6 +35,7 @@ We'll be testing the first Icehouse milestone release, and we'd like to test the
 *   larsks (Lars Kellogg-Stedman) - Testing, IRC, Documentation
 *   mrunge (Matthias Runge) - Testing Core components, IRC,
 *   nmagnezi (Nir Magnezi) - Testing Network and Core components, IRC
+*   mpavlase (Martin Pavlasek) - Testing, IRC
 *   oblaut(Ofer Blaut) - Testing Network components, IRC
 *   ohochman (Omri Hochman) - Testing foreman and Core components, IRC
 *   panda (Gabriele Cerami) - Testing All-in-One RHEL, ML2 plugin, CI, IRC
