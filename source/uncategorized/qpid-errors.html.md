@@ -26,7 +26,9 @@ You can recreate the sasldb file using the following command:
 
          saslpasswd2 -f /var/lib/qpidd/qpidd.sasldb -u QPID guest
 
-Provide the password at the command line (usually 'guest'), and the file will be created. You should further ensure that /etc/cinder/cinder.conf references the correct username and password corresponding with this file.
+Provide the password at the command line (usually 'guest'), and the file will be created. You should further ensure that /etc/cinder/cinder.conf references the correct username and password corresponding with this file. Then restart qpidd:
+
+         service qpidd restart
 
 You can verify the presence of users accounts in that file with:
 
