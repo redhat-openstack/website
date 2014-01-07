@@ -29,6 +29,7 @@ We'll be testing the first Icehouse milestone release, and we'd like to test the
 *   eharney (Eric Harney) - Testing cinder, IRC
 *   flaper87 (Flavio Percoco) - Testing glance All-in-One: different glance drivers only, IRC
 *   giulivo (Giulio Fidente) - Testing fully distributed system with EMC backend for cinder, IRC
+*   jhenner (Jaroslav Henner) Testing core, IRC
 *   larsks (Lars Kellogg-Stedman) - Testing, IRC, Documentation
 *   mrunge (Matthias Runge) - Testing Core components, IRC,
 *   nmagnezi (Nir Magnezi) - Testing Network and Core components, IRC
