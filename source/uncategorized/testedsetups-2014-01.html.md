@@ -91,3 +91,11 @@ Please see [Deploying RDO Using Foreman](Deploying RDO Using Foreman) for direct
 |                                      |            | CentOS 6.5 | ??     | [ Load Balanced API](Load_Balance_OpenStack_API)                                                         | ??       | ??            | None                                                                                                                            | None       |
 | HA MySql                             | Havana H-3 | RHEL 6.5   | ??     | [ HA MySql](Deploying_RDO_Using_Foreman#HA_Database_Cluster)                                             | ??       | ??            | None                                                                                                                            | None       |
 |                                      |            | CentOS 6.5 | ??     | [ HA MySql](Deploying_RDO_Using_Foreman#HA_Database_Cluster)                                             | ??       | ??            | None                                                                                                                            | None       |
+
+## Other
+
+| Config Name                                                 | Release | BaseOS | Status | HOWTO                                                                                            | Who | Date | BZ/LP | Notes Page |
+|-------------------------------------------------------------|---------|--------|--------|--------------------------------------------------------------------------------------------------|-----|------|-------|------------|
+| Savanna, hadoop cluster provisioning                        |         |        | ??     | [Savanna installation and setup](https://savanna.readthedocs.org/en/latest/)                     | ??  | ??   | None  | None       |
+| Securing RDO Core Services (API Endpoints, Message Brokers) |         |        | ??     | [Securing_Services](Securing_Services)                                               | ??  | ??   | None  | None       |
+| Tuskar and TripleO                                          |         |        | ??     | [Deploying_RDO_Using_Tuskar_And_TripleO](Deploying_RDO_Using_Tuskar_And_TripleO) | ??  | ??   | None  | None       |
