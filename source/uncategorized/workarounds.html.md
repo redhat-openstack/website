@@ -279,21 +279,6 @@ The root cause of the problem is that cinder does not override the control_excha
        sudo openstack-config --set /etc/cinder/cinder.conf DEFAULT control_exchange cinder
        sudo service openstack-cinder-volume restart
 
-## Could not enable mysqld
-
-*   **Bug:** <https://bugzilla.redhat.com/show_bug.cgi?id=1012786>
-*   **Affects:** All
-
-#### symptoms
-
-Packstack fails trying to setup mysql
-
-       Error: Could not enable mysqld: Execution of '/sbin/chkconfig mysqld on' returned 1: Note: Forwarding request to 'systemctl enable mysqld.service'.
-
-#### workaround
-
-       Changed /usr/lib/python2.7/site-packages/packstack/puppet/modules/mysql/manifests/params.pp to include "$service_name = 'mariadb'" in the Fedora >= 19 section, which seemed to fix this.
-
 ## ceilometer: notifications from openstack services not processed
 
 *   **Bug:** [1049369](https://bugzilla.redhat.com/1049369)
