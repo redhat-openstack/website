@@ -301,7 +301,7 @@ Packstack fails trying to setup mysql
 
 #### symptoms
 
-Any meter derived from notifications emitted by the openstack services are not recorded.
+Data for any meter derived from notifications emitted by the openstack services are not recorded.
 
 #### workaround
 
