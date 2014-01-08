@@ -47,7 +47,7 @@ To find the latest build available in Koji for a specific package:
     ----------------------------------------  --------------------  ----------------
     openstack-neutron-2014.1-0.1.b1.fc21      f21                   pbrady
 
-A few handy tags that can be to be used with koji build system: `f20`,`epel7`, `dist-6E-epel-testing-candidate`
+A few handy tags that can be to be used with koji build system: `f20-updates-candidate`, `f20`,`epel7`, `dist-6E-epel-testing-candidate`
 
 You can obtain all list of tags available by running:
 
