@@ -61,7 +61,7 @@ We'll be testing the first Icehouse milestone release, and we'd like to test the
 *   jpichon (Julie Pichon) - Testing all-in-one
 *   shardy (Steven Hardy) - Testing Heat
 *   ndipanov - Testing all-in-one nova, IRC
-*   verdurin - Testing all-in-one, IRC
+*   verdurin (Adam Huffman) - Testing all-in-one, IRC
 *   jistr (Jiri Stransky) - Testing Foreman (2 node) on VMs, IRC
 *   jruzicka - Testing all-in-one RHEL6.5 and Fedora 20, IRC
 *   smanjara(Shilpa) - Testing cinder and glance with gluster backend on RHEL6.5
