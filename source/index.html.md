@@ -25,6 +25,14 @@ The most up-to-date OpenStack on the industry's most trusted Linux platform, now
 </div>
 <div class="row">
 <div class="offset4 span7 pad-sides begin-content pull-s">
+## Stay up to date with RDO
+
+There's lots of ways to stay in touch with the RDO community.
+
+Come to one of the main [Events](Events) where some of us will be. Follow us on [Twitter](http://twitter.com/rdocommunity/) or our [Google+ community](https://plus.google.com/communities/110409030763231732154). Subscribe to the [rdo-list mailing list](http://www.redhat.com/mailman/listinfo/rdo-list) for technical questions, or to the [newsletter mailing list](http://www.redhat.com/mailman/listinfo/rdo-newsletter) for monthly community updates.
+
+And there's a variety of presentations on the [RDO videos](RDO videos) page from our hangouts and conference presentations you may have missed.
+
 ## Introducing RDO
 
 ![`openstack-distribution.png`](openstack-distribution.png "openstack-distribution.png")
@@ -34,20 +42,6 @@ RDO is a community of people using and deploying OpenStack on Red Hat Enterprise
 If you are looking for enterprise-level support, or information on partner certification, Red Hat also offers [Red Hat Enterprise Linux OpenStack Platform](//redhat.com/openstack).
 
 OpenStack relies on the underlying operating system and hypervisor — and what better operating system to build on than the industry's leading enterprise operating system? The RDO community is your one-stop community site for all things related to using OpenStack on Red Hat based platforms.
-
-## RDO Test Day (January 7th and 8th)
-
-Next week (January 7/8) we'll be doing our first [RDO_test_day_January_2014 | Icehouse test day], and we'd appreciate it if you could help us out with an hour or two of your time. Details on the test day can be found on [ the test day page](RDO_test_day_January_2014) and a matrix of what we'd like to test is at [ TestedSetups ](TestedSetups_2014_01).
-
-Thanks for any time you can contribute to this testing effort, to help make RDO as solid as possible.
-
-## Stay up to date with RDO
-
-There's lots of ways to stay in touch with the RDO community.
-
-Come to one of the main [Events](Events) where some of us will be. Follow us on [Twitter](http://twitter.com/rdocommunity/) or our [Google+ community](https://plus.google.com/communities/110409030763231732154). Subscribe to the [rdo-list mailing list](http://www.redhat.com/mailman/listinfo/rdo-list) for technical questions, or to the [newsletter mailing list](http://www.redhat.com/mailman/listinfo/rdo-newsletter) for monthly community updates.
-
-And there's a variety of presentations on the [RDO videos](RDO videos) page from our hangouts and conference presentations you may have missed.
 
 </div>
 </div>
