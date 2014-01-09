@@ -14,6 +14,16 @@ The following questions are the most commonly asked questions for [TryStack](htt
 
 We don't know. Please use ssh keys to authenticate to the hosts. A how-to on this would be a great doc for someone to contribute to TryStack.
 
+## Error: Failed to create ... overlaps with another subnet
+
+If you get an error like this:
+
+Error: Failed to create subnet "192.168.37.0/24" for network "public": 400-{u'NeutronError': {u'message': u'Invalid input for operation: Requested subnet with cidr: 192.168.37.0/24 for network: 5f94cde4-4dd5-4949-a955-50dc5dc6dfa7 overlaps with another subnet.', u'type': u'InvalidInput', u'detail': u''}}
+
+It means the subnet you choose is already being used. The Getting started video erroneously tells you to reuse the same subnet, in reality each tenant's subnet must be a unique block that does not overlap with another network in TryStack.
+
+Unfortunately we don't have a way to help you pick one that's not being used yet, you kinda have to guess. In the example above you can just change the 37 to another number in the range 1-254 until you find one that's not being used.
+
 ## Followed getting started video but can't ssh / ping
 
 The way this is usually resolved is by resetting your router, and possibly by rebuilding your network. This becomes necessary because as we work on and add to trystack things get reset. Some of these things are networking related and are set when networks get created.
