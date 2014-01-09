@@ -42,10 +42,8 @@ Sometimes, there are missing policies required in order released RDO versions to
 
 *   Perform a full test of the use case that is causing the problem
 *   File a [Bugzilla](https://bugzilla.redhat.com) and attach your /var/log/audit/audit.log
-
-When using Red Hat Enterprise Linux 6 or CentOS 6, please file the bug against the [openstack-selinux component in RDO](https://bugzilla.redhat.com/enter_bug.cgi?component=openstack-selinux&product=RDO).
-
-When using Fedora, please file the bug against [selinux-policy component in Fedora](https://bugzilla.redhat.com/enter_bug.cgi?component=selinux-policy&product=Fedora).
+    -   When using Red Hat Enterprise Linux 6 or CentOS 6, please file the bug against the [openstack-selinux component in RDO](https://bugzilla.redhat.com/enter_bug.cgi?component=openstack-selinux&product=RDO).
+    -   When using Fedora, please file the bug against [selinux-policy component in Fedora](https://bugzilla.redhat.com/enter_bug.cgi?component=selinux-policy&product=Fedora).
 
 For more information about how SELinux policies are developed for RDO, see (TBD)
 
