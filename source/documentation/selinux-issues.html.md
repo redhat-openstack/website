@@ -16,7 +16,7 @@ wiki_last_updated: 2014-01-10
 
 SELinux can sometimes be a source of issues with OpenStack. On a system with SELinux enabled (as it is by default on Fedora and RHEL), you can check for denial messages with the command:
 
-    sudo cat /var/log/audit/audit.log | grep denied
+    sudo cat /var/log/audit/audit.log | grep -i avc
 
 or
 
