@@ -32,6 +32,23 @@ To see what the current security context for a resource ls, run
 
 For more information on SELinux troubleshooting, see <http://fedoraproject.org/wiki/SELinux/Troubleshooting>.
 
+### Filing Bugzillas
+
+Sometimes, there are missing policies required in order released RDO versions to work correctly with SELinux in enforcing mode. In order for the RDO developers to troubleshoot the problem, please perform the following:
+
+*   Set SELinux to permissive mode
+*   Zero out your /var/log/audit/audit.log:
+        sudo cp /dev/null /var/log/audit/audit.log
+
+*   Perform a full test of the use case that is causing the problem
+*   File a [Bugzilla <https://bugzilla.redhat.com>] and attach your /var/log/audit/audit.log
+
+When using Red Hat Enterprise Linux 6 or CentOS 6, please file the bug against the [openstack-selinux](https://bugzilla.redhat.com/enter_bug.cgi?component=openstack-selinux&product=RDO) component in RDO.
+
+When using Fedora, please file the bug against [selinux-policy](https://bugzilla.redhat.com/enter_bug.cgi?component=selinux-policy&product=Fedora) component in Fedora.
+
+For more information about how SELinux policies are developed for RDO, see (TBD)
+
 ### PackStack fails if SELinux is disabled
 
 It has been reported that [PackStack will fail if SELinux is disabled](http://{{SERVERNAME}}/forum/discussion/46/install-on-centos-6-4-and-selinux-disabled/p1).
