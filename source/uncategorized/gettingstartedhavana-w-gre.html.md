@@ -30,7 +30,7 @@ The multi-node installation follows [QuickStartLatest](QuickStartLatest) for the
 
 ### Yum Repo Setup
 
-Start by installing the RDO Hanava Yum Repo:
+Start by installing the RDO Havanaa Yum Repo:
 
     sudo yum install -y http://rdo.fedorapeople.org/openstack-havana/rdo-release-havana.rpm
 
