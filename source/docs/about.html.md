@@ -22,8 +22,7 @@ wiki_last_updated: 2014-01-10
 *   [Continuous Integration](Continuous Integration)
 *   [RDO on Twitter](http://twitter.com/rdocommunity)
 *   [RDO on Google+](https://plus.google.com/communities/110409030763231732154)
-*   [rdo-list mailing list](http://www.redhat.com/mailman/listinfo/rdo-list)
-*   [rdo-newsletter mailing list](http://www.redhat.com/mailman/listinfo/rdo-newsletter)
+*   [Mailing_lists](Mailing_lists)
 
 </div>
 </div>
