@@ -24,7 +24,7 @@ Since RDO sticks closely to the upstream OpenStack project, the documentation at
 
 #### [ Installation and configuration](Install)
 
-<small>[Running_an_instance](Running_an_instance), [Image_resources](Image_resources), [Adding_a_compute_node](Adding_a_compute_node), [Troubleshooting](Troubleshooting), [Uninstalling_RDO](Uninstalling_RDO) ...</small>
+<small>[Running_an_instance](Running_an_instance), [Image_resources](Image_resources), [Adding_a_compute_node](Adding_a_compute_node), [Troubleshooting](Troubleshooting), [Uninstalling_RDO](Uninstalling_RDO), [More](Install) ...</small>
 
 #### [ Networking ](Docs/Networking)
 
