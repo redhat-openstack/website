@@ -36,7 +36,7 @@ Since RDO sticks closely to the upstream OpenStack project, the documentation at
 
 #### [ About RDO ](Docs/About)
 
-<small>[FAQ](Frequently_Asked_Questions), [Get_involved](Get_involved), [Twitter](http://twitter.com/rdocommunity), [Mailing list](http://www.redhat.com/mailman/listinfo/rdo-list)], [More](Docs/About) ...</small>
+<small>[FAQ](Frequently_Asked_Questions), [Get_involved](Get_involved), [Twitter](http://twitter.com/rdocommunity), [Mailing list](http://www.redhat.com/mailman/listinfo/rdo-list), [More](Docs/About) ...</small>
 
 #### [ Upstream Documentation ](Upstream Docs)
 
