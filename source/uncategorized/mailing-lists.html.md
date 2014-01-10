@@ -21,7 +21,7 @@ This is the main discussion list for the RDO project. This list is fairly low vo
 
 A monthly update of what's going on at RDO, rdo-newsletter is read-only, and very low volume.
 
-*   [rdo-newsletter Subscribe](http://www.redhat.com/mailman/listinfo/rdo-newsletter)
+*   [Subscribe](http://www.redhat.com/mailman/listinfo/rdo-newsletter)
 *   [Archives](https://www.redhat.com/archives/rdo-newsletter/)
 
 ## Other lists
