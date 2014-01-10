@@ -32,7 +32,7 @@ Since RDO sticks closely to the upstream OpenStack project, the documentation at
 
 #### [ Storage ](Docs/Storage)
 
-<small>[GlusterFS](Using_GlusterFS_for_Cinder_with_RDO_Havana), [1](https://wiki.openstack.org/wiki/How_to_deploy_cinder_with_EMC_plug-in|EMC), [ThinLVM](Using_ThinLVM_for_Cinder_with_RDO_Havana), [Ceph](http://openstack.redhat.com/Using_Ceph_for_Cinder_with_RDO_Havana), [More](Docs/Storage) ...</small>
+<small>[GlusterFS](Using_GlusterFS_for_Cinder_with_RDO_Havana), [EMC](https://wiki.openstack.org/wiki/How_to_deploy_cinder_with_EMC_plug-in), [ThinLVM](Using_ThinLVM_for_Cinder_with_RDO_Havana), [Ceph](http://openstack.redhat.com/Using_Ceph_for_Cinder_with_RDO_Havana), [More](Docs/Storage) ...</small>
 
 #### [ About RDO ](Docs/About)
 
