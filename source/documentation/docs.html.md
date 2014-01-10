@@ -24,6 +24,8 @@ Since RDO sticks closely to the upstream OpenStack project, the documentation at
 
 #### [ Installation and configuration](Install)
 
+[Running_an_instance](Running_an_instance), [Image_resources](Image_resources), [Adding_a_compute_node](Adding_a_compute_node), [Troubleshooting](Troubleshooting), ...
+
 #### [ Networking ](Docs/Networking)
 
 #### [ Storage ](Docs/Storage)
