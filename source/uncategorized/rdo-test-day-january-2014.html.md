@@ -68,6 +68,7 @@ We'll be testing the first Icehouse milestone release, and we'd like to test the
 *   kwhitney - Testing ceilometer on RHEL6.5, all-in-one, IRC
 *   shmcfarl (Shannon McFarland) - Testing all-in-one - Neutron - Documentation - CentOS 6.5 - IRC
 *   gparisse - Testing all-in-one - CentOS 6.5
+*   vladan - Testing all-in-one nova on Fedora 20, IRC
 
 ## Prerequisite for Test Day
 
