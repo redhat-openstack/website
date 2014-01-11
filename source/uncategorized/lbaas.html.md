@@ -456,3 +456,186 @@ Use the floatingip-list command to see that the floating IP address (172.24.4.23
     | 96943920-105e-4017-9393-873ef4607b5f |                  | 172.24.4.229        |                                      |
     | 6becaba6-b3fe-4e54-8bd6-f5d8364a363f | 10.0.0.6         | 172.24.4.230        | d2319cc8-6bc7-4a04-b3a6-4906ecc5d6b3 |
     +--------------------------------------+------------------+---------------------+--------------------------------------+
+
+### Testing
+
+Now that the load balancer is running and externally accessible, test that traffic is properly load-balanced and the health checker works correctly. First, check what members are active.
+
+    # neutron lb-member-list --sort-key address --sort-dir asc
+    +--------------------------------------+----------+---------------+----------------+--------+
+    | id                                   | address  | protocol_port | admin_state_up | status |
+    +--------------------------------------+----------+---------------+----------------+--------+
+    | 5750769c-3131-41bd-b0f1-be6c41aa15c9 | 10.0.0.3 |            80 | True           | ACTIVE |
+    | 135846f5-e1b0-4ad0-83fd-de4dd1dbde58 | 10.0.0.4 |            80 | True           | ACTIVE |
+    | 63f009cf-f6bc-4274-8e5d-f9c2613d7912 | 10.0.0.5 |            80 | True           | ACTIVE |
+    +--------------------------------------+----------+---------------+----------------+--------+
+
+Since this example has a single pool and all members are marked 'active', successive HTTP requests to the virtual IP address should be balanced round-robin across all three members. Recall that each virtual machine will respond to an HTTP request with its hostname.
+
+    # for i in {1..6} ; do curl -w "\n" 172.24.4.230 ; done
+    rhel-03
+    rhel-02
+    rhel-01
+    rhel-03
+    rhel-02
+    rhel-01
+
+Next, mark one of the member's 'admin_state_up' flag to False. A member with 'admin_state_up' set to False should not be considered for load-balancing.
+
+    # neutron lb-member-update 5750769c-3131-41bd-b0f1-be6c41aa15c9 --admin_state_up False
+    Updated member: 5750769c-3131-41bd-b0f1-be6c41aa15c9
+
+    # neutron lb-member-list --sort-key address --sort-dir asc
+    +--------------------------------------+----------+---------------+----------------+--------+
+    | id                                   | address  | protocol_port | admin_state_up | status |
+    +--------------------------------------+----------+---------------+----------------+--------+
+    | 5750769c-3131-41bd-b0f1-be6c41aa15c9 | 10.0.0.3 |            80 | False          | ACTIVE |
+    | 135846f5-e1b0-4ad0-83fd-de4dd1dbde58 | 10.0.0.4 |            80 | True           | ACTIVE |
+    | 63f009cf-f6bc-4274-8e5d-f9c2613d7912 | 10.0.0.5 |            80 | True           | ACTIVE |
+    +--------------------------------------+----------+---------------+----------------+--------+
+
+The member with IP address 10.0.0.3 (rhel-01) should no longer receive traffic from the load-balancer. Note that the virtual machine itself is still running. This is effectively the same as removing the member from the pool. Repeating the test that sends multiple HTTP requests to the load balancer.
+
+    # for i in {1..6} ; do curl -w "\n" 172.24.4.230 ; done
+    rhel-02
+    rhel-03
+    rhel-02
+    rhel-03
+    rhel-02
+    rhel-03
+
+As expected, virtual machine 'rhel-01' is not considered for load-balancing. Set the admin_state_up flag back to true and rerun the test.
+
+    # neutron lb-member-update 5750769c-3131-41bd-b0f1-be6c41aa15c9 --admin_state_up True
+    Updated member: 5750769c-3131-41bd-b0f1-be6c41aa15c9
+
+    # neutron lb-member-list --sort-key address --sort-dir asc
+    +--------------------------------------+----------+---------------+----------------+--------+
+    | id                                   | address  | protocol_port | admin_state_up | status |
+    +--------------------------------------+----------+---------------+----------------+--------+
+    | 5750769c-3131-41bd-b0f1-be6c41aa15c9 | 10.0.0.3 |            80 | True           | ACTIVE |
+    | 135846f5-e1b0-4ad0-83fd-de4dd1dbde58 | 10.0.0.4 |            80 | True           | ACTIVE |
+    | 63f009cf-f6bc-4274-8e5d-f9c2613d7912 | 10.0.0.5 |            80 | True           | ACTIVE |
+    +--------------------------------------+----------+---------------+----------------+--------+
+
+    # for i in {1..6} ; do curl -w "\n" 172.24.4.230 ; done
+    rhel-03
+    rhel-02
+    rhel-01
+    rhel-03
+    rhel-02
+    rhel-01
+
+As expected, 'rhel-01' is again eligible to receive HTTP requests via the load balancer.
+
+A member can also be disabled by setting its weight to 0.
+
+    # neutron lb-member-update 5750769c-3131-41bd-b0f1-be6c41aa15c9 --weight 0
+    Updated member: 5750769c-3131-41bd-b0f1-be6c41aa15c9
+
+    # neutron lb-member-show 5750769c-3131-41bd-b0f1-be6c41aa15c9
+    +--------------------+--------------------------------------+
+    | Field              | Value                                |
+    +--------------------+--------------------------------------+
+    | address            | 10.0.0.3                             |
+    | admin_state_up     | True                                 |
+    | id                 | 5750769c-3131-41bd-b0f1-be6c41aa15c9 |
+    | pool_id            | 01745519-f910-4393-b237-a24a4f9c2a7d |
+    | protocol_port      | 80                                   |
+    | status             | ACTIVE                               |
+    | status_description |                                      |
+    | tenant_id          | 47e1f8f3b8dc4ab2a5f931cdd502afae     |
+    | weight             | 0                                    |
+    +--------------------+--------------------------------------+
+
+    # for i in {1..6} ; do curl -w "\n" 172.24.4.230 ; done
+    rhel-02
+    rhel-03
+    rhel-02
+    rhel-03
+    rhel-02
+    rhel-03
+
+Notice that the member is still marked active and the admin_state_up flag is true, but the member's weight has been changed to 0. Regardless of the algorithm being used, a member with a weight of 0 will not received any new connections from the load balancer. Set the weight back to 1 for the member to once again be considered for load balancing.
+
+    # neutron lb-member-update 5750769c-3131-41bd-b0f1-be6c41aa15c9 --weight 1
+    Updated member: 5750769c-3131-41bd-b0f1-be6c41aa15c9
+
+    # for i in {1..6} ; do curl -w "\n" 172.24.4.230 ; done
+    rhel-03
+    rhel-02
+    rhel-01
+    rhel-03
+    rhel-02
+    rhel-01
+
+As expected, 'rhel-01' is again eligible to receive HTTP requests via the load balancer.
+
+A simple way to demonstrate the health checker is to shutdown one of the virtual machines. This will obviously cause the health check to fail and the member should be marked inactive. Stop one of the virtual machines that is an active member of the pool and check that it is marked inactive.
+
+    # nova list
+    +--------------------------------------+---------+--------+------------+-------------+------------------+
+    | ID                                   | Name    | Status | Task State | Power State | Networks         |
+    +--------------------------------------+---------+--------+------------+-------------+------------------+
+    | 1fffa4ec-2bd6-426d-89b0-ead561545de7 | rhel-01 | ACTIVE | None       | Running     | private=10.0.0.3 |
+    | ae1f4f60-18c1-4001-8a55-7b7036ca6b3c | rhel-02 | ACTIVE | None       | Running     | private=10.0.0.4 |
+    | 429be6ec-a069-4dcd-bfca-33cd42606d39 | rhel-03 | ACTIVE | None       | Running     | private=10.0.0.5 |
+    +--------------------------------------+---------+--------+------------+-------------+------------------+
+
+    # nova stop rhel-03
+    # nova list
+    +--------------------------------------+---------+---------+------------+-------------+------------------+
+    | ID                                   | Name    | Status  | Task State | Power State | Networks         |
+    +--------------------------------------+---------+---------+------------+-------------+------------------+
+    | 1fffa4ec-2bd6-426d-89b0-ead561545de7 | rhel-01 | ACTIVE  | None       | Running     | private=10.0.0.3 |
+    | ae1f4f60-18c1-4001-8a55-7b7036ca6b3c | rhel-02 | ACTIVE  | None       | Running     | private=10.0.0.4 |
+    | 429be6ec-a069-4dcd-bfca-33cd42606d39 | rhel-03 | SHUTOFF | None       | Shutdown    | private=10.0.0.5 |
+    +--------------------------------------+---------+---------+------------+-------------+------------------+
+
+    # neutron lb-member-list
+    +--------------------------------------+----------+---------------+----------------+----------+
+    | id                                   | address  | protocol_port | admin_state_up | status   |
+    +--------------------------------------+----------+---------------+----------------+----------+
+    | 135846f5-e1b0-4ad0-83fd-de4dd1dbde58 | 10.0.0.4 |            80 | True           | ACTIVE   |
+    | 5750769c-3131-41bd-b0f1-be6c41aa15c9 | 10.0.0.3 |            80 | True           | ACTIVE   |
+    | 63f009cf-f6bc-4274-8e5d-f9c2613d7912 | 10.0.0.5 |            80 | True           | INACTIVE |
+    +--------------------------------------+----------+---------------+----------------+----------+
+
+Notice that 'rhel-03' (which has address 10.0.0.5) is now marked as an incative member. This was caused by repeated failed health checks because that member is obviously not responding to HTTP requests. Running our simple test of sending multiple HTTP requests to the load balancer.
+
+    # for i in {1..6} ; do curl -w "\n" 172.24.4.230 ; done
+    rhel-01
+    rhel-02
+    rhel-01
+    rhel-02
+    rhel-01
+    rhel-02
+
+As expected, 'rhel-03' does not received any traffic from the load balancer. Although this virtual machine is down, it is still a member of the pool and therefore is still being health checked every 5 seconds. If the virtual machine is restarted, health checks of this member will once again be successful when httpd is responsive. Tthe member should then be marked active and once again be eligible to received HTTP requests via the load-balancer.
+
+    # nova start rhel-03
+    # nova list
+    +--------------------------------------+---------+--------+------------+-------------+------------------+
+    | ID                                   | Name    | Status | Task State | Power State | Networks         |
+    +--------------------------------------+---------+--------+------------+-------------+------------------+
+    | 1fffa4ec-2bd6-426d-89b0-ead561545de7 | rhel-01 | ACTIVE | None       | Running     | private=10.0.0.3 |
+    | ae1f4f60-18c1-4001-8a55-7b7036ca6b3c | rhel-02 | ACTIVE | None       | Running     | private=10.0.0.4 |
+    | 429be6ec-a069-4dcd-bfca-33cd42606d39 | rhel-03 | ACTIVE | None       | Running     | private=10.0.0.5 |
+    +--------------------------------------+---------+--------+------------+-------------+------------------+
+
+    # neutron lb-member-list
+    +--------------------------------------+----------+---------------+----------------+--------+
+    | id                                   | address  | protocol_port | admin_state_up | status |
+    +--------------------------------------+----------+---------------+----------------+--------+
+    | 135846f5-e1b0-4ad0-83fd-de4dd1dbde58 | 10.0.0.4 |            80 | True           | ACTIVE |
+    | 5750769c-3131-41bd-b0f1-be6c41aa15c9 | 10.0.0.3 |            80 | True           | ACTIVE |
+    | 63f009cf-f6bc-4274-8e5d-f9c2613d7912 | 10.0.0.5 |            80 | True           | ACTIVE |
+    +--------------------------------------+----------+---------------+----------------+--------+
+
+    # for i in {1..6} ; do curl -w "\n" 172.24.4.230 ; done
+    rhel-01
+    rhel-02
+    rhel-03
+    rhel-01
+    rhel-02
+    rhel-03
