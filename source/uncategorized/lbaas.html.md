@@ -23,15 +23,15 @@ In this guide, haproxy will be used as the load balancer. Be sure that you eithe
 
 ### Installation
 
-The Neutron LBaaS extension can be enabled and configured by packstack at install time. To do so, use the --neutron-lbaas-hosts option to specify the IP address of that host that will run the LBaaS agent:
+The Neutron LBaaS extension can be enabled and configured by packstack at install time. To do so, use the --neutron-lbaas-hosts option to specify the IP address of the host that will run the LBaaS agent:
 
     # packstack --allinone --neutron-lbaas-hosts=192.168.1.10
 
-In the above example, packstack will do an all-in-one install on the local host, which has an IP address of 192.168.1.10. In the future it may be possible to have packstack install and configure the LBaaS agent on multiple hosts. For now, using the local host's IP address for the --neutron-lbaas-hosts option will configure LBaaS on our all-one-one deployment
+In the above example, packstack will do an all-in-one install on the local host, which has an IP address of 192.168.1.10. In the future it may be possible to have packstack install and configure the LBaaS agent on multiple hosts. For now, using the local host's IP address for the --neutron-lbaas-hosts option will configure LBaaS on the all-one-one deployment.
 
 ### Configuration
 
-For LBaaS to be configure properly, various configuration files must have the following changes:
+For LBaaS to be configured properly, various configuration files must have the following changes.
 
 The service_provider parameter should be set in /usr/share/neutron/neutron-dist.conf:
 
@@ -59,15 +59,15 @@ If the above configuration files were changed manually, restart the neutron-serv
 
 ### Deploy
 
-Now that the LBaaS plugin is configured and the LBaaS agent is running, the next step is to boot some virtual machines and deploy a load balancer. In the example shown here, the "demo" tenant, which is provisioned by packstack, will be used.
+Now that the LBaaS plugin is configured and the LBaaS agent is running, the next step is to boot the virtual machines and deploy a load balancer. In the example shown here, the "demo" tenant, which is provisioned by packstack, will be used.
 
-This example also makes use of a custom image that has the httpd service enabled. This is the service that will be load-balanced. In addition, the image was built such that the virtual machine's host name is retrieved from the metadata service and place in /var/www/html/index.html. This is done in by using a simple curl command in rc.local:
+This example also makes use of a custom image that has the httpd service enabled. This is the service that will be load-balanced. In addition, the image was built such that the virtual machine's host name is retrieved from the metadata service and placed in /var/www/html/index.html. This is done by using a simple curl command in rc.local:
 
     curl -s -o /var/www/html/index.html http://169.254.169.254/latest/meta-data/hostname
 
 This is useful to show the load balancer working later in the example.
 
-First, use the demo tenant for everything:
+First, use the demo tenant:
 
     # source keystonerc_demo
 
@@ -85,7 +85,7 @@ Check that the image was imported:
     | 5d6bd846-e044-4a8f-99f0-5ca1d006f8ef | rhel-http | qcow2       | bare             | 1690042368 | active |
     +--------------------------------------+-----------+-------------+------------------+------------+--------+
 
-Next, create a keypair to use with when we boot the image:
+Next, create a keypair to use when we boot the image:
 
     # nova keypair-add rdo-key > rdo-key.pem
     # nova keypair-list
@@ -95,7 +95,7 @@ Next, create a keypair to use with when we boot the image:
     | rdo-key | 35:4a:79:73:94:74:d1:5b:bc:10:6a:01:01:69:a7:51 |
     +---------+-------------------------------------------------+
 
-Create some virtual machines by booting the custom image. Each of the resulting instances will be running the httpd service, which we can then load balance. This example will use three httpd servers.
+Create the virtual machines by booting the custom image. Each of the resulting instances will be running the httpd service, which we can then load balance. This example will use three httpd servers.
 
     # nova boot --flavor 2 --image rhel-http --key-name rdo_key rhel-01
     # nova boot --flavor 2 --image rhel-http --key-name rdo_key rhel-02
@@ -112,9 +112,9 @@ Once the virtual machines are up and running, check that each is active and has 
     | 429be6ec-a069-4dcd-bfca-33cd42606d39 | rhel-03 | ACTIVE | None       | Running     | private=10.0.0.5 |
     +--------------------------------------+---------+--------+------------+-------------+------------------+
 
-Before creating a load balancer, we can test that each server is running the httpd service by creating three floating IP addresses and associating them with the virtual machines. Then, use a simple curl or wget command to send a HTTP request to each virtual machine. We expect that the HTTP response will be the virtual machine's host name. This step is not required since the servers will be accessible via the load balancer later on in our example.
+Before creating a load balancer, optionally test that each server is running the httpd service by creating three floating IP addresses and associating them with the virtual machines. Then, use a simple curl or wget command to send an HTTP request to each virtual machine. The HTTP response should be the virtual machine's host name. This step is not required since the servers will be accessible via the load balancer later on in our example.
 
-Check to see what networks are available.
+Check to see what networks are available:
 
     # neutron net-list
     +--------------------------------------+---------+--------------------------------------------------+
@@ -128,7 +128,7 @@ Create three floating IP addresses on the 'public' network by running the follow
 
     # neutron floatingip-create public
 
-Check to see what floating IP addresses were created:
+Check to see which floating IP addresses were created:
 
     # neutron floatingip-list --sort-key floating_ip_address --sort-dir asc
     +--------------------------------------+------------------+---------------------+---------+
@@ -171,7 +171,7 @@ Use curl to send an HTTP request to each instance. Since each instance has its h
     # curl -w "\n" 172.24.4.229
     rhel-03
 
-These results confirm that each virtual machine will respond to a simple HTTP request with its own hostname. This will be useful later in the example when HTTP requests are sent via the load balancer.
+These results confirm that each virtual machine will respond to a simple HTTP request with its hostname. This will be useful later in the example when HTTP requests are sent via the load balancer.
 
 The floating IP addresses that were associated with each virtual machine are no longer needed, so it is safe is disassociate them.
 
@@ -201,7 +201,7 @@ Confirm that the floating IP addresses still exist but are no longer associated 
 
 ### Create the load balancer
 
-The first step when create a load balancer is to create a pool. A pool is a group of virtual machines, known as members, that will provide the actual service. In this example there will be three members, each capable of providing the httpd service. In addition, the pool also defines the protocol, the load balancing algorithm, and the subnet with which to associate the load balancer. Note that the subnet must be the same as the members that belong to the pool.
+The first step when creating a load balancer is to create a pool. A pool is a group of virtual machines, known as members, that will provide the actual service. In this example there will be three members, each capable of providing the httpd service. In addition, the pool also defines the protocol, the load balancing algorithm, and the subnet with which to associate the load balancer. Note that the subnet must be the same as the subnet of the members that belong to the pool.
 
 First, get the subnet ID from neutron.
 
@@ -236,7 +236,7 @@ Next, create the pool.
     | vip_id                 |                                      |
     +------------------------+--------------------------------------+
 
-The example above creates a pool named "http-pool", uses the HTTP protocol and a round-robin load balancing algorithm. This pool is associated with the private subnet. The lb-pool-list and lb-pool-show commands can be used to get information about existing pools.
+The example above creates a pool named "http-pool", which uses the HTTP protocol and a round-robin load balancing algorithm. This pool is associated with the private subnet. The lb-pool-list and lb-pool-show commands may be used to get information about existing pools.
 
     # neutron lb-pool-list
     +--------------------------------------+-----------+----------+-------------+----------+----------------+----------------+
@@ -266,13 +266,13 @@ The example above creates a pool named "http-pool", uses the HTTP protocol and a
     | vip_id                 |                                      |
     +------------------------+--------------------------------------+
 
-The next step is to create members and add them to our pool. A member is nothing more than the IP address and port of a virtual machine that can provide the service being load-balanced. In this example there are three virtual machines listening on port 80. Create a member for each of these servers and add them to the pool.
+The next step is to create members and add them to the pool. A member is nothing more than the IP address and port of a virtual machine that can provide the service being load-balanced. In this example there are three virtual machines listening on port 80. Create a member for each of these servers and add them to the pool.
 
     # neutron lb-member-create --address 10.0.0.3 --protocol-port 80 http-pool
     # neutron lb-member-create --address 10.0.0.4 --protocol-port 80 http-pool
     # neutron lb-member-create --address 10.0.0.5 --protocol-port 80 http-pool
 
-The lb-member-list and lb-member-show commands can be used to get information about existing members.
+The lb-member-list and lb-member-show commands may be used to get information about existing members.
 
     # neutron lb-member-list --sort-key address --sort-dir asc
     +--------------------------------------+----------+---------------+----------------+----------------+
@@ -298,7 +298,7 @@ The lb-member-list and lb-member-show commands can be used to get information ab
     | weight             | 1                                    |
     +--------------------+--------------------------------------+
 
-Note that the member shown above has a pool ID that corresponds to the 'http-pool'. The lb-pool-show command can also be used to see the members of a given pool.
+Note that the member shown above has a pool ID that corresponds to the 'http-pool'. The lb-pool-show command may also be used to see the members of a given pool.
 
     # neutron lb-pool-show http-pool
     +------------------------+--------------------------------------+
@@ -323,7 +323,7 @@ Note that the member shown above has a pool ID that corresponds to the 'http-poo
     | vip_id                 |                                      |
     +------------------------+--------------------------------------+
 
-The next step is to create a health monitor and associate it with our pool. The health monitor is responsible for periodically checking the health of each backend server, or member, of the pool.
+The next step is to create a health monitor and associate it with othe pool. The health monitor is responsible for periodically checking the health of each member of the pool.
 
     # neutron lb-healthmonitor-create --delay 5 --type HTTP --max-retries 3 --timeout 2
     Created a new health_monitor:
@@ -345,11 +345,11 @@ The next step is to create a health monitor and associate it with our pool. The 
 
 In this example, the health monitor will perform an HTTP GET of the "/" path. This health check expects an HTTP status of 200 in the response, and the connection must be established within 2 seconds. This check will be retried a maximum of 3 times before a member is determined to be failed.
 
-At this point the health monitor has not yet been associated with a pool, so it isn't actually performing any health checks. Associating the health monitor with the 'http-pool' will cause each of the members of 'http-pool' to be checked in the manner described above.
+At this point the health monitor has not yet been associated with a pool, so it is not actually performing any health checks. Associating the health monitor with the 'http-pool' will cause each of the members of the pool to be checked in the manner described above.
 
     # neutron lb-healthmonitor-associate 1de041b8-37bd-4b9a-aac6-a4669110eb46 http-pool
 
-The lb-healthmonitor-list and lb-healthmonitor-show can be used to get information about existing health monitors.
+The lb-healthmonitor-list and lb-healthmonitor-show may be used to get information about existing health monitors.
 
     # neutron lb-healthmonitor-list
     +--------------------------------------+------+----------------+
@@ -375,7 +375,7 @@ The lb-healthmonitor-list and lb-healthmonitor-show can be used to get informati
     | url_path       | /                                                                                                           |
     +----------------+-------------------------------------------------------------------------------------------------------------+
 
-The final step in creating our load balancer is to create the virtual IP address, or VIP. This will create a virtual IP address for the load balancer on the private subnet and associate the virtual IP address with our pool. The virtual IP address must be created on the same subnet as the pool, which in this example is the 'private' subnet. A floating IP address on the 'public' network can then be associated with the virtual IP address on the 'private_subnet' such that the load balancer will be externally accessible. First, create the VIP.
+The final step in creating the load balancer is to create the virtual IP address, or VIP. This will create a VIP for the load balancer on the private subnet and associate the virtual IP address with the pool. The VIP must be created on the same subnet as the pool, which in this example is the 'private' subnet. A floating IP address on the 'public' network can then be associated with the virtual IP address on the 'private_subnet' such that the load balancer will be externally accessible. First, create the VIP.
 
     # neutron lb-vip-create --name http-vip --protocol-port 80 --protocol HTTP --subnet-id a4f17073-298e-4d92-8c19-8f3333145fd0 http-pool
     Created a new vip:
@@ -398,7 +398,7 @@ The final step in creating our load balancer is to create the virtual IP address
     | tenant_id          | 47e1f8f3b8dc4ab2a5f931cdd502afae     |
     +--------------------+--------------------------------------+
 
-The lb-vip-list and lb-vip-show commands can be used to get information about existing virtual IP addresses:
+The lb-vip-list and lb-vip-show commands may be used to get information about existing virtual IP addresses:
 
     # neutron lb-vip-list
     +--------------------------------------+----------+----------+----------+----------------+--------+
@@ -427,7 +427,7 @@ The lb-vip-list and lb-vip-show commands can be used to get information about ex
     | tenant_id          | 47e1f8f3b8dc4ab2a5f931cdd502afae     |
     +--------------------+--------------------------------------+
 
-At this point the load-balancer has been fully created and should be functional. Traffic sent to address 10.0.0.6 port 80 will be load-balanced across all active members of our pool. To make the load balancer externally accessible, create a floating IP address and associate it with the virtual IP address.
+At this point the load-balancer has been successfully created and should be functional. Traffic sent to address 10.0.0.6 on port 80 will be load-balanced across all active members of our pool. To make the load balancer externally accessible, create a floating IP address and associate it with the virtual IP address.
 
     # neutron floatingip-create public
     Created a new floatingip:
@@ -494,7 +494,7 @@ Next, mark one of the member's 'admin_state_up' flag to False. A member with 'ad
     | 63f009cf-f6bc-4274-8e5d-f9c2613d7912 | 10.0.0.5 |            80 | True           | ACTIVE |
     +--------------------------------------+----------+---------------+----------------+--------+
 
-The member with IP address 10.0.0.3 (rhel-01) should no longer receive traffic from the load-balancer. Note that the virtual machine itself is still running. This is effectively the same as removing the member from the pool. Repeating the test that sends multiple HTTP requests to the load balancer.
+The member with IP address 10.0.0.3 (rhel-01) should no longer receive traffic from the load balancer. Note that the virtual machine itself is still running. This is effectively the same as removing the member from the pool. Repeat the test that sends multiple HTTP requests to the load balancer.
 
     # for i in {1..6} ; do curl -w "\n" 172.24.4.230 ; done
     rhel-02
@@ -504,7 +504,7 @@ The member with IP address 10.0.0.3 (rhel-01) should no longer receive traffic f
     rhel-02
     rhel-03
 
-As expected, virtual machine 'rhel-01' is not considered for load-balancing. Set the admin_state_up flag back to true and rerun the test.
+As expected, virtual machine 'rhel-01' is not considered for load-balancing. Set the admin_state_up flag back to True and rerun the test.
 
     # neutron lb-member-update 5750769c-3131-41bd-b0f1-be6c41aa15c9 --admin_state_up True
     Updated member: 5750769c-3131-41bd-b0f1-be6c41aa15c9
@@ -556,7 +556,7 @@ A member can also be disabled by setting its weight to 0.
     rhel-02
     rhel-03
 
-Notice that the member is still marked active and the admin_state_up flag is true, but the member's weight has been changed to 0. Regardless of the algorithm being used, a member with a weight of 0 will not received any new connections from the load balancer. Set the weight back to 1 for the member to once again be considered for load balancing.
+Notice that the member is still marked active and the admin_state_up flag is True, but the member's weight has been changed to 0. Regardless of the algorithm being used, a member with a weight of 0 will not receive any new connections from the load balancer. Set the member's weight back to 1 for it to once again be considered for load balancing.
 
     # neutron lb-member-update 5750769c-3131-41bd-b0f1-be6c41aa15c9 --weight 1
     Updated member: 5750769c-3131-41bd-b0f1-be6c41aa15c9
@@ -571,7 +571,7 @@ Notice that the member is still marked active and the admin_state_up flag is tru
 
 As expected, 'rhel-01' is again eligible to receive HTTP requests via the load balancer.
 
-A simple way to demonstrate the health checker is to shutdown one of the virtual machines. This will obviously cause the health check to fail and the member should be marked inactive. Stop one of the virtual machines that is an active member of the pool and check that it is marked inactive.
+A simple way to demonstrate the health checker is to shutdown one of the virtual machines. This will cause the health check to fail and the member should be marked inactive. Stop one of the virtual machines that is an active member of the pool and check that it is marked inactive.
 
     # nova list
     +--------------------------------------+---------+--------+------------+-------------+------------------+
@@ -601,7 +601,7 @@ A simple way to demonstrate the health checker is to shutdown one of the virtual
     | 63f009cf-f6bc-4274-8e5d-f9c2613d7912 | 10.0.0.5 |            80 | True           | INACTIVE |
     +--------------------------------------+----------+---------------+----------------+----------+
 
-Notice that 'rhel-03' (which has address 10.0.0.5) is now marked as an incative member. This was caused by repeated failed health checks because that member is obviously not responding to HTTP requests. Running our simple test of sending multiple HTTP requests to the load balancer.
+Notice that 'rhel-03' (which has address 10.0.0.5) is now marked as an inactive member. This was caused by repeated failed health checks because that member is not responding to HTTP requests. Run our simple test of sending multiple HTTP requests to the load balancer.
 
     # for i in {1..6} ; do curl -w "\n" 172.24.4.230 ; done
     rhel-01
@@ -611,7 +611,7 @@ Notice that 'rhel-03' (which has address 10.0.0.5) is now marked as an incative 
     rhel-01
     rhel-02
 
-As expected, 'rhel-03' does not received any traffic from the load balancer. Although this virtual machine is down, it is still a member of the pool and therefore is still being health checked every 5 seconds. If the virtual machine is restarted, health checks of this member will once again be successful when httpd is responsive. Tthe member should then be marked active and once again be eligible to received HTTP requests via the load-balancer.
+As expected, 'rhel-03' does not receive any traffic from the load balancer. Although this virtual machine is down, it is still a member of the pool and therefore is still being health checked every 5 seconds. If the virtual machine is restarted, health checks of this member will once again be successful when httpd is responsive. The member should then be marked active and again be eligible to receive HTTP requests via the load-balancer.
 
     # nova start rhel-03
     # nova list
