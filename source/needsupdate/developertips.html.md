@@ -109,3 +109,5 @@ To find out who has what ACLs for a specific package:
               rkukura       Approved        Approved        Approved        Approved
               otherwiseguy  Approved        Approved        Approved        Approved
             Last build:     2014-01-07 by otherwiseguy for openstack-neutron-2014.1-0.2.b1.fc21 in rawhide
+
+For other actions you can perform via packagedb-cli, refer: <https://fedorahosted.org/packagedb-cli/>
