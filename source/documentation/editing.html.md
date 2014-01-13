@@ -14,4 +14,10 @@ For editing this wiki, please use [MediaWiki syntax](https://meta.wikimedia.org/
 
 In forum posts and comments, you can use [Markdown syntax](//daringfireball.net/projects/markdown/syntax).
 
+To post long lines, such as log output or script lines, wrap a block in
+
+         <pre style="white-space: pre; overflow-x: auto; word-wrap: normal">
+             ...
+         </pre>
+
 <Category:Documentation>
