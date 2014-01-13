@@ -90,3 +90,22 @@ Some packages (like *openstack-neutron*) have sub-packages, you can list all sub
     /mnt/koji/packages/openstack-neutron/2014.1/0.1.b1.fc21/noarch/openstack-neutron-mellanox-2014.1-0.1.b1.fc21.noarch.rpm
     /mnt/koji/packages/openstack-neutron/2014.1/0.1.b1.fc21/noarch/openstack-neutron-cisco-2014.1-0.1.b1.fc21.noarch.rpm
     /mnt/koji/packages/openstack-neutron/2014.1/0.1.b1.fc21/src/openstack-neutron-2014.1-0.1.b1.fc21.src.rpm
+
+## Using pkgdb-cli to query/manage ACLs for packages in Fedora packagedb
+
+To find out who has what ACLs for a specific package:
+
+    $ yum install packagedb-cli -y
+    $ pkgdb-cli acl openstack-neutron
+    Fedora Package Database -- openstack-neutron
+    OpenStack Networking Service
+    62 bugs open (new, assigned, needinfo)
+    devel   Owner:          otherwiseguy
+                            watchbugzilla   watchcommits    commit          approveacls
+            Group:
+              provenpackager                                Approved
+            Comaintainer(s):
+              jlibosva      Approved        Approved
+              rkukura       Approved        Approved        Approved        Approved
+              otherwiseguy  Approved        Approved        Approved        Approved
+            Last build:     2014-01-07 by otherwiseguy for openstack-neutron-2014.1-0.2.b1.fc21 in rawhide
