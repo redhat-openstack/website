@@ -24,6 +24,7 @@ wiki_last_updated: 2015-05-26
 *   [ Setting a Floating IP Range ](Floating IP range)
 *   [ Setting up a virtualized multi-node dev environment for Neutron ](NeutronLibvirtMultinodeDevEnvironment)
 *   [Configuring Neutron with existing external network](Neutron_with_existing_external_network)
+*   [ Configuring and Deploying LBaaS in OpenStack Havana ](LBaaS)
 *   [OpenStack Networking in Too Much Detail](Networking_in_too_much_detail)
 *   [ Other networking resources ](Networking)
 
