@@ -34,7 +34,7 @@ Create a file that contains a list of the GlusterFS shares. The file's path shou
 
 Set the permissions of the file so that the Cinder group will be able to read from it.
 
-      # chmod 0640 /etc/cinder/`<filename>`.conf
+      # chmod 664 /etc/cinder/`<filename>`.conf
 
 Configure the path of the file that has all the shares:
 
