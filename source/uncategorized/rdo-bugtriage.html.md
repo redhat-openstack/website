@@ -8,6 +8,8 @@ wiki_last_updated: 2014-05-21
 
 # RDO-Bug Triage
 
+Wednesday, January 14, 14:00 UTC is our next bug triage day. That's `date -d "14:00 UTC"` in your local timezone. Please feel free to stop by `#rdo` on IRC (Freenode) to help out or ask questions.
+
 ## Bugzilla queries
 
 *   List of un-triaged bugs (NEW state) -- <http://goo.gl/NqW2LN>
