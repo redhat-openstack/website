@@ -18,7 +18,7 @@ The RDO packages can be browsed at [RDO repositories](http://rdo.fedorapeople.or
 
 ## Fedora
 
-If you are installing OpenStack on Fedora, you **do not** need to enable any additional repositories. The RDO OpenStack packages are included in the Fedora repositories.
+If you are installing OpenStack on Fedora 20 or later, you **do not** need to enable any additional repositories. The RDO OpenStack packages and all dependencies are included in the Fedora repositories.
 
 ## EPEL
 
