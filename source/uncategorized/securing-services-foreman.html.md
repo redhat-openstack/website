@@ -193,3 +193,37 @@ You'll get a redirect which will confirm that SSL is a-ok:
      <hr>
      <address>Apache/2.2.15 (Red Hat) Server at controller.example.com Port 443</address>
      </body></html>
+
+### Cleanup
+
+If you are using an IPA server as your certificate source and you want to re-install an existing Nova controller node there will be some additional steps. You need to clean up the environment on the host itself and on the IPA server.
+
+#### On the host
+
+Tell certmonger to stop tracking its certificates and remove the PEM files.
+
+Run `ipa-getcert list`. There should be four tracked certificates. The first one is for the host itself with the location being /etc/pki/nssdb. We can leave this one alone.
+
+For each of the others, cancel tracking by request id for each one:
+
+`# ipa-getcert stop-tracking -i `<request_id>
+
+Remove the private key and certificate pem files for the mysql and horizon certificates:
+
+      ` # rm /etc/pki/tls/certs/`hostname`-mysql.crt `
+      ` # rm /etc/pki/tls/private/`hostname`-mysql.crt `
+      ` # rm /etc/pki/tls/certs/`hostname`-horizon.crt `
+      ` # rm /etc/pki/tls/private/`hostname`-horizon.crt `
+
+#### On the IPA master
+
+The controller node has permission to request a certificiate for its public interface but not permission to revoke or replace it so you'll need to do that in advance:
+
+      # ipa service-show horizon/hostname.public.example.com
+
+Note the serial number
+
+`# ipa cert-revoke `<serial_number>
+      # ipa service-mod horizon/hostname.public.example.com --certificate=
+
+This sets the certificate to nothing which effectively removes it from the entry.
