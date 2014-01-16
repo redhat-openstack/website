@@ -178,9 +178,9 @@ To use it:
 
 #### horizon
 
-Use curl to verify that Horizon is up and SSL works:
+Use curl to verify that Horizon is up and SSL works. You need to do this request on the public interface:
 
-`# curl --cacert /etc/ipa/ca.crt `[`` https://`hostname`/ ``](https://`hostname`/)
+`# curl --cacert /etc/ipa/ca.crt `[`https://hostname.public.example.com/`](https://hostname.public.example.com/)
 
 You'll get a redirect which will confirm that SSL is a-ok:
 
