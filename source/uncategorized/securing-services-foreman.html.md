@@ -22,7 +22,7 @@ This can be seen as extending <http://openstack.redhat.com/Deploying_RDO_Using_F
 
 ## Preparation
 
-You'll need a CA to issue server certificates, along with the CA certificate itself. Instructions for issuing certificates is beyond the scope of this document, but the subject should include CN=<fqdn> for SSL to work.
+You'll need a CA to issue server certificates, along with the CA certificate itself. Instructions for issuing certificates is beyond the scope of this document, but the subject of the server certificates should include CN=<fqdn> for SSL to work.
 
 Depending on your host configuration, some services may be running on separate machines. Keep this in mind when restarting services.
 
@@ -38,18 +38,22 @@ Automatic provisioning of Foreman is not currently supported. Some manual work i
 
 The Foreman installation is largely the same. FQDNs need to be provided to the installer in order SSL to work.
 
-As an example, with 3 machines: a foreman server, a controller node and a compute node, the foreman_server.sh might look like:
+As an example, with 3 machines: a foreman server, a controller node and a compute node. The controller and compute nodes at least have two separate networks, private and public. The bin/seeds.rb might look like:
 
-      PUPPETMASTER=foreman.example.com
-      ...
-      PRIVATE_CONTROLLER_FQDN=controller.example.com
-      PRIVATE_INTERFACE=eth0
-      PRIVATE_NETMASK=192.168.122.1/24
-      PUBLIC_CONTROLLER_FQDN=controller.example.com
-      PUBLIC_INTERFACE=eth0
-      PUBLIC_NETMASK=192.168.122.1/24
-      FOREMAN_GATEWAY=false
-      FOREMAN_PROVISIONING=false
+    "controller_priv_host"          => 'controller.private.example.com',
+    "controller_pub_host"           => 'controller.public.example.com',
+    "mysql_host"                    => 'controller.private.example.com',
+     ...
+    "qpid_host"                     => 'controller.private.example.com',
+    ...
+    "mysql_ca"                      => "/etc/ipa/ca.crt",
+    "mysql_cert"                    => "/etc/pki/tls/certs/controller.private.example.com-mysql.crt",
+    "mysql_key"                     => "/etc/pki/tls/private/controller.private.example.com-mysql.key",
+    "qpid_ca"                       => "/etc/ipa/ca.crt",
+    "qpid_cert"                     => "/etc/pki/tls/certs/controller.private.example.com-qpid.crt",
+    "qpid_key"                      => "/etc/pki/tls/private/controller.private.example.com-qpid.key",
+    "horizon_cert"                  => "/etc/pki/tls/certs/controller.public.example.com-horizon.crt",
+    "horizon_key"                   => "/etc/pki/tls/private/controller.public.example.com-horizon.key",
 
 ## Initial Node installation
 
@@ -99,15 +103,17 @@ Next, you’ll need to assign the correct puppet classes to each of your hosts. 
 
 #### Manual SSL Configuration
 
-The default settings are ssl = true and freeipa = false. It is ok to leave things as-is.
+Override ssl to true. freeipa should be false which is the default.
 
 #### IPA Configuration
 
-ssl is enabled by default. Override the freeipa value and set it to true.
+Override ssl and freeipa values and set them to true.
 
 ### Compute
 
 In both cases (manual or IPA SSL configuration) only ssl needs to be set to true if the Controller node has ssl enabled.
+
+Be sure to verify that the interface names match the system.
 
 ## Apply Configuration
 
