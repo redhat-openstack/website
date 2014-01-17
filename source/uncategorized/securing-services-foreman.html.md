@@ -101,6 +101,8 @@ Next, you’ll need to assign the correct puppet classes to each of your hosts. 
 
 ### Controller
 
+In either case select the Host Group: Controller (Nova Network)
+
 #### Manual SSL Configuration
 
 Override ssl to true. freeipa should be false which is the default.
@@ -119,7 +121,7 @@ Be sure to verify that the interface names match the system.
 
       puppet agent -tv
 
-## Verifying Configuration
+## Verifying Configuration on the Controller
 
 Here are some basic steps to ensure that the services are working as expected.
 
@@ -127,13 +129,14 @@ Here are some basic steps to ensure that the services are working as expected.
 
 First confirm that the certificates for qpid and mysql were retrieve and are being tracked for renewal:
 
-      ipa-getcert list
+      # ipa-getcert list
 
 The output should contain 3 Request IDs in a monitoring state. These include:
 
 *   the host certificate
 *   the qpid certificate
 *   the mysql certificate
+*   the horizon certificate
 
 ### Common for Manual and IPA Configuration
 
