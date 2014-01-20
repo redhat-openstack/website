@@ -22,7 +22,7 @@ Below, we'll explain how to set up OpenStack on a single server. You'll be able 
 
 If you just want to try it out without installing anything, check out [TryStack](http://trystack.org).
 
-These instructions are to install the current ("**Havana**") release. If you'd like to try the development version of OpenStack ("**Icehouse**"), please follow [Devel release quick start](QuickStartDevelRelease). Also note these devel test day notes [Jan 7/8](RDO_test_day_January_2014), [Feb](RDO_test_day_February_2014).
+These instructions are to install the current ("**Havana**") release. If you'd like to try the development version of OpenStack ("**Icehouse**"), please follow [Devel release quick start](QuickStartDevelRelease). Also note these devel test day notes [Jan 7/8](RDO_test_day_January_2014), [Feb 4/5](RDO_test_day_Icehouse_milestone_2).
 
 </div>
 </div>
