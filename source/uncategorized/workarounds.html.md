@@ -131,6 +131,8 @@ xqueralt: installing and enabling the tuned service before running packstack sol
 
 hma: I have the exact same problem. My tuned is up and I did "yum update -y". but, the problem is still persistent. I am following RDO quick start to install OpenStack (Grizzly) on Fedora 19 which is on VMware (VMware player). I also changed IP address in /etc/libvirt/qemu/networks/default.xml as other post suggests, But, it does not help.
 
+mmagr: don't forget to also restart tuned.service, After restart it always solved this issue for me.
+
 ## heat-api and heat-engine fail to start
 
 *   **Bug:** <https://bugzilla.redhat.com/1006868>
