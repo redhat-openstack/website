@@ -13,8 +13,6 @@ wiki_last_updated: 2014-02-21
 
 Tested Setups for [RDO_test_day_January_2014](RDO_test_day_January_2014). Tests should be executed against the Icehouse RDO **not** Havana, some steps from the official Quickstart guide **do not** apply to Icehouse; make sure to follow the steps described in the [RDO_test_day_January_2014#How_To_Test](RDO_test_day_January_2014#How_To_Test) page instead.
 
-*See [TestedSetups](TestedSetups) for the canonical list, including history and filed bugs.*
-
 ## Example Entry
 
 Here's how you might fill out an entry once you've tested it. Mark a given test "Good" or "Fail", as appropriate, and link to any tickets that you've opened as a result, and to any place where you've written up your test notes. Mark as Workaround if you have a failure but can get past it. Link to your writeup of the workaround.
