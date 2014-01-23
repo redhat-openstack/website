@@ -21,8 +21,8 @@ wiki_last_updated: 2014-08-07
 | openstack-cinder              | Eric Harney             | Dafna Ron              |         |
 | openstack-foreman-installer   | Jason Guiditta          | Ami Jeain              |         |
 | openstack-glance              | Flavio Percoco          | Dafna Ron              |         |
-| openstack-heat                | Jeff Peeler             | Kevin Whitney          |         |
-| openstack-heat-templates      | Jeff Peeler             | Kevin Whitney          |         |
+| openstack-heat                | Steven Dake             | Kevin Whitney          |         |
+| openstack-heat-templates      | Steven Dake             | Kevin Whitney          |         |
 | openstack-keystone            | Alan Pevec              | Ami Jeain              |         |
 | openstack-neutron             | Miguel Angel Ajo Pelayo | Ofer Blaut             |         |
 | openstack-nova                | Xavier Queralt-Mateu    | Ami Jeain              |         |
