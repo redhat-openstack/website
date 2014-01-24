@@ -15,7 +15,7 @@ We'll be testing the second Icehouse milestone release. If you can do any testin
 
 ## Who's Participating
 
-rbowen - Test matrix, wiki stuff
+rbowen (Rich Bowen) - Test matrix, wiki stuff
 
 ## Prerequisites
 
