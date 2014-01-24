@@ -29,8 +29,6 @@ We plan to have have packages for the following platforms:
 
 You'll want a fresh install with latest updates installed. (Fresh so that there's no hard-to-reproduce interactions with other things.)
 
-## How to test
-
 ## How To Test
 
     sudo yum install http://rdo.fedorapeople.org/openstack-icehouse/rdo-release-icehouse.rpm
