@@ -17,4 +17,14 @@ We'll be testing the second Icehouse milestone release. If you can do any testin
 
 ## Prerequisites
 
+We plan to have have packages for the following platforms:
+
+*   Fedora 19
+*   Fedora 20
+*   RHEL 6.5
+*   CentOS 6
+*   CentOS 6.5
+
+You'll want a fresh install with latest updates installed. (Fresh so that there's no hard-to-reproduce interactions with other things.)
+
 ## How to test
