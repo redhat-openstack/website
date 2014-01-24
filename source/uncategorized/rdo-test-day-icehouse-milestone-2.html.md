@@ -15,6 +15,8 @@ We'll be testing the second Icehouse milestone release. If you can do any testin
 
 ## Who's Participating
 
+rbowen - Test matrix, wiki stuff
+
 ## Prerequisites
 
 We plan to have have packages for the following platforms:
