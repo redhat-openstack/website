@@ -87,9 +87,9 @@ Please see [Docs/Storage](Docs/Storage) for configuration guides as well as sugg
 
 Various components which don't fit the large test efforts above.
 
-| Item/Area Name                                     | Release      | BaseOS   | Status | HOWTO | Who | Date | BZ/LP | Notes Page                                      |
-|----------------------------------------------------|--------------|----------|--------|-------|-----|------|-------|-------------------------------------------------|
-| Ceilometer: All-in-One w/ Neutron Networking, Heat | RDO icehouse | RHEL 6.5 |        |       |     |      |       | Used script "cst.bash" (Ceilometer Sanity Test) |
+| Item/Area Name                                     | Release      | BaseOS   | Status | HOWTO | Who | Date | BZ/LP | Notes Page |
+|----------------------------------------------------|--------------|----------|--------|-------|-----|------|-------|------------|
+| Ceilometer: All-in-One w/ Neutron Networking, Heat | RDO icehouse | RHEL 6.5 |        |       |     |      |       |            |
 
 ## Advanced Installs (Foreman Based) -- Work in Progress
 
