@@ -21,9 +21,9 @@ rbowen (Rich Bowen) - Test matrix, wiki stuff
 
 We plan to have have packages for the following platforms:
 
-*   Fedora 19
 *   Fedora 20
 *   RHEL 6.5
+*   RHEL 7 beta
 *   CentOS 6
 *   CentOS 6.5
 
