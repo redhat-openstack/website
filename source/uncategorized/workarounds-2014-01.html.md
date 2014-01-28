@@ -10,6 +10,8 @@ wiki_last_updated: 2014-05-23
 
 This page documents workarounds that may be required for installing RDO Icehouse Milestone 1. This page is associated with the [RDO_test_day_January_2014](RDO_test_day_January_2014). Please see [Workarounds](Workarounds) for a recommended format for writing up these workarounds.
 
+= Active
+
 ## Failed to set up an ip address (Fedora 20)
 
 *   **Bug:** [1049503](https://bugzilla.redhat.com/show_bug.cgi?id=1049503)
@@ -45,32 +47,6 @@ If you hit this during a packstack run, you can still apply the workaround and r
        packstack --answer-file=$answerfile
 
 An alternative packstack workaround for this issue is to change /usr/lib/python2.7/site-packages/packstack/puppet/modules/mysql/manifests/params.pp to include "$service_name = 'mariadb'" in the Fedora >= 19 section
-
-## Failed to parse /etc/nova/nova.conf (RHEL)
-
-*   **Bug:** ~~[1047156](https://bugzilla.redhat.com/show_bug.cgi?id=1047156)~~, ~~[1048315](https://bugzilla.redhat.com/show_bug.cgi?id=1048315)~~, ~~[1048319](https://bugzilla.redhat.com/show_bug.cgi?id=1048319)~~
-*   **Affects:** RHEL, CentOS
-
-#### symptoms
-
-ERROR : Error appeared during Puppet run: <all-in-one-host>_api_nova.pp Notice: /Stage[main]/Nova::Api/Exec[nova-db-sync]/returns: oslo.config.cfg.ConfigFileParseError: Failed to parse /etc/nova/nova.conf
-
-and other similar errors
-
-#### workaround
-
-         sed -i '/^nil$/d' /etc/nova/nova.conf
-         test -e /var/log/nova/nova-manage.log && chown nova:nova /var/log/nova/nova-manage.log
-       
-         sed -i '/^nil$/d' /etc/heat/heat.conf
-         test -e /var/log/nova/heat-manage.log && chown heat:heat /var/log/nova/heat-manage.log
-       
-          openstack-db --service nova --rootpw redhat --password redhat --drop
-          openstack-db --service nova --rootpw redhat --password redhat --init
-
-Then run packstack again:
-
-       packstack --answer-file=$answerfile
 
 ## Failed to start mongodb
 
@@ -143,6 +119,7 @@ Explicitly start the new openstack-ceilometer-agent-notification service immedia
 
 *   **Bug:** [1049235](https://bugzilla.redhat.com/show_bug.cgi?id=1049235)
 *   **Affects:** Fedora 20
+*   **Status:** **MODIFIED**
 
 #### symptoms
 
@@ -161,6 +138,7 @@ neutron-openvswitch-agent fails to start with "No module named psutil"
 
 *   **Bug:** [1049391](https://bugzilla.redhat.com/show_bug.cgi?id=1049391)
 *   **Affects:** Fedora 20
+*   **Status:** **POST**
 
 #### symptoms
 
@@ -169,3 +147,31 @@ When starting an instance the above exception is received
 #### workaround
 
 Edit nova compute with <http://www.fpaste.org/66395/13890996/> and restart
+
+= Resolved
+
+## Failed to parse /etc/nova/nova.conf (RHEL)
+
+*   **Bug:** ~~[1047156](https://bugzilla.redhat.com/show_bug.cgi?id=1047156)~~, ~~[1048315](https://bugzilla.redhat.com/show_bug.cgi?id=1048315)~~, ~~[1048319](https://bugzilla.redhat.com/show_bug.cgi?id=1048319)~~
+*   **Affects:** RHEL, CentOS
+
+#### symptoms
+
+ERROR : Error appeared during Puppet run: <all-in-one-host>_api_nova.pp Notice: /Stage[main]/Nova::Api/Exec[nova-db-sync]/returns: oslo.config.cfg.ConfigFileParseError: Failed to parse /etc/nova/nova.conf
+
+and other similar errors
+
+#### workaround
+
+         sed -i '/^nil$/d' /etc/nova/nova.conf
+         test -e /var/log/nova/nova-manage.log && chown nova:nova /var/log/nova/nova-manage.log
+       
+         sed -i '/^nil$/d' /etc/heat/heat.conf
+         test -e /var/log/nova/heat-manage.log && chown heat:heat /var/log/nova/heat-manage.log
+       
+          openstack-db --service nova --rootpw redhat --password redhat --drop
+          openstack-db --service nova --rootpw redhat --password redhat --init
+
+Then run packstack again:
+
+       packstack --answer-file=$answerfile
