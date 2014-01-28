@@ -10,33 +10,33 @@ wiki_last_updated: 2014-05-23
 
 This page documents workarounds that may be required for installing RDO Icehouse Milestone 1. This page is associated with the [RDO_test_day_January_2014](RDO_test_day_January_2014). Please see [Workarounds](Workarounds) for a recommended format for writing up these workarounds.
 
-= Active
+## Active
 
-## Failed to set up an ip address (Fedora 20)
+### Failed to set up an ip address (Fedora 20)
 
 *   **Bug:** [1049503](https://bugzilla.redhat.com/show_bug.cgi?id=1049503)
 *   **Affects:** Fedora 20
 
-#### symptoms
+##### symptoms
 
 avc denial when setting up an ip address for an instance or at service start up
 
-#### workaround (Before running packstack)
+##### workaround (Before running packstack)
 
        setenforce 0
 
-#### notes
+##### notes
 
-## Failed to start mysqld (Fedora 20)
+### Failed to start mysqld (Fedora 20)
 
 *   **Bug:** [981116](https://bugzilla.redhat.com/show_bug.cgi?id=981116)
 *   **Affects:** Fedora 20
 
-#### symptoms
+##### symptoms
 
 ERROR : Error appeared during Puppet run: error running /sbin/chkconfig mysqld on
 
-#### workaround (Before running packstack)
+##### workaround (Before running packstack)
 
        yum install -y mariadb-server
        rm /usr/lib/systemd/system/mysqld.service
@@ -48,16 +48,16 @@ If you hit this during a packstack run, you can still apply the workaround and r
 
 An alternative packstack workaround for this issue is to change /usr/lib/python2.7/site-packages/packstack/puppet/modules/mysql/manifests/params.pp to include "$service_name = 'mariadb'" in the Fedora >= 19 section
 
-## Failed to start mongodb
+### Failed to start mongodb
 
 *   **Bug:** [1028690](https://bugzilla.redhat.com/show_bug.cgi?id=1028690)
 *   **Affects:** Fedora 20, RHEL
 
-#### symptoms
+##### symptoms
 
 ERROR : Error appeared during Puppet run: ...ceilometer.pp: error starting mongodb
 
-#### workaround
+##### workaround
 
        Starting the mongo service manually
 
@@ -65,16 +65,16 @@ Then run packstack again:
 
        packstack --answer-file=$answerfile
 
-## Failed to start mongodb in an environment under heavy load (Fedora 20)
+### Failed to start mongodb in an environment under heavy load (Fedora 20)
 
 *   **Bug:** [1040573](https://bugzilla.redhat.com/show_bug.cgi?id=1040573)
 *   **Affects:** Fedora 20
 
-#### symptoms
+##### symptoms
 
 ERROR : Error appeared during Puppet run: ...ceilometer.pp: error starting mongodb
 
-#### workaround (Before running packstack)
+##### workaround (Before running packstack)
 
        yum install -y mongodb-server
        sed -e 's|`\(ExecStart.*\)`|\1\nTimeoutStartSec=10m|' -i /lib/systemd/system/mongod.service
@@ -83,16 +83,16 @@ If you hit this during a packstack run, you can still apply the workaround and r
 
        packstack --answer-file=$answerfile
 
-## Installation fails on Fedora 20 if tempest is enabled
+### Installation fails on Fedora 20 if tempest is enabled
 
 *   **Bug:** [1049114](https://bugzilla.redhat.com/show_bug.cgi?id=1049114)
 *   **Affects:** Fedora 20
 
-#### symptoms
+##### symptoms
 
 ERROR : Error appeared during Puppet run: ...provision.pp: mysql-devel does not exist
 
-#### workaround (Before running packstack)
+##### workaround (Before running packstack)
 
        sed -e 's/mysql/mariadb/g' -i  /usr/lib/python2.7/site-packages/packstack/puppet/modules/tempest/manifests/params.pp
 
@@ -100,28 +100,28 @@ If you hit this during a packstack run, you can still apply the workaround and r
 
        packstack --answer-file=$answerfile
 
-## ceilometer: notifications from openstack services not processed
+### ceilometer: notifications from openstack services not processed
 
 *   **Bug:** [1049369](https://bugzilla.redhat.com/1049369)
 *   **Affects:** All
 
-#### symptoms
+##### symptoms
 
 Data for any meter derived from notifications emitted by the openstack services are not recorded.
 
-#### workaround
+##### workaround
 
 Explicitly start the new openstack-ceilometer-agent-notification service immediately post-installation:
 
        sudo service openstack-ceilometer-agent-notification start
 
-## neutron-openvswitch-agent fails to start
+### neutron-openvswitch-agent fails to start
 
 *   **Bug:** [1049235](https://bugzilla.redhat.com/show_bug.cgi?id=1049235)
 *   **Affects:** Fedora 20
 *   **Status:** **MODIFIED**
 
-#### symptoms
+##### symptoms
 
 neutron-openvswitch-agent fails to start with "No module named psutil"
 
@@ -130,38 +130,38 @@ neutron-openvswitch-agent fails to start with "No module named psutil"
     Jan 07 02:45:15 node2-compute neutron-openvswitch-agent[3471]: import psutil
     Jan 07 02:45:15 node2-compute neutron-openvswitch-agent[3471]: ImportError: No module named psutil
 
-#### workaround
+##### workaround
 
      $ yum install python-psutil -y 
 
-## openstack-nova-compute service fails with - libvirtError: internal error: CPU feature \`...' specified more than once
+### openstack-nova-compute service fails with - libvirtError: internal error: CPU feature \`...' specified more than once
 
 *   **Bug:** [1049391](https://bugzilla.redhat.com/show_bug.cgi?id=1049391)
 *   **Affects:** Fedora 20
 *   **Status:** **POST**
 
-#### symptoms
+##### symptoms
 
 When starting an instance the above exception is received
 
-#### workaround
+##### workaround
 
 Edit nova compute with <http://www.fpaste.org/66395/13890996/> and restart
 
-= Resolved
+## Resolved
 
-## Failed to parse /etc/nova/nova.conf (RHEL)
+### Failed to parse /etc/nova/nova.conf (RHEL)
 
 *   **Bug:** ~~[1047156](https://bugzilla.redhat.com/show_bug.cgi?id=1047156)~~, ~~[1048315](https://bugzilla.redhat.com/show_bug.cgi?id=1048315)~~, ~~[1048319](https://bugzilla.redhat.com/show_bug.cgi?id=1048319)~~
 *   **Affects:** RHEL, CentOS
 
-#### symptoms
+##### symptoms
 
 ERROR : Error appeared during Puppet run: <all-in-one-host>_api_nova.pp Notice: /Stage[main]/Nova::Api/Exec[nova-db-sync]/returns: oslo.config.cfg.ConfigFileParseError: Failed to parse /etc/nova/nova.conf
 
 and other similar errors
 
-#### workaround
+##### workaround
 
          sed -i '/^nil$/d' /etc/nova/nova.conf
          test -e /var/log/nova/nova-manage.log && chown nova:nova /var/log/nova/nova-manage.log
