@@ -16,4 +16,5 @@ There are lots of events, around the world, where you can hang out with people f
 *   [Infrastructure.Next](http://community.redhat.com/blog/2013/12/announcing-infrastructure-next/), February 5, Ghent, Belgium.
 *   Derek Higgins will be presenting ["Deploying OpenStack with Triple-O and Tuskar" at the OpenStack France Meet-up in Paris](http://www.meetup.com/OpenStack-France/events/161704432), February 11th
 *   [SCALE](https://www.socallinuxexpo.org/scale12x), February 21-23, Los Angeles, CA
+*   [Google Hangout - Setting up a multi-node deployment with Packstack](Hangouts#Upcoming_Hangouts) - February 27th, 10am EST
 *   [OpenStack Summit](http://www.openstack.org/summit/openstack-summit-atlanta-2014/), May 12-16, 2014, Atlanta, GA
