@@ -15,7 +15,7 @@ We'll be testing the second Icehouse milestone release. If you can do any testin
 
 ## Who's Participating
 
-rbowen (Rich Bowen) - Test matrix, wiki stuff yeylon (Yaniv Eylon) - Foreman installation, IRC tshefi (Tzach Shefi) - Glance Semi/Fully Distributed: GlusterFS, Swift nmagnezi (Nir Magnezi - Neutron ML2, Neutron OVS
+rbowen (Rich Bowen) - Test matrix, wiki stuff yeylon (Yaniv Eylon) - Foreman installation, IRC tshefi (Tzach Shefi) - Glance Semi/Fully Distributed: GlusterFS, Swift nmagnezi (Nir Magnezi) - Neutron ML2, Neutron OVS
 
 ## Prerequisites
 
