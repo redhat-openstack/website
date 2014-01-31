@@ -8,6 +8,14 @@ wiki_last_updated: 2015-05-05
 
 # TripleO VM Setup
 
+## Background
+
+The steps in this setup are a way of trying out an OpenStack deployment using TripleO. TripleO is the OpenStack Deployment program whose goal is to be able to deploy OpenStack using OpenStack wherever possible. Using baremetal provisioning from Nova, orchestration from Heat, and other OpenStack projects, you can deploy your cloud.
+
+These steps refer to an Undercloud and an Overcloud. The Undercloud is an OpenStack installation that will deploy your Overcloud. While the Overcloud is the cloud for end users, whether it be public, private, hybrid, etc.
+
+This setup uses 3 vm's: 1 for your Undercloud, and 2 for your Overcloud (a Control and a Compute node). The Overcloud vm's will be PXE booted, installed, and setup for your OpenStack deployment, just like you were using baremetal.
+
 ## Prerequisites
 
 1.  These steps have been tested on Fedora 20. However, they're likely to work on Fedora 19.
