@@ -123,7 +123,7 @@ Note that some of the commands below use '\' for bash line continuation to make 
 2.  Add your ssh key to nova.
         user-config
 
-3.  Deploy the Overcloud. The heat stack-create command will return immediately and show CREATE_IN_PROGRESS. You can run 'heat stack-list' to check its status, it should show CREATE_COMPLETE once finished. It will take around 5-10 minutes to complete.
+3.  Deploy the Overcloud. The heat stack-create command will return immediately and show CREATE_IN_PROGRESS. You can run 'heat stack-list' to check its status, it should show CREATE_COMPLETE once finished. It will take around 5-10 minutes to complete. If you have access to your vm's consoles via virt-manager or another tool, go ahead and watch the consoles as the vm's are powered on and PXE booted (the 2 Overcloud vm's are called baremetal_0 and baremetal_1).
         setup-overcloud-passwords
         source tripleo-overcloud-passwords
         make -C $TRIPLEO_ROOT/tripleo-heat-templates overcloud.yaml
