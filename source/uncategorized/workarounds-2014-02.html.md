@@ -22,3 +22,8 @@ This page documents workarounds that may be required for installing RDO Icehouse
 
 *   **Bug:** [1060334](https://bugzilla.redhat.com/show_bug.cgi?id=1060334)
 *   **Affects:** Fedora 20
+
+### Error: nova-compute fails to start properly
+
+*   **Bug:** [1049391](https://bugzilla.redhat.com/show_bug.cgi?id=1049391)
+*   **Affects:** Fedora 20
