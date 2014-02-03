@@ -45,6 +45,8 @@ We'll be testing the second Icehouse milestone release. If you can do any testin
 
 * rlandy (Ronelle Landy) - Tripleo/Tuskar
 
+* weshay ( Wes Hayutin ) - Packstack
+
 ## Prerequisites
 
 We plan to have have packages for the following platforms:
