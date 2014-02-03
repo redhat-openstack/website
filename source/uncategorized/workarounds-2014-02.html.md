@@ -17,6 +17,7 @@ This page documents workarounds that may be required for installing RDO Icehouse
 
 *   **Bug:** [1059815](https://bugzilla.redhat.com/show_bug.cgi?id=1059815)
 *   **Affects:** RHEL, CentOS
+*   FIXED
 
 ### Error: Package: openstack-dashboard-2014.1-0.1b1.fc21.noarch (openstack-icehouse)
 
