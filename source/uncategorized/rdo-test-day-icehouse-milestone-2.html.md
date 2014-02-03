@@ -27,6 +27,8 @@ We'll be testing the second Icehouse milestone release. If you can do any testin
 
 * ajeain (Ami Jeain) - Horizon
 
+* augol/cmyster (Amit Ugol) - Heat
+
 * ukalifon (Udi Kalifon) - Keystone
 
 * ohochman (Omri Hochman) - Foremen, Nova - IRC
