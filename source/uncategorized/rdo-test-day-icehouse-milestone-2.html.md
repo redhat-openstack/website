@@ -43,6 +43,8 @@ We'll be testing the second Icehouse milestone release. If you can do any testin
 
 * gszasz (Gabriel Szasz) - Nova, IRC
 
+* rlandy (Ronelle Landy) - Tripleo/Tuskar
+
 ## Prerequisites
 
 We plan to have have packages for the following platforms:
