@@ -152,3 +152,5 @@ These steps are actually the same as the TripleO upstream process, so instead of
 ## Future
 
 In future updates, look to see some of these steps getting replaced with using Tuskar (https://wiki.openstack.org/wiki/TripleO/Tuskar), and a move to Ironic (https://wiki.openstack.org/wiki/Ironic).
+
+Also, expect the vm images to be based off of the RDO icehouse packages in the near future.
