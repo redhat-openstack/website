@@ -16,6 +16,8 @@ These steps refer to an Undercloud and an Overcloud. The Undercloud is an OpenSt
 
 This setup uses 3 vm's: 1 for your Undercloud, and 2 for your Overcloud (a Control and a Compute node). The Overcloud vm's will be PXE booted, installed, and setup for your OpenStack deployment, just like you were using baremetal.
 
+The vm images are based on the icehouse-2 milestone tarballs from <http://tarballs.openstack.org/> (with 1 or 2 exceptions for some needed bug fixes).
+
 ## Prerequisites
 
 1.  These steps have been tested on Fedora 20. However, they're likely to work on Fedora 19.
