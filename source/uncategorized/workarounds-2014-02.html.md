@@ -23,6 +23,7 @@ This page documents workarounds that may be required for installing RDO Icehouse
 
 *   **Bug:** [1060334](https://bugzilla.redhat.com/show_bug.cgi?id=1060334)
 *   **Affects:** Fedora 20
+*   **Workaround:** Ensure python-troveclient >= 1.0 is installed from [updates](https://admin.fedoraproject.org/updates/python-troveclient-1.0.3-1.fc20)
 
 ### Error: nova-compute fails to start properly
 
