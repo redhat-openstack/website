@@ -39,6 +39,7 @@ Install the ML2 plugin:
 
 Switch to ML2's config file:
 
+      [ -h /etc/neutron/plugin.ini ] && unlink /etc/neutron/plugin.ini
       ln -s /etc/neutron/plugins/ml2/ml2_conf.ini /etc/neutron/plugin.ini
 
 Configure neutron-server to load the ML2 core plugin and the L3Router service plugin:
