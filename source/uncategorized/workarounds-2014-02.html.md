@@ -40,3 +40,4 @@ This page documents workarounds that may be required for installing RDO Icehouse
 
 *   **Bug:** [1060923](https://bugzilla.redhat.com/show_bug.cgi?id=1060923)
 *   **Affects:** RHEL, CentOS ( if set to y, set provision_tempest to 'n')
+*   **FIXED**
