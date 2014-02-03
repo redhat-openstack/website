@@ -28,3 +28,9 @@ This page documents workarounds that may be required for installing RDO Icehouse
 
 *   **Bug:** [1049391](https://bugzilla.redhat.com/show_bug.cgi?id=1049391)
 *   **Affects:** Fedora 20
+
+### Error: Heat, packstack install fails due to heat db migrate
+
+*   **Bug:** [1060904](https://bugzilla.redhat.com/show_bug.cgi?id=1060904)
+*   **Affects:** RHEL, CentOS
+*   Work around: Turn off heat in packstack answer file
