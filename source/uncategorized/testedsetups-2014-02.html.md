@@ -56,31 +56,25 @@ Please see [Docs/Storage](Docs/Storage) for configuration guides as well as sugg
 
 | Config Name                                                   | Backend                                                              | BaseOS      | Status | HOWTO | Who | Date | BZ/LP | Notes Page |
 |---------------------------------------------------------------|----------------------------------------------------------------------|-------------|--------|-------|-----|------|-------|------------|
-| [Cinder] All-in-One: different Cinder drivers only            | See [Docs/Storage](Docs/Storage) for guides and testables |
+| [Cinder] All-in-One: non-local storage drivers only           | See [Docs/Storage](Docs/Storage) for guides and testables |
 |                                                               |                                                                      | CentOS 6.5  | ??     |       | ??  | ??   | None  | None       |
-|                                                               |                                                                      | Fedora 20   | ??     |       | ??  | ??   | None  | None       |
-|                                                               | LVM                                                                  | RHEL 6.5    |        |       |     |      | None  | None       |
-|                                                               | gluster                                                              | RHEL 6.5    | ??     |       | ??  | ??   | None  | None       |
-|                                                               | ThinLVM                                                              | RHEL 6.5    |        |       |     | ??   | None  | None       |
-|                                                               | nfs                                                                  | RHEL 6.5    | ??     |       | ??  | ??   | None  | None       |
-|                                                               |                                                                      | RHEL 7 Beta | ??     |       | ??  | ??   | None  | None       |
-| [Cinder] Semi/Fully Distributed: GlusterFS, EMC, LVM, ThinLVM | See [Docs/Storage](Docs/Storage) for guides and testables |
-|                                                               |                                                                      | CentOS 6.5  | ??     |       | ??  | ??   | None  | None       |
-|                                                               | EMC iSCSI                                                            | RHEL 6.5    |        |       |     |      |       |
-|                                                               | ThinLVM                                                              | RHEL 6.5    |        |       |     |      |       |            |
 |                                                               |                                                                      | Fedora 20   | ??     |       | ??  | ??   | None  | None       |
 |                                                               |                                                                      | RHEL 6.5    | ??     |       | ??  | ??   | None  | None       |
 |                                                               |                                                                      | RHEL 7 Beta | ??     |       | ??  | ??   | None  | None       |
-| [Glance] All-in-One: different Glance drivers only            | See [Docs/Storage](Docs/Storage) for guides and testables |
+| [Cinder] Semi/Fully Distributed: GlusterFS, EMC, LVM, ThinLVM | See [Docs/Storage](Docs/Storage) for guides and testables |
 |                                                               |                                                                      | CentOS 6.5  | ??     |       | ??  | ??   | None  | None       |
-|                                                               | local                                                                | Fedora 20   |        |       |     |      | None  | None       |
-|                                                               | local Thin LVM                                                       | RHEL 6.5    |        |       |     |      | None  | None       |
-|                                                               | local                                                                | RHEL 6.5    |        |       |     |      | None  | None       |
+|                                                               |                                                                      | Fedora 20   | ??     |       | ??  | ??   | None  | None       |
+|                                                               |                                                                      | RHEL 6.5    | ??     |       | ??  | ??   | None  | None       |
+|                                                               |                                                                      | RHEL 7 Beta | ??     |       | ??  | ??   | None  | None       |
+| [Glance] All-in-One: non-local storage drivers only           | See [Docs/Storage](Docs/Storage) for guides and testables |
+|                                                               |                                                                      | CentOS 6.5  | ??     |       | ??  | ??   | None  | None       |
+|                                                               |                                                                      | Fedora 20   |        |       |     |      | None  | None       |
+|                                                               | local                                                                | RHEL 6.5    | ??     |       | ??  | ??   | None  | None       |
 |                                                               |                                                                      | RHEL 7 Beta | ??     |       | ??  | ??   | None  | None       |
 | [Glance] Semi/Fully Distributed: GlusterFS, Swift             | See [Docs/Storage](Docs/Storage) for guides and testables |
 |                                                               |                                                                      | CentOS 6.5  | ??     |       | ??  | ??   | None  | None       |
 |                                                               |                                                                      | Fedora 20   | ??     |       | ??  | ??   | None  | None       |
-|                                                               | Swift                                                                | RHEL 6.5    |        |       |     |      | None  | None       |
+|                                                               |                                                                      | RHEL 6.5    | ??     |       | ??  | ??   | None  | None       |
 |                                                               |                                                                      | RHEL 7 Beta | ??     |       | ??  | ??   | None  | None       |
 
 ## Packstack Based Installation (Misc Components)
