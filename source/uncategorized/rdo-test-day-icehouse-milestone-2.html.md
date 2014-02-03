@@ -33,6 +33,8 @@ We'll be testing the second Icehouse milestone release. If you can do any testin
 
 * ohochman (Omri Hochman) - Foremen, Nova - IRC
 
+* gszasz (Gabriel Szasz) - Nova, IRC
+
 ## Prerequisites
 
 We plan to have have packages for the following platforms:
