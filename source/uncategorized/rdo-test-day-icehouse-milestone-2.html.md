@@ -29,7 +29,7 @@ We'll be testing the second Icehouse milestone release. If you can do any testin
 
 * ukalifon (Udi Kalifon) - Keystone
 
-* ohochman (Omri Hochman) - Formen, Nova ,IRC
+* ohochman (Omri Hochman) - Foremen, Nova ,IRC
 
 ## Prerequisites
 
