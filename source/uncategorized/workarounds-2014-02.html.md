@@ -35,7 +35,7 @@ This page documents workarounds that may be required for installing RDO Icehouse
 
 *   **Bug:** [1060904](https://bugzilla.redhat.com/show_bug.cgi?id=1060904)
 *   **Affects:** RHEL, CentOS ( intermittent, rerun packstack a second time )
-*   Work around: Turn off heat in packstack answer file
+*   **Work around**: Heat from icehouse milestone 1 will be provided for test day
 
 ### Error: mysql-devel install error if PROVISION_TEMPEST is y
 
