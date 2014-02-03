@@ -68,8 +68,8 @@ Please see [Docs/Storage](Docs/Storage) for configuration guides as well as sugg
 |                                                               |                                                                      | RHEL 7 Beta | ??     |       | ??  | ??   | None  | None       |
 | [Glance] All-in-One: non-local storage drivers only           | See [Docs/Storage](Docs/Storage) for guides and testables |
 |                                                               |                                                                      | CentOS 6.5  | ??     |       | ??  | ??   | None  | None       |
-|                                                               |                                                                      | Fedora 20   |        |       |     |      | None  | None       |
-|                                                               | local                                                                | RHEL 6.5    | ??     |       | ??  | ??   | None  | None       |
+|                                                               |                                                                      | Fedora 20   | ??     |       | ??  | ??   | None  | None       |
+|                                                               |                                                                      | RHEL 6.5    | ??     |       | ??  | ??   | None  | None       |
 |                                                               |                                                                      | RHEL 7 Beta | ??     |       | ??  | ??   | None  | None       |
 | [Glance] Semi/Fully Distributed: GlusterFS, Swift             | See [Docs/Storage](Docs/Storage) for guides and testables |
 |                                                               |                                                                      | CentOS 6.5  | ??     |       | ??  | ??   | None  | None       |
