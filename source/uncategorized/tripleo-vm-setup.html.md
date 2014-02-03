@@ -37,12 +37,12 @@ Note that some of the commands below use '\' for bash line continuation to make 
 
 2.  Download the undercloud, overcloud, and deploy images. Note that if you choose you can download the images to a directory other than $TRIPLEO_ROOT. However, if you do so, you will need symlinks pointing to each of the images in $TRIPLEO_ROOT.
         # Fedora
-        curl -L -O https://s3.amazonaws.com/slagle-tripleo-images-fedora-i2/undercloud.qcow2
-        curl -L -O https://s3.amazonaws.com/slagle-tripleo-images-fedora-i2/deploy-ramdisk.initramfs
-        curl -L -O https://s3.amazonaws.com/slagle-tripleo-images-fedora-i2/deploy-ramdisk.kernel
-        curl -L -O https://s3.amazonaws.com/slagle-tripleo-images-fedora-i2/overcloud-compute.qcow2
-        curl -L -O https://s3.amazonaws.com/slagle-tripleo-images-fedora-i2/overcloud-control.qcow2
-        curl -L -O https://s3.amazonaws.com/slagle-tripleo-images-fedora-i2/user.qcow2
+        curl -L -O http://fedorapeople.org/~slagle/slagle-tripleo-images-fedora-i2/undercloud.qcow2
+        curl -L -O http://fedorapeople.org/~slagle/slagle-tripleo-images-fedora-i2/deploy-ramdisk.initramfs
+        curl -L -O http://fedorapeople.org/~slagle/slagle-tripleo-images-fedora-i2/deploy-ramdisk.kernel
+        curl -L -O http://fedorapeople.org/~slagle/slagle-tripleo-images-fedora-i2/overcloud-compute.qcow2
+        curl -L -O http://fedorapeople.org/~slagle/slagle-tripleo-images-fedora-i2/overcloud-control.qcow2
+        curl -L -O http://fedorapeople.org/~slagle/slagle-tripleo-images-fedora-i2/user.qcow2
 
 3.  Clone the repository for tripleo-incubator and add its scripts directory to your $PATH.
         git clone https://github.com/slagle/tripleo-incubator.git
