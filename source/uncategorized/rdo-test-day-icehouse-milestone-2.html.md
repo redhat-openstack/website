@@ -19,7 +19,15 @@ We'll be testing the second Icehouse milestone release. If you can do any testin
 
 * yeylon (Yaniv Eylon) - Foreman installation, IRC
 
-* tshefi (Tzach Shefi) - Glance Semi/Fully Distributed: GlusterFS, Swift
+* tshefi (Tzach Shefi) - GlusterFS semi distributed: Glance
+
+* gfidente (Giulio Fidente) - GlusterFS semi distributed: Cinder
+
+* yrabl (Yogev Rabel) - Netapp semi distributed
+
+* dron (Dafna Ron) - Netapp semi distributed
+
+* nlevinki (Nathan Levinkind) - Local TGT semi distributed
 
 * nmagnezi (Nir Magnezi) - Neutron ML2, Neutron OVS
 
