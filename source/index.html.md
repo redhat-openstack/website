@@ -17,9 +17,7 @@ __NOTOC__
 
 </div>
 <div class="offset3 span8 intro-text">
-The most up-to-date OpenStack on the industry's most trusted Linux platform, now easy to install and deploy.
-
-<span class="btn">[Quick start →](quickstart)</span>
+Join us for today's [Icehouse Milestone 2 test day](RDO_test_day_Icehouse_milestone_2)!
 
 </div>
 </div>
