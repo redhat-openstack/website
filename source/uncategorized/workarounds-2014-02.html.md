@@ -11,6 +11,8 @@ wiki_last_updated: 2014-03-25
 
 This page documents workarounds that may be required for installing RDO Icehouse Milestone 2. This page is associated with the [RDO_test_day_Icehouse_milestone_2](RDO_test_day_Icehouse_milestone_2). Please see [Workarounds](Workarounds) for a recommended format for writing up these workarounds.
 
+Additional notes can be found and also added in <https://etherpad.openstack.org/p/rdo_test_day_feb_2014>.
+
 ## Active
 
 ### Error: 87 lines match pattern '\[DEFAULT\]' in file '/etc/nova/nova.conf
