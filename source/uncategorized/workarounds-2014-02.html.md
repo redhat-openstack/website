@@ -70,10 +70,10 @@ Additional notes can be found and also added in <https://etherpad.openstack.org/
 
 ### Mariadb will not start
 
-*   **Bug:** [ <https://bugzilla.redhat.com/show_bug.cgi?id=1061045> 1061045]
+*   **Bug:** [1061045](https://bugzilla.redhat.com/show_bug.cgi?id=1061045)
 *   workaround: touch /var/log/mysqld.log; chown mysql:mysql /var/log/mysqld.log
 
 ### Neutron requires python-stevedore
 
-*   **Bug:** [ <https://bugzilla.redhat.com/show_bug.cgi?id=1061349> 1061349 ]
+*   **Bug:** [1061349](https://bugzilla.redhat.com/show_bug.cgi?id=1061349)
 *   workaround: yum -y install python-stevedore
