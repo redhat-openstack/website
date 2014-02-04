@@ -44,7 +44,7 @@ Additional notes can be found and also added in <https://etherpad.openstack.org/
 
 *   **Bug:** [1060923](https://bugzilla.redhat.com/show_bug.cgi?id=1060923)
 *   **Affects:** RHEL, CentOS ( if set to y, set provision_tempest to 'n')
-*   **FIXED**
+*   **FIXED** by providing updated openssl packages
 
 ### Error: Various services report module python-backports already loaded
 
