@@ -45,28 +45,28 @@ Please make sure to use the steps described in the RDO_test_day_January_2014#How
 
 Please see [Docs/Storage](Docs/Storage) for configuration guides as well as suggestions on what could be tested for both Cinder and Glance and make sure to use the steps described in the [RDO_test_day_January_2014#How_To_Test](RDO_test_day_January_2014#How_To_Test) page when installing the base RDO system. **Do not** go trough the Quickstart steps unmodified which will instead give you an RDO Havana deployment.
 
-| Config Name                                                   | Backend                                                              | BaseOS      | Status | HOWTO | Who | Date | BZ/LP | Notes Page |
-|---------------------------------------------------------------|----------------------------------------------------------------------|-------------|--------|-------|-----|------|-------|------------|
+| Config Name                                                   | Backend                                                              | BaseOS      | Status | HOWTO | Who      | Date       | BZ/LP | Notes Page |
+|---------------------------------------------------------------|----------------------------------------------------------------------|-------------|--------|-------|----------|------------|-------|------------|
 | [Cinder] All-in-One: non-local storage drivers only           | See [Docs/Storage](Docs/Storage) for guides and testables |
-|                                                               |                                                                      | CentOS 6.5  | ??     |       | ??  | ??   | None  | None       |
-|                                                               |                                                                      | Fedora 20   | ??     |       | ??  | ??   | None  | None       |
-|                                                               |                                                                      | RHEL 6.5    | ??     |       | ??  | ??   | None  | None       |
-|                                                               |                                                                      | RHEL 7 Beta | ??     |       | ??  | ??   | None  | None       |
+|                                                               |                                                                      | CentOS 6.5  | ??     |       | ??       | ??         | None  | None       |
+|                                                               |                                                                      | Fedora 20   | ??     |       | ??       | ??         | None  | None       |
+|                                                               |                                                                      | RHEL 6.5    | ??     |       | ??       | ??         | None  | None       |
+|                                                               |                                                                      | RHEL 7 Beta | ??     |       | ??       | ??         | None  | None       |
 | [Cinder] Semi/Fully Distributed: GlusterFS, EMC, LVM, ThinLVM | See [Docs/Storage](Docs/Storage) for guides and testables |
-|                                                               |                                                                      | CentOS 6.5  | ??     |       | ??  | ??   | None  | None       |
-|                                                               |                                                                      | Fedora 20   | ??     |       | ??  | ??   | None  | None       |
-|                                                               |                                                                      | RHEL 6.5    | ??     |       | ??  | ??   | None  | None       |
-|                                                               |                                                                      | RHEL 7 Beta | ??     |       | ??  | ??   | None  | None       |
+|                                                               |                                                                      | CentOS 6.5  | ??     |       | ??       | ??         | None  | None       |
+|                                                               |                                                                      | Fedora 20   | ??     |       | ??       | ??         | None  | None       |
+|                                                               |                                                                      | RHEL 6.5    | ??     |       | ??       | ??         | None  | None       |
+|                                                               |                                                                      | RHEL 7 Beta | ??     |       | ??       | ??         | None  | None       |
 | [Glance] All-in-One: non-local storage drivers only           | See [Docs/Storage](Docs/Storage) for guides and testables |
-|                                                               |                                                                      | CentOS 6.5  | ??     |       | ??  | ??   | None  | None       |
-|                                                               |                                                                      | Fedora 20   | ??     |       | ??  | ??   | None  | None       |
-|                                                               |                                                                      | RHEL 6.5    | ??     |       | ??  | ??   | None  | None       |
-|                                                               |                                                                      | RHEL 7 Beta | ??     |       | ??  | ??   | None  | None       |
+|                                                               |                                                                      | CentOS 6.5  | ??     |       | ??       | ??         | None  | None       |
+|                                                               |                                                                      | Fedora 20   | ??     |       | ??       | ??         | None  | None       |
+|                                                               |                                                                      | RHEL 6.5    | ??     |       | ??       | ??         | None  | None       |
+|                                                               |                                                                      | RHEL 7 Beta | ??     |       | ??       | ??         | None  | None       |
 | [Glance] Semi/Fully Distributed: GlusterFS, Swift             | See [Docs/Storage](Docs/Storage) for guides and testables |
-|                                                               |                                                                      | CentOS 6.5  | ??     |       | ??  | ??   | None  | None       |
-|                                                               |                                                                      | Fedora 20   | ??     |       | ??  | ??   | None  | None       |
-|                                                               |                                                                      | RHEL 6.5    | ??     |       | ??  | ??   | None  | None       |
-|                                                               |                                                                      | RHEL 7 Beta | ??     |       | ??  | ??   | None  | None       |
+|                                                               |                                                                      | CentOS 6.5  | ??     |       | ??       | ??         | None  | None       |
+|                                                               |                                                                      | Fedora 20   | ??     |       | ??       | ??         | None  | None       |
+|                                                               |                                                                      | RHEL 6.5    | ??     |       | mpavlase | 2014-02-05 | None  | None       |
+|                                                               |                                                                      | RHEL 7 Beta | ??     |       | ??       | ??         | None  | None       |
 
 ## Packstack Based Installation (Misc Components)
 
