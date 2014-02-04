@@ -55,6 +55,8 @@ We'll be testing the second Icehouse milestone release. If you can do any testin
 
 * tkammer (Tal Kammer) - Foremen installation - IRC
 
+* verdurin (Adam Huffman) - Packstack, CentOS
+
 ## Prerequisites
 
 We plan to have have packages for the following platforms:
