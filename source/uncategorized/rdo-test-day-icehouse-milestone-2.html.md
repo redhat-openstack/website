@@ -33,6 +33,8 @@ We'll be testing the second Icehouse milestone release. If you can do any testin
 
 * larsks (Lars Kellogg-Stedman) - IRC
 
+-kashyap (Kashyap Chamarthy) - IRC; Libvirt/QEMU/KVM/
+
 * ajeain (Ami Jeain) - Horizon
 
 * augol/cmyster (Amit Ugol) - Heat
