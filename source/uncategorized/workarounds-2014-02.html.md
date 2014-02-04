@@ -76,4 +76,4 @@ Additional notes can be found and also added in <https://etherpad.openstack.org/
 ### Neutron requires python-stevedore
 
 *   **Bug:** [1061349](https://bugzilla.redhat.com/show_bug.cgi?id=1061349)
-*   workaround: yum -y install python-stevedore
+*   **FIXED**
