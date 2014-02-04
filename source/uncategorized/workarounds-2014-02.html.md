@@ -30,6 +30,7 @@ This page documents workarounds that may be required for installing RDO Icehouse
 *   **Bug:** [1049391](https://bugzilla.redhat.com/show_bug.cgi?id=1049391)
 *   **Affects:** Fedora 20
 *   **Workaround:** Ensure libvirt >= 1.1.3.3-5 is installed from [updates-testing](https://admin.fedoraproject.org/updates/libvirt-1.1.3.3-5.fc20,openwsman-2.4.3-1.fc20)
+*   only update libvirt \*after\* the packstack install completes
 
 ### Error: Heat, packstack install fails due to heat db migrate
 
