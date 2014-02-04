@@ -42,3 +42,7 @@ This page documents workarounds that may be required for installing RDO Icehouse
 *   **Bug:** [1060923](https://bugzilla.redhat.com/show_bug.cgi?id=1060923)
 *   **Affects:** RHEL, CentOS ( if set to y, set provision_tempest to 'n')
 *   **FIXED**
+
+### Error: Various services report module python-backports already loaded
+
+*   make sure python-backports python-backports-1.0-4.el6.x86_64.rpm is installed update from 1.0-3
