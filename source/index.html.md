@@ -17,7 +17,9 @@ __NOTOC__
 
 </div>
 <div class="offset3 span8 intro-text">
-Join us for today's [Icehouse Milestone 2 test day](RDO_test_day_Icehouse_milestone_2)!
+Join us for today's Icehouse Milestone 2 test day!
+
+<span class="btn">[More Info →](RDO_test_day_Icehouse_milestone_2)</span>
 
 </div>
 </div>
