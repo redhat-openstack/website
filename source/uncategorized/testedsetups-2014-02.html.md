@@ -39,6 +39,7 @@ Please make sure to use the steps described in the RDO_test_day_January_2014#How
 |                                                                      |         | Fedora 20  | ??       |                                                                                                                                                 | ??  | ??   | None  | None       |
 | Neutron LBaaS Networking                                             |         | RHEL 6.5   | oblaut   |                                                                                                                                                 | ??  | ??   | None  | None       |
 |                                                                      |         | Fedora 20  | ??       |                                                                                                                                                 | ??  | ??   | None  | None       |
+| Neutron - Multi-L3-nodes                                             |         | RHEL 6.5   | yfried   |                                                                                                                                                 | ??  | ??   | None  | None       |
 
 ## Packstack Based Installation (Storage Components)
 
