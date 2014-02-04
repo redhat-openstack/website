@@ -54,3 +54,9 @@ Additional notes can be found and also added in <https://etherpad.openstack.org/
 
 *   **Affects:** Fedora 20
 *   For a clean system that seems to work a lot better, please do yum update and a restart BEFORE trying to install anything.
+
+### Error: neutron-dhcp-agent crashing
+
+*   **Bug:** [1061055](https://bugzilla.redhat.com/show_bug.cgi?id=1061055)
+*   **Affects:** RHEL6, CentOS6
+*   **Fixed**: openstack-neutron-2014.1-0.4.b2.el6
