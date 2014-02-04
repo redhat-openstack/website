@@ -72,3 +72,8 @@ Additional notes can be found and also added in <https://etherpad.openstack.org/
 
 *   **Bug:** [ <https://bugzilla.redhat.com/show_bug.cgi?id=1061045> 1061045]
 *   workaround: touch /var/log/mysqld.log; chown mysql:mysql /var/log/mysqld.log
+
+### Neutron requires python-stevedore
+
+*   **Bug:** [ <https://bugzilla.redhat.com/show_bug.cgi?id=1061349> 1061349 ]
+*   workaround: yum -y install python-stevedore
