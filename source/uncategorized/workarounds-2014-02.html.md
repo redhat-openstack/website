@@ -67,3 +67,8 @@ Additional notes can be found and also added in <https://etherpad.openstack.org/
 *   **Bug:** [1061055](https://bugzilla.redhat.com/show_bug.cgi?id=1061055)
 *   **Affects:** RHEL6, CentOS6
 *   **Fixed**: openstack-neutron-2014.1-0.4.b2.el6
+
+### Mariadb will not start
+
+*   **Bug:** [ <https://bugzilla.redhat.com/show_bug.cgi?id=1061045> 1061045]
+*   workaround: touch /var/log/mysqld.log; chown mysql:mysql /var/log/mysqld.log
