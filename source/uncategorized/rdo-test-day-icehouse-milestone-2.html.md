@@ -23,6 +23,8 @@ We'll be testing the second Icehouse milestone release. If you can do any testin
 
 * gfidente (Giulio Fidente) - GlusterFS semi distributed: Cinder
 
+* gcerami (Gabriele Cerami) - Rhel6.5 VXLAN
+
 * yrabl (Yogev Rabel) - Netapp semi distributed
 
 * dron (Dafna Ron) - Netapp semi distributed
