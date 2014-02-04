@@ -49,6 +49,8 @@ We'll be testing the second Icehouse milestone release. If you can do any testin
 
 * weshay ( Wes Hayutin ) - Packstack
 
+* eglynn (Eoghan Glynn) - Ceilometer
+
 ## Prerequisites
 
 We plan to have have packages for the following platforms:
