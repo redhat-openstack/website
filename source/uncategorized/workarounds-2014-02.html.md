@@ -15,6 +15,13 @@ Additional notes can be found and also added in <https://etherpad.openstack.org/
 
 ## Active
 
+### ERROR : Error appeared during Puppet run: 192.168.1.13_mysql.pp Error: Could not start Service[mysqld]: Execution of '/sbin/service mariadb start' returned 1:
+
+*   **Bug:** [1061045](https://bugzilla.redhat.com/show_bug.cgi?id=1061045)
+*   **Affects:** RHEL, CentOS
+*   **Workaround:** Before running packstack:
+        $ yum install -y mariadb-server && chown mysql:mysql /var/log/mariadb/mariadb.log
+
 ### Error: 87 lines match pattern '\[DEFAULT\]' in file '/etc/nova/nova.conf
 
 *   **Bug:** [1059815](https://bugzilla.redhat.com/show_bug.cgi?id=1059815)
