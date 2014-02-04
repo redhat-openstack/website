@@ -12,7 +12,7 @@ wiki_last_updated: 2014-02-06
 
 VXLAN will be supported in Packstack when the following bug is resolved: [1](https://bugzilla.redhat.com/show_bug.cgi?id=1021778)
 
-In the mean time, use the [GRE guide](Using_GRE_Tenant_Networks) to get things going. Afterwards, make the following modifications in /etc/neutron/plugin.ini on every node:
+In the mean time, use the [GRE guide](Using_GRE_Tenant_Networks) to get things going. Afterwards, make the following modifications in /etc/neutron/plugins/openvswitch/ovs_neutron_plugin.ini on every node:
 
     [OVS]
     tenant_network_type=vxlan
@@ -23,7 +23,7 @@ In the mean time, use the [GRE guide](Using_GRE_Tenant_Networks) to get things g
 
 Afterwards, run this on every node:
 
-    ovs-vsctl emer-reset && service openstack-openvswitch-agent
+    ovs-vsctl emer-reset && service  neutron-openvswitch-agent restart
 
 Verify that the GRE tunnels are now VXLAN tunnels via:
 
