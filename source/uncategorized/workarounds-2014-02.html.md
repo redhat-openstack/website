@@ -47,3 +47,8 @@ This page documents workarounds that may be required for installing RDO Icehouse
 ### Error: Various services report module python-backports already loaded
 
 *   make sure python-backports python-backports-1.0-4.el6.x86_64.rpm is installed update from 1.0-3
+
+### Error: Various issues with Fedora 20 from installing to starting services
+
+*   **Affects:** Fedora 20
+*   For a clean system that seems to work a lot better, please do yum update and a restart BEFORE trying to install anything.
