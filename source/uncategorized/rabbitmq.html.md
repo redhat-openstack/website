@@ -164,15 +164,14 @@ If the OpenStack services are properly configured and using RabbitMQ, several qu
     scheduler_fanout_e774adbbfb784b6c8edff8d9e579b2e0
     ...done.
 
-    == High Availability ==
+### High Availability
 
-    To setup RabbitMQ for high availability, create a cluster of RabbitMQ brokers and enable mirrored queues. The example given here will use three RabbitMQ brokers in a single cluster. The RabbitMQ service will run on the OpenStack node (10.15.85.141) as well as two additional nodes (10.15.85.142 and 10.15.85.143). These nodes will form the RabbitMQ cluster.
+To setup RabbitMQ for high availability, create a cluster of RabbitMQ brokers and enable mirrored queues. The example given here will use three RabbitMQ brokers in a single cluster. The RabbitMQ service will run on the OpenStack node (10.15.85.141) as well as two additional nodes (10.15.85.142 and 10.15.85.143). These nodes will form the RabbitMQ cluster.
 
-    Note: The example given here is not a complete solution for high availability. This example is is only intended to show how to configure RabbitMQ such that it is not a single point of failure.
+Note: The example given here is not a complete solution for high availability. This example is is only intended to show how to configure RabbitMQ such that it is not a single point of failure.
 
-    First, stop all of the OpenStack services on node-01.
+First, stop all of the OpenStack services on node-01.
 
-    <pre style="white-space: pre; overflow-x: auto; word-wrap: normal">
     % openstack-service stop
 
 Install the RabbitMQ service on the additional RabbitMQ brokers (node-02 and node-03).
