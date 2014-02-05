@@ -57,6 +57,8 @@ We'll be testing the second Icehouse milestone release. If you can do any testin
 
 * verdurin (Adam Huffman) - Packstack, CentOS
 
+* lon (Lon Hohberger) - EL7-specific installation, general testing
+
 ## Prerequisites
 
 We plan to have have packages for the following platforms:
