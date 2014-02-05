@@ -17,9 +17,9 @@ __NOTOC__
 
 </div>
 <div class="offset3 span8 intro-text">
-Join us for today's Icehouse Milestone 2 test day!
+The most up-to-date OpenStack on the industry's most trusted Linux platform, now easy to install and deploy.
 
-<span class="btn">[More Info →](RDO_test_day_Icehouse_milestone_2)</span>
+<span class="btn">[Quick start →](quickstart)</span>
 
 </div>
 </div>
