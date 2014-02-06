@@ -18,7 +18,7 @@ Additional notes can be found and also added in <https://etherpad.openstack.org/
 ### ERROR : Error appeared during Puppet run: 192.168.1.13_mysql.pp Error: Could not start Service[mysqld]: Execution of '/sbin/service mariadb start' returned 1:
 
 *   **Bug:** [1061045](https://bugzilla.redhat.com/show_bug.cgi?id=1061045)
-*   **Affects:** RHEL, CentOS
+*   **Affects:** RHEL, CentOS, Fedora20
 *   **Workaround:** Before running packstack:
         $ yum install -y mariadb-server && chown mysql:mysql /var/log/mariadb/mariadb.log
 
