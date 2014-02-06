@@ -29,6 +29,12 @@ Verify that the GRE tunnels are now VXLAN tunnels via:
 
     ovs-vsctl show
 
+Then add iptables rules to accept incoming UDP traffic on port 4789 (VXLAN) on each endpoint of the tunnels.
+
+    lineno=$(iptables -nvL INPUT --line-numbers | grep "state RELATED,ESTABLISHED" | awk '{print $1}')
+
+    iptables -I INPUT $lineno -s <vxlan-endpoint>/32 -p udp -m multiport --dports 4789 -m comment --comment "001 vxlan incoming <vxlan-endpoint>" -j ACCEPT
+
 *   Note: If you created any tenant networks after the GRE installation but before the transition to VXLAN, delete those networks and recreate them.
 
 <Category:Networking>
