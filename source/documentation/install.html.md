@@ -32,7 +32,7 @@ While the [Quickstart](Quickstart) is sufficient for an initial test deployment,
 *   [Troubleshooting](Troubleshooting)
 *   [ Upgrading from Grizzly to Havana](Upgrading_RDO)
 *   [Uninstalling RDO](Uninstalling RDO)
-*   [ Deploying RDO Using Tuskar and TripleO](Deploying_RDO_Using_Tuskar_And_TripleO)
+*   [ Deploying RDO using TripleO](TripleO_VM_Setup)
 *   [ Packstack Cookbook](Packstack_cookbook)
 
 </div>
