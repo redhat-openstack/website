@@ -301,5 +301,3 @@ Finally, define the RabbitMQ cluster nodes in the configuration file such that t
 
     [{rabbit,
       [{cluster_nodes, {['rabbit@node-01', 'rabbit@node-02', 'rabbit@node-03'], ram}}]}].
-
-</pre>
