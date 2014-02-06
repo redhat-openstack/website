@@ -296,3 +296,10 @@ Ceilometer:
 
     openstack-config --set /etc/ceilometer/ceilometer.conf DEFAULT rabbit_host 10.15.85.141
     openstack-config --set /etc/ceilometer/ceilometer.conf DEFAULT rabbit_port 5670
+
+Finally, define the RabbitMQ cluster nodes in the configuration file such that the node will join the cluster on restart. Edit /etc/rabbitmq/rabbitmq.config on each of the RabbitMQ cluster ndoes.
+
+    [{rabbit,
+      [{cluster_nodes, {['rabbit@node-01', 'rabbit@node-02', 'rabbit@node-03'], ram}}]}].
+
+</pre>
