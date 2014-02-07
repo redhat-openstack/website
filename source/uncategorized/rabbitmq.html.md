@@ -36,7 +36,7 @@ Next, install the RabbitMQ service.
 
 After installation completes, enable and start the RabbitMQ service.
 
-    % chkconfig rabbitmq-server start
+    % chkconfig rabbitmq-server on
     % service rabbitmq-server start
 
 At this point the RabbitMQ service is running on the localhost, listening on port 5672. The next step is to configure the relevant OpenStack services to use the RabbitMQ messaging driver.
@@ -72,10 +72,9 @@ Nova:
 
     openstack-config --set /etc/nova/nova.conf DEFAULT rabbit_host 10.15.85.141
     openstack-config --set /etc/nova/nova.conf DEFAULT rabbit_port 5672
-    </pre?
 
-    Glance:
-    <pre style="white-space: pre; overflow-x: auto; word-wrap: normal">
+Glance:
+
     openstack-config --set /etc/glance/glance-api.conf DEFAULT rabbit_host 10.15.85.141
     openstack-config --set /etc/glance/glance-api.conf DEFAULT rabbit_port 5672
 
