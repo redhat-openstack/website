@@ -23,7 +23,7 @@ These are just some guidelines so you get a perspective of IRC culture, communic
 *   When in a community environment, just post the question to the channel, you do not have to ping a specific person just because he/she answered your question before. Nor do you have to ask questions like "Anyone alive on this channel?" "Are you using ABC?" Stay channel topic related!
 *   It is an international channel: you may get better responses in certain timezones, be patient - don't count on instant reactions.
 
-All of the above look dead obvious, but doesn't instantly come to mind our minds when asking questions in a public IRC. And, sure - we also understand we are all human, buried in plenty of things, sometimes, we *just need* that answer and not follow heavy guidelines, if you're lucky, you might get the bonus of getting it answered instantly.
+All of the above look dead obvious, but doesn't instantly come to mind when asking questions in a public IRC. And, sure - we also understand we are all human, already overwhelmed and sometimes, we *Just Need* that answer and not want to follow any heavy instructions. If you're lucky, you might even havethe bonus of getting it answered instantly.
 
 ### Resources
 
