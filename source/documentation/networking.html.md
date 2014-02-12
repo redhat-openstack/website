@@ -26,7 +26,7 @@ wiki_last_updated: 2015-05-26
 *   [Configuring Neutron with existing external network](Neutron_with_existing_external_network)
 *   [ Configuring and Deploying LBaaS in OpenStack Havana ](LBaaS)
 *   [OpenStack Networking in Too Much Detail](Networking_in_too_much_detail)
-*   [ OpenStack integration with OpenDaylight controller ](OpenDaylight)
+*   [ OpenStack integration with OpenDaylight controller ](OpenDaylight intergration)
 *   [ Other networking resources ](Networking)
 
 </div>
