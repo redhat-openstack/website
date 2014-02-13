@@ -10,6 +10,17 @@ wiki_last_updated: 2014-10-06
 
 The following questions are the most commonly asked questions for [TryStack](http://trystack.org). Hopefully you can find your answer here. If you can't then ask it and add the answer here after you get one.
 
+## TryStack operational boundaries
+
+1. Instances are deleted after 24 hours
+We have limited compute capacity to server the 10000+ facebook members we have. You can help keep capactiy under control by terminating your instances once you're done with them and not letting them run to their 24 hour limit.
+
+2. User uploaded images will be set non-public
+TryStack doesn't have the man power to support all the images that are uploaded across all users. You're welcome to upload your own and use them, We just can't support sharing them.
+
+3. Neutron Floating IPs and router gateways are released once no longer associated with an instance.
+We only have a /24 IP block for all our servers, service IPs and floating IPs, These get used fast with everyone needing atleast 2 (one for your router and a floating IP)
+
 ## What's the root password to the instances?
 
 We don't know. Please use ssh keys to authenticate to the hosts. A how-to on this would be a great doc for someone to contribute to TryStack.
