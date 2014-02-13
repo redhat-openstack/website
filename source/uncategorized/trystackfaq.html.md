@@ -21,6 +21,9 @@ TryStack doesn't have the man power to support all the images that are uploaded 
 3. Neutron Floating IPs and router gateways are released once no longer associated with an instance.
 We only have a /24 IP block for all our servers, service IPs and floating IPs, These get used fast with everyone needing atleast 2 (one for your router and a floating IP)
 
+4. Cinder Volumes are deleted after 24 hours
+Limited storage capacity for for our 10000+ users
+
 ## What's the root password to the instances?
 
 We don't know. Please use ssh keys to authenticate to the hosts. A how-to on this would be a great doc for someone to contribute to TryStack.
