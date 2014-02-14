@@ -34,7 +34,7 @@ While the [Quickstart](Quickstart) is sufficient for an initial test deployment,
 *   [Uninstalling RDO](Uninstalling RDO)
 *   [ Deploying RDO using TripleO](TripleO_VM_Setup)
 *   [ Packstack Cookbook](Packstack_cookbook)
-*   [Virtualized_Foreman_dev_setup](Virtualized_Foreman_dev_setup)
+*   [Virtualized Foreman dev setup](Virtualized_Foreman_dev_setup)
 
 </div>
 </div>
