@@ -8,4 +8,8 @@ wiki_last_updated: 2014-02-27
 
 # Hangout Placeholder
 
-Hangout Placeholder
+The hangout you're looking for has not started yet, or is already done.
+
+Hangout live streams are at <http://tm3.org/rdohangout> when the event has started. Keep trying.
+
+Meanwhile, past events are archived at [Hangouts](Hangouts).
