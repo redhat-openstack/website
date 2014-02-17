@@ -10,10 +10,6 @@ wiki_last_updated: 2014-02-20
 
 __NOTOC__
 
-**DRAFT**
-
-**These instructions rely on patches only available upstream or currently under review**
-
 ## Overview
 
 The default OpenStack configuration doesn't include securing internal services with SSL. This document provides instructions for securing some of the services within a Foreman-managed environment.
@@ -32,11 +28,11 @@ Optionally you may use an IPA server to streamline issuance and management of se
 
 ### Provisioning
 
-Automatic provisioning of Foreman is not currently supported. Some manual work is needed on the hosts prior to applying the node configuration. It will work, in that your hosts will be created, but the resulting services will not be running due to missing certificates.
+The automatic provisioning capabilities of Foreman is not currently supported. Some manual work is needed on the hosts prior to applying the node configuration. It will work, in that your hosts will be created, but the resulting services will not be running due to missing certificates.
 
 ## Foreman server Installation
 
-The Foreman installation is largely the same. FQDNs need to be provided to the installer in order SSL to work.
+The Foreman installation is largely the same as a non-SSL installation with the exception that FQDNs need to be provided to the installer in order SSL to work.
 
 As an example, with 3 machines: a foreman server, a controller node and a compute node. The controller and compute nodes at least have two separate networks, private and public. The bin/seeds.rb might look like:
 
@@ -61,9 +57,9 @@ Before running the foreman_client.sh on your compute and controller node to regi
 
 ### Manual SSL Configuration
 
-For a manual installation the SSL certificates need to be pre-positioned on the controller node.
+For a manual installation the SSL certificates need to be pre-positioned on the controller or compute node.
 
-The default location for the certificates are defined in the controller configuration. The defaults are:
+The default location for the certificates are defined in the node hostgroup. The defaults are:
 
       mysql_ca        /etc/ipa/ca.crt
       mysql_cert     /etc/pki/tls/certs/FQDN-mysql.crt
@@ -75,9 +71,9 @@ The default location for the certificates are defined in the controller configur
       horizon_cert /etc/pki/tls/certs/FQDN-horizon.crt
       horizon_key  /etc/pki/tls/certs/FQDN-horizon.key
 
-Where FQDN is the fully-qualfied domain name of the private interface of the controller node. Change these as needed. These settings are found in the Foreman UI under More -> Configuration -> Host groups. Select each hostgroup then look in Parameters for the SSL options. To change a value select override, then add a new value at the bottom of the page.
+Where FQDN is the fully-qualfied domain name of the private interface of the node. Change these as needed. These settings are found in the Foreman UI under More -> Configuration -> Host groups. Select each hostgroup then look in Parameters for the SSL options. To change a value select override, then add a new value at the bottom of the page.
 
-Don't worry about file ownership, applying the controller node should set them as needed.
+Don't worry about file ownership, puppet should set them as needed.
 
 ### IPA Configuration
 
@@ -97,15 +93,15 @@ The controller node configuration will automatically obtain the SSL certificate.
 
 First, log in to your Foreman instance (https://{foreman_fqdn}). The default login and password are admin/changeme; we recommend changing this if you plan on keeping this host around.
 
-Next, you’ll need to assign the correct puppet classes to each of your hosts. Click the HOSTS link and select your host from the list. Select EDIT HOST and add the appropriate Host Group (OpenStack Controller or OpenStack Compute).
+Next, you’ll need to assign the correct puppet classes to each of your hosts. Click the HOSTS link and select your host from the list. Select EDIT HOST and add the appropriate Host Group.
 
 ### Controller
 
-In either case select the Host Group: Controller (Nova Network)
+In either case select either the Nova or Neutron Controller host group.
 
 #### Manual SSL Configuration
 
-Override ssl to true. freeipa should be false which is the default.
+Override ssl to true. freeipa should be false which is the default. Verify that the paths to the various SSL certs match what you've pre-positioned into the filesystem on the controller node.
 
 #### IPA Configuration
 
@@ -113,7 +109,7 @@ Override ssl and freeipa values and set them to true.
 
 ### Compute
 
-In both cases (manual or IPA SSL configuration) only ssl needs to be set to true if the Controller node has ssl enabled.
+In both cases (manual or IPA SSL configuration) only ssl needs to be set to true if the Controller node has ssl enabled. This is true for both Nova and Neutron compute host groups.
 
 Be sure to verify that the interface names match the system.
 
@@ -127,16 +123,18 @@ Here are some basic steps to ensure that the services are working as expected.
 
 ### IPA Configuration
 
-First confirm that the certificates for qpid and mysql were retrieve and are being tracked for renewal:
+First confirm that the certificates for qpid, mysql and horizon were retrieved and are being tracked for renewal:
 
       # ipa-getcert list
 
-The output should contain 3 Request IDs in a monitoring state. These include:
+The output should contain 4 Request IDs in a monitoring state. These include:
 
-*   the host certificate
+*   a certificate for the host itself
 *   the qpid certificate
 *   the mysql certificate
 *   the horizon certificate
+
+The status in certmonger should be MONITORING. If it isn't then something went wrong.
 
 ### Common for Manual and IPA Configuration
 
@@ -152,13 +150,7 @@ The output should include a line like this:
 
 #### qpid
 
-You can confirm it has an SSL certificate with:
-
-      # certutil -L -d /etc/pki/qpidd
-
-The output should include a nickname named broker.
-
-Here is a simple AMQP python script that will really exercise a connection over SSL:
+Here is a simple AMQP python script that will exercise a connection over SSL:
 
       import sys
       from qpid.messaging import *
@@ -205,7 +197,7 @@ You'll get a redirect which will confirm that SSL is a-ok:
 
 ### Cleanup
 
-If you are using an IPA server as your certificate source and you want to re-install an existing Nova controller node there will be some additional steps. You need to clean up the environment on the host itself and on the IPA server.
+If you are using an IPA server as your certificate source and you want to re-install an existing controller node there will be some additional steps. You need to clean up the environment on the host itself and on the IPA server.
 
 #### On the host
 
@@ -236,3 +228,5 @@ Note the serial number
       # ipa service-mod horizon/hostname.public.example.com --certificate=
 
 This sets the certificate to nothing which effectively removes it from the entry.
+
+You are now ready to reinstall on the controller node.
