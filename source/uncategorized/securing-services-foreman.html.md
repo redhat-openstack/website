@@ -154,6 +154,23 @@ The country code isn't really that important bu the Common Name MUST match the p
 
 Do the same for the public FQDN.
 
+Copy these files to the CA machine (I used the Foreman server for this).
+
+    # openssl ca -config ca.cnf -batch -notext -in /tmp/private.req  -out private.pem
+    Using configuration from ca.cnf
+    Check that the request matches the signature
+    Signature ok
+    The Subject's Distinguished Name is as follows
+    countryName           :PRINTABLE:'XX'
+    localityName          :ASN.1 12:'Raleigh'
+    organizationName      :ASN.1 12:'Test CA'
+    commonName            :ASN.1 12:'set1client1.private.example.com'
+    Certificate is to be certified until Feb 19 22:44:33 2015 GMT (365 days)
+
+Now put private.pem into the location defined in the controller hostgroup, then do a similar command for the public request.
+
+You could probably use the puppet CA for this as well. My assumption is that the organization already has a CA somewhere and that eventually that CA will be used to issue the certificates used for OpenStack.
+
 ### Provisioning
 
 The automatic provisioning capabilities of Foreman is not currently supported. Some manual work is needed on the hosts prior to applying the node configuration. It will work, in that your hosts will be created, but the resulting services will not be running due to missing certificates.
