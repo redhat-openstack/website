@@ -29,4 +29,5 @@ All of the above look dead obvious, but doesn't instantly come to mind when aski
 
 *   A fantastic resource from Eric S. Raymond [on how to ask smart questions](http://www.catb.org/~esr/faqs/smart-questions.html)
 *   Freenode's guide on [how to become a catalyst for problem solving](http://freenode.net/catalysts.shtml)
-*   Other community guidelines we respect and adhere to: <https://fedoraproject.org/wiki/How_to_communicate_using_IRC>
+*   Other communities (Fedora project) IRC communication [guidelines](https://fedoraproject.org/wiki/How_to_communicate_using_IRC)
+*   Bonus: [Email guidelines/posting-style](https://fedorahosted.org/rhevm-api/wiki/Email_Guidelines) when communicating in open source projects.
