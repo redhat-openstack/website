@@ -27,6 +27,6 @@ All of the above look dead obvious, but doesn't instantly come to mind when aski
 
 ### Resources
 
-*   A fantastic resource from Eric S. Raymond [on how to ask smart questions <http://www.catb.org/~esr/faqs/smart-questions.html>]
+*   A fantastic resource from Eric S. Raymond [on how to ask smart questions](http://www.catb.org/~esr/faqs/smart-questions.html)
 *   Freenode's guide on [how to become a catalyst for problem solving](http://freenode.net/catalysts.shtml)
 *   Other community guidelines we respect and adhere to: <https://fedoraproject.org/wiki/How_to_communicate_using_IRC>
