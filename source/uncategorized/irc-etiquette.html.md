@@ -8,7 +8,7 @@ wiki_last_updated: 2014-07-08
 
 # IRC etiquette
 
-## IRC communitcation guidelines and etiquette
+## IRC communication guidelines and etiquette
 
 ### Guidelines
 
