@@ -69,7 +69,7 @@ We'll be testing the first Icehouse milestone release, and we'd like to test the
 *   shmcfarl (Shannon McFarland) - Testing all-in-one - Neutron - Documentation - CentOS 6.5 - IRC
 *   gparisse - Testing all-in-one - CentOS 6.5
 *   vladan - Testing all-in-one nova on Fedora 20, IRC
-*   Chakri - Testing multi-node on Centos 6.5.
+*   Chakri (Chakri Girda) - Testing multi-node with Neutron on Centos 6.5 cluster.
 
 ## Prerequisite for Test Day
 
