@@ -26,6 +26,134 @@ The location of the certificates is not mandatory, but be aware of SELinux issue
 
 Optionally you may use an IPA server to streamline issuance and management of services. You will need the hostname of an IPA master and a user with the permissions to create hosts and services.
 
+### Manual CA
+
+If you want to test with a self-signed OpenSSL CA you can generate one by creating a location for the CA and generating it with a configuration file. These instructions were inspired by <http://www.ulduzsoft.com/2012/01/creating-a-certificate-authority-and-signing-the-ssl-certificates-using-openssl/>
+
+You can put the CA anywhere in the filesystem you'd like this is in /root/opensslca. First, create ca.cnf with these contents in /root:
+
+    [ ca ]
+    default_ca = CA_default
+
+    [ CA_default ]
+    dir = ./opensslca
+
+    # Where the issued certs are kept
+    certs = $dir/certs
+
+    # database index file
+    database = $dir/index.txt
+
+    # default place for new certs
+    new_certs_dir = $dir/certs
+
+    serial = $dir/serial
+
+    #
+    # The CA certificate
+    certificate = $dir/certs/ca.pem
+
+    private_key = $dir/private/ca.key
+
+    # private random number file
+    RANDFILE = $dir/private/.rand
+
+    # The extentions to add to the cert
+    x509_extensions = usr_cert
+
+    # how long to certify for
+    default_days = 365
+
+    # which md to use
+    default_md = sha1
+
+    # keep passed DN ordering
+    preserve = no
+
+    # Section names
+    policy = capolicy
+    x509_extensions = certificate_extensions
+
+    [ capolicy ]
+    # Use the user-supplied information for the subject
+    commonName = supplied
+    stateOrProvinceName = optional
+    countryName = supplied
+    emailAddress = optional
+    organizationName = supplied
+    organizationalUnitName = optional
+
+    [ certificate_extensions ]
+    # The signed certificate cannot be used as CA
+    basicConstraints = CA:false
+
+    [ req ]
+    # same as private_key
+    default_keyfile = ./opensslca/private/ca.key
+
+    # Which hash to use
+    default_md = sha1
+
+    # No prompts
+    prompt = no
+
+    # This is for CA
+    distinguished_name = root_ca_distinguished_name
+    x509_extensions = root_ca_extensions
+
+    [ root_ca_distinguished_name ]
+    commonName = Test CA
+    stateOrProvinceName = Raleigh
+    countryName = US
+    emailAddress = certs@example.com
+    organizationName = Test Certificate Authority
+
+    [ root_ca_extensions ]
+    basicConstraints = CA:true
+    subjectKeyIdentifier=hash
+    authorityKeyIdentifier=keyid:always,issuer
+
+Now generate the CA:
+
+      # pwd
+         /root
+      # mkdir -p opensslca/certs opensslca/private opensslca/crl
+      #  touch opensslca/index.txt
+      # echo "01" > opensslca/serial 
+      # openssl req -verbose -config ca.cnf -x509 -nodes -days 3650 -newkey rsa:2048 -out ./opensslca/certs/ca.pem -outform PEM -keyout ./opensslca/private/ca.key
+
+You can look at the result with:
+
+      # openssl x509 -text -in opensslca/certs/ca.pem
+
+Finally, we need to create a certificate to use. Ideally you want a separate certificate for each service but for the sake of brevity I'm creating only one. On the controller machine we need to create two certificates, one for the public and one for the private interfaces:
+
+    # openssl req -newkey rsa:1024 -nodes -sha1 -keyout /etc/pki/tls/certs/set1client1.private.example.com-mysql.crt  -keyform PEM -out /root/private.req -outform PEM
+    -----
+    You are about to be asked to enter information that will be incorporated
+    into your certificate request.
+    What you are about to enter is what is called a Distinguished Name or a DN.
+    There are quite a few fields but you can leave some blank
+    For some fields there will be a default value,
+    If you enter '.', the field will be left blank.
+    -----
+    Country Name (2 letter code) [XX]:US
+    State or Province Name (full name) []:
+    Locality Name (eg, city) [Default City]:
+    Organization Name (eg, company) [Default Company Ltd]:
+    Organizational Unit Name (eg, section) []:
+    Common Name (eg, your name or your server's hostname) []:set1client1.private.example.com
+    Email Address []:
+
+    Please enter the following 'extra' attributes
+    to be sent with your certificate request
+    A challenge password []:
+    An optional company name []:
+
+The country code isn't really that important bu the Common Name MUST match the private FQDN.
+
+Do the same for the public FQDN.
+
 ### Provisioning
 
 The automatic provisioning capabilities of Foreman is not currently supported. Some manual work is needed on the hosts prior to applying the node configuration. It will work, in that your hosts will be created, but the resulting services will not be running due to missing certificates.
