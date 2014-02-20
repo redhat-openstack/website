@@ -128,7 +128,7 @@ You can look at the result with:
 
 Finally, we need to create a certificate to use. Ideally you want a separate certificate for each service but for the sake of brevity I'm creating only one. On the controller machine we need to create two certificates, one for the public and one for the private interfaces:
 
-    # openssl req -newkey rsa:1024 -nodes -sha1 -keyout /etc/pki/tls/certs/set1client1.private.example.com-mysql.crt  -keyform PEM -out /root/private.req -outform PEM
+    # openssl req -newkey rsa:1024 -nodes -sha1 -keyout /etc/pki/tls/private/set1client1.private.example.com-mysql.key  -keyform PEM -out /root/private.req -outform PEM
     -----
     You are about to be asked to enter information that will be incorporated
     into your certificate request.
@@ -152,9 +152,13 @@ Finally, we need to create a certificate to use. Ideally you want a separate cer
 
 The country code isn't really that important bu the Common Name MUST match the private FQDN.
 
-Do the same for the public FQDN.
+Do the same for the public FQDN. There is only one certificate needed for the public interface so we can request it directly:
 
-Copy these files to the CA machine (I used the Foreman server for this).
+      # openssl req -newkey rsa:1024 -nodes -sha1 -keyout /etc/pki/tls/private/set1client1.private.example.com-horizon.key  -keyform PEM -out /root/private.req -outform PEM
+
+Copy these files to the CA machine (I used the Foreman server as the CA).
+
+Sign the certificate requests:
 
     # openssl ca -config ca.cnf -batch -notext -in /tmp/private.req  -out private.pem
     Using configuration from ca.cnf
@@ -168,6 +172,8 @@ Copy these files to the CA machine (I used the Foreman server for this).
     Certificate is to be certified until Feb 19 22:44:33 2015 GMT (365 days)
 
 Now put private.pem into the location defined in the controller hostgroup, then do a similar command for the public request.
+
+For testing purposes we can just copy the mysql certificate to the qpid certificate (or set the paths the same in seeds.rb). For production purposes you'd want separate certificates for each service.
 
 You could probably use the puppet CA for this as well. My assumption is that the organization already has a CA somewhere and that eventually that CA will be used to issue the certificates used for OpenStack.
 
