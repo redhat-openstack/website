@@ -49,7 +49,7 @@ Now install the MariaDB and Galera packages on each of the cluster nodes.
 
     yum install MariaDB-Galera-server MariaDB-client galera
 
-With the packages now installed on all three cluster nodes, login to one of the cluster nodes and nootstrap the cluster. In this example, the first node to be started will be 'node-02'. For now, all relevant parameters will be passed on the command line.
+With the packages now installed on all three cluster nodes, login to one of the cluster nodes and bootstrap the cluster. In this example, the first node to be started will be 'node-02'. For now, all relevant parameters will be passed on the command line.
 
     # service mysql start --user=mysql \
       --wsrep_cluster_address=gcomm:// \
