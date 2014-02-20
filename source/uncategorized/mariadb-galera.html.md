@@ -8,6 +8,11 @@ wiki_last_updated: 2014-02-20
 
 # MariaDB Galera
 
+__NOTOC__
+
+<div class="bg-boxes bg-boxes-single">
+<div class="row">
+<div class="offset3 span8 pull-s">
 ## Using MariDB+Galera Cluster with RDO Havana
 
 OpenStack services store information in an SQL database. Typically this is MySQL running on a single node, which presents a single point of failover. This guide will show how to deploy a highly available database using MariaDB and Galera, as well as how to integrate this cluster with HAProxy and RDO.
