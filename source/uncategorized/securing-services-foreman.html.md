@@ -28,107 +28,32 @@ Optionally you may use an IPA server to streamline issuance and management of se
 
 ### Manual CA
 
-If you want to test with a self-signed OpenSSL CA you can generate one by creating a location for the CA and generating it with a configuration file. These instructions were inspired by <http://www.ulduzsoft.com/2012/01/creating-a-certificate-authority-and-signing-the-ssl-certificates-using-openssl/>
+If you want to test with a self-signed OpenSSL CA you can generate one by creating a location for the CA and generating it with a configuration file.
 
-You can put the CA anywhere in the filesystem you'd like this is in /root/opensslca. First, create ca.cnf with these contents in /root:
+Lets create our own CA using the OpenSSL defaults.
 
-    [ ca ]
-    default_ca = CA_default
+    # mkdir /root/CA
+    # cd /root/CA
+    # mkdir certs crl newcerts private requests
+    # echo 01 > serial
+    # touch index.txt index.txt.attr
+    # cp /etc/pki/tls/openssl.cnf .
 
-    [ CA_default ]
-    dir = ./opensslca
+apply this diff
 
-    # Where the issued certs are kept
-    certs = $dir/certs
+    diff openssl.cnf  /etc/pki/tls/openssl.cnf
+    42c42
+    < dir           = /root//CA             # Where everything is kept
+    ---
+    > dir           = /etc/pki/CA           # Where everything is kept
 
-    # database index file
-    database = $dir/index.txt
+Now generate the private key for the CA
 
-    # default place for new certs
-    new_certs_dir = $dir/certs
-
-    serial = $dir/serial
-
-    #
-    # The CA certificate
-    certificate = $dir/certs/ca.pem
-
-    private_key = $dir/private/ca.key
-
-    # private random number file
-    RANDFILE = $dir/private/.rand
-
-    # The extentions to add to the cert
-    x509_extensions = usr_cert
-
-    # how long to certify for
-    default_days = 365
-
-    # which md to use
-    default_md = sha1
-
-    # keep passed DN ordering
-    preserve = no
-
-    # Section names
-    policy = capolicy
-    x509_extensions = certificate_extensions
-
-    [ capolicy ]
-    # Use the user-supplied information for the subject
-    commonName = supplied
-    stateOrProvinceName = optional
-    countryName = supplied
-    emailAddress = optional
-    organizationName = supplied
-    organizationalUnitName = optional
-
-    [ certificate_extensions ]
-    # The signed certificate cannot be used as CA
-    basicConstraints = CA:false
-
-    [ req ]
-    # same as private_key
-    default_keyfile = ./opensslca/private/ca.key
-
-    # Which hash to use
-    default_md = sha1
-
-    # No prompts
-    prompt = no
-
-    # This is for CA
-    distinguished_name = root_ca_distinguished_name
-    x509_extensions = root_ca_extensions
-
-    [ root_ca_distinguished_name ]
-    commonName = Test CA
-    stateOrProvinceName = Raleigh
-    countryName = US
-    emailAddress = certs@example.com
-    organizationName = Test Certificate Authority
-
-    [ root_ca_extensions ]
-    basicConstraints = CA:true
-    subjectKeyIdentifier=hash
-    authorityKeyIdentifier=keyid:always,issuer
-
-Now generate the CA:
-
-      # pwd
-         /root
-      # mkdir -p opensslca/certs opensslca/private opensslca/crl
-      #  touch opensslca/index.txt
-      # echo "01" > opensslca/serial 
-      # openssl req -verbose -config ca.cnf -x509 -nodes -days 3650 -newkey rsa:2048 -out ./opensslca/certs/ca.pem -outform PEM -keyout ./opensslca/private/ca.key
-
-You can look at the result with:
-
-      # openssl x509 -text -in opensslca/certs/ca.pem
-
-Finally, we need to create a certificate to use. Ideally you want a separate certificate for each service but for the sake of brevity I'm creating only one. On the controller machine we need to create two certificates, one for the public and one for the private interfaces:
-
-    # openssl req -newkey rsa:1024 -nodes -sha1 -keyout /etc/pki/tls/private/set1client1.private.example.com-mysql.key  -keyform PEM -out /root/private.req -outform PEM
+    # openssl req -nodes -new -newkey rsa:2048 -keyout private/cakey.pem -out careq.pem -config ./openssl.cnf
+    Generating a 2048 bit RSA private key
+    .......................+++
+    ...........................+++
+    writing new private key to 'private/cakey.pem'
     -----
     You are about to be asked to enter information that will be incorporated
     into your certificate request.
@@ -138,44 +63,87 @@ Finally, we need to create a certificate to use. Ideally you want a separate cer
     If you enter '.', the field will be left blank.
     -----
     Country Name (2 letter code) [XX]:US
-    State or Province Name (full name) []:
-    Locality Name (eg, city) [Default City]:
-    Organization Name (eg, company) [Default Company Ltd]:
+    State or Province Name (full name) []:NC
+    Locality Name (eg, city) [Default City]:Raleigh
+    Organization Name (eg, company) [Default Company Ltd]:Example Corp.
     Organizational Unit Name (eg, section) []:
-    Common Name (eg, your name or your server's hostname) []:set1client1.private.example.com
-    Email Address []:
+    Common Name (eg, your name or your server's hostname) []:Example Certificate Authority
+    Email Address []:certs@example.com
 
     Please enter the following 'extra' attributes
     to be sent with your certificate request
     A challenge password []:
     An optional company name []:
 
-The country code isn't really that important bu the Common Name MUST match the private FQDN.
+Sign the CA and issue a 10-year certificate. Yes, this is overkill for testing.
 
-Do the same for the public FQDN.
+      # openssl ca -create_serial -out cacert.pem -days 3650 -keyfile private/cakey.pem -selfsign -extensions v3_ca -config ./openssl.cnf -infiles careq.pem
 
-      # openssl req -newkey rsa:1024 -nodes -sha1 -keyout /etc/pki/tls/private/set1client1.public.example.com-horizon.key  -keyform PEM -out /root/private.req -outform PEM
+On the controller, generate a CSR for the public and private certs.
 
-Copy these files to the CA machine (I used the Foreman server as the CA).
+    # openssl req -newkey rsa:1024 -nodes -sha1 -keyout /etc/pki/tls/private/set1client1.public.example.com-horizon.key  -keyform PEM -out /root/public.req -outform PEM
 
-Sign the certificate requests:
+    Generating a 1024 bit RSA private key
+    .++++++
+    .........++++++
+    writing new private key to '/etc/pki/tls/private/set1client1.public.example.com-horizon.key'
+    -----
+    You are about to be asked to enter information that will be incorporated
+    into your certificate request.
+    What you are about to enter is what is called a Distinguished Name or a DN.
+    There are quite a few fields but you can leave some blank
+    For some fields there will be a default value,
+    If you enter '.', the field will be left blank.
+    -----
+    Country Name (2 letter code) [XX]:US
+    State or Province Name (full name) []:NC
+    Locality Name (eg, city) [Default City]:Raleigh
+    Organization Name (eg, company) [Default Company Ltd]:Example Corp.
+    Organizational Unit Name (eg, section) []:
+    Common Name (eg, your name or your server's hostname) []:set1client1.public.example.com
+    Email Address []:root@example.com
 
-    # openssl ca -config ca.cnf -batch -notext -in /tmp/private.req  -out private.pem
-    Using configuration from ca.cnf
-    Check that the request matches the signature
-    Signature ok
-    The Subject's Distinguished Name is as follows
-    countryName           :PRINTABLE:'XX'
-    localityName          :ASN.1 12:'Raleigh'
-    organizationName      :ASN.1 12:'Test CA'
-    commonName            :ASN.1 12:'set1client1.private.example.com'
-    Certificate is to be certified until Feb 19 22:44:33 2015 GMT (365 days)
+    Please enter the following 'extra' attributes
+    to be sent with your certificate request
+    A challenge password []:
+    An optional company name []:
 
-Now put private.pem into the location defined in the controller hostgroup, then do a similar command for the public request.
+Then do something similar for the private interface
 
-For testing purposes we can just copy the mysql certificate to the qpid certificate (or set the paths the same in seeds.rb). For production purposes you'd want separate certificates for each service.
+    # openssl req -newkey rsa:1024 -nodes -sha1 -keyout /etc/pki/tls/private/set1client1.private.example.com-mysql.key  -keyform PEM -out /root/private.req -outform PEM
+
+On the CA sign the requests
+
+Copy the two request files and put them into /root/CA/requests. You'll be asked to confirm the certificates, answer yes.
+
+    # openssl ca -config ./openssl.cnf -infiles requests/private.req
+    # openssl ca -config ./openssl.cnf -infiles requests/public.req
+
+The output of each signing is the public certificate. Copy that into the appropriate location on the controller, such as
+
+    /etc/pki/tls/certs/set1client1.public.example.com-horizon.crt
+    /etc/pki/tls/certs/set1client1.private.example.com-mysql.crt
+
+We cheat and use the same certificate for qpid as mysql. For production purposes you'd want separate certificates for each service.
+
+    # cp /etc/pki/tls/certs/set1client1.private.example.com-mysql.crt /etc/pki/tls/certs/set1client1.private.example.com-qpid.crt
+    # cp /etc/pki/tls/private/set1client1.private.example.com-mysql.key  /etc/pki/tls/private/set1client1.private.example.com-qpid.key
+
+Copy /root/CA/cacert.pem to the controller machine /etc/pki/tls/certs/openssl.crt
 
 You could probably use the puppet CA for this as well. My assumption is that the organization already has a CA somewhere and that eventually that CA will be used to issue the certificates used for OpenStack.
+
+When you set up seeds.rb you want to use values that look something like this:
+
+      "mysql_ca"                      => "/etc/pki/tls/certs/openssl.crt",
+      "mysql_cert"                    => "/etc/pki/tls/certs/set1client1.private.example.com-mysql.crt",
+      "mysql_key"                     => "/etc/pki/tls/private/set1client1.private.example.com-mysql.key",
+      "qpid_ca"                       => "/etc/pki/tls/certs/openssl.crt",
+      "qpid_cert"                     => "/etc/pki/tls/certs/set1client1.private.example.com-qpid.crt",
+      "qpid_key"                      => "/etc/pki/tls/private/set1client1.private.example.com-qpid.key",
+      "horizon_ca"                    => "/etc/pki/tls/certs/openssl.crt",
+      "horizon_cert"                  => "/etc/pki/tls/certs/set1client1.public.example.com-horizon.crt",
+      "horizon_key"                   => "/etc/pki/tls/private/set1client1.public.example.com-horizon.key",
 
 ### Provisioning
 
