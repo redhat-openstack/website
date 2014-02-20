@@ -27,7 +27,7 @@ All of the above look dead obvious, but doesn't instantly come to mind when aski
 
 ### Pinging for attention (please avoid a 'naked ping')
 
-A simple guideline if you want to raise some specific person's attention on IRC, and do it *effectively*.
+If you're not aware of what a 'naked ping' is, please take 3 minutes to read this [excellent post](http://blogs.gnome.org/markmc/2014/02/20/naked-pings/).
 
 #### Do:
 
