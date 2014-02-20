@@ -49,6 +49,10 @@ Now install the MariaDB and Galera packages on each of the cluster nodes.
 
     yum install MariaDB-Galera-server MariaDB-client galera
 
+At this time, MariaDB+Galera cluster does not work with SELinux is enabled. Set SELinux to permissive mode on all cluster nodes before attempting to start the service.
+
+    # setenforce 0
+
 With the packages now installed on all three cluster nodes, login to one of the cluster nodes and bootstrap the cluster. In this example, the first node to be started will be 'node-02'. For now, all relevant parameters will be passed on the command line.
 
     # service mysql start --user=mysql \
