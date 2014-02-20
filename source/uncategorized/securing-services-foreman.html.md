@@ -152,9 +152,9 @@ Finally, we need to create a certificate to use. Ideally you want a separate cer
 
 The country code isn't really that important bu the Common Name MUST match the private FQDN.
 
-Do the same for the public FQDN. There is only one certificate needed for the public interface so we can request it directly:
+Do the same for the public FQDN.
 
-      # openssl req -newkey rsa:1024 -nodes -sha1 -keyout /etc/pki/tls/private/set1client1.private.example.com-horizon.key  -keyform PEM -out /root/private.req -outform PEM
+      # openssl req -newkey rsa:1024 -nodes -sha1 -keyout /etc/pki/tls/private/set1client1.public.example.com-horizon.key  -keyform PEM -out /root/private.req -outform PEM
 
 Copy these files to the CA machine (I used the Foreman server as the CA).
 
