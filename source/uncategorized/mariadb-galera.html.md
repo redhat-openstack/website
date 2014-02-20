@@ -31,7 +31,7 @@ Now that the databases have been dumped, stop and disable the MySQL service.
 
 Now deploy the MariaDB+Galera cluster. It is recommended to use at least 3 nodes for this cluster. In this example, the MariaDB+Galera cluster will be deployed on three additional nodes that will be referred to as 'node-02', 'node-03'. and 'node-04' with addressses 10.15.85.142, 10.15.85.143, and 10.15.85.144 respectively.
 
-On each of the MariaDB+Galera cluster nodes, configure the yum repo from which the packages will be retrieved. In this example, each machine is running RHEL6, x86_64. Appropriate yum repositories for other operating systems and/or architectures can be found using [link title](http://downloads.mariadb.org/mariadb/repositories/).
+On each of the MariaDB+Galera cluster nodes, configure the yum repo from which the packages will be retrieved. In this example, each machine is running RHEL6, x86_64. Appropriate yum repositories for other operating systems and/or architectures can be found using the MariaDB [repository configuration tool](http://downloads.mariadb.org/mariadb/repositories/).
 
     # cat /etc/yum.repos.d/mariadb.repo 
     [mariadb]
@@ -51,7 +51,7 @@ With the packages now installed on all three cluster nodes, login to one of the 
       --wsrep_provider=/usr/lib64/galera/libgalera_smm.so \
       --wsrep_sst_method=rsync
 
-Note that when bootstrapping a new cluster the wsrep_cluster_address should use an empty "gcomm://" parameter. This will create a new cluster and therefore should not be use when adding a node to an existing cluster. Adding nodes to an existing cluster will be covered later in this guide. For more information, please refer to [link title](https://mariadb.com/kb/en/getting-started-with-mariadb-galera-cluster/).
+Note that when bootstrapping a new cluster the wsrep_cluster_address should use an empty "gcomm://" parameter. This will create a new cluster and therefore should not be use when adding a node to an existing cluster. Adding nodes to an existing cluster will be covered later in this guide. For more information, please refer to [Getting Started With MariaDB Galera Cluster](http://mariadb.com/kb/en/getting-started-with-mariadb-galera-cluster/).
 
 With a single-node MariaDB+Galera cluster up and running, the next steps are to add more nodes to the cluster and to import the OpenStack database previously dumped. These can be done in any order. In this example the database will be imported, followed by adding two more cluster nodes.
 
