@@ -53,6 +53,11 @@ At this time, MariaDB+Galera cluster does not work with SELinux is enabled. Set 
 
     # setenforce 0
 
+Open required ports for MariaDB+Galera cluster.
+
+    # iptables -A INPUT -p tcp --dport 3306 -j ACCEPT
+    # iptables -A INPUT -p tcp --dport 4567 -j ACCEPT
+
 With the packages now installed on all three cluster nodes, login to one of the cluster nodes and bootstrap the cluster. In this example, the first node to be started will be 'node-02'. For now, all relevant parameters will be passed on the command line.
 
     # service mysql start --user=mysql \
