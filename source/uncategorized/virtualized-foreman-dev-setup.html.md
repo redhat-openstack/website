@@ -40,7 +40,9 @@ Then, source this file:
 
 INITIMAGE defines the name of the base image. VMSET is a space-delimited list of virtual machine names; we will, below, use 'set1fore1' as the Foreman server, and 'set1client1' and 'set1client2' as clients managed by Foreman. INSTALLURL should point to your OS install tree.
 
-Then, follow the directions in [the vftool README](https://github.com/cwolferh/vms-and-foreman/) through the end of the first set of example commands, with one exception. When you reach the step '$ bash -x vftool.bash create_images', it may be helpful to do a little additional base configuration on your init image before creating the test VMs. For instance, assuming RHEL, you may wish to register with subscription-manager (or RHN) and attach to the appropriate pools, or any other steps you will take on each instance. Also complete the [Repo setup](Deploying_RDO_Using_Foreman#Repo_setup) step from the Foreman installation page.
+Then, follow the directions in [the vftool README](https://github.com/cwolferh/vms-and-foreman/) through the end of the first set of example commands, with one exception. When you reach the step '$ bash -x vftool.bash create_images', it may be helpful to do a little additional base configuration on your init image before creating the test VMs. For instance, assuming RHEL, you may wish to register with subscription-manager (or RHN) and attach to the appropriate pools, or any other steps you will take on each instance. Also complete the [Repo setup](Deploying_RDO_Using_Foreman#Repo_setup) step from the Foreman installation page. Note that we have, at this point, not done aything to make the VM accessible via dns, so the easiest way to make these changes is to put any such changes you want into a small script and locate that in /mnt/vm-share. Then you can apply it with:
+
+    bash-x vftool.bash run '. /mnt/vm-share/<your-script>'
 
 #### Configure the Foreman server
 
