@@ -20,9 +20,11 @@ This guide is meant to help you set up a development/PoC environment to deploy a
 
 [vftool](https://github.com/cwolferh/vms-and-foreman/) is a tool to build and configure multiple VMs. We will be using it in this example to allow you to test this process within virtual machines on a single physical host.
 
-Vftool is completely optional, with the purpose of making it a bit easier to set up and get a base configuration for a set of VMs to test with a multi-machine OpenStack setup, using Foreman. IOW, this is for PoC/disposable setups just to try things out. Anything done in/with this tool can also be done manually using your virtualization commands of choice/preference. If you choose to use this tool, first, clone it from:
+Vftool is completely optional, with the purpose of making it a bit easier to set up and get a base configuration for a set of VMs to test with a multi-machine OpenStack setup, using Foreman. IOW, this is for PoC/disposable setups just to try things out. Anything done in/with this tool can also be done manually using your virtualization commands of choice/preference. If you choose to use this tool, first, clone it:
 
-<https://github.com/cwolferh/vms-and-foreman/>
+    git clone git@github.com:cwolferh/vms-and-foreman.git 
+    # or, if any issues:
+    git clone https://github.com/cwolferh/vms-and-foreman.git
 
 ##### RHEL/RHOS install/setup with vftool
 
@@ -32,7 +34,9 @@ create a .rhel_vftoolrc with:
     export VMSET='set1fore1 set1client1 set1client2'
     export INSTALLURL=http://your-mirror/released/RHEL-6/6.4/Server/x86_64/os
 
-Then, source this file (`source .rhel_vftoolrc`).
+Then, source this file:
+
+    source .rhel_vftoolrc
 
 INITIMAGE defines the name of the base image. VMSET is a space-delimited list of virtual machine names; we will, below, use 'set1fore1' as the Foreman server, and 'set1client1' and 'set1client2' as clients managed by Foreman. INSTALLURL should point to your OS install tree.
 
