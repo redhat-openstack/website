@@ -216,6 +216,23 @@ If you just want to give Cinder a quick try, there is a script that sets up a `c
 
 Note that `cinder-testing-volume.sh` script is meant for testing only, and the volume group will not persist between reboots. In production environment Cinder storage should be always backed by disks or disk partitions, not by loop files.
 
+You can also manually create you Volume Groups, example here:
+
+    # local partition (requires an unused disk or partition)
+        pvcreate -yv -ff /dev/sdb
+            vgcreate cinder-volumes /dev/sdb
+
+    # iSCSI target (requires an initiator and target)
+        iscsiadm -m discovery -t st -p 172.31.143.200
+            iscsiadm -m node -l
+            partprobe -s
+            pvcreate -yv -ff /dev/sdb
+            vgcreate cinder-volumes /dev/sdb
+
+    # loopback device (poc only, requires free space)
+        truncate --size 5G /root/cinder-volumes
+            losetup -fv /root/cinder-volumes
+
 #### Load Balancer
 
 Note that the Load Balancer itself is not yet HA, but will be part or a Pacemaker cluster group in the near future.
