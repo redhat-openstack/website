@@ -20,8 +20,6 @@ If you missed a hangout, and are watching the video, you can always ask followup
 
 ### Multi-node deployment using packstack
 
-=
-
 February 27, 2014, presented by Lars Kellogg-Stedman
 
 <iframe width="630" src="//youtube.com/embed/DGf-ny25OAw" frameborder="0" align="center" allowfullscreen="true"> </iframe>
