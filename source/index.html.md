@@ -49,9 +49,9 @@ OpenStack relies on the underlying operating system and hypervisor — and what 
 <div class="span7 offset4 pad-sides begin-content pull-m">
 ## Networking with OpenStack
 
-On **Thursday, October 31st**, Brent Eagles gave a presentation on advanced networking with OpenStack.
+On **Thursday, February 27th**, Lars Kellogg-Stedman gave a presentation on doing a multi-node deployment of OpenStack using RDO and packstack. If you have follow-up questions, you can always ask them on #rdo on the Freenode IRC network, or on the [rdo-list mailing list](http://www.redhat.com/mailman/listinfo/rdo-list).
 
-<iframe width="630" src="//youtube.com/embed/wEa_8ESxPAY" frameborder="0" align="center" allowfullscreen="true"> </iframe>
+<iframe width="630" src="//youtube.com/embed/DGf-ny25OAw" frameborder="0" align="center" allowfullscreen="true"> </iframe>
 
 You can see some earlier presentations on the [RDO Videos](RDO Videos) page.
 
