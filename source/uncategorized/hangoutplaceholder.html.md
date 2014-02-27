@@ -8,8 +8,6 @@ wiki_last_updated: 2014-02-27
 
 # Hangout Placeholder
 
-The hangout you're looking for has not started yet, or is already done.
-
-Hangout live streams are at <http://goo.gl/Rpc3ml> when the event has started. Keep trying.
+In just a few minutes, Lars will be presenting a run through of a multi-node installation with packstack. Hold on, and [try again](http://goo.gl/Rpc3ml) in a few minutes.
 
 Meanwhile, past events are archived at [Hangouts](Hangouts).
