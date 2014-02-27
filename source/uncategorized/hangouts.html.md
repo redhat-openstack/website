@@ -12,9 +12,19 @@ RDO conducts periodic Google Hangouts on a variety of OpenStack-related topics.
 
 ## Upcoming Hangouts
 
-February 27th, 10am EST ([in your timezone](http://www.timeanddate.com/worldclock/fixedtime.html?iso=20140227T1500)) Lars Kellogg-Stedman will be doing a walk-through of a multinode deployment with packstack. The presentation will be streamed live at <https://plus.google.com/events/cm9ff549vmsim737lj7hopk4gao> We'll also be on IRC at #rdo-hangout on the Freenode network, to discuss and answer questions during the presentation.
+In March (date to be determined) Flavio Percoco will be presenting on Marconi. Stay tuned for more information.
 
 ## Past Hangouts
+
+If you missed a hangout, and are watching the video, you can always ask followup questions on the #rdo IRC channel on Freenode, or on the [rdo-list mailing list](http://www.redhat.com/mailman/listinfo/rdo-list)
+
+### Multi-node deployment using packstack
+
+=
+
+February 27, 2014, presented by Lars Kellogg-Stedman
+
+<iframe width="630" src="//youtube.com/embed/DGf-ny25OAw" frameborder="0" align="center" allowfullscreen="true"> </iframe>
 
 ### OpenStack Networking Part II
 
