@@ -12,7 +12,7 @@ RDO conducts periodic Google Hangouts on a variety of OpenStack-related topics.
 
 ## Upcoming Hangouts
 
-In March (date to be determined) Flavio Percoco will be presenting on Marconi. Stay tuned for more information.
+March 27th, 10am EST, Flavio Percoco will be presenting on Marconi. Stay tuned for more information.
 
 ## Past Hangouts
 
