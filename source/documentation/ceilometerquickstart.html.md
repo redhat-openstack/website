@@ -48,6 +48,8 @@ Before we do that, a few words on how Ceilometer is realized as a set of agents 
 *   **central** agent: polls the public RESTful APIs of other openstack services such as nova and glance, in order to keep tabs on resource existence
 *   **collector** service: consumes AMQP notifications from the agents and other openstack services, then dispatch these data to the metering store
 *   **API** service: presents aggregated metering data to consumers (such as billing engines, analytics tools *etc*.)
+*   **alarm-evaluator** service: determines when alarms fire due to the associated statistic trend crossing a threshold over a sliding time window
+*   **alarm-notifier** service: initiates alarm actions, for example calling out to a webhook with a description of the alarm state transition
 
  In a `packstack` "all in one" installation, all of these services will be running on your single node. In a wider deployment, the main location constraint is that the compute agent is required to run on all nova compute nodes. Assuming "all in one" for now, check that all services are running smoothly:
 
