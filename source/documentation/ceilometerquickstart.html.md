@@ -23,7 +23,7 @@ This guide is intended to get you up and running quickly with Ceilometer:
 *   understanding how the metering store is structured
 *   alarming on resource performance
 
-*This guide is predicated on at least the Havana RC1 version of the packages being used (the service start-up instructions for older versions of the packages from the H cycle would differ somewhat).*
+*This guide is predicated on at least the Havana final version of the packages being used, i.e. openstack-ceilometer-2013.2-1 or later (as the service start-up instructions for older versions of the packages from the H cycle would differ somewhat).*
 
 ### Prerequisites
 
@@ -51,7 +51,7 @@ Before we do that, a few words on how Ceilometer is realized as a set of agents 
 
  In a `packstack` "all in one" installation, all of these services will be running on your single node. In a wider deployment, the main location constraint is that the compute agent is required to run on all nova compute nodes. Assuming "all in one" for now, check that all services are running smoothly:
 
-       export CEILO_SVCS='compute central collector api'
+       export CEILO_SVCS='compute central collector api alarm-evaluator alarm-notifier'
        for svc in $CEILO_SVCS ; do sudo service openstack-ceilometer-$svc status ; done
 
 For your peace of mind, ensure that there are no errors in the Ceilometer logs at this time:
@@ -194,7 +194,7 @@ to set the logging level to debug as opposed to the default warning. As always, 
 First ensure that the latest version of CLI package is installed:
 
        sudo rpm -qa | awk -F- '/python-ceilometerclient/ {print $3}'
-       1.0.6
+       1.0.8
 
 which will allow you to access the latest API additions, for example alarm history and the separation of alarm representation from the encapsulated rules.
 
@@ -324,11 +324,10 @@ Individual datapoints for a particular meter may be aggregated into consolidated
 
 #### Using alarms
 
-Before creating any alarms, you'll need to ensure the Ceilometer alarming services are running (at the time of writing, these new services are not yet fired up during a `packstack` install):
+Before creating any alarms, ensure that the relevant Ceilometer alarming services are running:
 
-       sudo yum install -y openstack-ceilometer-alarm
        export CEILO_ALARM_SVCS='evaluator notifier'
-       for svc in $CEILO_ALARM_SVCS; do sudo service openstack-ceilometer-alarm-$svc start; done
+       for svc in $CEILO_ALARM_SVCS; do sudo service openstack-ceilometer-alarm-$svc status; done
 
 An example of creating a threshold-oriented alarm, based on a upper bound on the CPU utilization for a particular instance:
 
