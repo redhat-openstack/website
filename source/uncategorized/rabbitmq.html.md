@@ -17,80 +17,36 @@ __NOTOC__
 
 OpenStack requires a messaging service for internal communications between various components. Currently, this is done by using an AMQP broker. OpenStack can be configured to use either the Qpid broker or the RabbitMQ broker. In RDO, the default broker is Qpid. This guide will show how to replace Qpid with RabbitMQ, as well as how to deploy highly available RabbitMQ.
 
-This guide will assume that RDO has been installed on a single node via packstack:
+This guide will assume that RDO has been installed on a single node via packstack. RabbitMQ support in packstack is new, and not yet available in the RDO packstack package. Therefore it is necessary to run packstack from source, for now.
 
-    % packstack --allinone
+First, install required packages.
 
-This will deploy OpenStack on a single node, including the Qpid messaging service. In order to replace Qpid with RabbitMQ, all OpenStack services should first be stopped.
+    % yum install -y http://rdo.fedorapeople.org/rdo-release.rpm python-netaddr python-setuptools git
 
-    % openstack-service stop
+Grab the packstack source.
 
-Once all the OpenStack services are stopped, stop and disable the Qpid service.
+    % git clone git://github.com/stackforge/packstack
+    % cd packstack
 
-    % service qpidd stop
-    % chkconfig qpidd off
+Install the openstack puppet modules.
 
-Next, install the RabbitMQ service.
+    % python setup.py install_puppet_modules
 
-    % yum install rabbitmq-server
+Generate a default answers file for packstack.
 
-After installation completes, enable and start the RabbitMQ service.
+    % ./bin/packstack --gen-answer-file=answers
 
-    % chkconfig rabbitmq-server on
-    % service rabbitmq-server start
+Configure packstack to use RabbitMQ in place of Qpid.
 
-At this point the RabbitMQ service is running on the localhost, listening on port 5672. The next step is to configure the relevant OpenStack services to use the RabbitMQ messaging driver.
+    % sed -i 's/CONFIG_AMQP_SERVER=qpid/CONFIG_AMQP_SERVER=rabbitmq/' answers
 
-Neutron:
+If you are using RHEL, you must enable EPEL for RabbitMQ and Erlang to be available. Skip this step if using Fedora.
 
-    openstack-config --set /etc/neutron/neutron.conf DEFAULT rpc_backend neutron.openstack.common.rpc.impl_kombu
+    % sed -i 's/CONFIG_USE_EPEL=n/CONFIG_USE_EPEL=y/' answers
 
-Cinder:
+Finally, run packstack with the answers file.
 
-    openstack-config --set /etc/cinder/cinder.conf DEFAULT rpc_backend cinder.openstack.common.rpc.impl_kombu
-
-Nova:
-
-    openstack-config --set /etc/nova/nova.conf DEFAULT rpc_backend nova.openstack.common.rpc.impl_kombu
-
-Glance:
-
-    openstack-config --set /etc/glance/glance-api.conf DEFAULT notifier_strategy rabbit
-
-Ceilometer:
-
-    openstack-config --set /etc/ceilometer/ceilometer.conf DEFAULT rpc_backend ceilometer.openstack.common.rpc.impl_kombu
-
-By default, OpenStack assumes that the RabbitMQ broker is listening on port 5672 of the localhost. In this example, the OpenStack services could now be restarted with no additional configuration. For completeness, set the host and port where the RabbitMQ broker is listening. This must be done for each OpenStack service.
-
-Neutron:
-
-    openstack-config --set /etc/neutron/neutron.conf DEFAULT rabbit_host 10.15.85.141
-    openstack-config --set /etc/neutron/neutron.conf DEFAULT rabbit_port 5672
-
-Nova:
-
-    openstack-config --set /etc/nova/nova.conf DEFAULT rabbit_host 10.15.85.141
-    openstack-config --set /etc/nova/nova.conf DEFAULT rabbit_port 5672
-
-Glance:
-
-    openstack-config --set /etc/glance/glance-api.conf DEFAULT rabbit_host 10.15.85.141
-    openstack-config --set /etc/glance/glance-api.conf DEFAULT rabbit_port 5672
-
-Cinder:
-
-    openstack-config --set /etc/cinder/cinder.conf DEFAULT rabbit_host 10.15.85.141
-    openstack-config --set /etc/cinder/cinder.conf DEFAULT rabbit_port 5672
-
-Ceilometer:
-
-    openstack-config --set /etc/ceilometer/ceilometer.conf DEFAULT rabbit_host 10.15.85.141
-    openstack-config --set /etc/ceilometer/ceilometer.conf DEFAULT rabbit_port 5672
-
-With the RabbitMQ broker running listening on port 5672 at host 10.15.85.141, the last step is to start all of the OpenStack services.
-
-    % openstack-service start
+    %  ./bin/packstack --answer-file=answers
 
 If the OpenStack services are properly configured and using RabbitMQ, several queues should exist. Use the rabbitmqctl utility to get a list of queues.
 
