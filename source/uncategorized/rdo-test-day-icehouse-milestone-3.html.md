@@ -13,6 +13,12 @@ We plan to hold a RDO test day on March 19th and 20th, 2014. This will be coordi
 
 We'll be testing the second Icehouse milestone release. If you can do any testing on your own ahead of time, that will help ensure that everyone isn't encountering the same problems.
 
+Quick Links:
+
+*   Test Day App - <http://testdays.qa.fedoraproject.org/testdays/show_event?event_id=16>
+*   Test cases - <https://fedoraproject.org/wiki/Test_Day:2014-03-19_RDOMetadata>
+*   [Quickstart](Quickstart)
+
 ## Who's Participating
 
 *   -   -   
