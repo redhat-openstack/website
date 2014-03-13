@@ -175,8 +175,10 @@ Then you can source it and do a 'nova service-list'. This should show most servi
 
 ##### Notes
 
+*   This document needs major update, and a lot more detail.
 *   This is for GRE Tunnel only (for now)
 *   Minimum 3 hosts - 4 are needed for full validation (VMs communication across compute hosts)
+*   Further doc located [here](Configuring_Neutron_with_OVS_and_GRE_Tunnels_using_quickstack). Note this is also desperately in need of some updates.
 
 ##### Prerequisites
 
