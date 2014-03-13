@@ -48,6 +48,12 @@ Finally, run packstack with the answers file.
 
     %  ./bin/packstack --answer-file=answers
 
+Alternatively you can set the amqp server and epel along with the allinone option:
+
+    % packstack --allinone --amqp-server=rabbitmq --use-epel=y
+
+This will configure the rabbitmq as the amqp server, enable epel and then run the installation.
+
 If the OpenStack services are properly configured and using RabbitMQ, several queues should exist. Use the rabbitmqctl utility to get a list of queues.
 
     # rabbitmqctl list_queues name
