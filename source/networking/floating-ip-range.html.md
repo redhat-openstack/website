@@ -35,8 +35,9 @@ No floating IPs are created by default. You must first create a public network a
 1.  source /root/keystonerc_admin
 2.  neutron net-create public --router:external=True
 3.  neutron subnet-create public 192.168.1.0/24 --name vlan --enable_dhcp False --allocation_pool start=192.168.1.57,end=192.168.1.62 --gateway 192.168.1.1 (use your network gateway here - change the IP addresses in the allocation range to match what is available on your network)
-4.  neutron router-gateway-set $router_id $vlan_id (use your router id and previous created vlan id)
-5.  neutron floatingip-create public (repeat as necessary)
+4.  neutron router-create router1(name of your router)
+5.  neutron router-gateway-set $router_id $vlan_id (use your router id and previous created vlan id)
+6.  neutron floatingip-create public (repeat as necessary)
 
 Neutron does not auto-create floating IPs or auto-assign them to new instances but this feature is planned for future inclusion.
 
