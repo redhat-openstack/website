@@ -28,6 +28,7 @@ Quick Links:
 *   augol / cmyster - IRC OpenStack Heat, Fedora20
 *   nlevinki - foreman installation with rhel7, Swift
 *   iovadia - IRC, OpenStack-Horizon on RHEL7
+*   ukalifon - OpenStack-Keystone
 
 ## Prerequisites
 
