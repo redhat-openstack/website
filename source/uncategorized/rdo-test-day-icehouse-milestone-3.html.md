@@ -23,7 +23,7 @@ Quick Links:
 
 *   rbowen - Wiki, IRC, testing (CentOS)
 *   yeylon - IRC, testing foreman installation with rhel7
-*   
+*   ohochman - IRC, OpenStack- Foreman-Installer, Nova .
 
 ## Prerequisites
 
