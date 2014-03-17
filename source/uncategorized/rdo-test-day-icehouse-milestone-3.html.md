@@ -22,7 +22,8 @@ Quick Links:
 ## Who's Participating
 
 *   rbowen - Wiki, IRC, testing (CentOS)
-*   -   
+*   yeylon - IRC, testing foreman installation with rhel7
+*   
 
 ## Prerequisites
 
