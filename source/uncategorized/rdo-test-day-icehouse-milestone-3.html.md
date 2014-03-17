@@ -26,6 +26,7 @@ Quick Links:
 *   ohochman - IRC, OpenStack- Foreman-Installer, Nova .
 *   ajeain - IRC, OpenStack-Horizon, Nova
 *   augol / cmyster - IRC OpenStack Heat, Fedora20
+*   nlevinki - foreman installation with rhel7, Swift
 
 ## Prerequisites
 
