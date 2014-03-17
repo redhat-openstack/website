@@ -27,6 +27,7 @@ Quick Links:
 *   ajeain - IRC, OpenStack-Horizon, Nova
 *   augol / cmyster - IRC OpenStack Heat, Fedora20
 *   nlevinki - foreman installation with rhel7, Swift
+*   iovadia - IRC, OpenStack-Horizon on RHEL7
 
 ## Prerequisites
 
