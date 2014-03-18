@@ -12,7 +12,7 @@ wiki_last_updated: 2014-03-18
 
 ## Undercloud Setup
 
-The steps to install the undercloud and configure Tuskar are listed in: <https://github.com/agroup/instack-undercloud/blob/master/README-packages.md>.
+The steps to install the undercloud and configure Tuskar are listed in: <https://github.com/agroup/instack-undercloud/blob/master/README-packages.md>. These steps should be executed on Fedora 20.
 
 Note that this task's install uses the instack-baremetal.answers.sample answers file.
 
