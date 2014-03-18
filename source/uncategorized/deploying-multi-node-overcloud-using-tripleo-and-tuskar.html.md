@@ -36,7 +36,7 @@ Download the images needed for the Overcloud and load those images into Glance o
 
 Once the images are available in Glance, to deploy the overcloud using Heat, you can either:
 
-      - run "deploy-overcloud' script 
+      - run 'deploy-overcloud' script 
       - manually follow the steps in /usr/share/deploy-overcloud
 
 Note:
