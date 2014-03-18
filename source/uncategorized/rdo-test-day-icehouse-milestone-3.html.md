@@ -32,6 +32,7 @@ Quick Links:
 *   iovadia - IRC, OpenStack-Horizon on RHEL7
 *   ukalifon - OpenStack-Keystone
 *   tshefi - IRC, Openstack Foreman installer, RHEL7, Glance
+*   rlandy - TripleO, Tuskar
 
 ## Prerequisites
 
