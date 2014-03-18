@@ -9,7 +9,7 @@ wiki_last_updated: 2014-03-25
 
 # RDO test day Icehouse milestone 3
 
-**Due to a variety of issues, we are rescheduling the test day for March 25th and 26th.**
+**Due to build system failures, we are rescheduling the test day for March 25th and 26th.**
 
 We plan to hold a RDO test day on March 25th and 26th, 2014. This will be coordinated through the #rdo channel on Freenode, and through this wiki and the rdo-list mailing list.
 
