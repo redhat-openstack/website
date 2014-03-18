@@ -61,14 +61,20 @@ Note that some of the instructions linked below are changing. Please contact the
 To test the deploying the Overcloud with Tuskar,
 
       - Tear down the current Overcloud (heat stack-delete overcloud) and remove the baremetal nodes (nova baremetal-node-delete)
-
       - Configure Tuskar.  Edit /etc/tuskar/tuskar.conf so the following settings are enabled:
 
-connection=sqlite:////home/stack/tuskar.sqlite tht_local_dir=/usr/share/tripleo-heat-templates/ username=admin # OS_USERNAME from /etc/sysconfig/stackrc password=unset # OS_PASSWORD from /etc/sysconfig/stackrc tenant_name=admin # OS_TENANT_NAME from /etc/sysconfig/stackrc auth_url=<http://localhost:5000/v2.0> insecure=true
+    connection=sqlite:////home/stack/tuskar.sqlite   
+    tht_local_dir=/usr/share/tripleo-heat-templates/
+    username=admin  # OS_USERNAME from /etc/sysconfig/stackrc
+    password=unset   # OS_PASSWORD from /etc/sysconfig/stackrc
+    tenant_name=admin  # OS_TENANT_NAME from /etc/sysconfig/stackrc
+    auth_url=http://localhost:5000/v2.0   
+    insecure=true 
 
       - Initialise the Tuskar database and restart the service
 
-sudo tuskar-dbsync --config-file /etc/tuskar/tuskar.conf sudo service openstack-tuskar-api restart
+    sudo tuskar-dbsync --config-file /etc/tuskar/tuskar.conf
+    sudo service openstack-tuskar-api restart
 
       - Follow the steps linked here to deploy the Overcloud using Tuskar: `[`https://github.com/agroup/instack-undercloud/blob/master/scripts/instack-deploy-overcloud-tuskarcli`](https://github.com/agroup/instack-undercloud/blob/master/scripts/instack-deploy-overcloud-tuskarcli)` 
       - Be aware of syntax changes for tuskar overcloud-create: "--attributes" is now "--attribute" and "--roles" is now "--role-count"
