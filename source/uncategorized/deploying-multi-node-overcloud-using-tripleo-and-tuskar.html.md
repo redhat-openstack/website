@@ -30,7 +30,7 @@ Note that this task's install uses the instack-baremetal.answers.sample answers 
 
 ## Setup for Overcloud
 
-<https://github.com/agroup/instack-undercloud/blob/master/scripts/instack-prepare-for-overcloud>
+Download the images needed for the Overcloud and load those images into Glance on the Undercloud following the steps listed here: <https://github.com/agroup/instack-undercloud/blob/master/scripts/instack-prepare-for-overcloud>
 
 ## Deploying an Overcloud
 
