@@ -10,6 +10,8 @@ wiki_last_updated: 2014-03-18
 
 ## Background
 
+This task follows the steps to install RDO using the [Tuskar](//wiki.openstack.org/wiki/TripleO/Tuskar) and [TripleO](//wiki.openstack.org/wiki/TripleO) projects. The install is done via packages. Note that any pages linked and any information in the linked pages are part of a rapidly changing project and are likely to be modified.
+
 ## Undercloud Setup
 
 The steps to install the undercloud and configure Tuskar are listed in: <https://github.com/agroup/instack-undercloud/blob/master/README-packages.md>. These steps should be executed on Fedora 20.
