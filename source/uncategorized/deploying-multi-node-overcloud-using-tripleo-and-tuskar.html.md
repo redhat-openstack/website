@@ -34,6 +34,17 @@ Download the images needed for the Overcloud and load those images into Glance o
 
 ## Deploying an Overcloud
 
+Once the images are available in Glance, to deploy the overcloud using Heat, you can either:
+
+      - run "deploy-overcloud' script 
+      - manually follow the steps in /usr/share/deploy-overcloud
+
+Note:
+
+      - you need to set values that are appropriate to your environment for the environment variables used deploying the Overcloud:  - $TRIPLEO_ROOT, $CPU, $MEM, $DISK, $ARCH, "$MACS", $PM_IPS",  "$PM_USERS",  "$PM_PASSWORDS", $NeutronPublicInterface, $OVERCLOUD_LIBVIRT_TYPE
+      - to deploy an Overcloud with Block Storage, you will need to include /usr/share/tripleo-heat-templates/block-storage.yaml when building the overcloud.yaml file
+      - to deploy an Overcloud with multiple Compute or Block Storage nodes, you need to modify the --scale (or COMPUTESCALE) argument.
+
 ## Overcloud Steps
 
 ## Deploy the Overcloud using Tuskar
