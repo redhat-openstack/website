@@ -10,10 +10,6 @@ wiki_last_updated: 2014-03-18
 
 ## Background
 
-## Prerequisites
-
-1.  These steps have been tested on Fedora 20.
-
 ## Undercloud Setup
 
 The steps to install the undercloud and configure Tuskar are listed in: <https://github.com/agroup/instack-undercloud/blob/master/README-packages.md>.
