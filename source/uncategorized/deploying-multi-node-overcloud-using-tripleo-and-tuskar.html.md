@@ -45,6 +45,13 @@ Note:
       - to deploy an Overcloud with Block Storage, you will need to include /usr/share/tripleo-heat-templates/block-storage.yaml when building the overcloud.yaml file
       - to deploy an Overcloud with multiple Compute or Block Storage nodes, you need to modify the --scale (or COMPUTESCALE) argument.
 
-## Overcloud Steps
+## Overcloud Test Steps
+
+Test the Overcloud by deploying a test instance by either:
+
+      - running the "test-overcloud" script
+      - or manually executing the steps in /usr/share/test-overcloud.
+
+You should be able to ping the test instance but may not be able to ssh to it.
 
 ## Deploy the Overcloud using Tuskar
