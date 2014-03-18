@@ -55,3 +55,13 @@ Test the Overcloud by deploying a test instance by either:
 You should be able to ping the test instance but may not be able to ssh to it.
 
 ## Deploy the Overcloud using Tuskar
+
+Note that some of the instructions linked below are changing. Please contact the team on IRC Freenode #tripleo channel with questions.
+
+To test the deploying the Overcloud with Tuskar,
+
+      - Tear down the current Overcloud (heat stack-delete overcloud) and remove the baremetal nodes (nova baremetal-node-delete)
+`- Follow the steps linked here to deploy the Overcloud using Tuskar: `[`https://github.com/agroup/instack-undercloud/blob/master/scripts/instack-deploy-overcloud-tuskarcli`](https://github.com/agroup/instack-undercloud/blob/master/scripts/instack-deploy-overcloud-tuskarcli)
+      - To deploy multiple Compute or Block Storage nodes, change the number of the roles in "tuskar overcloud-create"
+
+You can test the Overcloud using the "test-overcloud" script mentioned in the section above.
