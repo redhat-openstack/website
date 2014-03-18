@@ -18,7 +18,9 @@ The steps to install the undercloud and configure Tuskar are listed in: <https:/
 
 Note that this task's install uses the instack-baremetal.answers.sample answers file.
 
-## Baremetal Setup
+## Setup for Overcloud
+
+<https://github.com/agroup/instack-undercloud/blob/master/scripts/instack-prepare-for-overcloud>
 
 ## Deploying an Overcloud
 
