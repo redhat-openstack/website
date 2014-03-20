@@ -17,7 +17,11 @@ RDO is a freely-available, community-supported distribution of OpenStack that ru
 
 ## What does RDO stand for?
 
-It doesn't really stand for anything.
+RDO has no expansion or longer name, officially. It is not an acronym or abbreviation for anything.
+
+However, RDO does focus on building a distribution of OpenStack specific to Red Hat operating systems (and clones of Red Hat operating systems). So, in some sense you can think of RDO as being a project started by Red Hat to build a distribution of OpenStack.
+
+The 3 letter meaningless acronym sort of comes from that line of thinking.
 
 ## What is OpenStack?
 
