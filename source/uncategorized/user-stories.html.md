@@ -6,6 +6,6 @@ wiki_revision_count: 12
 wiki_last_updated: 2015-04-09
 ---
 
-## User Stories
+# User stories
 
-[CERN](http://openstack-in-production.blogspot.com/) has more than 50,000 cores running OpenStack using RDO for deployment.
+![](Cern.jpg "fig:Cern.jpg") [CERN](http://openstack-in-production.blogspot.com/) has more than 50,000 cores running OpenStack using RDO for deployment.
