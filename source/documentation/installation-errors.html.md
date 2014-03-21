@@ -44,7 +44,7 @@ If you have http_proxy set in your particular network environment, part of packs
 
 Solve this by adding the IP address of your server to no_proxy and/or NO_PROXY variable. You can get the IP address using ifconfig.
 
-Add those to $HOME/.bashrc and then source$HOME/.bashrc\` or start a new shell instance.
+Add those to $HOME/.bashrc and then \`source $HOME/.bashrc\` or start a new shell instance.
 
 (See [ask.openstack.org](https://ask.openstack.org/en/question/24721/packstack-allinone-behind-a-proxy-server/) for further discussion.)
 
