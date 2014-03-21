@@ -38,4 +38,14 @@ There are a number of possible solutions:
 2.  Wipe the pre-existing databases with \`rm -rf /var/lib/mysql\` and rerun packstack
 3.  Run [ the uninstall script](uninstalling RDO) to reset the host before re-running the quick start
 
+# Running packstack with http_proxy set
+
+If you have http_proxy set in your particular network environment, part of packstack may fail.
+
+Solve this by adding the IP address of your server to no_proxy and/or NO_PROXY variable. You can get the IP address using ifconfig.
+
+Add those to $HOME/.bashrc and then source$HOME/.bashrc\` or start a new shell instance.
+
+(See [ask.openstack.org](https://ask.openstack.org/en/question/24721/packstack-allinone-behind-a-proxy-server/) for further discussion.)
+
 <Category:Documentation>
