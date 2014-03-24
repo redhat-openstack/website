@@ -47,6 +47,13 @@ We plan to have have packages for the following platforms:
 
 You'll want a fresh install with latest updates installed. (Fresh so that there's no hard-to-reproduce interactions with other things.)
 
+Users running fedora 20 should ensure the following prior to a packstack install.
+
+*   mariadb-server is running and can be restarted
+*   package python-pycadf is installed
+*   package deltarpm is installed
+*   selinux in permissive
+
 ## How To Test
 
     sudo yum install http://rdo.fedorapeople.org/openstack-icehouse/rdo-release-icehouse.rpm
