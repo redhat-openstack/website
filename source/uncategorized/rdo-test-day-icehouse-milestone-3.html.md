@@ -33,6 +33,7 @@ Quick Links:
 *   ukalifon - OpenStack-Keystone
 *   tshefi - IRC, Openstack , RHEL7, Glance
 *   rlandy - TripleO, Tuskar
+*   bkopilov - IRC, OpenStack - LVM , RHEL 6.5
 
 ## Prerequisites
 
