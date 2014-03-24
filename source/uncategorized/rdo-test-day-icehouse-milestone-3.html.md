@@ -31,7 +31,7 @@ Quick Links:
 *   nlevinki - foreman installation with rhel7, Swift
 *   iovadia - IRC, OpenStack-Horizon on RHEL7
 *   ukalifon - OpenStack-Keystone
-*   tshefi - IRC, Openstack Foreman installer, RHEL7, Glance
+*   tshefi - IRC, Openstack , RHEL7, Glance
 *   rlandy - TripleO, Tuskar
 
 ## Prerequisites
