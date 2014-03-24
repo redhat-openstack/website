@@ -32,6 +32,7 @@ Quick Links:
 *   iovadia - IRC, OpenStack-Horizon on RHEL7
 *   ukalifon - OpenStack-Keystone
 *   tshefi - IRC, Openstack , RHEL7, Glance
+*   yrabl - IRC, Openstack-Cinder, Foreman-Installer, Fedora 20
 *   rlandy - TripleO, Tuskar
 *   bkopilov - IRC, OpenStack - LVM , RHEL 6.5
 *   lon - IRC - RHEL 7 Beta
