@@ -34,6 +34,7 @@ Quick Links:
 *   tshefi - IRC, Openstack , RHEL7, Glance
 *   rlandy - TripleO, Tuskar
 *   bkopilov - IRC, OpenStack - LVM , RHEL 6.5
+*   lon - IRC - RHEL 7 Beta
 
 ## Prerequisites
 
