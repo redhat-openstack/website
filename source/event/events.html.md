@@ -13,6 +13,8 @@ There are lots of events, around the world, where you can hang out with people f
 
 *   [Icehouse Test Day](http://openstack.redhat.com/RDO_test_day_Icehouse_milestone_3), March 25-26
 *   [Google Hangout - Introducing OpenStack Marconi](Hangouts#Upcoming_Hangouts) - March 27th, 10am EST
+*   [Storage Services Hackathon](http://dataliberate.eventbrite.com), April 13th, San Francisco
+*   [Red Hat Summit](http://www.redhat.com/summit/), April 14-17, San Franciso
 *   [OpenStack Summit](http://www.openstack.org/summit/openstack-summit-atlanta-2014/), May 12-16, 2014, Atlanta, GA
 *   [OSCon](http://www.oscon.com/oscon2014), July 20-24, Portland, OR
 *   [LinuxCon/CloudOpen](http://events.linuxfoundation.org/events/linuxcon-north-america), August 20-22, Chicago, IL
