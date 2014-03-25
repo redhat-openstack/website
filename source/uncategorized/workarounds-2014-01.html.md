@@ -12,6 +12,19 @@ This page documents workarounds that may be required for installing RDO Icehouse
 
 ## Active
 
+### Failed to setup / start neutron services (neutron-ovs-cleanup) (Fedora 20)
+
+*   **Bug:** [1080438](https://bugzilla.redhat.com/show_bug.cgi?id=1080438)
+*   **Affects:** Fedora 20
+
+##### symptoms
+
+Intermittent failures when installing neutron. Seems due to something setting wrong owner on /etc/neutron/plugins/openvswitch/ovs_neutron_plugin.ini
+
+##### workaround (Before running packstack)
+
+       chown root:neutron  /etc/neutron/plugin.ini
+
 ### Failed to set up an ip address (Fedora 20)
 
 *   **Bug:** [1049503](https://bugzilla.redhat.com/show_bug.cgi?id=1049503)
