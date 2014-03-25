@@ -12,6 +12,25 @@ This page documents workarounds that may be required for installing RDO Icehouse
 
 ## Active
 
+### Failed to setup glance or heat databases due to utf-8 issue
+
+*   **Bug:** [1080355](https://bugzilla.redhat.com/show_bug.cgi?id=1080355)
+*   **Affects:** EL6, EL7, F20
+
+##### symptoms
+
+Error messages re utf-8 charset at install time
+
+##### workaround (after running packstack)
+
+See bottom of description in the bug above
+
+Then rerun packstack with --answer-file
+
+##### Notes
+
+This should be catered for glance with: <http://pkgs.fedoraproject.org/cgit/openstack-puppet-modules.git/commit/?h=el6-icehouse&id=6bfd5874> though it's still see to manafest with glance in a foreman+el6+nova network instasll
+
 ### Failed to setup / start neutron services (neutron-ovs-cleanup) (Fedora 20)
 
 *   **Bug:** [1080438](https://bugzilla.redhat.com/show_bug.cgi?id=1080438)
