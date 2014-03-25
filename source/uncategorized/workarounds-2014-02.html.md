@@ -77,3 +77,12 @@ Additional notes can be found and also added in <https://etherpad.openstack.org/
 
 *   **Bug:** [1061349](https://bugzilla.redhat.com/show_bug.cgi?id=1061349)
 *   **FIXED**
+
+### Could not start Service[ovs-cleanup-service]: Execution of '/sbin/service neutron-ovs-cleanup start' returned 1
+
+*   **Bug:** [1080438](https://bugzilla.redhat.com/show_bug.cgi?id=1080438)
+*   **Affects:** Fedora 20
+*   **Workaround:**
+
+         chown neutron:neutron /etc/neutron/plugins/openvswitch/ovs_neutron_plugin.ini
+         service neutron-ovs-cleanup start
