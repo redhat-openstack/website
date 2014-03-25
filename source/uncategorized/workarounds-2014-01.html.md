@@ -21,9 +21,11 @@ This page documents workarounds that may be required for installing RDO Icehouse
 
 Intermittent failures when installing neutron. Seems due to something setting wrong owner on /etc/neutron/plugins/openvswitch/ovs_neutron_plugin.ini
 
-##### workaround (Before running packstack)
+##### workaround (after running packstack)
 
        chown root:neutron  /etc/neutron/plugin.ini
+
+Then rerun packstack with --answer-file
 
 ### Failed to set up an ip address (Fedora 20)
 
