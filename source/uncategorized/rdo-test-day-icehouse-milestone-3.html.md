@@ -36,6 +36,7 @@ Quick Links:
 *   rlandy - TripleO, Tuskar
 *   bkopilov - IRC, OpenStack - LVM , RHEL 6.5
 *   lon - IRC - RHEL 7 Beta
+*   nmagnezi - IRC, OpenStack - Neutron , RHEL 6.5
 
 ## Prerequisites
 
