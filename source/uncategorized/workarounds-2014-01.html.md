@@ -75,8 +75,10 @@ ERROR : Error appeared during Puppet run: error running /sbin/chkconfig mysqld o
        yum install -y mariadb-server
        rm /usr/lib/systemd/system/mysqld.service
        cp /usr/lib/systemd/system/mariadb.service /usr/lib/systemd/system/mysqld.service
+       touch /var/log/mysqld.log
+       chown mysql:mysql /var/log/mysqld.log
 
-If you hit this during a packstack run, you can still apply the workaround and resume with:
+Ensure that mariadb-server can restart successfully If you hit this during a packstack run, you can still apply the workaround and resume with:
 
        packstack --answer-file=$answerfile
 
