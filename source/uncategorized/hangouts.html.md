@@ -20,6 +20,10 @@ In April we will hear from the Heat team.
 
 If you missed a hangout, and are watching the video, you can always ask followup questions on the #rdo IRC channel on Freenode, or on the [rdo-list mailing list](http://www.redhat.com/mailman/listinfo/rdo-list)
 
+### Introduction to OpenStack Marconi
+
+<iframe width="630" src="//youtube.com/embed/qe7qI3WY97c" frameborder="0" align="center" allowfullscreen="true"> </iframe>
+
 ### Multi-node deployment using packstack
 
 February 27, 2014, presented by Lars Kellogg-Stedman
