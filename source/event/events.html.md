@@ -11,7 +11,6 @@ wiki_last_updated: 2015-08-31
 
 There are lots of events, around the world, where you can hang out with people from the RDO community. Some recent and upcoming events are:
 
-*   [Icehouse Test Day](http://openstack.redhat.com/RDO_test_day_Icehouse_milestone_3), March 25-26
 *   [Google Hangout - Introducing OpenStack Marconi](Hangouts#Upcoming_Hangouts) - March 27th, 10am EST
 *   [Storage Services Hackathon](http://dataliberate.eventbrite.com), April 13th, San Francisco
 *   [Red Hat Summit](http://www.redhat.com/summit/), April 14-17, San Franciso
