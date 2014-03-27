@@ -12,9 +12,7 @@ RDO conducts periodic Google Hangouts on a variety of OpenStack-related topics.
 
 ## Upcoming Hangouts
 
-March 27th, 10am EST, Flavio Percoco will be presenting on [Marconi](https://wiki.openstack.org/wiki/Marconi). This presentation will be streamed live at <https://plus.google.com/events/ckjhm8rggnqvrnspftna845kubk> and available to watch there afterwards. Questions and comments can be discussed on the #rdo-hangout channel on irc.freenode.net
-
-In April we will hear from the Heat team.
+In April we will hear from the Heat team. Watch this page, or [Twitter](http://twitter.com/rdocommunity) for details as they become available.
 
 ## Past Hangouts
 
