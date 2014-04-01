@@ -138,6 +138,7 @@ The Foreman server should have 2 interfaces for this configuration, one for exte
 
 ### Troubleshooting with foreman/puppet
 
+*   If are see errors in a host report in the foreman dashboard like 'could not connect to MySQL on 172.16.0.1' it's likely because you have not over rode the default values to match your environment. you can specify overrides in the foreman UI. (Dashboard home >> more >> host groups >> *group name* >> parameters - click 'override' on each vale you want to specify and scroll to the end of the page to fill in the new parameters)
 *   If you have mod_nss installed, foreman-proxy will not start, as they both attempt to use port 8443. This is something we will try to address in the near future, but in the meantime, you can easily edit your httpd conf file for either of these modules to get around this issue.
 *   foreman-proxy restart is needed if you change certificates, or change Puppet versions (as it's loaded), or its settings file
 *   httpd restart emcompasses both the puppetmaster and Foreman as they run inside with passenger, so it's a quick way to restart both.
