@@ -151,7 +151,7 @@ The root cause of the problem is that cinder does not override the control_excha
 ### Could not prefetch glance_image provider 'glance'
 
 *   **Bug:** [1017421](https://bugzilla.redhat.com/show_bug.cgi?id=1017421)
-*   **Affects:** Fedora 19, RHEL 6.4
+*   **Affects:** Fedora 19, RHEL 6.4, RHEL7
 *   **Status:** **CLOSED WORKSFORME**
 
 ##### symptoms
@@ -169,6 +169,8 @@ Just run packstack once again on the generated answer file, for example:
 <dneary>`  Seems like it's a time out on testing Puppet module application which is funky.`
 
 <rbowen>` The workaround didn't work for me - I get that same failure repeatedly on subsequent runs.`
+
+<tshefi> My workaround openstack-status -> openstack-glance-api: failed, started Glance API service and reran packstack.
 
 ### glance: Error communicating with <http://192.168.8.96:9292> timed out
 
