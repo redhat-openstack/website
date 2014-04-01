@@ -279,3 +279,7 @@ The **Swift Storage Host Group** may be used to configure your Swift storage nod
 #### HA Database Cluster
 
 This sets up up a cluster for (currently) mysql via pacemaker, details [here](Foreman_HA_Database).
+
+#### SSL Configuration
+
+Currently, mysql, qpid and horizon, have support for securing via ssl in foreman, directions [here](Securing_Services_Foreman).
