@@ -686,7 +686,7 @@ Configuring qpidd does not currently work without making some manual changes, de
     # service openstack-nova-novncproxy restart
     # service openstack-nova-scheduler restart
 
-## Securing qpidd with Kerbers (WIP)
+## Securing qpidd with Kerberos (WIP)
 
 You can secure qpidd with either Kerberos or SSL, but not both. Securing with Kerberos provides an encrypted channel as well as authentication.
 
