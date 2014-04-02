@@ -30,7 +30,8 @@ wiki_last_updated: 2014-08-07
 | openstack-puppet-modules      | Martin Magr             | Nir Magnezi            |         |
 | openstack-quantum             | Miguel Angel Ajo Pelayo | Ofer Blaut             |         |
 | openstack-selinux             | Lon Hohberger           | Ofer Blaut             |         |
-| openstack-savanna             | Matthew Farrallee       | Dafna Ron              |         |
+| openstack-sahara              | Matthew Farrallee       | Dafna Ron              |         |
+| openstack-trove               | Sergey Gotliv           | Dafna Ron              |         |
 | openstack-swift               | Pádraig Brady           | Dafna Ron              |         |
 | openstack-swift-plugin-swift3 | Pádraig Brady           | Dafna Ron              |         |
 | openstack-utils               | Pádraig Brady           | Ami Jeain              |         |
