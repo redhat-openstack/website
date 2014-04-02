@@ -138,3 +138,64 @@ On the Neutron server, configure Neutron to send events to Nova. In /etc/neutron
       nova_admin_password=myservicepass
       nova_admin_tenant_id=myservicetenant
 `nova_admin_auth_url=`[`http://mykeystone:myport/v2.0`](http://mykeystone:myport/v2.0)
+
+Restart the neutron services on all affected nodes:
+
+      cd /etc/init.d
+      for service in openstack-neutron-*; do service $service start; done
+
+#### Upgrade Nova Compute Nodes
+
+At this point , the the entire cluster is running on the Icehouse release, except for the Nova compute nodes. These nodes can be independently upgraded to the Icehouse release, as is convenient. Instances may be migrated off of the nodes prior to upgrade if maintenance on the underlying OS or hardware is necessary. The following instructions apply to each compute node.
+
+If node downtime during the upgrade is desired, disable the node so that nothing will be scheduled to it and migrate any instances currently running to other hosts:
+
+      [root@controller ~(keystone_admin)]# nova service-list --binary nova-compute
+      +--------------+-----------------------+------+----------+-------+----------------------------+-----------------+
+      | Binary       | Host                  | Zone | Status   | State | Updated_at                 | Disabled Reason |
+      +--------------+-----------------------+------+----------+-------+----------------------------+-----------------+
+      | nova-compute | compute1.mydomain.com | nova | enabled  | up    | 2014-04-02T14:58:59.000000 | -               |
+      | nova-compute | compute2.mydomain.com | nova | enabled  | up    | 2014-04-02T14:58:57.000000 | -               |
+      +--------------+-----------------------+------+----------+-------+----------------------------+-----------------+
+      [root@controller ~(keystone_admin)]# nova service-disable --reason upgrade compute2.mydomain.com nova-compute
+      +-----------------------+--------------+----------+-----------------+
+      | Host                  | Binary       | Status   | Disabled Reason |
+      +-----------------------+--------------+----------+-----------------+
+      | compute2.mydomain.com | nova-compute | disabled | upgrade         |
+      +-----------------------+--------------+----------+-----------------+
+      [root@controller ~(keystone_admin)]# nova migrate myinstance1
+      [root@controller ~(keystone_admin)]# nova migrate myinstance2
+      [root@controller ~(keystone_admin)]# nova migrate myinstance3
+      # Wait for resizes to complete
+      [root@controller ~(keystone_admin)]# nova resize-confirm myinstance1
+      [root@controller ~(keystone_admin)]# nova resize-confirm myinstance2
+      [root@controller ~(keystone_admin)]# nova resize-confirm myinstance3
+
+This compute node can now be upgraded. On the host to be upgraded, simply stop the compute service, upgrade the packages, and start it up again:
+
+      cd /etc/init.d
+      for service in openstack-nova-*; do service $service stop; done
+      yum -y update *nova*
+      for service in openstack-nova-*; do service $service start; done
+
+If you disabled the service in the catalog, re-enable it now:
+
+      [root@controller ~(keystone_admin)]# nova service-enable compute2.mydomain.com nova-compute
+      +-----------------------+--------------+---------+
+      | Host                  | Binary       | Status  |
+      +-----------------------+--------------+---------+
+      | compute2.mydomain.com | nova-compute | enabled |
+      +-----------------------+--------------+---------+
+
+#### Post-Upgrade Cleanup
+
+After the live upgrade is complete (i.e. all nodes are running on Icehouse), the compute RPC API version pin should be removed. In /etc/nova/nova.conf, find the place where you set the icehouse-compat version for compute and comment it out:
+
+      [upgrade_levels]
+      # Set a version cap for messages sent to compute services. If
+      # you plan to do a live upgrade from havana to icehouse, you
+      # should set this option to "icehouse-compat" before beginning
+      # the live upgrade procedure. (string value)
+      #compute=icehouse-compat
+
+A restart of all services will be required for the above to take effect.
