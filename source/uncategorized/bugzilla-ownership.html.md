@@ -20,7 +20,7 @@ wiki_last_updated: 2014-08-07
 | openstack-ceilometer          | Pádraig Brady           | Kevin Whitney          |         |
 | openstack-cinder              | Eric Harney             | Dafna Ron              |         |
 | openstack-foreman-installer   | Jason Guiditta          | Ami Jeain              |         |
-| openstack-glance              | Flavio Percoco          | Dafna Ron              |         |
+| openstack-glance              | Jon Bernard             | Dafna Ron              |         |
 | openstack-heat                | Steven Dake             | Kevin Whitney          |         |
 | openstack-heat-templates      | Steven Dake             | Kevin Whitney          |         |
 | openstack-keystone            | Alan Pevec              | Ami Jeain              |         |
