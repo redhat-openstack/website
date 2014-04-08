@@ -8,6 +8,8 @@ wiki_last_updated: 2014-10-28
 
 # Deploying RDO on a Baremetal Environment using Instack
 
+THIS PAGE IS A WORK IN PROGRESS
+
 ## Requirements
 
 *   machine specs/ space/memory requirements
