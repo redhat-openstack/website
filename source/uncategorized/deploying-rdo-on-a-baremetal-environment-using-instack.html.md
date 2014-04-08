@@ -10,6 +10,12 @@ wiki_last_updated: 2014-10-28
 
 THIS PAGE IS A WORK IN PROGRESS
 
+## Overview
+
+You should select a host machine with at least 12G of memory and 200G disk space. The virt setup creates 5 virtual machines consisting of 2G of memory and 30G of disk space each. If you do not plan to deploy Block Storage or Swift Storage nodes, you can delete those virtual machines and require less space accordingly. Most of the virtual machine disk files are thinly provisioned and won't take up the full 30G. The undercloud is not thinly provisioned and is completely pre-allocated.
+
+If you're connecting to the virt host remotely from ssh, you will need to use the -t flag to force pseudo-tty allocation or enable notty via a $USER.notty file.
+
 ## Minimum System Requirements
 
 *   A quad core CPU
