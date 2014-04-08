@@ -67,7 +67,7 @@ Configure the odl section in /etc/neutron/plugins/ml2_conf.ini in Openstack cont
       tenant_network_type = vlan
       tunnel_bridge = br-tun
       integration_bridge = br-int
-      controllers = localhost:`<ODL_controller_port>`:admin:admin
+      controllers = `<ODL_controller_ip>`:`<ODL_controller_port>`:admin:admin
 
 Configure the ml2_odl section in /etc/neutron/plugins/ml2_conf.ini in Openstack control node
 
