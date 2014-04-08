@@ -13,3 +13,5 @@ wiki_last_updated: 2015-05-05
 [ Deploying RDO on a Baremetal Environment using Instack](Deploying RDO on a Baremetal Environment using Instack)
 
 ## Virtual Machine Setup
+
+[ Deploying RDO on a Virtual Machine Environment using Instack](Deploying RDO on a Virtual Machine Environment using Instack)
