@@ -10,12 +10,36 @@ wiki_last_updated: 2014-10-28
 
 THIS PAGE IS A WORK IN PROGRESS
 
-## Requirements
+## Overview
 
-*   machine specs/ space/memory requirements
-*   get MAC addresses
-*   add user
-*   passwordless sudo
+You should select a host machine with at least 12G of memory and 200G disk space. The virt setup creates 5 virtual machines consisting of 2G of memory and 30G of disk space each. If you do not plan to deploy Block Storage or Swift Storage nodes, you can delete those virtual machines and require less space accordingly. Most of the virtual machine disk files are thinly provisioned and won't take up the full 30G. The undercloud is not thinly provisioned and is completely pre-allocated.
+
+If you're connecting to the virt host remotely from ssh, you will need to use the -t flag to force pseudo-tty allocation or enable notty via a $USER.notty file.
+
+## Minimum System Requirements
+
+*   A quad core CPU
+*   12GB memory.
+*   200GB disk space
+
+## Preparing the Host Machine
+
+TODO: Add setenforce=0 , passwordless sudo and notty.
+
+## Recommended Default Values
+
+Some recommended default environment variables before starting:
+
+         # disk size in GB to set for each virtual machine created
+        NODE_DISK=30
+        # memory in MB allocated for each virtual machine created
+        NODE_MEM=2048
+        # Operating system distribution to set for each virtual machine created
+        NODE_DIST=fedora
+        # CPU count assigned to each virtual machine created
+        NODE_CPU=1
+        # 64 bit architecture
+        NODE_ARCH=amd64
 
 ## Installing the undercloud with Instack
 
