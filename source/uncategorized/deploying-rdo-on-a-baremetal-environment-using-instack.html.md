@@ -51,20 +51,44 @@ Works on Fedora 20 only
 
 ### Sourcing Files
 
+<li>
 You must source the contents of `/root/stackrc` into your shell before running the instack-\* scripts that interact with the undercloud and overcloud. In order to do that you can copy that file to a more convenient location or use `sudo` to `cat` the file and copy/paste the lines into your shell environment.
 
+</li>
 ### Downloading Images for the Overcloud
 
+<li>
 Once the undercloud is installed, there should be a script `/usr/bin/prepare-for-overcloud` available to be executed by the user. Run the `prepare-for-overcloud` script to set up before deploying the overcloud.
 
     instack-prepare-for-overcloud
 
 This script downloads images to use for deploying Control, Compute, Block Storage and Storage nodes in the overcloud. The script will avoid re-download images if they already exist in the current working directory. If you want to force a re-download of the images, delete those existing images first.
 
+</li>
 ### Environment Variables
 
-There should be two scripts available for deploying the overcloud, `instack-deploy-overcloud` and `instack-deploy-tuskar-cli` (see the "Deploying the Overcloud Using Heat" and "Deploying the Overcloud Using Tuskar" sections below for the differences in these scripts). Note these scripts to deploy the overcloud can be configured for individual environments via environment variables. The variables you can set are documented below and need to be defined (and exported) before calling the deploy scripts. Default values for these variables are set in the deploy scripts. View the scripts to see the default variable values.
+<li>
+There should be two scripts available for deploying the overcloud, `instack-deploy-overcloud` and `instack-deploy-tuskar-cli` (see the "Deploying the Overcloud Using Heat" and "Deploying the Overcloud Using Tuskar" sections below for the differences in these scripts). Note these scripts to deploy the overcloud can be configured for individual environments via environment variables. The variables you can set are documented below and need to be defined (and exported) before calling the deploy scripts.
 
+    # CPU: number of cpus on baremetal nodes
+    # MEM: amount of ram on baremetal nodes, in MB
+    # DISK: amount of disk on baremetal nodes, in GB
+    # ARCH: architecture of baremetal nodes, amd64 or i386
+    # MACS: list of MAC addresses of baremetal nodes
+    # PM_IPS: list of Power Management IP addresses
+    # PM_USERS: list of Power Management Users
+    # PM_PASSWORDS: list of Power Management Passwords
+    # NeutronPublicInterface: Overcloud management interface name
+    # OVERCLOUD_LIBVIRT_TYPE: Overcloud libvirt type, qemu or kvm
+    # NETWORK_CIDR: neutron network cidr
+    # FLOATING_IP_START: floating ip allocation start
+    # FLOATING_IP_END: floating ip allocation end
+    # FLOATING_IP_CIDR: floating ip network cidr
+
+Default values for these variables are set in the deploy scripts. View the scripts to see the default variable values.
+
+</li>
+</ol>
 ## Deploying the Overcloud Using Heat
 
 ## Deploying the Overcloud Using Tuskar
