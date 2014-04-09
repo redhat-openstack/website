@@ -40,6 +40,8 @@ REVIEW REQUIRED
     -   Users
     -   Passwords
 
+5.  Networking/boot order ?
+
 ## Installing the Undercloud with Instack
 
 1.  Enable the openstack-m repository
