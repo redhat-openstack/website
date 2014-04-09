@@ -22,9 +22,22 @@ This setup requires an environment with at least five baremetal machines (one ma
 
 ## Preparing the Baremetal Environment
 
-*   get MAC addresses
-*   add user
-*   passwordless sudo
+REVIEW REQUIRED
+
+1.  Select a machine on which to install the undercloud.
+2.  Add a user account and configure this user to have passwordless sudo access. The following example should be executed by the `root` user. It adds the user "stack".
+         useradd stack
+        passwd stack # specify a password
+
+    User this user to execute the steps for installation and deployment.
+
+3.  For the machines being used for the undercloud and overcloud nodes, you will need to find:
+    -   IP Addresses
+    -   MAC addresses
+    -   Users
+    -   Passwords
+
+    <l/i>
 
 ## Installing the Undercloud with Instack
 
