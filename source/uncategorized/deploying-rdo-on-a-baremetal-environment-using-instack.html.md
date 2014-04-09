@@ -43,4 +43,4 @@ THIS PAGE IS A WORK IN PROGRESS
         instack-install-undercloud-packages
 
 6.  Once the install script has run to completion, you should take note to secure and save the files `/root/stackrc` and `/root/tripleo-undercloud-passwords`. Both these files will be needed to interact with the installed undercloud. You may copy these files to your home directory to make them easier to source later on, but you should try to keep them as secure and backed up as possible.
-    That completes the undercloud install. To proceed with deploying and using the overcloud see Deploying the Overcloud section below.
+    That completes the undercloud install. To proceed with deploying and using the overcloud see sections below.
