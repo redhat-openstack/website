@@ -44,6 +44,8 @@ REVIEW REQUIRED
 
 ## Installing the Undercloud with Instack
 
+*   missing yum install -y yum-utils
+
 1.  Enable the openstack-m repository
         sudo yum -y install http://repos.fedorapeople.org/repos/openstack-m/openstack-m/openstack-m-release-icehouse-2.noarch.rpmT
 
