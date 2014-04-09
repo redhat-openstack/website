@@ -101,7 +101,7 @@ To scale the Compute, Block Storage or Swift Storage nodes, you can override the
 </ol>
 ## Deploying the Overcloud Using Heat
 
-To deploy the overcloud using the provided Heat templates, run:
+To deploy the overcloud using the provided [Heat](https://wiki.openstack.org/wiki/Heat) templates, run:
 
     instack-deploy-overcloud
 
