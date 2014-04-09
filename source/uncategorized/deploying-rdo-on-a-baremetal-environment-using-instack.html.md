@@ -118,8 +118,26 @@ To deploy the overcloud using the [Tuskar](https://wiki.openstack.org/wiki/Tripl
 
 ## Testing the Overcloud
 
-Run the test-overcloud script to launch a Fedora image on the overcloud and wait until it pings successfully
+Run the `instack-test-overcloud` script to launch a Fedora image on the overcloud and wait until it pings successfully
 
     instack-test-overcloud
 
+If your overcloud included a Block Storage node, the `instack-test-overcloud` script will test that node by:
+
+<li>
+Creating a new volume
+
+</li>
+<li>
+Attaching the volume to the Compute instance, and then
+
+</li>
+<li>
+Using `ssh` to log on to the instance and partition, format, and mount the volume
+
+</li>
+If your overcloud included a Swift (Object) Storage node, the `instack-test-overcloud` script will test that node by:
+
+<li>
+</li>
 ## Next Steps
