@@ -109,8 +109,8 @@ To deploy the overcloud using the provided Heat templates, run:
 
 To deploy the overcloud using the [Tuskar](https://wiki.openstack.org/wiki/TripleO/Tuskar) CLI:
 
-1.  Initialise the tuskar database and restart the service
-         sudo tuskar-dbsync --config-file /etc/tuskar/tuskar.conf
+1.  Initialise the Tuskar database and restart the service
+        sudo tuskar-dbsync --config-file /etc/tuskar/tuskar.conf
         sudo service openstack-tuskar-api restart
 
 2.  Run the deploy script
