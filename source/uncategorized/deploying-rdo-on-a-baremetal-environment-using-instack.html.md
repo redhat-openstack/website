@@ -49,7 +49,17 @@ Works on Fedora 20 only
 
 ## Preparing for Deploying the Overcloud
 
+### Downloading Images for the Overcloud
+
 Once the undercloud is installed, there should be a script `/usr/bin/prepare-for-overcloud` available to be executed by the user. Run the `prepare-for-overcloud` script to set up before deploying the overcloud. This script downloads images to use for deploying Control, Compute, Block Storage and Storage nodes in the overcloud. The script will avoid re-download images if they already exist in the current working directory. If you want to force a re-download of the images, delete those existing images first.
+
+### Environment Variables
+
+There should be two scripts available for deploying the overcloud, `instack-deploy-overcloud` and `instack-deploy-tuskar-cli` (see the "Deploying the Overcloud Using Heat" and "Deploying the Overcloud Using Tuskar" sections below for the differences in these scripts). Note these scripts to deploy the overcloud can be configured for individual environments via environment variables. The variables you can set are documented below and need to be defined (and exported) before calling the deploy scripts. default values for these variables are set in the deploy scripts. View the scripts to see the default variable values.
+
+### Sourcing Files
+
+      You must source the contents of /root/stackrc into your shell before running the instack-* scripts that interact with the undercloud and overcloud. In order to do that you can copy that file to a more convenient location or use sudo to cat the file and copy/paste the lines into your shell environment.
 
 ## Deploying the Overcloud Using Heat
 
