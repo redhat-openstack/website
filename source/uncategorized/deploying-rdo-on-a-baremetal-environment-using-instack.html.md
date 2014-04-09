@@ -65,10 +65,10 @@ Once the undercloud is installed, there should be a script `/usr/bin/prepare-for
 This script downloads images to use for deploying Control, Compute, Block Storage and Storage nodes in the overcloud. The script will avoid re-download images if they already exist in the current working directory. If you want to force a re-download of the images, delete those existing images first.
 
 </li>
-### Environment Variables
+### Defining Environment Variables
 
 <li>
-There should be two scripts available for deploying the overcloud, `instack-deploy-overcloud` and `instack-deploy-tuskar-cli` (see the "Deploying the Overcloud Using Heat" and "Deploying the Overcloud Using Tuskar" sections below for the differences in these scripts). Note these scripts to deploy the overcloud can be configured for individual environments via environment variables. The variables you can set are documented below and need to be defined (and exported) before calling the deploy scripts.
+There should be two scripts available for deploying the overcloud, `instack-deploy-overcloud` and `instack-deploy-tuskar-cli` (see the "Deploying the Overcloud Using Heat" and "Deploying the Overcloud Using Tuskar" sections below for the differences in these scripts). Note these scripts to deploy the overcloud can be configured for individual environments via environment variables. The variables you can set are documented below and need to be defined (and exported) before calling the deploy scripts. For convenience, you can define the variable values and save them to an rc file. Source the rc file before calling the scripts to deploy the overcloud.
 
     # CPU: number of cpus on baremetal nodes
     # MEM: amount of ram on baremetal nodes, in MB
@@ -86,6 +86,16 @@ There should be two scripts available for deploying the overcloud, `instack-depl
     # FLOATING_IP_CIDR: floating ip network cidr
 
 Default values for these variables are set in the deploy scripts. View the scripts to see the default variable values.
+
+</li>
+### Scaling the Overcloud Nodes
+
+<li>
+To scale the Compute, Block Storage or Swift Storage nodes, you can override the default values from the overcloud deploy scripts by adding scale definitions in your rc file. The defaults for those scripts are:
+
+    COMPUTESCALE=${COMPUTESCALE:-1}
+    BLOCKSTORAGESCALE=${BLOCKSTORAGESCALE:-1}
+    SWIFTSTORAGESCALE=${SWIFTSTORAGESCALE:-0}
 
 </li>
 </ol>
