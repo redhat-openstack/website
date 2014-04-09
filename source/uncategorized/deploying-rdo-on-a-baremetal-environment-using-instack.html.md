@@ -18,6 +18,8 @@ This setup requires an environment with at least five baremetal machines (one ma
 
 ## Minimum System Requirements
 
+REVIEW REQUIRED
+
 *   machine specs/ space/memory requirements
 
 ## Preparing the Baremetal Environment
