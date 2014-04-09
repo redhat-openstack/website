@@ -27,7 +27,7 @@ REVIEW REQUIRED
 REVIEW REQUIRED
 
 1.  Select a machine within the baremetal environment on which to install the undercloud.
-2.  Install Fedora 20 on this machine.
+2.  Install [Fedora 20](https://fedoraproject.org/en/get-fedora) on this machine.
 3.  Add a user account and configure this user to have passwordless sudo access. This user will execute the steps for installation and deployment. The following example should be executed by the `root` user. It adds the user "stack".
         useradd stack
         passwd stack # specify a password
