@@ -12,6 +12,8 @@ THIS PAGE IS A WORK IN PROGRESS
 
 ## Oveview
 
+Works on Fedora 20 only
+
 ## Minimum System Requirements
 
 *   machine specs/ space/memory requirements
