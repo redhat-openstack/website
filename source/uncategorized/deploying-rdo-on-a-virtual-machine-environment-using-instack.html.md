@@ -99,4 +99,10 @@ Note that you don't have to use the pre-created instack vm and could instead cre
 <address type='pci' domain='0x0000' bus='0x00' slot='0x09' function='0x0'/>
 `     `</interface>
 
-TODO: Add readme packages content
+## Installing the Undercloud
+
+TODO: migrate content from readme-packages
+
+## Deploying the Overcloud
+
+TODO: migrate content from overcloud-packages
