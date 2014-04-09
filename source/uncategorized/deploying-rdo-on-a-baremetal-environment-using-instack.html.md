@@ -109,20 +109,13 @@ To deploy the overcloud using the provided Heat templates, run:
 
 To deploy the overcloud using the [Tuskar](https://wiki.openstack.org/wiki/TripleO/Tuskar) CLI:
 
-<li>
-Initialise the tuskar database and restart the service
+1.  Initialise the tuskar database and restart the service
+         sudo tuskar-dbsync --config-file /etc/tuskar/tuskar.conf
+        sudo service openstack-tuskar-api restart
 
-     sudo tuskar-dbsync --config-file /etc/tuskar/tuskar.conf
-    sudo service openstack-tuskar-api restart
+2.  Run the deploy script
+        instack-deploy-tuskar-cli
 
-</li>
-<li>
-Run the deploy script
-
-    instack-deploy-tuskar-cli
-
-</li>
-</ol>
 ## Testing the Overcloud
 
 Run the test-overcloud script to launch a Fedora image on the overcloud and wait until it pings successfully
