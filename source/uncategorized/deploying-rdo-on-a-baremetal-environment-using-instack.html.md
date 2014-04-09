@@ -27,13 +27,14 @@ REVIEW REQUIRED
 REVIEW REQUIRED
 
 1.  Select a machine within the baremetal environment on which to install the undercloud.
-2.  Add a user account and configure this user to have passwordless sudo access. This user will execute the steps for installation and deployment. The following example should be executed by the `root` user. It adds the user "stack".
+2.  Install Fedora 20 on this machine.
+3.  Add a user account and configure this user to have passwordless sudo access. This user will execute the steps for installation and deployment. The following example should be executed by the `root` user. It adds the user "stack".
         useradd stack
         passwd stack # specify a password
         echo "stack        ALL=(ALL)       NOPASSWD: ALL" > /etc/sudoers.d/stack
         chmod 0440 /etc/sudoers.d/stack
 
-3.  For the machines being used for the undercloud and overcloud nodes, you will need to find:
+4.  For the machines being used for the undercloud and overcloud nodes, you will need to find:
     -   IP Addresses
     -   MAC addresses
     -   Users
