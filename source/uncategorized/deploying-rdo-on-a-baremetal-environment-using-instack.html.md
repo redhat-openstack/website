@@ -130,6 +130,7 @@ If your overcloud included a Block Storage node, the `instack-test-overcloud` sc
 
 If your overcloud included a Swift (Object) Storage node, the `instack-test-overcloud` script will test that node by:
 
-<li>
-</li>
+*   Uploading a file with data to the node
+*   Testing the data content downloaded from the node
+
 ## Next Steps
