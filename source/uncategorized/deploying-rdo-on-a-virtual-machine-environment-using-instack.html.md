@@ -28,7 +28,7 @@ TODO: Add setenforce=0 , passwordless sudo and notty.
 
 ## Recommended Default Values
 
-Some recommended default environment variables before starting:
+These environment variables are used in several places in TripleO. These are the suggested default values and can be changed to suit your specific environment needs. Just export any or all of these before you start the installation process.
 
          # disk size in GB to set for each virtual machine created
         NODE_DISK=30
@@ -39,7 +39,7 @@ Some recommended default environment variables before starting:
         # CPU count assigned to each virtual machine created
         NODE_CPU=1
         # 64 bit architecture
-        NODE_ARCH=amd644
+        NODE_ARCH=amd64
 
 ## Virtual Host Installation
 
