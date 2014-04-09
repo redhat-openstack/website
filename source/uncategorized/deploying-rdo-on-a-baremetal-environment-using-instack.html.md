@@ -122,13 +122,13 @@ Run the `instack-test-overcloud` script to launch a Fedora image on the overclou
 
     instack-test-overcloud
 
-If your overcloud included a Block Storage node, the `instack-test-overcloud` script will test that node by:
+If your overcloud contains a Block Storage node, the `instack-test-overcloud` script will test that node by:
 
 *   Creating a new volume
 *   Attaching the volume to the Compute instance, and then
 *   Using `ssh` to log on to the instance and partition, format, and mount the volume
 
-If your overcloud included a Swift (Object) Storage node, the `instack-test-overcloud` script will test that node by:
+If your overcloud contains a Swift (Object) Storage node, the `instack-test-overcloud` script will test that node by:
 
 *   Uploading a file with data to the node
 *   Testing the data content downloaded from the node
