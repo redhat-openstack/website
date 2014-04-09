@@ -10,9 +10,14 @@ wiki_last_updated: 2014-10-28
 
 THIS PAGE IS A WORK IN PROGRESS
 
-## Requirements
+## Oveview
+
+## Minimum System Requirements
 
 *   machine specs/ space/memory requirements
+
+## Preparing the Baremetal Environment
+
 *   get MAC addresses
 *   add user
 *   passwordless sudo
