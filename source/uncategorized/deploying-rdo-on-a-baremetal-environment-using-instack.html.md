@@ -49,14 +49,10 @@ Works on Fedora 20 only
 
 ## Preparing for Deploying the Overcloud
 
-===
-
-<li>
-Sourcing Files ===
+### Sourcing Files
 
 You must source the contents of `/root/stackrc` into your shell before running the instack-\* scripts that interact with the undercloud and overcloud. In order to do that you can copy that file to a more convenient location or use `sudo` to `cat` the file and copy/paste the lines into your shell environment.
 
-</li>
 ### Downloading Images for the Overcloud
 
 Once the undercloud is installed, there should be a script `/usr/bin/prepare-for-overcloud` available to be executed by the user. Run the `prepare-for-overcloud` script to set up before deploying the overcloud.
