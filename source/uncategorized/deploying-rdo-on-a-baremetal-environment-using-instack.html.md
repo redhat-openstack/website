@@ -19,15 +19,13 @@ THIS PAGE IS A WORK IN PROGRESS
 
 ## Installing the undercloud with Instack
 
-1. Enable the openstack-m repository
+1.  Enable the openstack-m repository
+        sudo yum -y install http://repos.fedorapeople.org/repos/openstack-m/openstack-m/openstack-m-release-icehouse-2.noarch.rpmT
 
-`   sudo yum -y install `[`http://repos.fedorapeople.org/repos/openstack-m/openstack-m/openstack-m-release-icehouse-2.noarch.rpm`](http://repos.fedorapeople.org/repos/openstack-m/openstack-m/openstack-m-release-icehouse-2.noarch.rpm)
+2.  Enable the fedora-openstack-m-testing yum repository.
+         sudo yum-config-manager --enable fedora-openstack-m-testing
 
-2. Enable the fedora-openstack-m-testing yum repository.
-
-         sudo yum-config-manager --enable fedora-openstack-m-testing
-
-         Install instack-undercloud
+Install instack-undercloud
 
          sudo yum -y install instack-undercloud
 
