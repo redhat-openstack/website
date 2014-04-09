@@ -107,7 +107,7 @@ To deploy the overcloud using the provided Heat templates, run:
 
 ## Deploying the Overcloud Using Tuskar
 
-To deploy the overcloud using the Tuskar CLI, run:
+To deploy the overcloud using the [Tuskar](https://wiki.openstack.org/wiki/TripleO/Tuskar) CLI, run:
 
     instack-deploy-tuskar-cli
 
