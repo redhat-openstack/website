@@ -47,6 +47,8 @@ THIS PAGE IS A WORK IN PROGRESS
 
 ## Preparing for Deploying the Overcloud
 
+Once the undercloud is installed, there should be a script `/usr/bin/prepare-for-overcloud` available to be executed by the user. Run the `prepare-for-overcloud` script to set up before deploying the overcloud. This script downloads images to use for deploying Control, Compute, Block Storage and Storage nodes in the overcloud. The script will avoid re-download images if they already exist in the current working directory. If you want to force a re-download of the images, delete those existing images first.
+
 ## Deploying the Overcloud Using Heat
 
 ## Deploying the Overcloud Using Tuskar
