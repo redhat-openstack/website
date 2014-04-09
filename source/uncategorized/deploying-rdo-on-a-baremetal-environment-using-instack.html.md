@@ -150,4 +150,6 @@ If your overcloud contains a Swift (Object) Storage node, the `instack-test-over
 
 ## Next Steps
 
-REVIEW REQUIRED You have a fully functional OpenStack instance deployed.
+REVIEW REQUIRED
+
+You have a fully functional OpenStack instance deployed.
