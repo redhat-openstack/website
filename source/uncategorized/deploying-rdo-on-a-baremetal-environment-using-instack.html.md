@@ -24,7 +24,7 @@ Works on Fedora 20 only
 *   add user
 *   passwordless sudo
 
-## Installing the undercloud with Instack
+## Installing the Undercloud with Instack
 
 1.  Enable the openstack-m repository
         sudo yum -y install http://repos.fedorapeople.org/repos/openstack-m/openstack-m/openstack-m-release-icehouse-2.noarch.rpmT
