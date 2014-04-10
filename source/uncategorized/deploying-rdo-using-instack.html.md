@@ -16,4 +16,4 @@ Instack installs the [TripleO undercloud](http://docs.openstack.org/developer/tr
 
 ## Virtual Machine Setup
 
-[ Deploying RDO on a Virtual Machine Environment using Instack](Deploying RDO on a Virtual Machine Environment using Instack)
+[ Deploying RDO to a Virtual Machine Environment using RDO via Instack](Deploying RDO to a Virtual Machine Environment using RDO via Instack)
