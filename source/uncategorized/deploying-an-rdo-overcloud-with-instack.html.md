@@ -37,17 +37,13 @@ Now that you have a working undercloud, let's deploy an overcloud. Note that dep
        # FLOATING_IP_END: floating ip allocation end
        # FLOATING_IP_CIDR: floating ip network cidr
 
-## Scaling
+### Scaling
 
 To scale the Compute, Block Storage or Swift Storage nodes, you can override the default values from the deploy-overcloud scripts in your rc file. The defaults for those scripts are:
 
        COMPUTESCALE=${COMPUTESCALE:-1}
        BLOCKSTORAGESCALE=${BLOCKSTORAGESCALE:-1}
        SWIFTSTORAGESCALE=${SWIFTSTORAGESCALE:-0}
-
-# Deploying the Overcloud
-
-Now that you have a working undercloud, let's deploy an overcloud. Note that deploy-overcloud can be configured for individual environments via environment variables. The variables you can set are documented below before the calls to the script. For their default values, see the deploy-overcloud script itself.
 
 1. You must source the contents of \`/root/stackrc\` into your shell before running the instack-\* scripts that interact with the undercloud and overcloud. In order to do that you can copy that file to a more convenient location or use sudo to cat the file and copy/paste the lines into your shell environment.
 
