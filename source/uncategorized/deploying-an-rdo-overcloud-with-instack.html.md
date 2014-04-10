@@ -12,6 +12,8 @@ wiki_last_updated: 2014-11-17
 
 Now that you have a working undercloud, let's deploy an overcloud. Note that deploy-overcloud can be configured for individual environments via environment variables. The variables you can set are documented below before the calls to the script. For their default values, see the deploy-overcloud script itself.
 
+## Preparing for the Overcloud
+
 1. You must source the contents of \`/root/stackrc\` into your shell before running the instack-\* scripts that interact with the undercloud and overcloud. In order to do that you can copy that file to a more convenient location or use sudo to cat the file and copy/paste the lines into your shell environment.
 
 2. Run the prepare-for-overcloud script to get setup. This script will avoid re-downloading images if they already exist in the current working directory. If you want to force a redownload of the images, delete them first.
@@ -45,6 +47,8 @@ To scale the Compute, Block Storage or Swift Storage nodes, you can override the
        BLOCKSTORAGESCALE=${BLOCKSTORAGESCALE:-1}
        SWIFTSTORAGESCALE=${SWIFTSTORAGESCALE:-0}
 
+## Deploying the Overcloud
+
 1. You must source the contents of \`/root/stackrc\` into your shell before running the instack-\* scripts that interact with the undercloud and overcloud. In order to do that you can copy that file to a more convenient location or use sudo to cat the file and copy/paste the lines into your shell environment.
 
 2. Run the prepare-for-overcloud script to get setup. This script will avoid re-downloading images if they already exist in the current working directory. If you want to force a redownload of the images, delete them first.
@@ -53,10 +57,12 @@ To scale the Compute, Block Storage or Swift Storage nodes, you can override the
 
 3. If you're testing an all VM setup, make sure you have copied the public key portion of the virtual power ssh key into the virtual power user's ~/.ssh/authorized_keys on the virtual machine host.
 
-5. Deploy the overcloud using provided heat templates or use the tuskar cli. Run one of the following examples.
+4. Deploy the overcloud using provided heat templates or use the tuskar cli. Run one of the following examples.
 
        # heat
         instack-deploy-overcloud
 
        #tuskar
         instack-deploy-tuskar-cli
+
+After a successful deployment, you should see "Overcloud Deployed" in the standard output of the terminal.
