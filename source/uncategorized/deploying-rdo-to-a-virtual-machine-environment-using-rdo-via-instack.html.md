@@ -143,7 +143,7 @@ The Undercloud image on the instack virtual machine is a minimal install of Fedo
 
 6. Once the install script has run to completion, you should take note to secure and save the file \`/root/stackrc\` and \`/root/tripleo-undercloud-passwords\`. Both these files will be needed to interact with the installed undercloud. You may copy these files to your home directory to make them easier to source later on, but you should try to keep them as secure and backed up as possible.
 
-You now have a running undercloud.
+You now have a running Undercloud. Next steps: [ Deploying an RDO Overcloud with Instack ](Deploying an RDO Overcloud with Instack)
 
 ## Optional: Accessing Undercloud Dashboard
 
