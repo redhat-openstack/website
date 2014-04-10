@@ -24,7 +24,16 @@ If you're connecting to the virt host remotely from ssh, you will need to use th
 
 ## Preparing the Host Machine
 
-TODO: Add setenforce=0 , passwordless sudo and notty.
+The virtual host machine needs SE Linux set to permissive mode. You can immediately set the mode and also update the configuration file to survive reboots.
+
+        # set selinux to permissive
+        sudo setenforce 0
+        # update the config file to survive reboots
+        sudo sed -i "s/=enforcing/=permissive/" /etc/selinux/config
+
+The user performing all of the installations needs to have passwordless sudo enabled. Create a user and then run the following commands, replacing "stack" with the name of the user you just created.
+
+sudo echo "stack ALL=(root) NOPASSWD:ALL" >> /etc/sudoers.d/stack sudo chmod 0440 /etc/sudoers.d/stack
 
 ## Recommended Default Values
 
