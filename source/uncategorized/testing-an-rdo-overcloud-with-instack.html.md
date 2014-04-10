@@ -6,7 +6,9 @@ wiki_revision_count: 4
 wiki_last_updated: 2014-10-27
 ---
 
-## Testing the Overcloud
+# Testing an RDO Overcloud with Instack
+
+[ ← Deploying RDO using Instack](Deploying RDO using Instack)
 
 Run the `instack-test-overcloud` script to launch a Fedora image on the overcloud and wait until it pings successfully
 
