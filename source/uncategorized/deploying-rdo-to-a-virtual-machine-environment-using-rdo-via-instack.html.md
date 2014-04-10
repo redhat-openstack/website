@@ -12,9 +12,7 @@ wiki_last_updated: 2014-10-31
 
 ## Overview
 
-This tutorial covers how to deploy a TripleO Undercloud and Overcloud using RDO and Instack. TripleO is a program aimed at installing, upgrading and operating OpenStack clouds using OpenStack's own cloud facilities as the foundations - building on nova, neutron and heat to automate fleet management at datacenter scale (and scaling down to as few as 2 machines).
-
-Instack executes diskimage-builder style elements on the current system. This enables a current running system to have an element applied in the same way that diskimage-builder applies the element to an image build. Using instack, you can quickly build an Undercloud to deploy your Overcloud. During this tutorial, you will be deploying RDO using RDO to a virtual machine environment.
+       During this tutorial, you will be deploying RDO using RDO to a virtual machine environment.
 
 If you're connecting to the virt host remotely from ssh, you will need to use the -t flag to force pseudo-tty allocation or enable notty via a $USER.notty file.
 
