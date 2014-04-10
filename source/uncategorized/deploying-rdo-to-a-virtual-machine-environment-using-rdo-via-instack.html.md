@@ -143,11 +143,8 @@ You now have a running Undercloud. Next steps: [ Deploying an RDO Overcloud with
 
 ## Optional: Accessing Undercloud Dashboard
 
-<div class="alert alert-info>
 To access horizon on the undercloud, create an ssh tunnel on the virt host where 192.168.122.55 should be changed to reflect your instack virtual machine's actual IP address. This will allow you to use horizon on instack from your virt host. If you need to connect remotely through the virt host, you can chain ssh tunnels as needed. Note: Depending on your virt host configuration, you may need to open up the correct port(s) in iptables.
 
            ssh -g -N -L 8080:192.168.122.55:80 `hostname`
 
 The default user and password are found in the stackrc file on the instack virtual machine, OS_USERNAME and OS_PASSWORD. You can read more about using the dashboard in the [User Guide](http://docs.openstack.org/user-guide/content/log_in_dashboard.html)
-
-</div>
