@@ -26,10 +26,10 @@ The following sections describe the steps for deploying an Undercloud on all bar
 
 [ Deploying an Undercloud to a Virtual Machine Environment using RDO via Instack](Deploying RDO to a Virtual Machine Environment using RDO via Instack)
 
-## Deploying an Overcloud
+## 2. Deploying an Overcloud
 
 [ Deploying an RDO Overcloud with Instack ](Deploying an RDO Overcloud with Instack)
 
-## Testing the Overcloud
+## 3. Testing the Overcloud
 
 [ Testing an RDO Overcloud with Instack ](Testing an RDO Overcloud with Instack)
