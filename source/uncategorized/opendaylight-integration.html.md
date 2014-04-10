@@ -21,7 +21,7 @@ Both OpenStack Swift and OpenDaylight use port 8080 for webpage GUI. You can eit
                      connectionTimeout="20000"
                                     redirectPort="8443" />
 
-Make sure it has following line for OpenFlow 1.3 config in the configuration/config.ini file. If not, add this line to config.ini file:
+Make sure it has following line for OpenFlow 1.3 config in the configuration/config.ini file. If not, add this line to config.ini file (or uncomment it if it is commented):
 
       ovsdb.of.version=1.3
 
