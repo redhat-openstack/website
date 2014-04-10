@@ -18,7 +18,7 @@ If you're connecting to the virt host remotely from ssh, you will need to use th
 
 ## Minimum System Requirements
 
-*   A quad core CPU
+*   At least (1) quad core CPU
 *   12GB memory.
 *   200GB disk space
 
