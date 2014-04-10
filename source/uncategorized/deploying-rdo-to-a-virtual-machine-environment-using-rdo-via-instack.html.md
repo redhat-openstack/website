@@ -61,20 +61,20 @@ These environment variables are used in several places in TripleO. These are the
 
         echo 'export LIBVIRT_DEFAULT_URI="qemu:///system"' >> ~/.bashrc
 
-1. Install the openstack-m repository
+2. Install the openstack-m repository
 
 `  sudo yum -y install `[`http://repos.fedorapeople.org/repos/openstack-m/openstack-m/openstack-m-release-icehouse-2.noarch.rpm`](http://repos.fedorapeople.org/repos/openstack-m/openstack-m/openstack-m-release-icehouse-2.noarch.rpm)
 
-1. Enable the fedora-openstack-m-testing yum repository.
+3. Enable the fedora-openstack-m-testing yum repository.
 
        sudo yum -y install yum-utils
        sudo yum-config-manager --enable fedora-openstack-m-testing
 
-1. Install instack-undercloud
+4. Install instack-undercloud
 
        sudo yum -y install instack-undercloud
 
-1. Run script to install required dependencies
+5. Run script to install required dependencies
 
        sudo yum install -y libguestfs-tools
        source /usr/libexec/openstack-tripleo/devtest_variables.sh
@@ -82,21 +82,21 @@ These environment variables are used in several places in TripleO. These are the
 
 After running this command, you will need to log out and log back in for the changes to be applied. If you plan to use virt-manager or boxes to visually manage the virtual machines created in the next step, this would be a good time to install those tools now.
 
-1. Run script to setup your virtual environment.
+6. Run script to setup your virtual environment.
 
        export NODE_DISK=30
        instack-virt-setup
 
-You should now have a vm called instack that you can use for the instack-undercloud installation that contains a minimal install of Fedora 20 x86_64. The instack vm contains a user "stack" that uses the password "stack" and is granted password-less sudo privileges. The root password is "redhat".
+You should now have a vm called instack that you can use for the instack-undercloud installation that contains a minimal install of Fedora 20 x86_64. The instack vm contains a user "stack" that uses the password "stack" and is granted passwordless sudo privileges. The root password is "redhat".
 
-1. Get IP Address
+7. Get IP Address
 
 You'll need to start the instack virtual machine and obtain its IP address. You can use your preferred virtual machine management software or follow the steps below.
 
        virsh start instack
        cat /var/lib/libvirt/dnsmasq/default.leases | grep $(tripleo get-vm-mac instack) | awk '{print $3;}'
 
-1. Get MAC addresses
+8. Get MAC addresses
 
 When setting up the undercloud on the instack virtual machine, you will need the MAC addresses of the baremetal node virtual machines. Use the following command to obtain the list of addresses you can add to your deploy-overcloudrc file later.
 
