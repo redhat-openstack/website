@@ -115,7 +115,7 @@ Note that you don't have to use the pre-created instack vm and could instead cre
 
 ## Installing the Undercloud
 
-The stack user in the default instack vm is already configured with passwordless sudo.
+The Undercloud image on the instack virtual machine is a minimal install of Fedora 20 with yum-utils and net-tools installed. This section will walk you through installing the instack-undercloud package and then running instack to apply packages.
 
 1. Enable the openstack-m repository
 
