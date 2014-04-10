@@ -8,7 +8,7 @@ wiki_last_updated: 2015-05-05
 
 # Deploying RDO using Instack
 
-[ ← Docs](Docs)
+[ ← Installation and Configuration](Install)
 
 This tutorial covers how to deploy a [TripleO](https://wiki.openstack.org/wiki/TripleO) [Undercloud](http://docs.openstack.org/developer/tripleo-incubator/devtest_undercloud.html) and [Overcloud](http://docs.openstack.org/developer/tripleo-incubator/devtest_overcloud.html) using RDO and Instack on an all baremetal or an all virtual environment.. TripleO is a program aimed at installing, upgrading and operating OpenStack clouds using OpenStack's own cloud facilities as the foundations - building on nova, neutron and heat to automate fleet management at datacenter scale (and scaling down to as few as 2 machines).
 
