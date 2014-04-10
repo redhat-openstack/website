@@ -18,6 +18,8 @@ If you're connecting to the virt host remotely from ssh, you will need to use th
 
 ## Minimum System Requirements
 
+These are the minimum system requirements to follow this tutorial. If you want to deviate from the tutorial or increase the scailing of one or more overcloud nodes, you will need to ensure you have enough memory and disk space.
+
 *   At least (1) quad core CPU
 *   12GB memory.
 *   200GB disk space
