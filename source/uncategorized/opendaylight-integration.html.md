@@ -14,7 +14,7 @@ OpenDaylight is an open platform for network programmability to enable Software-
 
 Get OpenDaylight virtualization edition from [OpenDaylight Release Download](http://www.opendaylight.org/software/downloads). Follow the [Installation Guide](https://wiki.opendaylight.org/view/Release/Hydrogen/Virtualization/Installation_Guide) to install. OpenDaylight can either run on same host of OpenStack control node or on separate Host. The host must have at least 3GB memory if running RDO computer node and ODL controller.
 
-Both OpenStack and OpenDaylight use port 8080 for webpage GUI. You can either disable OpenStack swift or move OpenDaylight webserver to different port. To move ODL webserver to different port, edit *Connector port* value in configuration/tomcat-server.xml under opendaylight directory:
+Both OpenStack Swift and OpenDaylight use port 8080 for webpage GUI. You can either disable OpenStack swift or move OpenDaylight webserver to different port. To move ODL webserver to different port, edit *Connector port* value in configuration/tomcat-server.xml under opendaylight directory:
 
 ` `<Service name="Catalina">
 `     `<Connector port="8081" protocol="HTTP/1.1"
