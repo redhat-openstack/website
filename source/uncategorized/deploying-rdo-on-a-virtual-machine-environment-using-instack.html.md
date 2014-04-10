@@ -33,7 +33,8 @@ The virtual host machine needs SE Linux set to permissive mode. You can immediat
 
 The user performing all of the installations needs to have passwordless sudo enabled. Create a user and then run the following commands, replacing "stack" with the name of the user you just created.
 
-sudo echo "stack ALL=(root) NOPASSWD:ALL" >> /etc/sudoers.d/stack sudo chmod 0440 /etc/sudoers.d/stack
+       sudo echo "stack ALL=(root) NOPASSWD:ALL" >> /etc/sudoers.d/stack
+       sudo chmod 0440 /etc/sudoers.d/stack
 
 ## Recommended Default Values
 
