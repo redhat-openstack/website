@@ -22,7 +22,7 @@ Instack executes [diskimage-builder](https://github.com/openstack/diskimage-buil
 
 ### Virtual Machine Setup
 
-[ Deploying RDO to a Virtual Machine Environment using RDO via Instack](Deploying RDO to a Virtual Machine Environment using RDO via Instack)
+[ Deploying an Undercloud to a Virtual Machine Environment using RDO via Instack](Deploying RDO to a Virtual Machine Environment using RDO via Instack)
 
 ## Deploying an Overcloud
 
