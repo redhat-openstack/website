@@ -8,7 +8,7 @@ wiki_last_updated: 2014-10-31
 
 # Deploying RDO to a Virtual Machine Environment using RDO via Instack
 
-[ <-Deploying RDO using Instack](Deploying RDO using Instack)
+[ ← Deploying RDO using Instack](Deploying RDO using Instack)
 
 ## Overview
 
