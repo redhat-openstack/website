@@ -133,19 +133,12 @@ The stack user in the default instack vm is already configured with passwordless
          # cp /usr/share/doc/instack-undercloud/instack-virt.answers.sample ~/instack.answers
          # Perform any answer file edits
 
-5. Run script to install undercloud. The script will produce a lot of output on
-
-        the sceen. It also logs to ~/.instack/install-undercloud.log. You should see
-      `   `install-undercloud Complete!` at the end of a successful run. `
+5. Run script to install undercloud. The script will produce a lot of output on the sceen. It also logs to ~/.instack/install-undercloud.log. You should see \`install-undercloud Complete!\` at the end of a successful run.
 
          instack-install-undercloud-packages
              
 
-6. Once the install script has run to completion, you should take note to secure and save the files
-
-      `   `/root/stackrc` and `/root/tripleo-undercloud-passwords`. Both these files will be needed to interact `
-        with the installed undercloud. You may copy these files to your home directory to make them 
-        easier to source later on, but you should try to keep them as secure and backed up as possible.
+6. Once the install script has run to completion, you should take note to secure and save the file \`/root/stackrc\` and \`/root/tripleo-undercloud-passwords\`. Both these files will be needed to interact with the installed undercloud. You may copy these files to your home directory to make them easier to source later on, but you should try to keep them as secure and backed up as possible.
 
 You now have a running undercloud.
 
