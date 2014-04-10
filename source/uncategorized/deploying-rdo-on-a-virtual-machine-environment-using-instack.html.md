@@ -163,7 +163,7 @@ Now that you have a working undercloud, let's deploy an overcloud. Note that dep
 
 4. Run the deploy-overcloud script to actually deploy the overcloud. Note that the variables must be exported so that their values are picked up by deploy-overcloud. If you put them in an rc file that you intend to source, make sure there are exports in that file as well.
 
-        # CPU: number of cpus on baremetal nodes
+       # CPU: number of cpus on baremetal nodes
        # MEM: amount of ram on baremetal nodes, in MB
        # DISK: amount of disk on baremetal nodes, in GB
        # ARCH: architecture of baremetal nodes, amd64 or i386
