@@ -10,10 +10,6 @@ wiki_last_updated: 2014-10-31
 
 [ ← Deploying RDO using Instack](Deploying RDO using Instack)
 
-## Overview
-
-During this tutorial, you will be deploying RDO using RDO to a virtual machine environment.
-
 If you're connecting to the virt host remotely from ssh, you will need to use the -t flag to force pseudo-tty allocation or enable notty via a $USER.notty file.
 
 ## Minimum System Requirements
