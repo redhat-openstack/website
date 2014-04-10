@@ -12,10 +12,20 @@ This tutorial covers how to deploy a [TripleO](https://wiki.openstack.org/wiki/T
 
 Instack executes [diskimage-builder](https://github.com/openstack/diskimage-builder) style elements on the current system. This enables a current running system to have an element applied in the same way that diskimage-builder applies the element to an image build. Using instack, you can quickly build an Undercloud to deploy your Overcloud.The following two sections describe the steps for an Instack install on all baremetal or all virtual machine environments using RDO packages.
 
-## Baremetal Setup
+## Deploying an Undercloud
+
+### Baremetal Setup
 
 [ Deploying RDO on a Baremetal Environment using Instack](Deploying RDO on a Baremetal Environment using Instack)
 
-## Virtual Machine Setup
+### Virtual Machine Setup
 
 [ Deploying RDO to a Virtual Machine Environment using RDO via Instack](Deploying RDO to a Virtual Machine Environment using RDO via Instack)
+
+## Deploying an Overcloud
+
+[ Deploying an RDO Overcloud with Instack ](Deploying an RDO Overcloud with Instack)
+
+## Testing the Overcloud
+
+[ Testing an RDO Overcloud with Instack ](Testing an RDO Overcloud with Instack)
