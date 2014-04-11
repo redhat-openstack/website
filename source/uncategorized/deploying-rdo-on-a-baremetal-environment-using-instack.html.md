@@ -22,21 +22,33 @@ If you do not plan to deploy Block Storage or Swift Storage nodes, you can set t
 
 ## Preparing the Baremetal Environment
 
+### Networking
+
+Instack parallels sections the flow described in [TripleO devtest](http://docs.openstack.org/developer/tripleo-incubator/devtest.html). The overcloud nodes will be deployed from the undercloud machine and therefore the machines need to have have their network settings modified to allow for the overcloud nodes to be PXE boot'ed using the undercloud machine. As such, the setup requires that:
+
+*   all machines (including the undercloud machine) in the setup must support IPMI
+
+<!-- -->
+
+*   one NIC from every machine needs to be on its own broadcast domain. In the tested environment, this required setting up a new VLAN on the switch. Note that you should use the "same" NIC on each of the overcloud machines ( for example: use the second NIC on each overcloud machine).
+
+<!-- -->
+
+*   the overcloud machines can PXE boot off the NIC that is on the private VLAN. In the tested environment, this required disabling network booting in the BIOS for all NICs other than the one we wanted to boot and then the chosen NIC is at the top of the boot order (ahead of the local hard disk drive and CD/DVD drives).
+
+<!-- -->
+
+*   you have the MAC addresses of the NICs, the IPMI IP addresses, the user names and passwords for each of the overcloud machines.
+
+### Setting Up the Undercloud Machine
+
 1.  Select a machine within the baremetal environment on which to install the undercloud.
-2.  Install [Fedora 20](https://fedoraproject.org/en/get-fedora) on this machine.
+2.  Install [Fedora 20 x86_64](https://fedoraproject.org/en/get-fedora) on this machine. See [RDO Quickstart](http://openstack.redhat.com/Quickstart) page for a list of supported platforms for RDO in general. Instack installs have been tested on Fedora 20 x86_64 only.
 3.  Add a user account and configure this user to have passwordless sudo access. This user will execute the steps for installation and deployment. The following example should be executed by the `root` user. It adds the user "stack".
         useradd stack
         passwd stack # specify a password
         echo "stack        ALL=(ALL)       NOPASSWD: ALL" > /etc/sudoers.d/stack
         chmod 0440 /etc/sudoers.d/stack
-
-4.  For the machines being used for the undercloud and overcloud nodes, you will need to find:
-    -   IP Addresses
-    -   MAC addresses
-    -   Users
-    -   Passwords
-
-5.  You may need to configure the network settings on the node machines so that the overcloud nodes can be deployed from the undercloud.
 
 ## Installing the Undercloud with Instack
 
