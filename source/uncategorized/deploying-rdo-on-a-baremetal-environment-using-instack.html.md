@@ -40,6 +40,18 @@ Instack parallels sections the flow described in [TripleO devtest](http://docs.o
 
 *   you have the MAC addresses of the NICs, the IPMI IP addresses, the user names and passwords for each of the overcloud machines.
 
+Note: if the undercloud machine was installed using LVM, when deploying overcloud nodes, you may see an error related to the disk being "in use". The workaround for this error is to:
+
+    # Modify /etc/lvm/lvm.conf to set use_lvmetad to be 0
+    vi /etc/lvm/lvm.conf
+    use_lvmetad=0
+    # Disable and stop relevant services
+    systemctl stop lvm2-lvmetad
+    systemctl stop lvm2-lvmetad
+    systemctl stop lvm2-lvmetad.socket
+    systemctl disable lvm2-lvmetad.socket
+    systemctl stop lvm2-lvmetad
+
 ### Setting Up the Undercloud Machine
 
 1.  Select a machine within the baremetal environment on which to install the undercloud.
