@@ -61,16 +61,16 @@ When using GRE, set the MTU in the Guest to 1400, this will allow for the GRE he
 
 ## Offloading
 
-You should turn offloading such as TSO and GRO off on the instance physical machine for traffic to work.
+You should turn offloading such as TSO/LRO and GRO/GSO off on the instance physical machine for traffic to work.
 
 This can be done with this command (replace ethX with your physical network interface name):
 
-      ethtool -K ethX tso off gro off
+      ethtool -K ethX tso off lro off gro off gso off
 
 You can modify the network script for this change to apply on startup:
 
       /etc/sysconfig/network-scripts/ifcfg-eth0
-      ETHTOOL_OPTS="-K ${DEVICE} tso off gro off"
+      ETHTOOL_OPTS="-K ${DEVICE}  tso off lro off gro off gso off"
 
 ## Additional Configuration
 
