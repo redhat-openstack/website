@@ -8,8 +8,6 @@ wiki_last_updated: 2014-10-28
 
 # Deploying RDO on a Baremetal Environment using Instack
 
-THIS PAGE IS A WORK IN PROGRESS
-
 ## Oveview
 
 REVIEW REQUIRED
@@ -40,17 +38,16 @@ REVIEW REQUIRED
     -   Users
     -   Passwords
 
-5.  Networking/boot order ?
+5.  You may need to configure the network settings on the node machines so that the overcloud nodes can be deployed from the undercloud.
 
 ## Installing the Undercloud with Instack
-
-*   missing yum install -y yum-utils
 
 1.  Enable the openstack-m repository
         sudo yum -y install http://repos.fedorapeople.org/repos/openstack-m/openstack-m/openstack-m-release-icehouse-2.noarch.rpmT
 
 2.  Enable the fedora-openstack-m-testing yum repository.
-         sudo yum-config-manager --enable fedora-openstack-m-testing
+         sudo yum -y install yum-utils
+        sudo yum-config-manager --enable fedora-openstack-m-testing
 
 3.  Install instack-undercloud
         sudo yum -y install instack-undercloud
