@@ -48,7 +48,7 @@ REVIEW REQUIRED
         sudo yum -y install http://repos.fedorapeople.org/repos/openstack-m/openstack-m/openstack-m-release-icehouse-2.noarch.rpmT
 
 2.  Enable the fedora-openstack-m-testing yum repository.
-         sudo yum -y install yum-utils
+        sudo yum -y install yum-utils
         sudo yum-config-manager --enable fedora-openstack-m-testing
 
 3.  Install instack-undercloud
