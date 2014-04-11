@@ -34,7 +34,7 @@ Instack parallels sections the flow described in [TripleO devtest](http://docs.o
 
 <!-- -->
 
-*   the overcloud machines can PXE boot off the NIC that is on the private VLAN. In the tested environment, this required disabling network booting in the BIOS for all NICs other than the one we wanted to boot and then the chosen NIC is at the top of the boot order (ahead of the local hard disk drive and CD/DVD drives).
+*   the overcloud machines can PXE boot off the NIC that is on the private VLAN. In the tested environment, this required disabling network booting in the BIOS for all NICs other than the one we wanted to boot and then ensuring that the chosen NIC is at the top of the boot order (ahead of the local hard disk drive and CD/DVD drives).
 
 <!-- -->
 
