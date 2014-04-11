@@ -10,12 +10,6 @@ wiki_last_updated: 2014-10-28
 
 [ ← Deploying RDO using Instack](Deploying RDO using Instack)
 
-## Oveview
-
-REVIEW REQUIRED
-
-This setup requires an environment with at least five baremetal machines (one machine for the undercloud and four for the overcloud nodes), each with a minimum of 2G of memory and 30G of disk space. If you do not plan to deploy Block Storage or Swift Storage nodes, you can set those scaling options to zero and you will need fewer baremetal machines accordingly. Note that the undercloud and overcloud nodes will run Fedora 20 only.
-
 ## Minimum System Requirements
 
 REVIEW REQUIRED
