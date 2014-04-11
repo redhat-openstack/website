@@ -18,7 +18,7 @@ This setup requires an environment with at least five baremetal machines (one ma
 *   32GB memory
 *   200GB disk space
 
-If you do not plan to deploy Block Storage or Swift Storage nodes, you can set those scaling options to zero and you will need fewer baremetal machines accordingly. Note that the undercloud and overcloud nodes will run Fedora 20 only.
+The setup *may* work on machines with a lower specification. If you do not plan to deploy Block Storage or Swift Storage nodes, you can set those scaling options to zero and you will need fewer baremetal machines accordingly. Note that the undercloud and overcloud nodes will be set up to run Fedora 20 x86_64 only.
 
 ## Preparing the Baremetal Environment
 
