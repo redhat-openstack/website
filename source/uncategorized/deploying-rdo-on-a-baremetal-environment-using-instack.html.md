@@ -8,6 +8,8 @@ wiki_last_updated: 2014-10-28
 
 # Deploying RDO on a Baremetal Environment using Instack
 
+[ ← Deploying RDO using Instack](Deploying RDO using Instack)
+
 ## Oveview
 
 REVIEW REQUIRED
