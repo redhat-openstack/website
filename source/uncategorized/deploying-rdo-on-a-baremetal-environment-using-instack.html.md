@@ -151,9 +151,3 @@ If your overcloud contains a Swift (Object) Storage node, the `instack-test-over
 
 *   Uploading a file with data to the node
 *   Testing the data content downloaded from the node
-
-## Next Steps
-
-REVIEW REQUIRED
-
-You have a fully functional OpenStack instance deployed.
