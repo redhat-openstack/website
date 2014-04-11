@@ -49,6 +49,8 @@ To scale the Compute, Block Storage or Swift Storage nodes, you can override the
 
 ## Deploying the Overcloud
 
+*   -   This is duplicate text \*\*
+
 1. You must source the contents of \`/root/stackrc\` into your shell before running the instack-\* scripts that interact with the undercloud and overcloud. In order to do that you can copy that file to a more convenient location or use sudo to cat the file and copy/paste the lines into your shell environment.
 
 2. Run the prepare-for-overcloud script to get setup. This script will avoid re-downloading images if they already exist in the current working directory. If you want to force a re-download of the images, delete them first.
@@ -56,6 +58,8 @@ To scale the Compute, Block Storage or Swift Storage nodes, you can override the
        instack-prepare-for-overcloud
 
 3. If you're testing an all VM setup, make sure you have copied the public key portion of the virtual power ssh key into the virtual power user's ~/.ssh/authorized_keys on the virtual machine host.
+
+*   -   End of duplicate text \*\*
 
 4. Deploy the overcloud using provided [Heat](https://wiki.openstack.org/wiki/Heat) templates or the [Tuskar](https://wiki.openstack.org/wiki/TripleO/Tuskar) CLI . Run one of the following examples.
 
