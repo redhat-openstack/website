@@ -47,7 +47,6 @@ Note: if the undercloud machine was installed using LVM, when deploying overclou
     use_lvmetad=0
     # Disable and stop relevant services
     systemctl stop lvm2-lvmetad
-    systemctl stop lvm2-lvmetad
     systemctl stop lvm2-lvmetad.socket
     systemctl disable lvm2-lvmetad.socket
     systemctl stop lvm2-lvmetad
