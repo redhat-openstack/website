@@ -55,6 +55,23 @@ Finally, on each node where quantum-openvswitch-agent runs (all compute and netw
 `# openstack-config --set /etc/quantum/plugins/openvswitch/ovs_quantum_plugin.ini OVS local_ip `<IP address>
       # service quantum-openvswitch-agent restart
 
+## MTU
+
+When using GRE, set the MTU in the Guest to 1400, this will allow for the GRE header and no packet fragmentation.
+
+## Offloading
+
+You should turn offloading such as TSO and GRO off on the instance physical machine for traffic to work.
+
+This can be done with this command (replace ethX with your physical network interface name):
+
+      ethtool -K ethX tso off gro off
+
+You can modify the network script for this change to apply on startup:
+
+      /etc/sysconfig/network-scripts/ifcfg-eth0
+      ETHTOOL_OPTS="-K ${DEVICE} tso off gro off"
+
 ## Additional Configuration
 
 On each node, be sure to specify the local IP address of the network interface over which the GRE tunnel traffic should be routed. Also make sure that each node's routing table is configured so that outgoing traffic to the other nodes' specified local IP addresses uses the desired interface. Production deployments would likely use a high bandwidth network interface and switch, with a dedicated subnet, for GRE traffic. For non-production deployments, each host's main (and probably only) IP address will suffice.
@@ -66,7 +83,5 @@ New packstack deployments can specify the interface whose IP address will be use
 Once the above steps are complete, newly created tenant networks should be GRE tunnels, which can be verified by running the following with admin credentials and looking at the provider:network_type attribute:
 
 `# quantum net-show `<network name or UUID>
-
-NOTE: When using GRE, set the MTU in the Guest to 1400, this will allow for the GRE header and no packet fragmentation. Also you should set TSO to off on the instance machine for outbound traffic to work. This can be done by this command : ethtool -K eth0 tso off . You can create a bash script for init.d to run it at startup.
 
 <Category:Networking>
