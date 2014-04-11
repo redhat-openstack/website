@@ -12,11 +12,11 @@ wiki_last_updated: 2014-10-28
 
 ## Minimum System Requirements
 
-This setup requires an environment with at least five baremetal machines (one machine for the undercloud and four for the overcloud nodes), each with:
+This setup requires an environment with at least five baremetal machines (one machine for the undercloud and four for the overcloud nodes). The setup has been tested successfully using baremetal machines each with:
 
-*   At least (1) quad core CPU
-*   4GB memory
-*   30GB disk space
+*   2 12-core CPUs
+*   32GB memory
+*   200GB disk space
 
 If you do not plan to deploy Block Storage or Swift Storage nodes, you can set those scaling options to zero and you will need fewer baremetal machines accordingly. Note that the undercloud and overcloud nodes will run Fedora 20 only.
 
