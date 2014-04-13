@@ -51,12 +51,12 @@ Add entry point in /usr/lib/python2.6/site-packages/neutron-2013.2.1-py2.6.egg-i
       ...
       opendaylight = neutron.plugins.ml2.drivers.mechanism_odl:OpenDaylightMechanismDriver
 
-Modify /etc/neutron/plugins/ml2_conf.ini in Openstack control node:
+Modify /etc/neutron/plugins/ml2/ml2_conf.ini in Openstack control node:
 
       crudini --set /etc/neutron/plugins/ml2/ml2_conf.ini ml2 mechanism_drivers opendaylight 
 `crudini --set /etc/neutron/plugins/ml2/ml2_conf.ini ml2 tenant_network_types `<gre or vxlan>
 
-Configure the odl section in /etc/neutron/plugins/ml2_conf.ini in Openstack control node
+Configure the odl section in /etc/neutron/plugins/ml2/ml2_conf.ini in Openstack control node
 
       [odl]
       nodes = 
