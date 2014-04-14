@@ -55,6 +55,6 @@ To scale the Compute, Block Storage or Swift Storage nodes, you can override the
         instack-deploy-overcloud
 
        #tuskar
-        instack-deploy-tuskarcli
+        instack-deploy-overcloud-tuskarcli
 
 After a successful deployment, you should see "Overcloud Deployed" in the standard output of the terminal. Next steps: [ Testing an RDO Overcloud with Instack ](Testing an RDO Overcloud with Instack)
