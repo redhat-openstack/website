@@ -6,7 +6,9 @@ wiki_revision_count: 2
 wiki_last_updated: 2014-04-15
 ---
 
-## Set up HA of Nova
+# Setting-up-HA-of-Nova
+
+## Set up HA of Nova [WORK-IN-PROGRESS]
 
 This document outlines configuration details for setting up HA of Nova.
 
