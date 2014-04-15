@@ -59,9 +59,10 @@ These environment variables are used in several places in TripleO. These are the
 
         echo 'export LIBVIRT_DEFAULT_URI="qemu:///system"' >> ~/.bashrc
 
-2. Install the openstack-m repository
+2. Enable the RDO icehouse and openstack-m repository
 
 `  sudo yum -y install `[`http://repos.fedorapeople.org/repos/openstack-m/openstack-m/openstack-m-release-icehouse-2.noarch.rpm`](http://repos.fedorapeople.org/repos/openstack-m/openstack-m/openstack-m-release-icehouse-2.noarch.rpm)
+`  sudo yum install -y `[`http://rdo.fedorapeople.org/openstack-icehouse/rdo-release-icehouse.rpm`](http://rdo.fedorapeople.org/openstack-icehouse/rdo-release-icehouse.rpm)
 
 3. Enable the fedora-openstack-m-testing yum repository.
 
