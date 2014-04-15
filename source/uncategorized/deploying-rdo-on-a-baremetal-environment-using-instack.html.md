@@ -63,8 +63,10 @@ Note: if the undercloud machine was installed using LVM, when deploying overclou
 
 ## Installing the Undercloud with Instack
 
-1.  Enable the openstack-m repository
-        sudo yum -y install http://repos.fedorapeople.org/repos/openstack-m/openstack-m/openstack-m-release-icehouse-2.noarch.rpmT
+1.  Enable the RDO icehouse and openstack-m repository
+         sudo yum -y install http://repos.fedorapeople.org/repos/openstack-m/openstack-m/openstack-m-release-icehouse-2.noarch.rpm
+
+        sudo yum install -y http://rdo.fedorapeople.org/openstack-icehouse/rdo-release-icehouse.rpm
 
 2.  Enable the fedora-openstack-m-testing yum repository.
         sudo yum -y install yum-utils
