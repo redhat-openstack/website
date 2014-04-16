@@ -26,6 +26,8 @@ wiki_last_updated: 2014-08-07
 | openstack-keystone            | Alan Pevec              | Ami Jeain              |         |
 | openstack-neutron             | Miguel Angel Ajo Pelayo | Ofer Blaut             |         |
 | openstack-nova                | Xavier Queralt-Mateu    | Ami Jeain              |         |
+| openstack-tuskar              | Jordan O'Mara           | Ami Jeain              |         |
+| openstack-tuskar-ui           | Jordan O'Mara           | Ami Jeain              |         |
 | openstack-packstack           | Martin Magr             | Nir Magnezi            |         |
 | openstack-puppet-modules      | Martin Magr             | Nir Magnezi            |         |
 | openstack-quantum             | Miguel Angel Ajo Pelayo | Ofer Blaut             |         |
