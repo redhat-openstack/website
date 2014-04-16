@@ -63,6 +63,8 @@ wiki_last_updated: 2014-08-07
 | python-prettytable            | Pádraig Brady           | Ami Jeain              |         |
 | python-pymongo                | RHOS Maint              | Yaniv Eylon            |         |
 | python-quantumclient          | Jacob Ruzicka           | Ofer Blaut             |         |
+| python-ironicclient           | Jacob Ruzicka           | Ofer Blaut             |         |
+| python-tuskarclient           | Jacob Ruzicka           | Ofer Blaut             |         |
 | python-swiftclient            | Jacob Ruzicka           |                        |         |
 | python-webob                  | RHOS Maint              | Ami Jeain              |         |
 | python-webtest                | Pádraig Brady           | Ami Jeain              |         |
