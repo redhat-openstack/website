@@ -74,7 +74,7 @@ The overcloud nodes will be deployed from the undercloud machine and therefore t
         # Answers file must exist in home directory for now
         # Use the baremetal answers file
         cp /usr/share/doc/instack-undercloud/instack-baremetal.answers.sample ~/instack.answers
-        # Perform any answer file edits
+        # Perform any answer file edits. The values in the answer file should be suitable for your environment. In particular, check that  the  LOCAL_INTERFACE setting matches the Network Interface on the undercloud used to handle PXE boots.
 
 6.  Run script to install undercloud. The script will produce a lot of output on the screen. It also logs to `~/.instack/install-undercloud.log`. You should see `install-undercloud Complete!` at the end of a successful run.
         instack-install-undercloud-packages
