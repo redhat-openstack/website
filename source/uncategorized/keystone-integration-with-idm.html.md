@@ -39,6 +39,8 @@ Either install Red Hat IdM from scratch or start with an existing Red Hat IdM di
 
 ### Install the Keystone schema
 
+Note: the following assumes that you want to manage assignment data in LDAP. In the Havana and later releases, the Identity backend only contains user and group information. Projects, roles, role assignments, and domains are all stored in the Assignment backend. The preferred approach is to store assignments in SQL, not in LDAP. Thus, the following custom schema is not necessary.
+
 Keystone will pull user account information from `cn=users,cn=accounts`, but we'll configure it to store Tenants and Roles in `cn=openstack`. This allows us to grant permission to that tree while restricting permissions to the standard tree. The following schema needs to be imported to support Keystone:
 
     dn: cn=openstack,dc=example,dc=com
