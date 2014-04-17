@@ -218,9 +218,9 @@ If you wish to only use Users and Groups from IPA in a read only manner, and man
 
     [ldap]
     url = ldap://ipa01.example.com
-    user_tree_dn=cn=users,cn=accounts,dc=ipa,dc=cloudlab,dc=freeipa,dc=org
+    user_tree_dn=cn=users,cn=accounts,dc=example,dc=com
     user_id_attribute=uid
-    group_tree_dn=cn=groups,cn=accounts,dc=ipa,dc=cloudlab,dc=freeipa,dc=org
+    group_tree_dn=cn=groups,cn=accounts,dc=example,dc=com
 
 Here are some possible variations on the configuration values above:
 
