@@ -8,11 +8,11 @@ wiki_last_updated: 2014-04-17
 
 ## Setting-up-HA-of-Keystone
 
-On both nodes of Keystone (rhos4-keystone1|rhos4-keystone2):
+On both nodes of Keystone (rdo-keystone1|rdo-keystone2):
 
     $ yum install -y openstack-keystone openstack-utils openstack-selinux
 
-For the first instance of Keystone (rhos4-keystone1):
+For the first instance of Keystone (rdo-keystone1):
 
     mysql --user=root --password=mysqltest --host=vip-mysql
 
@@ -26,18 +26,18 @@ Create the Keystone service token:
     export SERVICE_TOKEN=$(openssl rand -hex 10)
     echo $SERVICE_TOKEN &gt; /srv/rhos/configs/ks_admin_token
 
-On the second instance of Keystone (rhos4-keystone2):
+On the second instance of Keystone (rdo-keystone2):
 
     export SERVICE_TOKEN=$(cat /srv/rhos/configs/ks_admin_token)
 
-On both nodes of Keystone (rhos4-keystone1|rhos4-keystone2), setup `keystone.conf`:
+On both nodes of Keystone (rdo-keystone1|rdo-keystone2), setup `keystone.conf`:
 
     openstack-config --set /etc/keystone/keystone.conf DEFAULT admin_token $SERVICE_TOKEN
     openstack-config --set /etc/keystone/keystone.conf sql connection mysql://keystone:keystonetest@vip-mysql/keystone
     openstack-config --set /etc/keystone/keystone.conf DEFAULT admin_endpoint 'http://vip-keystone:%(admin_port)s/'
     openstack-config --set /etc/keystone/keystone.conf DEFAULT public_endpoint 'http://vip-keystone:%(public_port)s/'
 
-On the first Keystone instance (rhos4-keystone1), setup PKI:
+On the first Keystone instance (rdo-keystone1), setup PKI:
 
     keystone-manage pki_setup --keystone-user keystone --keystone-group keystone
     chown -R keystone:keystone /var/log/keystone    /etc/keystone/ssl/
@@ -46,24 +46,24 @@ On the first Keystone instance (rhos4-keystone1), setup PKI:
     cd /etc/keystone/ssl
     tar cvp -f /srv/rhos/configs/keystone_ssl.tar *
 
-On the second Keystone instance (rhos4-keystone2):
+On the second Keystone instance (rdo-keystone2):
 
     mkdir -p /etc/keystone/ssl
     cd /etc/keystone/ssl
     tar xvp -f /srv/rhos/configs/keystone_ssl.tar
     chown -R keystone:keystone /var/log/keystone    /etc/keystone/ssl/
 
-On both nodes of Keystone (rhos4-keystone1|rhos4-keystone2), configure pacemaker, and setup Keystone:
+On both nodes of Keystone (rdo-keystone1|rdo-keystone2), configure pacemaker, and setup Keystone:
 
     chkconfig pacemaker on
-    pcs cluster setup --name rhos4-keystone rhos4-keystone1 rhos4-keystone2
+    pcs cluster setup --name rdo-keystone rdo-keystone1 rdo-keystone2
     pcs cluster start
 
     sleep 30
 
-    pcs stonith create keystone1-fence fence_xvm multicast_address=225.0.0.7 pcmk_host_list=rhos4-keystone1
+    pcs stonith create keystone1-fence fence_xvm multicast_address=225.0.0.7 pcmk_host_list=rdo-keystone1
 
-    pcs stonith create keystone2-fence fence_xvm multicast_address=225.0.0.8 pcmk_host_list=rhos4-keystone2
+    pcs stonith create keystone2-fence fence_xvm multicast_address=225.0.0.8 pcmk_host_list=rdo-keystone2
 
     pcs resource create keystone lsb:openstack-keystone --clone
 
