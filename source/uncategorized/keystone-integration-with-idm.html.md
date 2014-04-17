@@ -138,7 +138,7 @@ After running `keystone-manage db_sync`, edit `/etc/keystone/keystone.conf`. In 
     #driver = keystone.identity.backends.sql.Identity
     driver = keystone.identity.backends.ldap.Identity
 
-Then, configure the `ldap` section to use the Red Hat IdM LDAP database.
+If you wish to store assignements in the LDAP store, configure the `ldap` section to use the Red Hat IdM LDAP database.
 
     [ldap]
     url = ldap://ipa01.example.com
@@ -207,6 +207,20 @@ Then, configure the `ldap` section to use the Red Hat IdM LDAP database.
     # role_allow_delete = True
 
 Change the above suffixes to reflect the IdM installation (i.e. dc=example,dc=com). Note that this configuration uses the `rdoadmin` account created above to authenticate Keystone to IPA. If a different account was created for that purpose above, change the `user` and `password` value in the configuration file.
+
+If you wish to only use Users and Groups from IPA in a read only manner, and manage assignments in SQL the configuration file can be significantly simplified. Since LDAP is read only, you don't have to provide a user or password for the admin: it will do an anonymous bind instead. Since a user added from Keystone would not be a valid IPA user, a user should only be added via the IPA API.
+
+    [assignment]
+    driver = keystone.assignment.backends.sql.Assignment
+
+    [identity]
+    driver = keystone.identity.backends.ldap.Identity
+
+    [ldap]
+    url = ldap://ipa01.example.com
+    user_tree_dn=cn=users,cn=accounts,dc=ipa,dc=cloudlab,dc=freeipa,dc=org
+    user_id_attribute=uid
+    group_tree_dn=cn=groups,cn=accounts,dc=ipa,dc=cloudlab,dc=freeipa,dc=org
 
 Here are some possible variations on the configuration values above:
 
