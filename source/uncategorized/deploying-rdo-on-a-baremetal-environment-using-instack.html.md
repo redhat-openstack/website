@@ -49,7 +49,7 @@ The overcloud nodes will be deployed from the undercloud machine and therefore t
 ### Setting Up the Undercloud Machine
 
 1.  Select a machine within the baremetal environment on which to install the undercloud.
-2.  Install [Fedora 20 x86_64](https://fedoraproject.org/en/get-fedora) on this machine. See [RDO Quickstart](http://openstack.redhat.com/Quickstart) page for a list of supported platforms for RDO in general. Instack installs have been tested on Fedora 20 x86_64 only.
+2.  Install [Fedora 20 x86_64](https://fedoraproject.org/en/get-fedora) on this machine. (Instack installs have been tested on Fedora 20 x86_64 only.)
 3.  Add a user account and configure this user to have passwordless sudo access. This user will execute the steps for installation and deployment. The following example should be executed by the `root` user. It adds the user "stack".
         useradd stack
         passwd stack # specify a password
