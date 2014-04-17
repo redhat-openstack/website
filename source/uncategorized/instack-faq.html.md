@@ -21,5 +21,3 @@ This page includes tips, fixes and debugging steps for Instack installs:
         systemctl stop lvm2-lvmetad.socket
         systemctl disable lvm2-lvmetad.socket
         systemctl stop lvm2-lvmetad
-
-<\\ul>
