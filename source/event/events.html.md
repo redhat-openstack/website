@@ -11,8 +11,6 @@ wiki_last_updated: 2015-08-31
 
 There are lots of events, around the world, where you can hang out with people from the RDO community. Some recent and upcoming events are:
 
-*   [Storage Services Hackathon](http://dataliberate.eventbrite.com), April 13th, San Francisco
-*   [Red Hat Summit](http://www.redhat.com/summit/), April 14-17, San Franciso
 *   [OpenStack Heat hangout](Hangouts), April 24th (tentative)
 *   [OpenStack Summit](http://www.openstack.org/summit/openstack-summit-atlanta-2014/), May 12-16, 2014, Atlanta, GA
 *   [OpenStack CEE Day](http://openstackceeday.com/), May 26, 2014, Budapest
