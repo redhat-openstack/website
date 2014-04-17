@@ -82,4 +82,4 @@ The overcloud nodes will be deployed from the undercloud machine and therefore t
 7.  Once the install script has run to completion, you should take note to secure and save the files `/root/stackrc` and `/root/tripleo-undercloud-passwords`. Both these files will be needed to interact with the installed undercloud. You may copy these files to your home directory to make them easier to source later on, but you should try to keep them as secure and backed up as possible.
     That completes the undercloud install and now you should have a running undercloud. For the next steps, see: [ Deploying an RDO Overcloud with Instack ](Deploying an RDO Overcloud with Instack)
 
-    If your install does not complete successfully please see the [ Instack FAQ](Instack FQA) page for potential solutions.
+    If your install does not complete successfully please see the [ Instack FAQ](Instack FAQ) page for potential solutions.
