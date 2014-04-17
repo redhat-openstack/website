@@ -28,13 +28,13 @@ The undercloud machine needs to run Fedora 20 x86_64, which is discussed more be
 
 ### Networking
 
-Instack parallels sections the flow described in [TripleO devtest](http://docs.openstack.org/developer/tripleo-incubator/devtest.html). The overcloud nodes will be deployed from the undercloud machine and therefore the machines need to have have their network settings modified to allow for the overcloud nodes to be PXE boot'ed using the undercloud machine. As such, the setup requires that:
+The overcloud nodes will be deployed from the undercloud machine and therefore the machines need to have have their network settings modified to allow for the overcloud nodes to be PXE boot'ed using the undercloud machine. As such, the setup requires that:
 
-*   all machines (including the undercloud machine) in the setup must support IPMI
+*   all overcloud machines in the setup must support IPMI
 
 <!-- -->
 
-*   one NIC from every machine needs to be on its own broadcast domain. In the tested environment, this required setting up a new VLAN on the switch. Note that you should use the "same" NIC on each of the overcloud machines ( for example: use the second NIC on each overcloud machine).
+*   one NIC from every machine needs to be on its own broadcast domain. In the tested environment, this required setting up a new VLAN on the switch. Note that you should use the "same" NIC on each of the overcloud machines ( for example: use the second NIC on each overcloud machine). This is because during installation we will need to refer to that NIC using a single name across all overcloud machines e.g. em2
 
 <!-- -->
 
@@ -42,18 +42,9 @@ Instack parallels sections the flow described in [TripleO devtest](http://docs.o
 
 <!-- -->
 
-*   you have the MAC addresses of the NICs, the IPMI IP addresses, the user names and passwords for each of the overcloud machines.
-
-Note: if the undercloud machine was installed using LVM, when deploying overcloud nodes, you may see an error related to the disk being "in use". The workaround for this error is to:
-
-    # Modify /etc/lvm/lvm.conf to set use_lvmetad to be 0
-    vi /etc/lvm/lvm.conf
-    use_lvmetad=0
-    # Disable and stop relevant services
-    systemctl stop lvm2-lvmetad
-    systemctl stop lvm2-lvmetad.socket
-    systemctl disable lvm2-lvmetad.socket
-    systemctl stop lvm2-lvmetad
+*   For each overcloud machine you have:
+    -   the MAC address of the NIC that will PXE boot
+    -   the IPMI information for the machine (i.e. IP address of the IPMI NIC, IPMI username and password)
 
 ### Setting Up the Undercloud Machine
 
