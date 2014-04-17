@@ -12,13 +12,17 @@ wiki_last_updated: 2014-10-28
 
 ## Minimum System Requirements
 
-This setup requires an environment with at least five baremetal machines (one machine for the undercloud and four for the overcloud nodes). The setup has been tested successfully using baremetal machines each with:
+In order to produce a usable OpenStack install this setup requires five baremetal machines: one machine for the undercloud, and one machine for each of the overcloud controller, compute, block storage and object storage nodes. However, the setup can be scaled down to run on just three machines and include only the undercloud, overcloud controller and overcloud compute nodes. Similarly, the overcloud nodes can be scaled up to include multiple compute, object storage or block storage nodes.
 
-*   2 12-core CPUs
-*   32GB memory
-*   200GB disk space
+![](instackSetup.png "instackSetup.png")
 
-The setup *may* work on machines with a lower specification. If you do not plan to deploy Block Storage or Swift Storage nodes, you can set those scaling options to zero and you will need fewer baremetal machines accordingly. Note that the undercloud and overcloud nodes will be set up to run Fedora 20 x86_64 only.
+The setup requires baremetal machines with the following minimum specifications:
+
+*   multi-core CPU
+*   4GB memory
+*   60GB free disk space
+
+The undercloud machine needs to run Fedora 20 x86_64, which is discussed more below.
 
 ## Preparing the Baremetal Environment
 
