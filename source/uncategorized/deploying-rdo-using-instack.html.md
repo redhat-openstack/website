@@ -33,3 +33,7 @@ The following sections describe the steps for deploying an Undercloud on all bar
 ## 3. Testing the Overcloud
 
 [ Testing an RDO Overcloud with Instack ](Testing an RDO Overcloud with Instack)
+
+## 4. Instack FAQ
+
+[ Instack FAQ ](Instack FAQ)
