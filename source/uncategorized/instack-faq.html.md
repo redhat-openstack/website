@@ -51,8 +51,8 @@ This page includes tips, fixes and debugging steps for Instack installs:
         export ARCH=amd64
         export MACS="52:54:00:01:f4:00 52:54:00:01:f4:01 52:54:00:01:f4:02 52:54:00:01:f4:03"
         export PM_IPS="10.10.0.01 10.10.0.02 10.10.0.03 10.10.0.04"
-        export PM_USERS="username username username username username "
-        export PM_PASSWORDS="password password password password password"
+        export PM_USERS="username username username username"
+        export PM_PASSWORDS="password password password password"
         export NeutronPublicInterface=em2
         export OVERCLOUD_LIBVIRT_TYPE=kvm
         export NETWORK_CIDR="10.0.0.0/8"
