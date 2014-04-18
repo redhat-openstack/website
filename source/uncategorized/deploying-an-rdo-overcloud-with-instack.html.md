@@ -22,7 +22,7 @@ Now that you have a working undercloud, let's deploy an overcloud. Note that dep
 
 3. If you're testing an all VM setup, make sure you have copied the public key portion of the virtual power ssh key into the virtual power user's ~/.ssh/authorized_keys on the virtual machine host.
 
-4. Create a deploy-overcloudrc script to set variable values you'll need to deploy the overcloud. Note that the variables must be exported so that their values are picked up by instack-deploy-overcloud.
+4. Create a deploy-overcloudrc script to set variable values you'll need to deploy the overcloud. Note that the variables must be exported so that their values are picked up by instack-deploy-overcloud. Example rc files containing example values for above variables can be found in [Instack FAQ](http://openstack.redhat.com/Instack_FAQ).
 
        # CPU: number of cpus on baremetal nodes
        # MEM: amount of ram on baremetal nodes, in MB
@@ -38,8 +38,6 @@ Now that you have a working undercloud, let's deploy an overcloud. Note that dep
        # FLOATING_IP_START: floating ip allocation start
        # FLOATING_IP_END: floating ip allocation end
        # FLOATING_IP_CIDR: floating ip network cidr
-
-Example rc files containing example values for above variables can be found in [Instack FAQ](http://openstack.redhat.com/Instack_FAQ).
 
 ### Scaling
 
