@@ -39,6 +39,8 @@ Now that you have a working undercloud, let's deploy an overcloud. Note that dep
        # FLOATING_IP_END: floating ip allocation end
        # FLOATING_IP_CIDR: floating ip network cidr
 
+Example rc files containing example values for above variables can be found in [ Instack FAQ](http://openstack.redhat.com/Instack_FAQ)
+
 ### Scaling
 
 To scale the Compute, Block Storage or Swift Storage nodes, you can override the default values from the instack-deploy-overcloud scripts in your rc file. The defaults for those scripts are:
