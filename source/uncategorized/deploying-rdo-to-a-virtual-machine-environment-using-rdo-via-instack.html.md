@@ -124,6 +124,7 @@ The Undercloud image on the instack virtual machine is a minimal install of Fedo
 1. Enable the openstack-m repository
 
 ` sudo yum -y install `[`http://repos.fedorapeople.org/repos/openstack-m/openstack-m/openstack-m-release-icehouse-2.noarch.rpm`](http://repos.fedorapeople.org/repos/openstack-m/openstack-m/openstack-m-release-icehouse-2.noarch.rpm)
+` sudo yum install -y `[`http://rdo.fedorapeople.org/openstack-icehouse/rdo-release-icehouse.rpm`](http://rdo.fedorapeople.org/openstack-icehouse/rdo-release-icehouse.rpm)
 
 2. Enable the fedora-openstack-m-testing yum repository.
 
