@@ -40,7 +40,7 @@ Setup `glance-registry.conf`:
     openstack-config --set /etc/glance/glance-registry.conf keystone_authtoken admin_user glance
     openstack-config --set /etc/glance/glance-registry.conf keystone_authtoken admin_password glancetest
 
-Set a Ceilometer hook:
+Enable Glance's notifications (Needed for Ceilometer):
 
     openstack-config --set /etc/glance/glance-api.conf DEFAULT notifier_strategy qpid
 
