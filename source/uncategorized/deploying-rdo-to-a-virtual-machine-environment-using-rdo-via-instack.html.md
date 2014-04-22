@@ -117,18 +117,13 @@ The Undercloud image on the instack virtual machine is a minimal install of Fedo
 
 1. Enable the openstack-m repository
 
-` sudo yum -y install `[`http://repos.fedorapeople.org/repos/openstack-m/openstack-m/openstack-m-release-icehouse-2.noarch.rpm`](http://repos.fedorapeople.org/repos/openstack-m/openstack-m/openstack-m-release-icehouse-2.noarch.rpm)
-` sudo yum install -y `[`http://rdo.fedorapeople.org/openstack-icehouse/rdo-release-icehouse.rpm`](http://rdo.fedorapeople.org/openstack-icehouse/rdo-release-icehouse.rpm)
+`  sudo yum install -y `[`http://rdo.fedorapeople.org/openstack-icehouse/rdo-release-icehouse.rpm`](http://rdo.fedorapeople.org/openstack-icehouse/rdo-release-icehouse.rpm)
 
-2. Enable the fedora-openstack-m-testing yum repository.
-
-       sudo yum-config-manager --enable fedora-openstack-m-testing
-
-3. Install instack-undercloud
+2. Install instack-undercloud
 
        sudo yum -y install instack-undercloud
 
-4. Create and edit your answers file. The descriptions of the parameters that can be set are in the sample answers file.
+3. Create and edit your answers file. The descriptions of the parameters that can be set are in the sample answers file.
 
          # Answers file must exist in home directory for now
          # Use either the baremetal or virt sample answers file
@@ -136,11 +131,11 @@ The Undercloud image on the instack virtual machine is a minimal install of Fedo
          # cp /usr/share/doc/instack-undercloud/instack-virt.answers.sample ~/instack.answers
          # Perform any answer file edits
 
-5. Run script to install undercloud. The script will produce a lot of output on the sceen. It also logs to ~/.instack/install-undercloud.log. You should see \`install-undercloud Complete!\` at the end of a successful run.
+4. Run script to install undercloud. The script will produce a lot of output on the sceen. It also logs to ~/.instack/install-undercloud.log. You should see \`install-undercloud Complete!\` at the end of a successful run.
 
          instack-install-undercloud-packages
 
-6. Once the install script has run to completion, you should take note to secure and save the file \`/root/stackrc\` and \`/root/tripleo-undercloud-passwords\`. Both these files will be needed to interact with the installed undercloud. You may copy these files to your home directory to make them easier to source later on, but you should try to keep them as secure and backed up as possible.
+5. Once the install script has run to completion, you should take note to secure and save the file \`/root/stackrc\` and \`/root/tripleo-undercloud-passwords\`. Both these files will be needed to interact with the installed undercloud. You may copy these files to your home directory to make them easier to source later on, but you should try to keep them as secure and backed up as possible.
 
 You now have a running Undercloud. Next steps: [ Deploying an RDO Overcloud with Instack ](Deploying an RDO Overcloud with Instack)
 
