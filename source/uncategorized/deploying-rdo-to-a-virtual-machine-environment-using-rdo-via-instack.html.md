@@ -43,15 +43,15 @@ The user performing all of the installations needs to have passwordless sudo ena
 These environment variables are used in several places in TripleO. These are the suggested default values and can be changed to suit your specific environment needs. Just export any or all of these before you start the installation process.
 
          # disk size in GB to set for each virtual machine created
-        NODE_DISK=30
+        export NODE_DISK=30
         # memory in MB allocated for each virtual machine created
-        NODE_MEM=2048
+        export NODE_MEM=2048
         # Operating system distribution to set for each virtual machine created
-        NODE_DIST=fedora
+        export NODE_DIST=fedora
         # CPU count assigned to each virtual machine created
-        NODE_CPU=1
+        export NODE_CPU=1
         # 64 bit architecture
-        NODE_ARCH=amd64
+        export NODE_ARCH=amd64
 
 ## Virtual Host Installation
 
