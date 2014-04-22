@@ -8,7 +8,7 @@ wiki_last_updated: 2014-04-22
 
 ## Setting up HA of Cinder
 
-This document outlines configuration details of setting up HA of Cinder.
+This document outlines configuration details for setting up HA of Cinder.
 
 Install the RPMs:
 
