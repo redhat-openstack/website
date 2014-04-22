@@ -12,7 +12,15 @@ This document aims to be a high-level page for configuring high availability of 
 
 ### HA Architecture
 
-[This document](http://openstack.redhat.com/HA_Architecture) describes a couple of different high availability architectures for OpenStack deployments
+[This document](http://openstack.redhat.com/HA_Architecture) describes a couple of different high availability architectures for OpenStack deployments.
+
+### Setting up HAProxy
+
+To configure HAProxy, refer to [Setting up HAProxy load balancer](http://openstack.redhat.com/Setting-up-HAProxy-Load-Balancer).
+
+### Setting up memcached
+
+To configure memcached, refer to [Setting up memcached](http://openstack.redhat.com/Setting-up-memcached).
 
 ### Keystone
 
