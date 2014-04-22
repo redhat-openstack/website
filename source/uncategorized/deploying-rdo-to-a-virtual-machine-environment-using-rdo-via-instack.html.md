@@ -61,19 +61,13 @@ These environment variables are used in several places in TripleO. These are the
 
 2. Enable the RDO icehouse and openstack-m repository
 
-`  sudo yum -y install `[`http://repos.fedorapeople.org/repos/openstack-m/openstack-m/openstack-m-release-icehouse-2.noarch.rpm`](http://repos.fedorapeople.org/repos/openstack-m/openstack-m/openstack-m-release-icehouse-2.noarch.rpm)
 `  sudo yum install -y `[`http://rdo.fedorapeople.org/openstack-icehouse/rdo-release-icehouse.rpm`](http://rdo.fedorapeople.org/openstack-icehouse/rdo-release-icehouse.rpm)
 
-3. Enable the fedora-openstack-m-testing yum repository.
-
-       sudo yum -y install yum-utils
-       sudo yum-config-manager --enable fedora-openstack-m-testing
-
-4. Install instack-undercloud
+3. Install instack-undercloud
 
        sudo yum -y install instack-undercloud
 
-5. Run script to install required dependencies
+4. Run script to install required dependencies
 
        sudo yum install -y libguestfs-tools
        source /usr/libexec/openstack-tripleo/devtest_variables.sh
@@ -81,27 +75,27 @@ These environment variables are used in several places in TripleO. These are the
 
 After running this command, you will need to log out and log back in for the changes to be applied. If you plan to use virt-manager or boxes to visually manage the virtual machines created in the next step, this would be a good time to install those tools now.
 
-6. Run script to setup your virtual environment. If you'd like to customize the root password on the undercloud virtual machine created in this step, export an environment variable UNDERCLOUD_ROOT_PASSWORD. If you prefer to customize the name of the undercloud virtual machine to something besides instack, export the environment variable UNDERCLOUD_VM_NAME.
+5. Run script to setup your virtual environment. If you'd like to customize the root password on the undercloud virtual machine created in this step, export an environment variable UNDERCLOUD_ROOT_PASSWORD. If you prefer to customize the name of the undercloud virtual machine to something besides instack, export the environment variable UNDERCLOUD_VM_NAME.
 
        export NODE_DISK=30
        instack-virt-setup
 
 You should now have a vm called instack that you can use for the instack-undercloud installation that contains a minimal install of Fedora 20 x86_64. The instack vm contains a user "stack" that uses the password "stack" and is granted passwordless sudo privileges. The root password is displayed in the standard output unless you previously set it using UNDERCLOUD_ROOT_PASSWORD.
 
-7. Get IP Address
+6. Get IP Address
 
 You'll need to start the instack virtual machine and obtain its IP address. You can use your preferred virtual machine management software or follow the steps below.
 
        virsh start instack
        cat /var/lib/libvirt/dnsmasq/default.leases | grep $(tripleo get-vm-mac instack) | awk '{print $3;}'
 
-8. Get MAC addresses
+7. Get MAC addresses
 
 When setting up the undercloud on the instack virtual machine, you will need the MAC addresses of the baremetal node virtual machines. Use the following command to obtain the list of addresses you can add to your deploy-overcloudrc file later.
 
         for i in $(seq 0 3); do echo -n $(tripleo get-vm-mac baremetal_$i) " "; done; echo
 
-9. Log into your instack virtual machine. Create the virtual-power-key and copy it to the virt host. The user in ssh-copy-id should match the VIRTUAL_POWER_USER and the ip should match the VIRTUAL_POWER_HOST in your instack.answers file.
+8. Log into your instack virtual machine. Create the virtual-power-key and copy it to the virt host. The user in ssh-copy-id should match the VIRTUAL_POWER_USER and the ip should match the VIRTUAL_POWER_HOST in your instack.answers file.
 
        ssh-keygen -t rsa -N '' -C virtual-power-key -f virtual-power-key
        ssh-copy-id -i virtual-power-key.pub stack@192.168.122.1
