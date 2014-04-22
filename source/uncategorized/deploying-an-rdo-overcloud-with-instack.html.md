@@ -47,6 +47,8 @@ To scale the Compute, Block Storage or Swift Storage nodes, you can override the
        BLOCKSTORAGESCALE=${BLOCKSTORAGESCALE:-1}
        SWIFTSTORAGESCALE=${SWIFTSTORAGESCALE:-0}
 
+Don't forget to `source deploy-overcloudrc` before running the deployment script.
+
 ## Deploying the Overcloud
 
 1. Deploy the overcloud using provided [Heat](https://wiki.openstack.org/wiki/Heat) templates or the [Tuskar](https://wiki.openstack.org/wiki/TripleO/Tuskar) CLI . Run one of the following examples.
