@@ -44,7 +44,7 @@ Enable Glance's notifications (Needed for Ceilometer):
 
     openstack-config --set /etc/glance/glance-api.conf DEFAULT notifier_strategy qpid
 
-On the first node of Glance (rdo-glance1), source the Keystone credentials and create a Keystone user, associate a role, and crea
+On the first node of Glance (rdo-glance1), source the Keystone credentials and create a Keystone user, associate a role, and create Glance service and a Keystone endpoint for it.
 
     . /srv/rhos/configs/keystonerc_admin
 
