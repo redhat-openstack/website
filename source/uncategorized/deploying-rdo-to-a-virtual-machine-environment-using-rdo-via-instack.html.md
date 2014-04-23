@@ -38,21 +38,6 @@ The user performing all of the installations needs to have passwordless sudo ena
        sudo echo "stack ALL=(root) NOPASSWD:ALL" >> /etc/sudoers.d/stack
        sudo chmod 0440 /etc/sudoers.d/stack
 
-## Recommended Default Values
-
-These environment variables are used in several places in TripleO. These are the suggested default values and can be changed to suit your specific environment needs. Just export any or all of these before you start the installation process.
-
-         # disk size in GB to set for each virtual machine created
-        export NODE_DISK=30
-        # memory in MB allocated for each virtual machine created
-        export NODE_MEM=2048
-        # Operating system distribution to set for each virtual machine created
-        export NODE_DIST=fedora
-        # CPU count assigned to each virtual machine created
-        export NODE_CPU=1
-        # 64 bit architecture
-        export NODE_ARCH=amd64
-
 ## Virtual Host Installation
 
 1. Add export of LIVBIRT_DEFAULT_URI to your bashrc file.
