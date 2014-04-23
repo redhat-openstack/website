@@ -75,12 +75,12 @@ These environment variables are used in several places in TripleO. These are the
 
 After running this command, you will need to log out and log back in for the changes to be applied. If you plan to use virt-manager or boxes to visually manage the virtual machines created in the next step, this would be a good time to install those tools now.
 
-5. Run script to setup your virtual environment. If you'd like to customize the root password on the undercloud virtual machine created in this step, export an environment variable UNDERCLOUD_ROOT_PASSWORD. If you prefer to customize the name of the undercloud virtual machine to something besides instack, export the environment variable UNDERCLOUD_VM_NAME.
+5. Run script to setup your virtual environment.
 
        export NODE_DISK=30
        instack-virt-setup
 
-You should now have a vm called instack that you can use for the instack-undercloud installation that contains a minimal install of Fedora 20 x86_64. The instack vm contains a user "stack" that uses the password "stack" and is granted passwordless sudo privileges. The root password is displayed in the standard output unless you previously set it using UNDERCLOUD_ROOT_PASSWORD.
+You should now have a vm called instack that you can use for the instack-undercloud installation that contains a minimal install of Fedora 20 x86_64. The instack vm contains a user "stack" that uses the password "stack" and is granted passwordless sudo privileges. The root password is displayed in the standard output.
 
 6. Get IP Address
 
@@ -95,7 +95,7 @@ When setting up the undercloud on the instack virtual machine, you will need the
 
         for i in $(seq 0 3); do echo -n $(tripleo get-vm-mac baremetal_$i) " "; done; echo
 
-8. Log into your instack virtual machine. Create the virtual-power-key and copy it to the virt host. The user in ssh-copy-id should match the VIRTUAL_POWER_USER and the ip should match the VIRTUAL_POWER_HOST in your instack.answers file.
+8. Log into your instack virtual machine as the stack user. Create the virtual-power-key and copy it to the virt host. The user in ssh-copy-id should match the VIRTUAL_POWER_USER and the ip should match the VIRTUAL_POWER_HOST in your instack.answers file.
 
        ssh-keygen -t rsa -N '' -C virtual-power-key -f virtual-power-key
        ssh-copy-id -i virtual-power-key.pub stack@192.168.122.1
