@@ -10,7 +10,7 @@ wiki_last_updated: 2014-05-21
 
 ## BUG TRIAGE DAY
 
-Wednesday, January 15, 14:00 UTC is our next bug triage day. That's `date -d "14:00 UTC"` in your local timezone. Please feel free to stop by `#rdo` on IRC (Freenode) to help out or ask questions.
+We generally try to conduct a public bug triage every third Tuesday of the month at 14:00 UTC. That's `date -d "14:00 UTC"` in your local timezone. Please feel free to stop by `#rdo` on IRC (Freenode) to help out or ask questions.
 
 ## Bugzilla queries
 
