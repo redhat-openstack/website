@@ -301,7 +301,7 @@ Here's an example of a [working logging configuration](https://github.com/openst
 
 ### nova: instances started in error state
 
-*   **Bug:**
+*   '''Bug: <https://bugzilla.redhat.com/show_bug.cgi?id=1090605> ''
 *   **Affects:** all distros
 
 ##### workaround
