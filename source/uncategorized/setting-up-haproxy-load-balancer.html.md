@@ -190,7 +190,7 @@ Setup `haproxy.cfg`:
         server rdo-rabbitmq4 192.168.16.52:5672 check inter 1s
     EOF
 
-Configure `pacemaker`:
+Configure `pacemaker` (Note: that fence xvm is specifically for VMs, not for baremetal)::
 
     chkconfig pacemaker on
     pcs cluster setup --name rdo-lb rdo-lb1 rdo-lb2
