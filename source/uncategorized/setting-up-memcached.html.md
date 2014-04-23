@@ -12,7 +12,7 @@ Install memcached on both nodes (rdo-memcache1|rdo-memcache2):
 
     yum install -y memcached
 
-Configure `pacemaker`:
+Configure `pacemaker`. (Note: that fence xvm is specifically for VMs, not for baremetal):
 
     chkconfig pacemaker on
     pcs cluster setup --name rdo-memcache rdo-memcache1 rdo-memcache2
