@@ -102,7 +102,7 @@ Note that you don't have to use the pre-created instack vm and could instead cre
 
 The Undercloud image on the instack virtual machine is a minimal install of Fedora 20 with yum-utils and net-tools installed. This section will walk you through installing the instack-undercloud package and then running instack to apply packages.
 
-1. Enable the openstack-m repository
+1. Enable the rdo-icehouse repository
 
 `  sudo yum install -y `[`http://rdo.fedorapeople.org/openstack-icehouse/rdo-release-icehouse.rpm`](http://rdo.fedorapeople.org/openstack-icehouse/rdo-release-icehouse.rpm)
 
