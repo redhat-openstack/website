@@ -46,7 +46,7 @@ The user performing all of the installations needs to have passwordless sudo ena
 
         echo 'export LIBVIRT_DEFAULT_URI="qemu:///system"' >> ~/.bashrc
 
-2. Enable the RDO icehouse and openstack-m repository
+2. Enable the RDO icehouse repository
 
 `  sudo yum install -y `[`http://rdo.fedorapeople.org/openstack-icehouse/rdo-release-icehouse.rpm`](http://rdo.fedorapeople.org/openstack-icehouse/rdo-release-icehouse.rpm)
 
