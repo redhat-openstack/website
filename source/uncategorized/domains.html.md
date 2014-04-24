@@ -27,6 +27,28 @@ The Cloud Administrator delegates the following tasks to Domain Administrators:
 
 The Cloud Administrator also delegates the assignment of resource quotas to Domain Administrators.
 
+## Implementation
+
+*   Download updated policy file
+
+<!-- -->
+
+    [root@laptop ~]# wget https://raw.githubusercontent.com/openstack/keystone/master/etc/policy.v3cloudsample.json  -O /etc/keystone/policy.json
+    --2014-04-23 23:00:05--  https://raw.githubusercontent.com/openstack/keystone/master/etc/policy.v3cloudsample.json
+    Resolving raw.githubusercontent.com... 199.27.74.133
+    Connecting to raw.githubusercontent.com|199.27.74.133|:443... connected.
+    HTTP request sent, awaiting response... 200 OK
+    Length: 9032 (8.8K) [text/plain]
+    Saving to: “/etc/keystone/policy.json”
+
+    100%[======================================>] 9,032       --.-K/s   in 0.02s   
+
+    2014-04-23 23:00:05 (434 KB/s) - “/etc/keystone/policy.json” saved [9032/9032]
+
+*   Change the keystone entries in the service catalog to point to v3:
+
+...
+
 ## References
 
 *   <https://wiki.openstack.org/wiki/Domains>
