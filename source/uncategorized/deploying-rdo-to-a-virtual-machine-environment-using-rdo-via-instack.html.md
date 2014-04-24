@@ -24,7 +24,7 @@ This setup creates (5) virtual machines consisting of 2G of memory and 30G of di
 
 These are the minimum system requirements to follow this tutorial. If you want to deviate from the tutorial or increase the scaling of one or more overcloud nodes, you will need to ensure you have enough memory and disk space.
 
-[1]: Note that the default Fedora partitioning scheme will most likely not provide enough space to the partition containing the default path for libvirt image storage (/var/lib/libvirt/images). The easiest fix is to customize the partition layout at install-time to provide at least 200 GB of space for that path. Moving the image storage location to a different partition may result in SELinux issues.
+[1]: Note that the default Fedora partitioning scheme will most likely not provide enough space to the partition containing the default path for libvirt image storage (/var/lib/libvirt/images). The easiest fix is to customize the partition layout at install-time to provide at least 200 GB of space for that path.
 
 ## Preparing the Host Machine
 
