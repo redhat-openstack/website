@@ -30,7 +30,7 @@ While the [Quickstart](Quickstart) is sufficient for an initial test deployment,
 *   [ Repository information ](Repositories)
 *   [Adding a compute node](Adding a compute node)
 *   [Troubleshooting](Troubleshooting)
-*   [ Upgrading from Grizzly to Havana](Upgrading_RDO)
+*   [ Upgrading from Havana to Icehouse](Upgrading_RDO_To_Icehouse)
 *   [Uninstalling RDO](Uninstalling RDO)
 *   [ Deploying RDO using TripleO](TripleO_VM_Setup)
 *   [ Packstack Cookbook](Packstack_cookbook)
