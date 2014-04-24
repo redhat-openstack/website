@@ -187,6 +187,22 @@ If you disabled the service in the catalog, re-enable it now:
       | compute2.mydomain.com | nova-compute | enabled |
       +-----------------------+--------------+---------+
 
+#### Migrating instances during upgrade
+
+It is possible to migrate instances from older Havana compute nodes to newer Icehouse nodes during an upgrade. This provides a lower-downtime option in the case where OS or hardware upgrades need to be performed in conjunction with the OpenStack upgrade. In order for this to work, ensure that the nova.conf changes for pinning the compute RPC version are applied to all compute nodes, and make sure that the usual requirements for migrations (SSH keys, SELinux policy, etc) are in place.
+
+For either type of migration, first, disable the service on the compute node so that no new instances are placed there:
+
+       [root@controller ~(keystone_admin)]# nova service-disable compute3.mydomain.com nova-compute
+
+If you want to use live migration, initiate the operation for each instance running on the host to evacuate to another host:
+
+      nova live-migration foo-instance1
+
+If you would prefer to use the less-complicated (and arguably safer) cold migration and can tolerate some instance downtime, do this:
+
+      nova migrate foo-instance1
+
 #### Post-Upgrade Cleanup
 
 After the live upgrade is complete (i.e. all nodes are running on Icehouse), the compute RPC API version pin should be removed. In /etc/nova/nova.conf, find the place where you set the icehouse-compat version for compute and comment it out:
