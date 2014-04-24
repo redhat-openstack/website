@@ -70,6 +70,37 @@ The Cloud Administrator also delegates the assignment of resource quotas to Doma
     [root@localhost ~]# keystone endpoint-list | grep $SERVICE_ID
     | 63105d9244c24bb1af9543072f6d3f94 | RegionOne |          http://192.168.0.10:5000/v3           |          http://192.168.0.10:5000/v3           |        http://192.168.0.10:35357/v3       | 302276e563ad4d61a404e33931be492e |
 
+## Open Issues
+
+### Nova
+
+The following blueprint is outstanding for Nova:
+
+*   <https://blueprints.launchpad.net/nova/+spec/domains-nova>
+
+### Quotas
+
+Domain quotas need to be implemented in each of the services:
+
+*   <https://blueprints.launchpad.net/nova/+spec/domain-quota-driver>
+*   <https://blueprints.launchpad.net/nova/+spec/domain-quota-driver-api>
+*   <https://blueprints.launchpad.net/nova/+spec/domain-quota-driver-v3-api>
+*   <https://blueprints.launchpad.net/nova/+spec/domain-quota-manage-commands>
+*   <https://blueprints.launchpad.net/neutron/+spec/domain-quota-driver>
+*   <https://blueprints.launchpad.net/cinder/+spec/domain-quota-driver>
+
+### Bugs
+
+<https://bugs.launchpad.net/keystone/+bug/1221805>
+
+### Multiple Domain Identifiers
+
+<http://lists.openstack.org/pipermail/openstack-dev/2014-April/032833.html>
+
+### Hierarchical Multitenancy
+
+Another approach is laid out here: <https://blueprints.launchpad.net/keystone/+spec/hierarchical-multitenancy>
+
 ## References
 
 *   <https://wiki.openstack.org/wiki/Domains>
