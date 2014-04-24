@@ -45,7 +45,7 @@ To scale the Compute, Block Storage or Swift Storage nodes, you can override the
 
        COMPUTESCALE=${COMPUTESCALE:-1}
        BLOCKSTORAGESCALE=${BLOCKSTORAGESCALE:-1}
-       SWIFTSTORAGESCALE=${SWIFTSTORAGESCALE:-0}
+       SWIFTSTORAGESCALE=${SWIFTSTORAGESCALE:-1}
 
 NOTE: Don't forget to `source deploy-overcloudrc` before running the deployment script.
 
