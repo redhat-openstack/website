@@ -29,6 +29,12 @@ The Cloud Administrator also delegates the assignment of resource quotas to Doma
 
 ## Implementation
 
+*   Install openstack client
+
+<!-- -->
+
+    root@localhost ~]# yum -y install openstack-packstack
+
 *   Download updated policy file
 
 <!-- -->
