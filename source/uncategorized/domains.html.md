@@ -41,7 +41,7 @@ The Cloud Administrator also delegates the assignment of resource quotas to Doma
 
 <!-- -->
 
-    [root@laptop ~]# wget https://raw.githubusercontent.com/openstack/keystone/master/etc/policy.v3cloudsample.json  -O /etc/keystone/policy.json
+    [root@localhost ~]# wget https://raw.githubusercontent.com/openstack/keystone/master/etc/policy.v3cloudsample.json  -O /etc/keystone/policy.json
     --2014-04-23 23:00:05--  https://raw.githubusercontent.com/openstack/keystone/master/etc/policy.v3cloudsample.json
     Resolving raw.githubusercontent.com... 199.27.74.133
     Connecting to raw.githubusercontent.com|199.27.74.133|:443... connected.
