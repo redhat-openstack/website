@@ -64,4 +64,12 @@ To test that this is working, try ssh'ing from one compute node to another as th
 
 At this point, you should be able to use the offline migration and resize commands (i.e. "nova migrate" and "nova resize") properly.
 
-## Live Migration
+## Live Migrations
+
+Enabling live migration of instances is a little more complicated than the process for offline migrations, but it shares a lot of the same setup steps. Since live migrations are orchestrated by libvirt instead of nova, the keys must be installed for the root user (libvirt runs as root) instead of the nova user. To start, follow the offline instructions above, but generate and install keys for the root user instead (or in addition to the nova user). If you used packstack or some other tool to install your deployment, this may already be done for you. The test is that you must be able to run this from any compute node to any other compute node, without being asked to approve a host key or type in a password:
+
+      # id -u
+      0
+      # ssh compute2 "It works!"
+      It works!
+      #
