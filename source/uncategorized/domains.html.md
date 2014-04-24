@@ -65,7 +65,8 @@ The Cloud Administrator also delegates the assignment of resource quotas to Doma
     [root@localhost ~]# keystone endpoint-list | grep $SERVICE_ID
     | a1ce3a4cca764b35a545fdfb4418fd67 | RegionOne |         http://192.168.0.10:5000/v2.0          |         http://192.168.0.10:5000/v2.0          |       http://192.168.0.10:35357/v2.0      | 302276e563ad4d61a404e33931be492e |
     [root@localhost ~]# keystone endpoint-create --region RegionOne --service-id $SERVICE_ID --publicurl http://192.168.0.10:5000/v3 --internalurl http://192.168.0.10:5000/v3 --adminurl http://192.168.0.10:35357/v3
-    [root@localhost ~]# keystone endpoint-list | grep $SERVICE_ID| 63105d9244c24bb1af9543072f6d3f94 | RegionOne |          http://192.168.0.10:5000/v3           |          http://192.168.0.10:5000/v3           |        http://192.168.0.10:35357/v3       | 302276e563ad4d61a404e33931be492e |
+    [root@localhost ~]# keystone endpoint-list | grep $SERVICE_ID
+    | 63105d9244c24bb1af9543072f6d3f94 | RegionOne |          http://192.168.0.10:5000/v3           |          http://192.168.0.10:5000/v3           |        http://192.168.0.10:35357/v3       | 302276e563ad4d61a404e33931be492e |
     | a1ce3a4cca764b35a545fdfb4418fd67 | RegionOne |         http://192.168.0.10:5000/v2.0          |         http://192.168.0.10:5000/v2.0          |       http://192.168.0.10:35357/v2.0      | 302276e563ad4d61a404e33931be492e |
     [root@localhost ~]# keystone endpoint-delete a1ce3a4cca764b35a545fdfb4418fd67
     Endpoint has been deleted.
