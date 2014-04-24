@@ -73,3 +73,13 @@ Enabling live migration of instances is a little more complicated than the proce
       # ssh compute2 "It works!"
       It works!
       #
+
+The first additional step you need to take is to configure nova on the compute nodes to not bind vnc consoles to the IP of the compute node. Without this, migrations will fail because the receiving compute node will not be able to bind to the address of the sending one. In /etc/nova/nova.conf, set the bind address to any:
+
+      vncserver_listen = 0.0.0.0
+
+Next, you need to configure the firewall to not block libvirt ephemeral ports used during live migration:
+
+      iptables -I INPUT -p tcp --dport 49152:49215 -j ACCEPT
+
+Once this is done, you should be able to live-migrate instances from one host to the other.
