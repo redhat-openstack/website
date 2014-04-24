@@ -12,7 +12,7 @@ RDO conducts periodic Google Hangouts on a variety of OpenStack-related topics.
 
 ## Upcoming Hangouts
 
-In April we will hear from the Heat team. Watch this page, or [Twitter](http://twitter.com/rdocommunity) for details as they become available.
+In April we will hear from the Heat team about [what's new in OpenStack Icehouse Heat](https://plus.google.com/u/1/events/ckhqrki6iepg12vkqk5vnt7ijd0)
 
 ## Past Hangouts
 
