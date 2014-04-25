@@ -22,7 +22,7 @@ Now that you have a working undercloud, let's deploy an overcloud. Note that dep
 
 3. If you're testing an all VM setup, make sure you have copied the public key portion of the virtual power ssh key into the virtual power user's ~/.ssh/authorized_keys on the virtual machine host.
 
-4. Create a deploy-overcloudrc script to set variable values you'll need to deploy the overcloud. Note that the variables must be exported so that their values are picked up by instack-deploy-overcloud. Example rc files containing example values for above variables can be found in [Instack FAQ](http://openstack.redhat.com/Instack_FAQ).
+4. Create a deploy-overcloudrc script to set variable values you'll need to deploy the overcloud. Note that the variables must be exported so that their values are picked up by instack-deploy-overcloud. Example rc files containing example values for above variables can be found in [Instack FAQ](http://openstack.redhat.com/Instack_FAQ). Most of the example values will work as-is if you've been using the defaults up until now, but the MACS value will most likely need to be altered to match your environment.
 
        # CPU: number of cpus on baremetal nodes
        # MEM: amount of ram on baremetal nodes, in MB
