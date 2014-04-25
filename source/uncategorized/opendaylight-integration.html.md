@@ -29,6 +29,19 @@ Start the controller with OVSDB and OpenFlow 1.3 option
 
       ./run.sh -virt ovsdb -of13
 
+## Configure ovsdb to connect to OpenDaylight and provide network information
+
+The odl.sh script below accomplishes a few things:
+
+1.  The set-manager instructs ovsdb to connect to OpenDaylight as a manager.
+2.  Configuration values are added to the other_config field in the Open_vSwitch table to inform OpenDaylight of information it needs to provision the bridges:
+    1.  bridge_mappings to detail how the physical networks are mapped to the provider networks. This is only needed for vlan isolation.
+    2.  local_ip to indicate the tunnel endpoint address which is needed to build the tunnels.
+
+Copy the odl.sh script and run it as:
+
+      sudo ./odl.sh --local_ip 192.168.120.31 --bridge_mappings physnet1:eth1,physnet3:eth3 --odl_ip 192.168.120.1
+
 ## Start RDO
 
 Start RDO as suggested in [ RDO Quickstart](Quickstart). After OpenStack is up and running, you can [ add compute nodes](Adding_a_compute_node). Then follow steps in [ ML2 plugin](ML2_plugin) to configure Neutron ML2 plugin.
@@ -97,3 +110,88 @@ Create network and attach subnet by neutron commands
       neutron  subnet-create `<network name>`10.100.2.0/24 --name `<subnet name>` 
 
 Add VM instance to the subnet by [ running instances](Running_an_instance). VM on different compute nodes should be able to ping each other through GRE or VxLAN tunnels provisioned by ODL controller.
+
+## odl.sh script
+
+      #!/bin/bash
+
+      local_ip=""
+      bridge_mappings=""
+      odl_ip=""
+
+      function usage {
+          local rc=$1
+          local outstr=$2
+
+          if [ "$outstr" != "" ]; then
+              echo "$outstr"
+              echo
+          fi
+
+      `     echo "Usage: `basename $0` [OPTION...]" `
+          echo
+          echo "Script options:"
+          echo "  --local_ip IP               IP address of the node, will be used as tunnel endpoint"
+          echo "  --bridge_mappings MAPPINGS  physical provider mappings, i.e physnet1:eth1,physnet2:eth2"
+          echo "  --odl_ip IP                 IP address of OpenDaylight controller"
+          echo
+          echo "Help options:"
+          echo "  -?, -h, --h, --help  Display this help and exit"
+          echo
+
+          exit $rc
+      }
+
+      function parse_options {
+          while true ; do
+              case "$1" in
+              --local_ip)
+                  shift; local_ip="$1"; shift
+                  ;;
+
+               --bridge_mappings)
+                  shift; bridge_mappings="$1"; shift
+                  ;;
+
+               --odl_ip)
+                  shift; odl_ip="$1"; shift
+                  ;;
+
+            -? | -h | --h | --help)
+                  usage 0
+                  ;;
+              "")
+                  break
+                  ;;
+              *)
+                  echo "Ignoring unknown option: $1"; shift;
+              esac
+          done
+      }
+
+      parse_options "$@"
+
+      ` if [ `whoami` != "root" ]; then `
+          usage 1 "Please execute this script as superuser or with sudo previleges."
+      fi
+
+      if [ -n "$odl_ip" ]; then
+          echo "setting odl_ip=$odl_ip"
+          ovs-vsctl set-manager tcp:$odl_ip:6640
+      fi
+
+      read ovstbl <<< $(ovs-vsctl get Open_vSwitch . _uuid)
+
+      if [ -n "$bridge_mappings" ]; then
+          sudo ovs-vsctl set Open_vSwitch $ovstbl other_config:bridge_mappings=$bridge_mappings
+      fi
+
+      if [ -n "$local_ip" ]; then
+          sudo ovs-vsctl set Open_vSwitch $ovstbl other_config:local_ip=$local_ip
+      fi
+
+      ovs-vsctl list Manager
+      echo
+      ovs-vsctl list Open_vSwitch .
+
+      exit 0
