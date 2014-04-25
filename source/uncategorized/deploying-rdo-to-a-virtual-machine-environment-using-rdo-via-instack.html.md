@@ -82,7 +82,7 @@ When setting up the undercloud on the instack virtual machine, you will need the
 
         for i in $(seq 0 3); do echo -n $(tripleo get-vm-mac baremetal_$i) " "; done; echo
 
-8. Log into your instack virtual machine as the stack user. Create the virtual-power-key and copy it to the virt host. The user in ssh-copy-id should match the VIRTUAL_POWER_USER and the ip should match the VIRTUAL_POWER_HOST in your instack.answers file.
+8. Log into your instack virtual machine as the stack user. Create the virtual-power-key and copy it to the virt host. The user in ssh-copy-id should match the the user you created on the host earlier. Make a note of the user and ip you used here. They will be the VIRTUAL_POWER_USER and VIRTUAL_POWER_HOST values in the instack.answers file discussed later.
 
        ssh-keygen -t rsa -N '' -C virtual-power-key -f virtual-power-key
        ssh-copy-id -i virtual-power-key.pub stack@192.168.122.1
