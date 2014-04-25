@@ -110,7 +110,7 @@ The Undercloud image on the instack virtual machine is a minimal install of Fedo
 
        sudo yum -y install instack-undercloud
 
-3. Create and edit your answers file. The descriptions of the parameters that can be set are in the sample answers file.
+3. Create and edit your answers file. The descriptions of the parameters that can be set are in the sample answers file. Make sure that at least VIRTUAL_POWER_USER and VIRTUAL_POWER_HOST match the values you noted earlier.
 
          # Answers file must exist in home directory for now
          # Use either the baremetal or virt sample answers file
