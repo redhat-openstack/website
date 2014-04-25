@@ -160,6 +160,31 @@ The Cloud Administrator also delegates the assignment of resource quotas to Doma
     | 548386103d43421886b0ab6a1962513a | admin | domain01 | domain01_admin |
     +----------------------------------+-------+----------+----------------+
 
+### Create a Project under the Domain as the Domain Admin
+
+    [root@localdomain ~(keystone_admin)]$ cat > keystonerc_domain01_admin <<EOF
+    > export OS_USERNAME=domain01_admin
+    > export OS_DOMAIN_NAME=domain01
+    > export OS_PASSWORD=password
+    > export OS_AUTH_URL=http://127.0.0.1:5000/v3/
+    > export PS1='[\u@\h \W(keystone_domain01_admin)]$ '
+    > EOF
+    [root@localdomain ~(keystone_admin)]$ . ./keystonerc_domain01_admin 
+    [root@localdomain ~(keystone_domain01_admin)]$ openstack --os-identity-api-version 3 token create
+    INFO: urllib3.connectionpool Starting new HTTP connection (1): 127.0.0.1
+    ERROR: cliff.app The request you have made requires authentication. (HTTP 401)
+    [root@laptop ~(keystone_domain01_admin)]$ tail /var/log/keystone/keystone.log 
+    2014-04-25 15:25:38.671 7906 TRACE keystone.auth.plugins.password   File "/usr/lib/python2.6/site-packages/keystone/identity/core.py", line 189, in wrapper
+    2014-04-25 15:25:38.671 7906 TRACE keystone.auth.plugins.password     return f(self, *args, **kwargs)
+    2014-04-25 15:25:38.671 7906 TRACE keystone.auth.plugins.password   File "/usr/lib/python2.6/site-packages/keystone/identity/core.py", line 315, in get_user_by_name
+    2014-04-25 15:25:38.671 7906 TRACE keystone.auth.plugins.password     ref = driver.get_user_by_name(user_name, domain_id)
+    2014-04-25 15:25:38.671 7906 TRACE keystone.auth.plugins.password   File "/usr/lib/python2.6/site-packages/keystone/identity/backends/sql.py", line 153, in get_user_by_name
+    2014-04-25 15:25:38.671 7906 TRACE keystone.auth.plugins.password     raise exception.UserNotFound(user_id=user_name)
+    2014-04-25 15:25:38.671 7906 TRACE keystone.auth.plugins.password UserNotFound: Could not find user, domain01_admin.
+    2014-04-25 15:25:38.671 7906 TRACE keystone.auth.plugins.password 
+    2014-04-25 15:25:38.672 7906 WARNING keystone.common.wsgi [-] Authorization failed. The request you have made requires authentication. from 127.0.0.1
+    2014-04-25 15:25:38.674 7906 INFO eventlet.wsgi.server [-] 127.0.0.1 - - [25/Apr/2014 15:25:38] "POST /v3/auth/tokens HTTP/1.1" 401 309 0.013765
+
 ## Open Issues
 
 ### Nova
