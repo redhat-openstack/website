@@ -97,7 +97,7 @@ The Cloud Administrator also delegates the assignment of resource quotas to Doma
     [root@localhost ~]# export OS_DOMAIN_ID=`openstack --os-identity-api-version 3 domain show admin | grep id | awk '{print $4}'`
     [root@localhost ~]# sed -i "s+admin_domain_id+$OS_DOMAIN_ID+g" /etc/keystone/policy.json
 
-*   Grant the "admin" role to the "admin" user on the "admin" domain"
+*   Grant the "admin" role to the "admin" user on the "admin" domain
 
 <!-- -->
 
@@ -113,13 +113,52 @@ The Cloud Administrator also delegates the assignment of resource quotas to Doma
 
 <!-- -->
 
-    [root@localhost ~]# echo > ~/keystonerc_admin <<EOF
+    [root@localhost ~]# cat > ~/keystonerc_admin <<EOF
     > export OS_USERNAME=admin
     > export OS_DOMAIN_NAME=admin
     > export OS_PASSWORD=password
-    > export OS_AUTH_URL=http://1270.0.0.1:5000/v3/
+    > export OS_AUTH_URL=http://127.0.0.1:5000/v3/
     > export PS1='[\u@\h \W(keystone_admin)]$ '
     > EOF
+
+## Using Domains
+
+### Create a Domain
+
+    [root@localhost ~]# . ./keystonerc_admin 
+    [root@localhost ~(keystone_admin)]$ openstack --os-identity-api-version 3 domain create --description domain01 domain01
+    +-------------+-------------------------------------------------------------------------------------+
+    | Field       | Value                                                                               |
+    +-------------+-------------------------------------------------------------------------------------+
+    | description | domain01                                                                            |
+    | enabled     | True                                                                                |
+    | id          | 6a79d7f2a8ad4654b19eff4688d5eaea                                                    |
+    | links       | {u'self': u'http://192.168.0.10:35357/v3/domains/6a79d7f2a8ad4654b19eff4688d5eaea'} |
+    | name        | domain01                                                                            |
+    +-------------+-------------------------------------------------------------------------------------+
+
+### Delegate control of the Domain to a Domain Admin
+
+    [root@localhost ~]# . ./keystonerc_admin 
+    [root@localhost ~(keystone_admin)]$ openstack --os-identity-api-version 3 user create --password password --email 'admin@domain01' --domain domain01 --description 'domain01 admin' domain01_admin
+    +-------------+-----------------------------------------------------------------------------------+
+    | Field       | Value                                                                             |
+    +-------------+-----------------------------------------------------------------------------------+
+    | description | domain01 admin                                                                    |
+    | domain_id   | 6a79d7f2a8ad4654b19eff4688d5eaea                                                  |
+    | email       | admin@domain01                                                                    |
+    | enabled     | True                                                                              |
+    | id          | 012867a298864c1c95dbcdd3a0e16f07                                                  |
+    | links       | {u'self': u'http://192.168.0.10:35357/v3/users/012867a298864c1c95dbcdd3a0e16f07'} |
+    | name        | domain01_admin                                                                    |
+    +-------------+-----------------------------------------------------------------------------------+
+    [root@localhost ~(keystone_admin)]$ openstack --os-identity-api-version 3 role add --user domain01_admin --domain domain01 admin
+    [root@localhost ~(keystone_admin)]$ openstack --os-identity-api-version 3 user list --role --domain domain01 domain01_admin
+    +----------------------------------+-------+----------+----------------+
+    | ID                               | Name  | Domain   | User           |
+    +----------------------------------+-------+----------+----------------+
+    | 548386103d43421886b0ab6a1962513a | admin | domain01 | domain01_admin |
+    +----------------------------------+-------+----------+----------------+
 
 ## Open Issues
 
