@@ -35,7 +35,7 @@ The virtual host machine needs SE Linux set to permissive mode. You can immediat
         # update the config file to survive reboots
         sudo sed -i "s/=enforcing/=permissive/" /etc/selinux/config
 
-The user performing all of the installations needs to have passwordless sudo enabled. Create a user and then run the following commands, replacing "stack" with the name of the user you just created.
+The user performing all of the installations needs to have passwordless sudo enabled. Create a user and then run the following commands, replacing "stack" with the name of the user you just created. **This step is NOT optional, you must create an additional user. Do not run rest of the script as root.**
 
        sudo echo "stack ALL=(root) NOPASSWD:ALL" >> /etc/sudoers.d/stack
        sudo chmod 0440 /etc/sudoers.d/stack
