@@ -53,7 +53,7 @@ The Cloud Administrator also delegates the assignment of resource quotas to Doma
 
     2014-04-23 23:00:05 (434 KB/s) - “/etc/keystone/policy.json” saved [9032/9032]
 
-*   Change the keystone entries in the service catalog to point to v3:
+*   Change the keystone entries in the service catalog to point to v3 (could/should do this with openstack client instead)
 
 <!-- -->
 
@@ -72,6 +72,66 @@ The Cloud Administrator also delegates the assignment of resource quotas to Doma
     Endpoint has been deleted.
     [root@localhost ~]# keystone endpoint-list | grep $SERVICE_ID
     | 63105d9244c24bb1af9543072f6d3f94 | RegionOne |          http://192.168.0.10:5000/v3           |          http://192.168.0.10:5000/v3           |        http://192.168.0.10:35357/v3       | 302276e563ad4d61a404e33931be492e |
+
+*   Create the "admin" domain
+
+<!-- -->
+
+    [root@localhost ~]# openstack --os-identity-api-version 3 --os-token $OS_SERVICE_TOKEN --os-url http://127.0.0.1:35357/v3/ domain list
+    +---------+---------+---------+----------------------------------------------------------------------+
+    | ID      | Name    | Enabled | Description                                                          |
+    +---------+---------+---------+----------------------------------------------------------------------+
+    | default | Default | True    | Owns users and tenants (i.e. projects) available on Identity API v2. |
+    +---------+---------+---------+----------------------------------------------------------------------+
+    [root@localhost ~]# openstack --os-identity-api-version 3 --os-token $OS_SERVICE_TOKEN --os-url http://127.0.0.1:35357/v3/ domain create Admin
+    +---------+----------------------------------------------------------------------------------+
+    | Field   | Value                                                                            |
+    +---------+----------------------------------------------------------------------------------+
+    | enabled | True                                                                             |
+    | id      | 73e400376ec0434d9785b5e9ea36e265                                                 |
+    | links   | {u'self': u'http://127.0.0.1:35357/v3/domains/73e400376ec0434d9785b5e9ea36e265'} |
+    | name    | Admin                                                                            |
+    +---------+----------------------------------------------------------------------------------+
+    [root@localhost ~]# openstack --os-identity-api-version 3 --os-token $OS_SERVICE_TOKEN --os-url http://127.0.0.1:35357/v3/ domain list
+    +----------------------------------+---------+---------+----------------------------------------------------------------------+
+    | ID                               | Name    | Enabled | Description                                                          |
+    +----------------------------------+---------+---------+----------------------------------------------------------------------+
+    | 73e400376ec0434d9785b5e9ea36e265 | Admin   | True    |                                                                      |
+    | default                          | Default | True    | Owns users and tenants (i.e. projects) available on Identity API v2. |
+    +----------------------------------+---------+---------+----------------------------------------------------------------------+
+    [root@localhost ~]# sed -i 's+admin_domain_id+73e400376ec0434d9785b5e9ea36e265+g' /etc/keystone/policy.json
+
+*   Create the cloud_admin user
+
+<!-- -->
+
+    [root@localhost ~]# openstack --os-identity-api-version 3 --os-token $OS_SERVICE_TOKEN --os-url http://127.0.0.1:35357/v3/ user create --domain Admin --password password --description "Cloud Administrator" cloud_admin
+    +-------------+--------------------------------------------------------------------------------+
+    | Field       | Value                                                                          |
+    +-------------+--------------------------------------------------------------------------------+
+    | description | Cloud Administrator                                                            |
+    | domain_id   | 73e400376ec0434d9785b5e9ea36e265                                               |
+    | enabled     | True                                                                           |
+    | id          | 298e956fa0b048c2bb5310cf703d83b7                                               |
+    | links       | {u'self': u'http://127.0.0.1:35357/v3/users/298e956fa0b048c2bb5310cf703d83b7'} |
+    | name        | cloud_admin                                                                    |
+    +-------------+--------------------------------------------------------------------------------+
+    [root@localhost ~]# openstack --os-identity-api-version 3 --os-token $OS_SERVICE_TOKEN --os-url http://127.0.0.1:35357/v3/ role list
+    +----------------------------------+---------------+
+    | ID                               | Name          |
+    +----------------------------------+---------------+
+    | 3bd6c80d3a094073803bac869eb3be34 | SwiftOperator |
+    | 548386103d43421886b0ab6a1962513a | admin         |
+    | 9fe2ff9ee4384b1894a90878d3e92bab | _member_      |
+    | a944477ab7dc416cac48ce43299d5962 | ResellerAdmin |
+    +----------------------------------+---------------+
+    [root@localhost ~]# openstack --os-identity-api-version 3 --os-token $OS_SERVICE_TOKEN --os-url http://127.0.0.1:35357/v3/ role add --user cloud_admin --domain Admin admin
+    [root@localhost ~]# openstack --os-identity-api-version 3 --os-token $OS_SERVICE_TOKEN --os-url http://127.0.0.1:35357/v3/ user list --domain Admin --role cloud_admin
+    +----------------------------------+-------+--------+-------------+
+    | ID                               | Name  | Domain | User        |
+    +----------------------------------+-------+--------+-------------+
+    | 548386103d43421886b0ab6a1962513a | admin | Admin  | cloud_admin |
+    +----------------------------------+-------+--------+-------------+
 
 ## Open Issues
 
