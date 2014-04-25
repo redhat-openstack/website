@@ -19,7 +19,7 @@ Do not use the root user for executing any instack-undercloud scripts. Some prog
 This setup creates (5) virtual machines consisting of 2G of memory and 30G of disk space each. If you do not plan to deploy Block Storage or Swift Storage nodes, you can delete those virtual machines and require less space accordingly. Most of the virtual machine disk files are thinly provisioned and won't take up the full 30G. The undercloud is not thinly provisioned and is completely pre-allocated.
 
 *   At least (1) quad core CPU
-*   12GB memory.
+*   12GB free memory.
 *   200GB disk space [1]
 
 These are the minimum system requirements to follow this tutorial. If you want to deviate from the tutorial or increase the scaling of one or more overcloud nodes, you will need to ensure you have enough memory and disk space.
