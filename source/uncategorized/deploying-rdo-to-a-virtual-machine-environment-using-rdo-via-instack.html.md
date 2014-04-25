@@ -60,7 +60,7 @@ The user performing all of the installations needs to have passwordless sudo ena
        source /usr/libexec/openstack-tripleo/devtest_variables.sh
        tripleo install-dependencies
 
-After running this command, you will need to log out and log back in for the changes to be applied. If you plan to use virt-manager or boxes to visually manage the virtual machines created in the next step, this would be a good time to install those tools now.
+**After running this command, you will need to log out and log back in for the changes to be applied**. If you plan to use virt-manager or boxes to visually manage the virtual machines created in the next step, this would be a good time to install those tools now.
 
 5. Run script to setup your virtual environment.
 
