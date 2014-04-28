@@ -60,7 +60,7 @@ Download the [OpenDaylight driver for ML2 plugin](https://raw.github.com/CiscoSy
 
 ------------------------------------------------------------------------
 
-''If using OpenStack Havana, you need to change neutron constants import and egg-info file. Skip these two steps if you are using OpenStack Icehouse.
+If using OpenStack Havana, you need to change neutron constants import and egg-info file. Skip these two steps if you are using OpenStack Icehouse.
 
 1. remove following line in downloaded OpenDaylight driver:
 
@@ -75,8 +75,6 @@ And add this line in OpenDaylight driver to change constants import :
       [neutron.ml2.mechanism_drivers]
       ...
       opendaylight = neutron.plugins.ml2.drivers.mechanism_odl:OpenDaylightMechanismDriver
-
-''
 
 ------------------------------------------------------------------------
 
