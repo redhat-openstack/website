@@ -58,6 +58,8 @@ Stop openvswitch agent on all aompute nodes
 
 Download the [OpenDaylight driver for ML2 plugin](https://raw.github.com/CiscoSystems/neutron/odl_ml2/neutron/plugins/ml2/drivers/mechanism_odl.py) and put the driver file under /usr/lib/python2.7/site-packages/neutron/plugins/ml2/drivers/ or /usr/lib/python2.6/site-packages/neutron/plugins/ml2/drivers/ if using RHEL 6.5.
 
+------------------------------------------------------------------------
+
 If using OpenStack Havana, you need to change neutron constants import and egg-info file. Skip these two steps if you are using OpenStack Icehouse.
 
 1. remove following line in downloaded OpenDaylight driver:
@@ -73,6 +75,8 @@ And add this line in OpenDaylight driver to change constants import :
       [neutron.ml2.mechanism_drivers]
       ...
       opendaylight = neutron.plugins.ml2.drivers.mechanism_odl:OpenDaylightMechanismDriver
+
+------------------------------------------------------------------------
 
 Modify /etc/neutron/plugins/ml2/ml2_conf.ini in Openstack control node:
 
