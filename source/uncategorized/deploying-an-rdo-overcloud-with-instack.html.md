@@ -63,7 +63,7 @@ NOTE: Don't forget to `source deploy-overcloudrc` AND `source tripleo-undercloud
 
 After a successful deployment, you should see "Overcloud Deployed" in the standard output of the terminal. Next steps: [ Testing an RDO Overcloud with Instack ](Testing an RDO Overcloud with Instack)
 
-<strong>Deleting an Overcloud</strong>
+### Deleting an Overcloud
 
 If you want to delete an overcloud and reset the environment to a state where you can deploy another overcloud, run one of the following examples that matches how you deployed the overcloud.
 
