@@ -40,6 +40,8 @@ The user performing all of the installations needs to have passwordless sudo ena
        sudo echo "stack ALL=(root) NOPASSWD:ALL" >> /etc/sudoers.d/stack
        sudo chmod 0440 /etc/sudoers.d/stack
 
+If you have previously used the host machine to run TripleO's devtest setup, then that could potentially conflict with the scripts installed from RDO packages. It is recommended to clean up from any previous devtest runs by deleting ~/.cache/tripleo and making sure there is no $TRIPLEO_ROOT defined in your environment.
+
 ## Virtual Host Installation
 
 1. Add export of LIVBIRT_DEFAULT_URI to your bashrc file.
