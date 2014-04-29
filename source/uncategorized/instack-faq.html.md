@@ -44,7 +44,6 @@ This page includes tips, fixes and debugging steps for Instack installs:
     Example rc file for deploying the overcloud on a barmetal machine setup:
 
         #!/bin/bash
-        export TRIPLEO_ROOT=/home/stack
         export CPU=1
         export MEM=2048
         export DISK=30
