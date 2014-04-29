@@ -65,7 +65,7 @@ After a successful deployment, you should see "Overcloud Deployed" in the standa
 
 ### Deleting an Overcloud
 
-If you want to delete an overcloud and reset the environment to a state where you can deploy another overcloud, run one of the following examples that matches how you deployed the overcloud.
+If you want to delete an overcloud and reset the environment to a state where you can deploy another overcloud, download the instack-delete-overcloud\* scripts from the github repository at <https://github.com/agroup/instack-undercloud/tree/master/scripts> . Run one of the following examples that matches how you deployed the overcloud.
 
         #heat
         instack-delete-overcloud
