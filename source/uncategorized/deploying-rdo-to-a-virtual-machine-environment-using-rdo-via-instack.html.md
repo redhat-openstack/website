@@ -87,17 +87,6 @@ When setting up the undercloud on the instack virtual machine, you will need the
        ssh-keygen -t rsa -N '' -C virtual-power-key -f virtual-power-key
        ssh-copy-id -i virtual-power-key.pub stack@192.168.122.1
 
-Note that you don't have to use the pre-created instack vm and could instead create a new one via some other method (virt-install, virt-clone, etc). If you do so however make sure all the NIC interfaces are set to use virtio, and also manually add an additional interface to the vm by adding the following the libvirt xml for the domain (you may need to adjust slot as needed):
-
-`     `<interface type='network'>
-             
-
-`       `<model type='virtio'/>
-             
-
-<address type='pci' domain='0x0000' bus='0x00' slot='0x09' function='0x0'/>
-`     `</interface>
-
 ## Installing the Undercloud
 
 The Undercloud image on the instack virtual machine is a minimal install of Fedora 20 with yum-utils and net-tools installed. This section will walk you through installing the instack-undercloud package and then running instack to apply packages.
