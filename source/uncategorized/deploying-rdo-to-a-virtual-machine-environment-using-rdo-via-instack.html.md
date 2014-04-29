@@ -64,7 +64,6 @@ The user performing all of the installations needs to have passwordless sudo ena
 
 5. Run script to setup your virtual environment.
 
-       export NODE_ARCH=amd64
        instack-virt-setup
 
 You should now have a vm called instack that you can use for the instack-undercloud installation that contains a minimal install of Fedora 20 x86_64. The instack vm contains a user "stack" that uses the password "stack" and is granted passwordless sudo privileges. The root password is displayed in the standard output.
