@@ -17,7 +17,7 @@ __NOTOC__
 
 </div>
 <div class="offset3 span8 intro-text">
-The most up-to-date OpenStack on the industry's most trusted Linux platform, now easy to install and deploy.
+Try out OpenStack Icehouse with the RDO Quick Start.
 
 <span class="btn">[Quick start →](quickstart)</span>
 
