@@ -44,7 +44,7 @@ These instructions are to install the current ("**Icehouse**") release.
 
 Run the following command to install RDO:
 
-If on Fedora 20, please skip to step 2
+If on Fedora 21, please skip to step 2
 
     sudo yum install -y http://rdo.fedorapeople.org/rdo-release.rpm
 
