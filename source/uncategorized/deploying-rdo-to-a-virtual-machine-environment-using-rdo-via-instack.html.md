@@ -77,7 +77,7 @@ You'll need to start the instack virtual machine and obtain its IP address. You 
 
 7. Get MAC addresses
 
-When setting up the undercloud on the instack virtual machine, you will need the MAC addresses of the baremetal node virtual machines. Use the following command to obtain the list of addresses you can add to your deploy-overcloudrc file later.
+When setting up the undercloud on the instack virtual machine, you will need the MAC addresses of the baremetal node virtual machines. Use the following command to obtain the list of addresses. Later, you will need these MAC addresses to add to your deploy-overcloudrc file later.
 
         for i in $(seq 0 3); do echo -n $(tripleo get-vm-mac baremetal_$i) " "; done; echo
 
