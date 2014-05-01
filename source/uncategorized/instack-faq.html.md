@@ -12,6 +12,8 @@ wiki_last_updated: 2015-02-13
 
 This page includes tips, fixes and debugging steps for Instack installs:
 
+## What do I do if I encounter an error relating to "disk is in use"?
+
 *   If the undercloud machine was installed using LVM, when deploying overcloud nodes, you may see an error related to the disk being "in use". The workaround for this error is to:
         # Modify /etc/lvm/lvm.conf to set use_lvmetad to be 0
         vi /etc/lvm/lvm.conf
@@ -21,6 +23,8 @@ This page includes tips, fixes and debugging steps for Instack installs:
         systemctl stop lvm2-lvmetad.socket
         systemctl disable lvm2-lvmetad.socket
         systemctl stop lvm2-lvmetad
+
+## Are there any example rc files for overcloud deployment?
 
 *   The following are example rc files to source before deploying the overcloud.
     Example rc file for deploying the overcloud on a virtual machine setup:
@@ -61,3 +65,21 @@ This page includes tips, fixes and debugging steps for Instack installs:
         export COMPUTESCALE=1
         export BLOCKSTORAGESCALE=1
         export SWIFTSTORAGESCALE=1
+
+## How do deploy my overcloud with new images?
+
+To deploy new overcloud images, you'll need a clean working directory. Either delete or move the files, or use a different working directory. You can either build new images locally using [instack-build-images](README-build-images.md) or download new images using `instack-prepare-for-overcloud`. The `instack-prepare-for-overcloud` script will delete images from glance if they are already present. Continue at Step 3. in [Deploying an Overcloud](README-deploy-overcloud).
+
+## How do I delete an overcloud?
+
+If you want to delete an overcloud and reset the environment to a state where you can deploy another overcloud, use the instack-delete-overcloud\* scripts from this repository at [Scripts]( <https://github.com/agroup/instack-undercloud/tree/master/scripts>). Run one of the following examples that matches how you deployed the overcloud.
+
+         #heat
+         instack-delete-overcloud
+
+         #tuskar
+         instack-delete-overcloud-tuskarcli
+
+## How do I redeploy my overcloud that I deployed?
+
+First you will need to delete your overcloud using the appropriate method above (heat or tuskar). Once the overcloud and baremetal nodes have been deleted, you can continue to Step 5. in [Deploying an Overcloud](README-deploy-overcloud).
