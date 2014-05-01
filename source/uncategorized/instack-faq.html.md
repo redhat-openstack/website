@@ -68,7 +68,7 @@ This page includes tips, fixes and debugging steps for Instack installs:
 
 ## How do deploy my overcloud with new images?
 
-To deploy new overcloud images, you'll need a clean working directory. Either delete or move the files, or use a different working directory. You can either build new images locally using [instack-build-images](README-build-images.md) or download new images using `instack-prepare-for-overcloud`. The `instack-prepare-for-overcloud` script will delete images from glance if they are already present. Continue at Step 3. in [ Deploying an RDO Overcloud with Instack ](Deploying an RDO Overcloud with Instack).
+To deploy new overcloud images, you'll need a clean working directory. Either delete or move the files, or use a different working directory. You can either build new images locally using `instack-build-images` or download new images using `instack-prepare-for-overcloud`. The `instack-prepare-for-overcloud` script will delete images from glance if they are already present. If you have a running overcloud, you'll need to delete it before moving on. Continue at Step 3. in [ Deploying an RDO Overcloud with Instack ](Deploying an RDO Overcloud with Instack).
 
 ## How do I delete an overcloud?
 
