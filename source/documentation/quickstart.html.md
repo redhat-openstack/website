@@ -62,6 +62,8 @@ If on RHEL7, please disable SELinux for now
 
     packstack --allinone
 
+If you encounter failures, see the [Workarounds](Workarounds) page for tips.
+
 If you have run packstack previously, there will be a file in your home directory named something like packstack-answers-20130722-153728.txt You will probably want to use that file again, using the --answer-file option, so that any passwords you've already set (eg, mysql) will be reused.
 
 The installer will ask you to enter the root password for each host node you are installing on the network, to enable remote configuration of the host so it can remotely configure each node using Puppet.
