@@ -72,7 +72,7 @@ To deploy new overcloud images, you'll need a clean working directory. Either de
 
 ## How do I delete an overcloud?
 
-If you want to delete an overcloud and reset the environment to a state where you can deploy another overcloud, use the instack-delete-overcloud\* scripts from this repository at [ <https://github.com/agroup/instack-undercloud/tree/master/scripts>](Scripts). Run one of the following examples that matches how you deployed the overcloud.
+If you want to delete an overcloud and reset the environment to a state where you can deploy another overcloud, use the instack-delete-overcloud\* scripts from this repository at [ Scripts](https://github.com/agroup/instack-undercloud/tree/master/scripts). Run one of the following examples that matches how you deployed the overcloud.
 
          #heat
          instack-delete-overcloud
