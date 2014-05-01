@@ -59,7 +59,7 @@ NOTE: Don't forget to `source deploy-overcloudrc` AND `source tripleo-undercloud
        #tuskar
         instack-deploy-overcloud-tuskarcli
 
-       #`[`tuskar-ui`](https://wiki.openstack.org/wiki/Tuskar/UsageGuide)`(WIP)
+       #`[`tuskar-ui`](https://wiki.openstack.org/wiki/Tuskar/UsageGuide)`(still Work In Progress)
 
 After a successful deployment, you should see "Overcloud Deployed" in the standard output of the terminal. Next steps: [ Testing an RDO Overcloud with Instack ](Testing an RDO Overcloud with Instack)
 
