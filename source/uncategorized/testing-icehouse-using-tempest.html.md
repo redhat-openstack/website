@@ -24,7 +24,7 @@ Edit answers.txt and set
 
         CONFIG_PROVISION_DEMO=y
         CONFIG_PROVISION_TEMPEST=y
-        CONFIG_PROVISION_TEMPEST_REPO_REVISION=stable/havana
+        CONFIG_PROVISION_TEMPEST_REPO_REVISION=master
 
 #### Workaround the openstack-puppet-module bug ( fedora only )
 
