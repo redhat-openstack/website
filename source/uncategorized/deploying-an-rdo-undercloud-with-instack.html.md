@@ -10,9 +10,22 @@ wiki_last_updated: 2015-01-08
 
 [ ← Deploying RDO using Instack](Deploying RDO using Instack)
 
+## Virtualization Undercloud Preparation
+
+If you're using the [ Virtual Machine Environment](Deploying RDO to a Virtual Machine Environment using RDO via Instack) instructions, then complete this section before moving on the Undercloud installation.
+
+The Undercloud image on the instack virtual machine is a minimal install of Fedora 20 with yum-utils and net-tools installed. This section will walk you through installing the instack-undercloud package and then running instack to apply packages.
+
+1. Log into your instack virtual machine as the stack user via the IP you retrieved earlier.
+
+2. Create the virtual-power-key and copy it to the virt host. The user in ssh-copy-id should match the the user you created on the host earlier. Make a note of the user and ip you used here. They will be the VIRTUAL_POWER_USER and VIRTUAL_POWER_HOST values in the instack.answers file discussed later.
+
+         ssh-keygen -t rsa -N '' -C virtual-power-key -f virtual-power-key
+         ssh-copy-id -i virtual-power-key.pub stack@192.168.122.1
+
 ## Installing the Undercloud with Instack
 
-1.  Make sure you are logged in as the non-root user you created above.
+1.  Make sure you are logged in as a non-root user.
 2.  Enable the RDO icehouse repository
         sudo yum install -y http://rdo.fedorapeople.org/openstack-icehouse/rdo-release-icehouse.rpm
 
