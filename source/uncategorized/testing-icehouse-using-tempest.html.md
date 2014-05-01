@@ -46,6 +46,6 @@ Edit answers.txt and set
 #### configure and run testr ( Fedora )
 
         testr init
-        test run --subunit | 
+        testr run --subunit | 
            tee >(subunit2junitxml --output-to=results.xml) |
            subunit-2to1 | tools/colorizer.py
