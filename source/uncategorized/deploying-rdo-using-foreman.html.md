@@ -23,6 +23,10 @@ Before using Foreman to deploy OpenStack on your bare metal machines, you might 
 
 ### Initial setup
 
+#### Operating Systems
+
+Please check Foreman's web site for support Operating System; [1](http://www.theforeman.org/manuals/1.4/quickstart_guide.html)
+
 #### Repo setup
 
 For RHEL systems, make sure you are registered to both rhel-6-server-rpms and the Optional channel:
