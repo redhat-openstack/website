@@ -42,9 +42,13 @@ These instructions are to install the current ("**Icehouse**") release.
 </div>
 ### Step 1: Software repositories
 
-Run the following command to install RDO:
-
 If on Fedora 21, please skip to step 2
+
+Update your current packages:
+
+    sudo yum update -y
+
+Setup the RDO repositories:
 
     sudo yum install -y http://rdo.fedorapeople.org/rdo-release.rpm
 
