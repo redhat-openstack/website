@@ -20,7 +20,7 @@ The Undercloud image on the instack virtual machine is a minimal install of Fedo
 
 2. Create the virtual-power-key and copy it to the virt host. The user in ssh-copy-id should match the the user you created on the host earlier. Make a note of the user and ip you used here. They will be the VIRTUAL_POWER_USER and VIRTUAL_POWER_HOST values in the instack.answers file discussed later.
 
-    ssh-keygen -t rsa -N '' -C virtual-power-key -f virtual-power-key
+        ssh-keygen -t rsa -N '' -C virtual-power-key -f virtual-power-key
         ssh-copy-id -i virtual-power-key.pub stack@192.168.122.1
 
 ## Installing the Undercloud with Instack
