@@ -28,6 +28,8 @@ You can deploy the overcloud via the command line or through the Horizon web int
 
 #### Tuskar Web UI Deployment
 
+Use the following guide to continue deploying your Overcloud.
+
        #`[`tuskar-ui`](https://wiki.openstack.org/wiki/Tuskar/UsageGuide)`(still Work In Progress)
 
 #### Command Line Deployment
@@ -61,7 +63,7 @@ NOTE: Don't forget to `source deploy-overcloudrc` AND `source tripleo-undercloud
 
 ## Deploying the Overcloud
 
-1. Deploy the overcloud using provided [Heat](https://wiki.openstack.org/wiki/Heat) templates or the [Tuskar](https://wiki.openstack.org/wiki/TripleO/Tuskar) CLI . Run one of the following examples.
+      Deploy the overcloud using provided  `[`Heat`](https://wiki.openstack.org/wiki/Heat)` templates or the `[`Tuskar`](https://wiki.openstack.org/wiki/TripleO/Tuskar)` CLI . Run one of the following examples.
 
        # heat
         instack-deploy-overcloud
