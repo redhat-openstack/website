@@ -18,6 +18,10 @@ In April we will hear from the Heat team about [what's new in OpenStack Icehouse
 
 If you missed a hangout, and are watching the video, you can always ask followup questions on the #rdo IRC channel on Freenode, or on the [rdo-list mailing list](http://www.redhat.com/mailman/listinfo/rdo-list)
 
+### What's new in Icehouse Heat
+
+<iframe width="630" src="//youtube.com/embed/ObNDx2wtCwc" frameborder="0" align="center" allowfullscreen="true"> </iframe>
+
 ### Introduction to OpenStack Marconi
 
 <iframe width="630" src="//youtube.com/embed/qe7qI3WY97c" frameborder="0" align="center" allowfullscreen="true"> </iframe>
