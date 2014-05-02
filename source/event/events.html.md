@@ -11,7 +11,7 @@ wiki_last_updated: 2015-08-31
 
 There are lots of events, around the world, where you can hang out with people from the RDO community. Some recent and upcoming events are:
 
-*   [OpenStack Heat hangout](https://plus.google.com/u/1/events/ckhqrki6iepg12vkqk5vnt7ijd0), April 29th
+*   [TripleO hangout](Hangouts), May, date to be announced.
 *   [OpenStack Summit](http://www.openstack.org/summit/openstack-summit-atlanta-2014/), May 12-16, 2014, Atlanta, GA
 *   [OpenStack CEE Day](http://openstackceeday.com/), May 26, 2014, Budapest
 *   [OpenStack Israel](http://www.openstack-israel.org/), June 2, 2014, Herzliya, Israel
