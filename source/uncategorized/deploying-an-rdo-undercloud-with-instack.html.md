@@ -32,10 +32,16 @@ The Undercloud image on the instack virtual machine is a minimal install of Fedo
 3.  Install instack-undercloud
         sudo yum -y install instack-undercloud
 
-4.  Create and edit your answers file. The descriptions of the parameters that can be set are in the sample answers file.
+4.  Create and edit your answers file. The descriptions of the parameters that can be set are in the sample answers file. Choose the file that matches your environment
         # Answers file must exist in home directory for now
+        BAREMETAL
         # Use the baremetal answers file
         cp /usr/share/doc/instack-undercloud/instack-baremetal.answers.sample ~/instack.answers
+
+        VIRTUAL ENVIRONMENTS
+        # Use  the  virt sample answers file
+        cp /usr/share/doc/instack-undercloud/instack-virt.answers.sample ~/instack.answers
+
         # Perform any answer file edits. 
         The values in the answer file should be suitable for your environment. 
         In particular, check that  the  LOCAL_INTERFACE setting matches the Network Interface on the undercloud used to handle PXE boots.
