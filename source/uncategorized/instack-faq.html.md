@@ -45,7 +45,7 @@ This page includes tips, fixes and debugging steps for Instack installs:
         export BLOCKSTORAGESCALE=1
         export SWIFTSTORAGESCALE=1
 
-    Example rc file for deploying the overcloud on a barmetal machine setup:
+    Example rc file for deploying the overcloud on a bare metal machine setup:
 
         #!/bin/bash
         export CPU=1
