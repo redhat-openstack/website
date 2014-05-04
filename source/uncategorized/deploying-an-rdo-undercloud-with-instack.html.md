@@ -12,13 +12,13 @@ wiki_last_updated: 2015-01-08
 
 ## Virtualization Undercloud Preparation
 
-If you're using the [ Virtual Machine Environment](Deploying RDO to a Virtual Machine Environment using RDO via Instack) instructions, then complete this section before moving on the Undercloud installation.
+If you are using the [ Virtual Machine Environment](Deploying RDO to a Virtual Machine Environment using RDO via Instack) instructions, then you should complete this section before moving on the Undercloud installation.
 
 The Undercloud image on the instack virtual machine is a minimal install of Fedora 20 with yum-utils and net-tools installed. This section will walk you through installing the instack-undercloud package and then running instack to apply packages.
 
-1. Log into your instack virtual machine as the stack user via the IP you retrieved earlier.
+1. Log into your instack virtual machine as the stack user via the IP address you retrieved earlier.
 
-2. Create the virtual-power-key and copy it to the virt host. The user in ssh-copy-id should match the the user you created on the host earlier. Make a note of the user and ip you used here. They will be the VIRTUAL_POWER_USER and VIRTUAL_POWER_HOST values in the instack.answers file discussed later.
+2. Create the virtual-power-key and copy it to the host. The user in ssh-copy-id should match the the user you created on the host earlier. Make a note of the user and IP address you used here. They will be the VIRTUAL_POWER_USER and VIRTUAL_POWER_HOST values in the instack.answers file discussed later.
 
         ssh-keygen -t rsa -N '' -C virtual-power-key -f virtual-power-key
         ssh-copy-id -i virtual-power-key.pub stack@192.168.122.1
@@ -52,11 +52,11 @@ The Undercloud image on the instack virtual machine is a minimal install of Fedo
 6.  Once the install script has run to completion, you should take note to secure and save the files `/root/stackrc` and `/root/tripleo-undercloud-passwords`. Both these files will be needed to interact with the installed undercloud. You may copy these files to your home directory to make them easier to source later on, but you should try to keep them as secure and backed up as possible.
     That completes the undercloud install and now you should have a running undercloud. For the next steps, see: [ Deploying an RDO Overcloud with Instack ](Deploying an RDO Overcloud with Instack)
 
-    If your install does not complete successfully please see the [ Instack FAQ](Instack FAQ) page for potential solutions.
+    If your install does not complete successfully, please see the [ Instack FAQ](Instack FAQ) page for potential solutions.
 
 ## Optional: Accessing Undercloud Dashboard
 
-To access horizon on the undercloud, create an ssh tunnel on the virt host where 192.168.122.55 should be changed to reflect your instack virtual machine's actual IP address. This will allow you to use horizon on instack from your virt host. If you need to connect remotely through the virt host, you can chain ssh tunnels as needed. Note: Depending on your virt host configuration, you may need to open up the correct port(s) in iptables.
+To access Horizon on the undercloud, create an ssh tunnel on the virt host where 192.168.122.55 should be changed to reflect your instack virtual machine's actual IP address. This will allow you to use horizon on instack from your virt host. If you need to connect remotely through the virt host, you can chain ssh tunnels as needed. Note: Depending on your virt host configuration, you may need to open up the correct port(s) in iptables.
 
            ssh -g -N -L 8080:192.168.122.55:80 `hostname`
 
