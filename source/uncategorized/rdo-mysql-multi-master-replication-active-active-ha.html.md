@@ -212,47 +212,60 @@ On sql2, my.cnf should look like the following:
 
 5) Start the mysql client on sql1 and issue the following commands:
 
-mysql> grant replication slave, replication client on \*.\* to 'replication'@'sql2.example.com' identified by 'secret_pw'; mysql> grant replication slave, replication client on \*.\* to'replication'@'sql1.example.com' identified by 'secret_pw'; mysql> flush privileges;
+      mysql> grant replication slave, replication client on *.* to 'replication'@'sql2.example.com' identified by 'secret_pw';
+      mysql> grant replication slave, replication client on *.* to'replication'@'sql1.example.com' identified by 'secret_pw';
+      mysql> flush privileges;
 
 6) Remain logged into the mysql client and issue the following command to obtain the log file name and log position - record these values. (NB: do NOT terminate the mysql client session after you complete these commands - remain logged in to maintain the read lock):
 
-mysql> slave stop; mysql> flush tables with read lock; mysql> show master status;
+      mysql> slave stop;
+      mysql> flush tables with read lock;
+      mysql> show master status;
 
 7) Start another login session into sql1 as root and rsync the mysql database directory from sql1 to sql2, excluding and deleting several files that are node specific:
 
-[root sql1 ]# rsync -av -e ssh --delete --exclude=\*relay-bin\* --exclude=mysql-bin.\* --exclude=\*.info /var/lib/mysql/sql2.example.com:/var/lib/mysql
+      [root sql1 ]# rsync -av -e ssh --delete --exclude=*relay-bin* --exclude=mysql-bin.* --exclude=*.info /var/lib/mysql/sql2.example.com:/var/lib/mysql 
 
 8) You may now safely log out of the mysql client on sql1.
 
 9) On sql2, start the mysqld:
 
-service mysqld start
+      service mysqld start 
 
 10) Start a mysql client session on sql2 and perform the following commands using the log file name and position recorded, above. NB: punctuation is very important:
 
-mysql> slave stop; mysql> change master to master_log_file='<recorded log file name, above>', master_log_pos=<recorded log position, above>; # <- note lack of quotes mysql> start slave;
+      mysql> slave stop; 
+      mysql> change master to master_log_file='<recorded log file name, above>', master_log_pos=<recorded log position, above>; # <- note lack of quotes mysql> start slave;
 
 11) As with sql1, issue the following command to obtain the log file name and log position - record these values. (NB: do NOT terminate the mysql client session after you complete these commands - remain logged in to maintain the read lock):
 
-mysql> flush tables with read lock; mysql> show master status;
+      mysql> flush tables with read lock;
+      mysql> show master status;
 
 12) Log into sql1, start a mysql client session, and issue the following commands:
 
-mysql> slave stop; mysql> change master to master_log_file='<recorded log file name, above>', master_log_pos=<recorded log position, above>; # <- note lack of quotes mysql> start slave;
+      mysql> slave stop;
+      mysql> change master to master_log_file='<recorded log file name, above>', master_log_pos=<recorded log position, above>; # <- note lack of quotes mysql> start slave;
 
 13) It is now safe to exit any mysql client sessions that may be open to unlock the databases.
 
 14) Each database should now be in sync with each other, but to verify this, start a mysql client session on each system and issue the following command:
 
-mysql> show slave status\\G;
+      mysql> show slave status\G; 
 
 15) Look at the values of Slave_IO_State, Slave_IO_Running, Slave_SQL_Running, and Seconds_Behind_Master. There should be no errors. If there are errors, then re-start the procedure at step 6.
 
 16) Additionally, create a test table and input some data on both systems. On sql1, run:
 
-mysql> create table test.tester ( col1 int not null auto_increment, col2 int, primary key (col1) ); mysql> insert into tester (col2) values ('1'),('3'),('5'); mysql> select \* from test.tester;
+      mysql> create table test.tester ( col1 int not null auto_increment, col2 int, primary key (col1) );
+      mysql> insert into tester (col2) values ('1'),('3'),('5');
+      mysql> select * from test.tester; 
 
-On sql2, run: mysql> select \* from test.tester; mysql> insert into tester (col2) values ('2'),('4'),('6'); mysql> select \* from test.tester;
+On sql2, run:
+
+      mysql> select * from test.tester;
+      mysql> insert into tester (col2) values ('2'),('4'),('6');
+      mysql> select * from test.tester; 
 
 The select output should be the same on each system.
 
