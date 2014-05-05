@@ -40,7 +40,7 @@ The user performing all of the installation steps on the virt host needs to have
 
 If you have previously used the host machine to run TripleO's devtest setup, then that could potentially conflict with the scripts installed from RDO packages. It is recommended to clean up from any previous devtest runs by deleting ~/.cache/tripleo and making sure there is no $TRIPLEO_ROOT defined in your environment.
 
-## Virtual Host Setup
+### Virtual Host Setup
 
 1. Make sure you are logged in as the user you created above.
 
