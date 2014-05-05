@@ -83,7 +83,7 @@ You should now have a virtual machine called "instack" that you can use for the 
 
 3. Get IP Address of VM for undercloud
 
-You will need to start the instack virtual machine and obtain its IP address. You can use your preferred virtual machine management software or follow the steps below. Note that the second command will not return anything until the instance has finished booting.
+You will need to start the instack virtual machine and obtain its IP address. Note that the second command will not return anything until the instance has finished booting.
 
        virsh start instack
        cat /var/lib/libvirt/dnsmasq/default.leases | grep $(tripleo get-vm-mac instack) | awk '{print $3;}'
