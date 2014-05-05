@@ -149,7 +149,64 @@ On sql1, my.cnf should look like the following:
 
 On sql2, my.cnf should look like the following:
 
-############################################################################ [client] port = 3306 socket = /var/lib/mysql/mysql.sock [mysqld_safe] socket = /var/lib/mysql/mysql.sock nice = 0 log = /var/log/mysqld.log log-error = /var/log/mysqld.log err-log = /var/log/mysqld.log log-warnings = 2 [mysqld] user = mysql pid-file = /var/run/mysqld/mysqld.pid socket = /var/lib/mysql/mysql.sock port = 3306 basedir = /usr datadir = /var/lib/mysql tmpdir = /tmp skip-external-locking bind-address = 0.0.0.0 key_buffer_size = 512M table_cache = 512 myisam_sort_buffer_size = 100M max_connections = 500 max_connect_errors = 1000 max_allowed_packet = 16M thread_stack = 192K thread_cache_size = 8 myisam-recover = BACKUP query_cache_limit = 1M query_cache_size = 16M log_error = /var/log/mysqld.log log-warning = 2 expire_logs_days = 14 max_binlog_size = 100M # If innodb is used innodb_flush_log_at_trx_commit = 1 # For replication. \*\*Note\*\* server-id and auto_increment_offset values! server_id = 2 auto_increment_offset = 2 auto_increment_increment = 10 master-host = sql1.example.com master-user = replication master-password = secret_pw sync_binlog = 1 log-bin = mysql-bin log-slave-updates relay-log = sql2-relay-bin slave_exec_mode = IDEMPOTENT # slave-skip-errors = 1062 # replicate-ignore-table = test.test ############################################################################
+      ############################################################################
+      [client]
+      port = 3306
+      socket = /var/lib/mysql/mysql.sock
+       
+      [mysqld_safe]
+      socket = /var/lib/mysql/mysql.sock
+      nice = 0
+      log = /var/log/mysqld.log
+      log-error = /var/log/mysqld.log
+      err-log = /var/log/mysqld.log
+      log-warnings = 2
+       
+      [mysqld]
+      user = mysql
+      pid-file = /var/run/mysqld/mysqld.pid
+      socket = /var/lib/mysql/mysql.sock
+      port = 3306
+      basedir = /usr
+      datadir = /var/lib/mysql
+      tmpdir = /tmp
+      skip-external-locking
+      bind-address = 0.0.0.0
+      key_buffer_size = 512M
+      table_cache = 512
+      myisam_sort_buffer_size = 100M
+      max_connections = 500
+      max_connect_errors = 1000
+      max_allowed_packet = 16M
+      thread_stack = 192K
+      thread_cache_size = 8
+      myisam-recover = BACKUP
+      query_cache_limit = 1M
+      query_cache_size = 16M
+      log_error = /var/log/mysqld.log
+      log-warning = 2
+      expire_logs_days = 14
+      max_binlog_size = 100M
+       
+      # If innodb is used
+      innodb_flush_log_at_trx_commit = 1
+       
+      # For replication. **Note** server-id and auto_increment_offset values!
+      server_id = 2
+      auto_increment_offset = 2
+      auto_increment_increment = 10
+      master-host = sql1.example.com
+      master-user = replication
+      master-password = secret_pw
+      sync_binlog = 1
+      log-bin = mysql-bin
+      log-slave-updates
+      relay-log = sql2-relay-bin
+      slave_exec_mode = IDEMPOTENT
+       
+      # slave-skip-errors = 1062
+      # replicate-ignore-table = test.test
+      ############################################################################
 
 4) On sql1 start the mysqld service and ignore any errors that may indicate that that the master-host options have been deprecated and will be removed in a future release. These errors are indeed correct, however, on the initialization of the multi-master replication database the options included in the my.cnf file will be used to generate an appropriate /var/lib/mysql/master.info file which then takes precedence over the options in my.cnf and the errors will go away in subsequent restarts.
 
