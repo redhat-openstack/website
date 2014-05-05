@@ -71,7 +71,7 @@ If you have previously used the host machine to run TripleO's devtest setup, the
 
 **After running this command, you will need to log into a new shell for the changes to be applied**.
 
-## Virtual Machine Creation
+### Virtual Machine Creation
 
 1. Make sure you are logged in, with a new shell, as the user you created above.
 
