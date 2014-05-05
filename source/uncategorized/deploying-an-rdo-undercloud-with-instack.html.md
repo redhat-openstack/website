@@ -25,7 +25,7 @@ The Undercloud image on the instack virtual machine is a minimal install of Fedo
 
 ## Installing the Undercloud with Instack
 
-1.  Make sure you are logged into the node you want to install the undercloud on as a non-root user. For a virt setup this will be VM called "instack" for a bare metal setup this will your selected host.
+1.  Make sure you are logged in, as a non-root user, to the node you want to install the undercloud on. For a virt setup this will be a VM called "instack", for a bare metal setup this will be the host you selected while preparing the environment.
 2.  Enable the RDO icehouse repository
         sudo yum install -y http://rdo.fedorapeople.org/openstack-icehouse/rdo-release-icehouse.rpm
 
