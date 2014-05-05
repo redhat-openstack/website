@@ -12,7 +12,7 @@ wiki_last_updated: 2015-02-13
 
 This page includes tips, fixes and debugging steps for Instack installs:
 
-## What do I do if I encounter an error relating to "disk is in use"?
+## I got a "disk is in use" error when deploying the Overcloud
 
 If the undercloud machine was installed using LVM, when deploying overcloud nodes, you may see an error related to the disk being "in use". The workaround for this error is to:
 
