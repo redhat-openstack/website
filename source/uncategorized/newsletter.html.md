@@ -14,7 +14,10 @@ You can sign up to receive the newsletter [on the mailing list page](http://www.
 
 ## 2014
 
-[May 2014](https://www.redhat.com/archives/rdo-newsletter/2014-May/msg00000.html) [April 2014](https://www.redhat.com/archives/rdo-newsletter/2014-April/msg00000.html) [March 2014](https://www.redhat.com/archives/rdo-newsletter/2014-March/msg00000.html) [February 2014](https://www.redhat.com/archives/rdo-newsletter/2014-February/msg00000.html)
+*   [May 2014](https://www.redhat.com/archives/rdo-newsletter/2014-May/msg00000.html)
+*   [April 2014](https://www.redhat.com/archives/rdo-newsletter/2014-April/msg00000.html)
+*   [March 2014](https://www.redhat.com/archives/rdo-newsletter/2014-March/msg00000.html)
+*   [February 2014](https://www.redhat.com/archives/rdo-newsletter/2014-February/msg00000.html)
 
 ## 2013
 
