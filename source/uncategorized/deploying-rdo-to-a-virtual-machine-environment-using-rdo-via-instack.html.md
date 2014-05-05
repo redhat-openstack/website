@@ -73,13 +73,15 @@ If you have previously used the host machine to run TripleO's devtest setup, the
 
 ## Virtual Machine Creation
 
-1. Make sure you are logged in, with a new shell, as the user you created above. 2. Run the script to setup your virtual environment.
+1. Make sure you are logged in, with a new shell, as the user you created above.
+
+2. Run the script to setup your virtual environment.
 
        instack-virt-setup
 
 You should now have a virtual machine called "instack" that you can use for the instack-undercloud installation that contains a minimal install of Fedora 20 x86_64. The instack virtual machine contains a user "stack" that uses the password "stack" and is granted password-less sudo privileges. The root password is displayed in the standard output.
 
-2. Get IP Address of VM for undercloud
+3. Get IP Address of VM for undercloud
 
 You will need to start the instack virtual machine and obtain its IP address. You can use your preferred virtual machine management software or follow the steps below. Note that the second command will not return anything until the instance has finished booting.
 
