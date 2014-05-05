@@ -8,6 +8,8 @@ wiki_last_updated: 2014-05-06
 
 # RDO MySQL Multi-Master Replication Active-Active HA
 
+MariaDB+Galera, pacemaker, and haproxy are the new hotness, no doubt about it. But, I'm old school and have used MySQL multi-master replication with an LVS (piranha) load balancer in a 200 TPS production environment for nearly 10 years and feel more at ease using tried and true technologies. I'm not saying this is the best way, but I know that it's one way that works (and doesn't require pacemaker and corosync which just makes my eye twitch).
+
 There are 3 tasks to accomplish:
 
 1 - deploy RHEL6x VMs to host the load balancers and sql servers 2 - deploy multi-master replication mysql database system 3 - deploy piranha load balancer using Direct Routing
