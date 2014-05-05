@@ -20,7 +20,7 @@ The following sections describe the steps for preparing for an Undercloud deploy
 
 ### Baremetal Setup
 
-[ Deploying RDO on a Bare metal Environment using Instack](Deploying RDO on a Bare metal Environment using Instack)
+[ Deploying RDO on a Bare metal Environment using Instack](Deploying RDO on a Baremetal Environment using Instack)
 
 ### Virtual Machine Setup
 
