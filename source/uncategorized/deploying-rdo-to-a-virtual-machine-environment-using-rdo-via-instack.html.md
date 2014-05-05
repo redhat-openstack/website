@@ -40,42 +40,53 @@ The user performing all of the installation steps on the virt host needs to have
 
 If you have previously used the host machine to run TripleO's devtest setup, then that could potentially conflict with the scripts installed from RDO packages. It is recommended to clean up from any previous devtest runs by deleting ~/.cache/tripleo and making sure there is no $TRIPLEO_ROOT defined in your environment.
 
-## Virtual Host Installation
+## Virtual Host Setup
 
-1. Add export of LIVBIRT_DEFAULT_URI to your bashrc file.
+1. Make sure you are logged in as the user you created above.
+
+2. The virtual host machine needs SELinux set to permissive mode. You can immediately set the mode and also update the configuration file to be persistent across reboots:
+
+        # set selinux to permissive
+        sudo setenforce 0
+        # update the config file to survive reboots
+        sudo sed -i "s/=enforcing/=permissive/" /etc/selinux/config
+
+3. Add export of LIVBIRT_DEFAULT_URI to your bashrc file.
 
         echo 'export LIBVIRT_DEFAULT_URI="qemu:///system"' >> ~/.bashrc
 
-2. Enable the RDO icehouse repository
+4. Enable the RDO icehouse repository
 
 `  sudo yum install -y `[`http://rdo.fedorapeople.org/openstack-icehouse/rdo-release-icehouse.rpm`](http://rdo.fedorapeople.org/openstack-icehouse/rdo-release-icehouse.rpm)
 
-3. Install instack-undercloud
+5. Install instack-undercloud package
 
        sudo yum install -y instack-undercloud
 
-4. Run script to install required dependencies
+6. Run script to install required dependencies
 
-       sudo yum install -y libguestfs-tools
+       sudo yum install -y libguestfs-tools systemd
        source /usr/libexec/openstack-tripleo/devtest_variables.sh
        tripleo install-dependencies
 
-**After running this command, you will need to log out and log back in for the changes to be applied**. If you plan to use virt-manager or boxes to visually manage the virtual machines created in the next step, this would be a good time to install those tools now.
+**After running this command, you will need to login in a new shell in for the changes to be applied**.
 
-5. Run the script to setup your virtual environment.
+## Virtual Machine Creation
+
+1. Make sure you are logged in, with a new shell, as the user you created above. 2. Run the script to setup your virtual environment.
 
        instack-virt-setup
 
-You should now have a virtual machine called instack that you can use for the instack-undercloud installation that contains a minimal install of Fedora 20 x86_64. The instack virtual machine contains a user "stack" that uses the password "stack" and is granted password-less sudo privileges. The root password is displayed in the standard output.
+You should now have a virtual machine called "instack" that you can use for the instack-undercloud installation that contains a minimal install of Fedora 20 x86_64. The instack virtual machine contains a user "stack" that uses the password "stack" and is granted password-less sudo privileges. The root password is displayed in the standard output.
 
-6. Get IP Address
+2. Get IP Address of VM for undercloud
 
 You will need to start the instack virtual machine and obtain its IP address. You can use your preferred virtual machine management software or follow the steps below. Note that the second command will not return anything until the instance has finished booting.
 
        virsh start instack
        cat /var/lib/libvirt/dnsmasq/default.leases | grep $(tripleo get-vm-mac instack) | awk '{print $3;}'
 
-7. Get MAC addresses
+3. Get MAC addresses of all other VMs
 
 When setting up the undercloud on the instack virtual machine, you will need the MAC addresses of the bare metal node virtual machines. Use the following command to obtain the list of addresses. Later, you will need these MAC addresses to add to your deploy-overcloudrc file later.
 
