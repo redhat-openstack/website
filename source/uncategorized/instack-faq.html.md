@@ -77,7 +77,7 @@ If you want to delete an overcloud and reset the environment to a state where yo
        #tuskar
        instack-delete-overcloud-tuskarcli
 
-## How do I view Undercloud Dashboard?
+## How do I view the Undercloud Dashboard?
 
 To access Horizon on the undercloud you need to create an ssh tunnel from the virt host to the instack virtual machine e.g.
 
