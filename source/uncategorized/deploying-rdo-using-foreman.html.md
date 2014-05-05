@@ -72,7 +72,9 @@ initialize the environment settings described in the example above for non-provi
 
     (sudo, if you are not root) sh foreman_server.sh
 
-After a brief time, this will leave you with a working Foreman install. Further details are below in 'Finishing the setup', but first, go ahead and configure the clients:
+After a brief time, this will leave you with a working Foreman install. Before moving forward you need to open the right ports. I use lokkit: lokkit --service http lokkit --service https lokkit --service dns lokkit --service tftp lokkit --port 8140:tcp
+
+       Further details are below in 'Finishing the setup', but first, go ahead and configure the clients:
 
 #### Steps for controller/compute nodes
 
