@@ -279,28 +279,103 @@ The select output should be the same on each system.
 
 2) Create the file /usr/local/bin/check_tcp_port.sh with the following contents, and make it executable:
 
-############################################################################ #!/bin/sh if [ -z $1 ] && [ -z $2 ]; then echo "Usage: $0 addr port" exit 1 fi TEST=\`/usr/bin/nc -zvv $1 $2 2>/dev/null | grep -c succeed\` if [ $TEST == 1 ]; then echo "OK" else echo "FAIL" fi exit 0 ############################################################################
+      ############################################################################
+      #!/bin/sh
+       
+      if [ -z $1 ] && [ -z $2 ]; then
+        echo "Usage: $0 addr port"
+        exit 1
+      fi
+       
+      ` TEST=`/usr/bin/nc -zvv $1 $2 2>/dev/null | grep -c succeed` `
+       
+      if [ $TEST == 1 ]; then
+        echo "OK"
+      else
+        echo "FAIL"
+      fi
+       
+      exit 0
+      ############################################################################
+        
 
 3) Edit the /etc/sysconfig/ha/lvs.cf file on each load balancer and make it look like the following:
 
-serial_no = 2013042401 service = lvs primary = 10.0.0.1 service = lvs rsh_command = ssh backup_active = 1 backup = 10.0.0.2 heartbeat = 1 heartbeat_port = 539 keepalive = 6 deadtime = 18 debug_level = NONE monitor_links = 1 syncdaemon = 1 hard_shutdown = 0 network = direct virtual openstack_mysql_3306 { active = 1 address = 10.0.0.3 eth0:6 vip_nmask = 255.255.240.0 port = 3306 persistent = 60 pmask = 255.255.240.0 use_regex = 0 send_program = "/usr/local/bin/check_tcp_port.sh %h 3306" send = "\\n" expect = "OK" load_monitor = none scheduler = wlc protocol = tcp timeout = 5 reentry = 10 quiesce_server = 1 server sql1.example.com { address = 10.0.0.4 active = 1 weight = 1 } server sql2.example.com { address = 10.0.0.5 active = 1 weight = 1 } }
+      serial_no = 2013042401
+      service = lvs
+      primary = 10.0.0.1
+      service = lvs
+      rsh_command = ssh
+      backup_active = 1
+      backup = 10.0.0.2
+      heartbeat = 1
+      heartbeat_port = 539
+      keepalive = 6
+      deadtime = 18
+      debug_level = NONE
+      monitor_links = 1
+      syncdaemon = 1
+      hard_shutdown = 0
+      network = direct
+       
+      virtual openstack_mysql_3306 {
+        active = 1
+        address = 10.0.0.3 eth0:6
+        vip_nmask = 255.255.240.0
+        port = 3306
+        persistent = 60
+        pmask = 255.255.240.0
+        use_regex = 0
+        send_program = "/usr/local/bin/check_tcp_port.sh %h 3306"
+        send = "\n"
+        expect = "OK"
+        load_monitor = none
+        scheduler = wlc
+        protocol = tcp
+        timeout = 5
+        reentry = 10
+        quiesce_server = 1
+        server sql1.example.com {
+        address = 10.0.0.4
+        active = 1
+        weight = 1
+        }
+        server sql2.example.com {
+        address = 10.0.0.5
+        active = 1
+        weight = 1
+        }
+      }
+       
 
 4) Shutdown the pulse service on lb2 and restart the pulse service on lb1.
 
-       service pulse restart 
+      service pulse restart
+        
 
 5) Verify that service is working by running the following command on lb1:
 
-       ipvsadm -Ln 
+      ipvsadm -Ln
+        
 
 The output should look like this:
 
-IP Virtual Server version 1.2.1 (size=4096) Prot LocalAddress:Port Scheduler Flags -> RemoteAddress:Port Forward Weight ActiveConn InActConn TCP 10.0.0.3:3306 wlc persistent 60 mask 255.255.240.0 -> 10.0.0.4:3306 Route 1 0 0 -> 10.0.0.5:3306 Route 1 0 0
+      IP Virtual Server version 1.2.1 (size=4096)
+      Prot LocalAddress:Port Scheduler Flags
+        -> RemoteAddress:Port Forward Weight ActiveConn InActConn
+      TCP 10.0.0.3:3306 wlc persistent 60 mask 255.255.240.0
+        -> 10.0.0.4:3306 Route 1 0 0
+        -> 10.0.0.5:3306 Route 1 0 0
+        
 
 Also, tail /var/log/messages on the load balancers and look for the following:
 
-Apr 3 15:02:13 lb1.example.com nanny[29298]: [ active ] making 10.0.0.5:3306 available 6) From a client on the network (NB: NOT the load balancer), connect to the service IP of the sql server:
+      Apr 3 15:02:13 lb1.example.com nanny[29298]: [ active ] making 10.0.0.5:3306 available
+        
 
-       [root client ]# mysql -u nova -h 10.0.0.3 -p 
+6) From a client on the network (NB: NOT the load balancer), connect to the service IP of the sql server:
 
-If this is successful, then congratulation, you have a fully functioning load-balanced multi-master mysql replication database system for your Red Hat OpenStack Cloud.
+      [root client ]# mysql -u nova -h 10.0.0.3 -p
+        
+
+If this is successful, then congratulations, you have a fully functioning load-balanced multi-master mysql replication database system for your Red Hat OpenStack Cloud.
