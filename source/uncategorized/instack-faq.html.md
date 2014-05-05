@@ -24,7 +24,7 @@ This page includes tips, fixes and debugging steps for Instack installs:
         systemctl disable lvm2-lvmetad.socket
         systemctl stop lvm2-lvmetad
 
-## Are there any example rc files for overcloud deployment?
+## Are there any example rc files for Overcloud deployment?
 
 *   The following are example rc files to source before deploying the overcloud.
     Example rc file for deploying the overcloud on a virtual machine setup:
