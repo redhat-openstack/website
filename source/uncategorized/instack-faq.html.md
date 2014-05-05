@@ -74,13 +74,3 @@ If you want to delete an overcloud and reset the environment to a state where yo
        instack-delete-overcloud
        #tuskar
        instack-delete-overcloud-tuskarcli
-
-## How do I bring up the Undercloud Dashboard (tuskar-ui) in my browser?
-
-To access Horizon on the undercloud you need to create an ssh tunnel from the virt host to the instack virtual machine e.g.
-
-      `       ssh -g -N -L 8080:192.168.122.55:80 `hostname` `
-
-where 192.168.122.55 is IP address of the instack virtual machine, you will need to update appropriately for your environment. With the ssh tunnel create you can launch a browser on the virt host and go to <http://localhost:8080> and the dashboard should appear. If you need to connect remotely through the virt host, you can chain ssh tunnels as needed. Note: Depending on your virt host configuration, you may need to open up the correct port(s) in iptables.
-
-When logging into the dashboard the default user and password are found in the stackrc file on the instack virtual machine, OS_USERNAME and OS_PASSWORD. You can read more about using the dashboard in the User Guide.
