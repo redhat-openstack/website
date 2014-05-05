@@ -69,7 +69,7 @@ If you have previously used the host machine to run TripleO's devtest setup, the
        source /usr/libexec/openstack-tripleo/devtest_variables.sh
        tripleo install-dependencies
 
-**After running this command, you will need to login in a new shell in for the changes to be applied**.
+**After running this command, you will need to log into a new shell in for the changes to be applied**.
 
 ## Virtual Machine Creation
 
