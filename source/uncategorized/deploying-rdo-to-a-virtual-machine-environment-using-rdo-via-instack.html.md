@@ -31,16 +31,11 @@ If you want to deviate from the tutorial or increase the scaling of one or more 
 
 ## Preparing the Host Machine
 
-The virtual host machine needs SELinux set to permissive mode. You can immediately set the mode and also update the configuration file to be persistent across reboots:
+The user performing all of the installation steps on the virt host needs to have password-less sudo enabled. **This step is NOT optional, you must create an additional user. Do not run the rest of the steps as root.**
 
-        # set selinux to permissive
-        sudo setenforce 0
-        # update the config file to survive reboots
-        sudo sed -i "s/=enforcing/=permissive/" /etc/selinux/config
-
-The user performing all of the installations needs to have password-less sudo enabled. Create a user and then run the following commands, replacing "stack" with the name of the user you just created. **This step is NOT optional, you must create an additional user. Do not run the rest of the script as root.**
-
-       sudo echo "stack ALL=(root) NOPASSWD:ALL" >> /etc/sudoers.d/stack
+       useradd stack
+       passwd stack  # specify a password
+       echo "stack ALL=(root) NOPASSWD:ALL" | sudo tee -a /etc/sudoers.d/stack
        sudo chmod 0440 /etc/sudoers.d/stack
 
 If you have previously used the host machine to run TripleO's devtest setup, then that could potentially conflict with the scripts installed from RDO packages. It is recommended to clean up from any previous devtest runs by deleting ~/.cache/tripleo and making sure there is no $TRIPLEO_ROOT defined in your environment.
