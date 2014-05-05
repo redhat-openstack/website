@@ -66,7 +66,7 @@ This page includes tips, fixes and debugging steps for Instack installs:
         export BLOCKSTORAGESCALE=1
         export SWIFTSTORAGESCALE=1
 
-## How to delete the Overcloud
+## How do I delete the Overcloud
 
 If you want to delete an overcloud and reset the environment to a state where you can deploy another overcloud, download the instack-delete-overcloud\* scripts from the github repository at <https://github.com/agroup/instack-undercloud/tree/master/scripts> . Run one of the following examples that matches how you deployed the overcloud.
 
