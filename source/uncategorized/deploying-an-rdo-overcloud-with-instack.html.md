@@ -28,7 +28,7 @@ You can deploy the overcloud via the command line or through the Horizon web int
 
 #### Tuskar Web UI Deployment
 
-Use the following guide to continue deploying your Overcloud.
+If you want to deploy the Overcloud via the UI you will need to setup an ssh tunnel, see this [FAQ](http://openstack.redhat.com/Instack_FAQ#How_do_I_view_the_Undercloud_Dashboard.3F) for more information. Once you have logged into the Web UI use the following guide to continue deploying your Overcloud.
 
        #`[`tuskar-ui`](https://wiki.openstack.org/wiki/Tuskar/UsageGuide)`(still Work In Progress)
 
