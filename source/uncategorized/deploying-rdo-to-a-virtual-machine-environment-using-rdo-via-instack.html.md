@@ -18,13 +18,14 @@ Do not use the root user for executing any instack-undercloud scripts. Some prog
 
 This setup creates five (5) virtual machines consisting of 2GB of memory and 30GB of disk space on each. If you do not plan to deploy Block Storage or Swift Storage nodes, you can delete those virtual machines and allocate less space accordingly. Most of the virtual machine disk files are thinly provisioned and will not take up the full 30GB. The undercloud is not thinly provisioned and is completely pre-allocated.
 
-The minimum system requirements to follow this tutorial are:
+The minimum system requirements for the virtual host machine to follow this tutorial are:
 
+*   Be running Fedora 20 x86_64
 *   At least (1) quad core CPU
-*   12GB free memory.
+*   12GB free memory
 *   200GB disk space [1]
 
-      If you want to deviate from the tutorial or increase the scaling of one or more overcloud nodes, you will need to ensure you have enough memory and disk space.
+If you want to deviate from the tutorial or increase the scaling of one or more overcloud nodes, you will need to ensure you have enough memory and disk space.
 
 [1]: Note that the default Fedora partitioning scheme will most likely not provide enough space to the partition containing the default path for libvirt image storage (/var/lib/libvirt/images). The easiest fix is to customize the partition layout at the time of install to provide at least 200 GB of space for that path.
 
