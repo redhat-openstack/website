@@ -24,15 +24,11 @@ Now that you have a working undercloud, let's deploy an overcloud. Note that dep
 
 ## Deploying the Overcloud
 
-You can deploy the overcloud through the Horizon web interface using the tuskar plugin or via the command line
+You can deploy the overcloud **either** through the Horizon web interface using the tuskar plugin **or** via the command line
 
 ### Tuskar Web UI Deployment
 
-If you want to deploy the Overcloud via the UI you will need to setup an ssh tunnel, see this [FAQ](http://openstack.redhat.com/Instack_FAQ#How_do_I_view_the_Undercloud_Dashboard.3F) for more information. Once you have logged into the Web UI use the following guide to continue deploying your Overcloud.
-
-       #`[`tuskar-ui`](https://wiki.openstack.org/wiki/Tuskar/UsageGuide)` (still work in progress)
-
-Next steps: [ Testing an RDO Overcloud with Instack ](Testing an RDO Overcloud with Instack)
+If you want to deploy the Overcloud via the UI you will need to setup an ssh tunnel, see this [FAQ](http://openstack.redhat.com/Instack_FAQ#How_do_I_view_the_Undercloud_Dashboard.3F) for more information. Once you have logged into the Web UI use [this guide](https://wiki.openstack.org/wiki/Tuskar/UsageGuide) (still work in progress) to continue deploying your Overcloud. After a successful deployment the next step is: [ Testing an RDO Overcloud with Instack ](Testing an RDO Overcloud with Instack)
 
 ### Command Line Deployment
 
@@ -53,10 +49,10 @@ If you want to deploy more or fewer compute, block storage or object storage nod
 
 3. Choose how you want to deploy the Overcloud. By calling [Heat](https://wiki.openstack.org/wiki/Heat) directly or via the [Tuskar](https://wiki.openstack.org/wiki/TripleO/Tuskar) CLI . Run one of the following commands.
 
-      # heat
-      instack-deploy-overcloud
+       # heat
+       instack-deploy-overcloud
 
-      #tuskar-cli
-      instack-deploy-overcloud-tuskarcli
+       #tuskar-cli
+       instack-deploy-overcloud-tuskarcli
 
 After a successful deployment, you should see "Overcloud Deployed" in the standard output of the terminal. Next steps: [ Testing an RDO Overcloud with Instack](Testing an RDO Overcloud with Instack). If you run into issues and want to redeploy your Overcloud the first step is to delete it using the instructions in the [FAQ](http://openstack.redhat.com/Instack_FAQ#How_do_I_delete_the_Overcloud.3F). You should then be able to deploy the Overcloud again.
