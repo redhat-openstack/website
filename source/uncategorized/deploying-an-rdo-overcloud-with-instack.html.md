@@ -49,12 +49,12 @@ If you want to deploy more or fewer compute, block storage or object storage nod
       export $(sudo cat /root/tripleo-undercloud-passwords | xargs)
       command $(sudo cat /root/stackrc | xargs)
 
-3. Choose how you want to deploy the Overcloud. By calling [Heat](https://wiki.openstack.org/wiki/Heat) directly or via the [Tuskar](https://wiki.openstack.org/wiki/TripleO/Tuskar) CLI . Run one of the following commands.
+3. Choose how you want to deploy the Overcloud. By calling scripts which **either** use [Heat](https://wiki.openstack.org/wiki/Heat) directly **or** which call the [Tuskar](https://wiki.openstack.org/wiki/TripleO/Tuskar) CLI :
 
        # heat
        instack-deploy-overcloud
 
-       #tuskar-cli
+       # tuskar-cli
        instack-deploy-overcloud-tuskarcli
 
 After a successful deployment, you should see "Overcloud Deployed" in the standard output of the terminal. Next steps: [ Testing an RDO Overcloud with Instack](Testing an RDO Overcloud with Instack). If you run into issues and want to redeploy your Overcloud the first step is to delete it using the instructions in the [FAQ](http://openstack.redhat.com/Instack_FAQ#How_do_I_delete_the_Overcloud.3F). You should then be able to deploy the Overcloud again.
