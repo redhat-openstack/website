@@ -27,7 +27,7 @@ If the undercloud machine was installed using LVM, when deploying overcloud node
 
 ## Are there any example rc files for Overcloud deployment?
 
-The following are example rc files to source before deploying the overcloud.
+The following are example rc files to source before deploying the overcloud. Descriptions of the variables are below
 
 Example rc file for deploying the overcloud on a virtual machine setup:
 
@@ -67,6 +67,23 @@ Example rc file for deploying the overcloud on a bare metal machine setup:
     export COMPUTESCALE=1
     export BLOCKSTORAGESCALE=1
     export SWIFTSTORAGESCALE=1
+
+Descriptions of the variables above
+
+*   CPU: number of cpus on baremetal nodes
+*   MEM: amount of ram on baremetal nodes, in MB
+*   DISK: amount of disk on baremetal nodes, in GB
+*   ARCH: architecture of baremetal nodes, amd64 or i386
+*   MACS: list of MAC addresses of baremetal nodes
+*   PM_IPS: list of Power Management IP addresses
+*   PM_USERS: list of Power Management Users
+*   PM_PASSWORDS: list of Power Management Passwords
+*   NeutronPublicInterface: Overcloud management interface name
+*   OVERCLOUD_LIBVIRT_TYPE: Overcloud libvirt type: qemu or kvm
+*   NETWORK_CIDR: neutron network cidr
+*   FLOATING_IP_START: floating ip allocation start
+*   FLOATING_IP_END: floating ip allocation end
+*   FLOATING_IP_CIDR: floating ip network cidr
 
 ## How do I delete the Overcloud?
 
