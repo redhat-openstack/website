@@ -51,7 +51,7 @@ If you want to deploy more or fewer compute, block storage or object storage nod
       export $(sudo cat /root/tripleo-undercloud-passwords | xargs)
       command $(sudo cat /root/stackrc | xargs)
 
-3. Choose how you want to deploy the Overcloud. By calling [Heat](https://wiki.openstack.org/wiki/Heat) dirrectly or via the [Tuskar](https://wiki.openstack.org/wiki/TripleO/Tuskar) CLI . Run one of the following examples.
+3. Choose how you want to deploy the Overcloud. By calling [Heat](https://wiki.openstack.org/wiki/Heat) directly or via the [Tuskar](https://wiki.openstack.org/wiki/TripleO/Tuskar) CLI . Run one of the following commands.
 
       # heat
       instack-deploy-overcloud
