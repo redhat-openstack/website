@@ -84,6 +84,9 @@ Descriptions of the variables above
 *   FLOATING_IP_START: floating ip allocation start
 *   FLOATING_IP_END: floating ip allocation end
 *   FLOATING_IP_CIDR: floating ip network cidr
+*   COMPUTESCALE: # of overcloud compute nodes
+*   BLOCKSTORAGESCALE: # of overcloud block storage nodes
+*   SWIFTSTORAGESCALE: # of overcloud object storage nodes
 
 ## How do I delete the Overcloud?
 
