@@ -41,7 +41,13 @@ If you want to deploy the Overcloud via the UI you will need to setup an ssh tun
 
 If you want to deploy more or fewer compute, block storage or object storage nodes in your overcloud then update the appropriate \*SCALE variable in the rc file. If you increase these numbers you will need to make sure that sufficient virtual machines or bare metal hosts are available.
 
-NOTE: Don't forget to `source deploy-overcloudrc` AND `source tripleo-undercloud-passwords`before running the deployment script.
+2. Export the required variables, including the rc file you just created:
+
+      source deploy-overcloudrc
+      export $(sudo cat /root/tripleo-undercloud-passwords | xargs)
+      command $(sudo cat /root/stackrc | xargs)
+
+3. Choose you deployment type
 
 ## Deploying the Overcloud
 
