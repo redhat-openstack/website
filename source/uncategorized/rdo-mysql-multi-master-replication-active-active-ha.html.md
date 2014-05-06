@@ -61,7 +61,7 @@ The OpenStack MySQL database is not very large, but requires enough disk space f
        4GB swap
        2GB / partition
        16GB /var partition
-       RHELv6.4
+       RHELv6
 
 The load balancers require significantly less resources. The following specs are more than adequate:
 
@@ -70,7 +70,7 @@ The load balancers require significantly less resources. The following specs are
        1GB swap
        2GB / partition
        4GB /var partition
-       RHELv6.4
+       RHELv6
 
 Iptables must be configured on all VMs to allow traffic on ports 3306 to the hosts or network segment that requires access to mysql, and 539 on the load balancers for heartbeat communication.
 
