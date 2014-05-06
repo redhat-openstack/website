@@ -14,7 +14,7 @@ Now that you have a working undercloud, let's deploy an overcloud. Note that dep
 
 ## Preparing for the Overcloud
 
-1. Export the required variables into your shell before running the instack-\* scripts that interact with the undercloud and overcloud.
+1. While logged into the undercloud node export the required variables into your shell before running the instack-\* scripts that interact with the undercloud and overcloud:
 
       command $(sudo cat /root/stackrc | xargs)
 
