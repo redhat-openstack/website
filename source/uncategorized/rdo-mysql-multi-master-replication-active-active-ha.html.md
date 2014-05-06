@@ -18,9 +18,9 @@ There are 3 tasks to accomplish:
 
 **Conventions used:**
 
-*   The load balancers and mysql servers must be on the same network
+*   The load balancers and mysql servers must be on the same network segment, have the same netmask and gateway and be able to receive the
 
-segment, have the same netmask and gateway and be able to receive the same broadcasts.
+same broadcasts.
 
 *   sql1 and lb1 are the first mysql and load balancer servers, respectively.
 *   sql2 and lb2 are the second mysql and load balancer servers, respectively.
