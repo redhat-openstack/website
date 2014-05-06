@@ -101,13 +101,17 @@ To solve "The Arp Problem" in Direct Routing mode (see [1](http://www.austintek.
 
 In this set up, replication is performed at the query level - that is, the binary logs are replayed, query by query, to produce the replication between each system.
 
-The following guide are based on the "Advanced MySQL Replication Techniques" ([http%3A%2F%2Fwww.onlamp.com%2Fpub%2Fa%2Fonlamp%2F2006%2F04%2F20%2Fadvanced-mysql-replication.html&sa=D&sntz=1&usg=AFQjCNGy-p0Wl41m7DxoLeACYaksXnrupQ]) OnLamp article written by Giuseppe Maxia, "How To Set Up Database Replication in MySQL" ([http%3A%2F%2Fwww.howtoforge.com%2Fmysql_database_replication&sa=D&sntz=1&usg=AFQjCNH8Kaa0MY1e6Gb-Z5jgJZ2_bT4z7Q]) by Falko Timme, and Chapter 16, "Replication of the MySQL 5.1 Reference Manual" ([2](http://dev.mysql.com/doc/refman/5.1/en/replication.html)). This guide is only valid for MySQL v5.1 and later.
+The following guide are based on the "Advanced MySQL Replication Techniques" ( [http%3A%2F%2Fwww.onlamp.com%2Fpub%2Fa%2Fonlamp%2F2006%2F04%2F20%2Fadvanced-mysql-replication.html&sa=D&sntz=1&usg=AFQjCNGy-p0Wl41m7DxoLeACYaksXnrupQ] ) OnLamp article written by Giuseppe Maxia, "How To Set Up Database Replication in MySQL" ( [http%3A%2F%2Fwww.howtoforge.com%2Fmysql_database_replication&sa=D&sntz=1&usg=AFQjCNH8Kaa0MY1e6Gb-Z5jgJZ2_bT4z7Q] ) by Falko Timme, and Chapter 16, "Replication of the MySQL 5.1 Reference Manual" ( [2](http://dev.mysql.com/doc/refman/5.1/en/replication.html) ). This guide is only valid for MySQL v5.1 and later.
 
 1) On each system, install the mysql client and server:
 
-yum -y install mysql mysql-server 2) Stop the mysql server on each system:
+      yum -y install mysql mysql-server 
 
-service mysqld stop 3) Edit the /etc/my.cnf file on each system (NB: the my.cnf on each system will be slightly different).
+2) Stop the mysql server on each system:
+
+      service mysqld stop 
+
+3) Edit the /etc/my.cnf file on each system (NB: the my.cnf on each system will be slightly different).
 
 On sql1, my.cnf should look like the following:
 
