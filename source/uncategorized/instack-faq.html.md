@@ -94,6 +94,7 @@ If you want to delete an overcloud and reset the environment to a state where yo
 
        #heat
        instack-delete-overcloud
+
        #tuskar
        instack-delete-overcloud-tuskarcli
 
