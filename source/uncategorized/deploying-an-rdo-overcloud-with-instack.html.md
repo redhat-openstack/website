@@ -34,7 +34,9 @@ If you want to deploy the Overcloud via the UI you will need to setup an ssh tun
 
 ### Command Line Deployment
 
-1. Create a deploy-overcloudrc script to set variable values you'll need to deploy the overcloud. Example rc files containing example values for above variables can be found in the [Instack FAQ](http://openstack.redhat.com/Instack_FAQ#Are_there_any_example_rc_files_for_Overcloud_deployment.3F). Note that the variables must be exported so that their values are picked up by instack-deploy-overcloud. Most of the example values will work as-is if you've been using the defaults up until now except for the following:
+1. Create a deploy-overcloudrc script to set variable values you'll need to deploy the overcloud.
+
+Example rc files containing values for the required variables can be found in the [Instack FAQ](http://openstack.redhat.com/Instack_FAQ#Are_there_any_example_rc_files_for_Overcloud_deployment.3F). Note that the variables must be exported so that their values are picked up by instack-deploy-overcloud. Most of the example values will work as-is if you've been using the defaults up until now, except for the following:
 
 *   In a virtualized deployment the MACS variable will need to be set to the values you gathered during the steps to [setup your virtual machines](http://openstack.redhat.com/Deploying_RDO_to_a_Virtual_Machine_Environment_using_RDO_via_Instack#Virtual_Machine_Creation).
 *   Similarly in a bare metal deployments the MACS variable will need to be set to the MAC address of the NIC that will PXE boot, for each host you want to deploy the overcloud to. The PM_\* variables need to be set with corresponding IPMI information. All these values should have been collected during the steps to [setup](http://openstack.redhat.com/Deploying_RDO_on_a_Baremetal_Environment_using_Instack#Networking) the bare metal environment].
@@ -47,7 +49,15 @@ If you want to deploy more or fewer compute, block storage or object storage nod
       export $(sudo cat /root/tripleo-undercloud-passwords | xargs)
       command $(sudo cat /root/stackrc | xargs)
 
-3. Choose you deployment type
+3. Choose how you want to deploy the Overcloud. By calling [Heat](https://wiki.openstack.org/wiki/Heat) dirrectly or via the [Tuskar](https://wiki.openstack.org/wiki/TripleO/Tuskar) CLI . Run one of the following examples.
+
+      # heat
+      instack-deploy-overcloud
+
+      #tuskar-cli
+      instack-deploy-overcloud-tuskarcli
+
+After a successful deployment, you should see "Overcloud Deployed" in the standard output of the terminal. Next steps: [ Testing an RDO Overcloud with Instack ](Testing an RDO Overcloud with Instack)
 
 ## Deploying the Overcloud
 
