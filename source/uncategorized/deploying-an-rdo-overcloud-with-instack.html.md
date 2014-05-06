@@ -24,15 +24,15 @@ Now that you have a working undercloud, let's deploy an overcloud. Note that dep
 
 ## Deploying the Overcloud
 
-You can deploy the overcloud via the command line or through the Horizon web interface using the tuskar plugin.
+You can deploy the overcloud through the Horizon web interface using the tuskar plugin or via the command line
 
-#### Tuskar Web UI Deployment
+### Tuskar Web UI Deployment
 
 If you want to deploy the Overcloud via the UI you will need to setup an ssh tunnel, see this [FAQ](http://openstack.redhat.com/Instack_FAQ#How_do_I_view_the_Undercloud_Dashboard.3F) for more information. Once you have logged into the Web UI use the following guide to continue deploying your Overcloud.
 
        #`[`tuskar-ui`](https://wiki.openstack.org/wiki/Tuskar/UsageGuide)`(still Work In Progress)
 
-#### Command Line Deployment
+### Command Line Deployment
 
 1. Create a deploy-overcloudrc script to set variable values you'll need to deploy the overcloud. Example rc files containing example values for above variables can be found in the [Instack FAQ](http://openstack.redhat.com/Instack_FAQ#Are_there_any_example_rc_files_for_Overcloud_deployment.3F). Note that the variables must be exported so that their values are picked up by instack-deploy-overcloud. Most of the example values will work as-is if you've been using the defaults up until now except for the following:
 
@@ -40,14 +40,6 @@ If you want to deploy the Overcloud via the UI you will need to setup an ssh tun
 *   Similarly in a bare metal deployments the MACS variable will need to be set to the MAC address of the NIC that will PXE boot, for each host you want to deploy the overcloud to. The PM_\* variables need to be set with corresponding IPMI information. All these values should have been collected during the steps to [setup](http://openstack.redhat.com/Deploying_RDO_on_a_Baremetal_Environment_using_Instack#Networking) the bare metal environment].
 
 If you want to deploy more or fewer compute, block storage or object storage nodes in your overcloud then update the appropriate \*SCALE variable in the rc file. If you increase these numbers you will need to make sure that sufficient virtual machines or bare metal hosts are available.
-
-### Scaling
-
-To scale the Compute, Block Storage or Swift Storage nodes, you can override the default values from the instack-deploy-overcloud scripts in your rc file. The defaults for those scripts are:
-
-       COMPUTESCALE=${COMPUTESCALE:-1}
-       BLOCKSTORAGESCALE=${BLOCKSTORAGESCALE:-1}
-       SWIFTSTORAGESCALE=${SWIFTSTORAGESCALE:-1}
 
 NOTE: Don't forget to `source deploy-overcloudrc` AND `source tripleo-undercloud-passwords`before running the deployment script.
 
