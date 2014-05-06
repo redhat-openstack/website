@@ -56,21 +56,21 @@ Typically, these physical hosts should easily be able to host the necessary VMs 
 
 The OpenStack MySQL database is not very large, but requires enough disk space for storing binary logs which are the key for database replication. For a medium sized cloud with 64 compute nodes and support for 4,000 2GB VMs, the following VM parameters are recommended:
 
-       2 vCPUs
-       2GB RAM
-       4GB swap
-       2GB / partition
-       16GB /var partition
-       RHELv6
+*   2 vCPUs
+*   2GB RAM
+*   4GB swap
+*   2GB / partition
+*   16GB /var partition
+*   RHELv6
 
 The load balancers require significantly less resources. The following specs are more than adequate:
 
-       1 vCPU
-       1GB RAM
-       1GB swap
-       2GB / partition
-       4GB /var partition
-       RHELv6
+      * 1 vCPU
+      * 1GB RAM
+      * 1GB swap
+      * 2GB / partition
+      * 4GB /var partition
+      * RHELv6
 
 Iptables must be configured on all VMs to allow traffic on ports 3306 to the hosts or network segment that requires access to mysql, and 539 on the load balancers for heartbeat communication.
 
@@ -82,11 +82,20 @@ To solve "The Arp Problem" in Direct Routing mode (see [1](http://www.austintek.
 
 1) Add the following lines to /etc/sysctl.conf then run 'sysctl -p':
 
-net.ipv4.conf.all.arp_announce = 2 net.ipv4.conf.all.arp_ignore = 1
+      net.ipv4.conf.all.arp_announce = 2
+      net.ipv4.conf.all.arp_ignore = 1
 
 2) Create the file /etc/sysconfig/network-scripts/ifcfg-lo:3 with the following contents and start the interface by running 'ifup lo:3':
 
-DEVICE=lo:3 BOOTPROTO=none ONPARENT=yes TYPE=Ethernet IPADDR=10.0.0.3 NETMASK=255.255.255.255 GATEWAY=10.0.0.254 PEERDNS=no NM_CONTROLLED=no
+      DEVICE=lo:3
+      BOOTPROTO=none
+      ONPARENT=yes
+      TYPE=Ethernet
+      IPADDR=10.0.0.3
+      NETMASK=255.255.255.255
+      GATEWAY=10.0.0.254
+      PEERDNS=no
+      NM_CONTROLLED=no
 
 ## 2. MySQL Multi-Master Replication Deployment
 
