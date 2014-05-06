@@ -18,7 +18,7 @@ Now that you have a working undercloud, let's deploy an overcloud. Note that dep
 
       command $(sudo cat /root/stackrc | xargs)
 
-2. Run the prepare-for-overcloud script to get setup. This script will avoid re-downloading images if they already exist in the current working directory. If you want to force a redownload of the images, delete them first.
+2. Run the prepare-for-overcloud script to get setup. This script will download approximately 2.5GB of images from [here](http://repos.fedorapeople.org/repos/openstack-m/tripleo-images-rdo-icehouse/). It will avoid re-downloading images if they already exist in the current working directory. If you want to force a redownload of the images, delete them first.
 
        instack-prepare-for-overcloud
 
