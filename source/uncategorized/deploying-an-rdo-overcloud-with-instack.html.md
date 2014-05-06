@@ -60,13 +60,3 @@ If you want to deploy more or fewer compute, block storage or object storage nod
       instack-deploy-overcloud-tuskarcli
 
 After a successful deployment, you should see "Overcloud Deployed" in the standard output of the terminal. Next steps: [ Testing an RDO Overcloud with Instack](Testing an RDO Overcloud with Instack). If you run into issues and want to redeploy your Overcloud the first step is to delete it using the instructions in the [FAQ](http://openstack.redhat.com/Instack_FAQ#How_do_I_delete_the_Overcloud.3F). You should then be able to deploy the Overcloud again.
-
-### Deleting an Overcloud
-
-If you want to delete an overcloud and reset the environment to a state where you can deploy another overcloud, download the instack-delete-overcloud\* scripts from the github repository at <https://github.com/agroup/instack-undercloud/tree/master/scripts> . Run one of the following examples that matches how you deployed the overcloud.
-
-        #heat
-        instack-delete-overcloud
-
-        #tuskar
-        instack-delete-overcloud-tuskarcli
