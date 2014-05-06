@@ -16,9 +16,19 @@ There are 3 tasks to accomplish:
 2.  deploy multi-master replication mysql database system
 3.  deploy piranha load balancer using Direct Routing
 
-**Conventions used:** The load balancers and mysql servers must be on the same network segment, have the same netmask and gateway and be able to receive the same broadcasts.
+**Conventions used:**
 
-sql1 and lb1 are the first mysql and load balancer servers, respectively. sql2 and lb2 are the second mysql and load balancer servers, respectively. 10.0.0.1 is the IP of the primary load balancer, lb1.example.com. 10.0.0.2 is the IP of the secondary load balancer, lb2.example.com. 10.0.0.3 is the IP of the VIP for the mysql server, sql.example.com. 10.0.0.4 is the IP of the first mysql Real Server, sql1.example.com. 10.0.0.5 is the IP of the second mysql Real Server, sql2.example.com.
+*   The load balancers and mysql servers must be on the same network
+
+segment, have the same netmask and gateway and be able to receive the same broadcasts.
+
+*   sql1 and lb1 are the first mysql and load balancer servers, respectively.
+*   sql2 and lb2 are the second mysql and load balancer servers, respectively.
+*   10.0.0.1 is the IP of the primary load balancer, lb1.example.com.
+*   10.0.0.2 is the IP of the secondary load balancer, lb2.example.com.
+*   10.0.0.3 is the IP of the VIP for the mysql server, sql.example.com.
+*   10.0.0.4 is the IP of the first mysql Real Server, sql1.example.com.
+*   10.0.0.5 is the IP of the second mysql Real Server, sql2.example.com.
 
 ## 1. VM Deployment
 
