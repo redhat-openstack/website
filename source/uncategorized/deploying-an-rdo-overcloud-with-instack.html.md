@@ -61,18 +61,6 @@ If you want to deploy more or fewer compute, block storage or object storage nod
 
 After a successful deployment, you should see "Overcloud Deployed" in the standard output of the terminal. Next steps: [ Testing an RDO Overcloud with Instack ](Testing an RDO Overcloud with Instack)
 
-## Deploying the Overcloud
-
-      Deploy the overcloud using provided  `[`Heat`](https://wiki.openstack.org/wiki/Heat)` templates or the `[`Tuskar`](https://wiki.openstack.org/wiki/TripleO/Tuskar)` CLI . Run one of the following examples.
-
-       # heat
-        instack-deploy-overcloud
-
-       #tuskar
-        instack-deploy-overcloud-tuskarcli
-
-After a successful deployment, you should see "Overcloud Deployed" in the standard output of the terminal. Next steps: [ Testing an RDO Overcloud with Instack ](Testing an RDO Overcloud with Instack)
-
 ### Deleting an Overcloud
 
 If you want to delete an overcloud and reset the environment to a state where you can deploy another overcloud, download the instack-delete-overcloud\* scripts from the github repository at <https://github.com/agroup/instack-undercloud/tree/master/scripts> . Run one of the following examples that matches how you deployed the overcloud.
