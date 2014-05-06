@@ -10,7 +10,7 @@ wiki_last_updated: 2014-11-17
 
 [ ← Deploying RDO using Instack](Deploying RDO using Instack)
 
-Now that you have a working undercloud, let's deploy an overcloud. Note that deploy-overcloud can be configured for individual environments via environment variables. The variables you can set are documented below before the calls to the script. For their default values, see the deploy-overcloud script itself.
+Now that you have a working undercloud, let's deploy an overcloud. Note that deploy-overcloud can be configured for individual environments via environment variables. The variables you can set are documented in the [Instack FAQ](http://openstack.redhat.com/Instack_FAQ#Are_there_any_example_rc_files_for_Overcloud_deployment.3F). For their default values, see the instack-deploy-overcloud\* scripts.
 
 ## Preparing for the Overcloud
 
