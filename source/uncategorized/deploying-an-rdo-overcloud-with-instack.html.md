@@ -34,22 +34,7 @@ If you want to deploy the Overcloud via the UI you will need to setup an ssh tun
 
 #### Command Line Deployment
 
-1. Create a deploy-overcloudrc script to set variable values you'll need to deploy the overcloud. Note that the variables must be exported so that their values are picked up by instack-deploy-overcloud. Example rc files containing example values for above variables can be found in [Instack FAQ](http://openstack.redhat.com/Instack_FAQ). Most of the example values will work as-is if you've been using the defaults up until now, but the MACS value will most likely need to be altered to match your environment.
-
-       # CPU: number of cpus on baremetal nodes
-       # MEM: amount of ram on baremetal nodes, in MB
-       # DISK: amount of disk on baremetal nodes, in GB
-       # ARCH: architecture of baremetal nodes, amd64 or i386
-       # MACS: list of MAC addresses of baremetal nodes
-       # PM_IPS: list of Power Management IP addresses
-       # PM_USERS: list of Power Management Users
-       # PM_PASSWORDS: list of Power Management Passwords
-       # NeutronPublicInterface: Overcloud management interface name
-       # OVERCLOUD_LIBVIRT_TYPE: Overcloud libvirt type, qemu or kvm
-       # NETWORK_CIDR: neutron network cidr
-       # FLOATING_IP_START: floating ip allocation start
-       # FLOATING_IP_END: floating ip allocation end
-       # FLOATING_IP_CIDR: floating ip network cidr
+1. Create a deploy-overcloudrc script to set variable values you'll need to deploy the overcloud. Note that the variables must be exported so that their values are picked up by instack-deploy-overcloud. Example rc files containing example values for above variables can be found in the [Instack FAQ](http://openstack.redhat.com/Instack_FAQ#Are_there_any_example_rc_files_for_Overcloud_deployment.3F). Most of the example values will work as-is if you've been using the defaults up until now, but the MACS value will most likely need to be altered to match your environment.
 
 ### Scaling
 
