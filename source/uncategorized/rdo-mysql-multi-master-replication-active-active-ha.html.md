@@ -12,9 +12,9 @@ MariaDB+Galera, pacemaker, and haproxy are the new hotness, no doubt about it. B
 
 There are 3 tasks to accomplish:
 
-       1 - deploy RHEL6x VMs to host the load balancers and sql servers
-       2 - deploy multi-master replication mysql database system
-       3 - deploy piranha load balancer using Direct Routing
+      1 - deploy RHEL6x VMs to host the load balancers and sql servers
+      2 - deploy multi-master replication mysql database system
+      3 - deploy piranha load balancer using Direct Routing
 
 **Conventions used:** The load balancers and mysql servers must be on the same network segment, have the same netmask and gateway and be able to receive the same broadcasts.
 
