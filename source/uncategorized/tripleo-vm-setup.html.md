@@ -8,6 +8,8 @@ wiki_last_updated: 2015-05-05
 
 # TripleO VM Setup
 
+**NOTE:** The instructions in this page, while still expected to work, are outdated. There are updated instructions at <http://openstack.redhat.com/Deploying_RDO_using_Instack>. The updated instructions work on both baremetal and virtual environments and are based on RDO Icehouse packages.
+
 ## Background
 
 The steps in this setup are a way of trying out an OpenStack deployment using TripleO. TripleO is the OpenStack Deployment program whose goal is to be able to deploy OpenStack using OpenStack wherever possible. Using baremetal provisioning from Nova, orchestration from Heat, and other OpenStack projects, you can deploy your cloud.
