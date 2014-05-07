@@ -31,10 +31,12 @@ If you want to deviate from the tutorial or increase the scaling of one or more 
 
 ## Preparing the Host Machine
 
-The user performing all of the installation steps on the virt host needs to have password-less sudo enabled. **This step is NOT optional, you must create an additional user. Do not run the rest of the steps as root.**
+1. Make sure sshd service is installed and running.
 
-       useradd stack
-       passwd stack  # specify a password
+2. The user performing all of the installation steps on the virt host needs to have password-less sudo enabled. **This step is NOT optional, you must create an additional user. Do not run the rest of the steps as root.**
+
+       sudo useradd stack
+       sudo passwd stack  # specify a password
        echo "stack ALL=(root) NOPASSWD:ALL" | sudo tee -a /etc/sudoers.d/stack
        sudo chmod 0440 /etc/sudoers.d/stack
 
