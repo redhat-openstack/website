@@ -27,7 +27,7 @@ To verify this worked just run "ssh -i virtual-power-key stack@192.168.122.1" fr
 
 ## Installing the Undercloud with Instack
 
-1.  Make sure you are logged in, as a non-root user, to the node you want to install the undercloud on. For a virt setup this will be a VM called "instack", for a bare metal setup this will be the host you selected while preparing the environment.
+1.  Make sure you are logged in, as a non-root user e.g. stack, to the node you want to install the undercloud on. For a virt setup this will be a VM called "instack", for a bare metal setup this will be the host you selected while preparing the environment.
 2.  Enable the RDO icehouse repository
         sudo yum install -y http://rdo.fedorapeople.org/openstack-icehouse/rdo-release-icehouse.rpm
 
