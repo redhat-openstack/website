@@ -10,7 +10,11 @@ wiki_last_updated: 2014-10-27
 
 [ ← Deploying RDO using Instack](Deploying RDO using Instack)
 
-Run the `instack-test-overcloud` script to launch a Fedora image on the overcloud and wait until it pings successfully
+1. While logged into the undercloud node export the required variables into your shell:
+
+      command $(sudo cat /root/stackrc | xargs)
+
+2. Run the `instack-test-overcloud` script to launch a Fedora image on the overcloud and wait until it pings successfully
 
     instack-test-overcloud
 
