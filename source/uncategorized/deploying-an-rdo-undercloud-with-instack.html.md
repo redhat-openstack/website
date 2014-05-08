@@ -23,6 +23,8 @@ The Undercloud image on the instack virtual machine is a minimal install of Fedo
         ssh-keygen -t rsa -N '' -C virtual-power-key -f virtual-power-key
         ssh-copy-id -i virtual-power-key.pub stack@192.168.122.1
 
+To verify this worked just run "ssh -i virtual-power-key stack@192.168.122.1" from the instack virtual machine and you should be logged back into the virt host without receiving a password prompt.
+
 ## Installing the Undercloud with Instack
 
 1.  Make sure you are logged in, as a non-root user, to the node you want to install the undercloud on. For a virt setup this will be a VM called "instack", for a bare metal setup this will be the host you selected while preparing the environment.
