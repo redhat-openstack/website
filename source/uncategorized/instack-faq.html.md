@@ -90,7 +90,13 @@ Descriptions of the variables above
 
 ## How do I delete the Overcloud?
 
-If you want to delete an overcloud and reset the environment to a state where you can deploy another overcloud, download the instack-delete-overcloud\* scripts from the github repository at <https://github.com/agroup/instack-undercloud/tree/master/scripts> . Run one of the following examples that matches how you deployed the overcloud.
+If you want to delete an overcloud and reset the environment to a state where you can deploy another overcloud, download the instack-delete-overcloud\* scripts from the github repository at <https://github.com/agroup/instack-undercloud/tree/master/scripts> . Then follow these steps:
+
+1. While logged into the undercloud node export the required variables into your shell:
+
+      command $(sudo cat /root/stackrc | xargs)
+
+2. Run one of the following examples that matches how you deployed the overcloud.
 
        #heat
        ./instack-delete-overcloud
