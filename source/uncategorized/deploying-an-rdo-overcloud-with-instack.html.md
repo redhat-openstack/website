@@ -48,7 +48,6 @@ Once you have logged into the Web UI use [this guide](https://wiki.openstack.org
 1. Export the required variables, including the rc file you just created:
 
       source deploy-overcloudrc
-      export $(sudo cat /root/tripleo-undercloud-passwords | xargs)
       command $(sudo cat /root/stackrc | xargs)
 
 2. Choose how you want to deploy the Overcloud. By calling scripts which **either** use [Heat](https://wiki.openstack.org/wiki/Heat) directly **or** which call the [Tuskar](https://wiki.openstack.org/wiki/TripleO/Tuskar) CLI :
