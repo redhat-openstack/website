@@ -29,7 +29,7 @@ If the undercloud machine was installed using LVM, when deploying overcloud node
 
 The following are example rc files to source before deploying the overcloud. Descriptions of the variables are below
 
-Example rc file for deploying the overcloud on a virtual machine setup:
+Example deploy-overcloudrc file for deploying the overcloud on a virtual machine setup:
 
     #!/bin/bash
     export CPU=1
@@ -47,7 +47,7 @@ Example rc file for deploying the overcloud on a virtual machine setup:
     export BLOCKSTORAGESCALE=1
     export SWIFTSTORAGESCALE=1
 
-Example rc file for deploying the overcloud on a bare metal machine setup:
+Example deploy-overcloudrc file for deploying the overcloud on a bare metal machine setup:
 
     #!/bin/bash
     export CPU=1
