@@ -106,12 +106,13 @@ If you want to delete an overcloud and reset the environment to a state where yo
 
 Once the command has completed successfully you are now ready to run instack-prepare-for-overcloud again.
 
-## How do I view the Undercloud Dashboard?
+## How do I view the Undercloud Dashboard when using a remote virt host?
 
-To access Horizon on the undercloud you need to create an ssh tunnel from the virt host to the instack virtual machine e.g.
+If you're virt host is a remote system, and not the same system that you're running your web browser from, you can create an ssh tunnel from the virt host to the instack virtual machine for connectivity:
 
+       sudo iptables -I INPUT -p tcp --dport 8080 -j ACCEPT
       `  ssh -g -N -L 8080:192.168.122.55:80 `hostname` `
 
-where 192.168.122.55 is IP address of the instack virtual machine, you will need to update appropriately for your environment. With the ssh tunnel created you can launch a browser on the virt host and go to <http://localhost:8080/dashboard> and the dashboard should appear. If you need to connect remotely through the virt host, you can chain ssh tunnels as needed. Note: Depending on your virt host configuration, you may need to open up the correct port(s) in iptables.
+where 192.168.122.55 is the IP address of the instack virtual machine. Update appropriately for your environment. With the ssh tunnel created you can launch a browser on a system with connectivity to the virt host and go to <http://><virt-host>:8080/dashboard and the dashboard should appear. If you need to connect remotely through the virt host, you can chain ssh tunnels as needed.
 
 When logging into the dashboard the default user and password are found in the /root/stackrc file on the instack virtual machine, OS_USERNAME and OS_PASSWORD. You can read more about using the dashboard in the User Guide.
