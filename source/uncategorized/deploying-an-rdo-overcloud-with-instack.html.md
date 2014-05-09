@@ -20,7 +20,14 @@ Now that you have a working undercloud, let's deploy an overcloud. Note that dep
 
 2. Run the prepare-for-overcloud script to get setup. This script will download approximately 2.5GB of images from [here](http://repos.fedorapeople.org/repos/openstack-m/tripleo-images-rdo-icehouse/). It will avoid re-downloading images if they already exist in the current working directory. If you want to force a redownload of the images, delete them first.
 
-       instack-prepare-for-overcloud
+      instack-prepare-for-overcloud
+
+3. Create a deploy-overcloudrc script to set variable values you'll need to deploy the overcloud. Example rc files containing values for the required variables can be found in the [Instack FAQ](http://openstack.redhat.com/Instack_FAQ#Are_there_any_example_rc_files_for_Overcloud_deployment.3F). Note that the variables must be exported so that their values are picked up by instack-deploy-overcloud. Most of the example values will work as-is if you've been using the defaults up until now, except for the following:
+
+*   In a virtualized deployment the MACS variable will need to be set to the values you gathered during the steps to [setup your virtual machines](http://openstack.redhat.com/Deploying_RDO_to_a_Virtual_Machine_Environment_using_RDO_via_Instack#Virtual_Machine_Creation).
+*   Similarly in a bare metal deployment the MACS variable will need to be set to the MAC address of the NIC that will PXE boot, for each host you want to deploy the overcloud to. The PM_\* variables need to be set with corresponding IPMI information. All these values should have been collected during the steps to [setup the bare metal environment](http://openstack.redhat.com/Deploying_RDO_on_a_Baremetal_Environment_using_Instack#Networking).
+
+If you want to deploy more or fewer compute, block storage or object storage nodes in your overcloud then update the appropriate \*SCALE variable in the rc file. If you increase these numbers you will need to make sure that sufficient virtual machines or bare metal hosts are available.
 
 ## Deploying the Overcloud
 
