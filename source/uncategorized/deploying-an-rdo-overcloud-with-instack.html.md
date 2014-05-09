@@ -22,8 +22,6 @@ Now that you have a working undercloud, let's deploy an overcloud. Note that dep
 
        instack-prepare-for-overcloud
 
-3. If you're using an all VM setup, make sure you have copied the public key portion of the virtual power ssh key into the virtual power user's ~/.ssh/authorized_keys on the virtual machine host.
-
 ## Deploying the Overcloud
 
 You can deploy the overcloud **either** through the Horizon web interface using the tuskar plugin **or** via the command line
