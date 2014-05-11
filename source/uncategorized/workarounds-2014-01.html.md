@@ -12,6 +12,30 @@ This page documents workarounds that may be required for installing RDO Icehouse
 
 ## Active
 
+<https://bugs.launchpad.net/openstack-manuals/+bug/1275785>
+
+### "Member" role is not added at install time
+
+*   **Bug:** [1](https://bugs.launchpad.net/openstack-manuals/+bug/1275785)
+*   **Affects:** F20 at least
+
+##### symptoms
+
+1. Fresh install of F20 2. run packstack --gen-answer-file=ans.txt, edit file, then run packstack --answer-file=ans.txt 3. Log into dashboard, Go to Identity Panel and try to create new Project 4. It fails with "Error: An error occurred. Please try again later."
+
+##### workaround
+
+See the bug above, and then run create the role manually on the command line:
+
+1.  source ~/keystonerc_admin
+2.  keystone role-create --name=Member
+
+Now you can create a new project and users.
+
+##### Notes
+
+The bug is a duplicate of a documentation bug [2](https://bugs.launchpad.net/openstack-manuals/+bug/1266391) that probably will end up getting fixed in packstack.
+
 ### Failed to setup glance or heat databases due to utf-8 issue
 
 *   **Bug:** [1080355](https://bugzilla.redhat.com/show_bug.cgi?id=1080355)
