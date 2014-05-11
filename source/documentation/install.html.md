@@ -37,6 +37,7 @@ While the [Quickstart](Quickstart) is sufficient for an initial test deployment,
 *   [Virtualized Foreman dev setup](Virtualized_Foreman_dev_setup)
 *   [ Deploying RDO using Instack](Deploying RDO using Instack)
 *   [Installing on Fedora 20 with an existing external network](Fedora_20_with_existing_network)
+*   [Creating CentOS and Fedora images ready for Openstack](Creating CentOS and Fedora images ready for Openstack)
 
 </div>
 </div>
