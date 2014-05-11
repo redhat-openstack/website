@@ -12,8 +12,6 @@ This page documents workarounds that may be required for installing RDO Icehouse
 
 ## Active
 
-<https://bugs.launchpad.net/openstack-manuals/+bug/1275785>
-
 ### "Member" role is not added at install time
 
 *   **Bug:** [1](https://bugs.launchpad.net/openstack-manuals/+bug/1275785)
