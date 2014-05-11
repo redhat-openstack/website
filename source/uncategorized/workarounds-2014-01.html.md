@@ -19,7 +19,10 @@ This page documents workarounds that may be required for installing RDO Icehouse
 
 ##### symptoms
 
-1. Fresh install of F20 2. run packstack --gen-answer-file=ans.txt, edit file, then run packstack --answer-file=ans.txt 3. Log into dashboard, Go to Identity Panel and try to create new Project 4. It fails with "Error: An error occurred. Please try again later."
+1.  Fresh install of F20
+2.  run packstack --gen-answer-file=ans.txt, edit file, then run packstack --answer-file=ans.txt
+3.  Log into dashboard, Go to Identity Panel and try to create new Project
+4.  It fails with "Error: An error occurred. Please try again later."
 
 ##### workaround
 
