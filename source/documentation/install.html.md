@@ -21,6 +21,7 @@ While the [Quickstart](Quickstart) is sufficient for an initial test deployment,
 *   [ Multinode Havana using GRE](GettingStartedHavana_w_GRE)
 *   [ Configuring Horizon to use SSL](HorizonSSL)
 *   [ Securing services](Securing_services)
+*   [Setting-up-High-Availability](Setting-up-High-Availability)
 *   [ HA and LB Control Services ](RDO_HighlyAvailable_and_LoadBalanced_Control_Services)
 *   [ Getting started with Ceilometer](CeilometerQuickStart)
 *   [ Launching your first VM ](Running an instance)
