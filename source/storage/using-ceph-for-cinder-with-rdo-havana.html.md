@@ -133,9 +133,9 @@ See [Configure OpenStack to Use Ceph](http://ceph.com/docs/master/rbd/rbd-openst
 
 ## Configuring Glance
 
-On the RDO node, configure the Glance API configuration file.
+On the RDO node, configure the Glance API configuration file. The default configuration file has commented out sections for Ceph, which you can uncomment and configure.
 
-1. As root, edit the `/etc/glance/glance-api.conf` file.
+1. As `root`, edit the `/etc/glance/glance-api.conf` file.
 
 2. Change `default_store=file` to `default_store=rbd`.
 
@@ -149,11 +149,22 @@ On the RDO node, configure the Glance API configuration file.
 
 7. Enable `rbd_store_chunk_size` and set the value to `8`.
 
-8. Restart glance.
+When you are done, the configuration (without comments) should look something like this:
+
+         default_store=rbd
+         rbd_store_user=images
+         rbd_store_pool=images
+         show_image_direct_url=True
+         rbd_store_ceph_conf=/etc/ceph/ceph.conf
+         rbd_store_chunk_size=8
+
+Restart glance to ensure that the configuration changes take effect.
+
+         sudo service openstack-glance-api restart
 
 ## Configuring Cinder
 
-On the RDO node, configure the Cinder configuration file.
+On the RDO node, configure the Cinder configuration file. The default configuration file has commented out sections for Ceph, which you can uncomment and configure.
 
 1. As root, edit the `/etc/cinder/cinder.conf` file.
 
@@ -174,5 +185,77 @@ On the RDO node, configure the Cinder configuration file.
 8. Enable `rbd_max_clone_depth` and set the value to `5`.
 
 9. Enable `glance_api_version` and set it to `2`.
+
+When you are done, the changes to the configuration file (without comments) should look something like this:
+
+         volume_driver=cinder.volume.drivers.rbd.RBDDriver
+         rbd_user=volumes
+         rbd_secret_uuid=457eb676-33da-42ec-9a8c-9293d545c337
+         rbd_pool=volumes
+         rbd_ceph_conf=/etc/ceph/ceph.conf
+         rbd_flatten_volume_from_snapshot=false
+         rbd_max_clone_depth=5
+         glance_api_version=2
+
+Restart Cinder to ensure that the configuration changes take effect.
+
+         sudo service openstack-cinder-volume restart
+
+## Configure Cinder Backup
+
+On the RDO node, continue to configure the Cinder configuration file. The default configuration file has commented out sections for Ceph backup, which you can uncomment and configure.
+
+1. As root, edit the `/etc/cinder/cinder.conf` file.
+
+2. Add the backup driver.
+
+         backup_driver=cinder.backup.drivers.ceph
+
+3. Enable `backup_ceph_conf` and use `/etc/ceph/ceph.conf` as the Ceph configuration file.
+
+4. Enable `backup_ceph_user` and specify `backups` as the user.
+
+5. Enable `backup_ceph_pool` and specify `backups` as the pool.
+
+6. Enable `backup_ceph_chunk_size` and leave the default value unchanged.
+
+7. Enable `backup_ceph_stripe_unit` and leave the default value unchanged.
+
+8. Enable `backup_ceph_stripe_count` and leave the default value unchanged.
+
+9. Enable `restore_discard_excess_bytes` and set the value to `true`.
+
+When you are done, the changes to the configuration file (without comments) should look something like this:
+
+         backup_driver=cinder.backup.drivers.ceph
+         backup_ceph_conf=/etc/ceph/ceph.conf
+         backup_ceph_user=cinder-backup
+         backup_ceph_pool=backups
+         backup_ceph_chunk_size=134217728
+         backup_ceph_stripe_unit=0
+         backup_ceph_stripe_count=0
+         restore_discard_excess_bytes=true
+
+Restart Cinder Backup to ensure that the configuration changes take effect.
+
+         sudo service openstack-cinder-backup restart
+
+## Configuring Nova
+
+In order to boot all the virtual machines directly into Ceph Nova must be configured. On every Compute nodes, edit `/etc/nova/nova.conf` and add the following under the `[libvirt]` section:
+
+         libvirt_images_type=rbd
+         libvirt_images_rbd_pool=volumes
+         libvirt_images_rbd_ceph_conf=/etc/ceph/ceph.conf
+         libvirt_inject_password=false
+         libvirt_inject_key=false
+         libvirt_inject_partition=-2
+
+         rbd_user=volumes
+         rbd_secret_uuid={uuid-from-libvirt}
+
+Restart Nova to ensure that the configuration changes take effect.
+
+         sudo service openstack-nova-compute restart
 
 <Category:Storage>
