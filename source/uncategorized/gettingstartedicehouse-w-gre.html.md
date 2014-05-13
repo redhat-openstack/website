@@ -13,7 +13,7 @@ wiki_last_updated: 2014-05-13
 Everything that will be presented in the demo can be followed along with by using the [Quickstart](Quickstart) instalation.
  This is not the exact same environment that will be presented from, but it is quicker and easier to install.
 
-If you would like to match the installation used for the presentation you'll need two virtual machines running a RedHat compatible install of linux are needed, RHEL, Fedora, CentOS, Scientific are a few options to meet this requirement. The workshop at Summit will use Fedora 20
+If you would like to match the installation used for the presentation you'll need two virtual machines running a RedHat compatible install of linux, RHEL, Fedora, CentOS, Scientific are a few options to meet this requirement. The workshop at Summit will use Fedora 20
 * Each VM should have 2 network interfaces each configured with static IP addresses. For this installation eth0 will be "public traffic" and eth1 will be "private traffic". The following IP addresses will be used:
 -- control host eth0 192.168.122.2, eth1 192.168.123.2
 -- compute host eth0 192.168.122.3, eth1 192.168.123.3
