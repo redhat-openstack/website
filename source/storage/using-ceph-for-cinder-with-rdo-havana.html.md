@@ -16,7 +16,7 @@ Ceph® is an open-source project capable of providing both object and block stor
 
 ## Configure an OS and Host
 
-Configure a system with Red Hat Enterprise Linux (RHEL) 6.4, or the equivalent version of one of the RHEL-based Linux distributions such as CentOS 6.4. Ensure the host has network connectivity with a static IP address.
+Configure a system with Red Hat Enterprise Linux (RHEL) 6.5, or the equivalent version of one of the RHEL-based Linux distributions such as CentOS 6.5. Ensure the host has network connectivity with a static IP address.
 
 ## Set Up a Ceph Storage Cluster
 
