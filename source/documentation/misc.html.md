@@ -24,6 +24,7 @@ wiki_last_updated: 2015-08-07
 *   [GlusterFS with Keystone Quickstart](http://www.gluster.org/community/documentation/index.php/GlusterFS_Keystone_Quickstart)
 *   [RDO videos](RDO videos)
 *   [Testing IceHouse using Tempest](Testing IceHouse using Tempest)
+*   [Setting-up-High-Availability](Setting-up-High-Availability)
 
 </div>
 </div>
