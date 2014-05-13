@@ -258,4 +258,20 @@ Restart Nova to ensure that the configuration changes take effect.
 
          sudo service openstack-nova-compute restart
 
+## Creating Your First Image
+
+OpenStack provides a default image using CirrOS. To create your own for use with Ceph, follow these steps:
+
+1. Download [CirrOS](http://download.cirros-cloud.net/0.3.2/cirros-0.3.2-x86_64-disk.img)
+
+2. Convert the image from Qcow2 to Raw using `qemu-img` on the CLI.
+
+         qemu-img convert -f qcow2 -O raw cirros-0.3.2-x86_64-disk.img cirros-0.3.2-x86_64-disk.raw
+
+3. Go to the OpenStack Dashboard and login.
+
+4. Go to the **Compute->Images** and select **Create an Instance**. Change **Image Source** to `Image File`. Then, click **Choose File**, navigate to the raw image you just created and select **Open**. Change **Format** to `Raw` and fill out the remaining fields. Then, click **Create Image** in the bottom right of the dialog.
+
+5. Your new image will appear after you upload it.
+
 <Category:Storage>
