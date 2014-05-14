@@ -40,7 +40,7 @@ The odl.sh script below accomplishes a few things:
 
 Copy the odl.sh script and run it as:
 
-      sudo ./odl.sh --local_ip 192.168.120.31 --bridge_mappings physnet1:eth1,physnet3:eth3 --odl_ip 192.168.120.1
+      sudo ./odl.sh --local_ip 192.168.120.31 --provider_mappings physnet1:eth1,physnet3:eth3 --odl_ip 192.168.120.1
 
 ## Start RDO
 
