@@ -35,7 +35,7 @@ The odl.sh script below accomplishes a few things:
 
 1.  The set-manager instructs ovsdb to connect to OpenDaylight as a manager.
 2.  Configuration values are added to the other_config field in the Open_vSwitch table to inform OpenDaylight of information it needs to provision the bridges:
-    1.  bridge_mappings to detail how the physical networks are mapped to the provider networks. This is only needed for vlan isolation.
+    1.  provider_mappings to detail how the physical networks are mapped to the provider networks. This is only needed for vlan isolation.
     2.  local_ip to indicate the tunnel endpoint address which is needed to build the tunnels.
 
 Copy the odl.sh script and run it as:
