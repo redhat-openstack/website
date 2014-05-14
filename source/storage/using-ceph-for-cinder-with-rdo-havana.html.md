@@ -274,4 +274,22 @@ OpenStack provides a default image using CirrOS. To create your own for use with
 
 5. Your new image will appear after you upload it.
 
+6. Once the image appears in the UI, it should be stored in the Ceph pool for images. To see if there is data in the `images` pool, execute the following on the command line.
+
+         rados -p images ls
+
+## Creating Your First Volume
+
+Once you have created an image in OpenStack, you can view it under **Compute->Images**. To create a volume:
+
+1. Navigate to the **Actions** column and the row representing your image.
+
+2. Select **More**.
+
+3. Select **Create Volume**.
+
+OpenStack will create a volume using your new image. Once OpenStack and Ceph complete creating your volume, you can see it under **Compute->Volumes**. To see if there is data in the `volumes` pool, execute the following on the command line.
+
+         rados -p volumes ls
+
 <Category:Storage>
