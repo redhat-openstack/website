@@ -35,12 +35,14 @@ The odl.sh script below accomplishes a few things:
 
 1.  The set-manager instructs ovsdb to connect to OpenDaylight as a manager.
 2.  Configuration values are added to the other_config field in the Open_vSwitch table to inform OpenDaylight of information it needs to provision the bridges:
-    1.  provider_mappings to detail how the physical networks are mapped to the provider networks. This is only needed for vlan isolation.
-    2.  local_ip to indicate the tunnel endpoint address which is needed to build the tunnels.
+    1.  provider_mappings to detail how the physical networks are mapped to the provider networks. This is only needed for vlan isolation. This would look similar to the bridge_mappings, i.e. bridge_mappings=physnet1:br-eth1 where the mapping of the physical network to the bridge is specified.
+    2.  local_ip to indicate the tunnel endpoint address which is needed to build the tunnels. This address is the address of the compute node and is reachable on the data network.
 
 Copy the odl.sh script and run it as:
 
       sudo ./odl.sh --local_ip 192.168.120.31 --provider_mappings physnet1:eth1,physnet3:eth3 --odl_ip 192.168.120.1
+
+Modify the values to match your configuration. For example, --provider_mappings is not needed if vlan tenant isolation is not used.
 
 ## Start RDO
 
