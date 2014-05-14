@@ -184,8 +184,6 @@ On the RDO node, configure the Cinder configuration file. The default configurat
 
 8. Enable `rbd_max_clone_depth` and set the value to `5`.
 
-9. Enable `glance_api_version` and set it to `2`.
-
 When you are done, the changes to the configuration file (without comments) should look something like this:
 
          volume_driver=cinder.volume.drivers.rbd.RBDDriver
@@ -195,7 +193,6 @@ When you are done, the changes to the configuration file (without comments) shou
          rbd_ceph_conf=/etc/ceph/ceph.conf
          rbd_flatten_volume_from_snapshot=false
          rbd_max_clone_depth=5
-         glance_api_version=2
 
 Restart Cinder to ensure that the configuration changes take effect.
 
