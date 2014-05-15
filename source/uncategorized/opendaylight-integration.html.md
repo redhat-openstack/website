@@ -94,7 +94,7 @@ If you see the following error with Havana try the following patch to fix the is
     2014-04-25 14:47:07.468 3875 TRACE neutron.plugins.ml2.managers
     2014-04-25 14:47:07.468 3875 WARNING neutron.plugins.ml2.managers [-] Failed to bind port ecbc56b4-57be-4db8-9522-e1b3504005ff on host pcloud13.perf.lab.eng.bos.redhat.com
 
-Try this patch to `neutron/neutron/plugins/ml2/drivers/mechanism_odl.py`:
+Try this patch to `neutron/neutron/plugins/ml2/drivers/mechanism_odl.py`. The patch could be different based on what source code version you have. You need to find where the TYPE_xxx constants are defined. Something like `find . -name "*.py" | xargs grep "TYPE_LOCAL ="` would work. Then use that path in the patch below.
 
     from neutron.plugins.common import constants
     #from neutron.openstack.common import constants
