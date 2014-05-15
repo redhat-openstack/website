@@ -80,6 +80,27 @@ And add this line in OpenDaylight driver to change constants import :
 
 ------------------------------------------------------------------------
 
+If you see the following error with Havana try the following patch to fix the issue.
+
+    2014-04-25 14:47:07.468 3875 ERROR neutron.plugins.ml2.managers [-] Mechanism driver opendaylight failed in bind_port
+    2014-04-25 14:47:07.468 3875 TRACE neutron.plugins.ml2.managers Traceback (most recent call last):
+    2014-04-25 14:47:07.468 3875 TRACE neutron.plugins.ml2.managers File "/usr/lib/python2.6/site-packages/neutron/plugins/ml2/managers.py", line 443, in bind_port
+    2014-04-25 14:47:07.468 3875 TRACE neutron.plugins.ml2.managers driver.obj.bind_port(context)
+    2014-04-25 14:47:07.468 3875 TRACE neutron.plugins.ml2.managers File "/usr/lib/python2.6/site-packages/neutron/plugins/ml2/drivers/mechanism_odl.py", line 378, in bind_port
+    2014-04-25 14:47:07.468 3875 TRACE neutron.plugins.ml2.managers if self.check_segment(segment):
+    2014-04-25 14:47:07.468 3875 TRACE neutron.plugins.ml2.managers File "/usr/lib/python2.6/site-packages/neutron/plugins/ml2/drivers/mechanism_odl.py", line 413, in check_segment
+    2014-04-25 14:47:07.468 3875 TRACE neutron.plugins.ml2.managers if network_type in [constants.TYPE_LOCAL, constants.TYPE_FLAT,
+    2014-04-25 14:47:07.468 3875 TRACE neutron.plugins.ml2.managers AttributeError: 'module' object has no attribute 'TYPE_LOCAL'
+    2014-04-25 14:47:07.468 3875 TRACE neutron.plugins.ml2.managers
+    2014-04-25 14:47:07.468 3875 WARNING neutron.plugins.ml2.managers [-] Failed to bind port ecbc56b4-57be-4db8-9522-e1b3504005ff on host pcloud13.perf.lab.eng.bos.redhat.com
+
+Try this patch to `neutron/neutron/plugins/ml2/drivers/mechanism_odl.py`:
+
+    from neutron.plugins.common import constants
+    #from neutron.openstack.common import constants
+
+------------------------------------------------------------------------
+
 Modify /etc/neutron/plugins/ml2/ml2_conf.ini in Openstack control node:
 
       crudini --set /etc/neutron/plugins/ml2/ml2_conf.ini ml2 mechanism_drivers opendaylight 
