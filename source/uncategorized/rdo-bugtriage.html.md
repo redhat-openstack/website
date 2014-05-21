@@ -20,7 +20,9 @@ We generally try to conduct a public bug triage every third Tuesday of the month
 
 ## Bugzilla workflow
 
-### Initial Triage (NEW) -- FIXME
+### Initial Triage
+
+Since RDO (say a mid-stream? ) is akin to what Fedora is to RHEL, we try to follow Fedora's bug triage method (see *References* section below) while closely monitoring upstream OpenStack issue tracker (details below in *Upstream OpenStack bug triage* section.)
 
 If a bug/RFE has already been fixed in the 'current' current stable RDO release (Say Havana), then
 
