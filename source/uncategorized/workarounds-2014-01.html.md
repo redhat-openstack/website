@@ -109,6 +109,11 @@ Ensure that mariadb-server can restart successfully If you hit this during a pac
 
 An alternative packstack workaround for this issue is to change /usr/lib/python2.7/site-packages/packstack/puppet/modules/mysql/manifests/params.pp to include "$service_name = 'mariadb'" in the Fedora >= 19 section
 
+If you do this and get a message that mariadb-galera-server conflicts with mariadb-server remove mariadb-server and install mariadb-galera-server instead.
+
+      yum remove -y mariadb-server
+      yum install -y mariadb-galera-server
+
 ### Failed to start mongodb
 
 *   **Bug:** [1028690](https://bugzilla.redhat.com/show_bug.cgi?id=1028690)
