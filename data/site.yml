@@ -22,6 +22,10 @@ logo: rdo-logo-white.png
 #copyright: "&copy; 2013 YOUR_NAME_HERE"
 
 
+# Location where this repo exists on github
+github: redhat-openstack/website
+
+
 # Optional footer links
 footer_links:
   "<strong>RDO</strong> is a <strong>Red Hat</strong>-sponsored community project":
