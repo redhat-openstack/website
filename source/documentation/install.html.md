@@ -18,7 +18,7 @@ While the [Quickstart](Quickstart) is sufficient for an initial test deployment,
 
 *   [ Quick start guide (RDO Havana)](Quickstart)
 *   [ Deploying RDO using Foreman](Deploying RDO using Foreman)
-*   [ Multinode Havana using GRE](GettingStartedHavana_w_GRE)
+*   [ Multinode Icehouse using GRE](GettingStartedIcehouse_w_GRE)
 *   [ Configuring Horizon to use SSL](HorizonSSL)
 *   [ Securing services](Securing_services)
 *   [Setting up high availability](Setting-up-High-Availability)
