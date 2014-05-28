@@ -37,7 +37,14 @@ This page has been created to track changes to the underlying systems and the de
 
          neutron quota-update  --tenant-id  $admin  --network 1000 --subnet  1000 --port  5000 --router 1000 --floatingip 1000
 
-         Use jumbo frames for interfaces carrying GRE/VXLAN traffic
+         Use jumbo frames for interfaces carrying GRE/VXLAN traffic:
+         Compute node(s):
+`      echo MTU=`<MTU>` >> /etc/sysconfig/network-scripts/ifcfg-`<interface>
+            nova_device_mtu=`<Guest MTU>` (50b less than tunnel interface) in the nova.conf file 
+         Network node(s):
+`      echo MTU=`<MTU>` >> /etc/sysconfig/network-scripts/ifcfg-`<interface>
+            echo dnsmasq_config_file=/etc/neutron/dnsmasq-neutron.conf >> /etc/neutron/dhcp_agent.ini
+            echo dhcp-option-force=26,`<MTU>` >> /etc/neutron/dnsmasq-neutron.conf
 
 **Compute node**
 
