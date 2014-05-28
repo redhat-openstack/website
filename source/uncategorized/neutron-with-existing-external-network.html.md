@@ -72,3 +72,7 @@ So, if we go this way, then it would make sense for us to add a config option fo
 But, in the end it should be possible to have something like:
 
     packstack --allinone --use-existing-external-net=y --provision-demo-ext-cidr=192.168.122.0/24 --provision-demo-ext-pool=192.168.122.10,192.168.122.40
+
+## See also
+
+Watch this video for a demonstration of how to use DHCP on the bridge, including cloning the MAC address from eth0: <https://www.youtube.com/watch?v=8zFQG5mKwPk>
