@@ -22,7 +22,7 @@ Log in to the Openstack dashboard at <http://CONTROL_NODE/dashboard> - the usern
 
 ### Step 2: Enable SSH on your default security group.
 
-Once logged in to the OpenStack dashboard, click the "Project" tab in the left-side navigation menu, and then click "Access & Security" under the heading "Manage Compute." Under the "Security Groups" heading, click the "Edit Rules" button for the "default" security group. Click the "Add Rule" button, and in the resulting dialog, enter "22" in the "Port" field, and then click the "Add" button.
+Once logged in to the OpenStack dashboard, click the "Project" tab in the left-side navigation menu, and then click "Access & Security" under the heading "Compute." Under the "Security Groups" heading, click the "Edit Rules" button for the "default" security group. Click the "Add Rule" button, and in the resulting dialog, enter "22" in the "Port" field, and then click the "Add" button.
 
 ### Step 3: Create or import a key pair.
 
