@@ -12,7 +12,7 @@ RDO conducts periodic Google Hangouts on a variety of OpenStack-related topics.
 
 ## Upcoming Hangouts
 
-In May we will hear from the TripleO team. Date to be announced soon. And in early June we'll have a hangout about Ceilometer - what's new in Icehouse and what's coming in Juno.
+Hugh Brock will present a hangout on Openstack TripleO on Friday at 1pm Eastern: <https://plus.google.com/events/cp6fpffs4a9maqfn3h92tvvck1o>
 
 ## Past Hangouts
 
