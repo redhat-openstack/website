@@ -34,12 +34,18 @@ Edit answers.txt and set
 
          packstack --answer-file=answers.txt
 
-### Runing tempest with tox
+### Running tempest with tox
 
        pip install tox==1.6.1
        tox -efull -- --concurrency=3
 
-libxslt-devel and libffi-devel might be requered for creating the venv.
+Note: The default concurrency is the number of CPU threads on the test runner machine.
+
+Run all network related test
+
+       tox -eall network
+
+libxslt-devel and libffi-devel might be required for creating the venv.
 
 #### Using tempest with python 2.6
 
@@ -52,12 +58,12 @@ Download the attached patch from <https://code.google.com/p/unittest-ext/issues/
       sudo rm /usr/lib/python2.6/site-packages/discover.pyc
       sudo python -c 'import discover'
 
-#### generating juint file from an existing testropistory
+#### generating junit file from an existing testropistory
 
        pip install junitxml python-subunit
         <./.testrepository/0  subunit-1to2  | subunit2junitxml >results.junit.xml
 
-./.testrepository/0 is the resouts from the first test run, you can convert any resouts to an another supported format
+./.testrepository/0 is the resouts from the first test run, you can convert any results to an another supported format
 
 #### 
 
