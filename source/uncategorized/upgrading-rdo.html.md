@@ -43,7 +43,7 @@ Once you get to this point, you need to upgrade the database schema for every se
 Now that the code and the databases have been upgraded, you can restart the services. Like above, this depends on how you have your services distributed, but this should work for a nova node:
 
       cd /etc/init.d
-      for service in openstack-nova*; do service $service stop; done
+      for service in openstack-nova*; do service $service restart; done
 
 ## Option 2: Service-by-Service Upgrade
 
