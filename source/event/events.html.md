@@ -11,7 +11,7 @@ wiki_last_updated: 2015-08-31
 
 There are lots of events, around the world, where you can hang out with people from the RDO community. Some recent and upcoming events are:
 
-*   [TripleO hangout](Hangouts), June, date to be announced.
+*   [TripleO hangout](Hangouts), Friday, June 6th, 1pm Eastern.
 *   [OpenStack Israel](http://www.openstack-israel.org/), June 2, 2014, Herzliya, Israel
 *   [CentOS Dojo](http://wiki.centos.org/Events/Dojo/Cincinnati2014), Cincinnati, Ohio, USA
 *   [OpenStack Day London](http://www.eventbooking.uk.com/openstack/home.html)
