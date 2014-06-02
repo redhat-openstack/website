@@ -13,8 +13,8 @@ There are lots of events, around the world, where you can hang out with people f
 
 *   [TripleO hangout](Hangouts), Friday, June 6th, 1pm Eastern.
 *   [OpenStack Israel](http://www.openstack-israel.org/), June 2, 2014, Herzliya, Israel
-*   [CentOS Dojo](http://wiki.centos.org/Events/Dojo/Cincinnati2014), Cincinnati, Ohio, USA
-*   [OpenStack Day London](http://www.eventbooking.uk.com/openstack/home.html)
+*   [CentOS Dojo](http://wiki.centos.org/Events/Dojo/Cincinnati2014), June 4, Cincinnati, Ohio, USA
+*   [OpenStack Day UK](http://www.eventbooking.uk.com/openstack/home.html), June 4, London.
 *   [OSCon](http://www.oscon.com/oscon2014), July 20-24, Portland, OR
 *   [LinuxCon/CloudOpen](http://events.linuxfoundation.org/events/linuxcon-north-america), August 20-22, Chicago, IL
 *   [LinuxCon/CloudOpen](http://events.linuxfoundation.org/events/linuxcon-europe), October 13-15, Duseldorf, Germany
