@@ -91,8 +91,4 @@ You should see "Open vSwitch agent" alive on all compute and network nodes, as w
 
 Now you can create any needed networks, subnets, routers, floatingips, ...
 
-## Advanced ML2 Features
-
-Information will be added here describing use of L2 population, Arista, and Cisco mechanism drivers, etc.
-
 <Category:Networking>
