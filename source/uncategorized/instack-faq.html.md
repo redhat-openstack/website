@@ -68,10 +68,10 @@ There are delete scripts included with the instack-undercloud package If you wan
 2. Run one of the following examples that matches how you deployed the overcloud.
 
        #heat
-       ./instack-delete-overcloud
+       instack-delete-overcloud
 
        #tuskar
-       ./instack-delete-overcloud-tuskarcli
+       instack-delete-overcloud-tuskarcli
 
 Once the command has completed successfully you are now ready to run instack-prepare-for-overcloud again.
 
