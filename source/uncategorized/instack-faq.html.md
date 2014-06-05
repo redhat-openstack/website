@@ -59,7 +59,7 @@ Descriptions of the variables in the rc files
 
 ## How do I delete the Overcloud?
 
-If you want to delete an overcloud and reset the environment to a state where you can deploy another overcloud, copy the instack-delete-overcloud\* scripts from the github repository at <https://github.com/agroup/instack-undercloud/tree/master/scripts>, making sure to make the files executable . Then follow these steps:
+There are delete scripts included with the instack-undercloud package If you want to delete an overcloud and reset the environment to a state where you can deploy another overcloud. Then follow these steps:
 
 1. While logged into the undercloud node export the required variables into your shell:
 
