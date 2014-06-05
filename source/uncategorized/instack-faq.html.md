@@ -27,48 +27,17 @@ If the undercloud machine was installed using LVM, when deploying overcloud node
 
 ## Are there any example rc files for Overcloud deployment?
 
-The following are example rc files to source before deploying the overcloud. Descriptions of the variables are below
+Example rc files to source before deploying the overcloud are included as part of the instack-undercloud package. Descriptions of the variables are below
 
 Example deploy-overcloudrc file for deploying the overcloud on a virtual machine setup:
 
-    #!/bin/bash
-    export CPU=1
-    export MEM=2048
-    export DISK=30
-    export ARCH=amd64
-    export NeutronPublicInterface=eth0
-    export OVERCLOUD_LIBVIRT_TYPE=qemu
-    export NETWORK_CIDR=10.0.0.0/8
-    export FLOATING_IP_START=192.0.2.45
-    export FLOATING_IP_END=192.0.2.64
-    export FLOATING_IP_CIDR=192.0.2.0/24
-    export MACS="52:54:00:01:f4:00 52:54:00:01:f4:01 52:54:00:01:f4:02 52:54:00:01:f4:03"
-    export COMPUTESCALE=1
-    export BLOCKSTORAGESCALE=1
-    export SWIFTSTORAGESCALE=1
+    /usr/share/doc/instack-undercloud/deploy-virt-overcloudrc
 
 Example deploy-overcloudrc file for deploying the overcloud on a bare metal machine setup:
 
-    #!/bin/bash
-    export CPU=1
-    export MEM=2048
-    export DISK=30
-    export ARCH=amd64
-    export MACS="52:54:00:01:f4:00 52:54:00:01:f4:01 52:54:00:01:f4:02 52:54:00:01:f4:03"
-    export PM_IPS="10.10.0.01 10.10.0.02 10.10.0.03 10.10.0.04"
-    export PM_USERS="username username username username"
-    export PM_PASSWORDS="password password password password"
-    export NeutronPublicInterface=em2
-    export OVERCLOUD_LIBVIRT_TYPE=kvm
-    export NETWORK_CIDR="10.0.0.0/8"
-    export FLOATING_IP_START="172.17.0.45"
-    export FLOATING_IP_END="172.17.0.64"
-    export FLOATING_IP_CIDR="172.17.0.0/16"
-    export COMPUTESCALE=1
-    export BLOCKSTORAGESCALE=1
-    export SWIFTSTORAGESCALE=1
+    /usr/share/doc/instack-undercloud/deploy-baremetal-overcloudrc
 
-Descriptions of the variables above
+Descriptions of the variables in the rc files
 
 *   CPU: number of cpus on baremetal nodes
 *   MEM: amount of ram on baremetal nodes, in MB
