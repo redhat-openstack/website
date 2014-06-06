@@ -49,14 +49,6 @@ OpenStack relies on the underlying operating system and hypervisor — and what 
 </div>
 <div class="row">
 <div class="span7 offset4 pad-sides begin-content pull-m">
-## Networking with OpenStack
-
-On **Thursday, February 27th**, Lars Kellogg-Stedman gave a presentation on doing a multi-node deployment of OpenStack using RDO and packstack. If you have follow-up questions, you can always ask them on #rdo on the Freenode IRC network, or on the [rdo-list mailing list](http://www.redhat.com/mailman/listinfo/rdo-list).
-
-<iframe width="630" src="//youtube.com/embed/DGf-ny25OAw" frameborder="0" align="center" allowfullscreen="true"> </iframe>
-
-You can see some earlier presentations on the [RDO Videos](RDO Videos) page.
-
 ## Red Hat Expertise
 
 From the Linux kernel and the KVM hypervisor to the top level OpenStack project components, Red Hat has expertise at every level of the stack. Whether you want to run a proof of concept of OpenStack on CentOS, or you want to prepare a production cloud and you are evaluating partners for your deployment, who better to go to than the number one contributor to OpenStack?
