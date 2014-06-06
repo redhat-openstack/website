@@ -96,8 +96,17 @@ If you see the following error with Havana try the following patch to fix the is
 
 Try this patch to `neutron/neutron/plugins/ml2/drivers/mechanism_odl.py`. The patch could be different based on what source code version you have. You need to find where the TYPE_xxx constants are defined. Something like `find . -name "*.py" | xargs grep "TYPE_LOCAL ="` would work. Then use that path in the patch below.
 
-    from neutron.plugins.common import constants
+Example:
+
+    # find . -name "*.py" | xargs grep "TYPE_LOCAL ="
+    **\1**:TYPE_LOCAL = 'local'
+    ./neutron/plugins/ml2/drivers/type_local.py:TYPE_LOCAL = 'local'
+    ./neutron/plugins/ml2/drivers/cisco/constants.py:NETWORK_TYPE_LOCAL = 'local'
+
+Based on that change neutron/neutron/plugins/ml2/drivers/mechanism_odl.py
+
     #from neutron.openstack.common import constants
+    from **\1** import constants
 
 ------------------------------------------------------------------------
 
