@@ -99,14 +99,14 @@ Try this patch to `neutron/neutron/plugins/ml2/drivers/mechanism_odl.py`. The pa
 Example:
 
     # find . -name "*.py" | xargs grep "TYPE_LOCAL ="
-    **\1**:TYPE_LOCAL = 'local'
+    ./neutron/plugins/openvswitch/common/constants.py:TYPE_LOCAL = 'local'
     ./neutron/plugins/ml2/drivers/type_local.py:TYPE_LOCAL = 'local'
     ./neutron/plugins/ml2/drivers/cisco/constants.py:NETWORK_TYPE_LOCAL = 'local'
 
-Based on that change neutron/neutron/plugins/ml2/drivers/mechanism_odl.py
+Based on that change `neutron/neutron/plugins/ml2/drivers/mechanism_odl.py` constant import line to point to the path of that file.
 
     #from neutron.openstack.common import constants
-    from **\1** import constants
+    from neutron.plugins.openvswitch.common import constants
 
 ------------------------------------------------------------------------
 
