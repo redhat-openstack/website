@@ -17,7 +17,7 @@ __NOTOC__
 
 </div>
 <div class="offset3 span8 intro-text">
-Come join the TripleO Google Hangout at <https://plus.google.com/events/cp6fpffs4a9maqfn3h92tvvck1o> and on the #rdo-hangout channel on Freenode.
+Come join the [TripleO Google Hangout](https://plus.google.com/events/cp6fpffs4a9maqfn3h92tvvck1o) going on right now.
 
 <span class="btn">[Quick start →](quickstart)</span>
 
