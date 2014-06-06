@@ -10,6 +10,8 @@ wiki_last_updated: 2015-03-31
 
 There is no automated uninstall process for RDO. If you have a previously installed version of OpenStack, you will need to uninstall it first, before installing the RDO packages. We do plan to support upgrades from version N to N+1 in the future.
 
+Also, if you setup OpenStack in a virtualized environment, it's highly recommended to take virtual machine snapshots of your OpenStack nodes . If something breaks severely, you can revert to the known sane state.
+
 ## Big hammer method
 
 To completely uninstall RDO, including all application data, and all packages which are installed on a base system, run the following script. This assumes that you are only running OpenStack on this machine - if you are using this machine for anything else, STOP! And go to the [ "Slightly smaller hammer"](uninstalling RDO#Slightly_smaller_hammer_method) section below
