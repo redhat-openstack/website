@@ -17,7 +17,9 @@ __NOTOC__
 
 </div>
 <div class="offset3 span8 intro-text">
-Come join the [TripleO Google Hangout](https://plus.google.com/events/cp6fpffs4a9maqfn3h92tvvck1o) going on right now.
+Did you miss the TripleO hangout? You can still [TripleO watch it here](https://plus.google.com/events/cp6fpffs4a9maqfn3h92tvvck1o).
+
+Try out OpenStack Icehouse with the RDO Quick Start.
 
 <span class="btn">[Quick start →](quickstart)</span>
 
