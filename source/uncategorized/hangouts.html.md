@@ -12,11 +12,15 @@ RDO conducts periodic Google Hangouts on a variety of OpenStack-related topics.
 
 ## Upcoming Hangouts
 
-Hugh Brock will present a hangout on Openstack TripleO on Friday at 1pm Eastern: <https://plus.google.com/events/cp6fpffs4a9maqfn3h92tvvck1o>
+To be announced shortly.
 
 ## Past Hangouts
 
 If you missed a hangout, and are watching the video, you can always ask followup questions on the #rdo IRC channel on Freenode, or on the [rdo-list mailing list](http://www.redhat.com/mailman/listinfo/rdo-list)
+
+### TripleO
+
+<iframe width="630" src="//youtube.com/embed/ol5LuedIWBw" frameborder="0" align="center" allowfullscreen="true"> </iframe>
 
 ### What's new in Icehouse Heat
 
