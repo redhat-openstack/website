@@ -103,7 +103,7 @@ Example:
     ./neutron/plugins/ml2/drivers/type_local.py:TYPE_LOCAL = 'local'
     ./neutron/plugins/ml2/drivers/cisco/constants.py:NETWORK_TYPE_LOCAL = 'local'
 
-Based on that change `neutron/neutron/plugins/ml2/drivers/mechanism_odl.py` constant import line to point to the path of that file.
+Based on that change `neutron/neutron/plugins/ml2/drivers/mechanism_odl.py` constant import line to point to one of those files. The openvswitch one worked in this case.
 
     #from neutron.openstack.common import constants
     from neutron.plugins.openvswitch.common import constants
