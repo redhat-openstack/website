@@ -12,4 +12,4 @@ wiki_last_updated: 2015-04-09
 
 [CERN](http://openstack-in-production.blogspot.com/) has more than 50,000 cores running OpenStack using RDO for deployment.
 
-*We use the RDO client packages on our Linux machines. The upgrade was a change of repository and yum update.*
+*We use the RDO client packages on our Linux machines. The upgrade was a change of repository and yum update.* -- [OpenStack In Production blog](http://openstack-in-production.blogspot.com/)
