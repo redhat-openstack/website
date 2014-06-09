@@ -16,10 +16,12 @@ wiki_last_updated: 2015-04-09
 
 ------------------------------------------------------------------------
 
-![](Thoughtworks.png "Thoughtworks.png")
+![](Thoughtworks.png "fig:Thoughtworks.png") - ThoughtWorks
 
-''[A co-worker] and I have been spiking out OpenStack and out of all the Distro's available, without any doubt (obviously as its from Redhat) RDO is the best for the following reasons:-
+*[A co-worker] and I have been spiking out OpenStack and out of all the Distro's available, without any doubt (obviously as its from Redhat) RDO is the best for the following reasons:-*
 
-1. Idempotent 2. Best Documentation 3. Helpful forums providing working solutions.
+1.  Idempotent
+2.  Best Documentation
+3.  Helpful forums providing working solutions.
 
-The work done on Packstack is admirable, this makes us to wonder why someone would want to use DevStack. ''
+*The work done on Packstack is admirable, this makes us to wonder why someone would want to use DevStack.*
