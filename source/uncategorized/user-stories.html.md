@@ -8,7 +8,7 @@ wiki_last_updated: 2015-04-09
 
 # User stories
 
-![](Cern.jpg "Cern.jpg")
+![](Cern.jpg "fig:Cern.jpg") - CERN
 
 [CERN](http://openstack-in-production.blogspot.com/) has more than 50,000 cores running OpenStack using RDO for deployment.
 
@@ -18,7 +18,7 @@ wiki_last_updated: 2015-04-09
 
 ![](Thoughtworks.png "fig:Thoughtworks.png") - [ThoughtWorks](http://thoughtworks.com)
 
-*[A co-worker] and I have been spiking out OpenStack and out of all the Distro's available, without any doubt (obviously as its from Redhat) RDO is the best for the following reasons:-*
+*[A co-worker] and I have been spiking out OpenStack and out of all the Distro's available, without any doubt (obviously as it's from Redhat) RDO is the best for the following reasons:-*
 
 1.  *Idempotent*
 2.  *Best Documentation*
