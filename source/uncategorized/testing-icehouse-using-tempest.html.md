@@ -75,6 +75,7 @@ Download the attached patch from <https://code.google.com/p/unittest-ext/issues/
         python tools/install_venv.py
         source .venv/bin/activate
         pip install junitxml
+        pip install -r requirements.txt
 
 #### configure and run testr ( Fedora )
 
