@@ -10,7 +10,12 @@ wiki_last_updated: 2015-06-17
 
 Many people have asked how to use packstack --allinone with an existing external network. This method should allow any machine on the network to be able to access launched instances via their floating IPs. Also, at the end of this message, there are some ideas for making this process better that I thought we could discuss.
 
-These instructions have been tested on a RHEL 6.4 "minimal" install VM attached to the default libvirt network. Make sure all of your repos are set up first (this example uses rdo-grizzly), that you have run
+These instructions have been tested on a RHEL 6.4 "minimal" install VM attached to the default libvirt network. Make sure all of your repos are set up first:
+
+    sudo yum install -y http://rdo.fedorapeople.org/rdo-release.rpm
+    sudo yum install -y openstack-packstack
+
+and that you have run
 
     yum update
 
