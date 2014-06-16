@@ -58,6 +58,25 @@ hma: I have the exact same problem. My tuned is up and I did "yum update -y". bu
 
 mmagr: don't forget to also restart tuned.service, After restart it always solved this issue for me.
 
+### heat.conf auth_uri is incorrectly set leading to api-cfn authentication errors
+
+*   **Bug:** <https://bugzilla.redhat.com/show_bug.cgi?id=1106394> (FIX PROPOSED)
+*   **Affects:** RHEL OSP & RDO (Icehouse) deployed with Packstack
+
+##### symptoms
+
+The auth_uri option within heat.conf defaults to auth_uri=<http://127.0.0.1:5000/v2.0/ec2tokens> in packstack deployed environments. This leads to the following authentication errors in api-cfn.log :
+
+[Rdo](User:Rdo) ([talk](User talk:Rdo)) 2014-06-04 03:52:12.346 1178 INFO heat.api.aws.ec2token [-] Checking AWS credentials.. 2014-06-04 03:52:12.347 1178 INFO heat.api.aws.ec2token [-] AWS credentials found, checking against keystone. 2014-06-04 03:52:12.348 1178 INFO heat.api.aws.ec2token [-] Authenticating with <http://127.0.0.1:5000/v2.0/ec2tokens/ec2tokens> 2014-06-04 03:52:12.350 1178 INFO urllib3.connectionpool [-] Starting new HTTP connection (1): 127.0.0.1 2014-06-04 03:52:12.356 1178 INFO heat.api.aws.ec2token [-] AWS authentication failure. [Rdo](User:Rdo) ([talk](User talk:Rdo))
+
+This error then leads to no autoscaling taking place.
+
+##### workaround
+
+Switching this to auth_uri=<http://127.0.0.1:5000/v2.0> removes these errors and allows stacks to autoscale.
+
+Note: IP address needs to be set to the machine running the Heat API, not necessarily 127.0.0.1
+
 ### heat-engine fail to start
 
 *   **Bug:** <https://bugzilla.redhat.com/1006911> (FIXED)
