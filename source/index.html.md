@@ -17,9 +17,7 @@ __NOTOC__
 
 </div>
 <div class="offset3 span8 intro-text">
-Did you miss the TripleO hangout? You can still [watch it here](https://plus.google.com/events/cp6fpffs4a9maqfn3h92tvvck1o).
-
-Try out OpenStack Icehouse with the RDO Quick Start.
+The most up-to-date OpenStack on the industry's most trusted Linux platform, now easy to install and deploy.
 
 <span class="btn">[Quick start →](quickstart)</span>
 
