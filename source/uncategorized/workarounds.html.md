@@ -75,7 +75,7 @@ This error then leads to no autoscaling taking place.
 
 Switching this to auth_uri=<http://127.0.0.1:5000/v2.0> removes these errors and allows stacks to autoscale.
 
-Note: IP address needs to be set to the machine running the Heat API, not necessarily 127.0.0.1
+Note: IP address needs to be set to the machine running the Keystone API, not necessarily 127.0.0.1
 
 ### heat-engine fail to start
 
