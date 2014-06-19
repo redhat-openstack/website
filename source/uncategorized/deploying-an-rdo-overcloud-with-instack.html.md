@@ -35,13 +35,13 @@ You can deploy the overcloud **either** through the Horizon web interface using 
 
 ### Tuskar Web UI Deployment
 
-If you want to deploy the Overcloud via the UI you will need to open up port 80 on the undercloud node in iptables so that you can access the Web UI. On the instack VM enter the following:
+If you want to deploy the Overcloud via the UI you will need to open up port 80 in iptables so that you can access the Web UI. On the undercloud node enter the following:
 
     sudo iptables -I INPUT -p tcp --dport 80 -j ACCEPT
 
-Note that if your virt host is not the same host that you'll be running the web browser from, you can use an ssh tunnel for connectivity. See this [FAQ](http://openstack.redhat.com/Instack_FAQ#How_do_I_view_the_Undercloud_Dashboard_when_using_a_remote_virt_host.3F) for more information.
+Note that if you are doing a virtual machine based deployment and your virt host is not the same host that you'll be running the web browser from, you can use an ssh tunnel for connectivity. See this [FAQ](http://openstack.redhat.com/Instack_FAQ#How_do_I_view_the_Undercloud_Dashboard_when_using_a_remote_virt_host.3F) for more information.
 
-Once you have logged into the Web UI use [this guide](https://wiki.openstack.org/wiki/Tuskar/UsageGuide) to continue deploying your Overcloud. After a successful deployment the next step is: [ Testing an RDO Overcloud with Instack ](Testing an RDO Overcloud with Instack)
+When logging into the dashboard the default user and password are found in the /root/stackrc file on the undercloud node, OS_USERNAME and OS_PASSWORD. Once you have logged into the Web UI use [this guide](https://wiki.openstack.org/wiki/Tuskar/UsageGuide) to continue deploying your Overcloud. After a successful deployment the next step is: [ Testing an RDO Overcloud with Instack ](Testing an RDO Overcloud with Instack)
 
 ### Command Line Deployment
 
