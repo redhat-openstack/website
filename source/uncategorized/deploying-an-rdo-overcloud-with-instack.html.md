@@ -35,7 +35,7 @@ You can deploy the overcloud **either** through the Horizon web interface using 
 
 ### Tuskar Web UI Deployment
 
-If you want to deploy the Overcloud via the UI you will need to open up port 80 in iptables so that you can access the Web UI. On the instack VM enter the following:
+If you want to deploy the Overcloud via the UI you will need to open up port 80 on the undercloud node in iptables so that you can access the Web UI. On the instack VM enter the following:
 
     sudo iptables -I INPUT -p tcp --dport 80 -j ACCEPT
 
