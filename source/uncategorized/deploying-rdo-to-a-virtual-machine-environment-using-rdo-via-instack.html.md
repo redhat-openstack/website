@@ -81,7 +81,7 @@ If you have previously used the host machine to run TripleO's devtest setup, the
 
        instack-virt-setup
 
-You should now have a virtual machine called "instack" that you can use for the instack-undercloud installation that contains a minimal install of Fedora 20 x86_64. The instack virtual machine contains a user "stack" that uses the password "stack" and is granted password-less sudo privileges. The root password is displayed in the standard output.
+Running "virsh list --all" will show you now have one virtual machine called "instack" and four related to "baremetal", all shut off. The "instack" vm runs a minimal install of Fedora 20 x86_64 and will be used to install the undercloud on. The vm contains a user "stack" that uses the password "stack" and is granted password-less sudo privileges. The root password is displayed in the standard output. The other vm's don't have an operating system on but will eventually become part of the "overcloud".
 
 3. Get IP Address of VM for undercloud
 
