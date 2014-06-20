@@ -51,7 +51,7 @@ Sign up to our [forum](http://openstack.redhat.com/forum) and help others with t
 
 ## Is RDO a fork of OpenStack?
 
-RDO is not a fork of OpenStack, but a community focused on packaging and integrating code from the upstream OpenStack project on Red Hat Enterprise Linux and Fedora based platforms. Red Hat continues to participate in the development of the core OpenStack projects upstream, and all relevant patches and bug reports are routed directly to the OpenStack community codebase.
+RDO is not a fork of OpenStack, but a community focused on packaging and integrating code from the upstream OpenStack project on CentOS, Red Hat Enterprise Linux and Fedora based platforms. Red Hat continues to participate in the development of the core OpenStack projects upstream, and all relevant patches and bug reports are routed directly to the OpenStack community codebase.
 
 ## What does RDO mean for OpenStack for EPEL?
 
