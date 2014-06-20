@@ -37,13 +37,7 @@ The OpenStack project benefits from a broad group of providers and distributors,
 
 ## For which distributions does RDO provide packages?
 
-RDO targets Red Hat Enterprise Linux, Fedora, and their derivatives. Specifically, RDO packages are available for RHEL 6.3 or later (and CentOS 6.3+, ScientificLinux 6.3+ and other similar derivatives), as well as Fedora 18 and later. Please note that el6.3 does not have [Open vSwitch](http://www.openvswitch.org) in its kernel - for Open vSwitch support in Neutron, you should install kernel version 2.6.32-343 or later.
-
-Additionally note that the kernel included in el6.3 and el6.4 does not include support for network namespaces. Network namespaces are heavily relied upon by OpenStack Networking functionality. A kernel with network namespaces support is available in the RDO repositories. Run this command to install the RDO-supplied kernel once the RDO software repository has been enabled:
-
-         # yum install kernel-2.6.32-*.openstack.el6.x86_64
-
-Reboot the system to ensure that the newly installed kernel is running before proceeding with OpenStack Networking configuration and installation. Note that installing this kernel overrides/supersedes the officially supported RHEL kernel.
+RDO targets CentOS, Fedora, and Red Hat Enterprise Linux, Fedora, and their derivatives. Specifically, RDO packages are available for RHEL 6.3 or later (and CentOS 6.3+, ScientificLinux 6.3+ and other similar derivatives), as well as Fedora 18 and later.
 
 ## How is RDO different from upstream?
 
