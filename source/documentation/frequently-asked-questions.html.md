@@ -41,7 +41,7 @@ RDO targets CentOS, Fedora, and Red Hat Enterprise Linux, Fedora, and their deri
 
 ## How is RDO different from upstream?
 
-The OpenStack project develops code, and does not handle packaging for specific platforms. As a distribution of OpenStack, RDO packages the upstream OpenStack components to run well together on Red Hat Enterprise Linux, Fedora, and their derivatives, and provides you with installation tools to make it easier for you to deploy OpenStack.
+The OpenStack project develops code, and does not handle packaging for specific platforms. As a distribution of OpenStack, RDO packages the upstream OpenStack components to run well together on CentOS, Red Hat Enterprise Linux, Fedora, and their derivatives, and provides you with installation tools to make it easier for you to deploy OpenStack.
 
 [Stable client branches](Clients) are maintained per release as part of RDO because client backward compatibility isn't guaranteed upstream.
 
