@@ -53,7 +53,7 @@ If you have previously used the host machine to run TripleO's devtest setup, the
         # update the config file to survive reboots
         sudo sed -i "s/=enforcing/=permissive/" /etc/selinux/config
 
-3. Add export of LIVBIRT_DEFAULT_URI to your bashrc file.
+3. Add export of LIBVIRT_DEFAULT_URI to your bashrc file.
 
         echo 'export LIBVIRT_DEFAULT_URI="qemu:///system"' >> ~/.bashrc
 
