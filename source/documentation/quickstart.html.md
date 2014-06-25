@@ -62,7 +62,7 @@ Setup the RDO repositories:
 
 Packstack takes the work out of manually setting up OpenStack. For a single node OpenStack deployment, run the following command.
 
-If on RHEL7, or Fedora 20/21, please make SELinux permissive for now, with: \`sudo setenforce permissive\`
+If on Fedora 20/21, please make SELinux permissive for now, with: \`sudo setenforce permissive\`
 
     packstack --allinone
 
