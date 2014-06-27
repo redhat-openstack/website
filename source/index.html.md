@@ -29,7 +29,7 @@ The most up-to-date OpenStack on the industry's most trusted Linux platform, now
 
 There's lots of ways to stay in touch with the RDO community.
 
-Come to one of the main [Events](Events) where some of us will be. Follow us on [Twitter](http://twitter.com/rdocommunity/) or our [Google+ community](https://plus.google.com/communities/110409030763231732154). Subscribe to the [rdo-list mailing list](http://www.redhat.com/mailman/listinfo/rdo-list) for technical questions, or to the [newsletter mailing list](http://www.redhat.com/mailman/listinfo/rdo-newsletter) for monthly community updates.
+Come to one of the main [Events](Events) where some of us will be. Follow us on [Twitter](http://twitter.com/rdocommunity/) and [Google+](https://plus.google.com/communities/110409030763231732154). Subscribe to the [rdo-list mailing list](http://www.redhat.com/mailman/listinfo/rdo-list) for technical questions, or to the [newsletter mailing list](http://www.redhat.com/mailman/listinfo/rdo-newsletter) for monthly community updates.
 
 And there's a variety of presentations on the [RDO videos](RDO videos) page from our hangouts and conference presentations you may have missed.
 
