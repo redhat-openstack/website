@@ -13,6 +13,30 @@ wiki_last_updated: 2015-05-07
 
 ## Active
 
+### Could not find command 'restorecon'
+
+*   **Bug:** <https://bugzilla.redhat.com/show_bug.cgi?id=1109079>
+*   **Affects:** CentOS 6.5
+
+##### symptoms
+
+ERROR : Error appeared during Puppet run: 10.16.67.27_swift.pp
+
+         Error:
+        /Stage[main]//Swift::Storage::Loopback[swift_loopback]/Swift::Storage::Ext4
+         [swift_loopback]/Swift::Storage::Mount[swift_loopback]/Exec[restorecon_mount
+         _swift_loopback]: Failed to call refresh: Could not find command 'restorecon'
+
+##### workaround
+
+Change line in /usr/share/openstack-puppet/modules/swift/manifests/storage/mount.pp:68
+
+           path        => ['/usr/sbin', '/bin'],
+
+to
+
+           path        => ['/usr/sbin', '/sbin'],
+
 ### /usr/sbin/tuned-adm profile virtual-host returned 2 instead of one of [0]
 
 *   **Bug:** <https://bugzilla.redhat.com/show_bug.cgi?id=1041350>
