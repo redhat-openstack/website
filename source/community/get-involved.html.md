@@ -36,6 +36,8 @@ Join our [newsletter mailing list](//www.redhat.com/mailman/listinfo/rdo-newslet
 
 Follow us on Twitter at [@rdocommunity](//twitter.com/rdocommunity), or on [Google+](https://plus.google.com/communities/110409030763231732154).
 
+<wikitwidget class="twitter-timeline" href="https://twitter.com/RDOcommunity" data-widget-id="482610699122638848" />
+
 ### Solve
 
 *   Check our [Frequently Asked Questions (FAQ) page](Frequently Asked Questions) for the answer to common questions
