@@ -78,7 +78,7 @@ In just a few short steps, you can transform any machine running Fedora, Red Hat
 
 There are many ways to [get involved](get involved) with the RDO community once you [ get started](quickstart). The simplest way is to [head over to the ask.openstack.org forum](http://ask.openstack.org) and help answer questions.
 
-The Puppet modules used in packstack are on [Github](https://github.com/packstack) and packstack itself is on [Stackforge](https://github.com/stackforge/packstack).
+![](Github.png "fig:Github.png") The Puppet modules used in packstack are on [Github](https://github.com/packstack) and packstack itself is on [Stackforge](https://github.com/stackforge/packstack).
 
 For a commercially-supported enterprise ready OpenStack solution, Red Hat provides [Red Hat Enterprise Linux OpenStack Platform](//redhat.com/openstack), an enterprise-class cloud platform based on OpenStack Havana.
 
