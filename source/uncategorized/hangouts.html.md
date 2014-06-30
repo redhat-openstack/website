@@ -8,7 +8,7 @@ wiki_last_updated: 2015-02-09
 
 # Hangouts
 
-RDO conducts periodic Google Hangouts on a variety of OpenStack-related topics.
+RDO conducts periodic Google Hangouts on a variety of OpenStack-related topics. (See other [Events](Events) also.)
 
 ## Upcoming Hangouts
 
