@@ -12,7 +12,7 @@ RDO conducts periodic Google Hangouts on a variety of OpenStack-related topics.
 
 ## Upcoming Hangouts
 
-To be announced shortly.
+Eoghan Glynn presents about Ceilometer on [July 9, 11am Eastern US time](https://plus.google.com/events/c6e8vjjn8klrf78ruhkr95j4tas)
 
 ## Past Hangouts
 
