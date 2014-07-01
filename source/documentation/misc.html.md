@@ -25,6 +25,7 @@ wiki_last_updated: 2015-08-07
 *   [RDO videos](RDO videos)
 *   [Testing IceHouse using Tempest](Testing IceHouse using Tempest)
 *   [Setting-up-High-Availability](Setting-up-High-Availability)
+*   [Using ManageIQ on OpenStack](Using ManageIQ on OpenStack)
 
 </div>
 </div>
