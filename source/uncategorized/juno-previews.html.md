@@ -11,3 +11,4 @@ wiki_last_updated: 2014-09-08
 Here's what's coming in Juno ...
 
 *   [Compute (Nova)](http://blog.russellbryant.net/2014/07/07/juno-preview-for-openstack-compute-nova/)
+*   [Metering (Ceilometer)](http://community.redhat.com/blog/2014/07/upstream-podcast-episode-10-rich-bowen-with-eoghan-glynn-on-openstack-juno/)
