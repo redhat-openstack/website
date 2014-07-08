@@ -15,7 +15,7 @@ wiki_last_updated: 2014-07-08
 These are just some guidelines so you get a perspective of IRC culture, communication:
 
 *   Try to ask smart questions, let us try to think for ourselves first and not let some poor, good-intentioned soul to do all the thinking for us. [Pro-tip: Eric S. Raymond's guide referred in the **Resources** section]
-*   Try (as humanly as possible) to be: clear, concrete, specific and *complete* with your statements/questions. People cannot read your minds.
+*   Try (as humanly as possible) to be: clear, concrete, specific and *complete* with your statements/questions. People cannot read your mind.
 *   Be patient: do not expect people will devote time for extreme hand-holding. If a URL is pointed, please try things yourself, do your home-work, use Google *effectively*.
 *   Try to maintain a balance of *taking* vs *giving* from the community. Do not demand excessive attention.
 *   IRC is a DIY environment, not a paid-support forum. If someone responds to you, that is a bonus.
