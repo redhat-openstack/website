@@ -12,11 +12,15 @@ RDO conducts periodic Google Hangouts on a variety of OpenStack-related topics. 
 
 ## Upcoming Hangouts
 
-Eoghan Glynn presents about Ceilometer on [July 9, 11am Eastern US time](https://plus.google.com/events/c6e8vjjn8klrf78ruhkr95j4tas)
+August ... To be Announced
 
 ## Past Hangouts
 
 If you missed a hangout, and are watching the video, you can always ask followup questions on the #rdo IRC channel on Freenode, or on the [rdo-list mailing list](http://www.redhat.com/mailman/listinfo/rdo-list)
+
+### Eoghan Glynn - Ceilometer in Juno
+
+<iframe width="630" src="//youtube.com/embed/Pmq4FJlP0UE" frameborder="0" align="center" allowfullscreen="true"> </iframe>
 
 ### TripleO
 
