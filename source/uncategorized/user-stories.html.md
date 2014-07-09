@@ -25,3 +25,9 @@ wiki_last_updated: 2015-04-09
 3.  "Helpful forums providing working solutions."
 
 "The work done on Packstack is admirable, this makes us to wonder why someone would want to use DevStack."
+
+------------------------------------------------------------------------
+
+[Juanma's Blog](http://jreypo.wordpress.com/2014/06/23/deploying-openstack-with-kvm-and-vmware-nsx-part-4-deploy-openstack-rdo-with-neutron-integrated-with-nsx/)
+
+"RDO is the upstream version of RHEL OpenStack Platform, the commercial version of OpenStack by Red Hat. During the last months I tried several flavors of OpenStack and while I still think that installing from scratch is the best way to learn, in fact is what I did for my first labs, RDO gives me the possibility to quickly create my testing labs."
