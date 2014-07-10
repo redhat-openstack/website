@@ -18,7 +18,7 @@ This is a collection of various OpenStack-ready images of different distribution
 *   Fedora 18: [32-bit](http://mattdm.fedorapeople.org/cloud-images/Fedora18-Cloud-i386-latest.qcow2) / [64-bit](http://mattdm.fedorapeople.org/cloud-images/Fedora18-Cloud-x86_64-latest.qcow2)
 *   [CentOS 6.5 images](http://repos.fedorapeople.org/repos/openstack/guest-images/)
 *   [Ubuntu cloud images](//cloud-images.ubuntu.com/)
-*   [RHEL 7 RC image](ftp://ftp.redhat.com/redhat/rhel/rc/7/GuestImage/)
+*   [<https://access.redhat.com/downloads/content/69/ver=/rhel>---7/7.0/x86_64/product-downloads RHEL 7 image] (Requires RHEL subscription)
 *   [RHEL 6 image](https://rhn.redhat.com/rhn/software/channel/downloads/Download.do?cid=16952) (Requires RHEL subscription)
 *   [Windows Server 2012 test image](http://www.cloudbase.it/ws2012/)
 *   See also [the oz-image-build list on Github](https://github.com/rackerjoe/oz-image-build)
