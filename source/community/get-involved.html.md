@@ -35,7 +35,7 @@ Follow us on Twitter at [@rdocommunity](//twitter.com/rdocommunity), or on [Goog
 
 *   Check our [Frequently Asked Questions (FAQ) page](Frequently Asked Questions) for the answer to common questions
 *   Try our [troubleshooting page](Troubleshooting) for solutions to common problems
-*   Search [/forum the forum] to find previous discussions on the topic
+*   Search [ask.openstack](http://ask.openstack.org) to find previous discussions on the topic
 
 ### Write
 
