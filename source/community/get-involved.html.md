@@ -15,7 +15,7 @@ __NOTOC__
 <div class="offset3 span8 pull-s">
 # Get Involved
 
-Help us make the RDO community site a great place for users and cloud operators in the Red Hat ecosystem by sharing your OpenStack questions and solutions in our [forum](http://openstack.redhat.com/forum), and by adding [the most useful solutions](Troubleshooting) and [stories](Case_studies) to the RDO website.
+Help us make the RDO community site a great place for users and cloud operators in the Red Hat ecosystem by sharing your OpenStack questions and solutions on [ask.openstack](http://ask.openstack.org), and by adding [the most useful solutions](Troubleshooting) and [stories](Case_studies) to the RDO website.
 
 ### Discuss
 
