@@ -32,7 +32,7 @@ These instructions are to install the current ("**Icehouse**") release.
 
 <div class="row">
 <div class="span4">
-**Software:** Red Hat Enterprise Linux (RHEL) 6.5 is the minimum recommended version, or the equivalent version of one of the RHEL-based Linux distributions such as CentOS, Scientific Linux, etc., or Fedora 20 or later. See also [ RDO repository info](Repositories) for details on required repositories. Please name the host with a fully qualified domain name rather than a short-form name to avoid DNS issues with Packstack.
+**Software:** Red Hat Enterprise Linux (RHEL) **6.5** is the minimum recommended version, or the equivalent version of one of the RHEL-based Linux distributions such as CentOS, Scientific Linux, etc., or Fedora 20 or later. **x86_64** is currently the only supported architecture. See also [ RDO repository info](Repositories) for details on required repositories. Please name the host with a fully qualified domain name rather than a short-form name to avoid DNS issues with Packstack.
 
 </div>
 <div class="span4">
