@@ -52,6 +52,10 @@ Note: At this point, for the DHCP agent to work, I had to kill the dnsmasq proce
 
     # killall dnsmasq
 
+Overwrite core plugin to ML2 in /etc/neutron/neutron.conf
+
+    core_plugin = neutron.plugins.ml2.plugin.Ml2Plugin
+
 Start the neutron services
 
     # openstack-service start neutron
