@@ -50,7 +50,9 @@ Note: For Neutron to work properly, a network namespaces-enabled kernel is requi
     yum -y update
     reboot
 
-Due to the quantum/neutron rename, SELinux policies are currently broken for Havana, so SELinux must be disabled/permissive on machines running neutron services, edit /etc/selinux/config to set SELINUX=permissive.
+Due to the quantum/neutron rename, SELinux policies are currently broken for Havana, so SELinux must be permissive (and please report the SELinux AVCs as bugs, if they're not already reported) on machines running neutron services, edit /etc/selinux/config to set SELINUX=permissive.
+
+(NOTE: In production setups, it's strongly recommended to run SELinux in *enforcing* mode.)
 
 ### Step 2: Install Packstack Installer
 
