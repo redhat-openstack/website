@@ -66,11 +66,7 @@ And, if you're in Europe, LinuxCon Dusseldorf is coming very soon - <http://even
 
 **Hangouts**
 
-In July, Eoghan Glynn gave us an overview of what's planned for Ceilometer in the Juno cycle in the RDO hangout. If you missed that, you can still watch it at <https://plus.google.com/events/c6e8vjjn8klrf78ruhkr95j4tas> If you have any followup questions, stop by #rdo or
-
-1.  openstack-ceilometer on the Freenode IRC network, where there's always
-
-someone that can help you out.
+In July, Eoghan Glynn gave us an overview of what's planned for Ceilometer in the Juno cycle in the RDO hangout. If you missed that, you can still watch it at <https://plus.google.com/events/c6e8vjjn8klrf78ruhkr95j4tas> If you have any followup questions, stop by #rdo or #openstack-ceilometer on the Freenode IRC network, where there's always someone that can help you out.
 
 Stay tuned to @rdocommunity on Twitter to hear about our plans for a hangout in August, or see the Hangouts page on the RDO website, at <http://openstack.redhat.com/Hangouts>
 
@@ -102,4 +98,6 @@ Once again, you can always keep up to date a variety of ways:
 
 Thanks again for being part of the RDO community!
 
--- Rich Bowen, OpenStack Community Liaison rbowen@redhat.com <http://openstack.redhat.com>
+         Rich Bowen, OpenStack Community Liaison
+         rbowen@redhat.com
+`   `[`http://openstack.redhat.com`](http://openstack.redhat.com)
