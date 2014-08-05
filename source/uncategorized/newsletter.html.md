@@ -14,6 +14,7 @@ You can sign up to receive the newsletter [on the mailing list page](http://www.
 
 ## 2014
 
+*   [August 2014](Newsletter/2014_August)
 *   [July 2014](Newsletter/2014_July)
 *   [June 2014](Newsletter/2014_June)
 *   [May 2014](http://openstack.redhat.com/Newsletter/2014_May)
