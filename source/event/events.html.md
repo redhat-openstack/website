@@ -11,7 +11,6 @@ wiki_last_updated: 2015-08-31
 
 There are lots of events, around the world, where you can hang out with people from the RDO community. Some recent and upcoming events are:
 
-*   [OSCon](http://www.oscon.com/oscon2014), July 20-24, Portland, OR
 *   [Flock Fedora contributor conference](http://flocktofedora.com/), August 6-9, Prague
 *   [OpenStack Trove Day](http://www.tesora.com/event/openstack-trove-day), August 19, Cambridget MA
 *   [LinuxCon/CloudOpen](http://events.linuxfoundation.org/events/linuxcon-north-america), August 20-22, Chicago, IL
