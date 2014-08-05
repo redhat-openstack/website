@@ -10,17 +10,17 @@ wiki_last_updated: 2014-08-05
 
 Thanks again for being part of the RDO community! Here's some of what's going on in the community.
 
-VOTE for the OpenStack Summit schedule
+**VOTE for the OpenStack Summit schedule**
 
-There's just one day left for you to influence what presentations will be at the OpenStack Summit in Paris in November. To vote, go to [1](https://www.openstack.org/vote-paris/) and dive right in. (You'll need an openstack.org account.)
+There's just one day left for you to influence what presentations will be at the OpenStack Summit in Paris in November. To vote, go to [<https://www.openstack.org/vote-paris/>](https://www.openstack.org/vote-paris/) and dive right in. (You'll need an openstack.org account.)
 
 There's a \*huge\* number of talks that have been submitted, so it can take a long time to get through them all. You can search for a particular topic that you're interested in, to narrow the list a little.
 
-If you're particularly interested in OpenStack on Red Hat Enterprise Linux, CentOS, and Fedora, you can find presentations by Red Hat engineers listed at [2](http://redhatstackblog.redhat.com/2014/07/31/session-voting-now-open-for-openstack-summit-paris/)
+If you're particularly interested in OpenStack on Red Hat Enterprise Linux, CentOS, and Fedora, you can find presentations by Red Hat engineers listed at [<http://redhatstackblog.redhat.com/2014/07/31/session-voting-now-open-for-openstack-summit-paris/>](http://redhatstackblog.redhat.com/2014/07/31/session-voting-now-open-for-openstack-summit-paris/)
 
 Remember, the vote closes on Wednesday, August 6, so don't wait!
 
-Flock starts tomorrow!
+**Flock starts tomorrow!**
 
 Flock, the Fedora Contributor Conference, starts tomorrow, August 6, in Prague, Czech Republic. It's a gathering of everyone who cares about Fedora, for technical sessions, planning for the future, and community networking.
 
@@ -28,7 +28,7 @@ On Saturday (August 9), Jakub Ruzicka will be leading a two hour workshop on con
 
 You can see more information about the session at <http://sched.co/1kI1BWf> and more information about the Flock conference at <http://flocktofedora.org/>
 
-Juno mid-cycle meetups
+**Juno mid-cycle meetups**
 
 Over the last few weeks, several of the OpenStack projects held mid-cycle meetups, to discuss how progress is going toward Juno, and what needs to happen between now and October.
 
@@ -46,7 +46,7 @@ Security, with Nathan Kinder - <http://redhatstackblog.redhat.com/2014/08/05/jun
 
 To catch other mid-cycle previews as they come in, just follow us on Twitter, at @rdocommunity and watch for updates on <http://openstack.redhat.com/Juno_previews>
 
-OSCON
+**OSCON**
 
 Two weeks ago was the always-fun O'Reilly Open Source Convention, OSCON, in Portland, Oregon. RDO had a demo stand, and a steady stream of people came by to talk with us, and get the TryStack.org T-shirt and other RDO swag.
 
@@ -58,13 +58,13 @@ And there was a lot of great content at the conference, about OpenStack and ever
 
 I've posted a few photos from the booth on the G+ group at <http://tm3.org/rdogplus>
 
-LinuxCon
+**LinuxCon**
 
 In just a few weeks, RDO will be at LinuxCon in Chicago - <http://events.linuxfoundation.org/events/linuxcon-north-america> Drop by the Red Hat booth to talk to us about RDO, and see a demo of RDO in action.
 
 And, if you're in Europe, LinuxCon Dusseldorf is coming very soon - <http://events.linuxfoundation.org/events/linuxcon-europe> - in the middle of OCtober. So save the date, and we hope to see you there.
 
-Hangouts
+**Hangouts**
 
 In July, Eoghan Glynn gave us an overview of what's planned for Ceilometer in the Juno cycle in the RDO hangout. If you missed that, you can still watch it at <https://plus.google.com/events/c6e8vjjn8klrf78ruhkr95j4tas> If you have any followup questions, stop by #rdo or
 
@@ -74,7 +74,7 @@ someone that can help you out.
 
 Stay tuned to @rdocommunity on Twitter to hear about our plans for a hangout in August, or see the Hangouts page on the RDO website, at <http://openstack.redhat.com/Hangouts>
 
-In closing ...
+**In closing ...**
 
 In closing, I wanted to mention a few articles that have caught my attention over the last few weeks.
 
