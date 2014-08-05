@@ -8,6 +8,8 @@ wiki_last_updated: 2014-08-05
 
 # 2014 August
 
+**Not on the rdo-newsletter distribution list? [Subscribe HERE.](http://www.redhat.com/mailman/listinfo/rdo-newsletter)**
+
 Thanks again for being part of the RDO community! Here's some of what's going on in the community.
 
 **VOTE for the OpenStack Summit schedule**
