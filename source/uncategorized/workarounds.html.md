@@ -13,6 +13,21 @@ wiki_last_updated: 2015-05-07
 
 ## Active
 
+### Comparison of string with 7 failed
+
+*   **Bug:** <https://bugzilla.redhat.com/show_bug.cgi?id=1117035>
+*   **Affects:** CentOS 7
+
+##### symptoms
+
+prescript.pp, fails with the following error message:
+
+         Comparison of String with 7 failed
+
+##### workaround
+
+Edit files in /usr/lib/python2.7/site-packages/packstack/puppet/templates/ where operatingsystemrelease is compared to 7. Change operatingsystemrelease to operatingsystemmajrelease. Run packstack again with the same answerfile.
+
 ### Could not find command 'restorecon'
 
 *   **Bug:** <https://bugzilla.redhat.com/show_bug.cgi?id=1109079>
