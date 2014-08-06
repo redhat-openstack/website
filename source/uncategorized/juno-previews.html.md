@@ -14,6 +14,7 @@ Here's what's coming in Juno ...
 *   [Metering (Ceilometer)](http://community.redhat.com/blog/2014/07/upstream-podcast-episode-10-rich-bowen-with-eoghan-glynn-on-openstack-juno/) - Eoghan Glynn. See also [Eoghan's Google Hangout](https://plus.google.com/events/c6e8vjjn8klrf78ruhkr95j4tas)
 *   [Orchestration (Heat)](https://www.youtube.com/watch?v=DwuZHMkFzFs&list=UUQ74G2gKXdpwZkXEsclzcrA#t=1343) - Zane Bitter
 *   [Image (Glance) and Messaging/Notification (Marconi) Juno Previews](http://blog.flaper87.com/post/juno-preview-glance-marconi/) - Flavio Percoco
+*   [Security (Keystone) Juno Previews](http://redhatstackblog.redhat.com/2014/08/05/juno-updates-security/) - Nathan Kinder
 
 See also ...
 
