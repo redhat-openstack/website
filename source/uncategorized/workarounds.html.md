@@ -28,6 +28,23 @@ prescript.pp, fails with the following error message:
 
 Edit files in /usr/lib/python2.7/site-packages/packstack/puppet/templates/ where operatingsystemrelease is compared to 7. Change operatingsystemrelease to operatingsystemmajrelease. Run packstack again with the same answerfile.
 
+### Could not enable mysqld
+
+##### symptoms
+
+         ERROR : Error appeared during Puppet run: 127.0.0.1_mysql.pp
+         Error: Could not enable mysqld: 
+
+##### workaround
+
+         # rm /usr/lib/systemd/system/mysqld.service 
+         # cp /usr/lib/systemd/system/mariadb.service /usr/lib/systemd/system/mysqld.service
+         # systemctl stop mariadb
+         # pkill mysql
+         # rm -f /var/lib/mysql/mysql.sock
+
+Then run packstack again with the generated answer file from the last time.
+
 ### Could not find command 'restorecon'
 
 *   **Bug:** <https://bugzilla.redhat.com/show_bug.cgi?id=1109079>
