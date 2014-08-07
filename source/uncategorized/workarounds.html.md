@@ -30,6 +30,8 @@ Edit files in /usr/lib/python2.7/site-packages/packstack/puppet/templates/ where
 
 ### Could not enable mysqld
 
+*   **Affects:** CentOS 7
+
 ##### symptoms
 
          ERROR : Error appeared during Puppet run: 127.0.0.1_mysql.pp
