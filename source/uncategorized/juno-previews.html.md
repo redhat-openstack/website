@@ -15,6 +15,7 @@ Here's what's coming in Juno ...
 *   [Orchestration (Heat)](http://www.zerobanana.com/archive/2014/07/10#heat-juno-update) - Zane Bitter. See also the [video of his PTL webinar](https://www.youtube.com/watch?v=DwuZHMkFzFs&list=UUQ74G2gKXdpwZkXEsclzcrA#t=1343). (Also briefly covers TripleO)
 *   [Image (Glance) and Messaging/Notification (Marconi) Juno Previews](http://blog.flaper87.com/post/juno-preview-glance-marconi/) - Flavio Percoco
 *   [Security (Keystone) Juno Previews](http://redhatstackblog.redhat.com/2014/08/05/juno-updates-security/) - Nathan Kinder
+*   [TripleO and Juno](http://blog-slagle.rhcloud.com/?p=235) - James Slagle
 
 See also ...
 
