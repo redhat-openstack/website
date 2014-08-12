@@ -27,7 +27,7 @@ The most up-to-date OpenStack on the industry's most trusted Linux platform, now
 <div class="offset4 span7 pad-sides begin-content pull-s">
 ## Stay up to date with RDO
 
-![](Twitter.gif "fig:Twitter.gif") ![](G_plus.jpg "fig:G_plus.jpg") ![](Email.png "fig:Email.png")
+![](Twitter.gif "fig:Twitter.gif") ![](Facebook.gif "fig:Facebook.gif") ![](G_plus.jpg "fig:G_plus.jpg") ![](Email.png "fig:Email.png")
 
 There's lots of ways to stay in touch with the RDO community.
 
