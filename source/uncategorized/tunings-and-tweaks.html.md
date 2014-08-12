@@ -13,10 +13,14 @@ This page has been created to track changes to the underlying systems and the de
 **`General`**
 
        You will hit OS system limits as you scale (this is a big hammer, will need some tightening for security)
-         Increase number of open files
+         Increase number of open files on the messing and database services
          edit    /etc/security/limits.conf 
-         *    soft nofile 64000
-         *    hard nofile 64000
+         mysql    soft nofile 64000
+         mysql   hard nofile 64000
+         qpidd   soft nofile 64000
+         qpidd   hard nofile 64000
+         rabbitmq   soft nofile 64000
+         rabbitmq  hard nofile 64000
          Increase number of procs
          /etc/security/limits.d/90-nproc.conf
          *          soft    nproc     10240
@@ -35,16 +39,24 @@ This page has been created to track changes to the underlying systems and the de
 
          where tenant-id is the uuid of the openstack tenant running the test
 
-         neutron quota-update  --tenant-id  $admin  --network 1000 --subnet  1000 --port  5000 --router 1000 --floatingip 1000
+         neutron quota-update  --tenant-id  $admin  --network -1 --subnet  -1 --port  -1 --router -1 --floatingip -1 --security_group -1 --security_group_rule -1
+         # add --vip -1 --pool -1  if needed
 
          Use jumbo frames for interfaces carrying GRE/VXLAN traffic:
          Compute node(s):
 `      echo MTU=`<MTU>` >> /etc/sysconfig/network-scripts/ifcfg-`<interface>
-            nova_device_mtu=`<Guest MTU>` (50b less than tunnel interface) in the nova.conf file 
+            nova_device_mtu=`<Guest MTU>` (50b less than tunnel interface for vxaln, 28b less for gre ) in the nova.conf file 
          Network node(s):
 `      echo MTU=`<MTU>` >> /etc/sysconfig/network-scripts/ifcfg-`<interface>
             echo dnsmasq_config_file=/etc/neutron/dnsmasq-neutron.conf >> /etc/neutron/dhcp_agent.ini
             echo dhcp-option-force=26,`<MTU>` >> /etc/neutron/dnsmasq-neutron.conf
+         Disable secure rootwrap:
+         Edit the /etc/neutron/neutron.conf
+             [agent]
+             root_helper = sudo
+         Edit the sudores file to allow neutron to use sudo without password for the commands required by neutron.
+         It makes the command execution faster, but without filtering it is less secure.
+         Just by the sudoers files you cannot property filter an evil command patters like this: ip netns exec net-ns evil_command. 
 
 **Compute node**
 
@@ -77,6 +89,8 @@ This page has been created to track changes to the underlying systems and the de
          Set expiration to 3600 in [token]  section in keystone.conf file on controller. 
 
          Update revocation_cache_time from 1 to 300 with auth_token middleware. Till this is not changed in the code one need to update the each service specific file like glance-api.conf and add revocation_cache_time=300  in [keystone_authtoken] section.
+
+        Make sure you have crontab entry for '/usr/bin/keystone-manage token_flush' and it run on one server at least once in every hour.
 
 **Swift**
 
