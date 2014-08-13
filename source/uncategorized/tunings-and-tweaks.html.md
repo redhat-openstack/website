@@ -8,7 +8,7 @@ wiki_last_updated: 2015-03-11
 
 # Tunings and tweaks
 
-This page has been created to track changes to the underlying systems and the default configurations needed in order to enable greater scalability for OpenStack. The goal here is to share the knowledge until the out of the box defaults can be changed. If that won't happen, then many of the items here should probably get put into end user documentation.
+iThis page has been created to track changes to the underlying systems and the default configurations needed in order to enable greater scalability for OpenStack. The goal here is to share the knowledge until the out of the box defaults can be changed. If that won't happen, then many of the items here should probably get put into end user documentation.
 
 **`General`**
 
@@ -41,6 +41,7 @@ This page has been created to track changes to the underlying systems and the de
 
          neutron quota-update  --tenant-id  $admin  --network -1 --subnet  -1 --port  -1 --router -1 --floatingip -1 --security_group -1 --security_group_rule -1
          # add --vip -1 --pool -1  if needed
+        The -1 means unlimited.
 
          Use jumbo frames for interfaces carrying GRE/VXLAN traffic:
          Compute node(s):
@@ -51,7 +52,7 @@ This page has been created to track changes to the underlying systems and the de
             echo dnsmasq_config_file=/etc/neutron/dnsmasq-neutron.conf >> /etc/neutron/dhcp_agent.ini
             echo dhcp-option-force=26,`<MTU>` >> /etc/neutron/dnsmasq-neutron.conf
          Disable secure rootwrap:
-         Edit the /etc/neutron/neutron.conf
+         Change root_helper in /etc/neutron/neutron.conf and in all used neutron ini file.
              [agent]
              root_helper = sudo
          Edit the sudores file to allow neutron to use sudo without password for the commands required by neutron.
@@ -81,6 +82,10 @@ This page has been created to track changes to the underlying systems and the de
          innodb_flush_method = O_DIRECT
          innodb_file_per_table
          innodb_flush_log_at_trx_commit = 0
+
+        rabbitmq:
+        if your erlang version support the hipe compile you can enable it in   /etc/rabbitmq/rabbitmq.config.
+`  `[`http://www.fpaste.org/125147/40791409`](http://www.fpaste.org/125147/40791409)
 
 **Keystone**
 
