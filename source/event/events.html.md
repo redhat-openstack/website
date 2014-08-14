@@ -19,3 +19,5 @@ There are lots of events, around the world, where you can hang out with people f
 Instructions for subscribing to the RDO iCalendar can be found in the [rdo-list archive](https://www.redhat.com/archives/rdo-list/2014-January/msg00133.html).
 
 See also upcoming [Hangouts](Hangouts) and the [openstack.org events listing](http://www.openstack.org/community/events/).
+
+Support your local [OpenStack user group](https://wiki.openstack.org/wiki/OpenStack_User_Groups)
