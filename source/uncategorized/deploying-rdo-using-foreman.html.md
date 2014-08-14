@@ -138,7 +138,11 @@ When Puppet runs on the controller node, it will install the optional APIs you e
 
 ### Foreman Provisioning Setup
 
-This is going to work largely the same as the non-provisioning mode, with the exception of changing the environment file we used earlier to configure the setup script a bit. For instance, you would enable the foreman gateway and set provisioning to true, as well as configure the appropriate eth\* devices on the foreman server to allow it to provision.
+This is going to work largely the same as the non-provisioning mode, with the exception of changing the environment file we used earlier to configure the setup script a bit. For instance, you would enable the foreman gateway and set provisioning to true, as well as configure the appropriate eth\* devices on the foreman server to allow it to provision. Eg:
+
+    export FOREMAN_GATEWAY=10.0.0.1
+    export FOREMAN_PROVISIONING=true
+    export PROVISIONING_INTERFACE=eth0
 
 The Foreman server should have 2 interfaces for this configuration, one for external access and one that the clients will connect to. The clients are going to pxeboot off of the internal-only interface. Those clients are not going to have an OS on them, Foreman will do the actual provisioning. Simply start the client machines and have them PXE boot from the network they share with the foreman server.
 
