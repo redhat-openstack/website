@@ -16,7 +16,7 @@ wiki_last_updated: 2015-07-16
 
 While the [Quickstart](Quickstart) is sufficient for an initial test deployment, there are many other ways that you may wish to deploy OpenStack with RDO. Documents here also cover configuring your deployment.
 
-*   [ Quick start guide (RDO Havana)](Quickstart)
+*   [ Quick start guide (RDO Icehouse)](Quickstart)
 *   [ Deploying RDO using Foreman](Deploying RDO using Foreman)
 *   [ Multinode Icehouse using GRE](GettingStartedIcehouse_w_GRE)
 *   [ Configuring Horizon to use SSL](HorizonSSL)
