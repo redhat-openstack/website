@@ -1161,7 +1161,7 @@ Now add iptables rules to allow forwarding in and out of the br-ex interface.
 
 Finally, to ensure a valid reverse-path, add a MASQUERADE rule so that any connections from the Neutron public network will appear as though they came from the host system.
 
-    iptables -t NAT -I POSTROUTING -s 192.168.21.0/24 ! -d 192.168.21.0/24 -j MASQUERADE
+    iptables -t nat -I POSTROUTING -s 192.168.21.0/24 ! -d 192.168.21.0/24 -j MASQUERADE
 
 You should now be able to SSH and ping from your VMs to the outside world!
 
