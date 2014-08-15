@@ -10,14 +10,19 @@ wiki_last_updated: 2015-07-16
 
 <div class="row">
 <div class="offset1 span10">
-## Installing and Configuring RDO
+# Installing and Configuring RDO
 
 [ ← Docs](Docs)
 
 While the [Quickstart](Quickstart) is sufficient for an initial test deployment, there are many other ways that you may wish to deploy OpenStack with RDO. Documents here also cover configuring your deployment.
 
+### Installation
+
 *   [ Quick start guide (RDO Icehouse)](Quickstart)
 *   [ Deploying RDO using Foreman](Deploying RDO using Foreman)
+
+### Configuration
+
 *   [ Multinode Icehouse using GRE](GettingStartedIcehouse_w_GRE)
 *   [ Configuring Horizon to use SSL](HorizonSSL)
 *   [ Securing services](Securing_services)
