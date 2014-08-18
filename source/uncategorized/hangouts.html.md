@@ -12,7 +12,7 @@ RDO conducts periodic Google Hangouts on a variety of OpenStack-related topics. 
 
 ## Upcoming Hangouts
 
-August ... To be Announced
+September 5th, 10 am, Lars Kellogg-Stedman will be presenting a hangout on deploying services with Heat. <https://plus.google.com/events/c9u4sjn7ksb8jrmma7vd25aok94>
 
 ## Past Hangouts
 
