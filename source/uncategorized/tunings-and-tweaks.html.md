@@ -21,6 +21,8 @@ iThis page has been created to track changes to the underlying systems and the d
          qpidd   hard nofile 64000
          rabbitmq   soft nofile 64000
          rabbitmq  hard nofile 64000
+         postgres soft nofile 64000
+         postgres hard nofile 64000
          Increase number of procs
          /etc/security/limits.d/90-nproc.conf
          *          soft    nproc     10240
@@ -83,6 +85,9 @@ iThis page has been created to track changes to the underlying systems and the d
          innodb_file_per_table
          innodb_flush_log_at_trx_commit = 0
 
+        Avoid  defining charset=utf8 without the use_unicode=0 in the mysql connection strings.
+`   `[`http://docs.sqlalchemy.org/en/rel_0_9/dialects/mysql.html#unicode`](http://docs.sqlalchemy.org/en/rel_0_9/dialects/mysql.html#unicode)
+             
         rabbitmq:
         if your erlang version support the hipe compile you can enable it in   /etc/rabbitmq/rabbitmq.config.
 `  `[`http://www.fpaste.org/125147/40791409`](http://www.fpaste.org/125147/40791409)
