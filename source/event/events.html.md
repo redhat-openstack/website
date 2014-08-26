@@ -11,10 +11,6 @@ wiki_last_updated: 2015-08-31
 
 There are lots of events, around the world, where you can hang out with people from the RDO community. Some recent and upcoming events are:
 
-*   [OpenStack Trove Day](http://www.tesora.com/event/openstack-trove-day), August 19, Cambridge MA
-*   [OpenStack Overview (Meetup)](http://www.meetup.com/Las-Vegas-Red-Hat-User-Group/events/197037262/), August 20, Las Vegas
-*   [Platform as a Service / OpenShift Overview (Meetup)](http://www.meetup.com/PhoenixRedHatSoftwareUserGroup/events/197047992/), August 21, Tempe, AZ
-*   [LinuxCon/CloudOpen](http://events.linuxfoundation.org/events/linuxcon-north-america), August 20-22, Chicago, IL
 *   [Deploying things with Heat](https://plus.google.com/events/c9u4sjn7ksb8jrmma7vd25aok94), September 5th, Google Hangout
 *   [LinuxCon/CloudOpen](http://events.linuxfoundation.org/events/linuxcon-europe), October 13-15, Dusseldorf, Germany
 *   [OpenStack Summit](http://openstack.org/summit), November 3-7, Paris
