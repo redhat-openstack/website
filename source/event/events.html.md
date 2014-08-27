@@ -11,7 +11,6 @@ wiki_last_updated: 2015-08-31
 
 There are lots of events, around the world, where you can hang out with people from the RDO community. Some recent and upcoming events are:
 
-*   [DevOps At Red Hat](http://www.meetup.com/Open-Source-Israel/events/195812602/), August 26, Ra'anana
 *   [OpenStack Networking (Neutron) - 2014 Update](http://www.meetup.com/OpenStack-Online-Meetup/events/201860872/), August 28, Google Hangout
 *   [Introduction to RDO and packstack](http://www.meetup.com/New-Zealand-OpenStack-User-Group/events/199656102/), August 28, New Zealand OpenStack User Group, Auckland
 *   [OpenStack Swift Hackathon](http://www.meetup.com/ValleyForgeTech/events/199592552/), August 28, Valley Forge Tech
