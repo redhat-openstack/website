@@ -50,7 +50,7 @@ Update your current packages:
 
 Setup the RDO repositories:
 
-    sudo yum install -y http://rdo.fedorapeople.org/rdo-release.rpm
+    sudo yum install -y https://rdo.fedorapeople.org/rdo-release.rpm
 
 *Looking for an older version? See <http://rdo.fedorapeople.org/> for the full listing.*
 
