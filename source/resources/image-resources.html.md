@@ -16,7 +16,7 @@ This is a collection of various OpenStack-ready images of different distribution
 
 *   Fedora 19: [32-bit](http://cloud.fedoraproject.org/fedora-19.i386.qcow2) / [64 bit](http://cloud.fedoraproject.org/fedora-19.x86_64.qcow2) ([*more info*](http://cloud.fedoraproject.org/))
 *   Fedora 18: [32-bit](http://mattdm.fedorapeople.org/cloud-images/Fedora18-Cloud-i386-latest.qcow2) / [64-bit](http://mattdm.fedorapeople.org/cloud-images/Fedora18-Cloud-x86_64-latest.qcow2)
-*   [CentOS 6.5 images](http://repos.fedorapeople.org/repos/openstack/guest-images/)
+*   CentOS 7 images - [qcow2](http://cloud.centos.org/centos/7/devel/CentOS-7-x86_64-GenericCloud-20140826_02.qcow2) (~922 MB) or [qcow2.xz](http://cloud.centos.org/centos/7/devel/CentOS-7-x86_64-GenericCloud-20140826_02.qcow2.xz) (~261 MB)
 *   [Ubuntu cloud images](//cloud-images.ubuntu.com/)
 *   [<https://access.redhat.com/downloads/content/69/ver=/rhel>---7/7.0/x86_64/product-downloads RHEL 7 image] (Requires RHEL subscription)
 *   [RHEL 6 image](https://rhn.redhat.com/rhn/software/channel/downloads/Download.do?cid=16952) (Requires RHEL subscription)
