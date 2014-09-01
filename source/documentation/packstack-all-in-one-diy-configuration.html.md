@@ -100,9 +100,9 @@ Using your favorite method, make sure that the l3 and dhcp agents are still runn
 </div>
 Network namespaces create new "virtual" network environments that are isolated from each other. Each network namespace has its own network devices, IP addresses, routing tables, ports, etc.. Neutron uses network namespaces to isolate network devices (including VIFs), DHCP and routing services for different networks and tenants. Neutron also uses something called a *veth pair*. A veth pair is two ethernet interfaces connected back-to-back and simplifies connecting things together that cannot be connected directly. We examine how veth pairs and namespaces are used we make our way through the steps. For now it is important to verify that Neutron was configured to enable these features. Your version of Packstack may or may not have modified the configuration files properly. It is better to be safe and check them before proceeding. Since we are modifying configuration files, please be careful not to accidentally modify configuration. You will need root or sudo access to modify them. You could use your favorite text editor to modify the files, but we'll use the openstack-config tool for simplicity.
 
-    # openstack-config --set [config file name] [config file section] [config variable name] [value]
-    openstack-config --set /etc/quantum/dhcp_agent.ini DEFAULT ovs_use_veth True
-    openstack-config --set /etc/quantum/l3_agent.ini DEFAULT ovs_use_veth True
+    # crudini --set [config file name] [config file section] [config variable name] [value]
+    crudini --set /etc/quantum/dhcp_agent.ini DEFAULT ovs_use_veth True
+    crudini --set /etc/quantum/l3_agent.ini DEFAULT ovs_use_veth True
 
 The ovs_use_veth settings are primarily required to workaround some issues with the OpenStack RHEL kernel. If you are using recent versions of Fedora, you may not need to changes these settings.
 
