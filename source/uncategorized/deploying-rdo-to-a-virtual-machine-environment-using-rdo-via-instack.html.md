@@ -22,7 +22,7 @@ The minimum system requirements for the virtual host machine to follow this tuto
 
 *   Be running Fedora 20 x86_64
 *   At least (1) quad core CPU
-*   12GB free memory
+*   15GB free memory
 *   200GB disk space [1]
 
 If you want to deviate from the tutorial or increase the scaling of one or more overcloud nodes, you will need to ensure you have enough memory and disk space.
