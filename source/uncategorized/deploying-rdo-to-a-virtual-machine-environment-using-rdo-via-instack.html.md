@@ -16,7 +16,7 @@ Do not use the root user for executing any instack-undercloud scripts. Some prog
 
 ## Minimum System Requirements
 
-This setup creates five (5) virtual machines consisting of 2GB of memory and 30GB of disk space on each. If you do not plan to deploy Block Storage or Swift Storage nodes, you can delete those virtual machines and allocate less space accordingly. Most of the virtual machine disk files are thinly provisioned and will not take up the full 30GB. The undercloud is not thinly provisioned and is completely pre-allocated.
+This setup creates five (5) virtual machines consisting of 3GB of memory and 30GB of disk space on each. If you do not plan to deploy Block Storage or Swift Storage nodes, you can delete those virtual machines and allocate less space accordingly. Most of the virtual machine disk files are thinly provisioned and will not take up the full 30GB. The undercloud is not thinly provisioned and is completely pre-allocated.
 
 The minimum system requirements for the virtual host machine to follow this tutorial are:
 
