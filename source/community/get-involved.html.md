@@ -27,7 +27,7 @@ If you want to help with our packaging and integration work, consider [joining o
 
 Join our [newsletter mailing list](//www.redhat.com/mailman/listinfo/rdo-newsletter) for monthly updates on RDO and the larger OpenStack world.
 
-Follow us on Twitter at [@rdocommunity](//twitter.com/rdocommunity), or on [Google+](https://plus.google.com/communities/110409030763231732154).
+Follow us on Twitter at [@rdocommunity](//twitter.com/rdocommunity), on [Google+](https://plus.google.com/communities/110409030763231732154), or on [Facebook](https://www.facebook.com/rdocommunity), as you prefer.
 
 <wikitwidget class="twitter-timeline" href="https://twitter.com/RDOcommunity" data-widget-id="482610699122638848" />
 
