@@ -89,11 +89,3 @@ You will need to start the instack virtual machine and obtain its IP address. No
 
       virsh start instack
       cat /var/lib/libvirt/dnsmasq/default.leases | grep $(tripleo get-vm-mac instack) | awk '{print $3;}'
-
-4. Get MAC addresses of all other VMs
-
-When setting up the undercloud on the instack virtual machine, you will need the MAC addresses of the bare metal node virtual machines. Use the following command to obtain the list of addresses. Later, you will need these MAC addresses to add to your deploy-overcloudrc file later.
-
-       for i in $(seq 0 3); do echo -n $(tripleo get-vm-mac baremetal_$i) " "; done; echo
-
-Next steps: [ Deploying an RDO Undercloud with Instack ](Deploying an RDO Undercloud with Instack)
