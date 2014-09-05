@@ -46,26 +46,19 @@ If you have previously used the host machine to run TripleO's devtest setup, the
 
 1. Make sure you are logged in as the user you created above.
 
-2. The virtual host machine needs SELinux set to permissive mode. You can immediately set the mode and also update the configuration file to be persistent across reboots:
-
-        # set selinux to permissive
-        sudo setenforce 0
-        # update the config file to survive reboots
-        sudo sed -i "s/=enforcing/=permissive/" /etc/selinux/config
-
-3. Add export of LIBVIRT_DEFAULT_URI to your bashrc file.
+2. Add export of LIBVIRT_DEFAULT_URI to your bashrc file.
 
         echo 'export LIBVIRT_DEFAULT_URI="qemu:///system"' >> ~/.bashrc
 
-4. Enable the RDO icehouse repository
+3. Enable the RDO icehouse repository
 
 `  sudo yum install -y `[`http://rdo.fedorapeople.org/openstack-icehouse/rdo-release-icehouse.rpm`](http://rdo.fedorapeople.org/openstack-icehouse/rdo-release-icehouse.rpm)
 
-5. Install instack-undercloud package
+4. Install instack-undercloud package
 
        sudo yum install -y instack-undercloud
 
-6. Run script to install required dependencies
+5. Run script to install required dependencies
 
        sudo yum install -y libguestfs-tools systemd
        source /usr/libexec/openstack-tripleo/devtest_variables.sh
