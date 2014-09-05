@@ -19,15 +19,11 @@ wiki_last_updated: 2015-01-08
 3.  Install instack-undercloud
         sudo yum -y install instack-undercloud
 
-4.  Create and edit your answers file. The descriptions of the parameters that can be set are in the sample answers file. Choose the file that matches your environment
+4.  Create and edit your answers file. In a virtualized setup, this has already been done for you. The descriptions of the parameters that can be set are in the sample answers file. Choose the file that matches your environment
         # Answers file must exist in home directory for now
         BAREMETAL
         # Use the baremetal answers file
         cp /usr/share/doc/instack-undercloud/instack-baremetal.answers.sample ~/instack.answers
-
-        VIRTUAL ENVIRONMENTS
-        # Use  the  virt sample answers file
-        cp /usr/share/doc/instack-undercloud/instack-virt.answers.sample ~/instack.answers
 
         # Perform any answer file edits. 
         The values in the answer file should be suitable for your environment. 
