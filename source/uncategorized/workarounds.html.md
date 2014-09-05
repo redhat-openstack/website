@@ -30,6 +30,7 @@ Edit files in /usr/lib/python2.7/site-packages/packstack/puppet/templates/ where
 
 ### Could not enable mysqld
 
+*   bug: <https://bugzilla.redhat.com/show_bug.cgi?id=1138701>
 *   **Affects:** CentOS 7
 
 ##### symptoms
