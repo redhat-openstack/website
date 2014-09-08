@@ -11,11 +11,10 @@ wiki_last_updated: 2015-08-31
 
 There are lots of events, around the world, where you can hang out with people from the RDO community. Some recent and upcoming events are:
 
-*   [Openstack Amsterdam September Meetup & Openstack 101](http://www.meetup.com/Openstack-Amsterdam/events/202482492/), Wednesday, September 3, Openstack & Ceph User Group, Amsterdam
-*   [Introduction to Ceph by Sheldon Mustard](http://www.meetup.com/Manchester-Linux-Openstack-and-Ceph-Usergroup/events/203930912/), Thursday, September 4 at the Manchester Linux Openstack and Ceph Usergroup
-*   [Deploying things with Heat](https://plus.google.com/events/c9u4sjn7ksb8jrmma7vd25aok94), Friday, September 5th, Google Hangout
-*   [Explore RHEL 7 With Techgrills](http://www.meetup.com/iShare-By-Techgrills/events/201146652/), Sunday, September 7th, Dehli
 *   [Red Hat :: Software Developer Meetup](http://www.meetup.com/RedHatFinland/events/182796782/), Wednesday, September 10th, Helsinki
+*   [Openstack and Open Throttle: a multi-vendor Openstack event at K1 Speed](http://www.meetup.com/San-Francisco-Silicon-Valley-OpenStack-Meetup/events/204925472/), Thursday September 11, Santa Clara
+*   [OpenStack India Meetup](http://www.meetup.com/Indian-OpenStack-User-Group/events/200883082/), Saturday September 13, Pune
+*   [OpenStack WorkShop by UnitedStack](http://www.meetup.com/China-OpenStack-User-Group/events/203178112/), Tuesday, September 16th, Shanghai
 *   [LinuxCon/CloudOpen](http://events.linuxfoundation.org/events/linuxcon-europe), October 13-15, Dusseldorf, Germany
 *   [OpenStack Summit](http://openstack.org/summit), November 3-7, Paris
 
