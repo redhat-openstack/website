@@ -17,7 +17,7 @@ Here's what's coming in Juno ...
 *   [Security (Keystone) Juno Previews](http://redhatstackblog.redhat.com/2014/08/05/juno-updates-security/) - Nathan Kinder
 *   [TripleO and Juno](http://blog-slagle.rhcloud.com/?p=235) - James Slagle
 *   Another [TripleO](http://giuliofidente.com/2014/08/tripleo-vs-openstack-ha.html) writeup by Giulio Fidente
-*   [Horizon](http://www.matthias-runge.de/2014/09/08/horizon-juno-cycle-features/) - Matthias Runge
+*   [Dashboard (Horizon)](http://www.matthias-runge.de/2014/09/08/horizon-juno-cycle-features/) - Matthias Runge
 
 See also ...
 
