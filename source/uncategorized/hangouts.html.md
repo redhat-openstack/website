@@ -20,7 +20,7 @@ If you missed a hangout, and are watching the video, you can always ask followup
 
 ### Lars Kellogg-Stedman - Deploying with Heat
 
-*   September 2014\*
+*September 2014*
 
 <iframe width="630" src="//youtube.com/embed/qH-qYE1Kmpg" frameborder="0" align="center" allowfullscreen="true"> </iframe>
 
