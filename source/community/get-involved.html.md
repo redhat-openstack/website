@@ -50,7 +50,7 @@ The site ask.openstack has replaced the forum hosted on this website [since Nove
 
 *   Help improve our knowledge base by turning the best answers to questions in the forum or on ask.openstack.org into a page in our [troubleshooting section](troubleshooting). In case of ask.openstack.org, a link might be sufficient.
 *   Blog about how you're using RDO. If you blog frequently about RDO and OpenStack, consider [requesting that your blog be added](https://wiki.openstack.org/wiki/AddingYourBlog) to the upstream [Planet OpenStack](http://planet.openstack.org/).
-*   Here are some tips on [adding new content](Adding_new_content)
+*   Here are some tips on [adding new content to this wiki](Adding_new_content).
 
 ### Contribute to OpenStack and Packstack
 
