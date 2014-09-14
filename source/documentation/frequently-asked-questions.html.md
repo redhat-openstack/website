@@ -47,7 +47,7 @@ The OpenStack project develops code, and does not handle packaging for specific 
 
 ## How can I participate?
 
-Sign up to our [forum](http://openstack.redhat.com/forum) and help others with their RDO questions. Add your case study to our case studies section of the wiki. Take the best answer from a forum thread and turn it into a new page in the knowledge base. Feel free to contribute any packaging and integration patches via our developer mailing lists, or propose improvements to OpenStack on the upstream Launchpad page. For more information, see [ getting involved](get involved).
+Sign up to [ask.openstack](Get involved#ask.openstack) and help others with their RDO questions. Add your case study to our case studies section of the wiki. Take well answered questions from ask.openstack and link them in the knowledge base. Feel free to contribute any packaging and integration patches via our developer mailing lists, or propose improvements to OpenStack on the upstream Launchpad page. For more information, see [ getting involved](get involved).
 
 ## Is RDO a fork of OpenStack?
 
@@ -69,7 +69,7 @@ Packstack, an installation utility which uses Puppet modules to deploy OpenStack
 
 ## Where can I find help with RDO?
 
-You can find documentation and get help through the [/forum forums], IRC, or mailing lists and from others in the RDO community. And don't hesitate to answer someone else's question if you know the answer. You can find all of the ways you can get involved in the RDO community at [ getting involved](get involved).
+You can find documentation and get help through [ask.openstack](Get involved#ask.openstack), IRC, or mailing lists and from others in the RDO community. And don't hesitate to answer someone else's question if you know the answer. You can find all of the ways you can get involved in the RDO community at [ getting involved](get involved).
 
 ## Can I buy commercial support for RDO?
 
