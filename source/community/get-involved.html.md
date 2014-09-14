@@ -17,11 +17,11 @@ __NOTOC__
 
 Help us make the RDO community site a great place for users and cloud operators in the Red Hat ecosystem by sharing your OpenStack questions and solutions on [ask.openstack](http://ask.openstack.org), and by adding [the most useful solutions](Troubleshooting) and [stories](Case_studies) to the RDO website.
 
-### Discuss
+### Discuss and stay informed
 
-Come and chat real-time with RDO users on **IRC** - you can usually find us in the #rdo channel - or hanging out with the wider OpenStack community in the #openstack channel - on [Freenode](http://freenode.net). Packstack-specific discussion is in the #packstack-dev channel.
+Come and chat real-time with RDO users on **IRC**—you can usually find us in the #rdo channel—or hanging out with the wider OpenStack community in the #openstack channel on [Freenode](http://freenode.net). Packstack-specific discussion takes place in the #packstack-dev channel.
 
-Join is for various [Events](Events) around the world.
+Join us for various [Events](Events) around the world.
 
 If you want to help with our packaging and integration work, consider [joining our contributor **mailing list**](//www.redhat.com/mailman/listinfo/rdo-list), and check out [Red Hat's OpenStack pages on github](//github.com/redhat-openstack).
 
@@ -33,7 +33,7 @@ Follow us on Twitter at [@rdocommunity](//twitter.com/rdocommunity), on [Google+
 
 ### Solve
 
-*   Check our [Frequently Asked Questions (FAQ) page](Frequently Asked Questions) for the answer to common questions
+*   Check our [Frequently Asked Questions (FAQ) page](Frequently Asked Questions) for answers to common questions
 *   Try our [troubleshooting page](Troubleshooting) for solutions to common problems
 *   Search [ask.openstack](http://ask.openstack.org) to find previous discussions on the topic
 
@@ -41,13 +41,13 @@ Follow us on Twitter at [@rdocommunity](//twitter.com/rdocommunity), on [Google+
 
 *   Help improve our knowledge base by turning the best answers to forum questions into a page in our [troubleshooting section](troubleshooting)
 *   Blog about how you're using RDO. If you blog frequently about RDO and OpenStack, consider [requesting that your blog be added](https://wiki.openstack.org/wiki/AddingYourBlog) to the upstream [Planet OpenStack](http://planet.openstack.org/).
-*   Here's some tips on [adding new content](Adding_new_content)
+*   Here are some tips on [adding new content](Adding_new_content)
 
-### Contribute to OpenStack
+### Contribute to OpenStack and Packstack
 
 If you see something which you'd like to improve in RDO, there is a good chance that the best place to make that happen is in [the OpenStack project](http://www.openstack.org).
 
-The Puppet modules used in packstack are on [Github](https://github.com/packstack) and packstack itself is on [Stackforge](https://github.com/stackforge/packstack). There's great information about contributing to Packstack in the [Packstack wiki page](https://wiki.openstack.org/wiki/Packstack).
+The Puppet modules used in packstack are on [Github](https://github.com/packstack) and packstack itself is on [Stackforge](https://github.com/stackforge/packstack). There's great information about contributing to Packstack in the [Packstack wiki page in OpenStack's wiki](https://wiki.openstack.org/wiki/Packstack).
 
 Feel free to contribute any packaging and integration patches via [our contributor mailing list](//www.redhat.com/mailman/listinfo/rdo-list), [fork us on GitHub](//github.com/redhat-openstack), or propose improvements to OpenStack on [the upstream Launchpad page](//launchpad.net/openstack).
 
