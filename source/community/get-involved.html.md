@@ -35,7 +35,16 @@ Follow us on Twitter at [@rdocommunity](//twitter.com/rdocommunity), on [Google+
 
 *   Check our [Frequently Asked Questions (FAQ) page](Frequently Asked Questions) for answers to common questions
 *   Try our [troubleshooting page](Troubleshooting) for solutions to common problems
-*   Search [ask.openstack](http://ask.openstack.org) to find previous discussions on the topic
+*   Join the ask.openstack community to ask and answer questions:
+
+#### ask.openstack
+
+The site ask.openstack has replaced the forum hosted on this website [since November 2013](https://openstack.redhat.com/forum/discussion/935/rdo-forum-moving-to-ask-openstack-org-and-the-path-forward/p1).
+
+*   Search [ask.openstack](http://ask.openstack.org) to find previous discussions on the topic.
+*   If you ask a new question, consider adding the tag “rdo” to it. You can use [this link to add a new question with this tag](https://ask.openstack.org/en/questions/ask/?tags=rdo).
+*   [Find all questions on ask.openstack related to RDO](https://ask.openstack.org/en/questions/scope:all/sort:age-desc/page:1/query:rdo/).
+*   If you're a frequent poster on ask.openstack and wish to identify yourself as part of the RDO community, consider adding the RDO logo to your avatar, like Lars: <https://ask.openstack.org/en/users/1745/larsks/> .
 
 ### Write
 
