@@ -61,7 +61,7 @@ RDO replaces OpenStack for EPEL ([Extra Packages for Enterprise Linux](http://fe
 
 Development of OpenStack for Fedora will continue unchanged. Fedora will continue to ship whatever the latest OpenStack release is, at the time when each Fedora release cycle hits its development freeze date. For Fedora users who want to run a more recent version of OpenStack than that which is available in the Fedora repository, we provide RPMs through RDO. For example, if you are running Fedora 20, and you would like to try Icehouse, then the RDO packages are for you. If you would like to run Havana on Fedora 19, then you should install OpenStack packages from the Fedora repository.
 
-Users of OpenStack on Fedora are welcome to participate in the Red Hat OpenStack community forums on openstack.redhat.com and in the Fedora Cloud SIG. There is more information on OpenStack in Fedora [in the Fedora project wiki](http://fedoraproject.org/wiki/OpenStack).
+Users of OpenStack on Fedora are welcome to participate in the discusson on [ask.openstack.org](http://ask.openstack.org/), and in the Fedora Cloud SIG. There is more information on OpenStack in Fedora [in the Fedora project wiki](http://fedoraproject.org/wiki/OpenStack).
 
 ## How do I deploy RDO?
 
