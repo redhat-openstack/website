@@ -45,7 +45,7 @@ You'll want a fresh install with latest updates installed. (Fresh so that there'
 
 ### Test cases and results
 
-The things that should be tested are listed at [RDO_test_day_Juno_milestone_3_test_cases](RDO_test_day_Juno_milestone_3_test_cases).
+**The things that should be tested are listed at [RDO_test_day_Juno_milestone_3_test_cases](RDO_test_day_Juno_milestone_3_test_cases).**
 
 *   Pick an item from the list
 *   Go through the scenario as though you were a beginner, just following the instructions. (Check the [ Workarounds](Workarounds) page for problems that others may have encountered and resolved.)
