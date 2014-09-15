@@ -48,7 +48,7 @@ The site [ask.openstack](http://ask.openstack.org) is the upstream Q&A for all m
 
 ### Write
 
-*   Help improve our knowledge base by turning the best answers to questions on the [Mailing_lists mailing lists](Mailing_lists mailing lists) or on [ask.openstack.org](http://ask.openstack.org) into a page in our [troubleshooting section](troubleshooting). In case of ask.openstack.org, a link might be sufficient.
+*   Help improve our knowledge base by turning the best answers to questions on the [Mailing_list](Mailing_list) or on [ask.openstack.org](http://ask.openstack.org) into a page in our [troubleshooting section](troubleshooting). In case of ask.openstack.org, a link might be sufficient.
 *   Blog about how you're using RDO. If you blog frequently about RDO and OpenStack, consider [requesting that your blog be added](https://wiki.openstack.org/wiki/AddingYourBlog) to the upstream [Planet OpenStack](http://planet.openstack.org/).
 *   Here are some tips on [adding new content to this wiki](Adding_new_content).
 
