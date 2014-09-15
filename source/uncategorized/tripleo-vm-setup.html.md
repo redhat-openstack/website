@@ -8,7 +8,7 @@ wiki_last_updated: 2015-05-05
 
 # TripleO VM Setup
 
-**NOTE:** The instructions in this page, while still expected to work, are outdated. There are updated instructions at <http://openstack.redhat.com/Deploying_RDO_using_Instack>. The updated instructions work on both baremetal and virtual environments and are based on RDO Icehouse packages.
+## **Note: These instructions are outdated. There's a new setup published [ here](Deploying_RDO_using_Instack) which is designed to be an easier process for trying TripleO.**
 
 ## Background
 
