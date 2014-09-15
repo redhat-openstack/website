@@ -39,7 +39,7 @@ Follow us on Twitter at [@rdocommunity](//twitter.com/rdocommunity), on [Google+
 
 #### ask.openstack
 
-The site ask.openstack has replaced the forum hosted on this website [since November 2013](https://openstack.redhat.com/forum/discussion/935/rdo-forum-moving-to-ask-openstack-org-and-the-path-forward/p1).
+The site [ask.openstack](http://ask.openstack.org) is the upstream Q&A for all manner of OpenStack issues.
 
 *   Search [ask.openstack](http://ask.openstack.org) to find previous discussions on the topic.
 *   If you ask a new question, consider adding the tag “rdo” to it. You can use [this link to add a new question with this tag](https://ask.openstack.org/en/questions/ask/?tags=rdo).
