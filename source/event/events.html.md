@@ -11,10 +11,12 @@ wiki_last_updated: 2015-08-31
 
 There are lots of events, around the world, where you can hang out with people from the RDO community. Some recent and upcoming events are:
 
-*   [Red Hat :: Software Developer Meetup](http://www.meetup.com/RedHatFinland/events/182796782/), Wednesday, September 10th, Helsinki
-*   [Openstack and Open Throttle: a multi-vendor Openstack event at K1 Speed](http://www.meetup.com/San-Francisco-Silicon-Valley-OpenStack-Meetup/events/204925472/), Thursday September 11, Santa Clara
-*   [OpenStack India Meetup](http://www.meetup.com/Indian-OpenStack-User-Group/events/200883082/), Saturday September 13, Pune
 *   [OpenStack WorkShop by UnitedStack](http://www.meetup.com/China-OpenStack-User-Group/events/203178112/), Tuesday, September 16th, Shanghai
+*   [Red Hat User Group inaugural happy hour](http://www.meetup.com/Seattle-Red-Hat-Enterprise-Linux-User-Group/), Wednesday, September 17th, Seattle
+*   [All about Open Source with The Fedora Project's Robyn Bergeron](http://www.meetup.com/PhoenixRedHatSoftwareUserGroup/events/202336622/), Wednesday, September 17th, Tempe AZ
+*   [Taking the Long View: How the Oslo Program Reduces Technical Debt](http://www.meetup.com/openstack-atlanta/events/199573312/), Thursday, September 18th, Atlanta, GA
+*   [OpenStack Conference Benelux](http://www.meetup.com/Openstack-Netherlands/events/181447772/), Friday, September 19th, Bossum
+*   [Tech Day - Rochester, NY - RHCI & JBoss Middleware](http://www.meetup.com/RedHatTechDay/events/204676922/), Tuesday, September 23, West Henrietta, NY
 *   [LinuxCon/CloudOpen](http://events.linuxfoundation.org/events/linuxcon-europe), October 13-15, Dusseldorf, Germany
 *   [OpenStack Summit](http://openstack.org/summit), November 3-7, Paris
 
