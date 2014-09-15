@@ -6,14 +6,16 @@ wiki_revision_count: 25
 wiki_last_updated: 2014-09-15
 ---
 
+# Deploying RDO using Tuskar and TripleO
+
 __NOTOC__
 
 <div class="bg-boxes bg-boxes-single">
 <div class="row">
 <div class="offset3 span8">
-**Note:** These instructions are outdated, however they're likely to still work. There's a new setup published at [TripleO_VM_Setup](TripleO_VM_Setup) which is designed to be an easier process for trying TripleO.
+## **Note: These instructions are outdated. There's a new setup published [ here](Deploying_RDO_using_Instack) which is designed to be an easier process for trying TripleO.**
 
-# Deploying RDO Using Tuskar and TripleO
+## Deploying RDO Using Tuskar and TripleO
 
 The following page describes a process for deploying RDO Havana using the [Tuskar](//wiki.openstack.org/wiki/TripleO/Tuskar) and [TripleO](//wiki.openstack.org/wiki/TripleO) projects.
 
@@ -23,7 +25,7 @@ NOTE: This install process is **NOT** suitable for production deployment, in fac
 </div>
 <div class="row">
 <div class="offset3 span8 pull-s">
-# Goal
+## Goal
 
 Deploy a virtualized OpenStack installation consisting of a single OpenStack controller node and single Nova compute node (known as the Overcloud). The instructions walk you through installing first Tuskar and TripleO (known as the Undercloud) then deploying this OpenStack install using the Tuskar UI.
 
@@ -33,7 +35,7 @@ Deploy a virtualized OpenStack installation consisting of a single OpenStack con
 </div>
 <div class="row">
 <div class="offset3 span8 pull-s">
-# Files to download
+## Files to download
 
 Download these files to the machine which you will use to host the virtual environment.
 
@@ -50,7 +52,7 @@ Download these files to the machine which you will use to host the virtual envir
 </div>
 <div class="row">
 <div class="offset3 span8 pull-s">
-# Instructions
+## Instructions
 
 Can be found [here](//github.com/mtaylor/tuskar_install/blob/master/README.md). If you run into issues please reach out on #tuskar on freenode irc.
 
@@ -58,7 +60,7 @@ Can be found [here](//github.com/mtaylor/tuskar_install/blob/master/README.md). 
 </div>
 <div class="row">
 <div class="offset3 span8 pull-s">
-# Future
+## Future
 
 The Tuskar and TripleO communities are continually extending the capabilities of the two projects. Over the course of the OpenStack Icehouse release we intend to reduce the complexity of the installation process. If you would like to help contribute please get in touch on #tuskar on freenode irc.
 
