@@ -11,7 +11,8 @@ wiki_last_updated: 2014-10-22
 See also:
 
 *   [OpenStack Summit Hong Kong presentations](OpenStack Summit Hong Kong presentations).
-*   [FLOSS Weekly, November 13, 2013, with Rich Bowen and Dave Neary](http://twit.tv/show/floss-weekly/273)
+*   OpenStack Summit Atlanta presentations
+*   Past RDO [Hangouts](Hangouts)
 
 ## OpenStack Networking Part II
 
