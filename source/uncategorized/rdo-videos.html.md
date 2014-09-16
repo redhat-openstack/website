@@ -11,7 +11,7 @@ wiki_last_updated: 2014-10-22
 See also:
 
 *   [OpenStack Summit Hong Kong presentations](OpenStack Summit Hong Kong presentations).
-*   OpenStack Summit Atlanta presentations
+*   [OpenStack Summit Atlanta presentations](https://www.openstack.org/summit/openstack-summit-atlanta-2014/session-videos/)
 *   Past RDO [Hangouts](Hangouts)
 
 ## OpenStack Networking Part II
