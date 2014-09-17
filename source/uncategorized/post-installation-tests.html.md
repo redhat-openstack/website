@@ -10,52 +10,23 @@ wiki_last_updated: 2014-10-01
 
 ## After installation, please run the following on your setup:
 
-## **As Admin user:**
+setting up:
 
-1. create a new image
+1. log into Horizon 2. create a new project called RedHat and set a high numbers quota 3. create a new project user with admin rights called Pinky Brain 4. log out
 
-2. launch 4 new instances from the image
+Admin in tenant:
 
-3. create a snapshot
+1.. log in to Project RedHat using Pinky Brain user 2.. create a new Image called qcow_image 3. create the following user's as members:
 
-4. create a volume from the image
+*   Peter PP
+*   Homer HH
+*   Francine FF
+*   Jeff JJ
+*   Tom TT
+*   Daniel DD
 
-5. launch an instance
+4. create a private network called PB 5. launch 6 instances from the created image called 'TV' 6. create a new volume from an image called 'image-volume' 7. create a new empty volume called 'blank-volume' 8. create a snapshot from both volumes 9. create a backup for both volumes 10. launch an instance from the 'image-volume' 11. attach the empty volume to an instance
 
-6. connect to the volume instance and one of the image instances and write to the image
+Member of tenant:
 
-7. create a new project with : 1 admin user, 2 Member users
-
-8. create a new privet network
-
-9. attach floating ips to an instance
-
-10. attach a new ip from the second privet network.
-
-11. shut off an instance
-
-12. destroy the volume instance
-
-13. launch a new instance from the volume -> connect to the instance via console -> make sure that the changes to the volume were not deleted on instance termination.
-
-14. create a new flavor and launch an instance with the flavor
-
-15. terminate all instances
-
-## **As new created users:**
-
-1. . launch an instance from image as the new admin user
-
-2. try to launch a user as Member user
-
-3. try to terminate an instance as member user
-
-4. try to launch an instance from the volume as a Member user
-
-5. launch an instance from the volume as the new admin user.
-
-6. connect via console to the volume instance as a Member user.
-
-7. destroy all images as a Member user
-
-8. delete volume and image as Member user
+1. log in to horizon using Peter Griffin's user
