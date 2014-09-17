@@ -9,7 +9,7 @@ wiki_last_updated: 2014-10-05
 
 # RDO test day Juno milestone 3
 
-We plan to hold a RDO test day on September 25th and 26th, 2014. This will be coordinated through the #rdo channel on Freenode, and through this wiki and the rdo-list mailing list.
+We plan to hold a RDO test day on **October 1st and 2nd**, 2014. This will be coordinated through the #rdo channel on Freenode, and through this wiki and the rdo-list mailing list.
 
 We'll be testing the third Juno milestone release. If you can do any testing on your own ahead of time, that will help ensure that everyone isn't encountering the same problems.
 
