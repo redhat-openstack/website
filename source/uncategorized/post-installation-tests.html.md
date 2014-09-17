@@ -8,9 +8,9 @@ wiki_last_updated: 2014-10-01
 
 # Post Installation Tests
 
-**After installation, please run the following on your setup:**
+## After installation, please run the following on your setup:
 
-As Admin user:
+## **As Admin user:**
 
 1. create a new image
 
@@ -42,7 +42,7 @@ As Admin user:
 
 15. terminate all instances
 
-**As new created users:**
+## **As new created users:**
 
 1. . launch an instance from image as the new admin user
 
