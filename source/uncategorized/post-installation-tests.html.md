@@ -12,11 +12,16 @@ wiki_last_updated: 2014-10-01
 
 setting up:
 
-1. log into Horizon 2. create a new project called RedHat and set a high numbers quota 3. create a new project user with admin rights called Pinky Brain 4. log out
+1.  log into Horizon
+2.  create a new project called RedHat and set a high numbers quota
+3.  create a new project user with admin rights called Pinky Brain
+4.  log out
 
 Admin in tenant:
 
-1.. log in to Project RedHat using Pinky Brain user 2.. create a new Image called qcow_image 3. create the following user's as members:
+1.  log in to Project RedHat using Pinky Brain user
+2.  create a new Image called qcow_image
+3.  create the following user's as members:
 
 *   Peter PP
 *   Homer HH
@@ -25,8 +30,15 @@ Admin in tenant:
 *   Tom TT
 *   Daniel DD
 
-4. create a private network called PB 5. launch 6 instances from the created image called 'TV' 6. create a new volume from an image called 'image-volume' 7. create a new empty volume called 'blank-volume' 8. create a snapshot from both volumes 9. create a backup for both volumes 10. launch an instance from the 'image-volume' 11. attach the empty volume to an instance
+1.  create a private network called PB
+2.  launch 6 instances from the created image called 'TV'
+3.  create a new volume from an image called 'image-volume'
+4.  create a new empty volume called 'blank-volume'
+5.  create a snapshot from both volumes
+6.  create a backup for both volumes
+7.  launch an instance from the 'image-volume'
+8.  attach the empty volume to an instance
 
 Member of tenant:
 
-1. log in to horizon using Peter Griffin's user
+1.  log in to horizon using Peter Griffin's user
