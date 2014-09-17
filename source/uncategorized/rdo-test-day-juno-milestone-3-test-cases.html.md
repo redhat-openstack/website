@@ -56,6 +56,6 @@ Various components which don't fit the large test efforts above.
 
 ## Other
 
-| Config Name    | Release | BaseOS | Status | HOWTO | Who | Date | BZ/LP | Notes Page |
-|----------------|---------|--------|--------|-------|-----|------|-------|------------|
-| Test Name Here |         |        | ??     | ??    | ??  | ??   | None  | None       |
+| Config Name       | Release          | BaseOS | Status | HOWTO                                                         | Who | Date  | BZ/LP | Notes Page |
+|-------------------|------------------|--------|--------|---------------------------------------------------------------|-----|-------|-------|------------|
+| Post Installation | Juno Milestone 3 | ALL    | ??     | [Post Installation Tests](Post Installation Tests) | ALL | 18-09 | None  | None       |
