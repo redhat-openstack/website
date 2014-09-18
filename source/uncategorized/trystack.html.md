@@ -18,6 +18,16 @@ Information on RDO: <http://openstack.redhat.com>
 TryStack Launchpad <http://launchpad.net/trystack>
  How to import a docker image into trystack [TryStackDocker](TryStackDocker)
 
+## TryStack Restrictions
+
+To keep TryStack as a testing only platform we have a few restrictions set in place.
+These help to make sure that resources are shared fairly as best as possible.
+
+*   Instances are deleted after 24 hours
+*   External gateways on routers are cleared daily
+*   Cinder volumes are deleted after 48 hours
+*   Other resource usage is monitored for other restrictions that need to be enforced
+
 ## Architecture Details
 
 TryStack's Architecture includes the following components
