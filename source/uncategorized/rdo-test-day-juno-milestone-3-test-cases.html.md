@@ -11,7 +11,7 @@ wiki_last_updated: 2014-10-14
 
 # RDO test day Juno milestone 3 test cases
 
-Tested Setups for [RDO_test_day_Juno_milestone_3](RDO_test_day_Juno_milestone_3). Tests should be executed against the Juno RDO **not** Icehouse, some steps from the official Quickstart guide **do not** apply to Juno; make sure to follow the steps described in the [RDO_test_day_Juno_milestone_3#How_To_Test](RDO_test_day_Juno_milestone_3#How_To_Test) page instead.
+Tested Setups for **[RDO_test_day_Juno_milestone_3](RDO_test_day_Juno_milestone_3)**. Tests should be executed against the Juno RDO **not** Icehouse, some steps from the official Quickstart guide **do not** apply to Juno; make sure to follow the steps described in the [RDO_test_day_Juno_milestone_3#How_To_Test](RDO_test_day_Juno_milestone_3#How_To_Test) page instead.
 
 ## Example Entry
 
