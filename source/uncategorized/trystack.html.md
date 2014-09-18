@@ -13,7 +13,10 @@ wiki_last_updated: 2014-11-04
 To get started watch this video: [<http://youtu.be/EPZPzXSypl4>](http://youtu.be/EPZPzXSypl4)
 This video references RDO Hanava but is still valid for RDO Icehouse currently running on TryStack.
 
-How to import a docker image into trystack [TryStackDocker](TryStackDocker)
+FAQs: <http://openstack.redhat.com/TryStackFAQ>
+Information on RDO: <http://openstack.redhat.com>
+TryStack Launchpad <http://launchpad.net/trystack>
+ How to import a docker image into trystack [TryStackDocker](TryStackDocker)
 
 ## Architecture Details
 
