@@ -36,6 +36,6 @@ Below you can find guides and some test suggestions for the storage components.
 
 You can find some people from the Red Hat storage team on IRC in the #rdo channel on Freenode:
 
-Dafna Ron (Dafna), Yogev Rabl (yrabl), Tzach Shefi (tshefi), Giulio Fidente (giulivo)
+Nathan Levinkind (nlevinki), Yogev Rabl (yrabl), Tzach Shefi (tshefi), Benny Kopilov (bkopilov), Prasanth Anbalagan (panbalag), Luigi Toscano (tosky), Tomas Rusnak (trusnak)
 
 <Category:Storage>
