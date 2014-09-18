@@ -20,7 +20,7 @@ Quick Links:
 ## Who's Participating
 
 *   rbowen - Wiki, IRC, testing (CentOS)
-*   tshefi - IRC
+*   tshefi - IRC (RHEL 7)
 *   ...
 
 ## Prerequisites
