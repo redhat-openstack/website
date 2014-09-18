@@ -6,7 +6,7 @@ wiki_revision_count: 2
 wiki_last_updated: 2014-09-18
 ---
 
-### TryStack Docker
+# Try Stack Docker
 
 There is a fedora docker image already imported and publicly available for use on TryStack named "fedora".
 This How-To shows the process of how that fedora image was imported into Glance.
