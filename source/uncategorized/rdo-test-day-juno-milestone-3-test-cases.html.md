@@ -26,11 +26,11 @@ Here's how you might fill out an entry once you've tested it. Mark a given test 
 
 Please make sure to use the steps described in the RDO_test_day_January_2014#How_To_Test page when installing the base RDO system. Do not go trough the Quickstart steps unmodified which will instead give you an RDO Havana deployment.
 
-| Config Name | Release | BaseOS   | Status | HOWTO                               | Who | Date       | BZ/LP | Notes Page |
-|-------------|---------|----------|--------|-------------------------------------|-----|------------|-------|------------|
-| All-in-One  |         | CentOS 7 | ??     | [QuickStart](QuickStart) | ?   | 2014-00-00 | None  | None       |
-| All-in-One  |         | F20      | ??     | [QuickStart](QuickStart) | ?   | 2014-00-00 | None  | None       |
-| All-in-One  |         | RHEL 7   | ??     | [QuickStart](QuickStart) | ?   | 2014-00-00 | None  | None       |
+| Config Name                       | Release | BaseOS   | Status     | HOWTO                               | Who      | Date       | BZ/LP                                                                                                                                   | Notes Page |
+|-----------------------------------|---------|----------|------------|-------------------------------------|----------|------------|-----------------------------------------------------------------------------------------------------------------------------------------|------------|
+| All-in-One                        |         | CentOS 7 | ??         | [QuickStart](QuickStart) | ?        | 2014-00-00 | None                                                                                                                                    | None       |
+| All-in-One                        |         | F20      | ??         | [QuickStart](QuickStart) | ?        | 2014-00-00 | None                                                                                                                                    | None       |
+| Controller, Networker, 2 Computes |         | RHEL 7   | **Failed** | [QuickStart](QuickStart) | nmagnezi | 2014-09-18 | [BZ #1144181](https://bugzilla.redhat.com/show_bug.cgi?id=1144181) [BZ #1144182](https://bugzilla.redhat.com/show_bug.cgi?id=1144182) | None       |
 
 ## Packstack Based Installation (Storage Components)
 
