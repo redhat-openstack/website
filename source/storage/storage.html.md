@@ -16,11 +16,12 @@ Below you can find guides and some test suggestions for the storage components.
 
 ## Cinder Manuals
 
+*   [Using Ceph for Cinder with RDO Havana](Using Ceph for Cinder with RDO Havana)
 *   [Using GlusterFS for Cinder with RDO Havana](Using GlusterFS for Cinder with RDO Havana)
+*   [Using GlusterFS for Cinder with RDO Grizzly](http://www.gluster.org/community/documentation/index.php/GlusterFS_Cinder)
 *   [Using EMC for Cinder with RDO](https://wiki.openstack.org/wiki/How_to_deploy_cinder_with_EMC_plug-in)
 *   [Using ThinLVM for Cinder with RDO Havana](Using ThinLVM for Cinder with RDO Havana)
-*   [Using Ceph for Cinder with RDO Havana](Using Ceph for Cinder with RDO Havana)
-*   [Using GlusterFS for Cinder with RDO Grizzly](http://www.gluster.org/community/documentation/index.php/GlusterFS_Cinder)
+*   [Using Dell EqualLogic for Cinder with RDO](Using Dell EqualLogic for Cinder with RDO)
 
 ## Glance Manuals
 
