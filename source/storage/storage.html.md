@@ -31,6 +31,7 @@ Below you can find guides and some test suggestions for the storage components.
 
 *   [Tests/Storage/Cinder](Tests/Storage/Cinder)
 *   [Tests/Storage/Glance](Tests/Storage/Glance)
+*   [Tests/Storage/Swift](Tests/Storage/Swift)
 
 ## Contacts
 
