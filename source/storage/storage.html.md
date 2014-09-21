@@ -24,6 +24,7 @@ Below you can find guides and some test suggestions for the storage components.
 
 ## Glance Manuals
 
+*   [Using Ceph for Glance with RDO](Using Ceph for Glance with RDO)
 *   [Using GlusterFS for Glance with RDO Havana](Using GlusterFS for Glance with RDO Havana)
 *   [Using Swift for Glance with RDO Havana](Using Swift for Glance with RDO Havana)
 
