@@ -17,6 +17,7 @@ There are lots of events, around the world, where you can hang out with people f
 *   [Taking the Long View: How the Oslo Program Reduces Technical Debt](http://www.meetup.com/openstack-atlanta/events/199573312/), Thursday, September 18th, Atlanta, GA
 *   [OpenStack Conference Benelux](http://www.meetup.com/Openstack-Netherlands/events/181447772/), Friday, September 19th, Bossum
 *   [Tech Day - Rochester, NY - RHCI & JBoss Middleware](http://www.meetup.com/RedHatTechDay/events/204676922/), Tuesday, September 23, West Henrietta, NY
+*   [RDO Juno Milestone 3 test day](https://openstack.redhat.com/RDO_test_day_Juno_milestone_3), October 1-2, #RDO on Freenode IRC
 *   [LinuxCon/CloudOpen](http://events.linuxfoundation.org/events/linuxcon-europe), October 13-15, Dusseldorf, Germany
 *   [OpenStack Summit](http://openstack.org/summit), November 3-7, Paris
 
