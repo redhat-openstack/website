@@ -21,6 +21,7 @@ Quick Links:
 
 *   rbowen - Wiki, IRC, testing (CentOS)
 *   tshefi - IRC (RHEL 7)
+*   arif-ali - IRC, packstack, allinone, (CentOS 7)
 *   ...
 
 ## Prerequisites
