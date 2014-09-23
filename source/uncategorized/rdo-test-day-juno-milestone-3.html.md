@@ -38,7 +38,7 @@ You'll want a fresh install with latest updates installed. (Fresh so that there'
 
 ## How To Test
 
-    sudo yum install http://rdo.fedorapeople.org/openstack-icehouse/rdo-release-juno.rpm
+    sudo yum install http://rdo.fedorapeople.org/openstack-juno/rdo-release-juno.rpm
 
 *   Check for any [ Workarounds](Workarounds) required for your platform before the main installation
 *   For Packstack based deployment start at step 2 of -- <http://openstack.redhat.com/Quickstart#Step_2:_Install_Packstack_Installer>
