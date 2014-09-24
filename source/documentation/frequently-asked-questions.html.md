@@ -23,6 +23,8 @@ However, RDO does focus on building a distribution of OpenStack specific to Red 
 
 The 3 letter meaningless acronym sort of comes from that line of thinking.
 
+If you prefer, you can think of it as 'Really Darned Obvious', representing our view that it should be easy to deploy an OpenStack cloud using RDO. Or, possibly, 'Ridiculously Dedicated OpenStackers', representing our OpenStack engineering team and their passion about making this stuff work.
+
 ## What is OpenStack?
 
 OpenStack is an open source project for building a private or public infrastructure-as-a-service (IaaS) cloud running on standard hardware. You can learn more about it by visiting [www.openstack org](http://www.openstack.org/).
