@@ -49,7 +49,9 @@ The OpenStack project develops code, and does not handle packaging for specific 
 
 ## How can I participate?
 
-Sign up to [ask.openstack](Get involved#ask.openstack) and help others with their RDO questions. Add your case study to our [Case_studies](Case_studies) section of the wiki. Take well answered questions from ask.openstack and link them in the knowledge base. Feel free to contribute any packaging and integration patches via our developer mailing lists, or propose improvements to OpenStack on the upstream Launchpad page. For more information, see [ getting involved](get involved).
+Sign up to [ask.openstack](Get involved#ask.openstack) and help others with their RDO questions. Add your [User_stories](User_stories) to the wiki. Take well answered questions from ask.openstack and turn them into howto documents on the [Docs](Docs) pages.
+
+Feel free to contribute any packaging and integration patches via our developer mailing lists, or propose improvements to OpenStack on the upstream Launchpad page. For more information, see [ getting involved](get involved).
 
 ## Is RDO a fork of OpenStack?
 
