@@ -56,7 +56,7 @@ Various components which don't fit the large test efforts above.
 |------------------------------------------|---------|-----------|--------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|------------|-------|------------|
 | 2,node+minimal OpenStack+Neutron+OVS+GRE | Juno M3 | Fedora 21 |        | [IceHouse-Notes](https://kashyapc.fedorapeople.org/virt/openstack/rdo/IceHouse-Nova-Neutron-ML2-GRE-OVS.txt) [IceHouse-Configs](https://kashyapc.fedorapeople.org/virt/openstack/rdo/IceHouse-Nova-Neutron-ML2-GRE-OVS.txt) | kashyapc | 2013-17-09 | None  | None       |
 
-## Other
+## Post Installation Tests
 
 | Config Name       | Release          | BaseOS | Status | HOWTO                                                         | Who | Date  | BZ/LP | Notes Page |
 |-------------------|------------------|--------|--------|---------------------------------------------------------------|-----|-------|-------|------------|
