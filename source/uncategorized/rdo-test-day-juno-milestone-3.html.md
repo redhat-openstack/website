@@ -23,6 +23,7 @@ Quick Links:
 *   tshefi - IRC (RHEL 7)
 *   arif-ali - IRC, packstack, allinone, (CentOS 7)
 *   apevec - IRC, devel (CentOS7)
+*   augol - IRC (RHEL 7)
 *   ...
 
 ## Prerequisites
