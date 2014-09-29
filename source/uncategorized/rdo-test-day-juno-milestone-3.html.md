@@ -24,7 +24,9 @@ Quick Links:
 *   arif-ali - IRC, packstack, allinone, (CentOS 7)
 *   apevec - IRC, devel (CentOS7)
 *   augol - IRC (RHEL 7)
-*   ...
+*   dron - IRC, (Centos7)
+*   mkrcmari - IRC, (Centos7)
+*   ....
 
 ## Prerequisites
 
