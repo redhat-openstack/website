@@ -17,9 +17,9 @@ __NOTOC__
 
 </div>
 <div class="offset3 span8 intro-text">
-The most up-to-date OpenStack on the industry's most trusted Linux platform, now easy to install and deploy.
+Please join us tomorrow as we kick the tires on OpenStack Juno!
 
-<span class="btn">[Quick start →](quickstart)</span>
+<span class="btn">[RDO Juno Test Day →](RDO_test_day_Juno_milestone_3)</span>
 
 </div>
 </div>
