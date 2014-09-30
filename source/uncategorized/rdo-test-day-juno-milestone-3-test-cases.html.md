@@ -32,7 +32,7 @@ Please make sure to use the steps described in the RDO_test_day_January_2014#How
 |                                           |         | F20      | ??     | [QuickStart](QuickStart) | iovadia  | 2014-00-00 | None  | + Horizon sanity |
 |                                           |         | RHEL7    | ??     | [QuickStart](QuickStart) | yfreid   | 2014-00-00 | None  | None             |
 | Distributed -ML2-OVS- VXLAN-IPv6- Sanity  |         | CentOS 7 | ??     | [QuickStart](QuickStart) | ?        | 2014-00-00 | None  | None             |
-|                                           |         | F20      | ??     | [QuickStart](QuickStart) | tdunnon  | 2014-00-00 | None  | None             |
+|                                           |         | F20      | ??     | [QuickStart](QuickStart) | ?        | 2014-00-00 | None  | None             |
 |                                           |         | RHEL7    | ??     | [QuickStart](QuickStart) | tfreger  | 2014-00-00 | None  | None             |
 | Distributed -ML2- OVS-GRE – IPv6 - LbaaS  |         | CentOS 7 | ??     | [QuickStart](QuickStart) | ?        | 2014-00-00 | None  | None             |
 |                                           |         | F20      | ??     | [QuickStart](QuickStart) | ?        | 2014-00-00 | None  | None             |
@@ -41,7 +41,7 @@ Please make sure to use the steps described in the RDO_test_day_January_2014#How
 |                                           |         | F20      | ??     | [QuickStart](QuickStart) | stoner   | 2014-00-00 | None  | None             |
 |                                           |         | RHEL7    | ??     | [QuickStart](QuickStart) | nmagnezi | 2014-00-00 | None  | None             |
 | Distributed -ML2-OVS- VXLAN-IPv6 – VPNaaS |         | CentOS 7 | ??     | [QuickStart](QuickStart) | ?        | 2014-00-00 | None  | None             |
-|                                           |         | F20      | ??     | [QuickStart](QuickStart) | ?        | 2014-00-00 | None  | None             |
+|                                           |         | F20      | ??     | [QuickStart](QuickStart) | tdunnon  | 2014-00-00 | None  | None             |
 |                                           |         | RHEL7    | ??     | [QuickStart](QuickStart) | ?        | 2014-00-00 | None  | None             |
 
 ## Packstack Based Installation (Storage Components)
