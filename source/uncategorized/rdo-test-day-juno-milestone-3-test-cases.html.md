@@ -28,7 +28,7 @@ Please make sure to use the steps described in the RDO_test_day_January_2014#How
 
 | Config Name                               | Release | BaseOS   | Status | HOWTO                               | Who      | Date       | BZ/LP | Notes Page |
 |-------------------------------------------|---------|----------|--------|-------------------------------------|----------|------------|-------|------------|
-| All-in-One - Sanity                       |         | CentOS 7 | ??     | [QuickStart](QuickStart) | ?        | 2014-00-00 | None  | None       |
+| All-in-One - Sanity                       |         | CentOS 7 | ??     | [QuickStart](QuickStart) | nyechiel | 2014-00-00 | None  | None       |
 |                                           |         | F20      | ??     | [QuickStart](QuickStart) | iovadia  | 2014-00-00 | None  | None       |
 |                                           |         | RHEL7    | ??     | [QuickStart](QuickStart) | yfreid   | 2014-00-00 | None  | None       |
 | Distributed -ML2-OVS- VXLAN-IPv6- Sanity  |         | CentOS 7 | ??     | [QuickStart](QuickStart) | ?        | 2014-00-00 | None  | None       |
