@@ -13,7 +13,7 @@ wiki_last_updated: 2015-05-07
 
 See [Workaround_archive](Workaround_archive) for workarounds that we believe to be resolved. Please move them back here if they appear to still be necessary.
 
-## Packstack fails; unable to start nova-api
+## Unable to start nova-api
 
 *   **Bug:** <https://bugzilla.redhat.com/show_bug.cgi?id=1139771>
 *   **Affects:** Fedora 20, CentOS7
