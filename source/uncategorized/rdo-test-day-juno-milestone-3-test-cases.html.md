@@ -73,6 +73,14 @@ Various components which don't fit the large test efforts above.
 | Ceilometer: All-in-One w/ Neutron Networking, Heat | RDO icehouse | RHEL 6.5 |        |       |     |      |       |            |
 | Ceilometer: All-in-One w/ Neutron Networking, Heat | RDO icehouse | RHEL 7.0 |        |       |     |      |       |            |
 
+## Core Tests
+
+General openstack tests
+
+| Item/Area Name | Release  | BaseOS   | Status | HOWTO | Who      | Date | BZ/LP | Notes Page |
+|----------------|----------|----------|--------|-------|----------|------|-------|------------|
+| Keystone tests | RDO Juno | CentOS 7 |        |       | ukalifon |      |       |            |
+
 ## Manual configuration of OpenStack
 
 | Config Name                              | Release | BaseOS     | Status | HOWTO                                                                                                                                                                                                                                                                            | Who       | Date       | BZ/LP | Notes Page |
