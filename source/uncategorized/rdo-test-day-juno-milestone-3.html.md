@@ -16,6 +16,8 @@ We'll be testing the third Juno milestone release. If you can do any testing on 
 Quick Links:
 
 *   [Quickstart](Quickstart)
+*   [RDO_test_day_Juno_milestone_3_test_cases](RDO_test_day_Juno_milestone_3_test_cases)
+*   [Workarounds](Workarounds)
 
 ## Who's Participating
 
