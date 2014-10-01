@@ -77,12 +77,12 @@ Various components which don't fit the large test efforts above.
 
 General openstack tests
 
-| Item/Area Name            | Release  | BaseOS    | Status                                       | HOWTO                                                                            | Who      | Date | BZ/LP                                                 | Notes Page |
-|---------------------------|----------|-----------|----------------------------------------------|----------------------------------------------------------------------------------|----------|------|-------------------------------------------------------|------------|
-| All-in-one Keystone tests | RDO Juno | CentOS 7  | <span style="background:#ff0000">FAIL</span> |                                                                                  | ukalifon |      | <https://bugzilla.redhat.com/show_bug.cgi?id=1148348> |            |
-| All-in-one Keystone tests | RDO Juno | RHEL 7    |                                              |                                                                                  | mabrams  |      |                                                       |            |
-| All-in-one Horizon        | RDO Juno | Fedora 20 |                                              |                                                                                  | iovadia  |      | PackStack installation + Sanity                       |            |
-| Heat tests                | RDO Juno | RHEL7     | <span style="background:#00ff00">PASS</span> | [<https://github.com/cmyster/readme/blob/master/juno_test_env.pdf> | environment | augol    |      | Packstack + environment creation + sanity             |            |
+| Item/Area Name            | Release  | BaseOS    | Status                                       | HOWTO                                                                                                                                             | Who      | Date | BZ/LP                                                 | Notes Page |
+|---------------------------|----------|-----------|----------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|----------|------|-------------------------------------------------------|------------|
+| All-in-one Keystone tests | RDO Juno | CentOS 7  | <span style="background:#ff0000">FAIL</span> |                                                                                                                                                   | ukalifon |      | <https://bugzilla.redhat.com/show_bug.cgi?id=1148348> |            |
+| All-in-one Keystone tests | RDO Juno | RHEL 7    |                                              |                                                                                                                                                   | mabrams  |      |                                                       |            |
+| All-in-one Horizon        | RDO Juno | Fedora 20 |                                              |                                                                                                                                                   | iovadia  |      | PackStack installation + Sanity                       |            |
+| Heat tests                | RDO Juno | RHEL7     | <span style="background:#00ff00">PASS</span> | [1](https://github.com/cmyster/readme/blob/master/juno_test_env.pdf) [2](https://github.com/cmyster/scripts/blob/master/rdo-packstack-install.sh) | augol    |      | Packstack + environment creation + sanity             |            |
 
 ## Manual configuration of OpenStack
 
