@@ -78,9 +78,13 @@ Packstack fails with the following error
 
 #### workaround
 
-Set CONFIG_PROVISION_DEMO=n in packstack config file, and then re-run with
+You can downgrade to the earlier version of `python-glanceclient`:
 
-`packstack --answer-file=`<generated packstack file>
+    yum downgrade python-glanceclient
+
+Or you can configure packstack to not provision a demo user, images, etc by setting `CONFIG_PROVISION_DEMO=n` in the packstack answers file, and then re-run with:
+
+     packstack --answer-file=<generated packstack file>
 
 ## Example Problem Description
 
