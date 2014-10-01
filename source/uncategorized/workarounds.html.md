@@ -76,7 +76,7 @@ And then:
     rm tmp/nova_allow_tmpfs.mod.fc tmp/nova_allow_tmpfs.mod
     # semodule -i nova_allow_tmpfs.pp
 
-## provisioning of glance does not work for demo environment
+## Provisioning of glance does not work for demo environment
 
 *   **Bug:** <https://bugzilla.redhat.com/show_bug.cgi?id=1148346>
 *   **Affects:** CentOS 7, RHEL 7
