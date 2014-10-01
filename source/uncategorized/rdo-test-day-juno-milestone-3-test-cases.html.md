@@ -83,6 +83,7 @@ General openstack tests
 | All-in-one Keystone tests | RDO Juno | RHEL 7    |                                              |                                                                                                                                                   | mabrams  |      |                                                       |            |
 | All-in-one Horizon        | RDO Juno | Fedora 20 |                                              |                                                                                                                                                   | iovadia  |      | PackStack installation + Sanity                       |            |
 | Heat tests                | RDO Juno | RHEL7     | <span style="background:#00ff00">PASS</span> | [1](https://github.com/cmyster/readme/blob/master/juno_test_env.pdf) [2](https://github.com/cmyster/scripts/blob/master/rdo-packstack-install.sh) | augol    |      | Packstack + environment creation + sanity             |            |
+| Nova tests                | RDO Juno | RHEL7     |                                              |                                                                                                                                                   | gszasz   |      | Packstack + nova sanity                               |            |
 
 ## Manual configuration of OpenStack
 
