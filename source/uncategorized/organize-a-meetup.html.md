@@ -14,15 +14,19 @@ There are OpenStack meetup groups all over the world, with more forming all the 
 
 ### Organizing an OpenStack Meetup: The Playbook
 
-Step 1: Check the list of [current OpenStack meetups](http://www.meetup.com/find/events/?allMeetups=false&keywords=OpenStack&radius=Infinity&userFreeform=Lexington%2C+KY&mcId=z40502&eventFilter=all). If there's already a meet-up in your area, join it and help to spread the word.
+#### Step 1: Find an existing meetup
 
-Step 2: No OpenStack meetup in your area? Create one on [meetup.com](http://www.meetup.com/) and [tell us about it](mailto:rdo-list@redhat.com)!
+Check the list of [current OpenStack meetups](http://www.meetup.com/find/events/?allMeetups=false&keywords=OpenStack&radius=Infinity&userFreeform=Lexington%2C+KY&mcId=z40502&eventFilter=all). If there's already a meet-up in your area, join it and help to spread the word.
 
-Step 3: We want to be sure that meetup organizers are committed to building a strong local community of OpenStack users. After a brief discussion, we will create the OpenStack meetup group in your area, appoint you as a co-organizer, and announce your new group to the world. We will also ship you an OpenStack meetup kit with everything you will need to get started.
+#### Step 2: Create a group on meetup.com
 
-Step 4: Secure a date and location for your first meetup! We will help you by spreading the word on social media, reaching out to potential speakers and sponsors in your area, and suggesting new and interesting OpenStack content on a regular basis.
+No OpenStack meetup in your area? Create one on [meetup.com](http://www.meetup.com/) and [tell us about it](mailto:rdo-list@redhat.com)! Start getting the word out to people in your area. It's a good idea to create a Twitter account to go along with the Meetup, and tell us about that, too, so that we can follow you and retweet your announcements.
 
-Supporting Your Local OpenStack Meetup
+#### Step 3: Find a time and place
+
+Secure a date and location for your first meetup! We will help you by spreading the word on social media, reaching out to potential speakers and sponsors in your area, and suggesting new and interesting OpenStack content on a regular basis. Connect with local businesses to see if they've got space, and if they're willing to sponsor refreshments to help bring people in.
+
+### Supporting Your Local OpenStack Meetup
 
 Already an OpenStack meetup group in your area? There are a number of ways you can help.
 
@@ -32,4 +36,4 @@ If you are an enthusiast, participate actively in your local meetup. Ask good qu
 
 If you are a business, consider hosting or sponsoring. Meetups don't happen without places to have them, and everyone appreciates food at a meetup. It's also a good way to get your company's name out there as an innovative workplace that encourages and supports open source development. If you'd like to host, send us an email and we will put you in touch with OpenStack enthusiasts in your area.
 
-Page shamelessly borrowed from [Ansible](http://www.ansible.com/ansible-meetup-organizer)
+*Page shamelessly borrowed from [Ansible](http://www.ansible.com/ansible-meetup-organizer)*
