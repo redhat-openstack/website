@@ -27,6 +27,7 @@ Quick Links:
 *   dron - IRC, (Centos7)
 *   mkrcmari - IRC, (Centos7)
 *   weshay - IRC, ( RHEL 7, CentOS 7)
+*   nlevinki -IRC (F20)
 
 ## Prerequisites
 
