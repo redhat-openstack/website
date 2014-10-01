@@ -34,6 +34,7 @@ Quick Links:
 *   gszasz - IRC, packstack, allinone (RHEL 7)
 *   pbrady - CentOS 7
 *   coolsvap - Fedora20, CentOS7,packstack,allinone
+*   mabrams - keystone (rhel7)
 
 ## Prerequisites
 
