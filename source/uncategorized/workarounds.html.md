@@ -160,6 +160,23 @@ Remove firewalld:
 
 Then re-run packstack with the same answer file.
 
+## Packstack fails when mariadb-server is installed
+
+*   **Bug:** <https://bugzilla.redhat.com/show_bug.cgi?id=1148578>
+*   **Affects:** Fedora 20
+
+#### symptoms
+
+192.168.122.48_mysql.pp: [ ERROR ] Applying Puppet manifests [ ERROR ]
+
+ERROR : Error appeared during Puppet run: 192.168.122.48_mysql.pp Error: Execution of '/usr/bin/yum -d 0 -e 0 -y install mariadb-galera-server' returned 1: Error: mariadb-galera-server conflicts with 1:mariadb-server-5.5.39-1.fc20.x86_64 You will find full trace in log /var/tmp/packstack/20141001-084831-5JyrbC/manifests/192.168.122.48_mysql.pp.log Please check log file /var/tmp/packstack/20141001-084831-5JyrbC/openstack-setup.log for more information
+
+#### workaround
+
+Remove the mariadb-server package: yum remove mariadb-server
+
+And rerun packstack
+
 ## Example Problem Description
 
 *   **Bug:** <https://bugzilla.redhat.com/show_bug.cgi?id=12345>
