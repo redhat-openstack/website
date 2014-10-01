@@ -29,6 +29,7 @@ Quick Links:
 *   weshay - IRC, ( RHEL 7, CentOS 7)
 *   nlevinki -IRC (F20)
 *   nyechiel - IRC, packstack, allinone (CentOS 7)
+*   mflobo - IRC (CentOS 7)
 
 ## Prerequisites
 
