@@ -32,7 +32,7 @@ Quick Links:
 *   mflobo - IRC (CentOS 7)
 *   eglynn - IRC, packstack allinone (Fedora 20)
 *   gszasz - IRC, packstack, allinone (RHEL 7)
-*   pbrady - CehtOS 7
+*   pbrady - CentOS 7
 
 ## Prerequisites
 
