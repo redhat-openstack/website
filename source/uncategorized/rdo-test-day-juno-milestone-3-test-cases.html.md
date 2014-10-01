@@ -59,7 +59,7 @@ Please see [Docs/Storage](Docs/Storage) for configuration guides as well as sugg
 | All-in-One  | Glance=swift, Cinder=thinlvm     | RHEL7    | ??     | [QuickStart](QuickStart) | ?                  | 2014-09-22 | None  | None       |
 | All-in-One  | Glance=s3, Cinder=nfs            | RHEL7    | ??     | [QuickStart](QuickStart) | Benny Kopilov      | 2014-09-22 | None  | None       |
 | All-in-One  | Glance=ceph, Cinder=ceph         | RHEL7    | ??     | [QuickStart](QuickStart) | Tomas Rusnak       | 2014-09-22 | None  | None       |
-| All-in-One  | Glance=lvm, Cinder=glusterfs     | RHEL7    | ??     | [QuickStart](QuickStart) | Tzach Shefi        | 2014-09-22 | None  | None       |
+| All-in-One  | Glance=lvm, Cinder=glusterfs     | RHEL7    | Good   | [QuickStart](QuickStart) | Tzach Shefi        | 2014-09-22 | None  | None       |
 | All-in-One  | Glance=lvm, Cinder=netapp_iscsi | RHEL7    | ??     | [QuickStart](QuickStart) | Yogev Rabl         | 2014-09-22 | None  | None       |
 | All-in-One  | Glance=lvm, Cinder=netapp_nfs   | RHEL7    | ??     | [QuickStart](QuickStart) | Yogev Rabl         | 2014-09-22 | None  | None       |
 | All-in-One  | swift                            | RHEL7    | ??     | [QuickStart](QuickStart) | Prasanth Anbalagan | 2014-09-22 | None  | None       |
