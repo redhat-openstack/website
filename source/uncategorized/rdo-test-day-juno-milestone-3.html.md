@@ -23,7 +23,7 @@ Quick Links:
 *   tshefi - IRC (RHEL 7)
 *   arif-ali - IRC, packstack, allinone, (CentOS 7)
 *   apevec - IRC, devel (CentOS7)
-*   augol - IRC (RHEL 7)
+*   augol / cmyster - IRC (RHEL 7)
 *   dron - IRC, (Centos7)
 *   mkrcmari - IRC, (Centos7)
 *   weshay - IRC, ( RHEL 7, CentOS 7)
