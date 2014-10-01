@@ -47,7 +47,7 @@ You can build an selinux module that permits the necessary access. On a Fedora 2
     #============= nova_api_t ==============
     allow nova_api_t tmpfs_t:filesystem getattr;
 
-On a RHEL7 or CentOS7 server,place this in a file called nova_allow_tmpfs.te:
+On a RHEL7 or CentOS7 server, place this in a file called nova_allow_tmpfs.te:
 
     module nova_allow_tmpfs 1.0;
 
