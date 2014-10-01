@@ -59,6 +59,29 @@ And then:
     rm tmp/nova_allow_tmpfs.mod.fc tmp/nova_allow_tmpfs.mod
     # semodule -i nova_allow_tmpfs.pp
 
+## provisioning of glance does not work for demo environment
+
+*   **Bug:** <https://bugzilla.redhat.com/show_bug.cgi?id=1148346>
+*   **Affects:** CentOS 7, RHEL 7
+
+#### symptoms
+
+Packstack fails with the following error
+
+    10.0.0.1_provision_glance.pp:                     [ ERROR ]             
+    Applying Puppet manifests                         [ ERROR ]
+
+    ERROR : Error appeared during Puppet run: 10.0.0.1_provision_glance.pp
+    Error: Could not prefetch glance_image provider 'glance': Execution of '/usr/bin/glance -T services -I glance -K 86f175e8c0884d77 -N http://10.0.0.1:35357/v2.0/ index' returned 2: usage: glance [--version] [-d] [-v] [--get-schema] [--timeout TIMEOUT]
+    You will find full trace in log /var/tmp/packstack/20141001-091112-m6iWqu/manifests/10.0.0.1_provision_glance.pp.log
+    Please check log file /var/tmp/packstack/20141001-091112-m6iWqu/openstack-setup.log for more information
+
+#### workaround
+
+Set CONFIG_PROVISION_DEMO=n in packstack config file, and then re-run with
+
+`packstack --answer-file=`<generated packstack file>
+
 ## Problem Description
 
 *   **Bug:** <https://bugzilla.redhat.com/show_bug.cgi?id=12345>
