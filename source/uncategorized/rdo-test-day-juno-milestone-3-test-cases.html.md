@@ -50,13 +50,13 @@ Please see [Docs/Storage](Docs/Storage) for configuration guides as well as sugg
 
 | Config Name | Backend                          | BaseOS   | Status | HOWTO                               | Who                | Date       | BZ/LP | Notes Page |
 |-------------|----------------------------------|----------|--------|-------------------------------------|--------------------|------------|-------|------------|
-| All-in-One  | Glance=localfs, Cinder=lvm       | CentOS 7 | ??     | [QuickStart](QuickStart) | Swapnil Kulkarni   | 2014-09-22 | None  | None       |
+| All-in-One  | Glance=localfs, Cinder=lvm       | CentOS 7 | ??     | [QuickStart](QuickStart) | Swapnil Kulkarni   | 2014-10-02 | None  | None       |
 | All-in-One  | Glance=swift, Cinder=thinlvm     | CentOS 7 | ??     | [QuickStart](QuickStart) | Prasanth Anbalagan | 2014-09-22 | None  | None       |
 | All-in-One  | Glance=s3, Cinder=nfs            | CentOS 7 | ??     | [QuickStart](QuickStart) | Benny Kopilov      | 2014-09-22 | None  | None       |
 | All-in-One  | Glance=ceph, Cinder=ceph         | CentOS 7 | ??     | [QuickStart](QuickStart) | Luigi Toscano      | 2014-09-22 | None  | None       |
 | All-in-One  | Glance=XtreamIO, Cinder=XtreamIO | CentOS 7 | ??     | [QuickStart](QuickStart) | ?                  | 2014-09-22 | None  | None       |
 | All-in-One  | Glance=ceph, Cinder=ceph         | F20      | ??     | [QuickStart](QuickStart) | Nathan Levinkind   | 2014-09-22 | None  | None       |
-| All-in-One  | Glance=swift, Cinder=thinlvm     | RHEL7    | ??     | [QuickStart](QuickStart) | Swapnil Kulkarni   | 2014-09-22 | None  | None       |
+| All-in-One  | Glance=swift, Cinder=thinlvm     | RHEL7    | ??     | [QuickStart](QuickStart) | Swapnil Kulkarni   | 2014-10-02 | None  | None       |
 | All-in-One  | Glance=s3, Cinder=nfs            | RHEL7    | ??     | [QuickStart](QuickStart) | Benny Kopilov      | 2014-09-22 | None  | None       |
 | All-in-One  | Glance=ceph, Cinder=ceph         | RHEL7    | ??     | [QuickStart](QuickStart) | Tomas Rusnak       | 2014-09-22 | None  | None       |
 | All-in-One  | Glance=lvm, Cinder=glusterfs     | RHEL7    | Good   | [QuickStart](QuickStart) | Tzach Shefi        | 2014-09-22 | None  | None       |
