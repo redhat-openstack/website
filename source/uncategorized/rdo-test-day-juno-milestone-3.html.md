@@ -31,6 +31,7 @@ Quick Links:
 *   nyechiel - IRC, packstack, allinone (CentOS 7)
 *   mflobo - IRC (CentOS 7)
 *   eglynn - IRC, packstack allinone (Fedora 20)
+*   gszasz - IRC, packstack, allinone (RHEL 7)
 
 ## Prerequisites
 
