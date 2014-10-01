@@ -33,6 +33,7 @@ Quick Links:
 *   eglynn - IRC, packstack allinone (Fedora 20)
 *   gszasz - IRC, packstack, allinone (RHEL 7)
 *   pbrady - CentOS 7
+*   coolsvap - Fedora20, CentOS7,packstack,allinone
 
 ## Prerequisites
 
