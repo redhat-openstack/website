@@ -77,11 +77,12 @@ Various components which don't fit the large test efforts above.
 
 General openstack tests
 
-| Item/Area Name            | Release  | BaseOS    | Status | HOWTO | Who      | Date | BZ/LP                           | Notes Page |
-|---------------------------|----------|-----------|--------|-------|----------|------|---------------------------------|------------|
-| All-in-one Keystone tests | RDO Juno | CentOS 7  |        |       | ukalifon |      |                                 |            |
-| All-in-one Keystone tests | RDO Juno | RHEL 7    |        |       | mabrams  |      |                                 |            |
-| All-in-one Horizon        | RDO Juno | Fedora 20 |        |       | iovadia  |      | PackStack installation + Sanity |            |
+| Item/Area Name            | Release  | BaseOS    | Status | HOWTO | Who      | Date | BZ/LP                                     | Notes Page |
+|---------------------------|----------|-----------|--------|-------|----------|------|-------------------------------------------|------------|
+| All-in-one Keystone tests | RDO Juno | CentOS 7  |        |       | ukalifon |      |                                           |            |
+| All-in-one Keystone tests | RDO Juno | RHEL 7    |        |       | mabrams  |      |                                           |            |
+| All-in-one Horizon        | RDO Juno | Fedora 20 |        |       | iovadia  |      | PackStack installation + Sanity           |            |
+| Heat tests                | RDO Juno | RHEL7     |        |       | augol    |      | Packstack + environment creation + sanity |            |
 
 ## Manual configuration of OpenStack
 
