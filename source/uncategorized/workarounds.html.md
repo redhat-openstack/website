@@ -122,6 +122,23 @@ After making one of the above changes, re-run packstack with:
 
           yum downgrade python-glanceclient
 
+## Packstack --allinone fails to remove firewalld
+
+*   **Bug:** <https://bugzilla.redhat.com/show_bug.cgi?id=1148426>
+*   **Affects:** Fedora 20
+
+#### symptoms
+
+Applying 192.168.122.48_prescript.pp 192.168.122.48_prescript.pp: [ ERROR ] Applying Puppet manifests [ ERROR ]
+
+ERROR : Error appeared during Puppet run: 192.168.122.48_prescript.pp Error: Execution of '/usr/bin/rpm -e firewalld-0.3.11-3.fc20.noarch' returned 1: error: Failed dependencies: You will find full trace in log /var/tmp/packstack/20141001-080818-TOTPkh/manifests/192.168.122.48_prescript.pp.log
+
+#### workaround
+
+yum remove firewalld
+
+This will also remove the anaconda package dependency
+
 ## Example Problem Description
 
 *   **Bug:** <https://bugzilla.redhat.com/show_bug.cgi?id=12345>
