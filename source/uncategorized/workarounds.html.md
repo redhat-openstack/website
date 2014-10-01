@@ -82,7 +82,7 @@ Set CONFIG_PROVISION_DEMO=n in packstack config file, and then re-run with
 
 `packstack --answer-file=`<generated packstack file>
 
-## Problem Description
+## Example Problem Description
 
 *   **Bug:** <https://bugzilla.redhat.com/show_bug.cgi?id=12345>
 *   **Affects:** Operating Systems Affected
