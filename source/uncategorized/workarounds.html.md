@@ -34,7 +34,7 @@ You can place selinux in permissive mode:
 
     # setenforce 0
 
-You can build an selinux module that permits the necessary access. Place this in a file called nova_allow_tmpfs.te:
+You can build an selinux module that permits the necessary access. On a Fedora 20 machine, place this in a file called nova_allow_tmpfs.te:
 
     module nova_allow_tmpfs 1.0;
 
@@ -46,6 +46,23 @@ You can build an selinux module that permits the necessary access. Place this in
 
     #============= nova_api_t ==============
     allow nova_api_t tmpfs_t:filesystem getattr;
+
+On a RHEL7 or CentOS7 server,place this in a file called nova_allow_tmpfs.te:
+
+    module nova_allow_tmpfs 1.0;
+
+    require {
+        type tmpfs_t;
+        type nova_api_t;
+        class filesystem getattr;
+        class dir { search write add_name remove_name } ;
+        class file { create read write open link unlink getattr } ;
+    }
+
+    #============= nova_api_t ==============
+    allow nova_api_t tmpfs_t:filesystem getattr;
+    allow nova_api_t tmpfs_t:dir { search write add_name remove_name } ;
+    allow nova_api_t tmpfs_t:file { create read write open link unlink getattr } ;
 
 And then:
 
