@@ -42,3 +42,5 @@ Admin in tenant:
 Member of tenant:
 
 1.  log in to horizon using Peter Griffin's user
+
+[post_installation_bugs](post_installation_bugs)
