@@ -43,4 +43,6 @@ Member of tenant:
 
 1.  log in to horizon using Peter Griffin's user
 
+**Please add any bugs link page below**
+
 [post_installation_bugs](post_installation_bugs)
