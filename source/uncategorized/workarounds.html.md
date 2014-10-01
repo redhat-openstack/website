@@ -105,6 +105,21 @@ After making one of the above changes, re-run packstack with:
 
      packstack --answer-file=<generated packstack file>
 
+## Enabling Tempest gives Glance error
+
+*   **Bug:** <https://bugzilla.redhat.com/show_bug.cgi?id=1148459>
+*   **Affects:** CentOS7
+
+#### symptoms
+
+         ERROR : Error appeared during Puppet run: 10.0.0.1_provision_glance.pp
+         Error: Could not prefetch glance_image provider 'glance': Execution of '/usr/bin/glance -T services -I glance -K 0f75673432f84bef -N     `[`http://10.0.0.1:35357/v2.0/`](http://10.0.0.1:35357/v2.0/)` index' returned 2: usage: glance [--version] [-d] [-v] [--get-schema] [--timeout TIMEOUT]
+         You will find full trace in log /var/tmp/packstack/20141001-131918-KS5XQ4/manifests/10.0.0.1_provision_glance.pp.log
+
+#### workaround
+
+          yum downgrade python-glanceclient
+
 ## Example Problem Description
 
 *   **Bug:** <https://bugzilla.redhat.com/show_bug.cgi?id=12345>
