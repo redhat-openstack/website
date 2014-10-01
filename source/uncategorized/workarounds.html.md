@@ -149,8 +149,8 @@ This will also remove the anaconda package dependency
 prescript.pp fails with the following error:
 
          Error: Execution of '/usr/bin/rpm -e firewalld-0.3.9-7.el7.noarch' returned 1: error: Failed dependencies:
-         firewalld >= 0.3.5-1 is needed by (installed) anaconda-19.31.79-1.el7.centos.4.x86_64
-         firewalld = 0.3.9-7.el7 is needed by (installed) firewall-config-0.3.9-7.el7.noarch
+             firewalld >= 0.3.5-1 is needed by (installed) anaconda-19.31.79-1.el7.centos.4.x86_64
+             firewalld = 0.3.9-7.el7 is needed by (installed) firewall-config-0.3.9-7.el7.noarch
 
 #### workaround
 
