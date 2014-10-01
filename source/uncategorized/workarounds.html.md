@@ -189,3 +189,15 @@ Describe symptoms here
 #### workaround
 
 Describe how to work around the problem.
+
+## packstack --allinone fails on Centos7 with: ERROR : Cinder's volume group 'cinder-volumes' could not be created.
+
+#### symptoms
+
+packstack --allinone fails on Centos7 with: ERROR : Cinder's volume group 'cinder-volumes' could not be created.
+
+#### workaround
+
+dd if=/dev/zero of=cinder-volumes bs=1 count=0 seek=2G && losetup /dev/loop2 cinder-volumes && pvcreate /dev/loop2 && vgcreate cinder-volumes /dev/loop2
+
+*   Bug: <https://bugzilla.redhat.com/show_bug.cgi?id=1148552>
