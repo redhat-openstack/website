@@ -82,7 +82,9 @@ You can downgrade to the earlier version of `python-glanceclient`:
 
     yum downgrade python-glanceclient
 
-Or you can configure packstack to not provision a demo user, images, etc by setting `CONFIG_PROVISION_DEMO=n` in the packstack answers file, and then re-run with:
+Or you can configure packstack to not provision a demo user, images, etc by setting `CONFIG_PROVISION_DEMO=n` in the packstack answers file.
+
+After making one of the above changes, re-run packstack with:
 
      packstack --answer-file=<generated packstack file>
 
