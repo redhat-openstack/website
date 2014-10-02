@@ -102,6 +102,6 @@ General openstack tests
 
 ## Post Installation Tests
 
-| Config Name       | Release          | BaseOS | Status | HOWTO                                                         | Who | Date  | BZ/LP | Notes Page |
-|-------------------|------------------|--------|--------|---------------------------------------------------------------|-----|-------|-------|------------|
-| Post Installation | Juno Milestone 3 | ALL    | ??     | [Post Installation Tests](Post Installation Tests) | ALL | 18-09 | None  | None       |
+| Config Name       | Release          | BaseOS     | Status                                       | HOWTO                                                         | Who      | Date  | BZ/LP | Notes Page |
+|-------------------|------------------|------------|----------------------------------------------|---------------------------------------------------------------|----------|-------|-------|------------|
+| Post Installation | Juno Milestone 3 | CentOS 7.0 | <span style="background:#00ff00">PASS</span> | [Post Installation Tests](Post Installation Tests) | mkrcmari | 02-10 | None  | None       |
