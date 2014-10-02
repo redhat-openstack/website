@@ -156,7 +156,7 @@ prescript.pp fails with the following error:
 
 Remove firewalld:
 
-          sudo yum rm firewalld
+          sudo yum remove firewalld
 
 Then re-run packstack with the same answer file.
 
