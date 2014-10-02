@@ -212,6 +212,33 @@ After making the above change, re-run packstack with:
 
      packstack --answer-file=<generated packstack file>
 
+## mariadb fails to start
+
+*   **Bug:** <https://bugzilla.redhat.com/show_bug.cgi?id=1141458>
+*   **Affects:** Fedora 21
+
+#### symptoms
+
+Packstack fails with the following error
+
+    192.168.1.127_mysql.pp:                           [ ERROR ]       
+    Applying Puppet manifests                         [ ERROR ]
+
+    ERROR : Error appeared during Puppet run: 192.168.1.127_mysql.pp
+    Error: Could not start Service[mysqld]: Execution of '/sbin/service mariadb start' returned 1: Redirecting to /bin/systemctl start  mariadb.service
+    You will find full trace in log /var/tmp/packstack/20141002-123813-7E6EEK/manifests/192.168.1.127_mysql.pp.log
+    Please check log file /var/tmp/packstack/20141002-123813-7E6EEK/openstack-setup.log for more information
+
+#### workaround
+
+For now comment out the "plugin-load-add=ha_connect.so" line in /etc/my.cnf.d/connect.cnf.
+
+    sed -i s/plugin-load-add=ha_connect.so/#plugin-load-add=ha_connect.so/ /etc/my.cnf.d/connect.cnf
+
+After making the above change, re-run packstack with:
+
+     packstack --answer-file=<generated packstack file>
+
 ## Example Problem Description
 
 *   **Bug:** <https://bugzilla.redhat.com/show_bug.cgi?id=12345>
