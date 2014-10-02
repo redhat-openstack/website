@@ -17,6 +17,7 @@ There are lots of events, around the world, where you can hang out with people f
 *   [OpenStack Neutron: Networking as a Service](http://www.meetup.com/New-Zealand-OpenStack-User-Group/events/203803432/), Thursday, October 2, Auckland
 *   [South Bay OpenStack Meetup, Beginner track](http://www.meetup.com/openstack/events/150932712/), Thursday, October 2, SFBay OpenStack
 *   [OpenStack Barbican](http://www.meetup.com/Alamo-City-Python-Group/events/210157372/), Thursday, October 2, San Antonio, TX
+*   [NFV, network virtualization functions with OpenStack](http://openstack.fr/2014/09/25/meetup-11-nfv/), Tuesday, Oct. 7 18.45, Paris
 *   [LinuxCon/CloudOpen](http://events.linuxfoundation.org/events/linuxcon-europe), October 13-15, Dusseldorf, Germany
 *   [OpenStack Summit](http://openstack.org/summit), November 3-7, Paris
 
