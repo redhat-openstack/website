@@ -47,7 +47,7 @@ Please make sure to use the steps described in the RDO_test_day_January_2014#How
 
 ## Packstack Based Installation (Storage Components)
 
-Please see [Docs/Storage](Docs/Storage) for configuration guides as well as suggestions on what could be tested for both Cinder and Glance and make sure to use the steps described in the [RDO_test_day_January_2014#How_To_Test](RDO_test_day_January_2014#How_To_Test) page when installing the base RDO system. **Do not** go trough the Quickstart steps unmodified which will instead give you an RDO Havana deployment.
+Please see [Docs/Storage](Docs/Storage) for configuration guides as well as suggestions on what could be tested for both Cinder and Glance and make sure to use the steps described in the [RDO_test_day_January_2014#How_To_Test](RDO_test_day_January_2014#How_To_Test) page when installing the base RDO system. **Do not** go through the Quickstart steps unmodified which will instead give you an RDO Havana deployment.
 
 | Config Name | Backend                          | BaseOS   | Status | HOWTO                               | Who                | Date       | BZ/LP | Notes Page |
 |-------------|----------------------------------|----------|--------|-------------------------------------|--------------------|------------|-------|------------|
