@@ -129,19 +129,19 @@ After making one of the above changes, re-run packstack with:
 
 #### symptoms
 
-         Applying 192.168.122.48_prescript.pp
-         192.168.122.48_prescript.pp:                      [ ERROR ]            
-         Applying Puppet manifests                         [ ERROR ]
+        Applying 192.168.122.48_prescript.pp
+        192.168.122.48_prescript.pp:                      [ ERROR ]            
+        Applying Puppet manifests                         [ ERROR ]
 
-         ERROR : Error appeared during Puppet run: 192.168.122.48_prescript.pp
-         Error: Execution of '/usr/bin/rpm -e firewalld-0.3.11-3.fc20.noarch' returned 1: error: Failed dependencies:
-         You will find full trace in log /var/tmp/packstack/20141001-080818-TOTPkh/manifests/192.168.122.48_prescript.pp.log
+        ERROR : Error appeared during Puppet run: 192.168.122.48_prescript.pp
+        Error: Execution of '/usr/bin/rpm -e firewalld-0.3.11-3.fc20.noarch' returned 1: error: Failed dependencies:
+        You will find full trace in log /var/tmp/packstack/20141001-080818-TOTPkh/manifests/192.168.122.48_prescript.pp.log
 
 The log contains:
 
-           Error: Execution of '/usr/bin/rpm -e firewalld-0.3.9-7.el7.noarch' returned 1: error: Failed dependencies:
-               firewalld >= 0.3.5-1 is needed by (installed) anaconda-19.31.79-1.el7.centos.4.x86_64
-               firewalld = 0.3.9-7.el7 is needed by (installed) firewall-config-0.3.9-7.el7.noarch
+          Error: Execution of '/usr/bin/rpm -e firewalld-0.3.9-7.el7.noarch' returned 1: error: Failed dependencies:
+              firewalld >= 0.3.5-1 is needed by (installed) anaconda-19.31.79-1.el7.centos.4.x86_64
+              firewalld = 0.3.9-7.el7 is needed by (installed) firewall-config-0.3.9-7.el7.noarch
 
 #### workaround
 
@@ -158,15 +158,59 @@ Then re-run packstack with the same answer file.
 
 #### symptoms
 
-192.168.122.48_mysql.pp: [ ERROR ] Applying Puppet manifests [ ERROR ]
+    192.168.122.48_mysql.pp:                          [ ERROR ]        
+    Applying Puppet manifests                         [ ERROR ]
 
-ERROR : Error appeared during Puppet run: 192.168.122.48_mysql.pp Error: Execution of '/usr/bin/yum -d 0 -e 0 -y install mariadb-galera-server' returned 1: Error: mariadb-galera-server conflicts with 1:mariadb-server-5.5.39-1.fc20.x86_64 You will find full trace in log /var/tmp/packstack/20141001-084831-5JyrbC/manifests/192.168.122.48_mysql.pp.log Please check log file /var/tmp/packstack/20141001-084831-5JyrbC/openstack-setup.log for more information
+    ERROR : Error appeared during Puppet run: 192.168.122.48_mysql.pp
+    Error: Execution of '/usr/bin/yum -d 0 -e 0 -y install mariadb-galera-server' returned 1: Error: mariadb-galera-server conflicts with 1:mariadb-server-5.5.39-1.fc20.x86_64
+    You will find full trace in log /var/tmp/packstack/20141001-084831-5JyrbC/manifests/192.168.122.48_mysql.pp.log
+    Please check log file /var/tmp/packstack/20141001-084831-5JyrbC/openstack-setup.log for more information
 
 #### workaround
 
 Remove the mariadb-server package: yum remove mariadb-server
 
 And rerun packstack
+
+## packstack --allinone fails on Centos7 with: ERROR : Cinder's volume group 'cinder-volumes' could not be created.
+
+*   Bug: <https://bugzilla.redhat.com/show_bug.cgi?id=1148552>
+
+#### symptoms
+
+packstack --allinone fails on Centos7 with: ERROR : Cinder's volume group 'cinder-volumes' could not be created.
+
+#### workaround
+
+    dd if=/dev/zero of=cinder-volumes bs=1 count=0 seek=2G && losetup /dev/loop2 cinder-volumes && pvcreate /dev/loop2 && vgcreate cinder-volumes /dev/loop2
+
+## rabbitmq-server does not start
+
+*   **Bug:** <https://bugzilla.redhat.com/show_bug.cgi?id=1148604>
+*   **Affects:** Fedora 21
+
+#### symptoms
+
+Packstack fails with the following error
+
+    Applying 192.168.1.127_mysql.pp
+    192.168.1.127_amqp.pp:                            [ ERROR ]       
+    Applying Puppet manifests                         [ ERROR ]
+
+    ERROR : Error appeared during Puppet run: 192.168.1.127_amqp.pp
+    Error: Could not start Service[rabbitmq-server]: Execution of '/sbin/service rabbitmq-server start' returned 1: Redirecting to /bin/systemctl start  rabbitmq-server.service
+    You will find full trace in log /var/tmp/packstack/20141002-113627-IM6EYW/manifests/192.168.1.127_amqp.pp.log
+    Please check log file /var/tmp/packstack/20141002-113627-IM6EYW/openstack-setup.log for more information
+
+#### workaround
+
+You can upgrade to a version of erlang-sd_notify >= 0.1-4. No version is currently in the repo so you have to directly download from koji. The command below should check the repo first (preferred) and then fallback to koji if necessary.
+
+    yum install -y erlang-sd_notify-0.1-4 || yum install -y http://kojipkgs.fedoraproject.org/packages/erlang-sd_notify/0.1/4.fc21/data/signed/95a43f54/x86_64/erlang-sd_notify-0.1-4.fc21.x86_64.rpm
+
+After making the above change, re-run packstack with:
+
+     packstack --answer-file=<generated packstack file>
 
 ## Example Problem Description
 
@@ -180,15 +224,3 @@ Describe symptoms here
 #### workaround
 
 Describe how to work around the problem.
-
-## packstack --allinone fails on Centos7 with: ERROR : Cinder's volume group 'cinder-volumes' could not be created.
-
-#### symptoms
-
-packstack --allinone fails on Centos7 with: ERROR : Cinder's volume group 'cinder-volumes' could not be created.
-
-#### workaround
-
-dd if=/dev/zero of=cinder-volumes bs=1 count=0 seek=2G && losetup /dev/loop2 cinder-volumes && pvcreate /dev/loop2 && vgcreate cinder-volumes /dev/loop2
-
-*   Bug: <https://bugzilla.redhat.com/show_bug.cgi?id=1148552>
