@@ -79,7 +79,7 @@ And then:
 ## Provisioning of glance does not work for demo environment
 
 *   **Bug:** <https://bugzilla.redhat.com/show_bug.cgi?id=1148346>
-*   **Affects:** CentOS 7, RHEL 7
+*   **Affects:** CentOS 7, RHEL 7, Fedora 21
 
 #### symptoms
 
