@@ -239,6 +239,43 @@ After making the above change, re-run packstack with:
 
      packstack --answer-file=<generated packstack file>
 
+## nova boot: failure creating veth devices
+
+*   **Bug:** <https://bugzilla.redhat.com/show_bug.cgi?id=1149043>
+*   **Affects:** Fedora 21
+
+#### symptoms
+
+Booting an instance fails and says 'No valid host was found.' In nova-compute.log:
+
+     [instance: d9ad23e8-ebf6-4d21-9004-991f893fd500] ProcessExecutionError: Unexpected error while running command.
+     [instance: d9ad23e8-ebf6-4d21-9004-991f893fd500] Command: sudo nova-rootwrap /etc/nova/rootwrap.conf ip link add qvb55064258-0a type veth peer name qvo55064258-0a
+     [instance: d9ad23e8-ebf6-4d21-9004-991f893fd500] Exit code: 255
+     [instance: d9ad23e8-ebf6-4d21-9004-991f893fd500] Stdout: ''
+     [instance: d9ad23e8-ebf6-4d21-9004-991f893fd500] Stderr: 'Error: argument "qvb55064258-0a" is wrong: Unknown device\n'
+
+#### workaround
+
+Patch the /usr/lib/python2.7/site-packages/nova/network/linux_net.py file to give arguments that /usr/sbin/ip will accept:
+
+    patch -b -d/ -p0  << EOF
+    --- /usr/lib/python2.7/site-packages/nova/network/linux_net.py.orig     2014-10-02 17:00:19.620007092 -0400
+    +++ /usr/lib/python2.7/site-packages/nova/network/linux_net.py  2014-10-02 16:40:31.514361599 -0400
+    @@ -1316,7 +1316,7 @@
+         for dev in [dev1_name, dev2_name]:
+             delete_net_dev(dev)
+
+    -    utils.execute('ip', 'link', 'add', dev1_name, 'type', 'veth', 'peer',
+    +    utils.execute('ip', 'link', 'add', 'name', dev1_name, 'type', 'veth', 'peer',
+                       'name', dev2_name, run_as_root=True)
+         for dev in [dev1_name, dev2_name]:
+             utils.execute('ip', 'link', 'set', dev, 'up', run_as_root=True)
+    EOF
+
+After making the above change, restart openstack services:
+
+     openstack-service restart
+
 ## Example Problem Description
 
 *   **Bug:** <https://bugzilla.redhat.com/show_bug.cgi?id=12345>
