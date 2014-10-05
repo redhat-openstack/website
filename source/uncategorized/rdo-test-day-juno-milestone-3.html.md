@@ -37,6 +37,7 @@ Quick Links:
 *   pbrady - CentOS 7
 *   coolsvap - Fedora20, CentOS7,packstack,allinone
 *   mabrams - keystone (RHEL 7)
+*   mabrams - keystone (F20)
 *   avladu - IRC, testing (CentOS 7), windows, hyperv
 
 ## Prerequisites
