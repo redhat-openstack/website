@@ -21,8 +21,10 @@ TryStack doesn't have the man power to support all the images that are uploaded 
 3. Neutron Floating IPs and router gateways are released once no longer associated with an instance.
 We only have a /24 IP block for all our servers, service IPs and floating IPs, These get used fast with everyone needing atleast 2 (one for your router and a floating IP)
 
-4. Cinder Volumes are deleted after 24 hours
+4. Cinder Volumes are deleted after 48 hours
 Limited storage capacity for for our 10000+ users
+
+5. Can a sample keystonerc file be provided? <http://fedoraproject.org/wiki/QA:Testcase_setup_OpenStack_Keystone>
 
 ## What's the root password to the instances?
 
