@@ -62,7 +62,7 @@ With OpenStack Juno in Feature Freeze, coming up to the release on October 16th 
 *   [Week of September 15](https://openstack.redhat.com/forum/discussion/986/blog-roundup-week-of-september-15-2014)
 *   [Week of September 22](https://openstack.redhat.com/forum/discussion/987/blog-roundup-week-of-september-22-2014)
 
-For the latest blog posts about OpenStack, don't forget to follow the [OpenStack Planet](http://planet.openstack.org/). I'd particularly like to recommend Thierry Carrez's excellent article ["#1 OpenStack Contributor: All of Us"](http://ttx.re/largest-openstack-contributor.html)
+For the latest blog posts about OpenStack, don't forget to follow the [OpenStack Planet](http://planet.openstack.org/). I'd particularly like to recommend Thierry Carrez's excellent article [#1 OpenStack Contributor: All of Us](http://ttx.re/largest-openstack-contributor.html)
 
 More than anything, we want \*you\* to participate in OpenStack, and to do what's necessary to help you do that. Please join us on this exciting journey.
 
