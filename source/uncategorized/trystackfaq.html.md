@@ -24,8 +24,6 @@ We only have a /24 IP block for all our servers, service IPs and floating IPs, T
 4. Cinder Volumes are deleted after 48 hours
 Limited storage capacity for for our 10000+ users
 
-5. Can a sample keystonerc file be provided? <http://fedoraproject.org/wiki/QA:Testcase_setup_OpenStack_Keystone>
-
 ## What's the root password to the instances?
 
 We don't know. Please use ssh keys to authenticate to the hosts. A how-to on this would be a great doc for someone to contribute to TryStack.
