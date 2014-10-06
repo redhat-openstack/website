@@ -16,15 +16,15 @@ Thanks again for being part of the RDO community. Here's some of what's been hap
 
 Today is the very last day to participate in the OpenStack User Survey. This survey is conducted twice a year, immediately before the OpenStack Summit, which judges statistics about deployments of OpenStack - what storage back ends are being used, what platforms are deployed on, the size of clouds running on OpenStack, and so on. It's important that you take the survey, as it influences the direction of the project, as well as how corporations shape their product offerings around OpenStack.
 
-Take the survey at [1](http://openstack.org/user-survey)
+Take the survey at [openstack.org/user-survey](http://openstack.org/user-survey)
 
 The deadline for participation is tomorrow - Tuesday, October 7th.
 
 **Hangouts**
 
-On September 5th, Lars Kellogg-Stedman gave an excellent hangout on deploying services with Heat. You can watch this on YouTube at [2](https://plus.google.com/events/c9u4sjn7ksb8jrmma7vd25aok94) The #openstack-heat channel, on Freenode, is the right place to go if you have questions about Heat. And, #RDO is a good place for other questions related to OpenStack on CentOS, RHEL, or Fedora.
+On September 5th, Lars Kellogg-Stedman gave an excellent hangout on deploying services with Heat. You can watch this on YouTube at [1](https://plus.google.com/events/c9u4sjn7ksb8jrmma7vd25aok94) The #openstack-heat channel, on Freenode, is the right place to go if you have questions about Heat. And, #RDO is a good place for other questions related to OpenStack on CentOS, RHEL, or Fedora.
 
-We expect to have another hangout later this month, but the details are still being worked out. Watch the rdo-list mailing list, and [3](http://openstack.redhat.com/Hangouts) for details as they become available.
+We expect to have another hangout later this month, but the details are still being worked out. Watch the rdo-list mailing list, and [2](http://openstack.redhat.com/Hangouts) for details as they become available.
 
 **Meetups**
 
