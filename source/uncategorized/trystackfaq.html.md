@@ -55,3 +55,7 @@ Now you have an empty router and no network.
 3. add the interface back to your router
 4. set the gateway on your router
 5. allocate and associate the floating ip to the new instance
+
+## Can a sample keystonerc file be provided?
+
+<http://fedoraproject.org/wiki/QA:Testcase_setup_OpenStack_Keystone>
