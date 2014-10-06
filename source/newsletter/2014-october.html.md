@@ -80,4 +80,7 @@ Once again, you can always keep up to date a variety of ways:
 
 Thanks again for being part of the RDO community!
 
--- Rich Bowen, OpenStack Community Liaison rbowen@redhat.com <http://openstack.redhat.com>
+         -- 
+         Rich Bowen, OpenStack Community Liaison
+         rbowen@redhat.com
+`   `[`http://openstack.redhat.com`](http://openstack.redhat.com)
