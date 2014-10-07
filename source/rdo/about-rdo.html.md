@@ -14,25 +14,12 @@ OpenStack is one of the most exciting, fast-paced open source projects in the wo
 
 RDO brings you the latest version of OpenStack on Red Hat Enterprise Linux, CentOS, Scientific Linux and other RHEL-based platforms, and on Fedora. This community-supported distribution of OpenStack includes the PackStack installer, which makes it very easy to bootstrap and grow your RDO install.
 
-We provide packages of all of the OpenStack core projects:
-
-*   Compute ([Nova](https://wiki.openstack.org/wiki/Nova))
-*   Network ([Quantum](https://wiki.openstack.org/wiki/Quantum))
-*   Image Storage ([Glance](https://wiki.openstack.org/wiki/Glance))
-*   Object Storage ([Swift](https://wiki.openstack.org/wiki/Swift))
-*   Block Storage ([Cinder](https://wiki.openstack.org/wiki/Cinder))
-*   Identity ([Keystone](https://wiki.openstack.org/wiki/Keystone))
-*   Dashboard ([Horizon](https://wiki.openstack.org/wiki/Horizon))
-
-In addition, we provide packages for several promising incubating projects:
-
-*   Orchestration service ([Heat](https://wiki.openstack.org/wiki/Heat))
-*   Monitoring and metering ([Ceilometer](https://wiki.openstack.org/wiki/Ceilometer))
+We provide packages of all of the OpenStack integrated projects. Additionally, we'll occasionally include some of the incubating projects if there's someone who's willing and able to create and maintain the packages for it. See the [OpenStack Programs](https://wiki.openstack.org/wiki/Programs) page for a listing of the integrated and incubating projects.
 
 ## Red Hat OpenStack
 
 If you are happy with community support, and what you want is to use and test the latest version of OpenStack, then RDO is for you.
 
-If, however, what you are looking for is a stable, supported platform, with certification of partner applications, and a reliable partner with a great track record in enterprise infrastructure to build or scale out your production OpenStack cloud, you should consider [Red Hat OpenStack](http://redhat.com/openstack). Our current product offering is Red Hat Openstack Early Adopter Edition, built on OpenStack Folsom, and hardened for enterprise usage.
+If, however, what you are looking for is a stable, supported platform, with certification of partner applications, and a reliable partner with a great track record in enterprise infrastructure to build or scale out your production OpenStack cloud, you should consider [Red Hat Linux OpenStack Platform](https://access.redhat.com/products/red-hat-enterprise-linux-openstack-platform/).
 
 <Category:RDO>
