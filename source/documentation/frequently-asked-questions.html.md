@@ -77,7 +77,7 @@ You can find documentation and get help through [ask.openstack](Get involved#ask
 
 ## Can I buy commercial support for RDO?
 
-No commercial support for RDO will be available from Red Hat. Red Hat offers [the enterprise-hardened and supported product Red Hat OpenStack Early Adopter Edition](http://redhat.com/openstack) including a Partner Certification Program and Red Hat's award-winning support offering.
+No commercial support for RDO will be available from Red Hat. If you need support for your OpenStack deployments, Red Hat offers [Red Hat Enterprise Linux OpenStack Platform](https://access.redhat.com/products/red-hat-enterprise-linux-openstack-platform/) including a Partner Certification Program and Red Hat's award-winning support offering.
 
 ## What is the errata or updates policy for RDO?
 
