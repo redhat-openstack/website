@@ -81,7 +81,7 @@ No commercial support for RDO will be available from Red Hat. If you need suppor
 
 ## What is the errata or updates policy for RDO?
 
-RDO updates when the OpenStack project provides updates. RDO provides no lifecycle guarantees beyond what the upstream project provides. If you require additional guarantees see [Red Hat OpenStack](//redhat.com/openstack).
+RDO updates when the OpenStack project provides updates. RDO provides no lifecycle guarantees beyond what the upstream project provides. If you require additional guarantees see [Red Hat Enterprise Linux OpenStack Platform](https://access.redhat.com/products/red-hat-enterprise-linux-openstack-platform/).
 
 ## Can I upgrade between versions of RDO?
 
