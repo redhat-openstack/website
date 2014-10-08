@@ -12,8 +12,8 @@ iThis page has been created to track changes to the underlying systems and the d
 
 **`General`**
 
-       You will hit OS system limits as you scale (this is a big hammer, will need some tightening for security)
-         Increase number of open files on the messing and database services
+You will hit OS system limits as you scale (this is a big hammer, will need some tightening for security) Increase number of open files on the messing and database services (EL6)
+
          edit    /etc/security/limits.conf 
          mysql    soft nofile 64000
          mysql   hard nofile 64000
@@ -28,12 +28,26 @@ iThis page has been created to track changes to the underlying systems and the d
          *          soft    nproc     10240
          root       soft    nproc     unlimited
 
-         opentstack-service restart
-         service httpd restart (on controller)
+Systemd (EL7, Fedora) uses per service limits and does not uses /etc/security/limits.conf . One possible way for setting a per service limit is creating a new service target in the /etc/systemd/system/ which will inherit and override from the packaged version of the target.
 
-         By default lots of stuff seems to go to /var, if possible put /var on a bigger, faster drive
+/etc/systemd/system/rabbitmq-server.service:
 
-         Try using SSD if available
+       .include /lib/systemd/system/rabbitmq-server.service
+       [Service]
+        LimitNOFILE=65535
+
+If the service already enabled and the service link points to the packaged version of the script, you need to disable and enable the service:
+
+       systemctl  stop rabbitmq-server
+       systemctl disable rabbitmq-server
+       systemctl enable rabbitmq-server
+       systemctl  start rabbitmq-server
+
+The systemd confing files need to be reload after configuration changes:
+
+       systemctl daemon-reload
+
+By default lots of stuff seems to go to /var, if possible put /var on a bigger, faster drive Try using SSD if available
 
 **Neutron**
 
