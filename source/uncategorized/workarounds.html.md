@@ -15,6 +15,19 @@ See [Workaround_archive](Workaround_archive) for workarounds that we believe to 
 
 These are the workarounds for the [RDO_test_day_Juno_milestone_3 Juno Milestone 3 Test Day](RDO_test_day_Juno_milestone_3 Juno Milestone 3 Test Day)
 
+## openstack swift service fails to start after a reboot
+
+*   **Bug:** <https://bugzilla.redhat.com/show_bug.cgi?id=1150590>
+*   **Affects:** Fedora 20
+
+#### symptoms
+
+The services related to swift are not started
+
+#### workaround
+
+openstack-service restart
+
 ## Unable to start nova-api
 
 *   **Bug:** <https://bugzilla.redhat.com/show_bug.cgi?id=1139771>
