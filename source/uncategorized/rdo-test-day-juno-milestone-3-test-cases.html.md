@@ -98,7 +98,7 @@ General openstack tests
 
 | 2.node (nova-network) Nova tests | RDO Juno | RHEL7     | <span style="background:#ff0000">FAIL</span> |                                                                                                                                                   | gszasz         |      | Packstack + nova live migration (block / shared storage)                                                    |            |
 | 2.node Nova tests                | RDO Juno | RHEL7     | <span style="background:#ff0000">FAIL</span> |                                                                                                                                                   | gszasz         |      | Packstack + nova live migration (block / shared storage)                                                    |            |
-|                                  | RDO Juno | Fedora 20 | <span style="background:#ff0000">FAIL</span> |                                                                                                                                                   | stoner tdunnon |      | <https://bugzilla.redhat.com/show_bug.cgi?id=1144181>                                                       |            |
+|                                  | RDO Juno | Fedora 20 | <span style="background:#00ff00">PASS</span> |                                                                                                                                                   | stoner tdunnon |      | with workaround, <https://bugzilla.redhat.com/show_bug.cgi?id=1144181>                                      |            |
 
 ## Manual configuration of OpenStack
 
