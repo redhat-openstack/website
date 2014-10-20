@@ -11,12 +11,13 @@ wiki_last_updated: 2015-08-31
 
 There are lots of events, around the world, where you can hang out with people from the RDO community. Some recent and upcoming events are:
 
-*   Tuesday, October 14th, [What is Ceph and why do I care?](http://www.meetup.com/OpenStack-Colorado/events/210326972/) Fort Collins, CO
-
-<!-- -->
-
-*   October 13-15, [LinuxCon/CloudOpen](http://events.linuxfoundation.org/events/linuxcon-europe), Dusseldorf, Germany
-*   Monday, October 20th, [Docker on OpenStack (RDO Juno M3 release)](http://www.meetup.com/OpenStack-MeetUp-Frankfurt/events/194344152/), Frankfurt, Germany
+*   Tuesday, October 21 - [Sydney OpenStack Meetup](http://www.meetup.com/Australian-OpenStack-User-Group/events/210190072/)
+*   Thursday, October 23 - [3rd OpenStackFin User Group meetup](http://www.meetup.com/OpenStack-Finland-User-Group/events/203219072/)
+*   Thursday, October 23 - [OpenStack Seattle Meetup](http://www.meetup.com/OpenStack-Seattle/events/198405682/)
+*   Thursday, October 23 - [Under the Hood with Nova, Libvirt, and KVM](http://www.meetup.com/OpenStack-LA/events/211212902/), Pasadena, CA
+*   Thursday, October 23 - [OpenStack Utah Meetup](http://www.meetup.com/openstack-utah/events/212292712/), Lindon, UT
+*   Friday, October 24 - [OpenStack 101](http://www.meetup.com/openstack-pittsburgh/events/210499422/), Pittsburgh, PA
+*   Monday, October 27 - [Red Hat Open Day](http://www.meetup.com/qldjvm/events/213724692/), Brisbane, Queensland
 
 <!-- -->
 
