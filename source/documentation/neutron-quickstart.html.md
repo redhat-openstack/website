@@ -8,14 +8,16 @@ wiki_revision_count: 37
 wiki_last_updated: 2015-04-01
 ---
 
+# Neutron-Quickstart
+
 __NOTOC__
 
 <div class="bg-boxes bg-boxes-single">
 <div class="row">
 <div class="offset3 span8">
-This document is no longer relevant. Just use the [Quickstart](Quickstart).
+#### This document is no longer relevant. Just use the [Quickstart](Quickstart).
 
-# RDO Neutron Quickstart
+## RDO Neutron Quickstart
 
 Deploying RDO is a quick and easy process. Setting up an OpenStack Grizzly cloud takes approximately 15 minutes, and can be as short as 3 steps.
 
@@ -72,7 +74,7 @@ Once the process is complete, you can log in to the OpenStack web interface "Hor
 
 You can find the demo network topology here: <http://$YOURIP/dashboard/project/network_topology/>
 
-# Next Steps
+## Next Steps
 
 Now that your single node OpenStack instance is up and running, you can read on about [running an instance with Neutron](running an instance with Neutron), configuring a [floating IP range](floating IP range), or about expanding your installation by [adding a compute node](adding a compute node).
 
