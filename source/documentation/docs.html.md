@@ -28,7 +28,7 @@ Since RDO sticks closely to the upstream OpenStack project, the documentation at
 
 #### [ Networking ](Docs/Networking)
 
-<small>[Neutron-Quickstart](Neutron-Quickstart), [Neutron with an existing external network](Neutron_with_existing_external_network), [ML2_plugin](ML2_plugin), [Floating vs Private IPs](Difference_between_Floating_IP_and_private_IP), [Networking in detail](Networking_in_too_much_detail), [More](Docs/Networking) ... </small>
+<small>[Neutron with an existing external network](Neutron_with_existing_external_network), [ML2_plugin](ML2_plugin), [Floating vs Private IPs](Difference_between_Floating_IP_and_private_IP), [Networking in detail](Networking_in_too_much_detail), [More](Docs/Networking) ... </small>
 
 #### [ Storage ](Docs/Storage)
 
