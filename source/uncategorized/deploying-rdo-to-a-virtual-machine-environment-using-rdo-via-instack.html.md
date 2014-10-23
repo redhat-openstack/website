@@ -16,14 +16,14 @@ Do not use the root user for executing any instack-undercloud scripts. Some prog
 
 ## Minimum System Requirements
 
-This setup creates five (5) virtual machines consisting of 3GB of memory and 30GB of disk space on each. If you do not plan to deploy Block Storage or Swift Storage nodes, you can delete those virtual machines and allocate less space accordingly. Most of the virtual machine disk files are thinly provisioned and will not take up the full 30GB. The undercloud is not thinly provisioned and is completely pre-allocated.
+This setup creates three (3) to five (5) virtual machines (depending on if you choose to deploy block and object storage nodes) consisting of 4GB of memory and 40GB of disk space on each. The virtual machine disk files are thinly provisioned and will not take up the full 40GB initially.
 
 The minimum system requirements for the virtual host machine to follow this tutorial are:
 
 *   Be running Fedora 20 x86_64
 *   At least (1) quad core CPU
-*   15GB free memory
-*   200GB disk space [1]
+*   12GB free memory
+*   120GB disk space [1]
 
 If you want to deviate from the tutorial or increase the scaling of one or more overcloud nodes, you will need to ensure you have enough memory and disk space.
 
