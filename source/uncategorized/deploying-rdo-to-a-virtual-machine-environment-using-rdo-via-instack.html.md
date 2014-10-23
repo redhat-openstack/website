@@ -33,7 +33,7 @@ If you want to deviate from the tutorial or increase the scaling of one or more 
 
 1. Make sure sshd service is installed and running.
 
-2. The user performing all of the installation steps on the virt host needs to have password-less sudo enabled. **This step is NOT optional, you must create an additional user. Do not run the rest of the steps as root.**
+2. The user performing all of the installation steps on the virt host needs to have sudo enabled. You can use an existing user or use the following commands to create a new user called **stack** with password-less sudo enabled. **Do not run the rest of the steps in this guide as root.**
 
        sudo useradd stack
        sudo passwd stack  # specify a password
@@ -52,7 +52,7 @@ If you have previously used the host machine to run TripleO's devtest setup, the
 
 3. Enable the RDO icehouse repository
 
-`  sudo yum install -y `[`http://rdo.fedorapeople.org/openstack-icehouse/rdo-release-icehouse.rpm`](http://rdo.fedorapeople.org/openstack-icehouse/rdo-release-icehouse.rpm)
+`  sudo yum install -y `[`http://rdo.fedorapeople.org/openstack-juno/rdo-release-juno.rpm`](http://rdo.fedorapeople.org/openstack-juno/rdo-release-juno.rpm)
 
 4. Install instack-undercloud package
 
@@ -60,9 +60,9 @@ If you have previously used the host machine to run TripleO's devtest setup, the
 
 5. Run script to install required dependencies
 
-       sudo yum install -y libguestfs-tools systemd
        source /usr/libexec/openstack-tripleo/devtest_variables.sh
        tripleo install-dependencies
+       tripleo set-usergroup-membership
 
 **After running this command, you will need to log into a new shell for the changes to be applied**.
 
@@ -74,13 +74,8 @@ If you have previously used the host machine to run TripleO's devtest setup, the
 
        instack-virt-setup
 
-Running "virsh list --all" will show you now have one virtual machine called "instack" and four related to "baremetal", all shut off. The "instack" vm runs a minimal install of Fedora 20 x86_64 and will be used to install the undercloud on. The vm contains a user "stack" that uses the password "stack" and is granted password-less sudo privileges. The root password is displayed in the standard output. The other vm's don't have an operating system on but will eventually become part of the "overcloud".
+When the script has completed successfully it will output the IP address of the instack vm.
 
-3. Get IP Address of VM for undercloud
-
-You will need to start the instack virtual machine and obtain its IP address. Note that the second command will not return anything until the instance has finished booting.
-
-      virsh start instack
-      cat /var/lib/libvirt/dnsmasq/default.leases | grep $(tripleo get-vm-mac instack) | awk '{print $3;}'
+Running `virsh list --all` will show you now have one virtual machine called instack" and four called "baremetal[0-4]", all shut off. The "instack" vm runs a minimal install of Fedora 20 x86_64 and will be used to install the undercloud on. The vm contains a user "stack" that uses the password "stack" and is granted password-less sudo privileges. The other vm's don't have an operating system yet installed but will eventually become part of the "overcloud".
 
 Next steps: [ Deploying an RDO Undercloud with Instack ](Deploying an RDO Undercloud with Instack)
