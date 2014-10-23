@@ -38,7 +38,7 @@ The overcloud nodes will be deployed from the undercloud machine and therefore t
 
 <!-- -->
 
-*   the provisioning network NIC should not be the same NIC that you are using for external access to the undercloud machine. During the undercloud installation, a openvswitch bridge will be created for Neutron and the provisioning NIC will be bridged to the openvswitch bridge. As such, connectivity would be lost if the provisioning NIC was also used for remote connectivity to the undercloud machine.
+*   the provisioning network NIC should not be the same NIC that you are using for remote connectivity to the undercloud machine. During the undercloud installation, a openvswitch bridge will be created for Neutron and the provisioning NIC will be bridged to the openvswitch bridge. As such, connectivity would be lost if the provisioning NIC was also used for remote connectivity to the undercloud machine.
 
 <!-- -->
 
