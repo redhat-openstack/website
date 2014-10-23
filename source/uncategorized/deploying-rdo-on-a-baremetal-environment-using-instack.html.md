@@ -34,7 +34,11 @@ The overcloud nodes will be deployed from the undercloud machine and therefore t
 
 <!-- -->
 
-*   one NIC from every machine needs to be on its own broadcast domain. In the tested environment, this required setting up a new VLAN on the switch. Note that you should use the "same" NIC on each of the overcloud machines ( for example: use the second NIC on each overcloud machine). This is because during installation we will need to refer to that NIC using a single name across all overcloud machines e.g. em2
+*   a management provisioning network is setup for all of the overcloud machines. One NIC from every machine needs to be in the same broadcast domain of the provisioning network. In the tested environment, this required setting up a new VLAN on the switch. Note that you should use the same NIC on each of the overcloud machines ( for example: use the second NIC on each overcloud machine). This is because during installation we will need to refer to that NIC using a single name across all overcloud machines e.g. em2
+
+<!-- -->
+
+*   the provisioning network NIC should not be the same NIC that you are using for external access to the undercloud machine. During the undercloud installation, a openvswitch bridge will be created for Neutron and the provisioning NIC will be bridged to the openvswitch bridge. As such, connectivity would be lost if the provisioning NIC was also used for remote connectivity to the undercloud machine.
 
 <!-- -->
 
@@ -43,7 +47,7 @@ The overcloud nodes will be deployed from the undercloud machine and therefore t
 <!-- -->
 
 *   For each overcloud machine you have:
-    -   the MAC address of the NIC that will PXE boot
+    -   the MAC address of the NIC that will PXE boot on the provisioning network
     -   the IPMI information for the machine (i.e. IP address of the IPMI NIC, IPMI username and password)
 
 ### Setting Up the Undercloud Machine
