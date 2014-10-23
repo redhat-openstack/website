@@ -14,7 +14,7 @@ This tutorial covers how to deploy a [TripleO](https://wiki.openstack.org/wiki/T
 
 ## What is Instack?
 
-Instack [1](https://github.com/agroup/instack) executes [diskimage-builder](https://github.com/openstack/diskimage-builder) style elements on the current system instead of building images. As such, it is a scripted installer for OpenStack based off of the TripleO elements. Using instack, you can quickly build an Undercloud to deploy your Overcloud.
+[Instack](https://github.com/agroup/instack) is a scripted installer for an OpenStack TripleO Undercloud that uses [tripleo-image-elements](https://github.com/openstack/tripleo-image-elements). Using instack, you can quickly build an Undercloud to deploy your Overcloud.
 
 ## Preparing for Undercloud Deployment
 
