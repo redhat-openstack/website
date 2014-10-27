@@ -55,19 +55,14 @@ Descriptions of the variables in the rc files
 
 There are delete scripts included with the instack-undercloud package If you want to delete an overcloud and reset the environment to a state where you can deploy another overcloud. Then follow these steps:
 
-1. While logged into the undercloud node export the required variables into your shell:
+1. While logged into the undercloud node export the required variables into your shell in order to use the CLI tools for the undercloud and overcloud. If you copied the stackrc file into your home directory at the end of the undercloud installation, simply source that file. Alternatively, you can use the following command directly to set the needed environment variables.
 
-      command $(sudo cat /root/stackrc | xargs)
+      command $(sudo cat /root/stackrc | xargs)
 
 2. Run one of the following examples that matches how you deployed the overcloud.
 
        #heat
        instack-delete-overcloud
-
-       #tuskar
-       instack-delete-overcloud-tuskarcli
-
-Once the command has completed successfully you are now ready to run instack-prepare-for-overcloud again.
 
 ## How do I view the Undercloud Dashboard when using a remote virt host?
 
