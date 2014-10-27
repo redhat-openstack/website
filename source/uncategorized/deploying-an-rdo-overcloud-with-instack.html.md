@@ -8,7 +8,7 @@ wiki_last_updated: 2014-11-17
 
 [ ← Deploying RDO using Instack](Deploying RDO using Instack)
 
-Now that you have a working undercloud, let's deploy an overcloud. Note that deploy-overcloud can be configured for individual environments via environment variables. The variables you can set are documented in the [Instack FAQ](http://openstack.redhat.com/Instack_FAQ#Are_there_any_example_rc_files_for_Overcloud_deployment.3F). For their default values, see the instack-deploy-overcloud\* scripts.
+Now that you have a working undercloud, let's deploy an overcloud.
 
 # Deploying an Overcloud
 
@@ -28,18 +28,14 @@ However, instack-undercloud provides a test script, `instack-deploy-overcloud` t
 
       instack-deploy-overcloud
 
-4. You should see `"Overcloud deployed!"` at the end of a successful deployment. To verify basic functionality, there is an included script that can be used called `instack-test-overcloud`. Run this script to perform a smoke test of your Overcloud.
-
-      instack-test-overcloud
-
-5. To further interact with the API services running in the Overcloud using the OpenStack cli tools, you can run the following commands.
+4. To further interact with the API services running in the Overcloud using the OpenStack cli tools, you can run the following commands.
 
       export TE_DATAFILE=instackenv.json
       source /etc/tripleo/overcloudrc
 
-# Deploying the Overcloud
+# Deploying the Overcloud via the Tuskar UI
 
-You can deploy the overcloud **either** through the Horizon web interface using the tuskar plugin **or** via the command line
+You can deploy the overcloud **either** through the Horizon web interface using the tuskar plugin **or** via the tuskar command line
 
 ### Tuskar Web UI Deployment
 
@@ -51,4 +47,4 @@ Note that if you are doing a virtual machine based deployment and your virt host
 
 When logging into the dashboard the default user and password are found in the /root/stackrc file on the undercloud node, OS_USERNAME and OS_PASSWORD. Once you have logged into the Web UI use [this guide](https://wiki.openstack.org/wiki/Tuskar/UsageGuide) to continue deploying your Overcloud. After a successful deployment the next step is: [ Testing an RDO Overcloud with Instack ](Testing an RDO Overcloud with Instack)
 
-After a successful deployment, you should see "Overcloud Deployed" in the standard output of the terminal. Next steps: [ Testing an RDO Overcloud with Instack](Testing an RDO Overcloud with Instack). If you run into issues and want to redeploy your Overcloud the first step is to delete it using the instructions in the [FAQ](http://openstack.redhat.com/Instack_FAQ#How_do_I_delete_the_Overcloud.3F). You should then be able to re-execute instack-prepare-for-overcloud and deploy the Overcloud again.
+Next steps: [ Testing an RDO Overcloud with Instack](Testing an RDO Overcloud with Instack). If you run into issues and want to redeploy your Overcloud the first step is to delete it using the instructions in the [FAQ](http://openstack.redhat.com/Instack_FAQ#How_do_I_delete_the_Overcloud.3F). You should then be able to re-execute instack-prepare-for-overcloud and deploy the Overcloud again.
