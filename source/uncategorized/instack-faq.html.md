@@ -31,28 +31,22 @@ Example rc files to source before deploying the overcloud are included as part o
 
 Example deploy-overcloudrc file for deploying the overcloud on a virtual machine setup:
 
-    /usr/share/doc/instack-undercloud/deploy-virt-overcloudrc
+    /usr/share/instack-undercloud/deploy-virt-overcloudrc
 
 Example deploy-overcloudrc file for deploying the overcloud on a bare metal machine setup:
 
-    /usr/share/doc/instack-undercloud/deploy-baremetal-overcloudrc
+    /usr/share/instack-undercloud/deploy-baremetal-overcloudrc
 
 Descriptions of the variables in the rc files
 
-*   CPU: number of cpus on baremetal nodes
-*   MEM: amount of ram on baremetal nodes, in MB
-*   DISK: amount of disk on baremetal nodes, in GB
-*   ARCH: architecture of baremetal nodes, amd64 or i386
-*   MACS: list of MAC addresses of baremetal nodes
-*   PM_IPS: list of Power Management IP addresses
-*   PM_USERS: list of Power Management Users
-*   PM_PASSWORDS: list of Power Management Passwords
 *   NeutronPublicInterface: Overcloud management interface name
 *   OVERCLOUD_LIBVIRT_TYPE: Overcloud libvirt type: qemu or kvm
 *   NETWORK_CIDR: neutron network cidr
 *   FLOATING_IP_START: floating ip allocation start
 *   FLOATING_IP_END: floating ip allocation end
 *   FLOATING_IP_CIDR: floating ip network cidr
+*   NEUTRON_NETWORK_TYPE: tenant network type: gre or vxlan
+*   NEUTRON_TUNNEL_TYPES: supported tenant network tunnel types: gre or vxlan or gre,vxlan
 *   COMPUTESCALE: # of overcloud compute nodes
 *   BLOCKSTORAGESCALE: # of overcloud block storage nodes
 *   SWIFTSTORAGESCALE: # of overcloud object storage nodes
