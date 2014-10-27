@@ -61,7 +61,6 @@ There are delete scripts included with the instack-undercloud package If you wan
 
 2. Run one of the following examples that matches how you deployed the overcloud.
 
-       #heat
        instack-delete-overcloud
 
 ## How do I view the Undercloud Dashboard when using a remote virt host?
