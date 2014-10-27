@@ -30,7 +30,7 @@ openstack-service restart
 
 ## Unable to start nova-api
 
-*   **Bug:** <https://bugzilla.redhat.com/show_bug.cgi?id=1139771>
+*   **Bug:** <https://bugzilla.redhat.com/show_bug.cgi?id=1144139>
 *   **Affects:** Fedora 20, CentOS7
 
 #### symptoms
