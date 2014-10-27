@@ -51,19 +51,4 @@ Note that if you are doing a virtual machine based deployment and your virt host
 
 When logging into the dashboard the default user and password are found in the /root/stackrc file on the undercloud node, OS_USERNAME and OS_PASSWORD. Once you have logged into the Web UI use [this guide](https://wiki.openstack.org/wiki/Tuskar/UsageGuide) to continue deploying your Overcloud. After a successful deployment the next step is: [ Testing an RDO Overcloud with Instack ](Testing an RDO Overcloud with Instack)
 
-### Command Line Deployment
-
-1. Export the required variables, including the rc file you just created:
-
-      source deploy-overcloudrc
-      command $(sudo cat /root/stackrc | xargs)
-
-2. Choose how you want to deploy the Overcloud. By calling scripts which **either** use [Heat](https://wiki.openstack.org/wiki/Heat) directly **or** which call the [Tuskar](https://wiki.openstack.org/wiki/TripleO/Tuskar) CLI :
-
-       # heat
-       instack-deploy-overcloud
-
-       # tuskar-cli
-       instack-deploy-overcloud-tuskarcli
-
 After a successful deployment, you should see "Overcloud Deployed" in the standard output of the terminal. Next steps: [ Testing an RDO Overcloud with Instack](Testing an RDO Overcloud with Instack). If you run into issues and want to redeploy your Overcloud the first step is to delete it using the instructions in the [FAQ](http://openstack.redhat.com/Instack_FAQ#How_do_I_delete_the_Overcloud.3F). You should then be able to re-execute instack-prepare-for-overcloud and deploy the Overcloud again.
