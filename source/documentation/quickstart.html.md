@@ -44,8 +44,6 @@ These instructions are to install the current ("**Juno**") release.
 </div>
 ### Step 1: Software repositories
 
-If on Fedora 21, please skip to step 2
-
 Update your current packages:
 
     sudo yum update -y
