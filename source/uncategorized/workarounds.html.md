@@ -13,7 +13,7 @@ wiki_last_updated: 2015-05-07
 
 See [Workaround_archive](Workaround_archive) for workarounds that we believe to be resolved. Please move them back here if they appear to still be necessary.
 
-These are the workarounds for the [RDO_test_day_Juno_milestone_3 Juno Milestone 3 Test Day](RDO_test_day_Juno_milestone_3 Juno Milestone 3 Test Day)
+These are the current workarounds for the RDO Juno.
 
 ## Packstack fails when mariadb-server is installed
 
