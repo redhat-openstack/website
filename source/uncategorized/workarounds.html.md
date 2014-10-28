@@ -140,21 +140,6 @@ After making the above change, restart openstack services:
 
      openstack-service restart
 
-## Neutron server fails to connect to the database. → oslodb fails to keep trying to connect to the database
-
-*   **Bug:** <https://bugzilla.redhat.com/show_bug.cgi?id=1144181>
-*   **Affects:** CentOS 7
-
-#### symptoms
-
-After a system reboot, neutron-server fails to connect to the database(if the database server is not available at that time). This issue appears because oslodb fails retrying to connect to the database.
-
-#### workaround
-
-Restart neutron-server service.
-
-    service neutron-server restart
-
 ## Example Problem Description
 
 *   **Bug:** <https://bugzilla.redhat.com/show_bug.cgi?id=12345>
