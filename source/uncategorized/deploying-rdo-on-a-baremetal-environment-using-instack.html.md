@@ -50,6 +50,12 @@ The overcloud nodes will be deployed from the undercloud machine and therefore t
     -   the MAC address of the NIC that will PXE boot on the provisioning network
     -   the IPMI information for the machine (i.e. IP address of the IPMI NIC, IPMI username and password)
 
+<!-- -->
+
+*   Refer to the following diagram for more information
+
+![](TripleO_Network_Diagram_.jpg "TripleO_Network_Diagram_.jpg")
+
 ### Setting Up the Undercloud Machine
 
 1.  Select a machine within the baremetal environment on which to install the undercloud.
