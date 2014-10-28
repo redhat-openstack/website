@@ -15,69 +15,6 @@ See [Workaround_archive](Workaround_archive) for workarounds that we believe to 
 
 These are the workarounds for the [RDO_test_day_Juno_milestone_3 Juno Milestone 3 Test Day](RDO_test_day_Juno_milestone_3 Juno Milestone 3 Test Day)
 
-## Unable to start nova-api
-
-*   **Bug:** <https://bugzilla.redhat.com/show_bug.cgi?id=1144139>
-*   **Affects:** Fedora 20, CentOS7
-
-#### symptoms
-
-Packstack fails with the error:
-
-    Error: Could not start Service[nova-api]: Execution of '/sbin/service openstack-nova-api start' returned 1: 
-
-/var/log/audit/audit.log contains:
-
-    type=AVC msg=audit(1412109980.125:4612): avc:  denied  { getattr } for  pid=3296 comm="nova-api" name="/" dev="tmpfs" ino=13317 scontext=system_u:system_r:nova_api_t:s0 tcontext=system_u:object_r:tmpfs_t:s0 tclass=filesystem permissive=0
-
-#### workaround
-
-You can place selinux in permissive mode:
-
-    # setenforce 0
-
-You can build an selinux module that permits the necessary access. On a Fedora 20 machine, place this in a file called nova_allow_tmpfs.te:
-
-    module nova_allow_tmpfs 1.0;
-
-    require {
-        type tmpfs_t;
-        type nova_api_t;
-        class filesystem getattr;
-    }
-
-    #============= nova_api_t ==============
-    allow nova_api_t tmpfs_t:filesystem getattr;
-
-On a RHEL7 or CentOS7 server, place this in a file called nova_allow_tmpfs.te:
-
-    module nova_allow_tmpfs 1.0;
-
-    require {
-        type tmpfs_t;
-        type nova_api_t;
-        class filesystem getattr;
-        class dir { search write add_name remove_name } ;
-        class file { create read write open link unlink getattr } ;
-    }
-
-    #============= nova_api_t ==============
-    allow nova_api_t tmpfs_t:filesystem getattr;
-    allow nova_api_t tmpfs_t:dir { search write add_name remove_name } ;
-    allow nova_api_t tmpfs_t:file { create read write open link unlink getattr } ;
-
-And then:
-
-    # yum -y install selinux-policy-devel
-    # make -f /usr/share/selinux/devel/Makefile nova_allow_tmpfs.pp
-    Compiling targeted nova_allow_tmpfs module
-    /usr/bin/checkmodule:  loading policy configuration from tmp/nova_allow_tmpfs.tmp
-    /usr/bin/checkmodule:  policy configuration loaded
-    /usr/bin/checkmodule:  writing binary representation (version 17) to tmp/nova_allow_tmpfs.mod
-    Creating targeted nova_allow_tmpfs.pp policy package
-    rm tmp/nova_allow_tmpfs.mod.fc tmp/nova_allow_tmpfs.mod
-    # semodule -i nova_allow_tmpfs.pp
-
 ## Packstack --allinone fails to remove firewalld
 
 *   **Bug:** <https://bugzilla.redhat.com/show_bug.cgi?id=1148426>
