@@ -15,35 +15,6 @@ See [Workaround_archive](Workaround_archive) for workarounds that we believe to 
 
 These are the workarounds for the [RDO_test_day_Juno_milestone_3 Juno Milestone 3 Test Day](RDO_test_day_Juno_milestone_3 Juno Milestone 3 Test Day)
 
-## Packstack --allinone fails to remove firewalld
-
-*   **Bug:** <https://bugzilla.redhat.com/show_bug.cgi?id=1148426>
-*   **Affects:** Fedora 20, Fedora 21, CentOS7
-
-#### symptoms
-
-        Applying 192.168.122.48_prescript.pp
-        192.168.122.48_prescript.pp:                      [ ERROR ]            
-        Applying Puppet manifests                         [ ERROR ]
-
-        ERROR : Error appeared during Puppet run: 192.168.122.48_prescript.pp
-        Error: Execution of '/usr/bin/rpm -e firewalld-0.3.11-3.fc20.noarch' returned 1: error: Failed dependencies:
-        You will find full trace in log /var/tmp/packstack/20141001-080818-TOTPkh/manifests/192.168.122.48_prescript.pp.log
-
-The log contains:
-
-          Error: Execution of '/usr/bin/rpm -e firewalld-0.3.9-7.el7.noarch' returned 1: error: Failed dependencies:
-              firewalld >= 0.3.5-1 is needed by (installed) anaconda-19.31.79-1.el7.centos.4.x86_64
-              firewalld = 0.3.9-7.el7 is needed by (installed) firewall-config-0.3.9-7.el7.noarch
-
-#### workaround
-
-         yum remove firewalld
-
-This will also remove the anaconda package dependency
-
-Then re-run packstack with the same answer file.
-
 ## Packstack fails when mariadb-server is installed
 
 *   **Bug:** <https://bugzilla.redhat.com/show_bug.cgi?id=1148578>
