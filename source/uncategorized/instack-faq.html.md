@@ -125,7 +125,7 @@ For baremetal:
 
 ## How do I delete the Overcloud?
 
-There are delete scripts included with the instack-undercloud package If you want to delete an overcloud and reset the environment to a state where you can deploy another overcloud. Then follow these steps:
+There are delete scripts included with the instack-undercloud package If you want to delete an overcloud and reset the environment to a state where you can deploy another overcloud. These steps only work if you used `instack-deploy-overcloud` to deploy the overcloud.
 
 1. While logged into the undercloud node export the required variables into your shell in order to use the CLI tools for the undercloud and overcloud. If you copied the stackrc file into your home directory at the end of the undercloud installation, simply source that file. Alternatively, you can use the following command directly to set the needed environment variables.
 
@@ -134,6 +134,18 @@ There are delete scripts included with the instack-undercloud package If you wan
 2. Run one of the following examples that matches how you deployed the overcloud.
 
        instack-delete-overcloud
+
+## How do I load new Overcloud images?
+
+If new images are made available for download, or you build new images, you will need to load them into glance on the Undercloud. You can follow these steps to do so.
+
+1. While logged into the undercloud node export the required variables into your shell in order to use the CLI tools for the undercloud and overcloud. If you copied the stackrc file into your home directory at the end of the undercloud installation, simply source that file. Alternatively, you can use the following command directly to set the needed environment variables.
+
+      command $(sudo cat /root/stackrc | xargs)
+
+2. Use the following command to load new images. Pass the command whatever new image file you want loaded into glance.
+
+      tripleo load-image -d overcloud-control.qcow2
 
 ## How do I view the Undercloud Dashboard when using a remote virt host?
 
