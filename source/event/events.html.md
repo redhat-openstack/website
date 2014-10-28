@@ -11,17 +11,27 @@ wiki_last_updated: 2015-08-31
 
 There are lots of events, around the world, where you can hang out with people from the RDO community. Some recent and upcoming events are:
 
-*   Tuesday, October 21 - [Sydney OpenStack Meetup](http://www.meetup.com/Australian-OpenStack-User-Group/events/210190072/)
-*   Thursday, October 23 - [3rd OpenStackFin User Group meetup](http://www.meetup.com/OpenStack-Finland-User-Group/events/203219072/)
-*   Thursday, October 23 - [OpenStack Seattle Meetup](http://www.meetup.com/OpenStack-Seattle/events/198405682/)
-*   Thursday, October 23 - [Under the Hood with Nova, Libvirt, and KVM](http://www.meetup.com/OpenStack-LA/events/211212902/), Pasadena, CA
-*   Thursday, October 23 - [OpenStack Utah Meetup](http://www.meetup.com/openstack-utah/events/212292712/), Lindon, UT
-*   Friday, October 24 - [OpenStack 101](http://www.meetup.com/openstack-pittsburgh/events/210499422/), Pittsburgh, PA
-*   Monday, October 27 - [Red Hat Open Day](http://www.meetup.com/qldjvm/events/213724692/), Brisbane, Queensland
+*   Tuesday, October 28 - Denver, Colorado - [Getting the Most out of Cinder](http://www.meetup.com/OpenStack-Denver/events/213229672/)
 
 <!-- -->
 
-*   November 3-7, [OpenStack Summit](http://openstack.org/summit), Paris
+*   Tuesday, October 28 - Santiago, Chile - [Primer reunión del grupo](http://www.meetup.com/DevOps-Culture/events/197237532/)
+
+<!-- -->
+
+*   Wednesday, October 29 - Denver, Colorado - [Ceph- Architecture of an Open Source, Distributed Storage System](http://www.meetup.com/Distributed-Computing-Denver/events/206469162/)
+
+<!-- -->
+
+*   Wednesday, October 29 - Columbia, Maryland - [Open Source Cloud Meetup](http://www.meetup.com/opensourcecloud/events/201114332/)
+
+<!-- -->
+
+*   Thursday, October 30 is Docker Global Hack Day, and there are meetups \*everywhere\*. [Find one near you](http://tm3.org/dockerhack)
+
+<!-- -->
+
+*   And, starting Sunday, the [OpenStack "Kilo" Summit](http://openstack.org/summit/) will be held in Paris - Hope to see you there!
 
 <!-- -->
 
