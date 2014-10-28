@@ -68,9 +68,9 @@ Packstack fails with the following error
 
 #### workaround
 
-You can upgrade to a version of erlang-sd_notify >= 0.1-4. No version is currently in the repo so you have to directly download from koji. The command below should check the repo first (preferred) and then fallback to koji if necessary.
+You can upgrade to a version of erlang-sd_notify >= 0.1-4 from F21 updates-testing: <https://admin.fedoraproject.org/updates/FEDORA-2014-11943/erlang-sd_notify-0.1-4.fc21>
 
-    yum install -y erlang-sd_notify-0.1-4 || yum install -y http://kojipkgs.fedoraproject.org/packages/erlang-sd_notify/0.1/4.fc21/data/signed/95a43f54/x86_64/erlang-sd_notify-0.1-4.fc21.x86_64.rpm
+    yum --enablerepo=updates-testing  install -y erlang-sd_notify-0.1-4
 
 After making the above change, re-run packstack with:
 
