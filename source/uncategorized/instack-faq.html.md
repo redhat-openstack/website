@@ -39,7 +39,7 @@ Example deploy-overcloudrc file for deploying the overcloud on a bare metal mach
 
 Descriptions of the variables in the rc files
 
-*   NODES_JSON: path to a file of the JSON representation of the baremetal nodes
+*   NODES_JSON: path to a file of the JSON representation of the baremetal nodes. Documented in the next section
 *   NeutronPublicInterface: Overcloud management interface name
 *   OVERCLOUD_LIBVIRT_TYPE: Overcloud libvirt type: qemu or kvm
 *   NETWORK_CIDR: neutron network cidr
@@ -51,6 +51,77 @@ Descriptions of the variables in the rc files
 *   COMPUTESCALE: # of overcloud compute nodes
 *   BLOCKSTORAGESCALE: # of overcloud block storage nodes
 *   SWIFTSTORAGESCALE: # of overcloud object storage nodes
+
+## What is the NODES_JSON file format?
+
+NODES_JSON in the deploy-overcloudrc file specifies a path to a JSON file and contains the data used to register nodes for baremetl provisioning. The JSON file should be in the following format.
+
+For virt (note that if you used `instack-virt-setup` the file has already been created for you automatically):
+
+            {
+              "nodes":
+                [
+                  {
+                    "memory": "4072",
+                    "disk": "30",
+                    "arch": "x86_64",
+                    "pm_user": "stack",
+                    "pm_addr": "192.168.122.1",
+                    "pm_password": "contents of ssh private key go here",
+                    "pm_type": "pxe_ssh",
+                    "mac": [
+                      "00:76:31:1f:f2:a0"
+                    ],
+                    "cpu": "1"
+                  },
+                  {
+                    "memory": "4072",
+                    "disk": "30",
+                    "arch": "x86_64",
+                    "pm_user": "stack",
+                    "pm_addr": "192.168.122.1",
+                    "pm_password": "contents of ssh private key go here",
+                    "pm_type": "pxe_ssh",
+                    "mac": [
+                      "00:76:31:1f:f2:a0"
+                    ],
+                    "cpu": "1"
+                  }
+                ]
+            }
+
+For baremetal:
+
+            {
+              "nodes": [
+                {
+                  "pm_password": "ipmi password goes here",
+                  "pm_type": "pxe_ipmitool",
+                  "mac": [
+                    "ipmi mac address goes here"
+                  ],
+                  "cpu": "4",
+                  "memory": "32768",
+                  "disk": "900",
+                  "arch": "x86_64",
+                  "pm_user": "ipmi username goes here",
+                  "pm_addr": "ipmi ip address goes here"
+                },
+                {
+                  "pm_password": "ipmi password goes here",
+                  "pm_type": "pxe_ipmitool",
+                  "mac": [
+                    "ipmi mac address goes here"
+                  ],
+                  "cpu": "4",
+                  "memory": "32768",
+                  "disk": "900",
+                  "arch": "x86_64",
+                  "pm_user": "ipmi username goes here",
+                  "pm_addr": "ipmi ip address goes here"
+                }
+              ]
+            }
 
 ## How do I delete the Overcloud?
 
