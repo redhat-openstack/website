@@ -39,6 +39,7 @@ Example deploy-overcloudrc file for deploying the overcloud on a bare metal mach
 
 Descriptions of the variables in the rc files
 
+*   NODES_JSON: path to a file of the JSON representation of the baremetal nodes
 *   NeutronPublicInterface: Overcloud management interface name
 *   OVERCLOUD_LIBVIRT_TYPE: Overcloud libvirt type: qemu or kvm
 *   NETWORK_CIDR: neutron network cidr
