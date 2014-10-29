@@ -157,3 +157,18 @@ If you're virt host is a remote system, and not the same system that you're runn
 where 192.168.122.55 is the IP address of the instack virtual machine. Update appropriately for your environment. With the ssh tunnel created you can launch a browser on a system with connectivity to the virt host and go to <http://><virt-host>:8080/dashboard and the dashboard should appear. If you need to connect remotely through the virt host, you can chain ssh tunnels as needed.
 
 When logging into the dashboard the default user and password are found in the /root/stackrc file on the instack virtual machine, OS_USERNAME and OS_PASSWORD. You can read more about using the dashboard in the User Guide.
+
+## What configuration changes does `instack-virt-setup` make to the virt host?
+
+`instack-virt-setup` makes configuration changes to the virt host to allow for using a full virtual environment for testing an Overcloud deployment.
+
+These changes include:
+
+*   Installs various packages such as openvswitch, libvirt, qemu, etc.
+*   Adds a new openvswitch bridge called `brbm`
+*   Adds a new libvirt network also called `brbm`, which is configured to use the above bridge.
+*   Reconfigures libvirtd to set the domain socket group ownership to the `libvirtd` group. This allows for easier interaction with libvirtd on the host
+
+<!-- -->
+
+*   Adds the user running `instack-virt-setup` to the `libvirtd` group.
