@@ -24,7 +24,7 @@ wiki_last_updated: 2015-01-08
 4.  Download the Overcloud images
         wget -r -nd -np --reject "index.html*" $IMAGEDOWNLOADURL
 
-5.  Create and edit your answers file. In a virtualized setup, this has already been done for you, so you can skip this step. Otherwise, copy the sample answers file into your home directory. The descriptions of the parameters that can be set are in the sample answers file.
+5.  Create and edit your answers file. In a virtualized setup, this has already been done for you, so you can skip this step. Otherwise, copy the sample answers file into your home directory. The descriptions of the parameters that can be set are in the sample answers file itself.
         # Answers file must exist in home directory for now
         # Copy the sample answers file to your home directory
         cp /usr/share/instack-undercloud/instack.answers.sample ~/instack.answers
