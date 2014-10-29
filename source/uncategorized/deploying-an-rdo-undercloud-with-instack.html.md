@@ -12,7 +12,9 @@ wiki_last_updated: 2015-01-08
 
 ## Installing the Undercloud with Instack
 
-1.  Make sure you are logged in as a non-root user (such as the stack user), on the node you want to install the undercloud onto. For a virt setup this will be a VM called "instack", for a bare metal setup this will be the host you selected while preparing the environment.
+1.  Make sure you are logged in as a non-root user (such as the stack user), on the node you want to install the undercloud onto.
+    If you used the virt setup this node will be a VM called "instack" and you can use the stack user. The initial password is also stack. It is recommended to change this password on login to the vm.
+    For a baremetal setup this will be the host you selected for the Undercloud while preparing the environment.
 2.  Enable the RDO juno repository
         sudo yum install -y http://rdo.fedorapeople.org/openstack-juno/rdo-release-juno.rpm
 
