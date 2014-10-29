@@ -81,4 +81,6 @@ When the script has completed successfully it will output the IP address of the 
 
 Running `virsh list --all` will show you now have one virtual machine called instack" and four called "baremetal[0-4]", all shut off. The "instack" vm runs a minimal install of Fedora 20 x86_64 and will be used to install the undercloud on. The vm contains a user "stack" that uses the password "stack" and is granted password-less sudo privileges. The other vm's don't have an operating system yet installed but will eventually become part of the "overcloud".
 
+You may also with to install virt-manager on the virt host as it can be very helpful if monitoring when the vm's for the Overcloud nodes are powered on and off. You can also use virt-manager to login to the console on the Overcloud nodes.
+
 Next steps: [ Deploying an RDO Undercloud with Instack ](Deploying an RDO Undercloud with Instack)
