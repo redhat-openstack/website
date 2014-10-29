@@ -168,7 +168,4 @@ These changes include:
 *   Adds a new openvswitch bridge called `brbm`
 *   Adds a new libvirt network also called `brbm`, which is configured to use the above bridge.
 *   Reconfigures libvirtd to set the domain socket group ownership to the `libvirtd` group. This allows for easier interaction with libvirtd on the host
-
-<!-- -->
-
 *   Adds the user running `instack-virt-setup` to the `libvirtd` group.
