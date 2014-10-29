@@ -44,6 +44,8 @@ If you have previously used the host machine to run TripleO's devtest setup, the
 
 ### Virtual Host Setup
 
+These steps will setup your virtual host for a virtual environment for testing the Overcloud deployment. For more information about the changes performed, See the [FAQ](https://openstack.redhat.com/Instack_FAQ#What_configuration_changes_does_instack-virt-setup_make_to_the_virt_host.3F).
+
 1. Make sure you are logged in as the user you created above.
 
 2. Add export of LIBVIRT_DEFAULT_URI to your bashrc file.
