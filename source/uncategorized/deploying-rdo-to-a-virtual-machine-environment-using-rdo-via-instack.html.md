@@ -65,8 +65,9 @@ These steps will setup your virtual host for a virtual environment for testing t
        source /usr/libexec/openstack-tripleo/devtest_variables.sh
        tripleo install-dependencies
        tripleo set-usergroup-membership
-
-**After running this command, you will need to log into a new shell for the changes to be applied**.
+       # The previous command has added the user to the libvirtd group, so we need to login to the new group
+       newgrp libvirtd
+       newgrp
 
 ### Virtual Machine Creation
 
