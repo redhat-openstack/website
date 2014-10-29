@@ -50,7 +50,7 @@ If you have previously used the host machine to run TripleO's devtest setup, the
 
         echo 'export LIBVIRT_DEFAULT_URI="qemu:///system"' >> ~/.bashrc
 
-3. Enable the RDO icehouse repository
+3. Enable the RDO juno repository
 
 `  sudo yum install -y `[`http://rdo.fedorapeople.org/openstack-juno/rdo-release-juno.rpm`](http://rdo.fedorapeople.org/openstack-juno/rdo-release-juno.rpm)
 
