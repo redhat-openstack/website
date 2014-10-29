@@ -99,9 +99,10 @@ By default lots of stuff seems to go to /var, if possible put /var on a bigger, 
          innodb_file_per_table
          innodb_flush_log_at_trx_commit = 0
 
-        Avoid  defining charset=utf8 without the use_unicode=0 in the mysql connection strings.
-`   `[`http://docs.sqlalchemy.org/en/rel_0_9/dialects/mysql.html#unicode`](http://docs.sqlalchemy.org/en/rel_0_9/dialects/mysql.html#unicode)
-             
+Consider using [thread_handling=pool-of-threads](https://mariadb.com/kb/en/mariadb/documentation/optimization-and-tuning/buffers-caches-and-threads/thread-pool/threadpool-in-55/) option when mariadb needs to handle large number of not too active connection. Mariadb by default creates a thread for every connection, which consumes a significant amount a memory when it needs to handle thousands of connections.
+
+Avoid defining charset=utf8 without the use_unicode=0 in the mysql connection strings. <http://docs.sqlalchemy.org/en/rel_0_9/dialects/mysql.html#unicode>
+
         rabbitmq:
         if your erlang version support the hipe compile you can enable it in   /etc/rabbitmq/rabbitmq.config.
 `  `[`http://www.fpaste.org/125147/40791409`](http://www.fpaste.org/125147/40791409)
@@ -114,7 +115,7 @@ By default lots of stuff seems to go to /var, if possible put /var on a bigger, 
 
          Update revocation_cache_time from 1 to 300 with auth_token middleware. Till this is not changed in the code one need to update the each service specific file like glance-api.conf and add revocation_cache_time=300  in [keystone_authtoken] section.
 
-        Make sure you have crontab entry for '/usr/bin/keystone-manage token_flush' and it run on one server at least once in every hour.
+        Make sure you have crontab entry for '/usr/bin/keystone-manage token_flush' and it run on at least on one server at least once in every hour.
 
 **Swift**
 
