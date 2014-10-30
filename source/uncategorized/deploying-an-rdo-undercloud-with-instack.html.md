@@ -46,7 +46,10 @@ wiki_last_updated: 2015-01-08
 7.  Run script to install undercloud. The script will produce a lot of output on the screen. It also logs to `~/.instack/install-undercloud.log`. You should see `instack-install-undercloud complete.` along with the details about the stackrc file at the end of a successful run.
         instack-install-undercloud
 
-8.  Once the install script has run to completion, you should take note of the files `/root/stackrc` and `/root/tripleo-undercloud-passwords`. Both these files will be needed to interact with the installed undercloud.
+8.  Once the install script has run to completion, you should take note of the files `/root/stackrc` and `/root/tripleo-undercloud-passwords`. Both these files will be needed to interact with the installed undercloud. Copy them to your home directory for easy use later.
+        sudo cp /root/tripleo-undercloud-passwords .
+        sudo cp /root/stackrc .
+
     That completes the undercloud install and now you should have a running undercloud. For the next steps, see: [ Deploying an RDO Overcloud with Instack ](Deploying an RDO Overcloud with Instack)
 
     If your install does not complete successfully, please see the [ Instack FAQ](Instack FAQ) page for potential solutions.
