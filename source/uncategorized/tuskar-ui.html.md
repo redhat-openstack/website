@@ -14,6 +14,11 @@ The Tuskar UI is developed as a plugin for OpenStack Horizon; as such it shares 
 
 ## Features
 
+*   Overcloud configuration
+*   Node management
+*   Role management
+*   History
+
 ## Quick Install
 
 ## Quick Usage
