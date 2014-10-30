@@ -69,6 +69,7 @@ These steps will setup your virtual host for a virtual environment for testing t
 
 5. Run script to install required dependencies
 
+       export NODE_DIST="fedora"
        source /usr/libexec/openstack-tripleo/devtest_variables.sh
        tripleo install-dependencies
        tripleo set-usergroup-membership
