@@ -79,7 +79,9 @@ These steps will setup your virtual host for a virtual environment for testing t
 
 ### Virtual Machine Creation
 
-1. Make sure you are logged in, with a new shell, as the user you created above.
+1. Verify again that your user has been added to the libvirtd group. The command shown below should show the libvirtd group listed in the output.
+
+      id | grep libvirtd
 
 2. Run the script to setup your virtual environment.
 
