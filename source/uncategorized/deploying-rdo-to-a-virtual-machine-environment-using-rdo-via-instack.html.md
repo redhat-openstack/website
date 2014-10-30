@@ -56,14 +56,14 @@ These steps will setup your virtual host for a virtual environment for testing t
 
 `  sudo yum install -y `[`http://rdo.fedorapeople.org/openstack-juno/rdo-release-juno.rpm`](http://rdo.fedorapeople.org/openstack-juno/rdo-release-juno.rpm)
 
-3.1. Install the instack-undercloud package. For now, we must also enable the copr and stage repositories.
+3.1.For now, we must also enable the copr and stage repositories.
 
        # Enable the copr repository
 ` sudo curl -o /etc/yum.repos.d/slagle-openstack-m.repo `[`https://copr.fedoraproject.org/coprs/slagle/openstack-m/repo/fedora-20/slagle-openstack-m-fedora-20.repo`](https://copr.fedoraproject.org/coprs/slagle/openstack-m/repo/fedora-20/slagle-openstack-m-fedora-20.repo)
        # Enable the stage RDO repo
        sudo sed -i 's#^baseurl.*#baseurl=`[`http://team.virt.bos.redhat.com/openstack/openstack-juno/fedora`](http://team.virt.bos.redhat.com/openstack/openstack-juno/fedora)`-$releasever/#' /etc/yum.repos.d/rdo-release.repo
 
-4 . Install the instack-undercloud package. For now, we must also enable the copr and stage repositories.
+4 . Install the instack-undercloud package.
 
        sudo yum install -y instack-undercloud
 
