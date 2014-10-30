@@ -21,6 +21,26 @@ The Tuskar UI is developed as a plugin for OpenStack Horizon; as such it shares 
 
 ## Quick Install
 
+*   Use Instack
+
 ## Quick Usage
 
+*   Login
+*   Register nodes
+*   Check flavors
+
+        * Suggested flavors
+        * Set role flavor if needed
+
+*   Deploy
+*   Initialize
+
 ## Detailed Information
+
+### Additional install options
+
+### Overcloud configuration
+
+### Uploading images
+
+### Using the Tuskar API
