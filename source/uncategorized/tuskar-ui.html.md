@@ -23,7 +23,12 @@ Key features of the Tuskar-UI include:
 
 ## Quick Install
 
-*   Use Instack
+We recommend using Instack to install the Tuskar-UI:
+
+*   Start by following the [Instack instructions](https://openstack.redhat.com/Deploying_RDO_using_Instack) through "Deploying an Undercloud".
+*   Follow the [Instack overcloud steps](https://openstack.redhat.com/Deploying_an_RDO_Overcloud_with_Instack) in the "Deploying the Overcloud via the Tuskar UI" section.
+
+The next section will cover usage of the Tuskar UI.
 
 ## Quick Usage
 
