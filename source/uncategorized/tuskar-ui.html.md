@@ -113,4 +113,6 @@ To view the Heat templates used for the overcloud plan, run the following:
 
 #### Modify plan parameters
 
-To modify a specific plan parameter, run the following:
+Available plan parameters can be viewed in the environment.yaml file. To modify a specific plan parameter, run the following:
+
+` [stack@localhost ~]$ tuskar plan-patch -A `<key>`=`<value>` `<plan uuid>
