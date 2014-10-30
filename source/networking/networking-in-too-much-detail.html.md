@@ -108,7 +108,7 @@ The tunnel bridge translates VLAN-tagged traffic from the integration bridge int
 
 There is a single rule that causes the bridge to drop all traffic. Afrer you boot an instance on this compute node, the rules are modified to look something like:
 
-    # ovs-ofctl dump-flows br-run
+    # ovs-ofctl dump-flows br-tun
     NXST_FLOW reply (xid=0x4):
      cookie=0x0, duration=422.158s, table=0, n_packets=2, n_bytes=120, idle_age=55, priority=3,tun_id=0x2,dl_dst=01:00:00:00:00:00/01:00:00:00:00:00 actions=mod_vlan_vid:1,output:1
      cookie=0x0, duration=421.948s, table=0, n_packets=64, n_bytes=8337, idle_age=31, priority=3,tun_id=0x2,dl_dst=fa:16:3e:dd:c1:62 actions=mod_vlan_vid:1,NORMAL
