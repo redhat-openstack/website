@@ -18,9 +18,7 @@ wiki_last_updated: 2015-01-08
 2.  Enable the RDO juno repository
         sudo yum install -y http://rdo.fedorapeople.org/openstack-juno/rdo-release-juno.rpm
 
-3.  We must also enable the copr and stage repositories.
-        # Enable the copr repository
-        sudo curl -o /etc/yum.repos.d/slagle-openstack-m.repo https://copr.fedoraproject.org/coprs/slagle/openstack-m/repo/fedora-20/slagle-openstack-m-fedora-20.repo
+3.  We must also enable the stage repository.
         # Enable the stage RDO repo
         sudo sed -i 's#^baseurl.*#baseurl=http://team.virt.bos.redhat.com/openstack/openstack-juno/fedora-$releasever/#' /etc/yum.repos.d/rdo-release.repo
 
