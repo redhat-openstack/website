@@ -26,7 +26,7 @@ Generate a Packstack answer file:
 
 Help text is provided above each parameter to whether it’s required for a given NetApp configuration. For more information about the specific parameters and examples of their use, see the [NetApp unified driver docs](http://docs.openstack.org/juno/config-reference/content/netapp-volume-driver.html) and choose the page detailing your storage family and protocol.
 
-The Packstack parameters are the same as those found in the docs, but in all caps and with `CINDER_` prepended. For example, entering the following into the answer file:
+The Packstack parameters are the same as those found in the docs, but in all caps and with `CONFIG_CINDER_` prepended. For example, entering the following into the answer file:
 
     ...
     CONFIG_CINDER_BACKEND=netapp
