@@ -65,9 +65,17 @@ After the overcloud is deployed, you will still need to initialize overcloud ser
 
 Once this is complete, the 'Overview' page will show you the credentials needed to access overcloud Horizon.
 
-## Detailed Information
+## Advanced Usage
 
-### Additional install options
+### Development installation
+
+If you wish to create a development installation of the Tuskar-UI, install as above first.
+
+Next, turn off the running instance of the Tuskar UI:
+
+       sudo service httpd stop
+
+Now you can follow [these instructions](http://tuskar-ui.readthedocs.org/en/latest/install.html).
 
 ### Overcloud configuration
 
