@@ -77,7 +77,11 @@ Next, turn off the running instance of the Tuskar UI:
 
 Now you can follow [these instructions](http://tuskar-ui.readthedocs.org/en/latest/install.html).
 
-### Overcloud configuration
+### Additional overcloud configuration
+
+The parameters that Tuskar is sending to Heat can be viewed by clicking on 'Service Configuration' in the left navigation. A subset of those can be modified through the UI. To do so, click on the 'Edit Configuration' button in the upper-right corner.
+
+Use the Tuskar CLI to modify additional parameters.
 
 ### Uploading images
 
