@@ -26,14 +26,33 @@ Key features of the Tuskar-UI include:
 We recommend using Instack to install the Tuskar-UI:
 
 *   Start by following the [Instack instructions](https://openstack.redhat.com/Deploying_RDO_using_Instack) through "Deploying an Undercloud".
-*   Follow the [Instack overcloud steps](https://openstack.redhat.com/Deploying_an_RDO_Overcloud_with_Instack) in the "Deploying the Overcloud via the Tuskar UI" section.
+*   Follow the [Instack overcloud steps](https://openstack.redhat.com/Deploying_an_RDO_Overcloud_with_Instack) in "Deploying the Overcloud via the Tuskar UI".
+*   If using a remote virtual host, you may need to configure your ports and create an ssh tunnel, as detailed [here](https://openstack.redhat.com/Instack_FAQ#How_do_I_view_the_Undercloud_Dashboard_when_using_a_remote_virt_host.3F).
 
 The next section will cover usage of the Tuskar UI.
 
 ## Quick Usage
 
-*   Login
-*   Register nodes
+Once the Tuskar-UI is installed, it can be accessed through a web browser at <http://><host>/dashboard/ ; or <http://><virt-host>:8080/dashboard if you're using a virtual host.
+
+### Login
+
+Upon accessing the Tuskar-UI, you will be prompted for a username and password. The username is 'admin'; the password can be found in /root/stackrc on the instack virtual machine.
+
+### Register nodes
+
+Start by registering nodes for your overcloud. To do so, click on 'Nodes' in the left navigation.
+
+Once there, you have two options for registering nodes in the top-right corner. The first is to input the relevant node information manually; click on the '+' icon to do so. The other is to upload a CSV containing your node information; click on the Upload icon to do that instead.
+
+If you are using virtual nodes, you can generate the CSV by running [this script](https://github.com/openstack/tuskar-ui/blob/master/nodes.sh) on your instack virtual machine.
+
+Both options lead to a node registration form where you can choose to have auto-discovery performed on the nodes to identify missing node attributes.
+
+If you choose not to use auto-discovery, fill in any missing node attributes and submit the form. Your nodes are now registered and viewable in the 'Free' tab.
+
+If you use auto-discovery, your nodes will appear in the 'Maintenance' tab instead with the status 'Discovering'. Wait a few minutes, and the status will change to 'Discovered'; their attributes will appear as well. Now you can choose to 'Activate' these nodes, and they will appear in the 'Free' tab.
+
 *   Check flavors
 
         * Suggested flavors
