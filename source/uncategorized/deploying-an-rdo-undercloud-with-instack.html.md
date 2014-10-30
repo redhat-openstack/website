@@ -18,13 +18,11 @@ wiki_last_updated: 2015-01-08
 2.  Enable the RDO juno repository
         sudo yum install -y http://rdo.fedorapeople.org/openstack-juno/rdo-release-juno.rpm
 
-3.  We must also enable the copr and stage repositories, and install a test tuskar-ui build from koji.
+3.  We must also enable the copr and stage repositories.
         # Enable the copr repository
         sudo curl -o /etc/yum.repos.d/slagle-openstack-m.repo https://copr.fedoraproject.org/coprs/slagle/openstack-m/repo/fedora-20/slagle-openstack-m-fedora-20.repo
         # Enable the stage RDO repo
         sudo sed -i 's#^baseurl.*#baseurl=http://team.virt.bos.redhat.com/openstack/openstack-juno/fedora-$releasever/#' /etc/yum.repos.d/rdo-release.repo
-        # Install a new tuskar-ui build from koji
-        sudo yum -y install https://kojipkgs.fedoraproject.org//packages/openstack-tuskar-ui/0.2.0/5.fc22/noarch/openstack-tuskar-ui-0.2.0-5.fc22.noarch.rpm
 
 4.  Install instack-undercloud
         sudo yum -y install instack-undercloud
