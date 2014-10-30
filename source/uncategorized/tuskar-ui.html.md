@@ -83,6 +83,34 @@ The parameters that Tuskar is sending to Heat can be viewed by clicking on 'Serv
 
 Use the Tuskar CLI to modify additional parameters.
 
-### Uploading images
+### Using the Tuskar CLI
 
-### Using the Tuskar API
+The Tuskar CLI can be used to perform additional operations. In order to use it, access the Instack virtual machine and source stackrc:
+
+       source /home/stack/stackrc
+
+Many of the CLI operations require the overcloud plan uuid:
+
+       [stack@localhost ~]$ tuskar plan-list
+       +--------------------------------------+-----------+-------------+----------------------------------------------------+
+       | uuid                                 | name      | description | roles                                              |
+       +--------------------------------------+-----------+-------------+----------------------------------------------------+
+       | 1289d499-de0a-4688-86e2-b0caf7ae06ea | overcloud | None        | controller, swift-storage, compute, cinder-storage |
+       +--------------------------------------+-----------+-------------+----------------------------------------------------+
+
+#### View plan templates
+
+To view the Heat templates used for the overcloud plan, run the following:
+
+` [stack@localhost ~]$ tuskar plan-templates -O output-dir `<plan uuid>
+       Following templates has been written:
+       output-dir/plan.yaml
+       output-dir/environment.yaml
+       output-dir/provider-swift-storage-1.yaml
+       output-dir/provider-cinder-storage-1.yaml
+       output-dir/provider-controller-1.yaml
+       output-dir/provider-compute-1.yaml
+
+#### Modify plan parameters
+
+To modify a specific plan parameter, run the following:
