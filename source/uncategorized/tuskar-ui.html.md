@@ -28,8 +28,10 @@ Key features of the Tuskar-UI include:
     -   Create an inventory of nodes through direct user input or bulk CSV upload
     -   Support for both baremetal and virtual nodes
     -   Node auto-discovery allows node attributes to be automatically filled in
+    -   Tabular views allow user to easily distinguish between nodes in use and nodes that are free
     -   View summary statistics of current node usage
     -   Drill down to a specific node to view historical usage data
+    -   Flavor 'suggestions' allow for quick flavor creation to match existing nodes
 
 <!-- -->
 
