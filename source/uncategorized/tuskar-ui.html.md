@@ -102,7 +102,7 @@ Many of the CLI operations require the overcloud plan uuid:
 
 #### View plan templates
 
-To view the Heat templates used for the Overcloud plan, run the following:
+To view the Heat templates used for the Overcloud deployment, run the following:
 
 ` [stack@localhost ~]$ tuskar plan-templates -O output-dir `<plan uuid>
        Following templates has been written:
