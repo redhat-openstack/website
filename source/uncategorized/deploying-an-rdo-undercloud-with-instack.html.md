@@ -21,11 +21,11 @@ wiki_last_updated: 2015-01-08
 3.  Install instack-undercloud
         sudo yum -y install instack-undercloud
 
-4.  Download the Overcloud images from <http://file.rdu.redhat.com/~bnemec/fedora-juno-koji/>
+4.  Download the Overcloud images from <https://repos.fedorapeople.org/repos/openstack-m/tripleo-images-rdo-juno/>
     You can use any method you choose to downlad them, an example wget command is shown below
 
         sudo yum -y install wget # install wget if necessary
-        wget -r -nd -np --reject "index.html*" http://file.rdu.redhat.com/~bnemec/fedora-juno-koji/ 
+        wget -r -nd -np --reject "index.html*" https://repos.fedorapeople.org/repos/openstack-m/tripleo-images-rdo-juno/ 
 
 5.  Create and edit your answers file. In a virtualized setup, this has already been done for you, so you can skip this step. Otherwise, copy the sample answers file into your home directory. The descriptions of the parameters that can be set are in the sample answers file itself.
         # Answers file must exist in home directory for now
