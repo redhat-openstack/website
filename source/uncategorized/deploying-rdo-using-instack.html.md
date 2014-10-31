@@ -26,7 +26,7 @@ The following sections describe the steps for preparing for an Undercloud deploy
 
 ### Virtual Machine Setup
 
-[ Deploying RDO to a Virtual Machine Environment using RDO via Instack](Deploying RDO to a Virtual Machine Environment using RDO via Instack)
+[ Deploying RDO on a Virtual Machine Environment using Instack](Deploying RDO on a Virtual Machine Environment using Instack)
 
 ## Deploying an Undercloud
 
