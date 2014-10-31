@@ -21,6 +21,7 @@ Key features of the Tuskar-UI include:
     -   Choose deployment counts for compute, controller, and storage roles
     -   View and customize deployment parameters
     -   See real-time updates in the UI during deployment or undeployment
+    -   Deployment log details each step of the deployment process
 
 <!-- -->
 
