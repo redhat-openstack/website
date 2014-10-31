@@ -83,7 +83,7 @@ Now you can follow the [development instance installation instructions](http://t
 
 The parameters that Tuskar is sending to Heat can be viewed by clicking on 'Service Configuration' in the left navigation. A subset of those can be modified through the UI. To do so, click on the 'Edit Configuration' button in the upper-right corner.
 
-Use the Tuskar CLI to modify additional parameters.
+Use the Tuskar CLI to modify additional parameters. This process is described in the next section.
 
 ### Using the Tuskar CLI
 
