@@ -16,10 +16,10 @@ The Tuskar UI is developed as a plugin for OpenStack Horizon; as such it is Djan
 
 Key features of the Tuskar-UI include:
 
-*   **Overcloud management** Plan and deploy your overcloud entirely through the UI.
+*   **Overcloud management** Plan and deploy your Overcloud entirely through the UI.
 *   **Node management:** Create an inventory of nodes through direct user input or bulk CSV upload. Use auto-discovery to have node attributes filled in for you. View summary statistics of current node usage, and detailed historical statistics for specific nodes.
 *   **Role management:** Manage and update the flavors and images used by the compute, controller, object storage, and block storage roles.
-*   **History:** View historical information about the overcloud deployment, as well as historical usage statistics for provisioned nodes.
+*   **History:** View historical information about the Overcloud deployment, as well as historical usage statistics for provisioned nodes.
 
 ## Quick Install
 
@@ -71,7 +71,7 @@ Once this is complete, the 'Overview' page will show you the credentials needed 
 
 ### Development installation
 
-If you wish to create a development installation of the Tuskar-UI, install as above first.
+If you wish to create a development installation of the Tuskar-UI, install as described above first.
 
 Next, turn off the running instance of the Tuskar UI:
 
@@ -102,7 +102,7 @@ Many of the CLI operations require the overcloud plan uuid:
 
 #### View plan templates
 
-To view the Heat templates used for the overcloud plan, run the following:
+To view the Heat templates used for the Overcloud plan, run the following:
 
 ` [stack@localhost ~]$ tuskar plan-templates -O output-dir `<plan uuid>
        Following templates has been written:
