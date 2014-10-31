@@ -25,9 +25,11 @@ Key features of the Tuskar-UI include:
 
 We recommend using Instack to install the Tuskar-UI:
 
-*   Start by following the [Instack instructions](https://openstack.redhat.com/Deploying_RDO_using_Instack) through "Deploying an Undercloud".
-*   Follow the [Instack overcloud steps](https://openstack.redhat.com/Deploying_an_RDO_Overcloud_with_Instack) in "Deploying the Overcloud via the Tuskar UI".
-*   If using a remote virtual host, you may need to configure your ports and create an ssh tunnel, as detailed [here](https://openstack.redhat.com/Instack_FAQ#How_do_I_view_the_Undercloud_Dashboard_when_using_a_remote_virt_host.3F).
+1. Start by following the [Instack instructions](https://openstack.redhat.com/Deploying_RDO_using_Instack) through "Deploying an Undercloud".
+
+2. Follow the [Instack overcloud steps](https://openstack.redhat.com/Deploying_an_RDO_Overcloud_with_Instack) in "Deploying the Overcloud via the Tuskar UI".
+
+3. If using a remote virtual host, you may need to configure your ports and create an ssh tunnel, as detailed [here](https://openstack.redhat.com/Instack_FAQ#How_do_I_view_the_Undercloud_Dashboard_when_using_a_remote_virt_host.3F).
 
 The next section will cover usage of the Tuskar UI.
 
