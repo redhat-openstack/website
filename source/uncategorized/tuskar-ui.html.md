@@ -17,9 +17,16 @@ The Tuskar UI is developed as a plugin for OpenStack Horizon; as such it is Djan
 Key features of the Tuskar-UI include:
 
 *   **Overcloud management** Plan and deploy your Overcloud entirely through the UI.
-*   **Node management:** Create an inventory of nodes through direct user input or bulk CSV upload. Use auto-discovery to have node attributes filled in for you. View summary statistics of current node usage, and detailed historical statistics for specific nodes.
-*   **Role management:** Manage and update the flavors and images used by the compute, controller, object storage, and block storage roles.
-*   **History:** View historical information about the Overcloud deployment, as well as historical usage statistics for provisioned nodes.
+    -   Node counts
+    -   Edit parameters
+    -   History
+*   **Node management:**
+    -   Create an inventory of nodes through direct user input or bulk CSV upload.
+    -   Use auto-discovery to have node attributes filled in for you
+    -   View summary statistics of current node usage
+    -   Drill down to detailed historical statistics for specific nodes.
+*   **Role management:**
+    -   Manage and update the flavors and images used by the compute, controller, object storage, and block storage roles.
 
 ## Quick Install
 
