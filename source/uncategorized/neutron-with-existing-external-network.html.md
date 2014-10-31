@@ -39,7 +39,9 @@ Make /etc/sysconfig/network-scripts/ifcfg-br-ex resemble: (note this file should
 
 Make /etc/sysconfig/network-scripts/ifcfg-eth0 resemble (no BOOTPROTO!):
 
-    DEVICE=eth0
+Note: if on Centos7, the file is /etc/sysconfig/network-scripts/enp2s0
+
+    DEVICE=eth0 # or enp2s0 if on CentOS 7
     HWADDR=52:54:00:92:05:AE # your hwaddr
     TYPE=OVSPort
     DEVICETYPE=ovs
