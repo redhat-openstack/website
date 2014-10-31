@@ -49,4 +49,4 @@ Note that if you are doing a virtual machine based deployment and your virt host
 
 When logging into the dashboard the default user and password are found in the /root/stackrc file on the undercloud node, OS_USERNAME and OS_PASSWORD. Once you have logged into the Web UI use the [Tuskar UI guide](https://openstack.redhat.com/Tuskar-UI) to continue deploying your Overcloud.
 
-Tuskar WEB UI Deployment doesn't support testing an RDO Overcloud with Instack. The overcloud-passwords file is missing and the instack.json file needs to be updated. If you managed to correct these, then proceed to: [ Testing an RDO Overcloud with Instack ](Testing an RDO Overcloud with Instack)
+Tuskar WEB UI Deployment currently does not support testing an RDO Overcloud with Instack. The overcloud-passwords file is missing and the instack.json file needs to be updated. If you managed to correct these, then proceed to: [ Testing an RDO Overcloud with Instack ](Testing an RDO Overcloud with Instack)
