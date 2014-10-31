@@ -33,6 +33,8 @@ However, instack-undercloud provides a test script, `instack-deploy-overcloud` t
       export TE_DATAFILE=instackenv.json
       source /etc/tripleo/overcloudrc
 
+Next steps: [ Testing an RDO Overcloud with Instack](Testing an RDO Overcloud with Instack). If you run into issues and want to redeploy your Overcloud the first step is to delete it using the instructions in the [FAQ](http://openstack.redhat.com/Instack_FAQ#How_do_I_delete_the_Overcloud.3F). You should then be able to re-execute instack-prepare-for-overcloud and deploy the Overcloud again.
+
 # Deploying the Overcloud via the Tuskar UI
 
 You can deploy the overcloud **either** through the Horizon web interface using the tuskar plugin **or** via the tuskar command line
