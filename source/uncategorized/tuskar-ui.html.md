@@ -100,7 +100,7 @@ Many of the CLI operations require the overcloud plan uuid:
        | 1289d499-de0a-4688-86e2-b0caf7ae06ea | overcloud | None        | controller, swift-storage, compute, cinder-storage |
        +--------------------------------------+-----------+-------------+----------------------------------------------------+
 
-#### View plan templates
+#### View Overcloud templates
 
 To view the Heat templates used for the Overcloud deployment, run the following:
 
