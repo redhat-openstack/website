@@ -71,13 +71,13 @@ Once this is complete, the 'Overview' page will show you the credentials needed 
 
 ### Development installation
 
-If you wish to create a development installation of the Tuskar-UI, install as described above first.
+If you wish to create a development installation of the Tuskar-UI, install as described in the [Quick Install instructions](https://openstack.redhat.com/Tuskar-UI#Quick_Install) first.
 
 Next, turn off the running instance of the Tuskar UI:
 
        sudo service httpd stop
 
-Now you can follow [these instructions](http://tuskar-ui.readthedocs.org/en/latest/install.html).
+Now you can follow the [development instance installation instructions](http://tuskar-ui.readthedocs.org/en/latest/install.html).
 
 ### Additional overcloud configuration
 
