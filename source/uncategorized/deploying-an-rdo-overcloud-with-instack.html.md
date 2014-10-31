@@ -47,4 +47,6 @@ If you want to deploy the Overcloud via the UI you will need to open up port 80 
 
 Note that if you are doing a virtual machine based deployment and your virt host is not the same host that you'll be running the web browser from, you can use an ssh tunnel for connectivity. See this [FAQ](http://openstack.redhat.com/Instack_FAQ#How_do_I_view_the_Undercloud_Dashboard_when_using_a_remote_virt_host.3F) for more information.
 
-When logging into the dashboard the default user and password are found in the /root/stackrc file on the undercloud node, OS_USERNAME and OS_PASSWORD. Once you have logged into the Web UI use the [Tuskar UI guide](https://openstack.redhat.com/Tuskar-UI) to continue deploying your Overcloud. After a successful deployment the next step is: [ Testing an RDO Overcloud with Instack ](Testing an RDO Overcloud with Instack)
+When logging into the dashboard the default user and password are found in the /root/stackrc file on the undercloud node, OS_USERNAME and OS_PASSWORD. Once you have logged into the Web UI use the [Tuskar UI guide](https://openstack.redhat.com/Tuskar-UI) to continue deploying your Overcloud.
+
+Tuskar WEB UI Deployment doesn't support testing an RDO Overcloud with Instack. The overcloud-passwords file is missing and the instack.json file needs to be updated. If you managed to correct these, then proceed to: [ Testing an RDO Overcloud with Instack ](Testing an RDO Overcloud with Instack)
