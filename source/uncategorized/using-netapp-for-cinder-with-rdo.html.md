@@ -16,7 +16,7 @@ It is possible to have Packstack configure Cinder to use NetApp storage devices 
 
 If Packstack is not already installed, follow steps 1 & 2 in the [RDO Quickstart](http://openstack.redhat.com/Quickstart) guide to get it installed. OpenStack deployments through Packstack can be configured via arguments to the `packstack` command or via a generated answer file.
 
-**Important:** For information regarding best practices using NetApp storage with Cinder and other OpenStack services, see the [NetApp Deployment and Operations Guide](http://netapp.github.io/openstack-deploy-ops-guide/). If you have any questions, you can get in touch with us on the [NetApp OpenStack Community](http://community.netapp.com/t5/OpenStack-Discussions/bd-p/openstack-discussions) page or join us on IRC in the #openstack-netapp channel on Freenode!.
+**Important:** For information regarding best practices using NetApp storage with Cinder and other OpenStack services, see the [NetApp Deployment and Operations Guide](http://netapp.github.io/openstack-deploy-ops-guide/). If you have any questions, you can get in touch with us on the [NetApp OpenStack Community](http://community.netapp.com/t5/OpenStack-Discussions/bd-p/openstack-discussions) page or join us on IRC in the #openstack-netapp channel on Freenode!
 
 ## Configure via answer file
 
