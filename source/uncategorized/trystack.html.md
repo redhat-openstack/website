@@ -43,11 +43,11 @@ TryStack's Architecture includes the following components
 
 TryStack runs the following OpenStack components
 
-*   Nova
-*   Neutron
+*   Nova & Nova-docker
+*   Neutron (ML2/OVS/VXLAN)
 *   Glance
 *   Keystone
-*   Cinder
+*   Cinder (Gluster backed)
 *   Ceilometer
 *   Heat
 *   Swift
