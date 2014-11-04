@@ -34,7 +34,7 @@ TryStack's Architecture includes the following components
 
 *   Forman/Puppet base config managment
 *   Nagios monitoring
-*   MySQL database
+*   MariaDB database
 *   RabbitMQ Messaging
 *   GlusterFS Storage (Glance, MySQL & Mongo)
 *   11 QEMU and 1 Docker Compute nodes
