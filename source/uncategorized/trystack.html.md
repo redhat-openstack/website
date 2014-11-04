@@ -26,6 +26,7 @@ These help to make sure that resources are shared fairly as best as possible.
 *   Instances are deleted after 24 hours
 *   External gateways on routers are cleared daily
 *   Cinder volumes are deleted after 48 hours
+*   Custom glance images are deleted after 30 days
 *   Other resource usage is monitored for other restrictions that need to be enforced
 
 ## Architecture Details
