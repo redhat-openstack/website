@@ -11,7 +11,7 @@ wiki_last_updated: 2014-11-04
 ## Trystack.org Runs OpenStack RDO
 
 To get started watch this video: [<http://youtu.be/EPZPzXSypl4>](http://youtu.be/EPZPzXSypl4)
-This video references RDO Hanava but is still valid for RDO Icehouse currently running on TryStack.
+This video references RDO Hanava but is still moslty valid for RDO Juno currently running on TryStack. A re-record will be done with Juno very soon.
 
 FAQs: <http://openstack.redhat.com/TryStackFAQ>
 Information on RDO: <http://openstack.redhat.com>
