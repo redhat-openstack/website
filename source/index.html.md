@@ -25,12 +25,6 @@ Try OpenStack Juno on the industry's most trusted Linux platform.
 </div>
 <div class="row">
 <div class="offset4 span7 pad-sides begin-content pull-s">
-## Juno packages now available
-
-We're pleased to announce the availability of RDO packages for OpenStack Juno, for EL7 (RHEL7 and CentOS7) and Fedora 20.
-
-You can get started with RDO Juno via the process described in the [Quick start](quickstart).
-
 ## Stay up to date with RDO
 
 ![](Twitter.gif "fig:Twitter.gif") ![](Facebook.gif "fig:Facebook.gif") ![](G_plus.jpg "fig:G_plus.jpg") ![](Email.png "fig:Email.png")
