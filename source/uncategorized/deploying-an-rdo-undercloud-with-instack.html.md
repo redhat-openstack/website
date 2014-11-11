@@ -22,7 +22,7 @@ wiki_last_updated: 2015-01-08
         sudo yum -y install instack-undercloud
 
 4.  Download the Overcloud images from <https://repos.fedorapeople.org/repos/openstack-m/tripleo-images-rdo-juno/>
-    You can use any method you choose to downlad them, an example wget command is shown below
+    You can use any method you choose to download them, an example wget command is shown below
 
         sudo yum -y install wget # install wget if necessary
         wget -r -nd -np --reject "index.html*" https://repos.fedorapeople.org/repos/openstack-m/tripleo-images-rdo-juno/ 
