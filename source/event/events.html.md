@@ -15,7 +15,7 @@ The following are the meetups I'm aware of in the coming week where RDO enthusia
 
 If you attend any of these meetups, please take pictures, and send me some. If you blog about the events (and you should), please send me that, too.
 
-*   Tonight, [OpenStack networking features, gotchas and best practices, Sunnyvale CA](http://www.meetup.com/openstack/events/211282752/)
+*   Wednesday, November 12, 2014, [OpenStack networking features, gotchas and best practices, Sunnyvale CA](http://www.meetup.com/openstack/events/211282752/)
 
 <!-- -->
 
