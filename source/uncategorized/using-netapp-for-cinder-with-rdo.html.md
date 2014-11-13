@@ -54,6 +54,11 @@ generates the following in `cinder.conf`:
     netapp_password=password
     nfs_shares_config=/etc/cinder/nfs_shares
 
+**Note:** At this time, you need to manually create the file passed into the `nfs_shares_config` parameters. In the above case, create the /etc/cinder folder and in the file in this format:
+
+    hostname:/share
+    10.0.0.1:/share
+
 When the answer file has been edited with your specific environment variables, run Packstack with:
 
     packstack --answer-file=~/packstack-answer.txt
