@@ -27,6 +27,8 @@ The minimum system requirements for the virtual host machine to follow this tuto
 
 If you want to deviate from the tutorial or increase the scaling of one or more overcloud nodes, you will need to ensure you have enough memory and disk space.
 
+RHEL 7 support is currently experimental and may not work with the currently released packages.
+
 [1]: Note that the default Fedora partitioning scheme will most likely not provide enough space to the partition containing the default path for libvirt image storage (/var/lib/libvirt/images). The easiest fix is to customize the partition layout at the time of install to provide at least 200 GB of space for that path.
 
 ## Preparing the Host Machine
