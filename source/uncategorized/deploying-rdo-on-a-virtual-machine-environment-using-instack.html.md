@@ -62,9 +62,16 @@ These steps will setup your virtual host for a virtual environment for testing t
 
        sudo yum install -y instack-undercloud
 
-5. Run script to install required dependencies
+5. Specify your selected distribution
 
+       # For Fedora 20
        export NODE_DIST="fedora"
+       # OR
+       # For RHEL 7
+       export NODE_DIST="rhel7"
+
+6. Run script to install required dependencies
+
        source /usr/libexec/openstack-tripleo/devtest_variables.sh
        tripleo install-dependencies
        tripleo set-usergroup-membership
