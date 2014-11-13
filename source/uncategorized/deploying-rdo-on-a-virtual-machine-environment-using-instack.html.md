@@ -62,15 +62,23 @@ These steps will setup your virtual host for a virtual environment for testing t
 
        sudo yum install -y instack-undercloud
 
-5. Specify your selected distribution
+5. Configure your environment for your selected distribution
 
        # For Fedora 20
        export NODE_DIST="fedora"
        # OR
        # For RHEL 7
        export NODE_DIST="rhel7"
+       # A web server containing the RHEL guest cloud image
+       export DIB_CLOUD_IMAGES="`[`http://server/path/containing/image`](http://server/path/containing/image)`"
+       # The file name of your RHEL guest cloud image
+       export BASE_IMAGE_FILE=rhel-guest-image-7.0-20140403.0.x86_64.qcow2
+       export DIB_RHSM_USER="your-rhsm-username"
+       export DIB_RHSM_PASSWORD="your-rhsm-password"
+       # Needed for some dependencies
+       export DIB_RHSM_REPOS="rhel-7-server-extras-rpms"
 
-6. Run script to install required dependencies
+6. Run scripts to install required dependencies
 
        source /usr/libexec/openstack-tripleo/devtest_variables.sh
        tripleo install-dependencies
