@@ -169,3 +169,21 @@ These changes include:
 *   Adds a new libvirt network also called `brbm`, which is configured to use the above bridge.
 *   Reconfigures libvirtd to set the domain socket group ownership to the `libvirtd` group. This allows for easier interaction with libvirtd on the host
 *   Adds the user running `instack-virt-setup` to the `libvirtd` group.
+
+## How do I build RHEL 7 Overcloud images?
+
+*   Install `instack-undercloud` on the system to be used for the image builds.
+*   Set the following environment variables in your shell, substituting appropriate values where necessary:
+
+<!-- -->
+
+    export NODE_DIST="rhel7"
+    export DIB_CLOUD_IMAGES="http://server/path/containing/image"
+    export BASE_IMAGE_FILE="rhel-guest-image-7.0-20140930.0.x86_64.qcow2"
+    export DIB_RHSM_USER="[your RHSM username]"
+    export DIB_RHSM_PASSWORD="[your RHSM password]"
+    export DIB_RHSM_REPOS="rhel-7-server-extras-rpms rhel-ha-for-rhel-7-server-rpms"
+    # Find this with `subscription-manager list --available`
+    export DIB_RHSM_POOL="[pool-id]"
+
+*   Run `instack-build-images`.
