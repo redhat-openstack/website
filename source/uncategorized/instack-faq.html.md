@@ -179,6 +179,7 @@ These changes include:
 
     export NODE_DIST="rhel7"
     export DIB_CLOUD_IMAGES="http://server/path/containing/image"
+    # A cloud guest image downloaded from the Red Hat Customer Portal
     export BASE_IMAGE_FILE="rhel-guest-image-7.0-20140930.0.x86_64.qcow2"
     export DIB_RHSM_USER="[your RHSM username]"
     export DIB_RHSM_PASSWORD="[your RHSM password]"
