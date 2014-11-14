@@ -72,7 +72,7 @@ These steps will setup your virtual host for a virtual environment for testing t
        # A web server containing the RHEL guest cloud image
        export DIB_CLOUD_IMAGES="`[`http://server/path/containing/image`](http://server/path/containing/image)`"
        # The file name of your RHEL guest cloud image
-       export BASE_IMAGE_FILE=rhel-guest-image-7.0-20140403.0.x86_64.qcow2
+       export BASE_IMAGE_FILE=rhel-guest-image-7.0-20140930.0.x86_64.qcow2
        export DIB_RHSM_USER="your-rhsm-username"
        export DIB_RHSM_PASSWORD="your-rhsm-password"
        # Needed for some dependencies
