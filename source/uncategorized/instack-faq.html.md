@@ -54,7 +54,7 @@ Descriptions of the variables in the rc files
 
 ## What is the NODES_JSON file format?
 
-NODES_JSON in the deploy-overcloudrc file specifies a path to a JSON file and contains the data used to register nodes for baremetl provisioning. The JSON file should be in the following format.
+NODES_JSON in the deploy-overcloudrc file specifies a path to a JSON file and contains the data used to register nodes for baremetal provisioning. The JSON file should be in the following format.
 
 For virt (note that if you used `instack-virt-setup` the file has already been created for you automatically):
 
