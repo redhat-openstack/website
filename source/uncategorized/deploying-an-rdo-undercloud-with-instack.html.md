@@ -30,7 +30,7 @@ wiki_last_updated: 2015-01-08
         sudo yum -y install wget # install wget if necessary
         wget -r -nd -np --reject "index.html*" https://repos.fedorapeople.org/repos/openstack-m/tripleo-images-rdo-juno/ 
 
-6.  For a RHEL 7 Overcloud, pre-built images can not be shipped due to licensing restrictions. However, it is possible to build images using the <i>instack-build-images</i> script from the instack-undercloud package. More details on doing so will be provided in the near future.
+6.  For a RHEL 7 Overcloud, pre-built images can not be shipped due to licensing restrictions. However, it is possible to build images using the <i>instack-build-images</i> script from the instack-undercloud package. See the [ Instack FAQ ](Instack_FAQ#How_do_I_build_RHEL_7_Overcloud_images.3F) for details.
 7.  Create and edit your answers file. In a virtualized setup, this has already been done for you, so you can skip this step. Otherwise, copy the sample answers file into your home directory. The descriptions of the parameters that can be set are in the sample answers file itself.
         # Answers file must exist in home directory for now
         # Copy the sample answers file to your home directory
