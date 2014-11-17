@@ -20,15 +20,17 @@ However, instack-undercloud provides a test script, `instack-deploy-overcloud` t
 
       command $(sudo cat /root/stackrc | xargs)
 
-2. A file named `deploy-overcloudrc` is used to define the needed environment variables to deploy an Overcloud. For a virtual environment setup, this file has already been created under `/home/stack`. For a baremetal setup, you will need to create the file yourself. There is a sample file included with instack-undercloud at `/usr/share/instack-undercloud/deploy-baremetal-overcloudrc`. Copy and edit the file as needed. Example rc files containing values for the required variables can also be found in the [Instack FAQ](http://openstack.redhat.com/Instack_FAQ#Are_there_any_example_rc_files_for_Overcloud_deployment.3F). Note that the variables must be exported so that their values are picked up by `instack-deploy-overcloud`.
+2. If doing a baremetal deployment, create a json file describing your baremetal nodes. See [this FAQ](https://openstack.redhat.com/Instack_FAQ#What_is_the_NODES_JSON_file_format.3F) for the documentation of the format of the file. For a virtual deployment, this file has already been created as instackenv.json, and you do not need to edit this file.
+
+3. A file named `deploy-overcloudrc` is used to define the needed environment variables to deploy an Overcloud. For a virtual environment setup, this file has already been created under `/home/stack`. For a baremetal setup, you will need to create the file yourself. There is a sample file included with instack-undercloud at `/usr/share/instack-undercloud/deploy-baremetal-overcloudrc`. Copy and edit the file as needed. For the NODES_JSON value, specify the path to the file that you created in the previous step. Example rc files containing values for the required variables can also be found in the [Instack FAQ](http://openstack.redhat.com/Instack_FAQ#Are_there_any_example_rc_files_for_Overcloud_deployment.3F). Note that the variables must be exported so that their values are picked up by `instack-deploy-overcloud`.
 
       source deploy-overcloudrc
 
-3. Deploy the Overcloud
+4. Deploy the Overcloud
 
       instack-deploy-overcloud
 
-4. To further interact with the API services running in the Overcloud using the OpenStack cli tools, you can run the following commands.
+5. To further interact with the API services running in the Overcloud using the OpenStack cli tools, you can run the following commands.
 
       export TE_DATAFILE=instackenv.json
       source /etc/tripleo/overcloudrc
