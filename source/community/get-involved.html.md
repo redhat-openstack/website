@@ -58,6 +58,8 @@ If you see something which you'd like to improve in RDO, there is a good chance 
 
 The Puppet modules used in packstack are on [Github](https://github.com/packstack) and packstack itself is on [Stackforge](https://github.com/stackforge/packstack). There's great information about contributing to Packstack in the [Packstack wiki page in OpenStack's wiki](https://wiki.openstack.org/wiki/Packstack).
 
+To file bugs against RDO itself, use the [ <https://bugzilla.redhat.com/enter_bug.cgi?product=RDO> RDO bugzilla].
+
 Feel free to contribute any packaging and integration patches via [our contributor mailing list](//www.redhat.com/mailman/listinfo/rdo-list), [fork us on GitHub](//github.com/redhat-openstack), or propose improvements to OpenStack on [the upstream Launchpad page](//launchpad.net/openstack).
 
 </div>
