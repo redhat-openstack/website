@@ -67,16 +67,19 @@ These steps will setup your virtual host for a virtual environment for testing t
        # For Fedora 20
        export NODE_DIST="fedora"
        # OR
-       # For RHEL 7
+       # For RHEL 7, registering the VM with the customer portal
        export NODE_DIST="rhel7"
        # A web server containing the RHEL guest cloud image
        export DIB_CLOUD_IMAGES="`[`http://server/path/containing/image`](http://server/path/containing/image)`"
        # The file name of your RHEL guest cloud image
        export BASE_IMAGE_FILE=rhel-guest-image-7.0-20140930.0.x86_64.qcow2
-       export DIB_RHSM_USER="your-rhsm-username"
-       export DIB_RHSM_PASSWORD="your-rhsm-password"
-       # Needed for some dependencies
-       export DIB_RHSM_REPOS="rhel-7-server-extras-rpms"
+       export REG_METHOD=portal
+      `  # Find this with `subscription-manager list --available` `
+       export REG_POOL_ID="[pool id]"
+       export REG_PASSWORD="[your password]"
+       export REG_USER="[your username]"
+       export REG_REPOS="rhel-7-server-extras-rpms rhel-ha-for-rhel-7-server-rpms rhel-7-server-optional-rpms"
+       export REG_HALT_UNREGISTER=1
 
 6. Run scripts to install required dependencies
 
