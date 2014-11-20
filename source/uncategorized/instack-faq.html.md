@@ -181,10 +181,11 @@ These changes include:
     export DIB_CLOUD_IMAGES="http://server/path/containing/image"
     # A cloud guest image downloaded from the Red Hat Customer Portal
     export BASE_IMAGE_FILE="rhel-guest-image-7.0-20140930.0.x86_64.qcow2"
-    export DIB_RHSM_USER="[your RHSM username]"
-    export DIB_RHSM_PASSWORD="[your RHSM password]"
-    export DIB_RHSM_REPOS="rhel-7-server-extras-rpms rhel-ha-for-rhel-7-server-rpms"
+    export REG_METHOD=portal
     # Find this with `subscription-manager list --available`
-    export DIB_RHSM_POOL="[pool-id]"
+    export REG_POOL_ID="[pool id]"
+    export REG_PASSWORD="[your password]"
+    export REG_USER="[your username]"
+    export REG_REPOS="rhel-7-server-extras-rpms rhel-ha-for-rhel-7-server-rpms rhel-7-server-optional-rpms"
 
 *   Run `instack-build-images`.
