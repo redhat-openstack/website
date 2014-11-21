@@ -14,19 +14,17 @@ To install MidoNet on RDO follow the [<http://docs.midonet.org/docs/v1.8/quick-s
 
 Enable the EDO repositories using the following command (as root):
 
-` yum install -y `[`https://rdo.fedorapeople.org/rdo-release.rpm`](https://rdo.fedorapeople.org/rdo-release.rpm)
+      yum install -y <nowiki>https://rdo.fedorapeople.org/rdo-release.rpm</nowiki>
 
 To enable the EPEL repository use this command:
 
-       su -c 'rpm -Uvh `[`http://download.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-2.noarch.rpm`](http://download.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-2.noarch.rpm)`'
+      su -c 'rpm -Uvh <nowiki>http://download.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-2.noarch.rpm</nowiki>'
 
 To enable 'optional' and 'extras' from the RHEL subscription run these commands (as root):
 
-       yum -y install yum-utils
-
-       yum-config-manager --enable rhel-7-server-optional-rpms
-
-       yum-config-manager --enable rhel-7-server-extras-rpms
+`yum -y install yum-utils
+yum-config-manager --enable rhel-7-server-optional-rpms
+yum-config-manager --enable rhel-7-server-extras-rpms`
 
 ## Installing OpenStack
 
