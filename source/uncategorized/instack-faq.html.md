@@ -173,12 +173,12 @@ These changes include:
 ## How do I build RHEL 7 Overcloud images?
 
 *   Install `instack-undercloud` on the system to be used for the image builds.
-*   Set the following environment variables in your shell, substituting appropriate values where necessary:
+*   Set the following environment variables in your shell, substituting appropriate values where necessary. In particular, any value wrapped in [] needs to be replaced with appropriate value for your environment.
 
 <!-- -->
 
     export NODE_DIST="rhel7"
-    export DIB_CLOUD_IMAGES="http://server/path/containing/image"
+    export DIB_CLOUD_IMAGES="[http://server/path/containing/image]"
     # A cloud guest image downloaded from the Red Hat Customer Portal
     export BASE_IMAGE_FILE="rhel-guest-image-7.0-20140930.0.x86_64.qcow2"
     export REG_METHOD=portal
