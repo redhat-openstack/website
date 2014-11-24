@@ -64,10 +64,12 @@ These steps will setup your virtual host for a virtual environment for testing t
 
 5. Configure your environment for your selected distribution, replacing the values in [] with the appropriate ones for your environment.
 
-      # For Fedora 20
-      export NODE_DIST="fedora"
-      # OR
-      # For RHEL 7, registering the VM with the customer portal
+Fedora 20
+
+       export NODE_DIST="fedora"
+
+RHEL 7, registered with the customer portal
+
       export NODE_DIST="rhel7"
       # A web server containing the RHEL guest cloud image
       export DIB_CLOUD_IMAGES="[http://server/path/containing/image]"
