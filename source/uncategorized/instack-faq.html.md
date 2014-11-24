@@ -173,7 +173,7 @@ These changes include:
 ## How do I build RHEL 7 Overcloud images?
 
 *   Install `instack-undercloud` on the system to be used for the image builds.
-*   Set the following environment variables in your shell, substituting appropriate values where necessary. In particular, any value wrapped in [] needs to be replaced with appropriate value for your environment.
+*   Set the following environment variables in your shell, substituting appropriate values where necessary. In particular, any value wrapped in [] needs to be replaced with the appropriate value for your environment.
 
 <!-- -->
 
