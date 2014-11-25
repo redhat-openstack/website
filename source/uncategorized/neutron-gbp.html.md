@@ -47,4 +47,32 @@ Start the neutron server and check its status:
 
 ## Using GBP
 
-TBD
+Once the neutron server is configured with GBP and running, basic operation can be verified using its API. The following commands are run with normal cloud tenant credentials on a system where the python-gbpclient package has been installed.
+
+Create a group:
+
+      gbp group-create test1 --description "first test group"
+
+The response should show the details of the group.
+
+List the groups:
+
+      gbp group-list
+
+You should see the group you just created.
+
+Verify that implicit L2 and L3 policies were created:
+
+      gbp l2policy-list
+      gbp l3policy-list
+
+You should see an L2 policy with the same name as the group, and an L3 policy named "default".
+
+Verify that neutron resources were created:
+
+      neutron net-list
+      neutron subnet-list
+
+You should see a network and a subnet with names derived from the group name.
+
+If all is well, you can proceed to create policy rule sets controlling connectivity between groups. Then create policy targets, and to use their ports to create nova instances. The [devstack instructions](https://wiki.openstack.org/wiki/GroupBasedPolicy/InstallDevstack) show this in detail.
