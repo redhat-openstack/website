@@ -19,3 +19,5 @@ Group Based Policy is currently being developed in StackForge as an add-on to th
 *These instructions are preliminary, and the referenced RPMs are unofficial builds not yet included in Fedora. The information here intended to facilitate the Fedora review process. Use at your own risk!!!*
 
 Start with a working packstack installation with neutron on Fedora 20 x86_64, such as described in [Quickstart](Quickstart).
+
+Work in progress...
