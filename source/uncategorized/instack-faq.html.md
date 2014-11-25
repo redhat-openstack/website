@@ -172,6 +172,7 @@ These changes include:
 
 ## How do I build RHEL 7 Overcloud images?
 
+*   Download the fedora-user.qcow2 image found here: <https://repos.fedorapeople.org/repos/openstack-m/tripleo-images-rdo-juno/fedora-user.qcow2> This is the image that will be booted to test that your overcloud is working properly. **Important Note:** If you are deploying to a virtual environment, it is necessary that you use this specific image and not a generic cloud image from Fedora. As of this writing the stock Fedora cloud image has problems running in nested virt on RHEL 7.
 *   Install `instack-undercloud` on the system to be used for the image builds.
 *   Set the following environment variables in your shell, substituting appropriate values where necessary. In particular, any value wrapped in [] needs to be replaced with the appropriate value for your environment.
 
