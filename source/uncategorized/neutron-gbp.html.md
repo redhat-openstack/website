@@ -18,11 +18,11 @@ Note that this describes use of the GBP's resource_mapping reference policy driv
 
 ## Configuring GBP
 
-*These instructions are preliminary, and the referenced RPMs are unofficial builds not yet included in Fedora. The information here is intended to facilitate the Fedora review process. Use at your own risk!!!*
+*WARNING: These instructions are preliminary, and the referenced RPMs are unofficial builds not yet included in Fedora or RDO. The information here is intended to facilitate the Fedora review process. Use at your own risk!!!*
 
 Start with a working packstack installation with neutron on Fedora 20 x86_64, such as is described in [Quickstart](Quickstart). The remaining steps are all executed as root on the controller node(s) where neutron-server runs. No changes are needed on compute or network nodes when using the resource_mapping policy driver.
 
-Install the (unofficial!) server and client RPMs:
+Install the (***unofficial!***) server and client RPMs:
 
 `yum install `[`https://rkukura.fedorapeople.org/test/openstack-neutron-gbp-2014.2-0.1.b3be657git.fc20.noarch.rpm`](https://rkukura.fedorapeople.org/test/openstack-neutron-gbp-2014.2-0.1.b3be657git.fc20.noarch.rpm)
 `yum install `[`https://rkukura.fedorapeople.org/test/python-gbpclient-0.1-0.1.f269444git.fc20.noarch.rpm`](https://rkukura.fedorapeople.org/test/python-gbpclient-0.1-0.1.f269444git.fc20.noarch.rpm)
