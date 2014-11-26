@@ -209,16 +209,17 @@ If this list empty, let's quickly grab a small basic `cirros` image that we'll l
        sudo yum install -y wget
 ` wget `[`http://launchpad.net/cirros/trunk/0.3.0/+download/cirros-0.3.0-x86_64-uec.tar.gz`](http://launchpad.net/cirros/trunk/0.3.0/+download/cirros-0.3.0-x86_64-uec.tar.gz)
        tar zxvf cirros-0.3.0-x86_64-uec.tar.gz 
-       glance add name=cirros-aki is_public=true container_format=aki disk_format=aki < cirros-0.3.0-x86_64-vmlinuz 
-       glance add name=cirros-ari is_public=true container_format=ari disk_format=ari < cirros-0.3.0-x86_64-initrd 
-       glance add name=cirros-ami is_public=true container_format=ami disk_format=ami \
-           "kernel_id=$(glance index | awk '/cirros-aki/ {print $1}')" \
-           "ramdisk_id=$(glance index | awk '/cirros-ari/ {print $1}')" < cirros-0.3.0-x86_64-blank.img  
-       
+       glance image-create --name cirros-aki --is-public True --container-format aki --disk-format aki \
+         --file cirros-0.3.0-x86_64-vmlinuz
+       glance image-create --name cirros-ari --is-public True --container-format ari --disk-format ari \
+         --file cirros-0.3.0-x86_64-initrd
+       glance image-create --name cirros-ami --is-public True --container-format ami --disk-format ami \
+         --property kernel_id=$(glance image-list | awk '/cirros-aki/ {print $2}') \
+         --property ramdisk_id=$(glance image-list | awk '/cirros-ari/ {print $2}') --file cirros-0.3.0-x86_64-blank.img
 
 Then spin up an instance booted from that image:
 
-       IMAGE_ID=$(glance index | awk '/cirros-ami/ {print $1}')
+       IMAGE_ID=$(glance image-list | awk '/cirros-ami/ {print $2}')
        nova boot --image $IMAGE_ID --flavor 1 test_instance
 
 Wait for that instance to become active and we're good to go!
