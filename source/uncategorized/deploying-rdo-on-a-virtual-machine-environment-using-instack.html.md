@@ -58,6 +58,10 @@ These steps will setup your virtual host for a virtual environment for testing t
 
 `  sudo yum install -y `[`http://rdo.fedorapeople.org/openstack-juno/rdo-release-juno.rpm`](http://rdo.fedorapeople.org/openstack-juno/rdo-release-juno.rpm)
 
+If on RHEL 7, enable the EPEL repository too
+
+` sudo yum install -y `[`http://download.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-2.noarch.rpm`](http://download.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-2.noarch.rpm)
+
 4 . Install the instack-undercloud package.
 
        sudo yum install -y instack-undercloud
