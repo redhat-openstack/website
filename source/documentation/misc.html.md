@@ -17,6 +17,7 @@ wiki_last_updated: 2015-08-07
 *   [ Tips for New Developers](DeveloperTips)
 *   [ RDO stable client branches](Clients)
 *   [ Heat Links](Heat)
+*   [ Ironic Links](Ironic)
 *   [Deploy an application with Heat](Deploy an application with Heat)
 *   [ Securing Core RDO Services (https, qpid)](Securing Services)
 *   [Load Balance OpenStack API](Load Balance OpenStack API)
