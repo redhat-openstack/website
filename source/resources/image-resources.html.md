@@ -48,6 +48,6 @@ Note: using the vm element as shown above is currently required for EPEL. Otherw
 
 The resulting image file can be imported into glance similar to any other image:
 
-    $ glance image-create --name F19-x86_64 --disk-format qcow2 --container-format bare --is-public True < fedora-image.qcow2
+    $ glance image-create --name F20-x86_64 --disk-format qcow2 --container-format bare --is-public True < fedora-image.qcow2
 
 <Category:Resources> <Category:Documentation>
