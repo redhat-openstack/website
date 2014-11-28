@@ -30,6 +30,9 @@ The packstack version in the RDO repositories, will auto enable EPEL
 
 If using RHEL, then RDO and EPEL need the "Optional channel" enabled. On RHEL7, EPEL7 requires the "Extras channel" enabled, see <https://fedoraproject.org/wiki/EPEL#How_can_I_use_these_extra_packages.3F> for details.
 
+         $ subscription-manager repos --enable rhel-7-server-optional-rpms
+         $ subscription-manager repos --enable rhel-7-server-extras-rpms
+
 If using CentOS or Scientific Linux, there is no such optional repository, as those packages are included in the main repositories for those distributions. Extras is enabled by default on CentOS7.
 
 ## RHEL-Z
