@@ -95,3 +95,33 @@ Where username:password are repository login credentials provided by Midokura, a
 *   2. Install the ZooKeeper packages:
 
       yum install zookeeper
+
+*   3. Zookeeper expects the JRE to be found in the /usr/java/default/bin/ directory so if it is in a different location, you must create a symbolic link pointing to that location. To do so run the 2 following commands:
+
+      mkdir -p /usr/java/default/bin/
+      ln -s /usr/lib/jvm/jre-1.7.0-openjdk/bin/java /usr/java/default/bin/java
+
+*   4. Next we need to create the zookeeper data directory and assign permissions:
+
+      mkdir /var/lib/zookeeper/data
+      chmod 777 /var/lib/zookeeper/data
+
+*   5. Now we can edit the Zookeeper configuration file. We need to add the servers (in a prod installation you would have more than one zookeeper server in a cluster. For this example we are only using one. ). Edit the Zookeeper config file at /etc/zookeeper/zoo.cfg and add the following to the bottom of the file:
+
+      server.1=`<host IP>`:2888:3888
+
+Note: Please replace host IP with your IP on the server you are working with
+
+*   6. We need to set the Zookeeper ID on this server:
+
+      echo 1 > /var/lib/zookeeper/data/myid
+
+*   7. Lastly we start the zookeeper service:
+
+      systemctl start zookeeper.service
+
+*   8. Now test to see if Zookeeper is running:
+
+      echo ruok | nc 127.0.0.1 2181
+
+If it is running correctly you will see an "imok" response.
