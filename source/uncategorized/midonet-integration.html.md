@@ -135,22 +135,35 @@ Use this procedure to install Cassandra on Red Hat Enterprise Linux 7.
       yum install dsc20
 
 *   2. Configure the cluster.
-    -   a) Configure the cluster name by editing the /etc/cassandra/cassandra.yaml file so that it contains this entry:
+    -   a) Configure the cluster name by editing the /etc/cassandra/conf/cassandra.yaml file so that it contains this entry:
 
       cluster_name: 'midonet'
 
-*   -   b) Configure a listen address by editing the /etc/cassandra/cassandra.yaml file so that it contains the IP of the host that you are configuring:
+*   -   b) Configure a listen address by editing the /etc/cassandra/conf/cassandra.yaml file so that it contains the IP of the host that you are configuring:
 
 `listen_address: `<host_IP>
 
-*   -   c) Configure the cluster nodes by editing the /etc/cassandra/cassandra.yaml file so that it contains the following lines:
+*   -   c) Configure the cluster nodes by editing the /etc/cassandra/conf/cassandra.yaml file so that it contains the following line:
 
-      seed_provider:
-      - class_name: org.apache.cassandra.locator.SimpleSeedProvider
-      parameters:
       - seeds: "`<host_IP>`"
+
+*   -   d) Configure the RPC Listen address:
+
+`rpc_listen: `<host_IP>
 
 *   3. Clean existing system data and restart Cassandra:
 
       rm -rf /var/lib/cassandra/data/system/
       systemctl restart cassandra.service
+
+*   4. Test for connectivity by running the following:
+
+      cassandra-cli -h 192.168.100.8 -p 9160
+
+If everything is ok you should see something similar:
+
+      Connected to: "midonet" on 10.0.0.5/9160
+      Welcome to Cassandra CLI version 2.0.6
+      Type 'help;' or '?' for help.
+      Type 'quit;' or 'exit;' to quit.
+      16 | Installing MidoNet
