@@ -85,3 +85,13 @@ The packages are tested against and supported on Red Hat Enterprise Linux (RHEL)
 Where username:password are repository login credentials provided by Midokura, and version is the OpenStack version you're installing with MidoNet, its accepted values being openstack-havana and openstack-icehouse. Alternatively you can follow the instructions using the MidoNet community repos as well.
 
 ### MidoNet Network State Database
+
+#### Installing ZooKeeper
+
+*   1. Install OpenJDK 7 JRE (the 'headless' mode at the least):
+
+      yum install java-1.7.0-openjdk-headless
+
+*   2. Install the ZooKeeper packages:
+
+      yum install zookeeper
