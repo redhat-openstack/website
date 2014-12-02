@@ -125,3 +125,24 @@ Note: Please replace host IP with your IP on the server you are working with
       echo ruok | nc 127.0.0.1 2181
 
 If it is running correctly you will see an "imok" response.
+
+#### Installing Cassandra
+
+Use this procedure to install Cassandra on Red Hat Enterprise Linux 7.
+
+*   1. Install the Cassandra packages:
+
+      yum install dsc20
+
+*   2. Configure the cluster.
+    -   a) Configure the cluster name by editing the /etc/cassandra/cassandra.yaml file so that it contains this entry:
+
+      cluster_name: 'midonet'
+
+*   -   b) Configure a listen address by editing the /etc/cassandra/cassandra.yaml file so that it contains the IP of the host that you are configuring:
+
+`listen_address: `<host_IP>
+
+c) Configure the cluster nodes by editing the /etc/cassandra/cassandra.yaml file so that it contains the following lines: seed_provider: - class_name: org.apache.cassandra.locator.SimpleSeedProvider parameters: - seeds: "<host_IP>"
+
+3. Clean existing system data and restart Cassandra: rm -rf /var/lib/cassandra/data/system/
