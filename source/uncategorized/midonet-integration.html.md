@@ -145,8 +145,12 @@ Use this procedure to install Cassandra on Red Hat Enterprise Linux 7.
 
 *   -   c) Configure the cluster nodes by editing the /etc/cassandra/cassandra.yaml file so that it contains the following lines:
 
-seed_provider: - class_name: org.apache.cassandra.locator.SimpleSeedProvider parameters: - seeds: "<host_IP>"
+      seed_provider:
+      - class_name: org.apache.cassandra.locator.SimpleSeedProvider
+      parameters:
+      - seeds: "`<host_IP>`"
 
 *   3. Clean existing system data and restart Cassandra:
 
       rm -rf /var/lib/cassandra/data/system/
+      systemctl restart cassandra.service
