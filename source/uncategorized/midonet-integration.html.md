@@ -46,4 +46,4 @@ Next, we need to SSH into the Packstack system (in this case I am using RHEL 7).
 
 *   1. Remove the OpenVswitch agent packages:
 
-yum remove openstack-neutron-openvswitch
+      yum remove openstack-neutron-openvswitch
