@@ -71,15 +71,13 @@ The packages are tested against and supported on Red Hat Enterprise Linux (RHEL)
 
       [Midokura]
       name=Midokura Repository
-`baseurl=`[`http://username:password@yum.midokura.com/repo/v1.7/stable/`](http://username:password@yum.midokura.com/repo/v1.7/stable/)
-      RHEL/7/
+`baseurl=`[`http://username:password@yum.midokura.com/repo/v1.7/stable/RHEL/7/`](http://username:password@yum.midokura.com/repo/v1.7/stable/RHEL/7/)
       gpgcheck=1
 `gpgkey=`[`http://username:password@yum.midokura.com/repo/RPM-GPG-KEYmidokura`](http://username:password@yum.midokura.com/repo/RPM-GPG-KEYmidokura)
       enabled=1
       [Midokura-Neutron-Plugin]
       name=Midokura-Neutron-Plugin Repository
-`baseurl=`[`http://username:password@yum.midokura.com/repo/`](http://username:password@yum.midokura.com/repo/)
-      openstack-version/stable/RHEL/7/
+`baseurl=`[`http://username:password@yum.midokura.com/repo/icehouse/stable/RHEL/7/`](http://username:password@yum.midokura.com/repo/icehouse/stable/RHEL/7/)
       gpgcheck=1
 `gpgkey=`[`http://username:password@yum.midokura.com/repo/RPM-GPG-KEYmidokura`](http://username:password@yum.midokura.com/repo/RPM-GPG-KEYmidokura)
       enabled=1
