@@ -8,8 +8,6 @@ wiki_last_updated: 2015-08-07
 
 # MidoNet integration
 
-To install MidoNet on RDO follow the [Redhat Enterprise Linux 7 Quick Start Guide](http://docs.midonet.org/docs/v1.8/quick-start-guide/rhel-7_icehouse/content/index.html), with the exception of the repository configuration, and OpenStack installation, as outlined below.
-
 ## Prerequisites
 
 ### Installing OpenStack
