@@ -59,9 +59,7 @@ Next, we need to SSH into the Packstack system (in this case I am using RHEL 7).
 
 ### Adding the MidoNet Repositories
 
-The packages are tested against and supported on Red Hat Enterprise Linux (RHEL) 7.
-
-*   1. Enable the DataStax repository by creating the /etc/yum.repos.d/datastax.repo file with this entry:
+The packages are tested against and supported on Red Hat Enterprise Linux (RHEL) 7. 1. Enable the DataStax repository by creating the /etc/yum.repos.d/datastax.repo file with this entry:
 
       [datastax]
       name= DataStax Repo for Apache Cassandra
@@ -69,7 +67,7 @@ The packages are tested against and supported on Red Hat Enterprise Linux (RHEL)
       enabled=1
       gpgcheck=0
 
-*   2. Enable the Midokura repositories by creating the /etc/yum.repos.d/midokura.repo file with these entries:
+2. Enable the Midokura repositories by creating the /etc/yum.repos.d/midokura.repo file with these entries:
 
       [Midokura]
       name=Midokura Repository
