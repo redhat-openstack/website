@@ -40,17 +40,17 @@ The first steps to get MidoNet running on the All-in-one environment created by 
 
 Log in to your horizon dashboard as the Admin account and do the following:
 
-*   1. Add the admin user to the "demo" tenant.
-*   2. Move to the demo tenant, as admin, and delete the router, the private subnet and clear the router gateway.
-*   3. Move back to the admin tenant and remove the public subnet (external network).
+1.  Add the admin user to the "demo" tenant.
+2.  Move to the demo tenant, as admin, and delete the router, the private subnet and clear the router gateway.
+3.  Move back to the admin tenant and remove the public subnet (external network).
 
 Next, we need to SSH into the Packstack system (in this case I am using RHEL 7). We need to remove services that will interfere with MidoNet and/or are no longer needed. This will break the networking of your PackStack until the MidoNet integration is complete. Please be aware of this before starting to make sure you have sufficient time.
 
-*   1. Remove the OpenVswitch agent packages:
+1.  Remove the OpenVswitch agent packages:
 
       yum remove openstack-neutron-openvswitch
 
-*   2. Stop and disable the Neutron L3 Agent package:
+1.  Stop and disable the Neutron L3 Agent package:
 
       systemctl stop neutron-l3-agent
       systemctl disable neutron-l3-agent
@@ -58,3 +58,33 @@ Next, we need to SSH into the Packstack system (in this case I am using RHEL 7).
 ## Installing MidoNet Components
 
 ### Adding the MidoNet repositories
+
+The packages are tested against and supported on Red Hat Enterprise Linux (RHEL) 7.
+
+1.  Enable the DataStax repository by creating the /etc/yum.repos.d/datastax.repo file with this entry:
+
+      [datastax]
+      name= DataStax Repo for Apache Cassandra
+`baseurl=`[`http://rpm.datastax.com/community`](http://rpm.datastax.com/community)
+      enabled=1
+      gpgcheck=0
+
+1.  Enable the Midokura repositories by creating the /etc/yum.repos.d/midokura.repo file with these entries:
+
+      [Midokura]
+      name=Midokura Repository
+`baseurl=`[`http://username:password@yum.midokura.com/repo/v1.7/stable/`](http://username:password@yum.midokura.com/repo/v1.7/stable/)
+      RHEL/7/
+      gpgcheck=1
+`gpgkey=`[`http://username:password@yum.midokura.com/repo/RPM-GPG-KEYmidokura`](http://username:password@yum.midokura.com/repo/RPM-GPG-KEYmidokura)
+      enabled=1
+      [Midokura-Neutron-Plugin]
+      name=Midokura-Neutron-Plugin Repository
+`baseurl=`[`http://username:password@yum.midokura.com/repo/`](http://username:password@yum.midokura.com/repo/)
+      openstack-version/stable/RHEL/7/
+      gpgcheck=1
+      MidoNet Deployment and Integration Guide | 11
+`gpgkey=`[`http://username:password@yum.midokura.com/repo/RPM-GPG-KEYmidokura`](http://username:password@yum.midokura.com/repo/RPM-GPG-KEYmidokura)
+      enabled=1
+
+Where username:password are repository login credentials provided by Midokura, and version is the OpenStack version you're installing with MidoNet, its accepted values being havana and icehouse.
