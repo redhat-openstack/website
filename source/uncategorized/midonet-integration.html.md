@@ -171,3 +171,24 @@ If everything is ok you should see something similar:
       [default@unknown]:
 
 ### Installing MidolMan
+
+The Midolman agent must be installed on all network and compute nodes (in this case we are running All-in-one).
+
+*   1. Install Midolman package:
+
+      yum install midolman
+
+*   2. If you run ZooKeeper and Cassandra in a cluster the Midolman configuration file must reflect this.
+    -   a) For the ZooKeeper cluster the /etc/midolman/midolman.conf file must contain the following entries:
+
+      [zookeeper]
+      zookeeper_hosts =`<host_IP>`:2181
+
+*   -   b) For the Cassandra cluster the /etc/midolman/midolman.conf file must contain the following entries:
+
+      [cassandra]
+`servers = `<host_IP>
+      replication_factor = 1
+      cluster = midonet
+
+3. Restart Midolman: systemctl restart midolman.service
