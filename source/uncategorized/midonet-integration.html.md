@@ -233,8 +233,8 @@ Make sure to change the all of the <host_ID> fields and the admin_token field to
 *   5. Configure MidoNet API context by editing the /etc/tomcat7/Catalina/localhost/midonet-api.xml file to contain these entries:
 
 <Context
-              path="/midonet-api"
-              docBase="/usr/share/midonet-api"
-              antiResourceLocking="false"
-privileged="true"
-/>
+  path="/midonet-api"
+  docBase="/usr/share/midonet-api"
+  antiResourceLocking="false"
+ privileged="true"
+ />
