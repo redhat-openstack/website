@@ -10,13 +10,15 @@ wiki_last_updated: 2015-08-07
 
 To install MidoNet on RDO follow the [Redhat Enterprise Linux 7 Quick Start Guide](http://docs.midonet.org/docs/v1.8/quick-start-guide/rhel-7_icehouse/content/index.html), with the exception of the repository configuration, and OpenStack installation, as outlined below.
 
-## Installing OpenStack
+## Prerequisites
+
+### Installing OpenStack
 
 Install OpenStack using the procedure provided in the [RDO Quickstart](https://openstack.redhat.com/Quickstart).
 
 Please verify that this is working before proceeding. Most installation issues come when a Packstack error has occurred but was ignored.
 
-## Enabling RDO repositories
+### Enabling RDO repositories
 
 Enable the EDO repositories using the following command (as root):
 
@@ -32,7 +34,7 @@ To enable 'optional' and 'extras' from the RHEL subscription run these commands 
       yum-config-manager --enable rhel-7-server-optional-rpms
       yum-config-manager --enable rhel-7-server-extras-rpms
 
-## Cleaning up Packstack OpenStack All-in-on Installation
+### Cleaning up Packstack OpenStack All-in-on Installation
 
 The first steps to get MidoNet running on the All-in-one environment created by the Packstack installer is to clean up the network section in preparation of installing MidoNet.
 
@@ -53,4 +55,6 @@ Next, we need to SSH into the Packstack system (in this case I am using RHEL 7).
       systemctl stop neutron-l3-agent
       systemctl disable neutron-l3-agent
 
-# Installing MidoNet Components
+## Installing MidoNet Components
+
+===Adding the MidoNet repositories==
