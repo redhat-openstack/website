@@ -191,4 +191,6 @@ The Midolman agent must be installed on all network and compute nodes (in this c
       replication_factor = 1
       cluster = midonet
 
-3. Restart Midolman: systemctl restart midolman.service
+3. Restart Midolman:
+
+      systemctl restart midolman.service
