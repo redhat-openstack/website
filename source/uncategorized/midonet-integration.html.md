@@ -63,7 +63,7 @@ The packages are tested against and supported on Red Hat Enterprise Linux (RHEL)
 
       [datastax]
       name= DataStax Repo for Apache Cassandra
-`baseurl=`[`http://rpm.datastax.com/community`](http://rpm.datastax.com/community)
+      baseurl=http://rpm.datastax.com/community
       enabled=1
       gpgcheck=0
 
@@ -71,15 +71,15 @@ The packages are tested against and supported on Red Hat Enterprise Linux (RHEL)
 
       [Midokura]
       name=Midokura Repository
-`baseurl=`[`http://username:password@yum.midokura.com/repo/v1.7/stable/RHEL/7/`](http://username:password@yum.midokura.com/repo/v1.7/stable/RHEL/7/)
+      baseurl=http://username:password@yum.midokura.com/repo/v1.7/stable/RHEL/7/
       gpgcheck=1
-`gpgkey=`[`http://username:password@yum.midokura.com/repo/RPM-GPG-KEYmidokura`](http://username:password@yum.midokura.com/repo/RPM-GPG-KEYmidokura)
+      gpgkey=http://username:password@yum.midokura.com/repo/RPM-GPG-KEYmidokura
       enabled=1
       [Midokura-Neutron-Plugin]
       name=Midokura-Neutron-Plugin Repository
-`baseurl=`[`http://username:password@yum.midokura.com/repo/openstack-icehouse/stable/RHEL/7/`](http://username:password@yum.midokura.com/repo/openstack-icehouse/stable/RHEL/7/)
+      baseurl=http://username:password@yum.midokura.com/repo/openstack-icehouse/stable/RHEL/7/
       gpgcheck=1
-`gpgkey=`[`http://username:password@yum.midokura.com/repo/RPM-GPG-KEYmidokura`](http://username:password@yum.midokura.com/repo/RPM-GPG-KEYmidokura)
+      gpgkey=http://username:password@yum.midokura.com/repo/RPM-GPG-KEYmidokura
       enabled=1
 
 Where username:password are repository login credentials provided by Midokura, and version is the OpenStack version you're installing with MidoNet, its accepted values being openstack-havana and openstack-icehouse. Alternatively you can follow the instructions using the MidoNet community repos as well.
