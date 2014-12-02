@@ -10,7 +10,7 @@ wiki_last_updated: 2015-02-01
 
 ## Introduction
 
-This page describes how to setup a two node OpenStack setup using ml2 to integrate with Helium-SR1 and Helium OpenDaylight and Juno OpenStack.
+This page describes how to setup a two node OpenStack setup using ml2 to integrate with Helium-SR1 and Helium OpenDaylight and Juno OpenStack. The setup guide for Hydrogen OpenDaylight and Icehouse Openstack can be found [OpenDaylight_integration](OpenDaylight_integration).
 
 The topology:
 
