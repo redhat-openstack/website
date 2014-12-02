@@ -55,6 +55,8 @@ I like to create really small VM images when testing so do the following if you 
 
 Now we should have a functioning setup using ML2 and OpenvSwitch networking. You can create some VMs and see what happens.
 
+If you hit this error [Fedora20: packstack gives undefined method \`split' for nil:NilClass](https://bugzilla.redhat.com/show_bug.cgi?id=1080481) then increase the memory for the VM to 4GB.
+
 ## Configure Control+Compute Node to use OpenDaylight ML2 Plugin
 
 Packstack does not have support for OpenDaylight yet so we need to do manual steps to enable the support. The below steps will disable the openvswitch agent, add ML2 OpenDaylight support and restart neutron. Recall that in this setup the OpenDaylight controll is running on the host at 192.168.120.1. Change the value below if you have a different address.
