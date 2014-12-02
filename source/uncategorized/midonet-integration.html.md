@@ -57,4 +57,4 @@ Next, we need to SSH into the Packstack system (in this case I am using RHEL 7).
 
 ## Installing MidoNet Components
 
-===Adding the MidoNet repositories==
+### Adding the MidoNet repositories
