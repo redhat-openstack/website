@@ -81,7 +81,6 @@ The packages are tested against and supported on Red Hat Enterprise Linux (RHEL)
 `baseurl=`[`http://username:password@yum.midokura.com/repo/`](http://username:password@yum.midokura.com/repo/)
       openstack-version/stable/RHEL/7/
       gpgcheck=1
-      MidoNet Deployment and Integration Guide | 11
 `gpgkey=`[`http://username:password@yum.midokura.com/repo/RPM-GPG-KEYmidokura`](http://username:password@yum.midokura.com/repo/RPM-GPG-KEYmidokura)
       enabled=1
 
