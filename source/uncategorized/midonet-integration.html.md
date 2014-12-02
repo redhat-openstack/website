@@ -166,4 +166,4 @@ If everything is ok you should see something similar:
       Welcome to Cassandra CLI version 2.0.6
       Type 'help;' or '?' for help.
       Type 'quit;' or 'exit;' to quit.
-      16 | Installing MidoNet
+      [default@unknown]:
