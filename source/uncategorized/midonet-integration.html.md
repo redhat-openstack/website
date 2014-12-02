@@ -167,3 +167,5 @@ If everything is ok you should see something similar:
       Type 'help;' or '?' for help.
       Type 'quit;' or 'exit;' to quit.
       [default@unknown]:
+
+### Installing MidolMan
