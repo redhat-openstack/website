@@ -29,7 +29,7 @@ Use [Quickstart](Quickstart) to install the packstack on the control node and in
 
 I ran packstack once, changed all the 192.168.122.xx addresses to 192.168.120.51 and reran packstack. I did this because by default the allinone used eth0 for the control addresses but in my setup I wanted eth2 to be the controller interface.
 
-You could probably also just use the attached packstack-answers.txt file and start with it. Modify the values to fit the addresses you chose for the guest VMs. This would also get around having to run packstack twice as I did above.
+You could probably also just use the attached packstack-answers.txt file and start with it. Modify the values to fit the addresses you chose for the guest VMs. This would also get around having to run packstack twice as I did above. [packstack-answers.txt](https://github.com/shague/packstack_stuff/blob/master/packstack/packstack-answers-20141130-164347.txt)
 
 In the example packstack_answer.txt file the node IP addresses are:
 
