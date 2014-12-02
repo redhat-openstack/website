@@ -18,7 +18,7 @@ Install OpenStack using the procedure provided in the [RDO Quickstart](https://o
 
 Please verify that this is working before proceeding. Most installation issues come when a Packstack error has occurred but was ignored.
 
-NOTE: Make sure Selinux is disable (or set to permissive) and both FirewallD and/or IPTables are disabled!
+NOTE: Make sure Selinux is disabled (or set to permissive) and both FirewallD and/or IPTables are disabled!
 
 ### Enabling RDO repositories
 
