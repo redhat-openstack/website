@@ -38,6 +38,8 @@ The first steps to get MidoNet running on the All-in-one environment created by 
 
 Log in to your horizon dashboard as the Admin account and do the following:
 
-1. Add the admin user to the "demo" tenant. 2. Move to the demo tenant, as admin, and delete the router, the private subnet and clear the router gateway. 3. Move back to the admin tenant and remove the public subnet (external network).
+*   1. Add the admin user to the "demo" tenant.
+*   2. Move to the demo tenant, as admin, and delete the router, the private subnet and clear the router gateway.
+*   3. Move back to the admin tenant and remove the public subnet (external network).
 
 Next, we need to SSH into the Packstack system (in this case I am using RHEL 7). We need to remove services that will interfere with MidoNet and/or are no longer needed. This will break the networking of your PackStack until the MidoNet integration is complete. Please be aware of this before starting to make sure you have sufficient time.
