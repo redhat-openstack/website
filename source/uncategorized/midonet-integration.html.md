@@ -205,7 +205,7 @@ The Midolman agent must be installed on all network and compute nodes (in this c
 
 <context-param>
 <param-name>`rest_api-base_uri`</param-name>
-<param-value>[`http://`](http://)<host_IP>`:8080/midonet-api`</param-value>
+<param-value>`http://<host_IP>:8080/midonet-api</param-value>`
 </context-param>
 <context-param>
 <param-name>`keystone-service_host`</param-name>
