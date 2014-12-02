@@ -51,4 +51,4 @@ Next, we need to SSH into the Packstack system (in this case I am using RHEL 7).
 *   2. Stop and disable the Neutron L3 Agent package:
 
       systemctl stop neutron-l3-agent
-       systemctl disable neutron-l3-agent
+      systemctl disable neutron-l3-agent
