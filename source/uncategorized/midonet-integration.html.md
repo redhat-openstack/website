@@ -196,3 +196,45 @@ The Midolman agent must be installed on all network and compute nodes (in this c
       systemctl restart midolman.service
 
 ### Midonet API
+
+*   1. Install the MidoNet API package:
+
+      yum install midonet-api
+
+*   2. Configure MidoNet API by editing the /usr/share/midonet-api/WEB-INF/web.xml file to contain the following entries:
+
+<context-param>
+<param-name>`rest_api-base_uri`</param-name>
+<param-value>[`http://`](http://)<host_IP>`:8080/midonet-api`</param-value>
+</context-param>
+<context-param>
+<param-name>`keystone-service_host`</param-name>
+<param-value>`host_IP`</param-value>
+</context-param>
+<context-param>
+<param-name>`keystone-admin_token`</param-name>
+<param-value>`ADMIN_TOKEN`</param-value>
+</context-param>
+<context-param>
+<param-name>`zookeeper-zookeeper_hosts`</param-name>
+<param-value>`host_IP:2181`</paramvalue>
+</context-param>
+
+Make sure to change the all of the <host_ID> fields and the admin_token field to the correct values. The admin_token can be found in your packstack keystonerc_admin.sh file
+
+*   3. Install the Tomcat package:
+
+      yum install tomcat
+
+*   4. Configure Tomcat's Entropy Source by editing the /usr/share/tomcat7/bin/catalina.sh file to contain this entry:
+
+      JAVA_OPTS="$JAVA_OPTS -Djava.security.egd=`[`file:/dev/./urandom`](file:/dev/./urandom)`"
+
+*   5. Configure MidoNet API context by editing the /etc/tomcat7/Catalina/localhost/midonet-api.xml file to contain these entries:
+
+<Context
+              path="/midonet-api"
+              docBase="/usr/share/midonet-api"
+              antiResourceLocking="false"
+privileged="true"
+/>
