@@ -73,13 +73,13 @@ The packages are tested against and supported on Red Hat Enterprise Linux (RHEL)
       name=Midokura Repository
       baseurl=http://username:password@yum.midokura.com/repo/v1.7/stable/RHEL/7/
       gpgcheck=1
-      gpgkey=http://username:password@yum.midokura.com/repo/RPM-GPG-KEYmidokura
+      gpgkey=http://username:password@yum.midokura.com/repo/RPM-GPG-KEY-midokura
       enabled=1
       [Midokura-Neutron-Plugin]
       name=Midokura-Neutron-Plugin Repository
       baseurl=http://username:password@yum.midokura.com/repo/openstack-icehouse/stable/RHEL/7/
       gpgcheck=1
-      gpgkey=http://username:password@yum.midokura.com/repo/RPM-GPG-KEYmidokura
+      gpgkey=http://username:password@yum.midokura.com/repo/RPM-GPG-KEY-midokura
       enabled=1
 
 Where username:password are repository login credentials provided by Midokura, and version is the OpenStack version you're installing with MidoNet, its accepted values being openstack-havana and openstack-icehouse. Alternatively you can follow the instructions using the MidoNet community repos as well.
