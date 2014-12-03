@@ -10,6 +10,8 @@ wiki_last_updated: 2015-03-09
 
 # Home lab
 
+__NOTOC__
+
 ## Hardware for a home lab
 
 A frequent request is: how can I install and configure a small OpenStack cloud for personal use, with cheap, quiet PCs I can keep in a home office. A typical hardware configuration would be three or more hosts, with one host serving as control node, and the others as compute nodes.
