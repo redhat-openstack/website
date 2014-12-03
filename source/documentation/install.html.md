@@ -45,6 +45,10 @@ While the [Quickstart](Quickstart) is sufficient for an initial test deployment,
 *   [Installing on Fedora 20 with an existing external network](Fedora_20_with_existing_network)
 *   [Creating CentOS and Fedora images ready for Openstack](Creating CentOS and Fedora images ready for Openstack)
 
+### Hardware
+
+*   [ Cheap hardware for a home cloud/lab](Home lab)
+
 </div>
 </div>
 <Category:Documentation> <Category:Install>
