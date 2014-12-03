@@ -46,14 +46,21 @@ Log in to your horizon dashboard as the Admin account and do the following:
 
 Next, we need to SSH into the Packstack system (in this case I am using RHEL 7). We need to remove services that will interfere with MidoNet and/or are no longer needed. This will break the networking of your PackStack until the MidoNet integration is complete. Please be aware of this before starting to make sure you have sufficient time.
 
-1.  Remove the OpenVswitch agent packages:
+*   1. Remove the OpenVswitch agent packages:
 
       yum remove openstack-neutron-openvswitch
 
-1.  Stop and disable the Neutron L3 Agent package:
+*   2. Stop and disable the Neutron L3 Agent package:
 
       systemctl stop neutron-l3-agent
       systemctl disable neutron-l3-agent
+
+*   3. Disable Network Manager
+
+      systemctl stop networkmanager.service
+      systemctl disable networkmanager.service
+      systemctl enable network.service
+      systemctl start network.service
 
 ## Installing MidoNet Components
 
