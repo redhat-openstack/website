@@ -340,5 +340,7 @@ Remember to change <host_IP> to the IP of you box.
 
 2. Create MidoNet Administrative User. As Keystone admin, execute the following commands:
 
-      keystone user-create --name midonet --pass MIDONET_PASS --tenant admin
+      keystone user-create --name midonet --pass midonet --tenant admin
       keystone user-role-add --user midonet --role admin --tenant admin
+
+NOTE: The "--pass midonet" can be "--pass <whateveryouwanthere>" just remember this password.
