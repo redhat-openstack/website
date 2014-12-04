@@ -330,3 +330,15 @@ If successful you will see:
 Remember to change <host_IP> to the IP of you box.
 
 ## Integrating Midonet with Packstack
+
+### Keystone Integration
+
+*   1. Create MidoNet API Service. As Keystone admin, execute the following command:
+
+      source /root/keystonerc_admin
+      keystone service-create --name midonet --type midonet --description "MidoNet API Service"
+
+2. Create MidoNet Administrative User. As Keystone admin, execute the following commands:
+
+      keystone user-create --name midonet --pass MIDONET_PASS --tenant admin
+      keystone user-role-add --user midonet --role admin --tenant admin
