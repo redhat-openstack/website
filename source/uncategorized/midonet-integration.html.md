@@ -344,3 +344,71 @@ Remember to change <host_IP> to the IP of you box.
       keystone user-role-add --user midonet --role admin --tenant admin
 
 NOTE: The "--pass midonet" can be "--pass <whateveryouwanthere>" just remember this password.
+
+### Neutron Integration
+
+#### Neutron Server and Packages
+
+*   1. Install the following packets:
+
+      yum install openstack-neutro python-neutron-plugin-midonet
+
+*   2. Edit the /etc/neutron/neutron.conf file and edit this parameter in the [DEFAULT] section:
+
+      core_plugin = midonet.neutron.plugin.MidonetPluginV2
+
+*   3. Create the directory for the MidoNet plugin:
+
+      mkdir /etc/neutron/plugins/midonet
+
+*   4. Create the /etc/neutron/plugins/midonet/midonet.ini file and edit it to contain the following:
+
+      [DATABASE]
+      sql_connection = mysql://neutron:NEUTRON_DBPASS@controller/neutron
+
+      [MIDONET]
+      # MidoNet API URL
+      midonet_uri = `[`http://`](http://)<host_IP>`:8081/midonet-api
+      # MidoNet administrative user in Keystone
+      username = midonet
+      password = MIDONET_PASS
+      # MidoNet administrative user's tenant
+      project_id = admin
+
+NOTE: The NEUTRON_DBPASS can be found in your packstack "answers" file in your /root/ directory. You can "cat /root/<packstackAnswersFileName> | grep NEUTRON_DB_PW" to find the password
+
+*   5. Create a symbolic link to direct Neutron to the MidoNet configuration:
+
+      rm -f /etc/neutron/plugin.ini
+      ln -s /etc/neutron/plugins/midonet/midonet.ini /etc/neutron/plugin.ini
+
+*   6. In /etc/neutron/neutron.conf you need to comment out the following line:
+
+      #service_plugin =
+
+#### Neutron DHCP Agent
+
+*   1. Edit the /etc/neutron/dhcp_agent.ini file to contain the following:
+
+      [DEFAULT]
+      interface_driver = neutron.agent.linux.interface.MidonetInterfaceDriver
+      dhcp_driver = midonet.neutron.agent.midonet_driver.DhcpNoOpDriver
+      use_namespaces = True
+      enable_isolated_metadata = True
+
+      [MIDONET]
+      # MidoNet API URL
+      midonet_uri = http://<host_IP>:8081/midonet-api
+      # MidoNet administrative user in Keystone
+      username = midonet
+      password = midonet
+      # MidoNet administrative user's tenant
+      project_id = admin
+
+#### Finish Neutron Integration
+
+Restart neutron services:
+
+        systemctl restart openstack-neutron-dhcp-agent
+        systemctl restart openstack-metadata-agent
+        systemctl restart neutron-server
