@@ -365,10 +365,9 @@ NOTE: The "--pass midonet" can be "--pass <whateveryouwanthere>" just remember t
 
       [DATABASE]
       sql_connection = mysql://neutron:NEUTRON_DBPASS@controller/neutron
-
       [MIDONET]
       # MidoNet API URL
-      midonet_uri = `[`http://`](http://)<host_IP>`:8081/midonet-api
+      midonet_uri = http://<host_IP>:8081/midonet-api
       # MidoNet administrative user in Keystone
       username = midonet
       password = MIDONET_PASS
