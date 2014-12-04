@@ -277,3 +277,5 @@ in /etc/tomcat/server.xml edit:
 *   6. Then restart tomcat:
 
       systemctl restart tomcat.service
+
+#### Create Midonet Tunnel Zone and Register Midolman
