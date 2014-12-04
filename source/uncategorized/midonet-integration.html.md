@@ -415,3 +415,20 @@ Restart neutron services:
       systemctl restart metadata-agent
 
 ### Nova Integration
+
+#### Libvirt Configuration
+
+*   1. We need to enable Cgroup in Libvirt for Midonet to work properly. To do this edit your /etc/libvirt/qemu.conf uncomment the following:
+
+      user = "root"
+      group = "root"
+
+*   2. In the same file uncomment this seciont and add "/dev/net/tun" to it.. It should look like:
+
+      cgroup_device_acl = [
+         "/dev/null", "/dev/full", "/dev/zero",
+         "/dev/random", "/dev/urandom",
+         "/dev/ptmx", "/dev/kvm", "/dev/kqemu",
+         "/dev/rtc","/dev/hpet", "/dev/vfio/vfio",
+         "/dev/net/tun"
+      ]
