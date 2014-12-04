@@ -351,7 +351,7 @@ NOTE: The "--pass midonet" can be "--pass <whateveryouwanthere>" just remember t
 
 *   1. Install the following packets:
 
-      yum install openstack-neutro python-neutron-plugin-midonet
+      yum install openstack-neutron python-neutron-plugin-midonet
 
 *   2. Edit the /etc/neutron/neutron.conf file and edit this parameter in the [DEFAULT] section:
 
