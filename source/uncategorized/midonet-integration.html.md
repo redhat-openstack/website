@@ -278,6 +278,28 @@ in /etc/tomcat/server.xml edit:
 
       systemctl restart tomcat.service
 
+### Install Midonet CLI
+
+We next need to install the Midonet CLI pacakge:
+
+*   1. Install the MidoNet CLI package:
+
+      yum install python-midonetclient
+
+*   2. Create the following file for authentication (this has to be exact):
+
+      vi ~/.midonetrc
+
+*   3. Edit ~/.midonetrc and add the following:
+
+       [cli]
+`api_url = `[`http://controller:8080/midonet-api`](http://controller:8080/midonet-api)
+      username = admin
+      password = ADMIN_PASS
+      project_id = admin
+
+NOTE: The admin_pass is the same pass from your /root/keystonerc_admin.sh file
+
 ### Create Midonet Tunnel Zone and Register Midolman
 
 We first need to create a Tunnel Zone in the Midonet CLI and then register the Midolman agent to it. This will allow the Midolman agent to send packets and communicate to the Midonet API.
