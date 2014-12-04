@@ -249,7 +249,7 @@ You should see the process running.
 <param-value>`host_IP:2181`</paramvalue>
 </context-param>
 
-Make sure to change the all of the <host_ID> fields and the admin_token field to the correct values. The admin_token can be found in your packstack keystonerc_admin.sh file
+Make sure to change the all of the <host_ID> fields and the admin_token field to the correct values. The admin_token can be found in your packstack /etc/keystone/keystone.conf file
 
 *   3. Install the Tomcat package:
 
