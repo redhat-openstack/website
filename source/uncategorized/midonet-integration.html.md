@@ -279,3 +279,30 @@ in /etc/tomcat/server.xml edit:
       systemctl restart tomcat.service
 
 ### Create Midonet Tunnel Zone and Register Midolman
+
+We first need to create a Tunnel Zone in the Midonet CLI and then register the Midolman agent to it. This will allow the Midolman agent to send packets and communicate to the Midonet API.
+
+*   1. Launch the MidoNet CLI:
+
+      midonet-cli
+
+You will see a prompt:
+
+      midonet>
+
+*   2. Create a tunnel zone:
+
+      midonet> tunnel-zone create name gre type gre
+
+If successful you will see:
+
+      tzone0
+
+*   3. Add hosts to the tunnel zone:
+
+      midonet> list host
+      host host0 name network alive true host host1 name compute alive true
+`midonet> tunnel-zone tzone0 add member host host0 address `<host_IP>
+      zone tzone0 host host0 address ip_address_host0
+
+Remember to change <host_IP> to the IP of you box.
