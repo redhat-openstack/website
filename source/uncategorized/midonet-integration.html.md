@@ -395,6 +395,8 @@ NOTE: The NEUTRON_DBPASS can be found in your packstack "answers" file in your /
       use_namespaces = True
       enable_isolated_metadata = True
 
+*   2. Add the following at the end of the file.
+
       [MIDONET]
       # MidoNet API URL
       midonet_uri = http://<host_IP>:8081/midonet-api
