@@ -432,3 +432,37 @@ Restart neutron services:
          "/dev/rtc","/dev/hpet", "/dev/vfio/vfio",
          "/dev/net/tun"
       ]
+
+*   3. Restart Libvirt:
+
+      systemctl restart libvirtd.service
+
+#### Nova Configuration
+
+*   1. Please edit your /etc/nova/nova.conf and add/edit the following lines at the END of the file:
+
+[MIDONET]
+
+1.  MidoNet API server URI
+
+midonet_uri = http://10.0.0.13:8081/midonet-api
+
+1.  MidoNet username with admin role in keystone
+
+username=midonet password=midonet
+
+1.  MidoNet provider tenant name
+
+project_id=admin
+
+NOTE: If you have changed your midonet keystone user password please put the new one in here
+
+*   2. Restart Nova
+
+      systemctl restart openstack-nova-api.service
+      systemctl restart openstack-nova-cert.service
+      systemctl restart openstack-nova-compute.service
+      systemctl restart openstack-nova-consoleauth.service
+      systemctl restart openstack-nova-scheduler.service
+      systemctl restart openstack-nova-conductor.service
+      systemctl restart openstack-nova-novncproxy.service
