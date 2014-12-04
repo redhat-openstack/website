@@ -370,11 +370,11 @@ NOTE: The "--pass midonet" can be "--pass <whateveryouwanthere>" just remember t
       midonet_uri = http://<host_IP>:8081/midonet-api
       # MidoNet administrative user in Keystone
       username = midonet
-      password = MIDONET_PASS
+      password = midonet
       # MidoNet administrative user's tenant
       project_id = admin
 
-NOTE: The NEUTRON_DBPASS can be found in your packstack "answers" file in your /root/ directory. You can "cat /root/<packstackAnswersFileName> | grep NEUTRON_DB_PW" to find the password
+NOTE: The NEUTRON_DBPASS can be found in your packstack "answers" file in your /root/ directory. You can "cat /root/<packstackAnswersFileName> | grep NEUTRON_DB_PW" to find the password. ALSO NOTE: If you changed your midonet keystone password, please change the password = midonet parameter.
 
 *   5. Create a symbolic link to direct Neutron to the MidoNet configuration:
 
