@@ -293,12 +293,12 @@ We next need to install the Midonet CLI pacakge:
 *   3. Edit ~/.midonetrc and add the following:
 
        [cli]
-`api_url = `[`http://controller:8080/midonet-api`](http://controller:8080/midonet-api)
+      api_url = http://<host_ip>:8081/midonet-api
       username = admin
       password = ADMIN_PASS
       project_id = admin
 
-NOTE: The admin_pass is the same pass from your /root/keystonerc_admin.sh file
+NOTE: The admin_pass is the same pass from your /root/keystonerc_admin.sh file and also edit the <host_ip>
 
 ### Create Midonet Tunnel Zone and Register Midolman
 
