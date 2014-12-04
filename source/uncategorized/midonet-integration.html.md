@@ -298,7 +298,7 @@ We next need to install the Midonet CLI pacakge:
       password = ADMIN_PASS
       project_id = admin
 
-NOTE: The admin_pass is the same pass from your /root/keystonerc_admin.sh file and also edit the <host_ip>
+NOTE: The admin_pass is the same pass from your /root/keystonerc_admin file and also edit the <host_ip>
 
 ### Create Midonet Tunnel Zone and Register Midolman
 
