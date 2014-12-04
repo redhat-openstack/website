@@ -328,3 +328,5 @@ If successful you will see:
       zone tzone0 host host0 address ip_address_host0
 
 Remember to change <host_IP> to the IP of you box.
+
+## Integrating Midonet with Packstack
