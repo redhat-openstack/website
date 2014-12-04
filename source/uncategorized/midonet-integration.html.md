@@ -58,7 +58,7 @@ The first steps to get MidoNet running on the All-in-one environment created by 
 
 Log in to your horizon dashboard as the Admin account and do the following:
 
-1.  Add the admin user to the "demo" tenant.
+1.  Add the admin user to the "demo" tenant ( under Admin>Identity>Project)
 2.  Move to the demo tenant, as admin, and delete the router, the private subnet and clear the router gateway.
 3.  Move back to the admin tenant and remove the public subnet (external network).
 
