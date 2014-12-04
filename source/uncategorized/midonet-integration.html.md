@@ -410,6 +410,6 @@ NOTE: The NEUTRON_DBPASS can be found in your packstack "answers" file in your /
 
 Restart neutron services:
 
-        systemctl restart openstack-neutron-dhcp-agent
-        systemctl restart openstack-metadata-agent
-        systemctl restart neutron-server
+      systemctl restart neutron-server
+      systemctl restart openstack-neutron-dhcp-agent
+      systemctl restart openstack-metadata-agent
