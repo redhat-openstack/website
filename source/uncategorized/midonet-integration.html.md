@@ -466,3 +466,13 @@ NOTE: If you have changed your midonet keystone user password please put the new
       systemctl restart openstack-nova-scheduler.service
       systemctl restart openstack-nova-conductor.service
       systemctl restart openstack-nova-novncproxy.service
+
+## Creating Initial Networks and Getting started with the system
+
+Use this section to create external connectivity on your all-in-one system. Please follow this exactly.
+
+### Create External Network
+
+We first need to create the External Network (fake) to be used for connectivity:
+
+      neutron subnet-create ext-net --name ext-subnet --allocation-pool start=200.200.200.2,end=200.200.200.254 --disable-dhcp --gateway 200.200.200.1 200.200.200.0/24
