@@ -30,7 +30,7 @@ Once this is finished:
 
 Enable the EDO repositories using the following command (as root):
 
-      yum install -y https://rdo.fedorapeople.org/rdo-release.rpm
+      yum install -y http://rdo.fedorapeople.org/openstack-icehouse/rdo-release-icehouse.rpm
 
 To enable the EPEL repository use this command:
 
