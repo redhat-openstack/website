@@ -12,13 +12,11 @@ wiki_last_updated: 2015-08-07
 
 ### Installing OpenStack
 
-Install OpenStack using the procedure provided in the [RDO Quickstart](https://openstack.redhat.com/Quickstart).
-
 Please verify that this is working before proceeding. Most installation issues come when a Packstack error has occurred but was ignored.
 
 NOTE: Make sure Selinux is disabled (or set to permissive) and both FirewallD and/or IPTables are disabled!
 
-### Enabling RDO repositories
+#### Enabling RDO repositories
 
 Enable the EDO repositories using the following command (as root):
 
@@ -33,6 +31,16 @@ To enable 'optional' and 'extras' from the RHEL subscription run these commands 
       yum -y install yum-utils
       yum-config-manager --enable rhel-7-server-optional-rpms
       yum-config-manager --enable rhel-7-server-extras-rpms
+
+#### Install Packstack Installer
+
+Run the following command to install Packstack on your system
+
+      yum install -y openstack-packstack
+
+#### Install Openstack Packstack
+
+      packstack --allinone
 
 ### Cleaning up Packstack OpenStack All-in-on Installation
 
