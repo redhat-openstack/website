@@ -12,7 +12,7 @@ Group Based Policy (GBP) is an optional service plugin for Neutron that provides
 
 ## GBP Status
 
-Group Based Policy is currently being developed in StackForge as an add-on to the Juno release of Neutron, along with a supporting client library and integrations with Horizon and Heat. See the [GBP project wiki](https://wiki.openstack.org/wiki/GroupBasedPolicy) for upstream details. This page describes packaging of GBP for Fedora that is currently under development and review. As soon as that process is complete, packages for other Linux distributions supported by RDO will also be provided.
+Group Based Policy is currently being developed in StackForge as an add-on to the Juno release of Neutron, along with a supporting client library and integrations with Horizon and Heat. See the [GBP project wiki](https://wiki.openstack.org/wiki/GroupBasedPolicy) for upstream details. This page describes packaging of pre-release versions of GBP add-ons for Juno RDO on Fedora 20.
 
 Note that this describes use of the GBP's resource_mapping reference policy driver, which should work with any Neutron core plugin, such as ML2. Other policy drivers are also included, but will be documented separately.
 
