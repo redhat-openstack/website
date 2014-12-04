@@ -255,11 +255,7 @@ Make sure to change the all of the <host_ID> fields and the admin_token field to
 
       yum install tomcat
 
-*   4. Configure Tomcat's Entropy Source by editing the /usr/share/tomcat7/bin/catalina.sh file to contain this entry:
-
-      JAVA_OPTS="$JAVA_OPTS -Djava.security.egd=`[`file:/dev/./urandom`](file:/dev/./urandom)`"
-
-*   5. Configure MidoNet API context by editing the /etc/tomcat7/Catalina/localhost/midonet-api.xml file to contain these entries:
+*   4. Configure MidoNet API context by editing the /etc/tomcat7/Catalina/localhost/midonet-api.xml file to contain these entries:
 
 <Context
      path="/midonet-api"
