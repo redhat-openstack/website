@@ -255,7 +255,7 @@ Make sure to change the all of the <host_ID> fields and the admin_token field to
 
       yum install tomcat
 
-*   4. Configure MidoNet API context by editing the /etc/tomcat7/Catalina/localhost/midonet-api.xml file to contain these entries:
+*   4. Configure MidoNet API context by editing the /etc/tomcat/Catalina/localhost/midonet-api.xml file to contain these entries:
 
 <Context
      path="/midonet-api"
