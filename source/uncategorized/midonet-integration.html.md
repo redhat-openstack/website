@@ -414,4 +414,4 @@ Restart neutron services:
       systemctl restart neutron-dhcp-agent
       systemctl restart metadata-agent
 
-### Midonet Nova Integration
+### Nova Integration
