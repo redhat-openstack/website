@@ -214,9 +214,15 @@ The Midolman agent must be installed on all network and compute nodes (in this c
       replication_factor = 1
       cluster = midonet
 
-3. Restart Midolman:
+*   3. Restart Midolman:
 
       systemctl restart midolman.service
+
+*   4. Check to see if Midolman is running:
+
+      ps -ef | grep mido
+
+You should see the process running.
 
 ### Midonet API
 
