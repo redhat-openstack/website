@@ -174,7 +174,7 @@ Use this procedure to install Cassandra on Red Hat Enterprise Linux 7.
 
 *   -   d) Configure the RPC Listen address:
 
-`rpc_listen: `<host_IP>
+`rpc_address: `<host_IP>
 
 *   3. Clean existing system data and restart Cassandra:
 
@@ -183,7 +183,7 @@ Use this procedure to install Cassandra on Red Hat Enterprise Linux 7.
 
 *   4. Test for connectivity by running the following:
 
-      cassandra-cli -h 192.168.100.8 -p 9160
+      cassandra-cli -h `<host_IP>` -p 9160
 
 If everything is ok you should see something similar:
 
