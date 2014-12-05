@@ -15,12 +15,6 @@ The following are the meetups I'm aware of in the coming week where RDO enthusia
 
 If you attend any of these meetups, please take pictures, and send me some. If you blog about the events (and you should), please send me that, too.
 
-*   Thu Dec 4 2014 [Tech Tutorial by Vikram Dham: Let's build MPLS router using SDN](http://www.meetup.com/openvswitch/events/217674872/), Santa Clara, CA, US
-*   Thu Dec 4 2014 [Getting the most out of Cinder - session powered by SolidFire](http://www.meetup.com/OpenStack-Austin/events/207259872/), Austin, TX, US
-*   Thu Dec 4 2014 [Introduction to Red Hat and OpenShift (cohost with UCI ACM)](http://www.meetup.com/Greater-Los-Angeles-Area-Red-Hat-User-Group-RHUG/events/216793342/), Whittier, CA, US
-*   Thu Dec 4 2014 [Software Defined Internet Exchange Points (SDX), and Kinetic - Nick Feamster](http://www.meetup.com/Silicon-Valley-Software-Defined-Networking-Group/events/219008530/), Santa Clara, CA, US
-*   Thu Dec 4 2014 [Best practices for Multi-Cloud operations and orchestration!](http://www.meetup.com/Openstack-Boston/events/207280092/), Boston, MA, US
-*   Thu Dec 4 2014 [South Bay OpenStack Meetup, Beginner track](http://www.meetup.com/openstack/events/185799562/), San Francisco, CA, US
 *   Fri Dec 5 2014 [Regular Friday get-together](http://www.meetup.com/Promoting-Open-Source-Libre-to-the-Canadian-government/events/218704520/), Ottawa, ON, CA
 *   Tue Dec 9 2014 [Workshop: Avoiding Cloud Computing Planning & Implementation Failure](http://www.meetup.com/Vancouver-Enterprise-Cloud-Computing-Users-Group/events/218815702/), Vancouver, BC, CA
 *   Tue Dec 9 2014 [7th OpenStack User Group Nordics meetup](http://www.meetup.com/OpenStack-User-Group-Nordics/events/218754241/), Stockholm, SE
