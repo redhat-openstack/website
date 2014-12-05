@@ -441,19 +441,14 @@ Restart neutron services:
 
 *   1. Please edit your /etc/nova/nova.conf and add/edit the following lines at the END of the file:
 
-[MIDONET]
-
-1.  MidoNet API server URI
-
-midonet_uri = http://10.0.0.13:8081/midonet-api
-
-1.  MidoNet username with admin role in keystone
-
-username=midonet password=midonet
-
-1.  MidoNet provider tenant name
-
-project_id=admin
+      [MIDONET]
+      # MidoNet API server URI 
+      midonet_uri = http://10.0.0.13:8081/midonet-api
+      # MidoNet username with admin role in keystone 
+      username=midonet
+      password=midonet
+      # MidoNet provider tenant name
+      project_id=admin
 
 NOTE: If you have changed your midonet keystone user password please put the new one in here
 
