@@ -56,6 +56,13 @@ By adding SSDs, the price goes up, but the noise and heat go down.
 | PCIe         | Intel 82574L dual-NIC                                        | 55            |
 | Total        |                                                              | 492           |
 
+Points to consider:
+
+*   make sure the processor is Virtualization Enabled
+*   probably want to make sure Mobo has PCIe slot available for additional NICs
+
+<!-- -->
+
     egrep 'vmx|svm' /proc/cpuinfo
 
 ### HP Micro servers
