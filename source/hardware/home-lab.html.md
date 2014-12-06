@@ -47,6 +47,7 @@ By adding SSDs, the price goes up, but the noise and heat go down.
 | Disk         | M4-CT256M4SSD2                                               | 170           |
 | PCIe         | Intel I350 Quad-NIC                                          | 310           |
 | Total        |                                                              | 1017          |
+| &nbsp        | &nbsp                                                        | &nbsp         |
 | Case         | Cooler Master RC-120A-KKN1 Elite 120 Advanced Mini-ITX Tower | 42            |
 | Mother Board | Intel DH61DL                                                 | 75            |
 | Processor    | CPU G620                                                     | 70            |
