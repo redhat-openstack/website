@@ -38,10 +38,22 @@ Estimated cost per node: $275
 
 By adding SSDs, the price goes up, but the noise and heat go down.
 
-| Component | Manufacturer                                                 | Cost (approx) |
-|-----------|--------------------------------------------------------------|---------------|
-| Case      | Cooler Master RC-120A-KKN1 Elite 120 Advanced Mini-ITX Tower | 42            |
-| Case      | Cooler Master RC-120A-KKN1 Elite 120 Advanced Mini-ITX Tower | 42            |
+| Component    | Manufacturer                                                 | Cost (approx) |
+|--------------|--------------------------------------------------------------|---------------|
+| Case         | Cooler Master RC-120A-KKN1 Elite 120 Advanced Mini-ITX Tower | 42            |
+| Mother Board | ASRock Z77E-ITX                                              | 120.00        |
+| Processor    | i5-3570K                                                     | 225           |
+| Memory       | Crucial BLS8G3D1609DS1S00 (2x8GB)                            | 150           |
+| Disk         | M4-CT256M4SSD2                                               | 170           |
+| PCIe         | Intel I350 Quad-NIC                                          | 310           |
+| Total        |                                                              | 1017          |
+| Case         | Cooler Master RC-120A-KKN1 Elite 120 Advanced Mini-ITX Tower | 42            |
+| Mother Board | Intel DH61DL                                                 | 75            |
+| Processor    | CPU G620                                                     | 70            |
+| Memory       | Crucial CMX4GX3M1A1333C9 (2x4GB)                             | 100           |
+| Disk         | SAMSUNG SSD PM83                                             | 150           |
+| PCIe         | Intel 82574L dual-NIC                                        | 55            |
+| Total        |                                                              | 492           |
 
     egrep 'vmx|svm' /proc/cpuinfo
 
