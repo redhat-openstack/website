@@ -6,11 +6,11 @@ wiki_category: Hardware
 wiki_title: Home lab
 wiki_revision_count: 12
 wiki_last_updated: 2015-03-09
-wiki_conversion_fallback: true
-wiki_warnings: conversion-fallback
 ---
 
 # Home lab
+
+__NOTOC__
 
 ## Hardware for a home lab
 
@@ -38,63 +38,10 @@ Estimated cost per node: $275
 
 By adding SSDs, the price goes up, but the noise and heat go down.
 
-Component
-
-Manufacturer
-
-Cost (approx)
-
-Cooler Master RC-120A-KKN1 Elite 120 Advanced Mini-ITX Tower
-
-42 Mother Board
-
-ASRock Z77E-ITX
-
-120.00 Processor
-
-i5-3570K
-
-225 Memory
-
-Crucial BLS8G3D1609DS1S00 (2x8GB)
-
-150 Disk
-
-M4-CT256M4SSD2
-
-170 PCIe
-
-Intel I350 Quad-NIC
-
-310 Total
-
-1017
-
-Cooler Master RC-120A-KKN1 Elite 120 Advanced Mini-ITX Tower
-
-42 Mother Board
-
-Intel DH61DL
-
-75 Processor
-
-CPU G620
-
-70 Memory
-
-Crucial CMX4GX3M1A1333C9 (2x4GB)
-
-100 Disk
-
-SAMSUNG SSD PM83
-
-150 PCIe
-
-Intel 82574L dual-NIC
-
-55 Total
-
-492
+| Component | Manufacturer                                                 | Cost (approx) |
+|-----------|--------------------------------------------------------------|---------------|
+| Case      | Cooler Master RC-120A-KKN1 Elite 120 Advanced Mini-ITX Tower | 42            |
+| Case      | Cooler Master RC-120A-KKN1 Elite 120 Advanced Mini-ITX Tower | 42            |
 
     egrep 'vmx|svm' /proc/cpuinfo
 
@@ -105,3 +52,5 @@ Several people have suggested Gen8 or N54L HP Proliant servers.
 *   Max RAM is 16GB (N54L)
 *   4 drive pays allow for lots of (potentially noisy) storage. 8 drive possible in 2.5".
 *   Start at about $180 (more if you want more RAM)
+
+<Category:Hardware>
