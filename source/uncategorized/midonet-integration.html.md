@@ -412,7 +412,7 @@ Restart neutron services:
 
       systemctl restart neutron-server
       systemctl restart neutron-dhcp-agent
-      systemctl restart metadata-agent
+      systemctl restart neutron-metadata-agent
 
 ### Nova Integration
 
