@@ -443,7 +443,7 @@ Restart neutron services:
 
       [MIDONET]
       # MidoNet API server URI 
-      midonet_uri = http://10.0.0.13:8081/midonet-api
+      midonet_uri = http://<host_IP>:8081/midonet-api
       # MidoNet username with admin role in keystone 
       username=midonet
       password=midonet
