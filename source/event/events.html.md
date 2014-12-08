@@ -42,7 +42,6 @@ If you attend any of these meetups, please take pictures, and send me some. If y
 *   Wed Dec 17 2014 [Cloud Foundry 2014 Wrap-up & Holiday Mixer](http://www.meetup.com/Bluemix/events/219048310/), Santa Clara, CA, US
 *   Wed Dec 17 2014 [Openstack - nova boot --flavor m1.tiny meetup0](http://www.meetup.com/DevOps-MVD/events/213384542/), Montevideo, UY
 *   Wed Dec 17 2014 [OSNW Birthday: Beat the Holidays with an extra dose of knowledge](http://www.meetup.com/OpenStack-Northwest/events/218941697/), Portland, OR, US
-*   Wed Dec 17 2014 [OpenStack DACH Day 2015: Vereinsgründung](http://www.meetup.com/OpenStack-DACH/events/219016150/), Vienna, AT
 *   Wed Dec 17 2014 [OpenStack DACH Day 2015: Vereinsgründung](http://www.meetup.com/openstack-de/events/219117732/), Berlin, DE
 *   Thu Dec 18 2014 [GA Tech + SDN](http://www.meetup.com/AtlantaNPUG/events/219020372/), Atlanta, GA, US
 *   Thu Dec 18 2014 ["Is OpenStack ready for Enterprises?"](http://www.meetup.com/OpenStack-for-Enterprises-NYC/events/218900712/), New York, NY, US
