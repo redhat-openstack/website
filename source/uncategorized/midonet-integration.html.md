@@ -234,7 +234,7 @@ You should see the process running.
 
 <context-param>
 <param-name>`rest_api-base_uri`</param-name>
-<param-value>`http://<host_IP>:8080/midonet-api</param-value>`
+<param-value>`http://<host_IP>:8081/midonet-api</param-value>`
 </context-param>
 <context-param>
 <param-name>`keystone-service_host`</param-name>
