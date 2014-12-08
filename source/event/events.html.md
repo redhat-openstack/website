@@ -28,8 +28,6 @@ If you attend any of these meetups, please take pictures, and send me some. If y
 *   Wed Dec 10 2014 [OpenStackDC Meetup #16](http://www.meetup.com/OpenStackDC/events/197814362/), Washington, DC, US
 *   Wed Dec 10 2014 [Talk Night: IndieWeb, Trends in PHP, OpenStack](http://www.meetup.com/Hack-Sonoma-County/events/218663630/), Sebastopol, CA, US
 *   Thu Dec 11 2014 [OpenStack Distros And Deployment Workshop And More ...](http://www.meetup.com/OpenStack-X/events/210803792/), Köln, DE
-*   Thu Dec 11 2014 [OpenStack Distros And Deployment Workshop](http://www.meetup.com/OpenStack-DACH/events/216772722/), Vienna, AT
-*   Thu Dec 11 2014 [OpenStack Distros And Deployment Workshop](http://www.meetup.com/openstack-de/events/216771952/), Berlin, DE
 *   Thu Dec 11 2014 [Guest Speaker: Red Hat Director of OpenStack Engineering](http://www.meetup.com/openstack-pittsburgh/events/218784742/), Pittsburgh, PA, US
 *   Thu Dec 11 2014 [How to deploy your own Private Cloud with OpenStack](http://www.meetup.com/Kolamba-Cloud-Meetup/events/219015539/), Colombo, LK
 *   Thu Dec 11 2014 [6WIND - DPDK Silicon Valley Meetup](http://www.meetup.com/DPDK_org/events/213924542/), Santa Clara, CA, US
