@@ -19,7 +19,6 @@ If you attend any of these meetups, please take pictures, and send me some. If y
 *   Tue Dec 9 2014 [7th OpenStack User Group Nordics meetup](http://www.meetup.com/OpenStack-User-Group-Nordics/events/218754241/), Stockholm, SE
 *   Tue Dec 9 2014 [OpenStack (plus opening talk on Automation Runbooks)](http://www.meetup.com/bostonazure/events/197954432/), Cambridge, MA, US
 *   Tue Dec 9 2014 [Docker vs Diego vs Cloud Foundry? When to use what.](http://www.meetup.com/Docker-Containers-Cloud-Foundry-PaaS-East-Bay-Meetup/events/216885522/), Pleasanton, CA, US
-*   Tue Dec 9 2014 [SwiftStack, SolidFire & Arista discuss OpenStack in the Enterprise](http://www.meetup.com/openstack/events/219008906/), San Francisco, CA, US
 *   Tue Dec 9 2014 [OpenStack Meetup with SwiftStack, Arista, and SolidFire](http://www.meetup.com/Arista-Networks-Silicon-Valley-User-Group/events/218893404/), Santa Clara, CA, US
 *   Tue Dec 9 2014 [Meetup#12 PaaS avec OpenStack, Solum Docker OpenShift](http://www.meetup.com/OpenStack-France/events/218918493/), Paris, FR
 *   Tue Dec 9 2014 [CloudForms: How can it make your life better?](http://www.meetup.com/Atlanta-Red-Hat-User-Group/events/217357402/), Atlanta, GA, US
