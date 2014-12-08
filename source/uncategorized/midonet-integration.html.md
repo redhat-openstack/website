@@ -16,16 +16,6 @@ Please verify that this is working before proceeding. Most installation issues c
 
 NOTE: Make sure Selinux is disabled (or set to permissive) and both FirewallD and/or IPTables are disabled!
 
-#### Make sure your OS is up to date
-
-Run yum update to make sure the system is running the latest packages. This is required:
-
-      yum update -y
-
-Once this is finished:
-
-      reboot
-
 #### Enabling RDO repositories
 
 Enable the EDO repositories using the following command (as root):
@@ -41,6 +31,16 @@ To enable 'optional' and 'extras' from the RHEL subscription run these commands 
       yum -y install yum-utils
       yum-config-manager --enable rhel-7-server-optional-rpms
       yum-config-manager --enable rhel-7-server-extras-rpms
+
+#### Make sure your OS is up to date
+
+Run yum update to make sure the system is running the latest packages. This is required:
+
+      yum update -y
+
+Once this is finished:
+
+      reboot
 
 #### Install Packstack Installer
 
