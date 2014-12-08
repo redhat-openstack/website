@@ -364,7 +364,7 @@ NOTE: The "--pass midonet" can be "--pass <whateveryouwanthere>" just remember t
 *   4. Create the /etc/neutron/plugins/midonet/midonet.ini file and edit it to contain the following:
 
       [DATABASE]
-      sql_connection = mysql://neutron:NEUTRON_DBPASS@controller/neutron
+      sql_connection = mysql://neutron:NEUTRON_DBPASS@<host_ip>/neutron
       [MIDONET]
       # MidoNet API URL
       midonet_uri = http://<host_IP>:8081/midonet-api
