@@ -20,7 +20,7 @@ All systems must be RHEL 7 instead of Fedora 20. This includes the virtual host 
 
 ## Use RHELOSP instead of RDO
 
-Enable the RHELOSP repositories instead of the RDO and EPEL repositories. This must be done on both the virtual host if using a virtual machine environment and the Undercloud system for both virtual and baremetal environments.. Register to a Satellite Server that configures the RHELOSP 6.0 repositories. Access to the Optional, Extras and HA repositories is also required.
+Enable the RHELOSP repositories instead of the RDO and EPEL repositories. This must be done on both the virtual host if using a virtual machine environment and the Undercloud system for both virtual and baremetal environments.. Register to a Satellite Server that configures the RHELOSP 6.0 repositories. Access to the RHEL 7 Optional, RHEL 7 Extras and RHEL 7 HA repositories is also required.
 
 If not using a Satellite Server, a manually crafted yum repo file that configures the required repositories can be installed under /etc/yum.repos.d.
 
