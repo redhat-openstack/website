@@ -96,6 +96,8 @@ The packages are tested against and supported on Red Hat Enterprise Linux (RHEL)
       enabled=1
       gpgcheck=0
 
+2. Enable the Midonet repositories by creating the /etc/yum.repos.d/midonet.repo file with these entries for Midonet Community:
+
       [midonet] 
       name=MidoNet
       baseurl=http://repo.midonet.org/midonet/v2014.11/RHEL/7/unstable/
@@ -127,7 +129,7 @@ The packages are tested against and supported on Red Hat Enterprise Linux (RHEL)
       enabled=1
       gpgcheck=0
 
-2. Enable the Midokura repositories by creating the /etc/yum.repos.d/midokura.repo file with these entries for Midokura Enterprise Midonet (not the commnity version)::
+2. Enable the Midokura repositories by creating the /etc/yum.repos.d/midokura.repo file with these entries for Midokura Enterprise Midonet (not the commnity version):
 
       [Midokura]
       name=Midokura Repository
