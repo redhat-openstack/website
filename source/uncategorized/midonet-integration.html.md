@@ -96,11 +96,26 @@ The packages are tested against and supported on Red Hat Enterprise Linux (RHEL)
       enabled=1
       gpgcheck=0
 
-[midonet] name=MidoNet baseurl=http://repo.midonet.org/midonet/v2014.11/RHEL/7/unstable/ enabled=1 gpgcheck=1 gpgkey=http://repo.midonet.org/RPM-GPG-KEY-midokura
+      [midonet] 
+      name=MidoNet
+      baseurl=http://repo.midonet.org/midonet/v2014.11/RHEL/7/unstable/
+      enabled=1
+      gpgcheck=1
+      gpgkey=http://repo.midonet.org/RPM-GPG-KEY-midokura
 
-[midonet-openstack-integration] name=MidoNet OpenStack Integration baseurl=http://repo.midonet.org/openstack-icehouse/RHEL/7/unstable/ enabled=1 gpgcheck=1 gpgkey=http://repo.midonet.org/RPM-GPG-KEY-midokura
+      [midonet-openstack-integration]
+      name=MidoNet OpenStack Integration
+      baseurl=http://repo.midonet.org/openstack-icehouse/RHEL/7/unstable/
+      enabled=1
+      gpgcheck=1
+      gpgkey=http://repo.midonet.org/RPM-GPG-KEY-midokura
 
-[midonet-misc] name=MidoNet 3rd Party Tools and Libraries baseurl=http://repo.midonet.org/misc/RHEL/7/misc/ enabled=1 gpgcheck=1 gpgkey=http://repo.midonet.org/RPM-GPG-KEY-midokura
+      [midonet-misc]
+      name=MidoNet 3rd Party Tools and Libraries
+      baseurl=http://repo.midonet.org/misc/RHEL/7/misc/
+      enabled=1
+      gpgcheck=1
+      gpgkey=http://repo.midonet.org/RPM-GPG-KEY-midokura
 
 #### Midokura Enterprise Midonet
 
