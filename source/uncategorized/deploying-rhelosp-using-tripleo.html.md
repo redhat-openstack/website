@@ -55,7 +55,7 @@ Finally, execute `instack-virt-setup`.
 
 ## Prerequisites for `instack-install-undercloud`
 
-Prior to installing the `instack-undercloud` rpm, perform the same steps on the Undercloud as in the above section for <instack-virt-setup>. This must be done on both virtual and baremetal Underclouds.
+Prior to installing the `instack-undercloud` rpm, perform the same steps on the Undercloud as in the above section for [Deploying_RHELOSP_using_TripleO#Prerequisites_for_instack-virt-seutp](Deploying_RHELOSP_using_TripleO#Prerequisites_for_instack-virt-seutp). This must be done on both virtual and baremetal Underclouds.
 
 Then, install the <instack-undercloud> package.
 
