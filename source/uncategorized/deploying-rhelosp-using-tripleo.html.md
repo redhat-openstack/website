@@ -8,7 +8,7 @@ wiki_last_updated: 2014-12-19
 
 # Deploying RHELOSP using TripleO
 
-Red Hat Enterprise Linux OpenStack Platform version 6.0 can be deployed using TripleO. The TripleO tooling includes Tuskar, a UI driven tool for the deployment of OpenStack.
+Red Hat Enterprise Linux OpenStack Platform version 6.0 can be deployed using TripleO. The TripleO tooling includes Tuskar, a UI tool for deploying OpenStack.
 
 The process is largely the same as the process for RDO, so be sure to be familiar with the steps at [Deploying_RDO_using_Instack](Deploying_RDO_using_Instack).
 
