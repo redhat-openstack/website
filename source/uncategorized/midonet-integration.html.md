@@ -84,7 +84,11 @@ Next, we need to SSH into the Packstack system (in this case I am using RHEL 7).
 
 ### Adding the MidoNet Repositories
 
-The packages are tested against and supported on Red Hat Enterprise Linux (RHEL) 7. 1. Enable the DataStax repository by creating the /etc/yum.repos.d/datastax.repo file with this entry:
+The packages are tested against and supported on Red Hat Enterprise Linux (RHEL) 7.
+
+#### Midonet Community
+
+1. Enable the DataStax repository by creating the /etc/yum.repos.d/datastax.repo file with this entry for Midokura Enterprise Midonet (not the commnity version):
 
       [datastax]
       name= DataStax Repo for Apache Cassandra
@@ -92,7 +96,23 @@ The packages are tested against and supported on Red Hat Enterprise Linux (RHEL)
       enabled=1
       gpgcheck=0
 
-2. Enable the Midokura repositories by creating the /etc/yum.repos.d/midokura.repo file with these entries:
+[midonet] name=MidoNet baseurl=http://repo.midonet.org/midonet/v2014.11/RHEL/7/unstable/ enabled=1 gpgcheck=1 gpgkey=http://repo.midonet.org/RPM-GPG-KEY-midokura
+
+[midonet-openstack-integration] name=MidoNet OpenStack Integration baseurl=http://repo.midonet.org/openstack-icehouse/RHEL/7/unstable/ enabled=1 gpgcheck=1 gpgkey=http://repo.midonet.org/RPM-GPG-KEY-midokura
+
+[midonet-misc] name=MidoNet 3rd Party Tools and Libraries baseurl=http://repo.midonet.org/misc/RHEL/7/misc/ enabled=1 gpgcheck=1 gpgkey=http://repo.midonet.org/RPM-GPG-KEY-midokura
+
+#### Midokura Enterprise Midonet
+
+1. Enable the DataStax repository by creating the /etc/yum.repos.d/datastax.repo file with this entry:
+
+      [datastax]
+      name= DataStax Repo for Apache Cassandra
+      baseurl=http://rpm.datastax.com/community
+      enabled=1
+      gpgcheck=0
+
+2. Enable the Midokura repositories by creating the /etc/yum.repos.d/midokura.repo file with these entries for Midokura Enterprise Midonet (not the commnity version)::
 
       [Midokura]
       name=Midokura Repository
