@@ -24,8 +24,6 @@ Enable the RHELOSP repositories instead of the RDO and EPEL repositories. This m
 
 If not using a Satellite Server, a manually crafted yum repo file that configures the required repositories can be installed under /etc/yum.repos.d.
 
-## Prior to installing `instack-undercloud`
-
 Prior to instaling the `instack-undercloud` rpm, the steps in this section must be completed. It's important to note that this must be done on the virtual host if using a virtual machine environment and on the Undercloud (regardless if the Undercloud is virtual or baremetal).
 
 Download the RHEL 7 guest image from the Red Hat Customer Portal [<https://access.redhat.com/downloads/content/69/ver=/rhel>---7/7.0/x86_64/product-downloads]. The guest image must then be hosted on an HTTP(S) server that does not require authentication.
