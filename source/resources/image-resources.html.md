@@ -18,6 +18,7 @@ This is a collection of various OpenStack-ready images of different distribution
 *   Fedora 20: [32-bit](http://cloud.fedoraproject.org/fedora-20.i386.qcow2) / [64 bit](http://cloud.fedoraproject.org/fedora-20.x86_64.qcow2) ([*more info*](http://cloud.fedoraproject.org/))
 *   Fedora 19: [32-bit](http://cloud.fedoraproject.org/fedora-19.i386.qcow2) / [64 bit](http://cloud.fedoraproject.org/fedora-19.x86_64.qcow2) ([*more info*](http://cloud.fedoraproject.org/))
 *   [CentOS 7 images](http://cloud.centos.org/centos/7/images/)
+*   [CentOS 6 images](http://cloud.centos.org/centos/6/images/)
 *   [Ubuntu cloud images](//cloud-images.ubuntu.com/)
 *   [<https://access.redhat.com/downloads/content/69/ver=/rhel>---7/7.0/x86_64/product-downloads RHEL 7 image] (Requires RHEL subscription)
 *   [RHEL 6 image](https://rhn.redhat.com/rhn/software/channel/downloads/Download.do?cid=16952) (Requires RHEL subscription)
