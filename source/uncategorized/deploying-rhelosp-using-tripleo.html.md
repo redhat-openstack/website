@@ -51,12 +51,18 @@ If using a manual yum repo configuration file:
       export BASE_IMAGE_FILE="rhel-guest-image-7.0-20140930.0.x86_64.qcow2"
       export REG_METHOD=disable
 
-Then proceed with installing the <instack-undercloud> rpm.
+Then proceed with installing the `instack-undercloud` rpm.
 
-## Prerequisites for `instack-install-undercloud`
+## Prerequisites for running `instack-install-undercloud`
 
 Prior to running `instack-install-undercloud`, Overcloud images must be built on the Undercloud. The environment variables defined in the previous section must still be set in the current environment.
 
 The following command will create all the Overcloud images, and they will be saved in the current directory.
 
       instack-build-images
+
+## Prerequisites for running `instack-test-overcloud` in a virtual machine environment
+
+Prior to running `instack-test-overcloud` in a virtual machine environment, an updated version of the Fedora cloud image must be downloaded as the RHEL guest image does not boot under qemu only virtualization. Use the following command on the Undercloud to download the updated Fedora cloud image.
+
+`curl -o /home/stack/fedora-user.qcow2 `[`http://dl.fedoraproject.org/pub/alt/openstack/20/x86_64/Fedora-x86_64-20-20140618-sda.qcow2`](http://dl.fedoraproject.org/pub/alt/openstack/20/x86_64/Fedora-x86_64-20-20140618-sda.qcow2)
