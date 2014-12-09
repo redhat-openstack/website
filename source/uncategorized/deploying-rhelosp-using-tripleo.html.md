@@ -50,6 +50,7 @@ If using a manual yum repo configuration file:
       # The name of the guest image downloaded from the Red Hat Customer Portal
       export BASE_IMAGE_FILE="rhel-guest-image-7.0-20140930.0.x86_64.qcow2"
       export REG_METHOD=disable
+      export REG_HALT_UNREGISTER=1
 
 Then proceed with installing the `instack-undercloud` rpm.
 
