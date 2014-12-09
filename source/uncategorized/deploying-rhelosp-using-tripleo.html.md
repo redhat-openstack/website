@@ -24,9 +24,11 @@ Enable the RHELOSP repositories instead of the RDO and EPEL repositories. This m
 
 If not using a Satellite Server, a manually crafted yum repo file that configures the required repositories can be installed under /etc/yum.repos.d.
 
-## Prerequisites for `instack-virt-seutp`
+## Prior to installing `instack-undercloud`
 
-Prior to running `instack-virt-setup`, download the RHEL 7 guest image from the Red Hat Customer Portal [<https://access.redhat.com/downloads/content/69/ver=/rhel>---7/7.0/x86_64/product-downloads]. The guest image must then be hosted on an HTTP(S) server that does not require authentication.
+Prior to instaling the `instack-undercloud` rpm, the steps in this section must be completed. It's important to note that this must be done on the virtual host if using a virtual machine environment and on the Undercloud (regardless if the Undercloud is virtual or baremetal).
+
+Download the RHEL 7 guest image from the Red Hat Customer Portal [<https://access.redhat.com/downloads/content/69/ver=/rhel>---7/7.0/x86_64/product-downloads]. The guest image must then be hosted on an HTTP(S) server that does not require authentication.
 
 If using a Satellite Server:
 
@@ -51,14 +53,12 @@ If using a manual yum repo configuration file:
       export BASE_IMAGE_FILE="rhel-guest-image-7.0-20140930.0.x86_64.qcow2"
       export REG_METHOD=disable
 
-Finally, execute `instack-virt-setup`.
+Then proceed with installing the <instack-undercloud> rpm.
 
 ## Prerequisites for `instack-install-undercloud`
 
-Prior to installing the `instack-undercloud` rpm, perform the same steps on the Undercloud as in the above section for [Deploying_RHELOSP_using_TripleO#Prerequisites_for_instack-virt-seutp](Deploying_RHELOSP_using_TripleO#Prerequisites_for_instack-virt-seutp). This must be done on both virtual and baremetal Underclouds.
+Prior to running `instack-install-undercloud`, Overcloud images must be built on the Undercloud. The environment variables defined in the previous section must still be set in the current environment.
 
-Then, install the <instack-undercloud> package.
-
-Next, Overcloud images must be built on the Undercloud. They will be created in the current directory. The environment variables defined in the previous section must still be set in the current environment.
+The following command will create all the Overcloud images, and they will be saved in the current directory.
 
       instack-build-images
