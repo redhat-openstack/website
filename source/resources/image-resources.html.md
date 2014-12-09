@@ -14,6 +14,7 @@ wiki_last_updated: 2015-07-22
 
 This is a collection of various OpenStack-ready images of different distributions and operating systems.
 
+*   Fedora 21 [cloud images](https://getfedora.org/en/cloud/download/)
 *   Fedora 20: [32-bit](http://cloud.fedoraproject.org/fedora-20.i386.qcow2) / [64 bit](http://cloud.fedoraproject.org/fedora-20.x86_64.qcow2) ([*more info*](http://cloud.fedoraproject.org/))
 *   Fedora 19: [32-bit](http://cloud.fedoraproject.org/fedora-19.i386.qcow2) / [64 bit](http://cloud.fedoraproject.org/fedora-19.x86_64.qcow2) ([*more info*](http://cloud.fedoraproject.org/))
 *   [CentOS 7 images](http://cloud.centos.org/centos/7/devel/)
