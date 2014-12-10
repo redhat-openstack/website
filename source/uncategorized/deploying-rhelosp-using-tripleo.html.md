@@ -31,7 +31,7 @@ Download the RHEL 7 guest image from the Red Hat Customer Portal [<https://acces
 If using a Satellite Server:
 
       export RHOS=1
-      export  NODE_DIST="rhel7"
+      export NODE_DIST="rhel7"
       export DIB_CLOUD_IMAGES="`[`http://`](http://)<server>`/path/to/directory/containing/guest/image"
       # The name of the guest image downloaded from the Red Hat Customer Portal
       export BASE_IMAGE_FILE="rhel-guest-image-7.0-20140930.0.x86_64.qcow2"
@@ -46,7 +46,7 @@ If using a Satellite Server:
 If using a manual yum repo configuration file:
 
  export RHOS=1
- export  NODE_DIST="rhel7"
+ export NODE_DIST="rhel7"
  export DIB_YUM_REPO_CONF=/etc/yum.repos.d/<rhelosp-repo-file>`.repo`
       export DIB_CLOUD_IMAGES="`[`http://`](http://)<server>`/path/to/directory/containing/guest/image"
       # The name of the guest image downloaded from the Red Hat Customer Portal
