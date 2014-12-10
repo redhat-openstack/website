@@ -8,13 +8,13 @@ wiki_last_updated: 2015-01-13
 
 # Using NetApp for Cinder with RDO
 
-It is possible to have Packstack configure Cinder to use NetApp storage devices as its backend. Cinder supports:
+It is possible to have Packstack configure Cinder to use NetApp storage devices as backends for providing block storage capabilities to OpenStack users. The NetApp driver for Cinder supports:
 
 *   NetApp Clustered Data ONTAP (NFS/iSCSI)
 *   NetApp Data ONTAP in 7-Mode (NFS/iSCSI)
 *   NetApp E-Series (iSCSI)
 
-If Packstack is not already installed, follow steps 1 & 2 in the [RDO Quickstart](http://openstack.redhat.com/Quickstart) guide to get it installed. OpenStack deployments through Packstack can be configured via arguments to the `packstack` command or via a generated answer file.
+If Packstack is not already installed, follow steps 1 & 2 in the [RDO Quickstart](http://openstack.redhat.com/Quickstart) guide to get it installed.
 
 **Important:** For information regarding best practices using NetApp storage with Cinder and other OpenStack services, see the [NetApp Deployment and Operations Guide](http://netapp.github.io/openstack-deploy-ops-guide/). If you have any questions, you can get in touch with us on the [NetApp OpenStack Community](http://community.netapp.com/t5/OpenStack-Discussions/bd-p/openstack-discussions) page or join us on IRC in the #openstack-netapp channel on Freenode!
 
@@ -64,6 +64,8 @@ When the answer file has been edited with your specific environment variables, r
     packstack --answer-file=~/packstack-answer.txt
 
 Packstack will alert you if any required parameters are missing or have incorrect values and then start the install.
+
+If you have any trouble creating Cinder volumes after the installation has finished, the log file found at `/var/log/cinder/volume.log` is a good place to begin troubleshooting. If you have any questions, drop us a line!
 
 ## Configure via command line arguments
 
