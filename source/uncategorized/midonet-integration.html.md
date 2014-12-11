@@ -84,7 +84,7 @@ Next, we need to SSH into the Packstack system (in this case I am using RHEL 7).
 
 ### Adding the MidoNet Repositories
 
-The packages are tested against and supported on Red Hat Enterprise Linux (RHEL) 7.
+The packages are tested against and supported on Red Hat Enterprise Linux (RHEL) 7. Add either the MidoNet Community repos or the Midokura Enterprise MidoNet repos.
 
 #### Midonet Community
 
