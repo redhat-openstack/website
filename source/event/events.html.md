@@ -31,11 +31,6 @@ If you attend any of these meetups, please take pictures, and send me some. If y
 *   Friday, December 19 [Introduction to Red Hat and OpenShift (cohost with South Bay LAJUG)](http://www.meetup.com/Greater-Los-Angeles-Area-Red-Hat-User-Group-RHUG/events/217273042/), Whittier, CA, US
 *   Friday, December 19 [South Bay OpenStack Meetup, Beginner track](http://www.meetup.com/openstack/events/218900735/), San Francisco, CA, US
 
-<!-- -->
-
-*   Thu Dec 18 2014 [Introduction to Red Hat and OpenShift (cohost with South Bay LAJUG)](http://www.meetup.com/Greater-Los-Angeles-Area-Red-Hat-User-Group-RHUG/events/217273042/), Whittier, CA, US
-*   Thu Dec 18 2014 [South Bay OpenStack Meetup, Beginner track](http://www.meetup.com/openstack/events/218900735/), San Francisco, CA, US
-
 See also upcoming [Hangouts](Hangouts) and the [openstack.org events listing](http://www.openstack.org/community/events/).
 
 Support your local [OpenStack user group](https://wiki.openstack.org/wiki/OpenStack_User_Groups)
