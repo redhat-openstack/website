@@ -15,18 +15,6 @@ The following are the meetups I'm aware of in the coming week where RDO enthusia
 
 If you attend any of these meetups, please take pictures, and send me some. If you blog about the events (and you should), please send me that, too.
 
-*   Tue Dec 9 2014 [Workshop: Avoiding Cloud Computing Planning & Implementation Failure](http://www.meetup.com/Vancouver-Enterprise-Cloud-Computing-Users-Group/events/218815702/), Vancouver, BC, CA
-*   Tue Dec 9 2014 [7th OpenStack User Group Nordics meetup](http://www.meetup.com/OpenStack-User-Group-Nordics/events/218754241/), Stockholm, SE
-*   Tue Dec 9 2014 [OpenStack (plus opening talk on Automation Runbooks)](http://www.meetup.com/bostonazure/events/197954432/), Cambridge, MA, US
-*   Tue Dec 9 2014 [Docker vs Diego vs Cloud Foundry? When to use what.](http://www.meetup.com/Docker-Containers-Cloud-Foundry-PaaS-East-Bay-Meetup/events/216885522/), Pleasanton, CA, US
-*   Tue Dec 9 2014 [OpenStack Meetup with SwiftStack, Arista, and SolidFire](http://www.meetup.com/Arista-Networks-Silicon-Valley-User-Group/events/218893404/), Santa Clara, CA, US
-*   Tue Dec 9 2014 [Meetup#12 PaaS avec OpenStack, Solum Docker OpenShift](http://www.meetup.com/OpenStack-France/events/218918493/), Paris, FR
-*   Tue Dec 9 2014 [CloudForms: How can it make your life better?](http://www.meetup.com/Atlanta-Red-Hat-User-Group/events/217357402/), Atlanta, GA, US
-*   Wed Dec 10 2014 [Online Meetup: Automating OpenStack clouds and beyond w/ StackStorm](http://www.meetup.com/Cloud-Online-Meetup/events/218805038/), Mountain View, CA, US
-*   Wed Dec 10 2014 [Scalable Multi-tenant Logging, Metrics and Monitoring as a Service for OpenStack](http://www.meetup.com/Cloud-Platform-at-Symantec/events/218914623/), Mountain View, CA, US
-*   Wed Dec 10 2014 [What's New in GlusterFS 3.6](http://www.meetup.com/GlusterFS-Silicon-Valley/events/180465522/), Mountain View, CA, US
-*   Wed Dec 10 2014 [OpenStackDC Meetup #16](http://www.meetup.com/OpenStackDC/events/197814362/), Washington, DC, US
-*   Wed Dec 10 2014 [Talk Night: IndieWeb, Trends in PHP, OpenStack](http://www.meetup.com/Hack-Sonoma-County/events/218663630/), Sebastopol, CA, US
 *   Thu Dec 11 2014 [OpenStack Distros And Deployment Workshop And More ...](http://www.meetup.com/OpenStack-X/events/210803792/), Köln, DE
 *   Thu Dec 11 2014 [Guest Speaker: Red Hat Director of OpenStack Engineering](http://www.meetup.com/openstack-pittsburgh/events/218784742/), Pittsburgh, PA, US
 *   Thu Dec 11 2014 [How to deploy your own Private Cloud with OpenStack](http://www.meetup.com/Kolamba-Cloud-Meetup/events/219015539/), Colombo, LK
