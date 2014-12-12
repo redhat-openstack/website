@@ -21,9 +21,9 @@ First, download the composed Wordpress example with::
 
 `$ wget `[`https://raw.github.com/openstack/heat-templates/master/cfn/F17/WordPress_Composed_Instances.template`](https://raw.github.com/openstack/heat-templates/master/cfn/F17/WordPress_Composed_Instances.template)
 
-Next, register a pre-built cfntools image with glance. Note the command automatically downloads the image. For reference, pre-built Fedora images are available from: <http://fedorapeople.org/groups/heat/prebuilt-jeos-images/>.
+Next, register a pre-built cfntools image with glance. Note the command automatically downloads the image. For reference, pre-built Fedora images are available from: <https://getfedora.org/cloud/download/>.
 
-`$ glance image-create --name F17-x86_64-cfntools --disk-format qcow2 --container-format bare --is-public True --copy-from `[`http://fedorapeople.org/groups/heat/prebuilt-jeos-images/F17-x86_64-cfntools.qcow2`](http://fedorapeople.org/groups/heat/prebuilt-jeos-images/F17-x86_64-cfntools.qcow2)
+`$ glance image-create --name Fedora-Cloud-Base-20141203-21.x86_64 --disk-format qcow2 --container-format bare --is-public True --copy-from `[`http://download.fedoraproject.org/pub/fedora/linux/releases/21/Cloud/Images/x86_64/Fedora-Cloud-Base-20141203-21.x86_64.qcow2`](http://download.fedoraproject.org/pub/fedora/linux/releases/21/Cloud/Images/x86_64/Fedora-Cloud-Base-20141203-21.x86_64.qcow2)
 
 Upload your public key in nova to make sure you'll be able to login on the VMs using SSH::
 
