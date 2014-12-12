@@ -22,6 +22,8 @@ Since RDO sticks closely to the upstream OpenStack project, the documentation at
 
 #### [Quickstart](Quickstart)
 
+#### [Packaging Guides](https://openstack.redhat.com/packaging/index.html)
+
 #### [ Installation and configuration](Install)
 
 <small>[Running_an_instance](Running_an_instance), [Image_resources](Image_resources), [Adding_a_compute_node](Adding_a_compute_node), [Troubleshooting](Troubleshooting), [Uninstalling_RDO](Uninstalling_RDO), [More](Install) ...</small>
