@@ -18,7 +18,6 @@ If you attend any of these meetups, please take pictures, and send me some. If y
 *   Wednesday, December 17 [CloudAustin December: The Twelve Clouds of Christmas](http://www.meetup.com/CloudAustin/events/212248062/), Austin, TX, US
 *   Wednesday, December 17 [A production deployment of SaltStack 2014.7](http://www.meetup.com/SaltStack-user-group-Silicon-Valley/events/219088938/), Mountain View, CA, US
 *   Tuesday, December 16 [DevOps Belfast - OpenStack, building your own cloud.](http://www.meetup.com/DevOps-Belfast/events/215956092/), Belfast, R3, GB
-*   Wednesday, December 17 [nova boot --flavor m1.tiny meetup0](http://www.meetup.com/OpenStack-Uruguay/events/219071916/), Montevideo, UY
 *   Wednesday, December 17 [Openstack - nova boot --flavor m1.tiny meetup0](http://www.meetup.com/DevOps-MVD/events/213384542/), Montevideo, UY
 *   Thursday, December 18 [Group based Policy in OpenDaylight](http://www.meetup.com/OpenDaylight-Silicon-Valley/events/219221090/), Mountain View, CA, US
 *   Thursday, December 18 [OSNW Birthday: Beat the Holidays with an extra dose of knowledge](http://www.meetup.com/OpenStack-Northwest/events/218941697/), Portland, OR, US
