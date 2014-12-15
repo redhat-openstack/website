@@ -24,7 +24,7 @@ Enable the EDO repositories using the following command (as root):
 
 To enable the EPEL repository use this command:
 
-      su -c 'rpm -Uvh http://download.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-2.noarch.rpm'
+      su -c 'rpm -Uvh http://download.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-5.noarch.rpm'
 
 To enable 'optional' and 'extras' from the RHEL subscription run these commands (as root):
 
