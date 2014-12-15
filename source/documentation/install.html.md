@@ -18,7 +18,7 @@ While the [Quickstart](Quickstart) is sufficient for an initial test deployment,
 
 ### Installation
 
-*   [ Quick start guide (RDO Icehouse)](Quickstart)
+*   [ Quick start guide (RDO Juno](Quickstart)
 *   [ Deploying RDO using Foreman](Deploying RDO using Foreman)
 
 ### Configuration
