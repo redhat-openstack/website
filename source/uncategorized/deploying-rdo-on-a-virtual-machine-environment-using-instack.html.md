@@ -85,7 +85,6 @@ RHEL 7, registered with the customer portal
       export REG_PASSWORD="[your password]"
       export REG_USER="[your username]"
       export REG_REPOS="rhel-7-server-extras-rpms rhel-ha-for-rhel-7-server-rpms rhel-7-server-optional-rpms"
-      export REG_HALT_UNREGISTER=1
 
 6. Run scripts to install required dependencies
 
