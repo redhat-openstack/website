@@ -24,7 +24,7 @@ Start with a working packstack installation with neutron on Fedora 20 x86_64, su
 
 Install the server and client RPMs:
 
-`yum install `[`https://rkukura.fedorapeople.org/test/openstack-neutron-gbp-2014.2-0.2.acb85f0git.fc20.noarch.rpm`](https://rkukura.fedorapeople.org/test/openstack-neutron-gbp-2014.2-0.2.acb85f0git.fc20.noarch.rpm)
+`yum install `[`https://rkukura.fedorapeople.org/test/openstack-neutron-gbp-2014.2-0.4.rc1.fc20.noarch.rpm`](https://rkukura.fedorapeople.org/test/openstack-neutron-gbp-2014.2-0.4.rc1.fc20.noarch.rpm)
 `yum install `[`https://rkukura.fedorapeople.org/test/python-gbpclient-0.1-0.2.7821534git.fc20.noarch.rpm`](https://rkukura.fedorapeople.org/test/python-gbpclient-0.1-0.2.7821534git.fc20.noarch.rpm)
 
 Stop the neutron server:
