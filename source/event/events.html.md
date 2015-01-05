@@ -15,20 +15,30 @@ The following are the meetups I'm aware of in the coming week where RDO enthusia
 
 If you attend any of these meetups, please take pictures, and send me some. If you blog about the events (and you should), please send me that, too.
 
-*   Wednesday, December 17 [CloudAustin December: The Twelve Clouds of Christmas](http://www.meetup.com/CloudAustin/events/212248062/), Austin, TX, US
-*   Wednesday, December 17 [A production deployment of SaltStack 2014.7](http://www.meetup.com/SaltStack-user-group-Silicon-Valley/events/219088938/), Mountain View, CA, US
-*   Tuesday, December 16 [DevOps Belfast - OpenStack, building your own cloud.](http://www.meetup.com/DevOps-Belfast/events/215956092/), Belfast, R3, GB
-*   Wednesday, December 17 [Openstack - nova boot --flavor m1.tiny meetup0](http://www.meetup.com/DevOps-MVD/events/213384542/), Montevideo, UY
-*   Thursday, December 18 [Group based Policy in OpenDaylight](http://www.meetup.com/OpenDaylight-Silicon-Valley/events/219221090/), Mountain View, CA, US
-*   Thursday, December 18 [OSNW Birthday: Beat the Holidays with an extra dose of knowledge](http://www.meetup.com/OpenStack-Northwest/events/218941697/), Portland, OR, US
-*   Wednesday, December 17 [OpenStack DACH Day 2015: Vereinsgründung](http://www.meetup.com/OpenStack-DACH/events/219016150/), Vienna, AT
-*   Thursday, December 18 [Online Meetup: DefCore - making OpenStack standard and interoperable](http://www.meetup.com/Cloud-Online-Meetup/events/219190801/), Mountain View, CA, US
-*   Thursday, December 18 ["Is OpenStack ready for Enterprises?"](http://www.meetup.com/OpenStack-for-Enterprises-NYC/events/218900712/), New York, NY, US
-*   Friday, December 19 [Introduction to Red Hat and OpenShift (cohost with South Bay LAJUG)](http://www.meetup.com/Greater-Los-Angeles-Area-Red-Hat-User-Group-RHUG/events/217273042/), Whittier, CA, US
-*   Friday, December 19 [South Bay OpenStack Meetup, Beginner track](http://www.meetup.com/openstack/events/218900735/), San Francisco, CA, US
-*   Friday, December 19 [OpenStack Meetup (Topic TBD)](http://www.meetup.com/openstack-atlanta/events/218782182/), Atlanta, GA, US
-*   Saturday, December 20 [SDN Tech Talk:OpenStack Networking(Neutron) &ONOS(Open Network Operating System)](http://www.meetup.com/sdneer/events/219249488/), Beijing, CN
-*   Sunday, December 21 [OpenStack技术论坛](http://www.meetup.com/China-OpenStack-User-Group/events/219206776/), Beijing, CN
+*   Thursday, January 08 [January 2015 OpenStack Meetup - neutron networking presentation](http://www.meetup.com/OpenStack-DFW/events/218257912/), Richardson, TX, US
+*   Thursday, January 08 [Scalable Multi-tenant Logging, Metrics and Monitoring as a Service for OpenStack](http://www.meetup.com/Cloud-Platform-at-Symantec/events/218914623/), Mountain View, CA, US
+*   Wednesday, January 07 [OpenStack in the Real World with Guy Daley, Cisco & Expert Panel](http://www.meetup.com/OpenStack-Israel/events/219529193/), Tel Aviv-Yafo, IL
+*   Friday, January 09 [Let's talk about identity management in the cloud](http://www.meetup.com/Cloud-Builders/events/218844510/), San Francisco, CA, US
+*   Friday, January 09 [Introduction to Red Hat and OpenShift (cohost with SGVLUG)](http://www.meetup.com/Greater-Los-Angeles-Area-Red-Hat-User-Group-RHUG/events/216795442/), Whittier, CA, US
+*   Saturday, January 10 [#寻找OpenStack SuperUser#第一期](http://www.meetup.com/China-OpenStack-User-Group/events/219586084/), Beijing, CN
+*   Saturday, January 10 [OpenStack Mini Meetup, Chennai](http://www.meetup.com/Indian-OpenStack-User-Group/events/219428900/), Bangalore, IN
+*   Sunday, January 11 [OpenStack India Meetup, Bangalore](http://www.meetup.com/Indian-OpenStack-User-Group/events/219475318/), Bangalore, IN
+*   Monday, January 12 [NFV & Open Networking Meet-up @Red Hat](http://www.meetup.com/IGTCloud/events/219419466/), Tel Aviv-Yafo, IL
+*   Tuesday, January 13 [OpenStackDC Meetup #17](http://www.meetup.com/OpenStackDC/events/218760179/), Washington, DC, US
+*   Tuesday, January 13 [Joint Meetup with OpenStack DC Meetup Group](http://www.meetup.com/Cloud-Foundry-Community-DC/events/219267040/), Washington, DC, US
+*   Wednesday, January 14 [L.A. Cloud Engineeering Group Monthly Meetup](http://www.meetup.com/Enterprise-Cloud/events/213093822/), El Segundo, CA, US
+*   Thursday, January 15 [First Calgary OpenStack Meetup!](http://www.meetup.com/Calgary-OpenStack-Meetup/events/219503704/), Calgary, AB, CA
+*   Wednesday, January 14 [OpenStack Neutron networking and more - double header event!](http://www.meetup.com/Openstack-Boston/events/218862617/), Boston, MA, US
+*   Thursday, January 15 [At the Crossroads of HPC and Cloud Computing with OpenStack](http://www.meetup.com/chicagoacm/events/219410203/), Chicago, IL, US
+*   Thursday, January 15 [Let's Talk About OpenStack!](http://www.meetup.com/OpenStack-Richmond/events/219346809/), Henrico, VA, US
+*   Thursday, January 15 ["Mix-and-match your Cloud"](http://www.meetup.com/OpenStack-for-Enterprises-NYC/events/219241367/), New York, NY, US
+*   Friday, January 16 [Deep Dive into Trove and Preview OpenStack Kilo](http://www.meetup.com/OpenStack-Austin/events/218860202/), Austin, TX, US
+*   Thursday, January 15 [2nd OpenDaylight and SDN meetup](http://www.meetup.com/London-SDN-ODLUG/events/218972643/), London, 17, GB
+*   Thursday, January 15 [DevOps for OpenStack - Migrating a Major Bank to OpenStack, with Vassil Avramov](http://www.meetup.com/OpenStack-Israel/events/219611133/), Tel Aviv-Yafo, IL
+*   Friday, January 16 [OpenStack Meetup (Topic TBD)](http://www.meetup.com/openstack-atlanta/events/218782169/), Atlanta, GA, US
+*   Friday, January 16 [Openstack Introductory Meetup](http://www.meetup.com/Lahore-OpenStack-Meetup/events/219586680/), Lahore, PK
+*   Saturday, January 17 [DevStack Saturday Jan 17 Harmony Lib Fort Collins](http://www.meetup.com/OpenStack-Colorado/events/219497398/), Fort Collins, CO, US
+*   Monday, January 19 [OpenStack Bootcamp Nürnberg](http://www.meetup.com/OpenStack-Munich/events/219374350/), München, DE
 
 See also upcoming [Hangouts](Hangouts) and the [openstack.org events listing](http://www.openstack.org/community/events/).
 
