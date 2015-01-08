@@ -60,7 +60,7 @@ These steps will setup your virtual host for a virtual environment for testing t
 
 If on RHEL 7, enable the EPEL repository too
 
-` sudo yum install -y `[`http://download.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-2.noarch.rpm`](http://download.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-2.noarch.rpm)
+` sudo yum install -y `[`http://download.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-5.noarch.rpm`](http://download.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-5.noarch.rpm)
 
 4 . Install the instack-undercloud package.
 
