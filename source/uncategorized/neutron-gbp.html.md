@@ -22,6 +22,8 @@ Note that this describes use of the GBP's resource_mapping reference policy driv
 
 Start with a working Packstack installation with Neutron on Fedora 20 x86_64, such as is described in [Quickstart](Quickstart). The remaining steps are all executed as root on the controller node(s) where neutron-server runs. No changes are needed on compute or network nodes when using the resource_mapping policy driver.
 
+### Configuring Neutron
+
 Install the server and client RPMs:
 
 `yum install `[`https://rkukura.fedorapeople.org/gbp/openstack-neutron-gbp-2014.2-1.fc20.noarch.rpm`](https://rkukura.fedorapeople.org/gbp/openstack-neutron-gbp-2014.2-1.fc20.noarch.rpm)
@@ -44,6 +46,10 @@ Start the Neutron server and check its status:
 
       systemctl start neutron-server
       systemctl status neutron-server
+
+### Configuring Horizon
+
+### Configuring Heat
 
 ## Using GBP
 
