@@ -49,6 +49,16 @@ Start the Neutron server and check its status:
 
 ### Configuring Horizon
 
+Install the RPMs:
+
+`yum install `[`https://rkukura.fedorapeople.org/gbp/python-django-horizon-gbp-2014.2-1.fc20.noarch.rpm`](https://rkukura.fedorapeople.org/gbp/python-django-horizon-gbp-2014.2-1.fc20.noarch.rpm)
+`yum install `[`https://rkukura.fedorapeople.org/gbp/openstack-dashboard-gbp-2014.2-1.fc20.noarch.rpm`](https://rkukura.fedorapeople.org/gbp/openstack-dashboard-gbp-2014.2-1.fc20.noarch.rpm)
+
+Restart the web server and check its status:
+
+      systemctl restart httpd
+      systemctl status httpd
+
 ### Configuring Heat
 
 ## Using GBP
