@@ -80,7 +80,7 @@ You are now ready to deploy your Overcloud. Start by clicking on 'Overview' in t
 
 Your Overcloud is now deploying.
 
-**4. Initialize overcloud**
+**4. Initialize the Overcloud**
 
 After the Overcloud is deployed, you will still need to initialize Overcloud services. To do so simply click on the 'Initialize' button. A form will appear detailing various initialization parameters; the defaults will be sufficient. Press 'Initialize' to start the initialization process.
 
