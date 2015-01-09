@@ -72,7 +72,7 @@ Both options lead to a node registration form where you can choose to have auto-
 
 If you choose not to use auto-discovery, fill in any missing node attributes and submit the form. Your nodes are now registered and viewable in the 'Free' tab.
 
-If you use auto-discovery, your nodes will appear in the 'Maintenance' tab instead with the status 'Discovering'. Wait a few minutes, and the status will change to 'Discovered'; their attributes will appear as well. Now you can choose to 'Activate' these nodes, and they will appear in the 'Free' tab. If you don't see any updates in the 'Maintenance' tab after discovery is complete, refresh your browswer. The page does not auto-update.
+If you use auto-discovery, your nodes will appear in the 'Maintenance' tab instead with the status 'Discovering'. Wait a few minutes, and the status will change to 'Discovered'; their attributes will appear as well. Now you can choose to 'Activate' these nodes, and they will appear in the 'Free' tab. If you don't see any updates in the 'Maintenance' tab after discovery is complete, refresh your browser. The page does not auto-update.
 
 **3. Deploy the Overcloud**
 
