@@ -61,6 +61,19 @@ Restart the web server and check its status:
 
 ### Configuring Heat
 
+Install the RPM:
+
+`yum install `[`https://rkukura.fedorapeople.org/gbp/openstack-heat-gbp-2014.2-1.fc20.noarch.rpm`](https://rkukura.fedorapeople.org/gbp/openstack-heat-gbp-2014.2-1.fc20.noarch.rpm)
+
+Edit the Heat configuration to include the GBP plugin:
+
+      crudini --set /etc/heat/heat.conf DEFAULT plugin_dirs "/usr/lib64/heat,/usr/lib/heat,/usr/lib/python2.7/site-packages/gbpautomation/heat"
+
+Restart the Heat engine and check its status:
+
+      systemctl start openstack-heat-engine
+      systemctl status openstack-heat-engine
+
 ## Using GBP
 
 Once the neutron server is configured with GBP and running, basic operation can be verified using its API. The following commands are run with normal cloud tenant credentials on a system where the python-gbpclient package has been installed.
