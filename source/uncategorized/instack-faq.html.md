@@ -149,7 +149,7 @@ If new images are made available for download, or you build new images, you will
 
 ## How do I view the Undercloud Dashboard when using a remote virt host?
 
-If you're virt host is a remote system, and not the same system that you're running your web browser from, you can create an ssh tunnel from the virt host to the instack virtual machine for connectivity. On the virt host enter the following:
+If your virt host is a remote system, and not the same system that you're running your web browser from, you can create an ssh tunnel from the virt host to the instack virtual machine for connectivity. On the virt host enter the following:
 
        sudo iptables -I INPUT -p tcp --dport 8080 -j ACCEPT
       `  ssh -g -N -L 8080:192.168.122.55:80 `hostname` `
