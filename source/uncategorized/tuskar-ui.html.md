@@ -88,6 +88,14 @@ Once this is complete, the 'Overview' page will show you the credentials needed 
 
 ## Advanced Usage
 
+### Flavor management
+
+Flavors are hardware templates that define RAM, disk, number of cores, architecture etc. Each Role is associated to certain Flavor.
+
+Flavors can be managed in Flavors tab in main navigation. To define a new Flavor, user can go two ways: Suggested flavors: They are based on registered nodes hardware configuration. Create Flavor by clicking "plus" action button at the table row. Suggested flavor can also be edited before Flavor is created from it. Defining a Flavor from scratch using "New Flavor" top action button.
+
+Filterable table below Suggested flavors lists all Flavors. From here, by clicking Flavor name, it is possible to display Flavor detail and Roles associated to it.
+
 ### Development installation
 
 If you wish to create a development installation of the Tuskar-UI, install as described in the [Quick Install instructions](https://openstack.redhat.com/Tuskar-UI#Quick_Install) first.
