@@ -32,7 +32,7 @@ If you attend any of these meetups, please take pictures, and send me some. If y
 *   Friday, January 16 [Meetup pour le Cloud Openstack & Eureka](http://www.meetup.com/Versailles-Cloud-based-Social-Media-Meetup/events/219600743/), Versailles, FR
 *   Saturday, January 17 [DevStack Saturday Jan 17 Harmony Lib Fort Collins](http://www.meetup.com/OpenStack-Colorado/events/219497398/), Fort Collins, CO, US
 *   Monday, January 19 [OpenStack Bootcamp Nürnberg](http://www.meetup.com/OpenStack-Munich/events/219374350/), München, DE
-*   Tuesday, January 20 [Come Join Us to Hear About HyperFast OpenStack Storage with CloudFounders!](http://www.meetup.com/openstack/events/219308937/), San Francisco, CA, US
+*   Monday, January 19 [Come Join Us to Hear About HyperFast OpenStack Storage with CloudFounders!](http://www.meetup.com/openstack/events/219308937/), San Francisco, CA, US
 *   Monday, January 19 [OpenStack Meetup Nürnberg](http://www.meetup.com/OpenStack-Munich/events/219374402/), München, DE
 *   Tuesday, January 20 [Implementaciónes de OpenStack, consideraciones basicas](http://www.meetup.com/OpenStack-GDL/events/219763969/), Guadalajara, MX
 *   Tuesday, January 20 [OpenStack 3 Days Training](http://www.meetup.com/IGTCloud/events/218924765/), Tel Aviv-Yafo, IL
