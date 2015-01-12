@@ -71,7 +71,7 @@ Edit the Heat configuration to include the GBP plugin:
 
 Restart the Heat engine and check its status:
 
-      systemctl start openstack-heat-engine
+      systemctl restart openstack-heat-engine
       systemctl status openstack-heat-engine
 
 ## Using GBP
