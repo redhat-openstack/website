@@ -19,7 +19,7 @@ If you attend any of these meetups, please take pictures, and send me some. If y
 *   Tuesday, January 13 [Online Meetup: Build a rock-solid foundation under your OpenStack cloud](http://www.meetup.com/Cloud-Online-Meetup/events/219714843/), Mountain View, CA, US
 *   Tuesday, January 13 [OpenStack India Meetup, New Delhi](http://www.meetup.com/Indian-OpenStack-User-Group/events/219637729/), Bangalore, IN
 *   Tuesday, January 13 [OpenStackDC Meetup #17](http://www.meetup.com/OpenStackDC/events/218760179/), Washington, DC, US
-*   Thursday, January 15 [First Calgary OpenStack Meetup!](http://www.meetup.com/Calgary-OpenStack-Meetup/events/219503704/), Calgary, AB, CA
+*   Thursday, January 14 [First Calgary OpenStack Meetup!](http://www.meetup.com/Calgary-OpenStack-Meetup/events/219503704/), Calgary, AB, CA
 *   Wednesday, January 14 [OpenStack Neutron networking and more - double header event!](http://www.meetup.com/Openstack-Boston/events/218862617/), Boston, MA, US
 *   Wednesday, January 14 [DevOps for OpenStack - Migrating a Major Bank to OpenStack, with Vassil Avramov](http://www.meetup.com/OpenStack-Israel/events/219611133/), Tel Aviv-Yafo, IL
 *   Thursday, January 15 [At the Crossroads of HPC and Cloud Computing with OpenStack](http://www.meetup.com/chicagoacm/events/219410203/), Chicago, IL, US
