@@ -92,9 +92,12 @@ Once this is complete, the 'Overview' page will show you the credentials needed 
 
 Flavors are hardware templates that define RAM, disk, number of cores, architecture etc. Each Role is associated to certain Flavor.
 
-Flavors can be managed in Flavors tab in main navigation. To define a new Flavor, user can go two ways: Suggested flavors: They are based on registered nodes hardware configuration. Create Flavor by clicking "plus" action button at the table row. Suggested flavor can also be edited before Flavor is created from it. Defining a Flavor from scratch using "New Flavor" top action button.
+Flavors can be managed in the Flavors tab in the main navigation. Users can define new Flavors two different ways:
 
-Filterable table below Suggested flavors lists all Flavors. From here, by clicking Flavor name, it is possible to display Flavor detail and Roles associated to it.
+*   Suggested flavors: They are based on registered nodes hardware configuration. Create a Flavor by clicking the "plus" action button at the table row. Suggested flavor can also be edited before Flavor is created from it.
+*   Definine a Flavor from scratch using the "New Flavor" top action button.
+
+The filterable table below Suggested flavors lists all Flavors. From here, by clicking Flavor name, it is possible to display Flavor detail and Roles associated to it.
 
 ### Development installation
 
