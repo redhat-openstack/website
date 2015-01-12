@@ -24,7 +24,7 @@ If you attend any of these meetups, please take pictures, and send me some. If y
 *   Wednesday, January 14 [DevOps for OpenStack - Migrating a Major Bank to OpenStack, with Vassil Avramov](http://www.meetup.com/OpenStack-Israel/events/219611133/), Tel Aviv-Yafo, IL
 *   Thursday, January 15 [At the Crossroads of HPC and Cloud Computing with OpenStack](http://www.meetup.com/chicagoacm/events/219410203/), Chicago, IL, US
 *   Thursday, January 15 ["Mix-and-match your Cloud"](http://www.meetup.com/OpenStack-for-Enterprises-NYC/events/219241367/), New York, NY, US
-*   Friday, January 16 [Deep Dive into Trove and Preview OpenStack Kilo](http://www.meetup.com/OpenStack-Austin/events/218860202/), Austin, TX, US
+*   Thursday, January 15 [Deep Dive into Trove and Preview OpenStack Kilo](http://www.meetup.com/OpenStack-Austin/events/218860202/), Austin, TX, US
 *   Thursday, January 15 [2nd OpenDaylight and SDN meetup](http://www.meetup.com/London-SDN-ODLUG/events/218972643/), London, 17, GB
 *   Friday, January 16 [OpenStack Meetup (Topic TBD)](http://www.meetup.com/openstack-atlanta/events/218782169/), Atlanta, GA, US
 *   Friday, January 16 [January 15th meetup with Red Hat](http://www.meetup.com/meetup-group-NjZdcegA/events/219665949/), Chicago, IL, US
