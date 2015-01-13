@@ -35,7 +35,9 @@ If using RHEL, then RDO and EPEL need the "Optional channel" enabled. On RHEL7, 
          $ subscription-manager repos --enable rhel-7-server-optional-rpms
          $ subscription-manager repos --enable rhel-7-server-extras-rpms
 
-If using CentOS or Scientific Linux, there is no such optional repository, as those packages are included in the main repositories for those distributions. Extras is enabled by default on CentOS7.
+If using CentOS or Scientific Linux, there is no such optional repository**[\*]**, as those packages are included in the main repositories for those distributions. Extras is enabled by default on CentOS7.
+
+**[\*]** NOTE: For CentOS, it is assumed that you're using packages from its Cloud SIG repository -- <http://cbs.centos.org/repos/cloud7-testing/x86_64/os/Packages/> -- if you're not using this repository, then EPEL repos still need to be defined for CentOS to satisfy all dependencies for OpenStack packages.
 
 ### RHEL-Z
 
