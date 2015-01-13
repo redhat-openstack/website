@@ -12,7 +12,7 @@ RDO conducts periodic Google Hangouts on a variety of OpenStack-related topics. 
 
 ## Upcoming Hangouts
 
-Stay tuned. We should have another hangout schedule real soon.
+February 9th, 1400 UTC (9am Eastern US time), What's coming in Kilo Ceilometer, with Eoghan Glynn.
 
 ## Past Hangouts
 
