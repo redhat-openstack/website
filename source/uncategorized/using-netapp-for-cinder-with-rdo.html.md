@@ -37,6 +37,7 @@ The Packstack parameters are the same as those found in the docs, but in all cap
     CONFIG_CINDER_NETAPP_SERVER_PORT=80
     CONFIG_CINDER_NETAPP_LOGIN=username
     CONFIG_CINDER_NETAPP_PASSWORD=password
+    CONFIG_CINDER_NETAPP_NFS_SHARES=192.168.1.1:/cinder1,192.168.1.2:/cinder2
     CONFIG_CINDER_NETAPP_NFS_SHARES_CONFIG=/etc/cinder/nfs_shares
     ...
 
@@ -54,10 +55,7 @@ generates the following in `cinder.conf`:
     netapp_password=password
     nfs_shares_config=/etc/cinder/nfs_shares
 
-**Note:** At this time, you need to manually create the file passed into the `nfs_shares_config` parameters. In the above case, create the /etc/cinder folder and in the file in this format:
-
-    hostname:/share
-    10.0.0.1:/share
+**Note:** The NFS shares in the `nfs_shares` parameter are written to the file in the location specified by `nfs_shares_config`.
 
 When the answer file has been edited with your specific environment variables, run Packstack with:
 
