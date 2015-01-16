@@ -119,6 +119,38 @@ Service configuration page is accessible from the main navigation. It lists conf
 
 User is allowed to set configuration for reduced list of options in the form that is accessed by clicking "Edit configuration" page action button.
 
+### Node Management
+
+Node registration is covered in this section: <https://openstack.redhat.com/Tuskar-UI#Register_nodes>.
+
+#### Viewing Nodes Information
+
+Information about existing nodes can be accessed by navigating to Nodes on the left-hand side navigation menu.
+
+The first tab, Overview, shows general aggregated information about existing nodes. On the left-hand side, hardware information, provisioning status and power status are displayed. On the right-hand side, you can view the graphs containing information from Ceilometer.
+
+The remaining four tabs (All, Provisioned, Free and Maintenance) show tabular information about corresponding nodes.
+
+#### Viewing Node Details
+
+Clicking on a particular node will take you to the detail page for that node. On this page you can view additional information, including hardware inventory, deployment related details, as well as Ceilometer graph metrics for that node.
+
+#### Node Actions
+
+Actions can be performed on a single node, or on a group of nodes (batch actions). To perform an action on a single node, you can either press the corresponding button in the "Actions" column of the tabular node view, or press the button on the node detail page. To perform a batch action on a group of nodes, you need to select the nodes using the checkboxes in the tabular view, and press the desired action button above the table.
+
+##### Delete
+
+To delete nodes, use the "Delete Nodes" button. Note that it is only possible to delete a node if the node is both free (non deployed) and powered off.
+
+##### Power on/off
+
+To power nodes on or off, use the corresponding "Power On Nodes"/"Power Off Nodes" buttons.
+
+##### Activate
+
+To activate nodes (move them from the maintenance state to the free state), use the "Activate Nodes" button.
+
 ### Development installation
 
 If you wish to create a development installation of the Tuskar-UI, install as described in the [Quick Install instructions](https://openstack.redhat.com/Tuskar-UI#Quick_Install) first.
