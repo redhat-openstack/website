@@ -202,3 +202,29 @@ The role list command will display the roles that are available to be added to a
 ## Advanced Install
 
 In the quick usage above, we rely on instack for most of the interactions with Tuskar. For a more custom install, we can follow these steps manually. They make use of the tuskar commands described above to interact with the Tuskar API.
+
+1. First initialise the command line enviroment, this will load the credentials and default settings for a deployment.
+
+         source ~/deploy-overcloudrc
+         source ~/tripleo-undercloud-passwords
+         source ~/stackrc
+         source /usr/share/instack-undercloud/deploy-virt-overcloudrc
+
+2. We need to retrieve the Plan ID from the API which will then be used for future communication with the API. This command can also be used to verify that the roles have been added to the deployment plan.
+
+         tuskar plan-list
+
+3. You will then need to update the the plan to set the attributes required by each role. This can be done with the following command.
+
+         tuskar plan-patch -A $KEY=$VALUE $PLAN_ID
+
+4. After the plan has been configured, you can retrieve the full plan as Heat Orchestration Templates with the following command.
+
+         tuskar plan-templates -o tuskar_templates $PLAN_ID
+
+5. You should now be ready to send the plan to Heat. This can be done with the following command.
+
+         head stack-create \
+             -f tuskar_templates/plan.yml \
+             -e tuskar_templates/environment.yml \
+             overcloud
