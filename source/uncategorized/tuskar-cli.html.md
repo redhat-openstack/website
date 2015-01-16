@@ -197,7 +197,7 @@ The role list command will display the roles that are available to be added to a
         | b106841c-6fbe-4a78-afff-3cfccb509861 | swift-storage  | 1       | Common Swift Storage Configuration                             |
         +--------------------------------------+----------------+---------+----------------------------------------------------------------+
 
-## Advanced Install
+## Advanced Usage
 
 In the quick usage above, we rely on instack for most of the interactions with Tuskar. For a more custom install, we can follow these steps manually. They make use of the tuskar commands described above to interact with the Tuskar API.
 
