@@ -82,6 +82,19 @@ usage: tuskar plan-create [-d <DESCRIPTION>] name
 
 Where name is the name of the plan to create. Description is an optional argument specifying a user-readable text for describing the Plan.
 
+        $ tuskar plan-create -d 'My Plan' my_plan
+        +-------------+--------------------------------------+
+        | Property    | Value                                |
+        +-------------+--------------------------------------+
+        | created_at  | 2015-01-16T14:27:34                  |
+        | description | My Plan                              |
+        | name        | my_plan                              |
+        | parameters  |                                      |
+        | roles       |                                      |
+        | updated_at  | None                                 |
+        | uuid        | e09572b6-eed2-41c0-9d98-f7d5d0872ff8 |
+        +-------------+--------------------------------------+
+
 ### tuskar plan-delete
 
 Delete a plan given a UUID.
