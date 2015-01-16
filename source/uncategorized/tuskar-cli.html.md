@@ -152,6 +152,9 @@ Delete a plan given a UUID.
 
 usage: tuskar plan-delete <PLAN UUID>
 
+        $ tuskar plan-delete e09572b6-eed2-41c0-9d98-f7d5d0872ff8
+        Deleted Plan "my_plan".
+
 ### tuskar plan-remove-role
 
 Remove role from a plan.
