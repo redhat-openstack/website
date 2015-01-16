@@ -16,9 +16,9 @@ We recommend using Instack to setup the undercloud with Tuskar. Follow the [Inst
 
 ## Quick Usage
 
-Once Tuskar is successfully installed in the undercloud with Instack the following steps can be used to deploy the overcloud.
+Once Tuskar has been successfully installed in the undercloud with Instack the following steps can be used to deploy the overcloud.
 
-1. First initialise the command line enviroment, this will load the credentials and default settings for a deployment.
+1. First, initialise the command line enviroment, this will load the credentials and default settings for a deployment.
 
          source ~/deploy-overcloudrc
          source ~/tripleo-undercloud-passwords
