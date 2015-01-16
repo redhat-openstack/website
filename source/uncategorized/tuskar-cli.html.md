@@ -103,10 +103,10 @@ The role list command will display the roles that are available to be added to a
         | uuid                                 | name           | version | description                                                    |
         +--------------------------------------+----------------+---------+----------------------------------------------------------------+
         | 0932afdb-39b3-41bc-b530-359e487e79e4 | compute        | 1       | OpenStack hypervisor node. Can be wrapped in a ResourceGroup fo|
-        |                                      |                |         |                                                                |
+        |                                      |                |         | r scaling.                                                     |
         | 62e7ca60-98a4-4231-b793-9d546c2bd1c9 | cinder-storage | 1       | Common Block Storage Configuration                             |
         | 79caea1a-f8fc-4eee-b663-40f89744382c | controller     | 1       | OpenStack control plane node. Can be wrapped in a ResourceGroup|
-        |                                      |                |         |                                                                |
+        |                                      |                |         | for scaling.                                                   |
         | b106841c-6fbe-4a78-afff-3cfccb509861 | swift-storage  | 1       | Common Swift Storage Configuration                             |
         +--------------------------------------+----------------+---------+----------------------------------------------------------------+
 
