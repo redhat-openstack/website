@@ -51,21 +51,34 @@ The default settines will deploy the control role to one node and the compute ro
 
 The Tuskar command line interface has a number of commands for interacting with the Tuskar API.
 
+### tuskar plan-list
+
+The tuskar plan-list command wil output a list of all of the plans in the Tuskar API. Currently this is limited to one plan with the name overcloud. Example output from this command can be seen below.
+
+         $ tuskar plan-list
+         +--------------------------------------+-----------+-------------+----------------------------------------------------+
+         | uuid                                 | name      | description | roles                                              |
+         +--------------------------------------+-----------+-------------+----------------------------------------------------+
+         | d9ac81d2-1f69-450d-91d3-64fed8081e8f | overcloud | None        | controller, swift-storage, compute, cinder-storage |
+         +--------------------------------------+-----------+-------------+----------------------------------------------------+
+
 ### tuskar plan-show
 
-test
+The plan show command will display the full details of your plan and the roles which have been added to it.
 
-*   tuskar plan-patch
-*   tuskar plan-templates
+### tuskar plan-patch
 
-<!-- -->
+### tuskar plan-templates
 
-*   tuskar plan-add-role
-*   tuskar plan-create
-*   tuskar plan-delete
-*   tuskar plan-list
-*   tuskar plan-remove-role
-*   tuskar role-list
+### tuskar plan-add-role
+
+### tuskar plan-create
+
+### tuskar plan-delete
+
+### tuskar plan-remove-role
+
+### tuskar role-list
 
 ## Detailed Install
 
