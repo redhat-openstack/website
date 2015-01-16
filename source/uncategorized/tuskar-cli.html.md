@@ -129,6 +129,19 @@ Remove role from a plan.
 
 usage: tuskar plan-remove-role -r <ROLE UUID> <PLAN UUID>
 
+        $ tuskar plan-remove-role -r 79caea1a-f8fc-4eee-b663-40f89744382c e09572b6-eed2-41c0-9d98-f7d5d0872ff8           
+        +-------------+--------------------------------------------------------------------------------------------------------------------+
+        | Property    | Value                                                                                                              |
+        +-------------+--------------------------------------------------------------------------------------------------------------------+
+        | created_at  | 2015-01-16T14:27:34                                                                                                |
+        | description | My Plan                                                                                                            |
+        | name        | my_plan                                                                                                            |
+        | parameters  | default= `<SNIP DETAILS>`                                                                                            |
+        | roles       |                                                                                                                    |
+        | updated_at  | None                                                                                                               |
+        | uuid        | e09572b6-eed2-41c0-9d98-f7d5d0872ff8                                                                               |
+        +-------------+--------------------------------------------------------------------------------------------------------------------+
+
 ### tuskar role-list
 
 The role list command will display the roles that are available to be added to a plan. This command takes no arguments.
