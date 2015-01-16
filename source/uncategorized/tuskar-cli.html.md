@@ -88,6 +88,10 @@ usage: tuskar plan-show <PLAN UUID>
 
 ### tuskar plan-patch
 
+Update a plan with KEY=VALUE pairs.
+
+usage: tuskar plan-patch [-h] [-A <KEY1=VALUE1>] plan_uuid
+
 ### tuskar plan-templates
 
 ### tuskar plan-add-role
