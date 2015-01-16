@@ -68,6 +68,24 @@ The plan show command will display the full details of your plan and the roles w
 
 usage: tuskar plan-show <PLAN UUID>
 
+        $ tuskar plan-show e09572b6-eed2-41c0-9d98-f7d5d0872ff8
+        +-------------+--------------------------------------------------------------------------------------------------------------------+
+        | Property    | Value                                                                                                              |
+        +-------------+--------------------------------------------------------------------------------------------------------------------+
+        | created_at  | 2015-01-16T14:27:34                                                                                                |
+        | description | My Plan                                                                                                            |
+        | name        | my_plan                                                                                                            |
+        | parameters  | default= `<SNIP DETAILS>`                                                                                            |
+        | roles       | description=OpenStack control plane node. Can be wrapped in a ResourceGroup for scaling.                           |
+        |             |                                                                                                                    |
+        |             | name=controller                                                                                                    |
+        |             | uuid=79caea1a-f8fc-4eee-b663-40f89744382c                                                                          |
+        |             | version=1                                                                                                          |
+        |             |                                                                                                                    |
+        | updated_at  | None                                                                                                               |
+        | uuid        | e09572b6-eed2-41c0-9d98-f7d5d0872ff8                                                                               |
+        +-------------+--------------------------------------------------------------------------------------------------------------------+
+
 ### tuskar plan-patch
 
 ### tuskar plan-templates
