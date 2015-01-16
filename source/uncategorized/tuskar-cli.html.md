@@ -94,6 +94,13 @@ usage: tuskar plan-patch [-h] [-A <KEY1=VALUE1>] plan_uuid
 
 ### tuskar plan-templates
 
+Output the templates associated with the given plan to OUTPUT_DIR.
+
+usage: tuskar plan-templates -O
+
+<OUTPUT DIR>
+plan_uuid
+
 ### tuskar plan-add-role
 
 Associate role to a plan. The role uuid can be found with 'tuskar role-list'.
