@@ -76,6 +76,10 @@ The plan show command will display the full details of your plan and the roles w
 
 ### tuskar plan-delete
 
+Delete a plan given a UUID.
+
+usage: tuskar plan-delete <PLAN UUID>
+
 ### tuskar plan-remove-role
 
 Remove role from a plan.
