@@ -25,25 +25,27 @@ Once Tuskar has been successfully installed in the undercloud with Instack the f
          source ~/stackrc
          source /usr/share/instack-undercloud/deploy-virt-overcloudrc
 
-2. You are now ready to start the deployment with the following command.
+2. You are now ready to start the default deployment with the following command.
 
          instack-deploy-overcloud --tuskar
 
-The default settines will deploy the control role to one node and the compute role to one node.
+The default settings will deploy the control role to one node and the compute role to one node.
 
-3. To scale your deployment or add new roles to unused nodes, you can scale the deployment. The following commands will deploy four roles over four nodes.
+3. You can scale your deployment or add new roles easily by defining the number of nodes for a role. The following commands will deploy four roles over four nodes.
 
          export CONTROLSCALE=1
          export COMPUTESCALE=1
          export BLOCKSTORAGESCALE=1
          export SWIFTSTORAGESCALE=1
-         instack-deploy-overcloud --tuskar
+         instack-update-overcloud --tuskar
 
 **Note:** Currenlty scale down is not supported.
 
 4. You can view the state of your baremetal machines and their state with the nova client which is already installed and will be usable after setting up the enviroment in step 1.
 
          nova baremetal-node-list
+
+See the [nova documentation](http://docs.openstack.org/cli-reference/content/novaclient_commands.html) for futher details around using the nova client.
 
 ## Command Line Interface
 
