@@ -76,6 +76,12 @@ usage: tuskar plan-show <PLAN UUID>
 
 ### tuskar plan-create
 
+Create a new plan.
+
+usage: tuskar plan-create [-d <DESCRIPTION>] name
+
+Where name is the name of the plan to create. Description is an optional argument specifying a user-readable text for describing the Plan.
+
 ### tuskar plan-delete
 
 Delete a plan given a UUID.
