@@ -222,7 +222,9 @@ In the quick usage above, we rely on instack for most of the interactions with T
 
 5. You should now be ready to send the plan to Heat. This can be done with the following command.
 
-         head stack-create \
+         heat stack-create \
              -f tuskar_templates/plan.yml \
              -e tuskar_templates/environment.yml \
              overcloud
+
+See the [Heat client documentation](http://docs.openstack.org/user-guide-admin/content/heat_client_commands.html) for more details on it's usage.
