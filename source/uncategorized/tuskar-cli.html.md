@@ -78,6 +78,10 @@ The plan show command will display the full details of your plan and the roles w
 
 ### tuskar plan-remove-role
 
+Remove role from a plan.
+
+usage: tuskar plan-remove-role -r <ROLE UUID> <PLAN UUID>
+
 ### tuskar role-list
 
 The role list command will display the roles that are available to be added to a plan. This command takes no arguments.
