@@ -101,6 +101,15 @@ usage: tuskar plan-templates -O
 <OUTPUT DIR>
 plan_uuid
 
+        $ tuskar plan-templates -O templates 344441e0-c2ba-4a0d-a857-51f35057fc53
+        Following templates has been written:
+        templates/plan.yaml
+        templates/environment.yaml
+        templates/provider-swift-storage-1.yaml
+        templates/provider-cinder-storage-1.yaml
+        templates/provider-controller-1.yaml
+        templates/provider-compute-1.yaml
+
 ### tuskar plan-add-role
 
 Associate role to a plan. The role uuid can be found with 'tuskar role-list'.
