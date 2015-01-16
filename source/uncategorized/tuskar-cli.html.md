@@ -41,7 +41,7 @@ The default settines will deploy the control role to one node and the compute ro
          export SWIFTSTORAGESCALE=1
          instack-deploy-overcloud --tuskar
 
-*   -   Note:\*\* Currenlty scale down is nt supported.
+**Note:** Currenlty scale down is not supported.
 
 4. You can view the state of your baremetal machines and their state with the nova client which is already installed and will be usable after setting up the enviroment in step 1.
 
