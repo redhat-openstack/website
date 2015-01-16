@@ -51,14 +51,20 @@ The default settines will deploy the control role to one node and the compute ro
 
 The Tuskar command line interface has a number of commands for interacting with the Tuskar API.
 
+### tuskar plan-show
+
+test
+
+*   tuskar plan-patch
+*   tuskar plan-templates
+
+<!-- -->
+
 *   tuskar plan-add-role
 *   tuskar plan-create
 *   tuskar plan-delete
 *   tuskar plan-list
-*   tuskar plan-patch
 *   tuskar plan-remove-role
-*   tuskar plan-show
-*   tuskar plan-templates
 *   tuskar role-list
 
 ## Detailed Install
