@@ -88,6 +88,20 @@ Once this is complete, the 'Overview' page will show you the credentials needed 
 
 ## Advanced Usage
 
+### Post Deployment Management
+
+#### Viewing Deployment Details
+
+After the Overcloud is deployed, you can access the information about the current deployment on the Overview page. Overcloud access information, which includes Overcloud Horizon URL, username and password, will be displayed on the left-hand side. On the right-hand side, you can see the role configuration (i.e. number of nodes assigned to each role).
+
+#### Scaling Up
+
+If you wish to add nodes to an existing deployment, you may do so using the "Scale-out" option on the Overview page. After pressing the "Scale-out" button, the "Scale-out Deployment" dialog will appear. Using this dialog, you may modify the number of nodes assigned to each role. Two things to note here. Firstly, only scaling up is supported, meaning the number of nodes can only be increased and not decreased. Secondly, number of Controller nodes can only be increased by two at a time (i.e. you can only have an odd number of controller nodes: 1, 3, 5, etc). After modifying the number of nodes for each role, press the "Deploy Changes" button, and the deployment will start updating to reflect the changes you have just made.
+
+#### Removing Deployment
+
+If you wish do remove an existing deployment, you may do so using the "Undeploy" option on the Overview page. After pressing the "Undeploy" button, a confirmation dialog will appear, asking you to confirm that you want to remove your deployment. Press the "Undeploy" button to confirm this, and the deployment removal will start.
+
 ### Flavor management
 
 Flavors are hardware templates that define RAM, disk, number of cores, architecture etc. Each Role is associated to certain Flavor.
