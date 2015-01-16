@@ -66,6 +66,8 @@ The tuskar plan-list command wil output a list of all of the plans in the Tuskar
 
 The plan show command will display the full details of your plan and the roles which have been added to it.
 
+usage: tuskar plan-show <PLAN UUID>
+
 ### tuskar plan-patch
 
 ### tuskar plan-templates
