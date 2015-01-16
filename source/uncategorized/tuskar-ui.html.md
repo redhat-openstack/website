@@ -99,6 +99,12 @@ Flavors can be managed in the Flavors tab in the main navigation. Users can defi
 
 The filterable table below Suggested flavors lists all Flavors. From here, by clicking Flavor name, it is possible to display Flavor detail and Roles associated to it.
 
+### Service configuration
+
+Service configuration page is accessible from the main navigation. It lists configuration options for OpenStack services which are divided into multiple sections. First is global configuration followed by services configuration for each role. All configuration options are read only. User can get more information about each configuration option by clicking the question mark icon next to the option label.
+
+User is allowed to set configuration for reduced list of options in the form that is accessed by clicking "Edit configuration" page action button.
+
 ### Development installation
 
 If you wish to create a development installation of the Tuskar-UI, install as described in the [Quick Install instructions](https://openstack.redhat.com/Tuskar-UI#Quick_Install) first.
