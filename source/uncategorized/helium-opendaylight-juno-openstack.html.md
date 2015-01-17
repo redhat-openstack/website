@@ -180,7 +180,7 @@ This next script will attempt to clean up any namespaces, ports or bridges still
       echo "Delete vxlan_xxx if present"
       sudo ovs-dpctl show
 
-At this point the control node should be clean so now clean up the control node. Use the above two steps to clean anything up. Then use the following script to stop the openvswitch agent and reset OpenvSwitch:
+At this point the control node should be clean so now clean up the compute node. Use the above two steps to clean anything up. Then use the following script to stop the openvswitch agent and reset OpenvSwitch:
 
       service neutron-openvswitch-agent stop
       sudo systemctl disable neutron-openvswitch-agent
