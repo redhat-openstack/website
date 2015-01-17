@@ -63,6 +63,7 @@ Packstack does not have support for OpenDaylight yet so we need to do manual ste
 
       service neutron-server stop
       service neutron-openvswitch-agent stop
+      sudo systemctl disable neutron-openvswitch-agent
 
       # Stops, cleans and restarts openvswitch and logs captured.
 
