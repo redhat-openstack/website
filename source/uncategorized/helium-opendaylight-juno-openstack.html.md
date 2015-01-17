@@ -61,8 +61,8 @@ If you hit this error [Fedora20: packstack gives undefined method \`split' for n
 
 Packstack does not have support for OpenDaylight yet so we need to do manual steps to enable the support. The below steps will disable the openvswitch agent, add ML2 OpenDaylight support and restart neutron. Recall that in this setup the OpenDaylight controll is running on the host at 192.168.120.1. Change the value below if you have a different address.
 
-      service neutron-server stop
-      service neutron-openvswitch-agent stop
+      sudo systemctl stop neutron-server
+      sudo systemctl stop neutron-openvswitch-agent
       sudo systemctl disable neutron-openvswitch-agent
 
       # Stops, cleans and restarts openvswitch and logs captured.
