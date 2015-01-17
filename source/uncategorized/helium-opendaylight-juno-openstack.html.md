@@ -90,7 +90,7 @@ Packstack does not have support for OpenDaylight yet so we need to do manual ste
 
 ## Clean Up Networking on Nodes
 
-By default the allinone install created OpenvSwitch bridges and OpenStack projects that just pollutes the setup so we will clean up everything. I also ran some vxlan tunnel tests with using the standard ml2 OpenvSwitch setup and I believe that is where many extra crumbs were left.
+By default the allinone install created OpenvSwitch bridges and OpenStack projects that just pollutes the setup so we will clean up everything. The neutron-openvswitch-agent also needs to be stopped and disabled. This is because OpenDaylight replaces the l2 agent. I also ran some vxlan tunnel tests with using the standard ml2 OpenvSwitch setup and I believe that is where many extra crumbs were left.
 
 This script is more of a template for some neutron commands to run to clean out the existing projects and networks. If your system is clean there is no need to run the commands. Use the neutron list commands to see if these steps are needed.
 
@@ -182,6 +182,7 @@ This next script will attempt to clean up any namespaces, ports or bridges still
 At this point the control node should be clean so now clean up the control node. Use the above two steps to clean anything up. Then use the following script to stop the openvswitch agent and reset OpenvSwitch:
 
       service neutron-openvswitch-agent stop
+      sudo systemctl disable neutron-openvswitch-agent
 
       # Stops, cleans and restarts openvswitch and logs captured.
 
