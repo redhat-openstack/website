@@ -87,7 +87,7 @@ Packstack does not have support for OpenDaylight yet so we need to do manual ste
       mysql -e "grant all on neutron_ml2.* to 'neutron'@'%';"
       neutron-db-manage --config-file /usr/share/neutron/neutron-dist.conf --config-file /etc/neutron/neutron.conf --config-file /etc/neutron/plugin.ini upgrade head
 
-      service neutron-server start
+      sudo systemctl start neutron-server
 
 ## Clean Up Networking on Nodes
 
