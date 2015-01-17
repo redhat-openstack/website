@@ -100,12 +100,12 @@ This script is more of a template for some neutron commands to run to clean out 
 
       neutron net-list
       neutron dhcp-agent-list-hosting-net vx-net
-      neutron dhcp-agent-network-remove 993b7e46-437f-4a39-852c-13c32fdea3b3 vx-net
+      neutron dhcp-agent-network-remove <subnet UUID from previous command> vx-net
 
       neutron router-list
       neutron router-port-list vx-rtr
       neutron router-interface-delete vx-rtr <subnet_id>
-      neutron router-gateway-clear vx-rtr <subnetid> - the 172.x address
+      neutron router-gateway-clear vx-rtr <subnet_id> - the 172.x address
       neutron router-delete vx-rtr
 
       neutron subnet-list
@@ -182,7 +182,7 @@ This next script will attempt to clean up any namespaces, ports or bridges still
 
 At this point the control node should be clean so now clean up the compute node. Use the above two steps to clean anything up. Then use the following script to stop the openvswitch agent and reset OpenvSwitch:
 
-      service neutron-openvswitch-agent stop
+      sudo systemctl stop neutron-openvswitch-agent
       sudo systemctl disable neutron-openvswitch-agent
 
       # Stops, cleans and restarts openvswitch and logs captured.
