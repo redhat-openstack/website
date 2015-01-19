@@ -20,8 +20,8 @@ If you attend any of these meetups, please take pictures, and send me some. If y
 *   Monday, January 19 [OpenStack Meetup Nürnberg](http://www.meetup.com/OpenStack-Munich/events/219374402/), München, DE
 *   Tuesday, January 20 [Implementaciónes de OpenStack, consideraciones basicas](http://www.meetup.com/OpenStack-GDL/events/219763969/), Guadalajara, MX
 *   Tuesday, January 20 [OpenStack 3 Days Training](http://www.meetup.com/IGTCloud/events/218924765/), Tel Aviv-Yafo, IL
-*   Wednesday, January 21 [State of the Cloudy Union](http://www.meetup.com/CloudAustin/events/218793700/), Austin, TX, US
-*   Wednesday, January 21 [January Openstack meetup](http://www.meetup.com/OpenStack-STL/events/219684702/), Chesterfield, MO, US
+*   Tuesday, January 20 [State of the Cloudy Union](http://www.meetup.com/CloudAustin/events/218793700/), Austin, TX, US
+*   Tuesday, January 20 [January Openstack meetup](http://www.meetup.com/OpenStack-STL/events/219684702/), Chesterfield, MO, US
 *   Tuesday, January 20 [Meetup #13 Ops : Comment gérer une production OpenStack](http://www.meetup.com/OpenStack-France/events/219689511/), Paris, FR
 *   Wednesday, January 21 [Online Meetup: Introduction into Ceph storage for OpenStack](http://www.meetup.com/Cloud-Online-Meetup/events/219855488/), Mountain View, CA, US
 *   Wednesday, January 21 [1/21 Afternoon Meet w/ You @ Shanghai JiaoTong University](http://www.meetup.com/Shanghai-OpenStack-Meetup/events/219803691/), Shanghai, CN
