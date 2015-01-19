@@ -16,7 +16,7 @@ The following are the meetups I'm aware of in the coming week where RDO enthusia
 If you attend any of these meetups, please take pictures, and send me some. If you blog about the events (and you should), please send me that, too.
 
 *   Monday, January 19 [OpenStack Bootcamp Nürnberg](http://www.meetup.com/OpenStack-Munich/events/219374350/), München, DE
-*   Tuesday, January 20 [Come Join Us to Hear About HyperFast OpenStack Storage with CloudFounders!](http://www.meetup.com/openstack/events/219308937/), San Francisco, CA, US
+*   Monday, January 19 [Come Join Us to Hear About HyperFast OpenStack Storage with CloudFounders!](http://www.meetup.com/openstack/events/219308937/), San Francisco, CA, US
 *   Monday, January 19 [OpenStack Meetup Nürnberg](http://www.meetup.com/OpenStack-Munich/events/219374402/), München, DE
 *   Tuesday, January 20 [Implementaciónes de OpenStack, consideraciones basicas](http://www.meetup.com/OpenStack-GDL/events/219763969/), Guadalajara, MX
 *   Tuesday, January 20 [OpenStack 3 Days Training](http://www.meetup.com/IGTCloud/events/218924765/), Tel Aviv-Yafo, IL
