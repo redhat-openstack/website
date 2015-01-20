@@ -57,6 +57,43 @@ Now we should have a functioning setup using ML2 and OpenvSwitch networking. You
 
 If you hit this error [Fedora20: packstack gives undefined method \`split' for nil:NilClass](https://bugzilla.redhat.com/show_bug.cgi?id=1080481) then increase the memory for the VM to 4GB.
 
+## Clean Up Networking on Nodes
+
+By default the allinone install created OpenvSwitch bridges and OpenStack projects that just pollutes the setup so if you did not use
+
+    --provision-demo=n
+
+, we will clean up everything before changing Neutron's configuration. Once we have switched Neutro to using ML2 to OpenDaylight, we will need to stop and disable neutron-openvswitch-agent on all hosts. This is because OpenDaylight replaces the l2 agent and manages the remote vSwitches directly. I also ran some vxlan tunnel tests with using the standard ml2 OpenvSwitch setup and I believe that is where many extra crumbs were left.
+
+This script is more of a template for some neutron commands to run to clean out the existing projects and networks. If your system is clean there is no need to run the commands. Use the neutron list commands to see if these steps are needed.
+
+      neutron port-list
+      neutron port-delete id
+
+      neutron net-list
+      neutron dhcp-agent-list-hosting-net vx-net
+      neutron dhcp-agent-network-remove <subnet UUID from previous command> vx-net
+
+      neutron router-list
+      neutron router-port-list vx-rtr
+      neutron router-interface-delete vx-rtr <subnet_id>
+      neutron router-gateway-clear vx-rtr <subnet_id> - the 172.x address
+      neutron router-delete vx-rtr
+
+      neutron subnet-list
+      neutron subnet-list id|name
+      neutron subnet-delete private-subnet
+
+      neutron net-list
+      neutron net-show private
+      neutron net-delete private
+
+      keystone tenant-list
+      keystone tenant-delete demo
+
+      neutron subnet-delete public-subnet
+      neutron net-delete public
+
 ## Configure Control+Network+Compute Node to use OpenDaylight ML2 Plugin
 
 Packstack does not have support for OpenDaylight yet so we need to do manual steps to enable the support. The below steps will disable the openvswitch agent, add ML2 OpenDaylight support and restart neutron. Recall that in this setup the OpenDaylight controll is running on the host at 192.168.120.1. Change the value below if you have a different address.
@@ -88,39 +125,6 @@ Packstack does not have support for OpenDaylight yet so we need to do manual ste
       neutron-db-manage --config-file /usr/share/neutron/neutron-dist.conf --config-file /etc/neutron/neutron.conf --config-file /etc/neutron/plugin.ini upgrade head
 
       sudo systemctl start neutron-server
-
-## Clean Up Networking on Nodes
-
-By default the allinone install created OpenvSwitch bridges and OpenStack projects that just pollutes the setup so we will clean up everything. The neutron-openvswitch-agent also needs to be stopped and disabled. This is because OpenDaylight replaces the l2 agent. I also ran some vxlan tunnel tests with using the standard ml2 OpenvSwitch setup and I believe that is where many extra crumbs were left.
-
-This script is more of a template for some neutron commands to run to clean out the existing projects and networks. If your system is clean there is no need to run the commands. Use the neutron list commands to see if these steps are needed.
-
-      neutron port-list
-      neutron port-delete id
-
-      neutron net-list
-      neutron dhcp-agent-list-hosting-net vx-net
-      neutron dhcp-agent-network-remove <subnet UUID from previous command> vx-net
-
-      neutron router-list
-      neutron router-port-list vx-rtr
-      neutron router-interface-delete vx-rtr <subnet_id>
-      neutron router-gateway-clear vx-rtr <subnet_id> - the 172.x address
-      neutron router-delete vx-rtr
-
-      neutron subnet-list
-      neutron subnet-list id|name
-      neutron subnet-delete private-subnet
-
-      neutron net-list
-      neutron net-show private
-      neutron net-delete private
-
-      keystone tenant-list
-      keystone tenant-delete demo
-
-      neutron subnet-delete public-subnet
-      neutron net-delete public
 
 This next script will attempt to clean up any namespaces, ports or bridges still hanging around. Make sure to use `sudo ovs-vsctl show` to determine if this is even needed.
 
