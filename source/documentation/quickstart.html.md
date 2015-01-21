@@ -42,6 +42,18 @@ These instructions are to install the current ("**Juno**") release.
 
 </div>
 </div>
+Stop NetworkManager:
+
+         systemctl stop NetworkManager
+         systemctl disable NetworkManager
+         systemctl enable network
+
+Make sure devices are named properly for the network daemon: i.e. the following line must be present in /etc/sysconfig/network-scripts/ifcfg-<interface_name>
+
+           DEVICE="`<interface_name>`"
+
+where <interface_name> is usually "eth0" or "em1".
+
 ### Step 1: Software repositories
 
 Update your current packages:
