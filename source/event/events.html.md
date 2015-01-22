@@ -15,19 +15,6 @@ The following are the meetups I'm aware of in the coming week where RDO enthusia
 
 If you attend any of these meetups, please take pictures, and send me some. If you blog about the events (and you should), please send me that, too.
 
-*   Monday, January 19 [OpenStack Bootcamp Nürnberg](http://www.meetup.com/OpenStack-Munich/events/219374350/), München, DE
-*   Monday, January 19 [Come Join Us to Hear About HyperFast OpenStack Storage with CloudFounders!](http://www.meetup.com/openstack/events/219308937/), San Francisco, CA, US
-*   Monday, January 19 [OpenStack Meetup Nürnberg](http://www.meetup.com/OpenStack-Munich/events/219374402/), München, DE
-*   Tuesday, January 20 [Implementaciónes de OpenStack, consideraciones basicas](http://www.meetup.com/OpenStack-GDL/events/219763969/), Guadalajara, MX
-*   Tuesday, January 20 [OpenStack 3 Days Training](http://www.meetup.com/IGTCloud/events/218924765/), Tel Aviv-Yafo, IL
-*   Tuesday, January 20 [State of the Cloudy Union](http://www.meetup.com/CloudAustin/events/218793700/), Austin, TX, US
-*   Tuesday, January 20 [January Openstack meetup](http://www.meetup.com/OpenStack-STL/events/219684702/), Chesterfield, MO, US
-*   Tuesday, January 20 [Meetup #13 Ops : Comment gérer une production OpenStack](http://www.meetup.com/OpenStack-France/events/219689511/), Paris, FR
-*   Wednesday, January 21 [Online Meetup: Introduction into Ceph storage for OpenStack](http://www.meetup.com/Cloud-Online-Meetup/events/219855488/), Mountain View, CA, US
-*   Wednesday, January 21 [1/21 Afternoon Meet w/ You @ Shanghai JiaoTong University](http://www.meetup.com/Shanghai-OpenStack-Meetup/events/219803691/), Shanghai, CN
-*   Wednesday, January 21 [January: The Future of Storage and PaaS Case Study.](http://www.meetup.com/RedHatOslo/events/219061905/), Oslo, NO
-*   Wednesday, January 21 [7th OpenStack User Group Berlin](http://www.meetup.com/OpenStack-User-Group-Berlin/events/218681700/), Berlin, DE
-*   Wednesday, January 21 [OpenStackDC Meetup #18](http://www.meetup.com/OpenStackDC/events/218827000/), Washington, DC, US
 *   Thursday, January 22 [Breaking the Neutron Barrier: Delivering Heterogenous Clouds](http://www.meetup.com/openstack/events/219067928/), San Francisco, CA, US
 *   Thursday, January 22 [January Red Hat Convergence Event](http://www.meetup.com/Raleigh-Red-Hat-User-Group/events/215314042/), Raleigh, NC, US
 *   Thursday, January 22 [Ceph & Gluster FS - Software Defined Storage Meetup](http://www.meetup.com/RedHatFinland/events/218774694/), Helsinki, FI
