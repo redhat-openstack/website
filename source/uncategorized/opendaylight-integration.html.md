@@ -10,6 +10,8 @@ wiki_last_updated: 2015-01-22
 
 **This page covers Hydrogen Opendaylight with Havana and Icehouse OpenStack. Use this link for Helium OpenDaylight and Juno Openstack [Helium_OpenDaylight_Juno_OpenStack](Helium_OpenDaylight_Juno_OpenStack)**
 
+**See also <https://wiki.opendaylight.org/view/OpenStack_and_OpenDaylight> for a more up to date version of this from the OpenDaylight side.**
+
 OpenDaylight is an open platform for network programmability to enable Software-Defined Networking (SDN). OpenDaylight has driver for Neutron ML2 (Modular Layer 2) plugin to enable communication between Neutron and OpenDaylight. On the SDN controller side, OpenDaylight has northbound APIs to interact with Neutron and use OVSDB (Open vSwitch Database Management Protocol) for southbound configuration of vSwitches on compute nodes. Thus OpenDaylight can manage network connectivity and initiate GRE or VXLAN tunnels for compute nodes. This page will provide step-by-step detail for neutron integration with OpenDaylight.
 
 ## Run OpenDaylight Controller
