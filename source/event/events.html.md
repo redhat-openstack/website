@@ -30,6 +30,13 @@ If you attend any of these meetups, please take pictures, and send me some. If y
 *   Thursday, January 29 [Platform as a Service and Identity Management](http://www.meetup.com/Las-Vegas-Red-Hat-User-Group/events/218703467/), Las Vegas, NV, US
 *   Thursday, January 29 [Do you want to help organise a Sydney OpenStack Meetup in 2015?](http://www.meetup.com/Australian-OpenStack-User-Group/events/219814136/), Sydney, AU
 *   Friday, January 30 [Introduction to Red Hat and OpenShift (cohost with OC MongoDB UG)](http://www.meetup.com/Greater-Los-Angeles-Area-Red-Hat-User-Group-RHUG/events/218765670/), Whittier, CA, US
+
+<!-- -->
+
+*   Friday January 30 [The CentOS Dojo](http://wiki.centos.org/Events/Dojo/Brussels2014), Brussels, Belgium
+
+<!-- -->
+
 *   Saturday, January 31 [Intros and Kickoff](http://www.meetup.com/SDN-OpenDayLight-Delhi-User-Group/events/219875181/), Delhi, IN
 
 See also upcoming [Hangouts](Hangouts) and the [openstack.org events listing](http://www.openstack.org/community/events/).
