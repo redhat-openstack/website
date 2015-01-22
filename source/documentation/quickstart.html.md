@@ -42,6 +42,8 @@ These instructions are to install the current ("**Juno**") release.
 
 </div>
 </div>
+In case your system is running with NetworkManager, you need to disable it.
+
 Stop and disable NetworkManager:
 
       systemctl stop NetworkManager
@@ -53,6 +55,14 @@ Make sure devices are named properly for the network daemon: i.e. the following 
       DEVICE="`<interface_name>`"
 
 where <interface_name> is usually "eth0" or "em1".
+
+Take down all interfaces (but the one via you're connected to the machine) with:
+
+` ifdown `<interface_name>
+
+Start the network daemon:
+
+       ifdown `<interface_name>` && systemctl start network
 
 ### Step 1: Software repositories
 
