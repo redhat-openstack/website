@@ -33,7 +33,7 @@ If you attend any of these meetups, please take pictures, and send me some. If y
 
 <!-- -->
 
-*   Friday January 30 [The CentOS Dojo](http://wiki.centos.org/Events/Dojo/Brussels2014), Brussels, Belgium
+*   **Friday January 30 [The CentOS Dojo](http://wiki.centos.org/Events/Dojo/Brussels2015), Brussels, Belgium, including an RDO Quickstart workshop, led by Haïkel Guemar**
 
 <!-- -->
 
