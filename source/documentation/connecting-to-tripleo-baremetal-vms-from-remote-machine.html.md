@@ -44,6 +44,10 @@ This is a pretty simple setup, since the VM host (if set up with Instack) will a
          HOTPLUG=no
          EOF
 
+Now start the bridge
+
+         ifup ovsbr2
+
 3. Setup up the tunnel
 
          ovs-vsctl add-port ovsbr2 vx1 -- set interface vx1 type=vxlan options:remote_ip=10.0.0.2
@@ -81,6 +85,10 @@ iptables can also be used directly:
          DELAY=0
          HOTPLUG=no
          EOF
+
+Now start the bridge
+
+         ifup ovsbr2
 
 8. Setup up the tunnel
 
