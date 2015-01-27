@@ -28,7 +28,6 @@ wiki_last_updated: 2015-05-26
 *   [OpenStack Networking in Too Much Detail](Networking_in_too_much_detail)
 *   [ OpenStack integration with OpenDaylight controller ](OpenDaylight intergration)
 *   [ Other networking resources ](Networking)
+*   [ Connecting to TripleO Baremetal VMs from a remote machine](Connecting_to_TripleO_Baremetal_VMs_from_remote_machine)
 
-</div>
-</div>
 <Category:Documentation> <Category:Networking>
