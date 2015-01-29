@@ -54,7 +54,7 @@ Now start the bridge
 
 4. Open up a port
 
-      with firewall-cmd (recommended, F20+, RHEL 7+, F19 doesn't seem to work):
+with firewall-cmd (recommended, F20+, RHEL 7+, F19 doesn't seem to work):
 
          firewall-cmd --permanent --add-rich-rule 'rule family="ipv4" source address="10.0.0.2/32" port port="4789" protocol="udp" accept'
          firewall-cmd --reload
@@ -96,7 +96,7 @@ Now start the bridge
 
 9. Open up a port
 
-      with firewall-cmd (recommended, F20+, RHEL 7+, F19 doesn't seem to work):
+with firewall-cmd (recommended, F20+, RHEL 7+, F19 doesn't seem to work):
 
          firewall-cmd --permanent --add-rich-rule 'rule family="ipv4" source address="10.0.0.1/32" port port="4789" protocol="udp" accept'
          firewall-cmd --reload
