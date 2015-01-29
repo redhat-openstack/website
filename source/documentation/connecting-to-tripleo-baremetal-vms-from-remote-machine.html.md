@@ -10,6 +10,10 @@ wiki_last_updated: 2015-05-26
 
 # Connecting to TripleO Baremetal VMs from remote machine
 
+## NOT FULLY WORKING YET
+
+I can ping the other side of the tunnel, but ssh and other protocols are not reliable (if they work at all). More investigation is needed.
+
 ## Motivation
 
 In order to test a TripleO VM setup, it would be ideal to be able to connect to the "Baremetal" VMs from a host other than the VM host. This would allow, for instance, a distributed Jenkins master/slave setup to be able to run arbitrary code against the Baremetal VMs (BMVM).
