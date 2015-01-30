@@ -573,3 +573,8 @@ In midonet-cli create a port in the provider router and bind it to the veth:
       host host0 name controller alive true
       midonet> host host0 add binding port router router0 port port0 interface veth1
       host host0 interface veth1 port router0:port0
+
+Add masquerading to your external interface so connections coming from the overlay with addresses belonging to the external network are NATed. Also make sure these packets can be forwarded:
+
+      iptables -t nat -I POSTROUTING -o eth0 -s 200.200.200.0/24 -j MASQUERADE
+      iptables -I FORWARD -s 200.200.200.0/24 -j ACCEPT
