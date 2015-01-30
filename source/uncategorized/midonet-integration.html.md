@@ -569,8 +569,6 @@ In midonet-cli create a port in the provider router and bind it to the veth:
       midonet> router router0 add port address 172.19.0.2 net 172.19.0.0/30
       router0:port0
       midonet> router router0 add route src 0.0.0.0/0 dst 0.0.0.0/0 type normal port router router0 port port0 gw 172.19.0.1
-      midonet> tunnel-zone list
-      tzone tzone0 name gre type gre
       midonet> host list
       host host0 name controller alive true
       midonet> host host0 add binding port router router0 port port0 interface veth1
