@@ -579,4 +579,4 @@ Add masquerading to your external interface so connections coming from the overl
       iptables -t nat -I POSTROUTING -o eth0 -s 200.200.200.0/24 -j MASQUERADE
       iptables -I FORWARD -s 200.200.200.0/24 -j ACCEPT
 
-      Now we can reach VMs from the underlay host with their floating IPs and VMs can reach external networks as well (as long as the host has external connectivity).
+Now we can reach VMs from the underlay host with their floating IPs and VMs can reach external networks as well (as long as the host has external connectivity).
