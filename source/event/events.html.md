@@ -38,6 +38,7 @@ If you attend any of these meetups, please take pictures, and send me some. If y
 *   Saturday, January 31 [OpenStack Xian Meetup 2015 启航](http://www.meetup.com/Xian-OpenStack-Meetup/events/220086059/), Xian, CN
 *   Saturday, January 31 [Intros and Kickoff](http://www.meetup.com/SDN-OpenDayLight-Delhi-User-Group/events/219875181/), Delhi, IN
 *   Monday, February 02 [OpenStack Seattle Meetup: Tech Duo Featuring PLUMgrid and Tesora](http://www.meetup.com/OpenStack-Seattle/events/198405792/), Seattle, WA, US
+*   Tuesday, February 03[Online Meetup: Deployment Models for OpenStack w/ Platform9](http://www.meetup.com/Cloud-Online-Meetup/events/220033002/), Mountain View CA, US
 *   Wednesday, February 04 [Online Meetup: How Dell and Intel are Optimizing OpenStack Clouds](http://www.meetup.com/Cloud-Online-Meetup/events/220033638/), Mountain View, CA, US
 *   Wednesday, February 04 [February OpenStack Meetup - swift Object Storage presentation](http://www.meetup.com/OpenStack-DFW/events/218260982/), Richardson, TX, US
 *   Thursday, February 05 [South Bay OpenStack Meetup, Beginner track](http://www.meetup.com/openstack/events/209717432/), San Francisco, CA, US
