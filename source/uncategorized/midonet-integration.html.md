@@ -512,6 +512,34 @@ We first need to create the External Network (fake) to be used for connectivity 
 
 ### Create fake uplink
 
+      # We are going to create the following topology to allow the VMs reach external networks
+      #
+      #             +---------------+
+      #                             |
+      #                             | 172.19.0.1/30
+      #          +------------------+---------------+
+      #          |                                  |
+      #          |     Fakeuplink linux bridge      |
+      #          |                                  |
+      #          +------------------+---------------+        UNDERLAY
+      #                             | veth0
+      #                             |
+      #                             |
+      #                             |
+      # +------+  +-------+  +-------------+  +-----+  +-----+
+      #                             |
+      #                             |
+      #                             |
+      #               172.19.0.2/30 | veth1
+      #          +------------------+----------------+        OVERLAY
+      #          |                                   |
+      #          |    MidonetProviderRouter          |
+      #          |                                   |
+      #          +------------------+----------------+
+      #                             |  200.200.200.0/24
+      #             +               |
+      #             +---------------+----------------+
+
 Create veth pair:
 
       ip link add type veth
