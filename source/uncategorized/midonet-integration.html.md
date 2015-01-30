@@ -509,3 +509,41 @@ We first need to create the External Network (fake) to be used for connectivity 
 
       neutron net-create ext-net --shared --router:external=True
       neutron subnet-create ext-net --name ext-subnet --allocation-pool start=200.200.200.2,end=200.200.200.254 --disable-dhcp --gateway 200.200.200.1 200.200.200.0/24
+
+### Create fake uplink
+
+Create veth pair:
+
+      ip link add type veth
+      ip link set dev veth0 up
+      ip link set dev veth1 up
+
+Create a linux brige, set an ip address and attach veth0
+
+      brctl addbr uplinkbridge
+      brctl addif uplinkbridge veth0
+      ip addr add 172.19.0.1/30 dev uplinkbridge
+      ip link set dev uplinkbridge up
+
+Enable IP forwarding:
+
+      sysctl -w net.ipv4.ip_forward=1
+
+Route packets to 'external' network to the bridge
+
+      ip route add 200.200.200.0/24 via 172.19.0.2
+
+In midonet-cli create a port in the provider router and bind it to the veth:
+
+      # midonet-cli
+      midonet> router list
+      router router0 name MidoNet Provider Router state up 
+      midonet> router router0 add port address 172.19.0.2 net 172.19.0.0/30
+      router0:port0
+      midonet> router router0 add route src 0.0.0.0/0 dst 0.0.0.0/0 type normal port router router0 port port0 gw 172.19.0.1
+      midonet> tunnel-zone list
+      tzone tzone0 name gre type gre
+      midonet> host list
+      host host0 name controller alive true
+      midonet> host host0 add binding port router router0 port port0 interface veth1
+      host host0 interface veth1 port router0:port0
