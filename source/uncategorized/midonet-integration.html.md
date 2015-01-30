@@ -546,7 +546,7 @@ Create veth pair:
       ip link set dev veth0 up
       ip link set dev veth1 up
 
-Create a linux brige, set an ip address and attach veth0
+Create a linux brige, set an IP address and attach veth0
 
       brctl addbr uplinkbridge
       brctl addif uplinkbridge veth0
