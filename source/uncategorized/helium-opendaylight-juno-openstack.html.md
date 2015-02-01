@@ -113,17 +113,16 @@ Packstack does not have support for OpenDaylight yet so we need to do manual ste
       sudo crudini --set /etc/neutron/plugins/ml2/ml2_conf.ini ml2 tenant_network_types vxlan
 
       cat <<EOT | sudo tee -a /etc/neutron/plugins/ml2/ml2_conf.ini > /dev/null
-
       [ml2_odl]
       password = admin
       username = admin
       url = http://192.168.120.1:8080/controller/nb/v2/neutron
       EOT
 
-      mysql -e "drop database if exists neutron_ml2;"
-      mysql -e "create database neutron_ml2 character set utf8;"
-      mysql -e "grant all on neutron_ml2.* to 'neutron'@'%';"
-      neutron-db-manage --config-file /usr/share/neutron/neutron-dist.conf --config-file /etc/neutron/neutron.conf --config-file /etc/neutron/plugin.ini upgrade head
+      sudo mysql -e "drop database if exists neutron_ml2;"
+      sudo mysql -e "create database neutron_ml2 character set utf8;"
+      sudo mysql -e "grant all on neutron_ml2.* to 'neutron'@'%';"
+      sudo neutron-db-manage --config-file /usr/share/neutron/neutron-dist.conf --config-file /etc/neutron/neutron.conf --config-file /etc/neutron/plugin.ini upgrade head
 
       sudo systemctl start neutron-server
 
