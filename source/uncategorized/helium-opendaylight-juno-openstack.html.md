@@ -109,10 +109,11 @@ Packstack does not have support for OpenDaylight yet so we need to do manual ste
       sudo rm -rf /etc/openvswitch/conf.db
       sudo systemctl start openvswitch
 
-      crudini --set /etc/neutron/plugins/ml2/ml2_conf.ini ml2 mechanism_drivers opendaylight 
-      crudini --set /etc/neutron/plugins/ml2/ml2_conf.ini ml2 tenant_network_types vxlan
+      sudo crudini --set /etc/neutron/plugins/ml2/ml2_conf.ini ml2 mechanism_drivers opendaylight 
+      sudo crudini --set /etc/neutron/plugins/ml2/ml2_conf.ini ml2 tenant_network_types vxlan
 
-      cat <<EOT>> /etc/neutron/plugins/ml2/ml2_conf.ini 
+      cat <<EOT | sudo tee -a /etc/neutron/plugins/ml2/ml2_conf.ini > /dev/null
+
       [ml2_odl]
       password = admin
       username = admin
