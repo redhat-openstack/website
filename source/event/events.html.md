@@ -15,36 +15,29 @@ The following are the meetups I'm aware of in the coming week where RDO enthusia
 
 If you attend any of these meetups, please take pictures, and send me some. If you blog about the events (and you should), please send me that, too.
 
-*   Tuesday, January 27 [Online Meetup: Auto-scaling MySQL Database Services on OpenStack with ScaleDB](http://www.meetup.com/Cloud-Online-Meetup/events/219983542/), Mountain View, CA, US
-*   Tuesday, January 27 [Do you want to help organise a Melbourne OpenStack Meetup in 2015?](http://www.meetup.com/Australian-OpenStack-User-Group/events/219282263/), Sydney, AU
-*   Tuesday, January 27 [OpenStack 2015 Jan](http://www.meetup.com/OpenStack-Hungary-Meetup-Group/events/220088735/), Budapest, HU
-*   Tuesday, January 27 [Auto-scaling MySQL Database Services on OpenStack with ScaleDB, Ronen Ariely](http://www.meetup.com/OpenStack-Israel/events/219391328/), Tel Aviv-Yafo, IL
-*   Wednesday, January 28 [Online Meetup: Unlock Your Cloud Potential w/ Mirantis OpenStack & Cumulus Linux](http://www.meetup.com/Cumulus-Linux-Open-Networking-User-Group-Bay-Area/events/220010052/), Mountain View, CA, US
-*   Wednesday, January 28 [OpenStack plays well with others](http://www.meetup.com/Vancouver-OpenStack-Meetup/events/219622935/), Vancouver, BC, CA
-*   Wednesday, January 28 [Platform as a Service and Identity Management](http://www.meetup.com/Las-Vegas-Red-Hat-User-Group/events/218703467/), Las Vegas, NV, US
-*   Thursday, January 29 [Online Meetup: The Latest on OpenStack Trove in the Upcoming Kilo Release](http://www.meetup.com/Cloud-Online-Meetup/events/220007088/), Mountain View, CA, US
-*   Thursday, January 29 [Do you want to help organise a Sydney OpenStack Meetup in 2015?](http://www.meetup.com/Australian-OpenStack-User-Group/events/219814136/), Sydney, AU
-*   Thursday, January 29 [Introduction to Red Hat and OpenShift (cohost with OC MongoDB UG)](http://www.meetup.com/Greater-Los-Angeles-Area-Red-Hat-User-Group-RHUG/events/218765670/), Whittier, CA, US
-*   Thursday, January 29 [Januári Cloud Budapest Meetup](http://www.meetup.com/Cloud-Budapest/events/219825248/), Budapest, HU
-*   Friday, January 30 [OpenStack Projects: Ideas and Implementations](http://www.meetup.com/openstack-pittsburgh/events/220036464/), Pittsburgh, PA, US
-
-<!-- -->
-
-*   **Friday January 30 [The CentOS Dojo](http://wiki.centos.org/Events/Dojo/Brussels2015), Brussels, Belgium, including an RDO Quickstart workshop, led by Haïkel Guemar**
-*   **Saturday, January 31 - Sunday February 1 [FOSDEM](https://fosdem.org/2015/), Brussels, Belgium**
-
-<!-- -->
-
-*   Saturday, January 31 [OpenStack Xian Meetup 2015 启航](http://www.meetup.com/Xian-OpenStack-Meetup/events/220086059/), Xian, CN
-*   Saturday, January 31 [Intros and Kickoff](http://www.meetup.com/SDN-OpenDayLight-Delhi-User-Group/events/219875181/), Delhi, IN
-*   Monday, February 02 [OpenStack Seattle Meetup: Tech Duo Featuring PLUMgrid and Tesora](http://www.meetup.com/OpenStack-Seattle/events/198405792/), Seattle, WA, US
-*   Tuesday, February 03[Online Meetup: Deployment Models for OpenStack w/ Platform9](http://www.meetup.com/Cloud-Online-Meetup/events/220033002/), Mountain View CA, US
-*   Wednesday, February 04 [Online Meetup: How Dell and Intel are Optimizing OpenStack Clouds](http://www.meetup.com/Cloud-Online-Meetup/events/220033638/), Mountain View, CA, US
+*   Wednesday, February 04 [Meet Chris Kemp, co-founder of OpenStack!](http://www.meetup.com/Vancouver-OpenStack-Meetup/events/220195427/), Vancouver, BC, CA
 *   Wednesday, February 04 [February OpenStack Meetup - swift Object Storage presentation](http://www.meetup.com/OpenStack-DFW/events/218260982/), Richardson, TX, US
+*   Wednesday, February 04 [apt install openstack](http://www.meetup.com/OpenStack-Northwest/events/219782471/), Portland, OR, US
 *   Thursday, February 05 [South Bay OpenStack Meetup, Beginner track](http://www.meetup.com/openstack/events/209717432/), San Francisco, CA, US
-*   Thursday, February 05 [SFBay OpenStack Hackathon #OSSFO](http://www.meetup.com/openstack/events/176812262/), San Francisco, CA, US
+*   Friday, February 06 [DevConf Brno](http://www.meetup.com/OpenStack-Czech-User-Group-Meetup/events/220088883/), Prague, CZ
+*   Saturday, February 07 [OpenStack & SDN 交流](http://www.meetup.com/China-OpenStack-User-Group/events/220222770/), Beijing, CN
 *   Saturday, February 07 [GlusterFS Pune Meetup](http://www.meetup.com/glusterfs-India/events/219327028/), Bangalore, IN
-*   Saturday, February 07 [OpenStack with VMware](http://www.meetup.com/iShare-By-Techgrills/events/219848835/), Delhi, IN
+*   Saturday, February 07 [OpenStack & Big Data 技术分享](http://www.meetup.com/China-OpenStack-User-Group/events/220251392/), Beijing, CN
+*   Sunday, February 08 [OpenStack with VMware](http://www.meetup.com/iShare-By-Techgrills/events/219848835/), Delhi, IN
+*   Monday, February 09 [Feb's Focus is on OpenStack and Ansible](http://www.meetup.com/seattlepython/events/219280065/), Seattle, WA, US
+*   Tuesday, February 10 [RHUG - Cloud Management and Automation](http://www.meetup.com/Utah-Red-Hat-Users-Group/events/219782066/), Salt Lake City, UT, US
+*   Wednesday, February 11 [Deep dive on ManageIQ by Red hat & “I Can Haz Moar Networks?” by Midokura](http://www.meetup.com/OpenStack-New-York-Meetup/events/219793794/), New York, NY, US
+*   Thursday, February 12 [Intro to OpenStack](http://www.meetup.com/RockyMountainCiscoUsersGroup/events/219386099/), Englewood, CO, US
+*   Thursday, February 12 [Deep dive on ManageIQ by Red hat & “I Can Haz Moar Networks?” by Midokura](http://www.meetup.com/Philly-OpenStack-Meetup-Group/events/219793923/), Philadelphia, PA, US
+*   Thursday, February 12 [OpenStack / IaaS Overview by Al Kari of Red Hat](http://www.meetup.com/PortlandRedHatUserGroup/events/219878095/), Portland, OR, US
+*   Friday, February 13 [Gnunify OpenStack Mini Conference 2015](http://www.meetup.com/Indian-OpenStack-User-Group/events/220245382/), Bangalore, IN
+*   Tuesday, February 17 [OpenStack Networking and Data Storage solutions](http://www.meetup.com/Calgary-OpenStack-Meetup/events/219945084/), Calgary, AB, CA
+*   Tuesday, February 17 [February 2015 meeting](http://www.meetup.com/Raleigh-Red-Hat-User-Group/events/219818484/), Raleigh, NC, US
+*   Wednesday, February 18 [OpenShift Users Meetup](http://www.meetup.com/RedHatFinland/events/219689228/), Helsinki, FI
+*   Wednesday, February 18 [Platform as a Service (PaaS) and OpenStack Architecture / Orchestration](http://www.meetup.com/VirtGBoston/events/220185373/), Arlington, MA, US
+*   Wednesday, February 18 [What is Trove? OpenStack L.A. February '15 Meetup](http://www.meetup.com/OpenStack-LA/events/219262037/), Pasadena, CA, US
+*   Wednesday, February 18 [1. Treffen](http://www.meetup.com/OpenStack-Baden-Wuerttemberg/events/219990894/), Stuttgart, DE
+*   Wednesday, February 18 [February 2015 OpenStack LA - OpenStack Trove Project](http://www.meetup.com/LA-NewTech-Meetup/events/220282070/), Santa Monica, CA, US
 
 See also upcoming [Hangouts](Hangouts) and the [openstack.org events listing](http://www.openstack.org/community/events/).
 
