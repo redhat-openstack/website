@@ -17,7 +17,7 @@ __NOTOC__
 
 </div>
 <div class="offset3 span8 intro-text">
-Try OpenStack Juno on the industry's most trusted Linux platform.
+Try OpenStack on the industry's most trusted Linux platform.
 
 <span class="btn">[Quick start →](quickstart)</span>
 
