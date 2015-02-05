@@ -8,7 +8,7 @@ wiki_last_updated: 2015-02-05
 
 # 2015 February
 
-February 2015 RDO Community Newsletter
+**February 2015 RDO Community Newsletter**
 
 Thanks, as always, for being part of the RDO community!
 
@@ -22,7 +22,7 @@ There's a lot in this month's newletter:
 *   SoCal Linux Expo in 2 weeks
 *   Ways to stay in touch!
 
-Quick links:
+**Quick links:**
 
 *   Quick Start - <http://openstack.redhat.com/quickstart>
 *   Mailing Lists - <https://openstack.redhat.com/Mailing_lists>
@@ -30,7 +30,7 @@ Quick links:
 *   RDO blog - <http://rdoproject.org/blog>
 *   Q&A - <http://ask.openstack.org/>
 
-Upcoming Hangouts
+**Upcoming Hangouts**
 
 Mark your calendars: On February 9th, at 14:00 UTC, Eoghan Glynn will present a hangout covering what's coming for Ceilometer in the Kilo release of OpenStack.
 
@@ -38,7 +38,7 @@ Mark your calendars: On February 9th, at 14:00 UTC, Eoghan Glynn will present a 
 
 Kilo milestone 2 is due on February 5, so this is traditionally around the time that mid-cycle meetings happen to evaluate the status of projects, and set expectations for what will actually make it into the release. So I hope that we'll be able to schedule more of these hangouts in time between Milestone 2 and the release on April 30th. (See <https://wiki.openstack.org/wiki/Kilo_Release_Schedule> for the release schedule.)
 
-Packaging updates
+**Packaging updates**
 
 You'll remember from last month that the RDO packaging effort is now open to wider participation from the entire community. If you're interested in participating, there are several places that you should be looking for updates.
 
@@ -48,19 +48,19 @@ Next, there's a weekly meeting on #rdo, on the Freenode IRC network, to discuss 
 
 Finally, since OpenStack is part of the larger Cloud infrastructure community, we're participating in the CentOS Cloud SIG effort - <http://wiki.centos.org/SpecialInterestGroup/Cloud> - which has a weekly meeting on the #centos-devel IRC channel at 15:00 UTC every Thursday.
 
-Call for Papers, OpenStack Summit
+**Call for Papers, OpenStack Summit**
 
 There's still a few more days to get your paper submissions in for the OpenStack Summit in Vancouver. The CFP closes on Monday, February 9th. Submit your paper today at <https://www.openstack.org/summit/vancouver-2015/call-for-speakers/>
 
 The OpenStack Summit will be held in Vancouver, Canada, May 18-22 2015, and is the most important place to be if you want to know more about OpenStack, and talk with everyone that's involved in OpenStack development.
 
-Vote for OpenStack L
+**Vote for OpenStack L**
 
 Speaking of OpenStack Summit, a major feature of each summit is planning the next release of OpenStack. OpenStack Kilo will be released on April 30th, and the Vancouver summit will be planning the L release, which hasn't yet been named.
 
 L will be either Lizard, Love, London, or Liberty, and you can have a voice in making that decision at <https://www.surveymonkey.com/r/openstack-l-naming> The poll closes on February 10th, so hurry up!
 
-FOSDEM
+**FOSDEM**
 
 Thanks to everyone that stopped by to see us at FOSDEM. We had a lot of great conversations, with people who were completely new to OpenStack, with experts, and everything in between.
 
@@ -68,13 +68,13 @@ We also had a good turn out on Friday at the CentOS dojo, where Haikel Guemar ga
 
 There was also a great deal of great content at FOSDEM, in the IaaS dev room - <https://fosdem.org/2015/schedule/track/infrastructure_as_a_service/> - and scattered through various other tracks during the event.
 
-SCALE
+**SCALE**
 
 We'll be at SCALE - the SoCal Linux Expo - February 19-22, 2015, at the Los Angeles Airport Hilton. SCALE is a great event, with lots of community participation, great talks, and fun evening events. We'd love to see you drop by the Red Hat booth, where we'll have RDO swag aplenty.
 
 Additional information about SCALE can be found at <http://www.socallinuxexpo.org/scale/13x> and registration is still open at <https://reg.socallinuxexpo.org/reg6/>
 
-Keep in touch
+**Keep in touch**
 
 There's lots of ways to stay in in touch with what's going in in the RDO community. The best ways are ...
 
