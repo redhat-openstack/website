@@ -35,7 +35,7 @@ Come to one of the main [Events](Events) where some of us will be. Follow us on 
 
 And there's a variety of presentations on the [RDO videos](RDO videos) page from our hangouts and conference presentations you may have missed.
 
-## Introducing RDO
+## What is RDO?
 
 ![`openstack-distribution.png`](openstack-distribution.png "openstack-distribution.png")
 
