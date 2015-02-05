@@ -14,14 +14,6 @@ Thanks, as always, for being part of the RDO community!
 
 There's a lot in this month's newletter:
 
-*   Upcoming Ceilometer hangout, February 9th
-*   Packaging effort
-*   CFP for OpenStack Summit Vancouver closes February 9th
-*   Naming vote for OpenStack 'L' closes February 10th
-*   FOSDEM report
-*   SoCal Linux Expo in 2 weeks
-*   Ways to stay in touch!
-
 ## Quick links:
 
 *   Quick Start - <http://openstack.redhat.com/quickstart>
