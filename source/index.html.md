@@ -25,15 +25,15 @@ Try OpenStack on the industry's most trusted Linux platform.
 </div>
 <div class="row">
 <div class="offset4 span7 pad-sides begin-content pull-s">
-## Stay up to date with RDO
+## What's happening
 
 ![](Twitter.gif "fig:Twitter.gif") ![](Facebook.gif "fig:Facebook.gif") ![](G_plus.jpg "fig:G_plus.jpg") ![](Email.png "fig:Email.png")
 
-There's lots of ways to stay in touch with the RDO community.
+On Monday, February 9, at 14:00 UTC, [Eoghan Glynn will be presenting what's coming in OpenStack Ceilometer for the Kilo release](https://plus.google.com/events/cht3k5nr5u73pv3d08i7vq5m570). Attend live, or watch it afterwards.
 
 Come to one of the main [Events](Events) where some of us will be. Follow us on [Twitter](http://twitter.com/rdocommunity/), [Facebook](http://facebook.com/rdocommunity), and [Google+](https://plus.google.com/communities/110409030763231732154). Subscribe to the [rdo-list mailing list](http://www.redhat.com/mailman/listinfo/rdo-list) for technical questions, or to the [newsletter mailing list](http://www.redhat.com/mailman/listinfo/rdo-newsletter) for monthly community updates.
 
-And there's a variety of presentations on the [RDO videos](RDO videos) page from our hangouts and conference presentations you may have missed.
+Watch the various presentations on the [RDO videos](RDO videos) page from our hangouts and conference presentations you may have missed.
 
 ## What is RDO?
 
