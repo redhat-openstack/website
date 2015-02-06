@@ -57,20 +57,6 @@ When you're ready for production, and you want support from a partner you know, 
 
 </div>
 </div>
-<div class="row">
-<div class="span7 offset4 pad-sides begin-content pull-l">
-## Download and get started!
-
-<div class="text-focus">
-In just a few short steps, you can transform any machine running Fedora, Red Hat Enterprise Linux, CentOS, Scientific Linux, or any other Red Hat Enterprise Linux based distribution into an OpenStack powerhouse.
-
-</div>
-<div class="button-wrap">
-<span class="btn">[QUICK START →](quickstart)</span> We'll help you get set up
-
-</div>
-</div>
-</div>
 <div class="block-highlight">
 <div class="row">
 <div class="span7 offset4 pad-sides begin-content pull-m">
