@@ -47,16 +47,6 @@ OpenStack relies on the underlying operating system and hypervisor — and what 
 
 </div>
 </div>
-<div class="row">
-<div class="span7 offset4 pad-sides begin-content pull-m">
-## Red Hat Expertise
-
-![](Redhat_logo.jpg "fig:Redhat_logo.jpg") From the Linux kernel and the KVM hypervisor to the top level OpenStack project components, Red Hat has expertise at every level of the stack. Whether you want to run a proof of concept of OpenStack on CentOS, or you want to prepare a production cloud and you are evaluating partners for your deployment, who better to go to than the number one contributor to OpenStack?
-
-When you're ready for production, and you want support from a partner you know, Red Hat offers you the [Red Hat Enterprise Linux OpenStack Platform](//redhat.com/openstack), with its partner certification program.
-
-</div>
-</div>
 <div class="block-highlight">
 <div class="row">
 <div class="span7 offset4 pad-sides begin-content pull-m">
