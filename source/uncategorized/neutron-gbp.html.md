@@ -18,16 +18,14 @@ Note that this describes use of the GBP's resource_mapping reference policy driv
 
 ## Configuring GBP
 
-*WARNING: The referenced RPMs are Fedora scratch builds not yet officially included in RDO. The information here is intended to facilitate validating the packages and testing GBP. Use at your own risk!!!*
-
-Start with a working Packstack installation with Neutron on Fedora 20 x86_64, such as is described in [Quickstart](Quickstart). The remaining steps are all executed as root on the controller node(s) where neutron-server runs. No changes are needed on compute or network nodes when using the resource_mapping policy driver.
+Start with a working Packstack installation with Neutron, such as is described in [Quickstart](Quickstart). If you plan to use Heat with GBP, be sure to generate an answer file, edit it to enable Heat, and use that answer file when running packstack. The remaining steps are all executed as root on the controller node(s) where neutron-server runs. No changes are needed on compute or network nodes when using the resource_mapping policy driver.
 
 ### Configuring Neutron
 
 Install the server and client RPMs:
 
-`yum install `[`https://rkukura.fedorapeople.org/gbp/openstack-neutron-gbp-2014.2-1.fc20.noarch.rpm`](https://rkukura.fedorapeople.org/gbp/openstack-neutron-gbp-2014.2-1.fc20.noarch.rpm)
-`yum install `[`https://rkukura.fedorapeople.org/gbp/python-gbpclient-0.9.0-1.fc20.noarch.rpm`](https://rkukura.fedorapeople.org/gbp/python-gbpclient-0.9.0-1.fc20.noarch.rpm)
+      yum install openstack-neutron-gbp
+      yum install python-gbpclient
 
 Stop the Neutron server:
 
@@ -51,8 +49,7 @@ Start the Neutron server and check its status:
 
 Install the RPMs:
 
-`yum install `[`https://rkukura.fedorapeople.org/gbp/python-django-horizon-gbp-2014.2-1.fc20.noarch.rpm`](https://rkukura.fedorapeople.org/gbp/python-django-horizon-gbp-2014.2-1.fc20.noarch.rpm)
-`yum install `[`https://rkukura.fedorapeople.org/gbp/openstack-dashboard-gbp-2014.2-1.fc20.noarch.rpm`](https://rkukura.fedorapeople.org/gbp/openstack-dashboard-gbp-2014.2-1.fc20.noarch.rpm)
+       yum install openstack-dashboard-gbp
 
 Restart the web server and check its status:
 
@@ -61,9 +58,9 @@ Restart the web server and check its status:
 
 ### Configuring Heat
 
-Install the RPM:
+Assuming Heat is enabled in your RDO deployment, install the RPM:
 
-`yum install `[`https://rkukura.fedorapeople.org/gbp/openstack-heat-gbp-2014.2-1.fc20.noarch.rpm`](https://rkukura.fedorapeople.org/gbp/openstack-heat-gbp-2014.2-1.fc20.noarch.rpm)
+      yum install openstack-heat-gbp
 
 Edit the Heat configuration to include the GBP plugin:
 
