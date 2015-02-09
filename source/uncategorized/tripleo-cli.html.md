@@ -71,6 +71,22 @@ When Tuskar is installed it will create a default Plan called \`overcloud\` whic
       | f57884c9-ed35-421e-b331-b2dc38b656af | overcloud | None        | controller, swift-storage, compute, cinder-storage |
       +--------------------------------------+-----------+-------------+----------------------------------------------------+
 
+The plan by default has the roles controller swift-storage, compute and cinder-storage. These are the four roles that Tuskar comes with as standard. The roles can all be seen with the command \`tuskar roles-list\`
+
+      $ tuskar role-list
+      +--------------------------------------+----------------+---------+------------------------------------------------------------------------------+
+      | uuid                                 | name           | version | description                                                                  |
+      +--------------------------------------+----------------+---------+------------------------------------------------------------------------------+
+      | 023031ea-2dd9-43b4-9dd2-e9ebfb71710c | cinder-storage | 1       | Common Block Storage Configuration                                           |
+      | 71f5b6c8-d423-482c-bc4a-e7103e67d7dc | swift-storage  | 1       | Common Swift Storage Configuration                                           |
+      | 950b6757-7804-41aa-93a7-f50b099b0159 | controller     | 1       | OpenStack control plane node. Can be wrapped in a ResourceGroup for scaling. |
+      |                                      |                |         |                                                                              |
+      | b2a5f50e-a088-45d1-b4ac-2751a607628a | compute        | 1       | OpenStack hypervisor node. Can be wrapped in a ResourceGroup for scaling.    |
+      |                                      |                |         |                                                                              |
+      +--------------------------------------+----------------+---------+------------------------------------------------------------------------------+
+
+For the roles to be deployed, we need to provide various settings and attributes that are required by the Heat Orchestration Templates.
+
 ## Monitoring
 
 The ironic client can be used to view your infrastructure. To get an overview, use the following command which will list all registered nodes and the state of that node.
