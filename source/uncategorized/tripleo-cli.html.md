@@ -85,7 +85,16 @@ The plan by default has the roles controller swift-storage, compute and cinder-s
       |                                      |                |         |                                                                              |
       +--------------------------------------+----------------+---------+------------------------------------------------------------------------------+
 
-To set the require attributes in the Deployment Plan use the Tuskar command `tuskar plan-patch -A $ATTRIBUTE1=$VALUE1 -A $ATTRIBUTE2=$VALUE2 ... $PLAN_ID`
+To set the require attributes in the Deployment Plan use the Tuskar command plan-patch.
+
+      tuskar plan-patch -A $ATTRIBUTE1=$VALUE1 -A $ATTRIBUTE2=$VALUE2 ... $PLAN_ID
+
+Once the attributes have been set in the Deployment Plan it can be reviewed with plan-show as described above. After this has been checked the Heat templates can be retried from Tuskar and a stack create can be executed.
+
+      tuskar plan-templates -O tuskar_templates $PLAN_ID
+      heat stack-create -f tuskar_templates/plan.yaml \
+         -e tuskar_templates/environment.yaml \
+         overcloud
 
 ## Monitoring
 
