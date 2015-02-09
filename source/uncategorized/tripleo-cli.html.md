@@ -113,6 +113,8 @@ To set the require attributes in the Deployment Plan use the Tuskar command plan
 
       tuskar plan-patch -A $ATTRIBUTE1=$VALUE1 -A $ATTRIBUTE2=$VALUE2 ... $PLAN_ID
 
+**TODO: Get the user a list of required attributes.**
+
 Once the attributes have been set in the Deployment Plan it can be reviewed with plan-show as described above. After this has been checked the Heat templates can be retried from Tuskar and a stack create can be executed.
 
       tuskar plan-templates -O tuskar_templates $PLAN_ID
