@@ -60,6 +60,17 @@ Option 2: Use the ironic client and \`ironic node-create\` to add them one at a 
 
 ## Deployment
 
+To deploy the Overcloud a deployment plan needs to be created with the Tuskar planning service. This allows you to select various Roles that will be used in the deployment, scale them and it will then output Heat Orchestration Templates that can then be executed by Heat.
+
+When Tuskar is installed it will create a default Plan called \`overcloud\` which should be used. At the moment only one deployment is supported within Tuskar. You can see this Deployment Plan with the command \`tuskar plan-list\`.
+
+      $ tuskar plan-list
+      +--------------------------------------+-----------+-------------+----------------------------------------------------+
+      | uuid                                 | name      | description | roles                                              |
+      +--------------------------------------+-----------+-------------+----------------------------------------------------+
+      | f57884c9-ed35-421e-b331-b2dc38b656af | overcloud | None        | controller, swift-storage, compute, cinder-storage |
+      +--------------------------------------+-----------+-------------+----------------------------------------------------+
+
 ## Monitoring
 
 The ironic client can be used to view your infrastructure. To get an overview, use the following command which will list all registered nodes and the state of that node.
