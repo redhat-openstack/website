@@ -52,9 +52,30 @@ This can then be loaded like this:
 
       register-nodes --service-host undercloud --nodes <(jq '.nodes' $JSON_FILE)
 
-Option 2: Use the ironic client and `ironic node-create` to add them one at a time.
+Option 2: Use the ironic client and `ironic node-create` and `ironic port-create` to add them one at a time.
 
-      ironic node-create
+      $ ironic node-create -d pxe_ssh -p cpus=1 -p memory_mb=4096 -p local_gb=40 -p cpu_arch=x86_64
+      +--------------+---------------------------------------------------------------------+
+      | Property     | Value                                                               |
+      +--------------+---------------------------------------------------------------------+
+      | uuid         | 4f59bb35-7d4b-4ed9-94df-6cd05c5e472f                                |
+      | driver_info  | {}                                                                  |
+      | extra        | {}                                                                  |
+      | driver       | pxe_ssh                                                             |
+      | chassis_uuid | None                                                                |
+      | properties   | {u'memory_mb': u'4096', u'cpu_arch': u'x86_64', u'local_gb': u'40', |
+      |              | u'cpus': u'1'}                                                      |
+      +--------------+---------------------------------------------------------------------+
+
+      $ ironic port-create -a "00:ff:e6:6c:22:34" -n 4f59bb35-7d4b-4ed9-94df-6cd05c5e472f
+      +-----------+--------------------------------------+
+      | Property  | Value                                |
+      +-----------+--------------------------------------+
+      | node_uuid | 4f59bb35-7d4b-4ed9-94df-6cd05c5e472f |
+      | extra     | {}                                   |
+      | uuid      | e9fd7e31-c1ab-44e1-9ba0-e7db9e75f732 |
+      | address   | 00:ff:e6:6c:22:34                    |
+      +-----------+--------------------------------------+
 
 ## OpenStack Setup
 
