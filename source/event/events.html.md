@@ -19,6 +19,7 @@ If you attend any of these meetups, please take pictures, and send me some. If y
 *   Tuesday, February 10 [RHUG - Cloud Management and Automation](http://www.meetup.com/Utah-Red-Hat-Users-Group/events/219782066/), Salt Lake City, UT, US
 *   Wednesday, February 11 [CloudCamp Bangladesh at Digital World 2015](http://www.meetup.com/Dhaka-OpenStack-Meetup-Group/events/219719607/), Dhaka, BD
 *   Wednesday, February 11 [Deep dive on ManageIQ bt RedHat & "I Can Haz Moar Networks?" by Midokura](http://www.meetup.com/OpenStack-for-Enterprises-NYC/events/219853523/), New York, NY, US
+*   Thursday, February 12 [Online Meetup: Building a cloud ready linux image locally using KVM](http://www.meetup.com/Cloud-Online-Meetup/events/220346025/), Mountain View, CA, US
 *   Thursday, February 12 [Deep dive on ManageIQ by Red hat & “I Can Haz Moar Networks?” by Midokura](http://www.meetup.com/Philly-OpenStack-Meetup-Group/events/219793923/), Philadelphia, PA, US
 *   Thursday, February 12 [OpenStack / IaaS Overview by Al Kari of Red Hat](http://www.meetup.com/PortlandRedHatUserGroup/events/219878095/), Portland, OR, US
 *   Friday, February 13 [Gnunify OpenStack Mini Conference 2015](http://www.meetup.com/Indian-OpenStack-User-Group/events/220245382/), Bangalore, IN
