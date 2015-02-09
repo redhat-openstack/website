@@ -140,6 +140,21 @@ First we need to retrieve the Plan ID. This can be seen in the output of \`tuska
 
       PLAN_ID=$( tuskar plan-show overcloud | awk '$2=="uuid" {print $4}' )
 
+To see the current scale values for your roles, use the \`tuskar plan-show\` command. Since the output is large, we can focus on the relevant sections with this command. It will show you each of the roles and their autoscale value.
+
+      $ tuskar plan-show overcloud | grep "::count" -A 1
+      |             | name=swift-storage-1::count        |
+      |             | value=1                            |
+      --
+      |             | name=controller-1::count           |
+      |             | value=1                            |
+      --
+      |             | name=compute-1::count              |
+      |             | value=1                            |
+      --
+      |             | name=cinder-storage-1::count       |
+      |             | value=1                            
+
 The plan-patch command allows us to set the count for the role we want to scale.
 
       tuskar plan-patch -A compute-1::count=4 $PLAN_ID
