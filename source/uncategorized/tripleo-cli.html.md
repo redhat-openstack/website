@@ -50,7 +50,7 @@ Option 1: Use register-nodes from os-cloud-config to load the nodes JSON. The JS
 
 This can then be loaded like this:
 
-         register-nodes --service-host undercloud --nodes <(jq '.nodes' $JSON_FILE)
+      register-nodes --service-host undercloud --nodes <(jq '.nodes' $JSON_FILE)
 
 Option 2: Use the ironic client and \`ironic node-create\` to add them one at a time.
 
