@@ -10,6 +10,20 @@ wiki_last_updated: 2015-02-09
 
 ## Infrastructure Setup
 
+Instack is used to create the management system undercloud.
+
+Questions: - How do we do instack of a hardware deployment?
+
+1.  Infrastructure Setup
+
+Option 1: Use register-nodes from os-cloud-config to load the nodes JSON.
+
+         register-nodes --service-host undercloud --nodes <(jq '.nodes' instackenv.json)
+
+Option 2: Use the ironic client and \`ironic node-create\` to add them one at a time.
+
+         ironic node-create
+
 ## OpenStack Setup
 
 ## Deployment
