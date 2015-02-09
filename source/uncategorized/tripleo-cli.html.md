@@ -18,35 +18,36 @@ You will need to register your bare-metal hardware as nodes in Ironic. This can 
 
 Option 1: Use register-nodes from os-cloud-config to load the nodes JSON. The JSON file should match the following structure.
 
+      {
+       "nodes": [
          {
-           "nodes": [
-             {
-               "arch": "x86_64",
-               "pm_user": "stack",
-               "pm_addr": "192.168.122.1",
-               "pm_password": "-----BEGIN RSA PRIVATE KEY-----$SNIP-----END RSA PRIVATE KEY-----",
-               "pm_type": "pxe_ssh",
-               "mac": [
-                 "00:0b:d0:69:7e:59"
-               ],
-               "cpu": "1",
-               "memory": "4096",
-               "disk": "40"
-             },
-             {
-               "arch": "x86_64",
-               "pm_user": "stack",
-               "pm_addr": "192.168.122.2",
-               "pm_password": "-----BEGIN RSA PRIVATE KEY-----$SNIP-----END RSA PRIVATE KEY-----",
-               "pm_type": "pxe_ssh",
-               "mac": [
-                 "00:0b:d0:69:7e:58"
-               ],
-               "cpu": "1",
-               "memory": "4096",
-               "disk": "40"
-             },
-         }
+           "arch": "x86_64",
+           "pm_user": "stack",
+           "pm_addr": "192.168.122.1",
+           "pm_password": "-----BEGIN RSA PRIVATE KEY-----$SNIP-----END RSA PRIVATE KEY-----",
+           "pm_type": "pxe_ssh",
+           "mac": [
+             "00:0b:d0:69:7e:59"
+           ],
+           "cpu": "1",
+           "memory": "4096",
+           "disk": "40"
+         },
+         {
+           "arch": "x86_64",
+           "pm_user": "stack",
+           "pm_addr": "192.168.122.2",
+           "pm_password": "-----BEGIN RSA PRIVATE KEY-----$SNIP-----END RSA PRIVATE KEY-----",
+           "pm_type": "pxe_ssh",
+           "mac": [
+             "00:0b:d0:69:7e:58"
+           ],
+           "cpu": "1",
+           "memory": "4096",
+           "disk": "40"
+         },
+
+}
 
 This can then be loaded like this:
 
