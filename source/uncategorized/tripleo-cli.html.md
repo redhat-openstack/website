@@ -52,7 +52,7 @@ This can then be loaded like this:
 
       register-nodes --service-host undercloud --nodes <(jq '.nodes' $JSON_FILE)
 
-Option 2: Use the ironic client and \`ironic node-create\` to add them one at a time.
+Option 2: Use the ironic client and `ironic node-create` to add them one at a time.
 
       ironic node-create
 
@@ -62,7 +62,7 @@ Option 2: Use the ironic client and \`ironic node-create\` to add them one at a 
 
 To deploy the Overcloud a deployment plan needs to be created with the Tuskar planning service. This allows you to select various Roles that will be used in the deployment, scale them and it will then output Heat Orchestration Templates that can then be executed by Heat.
 
-When Tuskar is installed it will create a default Plan called \`overcloud\` which should be used. At the moment only one deployment is supported within Tuskar. You can see this Deployment Plan with the command \`tuskar plan-list\`.
+When Tuskar is installed it will create a default Plan called `overcloud` which should be used. At the moment only one deployment is supported within Tuskar. You can see this Deployment Plan with the command `tuskar plan-list`.
 
       $ tuskar plan-list
       +--------------------------------------+-----------+-------------+----------------------------------------------------+
@@ -71,7 +71,7 @@ When Tuskar is installed it will create a default Plan called \`overcloud\` whic
       | f57884c9-ed35-421e-b331-b2dc38b656af | overcloud | None        | controller, swift-storage, compute, cinder-storage |
       +--------------------------------------+-----------+-------------+----------------------------------------------------+
 
-The plan by default has the roles controller swift-storage, compute and cinder-storage. These are the four roles that Tuskar comes with as standard. The roles can all be seen with the command \`tuskar roles-list\`
+The plan by default has the roles controller swift-storage, compute and cinder-storage. These are the four roles that Tuskar comes with as standard. The roles can all be seen with the command `tuskar roles-list`
 
       $ tuskar role-list
       +--------------------------------------+----------------+---------+------------------------------------------------------------------------------+
@@ -85,7 +85,7 @@ The plan by default has the roles controller swift-storage, compute and cinder-s
       |                                      |                |         |                                                                              |
       +--------------------------------------+----------------+---------+------------------------------------------------------------------------------+
 
-To set the require attributes in the Deployment Plan use the Tuskar command \`tuskar plan-patch -A $ATTRIBUTE1=$VALUE1 -A $ATTRIBUTE2=$VALUE2 ... $PLAN_ID\`
+To set the require attributes in the Deployment Plan use the Tuskar command `tuskar plan-patch -A $ATTRIBUTE1=$VALUE1 -A $ATTRIBUTE2=$VALUE2 ... $PLAN_ID`
 
 ## Monitoring
 
@@ -136,11 +136,11 @@ To view the detail for each individual node, use the following command with the 
 
 To scale a deployment, first you will need to update the deployment plan and then execute this plan with Heat. The following example shows how to scale the number of compute nodes to four.
 
-First we need to retrieve the Plan ID. This can be seen in the output of \`tuskar plan-list\` or it can be programmatically retrieved with the following command:
+First we need to retrieve the Plan ID. This can be seen in the output of `tuskar plan-list` or it can be programmatically retrieved with the following command:
 
       PLAN_ID=$( tuskar plan-show overcloud | awk '$2=="uuid" {print $4}' )
 
-To see the current scale values for your roles, use the \`tuskar plan-show\` command. Since the output is large, we can focus on the relevant sections with this command. It will show you each of the roles and their autoscale value.
+To see the current scale values for your roles, use the `tuskar plan-show` command. Since the output is large, we can focus on the relevant sections with this command. It will show you each of the roles and their autoscale value.
 
       $ tuskar plan-show overcloud | grep "::count" -A 1
       |             | name=swift-storage-1::count        |
@@ -159,9 +159,9 @@ The plan-patch command allows us to set the count for the role we want to scale.
 
       tuskar plan-patch -A compute-1::count=4 $PLAN_ID
 
-The format of the attribute name is the \`$ROLE_NAME-$ROLE_VERSION::count\`. Therefore to scale the swift-storage role it would be named \`swift-storage-1::count\`.
+The format of the attribute name is the `$ROLE_NAME-$ROLE_VERSION::count`. Therefore to scale the swift-storage role it would be named `swift-storage-1::count`.
 
-After updating the attribute, we need to output the Heat Orchestration Templates to then send these to Heat. This is done with the \`tuskar plan-templates\` command by passing an output directory and the Plan ID.
+After updating the attribute, we need to output the Heat Orchestration Templates to then send these to Heat. This is done with the `tuskar plan-templates` command by passing an output directory and the Plan ID.
 
       tuskar plan-templates -O tuskar_templates $PLAN_ID
 
