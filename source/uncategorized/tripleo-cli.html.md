@@ -64,11 +64,46 @@ Option 2: Use the ironic client and \`ironic node-create\` to add them one at a 
 
 The ironic client can be used to view your infrastructure. To get an overview, use the following command which will list all registered nodes and the state of that node.
 
-         ironic node-list
+         $ ironic node-list
+         +--------------------------------------+---------------+-------------+--------------------+-------------+
+         | UUID                                 | Instance UUID | Power State | Provisioning State | Maintenance |
+         +--------------------------------------+---------------+-------------+--------------------+-------------+
+         | b75f16bf-b76d-4a01-a2cf-a5a395bec765 | None          | power off   | None               | False       |
+         | 357e84e8-bf32-4a6a-8540-79a126070b8f | None          | power off   | None               | False       |
+         | 263ff2f1-2f75-4a9a-95aa-b475b9160ec4 | None          | power off   | None               | False       |
+         | 8412a224-634f-40a1-8aff-4b24148cb735 | None          | power off   | None               | False       |
+         +--------------------------------------+---------------+-------------+--------------------+-------------+
 
 To view the detail for each individual node, use the following command with the ID in the output from above.
 
-         ironic node-show $NODE_ID
+         $ ironic node-show 263ff2f1-2f75-4a9a-95aa-b475b9160ec4
+         +------------------------+--------------------------------------------------------------------------+
+         | Property               | Value                                                                    |
+         +------------------------+--------------------------------------------------------------------------+
+         | instance_uuid          | None                                                                     |
+         | target_power_state     | None                                                                     |
+         | properties             | {u'memory_mb': u'4096', u'cpu_arch': u'x86_64', u'local_gb': u'40',      |
+         |                        | u'cpus': u'1'}                                                           |
+         | maintenance            | False                                                                    |
+         | driver_info            | {u'ssh_username': u'stack', u'ssh_virt_type': u'virsh', u'ssh_address':  |
+         |                        | u'192.168.122.1', u'ssh_key_contents': u'-----BEGIN RSA PRIVATE KEY----- |
+         |                        | `<SNIP>`                                                                   |
+         |                        | -----END RSA                                                             |
+         |                        | PRIVATE KEY-----'}                                                       |
+         | extra                  | {}                                                                       |
+         | last_error             | None                                                                     |
+         | created_at             | 2015-02-05T13:50:36+00:00                                                |
+         | target_provision_state | None                                                                     |
+         | driver                 | pxe_ssh                                                                  |
+         | updated_at             | 2015-02-09T15:04:08+00:00                                                |
+         | instance_info          | {}                                                                       |
+         | chassis_uuid           | None                                                                     |
+         | provision_state        | None                                                                     |
+         | reservation            | None                                                                     |
+         | power_state            | power off                                                                |
+         | console_enabled        | False                                                                    |
+         | uuid                   | 263ff2f1-2f75-4a9a-95aa-b475b9160ec4                                     |
+         +------------------------+--------------------------------------------------------------------------+
 
 ## Post-Deployment
 
