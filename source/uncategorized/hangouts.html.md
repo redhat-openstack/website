@@ -12,11 +12,17 @@ RDO conducts periodic Google Hangouts on a variety of OpenStack-related topics. 
 
 ## Upcoming Hangouts
 
-February 9th, 1400 UTC (9am Eastern US time), What's coming in Kilo Ceilometer, with Eoghan Glynn. - <https://plus.google.com/events/cht3k5nr5u73pv3d08i7vq5m570>
+Stay tuned. We hope to have a number of hangouts about what's coming in Kilo in the coming weeks.
 
 ## Past Hangouts
 
 If you missed a hangout, and are watching the video, you can always ask followup questions on the #rdo IRC channel on Freenode, or on the [rdo-list mailing list](http://www.redhat.com/mailman/listinfo/rdo-list). RDO hangout videos are also available in the [RDO Hangout Playlist](https://www.youtube.com/watch?v=Pmq4FJlP0UE&list=PL27cQhFqK1QzpTJl6CAFabXB1mZAdN_fu).
+
+### Gnocci: Rebasing Ceilometer reporting for Kilo, By Eoghan Glynn
+
+*February 2015*
+
+<iframe width="630" src="//youtube.com/embed/KdphlN9Juk0" frameborder="0" align="center" allowfullscreen="true"> </iframe>
 
 ### Lars Kellogg-Stedman - Deploying with Heat
 
