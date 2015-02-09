@@ -8,6 +8,12 @@ wiki_last_updated: 2015-02-09
 
 # Juno-Triple O-CLI-install
 
+## Management System Installation
+
+Instack is used to create the management system undercloud.
+
+Questions: - How do we do instack of a hardware deployment?
+
 ## Infrastructure Setup
 
 Option 1: Use register-nodes from os-cloud-config to load the nodes JSON.
