@@ -46,8 +46,7 @@ Option 1: Use register-nodes from os-cloud-config to load the nodes JSON. The JS
            "memory": "4096",
            "disk": "40"
          },
-
-}
+      }
 
 This can then be loaded like this:
 
