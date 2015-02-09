@@ -77,6 +77,8 @@ Option 2: Use the ironic client and `ironic node-create` and `ironic port-create
       | address   | 00:ff:e6:6c:22:34                    |
       +-----------+--------------------------------------+
 
+$ ironic node-set-power-state 4f59bb35-7d4b-4ed9-94df-6cd05c5e472f off
+
 ## OpenStack Setup
 
 ## Deployment
