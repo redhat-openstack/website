@@ -54,7 +54,7 @@ This can then be loaded like this:
 
 Option 2: Use the ironic client and \`ironic node-create\` to add them one at a time.
 
-         ironic node-create
+      ironic node-create
 
 ## OpenStack Setup
 
