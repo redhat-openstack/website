@@ -54,30 +54,31 @@ This can then be loaded like this:
 
 Option 2: Use the ironic client and `ironic node-create` and `ironic port-create` to add them one at a time.
 
-      $ ironic node-create -d pxe_ssh -p cpus=1 -p memory_mb=4096 -p local_gb=40 -p cpu_arch=x86_64
-      +--------------+---------------------------------------------------------------------+
-      | Property     | Value                                                               |
-      +--------------+---------------------------------------------------------------------+
-      | uuid         | 4f59bb35-7d4b-4ed9-94df-6cd05c5e472f                                |
-      | driver_info  | {}                                                                  |
-      | extra        | {}                                                                  |
-      | driver       | pxe_ssh                                                             |
-      | chassis_uuid | None                                                                |
-      | properties   | {u'memory_mb': u'4096', u'cpu_arch': u'x86_64', u'local_gb': u'40', |
-      |              | u'cpus': u'1'}                                                      |
-      +--------------+---------------------------------------------------------------------+
-
-      $ ironic port-create -a "00:ff:e6:6c:22:34" -n 4f59bb35-7d4b-4ed9-94df-6cd05c5e472f
+      $ ironic node-create -d pxe_ssh \
+          -p cpus=1 -p memory_mb=4096 -p local_gb=40 -p cpu_arch=x86_64 \
+          -i ssh_username=stack -i ssh_virt_type=virsh -i ssh_address="192.168.122.1" -i ssh_key_contents="key"
+      +--------------+-------------------------------------------------------------------------+
+      | Property     | Value                                                                   |
+      +--------------+-------------------------------------------------------------------------+
+      | uuid         | 8d9e4de3-8a57-417e-8c96-789555be372c                                    |
+      | driver_info  | {u'ssh_username': u'stack', u'ssh_virt_type': u'virsh', u'ssh_address': |
+      |              | u'192.168.122.1', u'ssh_key_contents': u'key'}                          |
+      | extra        | {}                                                                      |
+      | driver       | pxe_ssh                                                                 |
+      | chassis_uuid | None                                                                    |
+      | properties   | {u'memory_mb': u'4096', u'cpu_arch': u'x86_64', u'local_gb': u'40',     |
+      |              | u'cpus': u'1'}                                                          |
+      +--------------+-------------------------------------------------------------------------+
+      $ ironic port-create -a "00:7e:11:29:45:4e" -n 8d9e4de3-8a57-417e-8c96-789555be372c
       +-----------+--------------------------------------+
       | Property  | Value                                |
       +-----------+--------------------------------------+
-      | node_uuid | 4f59bb35-7d4b-4ed9-94df-6cd05c5e472f |
+      | node_uuid | 8d9e4de3-8a57-417e-8c96-789555be372c |
       | extra     | {}                                   |
-      | uuid      | e9fd7e31-c1ab-44e1-9ba0-e7db9e75f732 |
-      | address   | 00:ff:e6:6c:22:34                    |
+      | uuid      | 1b93f57b-2add-45ca-bac4-c8e104ef4d63 |
+      | address   | 00:7e:11:29:45:4e                    |
       +-----------+--------------------------------------+
-
-$ ironic node-set-power-state 4f59bb35-7d4b-4ed9-94df-6cd05c5e472f off
+      $ ironic node-set-power-state 8d9e4de3-8a57-417e-8c96-789555be372c off
 
 ## OpenStack Setup
 
