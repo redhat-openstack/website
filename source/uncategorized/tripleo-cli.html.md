@@ -74,14 +74,24 @@ To view the detail for each individual node, use the following command with the 
 
 To scale a deployment, first you will need to update the deployment plan and then execute this plan with Heat. The following example shows how to scale the number of compute nodes to four.
 
+First we need to retrieve the Plan ID. This can be seen in the output of \`tuskar plan-list\` or it can be programmatically retrieved with the following command:
+
          PLAN_ID=$( tuskar plan-show overcloud | awk '$2=="uuid" {print $4}' )
+
+The plan-patch command allows us to set the count for the role we want to scale.
 
          tuskar plan-patch -A compute-1::count=4 $PLAN_ID
 
+The format of the attribute name is the \`$ROLE_NAME-$ROLE_VERSION::count\`. Therefore to scale the swift-storage role it would be named \`swift-storage-1::count\`.
+
+After updating the attribute, we need to output the Heat Orchestration Templates to then send these to Heat. This is done with the \`tuskar plan-templates\` command by passing an output directory and the Plan ID.
+
          tuskar plan-templates -O tuskar_templates $PLAN_ID
 
-         heat stack-update -f -f "tuskar_templates/plan.yaml" \
+Finally we can perform a stack update with Heat.
+
+         heat stack-update -f "tuskar_templates/plan.yaml" \
              -e "tuskar_templates/environment.yaml" \
              overcloud
 
-Note: At the moment only scaling up is supported.
+**Note: At the moment only scaling up is supported.**
