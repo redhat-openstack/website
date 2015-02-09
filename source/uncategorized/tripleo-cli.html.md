@@ -85,7 +85,7 @@ The plan by default has the roles controller swift-storage, compute and cinder-s
       |                                      |                |         |                                                                              |
       +--------------------------------------+----------------+---------+------------------------------------------------------------------------------+
 
-For the roles to be deployed, we need to provide various settings and attributes that are required by the Heat Orchestration Templates.
+To set the require attributes in the Deployment Plan use the Tuskar command \`tuskar plan-patch -A $ATTRIBUTE1=$VALUE1 -A $ATTRIBUTE2=$VALUE2 ... $PLAN_ID\`
 
 ## Monitoring
 
