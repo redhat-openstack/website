@@ -10,9 +10,7 @@ wiki_last_updated: 2015-03-10
 
 ## Management System Installation
 
-Instack is used to create the management system undercloud.
-
-Questions: - How do we do instack of a hardware deployment?
+Instack is used to create the undercloud. This can be either done on a fully virtualised environment or with bare metal. Follow the steps described in [deploying an RDO Undercloud https://openstack.redhat.com/Deploying_an_RDO_Undercloud_with_Instack](deploying an RDO Undercloud https://openstack.redhat.com/Deploying_an_RDO_Undercloud_with_Instack) to create the undercloud for this installation.
 
 ## Infrastructure Setup
 
