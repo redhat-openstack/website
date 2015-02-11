@@ -95,6 +95,8 @@ Flavors can be used to assign roles in the deployment plan to specific nodes. To
       nova flavor-key blockstorage set "cpu_arch"="x86_64" "baremetal:deploy_kernel_id"="$deploy_kernel_id" "baremetal:deploy_ramdisk_id"="$deploy_ramdisk_id"
       nova flavor-key swiftstorage set "cpu_arch"="x86_64" "baremetal:deploy_kernel_id"="$deploy_kernel_id" "baremetal:deploy_ramdisk_id"="$deploy_ramdisk_id"
 
+In the Deployment section which follows below, we will look at how to specify the flavors we want to use when we deploy.
+
 ## Deployment
 
 To deploy the Overcloud a deployment plan needs to be created with the Tuskar planning service. This allows you to select various Roles that will be used in the deployment, scale them and it will then output Heat Orchestration Templates that can then be executed by Heat.
