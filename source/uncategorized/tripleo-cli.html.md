@@ -128,6 +128,8 @@ To set the require attributes in the Deployment Plan use the Tuskar command plan
 
       tuskar plan-patch -A $ATTRIBUTE1=$VALUE1 -A $ATTRIBUTE2=$VALUE2 ... $PLAN_ID
 
+A full list of the attributes and their current values can be seen in the output of `tuskar plan-show overcloud`
+
 **TODO: Get the user a full list of required attributes.**
 
 At this stage we can use the attributes to control the flavor used by each role.
