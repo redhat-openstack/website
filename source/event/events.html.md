@@ -30,13 +30,8 @@ If you attend any of these meetups, please take pictures, and send me some. If y
 *   Wednesday, February 18 [What is Trove? OpenStack L.A. February '15 Meetup](http://www.meetup.com/OpenStack-LA/events/219262037/), Pasadena, CA, US
 *   Wednesday, February 18 [1. Treffen](http://www.meetup.com/OpenStack-Baden-Wuerttemberg/events/219990894/), Stuttgart, DE
 *   Wednesday, February 18 [February 2015 OpenStack LA - OpenStack Trove Project](http://www.meetup.com/laphpdev/events/220281815/), Santa Monica, CA, US
-
-<!-- -->
-
+*   Thursday, February 19 - OpenStack, Containers and the Private Cloud [1](http://www.meetup.com/BayLISA/events/219854114/), Sunnyvale, CA
 *   **Thursday, February 19 [SCaLE 13x](http://www.meetup.com/LinuxLA/events/219676387/), Los Angeles, CA, US**
-
-<!-- -->
-
 *   Thursday, February 19 [OpenStack Networking and Data storage solutions](http://www.meetup.com/Vancouver-OpenStack-Meetup/events/220329956/), Vancouver, BC, CA
 *   Thursday, February 19 [Double Header Meetup! OpenStack and VMWare Integration Best Practices](http://www.meetup.com/Openstack-Boston/events/218863008/), Boston, MA, US
 *   Thursday, February 19 [OpenStack Baltimore Meetup #2](http://www.meetup.com/OpenStack-Baltimore/events/219933731/), Baltimore, MD, US
