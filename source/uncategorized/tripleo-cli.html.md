@@ -82,6 +82,19 @@ Option 2: Use the ironic client and `ironic node-create` and `ironic port-create
 
 ## OpenStack Setup
 
+Flavors can be used to assign roles in the deployment plan to specific nodes. To do this, we need to assign the flavor to these nodes and also update the deployment plan with the flavor name.
+
+      nova flavor-create control auto 4096 40 2
+      nova flavor-create compute auto 1024 40 1
+      nova flavor-create blockstorage auto 1024 40 1
+      nova flavor-create swiftstorage auto 1024 40 1
+      deploy_kernel_id=$(glance image-show bm-deploy-kernel | awk ' / id / {print $4}')
+      deploy_ramdisk_id=$(glance image-show bm-deploy-ramdisk | awk ' / id / {print $4}')
+      nova flavor-key control set "cpu_arch"="x86_64" "baremetal:deploy_kernel_id"="$deploy_kernel_id" "baremetal:deploy_ramdisk_id"="$deploy_ramdisk_id"
+      nova flavor-key compute set "cpu_arch"="x86_64" "baremetal:deploy_kernel_id"="$deploy_kernel_id" "baremetal:deploy_ramdisk_id"="$deploy_ramdisk_id"
+      nova flavor-key blockstorage set "cpu_arch"="x86_64" "baremetal:deploy_kernel_id"="$deploy_kernel_id" "baremetal:deploy_ramdisk_id"="$deploy_ramdisk_id"
+      nova flavor-key swiftstorage set "cpu_arch"="x86_64" "baremetal:deploy_kernel_id"="$deploy_kernel_id" "baremetal:deploy_ramdisk_id"="$deploy_ramdisk_id"
+
 ## Deployment
 
 To deploy the Overcloud a deployment plan needs to be created with the Tuskar planning service. This allows you to select various Roles that will be used in the deployment, scale them and it will then output Heat Orchestration Templates that can then be executed by Heat.
