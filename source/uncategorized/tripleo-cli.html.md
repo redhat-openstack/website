@@ -128,7 +128,14 @@ To set the require attributes in the Deployment Plan use the Tuskar command plan
 
       tuskar plan-patch -A $ATTRIBUTE1=$VALUE1 -A $ATTRIBUTE2=$VALUE2 ... $PLAN_ID
 
-**TODO: Get the user a list of required attributes.**
+**TODO: Get the user a full list of required attributes.**
+
+At this stage we can use the attributes to control the flavor used by each role.
+
+      tuskar plan-patch -A compute-1::Flavor=compute $PLAN_ID
+      tuskar plan-patch -A swift-storage-1::Flavor=swift-storage $PLAN_ID
+      tuskar plan-patch -A controller-1::Flavor=controller $PLAN_ID
+      tuskar plan-patch -A cinder-storage-1::Flavor=cinder-storage $PLAN_ID
 
 Once the attributes have been set in the Deployment Plan it can be reviewed with plan-show as described above. After this has been checked the Heat templates can be retried from Tuskar and a stack create can be executed.
 
