@@ -98,7 +98,7 @@ For baremetal:
                   "pm_password": "ipmi password goes here",
                   "pm_type": "pxe_ipmitool",
                   "mac": [
-                    "ipmi mac address goes here"
+                    "mac address of nic that will handle pxe boot goes here"
                   ],
                   "cpu": "4",
                   "memory": "32768",
@@ -111,7 +111,7 @@ For baremetal:
                   "pm_password": "ipmi password goes here",
                   "pm_type": "pxe_ipmitool",
                   "mac": [
-                    "ipmi mac address goes here"
+                    "mac address of nic that will handle pxe boot goes here"
                   ],
                   "cpu": "4",
                   "memory": "32768",
