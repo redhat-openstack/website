@@ -39,7 +39,6 @@ If you attend any of these meetups, please take pictures, and send me some. If y
 *   Thursday, February 19 [Introduction to Red Hat and OpenShift (cohosted with Cal Poly Pomona)](http://www.meetup.com/Southern-California-Red-Hat-User-Group-RHUG/events/216824212/), Whittier, CA, US
 *   Saturday, February 21 [DevOps with Red Hat (BoF session at SCALE x13)](http://www.meetup.com/Southern-California-Red-Hat-User-Group-RHUG/events/220140502/), Whittier, CA, US
 *   Monday, February 23 [Kicking off 2015 with a huge Minnesota OpenStack Meetup!](http://www.meetup.com/Minnesota-OpenStack-Meetup/events/219791086/), Saint Paul, MN, US
-*   Thursday, March 5 - OpenStack and VMware vSphere: love-hate or a blessing in disguise?[2](http://platform9.com/resources/webinars.html), Online.
 
 See also upcoming [Hangouts](Hangouts) and the [openstack.org events listing](http://www.openstack.org/community/events/).
 
