@@ -82,7 +82,9 @@ Option 2: Use the ironic client and `ironic node-create` and `ironic port-create
 
 ## OpenStack Setup
 
-Flavors can be used to assign roles in the deployment plan to specific nodes. To do this, we need to assign the flavor to these nodes and also update the deployment plan with the flavor name.
+Flavors are used to assign roles in the deployment plan to specific nodes in your infrastructure. The connection between these is made by creating the flavors in Nova and the updating the deployment plan in Tuskar to reflect which flavors the roles should use.
+
+The following example creates a different flavor four the four standard roles, however, sharing flavors between roles is possible.
 
       nova flavor-create control auto 4096 40 2
       nova flavor-create compute auto 1024 40 1
@@ -95,7 +97,7 @@ Flavors can be used to assign roles in the deployment plan to specific nodes. To
       nova flavor-key cinder-storage set "cpu_arch"="x86_64" "baremetal:deploy_kernel_id"="$deploy_kernel_id" "baremetal:deploy_ramdisk_id"="$deploy_ramdisk_id"
       nova flavor-key swift-storage set "cpu_arch"="x86_64" "baremetal:deploy_kernel_id"="$deploy_kernel_id" "baremetal:deploy_ramdisk_id"="$deploy_ramdisk_id"
 
-In the Deployment section which follows below, we will look at how to specify the flavors we want to use when we deploy.
+In the Deployment section which follows below, we will look at how to specify the flavors (with the command `tuskar plan-patch`) we want to use when we deploy.
 
 ## Deployment
 
