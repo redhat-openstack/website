@@ -12,6 +12,17 @@ wiki_last_updated: 2015-03-10
 
 Instack is used to create the undercloud. This can be either done on a fully virtualised environment or with bare metal. Follow the steps described in [deploying an RDO Undercloud](Deploying_an_RDO_Undercloud_with_Instack) to create the undercloud for this installation.
 
+## Environment Setup
+
+To setup your shell environment with the correct configuration and authentication details for your deployment you will need to run the following commands.
+
+      source ~/deploy-overcloudrc
+      source ~/tripleo-undercloud-passwords
+      source ~/stackrc
+      source /usr/share/instack-undercloud/deploy-virt-overcloudrc
+
+These will need to be entered each time you start a new shell session for the following commands in this page to work.
+
 ## Infrastructure Setup
 
 You will need to register your bare-metal hardware as nodes in Ironic. This can be done in one of two ways, the first uses the command line utility register-nodes to add them based on a JSON file.
