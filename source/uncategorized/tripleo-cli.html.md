@@ -19,7 +19,6 @@ To setup your shell environment with the correct configuration and authenticatio
       source ~/deploy-overcloudrc
       source ~/tripleo-undercloud-passwords
       source ~/stackrc
-      source /usr/share/instack-undercloud/deploy-virt-overcloudrc
 
 These will need to be entered each time you start a new shell session for the following commands in this page to work.
 
