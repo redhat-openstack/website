@@ -95,7 +95,7 @@ Option 2: Use the ironic client and `ironic node-create` and `ironic port-create
 
 Flavors are used to assign roles in the deployment plan to specific nodes in your infrastructure. The connection between these is made by creating the flavors in Nova and the updating the deployment plan in Tuskar to reflect which flavors the roles should use.
 
-The following example creates a different flavor four the four standard roles, however, sharing flavors between roles is possible.
+The following example creates a different flavor for the four standard roles, however, sharing flavors between roles is possible.
 
       nova flavor-create control auto 4096 40 2
       nova flavor-create compute auto 1024 40 1
