@@ -23,6 +23,20 @@ Try OpenStack on the industry's most trusted Linux platform.
 
 </div>
 </div>
+<div class="block-highlight">
+<div class="row">
+<div class="span7 offset4 pad-sides begin-content pull-m">
+## Get Involved
+
+There are many ways to [get involved](get involved) with the RDO community once you [ get started](quickstart). The simplest way is to [head over to the ask.openstack.org forum](http://ask.openstack.org) and help answer questions.
+
+![](Github.png "fig:Github.png") The Puppet modules used in packstack are on [Github](https://github.com/packstack) and packstack itself is on [Stackforge](https://github.com/stackforge/packstack).
+
+For a commercially-supported enterprise ready OpenStack solution, Red Hat provides [Red Hat Enterprise Linux OpenStack Platform](//redhat.com/openstack), an enterprise-class cloud platform based on OpenStack Havana.
+
+</div>
+</div>
+</div>
 <div class="row">
 <div class="offset4 span7 pad-sides begin-content pull-s">
 ## What's happening
@@ -45,19 +59,5 @@ If you are looking for enterprise-level support, or information on partner certi
 
 OpenStack relies on the underlying operating system and hypervisor — and what better operating system to build on than the industry's leading enterprise operating system? The RDO community is your one-stop community site for all things related to using OpenStack on Red Hat based platforms.
 
-</div>
-</div>
-<div class="block-highlight">
-<div class="row">
-<div class="span7 offset4 pad-sides begin-content pull-m">
-## Join the community
-
-There are many ways to [get involved](get involved) with the RDO community once you [ get started](quickstart). The simplest way is to [head over to the ask.openstack.org forum](http://ask.openstack.org) and help answer questions.
-
-![](Github.png "fig:Github.png") The Puppet modules used in packstack are on [Github](https://github.com/packstack) and packstack itself is on [Stackforge](https://github.com/stackforge/packstack).
-
-For a commercially-supported enterprise ready OpenStack solution, Red Hat provides [Red Hat Enterprise Linux OpenStack Platform](//redhat.com/openstack), an enterprise-class cloud platform based on OpenStack Havana.
-
-</div>
 </div>
 </div>
