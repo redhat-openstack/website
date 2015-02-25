@@ -21,7 +21,7 @@ wiki_last_updated: 2015-07-16
 
 ### Client releases are independent
 
-*   Upstream client releases are **independent** on OpenStack releases and milestones.
+*   Upstream client releases are **independent** of OpenStack releases and milestones.
 *   Clients are supposed to be backward compatible, but this **isn't** enforced/ensured.
 
 ### Client stable/$RELEASE branches
