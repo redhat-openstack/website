@@ -45,7 +45,7 @@ If you attend any of these meetups, please take pictures, and send me some. If y
 *   Thursday, March 05 [South Bay OpenStack Meetup, Beginner track](http://www.meetup.com/openstack/events/209717452/), San Francisco, CA, US
 *   Thursday, March 05 [SFBay OpenStack Hackathon #OSSFO](http://www.meetup.com/openstack/events/176812482/), San Francisco, CA, US
 *   Tuesday, March 10 [Online Meetup: OpenStack & Development Platform ecosystem for the enterprise](http://www.meetup.com/Cloud-Online-Meetup/events/220346429/), Mountain View, CA, US
-*   Wednesday, March 11 7 Benefits of Automating KVM with OpenStack [1](http://platform9.com/resources/webinars.html#7-benefits-of-automating-kvm-with-openstack) - Webinar
+*   Wednesday, March 11 - [7 Benefits of Automating KVM with OpenStack] [1](http://platform9.com/resources/webinars.html#7-benefits-of-automating-kvm-with-openstack) - Webinar
 
 See also upcoming [Hangouts](Hangouts) and the [openstack.org events listing](http://www.openstack.org/community/events/).
 
