@@ -10,6 +10,10 @@ wiki_last_updated: 2015-05-26
 
 # Connecting to TripleO Baremetal VMs from remote machine
 
+## Work in progress
+
+There are still some kinks to be worked out with this method. Expect changes. YMMV.
+
 ## Motivation
 
 In order to test a TripleO VM setup, it would be ideal to be able to connect to the "Baremetal" VMs from a host other than the VM host. This would allow, for instance, a distributed Jenkins master/slave setup to be able to run arbitrary code against the Baremetal VMs (BMVM).
