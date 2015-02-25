@@ -16,4 +16,4 @@ RDO brochures and other printed materials
 
 [Red Hat Works With Red Hat](http://rdoproject.org/images/brochure/redhat_works_with_openstack-portrait-A4.pdf)
 
-[RDO/OpenStack command line cheatsheet](http://rdoproject.org/images/bookmark/rdo_bookmark.pdf)
+[RDO/OpenStack command line cheatsheet](http://rdoproject.org/images/bookmark/rdo_bookmark.pdf) (bookmark)
