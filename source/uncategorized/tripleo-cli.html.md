@@ -28,8 +28,7 @@ You will need to register your bare-metal hardware as nodes in Ironic. This can 
 
 Option 1: Use register-nodes from os-cloud-config to load the nodes JSON. The JSON file should match the following structure.
 
-      {
-       "nodes": [
+       [
          {
            "arch": "x86_64",
            "pm_user": "stack",
@@ -55,12 +54,12 @@ Option 1: Use register-nodes from os-cloud-config to load the nodes JSON. The JS
            "cpu": "1",
            "memory": "4096",
            "disk": "40"
-         },
-      }
+         }
+       ]
 
 This can then be loaded like this:
 
-      register-nodes --service-host undercloud --nodes <(jq '.nodes' $JSON_FILE)
+      register-nodes --service-host undercloud --nodes $JSON_FILE
 
 Option 2: Use the ironic client and `ironic node-create` and `ironic port-create` to add them one at a time.
 
