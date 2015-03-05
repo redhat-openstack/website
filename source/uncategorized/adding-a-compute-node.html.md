@@ -22,9 +22,9 @@ First, you must edit the "answer file" generated during the initial packstack se
 
 NOTE: by default $youranswerfile is called packstack-answer-$date-$time.txt
 
-    vi $youranswerfile
+    $EDITOR $youranswerfile
 
-If you're not familiar with vi, you may use another editor such as "nano".
+Replace $EDITOR with your preferred editor.
 
 #### Adjust network card names
 
