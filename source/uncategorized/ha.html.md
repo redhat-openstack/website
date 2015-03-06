@@ -10,7 +10,7 @@ wiki_last_updated: 2015-03-09
 
 ## Purpose
 
-In our [HA Guide](https://github.com/beekhof/osp-ha-deploy/blob/master/ha-openstack.md|Openstack) we document a high level architecture for a highly available control plane and set of compute nodes based on the [Pacemaker](http://clusterlabs.org) cluster manager and [HA Proxy](http://www.haproxy.org) which provides:
+In our [Openstack HA Guide](https://github.com/beekhof/osp-ha-deploy/blob/master/ha-openstack.md) we document a high level architecture for a highly available control plane and set of compute nodes based on the [Pacemaker](http://clusterlabs.org) cluster manager and [HA Proxy](http://www.haproxy.org) which provides:
 
 *   detection and recovery of machine and application-level failures
 *   startup/shutdown ordering between applications
