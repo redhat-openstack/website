@@ -19,7 +19,7 @@ Help us make the RDO community site a great place for users and cloud operators 
 
 ### Discuss and stay informed
 
-Come and chat real-time with RDO users on **IRC**—you can usually find us in the #rdo channel—or hanging out with the wider OpenStack community in the #openstack channel on [Freenode](http://freenode.net). Packstack-specific discussion takes place in the #packstack-dev channel.
+Come and chat real-time with RDO users on **IRC**—you can usually find us in the #rdo channel—or hanging out with the wider OpenStack community in the #openstack channel on [Freenode](http://freenode.net). RDO Deployment with Packstack and OpenStack Puppet Modules discussion takes place in the #rdo-puppet channel.
 
 Join us for various [Events](Events) around the world. [Organize-a-meetup Start a local meetup group](Organize-a-meetup Start a local meetup group).
 
