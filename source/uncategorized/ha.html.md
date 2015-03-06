@@ -10,50 +10,63 @@ wiki_last_updated: 2015-03-09
 
 ## Purpose
 
-This document will outline the process to set up multiple control nodes that have services highly available and load balanced across the nodes. For demonstration purposes each node will all of the api services, mysql and qpid installed and running as appropriate. The concepts in this document could be applied to break the services on each node further into smaller collections of services.
+In our [HA Guide](https://github.com/beekhof/osp-ha-deploy/blob/master/ha-openstack.md|Openstack) we document a high level architecture for a highly available control plane and set of compute nodes based on the [Pacemaker](http://clusterlabs.org) cluster manager and [HA Proxy](http://www.haproxy.org) which provides:
 
-## Overview
+*   detection and recovery of machine and application-level failures
+*   startup/shutdown ordering between applications
+*   preferences for other applications that must/must-not run on the same machine
+*   provably correct response to any failure or cluster state
 
-Start by setting each control node up as you would a non-HA/LB control node. Once each control node is installed without being aware of each other the nodes will be clustered together using Pacemaker. This involves clustering the database and messaging as pacemaker resources. MySQL wil be clustered in an active/passive fail over using shared storage only mounted on one node at a time. Qpid will be also be configured in an active/passive fail over configuration, this document will be updated in the future to demonstrate how to deploy qpid in a clustered configuration. Most of the other control services are stateless and, therefore, can be load balanced without further configuration. Exceptions to this include the nova-consoleauth service and the neutron L2 agent. The will be added as pacemaker resources and only run on a single host at a time.
+## Why Pacemaker
 
-## Openstack Installation
+At its core, a cluster is a distributed finite state machine capable of co-ordinating the startup and recovery of inter-related services across a set of machines.
 
-[ Installing Multinode Havana w/GRE](GettingStartedHavana_w_GRE) will walk through a multinode installation using GRE. This is the installation needed to proceed with HA and LB configuration. Use that document to install each of your control nodes. The number of compute nodes is up to you. You can specify the same or different compute node(s) for each install. You will update their settings later to make sure they're talking to the control nodes properly. The important piece in this installation is to separate your control from your compute nodes, that you do multiple control node installations (run that doc once for each control node) and that GRE is setup.
+Even a distributed and/or replicated application that is able to survive failures on one or more machines can benefit from a cluster manager:
 
-Be sure to provision your nodes with RHEL 6.5+
-The pacemaker features in this document require the version of pacemaker in 6.5.
+*   Awareness of other applications in the stack
 
-## High Availability Configuration
+While SYS-V init replacements like systemd can provide deterministic recovery of a complex stack of services, the recovery is limited to one machine and lacks the context of what is happening on other machines - context that is crucial to determine the difference between a local failure, clean startup and recovery after a total site failure.
 
-Now that the control nodes are installed, the next step is to cluster them. This is accomplished by having them share a database store and ensuring that messaging is highly available.
+*   Awareness of instances on other machines
 
-[ Highly Available MySQL server for OpenStack ](Highly_Available_MySQL_server_for_OpenStack) will get pacemaker installed and configured so that the nodes are highly available and MySQL is HA.
+Services like RabbitMQ and Galera have complicated boot-up sequences that require co-ordination, and often serialization, of startup operations across all machines in the cluster. This is especially true after site-wide failure or shutdown where we must first determine the last machine to be active.
 
-[ Highly Available Qpid for OpenStack](Highly_Available_Qpid_for_OpenStack) will get qpid clustered and/or added to pacemaker.
+*   Data integrity through fencing (a non-responsive process does not imply it is not doing anything)
 
-nova-consoleauth also needs to be added to pacemaker, this will ensure that it only runs on one node. Your remote console will not work if consoleauth is running in more than one place.
+A single application does not have sufficient context to know the difference between failure of a machine and failure of the applcation on a machine. The usual practice is to assume the machine is dead and carry on, however this is highly risky - a rogue process or machine could still be responding to requests and generally causing havoc. The safer approach is to make use of remotely accessible power switches and/or network switches and SAN controllers to fence (isolate) the machine before continuing.
 
-    node1$ pcs resource create consoleauth lsb:openstack-nova-consoleauth --group test-group
+*   Automated recovery of failed instances
 
-## Load Balancing
+While the application can still run after the failure of several instances, it may not have sufficient capacity to serve the required volume of requests. A cluster can automatically recover failed instances to prevent additional load induced failures.
 
-HA Proxy is used to load balance the services. It should be installed on each of the control nodes.
+## Why HA Proxy
 
-    # yum install -y haproxy
+HAProxy is a free, open source solution, providing load balancing and proxying for TCP and HTTP-based applications by spreading requests across multiple servers. It is written in C and has a reputation for being fast and efficient, both in terms of processor and memory usage.
 
-Next use the configuration from [ HA Proxy Configuration](Load_Balance_OpenStack_API#HAProxy) to configure HA Proxy.
-* Keepalived will not be used, pacemaker will handle keeping HA Proxy highly available.
-* The configuration on that wiki doc refers to quantum. The ports are the same in neutron, replace quantum with neutron if you want to.
- Once HA Proxy is configured it can be added to pacemaker as a resource to ensure that it's kept highly available.
+Integrating a proxy into the architecture has four key benefits:
 
-    node1$ pcs resource create qpidd lsb:qpidd --group test-group
+*   Load distribution
 
-In this example, HA Proxy is added to the same test-group as before. That way it will run on the same host as the floating ip.
+Many services can act in an active/active capacity, however they usually require an external mechanism for distributing requests to one of the available instances. The proxy server can serve this role.
+
+*   API isolation
+
+By sending all API access through the proxy, we can clearly identify service interdependancies. We can also move them to locations other than \`localhost\` to increase capacity if the need arises.
+
+*   Simplified process for adding/removing of nodes
+
+Since all API access is directed to the proxy, adding or removing nodes has no impact on the configuration of other services. This can be very useful in upgrade scenarios where an entirely new set of machines can be configured and tested in isolation before telling the proxy to direct traffic there instead.
+
+*   Enhanced failure detection
+
+The proxy can be configured as a secondary mechanism for detecting service failures. It can even be configured to look for nodes in a degraded state (such as being 'too far' behind in the replication) and take them out of circulation.
+
+## Details
+
+Implementation details are contained in scripts linked to from the main document. Read them carefully before considering to run them in your own environment.
+
+The current target for this document is CentOS 7 and the Juno release of Openstack.
 
 ## Securing Services
 
-Use [ Securing Services](Securing_Services) to secure your MySQL, qpid and Apache services
-
-## Updating OpenStack
-
-At this point all the services are being managed by either pacemaker or HAProxy. The final step is to point all the config files for the OpenStack cluster to use the floating ip address to connect to the API endpoints. Do this both in the config files and in the keystone endpoints. There are quite a few config files this should be updated. An update to a keystone endpoint is a delete then re-add, There is not an actual update method.
+The document [ Securing Services](Securing_Services) has some additional information on securing MySQL, qpid and Apache services.
