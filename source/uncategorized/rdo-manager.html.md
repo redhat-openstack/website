@@ -34,5 +34,5 @@ GitHub: <https://github.com/rdo-management/inlunch>
 
 Demo 3 Flow (March 9, 2015)
 
-*   [using Instack commands](http://etherpad.corp.redhat.com/sprint3-demo-flow-virt-setup-exp), [#, recording - TBD)
-*   [using extended CLI commands](http://etherpad.corp.redhat.com/sprint3-demo-flow-virt-setup-extended-cli), [#, recording - TBD)
+*   [using Instack commands](http://etherpad.corp.redhat.com/sprint3-demo-flow-virt-setup-exp), [# recording - TBD]
+*   [using extended CLI commands](http://etherpad.corp.redhat.com/sprint3-demo-flow-virt-setup-extended-cli), [# recording - TBD]
