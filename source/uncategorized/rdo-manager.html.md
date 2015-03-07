@@ -32,6 +32,4 @@ GitHub: <https://github.com/rdo-management/inlunch>
 
 ## How to Guides
 
-### Demo 3 Flow (2015-03-09)
-
-<http://etherpad.corp.redhat.com/sprint3-demo-flow-virt-setup-exp>
+Demo 3 Flow (March 9, 2015): <http://etherpad.corp.redhat.com/sprint3-demo-flow-virt-setup-exp>
