@@ -16,9 +16,9 @@ RDO-Manager Repositories: <https://github.com/rdo-management>
 
 ## Instack
 
-Instack is a tool which installs undercloud (management layer).
+Instack is a tool which installs RDO Manager, also known as the "Deployment Cloud" or the "Undercloud".
 
-At this moment it also include scripts to use CLI commands to deploy overcloud layer (functional OpenStack cloud).
+Instack also includes scripts to use CLI commands to deploy a Workload Cloud or "Overcloud" layer (the OpenStack cloud you want to actually run instances on).
 
 GitHub: <https://github.com/rdo-management/instack-undercloud>
 
