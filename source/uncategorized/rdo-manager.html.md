@@ -30,6 +30,8 @@ Inlunch is a tool which runs Instack while you are having a lunch. In other word
 
 GitHub: <https://github.com/rdo-management/inlunch>
 
+Example answers files: <http://etherpad.corp.redhat.com/inlunch-answers>
+
 ## How to Guides
 
 Demo 3 (March 9, 2015)
