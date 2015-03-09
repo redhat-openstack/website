@@ -36,5 +36,5 @@ Example answers files: <http://etherpad.corp.redhat.com/inlunch-answers>
 
 Demo 3 (March 9, 2015)
 
-*   [steps using Instack commands](http://etherpad.corp.redhat.com/sprint3-demo-flow-virt-setup-exp), [# recording - TBD]
-*   [steps using extended CLI commands](http://etherpad.corp.redhat.com/sprint3-demo-flow-virt-setup-extended-cli) -- ([recording](http://file.brq.redhat.com/~jcoufal/rdo-manager/2015-03-09_demo3/videos/2015-03-08_rdo-manager_instack+cli_cut_small.mp4))
+*   [steps using extended CLI commands](http://etherpad.corp.redhat.com/sprint3-demo-flow-virt-setup-extended-cli) -- ([recording](http://file.brq.redhat.com/~jcoufal/rdo-manager/2015-03-09_demo3/videos/))
+*   [steps using Instack commands](http://etherpad.corp.redhat.com/sprint3-demo-flow-virt-setup-exp)
