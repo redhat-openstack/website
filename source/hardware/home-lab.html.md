@@ -70,7 +70,7 @@ Points to consider:
 Several people have suggested Gen8 or N54L HP Proliant servers.
 
 *   Max RAM is 16GB (N54L)
-*   4 drive pays allow for lots of (potentially noisy) storage. 8 drive possible in 2.5".
+*   4 drive bays allow for lots of (potentially noisy) storage. 8 drive possible in 2.5".
 *   Start at about $180 (more if you want more RAM)
 
 <Category:Hardware>
