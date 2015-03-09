@@ -8,7 +8,9 @@ wiki_last_updated: 2015-03-09
 
 # HA
 
-## Purpose
+## RDO HighlyAvailable and LoadBalanced Control Services
+
+### Purpose
 
 In our [Openstack HA Guide](https://github.com/beekhof/osp-ha-deploy/blob/master/ha-openstack.md) we document a high level architecture for a highly available control plane and set of compute nodes based on the [Pacemaker](http://clusterlabs.org) cluster manager and [HA Proxy](http://www.haproxy.org) which provides:
 
@@ -17,7 +19,7 @@ In our [Openstack HA Guide](https://github.com/beekhof/osp-ha-deploy/blob/master
 *   preferences for other applications that must/must-not run on the same machine
 *   provably correct response to any failure or cluster state
 
-## Why Pacemaker
+### Why Pacemaker
 
 At its core, a cluster is a distributed finite state machine capable of co-ordinating the startup and recovery of inter-related services across a set of machines.
 
@@ -39,7 +41,7 @@ A single application does not have sufficient context to know the difference bet
 
 While the application can still run after the failure of several instances, it may not have sufficient capacity to serve the required volume of requests. A cluster can automatically recover failed instances to prevent additional load induced failures.
 
-## Why HA Proxy
+### Why HA Proxy
 
 HAProxy is a free, open source solution, providing load balancing and proxying for TCP and HTTP-based applications by spreading requests across multiple servers. It is written in C and has a reputation for being fast and efficient, both in terms of processor and memory usage.
 
@@ -61,12 +63,12 @@ Since all API access is directed to the proxy, adding or removing nodes has no i
 
 The proxy can be configured as a secondary mechanism for detecting service failures. It can even be configured to look for nodes in a degraded state (such as being 'too far' behind in the replication) and take them out of circulation.
 
-## Details
+### Details
 
 Implementation details are contained in scripts linked to from the main document. Read them carefully before considering to run them in your own environment.
 
 The current target for this document is CentOS 7 and the Juno release of Openstack.
 
-## Securing Services
+### Securing Services
 
 The document [ Securing Services](Securing_Services) has some additional information on securing MySQL, qpid and Apache services.
