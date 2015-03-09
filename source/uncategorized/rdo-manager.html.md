@@ -26,7 +26,7 @@ Usage Guide: <https://repos.fedorapeople.org/repos/openstack-m/instack-underclou
 
 ## Inlunch
 
-Inlunch is a tool which runs Instack while you are having lunch. In other words, it automates Instack scripts. Maybe more importantly, it prepares a virtual environment (using Vagrant) so that you can run Instack and it will find the virtual machines it needs to set up RDO Manager and the Workload Cloud.
+Inlunch is a tool which runs Instack while you are having lunch. In other words, it automates Instack scripts. Maybe more importantly, it prepares a virtual environment so that you can run Instack and it will find the virtual machines it needs to set up RDO Manager and the Workload Cloud.
 
 GitHub: <https://github.com/rdo-management/inlunch>
 
