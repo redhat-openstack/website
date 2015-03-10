@@ -30,7 +30,7 @@ Inlunch is a tool which runs Instack while you are having lunch. In other words,
 
 GitHub: <https://github.com/rdo-management/inlunch>
 
-## How to Guides
+## Presentations
 
 Demo 3 (March 9, 2015)
 
