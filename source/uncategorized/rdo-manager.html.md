@@ -34,4 +34,4 @@ GitHub: <https://github.com/rdo-management/inlunch>
 
 Demo 3 (March 9, 2015)
 
-*   [Recording on YouTube](https://www.youtube.com/watch?v=gskpEJ2QvpQ)
+*   [Deployment flow, Recording on YouTube](https://www.youtube.com/watch?v=gskpEJ2QvpQ)
