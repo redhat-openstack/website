@@ -35,4 +35,4 @@ GitHub: <https://github.com/rdo-management/inlunch>
 Demo 3 (March 9, 2015)
 
 *   [Flow steps using extended CLI commands](http://etherpad.corp.redhat.com/sprint3-demo-flow-virt-setup-extended-cli)
-*   [Recording on YouTube](https://www.youtube.com/watch?v=gskpEJ2QvpQ))
+*   [Recording on YouTube](https://www.youtube.com/watch?v=gskpEJ2QvpQ)
