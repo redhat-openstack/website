@@ -159,6 +159,8 @@ Once the attributes have been set in the Deployment Plan it can be reviewed with
          -e tuskar_templates/environment.yaml \
          overcloud
 
+If there are any problems with the Heat stack update, the Heat engine log under `/var/log/heat/engine.log` is a good place to start debugging.
+
 ## Monitoring
 
 The ironic client can be used to view your infrastructure. To get an overview, use the following command which will list all registered nodes and the state of that node.
