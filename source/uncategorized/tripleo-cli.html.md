@@ -231,6 +231,8 @@ The plan-patch command allows us to set the count for the role we want to scale.
 
       tuskar plan-patch -A compute-1::count=4 $PLAN_ID
 
+**Note: At the moment only scaling up is supported.**
+
 The format of the attribute name is the `$ROLE_NAME-$ROLE_VERSION::count`. Therefore to scale the swift-storage role it would be named `swift-storage-1::count`.
 
 After updating the attribute, we need to output the Heat Orchestration Templates to then send these to Heat. This is done with the `tuskar plan-templates` command by passing an output directory and the Plan ID.
@@ -243,4 +245,4 @@ Finally we can perform a stack update with Heat.
          -e "tuskar_templates/environment.yaml" \
          overcloud
 
-**Note: At the moment only scaling up is supported.**
+If there are any problems with the Heat stack update, the Heat engine log under `/var/log/heat/engine.log` is a good place to start debugging.
