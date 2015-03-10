@@ -108,6 +108,8 @@ The following example creates a different flavor for the four standard roles, ho
 
 In the Deployment section which follows below, we will look at how to specify the flavors (with the command `tuskar plan-patch`) we want to use when we deploy.
 
+Nova logs can be found under `/var/log/nova/`.
+
 ## Deployment
 
 To deploy the Overcloud a deployment plan needs to be created with the Tuskar planning service. This allows you to select various Roles that will be used in the deployment, scale them and it will then output Heat Orchestration Templates that can then be executed by Heat.
