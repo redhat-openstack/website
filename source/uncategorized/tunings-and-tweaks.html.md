@@ -12,17 +12,16 @@ iThis page has been created to track changes to the underlying systems and the d
 
 **`General`**
 
-You will hit OS system limits as you scale (this is a big hammer, will need some tightening for security) Increase number of open files on the messing and database services (EL6)
+You will hit OS system limits as you scale (this is a big hammer, will need some tightening for security) Increase number of open files on the messing and database services (EL6) edit /etc/security/limits.conf:
 
-         edit    /etc/security/limits.conf 
-         mysql    soft nofile 64000
-         mysql   hard nofile 64000
-         qpidd   soft nofile 64000
-         qpidd   hard nofile 64000
-         rabbitmq   soft nofile 64000
-         rabbitmq  hard nofile 64000
-         postgres soft nofile 64000
-         postgres hard nofile 64000
+         mysql    soft nofile 16384
+         mysql   hard nofile 16384
+         qpidd   soft nofile 16384
+         qpidd   hard nofile 16384
+         rabbitmq   soft nofile 16384
+         rabbitmq  hard nofile 16384
+         postgres soft nofile 16384
+         postgres hard nofile 16384
          Increase number of procs
          /etc/security/limits.d/90-nproc.conf
          *          soft    nproc     10240
@@ -34,7 +33,13 @@ Systemd (EL7, Fedora) uses per service limits and does not uses /etc/security/li
 
        .include /lib/systemd/system/rabbitmq-server.service
        [Service]
-        LimitNOFILE=65535
+        LimitNOFILE=16384
+
+Instead of creating an overlapping service, just extending it is also possible:
+
+      /etc/systemd/system/mariadb.service.d/limits.conf
+      [Service]
+      LimitNOFILE = 16384
 
 If the service already enabled and the service link points to the packaged version of the script, you need to disable and enable the service:
 
@@ -46,6 +51,8 @@ If the service already enabled and the service link points to the packaged versi
 The systemd confing files need to be reload after configuration changes:
 
        systemctl daemon-reload
+
+HAProxy requires to configure the file descriptor limits inside it's config file. <http://cbonte.github.io/haproxy-dconv/configuration-1.5.html#3.2-maxconn>
 
 By default lots of stuff seems to go to /var, if possible put /var on a bigger, faster drive Try using SSD if available
 
@@ -93,11 +100,15 @@ By default lots of stuff seems to go to /var, if possible put /var on a bigger, 
 
             increase number of connections -
 
-         in /etc/my.cnf
+in /etc/my.cnf
+
+         max_connections = 15360
          innodb_buffer_pool_size = 10G
          innodb_flush_method = O_DIRECT
          innodb_file_per_table
          innodb_flush_log_at_trx_commit = 0
+         innodb_log_file_size=1500M
+         innodb_log_files_in_group=2 
 
 Consider using [thread_handling=pool-of-threads](https://mariadb.com/kb/en/mariadb/documentation/optimization-and-tuning/buffers-caches-and-threads/thread-pool/threadpool-in-55/) option when mariadb needs to handle large number of not too active connection. Mariadb by default creates a thread for every connection, which consumes a significant amount a memory when it needs to handle thousands of connections.
 
