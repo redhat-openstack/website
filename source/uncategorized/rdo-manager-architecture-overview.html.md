@@ -10,7 +10,7 @@ wiki_last_updated: 2015-04-08
 
 RDO Manager Architecture Overview
 
-QuickStart
+## QuickStart
 
 This document lists the main components of RDO Manager, and gives some description of how each component is used. There are links to additional sources of information throughout the document. For those wishing to start actually using RDO Manager, the current installation documentation is here - <https://repos.fedorapeople.org/repos/openstack-m/instack-undercloud/html/index.html>
 
