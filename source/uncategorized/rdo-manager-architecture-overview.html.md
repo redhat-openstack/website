@@ -18,11 +18,13 @@ RDO Manager is a set of tools from deploying, and managing OpenStack which is bu
 
 The name TripleO refers to three related things:
 
-A design pattern, where an underlying OpenStack instance is used to deploy and then to manage another, usually more complex, OpenStack instance. A set of configuration files and scripts which contain OS image building rules and service configuration rules The upstream program within the OpenStack project which develops the various scripts and utilities which are combined to deliver the complete software solution.
+*   A design pattern, where an underlying OpenStack instance is used to deploy and then to manage another, usually more complex, OpenStack instance.
+*   A set of configuration files and scripts which contain OS image building rules and service configuration rules
+*   The upstream program within the OpenStack project which develops the various scripts and utilities which are combined to deliver the complete software solution.
 
 The design pattern, where a sophisticated, general-purpose OpenStack instance is created by, and then runs on top of, a simpler, single-purpose deployment instance of OpenStack, is what gives TripleO its name. It is short for OpenStack On OpenStack.
 
-Benefits
+## Benefits
 
 Using RDO Manager’s combination of OpenStack components, and their APIs, as the infrastructure to deploy and operate OpenStack itself delivers several benefits:
 
