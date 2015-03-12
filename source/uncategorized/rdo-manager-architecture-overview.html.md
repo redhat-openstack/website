@@ -22,45 +22,66 @@ The name TripleO refers to three related things:
 *   A set of configuration files and scripts which contain OS image building rules and service configuration rules
 *   The upstream program within the OpenStack project which develops the various scripts and utilities which are combined to deliver the complete software solution.
 
-The design pattern, where a sophisticated, general-purpose OpenStack instance is created by, and then runs on top of, a simpler, single-purpose deployment instance of OpenStack, is what gives TripleO its name. It is short for OpenStack On OpenStack.
+The design pattern, where a sophisticated, general-purpose OpenStack instance is created by, and then runs on top of, a simpler, single-purpose deployment instance of OpenStack, is what gives TripleO its name. It is short for *OpenStack On OpenStack*.
 
 ## Benefits
 
 Using RDO Manager’s combination of OpenStack components, and their APIs, as the infrastructure to deploy and operate OpenStack itself delivers several benefits:
 
-RDO Manager’s APIs \*are\* the OpenStack APIs. They’re well maintained, well documented, and come with client libraries and command line tools. Users who invest time in learning about RDO manager’s APIs are also learning about OpenStack itself, and users who are already familiar with OpenStack will find a great deal in RDO Manager that they already understand. Using the OpenStack components allows more rapid feature development of RDO Manager than might otherwise be the case; RDO Manager automatically inherits all the new features which are added to Glance, Heat etc., even when the developer of the new feature didn’t explicitly have TripleO and RDO Manager in mind. The same applies to bug fixes and security updates. When OpenStack developers fix bugs in the common components, those fixes are inherited by RDO Manager Users’ can invest time in integrating their own scripts and utilities with RDO Manager’s APIs with some confidence. Those APIs are cooperatively maintained and developed by the OpenStack community. They’re not at risk of being suddenly changed or retired by a single controlling vendor. For developers, tight integration with the openstack APIs provides a solid architecture, which has gone through extensive community review.
+*   RDO Manager’s APIs \*are\* the OpenStack APIs. They’re well maintained, well documented, and come with client libraries and command line tools. Users who invest time in learning about RDO manager’s APIs are also learning about OpenStack itself, and users who are already familiar with OpenStack will find a great deal in RDO Manager that they already understand.
+*   Using the OpenStack components allows more rapid feature development of RDO Manager than might otherwise be the case; RDO Manager automatically inherits all the new features which are added to Glance, Heat etc., even when the developer of the new feature didn’t explicitly have TripleO and RDO Manager in mind.
+*   The same applies to bug fixes and security updates. When OpenStack developers fix bugs in the common components, those fixes are inherited by RDO Manager
+*   Users’ can invest time in integrating their own scripts and utilities with RDO Manager’s APIs with some confidence. Those APIs are cooperatively maintained and developed by the OpenStack community. They’re not at risk of being suddenly changed or retired by a single controlling vendor.
+*   For developers, tight integration with the openstack APIs provides a solid architecture, which has gone through extensive community review.
 
 It should be noted that not everything in RDO Manager is a reused OpenStack element. The Tuskar API, for example (which lets users design the workload cloud that they want to deploy), is found in RDO Manager but not, so far at least, in a typical Openstack instance. The Tuskar API is described in more detail below.
 
-Deploying the workload cloud with RDO Manager
+## Deploying the workload cloud with RDO Manager
 
-To begin using RDO Manager, it is necessary to install the deployment cloud (sometimes referred to as the undercloud). The deployment cloud is a working instance of OpenStack, typically on a single machine. It is somewhat limited, because it only really exists for a single purpose: to deploy, and then manage, the workload cloud (sometimes referred to as the overcloud).
+To begin using RDO Manager, it is necessary to install the deployment cloud (sometimes referred to as the *undercloud*). The deployment cloud is a working instance of OpenStack, typically on a single machine. It is somewhat limited, because it only really exists for a single purpose: to deploy, and then manage, the workload cloud (sometimes referred to as the *overcloud*).
 
 In RDO Manager, installing and configuring the deployment cloud is done using a script called instack. Detailed instructions are included in the QuickStart link at the head of this document.
 
-The setup that instack carries out includes: Installing the required software to run the deployment cloud and configuring services Populating the Tuskar DB with default roles Setting a flavor management policy for the installation Downloading, or building, OS images Uploading those images into Glance.
+The setup that instack carries out includes:
+
+*   Installing the required software to run the deployment cloud and configuring services
+*   Populating the Tuskar DB with default roles
+*   Setting a flavor management policy for the installation
+*   Downloading, or building, OS images
+*   Uploading those images into Glance.
 
 When instack has set up the deployment cloud, the user has a single machine which is running a collection of core OpenStack services, and a couple of other services. The easiest way to understand all of these is to walk through the process of using them to define, prepare for, then deploy and monitor, the workload cloud.
 
-Hardware discovery
+## Hardware discovery
 
 Deploying the workload cloud requires suitable hardware. The first task is to register the available hardware with Ironic, OpenStack’s equivalent of a hypervisor for managing baremetal servers. The sequence of events is pictured below.
 
-The user, via the TripleO UI, the command-line tools, or through direct API calls, registers the power management credentials for a node with Ironic. The user then instructs Ironic to reboot the node Because the node is new, and not already fully registered, there are no specific PXE-boot instructions for it. In that case, the default action is to boot into a discovery ramdisk The discovery ramdisk probes the hardware on the node and gathers facts, including the number of CPU cores, the local disk size and the amount of RAM. The ramdisk posts the facts to the discoverd API Discoverd matches the hardware facts it has received with the node whose power management details are already registered with Ironic, and updates the Ironic DB, completing the registration of the node.
+*   The user, via the TripleO UI, the command-line tools, or through direct API calls, registers the power management credentials for a node with Ironic.
+*   The user then instructs Ironic to reboot the node
+*   Because the node is new, and not already fully registered, there are no specific PXE-boot instructions for it. In that case, the default action is to boot into a discovery ramdisk
+*   The discovery ramdisk probes the hardware on the node and gathers facts, including the number of CPU cores, the local disk size and the amount of RAM.
+*   The ramdisk posts the facts to the discoverd API
+*   Discoverd matches the hardware facts it has received with the node whose power management details are already registered with Ironic, and updates the Ironic DB, completing the registration of the node.
 
-Understanding roles
+## Understanding roles
 
 Roles are stored in the Tuskar DB, and are used through interaction with the Tuskar API. A role brings together three things:
 
-An image; the software to be installed on a node A flavor; the size of node suited to the role A set of heat templates; instructions on how to configure the node for its task
+*   An image; the software to be installed on a node
+*   A flavor; the size of node suited to the role
+*   A set of heat templates; instructions on how to configure the node for its task
 
-In the case of the “Compute” role: the image must contain all the required software to boot an OS and then run the KVM hypervisor and the Nova compute service the flavor (at least for a deployment which isn’t a simple proof of concept), should specify that the machine has enough CPU capacity and RAM to host several VMs concurrently the Heat templates will take care of ensuring that the Nova service is correctly configured on each node when it first boots.
+In the case of the “Compute” role:
+
+*   the image must contain all the required software to boot an OS and then run the KVM hypervisor and the Nova compute service
+*   the flavor (at least for a deployment which isn’t a simple proof of concept), should specify that the machine has enough CPU capacity and RAM to host several VMs concurrently
+*   the Heat templates will take care of ensuring that the Nova service is correctly configured on each node when it first boots.
 
 The roles in the current version of RDO Manager aren’t intended to be very customisable. The associated image can be updated, to allow for newer images with bug fixes, and the associated flavors can be changed (unless the deployment is only a proof of concept - see below), but the Heat templates which configure a node for its role cannot easily be altered, neither can roles be added or removed.
 
 In principle, a user might create their own role definition which did just about anything; they could even be used to deploy something other than an OpenStack workload cloud. However, the inter-related OS images (composed from TripleO image elements) and instance configuration rules (contained in TripleO Heat templates) are complex. A small amount of changes could prevent them from adding up to an operational workload cloud. Roles are used when the user designs the workload cloud they wish to deploy, which is described in a later section.
 
-Managing flavors
+## Managing flavors
 
 When users are creating virtual machines (VMs) in an OpenStack cloud, the flavor that they choose specifies the capacity of the VM which should be created. The flavor defines the CPU count, the amount of RAM, the amount of disk space etc.. As long as the cloud has enough capacity to grant the user’s wish, and the user hasn’t reached their quota limit, the flavor acts as a set of instructions on exactly what kind of VM to create on the user’s behalf.
 
@@ -72,9 +93,7 @@ For the second mode, named Scale because it is suited to larger scale workload c
 
 This second mode allows users to ensure that their different hardware types end up running their intended role, though it takes some extra effort to configure.
 
-<CRUD for flavors, association with roles>
-
-Preparing the deployment plan
+## Preparing the deployment plan
 
 Tuskar exposes a REST API and allows users to define, or update, a deployment plan. That plan contains the details of the roles to be assigned, and the service configuration parameters to be deployed. When the user is satisfied that their deployment plan is correct, then can extract it from Tuskar, and pass it to Heat, which orchestrates the deployment of the actual cloud, based on the plan.
 
@@ -108,7 +127,7 @@ Once the deployment plan is complete, it’s ready to be passed to Heat, the ser
 
 [stack@localhost tmp]$ tuskar plan-templates -O /tmp 193f7d1d-a1a9-4605-a54f-2c4ead45a7ab Following templates has been written: /tmp/plan.yaml /tmp/environment.yaml /tmp/provider-swift-storage-1.yaml /tmp/provider-cinder-storage-1.yaml /tmp/provider-controller-1.yaml /tmp/provider-compute-1.yaml
 
-Deploying the workload cloud
+## Deploying the workload cloud
 
 Bringing the deployment cloud into existence, by parsing the deployment plan from Tuskar and orchestrating the deployment of multiple nodes with images that their roles dictate, and with the required service parameters, is the role of Heat, OpenStack’s orchestration engine.
 
@@ -138,7 +157,7 @@ After the deployment of the workload cloud, there’s a set of steps which are r
 
 Those capabilities are integrated into the TripleO UI. From the command line, they are all encapsulated in the instack-deploy-overcloud script, which in turn calls init-keystone tripleo setup-endpoints and setup-neutron.
 
-Monitoring the workload cloud
+## Monitoring the workload cloud
 
 When the workload cloud is deployed, Ceilometer can be configured to track a set of OS metrics for each node (system load, CPU utiization, swap usage etc.) These metrics are graphed in the TripleO UI, both for individual nodes, and for groups of nodes, such as the collection of nodes which are all delivering a particular role.
 
@@ -146,7 +165,7 @@ Additionally, Ironic exports IPMI metrics for nodes, which can also be stored in
 
 In addition to being represented in the TripleO UI, these metrics can be queried using the ceilometer client tools, as described here: <https://www.rdoproject.org/CeilometerQuickStart>
 
-Scaling out the workload cloud
+## Scaling out the workload cloud
 
 This page ( <https://www.rdoproject.org/TripleO-CLI#Post-Deployment> ) contains a description of scaling out a deployed workload cloud. The process involves two stages:
 
