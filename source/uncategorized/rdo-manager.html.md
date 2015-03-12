@@ -32,6 +32,14 @@ Inlunch is a tool which runs Instack while you are having lunch. In other words,
 
 GitHub: <https://github.com/rdo-management/inlunch>
 
+## Tuskar API
+
+Tuskar is a service which allows users to define a workload cloud before deploying it via Heat, and then to scale out a deployed workload cloud by updating the definition.
+
+Tuskar Plan REST API Specification: <http://specs.openstack.org/openstack/tripleo-specs/specs/juno/tripleo-juno-tuskar-rest-api.html>
+
+Tuskar API examples: <https://www.rdoproject.org/Tuskar-API>
+
 ## Presentations
 
 Demo 3 (March 9, 2015)
