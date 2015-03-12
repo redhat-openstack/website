@@ -105,27 +105,39 @@ For many users, the simplest way to read and update a deployment plan will be vi
 
 In a default installation of RDO Manager, there’s a single pre-loaded deployment plan in Tuskar. The details can be retrieved with this command on the deployment cloud node:
 
-curl -v -X GET -H 'Content-Type: application/json' -H 'Accept: application/json' <http://0.0.0.0:8585/v2/plans/>
+`curl -v -X GET -H 'Content-Type: application/json' -H 'Accept: application/json' `[`http://0.0.0.0:8585/v2/plans/`](http://0.0.0.0:8585/v2/plans/)
 
 There’s a large amount of output, the majority of which is the array of parameters which the deployment plans contain, these cover multiple passwords, some usernames, networking options, the name of the flavor to request when creating an instance of a particular role etc..
 
 On the command line, the complete set of details of a plan, including all the parameters, can be seen by first, retrieving the plan ID:
 
-[stack@localhost ~]$ tuskar plan-list +--------------------------------------+-----------+-------------+----------------------------------------------------+ | uuid | name | description | roles | +--------------------------------------+-----------+-------------+----------------------------------------------------+ | 193f7d1d-a1a9-4605-a54f-2c4ead45a7ab | overcloud | None | controller, swift-storage, compute, cinder-storage | +--------------------------------------+-----------+-------------+----------------------------------------------------+
+      [stack@localhost ~]$ tuskar plan-list
+      +--------------------------------------+-----------+-------------+----------------------------------------------------+
+      | uuid                                 | name      | description | roles                                              |
+      +--------------------------------------+-----------+-------------+----------------------------------------------------+
+      | 193f7d1d-a1a9-4605-a54f-2c4ead45a7ab | overcloud | None        | controller, swift-storage, compute, cinder-storage |
+      +--------------------------------------+-----------+-------------+----------------------------------------------------+
 
 and then by using the uuid for the default plan to run:
 
-[stack@localhost ~]$ tuskar plan-show 193f7d1d-a1a9-4605-a54f-2c4ead45a7ab
+      [stack@localhost ~]$ tuskar plan-show 193f7d1d-a1a9-4605-a54f-2c4ead45a7ab
 
 That command lists a lot of output, including all the plan’s set of parameters.
 
 It is possible to alter the parameters associated with a plan, via the command line, or via the REST API. The following command increases the number of instances of the “compute” role which the plan will deploy to 6:
 
-tuskar plan-patch -A compute-1::count=6 193f7d1d-a1a9-4605-a54f-2c4ead45a7ab
+      tuskar plan-patch -A compute-1::count=6 193f7d1d-a1a9-4605-a54f-2c4ead45a7ab
 
 Once the deployment plan is complete, it’s ready to be passed to Heat, the service which actually launches the workload cloud. The command-line tools for Heat consume yaml files. Those yaml files, containing the whole deployment, can be output from Tuskar with this command:
 
-[stack@localhost tmp]$ tuskar plan-templates -O /tmp 193f7d1d-a1a9-4605-a54f-2c4ead45a7ab Following templates has been written: /tmp/plan.yaml /tmp/environment.yaml /tmp/provider-swift-storage-1.yaml /tmp/provider-cinder-storage-1.yaml /tmp/provider-controller-1.yaml /tmp/provider-compute-1.yaml
+      [stack@localhost tmp]$ tuskar plan-templates -O /tmp 193f7d1d-a1a9-4605-a54f-2c4ead45a7ab
+      Following templates has been written:
+      /tmp/plan.yaml
+      /tmp/environment.yaml
+      /tmp/provider-swift-storage-1.yaml
+      /tmp/provider-cinder-storage-1.yaml
+      /tmp/provider-controller-1.yaml
+      /tmp/provider-compute-1.yaml
 
 ## Deploying the workload cloud
 
@@ -137,7 +149,7 @@ Heat’s own term for the applications that it creates is stack. The workload cl
 
 Creating the stack with the CLI can be done like this:
 
-[stack@localhost tmp]$ heat stack create -f tuskar_templates/plan.yaml -e tuskar_templates/environment.yaml
+      [stack@localhost tmp]$ heat stack create -f tuskar_templates/plan.yaml -e tuskar_templates/environment.yaml
 
 In order to the stack to be deployed, Heat makes successive calls to Nova, OpenStack’s compute service controller. Nova depends upon Ironic,which, as described above has acquired an inventory of discovered hardware by this stage in the process
 
@@ -149,7 +161,12 @@ Once the nodes are booted, Heat also manages passing parameters to the newly lau
 
 The status of the deploying stack, and the completion of the deployment can be seen with this command:
 
-[stack@localhost ~]$ heat stack-list +--------------------------------------+------------+-----------------+----------------------+ | id | stack_name | stack_status | creation_time | +--------------------------------------+------------+-----------------+----------------------+ | 5b5dc570-c62c-4026-aa70-098c1ac383cb | overcloud | CREATE_COMPLETE | 2015-03-12T20:15:16Z | +--------------------------------------+------------+-----------------+----------------------+
+      [stack@localhost ~]$ heat stack-list
+      +--------------------------------------+------------+-----------------+----------------------+
+      | id                                   | stack_name | stack_status    | creation_time        |
+      +--------------------------------------+------------+-----------------+----------------------+
+      | 5b5dc570-c62c-4026-aa70-098c1ac383cb | overcloud  | CREATE_COMPLETE | 2015-03-12T20:15:16Z |
+      +--------------------------------------+------------+-----------------+----------------------+
 
 “heat stack-show” will return a complete description of the state of the cloud.
 
