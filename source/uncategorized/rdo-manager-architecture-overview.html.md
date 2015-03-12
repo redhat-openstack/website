@@ -56,7 +56,7 @@ When instack has set up the deployment cloud, the user has a single machine whic
 
 Deploying the workload cloud requires suitable hardware. The first task is to register the available hardware with Ironic, OpenStack’s equivalent of a hypervisor for managing baremetal servers. The sequence of events is pictured below.
 
-![](Example.jpg "Example.jpg")
+![](Hw_discovery_seq.jpg "Hw_discovery_seq.jpg")
 
 *   The user, via the TripleO UI, the command-line tools, or through direct API calls, registers the power management credentials for a node with Ironic.
 *   The user then instructs Ironic to reboot the node
