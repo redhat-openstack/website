@@ -8,11 +8,11 @@ wiki_last_updated: 2015-04-08
 
 # RDO Manager Architecture Overview
 
-RDO Manager Architecture Overview
-
 ## QuickStart
 
 This document lists the main components of RDO Manager, and gives some description of how each component is used. There are links to additional sources of information throughout the document. For those wishing to start actually using RDO Manager, the current installation documentation is here - <https://repos.fedorapeople.org/repos/openstack-m/instack-undercloud/html/index.html>
+
+## Introduction - RDO Manager and TripleO
 
 RDO Manager is a set of tools from deploying, and managing OpenStack which is built upon the TripleO project.
 
