@@ -52,7 +52,7 @@ Once you have a Ceph Storage Cluster up and running, you can begin installing vi
 
 ## Install RDO
 
-From the RDO node, install RDO. See [Quick Start page](//openstack.redhat.com/Quickstart) for details.
+From the RDO node, install RDO. See [Quick Start page](//rdoproject.org/Quickstart) for details.
 
 ## Configure Ceph Pools and Users
 
