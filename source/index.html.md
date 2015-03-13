@@ -32,7 +32,7 @@ There are many ways to [get involved](get involved) with the RDO community once 
 
 ![](Github.png "fig:Github.png") The Puppet modules used in packstack are on [Github](https://github.com/packstack) and packstack itself is on [Stackforge](https://github.com/stackforge/packstack).
 
-For a commercially-supported enterprise ready OpenStack solution, Red Hat provides [Red Hat Enterprise Linux OpenStack Platform](//redhat.com/openstack), an enterprise-class cloud platform based on OpenStack Havana.
+For a commercially-supported enterprise ready OpenStack solution, Red Hat provides [Red Hat Enterprise Linux OpenStack Platform](//redhat.com/openstack), an enterprise-class cloud platform based on OpenStack Juno.
 
 </div>
 </div>
