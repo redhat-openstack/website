@@ -248,4 +248,7 @@ Further information on using the Ceilometer to is available here: <https://www.r
 
 This page ( <https://www.rdoproject.org/TripleO-CLI#Post-Deployment> ) contains a description of scaling out a deployed workload cloud. The process involves two stages:
 
-Updating the plan managed by Tuskar, as described in the “Preparing the deployment plan” section above Calling heat stack-update, to apply the set of changes to Heat’s stack; the workload cloud.
+*   Updating the plan managed by Tuskar, as described in the “Preparing the deployment plan” section above
+*   Calling heat stack-update, to apply the set of changes to Heat’s stack; the workload cloud.
+
+As in the case of the original deployment of the overcloud via Heat, that status of the update can be checked by running heat stack-list. It's also possible to see a history of the events associated with a stack by running heat event-list overcloud.
