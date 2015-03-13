@@ -251,4 +251,21 @@ This page ( <https://www.rdoproject.org/TripleO-CLI#Post-Deployment> ) contains 
 *   Updating the plan managed by Tuskar, as described in the “Preparing the deployment plan” section above
 *   Calling heat stack-update, to apply the set of changes to Heat’s stack; the workload cloud.
 
-As in the case of the original deployment of the overcloud via Heat, that status of the update can be checked by running heat stack-list. It's also possible to see a history of the events associated with a stack by running heat event-list overcloud.
+As in the case of the original deployment of the overcloud via Heat, that status of the update can be checked by running heat stack-list.
+
+It's also possible to see a history of the events associated with a stack with this command:
+
+      [stack@localhost ~]$ heat event-list overcloud
+      +-----------------------------------+--------------------------------------+------------------------+--------------------+----------------------+
+      | resource_name                     | id                                   | resource_status_reason | resource_status    | event_time           |
+      +-----------------------------------+--------------------------------------+------------------------+--------------------+----------------------+
+      | CephStorageNodesPostDeployment    | 72670265-5145-4bae-b445-f920ccc9aa64 | state changed          | CREATE_COMPLETE    | 2015-03-12T20:19:40Z |
+      | CephStorageNodesPostDeployment    | b41db82a-6e17-4eb6-8666-0d5f60a234f9 | state changed          | CREATE_IN_PROGRESS | 2015-03-12T20:19:37Z |
+      | ControllerNodesPostDeployment     | f91ede39-f2b8-44b2-8644-072a04d619f0 | state changed          | CREATE_COMPLETE    | 2015-03-12T20:19:37Z |
+      | ComputeNodesPostDeployment        | 80912537-d95c-44a6-9975-9ce43d739f8b | state changed          | CREATE_COMPLETE    | 2015-03-12T20:17:58Z |
+      | ControllerNodesPostDeployment     | eadbef1a-e932-4f60-a94d-417007ae6578 | state changed          | CREATE_IN_PROGRESS | 2015-03-12T20:17:38Z |
+      | ControllerCephDeployment          | 47482901-69a7-4699-973d-c507e762dce8 | state changed          | CREATE_COMPLETE    | 2015-03-12T20:17:38Z |
+      | ControllerAllNodesDeployment      | 44436938-71e5-452e-a37f-956f3c8cec8e | state changed          | CREATE_COMPLETE    | 2015-03-12T20:17:38Z |
+      | ComputeNodesPostDeployment        | 4ac03e96-b9e3-437a-b0bb-a21774069abc | state changed          | CREATE_IN_PROGRESS | 2015-03-12T20:17:13Z |
+      | ComputeAllNodesDeployment         | 253244ba-aae4-4cb0-8d85-968699425217 | state changed          | CREATE_COMPLETE    | 2015-03-12T20:17:13Z |
+      | BlockStorageNodesPostDeployment   | cbc1a747-f683-4b74-bbc0-72a8095c8af1 | state changed          | CREATE_COMPLETE    | 2015-03-12T20:17:09Z |
