@@ -18,7 +18,7 @@ Replace 'cluster-mechanism' with 'ha-mechanism' in /etc/qpidd.conf then restart 
 
 ## sasldb errors
 
-As discussed in [forum thread](http://openstack.redhat.com/forum/discussion/293/error-on-openstack-status#Item_5|this), the qpid user database may become corrupted. This may be evidenced by error messages such as:
+As discussed in [forum thread](http://rdoproject.org/forum/discussion/293/error-on-openstack-status#Item_5|this), the qpid user database may become corrupted. This may be evidenced by error messages such as:
 
          qpidd: unable to open Berkeley db /var/lib/qpidd/qpidd.sasldb: No such file or directory
 
