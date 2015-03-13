@@ -10,7 +10,7 @@ wiki_last_updated: 2015-03-13
 
 # Adding new content
 
-The [RDO website](//openstack.redhat.com) is a wiki, built on [MediaWiki](//mediawiki.org), the software behind [Wikipedia](//wikipedia.org). We welcome contributions to the website which improve the knowledge base for RDO users!
+The [RDO website](//rdoproject.org) is a wiki, built on [MediaWiki](//mediawiki.org), the software behind [Wikipedia](//wikipedia.org). We welcome contributions to the website which improve the knowledge base for RDO users!
 
 Here are a few guidelines for contributing new content to the wiki
 
