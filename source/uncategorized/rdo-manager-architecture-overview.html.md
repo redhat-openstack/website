@@ -182,7 +182,67 @@ When the workload cloud is deployed, Ceilometer can be configured to track a set
 
 Additionally, Ironic exports IPMI metrics for nodes, which can also be stored in Ceilometer. This enables checks on hardware state such as fan operation/failure and internal chassis temperatures.
 
-In addition to being represented in the TripleO UI, these metrics can be queried using the ceilometer client tools, as described here: <https://www.rdoproject.org/CeilometerQuickStart>
+The metrics which Ceilometer gathers can be queried for Ceilometer's REST API, or by using the command line client, as in the following example:
+
+The first stage is to get the Instance UUID which will be used to identify the node we want to report on:
+
+      [stack@localhost ~]$ ironic node-list
+      +--------------------------------------+--------------------------------------+-------------+--------------------+-------------+
+      | UUID                                 | Instance UUID                        | Power State | Provisioning State | Maintenance |
+      +--------------------------------------+--------------------------------------+-------------+--------------------+-------------+
+      | 15739d49-90ab-4a42-9620-fe140f5bdcb5 | 9282131d-5e25-495c-82ce-dcbcd34158f7 | power on    | active             | False       |
+      | 3fb4021c-5a79-47ca-af39-f0dcde7109a4 | 31fac73a-90d0-44ef-b3ef-014b43f735e8 | power on    | active             | False       |
+      | 4c9915f1-8f6e-4110-85e3-6dcb8539f51d | d52ebd4f-a28b-49cf-8adc-61847e6bb525 | power on    | active             | False       |
+      | 3ef1e9e9-9f6b-4bbd-aab1-dd0941fb1ae1 | 0a00e394-be74-45b2-9046-1d81dac3d4a4 | power on    | active             | False       |
+      +--------------------------------------+--------------------------------------+-------------+--------------------+-------------+
+
+Having looked up the nodes, we can then look up the available meters for that node:
+
+      [stack@localhost ~]$ ceilometer meter-list --query resource=d52ebd4f-a28b-49cf-8adc-61847e6bb525
+      +------------------------------------------+------------+-----------+--------------------------------------+---------+------------+
+      | Name                                     | Type       | Unit      | Resource ID                          | User ID | Project ID |
+      +------------------------------------------+------------+-----------+--------------------------------------+---------+------------+
+      | hardware.cpu.load.15min                  | gauge      | process   | d52ebd4f-a28b-49cf-8adc-61847e6bb525 | None    | None       |
+      | hardware.cpu.load.1min                   | gauge      | process   | d52ebd4f-a28b-49cf-8adc-61847e6bb525 | None    | None       |
+      | hardware.cpu.load.5min                   | gauge      | process   | d52ebd4f-a28b-49cf-8adc-61847e6bb525 | None    | None       |
+      | hardware.memory.swap.avail               | gauge      | B         | d52ebd4f-a28b-49cf-8adc-61847e6bb525 | None    | None       |
+      | hardware.memory.swap.total               | gauge      | B         | d52ebd4f-a28b-49cf-8adc-61847e6bb525 | None    | None       |
+      | hardware.memory.total                    | gauge      | B         | d52ebd4f-a28b-49cf-8adc-61847e6bb525 | None    | None       |
+      | hardware.memory.used                     | gauge      | B         | d52ebd4f-a28b-49cf-8adc-61847e6bb525 | None    | None       |
+      | hardware.network.ip.incoming.datagrams   | cumulative | datagrams | d52ebd4f-a28b-49cf-8adc-61847e6bb525 | None    | None       |
+      | hardware.network.ip.outgoing.datagrams   | cumulative | datagrams | d52ebd4f-a28b-49cf-8adc-61847e6bb525 | None    | None       |
+      | hardware.system_stats.cpu.idle           | gauge      | %         | d52ebd4f-a28b-49cf-8adc-61847e6bb525 | None    | None       |
+      | hardware.system_stats.cpu.util           | gauge      | %         | d52ebd4f-a28b-49cf-8adc-61847e6bb525 | None    | None       |
+      | hardware.system_stats.io.incoming.blocks | cumulative | blocks    | d52ebd4f-a28b-49cf-8adc-61847e6bb525 | None    | None       |
+      | hardware.system_stats.io.outgoing.blocks | cumulative | blocks    | d52ebd4f-a28b-49cf-8adc-61847e6bb525 | None    | None       |
+      +------------------------------------------+------------+-----------+--------------------------------------+---------+------------+
+
+Retrieving the actual performance metrics for a node involves a query to return a set of samples:
+
+      [stack@localhost ~]$ ceilometer sample-list --meter hardware.cpu.load.5min -q 'resource_id=d52ebd4f-a28b-49cf-8adc-61847e6bb525'
+      +--------------------------------------+------------------------+-------+--------+---------+---------------------+
+      | Resource ID                          | Name                   | Type  | Volume | Unit    | Timestamp           |
+      +--------------------------------------+------------------------+-------+--------+---------+---------------------+
+      | d52ebd4f-a28b-49cf-8adc-61847e6bb525 | hardware.cpu.load.5min | gauge | 4.32   | process | 2015-03-13T11:02:27 |
+      | d52ebd4f-a28b-49cf-8adc-61847e6bb525 | hardware.cpu.load.5min | gauge | 4.09   | process | 2015-03-13T10:52:28 |
+      | d52ebd4f-a28b-49cf-8adc-61847e6bb525 | hardware.cpu.load.5min | gauge | 4.2    | process | 2015-03-13T10:42:27 |
+      | d52ebd4f-a28b-49cf-8adc-61847e6bb525 | hardware.cpu.load.5min | gauge | 4.07   | process | 2015-03-13T10:32:27 |
+      | d52ebd4f-a28b-49cf-8adc-61847e6bb525 | hardware.cpu.load.5min | gauge | 4.26   | process | 2015-03-13T10:22:27 |
+      | d52ebd4f-a28b-49cf-8adc-61847e6bb525 | hardware.cpu.load.5min | gauge | 4.02   | process | 2015-03-13T10:12:27 |
+      | d52ebd4f-a28b-49cf-8adc-61847e6bb525 | hardware.cpu.load.5min | gauge | 4.14   | process | 2015-03-13T10:02:27 |
+      | d52ebd4f-a28b-49cf-8adc-61847e6bb525 | hardware.cpu.load.5min | gauge | 4.26   | process | 2015-03-13T09:52:27 |
+      | d52ebd4f-a28b-49cf-8adc-61847e6bb525 | hardware.cpu.load.5min | gauge | 4.09   | process | 2015-03-13T09:42:27 |
+      | d52ebd4f-a28b-49cf-8adc-61847e6bb525 | hardware.cpu.load.5min | gauge | 4.65   | process | 2015-03-13T09:32:27 |
+      | d52ebd4f-a28b-49cf-8adc-61847e6bb525 | hardware.cpu.load.5min | gauge | 4.17   | process | 2015-03-13T09:22:27 |
+      | d52ebd4f-a28b-49cf-8adc-61847e6bb525 | hardware.cpu.load.5min | gauge | 4.39   | process | 2015-03-13T09:12:27 |
+      | d52ebd4f-a28b-49cf-8adc-61847e6bb525 | hardware.cpu.load.5min | gauge | 4.13   | process | 2015-03-13T09:02:27 |
+      | d52ebd4f-a28b-49cf-8adc-61847e6bb525 | hardware.cpu.load.5min | gauge | 4.28   | process | 2015-03-13T08:52:27 |
+      | d52ebd4f-a28b-49cf-8adc-61847e6bb525 | hardware.cpu.load.5min | gauge | 4.05   | process | 2015-03-13T08:42:27 |
+      | d52ebd4f-a28b-49cf-8adc-61847e6bb525 | hardware.cpu.load.5min | gauge | 4.2    | process | 2015-03-13T08:32:27 |
+      | d52ebd4f-a28b-49cf-8adc-61847e6bb525 | hardware.cpu.load.5min | gauge | 4.03   | process | 2015-03-13T08:22:27 |
+      | d52ebd4f-a28b-49cf-8adc-61847e6bb525 | hardware.cpu.load.5min | gauge | 4.14   | process | 2015-03-13T08:12:27 |
+
+Further information on using the Ceilometer to is available here: <https://www.rdoproject.org/CeilometerQuickStart>
 
 ## Scaling out the workload cloud
 
