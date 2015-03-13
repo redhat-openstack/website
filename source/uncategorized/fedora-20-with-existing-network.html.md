@@ -68,7 +68,7 @@ Environment: This machine is at home which means that it uses DHCP to acquire a 
 
     # once we are back from the reboot, verify that we still have network connectivity:
 
-    curl openstack.redhat.com/QuickStart
+    curl rdoproject.org/QuickStart
 
     # at this point, 'ovs-vsctl show' looks like:
 
