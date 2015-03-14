@@ -71,7 +71,7 @@ The following script removes only OpenStack specific application data and packag
     /var/cache/swift /var/log/keystone /tmp/keystone-signing-nova ;
 
     # Ensure there is a root user and that we know the password
-    service mysql stop
+    service mysqld stop
     cat > /tmp/set_mysql_root_pwd << EOF
     UPDATE mysql.user SET Password=PASSWORD('MyNewPass') WHERE User='root';
     FLUSH PRIVILEGES;
