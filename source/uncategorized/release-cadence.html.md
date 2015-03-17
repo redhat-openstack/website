@@ -30,3 +30,4 @@ RDO packages follow (roughly) the Fedora distribution release schedule. I.e., on
 ### References
 
 *   <https://wiki.openstack.org/wiki/Releases>
+*   <https://fedoraproject.org/wiki/OpenStack#OpenStack>
