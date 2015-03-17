@@ -23,8 +23,6 @@ So, to briefly explain the OpenStack release cadence in context of Fedora, RDO p
     Fedora-22 == Juno     (2014.2) -- once this transitions to
                                       'supported', Havana will be EOLed)
 
-**NOTE**: Needless to say -- as time goes by, the above information must be updated to reflect the new (future) reality.
-
 ### CentOS
 
 [FIXME]
