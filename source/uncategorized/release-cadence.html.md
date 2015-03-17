@@ -10,7 +10,7 @@ wiki_last_updated: 2015-03-18
 
 ## RDO packaging release cadence
 
-This page tries to capture the release cadence of RDO packages in relation to different community distributions, thus giving an approximate idea of "community support" status of any given OpenStack release.
+This page describes the release cadence of RDO packages in relation to different community distributions, giving an approximate idea of "community support" status of any given OpenStack release.
 
 ### Fedora
 
