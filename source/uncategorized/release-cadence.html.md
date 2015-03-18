@@ -18,10 +18,10 @@ OpenStack upstream, much like Fedora, has a 6-month (approx) release cycle.
 
 RDO packages follow (roughly) the Fedora distribution release schedule. I.e., once N+2 (Juno) is released, we EOL N (Havana). To map Fedora and OpenStack releases in Fedora official repos:
 
-|-----------|-------------------|------------------------------------------------------------|
-| Fedora 20 | Havana (2013.2)   | EOL                                                        |
-| Fedora 21 | Icehouse (2014.1) | supported                                                  |
-| Fedora 22 | Juno (2014.2)     | once this transitions to 'supported', Havana will be EOLed |
+|-----------|-------------------|-----------|
+| Fedora 20 | Havana (2013.2)   | EOL       |
+| Fedora 21 | Icehouse (2014.1) | supported |
+| Fedora 22 | Juno (2014.2)     | supported |
 
 ### CentOS
 
