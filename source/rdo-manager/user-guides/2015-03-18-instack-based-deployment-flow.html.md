@@ -148,7 +148,7 @@ We encourage to use a machine which you can fully dedicate to RDO-Manager becaus
         # export BASE_IMAGE_FILE=<image_name.qcow2>
 
         # use in case when you download image manually
-        # download and use images locally (need to be saved in /home/stack/)
+        # download and use images locally (need to be saved in /home/stack/), image can be downloaded from Red Hat portal
         # curl -O http://...   # OR #   'scp ...'
         export DIB_LOCAL_IMAGE=rhel-guest-image-7.1-20150224.0.x86_64.qcow2   # or the image name you have downloaded
 
@@ -286,7 +286,7 @@ We encourage to use a machine which you can fully dedicate to RDO-Manager becaus
         # export BASE_IMAGE_FILE=<image_name.qcow2>
 
         # use in case when you download image manually
-        # download and use images locally (need to be saved in /home/stack/)
+        # download and use images locally (need to be saved in /home/stack/), image can be downloaded from Red Hat portal
         # curl -O http://...   # OR #   'scp ...'
         export DIB_LOCAL_IMAGE=rhel-guest-image-7.1-20150224.0.x86_64.qcow2   # or the image name you have downloaded
 
