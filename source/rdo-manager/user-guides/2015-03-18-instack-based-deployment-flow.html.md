@@ -8,11 +8,14 @@ wiki_last_updated: 2015-03-19
 
 # 2015-03-18-instack-based-deployment-flow
 
+<div class="row">
+<div class="offset1 span10">
 ## March 18, 2015 - Instack Based Deployment Flow
 
 *   Following flow is **pinned** to certain date (2015-03-18)
 *   Flow is based on [Instack scripts](https://repos.fedorapeople.org/repos/openstack-m/instack-undercloud/html/index.html) to that date
     -   Source documentation is being updated to follow the latest code, therefor **this flow might diverge from the source docs** in time
+*   This flow should be working in time as long as enabled repositories stay pinned to certain package builds (in this guide we are pointing to these builds)
 
 <!-- -->
 
@@ -25,16 +28,14 @@ wiki_last_updated: 2015-03-19
 
 ### Preparing Virtual Environment
 
-------------------------------------------------------------------------
-
+<hr style="margin-top: -8px"/>
 Operations in this sections are performed on hosting bare metal machine.
 
 We encourage to use a machine which you can fully dedicate to RDO-Manager because during virtual setup Instack will enable multiple repositories and manipulate with your libvirt setup.
 
-#### Prepare Host Machine
+**\1**
 
-------------------------------------------------------------------------
-
+<hr style="margin-top: 0"/>
 [CentOS]
 
     # provision your host machine with CentOS7
@@ -48,10 +49,9 @@ We encourage to use a machine which you can fully dedicate to RDO-Manager becaus
     sudo subscription-manager attach --pool=<pool_id>
     # sudo subscription-manager repos --list   # make sure you have repositories available
 
-#### Create User
+**\1**
 
-------------------------------------------------------------------------
-
+<hr style="margin-top: 0"/>
     sudo useradd stack
     sudo passwd stack  # specify a password
 
@@ -60,10 +60,9 @@ We encourage to use a machine which you can fully dedicate to RDO-Manager becaus
 
     su - stack
 
-#### Enable Repositories
+**\1**
 
-------------------------------------------------------------------------
-
+<hr style="margin-top: 0"/>
     export DELOREAN_REPO=${DELOREAN_REPO:-"http://104.130.230.24/centos70/4a/1d/4a1d1169acdf6b63239b60a898a33caf428acb5c_291a4aa4/delorean.repo"}
     sudo curl -o /etc/yum.repos.d/delorean.repo $DELOREAN_REPO
 
@@ -91,16 +90,14 @@ We encourage to use a machine which you can fully dedicate to RDO-Manager becaus
     # for RHEL enable extra repositories from subscription-manager on top of above listed repositories
     sudo subscription-manager repos --enable=rhel-7-server-rpms --enable=rhel-7-server-optional-rpms --enable=rhel-7-server-extras-rpms
 
-#### Install instack-undercloud
+**\1**
 
-------------------------------------------------------------------------
-
+<hr style="margin-top: 0"/>
     sudo yum install -y instack-undercloud
 
-#### Image Variables
+**\1**
 
-------------------------------------------------------------------------
-
+<hr style="margin-top: 0"/>
 [CentOS]
 
     # use in case of cloud based image
@@ -139,10 +136,9 @@ We encourage to use a machine which you can fully dedicate to RDO-Manager becaus
     export REG_REPOS="rhel-7-server-rpms rhel-7-server-extras-rpms rhel-ha-for-rhel-7-server-rpms rhel-7-server-optional-rpms rhel-7-server-openstack-6.0-rpms"
     export REG_HALT_UNREGISTER=1
 
-#### Variables for virt-setup
+**\1**
 
-------------------------------------------------------------------------
-
+<hr style="margin-top: 0"/>
     export UNDERCLOUD_VM_NAME="rdo_manager"
     export UNDERCLOUD_NODE_MEM=4096
     export UNDERCLOUD_NODE_CPU=1
@@ -151,10 +147,9 @@ We encourage to use a machine which you can fully dedicate to RDO-Manager becaus
     export NODE_MEM=4096
     export NODE_CPU=1
 
-#### Prepare Virtual Environment
+**\1**
 
-------------------------------------------------------------------------
-
+<hr style="margin-top: 0"/>
     instack-virt-setup
 
     # if fails with KVM permission denied
@@ -165,24 +160,20 @@ We encourage to use a machine which you can fully dedicate to RDO-Manager becaus
 
 ### Stand up RDO-Manager (Undercloud)
 
-------------------------------------------------------------------------
+<hr style="margin-top: -8px"/>
+**\1**
 
-#### Log to rdo_manager VM
-
-------------------------------------------------------------------------
-
+<hr style="margin-top: 0"/>
     ssh root@<instack-vm-ip>
 
-#### Change User
+**\1**
 
-------------------------------------------------------------------------
-
+<hr style="margin-top: 0"/>
     su - stack
 
-#### Enable Repositories
+**\1**
 
-------------------------------------------------------------------------
-
+<hr style="margin-top: 0"/>
     export DELOREAN_REPO=${DELOREAN_REPO:-"http://104.130.230.24/centos70/4a/1d/4a1d1169acdf6b63239b60a898a33caf428acb5c_291a4aa4/delorean.repo"}
     sudo curl -o /etc/yum.repos.d/delorean.repo $DELOREAN_REPO
 
@@ -210,45 +201,38 @@ We encourage to use a machine which you can fully dedicate to RDO-Manager becaus
     # for RHEL enable extra repositories from subscription-manager on top of above listed repositories
     sudo subscription-manager repos --enable=rhel-7-server-rpms --enable=rhel-7-server-optional-rpms --enable=rhel-7-server-extras-rpms
 
-#### Install instack-undercloud
+**\1**
 
-------------------------------------------------------------------------
-
+<hr style="margin-top: 0"/>
     sudo yum install -y instack-undercloud
 
-#### Copy Answers (config) File
+**\1**
 
-------------------------------------------------------------------------
-
+<hr style="margin-top: 0"/>
     cp /usr/share/instack-undercloud/instack.answers.sample ~/instack.answers
 
-#### Install RDO-Manager (Undercloud)
+**\1**
 
-------------------------------------------------------------------------
-
+<hr style="margin-top: 0"/>
     instack-install-undercloud
 
-#### Copy Credential Files
+**\1**
 
-------------------------------------------------------------------------
-
+<hr style="margin-top: 0"/>
     sudo cp /root/tripleo-undercloud-passwords .
     sudo cp /root/stackrc .
 
 ### Use RDO-Manager for Deploying RDO (Overcloud)
 
-------------------------------------------------------------------------
+<hr style="margin-top: -8px"/>
+**\1**
 
-#### Source Credential File
-
-------------------------------------------------------------------------
-
+<hr style="margin-top: 0"/>
     source stackrc
 
-#### Overcloud Image Variables
+**\1**
 
-------------------------------------------------------------------------
-
+<hr style="margin-top: 0"/>
 [CentOS]
 
     # use in case of cloud based image
@@ -287,48 +271,50 @@ We encourage to use a machine which you can fully dedicate to RDO-Manager becaus
     export REG_REPOS="rhel-7-server-rpms rhel-7-server-extras-rpms rhel-ha-for-rhel-7-server-rpms rhel-7-server-optional-rpms rhel-7-server-openstack-6.0-rpms"
     export REG_HALT_UNREGISTER=1
 
-#### Build Images for Overcloud
+**\1**
 
-------------------------------------------------------------------------
-
+<hr style="margin-top: 0"/>
     instack-build-images
 
-#### Load Images into Glance
+**\1**
 
-------------------------------------------------------------------------
-
+<hr style="margin-top: 0"/>
     instack-prepare-for-overcloud
 
-#### Register Nodes
+**\1**
 
-------------------------------------------------------------------------
-
+<hr style="margin-top: 0"/>
     instack-ironic-deployment --nodes-json instackenv.json --register-nodes
 
-#### Discover Nodes
+**\1**
 
-------------------------------------------------------------------------
-
+<hr style="margin-top: 0"/>
     instack-ironic-deployment --discover-nodes
     instack-ironic-deployment --show-profile
 
-#### Create Flavors
+**\1**
 
-------------------------------------------------------------------------
-
+<hr style="margin-top: 0"/>
     instack-ironic-deployment --setup-flavors
 
-#### Deploy RDO (Overcloud)
+**\1**
 
-------------------------------------------------------------------------
-
+<hr style="margin-top: 0"/>
+    # source proper network settings for virtual environment
     source /usr/share/instack-undercloud/deploy-virt-overcloudrc
+
+    # deploy
     instack-deploy-overcloud
 
 ### Test Overcloud
 
-------------------------------------------------------------------------
-
+<hr style="margin-top: -8px"/>
+    # download testing image (Fedora) and add path to variables
     curl -O https://repos.fedorapeople.org/repos/openstack-m/tripleo-images-rdo-juno/fedora-user.qcow2
     export IMAGE_PATH=/home/stack/
+
+    # launch instack testing script
     instack-test-overcloud
+
+</div>
+</div>
