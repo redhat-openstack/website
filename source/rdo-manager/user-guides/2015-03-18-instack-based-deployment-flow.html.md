@@ -131,7 +131,7 @@ We encourage to use a machine which you can fully dedicate to RDO-Manager becaus
         # curl -O http://...   # OR #   'scp ...'
         # export DIB_LOCAL_IMAGE=CentOS-7-x86_64-GenericCloud.qcow2   # or the image name you have downloaded
 
-        # select image distribution and registration method
+        # select image distribution
         export NODE_DIST="centos7"
     else
         echo "CentOS 7 is NOT your operating system. Commands were not executed."
@@ -278,7 +278,7 @@ We encourage to use a machine which you can fully dedicate to RDO-Manager becaus
         # curl -O http://...   # OR #   'scp ...'
         # export DIB_LOCAL_IMAGE=CentOS-7-x86_64-GenericCloud.qcow2   # or the image name you have downloaded
 
-        # select image distribution and registration method
+        # select image distribution
         export NODE_DIST="centos7"
     else
         echo "CentOS 7 is NOT your operating system. Commands were not executed."
