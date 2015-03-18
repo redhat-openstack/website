@@ -56,7 +56,7 @@ We encourage to use a machine which you can fully dedicate to RDO-Manager becaus
 
     # provision your host machine with RHEL 7.1
 
-    if $(grep -Eqs 'Red Hat Enterprise Linux Server release 7.1' /etc/redhat-release); then
+    if $(grep -Eqs 'Red Hat Enterprise Linux' /etc/redhat-release) && $(grep -Eqs 'release 7.1' /etc/redhat-release); then
         echo "Environment is set to use RHEL 7.1 specific commands."
 
         # register your machine and subscribe it to pool (enter credentials for username, password and pool)
@@ -105,7 +105,7 @@ We encourage to use a machine which you can fully dedicate to RDO-Manager becaus
 
 [RHEL] - add on top of above listed repositories
 
-    if $(grep -Eqs 'Red Hat Enterprise Linux Server release 7.1' /etc/redhat-release); then
+    if $(grep -Eqs 'Red Hat Enterprise Linux' /etc/redhat-release) && $(grep -Eqs 'release 7.1' /etc/redhat-release); then
         # for RHEL enable extra repositories from subscription-manager on top of above listed repositories
         sudo subscription-manager repos --enable=rhel-7-server-rpms --enable=rhel-7-server-optional-rpms --enable=rhel-7-server-extras-rpms
     else
@@ -141,7 +141,7 @@ We encourage to use a machine which you can fully dedicate to RDO-Manager becaus
 
 [RHEL]
 
-    if $(grep -Eqs 'Red Hat Enterprise Linux Server release 7.1' /etc/redhat-release); then
+    if $(grep -Eqs 'Red Hat Enterprise Linux' /etc/redhat-release) && $(grep -Eqs 'release 7.1' /etc/redhat-release); then
         # use in case of cloud based image
         # a web server containing the RHEL guest cloud image
         # export DIB_CLOUD_IMAGES="<http://server/path/containing/image>"
@@ -226,15 +226,6 @@ We encourage to use a machine which you can fully dedicate to RDO-Manager becaus
     sudo yum install -y openstack-heat-templates
     sudo yum install -y openstack-tripleo-puppet-elements
 
-[RHEL] - add on top of above listed repositories
-
-    if $(grep -Eqs 'Red Hat Enterprise Linux Server release 7.1' /etc/redhat-release); then
-        # for RHEL enable extra repositories from subscription-manager on top of above listed repositories
-        sudo subscription-manager repos --enable=rhel-7-server-rpms --enable=rhel-7-server-optional-rpms --enable=rhel-7-server-extras-rpms
-    else
-        echo "RHEL 7.1 is NOT your operating system. Commands were not executed."
-    fi
-
 **\1**
 
 <hr style="margin-top: 0"/>
@@ -288,7 +279,7 @@ We encourage to use a machine which you can fully dedicate to RDO-Manager becaus
 
 [RHEL]
 
-    if $(grep -Eqs 'Red Hat Enterprise Linux Server release 7.1' /etc/redhat-release); then
+    if $(grep -Eqs 'Red Hat Enterprise Linux' /etc/redhat-release) && $(grep -Eqs 'release 7.1' /etc/redhat-release); then
         # use in case of cloud based image
         # a web server containing the RHEL guest cloud image
         # export DIB_CLOUD_IMAGES="<http://server/path/containing/image>"
