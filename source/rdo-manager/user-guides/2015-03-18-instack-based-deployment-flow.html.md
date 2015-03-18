@@ -44,17 +44,19 @@ We encourage to use a machine which you can fully dedicate to RDO-Manager becaus
 <hr style="margin-top: 0"/>
 [CentOS]
 
+     # provision your host machine with CentOS 7
+
     if $(grep -Eqs 'CentOS Linux release 7' /etc/redhat-release); then
-         # provision your host machine with CentOS 7
         echo "Environment is set to use CentOS 7 specific commands."
     else
-        echo "CentOS 7 is NOT your operating system. Commands were not executed."
+        echo "CentOS 7 is NOT your operating system."
     fi
 
 [RHEL]
 
+    # provision your host machine with RHEL 7.1
+
     if $(grep -Eqs 'Red Hat Enterprise Linux Server release 7.1' /etc/redhat-release); then
-        # provision your host machine with RHEL 7.1
         echo "Environment is set to use RHEL 7.1 specific commands."
 
         # register your machine and subscribe it to pool (enter credentials for username, password and pool)
