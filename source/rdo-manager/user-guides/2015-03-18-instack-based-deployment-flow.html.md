@@ -12,6 +12,7 @@ wiki_last_updated: 2015-03-19
 <div class="offset1 span10">
 ## March 18, 2015 - Instack Based Deployment Flow
 
+<hr style="margin-top: -8px"/>
 *   Following flow is **pinned** to certain date (2015-03-18)
 *   Flow is based on [Instack scripts](https://repos.fedorapeople.org/repos/openstack-m/instack-undercloud/html/index.html) to that date
     -   Source documentation is being updated to follow the latest code, therefor **this flow might diverge from the source docs** in time
