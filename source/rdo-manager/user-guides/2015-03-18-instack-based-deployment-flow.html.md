@@ -26,7 +26,11 @@ wiki_last_updated: 2015-03-19
 
 *   Supported Distributions: **RHEL 7.1**, **CentOS 7**
 *   Code specific for the distributions is having [RHEL] or [CentOS] tags
-*   There is a slightly different workflow to ensure that your host machine is set up correctly to proceed with the following steps. You should choose one of the supported operating systems and execute the commands listed for that Operating System, ignoring the other Operating Systems. For any section NOT tagged, this should work identically regardless of your Operating System.'
+
+## Select Your Operating System
+
+<hr style="margin-top: -8px"/>
+There is a slightly different workflow to ensure that your host machine is set up correctly to proceed with the following steps. You should choose one of the supported operating systems and execute the commands listed for that Operating System, ignoring the other Operating Systems. For any section NOT tagged, this should work identically regardless of your Operating System.'
 
 ## Preparing Virtual Environment
 
@@ -40,16 +44,26 @@ We encourage to use a machine which you can fully dedicate to RDO-Manager becaus
 <hr style="margin-top: 0"/>
 [CentOS]
 
-    # provision your host machine with CentOS 7
+    if $(grep -Eqs 'CentOS Linux release 7' /etc/redhat-release); then
+         # provision your host machine with CentOS 7
+        echo "Environment is set to use CentOS 7 specific commands."
+    else
+        echo "CentOS 7 is NOT your operating system. Commands were not executed."
+    fi
 
 [RHEL]
 
-    # provision your host machine with RHEL 7.1
+    if $(grep -Eqs 'Red Hat Enterprise Linux Server release 7.1' /etc/redhat-release); then
+        # provision your host machine with RHEL 7.1
+        echo "Environment is set to use RHEL 7.1 specific commands."
 
-    # register your machine and subscribe it to pool
-    sudo subscription-manager register --username=<user_name> --password=<password>
-    sudo subscription-manager attach --pool=<pool_id>
-    # sudo subscription-manager repos --list   # make sure you have repositories available
+        # register your machine and subscribe it to pool (enter credentials for username, password and pool)
+        sudo subscription-manager register --username=$rh_user_name --password=$rh_password
+        sudo subscription-manager attach --pool=$rh_pool_id
+        # sudo subscription-manager repos --list   # make sure you have repositories available
+    else
+        echo "RHEL 7.1 is NOT your operating system. Commands were not executed."
+    fi
 
 **\1**
 
@@ -89,8 +103,12 @@ We encourage to use a machine which you can fully dedicate to RDO-Manager becaus
 
 [RHEL] - add on top of above listed repositories
 
-    # for RHEL enable extra repositories from subscription-manager on top of above listed repositories
-    sudo subscription-manager repos --enable=rhel-7-server-rpms --enable=rhel-7-server-optional-rpms --enable=rhel-7-server-extras-rpms
+    if $(grep -Eqs 'Red Hat Enterprise Linux Server release 7.1' /etc/redhat-release); then
+        # for RHEL enable extra repositories from subscription-manager on top of above listed repositories
+        sudo subscription-manager repos --enable=rhel-7-server-rpms --enable=rhel-7-server-optional-rpms --enable=rhel-7-server-extras-rpms
+    else
+        echo "RHEL 7.1 is NOT your operating system. Commands were not executed."
+    fi
 
 **\1**
 
@@ -102,41 +120,49 @@ We encourage to use a machine which you can fully dedicate to RDO-Manager becaus
 <hr style="margin-top: 0"/>
 [CentOS]
 
-    # use in case of cloud based image
-    # a web server containing the CentOS guest cloud image
-    export DIB_CLOUD_IMAGES="http://cloud.centos.org/centos/7/images/"
-    export BASE_IMAGE_FILE=CentOS-7-x86_64-GenericCloud.qcow2
+    if $(grep -Eqs 'CentOS Linux release 7' /etc/redhat-release); then
+        # use in case of cloud based image
+        # a web server containing the CentOS guest cloud image
+        export DIB_CLOUD_IMAGES="http://cloud.centos.org/centos/7/images/"
+        export BASE_IMAGE_FILE=CentOS-7-x86_64-GenericCloud.qcow2
 
-    # use in case when you download image manually
-    # download and use images locally (need to be saved in /home/stack/)
-    # curl -O http://...   # OR #   'scp ...'
-    # export DIB_LOCAL_IMAGE=CentOS-7-x86_64-GenericCloud.qcow2   # or the image name you have downloaded
+        # use in case when you download image manually
+        # download and use images locally (need to be saved in /home/stack/)
+        # curl -O http://...   # OR #   'scp ...'
+        # export DIB_LOCAL_IMAGE=CentOS-7-x86_64-GenericCloud.qcow2   # or the image name you have downloaded
 
-    # select image distribution and registration method
-    export NODE_DIST="centos7"
+        # select image distribution and registration method
+        export NODE_DIST="centos7"
+    else
+        echo "CentOS 7 is NOT your operating system. Commands were not executed."
+    fi
 
 [RHEL]
 
-    # use in case of cloud based image
-    # a web server containing the RHEL guest cloud image
-    # export DIB_CLOUD_IMAGES="<http://server/path/containing/image>"
-    # export BASE_IMAGE_FILE=<image_name.qcow2>
+    if $(grep -Eqs 'Red Hat Enterprise Linux Server release 7.1' /etc/redhat-release); then
+        # use in case of cloud based image
+        # a web server containing the RHEL guest cloud image
+        # export DIB_CLOUD_IMAGES="<http://server/path/containing/image>"
+        # export BASE_IMAGE_FILE=<image_name.qcow2>
 
-    # use in case when you download image manually
-    # download and use images locally (need to be saved in /home/stack/)
-    # curl -O http://...   # OR #   'scp ...'
-    export DIB_LOCAL_IMAGE=rhel-guest-image-7.1-20150224.0.x86_64.qcow2   # or the image name you have downloaded
+        # use in case when you download image manually
+        # download and use images locally (need to be saved in /home/stack/)
+        # curl -O http://...   # OR #   'scp ...'
+        export DIB_LOCAL_IMAGE=rhel-guest-image-7.1-20150224.0.x86_64.qcow2   # or the image name you have downloaded
 
-    # select image distribution and registration method
-    export NODE_DIST="rhel7"
-    export REG_METHOD=portal
+        # select image distribution and registration method
+        export NODE_DIST="rhel7"
+        export REG_METHOD=portal
 
-    # find this with `subscription-manager list --available`
-    export REG_USER="<user_name>"
-    export REG_PASSWORD="<password>"
-    export REG_POOL_ID="<pool_id>"
-    export REG_REPOS="rhel-7-server-rpms rhel-7-server-extras-rpms rhel-ha-for-rhel-7-server-rpms rhel-7-server-optional-rpms rhel-7-server-openstack-6.0-rpms"
-    export REG_HALT_UNREGISTER=1
+        # find this with `subscription-manager list --available` (enter credentials)
+        export REG_USER="<user_name>"
+        export REG_PASSWORD="<password>"
+        export REG_POOL_ID="<pool_id>"
+        export REG_REPOS="rhel-7-server-rpms rhel-7-server-extras-rpms rhel-ha-for-rhel-7-server-rpms rhel-7-server-optional-rpms rhel-7-server-openstack-6.0-rpms"
+        export REG_HALT_UNREGISTER=1
+    else
+        echo "RHEL 7.1 is NOT your operating system. Commands were not executed."
+    fi
 
 **\1**
 
@@ -200,8 +226,12 @@ We encourage to use a machine which you can fully dedicate to RDO-Manager becaus
 
 [RHEL] - add on top of above listed repositories
 
-    # for RHEL enable extra repositories from subscription-manager on top of above listed repositories
-    sudo subscription-manager repos --enable=rhel-7-server-rpms --enable=rhel-7-server-optional-rpms --enable=rhel-7-server-extras-rpms
+    if $(grep -Eqs 'Red Hat Enterprise Linux Server release 7.1' /etc/redhat-release); then
+        # for RHEL enable extra repositories from subscription-manager on top of above listed repositories
+        sudo subscription-manager repos --enable=rhel-7-server-rpms --enable=rhel-7-server-optional-rpms --enable=rhel-7-server-extras-rpms
+    else
+        echo "RHEL 7.1 is NOT your operating system. Commands were not executed."
+    fi
 
 **\1**
 
@@ -237,41 +267,49 @@ We encourage to use a machine which you can fully dedicate to RDO-Manager becaus
 <hr style="margin-top: 0"/>
 [CentOS]
 
-    # use in case of cloud based image
-    # a web server containing the CentOS guest cloud image
-    export DIB_CLOUD_IMAGES="http://cloud.centos.org/centos/7/images/"
-    export BASE_IMAGE_FILE=CentOS-7-x86_64-GenericCloud.qcow2
+    if $(grep -Eqs 'CentOS Linux release 7' /etc/redhat-release); then
+        # use in case of cloud based image
+        # a web server containing the CentOS guest cloud image
+        export DIB_CLOUD_IMAGES="http://cloud.centos.org/centos/7/images/"
+        export BASE_IMAGE_FILE=CentOS-7-x86_64-GenericCloud.qcow2
 
-    # use in case when you download image manually
-    # download and use images locally (need to be saved in /home/stack/)
-    # curl -O http://...   # OR #   'scp ...'
-    # export DIB_LOCAL_IMAGE=CentOS-7-x86_64-GenericCloud.qcow2   # or the image name you have downloaded
+        # use in case when you download image manually
+        # download and use images locally (need to be saved in /home/stack/)
+        # curl -O http://...   # OR #   'scp ...'
+        # export DIB_LOCAL_IMAGE=CentOS-7-x86_64-GenericCloud.qcow2   # or the image name you have downloaded
 
-    # select image distribution and registration method
-    export NODE_DIST="centos7"
+        # select image distribution and registration method
+        export NODE_DIST="centos7"
+    else
+        echo "CentOS 7 is NOT your operating system. Commands were not executed."
+    fi
 
 [RHEL]
 
-    # use in case of cloud based image
-    # a web server containing the RHEL guest cloud image
-    # export DIB_CLOUD_IMAGES="<http://server/path/containing/image>"
-    # export BASE_IMAGE_FILE=<image_name.qcow2>
+    if $(grep -Eqs 'Red Hat Enterprise Linux Server release 7.1' /etc/redhat-release); then
+        # use in case of cloud based image
+        # a web server containing the RHEL guest cloud image
+        # export DIB_CLOUD_IMAGES="<http://server/path/containing/image>"
+        # export BASE_IMAGE_FILE=<image_name.qcow2>
 
-    # use in case when you download image manually
-    # download and use images locally (need to be saved in /home/stack/)
-    # curl -O http://...   # OR #   'scp ...'
-    export DIB_LOCAL_IMAGE=rhel-guest-image-7.1-20150224.0.x86_64.qcow2   # or the image name you have downloaded
+        # use in case when you download image manually
+        # download and use images locally (need to be saved in /home/stack/)
+        # curl -O http://...   # OR #   'scp ...'
+        export DIB_LOCAL_IMAGE=rhel-guest-image-7.1-20150224.0.x86_64.qcow2   # or the image name you have downloaded
 
-    # select image distribution and registration method
-    export NODE_DIST="rhel7"
-    export REG_METHOD=portal
+        # select image distribution and registration method
+        export NODE_DIST="rhel7"
+        export REG_METHOD=portal
 
-    # find this with `subscription-manager list --available`
-    export REG_USER="<user_name>"
-    export REG_PASSWORD="<password>"
-    export REG_POOL_ID="<pool_id>"
-    export REG_REPOS="rhel-7-server-rpms rhel-7-server-extras-rpms rhel-ha-for-rhel-7-server-rpms rhel-7-server-optional-rpms rhel-7-server-openstack-6.0-rpms"
-    export REG_HALT_UNREGISTER=1
+        # find this with `subscription-manager list --available` (enter credentials)
+        export REG_USER="<user_name>"
+        export REG_PASSWORD="<password>"
+        export REG_POOL_ID="<pool_id>"
+        export REG_REPOS="rhel-7-server-rpms rhel-7-server-extras-rpms rhel-ha-for-rhel-7-server-rpms rhel-7-server-optional-rpms rhel-7-server-openstack-6.0-rpms"
+        export REG_HALT_UNREGISTER=1
+    else
+        echo "RHEL 7.1 is NOT your operating system. Commands were not executed."
+    fi
 
 **\1**
 
