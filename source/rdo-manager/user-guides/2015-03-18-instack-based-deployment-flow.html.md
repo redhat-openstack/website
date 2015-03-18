@@ -180,11 +180,10 @@ We encourage to use a machine which you can fully dedicate to RDO-Manager becaus
 <hr style="margin-top: 0"/>
     instack-virt-setup
 
-    # if fails with KVM permission denied
-
-    # sudo chgrp kvm /dev/kvm
-    # sudo chmod g+rw /dev/kvm
-    # sudo virsh start rdo_manager
+    # if above script fails with KVM permission denied then
+    sudo chgrp kvm /dev/kvm
+    sudo chmod g+rw /dev/kvm
+    sudo virsh start rdo_manager
 
 ## Stand up RDO-Manager (Undercloud)
 
@@ -193,6 +192,7 @@ We encourage to use a machine which you can fully dedicate to RDO-Manager becaus
 
 <hr style="margin-top: 0"/>
     ssh root@<instack-vm-ip>
+    # you can get the IP with 'arp -n' command
 
 **\1**
 
