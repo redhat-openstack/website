@@ -26,6 +26,7 @@ wiki_last_updated: 2015-03-19
 
 *   Supported Distributions: **RHEL 7.1**, **CentOS 7**
 *   Code specific for the distributions is having [RHEL] or [CentOS] tags
+*   There is a slightly different workflow to ensure that your host machine is set up correctly to proceed with the following steps. You should choose one of the supported operating systems and execute the commands listed for that Operating System, ignoring the other Operating Systems. For any section NOT tagged, this should work identically regardless of your Operating System.'
 
 ## Preparing Virtual Environment
 
