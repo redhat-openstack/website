@@ -39,7 +39,7 @@ We encourage to use a machine which you can fully dedicate to RDO-Manager becaus
 <hr style="margin-top: 0"/>
 [CentOS]
 
-    # provision your host machine with CentOS7
+    # provision your host machine with CentOS 7
 
 [RHEL]
 
