@@ -15,11 +15,6 @@ The following are the meetups I'm aware of in the coming week where RDO enthusia
 
 If you attend any of these meetups, please take pictures, and send me some. If you blog about the events (and you should), please send me that, too.
 
-*   Tuesday, March 17 [OpenStack München Meetup – Lets talk about Storage](http://www.meetup.com/OpenStack-Munich/events/220488026/), München, DE
-*   Tuesday, March 17 [PLUG: Managing Hybrid Clouds with Red Hat CloudForms](http://www.meetup.com/UtahOpenSource/events/219084091/), Orem, UT, US
-*   Wednesday, March 18 [Arista's OpenStack Integration](http://www.meetup.com/San-Francisco-Arista-Networks-User-Group-Meetup/events/220610046/), San Francisco, CA, US
-*   Wednesday, March 18 [Open Storage meetup at Red Hat- March 2015](http://www.meetup.com/Open-Source-Israel/events/220839012/), Ra'anana, IL
-*   Wednesday, March 18 [Introduction to OpenDaylight: Current Events and OpenStack Neutron Integration](http://www.meetup.com/OpenStack-Austin/events/218911185/), Austin, TX, US
 *   Thursday, March 19 [Bringing in the Heat from OpenStack (in March)](http://www.meetup.com/OpenStack-for-Enterprises-NYC/events/220537721/), New York, NY, US
 *   Thursday, March 19 [OpenStack Jumpstart](http://www.meetup.com/OpenStack-Northwest/events/220386902/), Portland, OR, US
 *   Thursday, March 19 [OpenStack networking - Neutron deep dive with PLUMgrid](http://www.meetup.com/Openstack-Boston/events/218863040/), Boston, MA, US
