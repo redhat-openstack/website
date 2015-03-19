@@ -105,12 +105,13 @@ We encourage to use a machine which you can fully dedicate to RDO-Manager becaus
 
 [RHEL] - add on top of above listed repositories
 
-     # for RHEL enable extra repositories from subscription-manager on top of above listed repositories
+    # for RHEL enable extra repositories from subscription-manager on top of above listed repositories
 
     if $(grep -Eqs 'Red Hat Enterprise Linux Server' /etc/redhat-release) && $(grep -Eqs 'release 7.1' /etc/redhat-release); then
         sudo subscription-manager repos --enable=rhel-7-server-rpms --enable=rhel-7-server-optional-rpms --enable=rhel-7-server-extras-rpms
     else if $(grep -Eqs 'Red Hat Enterprise Linux Workstation' /etc/redhat-release) && $(grep -Eqs 'release 7.1' /etc/redhat-release); then
         sudo subscription-manager repos --enable=rhel-7-workstation-rpms --enable=rhel-7-workstation-optional-rpms --enable=rhel-7-workstation-extras-rpms
+    else
         echo "RHEL 7.1 is NOT your operating system. Commands were not executed."
     fi
 
