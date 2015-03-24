@@ -86,6 +86,8 @@ After the Overcloud is deployed, you will still need to initialize Overcloud ser
 
 Once this is complete, the 'Overview' page will show you the credentials needed to access Overcloud Horizon.
 
+Please note, that you should only use the generated password for your first login into the Overcloud Horizon, and change it as soon as possible, using a password of your choice. You can do that by navigating to the **Admin** tab, **Identity** panel, and clicking **Users**, then locating the "Admin" user on the list and change the password for that user.
+
 ## Advanced Usage
 
 ### Post Deployment Management
