@@ -8,5 +8,9 @@ wiki_last_updated: 2015-03-26
 
 # Juno Foreman
 
-*   Minimum nstall Centos 7
--
+*   Minimum install Centos 7
+*   Update packages:
+
+       # yum -y update
+
+*   Do everything here <https://www.rdoproject.org/Quickstart>
