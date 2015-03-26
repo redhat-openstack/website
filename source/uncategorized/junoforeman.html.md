@@ -13,4 +13,4 @@ wiki_last_updated: 2015-03-26
 
        # yum -y update
 
-*   Do everything here <https://www.rdoproject.org/Quickstart>
+*   Do steps 1 and 2 here <https://www.rdoproject.org/Quickstart>
