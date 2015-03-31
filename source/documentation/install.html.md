@@ -20,6 +20,7 @@ While the [Quickstart](Quickstart) is sufficient for an initial test deployment,
 
 *   [ Quick start guide (RDO Juno](Quickstart)
 *   [ Deploying RDO using Foreman](Deploying RDO using Foreman)
+*   [OpenStack Icehouse Installation - Multi Node](https://github.com/emagana/OpenStack-Icehouse-Install-Guide/blob/master/OpenStack-Icehouse-Installation.rst)
 
 ### Configuration
 
