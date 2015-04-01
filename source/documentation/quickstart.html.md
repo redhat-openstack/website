@@ -42,6 +42,7 @@ These instructions are to install the current ("**Juno**") release.
 </div>
 In case your system is running with NetworkManager, you need to disable it. (See [bz1117277](https://bugzilla.redhat.com/show_bug.cgi?id=1117277) for discussion of why.)
 
+<div class="mw-collapsible-content">
 Stop and disable NetworkManager:
 
       systemctl stop NetworkManager
@@ -62,6 +63,7 @@ Start the network daemon:
 
        ifdown `<interface_name>` && systemctl start network
 
+</div>
 ### Step 1: Software repositories
 
 Update your current packages:
