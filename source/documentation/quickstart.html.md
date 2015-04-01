@@ -40,7 +40,7 @@ These instructions are to install the current ("**Juno**") release.
 
 </div>
 </div>
-In case your system is running with NetworkManager, you need to disable it.
+In case your system is running with NetworkManager, you need to disable it. (See [bz1117277](https://bugzilla.redhat.com/show_bug.cgi?id=1117277) for discussion of why.)
 
 Stop and disable NetworkManager:
 
