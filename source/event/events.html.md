@@ -31,6 +31,7 @@ If you attend any of these meetups, please take pictures, and send me some. If y
 
 ## Major Events
 
+*   [Percona OpenStack Live, Santa Clara CA](http://www.percona.com/live/openstack-live-2015/home), April 13-14
 *   [OpenStack Summit, Vancouver](http://openstack.org/summit), May 18-22
 
 See also upcoming [Hangouts](Hangouts) and the [openstack.org events listing](http://www.openstack.org/community/events/).
