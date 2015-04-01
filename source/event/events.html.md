@@ -13,6 +13,8 @@ There are lots of events, around the world, where you can hang out with people f
 
 The following are the meetups I'm aware of in the coming week where RDO enthusiasts will be gathering. If you know of others, please let me know, and/or add them to <http://openstack.redhat.com/Events>
 
+## Meetups
+
 If you attend any of these meetups, please take pictures, and send me some. If you blog about the events (and you should), please send me that, too.
 
 *   Wednesday, April 01 [April OpenStack Meetup - PLUMgrid networking in OpenStack](http://www.meetup.com/OpenStack-DFW/events/218264002/), Richardson, TX, US
