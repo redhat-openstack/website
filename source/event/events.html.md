@@ -15,12 +15,6 @@ The following are the meetups I'm aware of in the coming week where RDO enthusia
 
 If you attend any of these meetups, please take pictures, and send me some. If you blog about the events (and you should), please send me that, too.
 
-*   Monday, March 30 [Deploying Cinder in Production with Avishay Traeger, Stratoscale](http://www.meetup.com/OpenStack-Israel/events/220597849/), Tel Aviv-Yafo, IL
-*   Monday, March 30 [Cloud Database-as-Service with CEO of Tesora](http://www.meetup.com/Boise-Cloud-Computing-Meetup/events/220929678/), Garden City, ID, US
-*   Tuesday, March 31 [Ceph Day Amsterdam](http://www.meetup.com/Openstack-Amsterdam/events/220888847/), Amsterdam, NL
-*   Tuesday, March 31 [OpenShift Hack Night](http://www.meetup.com/Brisbane-OpenShift-Group/events/220961631/), Brisbane, AU
-*   Tuesday, March 31 [Spring OpenStack meetup: fueled and containerized](http://www.meetup.com/OpenStack-User-Group-Italia/events/220588968/), Roma, RM, IT
-*   Tuesday, March 31 [OpenStack 2015 mar](http://www.meetup.com/OpenStack-Hungary-Meetup-Group/events/220145792/), Budapest, HU
 *   Wednesday, April 01 [April OpenStack Meetup - PLUMgrid networking in OpenStack](http://www.meetup.com/OpenStack-DFW/events/218264002/), Richardson, TX, US
 *   Wednesday, April 01 [OpenStack LATAM hangout #2](http://www.meetup.com/openstack-argentina/events/221486465/), Buenos Aires, AR
 *   Thursday, April 02 [OpenStack Seattle Meetup: Getting the Most out of Cinder](http://www.meetup.com/OpenStack-Seattle/events/219193094/), Seattle, WA, US
@@ -32,6 +26,10 @@ If you attend any of these meetups, please take pictures, and send me some. If y
 *   Thursday, April 09 [Are you getting the most out of Cinder block storage in OpenStack?](http://www.meetup.com/openstack-atlanta/events/219694781/), Atlanta, GA, US
 *   Monday, April 13 [OpenStack and NFV](http://www.meetup.com/San-Francisco-Silicon-Valley-OpenStack-Meetup/events/221142044/), San Francisco, CA, US
 *   Monday, April 13 [Wprowadzenie do OpenStack](http://www.meetup.com/Poland-CodiLime-Tech-Talk/events/221495777/), Warsaw, PL
+
+## Major Events
+
+*   [OpenStack Summit, Vancouver](http://openstack.org/summit), May 18-22
 
 See also upcoming [Hangouts](Hangouts) and the [openstack.org events listing](http://www.openstack.org/community/events/).
 
