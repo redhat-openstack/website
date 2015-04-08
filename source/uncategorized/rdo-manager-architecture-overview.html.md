@@ -14,7 +14,7 @@ This document lists the main components of RDO Manager, and gives some descripti
 
 ## Introduction - RDO Manager and TripleO
 
-RDO Manager is a set of tools from deploying, and managing OpenStack which is built upon the TripleO project - <https://wiki.openstack.org/wiki/TripleO>
+RDO Manager is a set of tools for deploying, and managing OpenStack which is built upon the TripleO project - <https://wiki.openstack.org/wiki/TripleO>
 
 The name TripleO refers to three related things:
 
