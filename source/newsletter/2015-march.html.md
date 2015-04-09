@@ -8,7 +8,7 @@ wiki_last_updated: 2015-04-09
 
 # 2015 March
 
-March 2015 RDO Community Newsletter
+## March 2015 RDO Community Newsletter
 
 Thanks, as always, for being part of the RDO community!
 
@@ -20,7 +20,7 @@ Quick links:
 *   RDO blog - <http://rdoproject.org/blog>
 *   Q&A - <http://ask.openstack.org/>
 
-## OpenStack Liberty Summit
+### OpenStack Liberty Summit
 
 Last month, I mentioned that the vote was ongoing for the name of the 'L' release of OpenStack. In case you missed it, the winner, by a tiny margin over Lizard, was Liberty. OpenStack Kilo will be released on April 30th, and on May 18th we'll meet in Vancouver, Canada, to begin the work towards OpenStack Liberty.
 
@@ -36,11 +36,11 @@ As always, RDO will be at OpenStack Summit in force. Come by early in the show t
 
 We're hoping to see you there!
 
-## Packaging
+### Packaging
 
 The RDO community packaging effort is gaining momentum, with more community members stepping up to participate. If you're interested in helping with the packaging effort, plan to come to the packaging meeting on the #RDO IRC channel, on Freenode, Wednesday at 15:00 UTC. Details at <https://www.redhat.com/archives/rdo-list/2015-March/msg00004.html>
 
-## Hangouts and Meetups
+### Hangouts and Meetups
 
 Each week there are dozens of OpenStack hangouts around the planet. You can see a list of these each Monday morning at <http://rdoproject.org/Events>
 
@@ -50,7 +50,7 @@ In February, we had one Google Hangout, in which Eoghan Glynn talked about the G
 
 And stay tuned for upcoming Hangouts. As the Kilo cycle draws to a close, we'll have more projects reporting on their progress in this version, and what you can expect to find when it releases.
 
-## Keep in touch
+### Keep in touch
 
 There's lots of ways to stay in in touch with what's going in in the RDO community. The best ways are ...
 
