@@ -8,7 +8,9 @@ wiki_last_updated: 2015-04-09
 
 # 2015 April
 
-March 2015 RDO Community Newsletter
+## March 2015 RDO Community Newsletter
+
+[Previous newsletters](Newsletter), Sign up to receive the newsletter [on the mailing list page](http://www.redhat.com/mailman/listinfo/rdo-newsletter).
 
 Thanks, as always, for being part of the RDO community!
 
@@ -20,7 +22,7 @@ Quick links:
 *   RDO blog - <http://rdoproject.org/blog>
 *   Q&A - <http://ask.openstack.org/>
 
-## Happy Birthday RDO!
+### Happy Birthday RDO!
 
 Just two years ago we started this effort to provide easy-to-install OpenStack for users of RHEL, CentOS, and Fedora.
 
@@ -28,7 +30,7 @@ Since then, we've gone from being entirely internally developed at Red Hat to ha
 
 We're so glad you're along for the ride, and we're really excited about the coming year, as our relationship with the CentOS community continues to strengthen, and we get broader community participation in the project.
 
-## OpenStack Summit
+### OpenStack Summit
 
 OpenStack Summit is a little over a month away, and now that the schedule is published - <https://www.openstack.org/summit/vancouver-2015/schedule/> - you can start planning your week.
 
@@ -60,11 +62,11 @@ But there's so much more excellent content scheduled, that it's going to be real
 
 Register today, if you haven't already, at <http://tm3.org/summit-register> , and be sure to drop by the RDO booth for your event-exclusive RDO tshirt, and our newly updated RDO OpenStack cheatsheet bookmarks. See you there!
 
-## Packaging Updates
+### Packaging Updates
 
 The RDO CentOS packaging effort continues to move along, and we'd love to have you come join us if you're looking for a way to get more involved in RDO. We meet each Wednesday at 15:00 UTC on the #RDO channel on the Freenode IRC network to discuss the RDO packaging effort. And we meet with the larger CentOS Cloud SIG group each Thursday at 15:00 UTC on the #centos-devel channel, to discuss the work that spans multiple open source cloud platforms, including CloudStack, Eucalyptus, and OpenNebula.
 
-## Meetups
+### Meetups
 
 Every day, there's at least OpenStack meetup somewhere in the world. Each week I post the upcoming meetings on the rdo-list mailing list and on the RDO website at <http://rdoproject.org/Events>
 
@@ -90,7 +92,7 @@ Some upcoming meetups that you might want to check out include:
 
 *   Monday, April 13 OpenStack and NFV, San Francisco, CA, US - <http://www.meetup.com/San-Francisco-Silicon-Valley-OpenStack-Meetup/events/221142044/>
 
-## Keep in touch
+### Keep in touch
 
 There's lots of ways to stay in in touch with what's going in in the RDO community. The best ways are ...
 
