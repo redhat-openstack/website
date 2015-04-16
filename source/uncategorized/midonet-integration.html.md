@@ -352,10 +352,12 @@ You will see a prompt:
 *   2. Create a tunnel zone:
 
       midonet> tunnel-zone create name gre type gre
+      tzone0
+      midonet> list tunnel-zone
 
 If successful you will see:
 
-      tzone0
+      tzone tzone0 name gre type gre
 
 *   3. Add hosts to the tunnel zone:
 
