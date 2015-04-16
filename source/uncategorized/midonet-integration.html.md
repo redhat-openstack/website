@@ -422,7 +422,7 @@ NOTE: The NEUTRON_DBPASS can be found in your packstack "answers" file in your /
 
 *   6. In /etc/neutron/neutron.conf you need to comment out the following line:
 
-      #service_plugin =
+      #service_plugins =
 
 #### Neutron DHCP Agent
 
