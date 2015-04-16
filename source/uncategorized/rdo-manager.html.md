@@ -16,12 +16,6 @@ RDO-Manager Architecture Overview: <http://www.rdoproject.org/RDO_Manager_Archit
 
 RDO-Manager Repositories: <http://github.com/rdo-management>
 
-## Inlunch
-
-Inlunch is a tool which runs [Instack](http://www.rdoproject.org/RDO-Manager#Instack) while you are having lunch. In other words, it automates Instack scripts. Maybe more importantly, it prepares a virtual environment so that you can run Instack and it will find the virtual machines it needs to set up RDO Manager and the Workload Cloud.
-
-GitHub: <http://github.com/rdo-management/inlunch>
-
 ## Instack
 
 Instack is a tool which installs RDO Manager, also known as the "Deployment Cloud" or the "Undercloud".
