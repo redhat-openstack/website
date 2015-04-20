@@ -42,6 +42,7 @@ If you attend any of these meetups, please take pictures, and send me some. If y
 *   Thursday, April 30 [Discuss and Learn about OpenStack](http://www.meetup.com/OpenStack-Denver/events/221330889/), Littleton, CO, US
 *   Thursday, April 30 [Canberra Openstack Meetup](http://www.meetup.com/Australian-OpenStack-User-Group/events/221180707/), Melbourne, AU
 *   Thursday, April 30 [Openstack&Ceph Spring Meetup](http://www.meetup.com/Openstack-Amsterdam/events/221966665/), Amsterdam, NL
+*   Tuesday, May 5 [London OpenStack Meetup](http://www.meetup.com/Openstack-London/events/221676467/), London, UK
 
 ## Major Events
 
