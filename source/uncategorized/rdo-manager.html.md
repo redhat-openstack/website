@@ -10,7 +10,7 @@ wiki_last_updated: 2015-07-23
 
 ## About
 
-RDO-Manager is an OpenStack Deployment & Management tool for RDO. It combines the best from the [OpenStack TripleO](http://wiki.openstack.org/wiki/TripleO) and [SpinalStack](http://spinal-stack.readthedocs.org/en/latest/) projects.
+RDO-Manager is an OpenStack Deployment & Management tool for RDO. It is based on [OpenStack TripleO](http://wiki.openstack.org/wiki/TripleO) project and its philosophy is inspired by [SpinalStack](http://spinal-stack.readthedocs.org/en/latest/) project.
 
 RDO-Manager Architecture Overview: <http://www.rdoproject.org/RDO_Manager_Architecture_Overview>
 
