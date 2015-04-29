@@ -22,6 +22,7 @@ Quick Links:
 ## Who's Participating
 
 *   rbowen - Wiki, IRC, testing (CentOS)
+*   arif-ali - IRC, packstack AIO (CentOS)
 
 ## Prerequisites
 
