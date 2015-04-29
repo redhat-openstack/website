@@ -84,18 +84,18 @@ General openstack tests
 
 | Item/Area Name                | Release  | BaseOS    | Status | HOWTO | Who | Date | BZ/LP                                                    | Notes Page |
 |-------------------------------|----------|-----------|--------|-------|-----|------|----------------------------------------------------------|------------|
-| All-in-one Keystone tests     | RDO Juno | CentOS 7  |        |       |     |      |                                                          |            |
-| All-in-one Keystone tests     | RDO Juno | RHEL 7    |        |       |     |      |                                                          |            |
-| All-in-one Keystone tests     | RDO Juno | Fedora 20 |        |       |     |      |                                                          |            |
-| All-in-one installation tests | RDO Juno | RHEL 7    |        |       |     |      |                                                          |            |
-| All-in-one Horizon            | RDO Juno | Fedora 20 |        |       |     |      | PackStack installation + Sanity                          |            |
-| Heat tests                    | RDO Juno | RHEL7     |        |       |     |      | Packstack + environment creation + sanity                |            |
-| All-in-one Nova tests         | RDO Juno | RHEL7     |        |       |     |      | Packstack + nova sanity                                  |            |
-| All-in-one Nova tests         | RDO Juno | Centos7   |        |       |     |      |                                                          |            |
-|                               | RDO Juno | Fedora 20 |        |       |     |      |                                                          |            |
+| All-in-one Keystone tests     | RDO Kilo | CentOS 7  |        |       |     |      |                                                          |            |
+| All-in-one Keystone tests     | RDO Kilo | RHEL 7    |        |       |     |      |                                                          |            |
+| All-in-one Keystone tests     | RDO Kilo | Fedora 20 |        |       |     |      |                                                          |            |
+| All-in-one installation tests | RDO Kilo | RHEL 7    |        |       |     |      |                                                          |            |
+| All-in-one Horizon            | RDO Kilo | Fedora 20 |        |       |     |      | PackStack installation + Sanity                          |            |
+| Heat tests                    | RDO Kilo | RHEL7     |        |       |     |      | Packstack + environment creation + sanity                |            |
+| All-in-one Nova tests         | RDO Kilo | RHEL7     |        |       |     |      | Packstack + nova sanity                                  |            |
+| All-in-one Nova tests         | RDO Kilo | Centos7   |        |       |     |      |                                                          |            |
+|                               | RDO Kilo | Fedora 20 |        |       |     |      |                                                          |            |
 
-| 2.node Nova tests             | RDO Juno | RHEL7     |        |       |     |      | Packstack + nova live migration (block / shared storage) |            |
-|                               | RDO Juno | Fedora 20 |        |       |     |      |                                                          |            |
+| 2.node Nova tests             | RDO Kilo | RHEL7     |        |       |     |      | Packstack + nova live migration (block / shared storage) |            |
+|                               | RDO Kilo | Fedora 20 |        |       |     |      |                                                          |            |
 
 ## Manual configuration of OpenStack
 
