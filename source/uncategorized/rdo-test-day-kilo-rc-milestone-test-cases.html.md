@@ -34,16 +34,14 @@ When you hit a problem, check out the [Workarounds](Workarounds) page first. May
 
 Please see [Deploying RDO Using Foreman](Deploying RDO Using Foreman) for directions on setting up compute and controller nodes using foreman (only RHEL (derivatives) for now)
 
-| Config Name                          | Release    | BaseOS     | Status | HOWTO                                                                                                               | Who | Date | BZ/LP | Notes Page |
-|--------------------------------------|------------|------------|--------|---------------------------------------------------------------------------------------------------------------------|-----|------|-------|------------|
-| 2 Node install with Nova Networking  | Havana H-3 | RHEL 6.4   | ??     | [ 2 Node install with Nova Networking](Deploying_RDO_Using_Foreman #2_Node_install_with_Nova_Networking) | ??  | ??   | None  | None       |
-|                                      |            | CentOS 6.4 | ??     | [ 2 Node install with Nova Networking](Deploying_RDO_Using_Foreman#2_Node_install_with_Nova_Networking)  | ??  | ??   | None  | None       |
-| 3 Node install with Neutron          | Havana H-3 | RHEL 6.4   | ??     | [ 3 Node install with Neutron](Deploying_RDO_Using_Foreman#Neutron_with_Networker_Node)                  | ??  | ??   | None  | None       |
-|                                      |            | CentOS 6.4 | ??     | [ 3 Node install with Neutron](Deploying_RDO_Using_Foreman#Neutron_with_Networker_Node)                  | ??  | ??   | None  | None       |
-| Multi-host w/ Load Balanced Services | Havana H-3 | RHEL 6.4   | ??     | [ Load Balanced API](Load_Balance_OpenStack_API)                                                         | ??  | ??   | None  | None       |
-|                                      |            | CentOS 6.4 | ??     | [ Load Balanced API](Load_Balance_OpenStack_API)                                                         | ??  | ??   | None  | None       |
-| HA MySql                             | Havana H-3 | RHEL 6.4   | ??     | [ HA MySql](Deploying_RDO_Using_Foreman#HA_Database_Cluster)                                             | ??  | ??   | None  | None       |
-|                                      |            | CentOS 6.4 | ??     | [ HA MySql](Deploying_RDO_Using_Foreman#HA_Database_Cluster)                                             | ??  | ??   | None  | None       |
+| Config Name                          | Release          | BaseOS     | Status | HOWTO                                                                                              | Who | Date | BZ/LP | Notes Page |
+|--------------------------------------|------------------|------------|--------|----------------------------------------------------------------------------------------------------|-----|------|-------|------------|
+| 3 Node install with Neutron          | Kilo 2015.1-0rc2 | RHEL 7.1   | ??     | [ 3 Node install with Neutron](Deploying_RDO_Using_Foreman#Neutron_with_Networker_Node) | ??  | ??   | None  | None       |
+|                                      |                  | CentOS 7.1 | ??     | [ 3 Node install with Neutron](Deploying_RDO_Using_Foreman#Neutron_with_Networker_Node) | ??  | ??   | None  | None       |
+| Multi-host w/ Load Balanced Services | Kilo 2015.1-0rc2 | RHEL 7.1   | ??     | [ Load Balanced API](Load_Balance_OpenStack_API)                                        | ??  | ??   | None  | None       |
+|                                      |                  | CentOS 7.1 | ??     | [ Load Balanced API](Load_Balance_OpenStack_API)                                        | ??  | ??   | None  | None       |
+| HA MySql                             | Kilo 2015.1-0rc2 | RHEL 7.1   | ??     | [ HA MySql](Deploying_RDO_Using_Foreman#HA_Database_Cluster)                            | ??  | ??   | None  | None       |
+|                                      |                  | CentOS 7.1 | ??     | [ HA MySql](Deploying_RDO_Using_Foreman#HA_Database_Cluster)                            | ??  | ??   | None  | None       |
 
 ## Other
 
