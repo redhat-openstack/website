@@ -108,4 +108,4 @@ General openstack tests
 
 | Config Name       | Release  | BaseOS     | Status | HOWTO                                                         | Who | Date | BZ/LP | Notes Page |
 |-------------------|----------|------------|--------|---------------------------------------------------------------|-----|------|-------|------------|
-| Post Installation | RDO Kilo | CentOS 7.1 |        | [Post Installation Tests](Post Installation Tests) |     |      | None  | None       |
+| Post Installation | RDO Kilo | CentOS 7.1 |        | [Post Installation Tests](Post Installation Tests) |     |      | None  |            |
