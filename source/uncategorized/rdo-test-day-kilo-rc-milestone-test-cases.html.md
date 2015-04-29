@@ -88,14 +88,14 @@ General openstack tests
 | All-in-one Keystone tests     | RDO Kilo | RHEL 7    |        |       |     |      |                                                          |            |
 | All-in-one Keystone tests     | RDO Kilo | Fedora 21 |        |       |     |      |                                                          |            |
 | All-in-one installation tests | RDO Kilo | RHEL 7    |        |       |     |      |                                                          |            |
-| All-in-one Horizon            | RDO Kilo | Fedora 20 |        |       |     |      | PackStack installation + Sanity                          |            |
+| All-in-one Horizon            | RDO Kilo | Fedora 21 |        |       |     |      | PackStack installation + Sanity                          |            |
 | Heat tests                    | RDO Kilo | RHEL7     |        |       |     |      | Packstack + environment creation + sanity                |            |
 | All-in-one Nova tests         | RDO Kilo | RHEL7     |        |       |     |      | Packstack + nova sanity                                  |            |
 | All-in-one Nova tests         | RDO Kilo | Centos7   |        |       |     |      |                                                          |            |
-|                               | RDO Kilo | Fedora 20 |        |       |     |      |                                                          |            |
+|                               | RDO Kilo | Fedora 21 |        |       |     |      |                                                          |            |
 
 | 2.node Nova tests             | RDO Kilo | RHEL7     |        |       |     |      | Packstack + nova live migration (block / shared storage) |            |
-|                               | RDO Kilo | Fedora 20 |        |       |     |      |                                                          |            |
+|                               | RDO Kilo | Fedora 21 |        |       |     |      |                                                          |            |
 
 ## Manual configuration of OpenStack
 
