@@ -60,7 +60,7 @@ Please see [Docs/Storage](Docs/Storage) for configuration guides as well as sugg
 | All-in-One  | Glance=ceph, Cinder=ceph              | CentOS 7 |        | [QuickStart](QuickStart) |     | 2015-00-00 | None  | None       |
 | All-in-One  | Glance=XtreamIO, Cinder=XtreamIO      | CentOS 7 |        | [QuickStart](QuickStart) |     | 2015-00-00 | None  | None       |
 | All-in-One  | Glance=localfs, Cinder=windows_iscsi | CentOS 7 |        | [QuickStart](QuickStart) |     | 2015-00-00 | None  | None       |
-| All-in-One  | Glance=ceph, Cinder=ceph              | F20      |        | [QuickStart](QuickStart) |     | 2015-00-00 | None  | None       |
+| All-in-One  | Glance=ceph, Cinder=ceph              | F21      |        | [QuickStart](QuickStart) |     | 2015-00-00 | None  | None       |
 | All-in-One  | Glance=swift, Cinder=thinlvm          | RHEL7    |        | [QuickStart](QuickStart) |     | 2015-00-00 | None  | None       |
 | All-in-One  | Glance=s3, Cinder=nfs                 | RHEL7    |        | [QuickStart](QuickStart) |     | 2015-00-00 | None  | None       |
 | All-in-One  | Glance=ceph, Cinder=ceph              | RHEL7    |        | [QuickStart](QuickStart) |     | 2015-00-00 | None  | None       |
