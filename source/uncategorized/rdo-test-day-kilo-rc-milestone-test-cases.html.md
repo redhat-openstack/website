@@ -23,7 +23,7 @@ Here's how you might fill out an entry once you've tested it. Mark a given test 
 
 ## Packstack Based Installation (Neutron Networking)
 
-Please make sure to use the steps described in the RDO_test_day_January_2014#How_To_Test page when installing the base RDO system. Do not go through the Quickstart steps unmodified which will instead give you an RDO Havana deployment.
+Please make sure to use the steps described in the RDO_test_day_Kilo#How_To_Test page when installing the base RDO system. Do not go through the Quickstart steps unmodified which will instead give you an RDO Havana deployment.
 
 | Config Name                               | Release          | BaseOS     | Status | HOWTO                                                                                              | Who | Date       | BZ/LP | Notes Page |
 |-------------------------------------------|------------------|------------|--------|----------------------------------------------------------------------------------------------------|-----|------------|-------|------------|
