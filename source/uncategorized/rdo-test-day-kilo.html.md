@@ -43,7 +43,7 @@ You'll want a fresh install (or VM) with latest updates installed. (Fresh so tha
 
 ### Test cases and results
 
-**Test Case List Goes Here**
+**[RDO_test_day_Kilo_RC_milestone_test_cases](RDO_test_day_Kilo_RC_milestone_test_cases)**
 
 *   Pick an item from the list
 *   Go through the scenario as though you were a beginner, just following the instructions. (Check the [ Workarounds](Workarounds) page for problems that others may have encountered and resolved.)
