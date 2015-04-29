@@ -86,7 +86,7 @@ General openstack tests
 |-------------------------------|----------|-----------|--------|-------|-----|------|----------------------------------------------------------|------------|
 | All-in-one Keystone tests     | RDO Kilo | CentOS 7  |        |       |     |      |                                                          |            |
 | All-in-one Keystone tests     | RDO Kilo | RHEL 7    |        |       |     |      |                                                          |            |
-| All-in-one Keystone tests     | RDO Kilo | Fedora 20 |        |       |     |      |                                                          |            |
+| All-in-one Keystone tests     | RDO Kilo | Fedora 21 |        |       |     |      |                                                          |            |
 | All-in-one installation tests | RDO Kilo | RHEL 7    |        |       |     |      |                                                          |            |
 | All-in-one Horizon            | RDO Kilo | Fedora 20 |        |       |     |      | PackStack installation + Sanity                          |            |
 | Heat tests                    | RDO Kilo | RHEL7     |        |       |     |      | Packstack + environment creation + sanity                |            |
