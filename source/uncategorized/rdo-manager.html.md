@@ -39,3 +39,8 @@ Tuskar API examples: <http://www.rdoproject.org/Tuskar-API>
 Demo 3 (March 9, 2015)
 
 *   [RDO-Manager Deployment Flow (non-narrated)](http://youtu.be/zKG-CB8WdTg)
+
+Post Demo 5
+
+*   [RDO-Manager Deployment Flow Using Instack Scripts (non-narrated)](https://youtu.be/TyK0df3mCM8)
+*   will be updated soon with narrated version
