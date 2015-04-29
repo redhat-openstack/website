@@ -42,5 +42,5 @@ Demo 3 (March 9, 2015)
 
 Post Demo 5
 
-*   [RDO-Manager Deployment Flow Using Instack Scripts (non-narrated)](https://youtu.be/TyK0df3mCM8)
+*   [RDO-Manager Deployment Flow Using Instack Scripts (non-narrated)](http://youtu.be/TyK0df3mCM8)
 *   will be updated soon with narrated version
