@@ -73,10 +73,10 @@ Please see [Docs/Storage](Docs/Storage) for configuration guides as well as sugg
 
 Various components which don't fit the large test efforts above.
 
-| Item/Area Name                                     | Release      | BaseOS   | Status | HOWTO | Who | Date | BZ/LP | Notes Page |
-|----------------------------------------------------|--------------|----------|--------|-------|-----|------|-------|------------|
-| Ceilometer: All-in-One w/ Neutron Networking, Heat | RDO icehouse | RHEL 6.6 |        |       |     |      |       |            |
-| Ceilometer: All-in-One w/ Neutron Networking, Heat | RDO icehouse | RHEL 7.1 |        |       |     |      |       |            |
+| Item/Area Name                                     | Release  | BaseOS   | Status | HOWTO | Who | Date | BZ/LP | Notes Page |
+|----------------------------------------------------|----------|----------|--------|-------|-----|------|-------|------------|
+| Ceilometer: All-in-One w/ Neutron Networking, Heat | RDO Kilo | RHEL 6.6 |        |       |     |      |       |            |
+| Ceilometer: All-in-One w/ Neutron Networking, Heat | RDO Kilo | RHEL 7.1 |        |       |     |      |       |            |
 
 ## Core Tests
 
