@@ -102,7 +102,7 @@ General openstack tests
 | Config Name                              | Release  | BaseOS     | Status | HOWTO | Who | Date | BZ/LP | Notes Page |
 |------------------------------------------|----------|------------|--------|-------|-----|------|-------|------------|
 | 2,node+minimal OpenStack+Neutron+OVS+GRE | RDO Kilo | Fedora 21  |        |       |     |      | None  | None       |
-| 2,node+minimal OpenStack+Neutron+OVS+GRE | RDO Kilo | CentOS 7.0 |        |       |     |      | None  | None       |
+| 2,node+minimal OpenStack+Neutron+OVS+GRE | RDO Kilo | CentOS 7.1 |        |       |     |      | None  | None       |
 
 ## Post Installation Tests
 
