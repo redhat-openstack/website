@@ -43,9 +43,9 @@ You'll want a fresh install (or VM) with latest updates installed. (Fresh so tha
 *   For Packstack based deployment start at step 2 of -- <http://openstack.redhat.com/Quickstart#Step_2:_Install_Packstack_Installer>
 *   Install and run tempest:
 
-`  `**`For` `Fedora21`**
+`  `**`RPM` `for` `Fedora21`**
 `     `[`opentack-tempest-kilo`](https://repos.fedorapeople.org/repos/openstack/openstack-kilo/fedora-21/fedora/openstack-tempest-kilo-20150413.2.fc23.noarch.rpm)
-`  `**`For` `RHEL:`**
+`  `**`RPMs` `for` `RHEL:`**
 `     `[`openstack-tempest-kilo`](https://kojipkgs.fedoraproject.org//work/tasks/3331/9603331/openstack-tempest-kilo-20150413.2.el7.noarch.rpm)
            `[`python-tempest-lib`](https://kojipkgs.fedoraproject.org//work/tasks/3410/9603410/python-tempest-lib-0.4.0-3.el7.noarch.rpm)` 
 
