@@ -25,27 +25,27 @@ Here's how you might fill out an entry once you've tested it. Mark a given test 
 
 Please make sure to use the steps described in the [RDO_test_day_Kilo#How_To_Test](RDO_test_day_Kilo#How_To_Test) when installing the base RDO system. Do not go through the Quickstart steps unmodified which will instead give you an RDO Havana deployment.
 
-| Config Name                               | Release          | BaseOS   | Status | HOWTO                                                                                              | Who | Date       | BZ/LP | Notes Page |
-|-------------------------------------------|------------------|----------|--------|----------------------------------------------------------------------------------------------------|-----|------------|-------|------------|
-| All-in-One - Sanity                       | Kilo 2015.1-0rc2 | CentOS 7 |        | [QuickStart](QuickStart)                                                                |     |            |       | None       |
-|                                           |                  | F21      | ??     | [QuickStart](QuickStart)                                                                |     |            |       |            |
+| Config Name                               | Release          | BaseOS     | Status | HOWTO                                                                                              | Who | Date       | BZ/LP | Notes Page |
+|-------------------------------------------|------------------|------------|--------|----------------------------------------------------------------------------------------------------|-----|------------|-------|------------|
+| All-in-One - Sanity                       | Kilo 2015.1-0rc2 | CentOS 7.1 |        | [QuickStart](QuickStart)                                                                |     |            |       | None       |
+|                                           |                  | F21        | ??     | [QuickStart](QuickStart)                                                                |     |            |       |            |
 
-| All-in-One                                | Kilo 2015.1-0rc2 | RHEL7    |        | [QuickStart](QuickStart)                                                                |     |            | None  | None       |
-| Distributed -ML2-OVS- VXLAN-IPv6- Sanity  | Kilo 2015.1-0rc2 | CentOS 7 | ??     | [QuickStart](QuickStart)                                                                | ?   |            | None  | None       |
-|                                           |                  | F21      | ??     | [QuickStart](QuickStart)                                                                | ?   | 2015-00-00 | None  | None       |
-|                                           |                  | RHEL7    |        | [QuickStart](QuickStart)                                                                |     | 2015-00-00 |       | None       |
-| Distributed -ML2- OVS-GRE – IPv6 - LbaaS  | Kilo 2015.1-0rc2 | CentOS 7 | ??     | [QuickStart](QuickStart)                                                                | ?   | 2015-00-00 | None  | None       |
-|                                           |                  | F21      | ??     | [QuickStart](QuickStart)                                                                | ?   | 2015-00-00 | None  | None       |
-|                                           |                  | RHEL7    |        | [QuickStart](QuickStart)                                                                |     | 2015-00-00 |       | None       |
-| Distributed -ML2- OVS-VLAN – IPv6 -FwaaS  | Kilo 2015.1-0rc2 | CentOS 7 | ??     | [QuickStart](QuickStart)                                                                | ?   | 2015-00-00 | None  | None       |
-|                                           |                  | F21      | ??     | [QuickStart](QuickStart)                                                                | ?   | 2015-00-00 | None  | None       |
-|                                           |                  | RHEL7    | ??     | [QuickStart](QuickStart)                                                                |     | 2015-00-00 |       | None       |
-| Distributed -ML2-OVS- VXLAN-IPv6 – VPNaaS | Kilo 2015.1-0rc2 | CentOS 7 | ??     | [QuickStart](QuickStart)                                                                | ?   | 2015-00-00 | None  | None       |
-|                                           |                  | F21      | ??     | [QuickStart](QuickStart)                                                                | ?   | 2015-00-00 | None  | None       |
-|                                           |                  | RHEL7    | ??     | [QuickStart](QuickStart)                                                                | ?   | 2015-00-00 | None  | None       |
-| 3,node -ML2-OVS- VXLAN                    | Kilo 2015.1-0rc2 | CentOS 7 |        | [1](https://gitlab.arif-ali.co.uk/arif/openstack-lab/wikis/RDO-Juno-test-M3-Notes-multinode-VXLAN) |     | 2015-00-00 | None  | None       |
-| 3,node -ML2-OVS- GRE                      | Kilo 2015.1-0rc2 | CentOS 7 |        |                                                                                                    |     | 2015-00-00 | None  | None       |
-| 3,node -ML2-OVS- VLAN                     | Kilo 2015.1-0rc2 | CentOS 7 | -      | [2](https://gitlab.arif-ali.co.uk/arif/openstack-lab/wikis/RDO-Juno-test-M3-Notes-multinode-VLAN)  |     | 2015-00-00 | None  | None       |
+| All-in-One                                | Kilo 2015.1-0rc2 | RHEL7.1    |        | [QuickStart](QuickStart)                                                                |     |            | None  | None       |
+| Distributed -ML2-OVS- VXLAN-IPv6- Sanity  | Kilo 2015.1-0rc2 | CentOS 7.1 | ??     | [QuickStart](QuickStart)                                                                | ?   |            | None  | None       |
+|                                           |                  | F21        | ??     | [QuickStart](QuickStart)                                                                | ?   | 2015-00-00 | None  | None       |
+|                                           |                  | RHEL7.1    |        | [QuickStart](QuickStart)                                                                |     | 2015-00-00 |       | None       |
+| Distributed -ML2- OVS-GRE – IPv6 - LbaaS  | Kilo 2015.1-0rc2 | CentOS 7.1 | ??     | [QuickStart](QuickStart)                                                                | ?   | 2015-00-00 | None  | None       |
+|                                           |                  | F21        | ??     | [QuickStart](QuickStart)                                                                | ?   | 2015-00-00 | None  | None       |
+|                                           |                  | RHEL7.1    |        | [QuickStart](QuickStart)                                                                |     | 2015-00-00 |       | None       |
+| Distributed -ML2- OVS-VLAN – IPv6 -FwaaS  | Kilo 2015.1-0rc2 | CentOS 7.1 | ??     | [QuickStart](QuickStart)                                                                | ?   | 2015-00-00 | None  | None       |
+|                                           |                  | F21        | ??     | [QuickStart](QuickStart)                                                                | ?   | 2015-00-00 | None  | None       |
+|                                           |                  | RHEL7.1    | ??     | [QuickStart](QuickStart)                                                                |     | 2015-00-00 |       | None       |
+| Distributed -ML2-OVS- VXLAN-IPv6 – VPNaaS | Kilo 2015.1-0rc2 | CentOS 7.1 | ??     | [QuickStart](QuickStart)                                                                | ?   | 2015-00-00 | None  | None       |
+|                                           |                  | F21        | ??     | [QuickStart](QuickStart)                                                                | ?   | 2015-00-00 | None  | None       |
+|                                           |                  | RHEL7.1    | ??     | [QuickStart](QuickStart)                                                                | ?   | 2015-00-00 | None  | None       |
+| 3,node -ML2-OVS- VXLAN                    | Kilo 2015.1-0rc2 | CentOS 7.1 |        | [1](https://gitlab.arif-ali.co.uk/arif/openstack-lab/wikis/RDO-Juno-test-M3-Notes-multinode-VXLAN) |     | 2015-00-00 | None  | None       |
+| 3,node -ML2-OVS- GRE                      | Kilo 2015.1-0rc2 | CentOS 7.1 |        |                                                                                                    |     | 2015-00-00 | None  | None       |
+| 3,node -ML2-OVS- VLAN                     | Kilo 2015.1-0rc2 | CentOS 7.1 | -      | [2](https://gitlab.arif-ali.co.uk/arif/openstack-lab/wikis/RDO-Juno-test-M3-Notes-multinode-VLAN)  |     | 2015-00-00 | None  | None       |
 
 ## Packstack Based Installation (Storage Components)
 
