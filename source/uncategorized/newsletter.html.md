@@ -14,6 +14,7 @@ You can sign up to receive the newsletter [on the mailing list page](http://www.
 
 ## 2015
 
+*   [May 2015](Newsletter/2015_May)
 *   [April 2015](Newsletter/2015_April)
 *   [March 2015](Newsletter/2015_March)
 *   [February 2015](Newsletter/2015_February)
