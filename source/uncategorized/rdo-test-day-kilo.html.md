@@ -28,7 +28,6 @@ Quick Links:
 
 We plan to have have packages for the following platforms:
 
-*   Fedora 21
 *   EL7 (RHEL 7, CentOS 7)
 
 You'll want a fresh install (or VM) with latest updates installed. (Fresh so that there's no hard-to-reproduce interactions with other things.)
