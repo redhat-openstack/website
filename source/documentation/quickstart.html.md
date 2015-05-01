@@ -70,7 +70,7 @@ Update your current packages:
 
 Setup the RDO repositories:
 
-    sudo yum install -y https://rdo.fedorapeople.org/rdo-release.rpm
+    sudo yum install -y https://rdoproject.org/repos/rdo-release.rpm
 
 *Looking for another version? Use <http://rdoproject.org/repos/openstack-kilo/rdo-release-kilo.rpm> for Kilo, and <http://rdo.fedorapeople.org/openstack-icehouse/rdo-release-icehouse.rpm> for Icehouse. Looking for an older version? See <http://rdo.fedorapeople.org/> for the full listing.*
 
