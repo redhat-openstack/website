@@ -23,6 +23,7 @@ Quick Links:
 
 *   rbowen - Wiki, IRC, testing (CentOS)
 *   arif-ali - IRC, packstack AIO (CentOS)
+*   bkopilov - Packstack AIO on RHEL 7.1 ,Automation coverage
 
 ## Prerequisites
 
