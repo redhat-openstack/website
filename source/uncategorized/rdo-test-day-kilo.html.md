@@ -48,13 +48,14 @@ You'll want a fresh install (or VM) with latest updates installed. (Fresh so tha
 `     `[`opentack-tempest-kilo`](https://repos.fedorapeople.org/repos/openstack/openstack-kilo/fedora-21/fedora/openstack-tempest-kilo-20150413.2.fc23.noarch.rpm)
 `     `[`python-tempest-lib`](https://repos.fedorapeople.org/repos/openstack/openstack-kilo/fedora-22/fedora/python-tempest-lib-0.4.0-3.fc23.noarch.rpm)
 
-yum install -y gcc libxml2-devel libxslt-devel python-devel openssl-devel python-testtools libffi-devel libffi pip install virtualenv virtualenv /usr/share/openstack-tempest-kilo/.venv source /usr/share/openstack-tempest-kilo/.venv/bin/activate
-
-1.  install under virtual env
-
-pip install -r /usr/share/openstack-tempest-kilo/requirements.txt pip install -r /usr/share/openstack-tempest-kilo/test-requirements.txt
-
-1.  you are ready , its the time to configure tempest.conf
+    yum install -y gcc libxml2-devel libxslt-devel  python-devel openssl-devel python-testtools libffi-devel libffi
+    pip install virtualenv 
+    virtualenv /usr/share/openstack-tempest-kilo/.venv
+    source /usr/share/openstack-tempest-kilo/.venv/bin/activate
+    # install under virtual env
+    pip install -r /usr/share/openstack-tempest-kilo/requirements.txt
+    pip install -r /usr/share/openstack-tempest-kilo/test-requirements.txt
+    # you are ready , its the time to configure tempest.conf
 
 ### Test cases and results
 
