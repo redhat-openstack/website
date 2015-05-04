@@ -48,10 +48,6 @@ You'll want a fresh install (or VM) with latest updates installed. (Fresh so tha
 `     `[`opentack-tempest-kilo`](https://repos.fedorapeople.org/repos/openstack/openstack-kilo/fedora-21/fedora/openstack-tempest-kilo-20150413.2.fc23.noarch.rpm)
 `     `[`python-tempest-lib`](https://repos.fedorapeople.org/repos/openstack/openstack-kilo/fedora-22/fedora/python-tempest-lib-0.4.0-3.fc23.noarch.rpm)
 
-*   post install :
-
-<http://storage-jenkins.scl.lab.tlv.redhat.com/tempest/tempest_run_example.txt>
-
 ### Test cases and results
 
 **[RDO_test_day_Kilo_RC_milestone_test_cases](RDO_test_day_Kilo_RC_milestone_test_cases)**
