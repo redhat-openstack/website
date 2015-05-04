@@ -26,6 +26,7 @@ Quick Links:
 *   bkopilov - Packstack AIO on RHEL 7.1 ,Automation coverage
 *   itzikb - Wiki, IRC, testing (RHEL7.1)
 *   tshefi - IRC, (RHEL7.1)
+*   iovadia - IRC, (RHEL7.1)
 
 ## Prerequisites
 
