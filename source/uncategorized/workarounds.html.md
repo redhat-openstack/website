@@ -25,3 +25,16 @@ These are the current workarounds for the RDO Kilo.
 Describe symptoms here
 
 #### workaround
+
+## Neutron lbaas package not found
+
+*   **Bug:** <https://bugzilla.redhat.com/show_bug.cgi?id=1218398>
+*   **Affects:** RHEL / CentOS
+
+#### symptoms
+
+Execution of '/usr/bin/yum -d 0 -e 0 -y list openstack-neutron-lbaas' returned 1: Error: No matching Packages to list
+
+#### workaround
+
+CONFIG_LBAAS_INSTALL: n
