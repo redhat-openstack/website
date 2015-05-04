@@ -54,23 +54,23 @@ Please make sure to use the steps described in the [RDO_test_day_Kilo#How_To_Tes
 
 Please see [Docs/Storage](Docs/Storage) for configuration guides as well as suggestions on what could be tested for both Cinder and Glance and make sure to use the steps described in the [RDO_test_day_Kilo#How_To_Test](RDO_test_day_Kilo#How_To_Test) page when installing the base RDO system. **Do not** go through the Quickstart steps unmodified which will instead give you an RDO Havana deployment.
 
-| Config Name | Backend                               | BaseOS     | Status | HOWTO                               | Who | Date       | BZ/LP | Notes Page |
-|-------------|---------------------------------------|------------|--------|-------------------------------------|-----|------------|-------|------------|
-| All-in-One  | Glance=localfs, Cinder=lvm            | CentOS 7.1 |        | [QuickStart](QuickStart) |     | 2015-00-00 | None  | None       |
-| All-in-One  | Glance=swift, Cinder=thinlvm          | CentOS 7.1 |        | [QuickStart](QuickStart) |     | 2015-00-00 | None  | None       |
-| All-in-One  | Glance=s3(amazon s3), Cinder=nfs      | CentOS 7.1 |        | [QuickStart](QuickStart) |     | 2015-00-00 | None  | None       |
-| All-in-One  | Glance=s3(swift s3), Cinder=nfs       | CentOS 7.1 |        | [QuickStart](QuickStart) |     | 2015-00-00 | None  | None       |
-| All-in-One  | Glance=ceph, Cinder=ceph              | CentOS 7.1 |        | [QuickStart](QuickStart) |     | 2015-00-00 | None  | None       |
-| All-in-One  | Glance=XtreamIO, Cinder=XtreamIO      | CentOS 7.1 |        | [QuickStart](QuickStart) |     | 2015-00-00 | None  | None       |
-| All-in-One  | Glance=localfs, Cinder=windows_iscsi | CentOS 7.1 |        | [QuickStart](QuickStart) |     | 2015-00-00 | None  | None       |
-| All-in-One  | Glance=ceph, Cinder=ceph              | F21        |        | [QuickStart](QuickStart) |     | 2015-00-00 | None  | None       |
-| All-in-One  | Glance=swift, Cinder=thinlvm          | RHEL7.1    |        | [QuickStart](QuickStart) |     | 2015-00-00 | None  | None       |
-| All-in-One  | Glance=s3, Cinder=nfs                 | RHEL7.1    |        | [QuickStart](QuickStart) |     | 2015-00-00 | None  | None       |
-| All-in-One  | Glance=ceph, Cinder=ceph              | RHEL7.1    |        | [QuickStart](QuickStart) |     | 2015-00-00 | None  | None       |
-| All-in-One  | Glance=lvm, Cinder=glusterfs          | RHEL7.1    |        | [QuickStart](QuickStart) |     | 2015-00-00 | None  | None       |
-| All-in-One  | Glance=lvm, Cinder=netapp_iscsi      | RHEL7.1    |        | [QuickStart](QuickStart) |     | 2015-00-00 | None  | None       |
-| All-in-One  | Glance=lvm, Cinder=netapp_nfs        | RHEL7.1    |        | [QuickStart](QuickStart) |     | 2015-00-00 | None  | None       |
-| All-in-One  | swift                                 | RHEL7.1    |        | [QuickStart](QuickStart) |     | 2015-00-00 | None  | None       |
+| Config Name | Backend                               | BaseOS     | Status | HOWTO                               | Who                | Date       | BZ/LP | Notes Page |
+|-------------|---------------------------------------|------------|--------|-------------------------------------|--------------------|------------|-------|------------|
+| All-in-One  | Glance=localfs, Cinder=lvm            | CentOS 7.1 |        | [QuickStart](QuickStart) |                    | 2015-00-00 | None  | None       |
+| All-in-One  | Glance=swift, Cinder=thinlvm          | CentOS 7.1 |        | [QuickStart](QuickStart) | Prasanth Anbalagan | 2015-00-00 | None  | None       |
+| All-in-One  | Glance=s3(amazon s3), Cinder=nfs      | CentOS 7.1 |        | [QuickStart](QuickStart) |                    | 2015-00-00 | None  | None       |
+| All-in-One  | Glance=s3(swift s3), Cinder=nfs       | CentOS 7.1 |        | [QuickStart](QuickStart) |                    | 2015-00-00 | None  | None       |
+| All-in-One  | Glance=ceph, Cinder=ceph              | CentOS 7.1 |        | [QuickStart](QuickStart) |                    | 2015-00-00 | None  | None       |
+| All-in-One  | Glance=XtreamIO, Cinder=XtreamIO      | CentOS 7.1 |        | [QuickStart](QuickStart) |                    | 2015-00-00 | None  | None       |
+| All-in-One  | Glance=localfs, Cinder=windows_iscsi | CentOS 7.1 |        | [QuickStart](QuickStart) |                    | 2015-00-00 | None  | None       |
+| All-in-One  | Glance=ceph, Cinder=ceph              | F21        |        | [QuickStart](QuickStart) |                    | 2015-00-00 | None  | None       |
+| All-in-One  | Glance=swift, Cinder=thinlvm          | RHEL7.1    |        | [QuickStart](QuickStart) | Prasanth Anbalagan | 2015-00-00 | None  | None       |
+| All-in-One  | Glance=s3, Cinder=nfs                 | RHEL7.1    |        | [QuickStart](QuickStart) |                    | 2015-00-00 | None  | None       |
+| All-in-One  | Glance=ceph, Cinder=ceph              | RHEL7.1    |        | [QuickStart](QuickStart) |                    | 2015-00-00 | None  | None       |
+| All-in-One  | Glance=lvm, Cinder=glusterfs          | RHEL7.1    |        | [QuickStart](QuickStart) |                    | 2015-00-00 | None  | None       |
+| All-in-One  | Glance=lvm, Cinder=netapp_iscsi      | RHEL7.1    |        | [QuickStart](QuickStart) |                    | 2015-00-00 | None  | None       |
+| All-in-One  | Glance=lvm, Cinder=netapp_nfs        | RHEL7.1    |        | [QuickStart](QuickStart) |                    | 2015-00-00 | None  | None       |
+| All-in-One  | swift                                 | RHEL7.1    |        | [QuickStart](QuickStart) | Prasanth Anbalagan | 2015-00-00 | None  | None       |
 
 ## Packstack Based Installation (Misc Components)
 
