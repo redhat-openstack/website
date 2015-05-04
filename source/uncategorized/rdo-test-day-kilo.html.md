@@ -27,6 +27,7 @@ Quick Links:
 *   itzikb - Wiki, IRC, testing (RHEL7.1)
 *   tshefi - IRC, (RHEL7.1)
 *   iovadia - IRC, (RHEL7.1)
+*   yrabl - IRC, (RHEL7.1)
 
 ## Prerequisites
 
