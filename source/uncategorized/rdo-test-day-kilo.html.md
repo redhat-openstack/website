@@ -28,6 +28,7 @@ Quick Links:
 *   tshefi - IRC, (RHEL7.1), cinder netapp iscsi
 *   iovadia - IRC, (RHEL7.1)
 *   yrabl - IRC, (RHEL7.1)
+*   stoner - IRC, (Fedora21) nova live migration
 
 ## Prerequisites
 
