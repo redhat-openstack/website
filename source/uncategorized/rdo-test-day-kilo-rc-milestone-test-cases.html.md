@@ -27,9 +27,9 @@ Please make sure to use the steps described in the [RDO_test_day_Kilo#How_To_Tes
 
 | Config Name                                 | Release          | BaseOS     | Status | HOWTO                                                                                              | Who      | Date       | BZ/LP | Notes Page |
 |---------------------------------------------|------------------|------------|--------|----------------------------------------------------------------------------------------------------|----------|------------|-------|------------|
-| All-in-One - Sanity                         | Kilo 2015.1-0rc2 | CentOS 7.1 |        | [QuickStart](QuickStart)                                                                |          |            |       | None       |
+| All-in-One - Sanity                         | Kilo 2015.1-0rc2 | CentOS 7.1 |        | [QuickStart](QuickStart)                                                                |          | 2015-00-00 |       | None       |
 | |                                           |                  | F21        | ??     | [QuickStart](QuickStart)                                                                |          |            |       |            |
-| |                                           |                  | RHEL7.1    |        | [QuickStart](QuickStart)                                                                |          |            | None  | None       |
+| |                                           |                  | RHEL7.1    |        | [QuickStart](QuickStart)                                                                | stafaev  | 2015-00-00 | None  | None       |
 | Distributed -IPv6-Deployment- Sanity        | Kilo 2015.1-0rc2 | CentOS 7.1 | ??     | [QuickStart](QuickStart)                                                                | ?        |            | None  | None       |
 |                                             |                  | F21        | ??     | [QuickStart](QuickStart)                                                                | ?        | 2015-00-00 | None  | None       |
 |                                             |                  | RHEL7.1    |        | [QuickStart](QuickStart)                                                                | ushkalim | 2015-00-00 |       | None       |
