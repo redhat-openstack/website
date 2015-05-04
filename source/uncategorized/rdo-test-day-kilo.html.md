@@ -50,6 +50,39 @@ You'll want a fresh install (or VM) with latest updates installed. (Fresh so tha
 
 Tempest directory : /usr/share/openstack-tempest-kilo
 
+1.  create a tempest.conf file
+
+cp /usr/share/openstack-tempest-kilo/etc/tempest.conf.sample /usr/share/openstack-tempest-kilo/etc/tempest.conf
+
+1.  configure tempest.conf (
+
+KEYSTONE_ADDRESS=x.x.x.x
+
+1.  glance image reference id
+
+IMAGE_REF=y.y.y.y.y.y PUBLIC_NET_ID=t.t.t.t.t
+
+1.  please configure:
+2.  1 tenants:
+3.  demo , alt_demo , admin
+4.  2 neutron create:
+5.  private network - must be shared
+6.  public network
+
+<!-- -->
+
+1.  keystone
+
+crudini --format=ini --set /usr/share/openstack-tempest-kilo/etc/tempest.conf identity uri '<http://$KEYSTONE_ADDRESS:35357/v2.0/>' crudini --format=ini --set /usr/share/openstack-tempest-kilo/etc/tempest.conf identity uri_v3 '<http://$KEYSTONE_ADDRESS:35357/v3/>' crudini --format=ini --set /usr/share/openstack-tempest-kilo/etc/tempest.conf identity-feature-enabled api_v3 'false' crudini --format=ini --set /usr/share/openstack-tempest-kilo/etc/tempest.conf identity admin_username 'admin' crudini --format=ini --set /usr/share/openstack-tempest-kilo/etc/tempest.conf identity admin_tenant_name 'admin' crudini --format=ini --set /usr/share/openstack-tempest-kilo/etc/tempest.conf identity admin_password 'redhat' crudini --format=ini --set /usr/share/openstack-tempest-kilo/etc/tempest.conf identity username 'demo' crudini --format=ini --set /usr/share/openstack-tempest-kilo/etc/tempest.conf identity tenant_name 'demo' crudini --format=ini --set /usr/share/openstack-tempest-kilo/etc/tempest.conf identity password 'redhat' crudini --format=ini --set /usr/share/openstack-tempest-kilo/etc/tempest.conf identity alt_username 'alt_demo' crudini --format=ini --set /usr/share/openstack-tempest-kilo/etc/tempest.conf identity alt_password 'redhat' crudini --format=ini --set /usr/share/openstack-tempest-kilo/etc/tempest.conf identity alt_tenant_name 'alt_demo' crudini --format=ini --set /usr/share/openstack-tempest-kilo/etc/tempest.conf compute image_ref $IMAGE_REF crudini --format=ini --set /usr/share/openstack-tempest-kilo/etc/tempest.conf compute image_ref_alt $IMAGE_REF
+
+1.  network name - private ( must be shared)
+
+crudini --format=ini --set /usr/share/openstack-tempest-kilo/etc/tempest.conf compute fixed_network_name 'private' crudini --format=ini --set /usr/share/openstack-tempest-kilo/etc/tempest.conf network public_network_id $PUBLIC_NET_ID crudini --format=ini --set /usr/share/openstack-tempest-kilo/etc/tempest.conf compute-admin username 'admin' crudini --format=ini --set /usr/share/openstack-tempest-kilo/etc/tempest.conf compute-admin tenant_name 'admin' crudini --format=ini --set /usr/share/openstack-tempest-kilo/etc/tempest.conf compute-admin password 'redhat'
+
+1.  run tempest:
+
+/usr/share/openstack-tempest-kilo/run_tests.sh
+
 ### Test cases and results
 
 **[RDO_test_day_Kilo_RC_milestone_test_cases](RDO_test_day_Kilo_RC_milestone_test_cases)**
