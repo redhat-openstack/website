@@ -25,7 +25,7 @@ Quick Links:
 *   arif-ali - IRC, packstack AIO (CentOS)
 *   bkopilov - Packstack AIO on RHEL 7.1 ,Automation coverage
 *   itzikb - Wiki, IRC, testing (RHEL7.1)
-*   tshefi - IRC, (RHEL7.1)
+*   tshefi - IRC, (RHEL7.1), cinder netapp iscsi
 *   iovadia - IRC, (RHEL7.1)
 *   yrabl - IRC, (RHEL7.1)
 
