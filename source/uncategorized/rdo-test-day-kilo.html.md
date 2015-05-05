@@ -31,6 +31,7 @@ Quick Links:
 *   stoner - IRC, (Fedora21) nova live migration
 *   nyechiel - IRC, Neutron testing (CentOS 7.1)
 *   berendt - IRC, Packstack Multi Node (CentOS 7.1)
+*   ekuris - IRC ,Neutron testing (RHEL 7.1)
 
 ## Prerequisites
 
