@@ -8,8 +8,10 @@ wiki_last_updated: 2015-05-05
 
 # TripleO VM Setup
 
-## **Note: These instructions are outdated. There's a new setup published [ here](Deploying_RDO_using_Instack) which is designed to be an easier process for trying TripleO.**
+<h2 style="color: #B40B0C">
+Note: These instructions are outdated. Please follow [RDO-Manager](RDO-Manager) site which replaces this setup.
 
+</h2>
 ## Background
 
 The steps in this setup are a way of trying out an OpenStack deployment using TripleO. TripleO is the OpenStack Deployment program whose goal is to be able to deploy OpenStack using OpenStack wherever possible. Using baremetal provisioning from Nova, orchestration from Heat, and other OpenStack projects, you can deploy your cloud.
