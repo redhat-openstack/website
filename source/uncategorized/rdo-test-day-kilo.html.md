@@ -42,6 +42,7 @@ Quick Links:
 *   hguemar - IRC, testing (CentOS 7.1)
 *   weshay - IRC, testing (CentOS 7.1) RDO-Manager
 *   jruzicka - IRC, `packstack --allinone` (CentOS 7.1)
+*   verdurin - IRC, testing (CentOS 7.1)
 
 ## Prerequisites
 
