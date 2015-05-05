@@ -43,7 +43,7 @@ You'll want a fresh install (or VM) with latest updates installed. (Fresh so tha
 
 ## How To Test
 
-    sudo yum install http://rdoproject.org/repos/openstack/openstack-kilo/rdo-release-kilo.rpm
+    sudo yum install http://rdoproject.org/repos/openstack-kilo/rdo-testing-kilo.rpm
 
 *   Check for any [ Workarounds](Workarounds) required for your platform before the main installation
 *   For Packstack based deployment start at step 2 of -- <http://openstack.redhat.com/Quickstart#Step_2:_Install_Packstack_Installer>
