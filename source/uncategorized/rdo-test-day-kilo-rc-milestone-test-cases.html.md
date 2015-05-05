@@ -56,7 +56,7 @@ Please see [Docs/Storage](Docs/Storage) for configuration guides as well as sugg
 
 | Config Name | Backend                               | BaseOS     | Status | HOWTO                               | Who                | Date       | BZ/LP | Notes Page |
 |-------------|---------------------------------------|------------|--------|-------------------------------------|--------------------|------------|-------|------------|
-| All-in-One  | Glance=localfs, Cinder=lvm            | CentOS 7.1 |        | [QuickStart](QuickStart) |                    | 2015-00-00 | None  | None       |
+| All-in-One  | Glance=localfs, Cinder=lvm            | CentOS 7.1 |        | [QuickStart](QuickStart) | Christian Berendt  | 2015-05-05 | None  | None       |
 | All-in-One  | Glance=swift, Cinder=thinlvm          | CentOS 7.1 |        | [QuickStart](QuickStart) | Prasanth Anbalagan | 2015-00-00 | None  | None       |
 | All-in-One  | Glance=s3(amazon s3), Cinder=nfs      | CentOS 7.1 |        | [QuickStart](QuickStart) |                    | 2015-00-00 | None  | None       |
 | All-in-One  | Glance=s3(swift s3), Cinder=nfs       | CentOS 7.1 |        | [QuickStart](QuickStart) |                    | 2015-00-00 | None  | None       |
