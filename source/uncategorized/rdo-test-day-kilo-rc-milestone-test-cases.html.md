@@ -68,6 +68,7 @@ Please see [Docs/Storage](Docs/Storage) for configuration guides as well as sugg
 | All-in-One  | Glance=ceph, Cinder=ceph              | RHEL7.1    |        | [QuickStart](QuickStart) | yrabl              | 2015-00-00 | None  | None       |
 | All-in-One  | Glance=lvm, Cinder=glusterfs          | RHEL7.1    |        | [QuickStart](QuickStart) | bkopilov           | 2015-00-00 | None  | None       |
 | All-in-One  | Glance=lvm, Cinder=netapp_iscsi      | RHEL7.1    |        | [QuickStart](QuickStart) | bkopilov           | 2015-00-00 | None  | None       |
+| All-in-One  | Glance=nfs, Cinder=netapp_iscsi      | RHEL7.1    |        | [QuickStart](QuickStart) | tshefi             | 2015-00-00 | None  | None       |
 | All-in-One  | Glance=lvm, Cinder=netapp_nfs        | RHEL7.1    |        | [QuickStart](QuickStart) | Juraj Marko        | 2015-00-00 | None  | None       |
 | All-in-One  | swift                                 | RHEL7.1    |        | [QuickStart](QuickStart) | Prasanth Anbalagan | 2015-00-00 | None  | None       |
 
