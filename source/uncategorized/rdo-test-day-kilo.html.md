@@ -40,6 +40,7 @@ Quick Links:
 *   gchamoul - IRC, Packstack, testing (CentOS7.1, RHEL7.1)
 *   panbalag - IRC, Packstack, testing (CentOS7.1, RHEL7.1)
 *   hguemar - IRC, testing (CentOS 7.1)
+*   weshay - IRC, testing (CentOS 7.1) RDO-Manager
 
 ## Prerequisites
 
