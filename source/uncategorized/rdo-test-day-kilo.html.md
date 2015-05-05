@@ -38,6 +38,7 @@ Quick Links:
 *   ajeain - IRC, Horizon, Packstack (RHEL 7.1)
 *   mabrams - IRC, Packstack, Keystone (RHEL 7.1)
 *   gchamoul - IRC, Packstack, testing (CentOS7.1, RHEL7.1)
+*   panbalag - IRC, Packstack, testing (CentOS7.1, RHEL7.1)
 
 ## Prerequisites
 
