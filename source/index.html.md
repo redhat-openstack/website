@@ -17,9 +17,9 @@ __NOTOC__
 
 </div>
 <div class="offset3 span8 intro-text">
-OpenStack: Packaged by and for the CentOS community
+Join us today and tomorrow for RDO Kilo test day.
 
-<span class="btn">[Quick start →](quickstart)</span>
+<span class="btn">[Get started →](RDO_test_day_Kilo)</span>
 
 </div>
 </div>
