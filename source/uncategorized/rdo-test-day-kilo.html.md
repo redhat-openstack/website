@@ -32,6 +32,8 @@ Quick Links:
 *   nyechiel - IRC, Neutron testing (CentOS 7.1)
 *   berendt - IRC, Packstack Multi Node (CentOS 7.1)
 *   ekuris - IRC ,Neutron testing (RHEL 7.1)
+*   ajeain - IRC, Horizon, Packstack (RHEL 7.1)
+*   mabrams - IRC, Packstack, Keystone (RHEL 7.1)
 
 ## Prerequisites
 
