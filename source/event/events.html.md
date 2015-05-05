@@ -17,25 +17,26 @@ The following are the meetups I'm aware of in the coming week where RDO enthusia
 
 If you attend any of these meetups, please take pictures, and send me some. If you blog about the events (and you should), please send me that, too.
 
-*   Wednesday, April 29 [SolidFire and VMware Integrated OpenStack](http://www.meetup.com/openstack/events/219140959/), San Francisco, CA, US
-*   Wednesday, April 29 [Come learn about OpenStack for Operators](http://www.meetup.com/Silicon-Valley-OpenStack-Ops-Meetup/events/221999533/), San Jose, CA, US
-*   Thursday, April 30 [OpenStack Howto part 2 - Identity](http://www.meetup.com/OpenStack-Czech-User-Group-Meetup/events/221143231/), Prague, CZ
-*   Thursday, April 30 [Trove - Database as a Service](http://www.meetup.com/New-Zealand-OpenStack-User-Group/events/221737612/), Wellington, NZ
-*   Thursday, April 30 [Applications on OpenStack with Kubernetes, Cloud Foundry and Murano](http://www.meetup.com/Cloud-Platform-at-Symantec/events/221873079/), Mountain View, CA, US
-*   Thursday, April 30 [Let's Talk About Ceph](http://www.meetup.com/openstack-pittsburgh/events/221895192/), Pittsburgh, PA, US
-*   Thursday, April 30 [Discuss and Learn about OpenStack](http://www.meetup.com/OpenStack-Denver/events/221330889/), Littleton, CO, US
-*   Thursday, April 30 [Canberra Openstack Meetup](http://www.meetup.com/Australian-OpenStack-User-Group/events/221180707/), Melbourne, AU
-*   Thursday, April 30 [4月 Taipei.py 聚會 OpenStack/BlueMix/Softlayer](http://www.meetup.com/Taipei-py/events/222014347/), Taipei, TW
-*   Thursday, April 30 [Openstack&Ceph Spring Meetup](http://www.meetup.com/Openstack-Amsterdam/events/221966665/), Amsterdam, NL
-*   Tuesday, May 05 [May OpenStack Meetup](http://www.meetup.com/Minnesota-OpenStack-Meetup/events/221870529/), Saint Paul, MN, US
-*   Tuesday, May 05 [May Sydney Meetup](http://www.meetup.com/Australian-OpenStack-User-Group/events/220202283/), Melbourne, AU
-*   Tuesday, May 05 [London OpenStack May Meetup](http://www.meetup.com/Openstack-London/events/221676467/), London, 17, GB
-*   Wednesday, May 06 [OpenStack Seattle Meetup: The Ins and Outs of Deploying OpenStack](http://www.meetup.com/OpenStack-Seattle/events/219315723/), Seattle, WA, US
-*   Wednesday, May 06 [OpenStack Meetup May - Ceilometer Telemetry Presentation](http://www.meetup.com/OpenStack-DFW/events/218264792/), Richardson, TX, US
-*   Wednesday, May 06 [The Ultimate OpenStack Meet and Greet](http://www.meetup.com/OpenStack-for-Enterprises-NYC/events/221726757/), New York, NY, US
-*   Thursday, May 07 [Automation of OpenStack Deployments with Big Data Solutions](http://www.meetup.com/San-Francisco-Silicon-Valley-OpenStack-Meetup/events/221895045/), San Francisco, CA, US
-*   Thursday, May 07 [Open... House. Community. Stack.](http://www.meetup.com/openstack/events/221751794/), San Francisco, CA, US
-*   Sunday, May 10 [奔跑吧，OpenStack！ UnitedStack与您面对面 北京站 5·10](http://www.meetup.com/China-OpenStack-User-Group/events/222125771/), Beijing, CN
+*   Tue May 5 [May OpenStack Meetup](http://www.meetup.com/Minnesota-OpenStack-Meetup/events/221870529/), Saint Paul, MN, US
+*   Tue May 5 [London OpenStack May Meetup](http://www.meetup.com/Openstack-London/events/221676467/), London, 17, GB
+*   Wed May 6 [OpenStack Seattle Meetup: The Ins and Outs of Deploying OpenStack](http://www.meetup.com/OpenStack-Seattle/events/219315723/), Seattle, WA, US
+*   Wed May 6 [OpenStack Meetup May - Ceilometer Telemetry Presentation](http://www.meetup.com/OpenStack-DFW/events/218264792/), Richardson, TX, US
+*   Wed May 6 [OpenStack cloud management platform - By Yaniv](http://www.meetup.com/Network-Admin-and-Support-Group/events/221902596/), Vancouver, BC, CA
+*   Wed May 6 [The Ultimate OpenStack Meet and Greet](http://www.meetup.com/OpenStack-for-Enterprises-NYC/events/221726757/), New York, NY, US
+*   Thu May 7 ["What's New : OpenStack Kilo "](http://www.meetup.com/Cloud-Enabled-Meetup/events/222232056/), Bangalore, IN
+*   Thu May 7 [Automation of OpenStack Deployments with Big Data Solutions](http://www.meetup.com/San-Francisco-Silicon-Valley-OpenStack-Meetup/events/221895045/), San Francisco, CA, US
+*   Sat May 9 [4th Public Meetup Vietnam OpenStack.](http://www.meetup.com/VietStack/events/222157997/), Ha Noi, VN
+*   Sun May 10 [奔跑吧，OpenStack！ UnitedStack与您面对面 北京站 5·10](http://www.meetup.com/China-OpenStack-User-Group/events/222125771/), Beijing, CN
+*   Tue May 12 [2015 China OpenStack 企业就绪论坛](http://www.meetup.com/China-OpenStack-User-Group/events/221992827/), Beijing, CN
+*   Tue May 12 [OpenStack + Heterogeneous Docker Orchestration (#1)](http://www.meetup.com/OpenStack-Nova/events/221839689/), Reston, VA, US
+*   Tue May 12 [High Availability in OpenStack](http://www.meetup.com/Athens-OpenStack-User-Group/events/222128761/), Athens, GR
+*   Tue May 12 [OpenStack MUC– CenterDevice UserStory / Mirantis experiences selecting Hardware](http://www.meetup.com/OpenStack-Munich/events/222030952/), München, DE
+*   Tue May 12 [Ceph at Comcast](http://www.meetup.com/Ceph-DC/events/221843869/), Washington, DC, US
+*   Wed May 13 [Heading for Vancouver](http://www.meetup.com/OpenStack-User-Group-Berlin/events/221817807/), Berlin, DE
+*   Wed May 13 [OpenStack hands on](http://www.meetup.com/openstack-argentina/events/222305435/), Buenos Aires, AR
+*   Wed May 13 [2º Hangout OpenStack Brasil 2015](http://www.meetup.com/Openstack-Brasil/events/222182172/), Porto Alegre, BR
+*   Thu May 14 [Singapore OpenStack UG meetup](http://www.meetup.com/OpenStack-Singapore/events/221538390/), Singapore, SG
+*   Thu May 14 [Singapore OpenStack UG meetup](http://www.meetup.com/Singapore-OpenStack-User-Group-Meetup/events/221519051/), Singapore, SG
 
 ## Major Events
 
