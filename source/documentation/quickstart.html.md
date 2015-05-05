@@ -72,7 +72,7 @@ Setup the RDO repositories:
 
     sudo yum install -y https://rdoproject.org/repos/rdo-release.rpm
 
-*Looking for another version? Use <http://rdoproject.org/repos/openstack-kilo/rdo-release-kilo.rpm> for Kilo, and <http://rdoproject.org/repos/openstack-icehouse/rdo-release-icehouse.rpm> for Icehouse. Looking for an older version? See <http://rdoproject.org/repos/> for the full listing.*
+*Looking for another version? Use <http://rdoproject.org/repos/openstack-kilo/rdo-testing-kilo.rpm> for Kilo, and <http://rdoproject.org/repos/openstack-icehouse/rdo-release-icehouse.rpm> for Icehouse. Looking for an older version? See <http://rdoproject.org/repos/> for the full listing.*
 
 ### Step 2: Install Packstack Installer
 
