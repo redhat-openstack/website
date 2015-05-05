@@ -13,6 +13,8 @@ There are lots of events, around the world, where you can hang out with people f
 
 The following are the meetups I'm aware of in the coming week where RDO enthusiasts will be gathering. If you know of others, please let me know, and/or add them to <http://openstack.redhat.com/Events>
 
+RDO Test Day, May 5th and 6th - [RDO_test_day_Kilo](RDO_test_day_Kilo)
+
 ## Meetups
 
 If you attend any of these meetups, please take pictures, and send me some. If you blog about the events (and you should), please send me that, too.
