@@ -89,7 +89,7 @@ General openstack tests
 | All-in-one Keystone tests     | RDO Kilo | CentOS 7.1 |        |       |         |      |                                                          |            |
 | All-in-one Keystone tests     | RDO Kilo | RHEL 7.1   |        |       |         |      |                                                          |            |
 | All-in-one Keystone tests     | RDO Kilo | Fedora 21  |        |       |         |      |                                                          |            |
-| All-in-one installation tests | RDO Kilo | RHEL 7.1   |        |       |         |      |                                                          |            |
+| All-in-one installation tests | RDO Kilo | RHEL 7.1   |        |       | |ajeain |      | 1218555,1218627                                          |            |
 | Distributed Horizon           | RDO Kilo | RHEL7.1    |        |       | iovadia |      | PackStack installation + Sanity                          |            |
 | Heat tests                    | RDO Kilo | RHEL7.1    |        |       |         |      | Packstack + environment creation + sanity                |            |
 | All-in-one Nova tests         | RDO Kilo | RHEL7.1    |        |       |         |      | Packstack + nova sanity                                  |            |
