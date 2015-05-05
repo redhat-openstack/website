@@ -57,8 +57,9 @@ You'll want a fresh install (or VM) with latest updates installed. (Fresh so tha
 *   For Packstack based deployment start at step 2 of -- <https://www.rdoproject.org/Quickstart#Step_2:_Install_Packstack_Installer>
 *   Install and run tempest:
 
-`     `[`opentack-tempest-kilo`](https://repos.fedorapeople.org/repos/openstack/openstack-kilo/fedora-21/fedora/openstack-tempest-kilo-20150413.2.fc23.noarch.rpm)
-`     `[`python-tempest-lib`](https://repos.fedorapeople.org/repos/openstack/openstack-kilo/fedora-22/fedora/python-tempest-lib-0.4.0-3.fc23.noarch.rpm)
+<!-- -->
+
+    sudo yum install openstack-tempest
 
     yum install -y gcc libxml2-devel libxslt-devel  python-devel openssl-devel python-testtools libffi-devel libffi
     pip install virtualenv 
