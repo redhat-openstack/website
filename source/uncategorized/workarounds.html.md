@@ -26,9 +26,11 @@ Describe symptoms here
 
 #### workaround
 
+<strike>
+
 ## Neutron lbaas package not found
 
-*   **Bug:** <https://bugzilla.redhat.com/show_bug.cgi?id=1218398>
+*   **Bug:** <https://bugzilla.redhat.com/show_bug.cgi?id=1218398> ON_QA
 *   **Affects:** RHEL / CentOS
 
 #### symptoms
@@ -37,4 +39,4 @@ Execution of '/usr/bin/yum -d 0 -e 0 -y list openstack-neutron-lbaas' returned 1
 
 #### workaround
 
-CONFIG_LBAAS_INSTALL: n
+CONFIG_LBAAS_INSTALL: n </strike>
