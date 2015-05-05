@@ -15,28 +15,41 @@ See [Workaround_archive](Workaround_archive) for workarounds that we believe to 
 
 These are the current workarounds for the RDO Kilo.
 
-## Example Problem Description
+### Example Problem Description
 
 *   **Bug:** <https://bugzilla.redhat.com/show_bug.cgi?id=12345>
 *   **Affects:** Operating Systems Affected
 
-#### symptoms
+##### symptoms
 
 Describe symptoms here
 
-#### workaround
+##### workaround
 
 <strike>
 
-## Neutron lbaas package not found
+### Neutron lbaas package not found
 
 *   **Bug:** <https://bugzilla.redhat.com/show_bug.cgi?id=1218398> ON_QA
 *   **Affects:** RHEL / CentOS
 
-#### symptoms
+##### symptoms
 
 Execution of '/usr/bin/yum -d 0 -e 0 -y list openstack-neutron-lbaas' returned 1: Error: No matching Packages to list
 
-#### workaround
+##### workaround
 
 CONFIG_LBAAS_INSTALL: n </strike>
+
+## Neutron l3-agent failed when FWAAs enabled
+
+*   **Bug:** <https://bugzilla.redhat.com/show_bug.cgi?id=1218543>
+*   **Affects:** Neutron l3-agent failed
+
+##### symptoms
+
+Neutron l3-agent failed when FWAAS enabled
+
+##### workaround
+
+when adding the config file /etc/neutron/fwaas_driver.ini to /usr/lib/systemd/system/neutron-l3-agent.service and restarted the l3 agent the l3 agent is started
