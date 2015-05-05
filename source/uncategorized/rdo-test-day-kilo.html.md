@@ -19,7 +19,7 @@ Quick Links:
 *   [Quickstart](Quickstart)
 *   [Workarounds](Workarounds)
 
-**Note:** We are going to push *'RDO-Manager* testing ahead a few more days to give us time to stabilize the Kilo repositories we depend on. The exact date will be announed on rdo-list but you can expect it to happen during the week of May 11.
+**Note:** We are going to push **RDO-Manager** testing ahead a few more days to give us time to stabilize the Kilo repositories we depend on. The exact date will be announed on rdo-list but you can expect it to happen during the week of May 11.
 
 ## Who's Participating
 
