@@ -30,6 +30,7 @@ Quick Links:
 *   yrabl - IRC, (RHEL7.1)
 *   stoner - IRC, (Fedora21) nova live migration
 *   nyechiel - IRC, Neutron testing (Fedora 21)
+*   berendt - IRC, Packstack Multi Node (CentOS 7.1)
 
 ## Prerequisites
 
