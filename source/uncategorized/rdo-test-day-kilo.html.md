@@ -47,7 +47,7 @@ You'll want a fresh install (or VM) with latest updates installed. (Fresh so tha
     sudo yum install http://rdoproject.org/repos/openstack-kilo/rdo-testing-kilo.rpm
 
 *   Check for any [ Workarounds](Workarounds) required for your platform before the main installation
-*   For Packstack based deployment start at step 2 of -- <http://openstack.redhat.com/Quickstart#Step_2:_Install_Packstack_Installer>
+*   For Packstack based deployment start at step 2 of -- <https://www.rdoproject.org/Quickstart#Step_2:_Install_Packstack_Installer>
 *   Install and run tempest:
 
 `     `[`opentack-tempest-kilo`](https://repos.fedorapeople.org/repos/openstack/openstack-kilo/fedora-21/fedora/openstack-tempest-kilo-20150413.2.fc23.noarch.rpm)
