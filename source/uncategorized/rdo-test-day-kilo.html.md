@@ -46,6 +46,7 @@ Quick Links:
 *   yprokule - IRC, (RHEL 7.1) ceilometer
 *   mpavlase - IRC, Fedora 21, Packstack AIO
 *   ushkalim - IRC, RHEL 7.1, DIS IPv6 Packstack
+*   rook - IRC, RHEL7.1, Packstack
 
 ## Prerequisites
 
