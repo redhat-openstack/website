@@ -43,6 +43,7 @@ Quick Links:
 *   weshay - IRC, testing (CentOS 7.1) RDO-Manager
 *   jruzicka - IRC, `packstack --allinone` (CentOS 7.1)
 *   verdurin - IRC, testing (CentOS 7.1)
+*   yprokule - IRC, (RHEL 7.1) ceilometer
 
 ## Prerequisites
 
