@@ -17,7 +17,7 @@ __NOTOC__
 
 </div>
 <div class="offset3 span8 intro-text">
-Join us today and tomorrow for RDO Kilo test day.
+Join us today for RDO Kilo test day.
 
 <span class="btn">[Get started →](RDO_test_day_Kilo)</span>
 
