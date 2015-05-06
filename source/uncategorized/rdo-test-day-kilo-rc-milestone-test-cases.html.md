@@ -57,20 +57,20 @@ Please see [Docs/Storage](Docs/Storage) for configuration guides as well as sugg
 | Config Name | Backend                               | BaseOS     | Status | HOWTO                               | Who                | Date       | BZ/LP | Notes Page |
 |-------------|---------------------------------------|------------|--------|-------------------------------------|--------------------|------------|-------|------------|
 | All-in-One  | Glance=localfs, Cinder=lvm            | CentOS 7.1 |        | [QuickStart](QuickStart) | Christian Berendt  | 2015-05-05 | None  | None       |
-| All-in-One  | Glance=swift, Cinder=thinlvm          | CentOS 7.1 |        | [QuickStart](QuickStart) | Prasanth Anbalagan | 2015-00-00 | None  | None       |
+| All-in-One  | Glance=swift, Cinder=thinlvm          | CentOS 7.1 | Passed | [QuickStart](QuickStart) | Prasanth Anbalagan | 2015-00-00 | None  | None       |
 | All-in-One  | Glance=s3(amazon s3), Cinder=nfs      | CentOS 7.1 |        | [QuickStart](QuickStart) |                    | 2015-00-00 | None  | None       |
 | All-in-One  | Glance=s3(swift s3), Cinder=nfs       | CentOS 7.1 |        | [QuickStart](QuickStart) |                    | 2015-00-00 | None  | None       |
 | All-in-One  | Glance=ceph, Cinder=ceph              | CentOS 7.1 |        | [QuickStart](QuickStart) |                    | 2015-00-00 | None  | None       |
 | All-in-One  | Glance=XtreamIO, Cinder=XtreamIO      | CentOS 7.1 |        | [QuickStart](QuickStart) |                    | 2015-00-00 | None  | None       |
 | All-in-One  | Glance=localfs, Cinder=windows_iscsi | CentOS 7.1 |        | [QuickStart](QuickStart) |                    | 2015-00-00 | None  | None       |
-| All-in-One  | Glance=swift, Cinder=thinlvm          | RHEL7.1    |        | [QuickStart](QuickStart) | Prasanth Anbalagan | 2015-00-00 | None  | None       |
+| All-in-One  | Glance=swift, Cinder=thinlvm          | RHEL7.1    | Passed | [QuickStart](QuickStart) | Prasanth Anbalagan | 2015-00-00 | None  | None       |
 | All-in-One  | Glance=s3, Cinder=nfs                 | RHEL7.1    |        | [QuickStart](QuickStart) | bkopilov           | 2015-00-00 | None  | None       |
 | All-in-One  | Glance=ceph, Cinder=ceph              | RHEL7.1    |        | [QuickStart](QuickStart) | yrabl              | 2015-00-00 | None  | None       |
 | All-in-One  | Glance=lvm, Cinder=glusterfs          | RHEL7.1    |        | [QuickStart](QuickStart) | bkopilov           | 2015-00-00 | None  | None       |
 | All-in-One  | Glance=lvm, Cinder=netapp_iscsi      | RHEL7.1    |        | [QuickStart](QuickStart) | bkopilov           | 2015-00-00 | None  | None       |
 | All-in-One  | Glance=nfs, Cinder=netapp_iscsi      | RHEL7.1    |        | [QuickStart](QuickStart) | tshefi             | 2015-00-00 | None  | None       |
 | All-in-One  | Glance=lvm, Cinder=netapp_nfs        | RHEL7.1    |        | [QuickStart](QuickStart) | Juraj Marko        | 2015-00-00 | None  | None       |
-| All-in-One  | swift                                 | RHEL7.1    |        | [QuickStart](QuickStart) | Prasanth Anbalagan | 2015-00-00 | None  | None       |
+| All-in-One  | swift                                 | RHEL7.1    | Passed | [QuickStart](QuickStart) | Prasanth Anbalagan | 2015-00-00 | None  | None       |
 
 ## Packstack Based Installation (Misc Components)
 
