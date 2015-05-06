@@ -53,3 +53,16 @@ Neutron l3-agent failed when FWAAS enabled
 ##### workaround
 
 when adding the config file /etc/neutron/fwaas_driver.ini to /usr/lib/systemd/system/neutron-l3-agent.service and restarted the l3 agent the l3 agent is started
+
+## Packstack fails on openstack-selinux check
+
+*   **Bug:** None
+*   **Affects:** Tested on CentOS 7.1
+
+##### symptoms
+
+When Packstack runs the prescript.pp against another node it fails on: "PuppetError: Error appeared during Puppet run: 192.168.80.xxx_prescript.pp Error: Execution of '/usr/bin/yum -d 0 -e 0 -y list openstack-selinux' returned 1: Error: No matching Packages to list"
+
+##### workaround
+
+Copy the /etc/yum.repos.d/rdo-testing.repo file from the AIO to the 2nd node and re-run Packstack
