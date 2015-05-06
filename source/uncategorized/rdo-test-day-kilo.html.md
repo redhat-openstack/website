@@ -44,6 +44,7 @@ Quick Links:
 *   jruzicka - IRC, `packstack --allinone` (CentOS 7.1)
 *   verdurin - IRC, testing (CentOS 7.1)
 *   yprokule - IRC, (RHEL 7.1) ceilometer
+*   mpavlase - IRC, Fedora 21, Packstack AIO
 
 ## Prerequisites
 
