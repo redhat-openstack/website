@@ -45,6 +45,7 @@ Quick Links:
 *   verdurin - IRC, testing (CentOS 7.1)
 *   yprokule - IRC, (RHEL 7.1) ceilometer
 *   mpavlase - IRC, Fedora 21, Packstack AIO
+*   ushkalim - IRC, RHEL 7.1, DIS IPv6 Packstack
 
 ## Prerequisites
 
