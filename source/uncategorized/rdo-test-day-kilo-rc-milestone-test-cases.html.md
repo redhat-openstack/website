@@ -87,7 +87,7 @@ General openstack tests
 | Item/Area Name                | Release  | BaseOS     | Status | HOWTO                                        | Who      | Date | BZ/LP                                                    | Notes Page |
 |-------------------------------|----------|------------|--------|----------------------------------------------|----------|------|----------------------------------------------------------|------------|
 | All-in-one Keystone tests     | RDO Kilo | CentOS 7.1 |        |                                              |          |      |                                                          |            |
-| All-in-one Keystone tests     | RDO Kilo | RHEL 7.1   |        | <span style="background:#00ff00">Good</span> | |mabrams |      | packstack allinone, keystone sanity                      |            |
+| All-in-one Keystone tests     | RDO Kilo | RHEL 7.1   |        | <span style="background:#00ff00">Good</span> | |mabrams |      | packstack allinone                                       |            |
 | All-in-one Keystone tests     | RDO Kilo | Fedora 21  |        |                                              |          |      |                                                          |            |
 | All-in-one installation tests | RDO Kilo | RHEL 7.1   |        |                                              | |ajeain  |      | 1218555,1218627                                          |            |
 | Distributed Horizon           | RDO Kilo | RHEL7.1    |        |                                              | iovadia  |      | 1218894                                                  |            |
