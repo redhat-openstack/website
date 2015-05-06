@@ -84,20 +84,22 @@ Various components which don't fit the large test efforts above.
 
 General openstack tests
 
-| Item/Area Name                | Release  | BaseOS     | Status | HOWTO                                        | Who      | Date | BZ/LP                                                    | Notes Page |
-|-------------------------------|----------|------------|--------|----------------------------------------------|----------|------|----------------------------------------------------------|------------|
-| All-in-one Keystone tests     | RDO Kilo | CentOS 7.1 |        |                                              |          |      |                                                          |            |
-| All-in-one Keystone tests     | RDO Kilo | RHEL 7.1   |        | <span style="background:#00ff00">Good</span> | |mabrams |      | packstack allinone                                       |            |
-| All-in-one Keystone tests     | RDO Kilo | Fedora 21  |        |                                              |          |      |                                                          |            |
-| All-in-one installation tests | RDO Kilo | RHEL 7.1   |        |                                              | |ajeain  |      | 1218555,1218627                                          |            |
-| Distributed Horizon           | RDO Kilo | RHEL7.1    |        |                                              | iovadia  |      | 1218894                                                  |            |
-| Heat tests                    | RDO Kilo | RHEL7.1    |        |                                              |          |      | Packstack + environment creation + sanity                |            |
-| All-in-one Nova tests         | RDO Kilo | RHEL7.1    |        |                                              |          |      | Packstack + nova sanity                                  |            |
-| All-in-one Nova tests         | RDO Kilo | Centos7.1  |        |                                              |          |      |                                                          |            |
-|                               | RDO Kilo | Fedora 21  |        |                                              |          |      |                                                          |            |
+| Item/Area Name                | Release  | BaseOS     | Status | HOWTO                                        | Who      | Date | BZ/LP                                                    | Notes Page                                |
+|-------------------------------|----------|------------|--------|----------------------------------------------|----------|------|----------------------------------------------------------|-------------------------------------------|
+| All-in-one Keystone tests     | RDO Kilo | CentOS 7.1 |        |                                              |          |      |                                                          |                                           |
+| All-in-one Keystone tests     | RDO Kilo | RHEL 7.1   |        | <span style="background:#00ff00">Good</span> | |mabrams |      | packstack allinone                                       |                                           |
+| All-in-one Keystone tests     | RDO Kilo | Fedora 21  |        |                                              |          |      |                                                          |                                           |
+| All-in-one installation tests | RDO Kilo | RHEL 7.1   |        |                                              | |ajeain  |      | 1218555,1218627                                          |                                           |
+| Distributed Horizon           | RDO Kilo | RHEL7.1    |        |                                              | iovadia  |      | 1218894                                                  |                                           |
+| Heat tests                    | RDO Kilo | RHEL7.1    |        |                                              |          |      | Packstack + environment creation + sanity                |                                           |
+| All-in-one Nova tests         | RDO Kilo | RHEL7.1    |        |                                              |          |      | Packstack + nova sanity                                  |                                           |
+| All-in-one Nova tests         | RDO Kilo | Centos7.1  |        |                                              |          |      |                                                          |                                           |
+|                               | RDO Kilo | Fedora 21  |        |                                              |          |      |                                                          |                                           |
 
-| 2.node Nova tests             | RDO Kilo | RHEL7.1    |        |                                              |          |      | Packstack + nova live migration (block / shared storage) |            |
-|                               | RDO Kilo | Fedora 21  |        |                                              |          |      |                                                          |            |
+| 2.node Nova tests             | RDO Kilo | RHEL7.1    |        |                                              |          |      | Packstack + nova live migration (block / shared storage) |                                           |
+|                               | RDO Kilo | Fedora 21  |        |                                              |          |      |                                                          |                                           |
+
+|                               | RDO Kilo | Centos7.1  |        | <span style="background:#00ff00">Good</span> | stoner   |      |                                                          | still requires selinux in permissive mode |
 
 ## Manual configuration of OpenStack
 
