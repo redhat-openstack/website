@@ -66,3 +66,16 @@ When Packstack runs the prescript.pp against another node it fails on: "PuppetEr
 ##### workaround
 
 Copy the /etc/yum.repos.d/rdo-testing.repo file from the AIO to the 2nd node and re-run Packstack
+
+## Re-login to Horizon fail after timeout
+
+*   **Bug:**
+*   **Affects:** Tested on CentOS 7.1
+
+##### symptoms
+
+When Packstack runs the prescript.pp against another node it fails on: "PuppetError: Error appeared during Puppet run: 192.168.80.xxx_prescript.pp Error: Execution of '/usr/bin/yum -d 0 -e 0 -y list openstack-selinux' returned 1: Error: No matching Packages to list"
+
+##### workaround
+
+Copy the /etc/yum.repos.d/rdo-testing.repo file from the AIO to the 2nd node and re-run Packstack
