@@ -29,7 +29,6 @@ RDO-Manager User Guide: <https://repos.fedorapeople.org/repos/openstack-m/instac
 Post Demo 5 (April 21, 2015)
 
 *   [RDO-Manager Deployment Flow Using Instack Scripts (non-narrated)](http://youtu.be/TyK0df3mCM8)
-*   will be updated soon with narrated version
 
 Demo 3 (March 9, 2015)
 
