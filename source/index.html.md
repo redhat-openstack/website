@@ -26,6 +26,10 @@ OpenStack: Packaged by and for the CentOS community
 <div class="block-highlight">
 <div class="row">
 <div class="span7 offset4 pad-sides begin-content pull-m">
+## Come see us at the OpenStack Summit
+
+Come see us at Booth H4 at the [OpenStack Summit](http://openstack.org/summit) next week in Vancouver
+
 ## Get Involved
 
 There are many ways to [get involved](get involved) with the RDO community once you [ get started](quickstart). The simplest way is to [head over to the ask.openstack.org forum](http://ask.openstack.org) and help answer questions.
