@@ -19,26 +19,26 @@ The following are the meetups I'm aware of in the coming week where RDO enthusia
 
 If you attend any of these meetups, please take pictures, and send me some. If you blog about the events (and you should), please send me that, too.
 
-*   Tue May 5 [May OpenStack Meetup](http://www.meetup.com/Minnesota-OpenStack-Meetup/events/221870529/), Saint Paul, MN, US
-*   Tue May 5 [London OpenStack May Meetup](http://www.meetup.com/Openstack-London/events/221676467/), London, 17, GB
-*   Wed May 6 [OpenStack Seattle Meetup: The Ins and Outs of Deploying OpenStack](http://www.meetup.com/OpenStack-Seattle/events/219315723/), Seattle, WA, US
-*   Wed May 6 [OpenStack Meetup May - Ceilometer Telemetry Presentation](http://www.meetup.com/OpenStack-DFW/events/218264792/), Richardson, TX, US
-*   Wed May 6 [OpenStack cloud management platform - By Yaniv](http://www.meetup.com/Network-Admin-and-Support-Group/events/221902596/), Vancouver, BC, CA
-*   Wed May 6 [The Ultimate OpenStack Meet and Greet](http://www.meetup.com/OpenStack-for-Enterprises-NYC/events/221726757/), New York, NY, US
-*   Thu May 7 ["What's New : OpenStack Kilo "](http://www.meetup.com/Cloud-Enabled-Meetup/events/222232056/), Bangalore, IN
-*   Thu May 7 [Automation of OpenStack Deployments with Big Data Solutions](http://www.meetup.com/San-Francisco-Silicon-Valley-OpenStack-Meetup/events/221895045/), San Francisco, CA, US
-*   Sat May 9 [4th Public Meetup Vietnam OpenStack.](http://www.meetup.com/VietStack/events/222157997/), Ha Noi, VN
-*   Sun May 10 [奔跑吧，OpenStack！ UnitedStack与您面对面 北京站 5·10](http://www.meetup.com/China-OpenStack-User-Group/events/222125771/), Beijing, CN
 *   Tue May 12 [2015 China OpenStack 企业就绪论坛](http://www.meetup.com/China-OpenStack-User-Group/events/221992827/), Beijing, CN
-*   Tue May 12 [OpenStack + Heterogeneous Docker Orchestration (#1)](http://www.meetup.com/OpenStack-Nova/events/221839689/), Reston, VA, US
+*   Tue May 12 [只要你對OpenStack有興趣都歡迎來參加](http://www.meetup.com/Taipei-OpenCloud-Meetup/events/222348949/), Taipei, TW
+*   Tue May 12 [OpenStack Taiwan User group meetup](http://www.meetup.com/OpenStack-Taiwan-User-Group/events/222363618/), Taipei, TW
 *   Tue May 12 [High Availability in OpenStack](http://www.meetup.com/Athens-OpenStack-User-Group/events/222128761/), Athens, GR
-*   Tue May 12 [OpenStack MUC– CenterDevice UserStory / Mirantis experiences selecting Hardware](http://www.meetup.com/OpenStack-Munich/events/222030952/), München, DE
 *   Tue May 12 [Ceph at Comcast](http://www.meetup.com/Ceph-DC/events/221843869/), Washington, DC, US
+*   Wed May 13 [OpenStack cloud management platform + demo](http://www.meetup.com/Vancouver-OpenStack-Meetup/events/222400382/), Vancouver, BC, CA
 *   Wed May 13 [Heading for Vancouver](http://www.meetup.com/OpenStack-User-Group-Berlin/events/221817807/), Berlin, DE
 *   Wed May 13 [OpenStack hands on](http://www.meetup.com/openstack-argentina/events/222305435/), Buenos Aires, AR
 *   Wed May 13 [2º Hangout OpenStack Brasil 2015](http://www.meetup.com/Openstack-Brasil/events/222182172/), Porto Alegre, BR
+*   Thu May 14 [OpenStack 2015 May](http://www.meetup.com/OpenStack-Hungary-Meetup-Group/events/222396966/), Budapest, HU
 *   Thu May 14 [Singapore OpenStack UG meetup](http://www.meetup.com/OpenStack-Singapore/events/221538390/), Singapore, SG
-*   Thu May 14 [Singapore OpenStack UG meetup](http://www.meetup.com/Singapore-OpenStack-User-Group-Meetup/events/221519051/), Singapore, SG
+*   Mon May 18 [\*Introduction to Ceph and architectural overview](http://www.meetup.com/OpenStack-GDL/events/222437342/), Guadalajara, MX
+*   Wed May 20 [[ONLINE MEETUP](http://www.meetup.com/OpenStack-Israel/events/222449430/) OpenStack & Beyond Podcast Ep 2 - Live from OpenStack Vancouver], Tel Aviv-Yafo, IL
+*   Wed May 20 [OpenStack Bucharest user meeting on Meetup](http://www.meetup.com/OpenStack-Bucharest-Romania-Meetup/events/221522734/), Bucharest, RO
+*   Wed May 20 [OpenStack Summit, Vancouver, Dinner Party](http://www.meetup.com/OpenStack-Baden-Wuerttemberg/events/222027081/), Stuttgart, DE
+*   Thu May 21 [Встреча на РИТ++](http://www.meetup.com/OpenStack-Russia/events/222393195/), Moscow, RU
+*   Thu May 21 [Vancouver OpenStack Summit Pub Crawl](http://www.meetup.com/CloudBeers/events/220985796/), San Francisco, CA, US
+*   Thu May 21 [OpenStack Meetup Summit and Kilo Highlights](http://www.meetup.com/openstack-atlanta/events/220639582/), Atlanta, GA, US
+*   Thu May 21 [3. Meetup, Konu:TBA](http://www.meetup.com/Turkey-OpenStack-Meetup/events/221151299/), Istanbul, TR
+*   Sat May 23 [OpenStack Meetup, New Delhi](http://www.meetup.com/Indian-OpenStack-User-Group/events/222413310/), Bangalore, IN
 
 ## Major Events
 
