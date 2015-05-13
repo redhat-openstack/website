@@ -47,6 +47,16 @@ Follow by:
 *   Undercloud Installation
 *   Basic Deployment
 
+## Goal for Testing Day
+
+The goal is to deploy RDO Kilo cloud having 1 Controller and 1 Compute.
+
+To make sure that your RDO cloud works properly you can run testing script:
+
+    instack-test-overcloud
+
+which will spin up a testing VM instance in your cloud and try to ping it.
+
 ## Keep Notes from Testing
 
 You can use <https://etherpad.openstack.org/p/rdo_kilo_test_day> for notes. Reviewing other peoples' notes may help you avoid problems that they've already encountered.
