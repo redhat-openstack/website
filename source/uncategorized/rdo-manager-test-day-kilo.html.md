@@ -20,6 +20,7 @@ Quick Links:
 ## Who's Participating
 
 *   jcoufal - Wiki, IRC, testing (CentOS)
+*   egallen - IRC, testing (CentOS)
 
 ## Prerequisites
 
