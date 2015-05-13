@@ -14,7 +14,7 @@ RDO-Manager is an OpenStack Deployment & Management tool for RDO. It is based on
 
 RDO-Manager Architecture Overview: <http://www.rdoproject.org/RDO_Manager_Architecture_Overview>
 
-RDO-Manager Components: <https://repos.fedorapeople.org/repos/openstack-m/instack-undercloud/html/introduction/components.html>
+RDO-Manager Components: <https://repos.fedorapeople.org/repos/openstack-m/docs/master/introduction/components.html>
 
 RDO-Manager Repositories: <http://github.com/rdo-management>
 
