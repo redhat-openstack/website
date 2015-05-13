@@ -49,13 +49,11 @@ Follow by:
 
 ## Goal for Testing Day
 
-The goal is to deploy RDO Kilo cloud having 1 Controller and 1 Compute.
+*   The goal is to deploy RDO Kilo cloud having 1 Controller and 1 Compute.
+*   To make sure that your RDO cloud works properly you can run testing script:
+        instack-test-overcloud
 
-To make sure that your RDO cloud works properly you can run testing script:
-
-    instack-test-overcloud
-
-which will spin up a testing VM instance in your cloud and try to ping it.
+    which will spin up a testing VM instance in your cloud and try to ping it.
 
 ## Keep Notes from Testing
 
