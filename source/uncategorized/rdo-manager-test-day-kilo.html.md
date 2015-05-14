@@ -21,7 +21,8 @@ Quick Links:
 
 *   jcoufal - Wiki, IRC, testing (CentOS)
 *   egallen - IRC, testing (CentOS)
-*   ohochman - IRC, testing (CentOS - as agreed RHEL should not be tested )
+*   ohochman - IRC, testing (CentOS - as agreed RHEL should not be tested)
+*   shardy - IRC, testing (CentOS)
 
 ## Prerequisites
 
