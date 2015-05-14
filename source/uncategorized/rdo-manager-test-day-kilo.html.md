@@ -60,7 +60,7 @@ Follow by:
 
 ## Keep Notes from Testing
 
-You can use <https://etherpad.openstack.org/p/rdo_kilo_test_day> for notes. Reviewing other peoples' notes may help you avoid problems that they've already encountered.
+You can use <https://etherpad.openstack.org/p/rdo-manager_kilo_test_day> for notes. Reviewing other peoples' notes may help you avoid problems that they've already encountered.
 
 ## Troubleshooting and Communication
 
