@@ -51,6 +51,7 @@ Follow by:
 
 ## Goal for Testing Day
 
+*   Use CentOS only
 *   The goal is to deploy RDO Kilo cloud having 1 Controller and 1 Compute.
 *   To make sure that your RDO cloud works properly you can run testing script:
         instack-test-overcloud
