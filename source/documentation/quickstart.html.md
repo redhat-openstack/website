@@ -22,7 +22,7 @@ Below, we'll explain how to set up OpenStack on a single server. You'll be able 
 
 If you just want to try it out without installing anything, check out [TryStack](http://trystack.org). See also [Installation](Install#Installation) for alternate deployment methods.
 
-These instructions are to install the current ("**Juno**") release.
+These instructions are to install the current ("**Kilo**") release.
 
 </div>
 </div>
