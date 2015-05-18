@@ -34,7 +34,7 @@ Come see us at **Booth H4** at the [OpenStack Summit](http://openstack.org/summi
 
 OPENSTACK DEPLOYMENT AND MANAGEMENT IN PRODUCTION ENVIRONMENTS FROM THE COMMUNITY
 
-[RDO-Manager Get started here!]
+[Get started here!](RDO-Manager)
 
 ## Get Involved
 
