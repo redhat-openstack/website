@@ -17,22 +17,20 @@ __NOTOC__
 
 </div>
 <div class="offset3 span8 intro-text">
-OpenStack: Packaged by and for the CentOS community
-
-<span class="btn">[Quick start →](quickstart)</span>
+Come see us at **Booth H4** at the [OpenStack Summit](http://openstack.org/summit) next week in Vancouver
 
 </div>
 </div>
 <div class="block-highlight">
 <div class="row">
 <div class="span7 offset4 pad-sides begin-content pull-m">
-## Come see us at the OpenStack Summit
-
-Come see us at **Booth H4** at the [OpenStack Summit](http://openstack.org/summit) next week in Vancouver
-
 ## RDO Manager
 
-OPENSTACK DEPLOYMENT AND MANAGEMENT IN PRODUCTION ENVIRONMENTS FROM THE COMMUNITY
+OpenStack deployment and management
+
+in production environments
+
+from the community
 
 [Get started here!](RDO-Manager)
 
