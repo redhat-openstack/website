@@ -30,6 +30,12 @@ OpenStack: Packaged by and for the CentOS community
 
 Come see us at **Booth H4** at the [OpenStack Summit](http://openstack.org/summit) next week in Vancouver
 
+## RDO Manager
+
+OPENSTACK DEPLOYMENT AND MANAGEMENT IN PRODUCTION ENVIRONMENTS FROM THE COMMUNITY
+
+[RDO-Manager Get started here!]
+
 ## Get Involved
 
 There are many ways to [get involved](get involved) with the RDO community once you [ get started](quickstart). The simplest way is to [head over to the ask.openstack.org forum](http://ask.openstack.org) and help answer questions.
