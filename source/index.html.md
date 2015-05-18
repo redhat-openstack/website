@@ -29,9 +29,7 @@ Come see us at **Booth H4** at the [OpenStack Summit](http://openstack.org/summi
 ![](Rdo-manager-logo.png "Rdo-manager-logo.png")
 
 OpenStack deployment and management
-
 in production environments
-
 from the community
 
 [Get started here!](RDO-Manager)
