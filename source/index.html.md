@@ -17,7 +17,7 @@ __NOTOC__
 
 </div>
 <div class="offset3 span8 intro-text">
-Come see us at **Booth H4** at the [OpenStack Summit](http://openstack.org/summit) next week in Vancouver
+Come see us at **Booth H4** at the [OpenStack Summit](http://openstack.org/summit) this week in Vancouver
 
 </div>
 </div>
