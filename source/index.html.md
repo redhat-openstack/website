@@ -24,7 +24,9 @@ Come see us at **Booth H4** at the [OpenStack Summit](http://openstack.org/summi
 <div class="block-highlight">
 <div class="row">
 <div class="span7 offset4 pad-sides begin-content pull-m">
-## RDO Manager
+## RDO-Manager
+
+![](Rdo-manager-logo.png "Rdo-manager-logo.png")
 
 OpenStack deployment and management
 
