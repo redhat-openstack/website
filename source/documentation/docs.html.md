@@ -22,7 +22,7 @@ Since RDO sticks closely to the upstream OpenStack project, the documentation at
 
 #### [Quickstart](Quickstart)
 
-#### [Packaging Guides](https://openstack.redhat.com/packaging/index.html)
+#### [Packaging Guides](https://rdoproject.org/packaging/index.html)
 
 #### [ Installation and configuration](Install)
 
