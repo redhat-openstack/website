@@ -19,8 +19,6 @@ __NOTOC__
 <div class="offset3 span8 intro-text">
 Join us for the [RDO Community Meetup](http://sched.co/3HRs) at the OpenStack Summit in Vancouver on Thursday, 9:50 am, East Building Room 10
 
-Come see us at **Booth H4** at the [OpenStack Summit](http://openstack.org/summit) this week in Vancouver
-
 </div>
 </div>
 <div class="block-highlight">
