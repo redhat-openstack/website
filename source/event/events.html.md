@@ -14,7 +14,7 @@ There are lots of events, around the world, where you can hang out with people f
 The following are the meetups I'm aware of in the coming week where RDO enthusiasts will be gathering. If you know of others, please let me know, and/or add them to <http://openstack.redhat.com/Events>
 
 <h3>
-Join us for the [RDO Community Meetup](http://sched.co/3HRs) at the OpenStack Summit in Vancouver on Thursday, 9:50 am, East Building Room 10
+**Join us for the [RDO Community Meetup](http://sched.co/3HRs) at the OpenStack Summit in Vancouver on Thursday, 9:50 am, East Building Room 10**
 
 </h3>
 ## Meetups
