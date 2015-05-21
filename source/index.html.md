@@ -17,7 +17,9 @@ __NOTOC__
 
 </div>
 <div class="offset3 span8 intro-text">
-Join us for the [RDO Community Meetup](http://sched.co/3HRs) at the OpenStack Summit in Vancouver on Thursday, 9:50 am, East Building Room 10
+OpenStack: Packaged by and for the CentOS community
+
+<span class="btn">[Quick start →](quickstart)</span>
 
 </div>
 </div>
