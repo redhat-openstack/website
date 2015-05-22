@@ -72,6 +72,11 @@ Setup the RDO repositories:
 
     sudo yum install -y https://rdoproject.org/repos/rdo-release.rpm
 
+RDO Kilo for Fedora 21 is currently in testing. After installing rdo-release.rpm enable testing repository with:
+
+        yum-config-manager --disable openstack-kilo
+        yum-config-manager --enable openstack-kilo-testing
+
 *Looking for an older version? See <http://rdoproject.org/repos/> for the full listing.*
 
 ### Step 2: Install Packstack Installer
