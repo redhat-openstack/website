@@ -411,7 +411,7 @@ NOTE: The "--pass midonet" can be "--pass <whateveryouwanthere>" just remember t
       username = midonet
       password = midonet
       # MidoNet administrative user's tenant
-      project_id = admin
+      project_id = services
 
 NOTE: The NEUTRON_DBPASS can be found in your packstack "answers" file in your /root/ directory. You can "cat /root/<packstackAnswersFileName> | grep NEUTRON_DB_PW" to find the password. ALSO NOTE: If you changed your midonet keystone password, please change the password = midonet parameter.
 
