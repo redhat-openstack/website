@@ -443,7 +443,7 @@ NOTE: The NEUTRON_DBPASS can be found in your packstack "answers" file in your /
       username = midonet
       password = midonet
       # MidoNet administrative user's tenant
-      project_id = admin
+      project_id = services
 
 #### Finish Neutron Integration
 
