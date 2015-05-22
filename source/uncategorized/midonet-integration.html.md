@@ -487,7 +487,7 @@ Restart neutron services:
       username=midonet
       password=midonet
       # MidoNet provider tenant name
-      project_id=admin
+      project_id=services
 
 NOTE: If you have changed your midonet keystone user password please put the new one in here
 
