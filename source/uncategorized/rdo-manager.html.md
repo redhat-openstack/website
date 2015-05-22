@@ -26,6 +26,10 @@ RDO-Manager User Guide: <http://docs.rdoproject.org/rdo-manager/master>
 
 ## Presentations
 
+OpenStack Summit, Vancouver (May 22, 2015)
+
+*   [RDO-Manager: Deploying OpenStack Kilo, Vancouver Summit Demo](http://youtu.be/731INn1GDmk)
+
 Post Demo 5 (April 21, 2015)
 
 *   [RDO-Manager Deployment Flow Using Instack Scripts (non-narrated)](http://youtu.be/TyK0df3mCM8)
