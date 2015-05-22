@@ -40,7 +40,5 @@ Demo 3 (March 9, 2015)
 
 ## Get in Touch
 
-=
-
 *   IRC: **#rdo** channel on [Freenode](http://freenode.net)
 *   Mailing List: [**rdo-list**](//www.redhat.com/mailman/listinfo/rdo-list), using **[RDO-Manager]** tag in the subject of the e-mail
