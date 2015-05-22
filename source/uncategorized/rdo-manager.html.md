@@ -37,3 +37,10 @@ Post Demo 5 (April 21, 2015)
 Demo 3 (March 9, 2015)
 
 *   [RDO-Manager Deployment Flow (non-narrated)](http://youtu.be/zKG-CB8WdTg)
+
+## Get in Touch
+
+=
+
+*   IRC: **#rdo** channel on [Freenode](http://freenode.net)
+*   Mailing List: [**rdo-list**](//www.redhat.com/mailman/listinfo/rdo-list), using **[RDO-Manager]** tag in the subject of the e-mail
