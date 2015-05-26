@@ -30,5 +30,6 @@ wiki_last_updated: 2015-05-26
 *   [ OpenStack integration with OpenDaylight controller ](OpenDaylight intergration)
 *   [ Other networking resources ](Networking)
 *   [ Connecting to TripleO Baremetal VMs from a remote machine](Connecting_to_TripleO_Baremetal_VMs_from_remote_machine)
+*   [RDO Openstack & OpenContrail Integration](http://www.opencontrail.org/rdo-openstack-opencontrail-integration/)
 
 <Category:Documentation> <Category:Networking>
