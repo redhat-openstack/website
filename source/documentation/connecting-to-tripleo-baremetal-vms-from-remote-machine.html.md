@@ -126,3 +126,5 @@ iptables can also be used directly:
 13. At this point, you should be able to ping a VM from the remote host.
 
          (From 10.0.0.1): ping 192.168.100.55
+
+<Category:Documentation> <Category:Networking> <Category:TripleO>
