@@ -28,7 +28,7 @@ If you attend any of these meetups, please take pictures, and send me some. If y
 *   Thu Jun 4 [South Bay OpenStack Meetup, Beginner track Topic: Vagrant Technology](http://www.meetup.com/openstack/events/214328752/), San Francisco, CA, US
 *   Sat Jun 6 [北京Ceph Day](http://www.meetup.com/China-Ceph/events/222392105/), Beijing, CN
 *   Sat Jun 6 [OpenStack Meetup, Bangalore](http://www.meetup.com/Indian-OpenStack-User-Group/events/222125182/), Bangalore, IN
-*   Sun Jun 7 [[Tentative](http://www.meetup.com/SDN-OpenDayLight-Delhi-User-Group/events/220502628/) Second Meetup - Brushing up 'What's New' with OpenDaylight Helium], Delhi, IN
+*   Sun Jun 7 [Second Meetup - Brushing up 'What's New' with OpenDaylight Helium](http://www.meetup.com/SDN-OpenDayLight-Delhi-User-Group/events/220502628/), Delhi, IN
 *   Sun Jun 7 [奔跑吧，OpenStack! ——UnitedStack与您⾯对⾯·北京站·网络专场](http://www.meetup.com/China-OpenStack-User-Group/events/222778931/), Beijing, CN
 *   Mon Jun 8 [OpenStack CEE Day 2015](http://www.meetup.com/OpenStack-Hungary-Meetup-Group/events/222834045/), Budapest, HU
 *   Thu Jun 11 [OpenStack DACH Day 2015 - Don't miss out](http://www.meetup.com/OpenStack-DACH/events/222713150/), Vienna, AT
