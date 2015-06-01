@@ -36,6 +36,6 @@ If you attend any of these meetups, please take pictures, and send me some. If y
 *   Sun Jun 14 [OpenStack Israel Advanced Public Training - June 2015](http://www.meetup.com/OpenStack-Israel/events/222152894/), Tel Aviv-Yafo, IL
 *   Mon Jun 15 [OpenStack Israel Event 2015](http://www.meetup.com/OpenStack-Israel/events/221629672/), Tel Aviv-Yafo, IL
 
-See also upcoming [Hangouts](Hangouts) and the [openstack.org events listing](http://www.openstack.org/community/events/).
+See also the [openstack.org events listing](http://www.openstack.org/community/events/).
 
 Support your local [OpenStack user group](https://wiki.openstack.org/wiki/OpenStack_User_Groups)
