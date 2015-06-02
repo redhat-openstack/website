@@ -12,6 +12,7 @@ wiki_last_updated: 2015-06-02
 
 *   [OpenStack Operations Guide](http://www.lulu.com/shop/openstack-foundation/openstack-operations-guide/paperback/product-20958016.html)
 *   [OpenStack Cloud Computing Cookbook](http://www.amazon.com/OpenStack-Cloud-Computing-Cookbook-Jackson/dp/1849517320)
+*   [OpenStack Essentials](https://www.packtpub.com/books/info/authors/dan-radez), by Dan Radez
 *   And don't forget the [docs](http://docs.openstack.org/)
 
 <Category:Documentation>
