@@ -12,7 +12,7 @@ Many people have asked how to use packstack --allinone with an existing external
 
 These instructions have been tested on Centos 7.
 
-Initially, follow the quickstart guide but stop when you see the first "packstack --allinone" at Step 3.
+Initially, follow the quickstart guide but stop when you see the first "packstack --allinone" at Step 3, instead do:
 
     # packstack --allinone --provision-demo=n
 
@@ -61,7 +61,7 @@ Restart the network service
 
     # reboot
 
-    or, alternatively
+    or, alternatively:
 
     # service network restart
     # service neutron-openvswitch-agent restart
@@ -82,7 +82,16 @@ Please note: 192.168.122.1/24 is the router and CIDR we defined in /etc/sysconfi
     # neutron router-create router1
     # neutron router-gateway-set router1 external_network
 
-You should now be able to follow the steps at [running an instance with Neutron](running an instance with Neutron) to launch an instance with external network access.
+Now create a private network and subnet, since that provisioning has been disabled:
+
+    # neutron net-create private_network
+    # neutron subnet-create --name private_subnet private_network 192.168.100.0/24
+
+Get a cirrus image, not provisioned without demo provisioning:
+
+    curl http://download.cirros-cloud.net/0.3.4/cirros-0.3.4-x86_64-disk.img | glance image-create --name='cirros image' --is-public=true  --container-format=bare --disk-format=qcow2
+
+You should now be able to follow the steps at [running an instance with Neutron](running an instance with Neutron) to launch an instance with external network access as admin, if you want other tenants you may need to create them manually.
 
 ## Possible improvements
 
