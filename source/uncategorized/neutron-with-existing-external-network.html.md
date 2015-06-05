@@ -12,7 +12,7 @@ Many people have asked how to use packstack --allinone with an existing external
 
 These instructions have been tested on Centos 7.
 
-Initially, follow the quickstart guide but stop when you see the first "packstack --allinone" at Step 3, instead do:
+Initially, follow the [Quickstart](Quickstart) but stop when you see the first "packstack --allinone" at Step 3, instead do:
 
     # packstack --allinone --provision-demo=n
 
