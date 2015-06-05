@@ -26,7 +26,8 @@ Make /etc/sysconfig/network-scripts/ifcfg-br-ex resemble: (note this file will e
     DEVICETYPE=ovs
     TYPE=OVSBridge
     BOOTPROTO=static
-    IPADDR=192.168.122.212 # Old eth0 IP since we want the network restart to not kill the connection, otherwise pick something outside your dhcp range
+    IPADDR=192.168.122.212 # Old eth0 IP since we want the network restart to not 
+                           # kill the connection, otherwise pick something outside your dhcp range
     NETMASK=255.255.255.0  # your netmask
     GATEWAY=192.168.122.1  # your gateway
     DNS1=192.168.122.1     # your nameserver
@@ -78,7 +79,8 @@ You need to recreate the public subnet with an allocation range outside of your 
 
 Please note: 192.168.122.1/24 is the router and CIDR we defined in /etc/sysconfig/network-scripts/ifcfg-br-ex for external connectivity.
 
-    # neutron subnet-create --name public_subnet --enable_dhcp=False --allocation-pool=start=192.168.122.10,end=192.168.122.20 --gateway=192.168.122.1 external_network 192.168.122.0/24
+    # neutron subnet-create --name public_subnet --enable_dhcp=False --allocation-pool=start=192.168.122.10,end=192.168.122.20 \
+                            --gateway=192.168.122.1 external_network 192.168.122.0/24
     # neutron router-create router1
     # neutron router-gateway-set router1 external_network
 
@@ -93,7 +95,8 @@ And connect this private network to the public network via the router, which wil
 
 Get a cirrus image, not provisioned without demo provisioning:
 
-    curl http://download.cirros-cloud.net/0.3.4/cirros-0.3.4-x86_64-disk.img | glance image-create --name='cirros image' --is-public=true  --container-format=bare --disk-format=qcow2
+    curl http://download.cirros-cloud.net/0.3.4/cirros-0.3.4-x86_64-disk.img | glance \
+             image-create --name='cirros image' --is-public=true  --container-format=bare --disk-format=qcow2
 
 You should now be able to follow the steps at [running an instance with Neutron](running an instance with Neutron) to launch an instance with external network access as admin, if you want other tenants you may need to create them manually.
 
