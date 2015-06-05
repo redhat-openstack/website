@@ -10,22 +10,17 @@ wiki_last_updated: 2015-06-17
 
 Many people have asked how to use packstack --allinone with an existing external network. This method should allow any machine on the network to be able to access launched instances via their floating IPs. Also, at the end of this message, there are some ideas for making this process better that I thought we could discuss.
 
-These instructions have been tested on a RHEL 6.4 "minimal" install VM attached to the default libvirt network. Make sure all of your repos are set up first:
+These instructions have been tested on Centos 7.
 
-    sudo yum install -y http://rdo.fedorapeople.org/rdo-release.rpm
-    sudo yum install -y openstack-packstack
+Initially, follow the quickstart guide but stop when you see the first "packstack --allinone" at Step 3.
 
-and that you have run
+    # packstack --allinone --provision-demo=n
 
-    yum update
-
-and have rebooted first to ensure packages are up to date and you are running the correct kernel.
-
-    # packstack --allinone --provision-all-in-one-ovs-bridge=n
+(There's an alternate method using packstack --allinone --provision-all-in-one-ovs-bridge=n, but it's more complicated)
 
 After completion, given a single machine with a current IP of 192.168.122.212/24 via DHCP with gateway of 192.168.122.1:
 
-Make /etc/sysconfig/network-scripts/ifcfg-br-ex resemble: (note this file shouldn't exist, but does due to a bug)
+Make /etc/sysconfig/network-scripts/ifcfg-br-ex resemble: (note this file will exist, and IPADDR/NETMASK will be populated with _br_ex at the end, remove that part, and fill all the missing fields)
 
     DEVICE=br-ex
     DEVICETYPE=ovs
@@ -37,36 +32,55 @@ Make /etc/sysconfig/network-scripts/ifcfg-br-ex resemble: (note this file should
     DNS1=192.168.122.1     # your nameserver
     ONBOOT=yes
 
+This file will configure the network parameters we probably had into our eth0 interface but, over br-ex.
+
 Make /etc/sysconfig/network-scripts/ifcfg-eth0 resemble (no BOOTPROTO!):
 
-Note: if on Centos7, the file is /etc/sysconfig/network-scripts/enp2s0
+Note: if on Centos7, the file could be /etc/sysconfig/network-scripts/enp2s0
 
-    DEVICE=eth0 # or enp2s0 if on CentOS 7
-    HWADDR=52:54:00:92:05:AE # your hwaddr
+    DEVICE=eth0
+    HWADDR=52:54:00:92:05:AE # your hwaddr (find via ip link show eth0)
     TYPE=OVSPort
     DEVICETYPE=ovs
     OVS_BRIDGE=br-ex
     ONBOOT=yes
 
-Add to the /etc/neutron/plugin.ini file these lines:
+This means, we will bring up the interface, and plug it into br-ex OVS bridge as a port, providing the uplink connectivity.
 
-    network_vlan_ranges = physnet1
-    bridge_mappings = physnet1:br-ex
+Modify the following config parameter:
+
+    openstack-config --set /etc/neutron/plugins/openvswitch/ovs_neutron_plugin.ini ovs bridge_mappings extnet:br-ex
+
+This will define a logical name for our external physical L2 segment, as "extnet", this will be referenced as a provider network when we create the external networks.
+
+This one will overcome a packstack deployment bug where only vxlan is made available.
+
+    openstack-config --set /etc/neutron/plugin.ini ml2 type_drivers vxlan,flat,vlan
 
 Restart the network service
 
+    # reboot
+
+    or, alternatively
+
     # service network restart
+    # service neutron-openvswitch-agent restart
+    # service neutron-server restart
 
 NOTE: It is important to do the network restart before setting up the router gateway below, because a network restart takes destroys and recreates br-ex which causes the router's interface in the qrouter-\* netns to be deleted, and it won't be recreated without clearing and re-setting the gateway.
 
     # . keystonerc_admin
-    # neutron router-gateway-clear router1
-    # neutron subnet-delete public_subnet
+    # neutron net-create external_network --provider:network_type flat --provider:physical_network extnet  --router:external
+
+Please note: "extnet" is the L2 segment we defined in the bridge_mappings above (plugin.ini file, ml2 section).
 
 You need to recreate the public subnet with an allocation range outside of your external DHCP range and set the gateway to the default gateway of the external network.
 
-    # neutron subnet-create --name public_subnet --enable_dhcp=False --allocation-pool=start=192.168.122.10,end=192.168.122.20 --gateway=192.168.122.1 public 192.168.122.0/24
-    # neutron router-gateway-set router1 public
+Please note: 192.168.122.1/24 is the router and CIDR we defined in /etc/sysconfig/network-scripts/ifcfg-br-ex for external connectivity.
+
+    # neutron subnet-create --name public_subnet --enable_dhcp=False --allocation-pool=start=192.168.122.10,end=192.168.122.20 --gateway=192.168.122.1 external_network 192.168.122.0/24
+    # neutron router-create router1
+    # neutron router-gateway-set router1 external_network
 
 You should now be able to follow the steps at [running an instance with Neutron](running an instance with Neutron) to launch an instance with external network access.
 
