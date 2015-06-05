@@ -87,6 +87,10 @@ Now create a private network and subnet, since that provisioning has been disabl
     # neutron net-create private_network
     # neutron subnet-create --name private_subnet private_network 192.168.100.0/24
 
+And connect this private network to the public network via the router, which will provide the floating IP addresses.
+
+    # neutron router-interface-add router1 private_subnet
+
 Get a cirrus image, not provisioned without demo provisioning:
 
     curl http://download.cirros-cloud.net/0.3.4/cirros-0.3.4-x86_64-disk.img | glance image-create --name='cirros image' --is-public=true  --container-format=bare --disk-format=qcow2
