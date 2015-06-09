@@ -14,7 +14,7 @@ __NOTOC__
 <div class="offset3 span8 pull-s">
 # Running an Instance
 
-*   -   TODO: Update to reflect current UI\*\*
+**TODO: Update to reflect current UI**
 
 ### Step 1: Visit the Dashboard
 
