@@ -61,7 +61,7 @@ Neutron is a virtual network service for Openstack.
 
 *   Homepage: <https://wiki.openstack.org/wiki/Neutron>
 *   Code: <https://github.com/openstack/neutron>
-*   Package Maintainers:
+*   Package Maintainers: ihrachys@redhat.com
 *   Report Bug/Issues: <https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&component=openstack-neutron>
 
 ### Heat
@@ -142,5 +142,5 @@ Designate is an OpenStack inspired DNSaaS.
 
 *   Homepage: <https://wiki.openstack.org/wiki/Designate>
 *   Code: <https://github.com/openstack/designate>
-*   Package Maintainers:
+*   Package Maintainers: jschwarz@redhat.com, ihrachys@redhat.com
 *   Report Bug/Issues: <https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&component=openstack-designate>
