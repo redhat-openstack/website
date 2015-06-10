@@ -79,7 +79,7 @@ The Ceilometer project aims to become the infrastructure to collect measurements
 
 *   Homepage: <https://wiki.openstack.org/wiki/Ceilometer>
 *   Code: <https://github.com/openstack/ceilometer>
-*   Package Maintainers:
+*   Package Maintainers: pkilambi@redhat.com
 *   Report Bug/Issues: <https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&component=openstack-ceilometer>
 
 ### Horizon
