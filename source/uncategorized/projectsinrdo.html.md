@@ -133,7 +133,7 @@ Manila is a shared filesystem management project for OpenStack.
 
 *   Homepage: <https://wiki.openstack.org/wiki/Manila>
 *   Code: <https://github.com/openstack/manila>
-*   Package Maintainers:
+*   Package Maintainers: zaitcev@redhat.com, hguemar@fedoraproject.org
 *   Report Bug/Issues: <https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&component=openstack-manilla>
 
 ### Designate
