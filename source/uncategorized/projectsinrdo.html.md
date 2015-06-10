@@ -34,7 +34,7 @@ Cinders goal is to implement services and libraries to provide on demand, self-s
 
 *   Homepage: <https://wiki.openstack.org/wiki/Cinder>
 *   Code: <https://github.com/openstack/cinder>
-*   Package Maintainers:
+*   Package Maintainers: hguemar@fedoraproject.org
 *   Report Bug/Issues: <https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&component=openstack-cinder>
 
 ### Swift
