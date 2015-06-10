@@ -25,7 +25,7 @@ The Glance project provides services for discovering, registering, and retrievin
 
 *   Homepage: <https://wiki.openstack.org/wiki/Glance>
 *   Code: <https://github.com/openstack/glance>
-*   Package Maintainers:
+*   Package Maintainers: hguemar@fedoraproject.org
 *   Report Bug/Issues: <https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&component=openstack-glance>
 
 ### Cinder
