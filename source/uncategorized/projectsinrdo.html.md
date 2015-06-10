@@ -106,7 +106,7 @@ Trove is Database as a Service for Open Stack.
 
 *   Homepage: <https://wiki.openstack.org/wiki/Trove>
 *   Code: <https://github.com/openstack/trove>
-*   Package Maintainers:
+*   Package Maintainers: victoria@redhat.com
 *   Report Bug/Issues: <https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&component=openstack-trove>
 
 ### Sahara
