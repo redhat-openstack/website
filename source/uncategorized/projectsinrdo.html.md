@@ -43,7 +43,7 @@ Swift is a distributed object storage system designed to scale from a single mac
 
 *   Homepage: <https://wiki.openstack.org/wiki/Swift>
 *   Code: <https://github.com/openstack/swift>
-*   Package Maintainers:
+*   Package Maintainers: zaitcev@redhat.com
 *   Report Bug/Issues: <https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&component=openstack-swift>
 
 ### Nova
