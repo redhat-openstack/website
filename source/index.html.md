@@ -38,7 +38,7 @@ from the community
 
 ## Get Involved
 
-There are many ways to [get involved](get involved) with the RDO community once you [ get started](quickstart). The simplest way is to [head over to the ask.openstack.org forum](http://ask.openstack.org) and help answer questions.
+There are many ways to [get involved](get involved) with the RDO community once you [ get started](quickstart). The simplest way is to [head over to the ask.openstack.org forum](http://ask.openstack.org) and help answer questions. Or try out OpenStack for your self right now at [TryStack.org](http://trystack.org/).
 
 ![](Github.png "fig:Github.png") The Puppet modules used in packstack are on [Github](https://github.com/packstack) and packstack itself is on [Stackforge](https://github.com/stackforge/packstack).
 
