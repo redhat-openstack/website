@@ -71,7 +71,7 @@ Restart the network service
 NOTE: It is important to do the network restart before setting up the router gateway below, because a network restart takes destroys and recreates br-ex which causes the router's interface in the qrouter-\* netns to be deleted, and it won't be recreated without clearing and re-setting the gateway.
 
     # . keystonerc_admin
-    # neutron net-create external_network --provider:network_type flat --provider:physical_network extnet  --router:external
+    # neutron net-create external_network --provider:network_type flat --provider:physical_network extnet  --router:external --shared
 
 Please note: "extnet" is the L2 segment we defined in the bridge_mappings above (plugin.ini file, ml2 section).
 
@@ -97,6 +97,13 @@ Get a cirrus image, not provisioned without demo provisioning:
 
     curl http://download.cirros-cloud.net/0.3.4/cirros-0.3.4-x86_64-disk.img | glance \
              image-create --name='cirros image' --is-public=true  --container-format=bare --disk-format=qcow2
+
+Finally, for your user, you need to create a network and connect that network through a router to your shared and external network. Since you don't created a user yet
+
+    keystone tenant-create --name internal --description "internal tenant" --enabled true
+    keystone user-create --name internal --tenant internal --pass "foo" --email bar@corp.com --enabled true
+
+Easiest way to the network and to launch instances is via horizon, which was set up by packstack.
 
 You should now be able to follow the steps at [running an instance with Neutron](running an instance with Neutron) to launch an instance with external network access as admin, if you want other tenants you may need to create them manually.
 
