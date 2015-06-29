@@ -9,7 +9,13 @@ wiki_last_updated: 2015-08-31
 
 # Events
 
-There are lots of events, around the world, where you can hang out with people from the RDO community. Some recent and upcoming events are:
+There are lots of events, around the world, where you can hang out with people from the RDO community. RDO will have a presence at the following upcoming events:
+
+*   [OSCon](http://www.oscon.com/open-source-2015) - July 20-24, Portland, Oregon
+*   [LinuxCon](http://events.linuxfoundation.org/events/linuxcon-north-america) - August 17-19, Seattle Washington
+*   [LinuxCon Europe](http://events.linuxfoundation.org/events/linuxcon-europe) - October 5-7, Dublin IE
+*   [OpenStack Summit](https://www.openstack.org/summit) - October 27-30, Tokyo, Japan
+*   FOSDEM 2016
 
 The following are the meetups I'm aware of in the coming weeks where RDO enthusiasts will be gathering. If you know of others, please let me know, and/or add them to <http://openstack.redhat.com/Events>
 
