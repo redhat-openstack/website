@@ -23,19 +23,6 @@ The following are the meetups I'm aware of in the coming weeks where RDO enthusi
 
 If you attend any of these meetups, please take pictures, and send me some. If you blog about the events (and you should), please send me that, too.
 
-*   Mon Jun 29 [Openstack Summit Discussion](http://www.meetup.com/openstack-pittsburgh/events/223179665/), Pittsburgh, PA, US
-*   Tue Jun 30 [OpenStack Foundation 5th birthday party & OpenStack Bucharest 1st celebration](http://www.meetup.com/OpenStack-Bucharest-Romania-Meetup/events/221522734/), Bucharest, RO
-*   Tue Jun 30 [Meetup#15 Design d'applications­ sur OpenStack + 5ème anniversaire OpenStack](http://www.meetup.com/OpenStack-France/events/223339142/), Paris, FR
-*   Wed Jul 1 [July OpenStack Meetup - NFV Engineering & Planning on OpenStack presentation](http://www.meetup.com/OpenStack-DFW/events/218266682/), Richardson, TX, US
-*   Wed Jul 1 [OpenStack Iftar Party - Lahore - Wed July 1](http://www.meetup.com/Lahore-OpenStack-Meetup/events/223460780/), Lahore, PK
-*   Wed Jul 1 [OpenStack 5th birthday party](http://www.meetup.com/Athens-OpenStack-User-Group/events/222125353/), Athens, GR
-*   Wed Jul 1 [OpenStack 5th Birthday - OpenStack Sevilla](http://www.meetup.com/Bitnami-Sevilla/events/223329992/), Sevilla, ES
-*   Wed Jul 1 [OpenStack Operation Guide 讀書會](http://www.meetup.com/OpenStack-Taiwan-User-Group/events/223529694/), Taipei, TW
-*   Thu Jul 2 [Invitation to participate in OpenStack Conference](http://www.meetup.com/Exploring-OpenStack-London/events/223307715/), Denham, B9, GB
-*   Thu Jul 2 [OpenStack Software Defined Networking 2015](http://www.meetup.com/Openstack-Netherlands/events/220916687/), Amersfoort, NL
-*   Thu Jul 2 [OpenStack Howto part 4 - Network](http://www.meetup.com/OpenStack-Czech-User-Group-Meetup/events/222955554/), Prague, CZ
-*   Thu Jul 2 [First meetup: drinks reception and discussion 2 July, Central London](http://www.meetup.com/Exploring-OpenStack-London/events/222153382/), Denham, B9, GB
-*   Tue Jul 7 [OpenStack's 5th Birthday Celebration!](http://www.meetup.com/OpenStack-Nova/events/222455987/), Reston, VA, US
 *   Wed Jul 8 [Kilo to Liberty: The Vancouver Summit](http://www.meetup.com/OpenStack-Northwest/events/221371151/), Portland, OR, US
 *   Thu Jul 9 [IV Encontro de usuários do Openstack Brasil no FISL](http://www.meetup.com/Openstack-Brasil/events/223407121/), Porto Alegre, BR
 *   Thu Jul 9 [Upstream Training in Japan #3](http://www.meetup.com/Japan-OpenStack-User-Group/events/223005607/), Tokyo, JP
