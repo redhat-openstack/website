@@ -364,7 +364,7 @@ if data.site.openshift
     method: :rsync,
     user: os_token,
     host: os_host,
-    path: "/var/lib/openshift/#{os_token}/app-root/repo",
+    path: "/var/lib/openshift/#{os_token}/app-root/repo/public",
     clean: true, # remove orphaned files on remote host
     build_before: true # default false
   }
