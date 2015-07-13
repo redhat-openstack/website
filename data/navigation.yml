@@ -1,6 +1,7 @@
 - Home: "/"
-- Quick Start: "/foo"
-- Docs: "/foo"
-- Forum: "/foo"
-- People: "/foo"
+- Quick Start: "/Quickstart"
+- Docs: "/Docs"
+- Ask: "/Blog"
+- Get Involved: "/Get_involved"
+- Search: "/search"
 #- Blog: /blog/
