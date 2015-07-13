@@ -1,5 +1,6 @@
 ---
 title: Search
+index: false
 ---
 
 .search-page
@@ -12,6 +13,10 @@ title: Search
 
   .progress-container
     %i#progress.spinner.fa.fa-circle-o-notch.fa-spin.hidden
+
+  #matches.search-match-string.hidden
+    %span.number
+    result<span class="plural">s</span> found.
 
   #similar.similar.hidden
     Possibly related:
@@ -27,9 +32,10 @@ title: Search
     %article.post.hentry
       %h2.post-title.entry-title
         %a.title
+      %section.post-content.entry-content.summary
       %header.post-meta
         %time.published.date
-      %section.post-content.entry-content.summary
+        %a.url
 
 
 - content_for :tail do
@@ -38,6 +44,7 @@ title: Search
     $input = $('#search-input')
     $similar = $('#similar')
     $similarList = $('#similar-list')
+    $matchesString = $('#matches')
     $results = $('#results')
     $progress = $('#progress')
     $template = $('#template')
@@ -45,7 +52,7 @@ title: Search
 
     ajax = new $.Deferred()
 
-    wordsplit = /[\s.,;!?=\-"'\\\/]+/
+    wordsplit = /[\s.,;!?="'\\\/]+/
     typeTimer = null
 
 
@@ -57,15 +64,35 @@ title: Search
         ajax.resolve data
 
 
-    displayResults = (matches, similar) ->
+    displayResults = (words, matches, similar) ->
       $pending = $('<div class="pending"/>')
       pages = searchIndex.pages
+      text = $input.val().toLowerCase().replace(/ ?-\w+/g, '')
 
       $('#results-none').hide()
 
       if matches.length > 0
         # Sort by date
-        matches.sort (a, b) -> pages[a]['date'] < pages[b]['date'] ? a : b
+        matches.sort (a, b) ->
+          # Title match score (weighted heavily)
+          titleA = pages[a].title.toLowerCase().score(text)
+          titleB = pages[b].title.toLowerCase().score(text)
+
+          # Summary snippet score (weighted a good bit)
+          summA = pages[a].summary.toLowerCase().score(text)
+          summB = pages[b].summary.toLowerCase().score(text)
+
+          # Date score (very small weight)
+          dateScoreA = Date.parse(pages[a].date.split(' ')[0]) / Date.now() * 0.05
+          dateScoreB = Date.parse(pages[b].date.split(' ')[0]) / Date.now() * 0.05
+
+          # Generate page scores
+          # (and add a 'score' value to the page info)
+          scoreA = pages[a].score = (titleA * 3 + summA + dateScoreA) / 5 / 0.71
+          scoreB = pages[b].score = (titleB * 3 + summB + dateScoreB) / 5 / 0.71
+
+          # Sort based on score
+          return scoreA < scoreB
 
         for match in matches
           page = pages[match]
@@ -75,6 +102,7 @@ title: Search
           # Add data to the cloned template
           $snippet.removeClass('hidden')
             .find('.title').html(page.title).attr('href', page.url).end()
+            .find('.url').html(page.url).attr('href', page.url).end()
             .find('.summary').html(page.summary).end()
 
           $snippet.find('.date').text(page.datestring).end() if page.date
@@ -101,7 +129,13 @@ title: Search
         $similar.show()
       else
         $similar.hide()
+        $matchesString.hide()
         $similarList.html('')
+
+      $matchesString
+        .find('.number').html(matches.length).end()
+        .find('.plural').toggle(matches.length != 1).end()
+        .removeClass('hidden').toggle(matches.length != 0)
 
       $progress.hide()
       $input.focus()
@@ -113,28 +147,45 @@ title: Search
       $.when(ajax).done (data)->
         text = $input.val()
         words = text.toLowerCase().trim().split(wordsplit)
-        matches = []
         similar = []
+        matchers = {matches: [], antimatches: []}
 
+        # Search for each word in the text entry
         for word in words
+          polarity = if word.match(/^-/) then 'antimatches' else 'matches'
+          word = word.replace(/^-/, '')
           wordMatch = data.words[word]
 
           if wordMatch
-            if matches.length < 1
+            if matchers[polarity].length < 1
               # First word; propogate the matches
-              matches = wordMatch
+              matchers[polarity] = wordMatch
             else
-              # Filter with an AND of existing terms
-              matches = $.map matches, (a) ->
-                return a if $.inArray(a, wordMatch) > 0
+              if polarity == 'matches'
+                # Do an AND of matching pages
+                matchers[polarity] = matchers[polarity].map (a) ->
+                  return a unless wordMatch.indexOf(a) < 0
+              else
+                # Add unique antimatchers
+                matchers[polarity] = matchers[polarity]
+                  .concat wordMatch.filter (item) ->
+                      matchers[polarity].indexOf(item) < 0
 
-          $.map searchIndex.words, (data, key) ->
-            matchscore = key.score(word, 0.5)
-            similar.push {word: key, score: matchscore} if (matchscore > 0.7) && !similar[key] && word != key
+          # Add similar words to a 'similar' keyword array
+          if polarity == 'matches'
+            $.map searchIndex.words, (data, key) ->
+              matchscore = key.score(word, 0.5)
+              similar.push {word: key, score: matchscore} if (matchscore > 0.7) && !similar[key] && word != key
 
+        # Sort similar words by similarity score
         similar.sort (a, b) -> a.score < b.score ? a : b
 
-        displayResults matches, similar.slice(0,21)
+        # Power results with a matches-antimatches reaction
+        results = matchers['matches'].filter (match) ->
+          match if matchers['antimatches'].indexOf(match) < 0
+
+        # Hand off word matches and similar keywords to the renderer
+        displayResults words, results, similar.slice(0,21)
 
 
     selectForm = ->
@@ -154,10 +205,10 @@ title: Search
       $form
         .on 'keypress', (e)->
           switch e.key
-            when "Tab", "Down"
+            when "Tab", "Down", "ArrowDown"
               $('#similar a:first,#results a').first().focus()
               do e.preventDefault
-            when "Left", "Right", "Home", "End", "Esc", "Enter"
+            when "Left", "ArrowLeft", "Right", "ArrowRight", "Home", "End", "Esc", "Escape", "Enter"
               # NOOP
             else
               unless e.ctrlKey || e.altKey
@@ -169,13 +220,13 @@ title: Search
 
       $similar.on 'keypress', 'a', (e)->
         switch e.key
-          when "Right"
+          when "Right", "ArrowRight"
             $(@).next().focus()
-          when "Left"
+          when "Left", "ArrowLeft"
             $(@).prev().focus()
-          when "Up"
+          when "Up", "ArrowUp"
             selectForm()
-          when "Down"
+          when "Down", "ArrowDown"
             $('#results a:first').focus()
           when " "
             $(@).click()
@@ -186,14 +237,14 @@ title: Search
         .on 'keypress', 'a', (e) ->
           $article = $(@).parentsUntil('#results')
           switch e.key
-            when "Down"
-              $article.next().find('a').focus()
-            when "Up"
+            when "Down", "ArrowDown"
+              $article.next().find('a:first').focus()
+            when "Up", "ArrowUp"
               firstChild = $article.filter(':first-child').length != 1
               if firstChild
                 selectForm()
               else
-                $article.prev().find('a').focus()
+                $article.prev().find('a:first').focus()
         .on 'focus', 'a', (e) ->
           $(@).parentsUntil('#results').addClass('highlight')
         .on 'blur', 'a', (e) ->
@@ -202,7 +253,7 @@ title: Search
       $(document)
         .on 'keypress', (e) ->
           switch e.key
-            when "Esc"
+            when "Esc", "Escape"
               $input.val('')
               do updateHash
 
