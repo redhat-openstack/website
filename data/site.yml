@@ -1,6 +1,6 @@
 name: RDO
 #subhead: Red Hat OpenStack
-domain: yourdomain.org
+domain: rdoproject.org
 
 # Be sure to set up and install Juvia before enabling!
 #has_comments: true
