@@ -1,6 +1,6 @@
 ---
 title: ''
-page-classes: front-page
+page_classes: front-page
 authors: dneary, garrett, mediawiki, mediawiki default, rbowen
 wiki_title: Main Page
 wiki_revision_count: 226
@@ -14,6 +14,12 @@ hide_metadata: true
 - content_for :head do
   %link(href="/blog/feed.xml" rel="alternate" title="Atom feed" type="application/atom+xml")
 
+- content_for :tail do
+  :coffee
+    $ ->
+      # Emulate MediaWiki's mw-headline class for visual effects on the front page
+      $('h2').wrapInner('<span class="mw-headline"/>')
+
 
 %section#bodyContent
   -#.container
@@ -22,26 +28,28 @@ hide_metadata: true
   .bg-boxes
 
     .hero-unit.row
+      .intro-stack &nbsp;
+
       .col-md-offset-3.col-md-8.intro-text
         :markdown
           OpenStack: Packaged by and for the CentOS community
 
-          <span class="btn">[Quick start →](/Quickstart)</span>
+          <span class="btn">[Quick start →](Quickstart)</span>
 
-    .block-highlight
+    .foo
       .row
         .col-md-7.col-md-offset-4.pad-sides.begin-content.pull-m
           :markdown
             ## RDO Manager
 
             {:.floatright}
-            [![RDO Manager Logo](rdo-manager-logo.png)](/RDO-Manager)
+            [![RDO Manager Logo](rdo-manager-logo.png)](RDO-Manager)
 
             OpenStack deployment and management<br>
             in production environments<br>
             from the community
 
-            [Get started!](/RDO-Manager)
+            [Get started!](RDO-Manager)
 
       .row
         .col-md-7.col-md-offset-4.pad-sides.begin-content.pull-l
@@ -54,35 +62,30 @@ hide_metadata: true
 
             For a commercially-supported enterprise ready OpenStack solution, Red Hat provides [Red Hat Enterprise Linux OpenStack Platform](//redhat.com/openstack), an enterprise-class cloud platform based on OpenStack Juno.
 
-    .row
-      .col-md-offset-4.col-md-7.pad-sides.begin-content.pull-s
+    .block-highlight
+      .row
+        .col-md-offset-4.col-md-7.pad-sides.begin-content.pull-s
 
-        :markdown
+          :markdown
 
-          ## What's happening?
+            ## What's happening?
 
-          ![](Twitter.gif "fig:Twitter.gif") ![](Facebook.gif "fig:Facebook.gif") ![](G_plus.jpg "fig:G_plus.jpg") ![](Email.png "fig:Email.png")
+            ![](Twitter.gif "fig:Twitter.gif") ![](Facebook.gif "fig:Facebook.gif") ![](G_plus.jpg "fig:G_plus.jpg") ![](Email.png "fig:Email.png")
 
-          Come to one of the main [Events](Events) where some of us will be. Follow us on [Twitter](http://twitter.com/rdocommunity/), [Facebook](http://facebook.com/rdocommunity), and [Google+](https://plus.google.com/communities/110409030763231732154). Subscribe to the [rdo-list mailing list](http://www.redhat.com/mailman/listinfo/rdo-list) for technical questions, or to the [newsletter mailing list](http://www.redhat.com/mailman/listinfo/rdo-newsletter) for monthly community updates.
+            Come to one of the main [Events](Events) where some of us will be. Follow us on [Twitter](http://twitter.com/rdocommunity/), [Facebook](http://facebook.com/rdocommunity), and [Google+](https://plus.google.com/communities/110409030763231732154). Subscribe to the [rdo-list mailing list](http://www.redhat.com/mailman/listinfo/rdo-list) for technical questions, or to the [newsletter mailing list](http://www.redhat.com/mailman/listinfo/rdo-newsletter) for monthly community updates.
 
-          Watch the various presentations on the [RDO videos](RDO videos) page from our hangouts and conference presentations you may have missed.
+            Watch the various presentations on the [RDO videos](RDO videos) page from our hangouts and conference presentations you may have missed.
 
-    .row
-      .col-md-offset-4.col-md-7.pad-sides.begin-content.pull-m
-        :markdown
-          ## What is RDO?
+      .row
+        .col-md-offset-4.col-md-7.pad-sides.begin-content.pull-m
+          :markdown
+            ## What is RDO?
 
-          {:.floatright}
-          ![An Openstack Distribution](openstack-distribution.png)
-          
-          RDO is a community of people using and deploying OpenStack on Red Hat Enterprise Linux, Fedora and distributions derived from these (such as CentOS, Scientific Linux and others). We have [ documentation to help get started](Docs), [Mailing_lists](Mailing_lists) where you can connect with other users, and [ community-supported packages](Quickstart) of the most up-to-date OpenStack releases available for download.
+            {:.floatright}
+            ![An Openstack Distribution](openstack-distribution.png)
 
-          If you are looking for enterprise-level support, or information on partner certification, Red Hat also offers [Red Hat Enterprise Linux OpenStack Platform](//redhat.com/openstack).
+            RDO is a community of people using and deploying OpenStack on Red Hat Enterprise Linux, Fedora and distributions derived from these (such as CentOS, Scientific Linux and others). We have [documentation to help get started](Docs), [Mailing_lists](Mailing_lists) where you can connect with other users, and [community-supported packages](Quickstart) of the most up-to-date OpenStack releases available for download.
 
-          OpenStack relies on the underlying operating system and hypervisor — and what better operating system to build on than the industry's leading enterprise operating system? The RDO community is your one-stop community site for all things related to using OpenStack on Red Hat based platforms.
+            If you are looking for enterprise-level support, or information on partner certification, Red Hat also offers [Red Hat Enterprise Linux OpenStack Platform](//redhat.com/openstack).
 
-- content_for :tail do
-  :coffee
-    $ ->
-      # Emulate MediaWiki's mw-headline class for visual effects on the front page
-      $('h2').wrapInner('<span class="mw-headline"/>')
+            OpenStack relies on the underlying operating system and hypervisor — and what better operating system to build on than the industry's leading enterprise operating system? The RDO community is your one-stop community site for all things related to using OpenStack on Red Hat based platforms.
