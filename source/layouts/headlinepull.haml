@@ -1,0 +1,13 @@
+- content_for :tail do
+  :coffee
+    $ ->
+      # Emulate MediaWiki's mw-headline class for visual effects on the front page
+      $('h2').wrapInner('<span class="mw-headline"/>')
+
+~ wrap_layout :layout do
+
+  %section#bodyContent
+    .bg-boxes.bg-boxes-single
+      .row
+        .col-md-offset-3.col-md-8.pull-s
+          = yield
