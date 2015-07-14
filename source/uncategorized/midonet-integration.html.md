@@ -8,123 +8,87 @@ wiki_last_updated: 2015-08-07
 
 # MidoNet integration
 
+## Prerequisites
+
 ### Installing OpenStack
 
-For simplicity, this guide assumes a Packstack All-In-One OpenStack installation as a base.
+Please verify that this is working before proceeding. Most installation issues come when a Packstack error has occurred but was ignored.
 
-#### Enable necessary repositories
+NOTE: Make sure Selinux is disabled (or set to permissive) and both FirewallD and/or IPTables are disabled!
 
-Enable additional RHEL repositories:
+#### Enabling RDO repositories
 
-      subscription-manager repos --enable=rhel-7-server-extras-rpms
-      subscription-manager repos --enable=rhel-7-server-optional-rpms
+Enable the EDO repositories using the following command (as root):
 
-Enable the EPEL repository:
+      yum install -y http://rdo.fedorapeople.org/openstack-icehouse/rdo-release-icehouse.rpm
 
-      yum install http://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-5.noarch.rpm
+To enable the EPEL repository use this command:
 
-Enable the RDO Kilo repository:
+      su -c 'rpm -Uvh http://download.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-5.noarch.rpm'
 
-      yum install http://rdo.fedorapeople.org/openstack-kilo/rdo-release-kilo.rpm
+To enable 'optional' and 'extras' from the RHEL subscription run these commands (as root):
 
-#### Make your system up-to-date
+      yum -y install yum-utils
+      yum-config-manager --enable rhel-7-server-optional-rpms
+      yum-config-manager --enable rhel-7-server-extras-rpms
 
-Install the latest package updates:
+#### Make sure your OS is up to date
 
-      yum upgrade
+Run yum update to make sure the system is running the latest packages. This is required:
 
-#### Reboot your system
+      yum update -y
 
-Reboot your system to apply the changes:
+Once this is finished:
 
       reboot
 
-#### Install Packstack
+#### Install Packstack Installer
 
 Run the following command to install Packstack on your system
 
-      yum install openstack-packstack
+      yum install -y openstack-packstack
 
-#### Install OpenStack
+#### Install Openstack Packstack
 
       packstack --allinone
 
-#### Verify OpenStack installation
+### Cleaning up Packstack OpenStack All-in-on Installation
 
-Before proceeding, please verify that your OpenStack installation is working.
+The first steps to get MidoNet running on the All-in-one environment created by the Packstack installer is to clean up the network section in preparation of installing MidoNet.
 
-Most installation issues come when a Packstack error has occurred but was ignored.
+Log in to your horizon dashboard as the Admin account and do the following:
 
-### Cleaning up Packstack OpenStack All-in-One installation
+1.  Add the admin user to the "demo" tenant ( under Admin>Identity>Project)
+2.  Move to the demo tenant, as admin, and delete the router, the private subnet and clear the router gateway in this order: Clear Router Gateway, Delete Router Interface, Delete Router, Delete network.
+3.  Move back to the admin tenant and remove the public subnet (external network).
 
-Next, we need to SSH into the Packstack system. We need to remove services that will interfere with MidoNet and/or are no longer needed. This will break the networking of your OpenStack installation until the MidoNet integration is complete. Please be aware of this and make sure you have sufficient time before starting.
+Next, we need to SSH into the Packstack system (in this case I am using RHEL 7). We need to remove services that will interfere with MidoNet and/or are no longer needed. This will break the networking of your PackStack until the MidoNet integration is complete. Please be aware of this before starting to make sure you have sufficient time.
 
-*   1. Remove the Open vSwitch agent packages
+*   1. Remove the OpenVswitch agent packages:
 
       yum remove openstack-neutron-openvswitch
 
-*   2. Stop and disable the Neutron L3 agent
+*   2. Stop and disable the Neutron L3 Agent package:
 
       systemctl stop neutron-l3-agent
       systemctl disable neutron-l3-agent
 
-*   3. Stop and disable Network Manager
+*   3. Disable Network Manager
 
-      systemctl stop NetworkManager
-      systemctl disable NetworkManager
-      chkconfig network on
-      systemctl start network
-
-*   4. Disable SELinux
-
-      setenforce permissive
-
-Edit the SELinux configuration file:
-
-      vi /etc/selinux/config
-
-Change the SELINUX value to "permissive":
-
-      # SELINUX= can take one of these three values:
-      #     enforcing - SELinux security policy is enforced.
-      #     permissive - SELinux prints warnings instead of enforcing.
-      #     disabled - No SELinux policy is loaded.
-      SELINUX=permissive
-
-*   5. Disable firewall
-
-Disable FirewallD and/or iptables:
-
-      systemctl disable firewalld
-
-      systemctl disable iptables
-      iptables -L -v
-
-*   6. Fix RDO Horizon bug
-
-Edit the following conf:
-
-       vi /etc/httpd/conf.d/15-horizon_vhost.conf
-
-Add this above all ServerAlias:
-
-      ServerAlias *
-
-Run:
-
-      systemctl restart httpd
+      systemctl stop networkmanager.service
+      systemctl disable networkmanager.service
+      systemctl enable network.service
+      systemctl start network.service
 
 ## Installing MidoNet Components
 
 ### Adding the MidoNet Repositories
 
-The packages are tested against and supported on Red Hat Enterprise Linux (RHEL) 7.
+The packages are tested against and supported on Red Hat Enterprise Linux (RHEL) 7. Add either the MidoNet Community repos or the Midokura Enterprise MidoNet repos.
 
-Add either the MidoNet community repositories **or** the Midokura Enterprise MidoNet repositories.
+#### Midonet Community
 
-#### Apache Cassandra
-
-Enable the DataStax repository by creating the /etc/yum.repos.d/datastax.repo file with this entry:
+1. Enable the DataStax repository by creating the /etc/yum.repos.d/datastax.repo file with this entry for Midokura Enterprise Midonet (not the commnity version):
 
       [datastax]
       name= DataStax Repo for Apache Cassandra
@@ -133,23 +97,21 @@ Enable the DataStax repository by creating the /etc/yum.repos.d/datastax.repo fi
       gpgcheck=0
       gpgkey = https://rpm.datastax.com/rpm/repo_key
 
-#### Midonet Community
-
-Enable the MidoNet repositories by creating the /etc/yum.repos.d/midonet.repo file with these entries for the **MidoNet community version**:
+2. Enable the Midonet repositories by creating the /etc/yum.repos.d/midonet.repo file with these entries for Midonet Community:
 
       [midonet] 
       name=MidoNet
-      baseurl=http://repo.midonet.org/midonet/v2015.06/RHEL/7/stable/ 
+      baseurl=http://repo.midonet.org/midonet/v2014.11/RHEL/7/unstable/
       enabled=1
       gpgcheck=1
-      gpgkey=http://repo.midonet.org/RPM-GPG-KEY-midokura 
+      gpgkey=http://repo.midonet.org/RPM-GPG-KEY-midokura
 
       [midonet-openstack-integration]
-      name=MidoNet - OpenStack Integration
-      baseurl=http://repo.midonet.org/openstack-kilo/RHEL/7/stable/
+      name=MidoNet OpenStack Integration
+      baseurl=http://repo.midonet.org/openstack-icehouse/RHEL/7/unstable/
       enabled=1
       gpgcheck=1
-      gpgkey=http://repo.midonet.org/RPM-GPG-KEY-midokura 
+      gpgkey=http://repo.midonet.org/RPM-GPG-KEY-midokura
 
       [midonet-misc]
       name=MidoNet 3rd Party Tools and Libraries
@@ -160,141 +122,187 @@ Enable the MidoNet repositories by creating the /etc/yum.repos.d/midonet.repo fi
 
 #### Midokura Enterprise Midonet
 
-Enable the Midokura repositories by creating the /etc/yum.repos.d/midokura.repo file with these entries for **Midokura Enterprise MidoNet version**:
+1. Enable the DataStax repository by creating the /etc/yum.repos.d/datastax.repo file with this entry:
 
-      [mem]
-      name=Midokura Enterprise MidoNet (MEM)
-      baseurl=http://username:password@yum.midokura.com/repo/v1.9/stable/RHEL/7/
+      [datastax]
+      name= DataStax Repo for Apache Cassandra
+      baseurl=http://rpm.datastax.com/community
+      enabled=1
+      gpgcheck=0
+
+2. Enable the Midokura repositories by creating the /etc/yum.repos.d/midokura.repo file with these entries for Midokura Enterprise Midonet (not the commnity version):
+
+      [Midokura]
+      name=Midokura Repository
+      baseurl=http://username:password@yum.midokura.com/repo/v1.7/stable/RHEL/7/
+      gpgcheck=1
+      gpgkey=http://username:password@yum.midokura.com/repo/RPM-GPG-KEY-midokura
+      enabled=1
+      [Midokura-Neutron-Plugin]
+      name=Midokura-Neutron-Plugin Repository
+      baseurl=http://username:password@yum.midokura.com/repo/openstack-icehouse/stable/RHEL/7/
       gpgcheck=1
       gpgkey=http://username:password@yum.midokura.com/repo/RPM-GPG-KEY-midokura
       enabled=1
 
-      [mem-openstack-integration]
-      name=Midokura Enterprise MidoNet (MEM) - OpenStack Integration
-      baseurl=http://username:password@yum.midokura.com/repo/openstack-kilo/stable/RHEL/7/
-      gpgcheck=1
-      gpgkey=http://username:password@yum.midokura.com/repo/RPM-GPG-KEY-midokura
-      enabled=1
-
-Where username:password are the repository login credentials provided by Midokura.
+Where username:password are repository login credentials provided by Midokura, and version is the OpenStack version you're installing with MidoNet, its accepted values being openstack-havana and openstack-icehouse. Alternatively you can follow the instructions using the MidoNet community repos as well.
 
 ### MidoNet Network State Database
 
 #### Installing ZooKeeper
 
-*   1. Install OpenJDK 7 JRE (the -headless package should be sufficient, but the zookeeper package's requires are currently defined incorrectly):
+1. Install OpenJDK 7 JRE (the 'headless' mode at the least):
 
-      yum install java-1.7.0-openjdk
+   ```
+   yum install java-1.7.0-openjdk-headless
+   ```
 
-*   2. Install the ZooKeeper packages:
+2. Install the ZooKeeper packages:
 
-      yum install zookeeper
+   ```
+   yum install zookeeper
+   ```
 
-*   3. Zookeeper expects the JRE to be found in the /usr/java/default/bin/ directory so if it is in a different location, you must create a symbolic link pointing to that location. To do so run the 2 following commands:
+3. Zookeeper expects the JRE to be found in the /usr/java/default/bin/ directory so if it is in a different location, you must create a symbolic link pointing to that location. To do so run the 2 following commands:
 
-      mkdir -p /usr/java/default/bin/
-      ln -s /usr/lib/jvm/jre-1.7.0-openjdk/bin/java /usr/java/default/bin/java
+   ```
+   mkdir -p /usr/java/default/bin/
+   ln -s /usr/lib/jvm/jre-1.7.0-openjdk/bin/java /usr/java/default/bin/java
+   ```
 
-*   4. Next we need to create the zookeeper data directory and assign permissions:
+4. Next we need to create the zookeeper data directory and assign permissions:
 
-      mkdir /var/lib/zookeeper/data
-      chown zookeeper:zookeeper /var/lib/zookeeper/data
+   ```
+   mkdir /var/lib/zookeeper/data
+   chmod 777 /var/lib/zookeeper/data
+   ```
 
-*   5. Now we can edit the Zookeeper configuration file. We need to add the servers (in a prod installation you would have more than one zookeeper server in a cluster. For this example we are only using one. ). Edit the Zookeeper config file at /etc/zookeeper/zoo.cfg and add the following to the bottom of the file:
+5. Now we can edit the Zookeeper configuration file. We need to add the servers (in a prod installation you would have more than one zookeeper server in a cluster. For this example we are only using one. ). Edit the Zookeeper config file at /etc/zookeeper/zoo.cfg and add the following to the bottom of the file:
 
-      server.1=`<host IP>`:2888:3888
+   ```
+   server.1=`<host IP>`:2888:3888
+   ```
 
-Note: Please replace host IP with your IP on the server you are working with
+   _**Note**: Please replace host IP with your IP on the server you are working with_
 
-*   6. We need to set the Zookeeper ID on this server:
+6. We need to set the Zookeeper ID on this server:
 
-      echo 1 > /var/lib/zookeeper/data/myid
+   ```
+   echo 1 > /var/lib/zookeeper/data/myid
+   ```
 
-*   7. Lastly we start and enable the zookeeper service:
+7. Lastly we start the zookeeper service:
 
-      systemctl start zookeeper
-      chkconfig zookeeper on
+   ```
+   systemctl start zookeeper.service
+   ```
 
-*   8. Now test to see if Zookeeper is running:
+8. Now test to see if Zookeeper is running:
 
-      echo ruok | nc 127.0.0.1 2181
+   ```
+   echo ruok | nc 127.0.0.1 2181
+   ```
 
-If it is running correctly you will see an "imok" response.
+   _If it is running correctly you will see an "imok" response._
 
 #### Installing Cassandra
 
 Use this procedure to install Cassandra on Red Hat Enterprise Linux 7.
 
-*   1. Install the Cassandra packages:
+1. Install the Cassandra packages:
 
-      yum install dsc20
+   ```
+   yum install dsc20
+   ```
 
-*   2. Configure the cluster.
-    -   a) Configure the cluster name by editing the /etc/cassandra/conf/cassandra.yaml file so that it contains this entry:
+2. Configure the cluster.
 
+   1. Configure the cluster name by editing the /etc/cassandra/conf/cassandra.yaml file so that it contains this entry:
+
+      ```
       cluster_name: 'midonet'
+      ```
 
-*   -   b) Configure a listen address by editing the /etc/cassandra/conf/cassandra.yaml file so that it contains the IP of the host that you are configuring:
+   2. Configure a listen address by editing the /etc/cassandra/conf/cassandra.yaml file so that it contains the IP of the host that you are configuring:
 
-`listen_address: `<host_IP>
+      ```
+      listen_address: <host_IP>
+      ```
 
-*   -   c) Configure the cluster nodes by editing the /etc/cassandra/conf/cassandra.yaml file so that it contains the following line:
+   3. Configure the cluster nodes by editing the /etc/cassandra/conf/cassandra.yaml file so that it contains the following line:
 
-      - seeds: "`<host_IP>`"
+      ```
+      seeds: "<host_IP>"
+      ```
 
-*   -   d) Configure the RPC Listen address:
+   4. Configure the RPC Listen address:
 
-`rpc_address: `<host_IP>
+      ```
+      rpc_address: <host_IP>
+      ```
 
-*   3. Clean existing system data and restart Cassandra:
+3. Clean existing system data and restart Cassandra:
 
-      rm -rf /var/lib/cassandra/data/system/
-      systemctl restart cassandra
-      chkconfig cassandra on
+   ```
+   rm -rf /var/lib/cassandra/data/system/
+   systemctl restart cassandra.service
+   ```
 
-*   4. Test for connectivity by running the following:
+4. Test for connectivity by running the following:
 
-      cassandra-cli -h `<host_IP>` -p 9160
+   ```
+   cassandra-cli -h `<host_IP>` -p 9160
+   ```
 
 If everything is ok you should see something similar:
 
-      Connected to: "midonet" on 10.0.0.5/9160
-      Welcome to Cassandra CLI version 2.0.6
-      Type 'help;' or '?' for help.
-      Type 'quit;' or 'exit;' to quit.
-      [default@unknown]:
-
-Disconnect again by typing `exit;` or `quit;`.
+```
+Connected to: "midonet" on 10.0.0.5/9160
+Welcome to Cassandra CLI version 2.0.6
+Type 'help;' or '?' for help.
+Type 'quit;' or 'exit;' to quit.
+[default@unknown]:
+```
 
 ### Installing MidolMan
 
 The Midolman agent must be installed on all network and compute nodes (in this case we are running All-in-one).
 
-*   1. Install Midolman package:
+1. Install Midolman package:
 
-      yum install midolman
+   ```
+   yum install midolman
+   ```
 
-*   2. If you run ZooKeeper and Cassandra in a cluster the Midolman configuration file must reflect this.
-    -   a) For the ZooKeeper cluster the /etc/midolman/midolman.conf file must contain the following entries:
+2. If you run ZooKeeper and Cassandra in a cluster the Midolman configuration file must reflect this.
 
-      [zookeeper]
-      zookeeper_hosts =`<host_IP>`:2181
+    1. For the ZooKeeper cluster the /etc/midolman/midolman.conf file must contain the following entries:
 
-*   -   b) For the Cassandra cluster the config has to be set with mn-conf:
+       ```
+       [zookeeper]
+       zookeeper_hosts =`<host_IP>`:2181
+       ```
 
-      echo "cassandra.servers : `<host_IP>`" |mn-conf set -t default
+    2. For the Cassandra cluster the /etc/midolman/midolman.conf file must contain the following entries:
 
-3. For testing purposes remove the 'lock in memory' flag:
+       ```
+       [cassandra]
+ `servers = `<host_IP>
+       replication_factor = 1
+       cluster = midonet
+       ```
 
-      echo "agent.midolman.lock_memory : false" | mn-conf set -t default
+3. Restart Midolman:
 
-*   3. Restart Midolman:
+   ```
+   systemctl restart midolman.service
+   ```
 
-      systemctl restart midolman
+4. Check to see if Midolman is running:
 
-*   4. Check to see if Midolman is running:
-
-      ps -ef | grep mido
+   ```
+   ps -ef | grep mido
+   ```
 
 You should see the process running.
 
@@ -306,13 +314,14 @@ You should see the process running.
 
 *   2. Configure MidoNet API by editing the /usr/share/midonet-api/WEB-INF/web.xml file to contain the following entries:
 
+```xml
 <context-param>
 <param-name>`rest_api-base_uri`</param-name>
 <param-value>`http://<host_IP>:8081/midonet-api</param-value>`
 </context-param>
 <context-param>
 <param-name>`keystone-service_host`</param-name>
-<param-value><host_IP></param-value>
+<param-value>`host_IP`</param-value>
 </context-param>
 <context-param>
 <param-name>`keystone-admin_token`</param-name>
@@ -320,10 +329,11 @@ You should see the process running.
 </context-param>
 <context-param>
 <param-name>`zookeeper-zookeeper_hosts`</param-name>
-<param-value><host_IP>`:2181`</paramvalue>
+<param-value>`host_IP:2181`</paramvalue>
 </context-param>
+```
 
-Make sure to replace all of the `<host_IP>` placeholders, to set the port for `rest_api-base_uri` to `8081` and to change the `ADMIN_TOKEN` to the value that packstack set in the /etc/keystone/keystone.conf file.
+Make sure to change the all of the <host_ID> fields and the admin_token field to the correct values. The admin_token can be found in your packstack /etc/keystone/keystone.conf file
 
 *   3. Install the Tomcat package:
 
@@ -331,24 +341,28 @@ Make sure to replace all of the `<host_IP>` placeholders, to set the port for `r
 
 *   4. Configure MidoNet API context by editing the /etc/tomcat/Catalina/localhost/midonet-api.xml file to contain these entries:
 
+```
 <Context
      path="/midonet-api"
      docBase="/usr/share/midonet-api"
      antiResourceLocking="false"
      privileged="true"
  />
+```
 
-edit /etc/tomcat/server.xml to change the connector port and add the parameter maxHttpHeaderSize:
+*   5. Configure the port for MidoNet-API. Swift proxy is running by default on port 8080, we need to configure Midonet API to run on a different port (8081). In /etc/tomcat/tomcat.conf edit the following:
+
+      CONNECTOR_PORT="8081"
+
+in /etc/tomcat/server.xml edit:
 
 `   `<Connector port="8081" protocol="HTTP/1.1"
                connectionTimeout="20000"
-               redirectPort="8443" 
-               maxHttpHeaderSize="65536"/>
+               redirectPort="8443" />
 
 *   6. Then restart tomcat:
 
-      systemctl restart tomcat
-      systemctl enable tomcat
+      systemctl restart tomcat.service
 
 ### Install Midonet CLI
 
@@ -364,7 +378,7 @@ We next need to install the Midonet CLI pacakge:
 
 *   3. Edit ~/.midonetrc and add the following:
 
-      [cli]
+       [cli]
       api_url = http://<host_ip>:8081/midonet-api
       username = admin
       password = ADMIN_PASS
@@ -412,12 +426,14 @@ You can now leave the CLI again by typing `exit` or `ctrl-d`.
 *   1. Create MidoNet API Service. As Keystone admin, execute the following command:
 
       source /root/keystonerc_admin
-      openstack service create --name midonet --description "MidoNet API Service" midonet
+      keystone service-create --name midonet --type midonet --description "MidoNet API Service"
 
 2. Create MidoNet Administrative User. As Keystone admin, execute the following commands:
 
-      openstack user create --password midonet midonet
-      openstack role add --project services --user midonet admin
+      keystone user-create --name midonet --pass midonet --tenant services
+      keystone user-role-add --user midonet --role admin --tenant services
+
+NOTE: The "--pass midonet" can be "--pass <whateveryouwanthere>" just remember this password.
 
 ### Neutron Integration
 
@@ -425,21 +441,17 @@ You can now leave the CLI again by typing `exit` or `ctrl-d`.
 
 *   1. Install the following packets:
 
-      yum install python-neutron-plugin-midonet
+      yum install openstack-neutron python-neutron-plugin-midonet
 
 *   2. Edit the /etc/neutron/neutron.conf file and edit this parameter in the [DEFAULT] section:
 
-      core_plugin = neutron.plugins.midonet.plugin.MidonetPluginV2
+      core_plugin = midonet.neutron.plugin.MidonetPluginV2
 
-*   3. Also in /etc/neutron/neutron.conf you need to comment out the following line:
-
-      #service_plugins =
-
-*   4. Create the directory for the MidoNet plugin:
+*   3. Create the directory for the MidoNet plugin:
 
       mkdir /etc/neutron/plugins/midonet
 
-*   5. Create the /etc/neutron/plugins/midonet/midonet.ini file and edit it to contain the following:
+*   4. Create the /etc/neutron/plugins/midonet/midonet.ini file and edit it to contain the following:
 
       [DATABASE]
       sql_connection = mysql://neutron:NEUTRON_DBPASS@<host_ip>/neutron
@@ -452,12 +464,16 @@ You can now leave the CLI again by typing `exit` or `ctrl-d`.
       # MidoNet administrative user's tenant
       project_id = services
 
-NOTE: The NEUTRON_DBPASS can be found in your packstack "answers" file in your /root/ directory. You can `grep NEUTRON_DB_PW /root/<packstackAnswersFileName>` to find the password. ALSO NOTE: If you changed your midonet keystone password, please change the password = midonet parameter.
+NOTE: The NEUTRON_DBPASS can be found in your packstack "answers" file in your /root/ directory. You can "cat /root/<packstackAnswersFileName> | grep NEUTRON_DB_PW" to find the password. ALSO NOTE: If you changed your midonet keystone password, please change the password = midonet parameter.
 
-*   6. Create a symbolic link to direct Neutron to the MidoNet configuration:
+*   5. Create a symbolic link to direct Neutron to the MidoNet configuration:
 
       rm -f /etc/neutron/plugin.ini
       ln -s /etc/neutron/plugins/midonet/midonet.ini /etc/neutron/plugin.ini
+
+*   6. In /etc/neutron/neutron.conf you need to comment out the following line:
+
+      #service_plugins =
 
 #### Neutron DHCP Agent
 
@@ -493,6 +509,7 @@ Rebuild Neutron database:
 
 Restart neutron services:
 
+      systemctl restart neutron-server
       systemctl restart neutron-dhcp-agent
       systemctl restart neutron-metadata-agent
 
@@ -517,18 +534,32 @@ Restart neutron services:
 
 *   3. Restart Libvirt:
 
-      systemctl restart libvirtd
+      systemctl restart libvirtd.service
 
 #### Nova Configuration
 
-*   1. Install nova-rootwrap network filters
+*   1. Please edit your /etc/nova/nova.conf and add/edit the following lines at the END of the file:
 
-      # yum install openstack-nova-network
-      # systemctl disable openstack-nova-network
+      [MIDONET]
+      # MidoNet API server URI 
+      midonet_uri = http://<host_IP>:8081/midonet-api
+      # MidoNet username with admin role in keystone 
+      username=midonet
+      password=midonet
+      # MidoNet provider tenant name
+      project_id=services
 
-*   2. Restart nova-compute
+NOTE: If you have changed your midonet keystone user password please put the new one in here
 
-      systemctl restart openstack-nova-compute
+*   2. Restart Nova
+
+      systemctl restart openstack-nova-api.service
+      systemctl restart openstack-nova-cert.service
+      systemctl restart openstack-nova-compute.service
+      systemctl restart openstack-nova-consoleauth.service
+      systemctl restart openstack-nova-scheduler.service
+      systemctl restart openstack-nova-conductor.service
+      systemctl restart openstack-nova-novncproxy.service
 
 ## Creating Initial Networks and Static Uplink
 
@@ -538,8 +569,8 @@ Use this section to create external connectivity on your all-in-one system. Plea
 
 We first need to create the External Network (fake) to be used for connectivity using the following two commands:
 
-      neutron net-create ext-net --shared --router:external
-      neutron subnet-create ext-net 200.200.200.0/24 --name ext-subnet --allocation-pool start=200.200.200.2,end=200.200.200.254 --disable-dhcp --gateway 200.200.200.1
+      neutron net-create ext-net --shared --router:external=True
+      neutron subnet-create ext-net --name ext-subnet --allocation-pool start=200.200.200.2,end=200.200.200.254 --disable-dhcp --gateway 200.200.200.1 200.200.200.0/24
 
 ### Create Fake Uplink
 
@@ -612,7 +643,3 @@ Add masquerading to your external interface so connections coming from the overl
       iptables -I FORWARD -d 200.200.200.0/24 -j ACCEPT
 
 Now we can reach VMs from the underlay host with their floating IPs, and VMs can reach external networks as well (as long as the host has external connectivity).
-
-### Finished!
-
-You're now all set up to use your Packstack all-in-one installation with MidoNet! Why not log into Horizon at `<nowiki>http://<host_IP></nowiki>` with the credentials from the `keystonerc_admin` or `keystonerc_demo` files, create an internal network and launch an instance?
