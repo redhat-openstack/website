@@ -6,6 +6,7 @@ wiki_category: Community
 wiki_title: Get involved
 wiki_revision_count: 49
 wiki_last_updated: 2015-08-10
+layout: pullheadings
 ---
 
 # Get Involved
