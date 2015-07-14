@@ -1,7 +1,6 @@
-- Home: "/"
-- Quick Start: "/Quickstart"
-- Docs: "/Docs"
-- Ask: "/Blog"
-- Get Involved: "/Get_involved"
-- Search: "/search"
-#- Blog: /blog/
+- Home: '/'
+- Quick Start: /documentation/quickstart
+- Docs: /documentation/
+- Blog: /blog/
+- Get Involved: /community/get-involved/
+- Search: /search/
