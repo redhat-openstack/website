@@ -12,10 +12,6 @@ wiki_last_updated: 2015-07-16
 
 # Docs
 
-__NOTOC__
-
-<div class="row">
-<div class="offset1 span10">
 ## RDO documentation
 
 Since RDO sticks closely to the upstream OpenStack project, the documentation at [docs.openstack.org](http://docs.openstack.org) will also prove helpful. If you've come across useful tips for resolving issues on OpenStack, or if you're interested in sharing details of your deployment, please consider sharing this information with the community at our [troubleshooting](troubleshooting) and [case studies](case studies) pages.
@@ -45,7 +41,3 @@ Since RDO sticks closely to the upstream OpenStack project, the documentation at
 <small>[OpenStack docs](http://docs.openstack.org/), [Books](http://openstack.redhat.com/Books), [Glossary](http://docs.openstack.org/glossary/content/glossary.html), [OpenStack Operations Guide](http://docs.openstack.org/trunk/openstack-ops/content/index.html), [More](UpstreamDocs) ...</small>
 
 #### [ Miscellaneous Docs ](Docs/Misc)
-
-</div>
-</div>
-<Category:Documentation>
