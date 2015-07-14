@@ -7,7 +7,7 @@ wiki_category: Documentation
 wiki_title: Quickstart
 wiki_revision_count: 141
 wiki_last_updated: 2015-06-30
-layout: headlinepull
+layout: pullheadings
 ---
 
 # RDO Quickstart
