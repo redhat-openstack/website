@@ -25,19 +25,19 @@ Before using Foreman to deploy OpenStack on your bare metal machines, you might 
 
 #### Operating Systems
 
-Please check Foreman's web site for support Operating System; [1](http://www.theforeman.org/manuals/1.4/quickstart_guide.html)
+Please check Foreman's web site for support Operating System; [1](http://theforeman.org/manuals/1.8/quickstart_guide.html)
 
 #### Repo setup
 
-For RHEL systems, make sure you are registered to both rhel-6-server-rpms and the Optional channel:
+For RHEL systems, make sure you are registered to both rhel-7-server-rpms and the Optional channel:
 
-    yum-config-manager --enable rhel-6-server-rpms
-    yum-config-manager --enable rhel-6-server-optional-rpms
+    yum-config-manager --enable rhel-7-server-rpms
+    yum-config-manager --enable rhel-7-server-optional-rpms
 
 For all systems, you will also want the following two repositories:
 
-    yum install http://download.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm
-    yum install http://repos.fedorapeople.org/repos/openstack/openstack-havana/rdo-release-havana-7.noarch.rpm
+    yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+    yum install https://repos.fedorapeople.org/repos/openstack/openstack-juno/rdo-release-juno-1.noarch.rpm
 
 These steps should be run on each system.
 
