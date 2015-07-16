@@ -21,3 +21,5 @@ It can sometimes be difficult to debug an "all-in-one" deployment. Guides like [
 Where to begin? Since this story is about starting over, that is really the beginning. The prequel would be familiar to some: DHCP isn't working, no external access, VMs failing to boot. It is a sad story and apparently without hope, but like a little-known sci-fi epic, with a new beginning comes new hope (sorry G.L.). Let's start with a description of the galaxy system we have to work with.
 
 ### The System
+
+<Category:NeedsUpdate>
