@@ -204,7 +204,7 @@ Where username:password are repository login credentials provided by Midokura, a
 *   4. Next we need to create the zookeeper data directory and assign permissions:
 
       mkdir /var/lib/zookeeper/data
-      chmod 777 /var/lib/zookeeper/data
+      chown zookeeper:zookeeper /var/lib/zookeeper/data
 
 *   5. Now we can edit the Zookeeper configuration file. We need to add the servers (in a prod installation you would have more than one zookeeper server in a cluster. For this example we are only using one. ). Edit the Zookeeper config file at /etc/zookeeper/zoo.cfg and add the following to the bottom of the file:
 
