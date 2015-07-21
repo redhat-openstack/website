@@ -164,18 +164,20 @@ The packages are tested against and supported on Red Hat Enterprise Linux (RHEL)
       baseurl=http://rpm.datastax.com/community
       enabled=1
       gpgcheck=0
+      gpgkey = https://rpm.datastax.com/rpm/repo_key
 
 2. Enable the Midokura repositories by creating the /etc/yum.repos.d/midokura.repo file with these entries for Midokura Enterprise Midonet (not the commnity version):
 
       [Midokura]
       name=Midokura Repository
-      baseurl=http://username:password@yum.midokura.com/repo/v1.7/stable/RHEL/7/
+      baseurl=http://username:password@yum.midokura.com/repo/v1.9/stable/RHEL/7/
       gpgcheck=1
       gpgkey=http://username:password@yum.midokura.com/repo/RPM-GPG-KEY-midokura
       enabled=1
+
       [Midokura-Neutron-Plugin]
       name=Midokura-Neutron-Plugin Repository
-      baseurl=http://username:password@yum.midokura.com/repo/openstack-icehouse/stable/RHEL/7/
+      baseurl=http://username:password@yum.midokura.com/repo/openstack-kilo/stable/RHEL/7/
       gpgcheck=1
       gpgkey=http://username:password@yum.midokura.com/repo/RPM-GPG-KEY-midokura
       enabled=1
