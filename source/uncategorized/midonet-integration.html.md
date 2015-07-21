@@ -353,6 +353,7 @@ edit /etc/tomcat/server.xml to change the port and add the parameter maxHttpHead
 *   6. Then restart tomcat:
 
       systemctl restart tomcat.service
+      systemctl enable tomcat.service
 
 ### Install Midonet CLI
 
