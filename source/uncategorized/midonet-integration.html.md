@@ -135,17 +135,17 @@ The packages are tested against and supported on Red Hat Enterprise Linux (RHEL)
 
       [midonet] 
       name=MidoNet
-      baseurl=http://repo.midonet.org/midonet/v2014.11/RHEL/7/unstable/
+      baseurl=http://repo.midonet.org/midonet/v2015.06/RHEL/7/stable/ 
       enabled=1
       gpgcheck=1
-      gpgkey=http://repo.midonet.org/RPM-GPG-KEY-midokura
+      gpgkey=http://repo.midonet.org/RPM-GPG-KEY-midokura 
 
       [midonet-openstack-integration]
       name=MidoNet OpenStack Integration
-      baseurl=http://repo.midonet.org/openstack-icehouse/RHEL/7/unstable/
+      baseurl=http://repo.midonet.org/openstack-kilo/RHEL/7/stable/
       enabled=1
       gpgcheck=1
-      gpgkey=http://repo.midonet.org/RPM-GPG-KEY-midokura
+      gpgkey=http://repo.midonet.org/RPM-GPG-KEY-midokura 
 
       [midonet-misc]
       name=MidoNet 3rd Party Tools and Libraries
