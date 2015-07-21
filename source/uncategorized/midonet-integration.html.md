@@ -288,6 +288,10 @@ The Midolman agent must be installed on all network and compute nodes (in this c
 
       echo "cassandra.servers : `<host_IP>`" |mn-conf set -t default
 
+3. For testing purposes remove the 'lock in memory' flag:
+
+      echo "agent.midolman.lock_memory : false" | mn-conf set -t default
+
 *   3. Restart Midolman:
 
       systemctl restart midolman.service
