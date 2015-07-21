@@ -130,6 +130,7 @@ The packages are tested against and supported on Red Hat Enterprise Linux (RHEL)
       baseurl=http://rpm.datastax.com/community
       enabled=1
       gpgcheck=0
+      gpgkey = https://rpm.datastax.com/rpm/repo_key
 
 2. Enable the Midonet repositories by creating the /etc/yum.repos.d/midonet.repo file with these entries for Midonet Community:
 
