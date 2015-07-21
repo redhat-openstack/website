@@ -8,77 +8,112 @@ wiki_last_updated: 2015-08-07
 
 # MidoNet integration
 
-## Prerequisites
-
 ### Installing OpenStack
 
-Please verify that this is working before proceeding. Most installation issues come when a Packstack error has occurred but was ignored.
+For simplicity, this guide assumes a Packstack All-In-One OpenStack installation as a base.
 
-NOTE: Make sure Selinux is disabled (or set to permissive) and both FirewallD and/or IPTables are disabled!
+#### Enable necessary repositories
 
-#### Enabling RDO repositories
+Enable additional RHEL repositories:
 
-Enable the EDO repositories using the following command (as root):
+      # subscription-manager repos --enable=rhel-7-server-extras-rpms
+      # subscription-manager repos --enable=rhel-7-server-optional-rpms
 
-      yum install -y http://rdo.fedorapeople.org/openstack-icehouse/rdo-release-icehouse.rpm
+Enable the EPEL repository:
 
-To enable the EPEL repository use this command:
+      # yum install http://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-5.noarch.rpm
 
-      su -c 'rpm -Uvh http://download.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-5.noarch.rpm'
+Enable the RDO Kilo repository:
 
-To enable 'optional' and 'extras' from the RHEL subscription run these commands (as root):
+      # yum install http://rdo.fedorapeople.org/openstack-kilo/rdo-release-kilo.rpm
 
-      yum -y install yum-utils
-      yum-config-manager --enable rhel-7-server-optional-rpms
-      yum-config-manager --enable rhel-7-server-extras-rpms
+#### Make your system up-to-date
 
-#### Make sure your OS is up to date
+Install the latest package updates:
 
-Run yum update to make sure the system is running the latest packages. This is required:
+      # yum upgrade
 
-      yum update -y
+#### Reboot your system
 
-Once this is finished:
+Reboot your system to apply the changes:
 
-      reboot
+      # reboot
 
-#### Install Packstack Installer
+#### Install Packstack
 
 Run the following command to install Packstack on your system
 
-      yum install -y openstack-packstack
+      # yum install openstack-packstack
 
-#### Install Openstack Packstack
+#### Install OpenStack
 
-      packstack --allinone
+      $ packstack --allinone
 
-### Cleaning up Packstack OpenStack All-in-on Installation
+#### Verify OpenStack installation
 
-The first steps to get MidoNet running on the All-in-one environment created by the Packstack installer is to clean up the network section in preparation of installing MidoNet.
+Before proceeding, please verify that your OpenStack installation is working.
 
-Log in to your horizon dashboard as the Admin account and do the following:
+Most installation issues come when a Packstack error has occurred but was ignored.
 
-1.  Add the admin user to the "demo" tenant ( under Admin>Identity>Project)
-2.  Move to the demo tenant, as admin, and delete the router, the private subnet and clear the router gateway in this order: Clear Router Gateway, Delete Router Interface, Delete Router, Delete network.
-3.  Move back to the admin tenant and remove the public subnet (external network).
+### Cleaning up Packstack OpenStack All-in-One installation
 
-Next, we need to SSH into the Packstack system (in this case I am using RHEL 7). We need to remove services that will interfere with MidoNet and/or are no longer needed. This will break the networking of your PackStack until the MidoNet integration is complete. Please be aware of this before starting to make sure you have sufficient time.
+The first steps to get MidoNet running on the All-in-One environment created by the Packstack installer is to clean up the network section in preparation of installing MidoNet.
 
-*   1. Remove the OpenVswitch agent packages:
+As the Admin user, log in to the Horizon Dashboard and do the following:
 
-      yum remove openstack-neutron-openvswitch
+*   1. Add the "admin" user to the "demo" project (under Identity -> Projects)
 
-*   2. Stop and disable the Neutron L3 Agent package:
+<!-- -->
 
-      systemctl stop neutron-l3-agent
-      systemctl disable neutron-l3-agent
+*   2. As "admin" user, change to the "demo" project and delete the project's router and network (in the following order):
+    -   clear router gateway
+    -   delete router interface
+    -   delete router
+    -   delete network
 
-*   3. Disable Network Manager
+<!-- -->
 
-      systemctl stop networkmanager.service
-      systemctl disable networkmanager.service
-      systemctl enable network.service
-      systemctl start network.service
+*   3. Change back to the "admin" project and remove the public subnet (external network).
+
+Next, we need to SSH into the Packstack system. We need to remove services that will interfere with MidoNet and/or are no longer needed. This will break the networking of your OpenStack installation until the MidoNet integration is complete. Please be aware of this and make sure you have sufficient time before starting.
+
+*   1. Remove the Open vSwitch agent packages
+
+      # yum remove openstack-neutron-openvswitch
+
+*   2. Stop and disable the Neutron L3 agent
+
+      # systemctl stop neutron-l3-agent
+      # systemctl disable neutron-l3-agent
+
+*   3. Stop and disable Network Manager
+
+      # systemctl stop networkmanager
+      # systemctl disable networkmanager
+      # systemctl enable network
+      # systemctl start network.service
+
+*   4. Disable SELinux
+
+Edit the SELinux configuration file:
+
+      # vi /etc/selinux/config
+
+Change the SELINUX value to "permissive":
+
+      # SELINUX= can take one of these three values:
+      #     enforcing - SELinux security policy is enforced.
+      #     permissive - SELinux prints warnings instead of enforcing.
+      #     disabled - No SELinux policy is loaded.
+      SELINUX=permissive
+
+*   5. Disable firewall
+
+Disable FirewallD and/or iptables:
+
+      # systemctl disable firewalld
+
+      # systemctl disable iptables
 
 ## Installing MidoNet Components
 
