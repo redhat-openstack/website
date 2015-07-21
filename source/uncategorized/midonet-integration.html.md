@@ -216,9 +216,10 @@ Note: Please replace host IP with your IP on the server you are working with
 
       echo 1 > /var/lib/zookeeper/data/myid
 
-*   7. Lastly we start the zookeeper service:
+*   7. Lastly we start and enable the zookeeper service:
 
       systemctl start zookeeper.service
+      systemctl enable zookeeper.service
 
 *   8. Now test to see if Zookeeper is running:
 
