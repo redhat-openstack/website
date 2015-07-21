@@ -284,12 +284,9 @@ The Midolman agent must be installed on all network and compute nodes (in this c
       [zookeeper]
       zookeeper_hosts =`<host_IP>`:2181
 
-*   -   b) For the Cassandra cluster the /etc/midolman/midolman.conf file must contain the following entries:
+*   -   b) For the Cassandra cluster the config has to be set with mn-conf:
 
-      [cassandra]
-`servers = `<host_IP>
-      replication_factor = 1
-      cluster = midonet
+      echo "cassandra.servers : `<host_IP>`" |mn-conf set -t default
 
 *   3. Restart Midolman:
 
