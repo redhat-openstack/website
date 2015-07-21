@@ -369,7 +369,7 @@ We next need to install the Midonet CLI pacakge:
 
 *   3. Edit ~/.midonetrc and add the following:
 
-       [cli]
+      [cli]
       api_url = http://<host_ip>:8081/midonet-api
       username = admin
       password = ADMIN_PASS
