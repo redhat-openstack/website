@@ -434,11 +434,11 @@ NOTE: You will be asked to enter a password, remember it for later.
 
 *   1. Install the following packets:
 
-      yum install openstack-neutron python-neutron-plugin-midonet
+      yum install python-neutron-plugin-midonet
 
 *   2. Edit the /etc/neutron/neutron.conf file and edit this parameter in the [DEFAULT] section:
 
-      core_plugin = midonet.neutron.plugin.MidonetPluginV2
+      core_plugin = neutron.plugins.midonet.plugin.MidonetPluginV2
 
 *   3. Create the directory for the MidoNet plugin:
 
