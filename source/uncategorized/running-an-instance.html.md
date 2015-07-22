@@ -42,7 +42,7 @@ For a collection of links to alternative cloud-ready images, check out [image re
 
 ### Step 5: Launch the instance.
 
-In the main portion of the screen, under the "Images" heading, click the "Launch Instance" button for the "Fedora22" image. In the resulting dialog, provide a name in the "Instance Name" field, and click the "Launch" button.
+In the main portion of the screen, under the "Images" heading, click the "Launch Instance" button for the "Fedora22" image. In the resulting dialog, provide a name in the "Instance Name" field, in the "Flavor" field select at least "m1.small", and click the "Launch" button.
 
 You have to assign a network, either click on the "+" next to "private" or drag & drop the "private" box from "Available networks" to "Selected networks".
 
