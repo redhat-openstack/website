@@ -38,7 +38,7 @@ The "Import Key Pair" option will prompt you to provide a name and a public key 
 
 ### Step 4: Add an image.
 
-In the left-side navigation menu, click "Images & Snapshots" under the heading "Manage Compute." Click the "Create Image" button, located in the upper-right portion of the screen. In the resulting dialog box, enter "Fedora19" in the "Name" field, "[<http://cloud.fedoraproject.org/fedora-19.x86_64.qcow2>](http://cloud.fedoraproject.org/fedora-19.x86_64.qcow2)" in the "Image Location" field, choose "QCOW2" from the "Format" drop-down menu, leave the "Minimum Disk" and "Minimum Ram" fields blank, leave the "Public" box unchecked, and click the "Create Image" button.
+In the left-side navigation menu, click "Images" under the heading "Compute." Click the "Create Image" button, located in the upper-right portion of the screen. In the resulting dialog box, enter "Fedora19" in the "Name" field, "[<http://cloud.fedoraproject.org/fedora-19.x86_64.qcow2>](http://cloud.fedoraproject.org/fedora-19.x86_64.qcow2)" in the "Image Location" field, choose "QCOW2" from the "Format" drop-down menu, leave the "Minimum Disk" and "Minimum Ram" fields blank, leave the "Public" box unchecked, and click the "Create Image" button.
 
 For a collection of links to alternative cloud-ready images, check out [image resources](image resources).
 
