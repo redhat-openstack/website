@@ -419,14 +419,14 @@ Remember to change <host_IP> to the IP of you box.
 *   1. Create MidoNet API Service. As Keystone admin, execute the following command:
 
       source /root/keystonerc_admin
-      keystone service-create --name midonet --type midonet --description "MidoNet API Service"
+      openstack service create --name midonet --description "MidoNet API Service" midonet
 
 2. Create MidoNet Administrative User. As Keystone admin, execute the following commands:
 
-      keystone user-create --name midonet --pass midonet --tenant services
-      keystone user-role-add --user midonet --role admin --tenant services
+      openstack user create --password-prompt midonet
+      openstack role add --project services --user midonet admin
 
-NOTE: The "--pass midonet" can be "--pass <whateveryouwanthere>" just remember this password.
+NOTE: You will be asked to enter a password, remember it for later.
 
 ### Neutron Integration
 
