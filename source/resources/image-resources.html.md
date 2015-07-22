@@ -16,7 +16,7 @@ This is a collection of various OpenStack-ready images of different distribution
 
 *   Fedora 22 [cloud images](https://getfedora.org/cloud/download/)
 *   Fedora 20: [32-bit](http://cloud.fedoraproject.org/fedora-20.i386.qcow2) / [64 bit](http://cloud.fedoraproject.org/fedora-20.x86_64.qcow2) ([*more info*](http://cloud.fedoraproject.org/))
-*   Fedora 19: [32-bit](http://cloud.fedoraproject.org/fedora-19.i386.qcow2) / [64 bit](http://cloud.fedoraproject.org/fedora-19.x86_64.qcow2) ([*more info*](http://cloud.fedoraproject.org/))
+*   Fedora 19: [32-bit](http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/19/Images/i386/Fedora-i386-19-20130627-sda.qcow2) / [64 bit](http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/19/Images/x86_64/Fedora-x86_64-19-20130627-sda.qcow2) ([*more info*](http://cloud.fedoraproject.org/)) **Outdated:** already in archive
 *   [CentOS 7 images](http://cloud.centos.org/centos/7/images/)
 *   [CentOS 6 images](http://cloud.centos.org/centos/6/images/)
 *   [Ubuntu cloud images](//cloud-images.ubuntu.com/)
