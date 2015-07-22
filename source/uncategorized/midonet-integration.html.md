@@ -423,10 +423,8 @@ Remember to change <host_IP> to the IP of you box.
 
 2. Create MidoNet Administrative User. As Keystone admin, execute the following commands:
 
-      openstack user create --password-prompt midonet
+      openstack user create --password midonet midonet
       openstack role add --project services --user midonet admin
-
-NOTE: You will be asked to enter a password, remember it for later.
 
 ### Neutron Integration
 
