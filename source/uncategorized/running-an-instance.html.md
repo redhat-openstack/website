@@ -46,6 +46,8 @@ For a collection of links to alternative cloud-ready images, check out [image re
 
 In the main portion of the screen, under the "Images" heading, click the "Launch Instance" button for the "Fedora22" image. In the resulting dialog, provide a name in the "Instance Name" field, and click the "Launch" button.
 
+You have to assign a network, either click on the "+" next to "private" or drag & drop the "private" box from "Available networks" to "Selected networks".
+
 ### Step 6: Associate Floating IP
 
 In the main portion of the screen, under the "Instances" heading, click the "More" button, followed by the "Associate Floating IP" link for the instance you just launched. You should see both public and private IP addresses listed in the "IP Address" column for your instance.
