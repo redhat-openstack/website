@@ -520,28 +520,14 @@ Restart neutron services:
 
 #### Nova Configuration
 
-*   1. Please edit your /etc/nova/nova.conf and add/edit the following lines at the END of the file:
+*   1. Install nova-rootwrap network filters
 
-      [MIDONET]
-      # MidoNet API server URI 
-      midonet_uri = http://<host_IP>:8081/midonet-api
-      # MidoNet username with admin role in keystone 
-      username=midonet
-      password=midonet
-      # MidoNet provider tenant name
-      project_id=services
+      # yum install openstack-nova-network
+      # systemctl disable openstack-nova-network.service
 
-NOTE: If you have changed your midonet keystone user password please put the new one in here
+*   2. Restart nova-compute
 
-*   2. Restart Nova
-
-      systemctl restart openstack-nova-api.service
-      systemctl restart openstack-nova-cert.service
       systemctl restart openstack-nova-compute.service
-      systemctl restart openstack-nova-consoleauth.service
-      systemctl restart openstack-nova-scheduler.service
-      systemctl restart openstack-nova-conductor.service
-      systemctl restart openstack-nova-novncproxy.service
 
 ## Creating Initial Networks and Static Uplink
 
