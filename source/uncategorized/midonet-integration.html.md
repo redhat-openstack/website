@@ -57,24 +57,6 @@ Most installation issues come when a Packstack error has occurred but was ignore
 
 ### Cleaning up Packstack OpenStack All-in-One installation
 
-The first steps to get MidoNet running on the All-in-One environment created by the Packstack installer is to clean up the network section in preparation of installing MidoNet.
-
-As the Admin user, log in to the Horizon Dashboard and do the following:
-
-*   1. Add the "admin" user to the "demo" project (under Identity -> Projects)
-
-<!-- -->
-
-*   2. As "admin" user, change to the "demo" project and delete the project's router and network (in the following order):
-    -   clear router gateway
-    -   delete router interface
-    -   delete router
-    -   delete network
-
-<!-- -->
-
-*   3. Change back to the "admin" project and remove the public subnet (external network).
-
 Next, we need to SSH into the Packstack system. We need to remove services that will interfere with MidoNet and/or are no longer needed. This will break the networking of your OpenStack installation until the MidoNet integration is complete. Please be aware of this and make sure you have sufficient time before starting.
 
 *   1. Remove the Open vSwitch agent packages
