@@ -50,7 +50,9 @@ You have to assign a network, either click on the "+" next to "private" or drag 
 
 ### Step 6: Associate Floating IP
 
-In the main portion of the screen, under the "Instances" heading, click the "More" button, followed by the "Associate Floating IP" link for the instance you just launched. You should see both public and private IP addresses listed in the "IP Address" column for your instance.
+In the main portion of the screen, under the "Instances" heading, click the "More" (down arrow in "Actions" column) button for your instance you just launched, followed by the "Associate Floating IP". Click on "+" next to "IP Address" and select the "public" Pool in the "Allocate Floating IP" dialog, continue by clicking "Allocate IP". Being back in the "Manage Floating IP Associations" dialog you can select the allicated IP Address and click "Associate".
+
+The associated Floating IPs can be spotted in the "IP Address" for each instance.
 
 For additional details, please read [how to set a floating IP range](Floating IP range).
 
