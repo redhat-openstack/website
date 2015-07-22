@@ -537,8 +537,8 @@ Use this section to create external connectivity on your all-in-one system. Plea
 
 We first need to create the External Network (fake) to be used for connectivity using the following two commands:
 
-      neutron net-create ext-net --shared --router:external=True
-      neutron subnet-create ext-net --name ext-subnet --allocation-pool start=200.200.200.2,end=200.200.200.254 --disable-dhcp --gateway 200.200.200.1 200.200.200.0/24
+      neutron net-create ext-net --shared --router:external
+      neutron subnet-create ext-net 200.200.200.0/24 --name ext-subnet --allocation-pool start=200.200.200.2,end=200.200.200.254 --disable-dhcp --gateway 200.200.200.1
 
 ### Create Fake Uplink
 
