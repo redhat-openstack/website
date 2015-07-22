@@ -33,7 +33,7 @@ Steps to remove hard-coded floating IP and add a new one:
 No floating IPs are created by default. You must first create a public network and subnet, defining the IP address range for floating IPs at that time.
 
 1.  source /root/keystonerc_admin
-2.  neutron net-create public --router:external=True
+2.  neutron net-create public --router:external
 3.  neutron subnet-create public 192.168.1.0/24 --name vlan --enable_dhcp=False --allocation_pool start=192.168.1.57,end=192.168.1.62 --gateway 192.168.1.1 (use your network gateway here - change the IP addresses in the allocation range to match what is available on your network)
 4.  neutron router-create router1(name of your router)
 5.  neutron router-gateway-set $router_id $vlan_id (use your router id and previous created vlan id)
