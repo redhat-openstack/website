@@ -14,8 +14,6 @@ __NOTOC__
 <div class="offset3 span8 pull-s">
 # Running an Instance
 
-**TODO: Update to reflect current UI**
-
 ### Step 1: Visit the Dashboard
 
 Log in to the Openstack dashboard at <http://CONTROL_NODE/dashboard> - the username is "demo". The password can be found in the file keystonerc_demo in the /root/ directory of the control node.
