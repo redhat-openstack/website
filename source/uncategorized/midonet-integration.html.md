@@ -77,6 +77,8 @@ Next, we need to SSH into the Packstack system. We need to remove services that 
 
 *   4. Disable SELinux
 
+      # setenforce permissive
+
 Edit the SELinux configuration file:
 
       # vi /etc/selinux/config
