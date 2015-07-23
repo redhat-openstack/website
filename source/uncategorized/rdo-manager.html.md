@@ -28,7 +28,7 @@ RDO-Manager User Guide: <http://docs.rdoproject.org/rdo-manager/master>
 
 Demo 7 (June 19, 2015)
 
-*   [RDO-Manager: GUI End-to-End Deployment (non-narrated)](https://www.youtube.com/watch?v=VVJ8-JrHduk)
+*   [RDO-Manager: GUI End-to-End Deployment (non-narrated)](https://youtu.be/VVJ8-JrHduk)
 
 OpenStack Summit, Vancouver (May 22, 2015)
 
