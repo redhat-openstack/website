@@ -422,11 +422,15 @@ Remember to change <host_IP> to the IP of you box.
 
       core_plugin = neutron.plugins.midonet.plugin.MidonetPluginV2
 
-*   3. Create the directory for the MidoNet plugin:
+*   3. Also in /etc/neutron/neutron.conf you need to comment out the following line:
+
+      #service_plugins =
+
+*   4. Create the directory for the MidoNet plugin:
 
       mkdir /etc/neutron/plugins/midonet
 
-*   4. Create the /etc/neutron/plugins/midonet/midonet.ini file and edit it to contain the following:
+*   5. Create the /etc/neutron/plugins/midonet/midonet.ini file and edit it to contain the following:
 
       [DATABASE]
       sql_connection = mysql://neutron:NEUTRON_DBPASS@<host_ip>/neutron
@@ -441,14 +445,10 @@ Remember to change <host_IP> to the IP of you box.
 
 NOTE: The NEUTRON_DBPASS can be found in your packstack "answers" file in your /root/ directory. You can "cat /root/<packstackAnswersFileName> | grep NEUTRON_DB_PW" to find the password. ALSO NOTE: If you changed your midonet keystone password, please change the password = midonet parameter.
 
-*   5. Create a symbolic link to direct Neutron to the MidoNet configuration:
+*   6. Create a symbolic link to direct Neutron to the MidoNet configuration:
 
       rm -f /etc/neutron/plugin.ini
       ln -s /etc/neutron/plugins/midonet/midonet.ini /etc/neutron/plugin.ini
-
-*   6. In /etc/neutron/neutron.conf you need to comment out the following line:
-
-      #service_plugins =
 
 #### Neutron DHCP Agent
 
