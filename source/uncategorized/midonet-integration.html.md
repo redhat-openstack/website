@@ -473,17 +473,14 @@ NOTE: The NEUTRON_DBPASS can be found in your packstack "answers" file in your /
 
 #### Finish Neutron Integration
 
-Rebuild Neutron and Zookeeper databases:
+Rebuild Neutron database:
 
       systemctl stop neutron-server
-      systemctl stop tomcat
       mysql -e 'drop database neutron'
-      rm -rf /var/lib/zookeeper/data/version-2/*
       mysql -e 'create database neutron'
       su -s /bin/sh -c "neutron-db-manage --config-file /etc/neutron/neutron.conf --config-file /etc/neutron/plugins/midonet/midonet.ini upgrade kilo" neutron
       systemctl restart openstack-nova-api.service openstack-nova-scheduler.service openstack-nova-conductor.service
       systemctl start neutron-server.service
-      systemctl start tomcat
 
 Restart neutron services:
 
