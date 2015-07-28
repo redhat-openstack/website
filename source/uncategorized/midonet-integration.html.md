@@ -118,7 +118,7 @@ Enable the DataStax repository by creating the /etc/yum.repos.d/datastax.repo fi
 
 #### Midonet Community
 
-Enable the Midonet repositories by creating the /etc/yum.repos.d/midonet.repo file with these entries for Midonet Community:
+Enable the MidoNet repositories by creating the /etc/yum.repos.d/midonet.repo file with these entries for the MidoNet community version:
 
       [midonet] 
       name=MidoNet
