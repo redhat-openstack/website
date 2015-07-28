@@ -128,7 +128,7 @@ Enable the Midonet repositories by creating the /etc/yum.repos.d/midonet.repo fi
       gpgkey=http://repo.midonet.org/RPM-GPG-KEY-midokura 
 
       [midonet-openstack-integration]
-      name=MidoNet OpenStack Integration
+      name=MidoNet - OpenStack Integration
       baseurl=http://repo.midonet.org/openstack-kilo/RHEL/7/stable/
       enabled=1
       gpgcheck=1
