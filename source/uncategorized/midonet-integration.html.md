@@ -234,8 +234,8 @@ Use this procedure to install Cassandra on Red Hat Enterprise Linux 7.
 *   3. Clean existing system data and restart Cassandra:
 
       rm -rf /var/lib/cassandra/data/system/
-      systemctl restart cassandra.service
-      systemctl enable cassandra.service
+      systemctl restart cassandra
+      chkconfig cassandra on
 
 *   4. Test for connectivity by running the following:
 
