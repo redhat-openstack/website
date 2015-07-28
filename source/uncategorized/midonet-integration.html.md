@@ -333,12 +333,12 @@ edit /etc/tomcat/server.xml to change the port and add the parameter maxHttpHead
                connectionTimeout="20000"
                URIEncoding="UTF-8"
                redirectPort="8443" 
-              maxHttpHeaderSize="65536"/>
+               maxHttpHeaderSize="65536"/>
 
 *   6. Then restart tomcat:
 
-      systemctl restart tomcat.service
-      systemctl enable tomcat.service
+      systemctl restart tomcat
+      systemctl enable tomcat
 
 ### Install Midonet CLI
 
