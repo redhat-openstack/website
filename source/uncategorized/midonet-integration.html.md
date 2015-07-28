@@ -143,16 +143,7 @@ Enable the Midonet repositories by creating the /etc/yum.repos.d/midonet.repo fi
 
 #### Midokura Enterprise Midonet
 
-1. Enable the DataStax repository by creating the /etc/yum.repos.d/datastax.repo file with this entry:
-
-      [datastax]
-      name= DataStax Repo for Apache Cassandra
-      baseurl=http://rpm.datastax.com/community
-      enabled=1
-      gpgcheck=0
-      gpgkey = https://rpm.datastax.com/rpm/repo_key
-
-2. Enable the Midokura repositories by creating the /etc/yum.repos.d/midokura.repo file with these entries for Midokura Enterprise Midonet (not the commnity version):
+Enable the Midokura repositories by creating the /etc/yum.repos.d/midokura.repo file with these entries for Midokura Enterprise Midonet (not the commnity version):
 
       [Midokura]
       name=Midokura Repository
@@ -168,7 +159,7 @@ Enable the Midonet repositories by creating the /etc/yum.repos.d/midonet.repo fi
       gpgkey=http://username:password@yum.midokura.com/repo/RPM-GPG-KEY-midokura
       enabled=1
 
-Where username:password are repository login credentials provided by Midokura, and version is the OpenStack version you're installing with MidoNet, its accepted values being openstack-havana and openstack-icehouse. Alternatively you can follow the instructions using the MidoNet community repos as well.
+Where username:password are the repository login credentials provided by Midokura.
 
 ### MidoNet Network State Database
 
