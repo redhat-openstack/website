@@ -275,7 +275,7 @@ The Midolman agent must be installed on all network and compute nodes (in this c
 
 *   3. Restart Midolman:
 
-      systemctl restart midolman.service
+      systemctl restart midolman
 
 *   4. Check to see if Midolman is running:
 
