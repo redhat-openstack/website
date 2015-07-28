@@ -297,7 +297,7 @@ You should see the process running.
 </context-param>
 <context-param>
 <param-name>`keystone-service_host`</param-name>
-<param-value>`host_IP`</param-value>
+<param-value><host_IP></param-value>
 </context-param>
 <context-param>
 <param-name>`keystone-admin_token`</param-name>
@@ -305,7 +305,7 @@ You should see the process running.
 </context-param>
 <context-param>
 <param-name>`zookeeper-zookeeper_hosts`</param-name>
-<param-value>`host_IP:2181`</paramvalue>
+<param-value><host_IP>`:2181`</paramvalue>
 </context-param>
 
 Make sure to change the all of the <host_ID> fields and the admin_token field to the correct values. The admin_token can be found in your packstack /etc/keystone/keystone.conf file
