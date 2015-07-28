@@ -167,9 +167,9 @@ Where username:password are the repository login credentials provided by Midokur
 
 #### Installing ZooKeeper
 
-*   1. Install OpenJDK 7 JRE (the 'headless' mode at the least):
+*   1. Install OpenJDK 7 JRE (the -headless package should be sufficient, but the zookeeper package's requires are currently defined incorrectly):
 
-      yum install java-1.7.0-openjdk-headless
+      yum install java-1.7.0-openjdk
 
 *   2. Install the ZooKeeper packages:
 
