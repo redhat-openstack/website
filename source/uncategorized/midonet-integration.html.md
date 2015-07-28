@@ -249,6 +249,8 @@ If everything is ok you should see something similar:
       Type 'quit;' or 'exit;' to quit.
       [default@unknown]:
 
+Disconnect again by typing `exit;` or `quit;`.
+
 ### Installing MidolMan
 
 The Midolman agent must be installed on all network and compute nodes (in this case we are running All-in-one).
