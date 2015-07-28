@@ -197,8 +197,8 @@ Note: Please replace host IP with your IP on the server you are working with
 
 *   7. Lastly we start and enable the zookeeper service:
 
-      systemctl start zookeeper.service
-      systemctl enable zookeeper.service
+      systemctl start zookeeper
+      chkconfig zookeeper on
 
 *   8. Now test to see if Zookeeper is running:
 
