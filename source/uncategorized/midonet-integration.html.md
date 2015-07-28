@@ -70,10 +70,10 @@ Next, we need to SSH into the Packstack system. We need to remove services that 
 
 *   3. Stop and disable Network Manager
 
-      # systemctl stop networkmanager
-      # systemctl disable networkmanager
-      # systemctl enable network
-      # systemctl start network.service
+      # systemctl stop NetworkManager
+      # systemctl disable NetworkManager
+      # chkconfig network on
+      # systemctl start network
 
 *   4. Disable SELinux
 
