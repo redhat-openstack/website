@@ -103,7 +103,9 @@ Disable FirewallD and/or iptables:
 
 ### Adding the MidoNet Repositories
 
-The packages are tested against and supported on Red Hat Enterprise Linux (RHEL) 7. Add either the MidoNet Community repos or the Midokura Enterprise MidoNet repos.
+The packages are tested against and supported on Red Hat Enterprise Linux (RHEL) 7.
+
+Add either the MidoNet community repositories **or** the Midokura Enterprise MidoNet repositories.
 
 #### Apache Cassandra
 
