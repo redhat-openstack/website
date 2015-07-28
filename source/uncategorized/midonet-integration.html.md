@@ -145,7 +145,7 @@ Enable the MidoNet repositories by creating the /etc/yum.repos.d/midonet.repo fi
 
 #### Midokura Enterprise Midonet
 
-Enable the Midokura repositories by creating the /etc/yum.repos.d/midokura.repo file with these entries for Midokura Enterprise Midonet (not the community version):
+Enable the Midokura repositories by creating the /etc/yum.repos.d/midokura.repo file with these entries for **Midokura Enterprise MidoNet version**:
 
       [mem]
       name=Midokura Enterprise MidoNet (MEM)
