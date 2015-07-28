@@ -143,17 +143,17 @@ Enable the Midonet repositories by creating the /etc/yum.repos.d/midonet.repo fi
 
 #### Midokura Enterprise Midonet
 
-Enable the Midokura repositories by creating the /etc/yum.repos.d/midokura.repo file with these entries for Midokura Enterprise Midonet (not the commnity version):
+Enable the Midokura repositories by creating the /etc/yum.repos.d/midokura.repo file with these entries for Midokura Enterprise Midonet (not the community version):
 
-      [Midokura]
-      name=Midokura Repository
+      [mem]
+      name=Midokura Enterprise MidoNet (MEM)
       baseurl=http://username:password@yum.midokura.com/repo/v1.9/stable/RHEL/7/
       gpgcheck=1
       gpgkey=http://username:password@yum.midokura.com/repo/RPM-GPG-KEY-midokura
       enabled=1
 
-      [Midokura-Neutron-Plugin]
-      name=Midokura-Neutron-Plugin Repository
+      [mem-openstack-integration]
+      name=Midokura Enterprise MidoNet (MEM) - OpenStack Integration
       baseurl=http://username:password@yum.midokura.com/repo/openstack-kilo/stable/RHEL/7/
       gpgcheck=1
       gpgkey=http://username:password@yum.midokura.com/repo/RPM-GPG-KEY-midokura
