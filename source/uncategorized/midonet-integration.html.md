@@ -105,9 +105,9 @@ Disable FirewallD and/or iptables:
 
 The packages are tested against and supported on Red Hat Enterprise Linux (RHEL) 7. Add either the MidoNet Community repos or the Midokura Enterprise MidoNet repos.
 
-#### Midonet Community
+#### Apache Cassandra
 
-1. Enable the DataStax repository by creating the /etc/yum.repos.d/datastax.repo file with this entry for Midokura Enterprise Midonet (not the commnity version):
+Enable the DataStax repository by creating the /etc/yum.repos.d/datastax.repo file with this entry:
 
       [datastax]
       name= DataStax Repo for Apache Cassandra
@@ -116,7 +116,9 @@ The packages are tested against and supported on Red Hat Enterprise Linux (RHEL)
       gpgcheck=0
       gpgkey = https://rpm.datastax.com/rpm/repo_key
 
-2. Enable the Midonet repositories by creating the /etc/yum.repos.d/midonet.repo file with these entries for Midonet Community:
+#### Midonet Community
+
+Enable the Midonet repositories by creating the /etc/yum.repos.d/midonet.repo file with these entries for Midonet Community:
 
       [midonet] 
       name=MidoNet
