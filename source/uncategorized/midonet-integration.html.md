@@ -308,7 +308,7 @@ You should see the process running.
 <param-value><host_IP>`:2181`</paramvalue>
 </context-param>
 
-Make sure to change the all of the <host_IP> fields and the ADMIN_TOKEN field to the correct values. The admin_token can be found in your packstack /etc/keystone/keystone.conf file
+Make sure to replace all of the `<host_IP>` placeholders, to set the port for `rest_api-base_uri` to `8081` and to change the `ADMIN_TOKEN` to the value that packstack set in the /etc/keystone/keystone.conf file.
 
 *   3. Install the Tomcat package:
 
