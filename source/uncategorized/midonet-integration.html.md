@@ -601,3 +601,7 @@ Add masquerading to your external interface so connections coming from the overl
       iptables -I FORWARD -d 200.200.200.0/24 -j ACCEPT
 
 Now we can reach VMs from the underlay host with their floating IPs, and VMs can reach external networks as well (as long as the host has external connectivity).
+
+### Finished!
+
+You're now all set up to use your Packstack all-in-one installation with MidoNet! Why not log into Horizon at `<nowiki>http://<host_IP></nowiki>` with the credentials from the `keystonerc_admin` or `keystonerc_demo` files, create an internal network and launch an instance?
