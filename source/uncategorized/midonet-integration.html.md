@@ -477,8 +477,8 @@ Rebuild Neutron database:
       mysql -e 'drop database neutron'
       mysql -e 'create database neutron'
       su -s /bin/sh -c "neutron-db-manage --config-file /etc/neutron/neutron.conf --config-file /etc/neutron/plugins/midonet/midonet.ini upgrade kilo" neutron
-      systemctl restart openstack-nova-api.service openstack-nova-scheduler.service openstack-nova-conductor.service
-      systemctl start neutron-server.service
+      systemctl restart openstack-nova-api openstack-nova-scheduler openstack-nova-conductor
+      systemctl start neutron-server
 
 Restart neutron services:
 
