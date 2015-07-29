@@ -392,6 +392,8 @@ If successful you will see:
 
 Remember to change <host_IP> to the IP of you box.
 
+You can now leave the CLI again by typing `exit` or `ctrl-d`.
+
 ## Integrating Midonet with Packstack
 
 ### Keystone Integration
