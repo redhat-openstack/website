@@ -441,7 +441,7 @@ You can now leave the CLI again by typing `exit` or `ctrl-d`.
       # MidoNet administrative user's tenant
       project_id = services
 
-NOTE: The NEUTRON_DBPASS can be found in your packstack "answers" file in your /root/ directory. You can "cat /root/<packstackAnswersFileName> | grep NEUTRON_DB_PW" to find the password. ALSO NOTE: If you changed your midonet keystone password, please change the password = midonet parameter.
+NOTE: The NEUTRON_DBPASS can be found in your packstack "answers" file in your /root/ directory. You can `grep NEUTRON_DB_PW /root/<packstackAnswersFileName>` to find the password. ALSO NOTE: If you changed your midonet keystone password, please change the password = midonet parameter.
 
 *   6. Create a symbolic link to direct Neutron to the MidoNet configuration:
 
