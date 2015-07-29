@@ -16,38 +16,38 @@ For simplicity, this guide assumes a Packstack All-In-One OpenStack installation
 
 Enable additional RHEL repositories:
 
-      # subscription-manager repos --enable=rhel-7-server-extras-rpms
-      # subscription-manager repos --enable=rhel-7-server-optional-rpms
+      subscription-manager repos --enable=rhel-7-server-extras-rpms
+      subscription-manager repos --enable=rhel-7-server-optional-rpms
 
 Enable the EPEL repository:
 
-      # yum install http://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-5.noarch.rpm
+      yum install http://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-5.noarch.rpm
 
 Enable the RDO Kilo repository:
 
-      # yum install http://rdo.fedorapeople.org/openstack-kilo/rdo-release-kilo.rpm
+      yum install http://rdo.fedorapeople.org/openstack-kilo/rdo-release-kilo.rpm
 
 #### Make your system up-to-date
 
 Install the latest package updates:
 
-      # yum upgrade
+      yum upgrade
 
 #### Reboot your system
 
 Reboot your system to apply the changes:
 
-      # reboot
+      reboot
 
 #### Install Packstack
 
 Run the following command to install Packstack on your system
 
-      # yum install openstack-packstack
+      yum install openstack-packstack
 
 #### Install OpenStack
 
-      $ packstack --allinone
+      packstack --allinone
 
 #### Verify OpenStack installation
 
@@ -61,27 +61,27 @@ Next, we need to SSH into the Packstack system. We need to remove services that 
 
 *   1. Remove the Open vSwitch agent packages
 
-      # yum remove openstack-neutron-openvswitch
+      yum remove openstack-neutron-openvswitch
 
 *   2. Stop and disable the Neutron L3 agent
 
-      # systemctl stop neutron-l3-agent
-      # systemctl disable neutron-l3-agent
+      systemctl stop neutron-l3-agent
+      systemctl disable neutron-l3-agent
 
 *   3. Stop and disable Network Manager
 
-      # systemctl stop NetworkManager
-      # systemctl disable NetworkManager
-      # chkconfig network on
-      # systemctl start network
+      systemctl stop NetworkManager
+      systemctl disable NetworkManager
+      chkconfig network on
+      systemctl start network
 
 *   4. Disable SELinux
 
-      # setenforce permissive
+      setenforce permissive
 
 Edit the SELinux configuration file:
 
-      # vi /etc/selinux/config
+      vi /etc/selinux/config
 
 Change the SELINUX value to "permissive":
 
@@ -95,9 +95,9 @@ Change the SELINUX value to "permissive":
 
 Disable FirewallD and/or iptables:
 
-      # systemctl disable firewalld
+      systemctl disable firewalld
 
-      # systemctl disable iptables
+      systemctl disable iptables
 
 ## Installing MidoNet Components
 
