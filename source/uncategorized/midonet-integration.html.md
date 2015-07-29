@@ -506,7 +506,7 @@ Restart neutron services:
 
 *   3. Restart Libvirt:
 
-      systemctl restart libvirtd.service
+      systemctl restart libvirtd
 
 #### Nova Configuration
 
