@@ -513,11 +513,11 @@ Restart neutron services:
 *   1. Install nova-rootwrap network filters
 
       # yum install openstack-nova-network
-      # systemctl disable openstack-nova-network.service
+      # systemctl disable openstack-nova-network
 
 *   2. Restart nova-compute
 
-      systemctl restart openstack-nova-compute.service
+      systemctl restart openstack-nova-compute
 
 ## Creating Initial Networks and Static Uplink
 
