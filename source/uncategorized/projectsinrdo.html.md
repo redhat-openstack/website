@@ -104,7 +104,7 @@ Ironic is an integrated OpenStack project which aims to provision bare metal mac
 
 *   Homepage: <https://wiki.openstack.org/wiki/Ironic>
 *   Code: <https://github.com/openstack/ironic>
-*   Package Maintainers:
+*   Package Maintainers: dtantsur@redhat.com
 *   Report Bug/Issues: <https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&component=openstack-ironic>
 
 ### Trove
