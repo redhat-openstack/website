@@ -82,6 +82,13 @@ The Ceilometer project aims to become the infrastructure to collect measurements
 *   Package Maintainers: pkilambi@redhat.com
 *   Report Bug/Issues: <https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&component=openstack-ceilometer>
 
+Gnocchi is the project name of a TDBaaS (Time Series Database as a Service) project started under the Ceilometer program umbrella.
+
+*   Homepage: <https://wiki.openstack.org/wiki/Gnocchi>
+*   Code: <https://github.com/openstack/gnocchi>
+*   Package Maintainers: pkilambi@redhat.com
+*   Report Bug/Issues: <https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&component=openstack-gnocchi>
+
 ### Horizon
 
 Horizon is a Django-based project aimed at providing a complete OpenStack Dashboard along with an extensible framework for building new dashboards from reusable components.
