@@ -122,7 +122,7 @@ Sahara aims to provide users with simple means to provision a Hadoop cluster by 
 
 *   Homepage: <https://wiki.openstack.org/wiki/Sahara>
 *   Code: <https://github.com/openstack/sahara>
-*   Package Maintainers:
+*   Package Maintainers: egafford@redhat.com
 *   Report Bug/Issues: <https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&component=openstack-sahara>
 
 ### Tempest
