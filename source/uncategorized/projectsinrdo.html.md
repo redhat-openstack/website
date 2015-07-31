@@ -95,7 +95,7 @@ Horizon is a Django-based project aimed at providing a complete OpenStack Dashbo
 
 *   Homepage: <https://wiki.openstack.org/wiki/Horizon>
 *   Code: <https://github.com/openstack/horizon>
-*   Package Maintainers:
+*   Package Maintainers: mrunge@redhat.com
 *   Report Bug/Issues: <https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&component=openstack-horizon>
 
 ### Ironic
