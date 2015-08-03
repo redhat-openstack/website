@@ -22,14 +22,6 @@ The following are the meetups I'm aware of in the coming weeks where RDO enthusi
 
 If you attend any of these meetups, please take pictures, and send me some. If you blog about the events (and you should), please send me that, too.
 
-*   Tue Jul 28 [OpenStack 5th Birthday & BoD Mingle](http://www.meetup.com/OpenStack-Austin/events/223604418/), Austin, TX, US
-*   Wed Jul 29 [PaaS and Cloud Foundry on OpenStack + demo!](http://www.meetup.com/Vancouver-OpenStack-Meetup/events/223943406/), Vancouver, BC, CA
-*   Wed Jul 29 [SFBay OpenStack #OSSFO Topic: Continuous Infrastructure Insights](http://www.meetup.com/openstack/events/223909078/), San Francisco, CA, US
-*   Wed Jul 29 [Come learn about Cloud-Native Apps with Cloud Foundry and OpenStack.](http://www.meetup.com/Orange-County-Cloud-Foundry-Meetup/events/223460422/), Santa Ana, CA, US
-*   Wed Jul 29 [Work to help people or businesses understand Openstack and Cloud services](http://www.meetup.com/Frederick-MD-OpenStack-Meetup/events/223318157/), Frederick, MD, US
-*   Wed Jul 29 [OpenStack Operation Guide 讀書會](http://www.meetup.com/OpenStack-Taiwan-User-Group/events/224224125/), Taipei, TW
-*   Sat Aug 1 [“OpenStack+”企业实践论坛 开启企业云化之旅【Hosted by EasyStack】](http://www.meetup.com/China-OpenStack-User-Group/events/224145242/), Beijing, CN
-*   Sun Aug 2 [OpenStack UnSummit onSummit = SKI TIME!](http://www.meetup.com/Australian-OpenStack-User-Group/events/222951377/), Sydney, AU
 *   Wed Aug 5 [HP Talk - Doug Hellmann](http://www.meetup.com/openstack-pittsburgh/events/223738597/), Pittsburgh, PA, US
 *   Wed Aug 5 [August Sydney Meetup](http://www.meetup.com/Australian-OpenStack-User-Group/events/220202320/), Sydney, AU
 *   Wed Aug 5 [Minimal OpenStack](http://www.meetup.com/mhvlug/events/223104128/), Poughkeepsie, NY, US
