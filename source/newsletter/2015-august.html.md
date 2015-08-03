@@ -22,7 +22,7 @@ Quick links:
 
 Thanks for being part of the RDO community!
 
-Mailing List Update ===================
+## Mailing List Update
 
 Here's what's been going on in the RDO world since you last heard from me.
 
@@ -44,7 +44,7 @@ RDO Manager, and this has generated quite a bit of discussion, at <https://www.r
 
 upcoming OpenStack Summit in Tokyo. That vote is now closed, and we should see the schedule for that event very soon at <http://openstack.org/summit>
 
-RDO Blogs =========
+## RDO Blogs
 
 There are a number of very prolific bloggers in the RDO community. Each week I try to post the highlights to the mailing list, and you can see those lists here:
 
@@ -81,55 +81,43 @@ Devtest is the upstream way to deploy Openstack with TripleO. In simple words it
 
 CERN's OpenStack cloud runs the Juno release on mainly CentOS 7 hypervisors. Along with previous tuning options described in this blog which can be used on Juno, a number of further improvements have been delivered in Kilo. ... read more at <http://tm3.org/1r>
 
-Meetups and Events ==================
+## Meetups and Events
 
 Each week we post the upcoming OpenStack meetups to the rdo-list mailing list, and also on the RDO website at <http://rdoproject.org/Events> If you have events that you'd like for us to help you publicize, please let me know at rbowen@redhat.com
 
 In the coming months, RDO will have a presence at several other events:
 
-*   OpenStack Day India - August 7th & 8th -
-
-` `[`http://www.meetup.com/Indian-OpenStack-User-Group/events/223574830/`](http://www.meetup.com/Indian-OpenStack-User-Group/events/223574830/)
-
-*   LinuxCon in Seattle - August 17-19 -
-
-` `[`http://events.linuxfoundation.org/events/linuxcon-north-america`](http://events.linuxfoundation.org/events/linuxcon-north-america)
-
-*   LinuxCon in Dublin - October 5-7 -
-
-` `[`http://events.linuxfoundation.org/events/linuxcon-europe`](http://events.linuxfoundation.org/events/linuxcon-europe)
-
-*   OpenStack Summit in Tokyo - October 27-30 -
-
-` `[`https://www.openstack.org/summit/tokyo-2015/`](https://www.openstack.org/summit/tokyo-2015/)
-
+*   OpenStack Day India - August 7th & 8th - <http://www.meetup.com/Indian-OpenStack-User-Group/events/223574830/>
+*   LinuxCon in Seattle - August 17-19 - <http://events.linuxfoundation.org/events/linuxcon-north-america>
+*   LinuxCon in Dublin - October 5-7 - <http://events.linuxfoundation.org/events/linuxcon-europe>
+*   OpenStack Summit in Tokyo - October 27-30 - <https://www.openstack.org/summit/tokyo-2015/>
 *   FOSDEM in Brussels - 30 & 31 January 2016
 
 If you're going to be at any of these events, please drop by and see us.
 
-Keep in touch =============
+## Keep in touch
 
 There's lots of ways to stay in in touch with what's going on in the RDO community. The best ways are ...
 
-WWW
+### WWW
 
-` * RDO - `[`http://rdoproject.org/`](http://rdoproject.org/)
-       * OpenStack Q&A - `[`http://ask.openstack.org/`](http://ask.openstack.org/)` 
+*   RDO - <http://rdoproject.org/>
+*   OpenStack Q&A - <http://ask.openstack.org/>
 
-Mailing Lists:
+### Mailing Lists:
 
-       * rdo-list mailing list - `[`http://www.redhat.com/mailman/listinfo/rdo-list`](http://www.redhat.com/mailman/listinfo/rdo-list)` 
-       * This newsletter - `[`http://www.redhat.com/mailman/listinfo/rdo-newsletter`](http://www.redhat.com/mailman/listinfo/rdo-newsletter)` 
+*   rdo-list mailing list - <http://www.redhat.com/mailman/listinfo/rdo-list>
+*   This newsletter - <http://www.redhat.com/mailman/listinfo/rdo-newsletter>
 
-IRC
+### IRC
 
-       * IRC - #rdo on Freenode.irc.net
-       * Puppet module development - #rdo-puppet
+*   IRC - #rdo on Freenode.irc.net
+*   Puppet module development - #rdo-puppet
 
-Social Media:
+### Social Media:
 
-       * Follow us on Twitter - `[`http://twitter.com/rdocommunity`](http://twitter.com/rdocommunity)` 
-       * Google+ - `[`http://tm3.org/rdogplus`](http://tm3.org/rdogplus)` 
-` * Facebook - `[`http://facebook.com/rdocommunity`](http://facebook.com/rdocommunity)
+*   Follow us on Twitter - <http://twitter.com/rdocommunity>
+*   Google+ - <http://tm3.org/rdogplus>
+*   Facebook - <http://facebook.com/rdocommunity>
 
 Thanks again for being part of the RDO community!
