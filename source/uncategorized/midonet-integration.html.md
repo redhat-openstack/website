@@ -112,7 +112,7 @@ Add this above all ServerAlias:
 
 Run:
 
-      systemctl httpd restart
+      systemctl restart httpd
 
 ## Installing MidoNet Components
 
