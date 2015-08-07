@@ -28,7 +28,6 @@ wiki_last_updated: 2015-08-07
 *   [Setting-up-High-Availability](Setting-up-High-Availability)
 *   [Using ManageIQ on OpenStack](Using ManageIQ on OpenStack)
 *   [RDO Manager Architecture Overview](RDO Manager Architecture Overview)
+*   [Testing RDO with Rally](Testing RDO with Rally)
 
-</div>
-</div>
 <Category:Documentation>
