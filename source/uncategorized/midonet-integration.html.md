@@ -338,10 +338,6 @@ Make sure to replace all of the `<host_IP>` placeholders, to set the port for `r
      privileged="true"
  />
 
-*   5. Configure the port for MidoNet-API. Swift proxy is running by default on port 8080, we need to configure Midonet API to run on a different port (8081). In /etc/tomcat/tomcat.conf add the following:
-
-      CONNECTOR_PORT="8081"
-
 edit /etc/tomcat/server.xml to change the port and add the parameter maxHttpHeaderSize:
 
 `   `<Connector port="8081" protocol="HTTP/1.1"
