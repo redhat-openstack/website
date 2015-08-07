@@ -110,6 +110,10 @@ Add this above all ServerAlias:
 
       ServerAlias *
 
+Run:
+
+      systemctl httpd restart
+
 ## Installing MidoNet Components
 
 ### Adding the MidoNet Repositories
