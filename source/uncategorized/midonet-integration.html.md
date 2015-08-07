@@ -98,6 +98,17 @@ Disable FirewallD and/or iptables:
       systemctl disable firewalld
 
       systemctl disable iptables
+      iptables -L -v
+
+*   6. Fix RDO Horizon bug
+
+Edit the following conf:
+
+       vi /etc/httpd/conf.d/15-horizon_vhost.conf
+
+Add this above all ServerAlias:
+
+      ServerAlias *
 
 ## Installing MidoNet Components
 
