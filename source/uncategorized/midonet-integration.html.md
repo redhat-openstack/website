@@ -338,7 +338,7 @@ Make sure to replace all of the `<host_IP>` placeholders, to set the port for `r
      privileged="true"
  />
 
-edit /etc/tomcat/server.xml to change the port and add the parameter maxHttpHeaderSize:
+edit /etc/tomcat/server.xml to change the connector port and add the parameter maxHttpHeaderSize:
 
 `   `<Connector port="8081" protocol="HTTP/1.1"
                connectionTimeout="20000"
