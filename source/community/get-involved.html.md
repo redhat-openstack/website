@@ -60,7 +60,7 @@ The Puppet modules used in packstack are on [Github](https://github.com/redhat-o
 
 To file bugs against RDO itself, use the [RDO bugzilla](https://bugzilla.redhat.com/enter_bug.cgi?product=RDO).
 
-Participate in the packaging effort by following the [RDO Packaging Documentation](https://openstack.redhat.com/packaging/). Come to our [bi-weekly RDO Packaging Meeting](https://etherpad.openstack.org/p/RDO-Packaging) and the weekly [CentOS Cloud SIG](http://wiki.centos.org/SpecialInterestGroup/Cloud) meeting (15:00 UTC, #centos-devel on Freenode IRC).
+Participate in the packaging effort by following the [RDO Packaging Documentation](https://www.rdoproject.org/packaging/). Come to our [bi-weekly RDO Packaging Meeting](https://etherpad.openstack.org/p/RDO-Packaging) and the weekly [CentOS Cloud SIG](http://wiki.centos.org/SpecialInterestGroup/Cloud) meeting (15:00 UTC, #centos-devel on Freenode IRC).
 
 Contribute any packaging and integration patches via [our contributor mailing list](//www.redhat.com/mailman/listinfo/rdo-list), [fork us on GitHub](//github.com/redhat-openstack), or propose improvements to OpenStack on [the upstream Launchpad page](//launchpad.net/openstack).
 
