@@ -10,41 +10,41 @@ per_page: 12
     %link(href="/blog/tag/#{tagname.downcase}.xml" rel="alternate" title="Atom feed" type="application/atom+xml")
 
 
-- if defined? tagname
+- unless blog.tags.empty?
 
-  %h2
-    Articles tagged '#{tagname}'
+  - if defined? tagname
 
-  - if paginate && num_pages > 1
+    %h1
+      Articles tagged '#{tagname}'
 
-    %p
-      Page #{page_number} of #{num_pages}
-    - if prev_page
-      %p= link_to 'Previous page', prev_page
+    - if paginate && num_pages > 1
 
-  %ul
-    - page_articles.each_with_index do |article, i|
+      %p
+        Page #{page_number} of #{num_pages}
+      - if prev_page
+        %p= link_to 'Previous page', prev_page
 
-      %li
-        = link_to article.title, article
-        %span= article.date.strftime('%b %e')
+    %ul
+      - page_articles.each_with_index do |article, i|
 
-  - if paginate
-    - if next_page
-      %p= link_to 'Next page', next_page
+        %li
+          = link_to article.title, article
+          %span= article.date.strftime('%b %e')
 
-- else
+    - if paginate
+      - if next_page
+        %p= link_to 'Next page', next_page
 
-  :ruby
-    def tag_size count, min, max
-      min_percent, max_percent = 100, 300
+  - else
 
-      size = min_percent + (count - min) * ((max_percent - min_percent) /  [(max - min), 1].max)
+    :ruby
+      def tag_size count, min, max
+        min_percent, max_percent = 100, 300
 
-      "font-size:#{size}%;"
-    end
+        size = min_percent + (count - min) * ((max_percent - min_percent) /  [(max - min),1].max)
 
-  - if blog.tags.count > 0
+        "font-size:#{size}%;"
+      end
 
     %h2 All tags
 
