@@ -67,3 +67,15 @@ site in <data/site.yml>, deployment is one simple command:
 ```
 bundle exec middleman deploy
 ```
+
+
+### Add new features (parsers, etc.)
+
+Simply add a new `gem 'some-gem-here'` line in the `Gemfile` and run
+`bundle install`
+
+
+## More info
+
+For more information, please check the excellent
+[Middleman documentation](https://middlemanapp.com/basics/install/).
