@@ -57,14 +57,12 @@ After getting it how you want, you can build the static site by running:
 
 ### Setting up deployment
 
-FIXME: Right now, please reference data/site.yml
+FIXME: Right now, please reference <data/site.yml>
 
 ### Actual deployment
 
-You'll need to be added to the `osasteam` group on OpenShift and have
-your public key added to your profile.
-
-Afterward, deployment is a simple single command:
+After copying your public key to the remote server and configuring your
+site in <data/site.yml>, deployment is one simple command:
 
 ```
 bundle exec middleman deploy
