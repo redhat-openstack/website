@@ -10,7 +10,11 @@ per_page: 12
     %link(href="/blog/tag/#{tagname.downcase}.xml" rel="alternate" title="Atom feed" type="application/atom+xml")
 
 
-- unless blog.tags.empty?
+- if blog.tags.empty?
+
+  %h2 No tags found
+
+- else
 
   - if defined? tagname
 
@@ -54,7 +58,3 @@ per_page: 12
     .tag-cloud
       - blog.tags.sort_by {|tag_name, d| tag_name.downcase}.each do |tag_name, tag_data|
         %span.tag= link_to tag_name, "/blog/tag/#{tag_name.parameterize.downcase}/", style: tag_size(tag_data.count, min_size, max_size)
-
-  - else
-
-    %h2 No tags found
