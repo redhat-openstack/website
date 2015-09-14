@@ -12,12 +12,12 @@ If you're writing about RDO, or about OpenStack on CentOS, Fedora or RHEL, and y
 
 > I have been working with container technology since September 2014, sorting out how they are useful in the context of OpenStack.  This led to my involvement in the Kolla project, a project to containerize OpenStack as well as Magnum, a project to provide containers as a service.  Containers are super useful as  an upgrade tool for OpenStack, and the main topic of this blog post.
 
-... Read more at http://tm3.org/blog84
+... Read more at [http://tm3.org/blog84](http://tm3.org/blog84)
 
 
 **Notes from a talk on “Advanced snapshots with libvirt and QEMU”**, by Kashyap Chamarthy
 
 > I just did a talk at a small local conference (Infrastructure.Next, co-located with cfgmgmtcamp.eu) about Advanced Snapshots in libvirt and QEMU.
 
-... Read more at http://tm3.org/blog85
+... Read more at [http://tm3.org/blog85](http://tm3.org/blog85)
 
