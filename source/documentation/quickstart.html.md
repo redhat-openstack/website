@@ -33,14 +33,6 @@ These instructions are to install the current ("**Kilo**") release.
 
 **Hardware:** Machine with at least 4GB RAM, processors with hardware virtualization extensions, and at least one network adapter.
 
-In case your system is running with NetworkManager, you need to disable it. (See [bz1117277](https://bugzilla.redhat.com/show_bug.cgi?id=1117277) for discussion of why.)
-
-Stop and disable NetworkManager:
-
-    systemctl stop NetworkManager
-    systemctl disable NetworkManager
-    systemctl enable network
-
 Make sure devices are named properly for the network daemon: i.e. the following line must be present in `/etc/sysconfig/network-scripts/ifcfg-<interface_name>`
 
     DEVICE="<interface_name>"
