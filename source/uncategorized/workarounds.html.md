@@ -74,7 +74,7 @@ Copy the /etc/yum.repos.d/rdo-testing.repo file from the AIO to the 2nd node and
 
 ##### symptoms
 
-Can't re-login to Horizon after timeout. "ValidationError" on browzer and log file
+Can't re-login to Horizon after timeout. "ValidationError" on browser and log file
 
 ##### workaround
 
