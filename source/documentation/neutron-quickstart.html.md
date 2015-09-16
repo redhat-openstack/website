@@ -6,16 +6,14 @@ wiki_category: Documentation
 wiki_title: Neutron-Quickstart
 wiki_revision_count: 37
 wiki_last_updated: 2015-04-01
+layout: pullheadings
 ---
 
 # Neutron-Quickstart
 
 {:.no_toc}
 
-<div class="bg-boxes bg-boxes-single">
-<div class="row">
-<div class="offset3 span8">
-#### This document is no longer relevant. Just use the [Quickstart](Quickstart).
+### This document is no longer relevant. Just use the [Quickstart](Quickstart).
 
 ------------------------------------------------------------------------
 
@@ -25,23 +23,13 @@ Deploying RDO is a quick and easy process. Setting up an OpenStack Grizzly cloud
 
 Below, we'll explain how to set up OpenStack on a single server. You'll be able to [add more nodes](Adding_a_compute_node) to your OpenStack cloud later, if you choose.
 
-</div>
-</div>
-<div class="row">
-<div class="offset3 span8 pull-s">
-### Step 0: Prerequisites
+## Step 0: Prerequisites
 
-<div class="row">
-<div class="span4">
 **Software:** Red Hat Enterprise Linux (RHEL) 6.4, or the equivalent version of one of the RHEL-based Linux distributions such as CentOS, Scientific Linux, etc., or Fedora 18 or later. See also [ RDO repository info](Repositories) for details on required repositories. Start from a minimal installation.
 
-</div>
-<div class="span4">
 **Hardware:** Machine with at least 2GB RAM, processors with hardware virtualization extensions, and at least one network adapter.
 
-</div>
-</div>
-### Step 1: Software repositories
+## Step 1: Software repositories
 
 Run the following command:
 
@@ -60,11 +48,11 @@ Due to the quantum/neutron rename, SELinux policies are currently broken for Hav
 
 (NOTE: In production setups, it's strongly recommended to run SELinux in *enforcing* mode.)
 
-### Step 2: Install Packstack Installer
+## Step 2: Install Packstack Installer
 
     sudo yum install -y openstack-packstack python-netaddr
 
-### Step 3: Run Packstack to install OpenStack
+## Step 3: Run Packstack to install OpenStack
 
 Packstack takes the work out of manually setting up OpenStack. For a single node OpenStack deployment, run the following command.
 

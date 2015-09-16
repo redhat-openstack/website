@@ -4,20 +4,18 @@ authors: eglynn
 wiki_title: HowToTest/Ceilometer/H/AlarmAggregation
 wiki_revision_count: 1
 wiki_last_updated: 2013-10-23
+layout: pullheadings
 ---
 
 # Alarm Aggregation
 
 {:.no_toc}
 
-<div class="bg-boxes bg-boxes-single">
-<div class="row">
-<div class="offset3 span8 pull-s">
 ## Aggregation over multiple alarm states
 
 Upstream [blueprint](https://blueprints.launchpad.net/ceilometer/+spec/alarming-logical-combination) .
 
-### Prerequisites
+## Prerequisites
 
 Install `packstack --allinone`, then spin up an instance in the usual way.
 
@@ -32,7 +30,7 @@ Ensure the ceilometer alarm services are installed and running:
        export CEILO_ALARM_SVCS='evaluator notifier'
        for svc in $CEILO_ALARM_SVCS; do sudo service openstack-ceilometer-alarm-$svc start; done
 
-### Step 1.
+## Step 1.
 
 Create multiple basic alarms with thresholds sufficiently low that they are guaranteed to go into alarm:
 
@@ -45,7 +43,7 @@ Create multiple basic alarms with thresholds sufficiently low that they are guar
           --query resource_id=$INSTANCE_ID
        done
 
-### Step 2.
+## Step 2.
 
 Create a meta-alarm combining (with logical AND) the state of these basic alarms:
 
@@ -57,7 +55,7 @@ Ensure that this combination alarm transitions into the alarm state within one e
 
        sleep 60 ; ceilometer alarm-list | grep combination_cpu_low
 
-### Step 3.
+## Step 3.
 
 Create another set of basic alarms with thresholds sufficiently high that they are guaranteed not to go into alarm:
 
@@ -70,7 +68,7 @@ Create another set of basic alarms with thresholds sufficiently high that they a
           --query resource_id=$INSTANCE_ID
        done
 
-### Step 4.
+## Step 4.
 
 Create two further meta-alarms combining (with logical AND & OR respectively) the state of these basic alarms:
 
@@ -83,5 +81,3 @@ Ensure that this combination alarms transition into the alarm and ok state (for 
 
        sleep 60 ; ceilometer alarm-list | grep combination_cpu_mixed
 
-</div>
-</div>
