@@ -4,6 +4,7 @@ authors: gfidente, mburns, pixelbeat, sdake, tosky
 wiki_title: Bugzilla ownership
 wiki_revision_count: 12
 wiki_last_updated: 2014-08-07
+wiki_warnings: table
 ---
 
 # Bugzilla ownership
