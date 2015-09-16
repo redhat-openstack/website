@@ -16,6 +16,9 @@ everyone isn't encountering the same problems.
 
  * rbowen (Rich Bowen) - Test matrix, promotion, website stuff
 
+Update this page by submitting pull requests to [this
+repo](https://github.com/redhat-openstack/website).
+
 ## Prerequisites
 
 We plan to have have packages for the following platforms:
