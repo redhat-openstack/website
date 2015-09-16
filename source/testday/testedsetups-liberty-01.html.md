@@ -6,11 +6,11 @@ wiki_warnings: table
 
 # TestedSetups 2015 01
 
-Tested Setups for [rdo-test-day-liberty](RDO_test_day_Liberty). 
+Tested Setups for [RDO test day Liberty 1](/testday/rdo-test-day-liberty-01). 
 Tests should be executed against
 the Liberty RDO not Liberty, some steps from the official Quickstart guide
 do not apply to Liberty; make sure to follow the steps described in the
-[rdo-test-day-liberty#How_To_Test](How_To_Test) page instead.
+[How To Test](/testday/rdo-test-day-liberty-01#how-to-test) page instead.
 
 ## Example Entry
 
