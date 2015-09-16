@@ -27,7 +27,7 @@ Here's how you might fill out an entry once you've tested it. Mark a given test 
 Please make sure to use the steps described in the [[ RDO_test_day_Liberty#How_To_Test ]]  when installing the base RDO system. Do not go through the Quickstart steps unmodified which will instead give you an RDO kilo deployment. 
 
 | Config Name | Release | BaseOS | Status | HOWTO | Who | Date | BZ/LP | Notes Page
-
+|----------------------------------------------------------------|------------------|-----------|----------------------------------------------|-----------------------------------------------------|--------|------------|--------------------------------------------------------------------|------------|
 | All-in-One - Sanity |  | CentOS 7 |   | [/QuickStart](Quickstart) |  |    |    | 
 
 | |   | |  F22 |  | [[QuickStart]] |  |  |  | 
