@@ -44,10 +44,10 @@ You'll want a fresh install with latest updates installed.
 The things that should be tested are listed on the [Tested Setups](TestedSetups_2015_01) page.
 
 * Pick an item from the list
-* Go through the scenario as though you were a beginner, just following the instructions. (Check the [[Workarounds_2015_01 | Workarounds]] page for problems that others may have encountered and resolved.)
+* Go through the scenario as though you were a beginner, just following the instructions. (Check the [workarounds](Workarounds_2015_01) page for problems that others may have encountered and resolved.)
 * KEEP GOOD NOTES. You can use https://etherpad.openstack.org/p/rdo_test_day_sep_2015 for these notes. Reviewing other peoples' notes may help you avoid problems that they've already encountered.
 * Compare your results to the CI results @ http://trunk.rdoproject.org/f22/report.html
-* Execute the openstack test suite tempest @ [[Testing Liberty using Tempest]] 
+* Execute the openstack test suite tempest @ [Testing Liberty using Tempest](/uncategorized/testing-liberty-using-tempest/)
 
 If you have problems with any of the tests, report a bug to [Bugzilla](https://bugzilla.redhat.com) usually for one of the 
 [openstack-packstack](https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&component=openstack-packstack), 
