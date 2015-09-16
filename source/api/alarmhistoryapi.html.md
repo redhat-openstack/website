@@ -5,18 +5,16 @@ authors: eglynn
 wiki_title: HowToTest/Ceilometer/H/AlarmHistoryAPI
 wiki_revision_count: 2
 wiki_last_updated: 2013-10-23
+layout: pullheadings
 ---
 
 {:.no_toc}
 
-<div class="bg-boxes bg-boxes-single">
-<div class="row">
-<div class="offset3 span8 pull-s">
 # Alarm audit/history API
 
 Upstream [blueprint](https://blueprints.launchpad.net/ceilometer/+spec/alarm-audit-api).
 
-### Prerequistes
+## Prerequistes
 
 Install packstack allinone, then spin up an instance in the usual way.
 
@@ -25,7 +23,7 @@ Ensure the compute agent is gathering metrics at a reasonable cadence (every 60s
        sudo sed -i '/^ *name: cpu_pipeline$/ { n ; s/interval: 600$/interval: 60/ }' /etc/ceilometer/pipeline.yaml
        sudo service openstack-ceilometer-compute restart
 
-### Step 1.
+## Step 1.
 
 Create an alarm with a threshold sufficiently low that it's guaranteed to go into alarm:
 
@@ -35,19 +33,19 @@ Create an alarm with a threshold sufficiently low that it's guaranteed to go int
           --alarm-action 'log://' \
           --query resource_id=$INSTANCE_ID
 
-### Step 2.
+## Step 2.
 
 Update the alarm:
 
        ceilometer alarm-update --threshold 75.0 -a $ALARM_ID
 
-### Step 3.
+## Step 3.
 
 Wait a while, then delete the alarm:
 
        sleep 120 ; ceilometer alarm-delete -a $ALARM_ID
 
-### Step 3.
+## Step 3.
 
 Ensure that the alarm-history reports the following events:
 
@@ -74,5 +72,3 @@ Ensure that the alarm-history reports the following events:
        |                  |                            | rule: cpu_util > 75. during 1 x 60sc  |
        +------------------+----------------------------+---------------------------------------+
 
-</div>
-</div>

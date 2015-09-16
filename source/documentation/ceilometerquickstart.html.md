@@ -6,13 +6,11 @@ wiki_category: Documentation
 wiki_title: CeilometerQuickStart
 wiki_revision_count: 43
 wiki_last_updated: 2014-11-26
+layout: pullheadings
 ---
 
 {:.no_toc}
 
-<div class="bg-boxes bg-boxes-single">
-<div class="row">
-<div class="offset3 span8 pull-s">
 # Ceilometer Quickstart
 
 This guide is intended to get you up and running quickly with Ceilometer:
@@ -25,7 +23,7 @@ This guide is intended to get you up and running quickly with Ceilometer:
 
 *This guide is predicated on at least the Havana final version of the packages being used, i.e. openstack-ceilometer-2013.2-1 or later (as the service start-up instructions for older versions of the packages from the H cycle would differ somewhat).*
 
-### Prerequisites
+## Prerequisites
 
 The general prerequisites are identical to the [Havana QuickStart](QuickStartLatest), and in fact if you follow that guide right now you will end up with Ceilometer installed by default once your `packstack` run completes .
 
@@ -38,7 +36,7 @@ However, if you are installing on a resource-constrained VM, some prior setup ca
          sudo service mongod status
          sudo service mongod stop
 
-### Verification
+## Verification
 
 Once your `packstack` run is complete, you're probably eager to verify that Ceilometer is properly installed and working it should.
 
@@ -60,11 +58,11 @@ For your peace of mind, ensure that there are no errors in the Ceilometer logs a
 
        for svc in $CEILO_SVCS ; do sudo grep ERROR /var/log/ceilometer/${svc}.log ; done
 
-### Basic Concepts
+## Basic Concepts
 
 Getting up to speed with Ceilometer involves getting to grips a few basic concepts and terms.
 
-#### Meters
+### Meters
 
 Meters simply measure a particular aspect of resource usage (e.g. the existence of a running instance) or of ongoing performance (e.g. the current CPU utilization % for that instance). As such meters exist per-resource, in that there is a separate `cpu_util` meter for example for each instance. The lifecycle of meters is also decoupled from the existence of the related resources, in the sense that the meter continues to exist *after* the resource has been terminated. While that may seem strange initially, think about how otherwise you could avoid being billed simply by shutting down all your instances the day before your cloud provider kicks off their monthly billing run!
 
@@ -72,11 +70,11 @@ All meters have a string name, a unit of measurement, and a type indicating whet
 
 In earlier iterations of Ceilometer, we often used 'counter' as a synonym for 'meter', and this usage though now deprecated persists in some older documentation and deprecated aspects of the command line interpreter.
 
-#### Samples
+### Samples
 
 Sample are simply individual datapoints associated with a particular meter. As such, all samples encompass the same attributes as the meter itself, but with the addition of a timestamp and and a value (otherwise known as the sample 'volume').
 
-#### Statistics
+### Statistics
 
 If a sample is a single datapoint, then a statistic is a set of such datapoints aggregates over a time duration. Ceilometer currently employs 5 different aggregation functions:
 
@@ -90,7 +88,7 @@ If a sample is a single datapoint, then a statistic is a set of such datapoints 
 
 Also there is some potential confusion in there being both a duration *and* a period associated with these statistics. The duration is simply the overall time-span over which a single query applies, whereas the period is the time-slice length into which this duration is divided for aggregation purposes. So for example, if I was interested in the hourly average CPU utilization over a day, I would provide midnight-to-midnight start and end timestamps on my query giving a duration of 24 hours, while also specifying a period of 3600 seconds to indicate that the finegrained samples should be aggregated over each hour within that day.
 
-#### Pipelines
+### Pipelines
 
 Pipelines are composed of a metering data source that produces certain enumerated or wildcarded meters at a certain cadence, which are fed through a chain of zero or more transformers to massage the data in various ways, before being emitted to the collector via a publisher.
 
@@ -108,7 +106,7 @@ Example of transformers shipped with Ceilometer include:
 
 These pipelines are configured via a YAML file which is explained in detail below.
 
-#### Alarms
+### Alarms
 
 Alarms are a new feature in Ceilometer for Havana intended to provide user-oriented Monitoring-as-a-Service for Openstack, with Heat autoscaling being the main motivating use-case, but also having general purpose utility. Essentially an alarm is just a set of rules defining a monitor, plus a current state, with edge-triggered actions associated with target states. These alarms follow a tri-state model of `ok`, `alarm`, and `insufficient data`.
 
@@ -122,11 +120,11 @@ We also support the concept of a meta-alarm, which aggregates over the current s
 
 A key associated concept is the notion of *dimensioning* which defines the set of matching meters that feed into an alarm evaluation. Recall that meters are per-resource-instance, so in the simplest case an alarm might be defined over a particular meter applied to *all* resources visible to a particular user. More useful however would the option to explicitly select which specific resources we're interested in alarming on. On one extreme we would have narrowly dimensioned alarms where this selection would have only a single target (identified by resource ID). On the other extreme, we'd have widely dimensioned alarms where this selection identifies many resources over which the statistic is aggregated, for example all instances booted from a particular image or all instances with matching user metadata (the latter is how Heat identifies autoscaling groups).
 
-### Configuration
+## Configuration
 
 The shipped Ceilometer configuration is intended to be usable out-of-the-box. However, there are a few tweaks you may want to make while exploring Ceilometer functionality.
 
-#### Pipeline configuration
+### Pipeline configuration
 
 The pipeline definitions are read by default from `/etc/ceilometer/pipeline.yaml` though this location may be overridden via the `pipeline_cfg_file` config option (for example to allow different ceilometer services use different pipelines.
 
@@ -176,7 +174,7 @@ An example modification would be something like increasing the cadence of `cpu_u
 
 Note that we only need to restart the `compute` and not the `central` even though both share the same pipeline config by default, because the particular meter impacted by the change is only gathered by the former agent.
 
-#### Service configuration
+### Service configuration
 
 The service configuration is read by default from two sources, via the same pattern as you've encountered with the other openstack services in RDO:
 
@@ -191,7 +189,7 @@ As always, you can choose to manually edit this file or else use the convenient 
 
 to set the logging level to debug as opposed to the default warning. As always, services must be restarted for config changes to take effect.
 
-### Exploring with the CLI
+## Exploring with the CLI
 
 First ensure that the latest version of CLI package is installed:
 
@@ -226,7 +224,7 @@ Wait for that instance to become active and we're good to go!
 
        watch 'nova show test_instance'
 
-#### Displaying meters
+### Displaying meters
 
 Individual meters are displayed via the CLI `meter-list` command:
 
@@ -262,7 +260,7 @@ The syntax of that `--query` (or `-q`) option is common across several CLI comma
 
 which are translated by the CLI to a sequence of [WSME](//pypi.python.org/pypi/WSME) query parameters.
 
-#### Displaying datapoints
+### Displaying datapoints
 
 Individual datapoints for a particular meter name are displayed via the CLI `samples-list` command:
 
@@ -297,7 +295,7 @@ Note that the samples relate to multiple resources (assuming more than one insta
 
 to restrict the query to samples for a particular instance that occurred within the specified half hour time window,
 
-#### Aggregating statistics
+### Aggregating statistics
 
 Individual datapoints for a particular meter may be aggregated into consolidated statistics via the CLI `statistics` command:
 
@@ -325,7 +323,7 @@ Individual datapoints for a particular meter may be aggregated into consolidated
        | ...[snip]
        +--------+--------------+------------+-------+-----+-----+-----+-----+----------+----------------+----
 
-#### Using alarms
+### Using alarms
 
 Before creating any alarms, ensure that the relevant Ceilometer alarming services are running:
 
@@ -431,7 +429,7 @@ or deleted permanently:
 
       $ ceilometer alarm-delete -a ALARM_ID
 
-### Exploring the metering store
+## Exploring the metering store
 
 Ceilometer uses `mongodb` by default to store metering data, though alternative pluggable storage drivers are also provided for sqlalchemy, db2 and HBase. Only the `mongodb` storage driver is considered feature-complete at this time, so this is the recommended choice for production.
 
@@ -504,6 +502,4 @@ Say for example you wanted to see how much variance in CPU utilization there has
 
 We leave it as an exercise for the reader to compare the aggregate values directly calculated above in the partial results (sum, count) with those reported via the statistics API.
 
-</div>
-</div>
 <Category:Documentation>

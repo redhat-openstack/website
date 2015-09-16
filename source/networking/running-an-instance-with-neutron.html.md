@@ -6,13 +6,11 @@ wiki_category: Networking
 wiki_title: Running an instance with Neutron
 wiki_revision_count: 14
 wiki_last_updated: 2013-12-18
+layout: pullheadings
 ---
 
 {:.no_toc}
 
-<div class="bg-boxes bg-boxes-single">
-<div class="row">
-<div class="offset3 span8 pull-s">
 # Running an Instance
 
 ### Step 1: Visit the Dashboard

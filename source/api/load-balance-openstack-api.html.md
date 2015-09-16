@@ -5,28 +5,26 @@ authors: djschaap, rohara
 wiki_title: Load Balance OpenStack API
 wiki_revision_count: 11
 wiki_last_updated: 2013-09-13
+layout: pullheadings
 ---
 
 {:.no_toc}
 
-<div class="bg-boxes bg-boxes-single">
-<div class="row">
-<div class="offset3 span8 pull-s">
 # Load-Balancing OpenStack API Services
 
 When running each of the OpenStack API services on a single controller node, there exists not only a single point of failure but also a potential bottleneck. This guide will show how to manually deploy additional OpenStack controller nodes and configure HAProxy to load-balance each OpenStack API service. In addition, keepalived will be used to provide high availability for the HAProxy load-balancer.
 
-### Prerequisites
+## Prerequisites
 
 This guide assumes that OpenStack has been deployed on a single node via the packstack installer. See the RDO QuickStart guide for more information.
 
-### Overview
+## Overview
 
 The general approach is to install and configure the load-balancer nodes, followed by deploying the additional OpenStack controller nodes. This may seem backwards, but it is better to configure our OpenStack controller nodes after our virtual IP address is active.
 
 Note that in the example given in this guide the load-balancer is not co-located on the OpenStack controller nodes. While it may be possible to merge the load-balancer and controller nodes, it requires extra care to ensure that HAProxy and the various OpenStack API services are not listening on the same ports.
 
-### Configure Load-Balancer Nodes
+## Configure Load-Balancer Nodes
 
 The first step is select two or more nodes that will serve as load-balancer nodes. Each of these nodes will run both haproxy and keepalived. In our example there will be three load-balancer nodes.
 
@@ -44,7 +42,7 @@ Login to each of the load-balancer nodes and install both keepalived and haproxy
 
     # yum install keepalived haproxy
 
-#### HAProxy
+### HAProxy
 
 To configure the load-balancer, begin by editing the HAProxy configuration file /etc/haproxy/haproxy.cfg. In the example below shows a very simple haproxy.cfg file that defines a proxy for each OpenStack API service. Each proxy has a frontend and a backend. The frontend will define the IP address and port on which HAProxy will listen, as well that the default backend. A proxy's backend defines the pool of servers which traffic will be load-balanced across using a specific algorithm.
 
@@ -154,7 +152,7 @@ Notice that each server declaration has "check inter 10s" appended. This instruc
 
 The haproxy.cfg file should be identical on each of the load-balancer nodes, so copy that file to the all other load-balancer nodes.
 
-#### Keepalived
+### Keepalived
 
 Before we start the HAProxy service on our load-balancer nodes, configure keepalived. In our example, keepalived will be used to provide high-availability for our HAProxy load-balancer. Without keepalived, HAProxy would be a single point of failure.
 
@@ -209,11 +207,11 @@ With both keepalived and haproxy configured on each node, enable and start each 
 
 At this point both services should be running on each node. The node with the highest priority should own the virtual IP address and HAProxy should be ready to load-balance traffic for our OpenStack API services to our controller nodes once they are configured.
 
-### Configure OpenStack Controller Nodes
+## Configure OpenStack Controller Nodes
 
 The next step is to deploy additional OpenStack controller nodes and configure them to use our virtual IP address. The easiest way to do this is install the required packages on the additional controller nodes, edit the appropriate configuration files on the original single-node deployment, and finally copy the configuration files to the new controller nodes. When copying OpenStack configuration files between nodes, take care that the files have the correct owner, group and permissions.
 
-#### Keystone
+### Keystone
 
 On the new controller nodes, install the OpenStack Keystone service:
 
@@ -251,7 +249,7 @@ On the original controller node, restart the OpenStack Keystone service:
 
     # service openstack-keystone restart
 
-#### Quantum
+### Quantum
 
 On the new controller nodes, install the OpenStack Quantum service and the appropriate L2 plugin:
 
@@ -299,7 +297,7 @@ On the original controller node, restart the OpenStack Quantum service:
 
     # service quantum-server restart
 
-#### Glance
+### Glance
 
 On the new controller nodes, install the OpenStack Glance service:
 
@@ -340,7 +338,7 @@ On the original controller node, restart the OpenStack Glance API and registry s
     # service openstack-glance-registry restart
     # service openstack-glance-api restart
 
-#### Nova
+### Nova
 
 On the new controller nodes, install the OpenStack Nova service and the Cinder client:
 
@@ -378,7 +376,7 @@ On the original controller node, restart the OpenStack Nova service:
 
     # service openstack-nova-api restart
 
-#### Cinder
+### Cinder
 
 On the new controller nodes, install the OpenStack Cinder service:
 
@@ -404,7 +402,7 @@ One the original controller node, restart the OpenStack Cinder service:
 
     # service openstack-cinder-api restart
 
-### Create Service Endpoints
+## Create Service Endpoints
 
 Now that the OpenStack services running on multiple controller nodes and the load-balancer nodes are listening on our virtual IP address, return to the original OpenStack node and recreate our service endpoints. This is necessary so that endpoint discovery will direct clients to the virtual IP address.
 
@@ -430,7 +428,7 @@ Next, get the list of service endpoint from keystone:
 
 Notice that each URL for a given endpoint points to the original OpenStack controller node. In our example, this is 10.15.85.141. In order to load-balancer the OpenStack services, create a new endpoint for each service. Each URL for the new endpoints should point to the virtual IP address, which is 10.15.85.31 in our example.
 
-#### Keystone
+### Keystone
 
 Create a new endpoint for the Keystone service that points to our virtual IP address:
 
@@ -454,7 +452,7 @@ Delete the old endpoint for the Keystone service:
     # keystone endpoint-delete ca8676494d73487397f9223432cb8d07
     Endpoint has been deleted.
 
-#### Quantum
+### Quantum
 
 Create a new endpoint for the Quantum service that points to our virtual IP address:
 
@@ -478,7 +476,7 @@ Delete the old endpoint for the Quantum service:
     # keystone endpoint-delete d3bc590da84042cb8f4df4296550d689
     Endpoint has been deleted.
 
-#### Glance
+### Glance
 
 Create a new endpoint for the Glance service that points to our virtual IP address:
 
@@ -502,7 +500,7 @@ Delete the old endpoint for the Glance service:
     # keystone endpoint-delete f66323395c394322b2e20fee63777927
     Endpoint has been deleted.
 
-#### Nova
+### Nova
 
 Create a new endpoint for the Nova (compute) service that points to our virtual IP address:
 
@@ -548,7 +546,7 @@ Delete the old endpoint for the Nova (EC2) service:
     # keystone endpoint-delete b51a4af8149b479b8856db85c6ea41ba
     Endpoint has been deleted.
 
-#### Cinder
+### Cinder
 
 Create a new endpoint for the Cinder (volume) service that points to our virtual IP address:
 
@@ -572,7 +570,7 @@ Delete the old endpoint for the Cinder (volume) service:
     # keystone endpoint-delete 0b52480b89964721bc2fc59cc41ad16c
     Endpoint has been deleted.
 
-### Conclusion
+## Conclusion
 
 The final step is to edit the keystone_adminrc file on the client node(s). Specifically, change the OS_AUTH_URL variable such that is points to the virtual IP address:
 

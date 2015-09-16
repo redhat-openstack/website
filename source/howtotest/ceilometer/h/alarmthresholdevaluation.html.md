@@ -4,20 +4,18 @@ authors: eglynn
 wiki_title: HowToTest/Ceilometer/H/AlarmThresholdEvaluation
 wiki_revision_count: 2
 wiki_last_updated: 2013-10-23
+layout: pullheadings
 ---
 
 # Alarm Threshold Evaluation
 
 {:.no_toc}
 
-<div class="bg-boxes bg-boxes-single">
-<div class="row">
-<div class="offset3 span8 pull-s">
 ## Alarm threshold evaluation logic capable of wide scaling
 
 Upstream [blueprint](https://blueprints.launchpad.net/ceilometer/+spec/alarm-distributed-threshold-evaluation)
 
-### Prerequisites
+## Prerequisites
 
 Install `packstack --allinone`, and also on an additional compute node.
 
@@ -26,7 +24,7 @@ Ensure the compute agent is gathering metrics at a reasonable cadence (every 60s
        sudo sed -i '/^ *name: cpu_pipeline$/ { n ; s/interval: 600$/interval: 60/ }' /etc/ceilometer/pipeline.yaml
        sudo service openstack-ceilometer-compute restart
 
-### Step 1.
+## Step 1.
 
 Ensure the ceilometer-alarm-evaluator and ceilometer-alarm-notifier services are running on the controller node:
 
@@ -35,7 +33,7 @@ Ensure the ceilometer-alarm-evaluator and ceilometer-alarm-notifier services are
        export CEILO_ALARM_SVCS='evaluator notifier'
        for svc in $CEILO_ALARM_SVCS; do sudo service openstack-ceilometer-alarm-$svc restart; done
 
-### Step 2.
+## Step 2.
 
 Ensure a second ceilometer-alarm-evaluator service is running on the compute node:
 
@@ -44,13 +42,13 @@ Ensure a second ceilometer-alarm-evaluator service is running on the compute nod
        export CEILO_ALARM_SVCS='evaluator'
        for svc in $CEILO_ALARM_SVCS; do sudo service openstack-ceilometer-alarm-$svc start; done
 
-### Step 3.
+## Step 3.
 
 Spin up an instance in the usual way:
 
        nova boot --image $IMAGE_ID --flavor 1 test_instance
 
-### Step 4.
+## Step 4.
 
 Create multiple alarms with thresholds sufficiently low that they are guaranteed to go into alarm:
 
@@ -63,7 +61,7 @@ Create multiple alarms with thresholds sufficiently low that they are guaranteed
           --query resource_id=$INSTANCE_ID
        done
 
-### Step 5.
+## Step 5.
 
 Ensure that the alarms are partitioned over the multiple evaluators:
 
@@ -74,13 +72,13 @@ On each host, expect approximately half the alarms to be evaluated, i.e.
 
        '... initiating evaluation cycle on 5 alarms'
 
-### Step 6.
+## Step 6.
 
 Ensure all alarms have transitioned to the 'alarm' state:
 
        ceilometer alarm-list
 
-### Step 7.
+## Step 7.
 
 Create some more alarms:
 
@@ -101,7 +99,7 @@ and ensure that the alarm allocation is still roughly even between the evaluatio
 
        tail -f /var/log/alarm-evaluator.log | grep 'initiating evaluation cycle'
 
-### Step 8.
+## Step 8.
 
 Shutdown the partitioned ceilometer alarm service on each host:
 
@@ -112,7 +110,7 @@ then restart on the controller host \*only\* with the singleton evaluator:
        sudo openstack-config --set /etc/ceilometer/ceilometer.conf alarm evaluation_service ceilometer.alarm.service.SingletonAlarmService 
        sudo service openstack-ceilometer-alarm-evaluator start
 
-### Step 9.
+## Step 9.
 
 Reset all alarms to the 'ok' state and ensure that they flip back to 'alarm':
 
@@ -123,5 +121,3 @@ Reset all alarms to the 'ok' state and ensure that they flip back to 'alarm':
        
        sleep 60 ; ceilometer alarm-list
 
-</div>
-</div>
