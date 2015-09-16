@@ -1,0 +1,50 @@
+# Liberty Test Day 1
+
+We will be holding a RDO test day on September 23rd and 24th, 2015. This will be coordinated through the #rdo channel on Freenode, and through this wiki and the rdo-list mailing list.
+
+We'll be testing the second Icehouse milestone release. If you can do any testing on your own ahead of time, that will help ensure that everyone isn't encountering the same problems.
+
+##  Who's Participating
+
+ * rbowen (Rich Bowen) - Test matrix, promotion, wiki stuff
+
+## Prerequisites
+
+We plan to have have packages for the following platforms:
+
+* Fedora 22
+* RHEL 7
+* CentOS 7
+
+You'll want a fresh install with latest updates installed. (Fresh so that there's no hard-to-reproduce interactions with other things.)
+
+## How To Test
+
+<pre>
+cd /etc/yum.repos.d/
+sudo wget http://trunk.rdoproject.org/centos7/delorean-deps.repo
+sudo wget http://trunk.rdoproject.org/centos7/current/delorean.repo
+</pre>
+TODO point to a Delorean snapshot which passed CI
+
+* Check for any [[Workarounds_2015_01 | Workarounds]] required for your platform before the main installation
+* For Packstack based deployment start at step 2 of -- http://openstack.redhat.com/Quickstart#Step_2:_Install_Packstack_Installer
+* For RDO-Manager based installs, _____________
+
+### Test cases and results
+
+The things that should be tested are listed on the [[TestedSetups_2015_01|Tested Setups]] page.
+
+* Pick an item from the list
+* Go through the scenario as though you were a beginner, just following the instructions. (Check the [[Workarounds_2015_01 | Workarounds]] page for problems that others may have encountered and resolved.)
+* KEEP GOOD NOTES. You can use https://etherpad.openstack.org/p/rdo_test_day_sep_2015 for these notes. Reviewing other peoples' notes may help you avoid problems that they've already encountered.
+* Compare your results to the CI results @ http://trunk.rdoproject.org/f22/report.html
+* Execute the openstack test suite tempest @ [[Testing Liberty using Tempest]] 
+
+If you have problems with any of the tests, report a bug to [https://bugzilla.redhat.com](Bugzilla) usually for one of the 
+[https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&component=openstack-packstack](openstack-packstack), 
+[https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&component=openstack-nova](openstack-nova), [https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&component=openstack-glance](openstack-glance), [https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&component=openstack-keystone](openstack-keystone), [https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&component=openstack-cinder](openstack-cinder),
+[https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&component=openstack-neutron](openstack-neutron), [https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&component=openstack-swift](openstack-swift),  [https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&component=python-django-horizon](python-django-horizon), [https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&component=openstack-heat](openstack-heat) or [https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&component=openstack-ceilometer](openstack-ceilometer) components. If you are unsure about exactly how to file the report or what other information to include, just ask on IRC (#rdo, freenode.net)  and we will help you.
+
+Once you have completed the tests, add your results to the table on the [testedsetups-2015-01](TestedSetups) page, following the examples already there. Be sure to check the [workarounds-2015-01](Workarounds) page for things that may have already have fixes or workarounds.
+
