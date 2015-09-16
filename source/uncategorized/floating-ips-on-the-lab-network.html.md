@@ -8,7 +8,7 @@ wiki_last_updated: 2013-08-26
 
 # Floating IPs on the Lab Network
 
-__NOTOC__
+{:.no_toc}
 
 <div class="alert">
 Draft in progress

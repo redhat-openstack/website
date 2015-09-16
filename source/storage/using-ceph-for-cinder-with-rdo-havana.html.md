@@ -10,7 +10,7 @@ wiki_last_updated: 2015-03-13
 
 # Using Ceph for Cinder with RDO Havana
 
-__NOTOC__
+{:.no_toc}
 
 Ceph® is an open-source project capable of providing both object and block storage to RDO Havana. See [Block Devices and Open Stack](http://ceph.com/docs/master/rbd/rbd-openstack/) for additional details.
 

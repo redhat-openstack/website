@@ -8,7 +8,7 @@ wiki_last_updated: 2013-12-02
 
 # Securing services
 
-__NOTOC__
+{:.no_toc}
 
 ## Overview
 

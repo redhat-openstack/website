@@ -8,7 +8,7 @@ wiki_last_updated: 2013-10-23
 
 # Units Rate Of Change Conversion
 
-__NOTOC__
+{:.no_toc}
 
 <div class="bg-boxes bg-boxes-single">
 <div class="row">

@@ -8,7 +8,7 @@ wiki_revision_count: 14
 wiki_last_updated: 2013-12-18
 ---
 
-__NOTOC__
+{:.no_toc}
 
 <div class="bg-boxes bg-boxes-single">
 <div class="row">

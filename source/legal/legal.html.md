@@ -10,7 +10,7 @@ wiki_last_updated: 2013-04-13
 
 # Legal
 
-__NOTOC__
+{:.no_toc}
 
 ## Copyright
 

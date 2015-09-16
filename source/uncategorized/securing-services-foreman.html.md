@@ -8,7 +8,7 @@ wiki_last_updated: 2014-02-20
 
 # Securing Services Foreman
 
-__NOTOC__
+{:.no_toc}
 
 ## Overview
 

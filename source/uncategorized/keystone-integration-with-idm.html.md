@@ -8,7 +8,7 @@ wiki_last_updated: 2014-04-17
 
 # Keystone integration with IDM
 
-__NOTOC__
+{:.no_toc}
 
 ## Overview
 

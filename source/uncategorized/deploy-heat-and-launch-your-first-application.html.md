@@ -8,7 +8,7 @@ wiki_last_updated: 2013-10-01
 
 # Deploy Heat and launch your first Application
 
-__NOTOC__
+{:.no_toc}
 
 ## Deploy OpenStack Heat on RDO Grizzly
 

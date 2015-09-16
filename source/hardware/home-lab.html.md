@@ -10,7 +10,7 @@ wiki_last_updated: 2015-03-09
 
 # Home lab
 
-__NOTOC__
+{:.no_toc}
 
 ## Hardware for a home lab
 

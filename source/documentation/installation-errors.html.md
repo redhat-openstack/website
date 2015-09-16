@@ -8,7 +8,7 @@ wiki_revision_count: 4
 wiki_last_updated: 2014-03-21
 ---
 
-__NOTOC__
+{:.no_toc}
 
 # Installation issues
 

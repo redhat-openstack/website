@@ -8,7 +8,7 @@ wiki_last_updated: 2014-02-25
 
 # Virtualized Foreman dev setup
 
-__NOTOC__
+{:.no_toc}
 
 __TOC__
 

@@ -10,7 +10,7 @@ wiki_last_updated: 2014-06-27
 
 # Scratch
 
-__NOTOC__
+{:.no_toc}
 
 <div class="row">
 <div class="offset1 span10">

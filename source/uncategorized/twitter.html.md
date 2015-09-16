@@ -8,7 +8,7 @@ wiki_last_updated: 2014-06-27
 
 # Twitter
 
-<noinclude>__NOTOC__ This widget allows you to embed a **[Twitter feed](http://twitter.com/widgets/html_widget)** (HTML version) on your wiki page.
+<noinclude>{:.no_toc} This widget allows you to embed a **[Twitter feed](http://twitter.com/widgets/html_widget)** (HTML version) on your wiki page.
 
 Created by [Sergey Chernyshev](http://www.mediawikiwidgets.org/User:Sergey_Chernyshev)
 

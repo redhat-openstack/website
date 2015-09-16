@@ -10,7 +10,7 @@ wiki_last_updated: 2015-07-16
 
 #  starting from scratch with Havana
 
-__NOTOC__
+{:.no_toc}
 
 ## Introduction
 

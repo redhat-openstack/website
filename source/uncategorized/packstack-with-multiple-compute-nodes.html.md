@@ -8,7 +8,7 @@ wiki_last_updated: 2013-08-20
 
 # Packstack with Multiple Compute nodes
 
-__NOTOC__
+{:.no_toc}
 
 Draft! Work In Progress!
 

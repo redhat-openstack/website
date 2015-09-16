@@ -10,7 +10,7 @@ wiki_last_updated: 2015-04-01
 
 # Neutron-Quickstart
 
-__NOTOC__
+{:.no_toc}
 
 <div class="bg-boxes bg-boxes-single">
 <div class="row">

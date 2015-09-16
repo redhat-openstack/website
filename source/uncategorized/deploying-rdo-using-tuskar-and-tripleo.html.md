@@ -8,7 +8,7 @@ wiki_last_updated: 2014-09-15
 
 # Deploying RDO using Tuskar and TripleO
 
-__NOTOC__
+{:.no_toc}
 
 <div class="bg-boxes bg-boxes-single">
 <div class="row">

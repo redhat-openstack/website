@@ -10,7 +10,7 @@ wiki_last_updated: 2013-12-19
 
 # Networking
 
-__NOTOC__
+{:.no_toc}
 
 (See Also: [:Category:Networking](:Category:Networking))
 

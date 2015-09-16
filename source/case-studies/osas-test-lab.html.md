@@ -10,7 +10,7 @@ wiki_last_updated: 2013-04-11
 
 # OSAS test lab
 
-__NOTOC__
+{:.no_toc}
 
 ## Red Hat's Open Source and Standards team test lab
 
