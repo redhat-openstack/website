@@ -107,17 +107,17 @@
   Highly Available MySQL server for OpenStack: uncategorized/highly-available-mysql-server-for-openstack
   Floating IPs on the Lab Network: uncategorized/floating-ips-on-the-lab-network
   Events: event/events
-  RDO Test Day September 2013: uncategorized/rdo-test-day-september-2013
+  RDO Test Day September 2013: testday/rdo-test-day-september-2013
   HA OpenStack API: api/ha-openstack-api
   Highly Available MySQL server: uncategorized/highly-available-mysql-server
   Highly Available MySQL server on OpenStack: uncategorized/highly-available-mysql-server-on-openstack
   Heat: uncategorized/heat
-  TestedSetups: uncategorized/testedsetups
+  TestedSetups: testday/testedsetups
   Deploying RDO using Foreman: uncategorized/deploying-rdo-using-foreman
   Securing services: uncategorized/securing-services
-  Test Day 09 2013: uncategorized/test-day-09-2013
+  Test Day 09 2013: testday/test-day-09-2013
   TripleO images: uncategorized/tripleo-images
-  Workarounds: uncategorized/workarounds
+  Workarounds: testday/workarounds
   RDO videos: uncategorized/rdo-videos
   Deploying Heat on Havana: uncategorized/deploying-heat-on-havana
   Deploy an application with Heat: uncategorized/deploy-an-application-with-heat
@@ -125,7 +125,7 @@
   Clients: needsupdate/clients
   Neutron with existing external network: uncategorized/neutron-with-existing-external-network
   Difference between Floating IP and private IP: networking/difference-between-floating-ip-and-private-ip
-  RDO Test Day October 2013: uncategorized/rdo-test-day-october-2013
+  RDO Test Day October 2013: testday/rdo-test-day-october-2013
   LaunchHeatApplication: uncategorized/launchheatapplication
   Configuring Neutron with OVS and GRE Tunnels using quickstack: uncategorized/configuring-neutron-with-ovs-and-gre-tunnels-using-quickstack
   GettingStartedHavana w GRE: uncategorized/gettingstartedhavana-w-gre
@@ -177,17 +177,17 @@
   Docs/Misc: documentation/misc
   Category:Networking: networking/index
   Using VXLAN Tenant Networks: networking/using-vxlan-tenant-networks
-  RDO test day January 2014: uncategorized/rdo-test-day-january-2014
-  TestedSetups 2014 01: uncategorized/testedsetups-2014-01
+  RDO test day January 2014: testday/rdo-test-day-january-2014
+  TestedSetups 2014 01: testday/testedsetups-2014-01
   Using ThinLVM for Cinder with RDO Havana: uncategorized/using-thinlvm-for-cinder-with-rdo-havana
-  Workarounds 2014 01: uncategorized/workarounds-2014-01
+  Workarounds 2014 01: testday/workarounds-2014-01
   Using Swift for Glance with RDO Havana: uncategorized/using-swift-for-glance-with-rdo-havana
   Using GlusterFS for Cinder with RDO Havana: uncategorized/using-glusterfs-for-cinder-with-rdo-havana
   DeveloperTips: needsupdate/developertips
   Using GlusterFS for Glance with RDO Havana: uncategorized/using-glusterfs-for-glance-with-rdo-havana
   Tests/Storage/Cinder: tests/storage/cinder
   Tests/Storage/Glance: tests/storage/glance
-  RDO test day January 2014 Metadata: uncategorized/rdo-test-day-january-2014-metadata
+  RDO test day January 2014 Metadata: testday/rdo-test-day-january-2014-metadata
   Using NFS for Cinder with RDO: uncategorized/using-nfs-for-cinder-with-rdo
   Using Ceph for block storage with RDO: uncategorized/using-ceph-for-block-storage-with-rdo
   Modular Layer 2 (ML2) Plugin: uncategorized/modular-layer-2-(ml2)-plugin
@@ -198,18 +198,18 @@
   LBaaS: uncategorized/lbaas
   LBaaS Havana: uncategorized/lbaas-havana
   CentOS: uncategorized/centos
-  RDO test day Icehouse milestone 2: uncategorized/rdo-test-day-icehouse-milestone-2
+  RDO test day Icehouse milestone 2: testday/rdo-test-day-icehouse-milestone-2
   Bugzilla ownership: uncategorized/bugzilla-ownership
   Hangouts: uncategorized/hangouts
-  TestedSetups 2014 02: uncategorized/testedsetups-2014-02
-  Workarounds 2014 02: uncategorized/workarounds-2014-02
+  TestedSetups 2014 02: testday/testedsetups-2014-02
+  Workarounds 2014 02: testday/workarounds-2014-02
   TripleO VM Setup: uncategorized/tripleo-vm-setup
   RabbitMQ: uncategorized/rabbitmq
   IRC etiquette: uncategorized/irc-etiquette
   OpenDaylight integration: uncategorized/opendaylight-integration
   HangoutPlaceholder: uncategorized/hangoutplaceholder
   MariaDB Galera: uncategorized/mariadb-galera
-  RDO test day Icehouse milestone 3: uncategorized/rdo-test-day-icehouse-milestone-3
+  RDO test day Icehouse milestone 3: testday/rdo-test-day-icehouse-milestone-3
   HA Architecture: uncategorized/ha-architecture
   Deploying Multi Node Overcloud Using TripleO And Tuskar: uncategorized/deploying-multi-node-overcloud-using-tripleo-and-tuskar
   User stories: uncategorized/user-stories
@@ -251,15 +251,15 @@
   Juno previews: uncategorized/juno-previews
   Newsletter/2014 August: newsletter/2014-august
   Newsletter/2014 September: newsletter/2014-september
-  RDO test day Juno milestone 3: uncategorized/rdo-test-day-juno-milestone-3
+  RDO test day Juno milestone 3: testday/rdo-test-day-juno-milestone-3
   Test: uncategorized/test
-  RDO test day Juno milestone 3 test cases: uncategorized/rdo-test-day-juno-milestone-3-test-cases
+  RDO test day Juno milestone 3 test cases: testday/rdo-test-day-juno-milestone-3-test-cases
   Post Installation Tests: uncategorized/post-installation-tests
   TryStackDocker: uncategorized/trystackdocker
   TryStack: uncategorized/trystack
   Using Ceph for Glance with RDO: uncategorized/using-ceph-for-glance-with-rdo
   Using Dell EqualLogic for Cinder with RDO: uncategorized/using-dell-equallogic-for-cinder-with-rdo
-  Workaround archive: uncategorized/workaround-archive
+  Workaround archive: testday/workaround-archive
   Post installation bugs: uncategorized/post-installation-bugs
   Organize-a-meetup: uncategorized/organize-a-meetup
   Newsletter/2014 October: newsletter/2014-october
@@ -268,7 +268,7 @@
   Newsletter/2014 November: newsletter/2014-november
   Brochures: uncategorized/brochures
   MidoNet integration: uncategorized/midonet-integration
-  Workaround for newtron installtion error: uncategorized/workaround-for-newtron-installtion-error
+  Workaround for newtron installtion error: testday/workaround-for-newtron-installtion-error
   Neutron GBP: uncategorized/neutron-gbp
   Ironic: uncategorized/ironic
   Ironic Developer Quick-Start: uncategorized/ironic-developer-quick-start
@@ -294,10 +294,10 @@
   Newsletter/2015 April: newsletter/2015-april
   Newsletter/2015 March: newsletter/2015-march
   Using provider networks: uncategorized/using-provider-networks
-  RDO test day Kilo: uncategorized/rdo-test-day-kilo
-  RDO test day Kilo RC milestone test cases: uncategorized/rdo-test-day-kilo-rc-milestone-test-cases
+  RDO test day Kilo: testday/rdo-test-day-kilo
+  RDO test day Kilo RC milestone test cases: testday/rdo-test-day-kilo-rc-milestone-test-cases
   Newsletter/2015 May: newsletter/2015-may
-  RDO-Manager test day Kilo: uncategorized/rdo-manager-test-day-kilo
+  RDO-Manager test day Kilo: testday/rdo-manager-test-day-kilo
   Node/add: node/add
   Newsletter/2015 June: newsletter/2015-june
   ProjectsInRDO: uncategorized/projectsinrdo
