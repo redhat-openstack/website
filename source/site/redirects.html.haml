@@ -75,8 +75,8 @@ index: false
       - $processed.each do |item|
         %tr
           %td
-            %a{href: "http://ovirt.org/#{item[:orig]}", target: "_blank"}
-              %span.fa-external-link{title: "view the link on oVirt.org", target: "_blank"}
+            %a{href: "http://#{data.site.domain}/#{item[:orig]}", target: "_blank"}
+              %span.fa-external-link{title: "view the link on #{data.site.domain}", target: "_blank"}
 
           %td
             %a{href: item[:mw_path], title: "local link — should be remapped to new path via Apache .htaccess rules", target: "_blank"}
