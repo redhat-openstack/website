@@ -6,6 +6,7 @@ wiki_category: Hardware
 wiki_title: Home lab
 wiki_revision_count: 12
 wiki_last_updated: 2015-03-09
+wiki_warnings: table
 ---
 
 # Home lab

@@ -6,6 +6,7 @@ authors: ajeain, apevec, berendt, bkopilov, dbaxps, ekuris, eyepv6, iovadia, itz
 wiki_title: RDO test day Kilo RC milestone test cases
 wiki_revision_count: 67
 wiki_last_updated: 2015-05-12
+wiki_warnings: table
 ---
 
 # RDO test day Kilo RC milestone test cases
