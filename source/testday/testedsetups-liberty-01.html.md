@@ -11,6 +11,10 @@ the Liberty RDO not Liberty, some steps from the official Quickstart guide
 do not apply to Liberty; make sure to follow the steps described in the
 [How To Test](/testday/rdo-test-day-liberty-01#how-to-test) page instead.
 
+For convenience, during the test day, please feel free to use [the test
+day etherpad](https://etherpad.openstack.org/p/rdo_test_day_sep_2015),
+which we'll use to periodically update this page.
+
 ## Example Entry
 
 Here's how you might fill out an entry once you've tested it. Mark a given test "Good" or "Fail", as appropriate, and link to any tickets that you've opened as a result, and to any place where you've written up your test notes. Mark as Workaround if you have a failure but can get past it. Link to your writeup of the workaround.
