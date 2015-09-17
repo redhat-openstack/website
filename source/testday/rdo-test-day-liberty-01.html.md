@@ -8,7 +8,7 @@ We will be holding a RDO test day on September 23rd and 24th, 2015.
 This will be coordinated through the #rdo channel on Freenode, and 
 through this website and the rdo-list mailing list.
 
-We'll be testing the second Icehouse milestone release. If you can do
+We'll be testing the second Liberty milestone release. If you can do
 any testing on your own ahead of time, that will help ensure that 
 everyone isn't encountering the same problems.
 
