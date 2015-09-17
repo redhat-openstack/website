@@ -6,7 +6,6 @@ authors: acalinciuc, derekh, dron, gdubreui, jayg, jdennis, jlibosva, jruzicka, 
 wiki_title: TestedSetups
 wiki_revision_count: 134
 wiki_last_updated: 2014-01-06
-wiki_warnings: table
 ---
 
 # Tested Setups

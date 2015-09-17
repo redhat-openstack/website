@@ -1,7 +1,6 @@
 ---
 title: TestedSetups Liberty 1
 authors: rbowen
-wiki_warnings: table
 ---
 
 # TestedSetups 2015 01
