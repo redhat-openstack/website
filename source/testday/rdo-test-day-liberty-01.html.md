@@ -8,7 +8,7 @@ We will be holding a RDO test day on September 23rd and 24th, 2015.
 This will be coordinated through the #rdo channel on Freenode, and 
 through this website and the rdo-list mailing list.
 
-We'll be testing the second Icehouse milestone release. If you can do
+We'll be testing the second Liberty milestone release. If you can do
 any testing on your own ahead of time, that will help ensure that 
 everyone isn't encountering the same problems.
 
@@ -39,7 +39,7 @@ You'll want a fresh install with latest updates installed.
 **TODO** point to a Delorean snapshot which passed CI
 
 * Check for any [workarounds](/testday/workarounds-liberty-01) required for your platform before the main installation
-* For Packstack based deployment start at step 2 of -- http://openstack.redhat.com/Quickstart#Step_2:_Install_Packstack_Installer
+* For Packstack based deployment start at step 2 of -- [packstack-quickstart](http://openstack.redhat.com/Quickstart#Step_2:_Install_Packstack_Installer)
 * For RDO-Manager based installs, *doc goes here* **TODO**
 
 ### Test cases and results
@@ -48,8 +48,8 @@ The things that should be tested are listed on the [Tested Setups](/testday/test
 
 * Pick an item from the list
 * Go through the scenario as though you were a beginner, just following the instructions. (Check the [workarounds](/testday/workarounds-liberty-01) page for problems that others may have encountered and resolved.)
-* KEEP GOOD NOTES. You can use https://etherpad.openstack.org/p/rdo_test_day_sep_2015 for these notes. Reviewing other peoples' notes may help you avoid problems that they've already encountered.
-* Compare your results to the CI results @ http://trunk.rdoproject.org/f22/report.html
+* KEEP GOOD NOTES. You can use [etherpad rdo_test_day_sep_2015](https://etherpad.openstack.org/p/rdo_test_day_sep_2015) for these notes. Reviewing other peoples' notes may help you avoid problems that they've already encountered.
+* Compare your results to the CI results @ [rdoproject f22 CI report](http://trunk.rdoproject.org/f22/report.html)
 * Execute the openstack test suite tempest @ [Testing Liberty using Tempest](/uncategorized/testing-liberty-using-tempest/)
 
 If you have problems with any of the tests, report a bug to [Bugzilla](https://bugzilla.redhat.com) usually for one of the 
