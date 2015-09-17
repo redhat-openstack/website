@@ -97,10 +97,8 @@ General openstack tests
 | All-in-one Nova tests         | RDO Kilo | RHEL7.1    |        |                                              |          |      | Packstack + nova sanity                                  |                                           |
 | All-in-one Nova tests         | RDO Kilo | Centos7.1  |        |                                              |          |      |                                                          |                                           |
 |                               | RDO Kilo | Fedora 21  |        |                                              |          |      |                                                          |                                           |
-
 | 2.node Nova tests             | RDO Kilo | RHEL7.1    |        |                                              |          |      | Packstack + nova live migration (block / shared storage) |                                           |
 |                               | RDO Kilo | Fedora 21  |        |                                              |          |      |                                                          |                                           |
-
 |                               | RDO Kilo | Centos7.1  |        | <span style="background:#00ff00">Good</span> | stoner   |      |                                                          | still requires selinux in permissive mode |
 
 ## Manual configuration of OpenStack

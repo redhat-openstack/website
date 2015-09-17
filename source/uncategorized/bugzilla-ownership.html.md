@@ -61,7 +61,7 @@ wiki_warnings: table
 | python-openstackclient        | Jacob Ruzicka           | Yaniv Eylon            |                  |
 | python-oslo-config            | Pádraig Brady           | Ami Jeain              |                  |
 | python-pecan                  | RHOS Maint              | Ami Jeain              |                  |
-| python-prettytable            | Pádraig Brady           | Ami Jeain              | |-Giulio Fidente |
+| python-prettytable            | Pádraig Brady           | Ami Jeain              | Giulio Fidente   |
 | python-quantumclient          | Jacob Ruzicka           | Ofer Blaut             |                  |
 | python-saharaclient           | RHOS Maint              | Luigi Toscano          |                  |
 | python-ironicclient           | Jacob Ruzicka           | Ofer Blaut             |                  |
@@ -70,3 +70,7 @@ wiki_warnings: table
 | python-webob                  | RHOS Maint              | Ami Jeain              |                  |
 | python-webtest                | Pádraig Brady           | Ami Jeain              |                  |
 | python-wsme                   | Pádraig Brady           | Ami Jeain              |                  |
+
+
+TAGS: needs-update
+
