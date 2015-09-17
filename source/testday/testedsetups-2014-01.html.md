@@ -7,7 +7,6 @@ authors: amuller, bcrochet, cgirda, dron, edu, flaper87, gfidente, ihrachys, jar
 wiki_title: TestedSetups 2014 01
 wiki_revision_count: 132
 wiki_last_updated: 2014-02-21
-wiki_warnings: table
 ---
 
 # TestedSetups 2014 01

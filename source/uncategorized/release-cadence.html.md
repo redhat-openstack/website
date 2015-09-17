@@ -4,7 +4,6 @@ authors: apevec, kashyap, larsks
 wiki_title: Release-Cadence
 wiki_revision_count: 6
 wiki_last_updated: 2015-03-18
-wiki_warnings: table
 ---
 
 # Release-Cadence
