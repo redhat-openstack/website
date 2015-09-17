@@ -4,6 +4,11 @@ This page documents workarounds that may be required for installing
 RDO Liberty. This page is associated with the 
 [RDO Liberty test day 1](/testday/rdo-test-day-liberty-01).
 
+For convenience, during the test day, please feel free to use [the test
+day etherpad](https://etherpad.openstack.org/p/rdo_test_day_sep_2015),
+which we'll use to periodically update this page.
+
+
 ## Active Workarounds
 
 ### Example 1 ###
