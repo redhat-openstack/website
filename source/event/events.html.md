@@ -21,35 +21,28 @@ The following are the meetups I'm aware of in the coming weeks where RDO enthusi
 
 If you attend any of these meetups, please take pictures, and send me some. If you blog about the events (and you should), please send me that, too.
 
-* Mon Sep 14 [http://www.meetup.com/GlusterFS-Silicon-Valley/events/224932563/ GlusterFS Meetup is Back!], Mountain View, CA, US
-* Mon Sep 14 [http://www.meetup.com/OpenStackDC/events/223978615/ Extensibility in OpenStack Swift and what you can do with it! (#25)], Washington, DC, US
-* Tue Sep 15 [http://www.meetup.com/OpenStack-Belgium-Meetup/events/224736832/ Open Source Strategist & OpenStack Project Leader@HP visiting Belgium], Antwerpen, BE
-* Wed Sep 16 [http://www.meetup.com/nycnetworkers/events/225239982/ OpenStack and ACI], New York, NY, US
-* Wed Sep 16 [http://www.meetup.com/OpenStack-New-York-Meetup/events/224928160/ An Evening Of OpenStack With Swift PTL (SwiftStack), Arista Networks & Coho Data], New York, NY, US
-* Wed Sep 16 [http://www.meetup.com/OpenStack-Austin/events/224238339/ Special OpenStack Meetup: CHECK this out and BE THERE!], Austin, TX, US
-* Wed Sep 16 [http://www.meetup.com/Openstack-Brasil/events/225010609/ 6º Hangout OpenStack Brasil], Porto Alegre, BR
-* Thu Sep 17 [http://www.meetup.com/Openstack-Amsterdam/events/223038288/ OpenStack Benelux Conference 2015], Amsterdam, NL
-* Thu Sep 17 [http://www.meetup.com/Arista-Networks-Pittsburgh-Meetup/events/223834208/ OpenStack Open Source Solutions], Pittsburgh, PA, US
-* Thu Sep 17 [http://www.meetup.com/openstack-pdx/events/224572482/ OpenStack PDX Meetup - Open SDN Panel], Portland, OR, US
-* Thu Sep 17 [http://www.meetup.com/Philly-OpenStack-Meetup-Group/events/224928227/ An Evening Of OpenStack With Arista Networks and Coho Data], Philadelphia, PA, US
-* Thu Sep 17 [http://www.meetup.com/Arista-Warriors-Independence-Philadelphia-PA/events/223834085/ OpenStack Solutions - Date Changed to 9/17 Co-Hosting w OpenStack Philly], Philadelphia, PA, US
-* Thu Sep 17 [http://www.meetup.com/Openstack-Boston/events/225057400/ September OpenStack Meetup - Storage Double Header Event!!], Boston, MA, US
-* Thu Sep 17 [http://www.meetup.com/Athens-OpenStack-User-Group/events/225038590/ Deploying OpenStack with Ansible], Athens, GR
-* Thu Sep 17 [http://www.meetup.com/openstack/events/223231183/ SFBay OpenStack Advanced Meetup: OpenStack Networking for Multi-Hypervisor DCs], San Francisco, CA, US
-* Thu Sep 17 [http://www.meetup.com/openstack-atlanta/events/224885995/ OpenStack Meetup (Topic TBD)], Atlanta, GA, US
-* Sun Sep 20 [http://www.meetup.com/docker-Chennai/events/225203090/ Docker Global Hack Day #3], Chennai, IN
-* Mon Sep 21 [http://www.meetup.com/OpenStack-GDL/events/224087006/ OpenStack Development Process - Monty Taylor], Guadalajara, MX
-* Mon Sep 21 [http://www.meetup.com/Silicon-Valley-OpenStack-Ops-Meetup/events/225127012/ Come learn about OpenStack Operations from Platform9], San Jose, CA, US
-* Tue Sep 22 [http://www.meetup.com/China-OpenStack-User-Group/events/224963576/ 化繁为简 点铁成金：海云捷迅OpenStack企业私有云实战公开课召开在即，约吗？], Beijing, CN
-* Tue Sep 22 [http://www.meetup.com/OpenStackDC/events/224954102/ OpenStack, Bi-modal IT & Ceph (#26)], Washington, DC, US
-* Wed Sep 23 [http://www.meetup.com/OpenStack-Finland-User-Group/events/225087536/ OpenStackFin and DevOps User Groups' meetup], Helsinki, FI
-* Wed Sep 23 [http://www.meetup.com/OpenStack-Hungary-Meetup-Group/events/225198785/ OpenStack 2015 September], Budapest, HU
-* Wed Sep 23 [http://www.meetup.com/Orlando-Central-Florida-OpenStack-Meetup/events/224917186/ OpenStack Central Florida is a go!], Orlando, FL, US
-* Thu Sep 24 [http://www.meetup.com/openstack-utah/events/224939158/ How Adobe Built an OpenStack Cloud], Herriman, UT, US
-* Thu Sep 24 [http://www.meetup.com/OpenStack-Czech-User-Group-Meetup/events/222955580/ OpenStack Howto part 6 - Storage/Telemetry], Prague, CZ
-* Thu Sep 24 [http://www.meetup.com/OpenStack-Denver/events/224948248/ Discuss and Learn about OpenStack], Littleton, CO, US
-* Thu Sep 24 [http://www.meetup.com/OpenStack-STL/events/225111289/ OpenStack DNS as as Service - Designate], Chesterfield, MO, US
-
+* Mon Sep 21 [Joint Meetup: Triangle OpenStack & Triangle Bluemix](http://www.meetup.com/Triangle-OpenStack-Meetup/events/225367959/), Durham, NC, US
+* Mon Sep 21 [OpenStack Development Process - Monty Taylor](http://www.meetup.com/OpenStack-GDL/events/224087006/), Guadalajara, MX
+* Mon Sep 21 [Come learn about OpenStack Operations from Platform9](http://www.meetup.com/Silicon-Valley-OpenStack-Ops-Meetup/events/225127012/), San Jose, CA, US
+* Tue Sep 22 [化繁为简 点铁成金：海云捷迅OpenStack企业私有云实战公开课召开在即，约吗？](http://www.meetup.com/China-OpenStack-User-Group/events/224963576/), Beijing, CN
+* Tue Sep 22 [Bi-modal IT & OpenStack (#26)](http://www.meetup.com/OpenStackDC/events/224954102/), Washington, DC, US
+* Wed Sep 23 [OpenStackFin and DevOps User Groups' meetup](http://www.meetup.com/OpenStack-Finland-User-Group/events/225087536/), Helsinki, FI
+* Wed Sep 23 [OpenStack 2015 September](http://www.meetup.com/OpenStack-Hungary-Meetup-Group/events/225198785/), Budapest, HU
+* Wed Sep 23 [OpenStack Central Florida is a go!](http://www.meetup.com/Orlando-Central-Florida-OpenStack-Meetup/events/224917186/), Orlando, FL, US
+* Thu Sep 24 [How Adobe Built an OpenStack Cloud](http://www.meetup.com/openstack-utah/events/224939158/), Herriman, UT, US
+* Thu Sep 24 [OpenStack Howto part 6 - Storage/Telemetry](http://www.meetup.com/OpenStack-Czech-User-Group-Meetup/events/222955580/), Prague, CZ
+* Thu Sep 24 [Cisco UCS Director and OpenStack](http://www.meetup.com/The-Chicago-Cisco-Systems-Meetup-Group/events/225123811/), Chicago, IL, US
+* Thu Sep 24 [OpenStack mit Kubernetes, Ceph & Docker Apps](http://www.meetup.com/OpenStack-X/events/219719012/), Köln, DE
+* Thu Sep 24 [Discuss and Learn about OpenStack](http://www.meetup.com/OpenStack-Denver/events/224948248/), Littleton, CO, US
+* Thu Sep 24 [OpenStack DNS as as Service - Designate](http://www.meetup.com/OpenStack-STL/events/225111289/), Chesterfield, MO, US
+* Thu Sep 24 [Deploying OpenStack with Ansible](http://www.meetup.com/Athens-OpenStack-User-Group/events/225038590/), Athens, GR
+* Thu Sep 24 [Elastic L4-L7 Services for OpenStack. The September OpenStack L.A. Meetup](http://www.meetup.com/OpenStack-LA/events/225213471/), Pasadena, CA, US
+* Mon Sep 28 [Meetup#16 Métriques dans OpenStack avec Gnocchi et Ceilometer](http://www.meetup.com/OpenStack-France/events/225227112/), Paris, FR
+* Tue Sep 29 [OpenStack Rhône-Alpes Meet-up #7: Outils de déploiement](http://www.meetup.com/OpenStack-Rhone-Alpes/events/220405945/), Lyon, FR
+* Tue Sep 29 [Cloud Storage in OpenStack](http://www.meetup.com/Frederick-MD-OpenStack-Meetup/events/224922940/), Frederick, MD, US
+* Thu Oct  1 [October OpenStack Meetup - SDN and Containers](http://www.meetup.com/meetup-group-NjZdcegA/events/225081881/), Chicago, IL, US
+* Thu Oct  1 [OpenStack Meetup Cluj](http://www.meetup.com/OpenStackRomania/events/222910344/), Cluj-Napoca, RO
+* Thu Oct  1 [South Bay OpenStack Meetup, Beginner track](http://www.meetup.com/openstack/events/221806052/), San Francisco, CA, US
 See also the [openstack.org events listing](http://www.openstack.org/community/events/).
 
 Support your local [OpenStack user group](https://wiki.openstack.org/wiki/OpenStack_User_Groups)
