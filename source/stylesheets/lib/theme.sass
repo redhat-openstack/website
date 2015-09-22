@@ -127,8 +127,8 @@ body.mediawiki
     padding: 24px
     background: none
 
-#branding, .hero-unit:first-child
-  background: black url(/images/bg-lens.jpg) no-repeat fixed top center
+#branding, .hero-unit
+  background: #111 url(/images/bg-lens.jpg) no-repeat fixed top center
   background-size: 100%
 
 #branding
@@ -243,14 +243,14 @@ body > section
   padding-bottom: 8rem
 
 .bg-boxes
-  background: url(/images/bg-boxes.png) repeat-y 14.75% 0
+  background: url(/images/bg-boxes.png) repeat-y 12vw 0
   /* Overcome #bodyContent
   margin-bottom: -16rem // Also needs to offset bodyContent padding
   padding-bottom: 8rem
   overflow: hidden
 
 .bg-boxes-single
-  background: url(/images/bg-boxes-single.png) repeat-y 11.4% 0
+  background: url(/images/bg-boxes-single.png) repeat-y 11vw 0
 
 #footer
   background-color: #222222
@@ -258,7 +258,6 @@ body > section
   color: #eeeeee
 
 .hero-unit
-  background: #111111
   color: white
   border-radius: 0
   padding: 0
@@ -298,7 +297,8 @@ body > section
     min-width: 177px
     width: 40%
     min-height: 186px
-    background: no-repeat url(/images/intro-stack.png) 50% 100%
+    background: no-repeat url(/images/intro-stack.png) 12vw 100%
+    //background: url(/images/bg-boxes.png) repeat-y 14.75% 0
     position: absolute
     bottom: 6px
     left: 0
@@ -363,6 +363,9 @@ body > section
 /* Some trickiness for the faint red lines behind the headers
 
 #bodyContent
+  $offsetWidth: 33.3333333vw
+  $blocksWidth: 12vw
+  $pullWidth: $offsetWidth - $blocksWidth
   .block-heading h2
     position: relative
 
@@ -394,40 +397,70 @@ body > section
       z-index: 0
 
   .pull-s h2
-    margin-left: -22.5%
-    padding-left: 22.5%
+    $offset-s: -115px
+    margin-left: calc(-#{$pullWidth} - #{$offset-s})
+    padding-left: calc(#{$pullWidth} + #{$offset-s})
 
   .pull-m h2
-    margin-left: -30.3%
-    padding-left: 30.3%
+    $offset-m: -55px
+    margin-left: calc(-#{$pullWidth} - #{$offset-m})
+    padding-left: calc(#{$pullWidth} + #{$offset-m})
 
   .pull-l h2
-    margin-left: -38.2%
-    padding-left: 38.2%
+    $offset-l: 5px
+    margin-left: calc(-#{$pullWidth} - #{$offset-l})
+    padding-left: calc(#{$pullWidth} + #{$offset-l})
 
   .bg-boxes
+    .row, h4, h5, h6
+      line-height: 20px
+
+    h1, h2, h3
+      line-height: 40px
+
+    p + pre
+      /* Needs to align to 20px rythm for blocks; pre has 5px margin by default
+      margin-top: 15px
+
+    ul, li
+      line-height: 20px
+
+    ul, ol
+      margin: 10px 0
+
     &:not(.bg-boxes-single)
       .block-heading
         @extend .col-sm-7
         @extend .col-sm-offset-4
         @extend .pad-sides
         @extend .begin-content
+        margin-left: 33.33333vw
 
       .row
-        @extend .pull-s
+        &:nth-child(5n + 1),
+          @extend .pull-l
 
         &:nth-child(5n + 2),
         &:nth-child(5n + 4)
           @extend .pull-m
 
         &:nth-child(5n + 3)
-          @extend .pull-l
+          @extend .pull-s
 
     &.bg-boxes-single
+      $offsetWidthSingle: 25vw
+      $blocksWidthSingle: 11vw
+      $pullWidthSingle: $offsetWidthSingle - $blocksWidthSingle
+
       .block-heading
         @extend .col-sm-8
         @extend .col-sm-offset-3
-        @extend .pull-s
+        margin-left: $offsetWidthSingle
+
+        h2
+          $offset-single: 1px
+          margin-left: calc(-#{$pullWidthSingle} - #{$offset-single})
+          padding-left: calc(#{$pullWidthSingle} + #{$offset-single})
 
   .block-highlight h2 > .mw-headline
     background-color: #eeeeee
@@ -568,44 +601,40 @@ body > section
 
 /* Adjust for various widths (responsive)
 @media (min-width: 980px) and (max-width: 1199px)
-  .bg-boxes
-    background-position: 12.1% 0
-    .block-highlight
-      background-position: 13.1% 0
+  .hero-unit .intro-stack, .bg-boxes, .bg-boxes .block-highlight
+    //background-position: 11vw 0
   .bg-boxes-single
-    background-position: 12.1% 0
+    //background-position: 12.1% 0
   #bodyContent
     .pull-s h2
-      margin-left: -22%
-      padding-left: 22%
+      //margin-left: -22%
+      //padding-left: 22%
     .pull-m h2
-      margin-left: -32.3%
-      padding-left: 32.3%
+      //margin-left: -32.3%
+      //padding-left: 32.3%
     .pull-l h2
-      margin-left: -42.6%
-      padding-left: 42.6%
+      //margin-left: -42.6%
+      //padding-left: 42.6%
   .thumbinner
     height: 310px
     > iframe
       height: 310px
 
 @media (min-width: 768px) and (max-width: 979px)
-  .bg-boxes
-    background-position: 10.25% 0
-    .block-highlight
-      background-position: 10.25% 0
+  .hero-unit .intro-stack, .bg-boxes, .bg-boxes .block-highlight
+    //background-position: 8vw 0
   .bg-boxes-single
-    background-position: 12.6% 0
+    //background-position: 12.6% 0
   #bodyContent
     .pull-s h2
-      margin-left: -22.2%
-      padding-left: 22.2%
+      //margin-left: -22.2%
+      //padding-left: 22.2%
     .pull-m h2
-      margin-left: -35.5%
-      padding-left: 35.5%
+      //margin-left: -35.5%
+      //padding-left: 35.5%
     .pull-l h2
-      margin-left: -48.8%
-      padding-left: 48.8%
+      //margin-left: -48.8%
+      //padding-left: 48.8%
   .thumbinner
     height: 240px
     > iframe
@@ -785,3 +814,56 @@ section#content .external
 .front-page
   .frontmatter-metadata
     display: none
+
+.social-icons
+  line-height: 20px
+  a
+    display: inline-block
+    white-space: nowrap
+    padding: 9px 12px 11px 5px
+    border-radius: 5px
+    transition: 900ms all
+    .label
+      transition: 300ms border
+      border-bottom: 1px solid rgba(blue, 0)
+  a:hover
+    transition: 300ms background
+    background: rgba(#fff, 0.75)
+    text-decoration: none
+    box-shadow: 1px 1px 1px rgba(black, 0.05)
+    .label
+      border-color: rgba(blue, 0.25)
+  .social-icon
+    font-size: 24px
+    padding: 0 0.5ex
+    vertical-align: bottom
+    text-decoration: none
+  .fa-twitter
+    color: #55acee
+  .fa-facebook
+    color: #3a5795
+  .fa-google-plus
+    color: #db4437
+  .fa-calendar
+    color: #5c0
+  .fa-envelope
+    color: #b8d
+
+.openstack-distro
+  // Pad to a multiple of 20px == make 80px (original graphic is 70px high)
+  // also add a bit of breathing room to the left
+  padding: 0 0 10px 2ex
+
+.rdo-manager-logo
+  // Pad to a multiple of 20px == make 1000px (original graphic is 70px high)
+  padding: 0 0 3px 2ex
+
+pre
+  border: none
+  background: #eee
+  //font-size: 12px
+  padding: 10px 15px
+  margin: 5px 0
+  overflow-x: auto
+  word-wrap: normal
+  line-height: 20px
