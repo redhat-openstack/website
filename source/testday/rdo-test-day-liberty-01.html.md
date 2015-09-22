@@ -33,8 +33,8 @@ You'll want a fresh install with latest updates installed.
 ## How To Test
 
     cd /etc/yum.repos.d/
-    sudo wget http://trunk.rdoproject.org/centos7/delorean-deps.repo
-    sudo wget http://trunk.rdoproject.org/centos7/current/delorean.repo
+    sudo wget http://trunk.rdoproject.org/centos7-liberty/delorean-deps.repo
+    sudo wget http://trunk.rdoproject.org/centos7-liberty/current/delorean.repo
 
 **TODO** point to a Delorean snapshot which passed CI
 
