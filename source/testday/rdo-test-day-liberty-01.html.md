@@ -5,16 +5,12 @@ title: RDO Liberty Test Day
 # Liberty Test Day 1
 
 We will be holding a RDO test day on September 23rd and 24th, 2015. 
-This will be coordinated through the #rdo channel on Freenode, and 
+This will be coordinated through the **#rdo channel on Freenode**, and 
 through this website and the rdo-list mailing list.
 
 We'll be testing the second Liberty milestone release. If you can do
 any testing on your own ahead of time, that will help ensure that 
 everyone isn't encountering the same problems.
-
-##  Who's Participating
-
- * rbowen (Rich Bowen) - Test matrix, promotion, website stuff
 
 Update this page by submitting pull requests to [this
 repo](https://github.com/redhat-openstack/website).
