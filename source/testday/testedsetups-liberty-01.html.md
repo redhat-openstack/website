@@ -87,7 +87,7 @@ Various components which don't fit the large test efforts above.
 | Config Name | Release | BaseOS | Status | HOWTO | Who | Date | BZ/LP | Notes Page
 |----------------------------------------------------------------|------------------|-----------|----------------------------------------------|-----------------------------------------------------|--------|------------|--------------------------------------------------------------------|------------|
 | Ceilometer: All-in-One w/ Neutron Networking | RDO Liberty || RHEL 7.1 ||   ||   ||    || 2015-05-07 ||   || 
-| Ceilometer: All-in-One w/ Neutron Networking, Heat | RDO Liberty | CentOS 7.1 | Tested || coolsvap | 2015-09-23  ||  || [Answer-File](https://gist.github.com/coolsvap/d9e476f992f32ac28c6c) || 
+| Ceilometer: All-in-One w/ Neutron Networking, Heat | RDO Liberty | CentOS 7.1 | Tested || coolsvap | 2015-09-23  ||  || [Answer-File](https://gist.github.com/coolsvap/d9e476f992f32ac28c6c)
 
 ## Core Tests
 
