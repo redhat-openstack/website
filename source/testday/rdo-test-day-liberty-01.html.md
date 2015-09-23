@@ -5,23 +5,19 @@ title: RDO Liberty Test Day
 # Liberty Test Day 1
 
 We will be holding a RDO test day on September 23rd and 24th, 2015. 
-This will be coordinated through the #rdo channel on Freenode, and 
+This will be coordinated through the **#rdo channel on Freenode**, and 
 through this website and the rdo-list mailing list.
 
 We'll be testing the second Liberty milestone release. If you can do
 any testing on your own ahead of time, that will help ensure that 
 everyone isn't encountering the same problems.
 
-##  Who's Participating
-
- * rbowen (Rich Bowen) - Test matrix, promotion, website stuff
-
 Update this page by submitting pull requests to [this
 repo](https://github.com/redhat-openstack/website).
 
 ## Prerequisites
 
-We plan to have have packages for the following platforms:
+We plan to have packages for the following platforms:
 
 * Fedora 22
 * RHEL 7
@@ -33,10 +29,8 @@ You'll want a fresh install with latest updates installed.
 ## How To Test
 
     cd /etc/yum.repos.d/
-    sudo wget http://trunk.rdoproject.org/centos7/delorean-deps.repo
-    sudo wget http://trunk.rdoproject.org/centos7/current/delorean.repo
-
-**TODO** point to a Delorean snapshot which passed CI
+    sudo wget http://trunk.rdoproject.org/centos7-liberty/delorean-deps.repo
+    sudo wget http://trunk.rdoproject.org/centos7-liberty/current-passed-ci/delorean.repo
 
 * Check for any [workarounds](/testday/workarounds-liberty-01) required for your platform before the main installation
 * For Packstack based deployment start at step 2 of the [packstack Quickstart](http://openstack.redhat.com/Quickstart#Step_2:_Install_Packstack_Installer)
@@ -58,4 +52,3 @@ If you have problems with any of the tests, report a bug to [Bugzilla](https://b
 [openstack-neutron](https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&component=openstack-neutron), [openstack-swift](https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&component=openstack-swift),  [python-django-horizon](https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&component=python-django-horizon), [openstack-heat](https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&component=openstack-heat) or [openstack-ceilometer](https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&component=openstack-ceilometer) components. If you are unsure about exactly how to file the report or what other information to include, just ask on IRC (#rdo, freenode.net)  and we will help you.
 
 Once you have completed the tests, add your results to the table on the [TestedSetups](/testday/testedsetups-liberty-01) page, following the examples already there. Be sure to check the [Workarounds](/testday/workarounds-2015-01) page for things that may have already have fixes or workarounds.
-

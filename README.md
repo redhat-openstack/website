@@ -28,7 +28,7 @@ bundle install
 3. Edit!
 
    When you edit files (pages, layouts, CSS, etc.), the site will
-   dyanmically update in development mode. (There's no need to refresh
+   dynamically update in development mode. (There's no need to refresh
    the page, unless you get a Ruby error.)
 
 
