@@ -62,6 +62,7 @@ Please see [Docs - Storage](/documentation/storage) for configuration guides as 
 | Config Name | Release | BaseOS | Status | HOWTO | Who | Date | BZ/LP | Notes Page
 |----------------------------------------------------------------|------------------|-----------|----------------------------------------------|-----------------------------------------------------|--------|------------|--------------------------------------------------------------------|------------|
 | All-in-One | Glance=localfs, Cinder=lvm| CentOS 7.1 | Tested  | [QuickStart](/Quickstart) | coolsvap   |  2015-09-23  |  None | [Answer-file](https://gist.github.com/coolsvap/d90a5133d4bbccef1966)
+| All-in-One | Glance=localfs, Cinder=glusterfs| CentOS 7.1 | Tested  | [QuickStart](/Quickstart) | coolsvap   |  2015-09-23  |  None | [Answer-file](https://gist.github.com/coolsvap/e065358ae84ff80138a1)
 | All-in-One | Glance=swift, Cinder=thinlvm| CentOS 7.1 |  Tested | [QuickStart](/Quickstart) | coolsvap  | 2015-09-23   | None | [Answer-file](https://gist.github.com/coolsvap/183aadd91868801279de)
 | All-in-One | Glance=s3(amazon s3), Cinder=nfs| CentOS 7.1 |  | [QuickStart](/Quickstart) | |    | None | None
 | All-in-One | Glance=s3(swift s3), Cinder=nfs| CentOS 7.1 |  | [QuickStart](/Quickstart) |  |    |  None|  None
