@@ -8,7 +8,7 @@ as "bundler".
 
 ```
 sudo yum install -y ruby-devel rubygems gcc-c++ curl-devel rubygem-bundler
-git clone git@gitlab.osas.lab.eng.rdu2.redhat.com:garrett/rdo-middleman.git
+git clone git@github.com:redhat-openstack/website.git
 cd rdo-middleman
 bundle install
 ```
