@@ -29,8 +29,11 @@ You'll want a fresh install with latest updates installed.
 ## How To Test
 
     cd /etc/yum.repos.d/
+    # for Centos 7 and RHEL 7
     sudo wget http://trunk.rdoproject.org/centos7-liberty/delorean-deps.repo
     sudo wget http://trunk.rdoproject.org/centos7-liberty/current-passed-ci/delorean.repo
+    # for Fedora 22
+    sudo wget http://trunk.rdoproject.org/f22/delorean-deps.repo
 
 * Check for any [workarounds](/testday/workarounds-liberty-01) required for your platform before the main installation
 * For Packstack based deployment start at step 2 of the [packstack Quickstart](http://openstack.redhat.com/Quickstart#Step_2:_Install_Packstack_Installer)
