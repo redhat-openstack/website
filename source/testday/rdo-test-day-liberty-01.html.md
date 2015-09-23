@@ -37,7 +37,6 @@ You'll want a fresh install with latest updates installed.
 
 * Check for any [workarounds](/testday/workarounds-liberty-01) required for your platform before the main installation
 * For Packstack based deployment start at step 2 of the [packstack Quickstart](http://openstack.redhat.com/Quickstart#Step_2:_Install_Packstack_Installer)
-* For RDO-Manager based installs, *doc goes here* **TODO**
 
 ### Test cases and results
 
