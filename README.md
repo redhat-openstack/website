@@ -39,10 +39,10 @@ The site can be easily customized by editing `data/site.yml`.
 
 ## Adding a Post
 
-To add a post to the community blog (or any blog managed by middleman) use:
+To add a post to the community blog use:
 
 ```
-bundle exec middleman article TITLE
+./create-post.rb "TITLE"
 ```
 
 
