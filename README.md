@@ -9,7 +9,7 @@ as "bundler".
 ```
 sudo yum install -y ruby-devel rubygems-devel gcc-c++ curl-devel rubygem-bundler patch
 git clone git@github.com:redhat-openstack/website.git
-cd rdo-middleman
+cd website
 bundle install
 ```
 
