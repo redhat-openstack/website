@@ -17,7 +17,7 @@ repo](https://github.com/redhat-openstack/website).
 
 ## Prerequisites
 
-We plan to have have packages for the following platforms:
+We plan to have packages for the following platforms:
 
 * Fedora 22
 * RHEL 7
