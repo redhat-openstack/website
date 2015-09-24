@@ -236,10 +236,10 @@
   Domains: uncategorized/domains
   Enabling Migrations: uncategorized/enabling-migrations
   Setting-up-HA-of-RabbitMQ: uncategorized/setting-up-ha-of-rabbitmq
-  NewsletterThanks: newsletter/newsletterthanks.html.md
+  NewsletterThanks: newsletter/newsletterthanks
   Deploying an RDO Undercloud with Instack: uncategorized/deploying-an-rdo-undercloud-with-instack
   ML2 from OVS: uncategorized/ml2-from-ovs
-  Newsletter: newsletter/newsletter.html.md
+  Newsletter: newsletter/newsletter
   Newsletter/2014 May: newsletter/2014-may
   Creating CentOS and Fedora images ready for Openstack: resources/creating-centos-and-fedora-images-ready-for-openstack
   GettingStartedIcehouse w GRE: uncategorized/gettingstartedicehouse-w-gre
