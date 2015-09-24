@@ -28,6 +28,7 @@ You'll want a fresh install with latest updates installed.
 
 ## How To Test
 
+    yum -y install yum-plugin-priorities
     cd /etc/yum.repos.d/
     # for Centos 7 and RHEL 7
     sudo wget http://trunk.rdoproject.org/centos7-liberty/delorean-deps.repo
