@@ -38,7 +38,7 @@ You'll want a fresh install with latest updates installed.
     sudo wget http://trunk.rdoproject.org/f22/delorean-deps.repo
 
 * Check for any [workarounds](/testday/workarounds-liberty-01) required for your platform before the main installation
-* For Packstack based deployment start at step 2 of the [packstack Quickstart](http://openstack.redhat.com/Quickstart#Step_2:_Install_Packstack_Installer)
+* For Packstack based deployment start at step 2 of the [packstack Quickstart](/install/quickstart#Step_2:_Install_Packstack_Installer)
 * **Note**: Please be aware that the Fedora 22 packages have not gone through CI
 
 ### Test cases and results
