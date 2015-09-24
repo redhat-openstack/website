@@ -75,11 +75,11 @@
   Deploy Heat and launch your first Application: uncategorized/deploy-heat-and-launch-your-first-application
   Help:Editing: documentation/editing
   Common service operations: uncategorized/common-service-operations
-  Using RDO on TryStack: documentation/using-rdo-on-trystack
+  Using RDO on TryStack: community/using-rdo-on-trystack
   Getting Started: documentation/getting-started
   Keystone integration with IDM: uncategorized/keystone-integration-with-idm
   KeystoneIDMIntegration: uncategorized/keystoneidmintegration
-  Repositories: uncategorized/repositories
+  Repositories: community/repositories
   Image resources: resources/image-resources
   Qpid errors: uncategorized/qpid-errors
   Networking: troubleshooting/networking
@@ -173,7 +173,7 @@
   Docs/Networking: documentation/networking
   Docs/Storage: storage/
   Docs/About: docs/about
-  Upstream Docs: uncategorized/upstream-docs
+  Upstream Docs: community/upstream-docs
   Docs/Misc: documentation/misc
   Category:Networking: networking/index
   Using VXLAN Tenant Networks: networking/using-vxlan-tenant-networks
@@ -194,20 +194,20 @@
   QuickStartLatest: uncategorized/quickstartlatest
   Testing IceHouse using Tempest: uncategorized/testing-icehouse-using-tempest
   SELinux: uncategorized/selinux
-  Mailing lists: uncategorized/mailing-lists
+  Mailing lists: community/mailing-lists
   LBaaS: uncategorized/lbaas
   LBaaS Havana: uncategorized/lbaas-havana
   CentOS: uncategorized/centos
   RDO test day Icehouse milestone 2: testday/rdo-test-day-icehouse-milestone-2
   Bugzilla ownership: uncategorized/bugzilla-ownership
-  Hangouts: uncategorized/hangouts
+  Hangouts: community/hangouts
   TestedSetups 2014 02: testday/testedsetups-2014-02
   Workarounds 2014 02: testday/workarounds-2014-02
   TripleO VM Setup: uncategorized/tripleo-vm-setup
   RabbitMQ: uncategorized/rabbitmq
-  IRC etiquette: uncategorized/irc-etiquette
+  IRC etiquette: community/irc-etiquette
   OpenDaylight integration: uncategorized/opendaylight-integration
-  HangoutPlaceholder: uncategorized/hangoutplaceholder
+  HangoutPlaceholder: community/hangoutplaceholder
   MariaDB Galera: uncategorized/mariadb-galera
   RDO test day Icehouse milestone 3: testday/rdo-test-day-icehouse-milestone-3
   HA Architecture: uncategorized/ha-architecture
@@ -255,13 +255,13 @@
   Test: uncategorized/test
   RDO test day Juno milestone 3 test cases: testday/rdo-test-day-juno-milestone-3-test-cases
   Post Installation Tests: uncategorized/post-installation-tests
-  TryStackDocker: uncategorized/trystackdocker
-  TryStack: uncategorized/trystack
+  TryStackDocker: community/trystackdocker
+  TryStack: community/trystack
   Using Ceph for Glance with RDO: uncategorized/using-ceph-for-glance-with-rdo
   Using Dell EqualLogic for Cinder with RDO: uncategorized/using-dell-equallogic-for-cinder-with-rdo
   Workaround archive: testday/workaround-archive
   Post installation bugs: uncategorized/post-installation-bugs
-  Organize-a-meetup: uncategorized/organize-a-meetup
+  Organize-a-meetup: community/organize-a-meetup
   Newsletter/2014 October: newsletter/2014-october
   Tuskar-UI: uncategorized/tuskar-ui
   Using NetApp for Cinder with RDO: uncategorized/using-netapp-for-cinder-with-rdo
