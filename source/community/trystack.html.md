@@ -13,8 +13,8 @@ wiki_last_updated: 2014-11-04
 To get started watch this video: [<http://youtu.be/EPZPzXSypl4>](http://youtu.be/EPZPzXSypl4)
 This video references RDO Hanava but is still moslty valid for RDO Juno currently running on TryStack. A re-record will be done with Juno very soon.
 
-FAQs: <http://openstack.redhat.com/TryStackFAQ>
-Information on RDO: <http://openstack.redhat.com>
+FAQs: <http://rdoproject.org/TryStackFAQ>
+Information on RDO: <http://rdoproject.org>
 TryStack Launchpad <http://launchpad.net/trystack>
  How to import a docker image into trystack [TryStackDocker](TryStackDocker)
 
