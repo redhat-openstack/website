@@ -137,7 +137,7 @@
   QuickStart: uncategorized/quickstart
   Upgrading RDO: uncategorized/upgrading-rdo
   Highly Available Qpid for OpenStack: uncategorized/highly-available-qpid-for-openstack
-  HowToTest: howto/test
+  HowToTest: testday/howto
   HowToTest/Ceilometer/H/AlarmThresholdEvaluation: howtotest/ceilometer/h/alarmthresholdevaluation
   HowToTest/Ceilometer/H/AlarmPartitioning: howtotest/ceilometer/h/alarmpartitioning
   HowToTest/Ceilometer/H/UnitsRateOfChangeConversion: howtotest/ceilometer/h/unitsrateofchangeconversion
@@ -184,8 +184,8 @@
   Using GlusterFS for Cinder with RDO Havana: storage/Cinder/Havan/using-glusterfs-for-cinder-with-rdo-havana
   DeveloperTips: needsupdate/developertips
   Using GlusterFS for Glance with RDO Havana: storage/using-glusterfs-for-glance-with-rdo-havana
-  Tests/Storage/Cinder: tests/storage/cinder
-  Tests/Storage/Glance: tests/storage/glance
+  Tests/Storage/Cinder: /testday/tests/storage/cinder
+  Tests/Storage/Glance: /testday/tests/storage/glance
   RDO test day January 2014 Metadata: testday/rdo-test-day-january-2014-metadata
   Using NFS for Cinder with RDO: storage/Cinder/using-nfs-for-cinder-with-rdo
   Using Ceph for block storage with RDO: storage/Cinder/using-ceph-for-block-storage-with-rdo
