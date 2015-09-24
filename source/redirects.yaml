@@ -87,7 +87,7 @@
   Running an instance with Neutron: networking/running-an-instance-with-neutron
   Tools: uncategorized/tools
   Networking Solutions: networking/networking-solutions
-  Tenant Networks: uncategorized/tenant-networks
+  Tenant Networks: networking/tenant-networks
   External Connectivity: uncategorized/external-connectivity
   Network Interfaces: networking/network-interfaces
   Neutron with OVS and VLANs: networking/neutron-with-ovs-and-vlans
@@ -155,7 +155,7 @@
   'A Case Study: Starting From Scratch With Havana': a-case-study/starting-from-scratch-with-havana
   Deploying RDO Using Foreman: install/deploying-rdo-using-foreman
   Securing Services: uncategorized/securing-services
-  Using GRE Tenant Networks: uncategorized/using-gre-tenant-networks
+  Using GRE Tenant Networks: networking/using-gre-tenant-networks
   Packstack cookbook: uncategorized/packstack-cookbook
   DeployHeatOnHavana: install/deployheatonhavana
   Cookbook: uncategorized/cookbook
@@ -288,7 +288,7 @@
   JunoForeman: uncategorized/junoforeman
   Newsletter/2015 April: newsletter/2015-april
   Newsletter/2015 March: newsletter/2015-march
-  Using provider networks: uncategorized/using-provider-networks
+  Using provider networks: networking/using-provider-networks
   RDO test day Kilo: testday/rdo-test-day-kilo
   RDO test day Kilo RC milestone test cases: testday/rdo-test-day-kilo-rc-milestone-test-cases
   Newsletter/2015 May: newsletter/2015-may
