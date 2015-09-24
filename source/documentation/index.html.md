@@ -20,7 +20,7 @@ Since RDO sticks closely to the upstream OpenStack project, the documentation at
 
 #### [Packaging Guides](https://rdoproject.org/packaging/index.html)
 
-#### [Installation and configuration](Install)
+#### [Installation and configuration](/install/)
 
 <small>[Running_an_instance](Running_an_instance), [Image_resources](Image_resources), [Adding_a_compute_node](Adding_a_compute_node), [Troubleshooting](Troubleshooting), [RDO-Manager](RDO-Manager), [More](Install) ...</small>
 
