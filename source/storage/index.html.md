@@ -16,23 +16,25 @@ Below you can find guides and some test suggestions for the storage components.
 
 ## Cinder Manuals
 
-*   [Using Ceph for Cinder with RDO Havana](Using Ceph for Cinder with RDO Havana)
-*   [Using GlusterFS for Cinder with RDO Havana](Using GlusterFS for Cinder with RDO Havana)
+*   [Using Ceph for Cinder with RDO Havana](storage/Cinder/Havana/using-ceph-for-cinder-with-rdo-havana.html.md)
+*   [Using GlusterFS for Cinder with RDO Havana](storage/Cinder/Havana/using-glusterfs-for-cinder-with-rdo-havana.html.md)
 *   [Using GlusterFS for Cinder with RDO Grizzly](http://www.gluster.org/community/documentation/index.php/GlusterFS_Cinder)
-*   [Using EMC for Cinder with RDO](https://wiki.openstack.org/wiki/How_to_deploy_cinder_with_EMC_plug-in)
-*   [Using ThinLVM for Cinder with RDO Havana](Using ThinLVM for Cinder with RDO Havana)
-*   [Using Dell EqualLogic for Cinder with RDO](Using Dell EqualLogic for Cinder with RDO)
-*   [Using NetApp for Cinder with RDO](Using NetApp for Cinder with RDO)
+*   [Using ThinLVM for Cinder with RDO Havana](storage/Cinder/Havana/using-thinlvm-for-cinder-with-rdo-havana.html.md)
+*   [Using Dell EqualLogic for Cinder with RDO](storage/using-dell-equallogic-for-cinder-with-rdo.html.md)
+*   [Using NetApp for Cinder with RDO](storage/using-netapp-for-cinder-with-rdo.html.md)
+*   [Using NFS for Cinder with RDO](storage/using-nfs-for-cinder-with-rdo.html.md)
+*   [Setting up HA of Cinder with RDO](storage/setting-up-ha-of-cinder.html.md)
 
 ## Glance Manuals
 
-*   [Using Ceph for Glance with RDO](Using Ceph for Glance with RDO)
-*   [Using GlusterFS for Glance with RDO Havana](Using GlusterFS for Glance with RDO Havana)
-*   [Using Swift for Glance with RDO Havana](Using Swift for Glance with RDO Havana)
+*   [Using GlusterFS for Glance with RDO Havana](storage/Glance/Havana/using-glusterfs-for-glance-with-rdo-havana.html.md)
+*   [Using Swift for Glance with RDO Havana](storage/Glance/Havana/using-swift-for-glance-with-rdo-havana.html.md)
+*   [Using Ceph for Glance with RDO](storage/Glance/using-ceph-for-glance-with-rdo.html.md)
+*   [Setting up HA of Glance](storage/Glance/setting-up-ha-of-glance.html.md)
 
 ## Swift Manuals
 
-*   [Using Swift..](Using Swift..)
+*   [Using Swift for Glance with RDO Havana](storage/Swift/Havana/using-swift-for-glance-with-rdo-havana.html.md)
 
 ## Test Suggestions
 

@@ -94,7 +94,7 @@
   External Connectivity: uncategorized/external-connectivity
   Network Interfaces: uncategorized/network-interfaces
   Neutron with OVS and VLANs: networking/neutron-with-ovs-and-vlans
-  Using Ceph for Cinder with RDO Havana: storage/using-ceph-for-cinder-with-rdo-havana
+  Using Ceph for Cinder with RDO Havana: source/storage/Cinder/Havana/using-ceph-for-cinder-with-rdo-havana
   Books: documentation/books
   Neutron-ovs with vlans: uncategorized/neutron-ovs-with-vlans
   Neutron with OVS and vlans: uncategorized/neutron-with-ovs-and-vlans
@@ -179,17 +179,17 @@
   Using VXLAN Tenant Networks: networking/using-vxlan-tenant-networks
   RDO test day January 2014: testday/rdo-test-day-january-2014
   TestedSetups 2014 01: testday/testedsetups-2014-01
-  Using ThinLVM for Cinder with RDO Havana: uncategorized/using-thinlvm-for-cinder-with-rdo-havana
+  Using ThinLVM for Cinder with RDO Havana: storage/Cinder/Havan/using-thinlvm-for-cinder-with-rdo-havana
   Workarounds 2014 01: testday/workarounds-2014-01
   Using Swift for Glance with RDO Havana: storage/using-swift-for-glance-with-rdo-havana
-  Using GlusterFS for Cinder with RDO Havana: storage/using-glusterfs-for-cinder-with-rdo-havana
+  Using GlusterFS for Cinder with RDO Havana: storage/Cinder/Havan/using-glusterfs-for-cinder-with-rdo-havana
   DeveloperTips: needsupdate/developertips
   Using GlusterFS for Glance with RDO Havana: storage/using-glusterfs-for-glance-with-rdo-havana
   Tests/Storage/Cinder: tests/storage/cinder
   Tests/Storage/Glance: tests/storage/glance
   RDO test day January 2014 Metadata: testday/rdo-test-day-january-2014-metadata
-  Using NFS for Cinder with RDO: uncategorized/using-nfs-for-cinder-with-rdo
-  Using Ceph for block storage with RDO: uncategorized/using-ceph-for-block-storage-with-rdo
+  Using NFS for Cinder with RDO: storage/Cinder/using-nfs-for-cinder-with-rdo
+  Using Ceph for block storage with RDO: storage/Cinder/using-ceph-for-block-storage-with-rdo
   Modular Layer 2 (ML2) Plugin: uncategorized/modular-layer-2-(ml2)-plugin
   QuickStartLatest: uncategorized/quickstartlatest
   Testing IceHouse using Tempest: uncategorized/testing-icehouse-using-tempest
@@ -229,7 +229,7 @@
   Setting-up-HA-of-Glance: uncategorized/setting-up-ha-of-glance
   OpenDaylight intergration: uncategorized/opendaylight-intergration
   Setting up High Availability: uncategorized/setting-up-high-availability
-  Setting-up-HA-of-Cinder: uncategorized/setting-up-ha-of-cinder
+  Setting-up-HA-of-Cinder: storage/Cinder/setting-up-ha-of-cinder
   Setting-up-HAProxy-Load-Balancer: uncategorized/setting-up-haproxy-load-balancer
   Setting-up-memcached: uncategorized/setting-up-memcached
   Setting-up-High-Availability: uncategorized/setting-up-high-availability
@@ -258,13 +258,13 @@
   TryStackDocker: uncategorized/trystackdocker
   TryStack: uncategorized/trystack
   Using Ceph for Glance with RDO: uncategorized/using-ceph-for-glance-with-rdo
-  Using Dell EqualLogic for Cinder with RDO: uncategorized/using-dell-equallogic-for-cinder-with-rdo
+  Using Dell EqualLogic for Cinder with RDO: storage/Cinder/using-dell-equallogic-for-cinder-with-rdo
   Workaround archive: testday/workaround-archive
   Post installation bugs: uncategorized/post-installation-bugs
   Organize-a-meetup: uncategorized/organize-a-meetup
   Newsletter/2014 October: newsletter/2014-october
   Tuskar-UI: uncategorized/tuskar-ui
-  Using NetApp for Cinder with RDO: uncategorized/using-netapp-for-cinder-with-rdo
+  Using NetApp for Cinder with RDO: storage/Cinder/using-netapp-for-cinder-with-rdo
   Newsletter/2014 November: newsletter/2014-november
   Brochures: uncategorized/brochures
   MidoNet integration: uncategorized/midonet-integration
