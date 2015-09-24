@@ -283,6 +283,12 @@ body > section
 
 /* Shrink the text a little to make it wrap in smaller widths
 @media (min-width: 768px) and (max-width: 979px)
+  .hero-unit .intro-stack,
+  .bg-boxes
+    background-position: 6vw 0 !important
+  .bg-boxes-single
+    background-position: 5vw 0
+
   .hero-unit p
     font-size: 18pt
 
@@ -396,20 +402,20 @@ body > section
       top: -14px // -( line-height + (bar-height * 1.5) )
       z-index: 0
 
-  .pull-s h2
-    $offset-s: -115px
-    margin-left: calc(-#{$pullWidth} - #{$offset-s})
-    padding-left: calc(#{$pullWidth} + #{$offset-s})
+  @mixin header-pull($hp-pullWidth, $hp-offset)
+    margin-left: calc(-#{$hp-pullWidth} - #{$hp-offset})
+    padding-left: calc(#{$hp-pullWidth} + #{$hp-offset})
 
-  .pull-m h2
-    $offset-m: -55px
-    margin-left: calc(-#{$pullWidth} - #{$offset-m})
-    padding-left: calc(#{$pullWidth} + #{$offset-m})
+  $pulls: (s: -115px, m: -55px, l: 5px, o: 1px)
 
-  .pull-l h2
-    $offset-l: 5px
-    margin-left: calc(-#{$pullWidth} - #{$offset-l})
-    padding-left: calc(#{$pullWidth} + #{$offset-l})
+  /* .pull-s, .pull-m, and .pull-l are defined here
+  @each $pullSize, $pullOffset in $pulls
+    /* .pull-#{$pullSize}
+    .pull-#{$pullSize} h2
+      @media (min-width: 980px)
+        @include header-pull($pullWidth, $pullOffset)
+      @media (min-width: 768px) and (max-width: 979px)
+        @include header-pull($pullWidth + 6, $pullOffset)
 
   .bg-boxes
     .row, h4, h5, h6
@@ -430,11 +436,12 @@ body > section
 
     &:not(.bg-boxes-single)
       .block-heading
-        @extend .col-sm-7
-        @extend .col-sm-offset-4
         @extend .pad-sides
         @extend .begin-content
-        margin-left: 33.33333vw
+        @extend .col-sm-7
+        @extend .col-sm-offset-4
+        @media (min-width: 768px)
+          margin-left: 33.33333vw
 
       .row
         &:nth-child(5n + 1),
@@ -455,12 +462,16 @@ body > section
       .block-heading
         @extend .col-sm-8
         @extend .col-sm-offset-3
-        margin-left: $offsetWidthSingle
+        @media (min-width: 768px)
+          margin-left: $offsetWidthSingle
 
         h2
-          $offset-single: 1px
-          margin-left: calc(-#{$pullWidthSingle} - #{$offset-single})
-          padding-left: calc(#{$pullWidthSingle} + #{$offset-single})
+          @extend .pull-s
+          $pullOffsetSingle: 1px
+          @media (min-width: 980px)
+            @include header-pull($pullWidthSingle, $pullOffsetSingle)
+          @media (min-width: 768px) and (max-width: 979px)
+            @include header-pull($pullWidthSingle + 5, $pullOffsetSingle)
 
   .block-highlight
     h2
@@ -607,40 +618,12 @@ body > section
 
 /* Adjust for various widths (responsive)
 @media (min-width: 980px) and (max-width: 1199px)
-  .hero-unit .intro-stack, .bg-boxes, .bg-boxes .block-highlight
-    //background-position: 11vw 0
-  .bg-boxes-single
-    //background-position: 12.1% 0
-  #bodyContent
-    .pull-s h2
-      //margin-left: -22%
-      //padding-left: 22%
-    .pull-m h2
-      //margin-left: -32.3%
-      //padding-left: 32.3%
-    .pull-l h2
-      //margin-left: -42.6%
-      //padding-left: 42.6%
   .thumbinner
     height: 310px
     > iframe
       height: 310px
 
 @media (min-width: 768px) and (max-width: 979px)
-  .hero-unit .intro-stack, .bg-boxes, .bg-boxes .block-highlight
-    //background-position: 8vw 0
-  .bg-boxes-single
-    //background-position: 12.6% 0
-  #bodyContent
-    .pull-s h2
-      //margin-left: -22.2%
-      //padding-left: 22.2%
-    .pull-m h2
-      //margin-left: -35.5%
-      //padding-left: 35.5%
-    .pull-l h2
-      //margin-left: -48.8%
-      //padding-left: 48.8%
   .thumbinner
     height: 240px
     > iframe
