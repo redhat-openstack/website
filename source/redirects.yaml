@@ -85,14 +85,14 @@
   Networking: troubleshooting/networking
   PackStack All-in-One DIY Configuration: documentation/packstack-all-in-one-diy-configuration
   Packstack with Multiple Compute nodes: uncategorized/packstack-with-multiple-compute-nodes
-  Network Configuration Overview: uncategorized/network-configuration-overview
+  Network Configuration Overview: networking/network-configuration-overview
   Neutron-Quickstart: documentation/neutron-quickstart
   Running an instance with Neutron: networking/running-an-instance-with-neutron
   Tools: uncategorized/tools
-  Networking Solutions: uncategorized/networking-solutions
+  Networking Solutions: networking/networking-solutions
   Tenant Networks: uncategorized/tenant-networks
   External Connectivity: uncategorized/external-connectivity
-  Network Interfaces: uncategorized/network-interfaces
+  Network Interfaces: networking/network-interfaces
   Neutron with OVS and VLANs: networking/neutron-with-ovs-and-vlans
   Using Ceph for Cinder with RDO Havana: source/storage/Cinder/Havana/using-ceph-for-cinder-with-rdo-havana
   Books: documentation/books
