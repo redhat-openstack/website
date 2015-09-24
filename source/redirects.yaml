@@ -210,7 +210,7 @@
   HangoutPlaceholder: community/hangoutplaceholder
   MariaDB Galera: uncategorized/mariadb-galera
   RDO test day Icehouse milestone 3: testday/rdo-test-day-icehouse-milestone-3
-  HA Architecture: uncategorized/ha-architecture
+  HA Architecture: ha/ha-architecture
   Deploying Multi Node Overcloud Using TripleO And Tuskar: uncategorized/deploying-multi-node-overcloud-using-tripleo-and-tuskar
   User stories: case-studies/user-stories
   Upgrading RDO To Icehouse: uncategorized/upgrading-rdo-to-icehouse
