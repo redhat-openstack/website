@@ -29,6 +29,8 @@ Below you can find guides and some test suggestions for the storage components.
 
 *   [Using GlusterFS for Glance with RDO Havana](/source/storage/Glance/Havana/using-glusterfs-for-glance-with-rdo-havana.html.md)
 *   [Using Swift for Glance with RDO Havana](/source/storage/Glance/Havana/using-swift-for-glance-with-rdo-havana.html.md)
+*   [Using Ceph for Glance with RDO](/source/storage/Glance/using-ceph-for-glance-with-rdo.html.md)
+*   [Setting up HA of Glance](/source/storage/Glance/setting-up-ha-of-glance.html.md)
 
 ## Swift Manuals
 
