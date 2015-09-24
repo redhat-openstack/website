@@ -44,22 +44,22 @@
   RDO HighlyAvailable and LoadBalanced Control Services: HA
 :map:
   Main Page: "/index"
-  Frequently asked questions: uncategorized/frequently-asked-questions
   Docs: documentation/docs
-  Get Involved: uncategorized/get-involved
-  Running an instance: uncategorized/running-an-instance
-  Adding a compute node: uncategorized/adding-a-compute-node
+  Get Involved: community/get-involved
+  Running an instance: install/running-an-instance
+  Adding a compute node: install/adding-a-compute-node
   Floating IP range: networking/floating-ip-range
-  FAQ: uncategorized/faq
-  Frequently Asked Questions: documentation/frequently-asked-questions
+  FAQ: rdo/faq
+  Frequently Asked Questions: rdo/faq
+  Frequently asked questions: rdo/faq
   About RDO: rdo/about-rdo
   Troubleshooting: documentation/troubleshooting
   Community guidelines: documentation/community-guidelines
-  Legal: legal/legal
+  Legal: legal/
   Terms of use: legal/terms-of-use
+  Licensing: legal/
   RDO:About: rdo/about
   Case studies: documentation/case-studies
-  Licensing: uncategorized/licensing
   Get involved: community/get-involved
   Floating ip range: uncategorized/floating-ip-range
   OSAS test lab: case-studies/osas-test-lab
