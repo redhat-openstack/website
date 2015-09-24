@@ -96,20 +96,20 @@
   Neutron with OVS and VLANs: networking/neutron-with-ovs-and-vlans
   Using Ceph for Cinder with RDO Havana: source/storage/Cinder/Havana/using-ceph-for-cinder-with-rdo-havana
   Books: documentation/books
-  Neutron-ovs with vlans: uncategorized/neutron-ovs-with-vlans
-  Neutron with OVS and vlans: uncategorized/neutron-with-ovs-and-vlans
+  Neutron-ovs with vlans: networking/neutron-ovs-with-vlans
+  Neutron with OVS and vlans: networking/neutron-with-ovs-and-vlans
   Fedora 19: uncategorized/fedora-19
   Using GRE tenant networks: networking/using-gre-tenant-networks
   Load Balance OpenStack API: api/load-balance-openstack-api
   Scratch: documentation/scratch
   OpenStack Summit Hong Kong: events/openstack-summit-hong-kong
-  Highly Available MySQL server for OpenStack: uncategorized/highly-available-mysql-server-for-openstack
+  Highly Available MySQL server for OpenStack: ha/highly-available-mysql-server-for-openstack
   Floating IPs on the Lab Network: uncategorized/floating-ips-on-the-lab-network
   Events: event/events
   RDO Test Day September 2013: testday/rdo-test-day-september-2013
   HA OpenStack API: api/ha-openstack-api
-  Highly Available MySQL server: uncategorized/highly-available-mysql-server
-  Highly Available MySQL server on OpenStack: uncategorized/highly-available-mysql-server-on-openstack
+  Highly Available MySQL server: ha/highly-available-mysql-server
+  Highly Available MySQL server on OpenStack: ha/highly-available-mysql-server-on-openstack
   Heat: uncategorized/heat
   TestedSetups: testday/testedsetups
   Deploying RDO using Foreman: uncategorized/deploying-rdo-using-foreman
@@ -122,29 +122,30 @@
   Deploy an application with Heat: uncategorized/deploy-an-application-with-heat
   Multi-node Openstack with Neutron with libvirt, netsted kvm, virt-manager and qcow2 images: networking/multi-node-openstack-with-neutron-with-libvirt,-netsted-kvm,-virt-manager-and-qcow2-images
   Clients: needsupdate/clients
-  Neutron with existing external network: uncategorized/neutron-with-existing-external-network
+  Neutron with existing external network: networking/neutron-with-existing-external-network
   Difference between Floating IP and private IP: networking/difference-between-floating-ip-and-private-ip
   RDO Test Day October 2013: testday/rdo-test-day-october-2013
   LaunchHeatApplication: uncategorized/launchheatapplication
-  Configuring Neutron with OVS and GRE Tunnels using quickstack: uncategorized/configuring-neutron-with-ovs-and-gre-tunnels-using-quickstack
+  Configuring Neutron with OVS and GRE Tunnels using quickstack: networking/configuring-neutron-with-ovs-and-gre-tunnels-using-quickstack
   GettingStartedHavana w GRE: uncategorized/gettingstartedhavana-w-gre
   Continuous Integration: uncategorized/continuous-integration
-  HA: uncategorized/ha
+  HA: ha/
   CeilometerQuickStart: documentation/ceilometerquickstart
   Securing Services Foreman: uncategorized/securing-services-foreman
   People/: uncategorized/people
   HorizonSSL: uncategorized/horizonssl
-  QuickStart: uncategorized/quickstart
+  QuickStart: documentation/quickstart
+  Quickstart: documentation/quickstart
+  quickstart: documentation/quickstart
   Upgrading RDO: uncategorized/upgrading-rdo
-  Highly Available Qpid for OpenStack: uncategorized/highly-available-qpid-for-openstack
+  Highly Available Qpid for OpenStack: ha/highly-available-qpid-for-openstack
   HowToTest: testday/howto
-  HowToTest/Ceilometer/H/AlarmThresholdEvaluation: howtotest/ceilometer/h/alarmthresholdevaluation
-  HowToTest/Ceilometer/H/AlarmPartitioning: howtotest/ceilometer/h/alarmpartitioning
-  HowToTest/Ceilometer/H/UnitsRateOfChangeConversion: howtotest/ceilometer/h/unitsrateofchangeconversion
-  HowToTest/Ceilometer/H/AlarmHistoryAPI: api/alarmhistoryapi
-  HowToTest/Ceilometer/H/AlarmAggregation: howtotest/ceilometer/h/alarmaggregation
+  HowToTest/Ceilometer/H/AlarmThresholdEvaluation: testday/howtotest/ceilometer/h/alarmthresholdevaluation
+  HowToTest/Ceilometer/H/AlarmPartitioning: testday/howtotest/ceilometer/h/alarmpartitioning
+  HowToTest/Ceilometer/H/UnitsRateOfChangeConversion: testday/howtotest/ceilometer/h/unitsrateofchangeconversion
+  HowToTest/Ceilometer/H/AlarmHistoryAPI: testday/howtotest/ceilometer/h/api/alarmhistoryapi
+  HowToTest/Ceilometer/H/AlarmAggregation: testday/howtotest/ceilometer/h/alarmaggregation
   'A case study: starting from scratch with Havana': needsupdate/starting-from-scratch-with-havana
-  Lars-Test: uncategorized/lars-test
   Networking in too much detail: networking/networking-in-too-much-detail
   Virtualized Foreman dev setup: uncategorized/virtualized-foreman-dev-setup
   Foreman HA Database: uncategorized/foreman-ha-database
@@ -165,7 +166,7 @@
   ML2 plugin: networking/ml2-plugin
   RDO-BugTriage: uncategorized/rdo-bugtriage
   TryStackFAQ: uncategorized/trystackfaq
-  NeutronLibvirtMultinodeDevEnvironment: uncategorized/neutronlibvirtmultinodedevenvironment
+  NeutronLibvirtMultinodeDevEnvironment: networking/neutronlibvirtmultinodedevenvironment
   Using Ceph for Block Storage with RDO: uncategorized/using-ceph-for-block-storage-with-rdo
   Virtualized Foreman Dev Setup: uncategorized/virtualized-foreman-dev-setup
   Install: documentation/install
@@ -221,20 +222,20 @@
   Deploying an RDO Overcloud with Instack: uncategorized/deploying-an-rdo-overcloud-with-instack
   Testing an RDO Overcloud with Instack: uncategorized/testing-an-rdo-overcloud-with-instack
   Fedora 20 with existing network: uncategorized/fedora-20-with-existing-network
-  Setting-up-HA-of-Nova: uncategorized/setting-up-ha-of-nova
-  Setting-up-HA-of-Keystone: uncategorized/setting-up-ha-of-keystone
+  Setting-up-HA-of-Nova: ha/setting-up-ha-of-nova
+  Setting-up-HA-of-Keystone: ha/setting-up-ha-of-keystone
   Instack FAQ: uncategorized/instack-faq
-  Setting-up-HA-of-Neutron: uncategorized/setting-up-ha-of-neutron
-  Setting-up-HA-of-Glance: uncategorized/setting-up-ha-of-glance
+  Setting-up-HA-of-Neutron: ha/setting-up-ha-of-neutron
+  Setting-up-HA-of-Glance: ha/setting-up-ha-of-glance
   OpenDaylight intergration: uncategorized/opendaylight-intergration
   Setting up High Availability: uncategorized/setting-up-high-availability
   Setting-up-HA-of-Cinder: storage/Cinder/setting-up-ha-of-cinder
-  Setting-up-HAProxy-Load-Balancer: uncategorized/setting-up-haproxy-load-balancer
+  Setting-up-HAProxy-Load-Balancer: ha/setting-up-haproxy-load-balancer
   Setting-up-memcached: uncategorized/setting-up-memcached
   Setting-up-High-Availability: uncategorized/setting-up-high-availability
   Domains: uncategorized/domains
   Enabling Migrations: uncategorized/enabling-migrations
-  Setting-up-HA-of-RabbitMQ: uncategorized/setting-up-ha-of-rabbitmq
+  Setting-up-HA-of-RabbitMQ: ha/setting-up-ha-of-rabbitmq
   NewsletterThanks: newsletter/newsletterthanks
   Deploying an RDO Undercloud with Instack: uncategorized/deploying-an-rdo-undercloud-with-instack
   ML2 from OVS: uncategorized/ml2-from-ovs
@@ -268,7 +269,7 @@
   Brochures: uncategorized/brochures
   MidoNet integration: uncategorized/midonet-integration
   Workaround for newtron installtion error: testday/workaround-for-newtron-installtion-error
-  Neutron GBP: uncategorized/neutron-gbp
+  Neutron GBP: networking/neutron-gbp
   Ironic: uncategorized/ironic
   Ironic Developer Quick-Start: uncategorized/ironic-developer-quick-start
   Helium OpenDaylight Juno OpenStack: uncategorized/helium-opendaylight-juno-openstack
@@ -284,7 +285,6 @@
   Juno-TripleO-CLI-install: uncategorized/juno-tripleo-cli-install
   TripleO-CLI: uncategorized/tripleo-cli
   RDO-Manager: rdo-manager/./rdo-manager
-  RDO HighlyAvailable and LoadBalanced Control Services: uncategorized/rdo-highlyavailable-and-loadbalanced-control-services
   RDO Manager Architecture Overview: rdo-manager/./rdo-manager-architecture-overview
   Release-Cadence: uncategorized/release-cadence
   RDO-Manager/user-guides/2015-03-18-instack-based-deployment-flow: rdo-manager/user-guides/2015-03-18-instack-based-deployment-flow
