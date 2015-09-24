@@ -462,8 +462,14 @@ body > section
           margin-left: calc(-#{$pullWidthSingle} - #{$offset-single})
           padding-left: calc(#{$pullWidthSingle} + #{$offset-single})
 
-  .block-highlight h2 > .mw-headline
-    background-color: #eeeeee
+  .block-highlight
+    h2
+      &:before
+        border-color: #e62020
+      &:after
+        border-color: #eccece
+      > .mw-headline
+        background-color: #eeeeee
 
 
 .forum-blurbs
