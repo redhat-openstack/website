@@ -27,6 +27,9 @@ logo: rdo-logo-white.png
   #About: /about
   #Offsite example: http://example.com/
 
+# Regular expression filter for events
+events_filter: rdo
+
 
 ## If unspecified, timezone defaults to UTC
 ## For more TZs, see the top of:
