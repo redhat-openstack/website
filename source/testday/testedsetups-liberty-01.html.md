@@ -77,6 +77,7 @@ Please see [Docs - Storage](/documentation/storage) for configuration guides as 
 | All-in-One | Glance=nfs, Cinder=netapp_iscsi|  RHEL7.1 | | [QuickStart](/Quickstart) |  |    |   | None
 | All-in-One | Glance=lvm, Cinder=netapp_nfs|  RHEL7.1 |  | [QuickStart](/Quickstart) |   |    | None | None
 | All-in-One | swift|  RHEL7.1 | | [QuickStart](/Quickstart) |   |   | None | None
+| All-in-One | Glance=lvm, Cinder=lvm, Manila=Generic | Fedora 22 | FAIL | [QuickStart](/Quickstart) | dustins | | [1265816](https://bugzilla.redhat.com/show_bug.cgi?id=1265816) | None
 
 ## Packstack Based Installation (Misc Components)
 
