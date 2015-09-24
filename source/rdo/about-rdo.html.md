@@ -22,4 +22,4 @@ If you are happy with community support, and what you want is to use and test th
 
 If, however, what you are looking for is a stable, supported platform, with certification of partner applications, and a reliable partner with a great track record in enterprise infrastructure to build or scale out your production OpenStack cloud, you should consider [Red Hat Linux OpenStack Platform](https://access.redhat.com/products/red-hat-enterprise-linux-openstack-platform/).
 
-<Category:RDO>
+TAGS: needs-update
