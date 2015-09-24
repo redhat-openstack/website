@@ -67,7 +67,7 @@
   OSAS Test Lab: uncategorized/osas-test-lab
   SELinux issues: documentation/selinux-issues
   Accessing Nagios: documentation/accessing-nagios
-  Uninstalling RDO: uncategorized/uninstalling-rdo
+  Uninstalling RDO: install/uninstalling-rdo
   Installation errors: documentation/installation-errors
   Deploy Haeat and launch your first Application: uncategorized/deploy-haeat-and-launch-your-first-application
   Deploy Heat and launch your first Application: uncategorized/deploy-heat-and-launch-your-first-application
@@ -125,7 +125,7 @@
   RDO Test Day October 2013: testday/rdo-test-day-october-2013
   LaunchHeatApplication: uncategorized/launchheatapplication
   Configuring Neutron with OVS and GRE Tunnels using quickstack: networking/configuring-neutron-with-ovs-and-gre-tunnels-using-quickstack
-  GettingStartedHavana w GRE: uncategorized/gettingstartedhavana-w-gre
+  GettingStartedHavana w GRE: networking/gettingstartedhavana-w-gre
   Continuous Integration: uncategorized/continuous-integration
   HA: ha/
   CeilometerQuickStart: install/ceilometerquickstart
@@ -189,7 +189,7 @@
   Using NFS for Cinder with RDO: storage/Cinder/using-nfs-for-cinder-with-rdo
   Using Ceph for block storage with RDO: storage/Cinder/using-ceph-for-block-storage-with-rdo
   Modular Layer 2 (ML2) Plugin: uncategorized/modular-layer-2-(ml2)-plugin
-  Testing IceHouse using Tempest: uncategorized/testing-icehouse-using-tempest
+  Testing IceHouse using Tempest: testday/testing-icehouse-using-tempest
   SELinux: uncategorized/selinux
   Mailing lists: community/mailing-lists
   LBaaS: uncategorized/lbaas
@@ -217,8 +217,8 @@
   Deploying RDO on a Virtual Machine Environment using Instack: uncategorized/deploying-rdo-on-a-virtual-machine-environment-using-instack
   Deploying RDO to a Virtual Machine Environment using RDO via Instack: uncategorized/deploying-rdo-to-a-virtual-machine-environment-using-rdo-via-instack
   Deploying an RDO Overcloud with Instack: uncategorized/deploying-an-rdo-overcloud-with-instack
-  Testing an RDO Overcloud with Instack: uncategorized/testing-an-rdo-overcloud-with-instack
-  Fedora 20 with existing network: uncategorized/fedora-20-with-existing-network
+  Testing an RDO Overcloud with Instack: testday/testing-an-rdo-overcloud-with-instack
+  Fedora 20 with existing network: networking/fedora-20-with-existing-network
   Setting-up-HA-of-Nova: ha/setting-up-ha-of-nova
   Setting-up-HA-of-Keystone: ha/setting-up-ha-of-keystone
   Instack FAQ: uncategorized/instack-faq
@@ -239,7 +239,7 @@
   Newsletter: newsletter/newsletter
   Newsletter/2014 May: newsletter/2014-may
   Creating CentOS and Fedora images ready for Openstack: resources/creating-centos-and-fedora-images-ready-for-openstack
-  GettingStartedIcehouse w GRE: uncategorized/gettingstartedicehouse-w-gre
+  GettingStartedIcehouse w GRE: networking/gettingstartedicehouse-w-gre
   Newsletter/2014 June: newsletter/2014-june
   Deployment methods: uncategorized/deployment-methods
   Twitter: uncategorized/twitter
@@ -300,4 +300,4 @@
   Newsletter/2015 July: newsletter/2015-july
   Newsletter/2015 August: newsletter/2015-august
   Allinone.yaml: uncategorized/allinone.yaml
-  Testing RDO with Rally: uncategorized/testing-rdo-with-rally
+  Testing RDO with Rally: testday/testing-rdo-with-rally
