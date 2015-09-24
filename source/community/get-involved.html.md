@@ -25,7 +25,7 @@ Join our [newsletter mailing list](//www.redhat.com/mailman/listinfo/rdo-newslet
 
 Follow us on Twitter at [@rdocommunity](//twitter.com/rdocommunity), on [Google+](https://plus.google.com/communities/110409030763231732154), or on [Facebook](https://www.facebook.com/rdocommunity), as you prefer.
 
-[Tweets by RDOcommunity](https://twitter.com/RDOcommunity){:.twitter-timeline data-widget-id="482610699122638848"}
+[Tweets by RDOcommunity](https://twitter.com/RDOcommunity){:.twitter-timeline data-widget-id="482610699122638848" data-height="425"}
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='//platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
 
