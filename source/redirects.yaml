@@ -102,8 +102,7 @@
   Using GRE tenant networks: networking/using-gre-tenant-networks
   Load Balance OpenStack API: api/load-balance-openstack-api
   Scratch: documentation/scratch
-  OpenStack Summit Hong Kong: uncategorized/openstack-summit-hong-kong
-  OpenStackForumHongKong: uncategorized/openstackforumhongkong
+  OpenStack Summit Hong Kong: events/openstack-summit-hong-kong
   Highly Available MySQL server for OpenStack: uncategorized/highly-available-mysql-server-for-openstack
   Floating IPs on the Lab Network: uncategorized/floating-ips-on-the-lab-network
   Events: event/events
