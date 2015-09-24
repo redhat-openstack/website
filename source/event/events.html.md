@@ -15,7 +15,7 @@ There are lots of events, around the world, where you can hang out with people f
 *   [OpenStack Summit](https://www.openstack.org/summit) - October 27-30, Tokyo, Japan
 *   FOSDEM 2016
 
-The following are the meetups I'm aware of in the coming weeks where RDO enthusiasts will be gathering. If you know of others, please let me know, and/or add them to <http://openstack.redhat.com/Events>
+The following are the meetups I'm aware of in the coming weeks where RDO enthusiasts will be gathering. If you know of others, please let me know, and/or add them to <http://rdoproject.org/Events>
 
 ## Meetups
 

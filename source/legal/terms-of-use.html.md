@@ -12,7 +12,7 @@ wiki_last_updated: 2013-04-15
 
 ## General Information
 
-Please read these RDO website terms of use ("Terms") carefully because they apply to your use of the RDO website (https://openstack.redhat.com/) ("Website"). The Terms form a binding legal agreement between you and Red Hat, Inc. ("Red Hat") concerning your use of the Website.
+Please read these RDO website terms of use ("Terms") carefully because they apply to your use of the RDO website (https://rdoproject.org/) ("Website"). The Terms form a binding legal agreement between you and Red Hat, Inc. ("Red Hat") concerning your use of the Website.
 
 ## Your Agreement to the Terms
 
