@@ -1,0 +1,79 @@
+#toc
+  width: 100%
+  ul
+    margin: 0 0 0 30px
+    -moz-column-count: 2
+    column-count: 2
+    -moz-column-gap: 7ex
+    column-gap: 7ex
+    ul ul
+      -moz-column-count: 1
+      column-count: 1
+  li
+    list-style: none
+    margin: 0
+    padding: 0
+    + li
+      margin-top: 10px
+  .tocnumber
+    color: #999999
+    display: inline-block
+    width: 2ex
+  li
+    text-indent: -2ex
+  ul ul
+    .tocnumber
+      width: 2.5ex
+    li
+      text-indent: -2.4ex
+
+#toctitle
+  position: relative
+
+.toctoggle
+  position: absolute
+  top: 0
+  right: 0
+  left: 0
+  bottom: 0
+  color: transparent
+  a
+    position: absolute
+    top: 0
+    right: 0
+    left: 0
+    bottom: 0
+    line-height: 40px
+    padding-right: 10px
+    text-align: right
+    &:not(:hover)
+      color: transparent
+
+/* We shouldn't really show the advanced search links...
+.mw-search-formheader
+  display: none
+
+/* Nav & JS based sign in link; will probably change in the future...
+
+#n-Sign-In
+  position: absolute
+  top: 30px
+  /* 20 (header pad) + 24 (logo pad) - 14 (self padding) to make it align w/ the logo
+  right: 20px
+  &:before
+    content: "\f007"
+    display: inline-block
+    font-family: FontAwesome
+    font-weight: normal
+    margin-right: 1ex
+
+/* Signed in state via CSS
+#dashboard_entry_signin #n-Sign-In, .signed-in #n-Sign-In
+  display: none !important
+
+/* Reset offsite icons for http/https
+section#content .external
+  &[href^="//"], &[href^="http"]
+    background: none
+    padding-right: 0
+

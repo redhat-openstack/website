@@ -1,0 +1,99 @@
+*
+  box-sizing: border-box
+  -moz-box-sizing: border-box
+  /* Firefox
+  -webkit-box-sizing: border-box
+  /* Safari
+
+body
+  font-family: "Lato", sans-serif
+  background-color: #333333
+
+h1, h2, h3, h4, h5, h6
+  font-weight: normal
+  font-family: "Raleway", sans-serif
+  color: #888888
+
+h1
+  font-size: 26pt
+  margin: 70px 0 20px
+
+h2
+  font-size: 22pt
+  margin: 50px 0 20px
+
+h3
+  font-size: 16pt
+  margin: 20px 0 10px
+
+p
+  margin: 0
+
+div + p, pre + p
+  margin-top: 20px
+
+p +
+  pre, p
+    margin-top: 20px
+
+.text-secondary, .text-focus + p:not(.text-focus), .text-secondary + p
+  color: #888888
+
+pre
+  border: none
+  background: #eee
+  //font-size: 12px
+  padding: 10px 15px
+  margin: 5px 0
+  overflow-x: auto
+  word-wrap: normal
+  line-height: 20px
+
+.text-focus
+  color: #333333
+
+.floatright
+  float: right
+
+.floatleft
+  float: left
+
+.nav
+  .search-query
+    border-top: 0
+    border-left: 0
+    border-right: 0
+    background: black
+    color: white
+    padding: 3px
+    font: inherit
+    border-radius: 0
+    font-weight: normal
+    position: relative
+    z-index: 100
+  .icon-search
+    line-height: 10px
+
+body > section
+  background-color: white
+
+#bodyContent
+  background-color: white
+  padding-bottom: 8rem
+
+.row
+  margin-top: 20px
+  margin-top: 0
+  line-height: 20px
+
+.alert
+  a
+    font-weight: bold
+
+span, i, div
+  &[class^=fa-]
+    @extend .fa
+
+/*debug grid
+//#bodyContent
+  background: white url(theme/grid.png);

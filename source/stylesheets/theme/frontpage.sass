@@ -1,0 +1,49 @@
+.front-page
+  .frontmatter-metadata
+    display: none
+
+.social-icons
+  line-height: 20px
+  a
+    display: inline-block
+    white-space: nowrap
+    padding: 9px 12px 11px 5px
+    border-radius: 5px
+    transition: 900ms all
+    .label
+      transition: 300ms border
+      border-bottom: 1px solid rgba(blue, 0)
+  a:hover
+    transition: 300ms background
+    background: rgba(#fff, 0.75)
+    text-decoration: none
+    box-shadow: 1px 1px 1px rgba(black, 0.05)
+    .label
+      border-color: rgba(blue, 0.25)
+  .social-icon
+    font-size: 24px
+    padding: 0 0.5ex
+    vertical-align: bottom
+    text-decoration: none
+  .fa-twitter
+    color: #55acee
+  .fa-facebook
+    color: #3a5795
+  .fa-google-plus
+    color: #db4437
+  .fa-calendar
+    color: #5c0
+  .fa-envelope
+    color: #b8d
+
+.openstack-distribution-logo
+  margin-left: 2ex
+
+.openstack-distro
+  // Pad to a multiple of 20px == make 80px (original graphic is 70px high)
+  // also add a bit of breathing room to the left
+  padding: 0 0 10px 2ex
+
+.rdo-manager-logo
+  // Pad to a multiple of 20px == make 1000px (original graphic is 70px high)
+  padding: 0 0 3px 2ex
