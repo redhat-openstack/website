@@ -2,6 +2,8 @@
 
   %hr.visible-print
 
+  = partial :footer_custom
+
   - if data.site.footer_links
     %ul.footer-nav-list
       - data.site.footer_links.each do |name, url|
