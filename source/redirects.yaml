@@ -249,13 +249,13 @@
   RDO test day Juno milestone 3: testday/rdo-test-day-juno-milestone-3
   Test: uncategorized/test
   RDO test day Juno milestone 3 test cases: testday/rdo-test-day-juno-milestone-3-test-cases
-  Post Installation Tests: uncategorized/post-installation-tests
+  Post Installation Tests: install/post-installation-tests
   TryStackDocker: community/trystackdocker
   TryStack: community/trystack
   Using Ceph for Glance with RDO: uncategorized/using-ceph-for-glance-with-rdo
   Using Dell EqualLogic for Cinder with RDO: storage/Cinder/using-dell-equallogic-for-cinder-with-rdo
   Workaround archive: testday/workaround-archive
-  Post installation bugs: uncategorized/post-installation-bugs
+  Post installation bugs: install/post-installation-bugs
   Organize-a-meetup: community/organize-a-meetup
   Newsletter/2014 October: newsletter/2014-october
   Tuskar-UI: uncategorized/tuskar-ui
@@ -297,5 +297,5 @@
   ProjectsInRDO: rdo/projectsinrdo
   Newsletter/2015 July: newsletter/2015-july
   Newsletter/2015 August: newsletter/2015-august
-  Allinone.yaml: uncategorized/allinone.yaml
+  Allinone.yaml: install/allinone.yaml
   Testing RDO with Rally: testday/testing-rdo-with-rally
