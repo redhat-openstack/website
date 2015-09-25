@@ -8,7 +8,7 @@ wiki_last_updated: 2015-03-11
 
 # Tunings and tweaks
 
-iThis page has been created to track changes to the underlying systems and the default configurations needed in order to enable greater scalability for OpenStack. The goal here is to share the knowledge until the out of the box defaults can be changed. If that won't happen, then many of the items here should probably get put into end user documentation.
+This page has been created to track changes to the underlying systems and the default configurations needed in order to enable greater scalability for OpenStack. The goal here is to share the knowledge until the out of the box defaults can be changed. If that won't happen, then many of the items here should probably get put into end user documentation.
 
 **`General`**
 

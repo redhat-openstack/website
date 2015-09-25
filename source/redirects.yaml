@@ -85,9 +85,9 @@
   Network Configuration Overview: networking/network-configuration-overview
   Neutron-Quickstart: install/neutron-quickstart
   Running an instance with Neutron: networking/running-an-instance-with-neutron
-  Tools: uncategorized/tools
+  Tools: networking/tools
   Networking Solutions: networking/networking-solutions
-  Tenant Networks: uncategorized/tenant-networks
+  Tenant Networks: networking/tenant-networks
   External Connectivity: networking/external-connectivity
   Network Interfaces: networking/network-interfaces
   Neutron with OVS and VLANs: networking/neutron-with-ovs-and-vlans
@@ -107,7 +107,7 @@
   HA OpenStack API: api/ha-openstack-api
   Highly Available MySQL server: ha/highly-available-mysql-server
   Highly Available MySQL server on OpenStack: ha/highly-available-mysql-server-on-openstack
-  Heat: uncategorized/heat
+  Heat: documentation/heat
   TestedSetups: testday/testedsetups
   Deploying RDO using Foreman: install/deploying-rdo-using-foreman
   Securing services: uncategorized/securing-services
@@ -134,7 +134,7 @@
   QuickStart: install/quickstart
   Quickstart: install/quickstart
   quickstart: install/quickstart
-  Upgrading RDO: uncategorized/upgrading-rdo
+  Upgrading RDO: install/upgrading-rdo
   Highly Available Qpid for OpenStack: ha/highly-available-qpid-for-openstack
   HowToTest: testday/howto
   HowToTest/Ceilometer/H/AlarmThresholdEvaluation: testday/howtotest/ceilometer/h/alarmthresholdevaluation
@@ -155,8 +155,8 @@
   'A Case Study: Starting From Scratch With Havana': a-case-study/starting-from-scratch-with-havana
   Deploying RDO Using Foreman: install/deploying-rdo-using-foreman
   Securing Services: uncategorized/securing-services
-  Using GRE Tenant Networks: uncategorized/using-gre-tenant-networks
-  Packstack cookbook: uncategorized/packstack-cookbook
+  Using GRE Tenant Networks: networking/using-gre-tenant-networks
+  Packstack cookbook: documentation/packstack-cookbook
   DeployHeatOnHavana: install/deployheatonhavana
   Cookbook: uncategorized/cookbook
   Deploying RDO Using Tuskar And TripleO: install/deploying-rdo-using-tuskar-and-tripleo
@@ -194,12 +194,12 @@
   LBaaS: networking/lbaas
   CentOS: uncategorized/centos
   RDO test day Icehouse milestone 2: testday/rdo-test-day-icehouse-milestone-2
-  Bugzilla ownership: uncategorized/bugzilla-ownership
+  Bugzilla ownership: rdo/bugzilla-ownership
   Hangouts: community/hangouts
   TestedSetups 2014 02: testday/testedsetups-2014-02
   Workarounds 2014 02: testday/workarounds-2014-02
   TripleO VM Setup: uncategorized/tripleo-vm-setup
-  RabbitMQ: uncategorized/rabbitmq
+  RabbitMQ: documentation/rabbitmq
   IRC etiquette: community/irc-etiquette
   OpenDaylight integration: networking/opendaylight-integration
   HangoutPlaceholder: community/hangoutplaceholder
@@ -208,8 +208,8 @@
   HA Architecture: ha/ha-architecture
   Deploying Multi Node Overcloud Using TripleO And Tuskar: install/deploying-multi-node-overcloud-using-tripleo-and-tuskar
   User stories: case-studies/user-stories
-  Upgrading RDO To Icehouse: uncategorized/upgrading-rdo-to-icehouse
-  Tunings and tweaks: uncategorized/tunings-and-tweaks
+  Upgrading RDO To Icehouse: install/upgrading-rdo-to-icehouse
+  Tunings and tweaks: documentation/tunings-and-tweaks
   Deploying RDO using Instack: install/deploying-rdo-using-instack
   Deploying RDO on a Baremetal Environment using Instack: install/deploying-rdo-on-a-baremetal-environment-using-instack
   Deploying RDO on a Virtual Machine Environment using Instack: install/deploying-rdo-on-a-virtual-machine-environment-using-instack
@@ -219,7 +219,7 @@
   Fedora 20 with existing network: networking/fedora-20-with-existing-network
   Setting-up-HA-of-Nova: ha/setting-up-ha-of-nova
   Setting-up-HA-of-Keystone: ha/setting-up-ha-of-keystone
-  Instack FAQ: uncategorized/instack-faq
+  Instack FAQ: install/instack-faq
   Setting-up-HA-of-Neutron: ha/setting-up-ha-of-neutron
   Setting-up-HA-of-Glance: ha/setting-up-ha-of-glance
   OpenDaylight intergration: networking/opendaylight-intergration
@@ -233,7 +233,7 @@
   Setting-up-HA-of-RabbitMQ: ha/setting-up-ha-of-rabbitmq
   NewsletterThanks: newsletter/newsletterthanks
   Deploying an RDO Undercloud with Instack: install/deploying-an-rdo-undercloud-with-instack
-  ML2 from OVS: uncategorized/ml2-from-ovs
+  ML2 from OVS: networking/ml2-from-ovs
   Newsletter: newsletter/newsletter
   Newsletter/2014 May: newsletter/2014-may
   Creating CentOS and Fedora images ready for Openstack: resources/creating-centos-and-fedora-images-ready-for-openstack
@@ -265,7 +265,7 @@
   MidoNet integration: uncategorized/midonet-integration
   Workaround for newtron installtion error: testday/workaround-for-newtron-installtion-error
   Neutron GBP: networking/neutron-gbp
-  Ironic: uncategorized/ironic
+  Ironic: documentation/ironic
   Ironic Developer Quick-Start: uncategorized/ironic-developer-quick-start
   Helium OpenDaylight Juno OpenStack: networking/helium-opendaylight-juno-openstack
   Newsletter/2014 December: newsletter/2014-december
@@ -281,7 +281,7 @@
   TripleO-CLI: uncategorized/tripleo-cli
   RDO-Manager: rdo-manager/./rdo-manager
   RDO Manager Architecture Overview: rdo-manager/./rdo-manager-architecture-overview
-  Release-Cadence: uncategorized/release-cadence
+  Release-Cadence: rdo/release-cadence
   RDO-Manager/user-guides/2015-03-18-instack-based-deployment-flow: rdo-manager/user-guides/2015-03-18-instack-based-deployment-flow
   RDO-Manager/user-guides: documentation/user-guides
   JunoForeman: uncategorized/junoforeman
@@ -294,7 +294,7 @@
   RDO-Manager test day Kilo: testday/rdo-manager-test-day-kilo
   Node/add: node/add
   Newsletter/2015 June: newsletter/2015-june
-  ProjectsInRDO: uncategorized/projectsinrdo
+  ProjectsInRDO: rdo/projectsinrdo
   Newsletter/2015 July: newsletter/2015-july
   Newsletter/2015 August: newsletter/2015-august
   Allinone.yaml: uncategorized/allinone.yaml
