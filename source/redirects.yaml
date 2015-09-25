@@ -278,8 +278,8 @@
   Newsletter/2015 February: newsletter/2015-february
   Juno-TripleO-CLI-install: uncategorized/juno-tripleo-cli-install
   TripleO-CLI: uncategorized/tripleo-cli
-  RDO-Manager: rdo-manager/./rdo-manager
-  RDO Manager Architecture Overview: rdo-manager/./rdo-manager-architecture-overview
+  RDO-Manager: rdo-manager/
+  RDO Manager Architecture Overview: rdo-manager/rdo-manager-architecture-overview
   Release-Cadence: rdo/release-cadence
   RDO-Manager/user-guides/2015-03-18-instack-based-deployment-flow: rdo-manager/user-guides/2015-03-18-instack-based-deployment-flow
   RDO-Manager/user-guides: documentation/user-guides
