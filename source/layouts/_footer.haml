@@ -7,7 +7,10 @@
   - if data.site.footer_links
     %ul.footer-nav-list
       - data.site.footer_links.each do |name, url|
-        %li= link_to name.strip, url.strip, target: "_blank"
+        - if url
+          %li= link_to name.strip, url.strip, target: "_blank"
+        - else
+          %li= name.strip
 
   =# data.site.founding_year
   - founding = data.site.founding_year
