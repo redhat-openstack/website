@@ -114,7 +114,7 @@
   Test Day 09 2013: testday/test-day-09-2013
   TripleO images: uncategorized/tripleo-images
   Workarounds: testday/workarounds
-  RDO videos: uncategorized/rdo-videos
+  RDO videos: rdo/rdo-videos
   Deploying Heat on Havana: install/deploying-heat-on-havana
   Deploy an application with Heat: install/deploy-an-application-with-heat
   Multi-node Openstack with Neutron with libvirt, netsted kvm, virt-manager and qcow2 images: networking/multi-node-openstack-with-neutron-with-libvirt,-netsted-kvm,-virt-manager-and-qcow2-images
@@ -129,7 +129,7 @@
   HA: ha/
   CeilometerQuickStart: install/ceilometerquickstart
   Securing Services Foreman: uncategorized/securing-services-foreman
-  People/: uncategorized/people
+  People/: rdo/people
   HorizonSSL: uncategorized/horizonssl
   QuickStart: install/quickstart
   Quickstart: install/quickstart
@@ -146,12 +146,12 @@
   Networking in too much detail: networking/networking-in-too-much-detail
   Virtualized Foreman dev setup: uncategorized/virtualized-foreman-dev-setup
   Foreman HA Database: uncategorized/foreman-ha-database
-  RDO Video: uncategorized/rdo-video
+  RDO Video: rdo/rdo-video
   Deploying RDO using Tuskar and TripleO: install/deploying-rdo-using-tuskar-and-tripleo
   RDO MySQL Multi-Master Replication Active-Active HA: uncategorized/rdo-mysql-multi-master-replication-active-active-ha
   OpenStack Summit Hong Kong presentations: uncategorized/openstack-summit-hong-kong-presentations
   OpenStack Summit Hong Kong Presentations: uncategorized/openstack-summit-hong-kong-presentations
-  RDO Videos: uncategorized/rdo-videos
+  RDO Videos: rdo/rdo-videos
   'A Case Study: Starting From Scratch With Havana': a-case-study/starting-from-scratch-with-havana
   Deploying RDO Using Foreman: install/deploying-rdo-using-foreman
   Securing Services: uncategorized/securing-services
@@ -161,10 +161,10 @@
   Cookbook: uncategorized/cookbook
   Deploying RDO Using Tuskar And TripleO: install/deploying-rdo-using-tuskar-and-tripleo
   ML2 plugin: networking/ml2-plugin
-  RDO-BugTriage: uncategorized/rdo-bugtriage
-  TryStackFAQ: uncategorized/trystackfaq
+  RDO-BugTriage: community/rdo-bugtriage
+  TryStackFAQ: community/trystackfaq
   NeutronLibvirtMultinodeDevEnvironment: networking/neutronlibvirtmultinodedevenvironment
-  Using Ceph for Block Storage with RDO: uncategorized/using-ceph-for-block-storage-with-rdo
+  Using Ceph for Block Storage with RDO: storage/Cinder/using-ceph-for-block-storage-with-rdo
   Virtualized Foreman Dev Setup: uncategorized/virtualized-foreman-dev-setup
   Install: install/
   Docs/Networking: documentation/networking
@@ -176,12 +176,12 @@
   Using VXLAN Tenant Networks: networking/using-vxlan-tenant-networks
   RDO test day January 2014: testday/rdo-test-day-january-2014
   TestedSetups 2014 01: testday/testedsetups-2014-01
-  Using ThinLVM for Cinder with RDO Havana: storage/Cinder/Havan/using-thinlvm-for-cinder-with-rdo-havana
+  Using ThinLVM for Cinder with RDO Havana: storage/Cinder/Havana/using-thinlvm-for-cinder-with-rdo-havana
   Workarounds 2014 01: testday/workarounds-2014-01
   Using Swift for Glance with RDO Havana: storage/using-swift-for-glance-with-rdo-havana
-  Using GlusterFS for Cinder with RDO Havana: storage/Cinder/Havan/using-glusterfs-for-cinder-with-rdo-havana
+  Using GlusterFS for Cinder with RDO Havana: storage/Cinder/Havana/using-glusterfs-for-cinder-with-rdo-havana
   DeveloperTips: needsupdate/developertips
-  Using GlusterFS for Glance with RDO Havana: storage/using-glusterfs-for-glance-with-rdo-havana
+  Using GlusterFS for Glance with RDO Havana: storage/Cinder/Havana/using-glusterfs-for-glance-with-rdo-havana
   Tests/Storage/Cinder: /testday/tests/storage/cinder
   Tests/Storage/Glance: /testday/tests/storage/glance
   RDO test day January 2014 Metadata: testday/rdo-test-day-january-2014-metadata
