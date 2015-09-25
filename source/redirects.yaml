@@ -85,10 +85,10 @@
   Network Configuration Overview: networking/network-configuration-overview
   Neutron-Quickstart: install/neutron-quickstart
   Running an instance with Neutron: networking/running-an-instance-with-neutron
-  Tools: uncategorized/tools
+  Tools: networking/tools
   Networking Solutions: networking/networking-solutions
-  Tenant Networks: uncategorized/tenant-networks
-  External Connectivity: uncategorized/external-connectivity
+  Tenant Networks: networking/tenant-networks
+  External Connectivity: networking/external-connectivity
   Network Interfaces: networking/network-interfaces
   Neutron with OVS and VLANs: networking/neutron-with-ovs-and-vlans
   Using Ceph for Cinder with RDO Havana: source/storage/Cinder/Havana/using-ceph-for-cinder-with-rdo-havana
@@ -107,14 +107,14 @@
   HA OpenStack API: api/ha-openstack-api
   Highly Available MySQL server: ha/highly-available-mysql-server
   Highly Available MySQL server on OpenStack: ha/highly-available-mysql-server-on-openstack
-  Heat: uncategorized/heat
+  Heat: documentation/heat
   TestedSetups: testday/testedsetups
   Deploying RDO using Foreman: install/deploying-rdo-using-foreman
   Securing services: uncategorized/securing-services
   Test Day 09 2013: testday/test-day-09-2013
   TripleO images: uncategorized/tripleo-images
   Workarounds: testday/workarounds
-  RDO videos: uncategorized/rdo-videos
+  RDO videos: rdo/rdo-videos
   Deploying Heat on Havana: install/deploying-heat-on-havana
   Deploy an application with Heat: install/deploy-an-application-with-heat
   Multi-node Openstack with Neutron with libvirt, netsted kvm, virt-manager and qcow2 images: networking/multi-node-openstack-with-neutron-with-libvirt,-netsted-kvm,-virt-manager-and-qcow2-images
@@ -129,12 +129,12 @@
   HA: ha/
   CeilometerQuickStart: install/ceilometerquickstart
   Securing Services Foreman: uncategorized/securing-services-foreman
-  People/: uncategorized/people
-  HorizonSSL: uncategorized/horizonssl
+  People/: rdo/people
+  HorizonSSL: install/horizonssl
   QuickStart: install/quickstart
   Quickstart: install/quickstart
   quickstart: install/quickstart
-  Upgrading RDO: uncategorized/upgrading-rdo
+  Upgrading RDO: install/upgrading-rdo
   Highly Available Qpid for OpenStack: ha/highly-available-qpid-for-openstack
   HowToTest: testday/howto
   HowToTest/Ceilometer/H/AlarmThresholdEvaluation: testday/howtotest/ceilometer/h/alarmthresholdevaluation
@@ -146,25 +146,25 @@
   Networking in too much detail: networking/networking-in-too-much-detail
   Virtualized Foreman dev setup: uncategorized/virtualized-foreman-dev-setup
   Foreman HA Database: uncategorized/foreman-ha-database
-  RDO Video: uncategorized/rdo-video
+  RDO Video: rdo/rdo-video
   Deploying RDO using Tuskar and TripleO: install/deploying-rdo-using-tuskar-and-tripleo
   RDO MySQL Multi-Master Replication Active-Active HA: uncategorized/rdo-mysql-multi-master-replication-active-active-ha
   OpenStack Summit Hong Kong presentations: uncategorized/openstack-summit-hong-kong-presentations
   OpenStack Summit Hong Kong Presentations: uncategorized/openstack-summit-hong-kong-presentations
-  RDO Videos: uncategorized/rdo-videos
+  RDO Videos: rdo/rdo-videos
   'A Case Study: Starting From Scratch With Havana': a-case-study/starting-from-scratch-with-havana
   Deploying RDO Using Foreman: install/deploying-rdo-using-foreman
   Securing Services: uncategorized/securing-services
-  Using GRE Tenant Networks: uncategorized/using-gre-tenant-networks
-  Packstack cookbook: uncategorized/packstack-cookbook
+  Using GRE Tenant Networks: networking/using-gre-tenant-networks
+  Packstack cookbook: documentation/packstack-cookbook
   DeployHeatOnHavana: install/deployheatonhavana
   Cookbook: uncategorized/cookbook
   Deploying RDO Using Tuskar And TripleO: install/deploying-rdo-using-tuskar-and-tripleo
   ML2 plugin: networking/ml2-plugin
-  RDO-BugTriage: uncategorized/rdo-bugtriage
-  TryStackFAQ: uncategorized/trystackfaq
+  RDO-BugTriage: community/rdo-bugtriage
+  TryStackFAQ: community/trystackfaq
   NeutronLibvirtMultinodeDevEnvironment: networking/neutronlibvirtmultinodedevenvironment
-  Using Ceph for Block Storage with RDO: uncategorized/using-ceph-for-block-storage-with-rdo
+  Using Ceph for Block Storage with RDO: storage/Cinder/using-ceph-for-block-storage-with-rdo
   Virtualized Foreman Dev Setup: uncategorized/virtualized-foreman-dev-setup
   Install: install/
   Docs/Networking: documentation/networking
@@ -176,12 +176,12 @@
   Using VXLAN Tenant Networks: networking/using-vxlan-tenant-networks
   RDO test day January 2014: testday/rdo-test-day-january-2014
   TestedSetups 2014 01: testday/testedsetups-2014-01
-  Using ThinLVM for Cinder with RDO Havana: storage/Cinder/Havan/using-thinlvm-for-cinder-with-rdo-havana
+  Using ThinLVM for Cinder with RDO Havana: storage/Cinder/Havana/using-thinlvm-for-cinder-with-rdo-havana
   Workarounds 2014 01: testday/workarounds-2014-01
   Using Swift for Glance with RDO Havana: storage/using-swift-for-glance-with-rdo-havana
-  Using GlusterFS for Cinder with RDO Havana: storage/Cinder/Havan/using-glusterfs-for-cinder-with-rdo-havana
+  Using GlusterFS for Cinder with RDO Havana: storage/Cinder/Havana/using-glusterfs-for-cinder-with-rdo-havana
   DeveloperTips: needsupdate/developertips
-  Using GlusterFS for Glance with RDO Havana: storage/using-glusterfs-for-glance-with-rdo-havana
+  Using GlusterFS for Glance with RDO Havana: storage/Cinder/Havana/using-glusterfs-for-glance-with-rdo-havana
   Tests/Storage/Cinder: /testday/tests/storage/cinder
   Tests/Storage/Glance: /testday/tests/storage/glance
   RDO test day January 2014 Metadata: testday/rdo-test-day-january-2014-metadata
@@ -189,28 +189,27 @@
   Using Ceph for block storage with RDO: storage/Cinder/using-ceph-for-block-storage-with-rdo
   Modular Layer 2 (ML2) Plugin: uncategorized/modular-layer-2-(ml2)-plugin
   Testing IceHouse using Tempest: testday/testing-icehouse-using-tempest
-  SELinux: uncategorized/selinux
+  SELinux: install/selinux
   Mailing lists: community/mailing-lists
-  LBaaS: uncategorized/lbaas
-  LBaaS Havana: uncategorized/lbaas-havana
+  LBaaS: networking/lbaas
   CentOS: uncategorized/centos
   RDO test day Icehouse milestone 2: testday/rdo-test-day-icehouse-milestone-2
-  Bugzilla ownership: uncategorized/bugzilla-ownership
+  Bugzilla ownership: rdo/bugzilla-ownership
   Hangouts: community/hangouts
   TestedSetups 2014 02: testday/testedsetups-2014-02
   Workarounds 2014 02: testday/workarounds-2014-02
   TripleO VM Setup: uncategorized/tripleo-vm-setup
-  RabbitMQ: uncategorized/rabbitmq
+  RabbitMQ: documentation/rabbitmq
   IRC etiquette: community/irc-etiquette
-  OpenDaylight integration: uncategorized/opendaylight-integration
+  OpenDaylight integration: networking/opendaylight-integration
   HangoutPlaceholder: community/hangoutplaceholder
   MariaDB Galera: uncategorized/mariadb-galera
   RDO test day Icehouse milestone 3: testday/rdo-test-day-icehouse-milestone-3
   HA Architecture: ha/ha-architecture
   Deploying Multi Node Overcloud Using TripleO And Tuskar: install/deploying-multi-node-overcloud-using-tripleo-and-tuskar
   User stories: case-studies/user-stories
-  Upgrading RDO To Icehouse: uncategorized/upgrading-rdo-to-icehouse
-  Tunings and tweaks: uncategorized/tunings-and-tweaks
+  Upgrading RDO To Icehouse: install/upgrading-rdo-to-icehouse
+  Tunings and tweaks: documentation/tunings-and-tweaks
   Deploying RDO using Instack: install/deploying-rdo-using-instack
   Deploying RDO on a Baremetal Environment using Instack: install/deploying-rdo-on-a-baremetal-environment-using-instack
   Deploying RDO on a Virtual Machine Environment using Instack: install/deploying-rdo-on-a-virtual-machine-environment-using-instack
@@ -220,21 +219,21 @@
   Fedora 20 with existing network: networking/fedora-20-with-existing-network
   Setting-up-HA-of-Nova: ha/setting-up-ha-of-nova
   Setting-up-HA-of-Keystone: ha/setting-up-ha-of-keystone
-  Instack FAQ: uncategorized/instack-faq
+  Instack FAQ: install/instack-faq
   Setting-up-HA-of-Neutron: ha/setting-up-ha-of-neutron
   Setting-up-HA-of-Glance: ha/setting-up-ha-of-glance
-  OpenDaylight intergration: uncategorized/opendaylight-intergration
+  OpenDaylight intergration: networking/opendaylight-intergration
   Setting up High Availability: uncategorized/setting-up-high-availability
   Setting-up-HA-of-Cinder: storage/Cinder/setting-up-ha-of-cinder
   Setting-up-HAProxy-Load-Balancer: ha/setting-up-haproxy-load-balancer
-  Setting-up-memcached: uncategorized/setting-up-memcached
+  Setting-up-memcached: install/setting-up-memcached
   Setting-up-High-Availability: uncategorized/setting-up-high-availability
   Domains: uncategorized/domains
   Enabling Migrations: uncategorized/enabling-migrations
   Setting-up-HA-of-RabbitMQ: ha/setting-up-ha-of-rabbitmq
   NewsletterThanks: newsletter/newsletterthanks
   Deploying an RDO Undercloud with Instack: install/deploying-an-rdo-undercloud-with-instack
-  ML2 from OVS: uncategorized/ml2-from-ovs
+  ML2 from OVS: networking/ml2-from-ovs
   Newsletter: newsletter/newsletter
   Newsletter/2014 May: newsletter/2014-may
   Creating CentOS and Fedora images ready for Openstack: resources/creating-centos-and-fedora-images-ready-for-openstack
@@ -262,13 +261,13 @@
   Tuskar-UI: uncategorized/tuskar-ui
   Using NetApp for Cinder with RDO: storage/Cinder/using-netapp-for-cinder-with-rdo
   Newsletter/2014 November: newsletter/2014-november
-  Brochures: uncategorized/brochures
+  Brochures: community/brochures
   MidoNet integration: uncategorized/midonet-integration
   Workaround for newtron installtion error: testday/workaround-for-newtron-installtion-error
   Neutron GBP: networking/neutron-gbp
-  Ironic: uncategorized/ironic
+  Ironic: documentation/ironic
   Ironic Developer Quick-Start: uncategorized/ironic-developer-quick-start
-  Helium OpenDaylight Juno OpenStack: uncategorized/helium-opendaylight-juno-openstack
+  Helium OpenDaylight Juno OpenStack: networking/helium-opendaylight-juno-openstack
   Newsletter/2014 December: newsletter/2014-december
   Home lab: hardware/home-lab
   Deploying RHELOSP using TripleO: install/deploying-rhelosp-using-tripleo
@@ -282,7 +281,7 @@
   TripleO-CLI: uncategorized/tripleo-cli
   RDO-Manager: rdo-manager/./rdo-manager
   RDO Manager Architecture Overview: rdo-manager/./rdo-manager-architecture-overview
-  Release-Cadence: uncategorized/release-cadence
+  Release-Cadence: rdo/release-cadence
   RDO-Manager/user-guides/2015-03-18-instack-based-deployment-flow: rdo-manager/user-guides/2015-03-18-instack-based-deployment-flow
   RDO-Manager/user-guides: documentation/user-guides
   JunoForeman: uncategorized/junoforeman
@@ -295,7 +294,7 @@
   RDO-Manager test day Kilo: testday/rdo-manager-test-day-kilo
   Node/add: node/add
   Newsletter/2015 June: newsletter/2015-june
-  ProjectsInRDO: uncategorized/projectsinrdo
+  ProjectsInRDO: rdo/projectsinrdo
   Newsletter/2015 July: newsletter/2015-july
   Newsletter/2015 August: newsletter/2015-august
   Allinone.yaml: uncategorized/allinone.yaml
