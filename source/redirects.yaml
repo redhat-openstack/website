@@ -144,7 +144,6 @@
   HowToTest/Ceilometer/H/AlarmAggregation: testday/howtotest/ceilometer/h/alarmaggregation
   'A case study: starting from scratch with Havana': needsupdate/starting-from-scratch-with-havana
   Networking in too much detail: networking/networking-in-too-much-detail
-  Virtualized Foreman dev setup: uncategorized/virtualized-foreman-dev-setup
   Foreman HA Database: uncategorized/foreman-ha-database
   RDO Video: rdo/rdo-video
   Deploying RDO using Tuskar and TripleO: install/deploying-rdo-using-tuskar-and-tripleo
@@ -165,7 +164,8 @@
   TryStackFAQ: community/trystackfaq
   NeutronLibvirtMultinodeDevEnvironment: networking/neutronlibvirtmultinodedevenvironment
   Using Ceph for Block Storage with RDO: storage/Cinder/using-ceph-for-block-storage-with-rdo
-  Virtualized Foreman Dev Setup: uncategorized/virtualized-foreman-dev-setup
+  Virtualized Foreman dev setup: install/virtualized-foreman-dev-setup
+  Virtualized Foreman Dev Setup: install/virtualized-foreman-dev-setup
   Install: install/
   Docs/Networking: documentation/networking
   Docs/Storage: storage/
