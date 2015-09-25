@@ -95,7 +95,6 @@
   Books: documentation/books
   Neutron-ovs with vlans: networking/neutron-ovs-with-vlans
   Neutron with OVS and vlans: networking/neutron-with-ovs-and-vlans
-  Fedora 19: uncategorized/fedora-19
   Using GRE tenant networks: networking/using-gre-tenant-networks
   Load Balance OpenStack API: api/load-balance-openstack-api
   Scratch: documentation/scratch
