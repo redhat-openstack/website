@@ -23,9 +23,10 @@ logo: rdo-logo-white.png
 
 
 # Optional footer links
-#footer_links:
-  #About: /about
-  #Offsite example: http://example.com/
+footer_links:
+  "<strong>RDO</strong> is a <strong>Red Hat</strong>-sponsored community project":
+# Note: RDO uses a custom footer, defined in:
+# source/layouts/_footer_custom.yaml
 
 # Regular expression filter for events
 events_filter: rdo
