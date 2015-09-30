@@ -1,11 +1,24 @@
 #footer
-  background-color: #222222
-  padding: 20px 40px
-  color: #eeeeee
-  text-align: left
+  width: 100%
+  max-width: 88em
+  margin: 0 auto
+  padding: 40px 2em
+  color: #ccc
 
   .copyright
     float: left
+
+  .edit-this-page
+    padding: 0 2ex
+
+    a
+      opacity: 1
+      color: mix(#337ab7, #fff, 60)
+
+      &:hover
+        opacity: 1
+        color: mix(#337ab7, #fff, 30)
+
 
 .footer-nav-list
   line-height: 20px
@@ -34,11 +47,15 @@
 .footer-rdo
   text-align: left
   overflow: hidden
+  //max-width: 80em
+  margin: 0 auto
 
   dl
     width: 25%
+    min-width: 24ex
     float: left
     padding: 0 0 4ex
+    min-height: 10em
 
     dt
       text-transform: uppercase
