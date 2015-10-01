@@ -33,7 +33,7 @@ footer_links:
 # source/layouts/_footer_custom.yaml
 
 # Regular expression filter for events
-events_filter: rdo
+events_filter: rdo|openstack
 
 
 ## If unspecified, timezone defaults to UTC
