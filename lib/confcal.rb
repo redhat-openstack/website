@@ -140,6 +140,24 @@ class ConfCal < Middleman::Extension
         end
       end
     end
+
+    # Determines if a talk is relevant, based on
+    # 1. If conference matches (then yes)
+    # 2. If talk matches (then yes, even if conference doesn't)
+    def is_relevant_talk(filter, conf, talk)
+      return true if filter.nil?
+
+      # Normalize filter
+      filter = /#{filter}/i if filter.class == String
+
+      # Handle only conference info (no talk info)
+      conf_data = conf.dup
+      conf_data.delete(:talks)
+      conf_match = conf_data.to_yaml.match(filter)
+
+      # True if conference and/or talk matches
+      conf_match || talk.to_yaml.match(filter)
+    end
   end
 end
 

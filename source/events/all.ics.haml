@@ -41,6 +41,8 @@ index: false
             talk_times = []
 
             conf.talks.each do |talk|
+              next unless is_relevant_talk(data.site.events_filter, conf, talk)
+
               event = Icalendar::Event.new
 
               event.uid = event.uid.gsub(/@.*/, "@#{data.site.domain}")
