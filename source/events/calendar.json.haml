@@ -37,16 +37,19 @@ index: false
               conf.talks.each do |talk|
                 fragment = "##{conf_label.parameterize}--#{talk.title.parameterize}"
 
-                item = {
-                  title: talk.title,
-                  start: Chronic::parse(talk.start).strftime("%Y-%m-%d"),
-                  end: Chronic::parse(talk.end).strftime("%Y-%m-%d"),
-                  url: current ? fragment : page + fragment,
-                  className: current ? "current" : "old",
-                  allDay: true
-                }
+                begin
+                  item = {
+                    title: talk.title,
+                    start: Chronic::parse(talk.start).strftime("%Y-%m-%d"),
+                    end: Chronic::parse(talk.end).strftime("%Y-%m-%d"),
+                    url: current ? fragment : page + fragment,
+                    className: current ? "current" : "old",
+                    allDay: true
+                  }
 
-                conferences.push item
+                  conferences.push item
+                rescue
+                end
               end
             end
 
