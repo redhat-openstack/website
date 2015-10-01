@@ -3,7 +3,7 @@ layout: false
 index: false
 ---
 
-- if defined?(data.events)
+- if data[:events]
 
   :ruby
     require 'icalendar'
@@ -17,7 +17,7 @@ index: false
 
     cal.x_wr_calname = data.site.name
 
-    confs_match(data.site.events_filter).each do |year_label, year|
+    confs_match(data.site.events_filter, data.events).each do |year_label, year|
 
       if year_label[/\d{4}/]
 
