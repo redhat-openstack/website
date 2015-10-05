@@ -7,7 +7,7 @@ comments: true
 published: true
 ---
 
-*This continues my [series talking with OpenStack project PTLs](/blog/ptl-interviews)(Project Technical Leads) about their projects, what's new in Liberty, and what's coming in future releases.*
+*This continues my [series talking with OpenStack project PTLs](/blog/ptl-interviews) (Project Technical Leads) about their projects, what's new in Liberty, and what's coming in future releases.*
 
 **R**: I'm Rich Bowen, I'm the community liaison for the OpenStack project
 at Red Hat. I'm speaking with Haikel Guemar, who is the Project
