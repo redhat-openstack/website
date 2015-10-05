@@ -9,6 +9,9 @@ published: true
 
 *This continues my [series talking with OpenStack project PTLs](/blog/ptl-interviews) (Project Technical Leads) about their projects, what's new in Liberty, and what's coming in future releases.*
 
+You can listen to the interview [HERE](http://drbacchus.com/podcasts/openstack/haikel_packaging.mp3) or
+see the transcript below.
+
 **R**: I'm Rich Bowen, I'm the community liaison for the OpenStack project
 at Red Hat. I'm speaking with Haikel Guemar, who is the Project
 Technical Lead (PTL) on the [RPM packaging project](https://wiki.openstack.org/wiki/Rpm-packaging) at OpenStack. Thanks
