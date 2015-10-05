@@ -9,8 +9,13 @@ published: true
 
 *This continues my [series talking with OpenStack project PTLs](/blog/ptl-interviews) (Project Technical Leads) about their projects, what's new in Liberty, and what's coming in future releases.*
 
-You can listen to the interview [HERE](http://drbacchus.com/podcasts/openstack/haikel_packaging.mp3) or
+If the audio player below doesn't work for you, you can listen to the interview [HERE](http://drbacchus.com/podcasts/openstack/haikel_packaging.mp3) or
 see the transcript below.
+
+<audio controls>
+  <source src="http://drbacchus.com/podcasts/openstack/haikel_packaging.mp3" type="audio/mpeg">
+</audio>
+
 
 **R**: I'm Rich Bowen, I'm the community liaison for the OpenStack project
 at Red Hat. I'm speaking with Haikel Guemar, who is the Project
