@@ -37,7 +37,7 @@ Please make sure to use the steps described in the [How To Test](/testday/rdo-te
 | Distributed -IPv6-Deployment- Sanity |  |  CentOS 7 |  | [QuickStart](/Quickstart) |  |   |  | 
 |                                      |  | F22       |  | [QuickStart](/Quickstart) |  |   |  | 
 |                                      |  | RHEL7.1   |  | [QuickStart](/Quickstart) |  |   |  |
-| Distributed -ML2- OVS-VXLAN –  LbaaS | | CentOS 7.1 |  | [QuickStart](/Quickstart) |  |   |  | 
+| Distributed -ML2- OVS-VXLAN –  LbaaS | | CentOS 7.1 |  | [QuickStart](/Quickstart) | astafeye |   |  | 
 |                                      | | F22        |  | [QuickStart](/Quickstart) |  |   |  | 
 |                                      | | RHEL7.1    |  | [QuickStart](/Quickstart) |  |   |   | 
 | Distributed -ML2- OVS-VXLAN-VRRP     | | CentOS 7.1 |  | [QuickStart](/Quickstart) |  |  |  | 
@@ -50,6 +50,7 @@ Please make sure to use the steps described in the [How To Test](/testday/rdo-te
 | | | F22 | | [QuickStart](/Quickstart) |  |  |  | 
 | | | RHEL7.1 | | [QuickStart](/Quickstart) |  |   | | 
 | Distributed -ML2-OVS- VXLAN DVR | | RHEL 7.1 | | [QuickStart](/Quickstart) | |   |  | 
+| Distributed -ML2-OVS- VXLAN DVR | | CentOS 7.1 | | [QuickStart](/Quickstart) |itbrown |   |  | 
 | 3,node  -ML2-OVS- VXLAN |  | CentOS 7.1 |    | |   |   |  | 
 | 3,node  -ML2-OVS- GRE   |  | CentOS 7.1 |    | |   |   |  | 
 | 3,node  -ML2-OVS- VLAN  |  | CentOS 7.1 |    | |   |   |  | 
