@@ -159,7 +159,7 @@ class ConfCal < Middleman::Extension
     # Determines if a talk is relevant, based on
     # 1. If conference matches (then yes)
     # 2. If talk matches (then yes, even if conference doesn't)
-    def is_relevant_talk(filter, conf, talk)
+    def relevant_talk?(filter, conf, talk)
       return true if filter.nil?
 
       # Normalize filter

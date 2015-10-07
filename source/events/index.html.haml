@@ -94,7 +94,7 @@
             - if conf.talks
 
               - conf.talks.each do |talk|
-                - next unless is_relevant_talk(data.site.events_filter, conf, talk)
+                - next unless relevant_talk?(data.site.events_filter, conf, talk)
 
                 - talk_label = "#{conf_label.parameterize}--#{talk.title.parameterize}"
 
