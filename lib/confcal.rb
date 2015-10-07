@@ -75,6 +75,20 @@ class ConfCal < Middleman::Extension
       result
     end
 
+    # Dance to add an hour to the string representation of datetime
+    def stringtime_addhour(time_str, add_hour = 1.hour)
+      end_frags = time_str.to_s.split(' ')
+      end_tz = end_frags.pop
+
+      (end_frags.join(' ').to_time + add_hour)
+        .to_s
+        .split(' ')
+        .take(2)
+        .push(end_tz)
+        .join(' ')
+        .sub(/:00 /, ' ')
+    end
+
     def sort_events(events = data.events)
       sorted_events = {}
 
@@ -112,9 +126,11 @@ class ConfCal < Middleman::Extension
       $cur_ev[date_start] ||= {}
 
       $cur_ev[date_start][date_end] = events.each_with_object({}) do |(year_label, year), h|
+        update_commands = {}
+
         if year_label[/\d{4}/]
 
-          h[year_label] = year.select do |_conf_label, conf|
+          h[year_label] = year.select do |conf_label, conf|
             matches = false
 
             if conf.start
@@ -122,10 +138,21 @@ class ConfCal < Middleman::Extension
               matches = true if conf_date >= date_start && conf_date < date_end
             end
 
-            if conf.talks && !matches
+            if conf[:talks]
+              conf.talks.each_with_index do |talk, idx|
+                # Queue updates to add an hour when an end time does not exist
+                if talk.start && !talk.end
+                  uplabel = "#{conf_label}@@@#{idx}"
+                  update_commands[uplabel] = stringtime_addhour(talk.start)
+                end
+              end
+            end
+
+            if conf[:talks] && !matches
               conf.talks.each do |talk|
-                talk_date = Chronic.parse(talk.end)
-                if talk.end && talk_date >= date_start && talk_date < date_end
+                talk_time = talk.end || talk.start
+                talk_date = Chronic.parse(talk_time)
+                if talk_time && talk_date >= date_start && talk_date < date_end
                   matches = true
                 end
               end
@@ -133,7 +160,17 @@ class ConfCal < Middleman::Extension
 
             matches
           end
+
         end
+
+        # Add missing end times where relevant
+        update_commands.each do |command, value|
+          c = command.split('@@@')
+          conf = h[year_label][c[0]]
+          conf.talks[c[1].to_i][:end] = value if conf
+        end
+
+        h[year_label]
       end
 
       $cur_ev[date_start][date_end].reject! { |_year_label, year| year.empty? }
