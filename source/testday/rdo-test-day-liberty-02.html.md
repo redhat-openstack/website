@@ -19,7 +19,6 @@ repo](https://github.com/redhat-openstack/website).
 
 We plan to have packages for the following platforms:
 
-* Fedora 22
 * RHEL 7
 * CentOS 7
 
@@ -33,14 +32,10 @@ You'll want a fresh install with latest updates installed.
     # for Centos 7 and RHEL 7
     sudo wget http://trunk.rdoproject.org/centos7-liberty/delorean-deps.repo
     sudo wget http://trunk.rdoproject.org/centos7-liberty/current-passed-ci/delorean.repo
-    # for Fedora 22
-    sudo wget http://trunk.rdoproject.org/f22/current/delorean.repo
-    sudo wget http://trunk.rdoproject.org/f22/delorean-deps.repo
 
 * Check for any [workarounds](/testday/workarounds-liberty-02) required for your platform before the main installation
 * For Packstack based deployment start at step 2 of the [packstack Quickstart](/install/quickstart#Step_2:_Install_Packstack_Installer)
 * For RDO Manager based deployments TODO where is this info
-* **Note**: Please be aware that the Fedora 22 packages have not gone through CI
 
 ### Test cases and results
 
