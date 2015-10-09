@@ -5,11 +5,11 @@ title: RDO Liberty Test Day
 # Liberty Test Day 2
 
 We will be holding a RDO test day on October 12th and 13th, 2015.
-This will be coordinated through the **#rdo channel on Freenode**, and 
+This will be coordinated through the **#rdo channel on Freenode**, and
 through this website and the rdo-list mailing list.
 
 We'll be testing the second Liberty milestone release. If you can do
-any testing on your own ahead of time, that will help ensure that 
+any testing on your own ahead of time, that will help ensure that
 everyone isn't encountering the same problems.
 
 Update this page by submitting pull requests to [this
@@ -22,7 +22,7 @@ We plan to have packages for the following platforms:
 * RHEL 7
 * CentOS 7
 
-You'll want a fresh install with latest updates installed. 
+You'll want a fresh install with latest updates installed.
 (Fresh so that there's no hard-to-reproduce interactions with other things.)
 
 ## How To Test
@@ -35,7 +35,7 @@ You'll want a fresh install with latest updates installed.
 
 * Check for any [workarounds](/testday/workarounds-liberty-02) required for your platform before the main installation
 * For Packstack based deployment start at step 2 of the [packstack Quickstart](/install/quickstart#Step_2:_Install_Packstack_Installer)
-* For RDO Manager based deployments TODO where is this info
+* For RDO Manager based deployments follow the documentation in the [RDO Manager liberty docs](https://repos.fedorapeople.org/repos/openstack-m/rdo-manager-docs/liberty/)
 
 ### Test cases and results
 
@@ -47,8 +47,8 @@ The things that should be tested are listed on the [Tested Setups](/testday/test
 * Compare your results to the [rdoproject f22 CI report](http://trunk.rdoproject.org/f22/report.html)
 * Execute the openstack test suite tempest @ [Testing Liberty using Tempest](/uncategorized/testing-liberty-using-tempest/)
 
-If you have problems with any of the tests, report a bug to [Bugzilla](https://bugzilla.redhat.com) usually for one of the 
-[openstack-packstack](https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&component=openstack-packstack), 
+If you have problems with any of the tests, report a bug to [Bugzilla](https://bugzilla.redhat.com) usually for one of the
+[openstack-packstack](https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&component=openstack-packstack),
 [openstack-nova](https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&component=openstack-nova), [openstack-glance](https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&component=openstack-glance), [openstack-keystone](https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&component=openstack-keystone), [openstack-cinder](https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&component=openstack-cinder),
 [openstack-neutron](https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&component=openstack-neutron), [openstack-swift](https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&component=openstack-swift),  [python-django-horizon](https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&component=python-django-horizon), [openstack-heat](https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&component=openstack-heat) or [openstack-ceilometer](https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&component=openstack-ceilometer) components. If you are unsure about exactly how to file the report or what other information to include, just ask on IRC (#rdo, freenode.net)  and we will help you.
 
