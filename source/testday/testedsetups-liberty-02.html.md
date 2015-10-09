@@ -5,7 +5,7 @@ authors: rbowen
 
 # TestedSetups 2015 02
 
-Tested Setups for [RDO test day Liberty 2](/testday/rdo-test-day-liberty-02). 
+Tested Setups for [RDO test day Liberty 2](/testday/rdo-test-day-liberty-02).
 Tests should be executed against
 the Liberty RDO not Liberty, some steps from the official Quickstart guide
 do not apply to Liberty; make sure to follow the steps described in the
@@ -25,34 +25,43 @@ Here's how you might fill out an entry once you've tested it. Mark a given test 
 |                                                                |                  | CentOS 7.1 | <span style="background:#ff0000">FAIL</span> | [Neutron-Quickstart](Neutron-Quickstart) | rbowen | 2013-10-09 | ~~[1017421](https://bugzilla.redhat.com/show_bug.cgi?id=1017421)~~ | None       |
 
 
+## RDO Manager Based Installation
+
+| Config Name | HW type | BaseOS | Status | HOWTO | Who | Date | BZ/LP | Notes Page
+|----------------------------------------------------------------|------------------|-----------|----------------------------------------------|-----------------------------------------------------|--------|------------|--------------------------------------------------------------------|------------|
+| 1 Control 1 Compute | Virtual | CentOS 7 |   | [Start Here](https://repos.fedorapeople.org/repos/openstack-m/rdo-manager-docs/liberty/environments/virtual.html) |  |    |    |
+| 1 Control 1 Compute 1 Ceph | Virtual | CentOS 7 |  | [Start Here](https://repos.fedorapeople.org/repos/openstack-m/rdo-manager-docs/liberty/environments/virtual.html) |  |   |  |
+| 1 Control 1 Compute | Baremetal | CentOS 7 |  | [Start Here](https://repos.fedorapeople.org/repos/openstack-m/rdo-manager-docs/liberty/environments/baremetal.html) |  |   |  |
+| 1 Control 1 Compute 1 Ceph | Baremetal | CentOS 7 |  | [Start Here](https://repos.fedorapeople.org/repos/openstack-m/rdo-manager-docs/liberty/environments/baremetal.html) |  |   |  |
+
 ## Packstack Based Installation (Neutron Networking)
 
-Please make sure to use the steps described in the [How To Test](/testday/rdo-test-day-liberty-02#how-to-test)  when installing the base RDO system. Do not go through the Quickstart steps unmodified which will instead give you an RDO kilo deployment. 
+Please make sure to use the steps described in the [How To Test](/testday/rdo-test-day-liberty-02#how-to-test)  when installing the base RDO system. Do not go through the Quickstart steps unmodified which will instead give you an RDO kilo deployment.
 
 | Config Name | Release | BaseOS | Status | HOWTO | Who | Date | BZ/LP | Notes Page
 |----------------------------------------------------------------|------------------|-----------|----------------------------------------------|-----------------------------------------------------|--------|------------|--------------------------------------------------------------------|------------|
-| All-in-One - Sanity |  | CentOS 7 |   | [QuickStart](/Quickstart) |  |    |    | 
-|                     |  | F22      |   | [QuickStart](/Quickstart) |  |    |    | 
-|                     |  | RHEL7.1  |   | [QuickStart](/Quickstart) |  |    |    | 
-| Distributed -IPv6-Deployment- Sanity |  |  CentOS 7 |  | [QuickStart](/Quickstart) |  |   |  | 
-|                                      |  | F22       |  | [QuickStart](/Quickstart) |  |   |  | 
+| All-in-One - Sanity |  | CentOS 7 |   | [QuickStart](/Quickstart) |  |    |    |
+|                     |  | F22      |   | [QuickStart](/Quickstart) |  |    |    |
+|                     |  | RHEL7.1  |   | [QuickStart](/Quickstart) |  |    |    |
+| Distributed -IPv6-Deployment- Sanity |  |  CentOS 7 |  | [QuickStart](/Quickstart) |  |   |  |
+|                                      |  | F22       |  | [QuickStart](/Quickstart) |  |   |  |
 |                                      |  | RHEL7.1   |  | [QuickStart](/Quickstart) |  |   |  |
-| Distributed -ML2- OVS-VXLAN –  LbaaS | | CentOS 7.1 |  | [QuickStart](/Quickstart) |  |   |  | 
-|                                      | | F22        |  | [QuickStart](/Quickstart) |  |   |  | 
-|                                      | | RHEL7.1    |  | [QuickStart](/Quickstart) |  |   |   | 
-| Distributed -ML2- OVS-VXLAN-VRRP     | | CentOS 7.1 |  | [QuickStart](/Quickstart) |  |  |  | 
-| | | F22 |  | [QuickStart](/Quickstart) |  |   | | 
-| | | RHEL7.1 | | [QuickStart](/Quickstart) |  |   | | 
-| Distributed -ML2-OVS- VXLAN-IPv6 – VPNaaS | | CentOS 7.1 |  | [QuickStart](/Quickstart) |  |  |  | 
-| | | F22 |  | [QuickStart](/Quickstart) |  |   |  | 
-| | | RHEL7.1 |  | [QuickStart](/Quickstart) | |  |  | 
-| Distributed -ML2-OVS- VXLAN Security Groups | | CentOS 7.1 |  | [QuickStart](/Quickstart) |  |   |  | 
-| | | F22 | | [QuickStart](/Quickstart) |  |  |  | 
-| | | RHEL7.1 | | [QuickStart](/Quickstart) |  |   | | 
-| Distributed -ML2-OVS- VXLAN DVR | | RHEL 7.1 | | [QuickStart](/Quickstart) | |   |  | 
-| 3,node  -ML2-OVS- VXLAN |  | CentOS 7.1 |    | |   |   |  | 
-| 3,node  -ML2-OVS- GRE   |  | CentOS 7.1 |    | |   |   |  | 
-| 3,node  -ML2-OVS- VLAN  |  | CentOS 7.1 |    | |   |   |  | 
+| Distributed -ML2- OVS-VXLAN –  LbaaS | | CentOS 7.1 |  | [QuickStart](/Quickstart) |  |   |  |
+|                                      | | F22        |  | [QuickStart](/Quickstart) |  |   |  |
+|                                      | | RHEL7.1    |  | [QuickStart](/Quickstart) |  |   |   |
+| Distributed -ML2- OVS-VXLAN-VRRP     | | CentOS 7.1 |  | [QuickStart](/Quickstart) |  |  |  |
+| | | F22 |  | [QuickStart](/Quickstart) |  |   | |
+| | | RHEL7.1 | | [QuickStart](/Quickstart) |  |   | |
+| Distributed -ML2-OVS- VXLAN-IPv6 – VPNaaS | | CentOS 7.1 |  | [QuickStart](/Quickstart) |  |  |  |
+| | | F22 |  | [QuickStart](/Quickstart) |  |   |  |
+| | | RHEL7.1 |  | [QuickStart](/Quickstart) | |  |  |
+| Distributed -ML2-OVS- VXLAN Security Groups | | CentOS 7.1 |  | [QuickStart](/Quickstart) |  |   |  |
+| | | F22 | | [QuickStart](/Quickstart) |  |  |  |
+| | | RHEL7.1 | | [QuickStart](/Quickstart) |  |   | |
+| Distributed -ML2-OVS- VXLAN DVR | | RHEL 7.1 | | [QuickStart](/Quickstart) | |   |  |
+| 3,node  -ML2-OVS- VXLAN |  | CentOS 7.1 |    | |   |   |  |
+| 3,node  -ML2-OVS- GRE   |  | CentOS 7.1 |    | |   |   |  |
+| 3,node  -ML2-OVS- VLAN  |  | CentOS 7.1 |    | |   |   |  |
 
 
 ## Packstack Based Installation (Storage Components)
@@ -61,9 +70,9 @@ Please see [Docs - Storage](/documentation/storage) for configuration guides as 
 
 | Config Name | Release | BaseOS | Status | HOWTO | Who | Date | BZ/LP | Notes Page
 |----------------------------------------------------------------|------------------|-----------|----------------------------------------------|-----------------------------------------------------|--------|------------|--------------------------------------------------------------------|------------|
-| All-in-One | Glance=localfs, Cinder=lvm| CentOS 7.1 | Tested  | [QuickStart](/Quickstart) | | |  None | 
-| All-in-One | Glance=localfs, Cinder=glusterfs| CentOS 7.1 | Tested  | [QuickStart](/Quickstart) | | |  None | 
-| All-in-One | Glance=swift, Cinder=thinlvm| CentOS 7.1 |  Tested | [QuickStart](/Quickstart) | | | None | 
+| All-in-One | Glance=localfs, Cinder=lvm| CentOS 7.1 | Tested  | [QuickStart](/Quickstart) | | |  None |
+| All-in-One | Glance=localfs, Cinder=glusterfs| CentOS 7.1 | Tested  | [QuickStart](/Quickstart) | | |  None |
+| All-in-One | Glance=swift, Cinder=thinlvm| CentOS 7.1 |  Tested | [QuickStart](/Quickstart) | | | None |
 | All-in-One | Glance=s3(amazon s3), Cinder=nfs| CentOS 7.1 |  | [QuickStart](/Quickstart) | | | None | None
 | All-in-One | Glance=s3(swift s3), Cinder=nfs| CentOS 7.1 |  | [QuickStart](/Quickstart) |  | |  None|  None
 | All-in-One | Glance=ceph, Cinder=ceph| CentOS 7.1 |  | [QuickStart](/Quickstart) |  |    | None | None
@@ -86,8 +95,8 @@ Various components which don't fit the large test efforts above.
 
 | Config Name | Release | BaseOS | Status | HOWTO | Who | Date | BZ/LP | Notes Page
 |----------------------------------------------------------------|------------------|-----------|----------------------------------------------|-----------------------------------------------------|--------|------------|--------------------------------------------------------------------|------------|
-| Ceilometer: All-in-One w/ Neutron Networking | RDO Liberty | RHEL 7.1 |    |    |    |    |   |     
-| Ceilometer: All-in-One w/ Neutron Networking, Heat | RDO Liberty | CentOS 7.1 | || | || 
+| Ceilometer: All-in-One w/ Neutron Networking | RDO Liberty | RHEL 7.1 |    |    |    |    |   |
+| Ceilometer: All-in-One w/ Neutron Networking, Heat | RDO Liberty | CentOS 7.1 | || | ||
 
 ## Core Tests
 
@@ -95,15 +104,15 @@ Various components which don't fit the large test efforts above.
 
 | Config Name | Release | BaseOS | Status | HOWTO | Who | Date | BZ/LP | Notes Page
 |----------------------------------------------------------------|------------------|-----------|----------------------------------------------|-----------------------------------------------------|--------|------------|--------------------------------------------------------------------|------------|
-|All-in-one Keystone tests | RDO Liberty | CentOS 7.1 |   |   |   |  |  | 
-|All-in-one Keystone tests | RDO Liberty | RHEL 7.1 |   |   |  |    | | | 
+|All-in-one Keystone tests | RDO Liberty | CentOS 7.1 |   |   |   |  |  |
+|All-in-one Keystone tests | RDO Liberty | RHEL 7.1 |   |   |  |    | | |
 |All-in-one installation tests | RDO Liberty | RHEL 7.1 |   |   |   |   | |    |
-| Distributed Horizon | RDO Liberty | RHEL7.1 |   |   |     |  |   | 
+| Distributed Horizon | RDO Liberty | RHEL7.1 |   |   |     |  |   |
 | Heat tests | RDO Liberty | RHEL7.1|   | |    |  | Packstack + environment creation + sanity |
 | All-in-one Nova tests | RDO Liberty | RHEL7.1 |  |  |   |  | Packstack + nova sanity |
 | All-in-one Nova tests | RDO Liberty | Centos7.1 |   |  |    |  |  |
 | 2.node Nova tests | RDO Liberty | RHEL7.1 |   |  |   |  | Packstack + nova live migration (block / shared storage) |
-|  | RDO Liberty | Centos7.1 |   |  |     |  |  | 
+|  | RDO Liberty | Centos7.1 |   |  |     |  |  |
 
 
 ## Manual configuration of OpenStack
@@ -116,6 +125,6 @@ Various components which don't fit the large test efforts above.
 
 | Config Name | Release | BaseOS | Status | HOWTO | Who | Date | BZ/LP | Notes Page
 |----------------------------------------------------------------|------------------|-----------|----------------------------------------------|-----------------------------------------------------|--------|------------|--------------------------------------------------------------------|------------|
-| Post Installation | RDO Liberty |  CentOS 7.1 |  | [[Post Installation Tests]]|  |  | None | 
+| Post Installation | RDO Liberty |  CentOS 7.1 |  | [[Post Installation Tests]]|  |  | None |
 
 
