@@ -12,7 +12,7 @@
 
 This month's newsletter is very late, because I've been traveling and
 the time got away from me. If you'd like to help get next month's
-newletter out on time, or contribute to it in some other way, please
+newsletter out on time, or contribute to it in some other way, please
 let me know, at rbowen@redhat.com
 
 
@@ -98,7 +98,7 @@ And I'm in the process of editing an interview with Mike Perez, the
 Cinder PTL, and should that up later this week.
 
 As always, every week I post a summary of the blog posts by RDO
-enthusiasts in the preceeding week. These tend to increase in volume
+enthusiasts in the preceding week. These tend to increase in volume
 as we approach the next release.
 
 And, as of just a few weeks ago, we now have
