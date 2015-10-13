@@ -6,6 +6,8 @@ wiki_revision_count: 47
 wiki_last_updated: 2013-10-01
 ---
 
+*TODO: Update to Liberty, or remove entirely*
+
 # Deploy Heat and launch your first Application
 
 {:.no_toc}
