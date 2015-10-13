@@ -6,7 +6,11 @@ author: rbowen
 
 _This is the second in what I hope is a long-running series of interviews with the various OpenStack PTLs (Project Technical Leads), in an effort to better understand what the various projects do, what's new in the Kilo release, and what we can expect in Liberty, and beyond._
 
-You can listen to the recording --> [here](http://drbacchus.com/podcasts/openstack/dims_oslo.mp3) <--, and the transcript is below.
+If the audio player below doesn't work for you, you can listen to the recording --> [here](http://drbacchus.com/podcasts/openstack/dims_oslo.mp3) or see the transcript below.
+
+<audio controls>
+  <source src="http://drbacchus.com/podcasts/openstack/dims_oslo.mp3" type="audio/mpeg">
+</audio>
 
 **Rich**: Hi, this is Rich Bowen. I am the OpenStack Community Liaison at Red
 Hat, and continuing my series on Project Technical Leads (PTLs) at
@@ -30,8 +34,7 @@ though. Some of the initial effort was started back in release B.
 **R**: Oh, that long ago.
 
 **D**: Yeah. So, what we were doing ... why did Oslo come about? Oslo came
-about because way back when Nova started, we started splitting code
-from Nova into separate projects. But these projects were sharing
+about because way back when Nova started, we started splitting code from Nova into separate projects. But these projects were sharing
 code, so we were trying to figure out the best way to synchronize code
 between these sibling or child projects. So we ended up with a single
 repository of source code, called Oslo Incubator, where you would have
