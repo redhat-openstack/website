@@ -29,7 +29,7 @@ Here's how you might fill out an entry once you've tested it. Mark a given test 
 
 | Config Name | HW type | BaseOS | Status | HOWTO | Who | Date | BZ/LP | Notes Page
 |----------------------------------------------------------------|------------------|-----------|----------------------------------------------|-----------------------------------------------------|--------|------------|--------------------------------------------------------------------|------------|
-| 1 Control 1 Compute | Virtual | CentOS 7 |   | [Start Here](https://repos.fedorapeople.org/repos/openstack-m/rdo-manager-docs/liberty/environments/virtual.html) |  |    |    |
+| 1 Control 1 Compute | Virtual | CentOS 7 | <span style="background:#ff0000">FAIL</span>  | [Start Here](https://repos.fedorapeople.org/repos/openstack-m/rdo-manager-docs/liberty/environments/virtual.html) | mpavlase | 2015-10-13 | [RHBZ#1266101](https://bugzilla.redhat.com/show_bug.cgi?id=1266101), [RHBZ#1271317](https://bugzilla.redhat.com/show_bug.cgi?id=1271317)  |
 | 1 Control 1 Compute 1 Ceph | Virtual | CentOS 7 |  | [Start Here](https://repos.fedorapeople.org/repos/openstack-m/rdo-manager-docs/liberty/environments/virtual.html) |  |   |  |
 | 1 Control 1 Compute | Baremetal | CentOS 7 |  | [Start Here](https://repos.fedorapeople.org/repos/openstack-m/rdo-manager-docs/liberty/environments/baremetal.html) |  |   |  |
 | 1 Control 1 Compute 1 Ceph | Baremetal | CentOS 7 |  | [Start Here](https://repos.fedorapeople.org/repos/openstack-m/rdo-manager-docs/liberty/environments/baremetal.html) |  |   |  |
