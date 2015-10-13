@@ -6,7 +6,12 @@ author: rbowen
 
 [Zaqar](https://wiki.openstack.org/wiki/Zaqar) (formerly called Marconi) is the messaging service in [OpenStack](http://openstack.org). I recently had an opportunity to interview Flavio Percoco, who is the PTL (Project Technical Lead) of that project, about what's new in Kilo, and what's coming in [Liberty](https://wiki.openstack.org/wiki/Liberty_Release_Schedule).
 
-The recording is --> [here](http://drbacchus.com/podcasts/openstack/flavio_zaqar.mp3) <--, and the transcript follows below.
+If the audio player below doesn't work for you, the recording is [HERE](http://drbacchus.com/podcasts/openstack/flavio_zaqar.mp3), and the transcript follows below.
+
+<audio controls>
+  <source src="http://drbacchus.com/podcasts/openstack/flavio_zaqar.mp3" type="audio/mpeg">
+</audio>
+
 
 <hr />
 

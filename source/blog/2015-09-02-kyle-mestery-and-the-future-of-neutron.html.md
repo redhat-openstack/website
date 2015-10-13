@@ -6,7 +6,12 @@ author: rbowen
 
 At LinuxCon two weeks ago I had the privilege of chatting with Kyle about the future of Neutron. Kyle was a delight to interview, because he's obviously so passionate about his project.
 
-You can listen to the interview --> [HERE](http://drbacchus.com/podcasts/openstack/kyle_neutron.mp3) <-- and the transcript is below.
+If the audio player below doesn't work for you, you can listen to the interview [HERE](http://drbacchus.com/podcasts/openstack/kyle_neutron.mp3), or see the transcript below
+
+<audio controls>
+  <source src="http://drbacchus.com/podcasts/openstack/kyle_neutron.mp3" type="audio/mpeg">
+</audio>
+
 
 R: This is Rich Bowen. I'm the OpenStack community liaison at Red Hat.  This is a continuation of my series ... I'm talking with various Project Technical Leads (PTLs) at OpenStack about what's coming in the future. We've noticed ... ever since I've been involved with OpenStack I've noticed that networking is always the number one place where people have difficulties. I'm really excited to be taling with **Kyle Mestery**, who is the PTL of [**Neutron**](https://wiki.openstack.org/wiki/Neutron). Thanks so much for taking time to do this.
 
