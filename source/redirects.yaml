@@ -178,11 +178,13 @@
   Using ThinLVM for Cinder with RDO Havana: storage/Cinder/Havana/using-thinlvm-for-cinder-with-rdo-havana
   Using ThinLVM for Cinder with RDO Liberty: storage/Cinder/Liberty/using-thinlvm-for-cinder-with-rdo-liberty
   Workarounds 2014 01: testday/workarounds-2014-01
-  Using Swift for Glance with RDO Havana: storage/using-swift-for-glance-with-rdo-havana
+  Using Swift for Glance with RDO Havana: storage/Glance/Havana/using-swift-for-glance-with-rdo-havana
+  Using Swift for Glance with RDO Liberty: storage/Glance/Liberty/using-swift-for-glance-with-rdo-liberty
   Using GlusterFS for Cinder with RDO Havana: storage/Cinder/Havana/using-glusterfs-for-cinder-with-rdo-havana
   Using GlusterFS for Cinder with RDO Liberty: storage/Cinder/Liberty/using-glusterfs-for-cinder-with-rdo-liberty
   DeveloperTips: needsupdate/developertips
-  Using GlusterFS for Glance with RDO Havana: storage/Cinder/Havana/using-glusterfs-for-glance-with-rdo-havana
+  Using GlusterFS for Glance with RDO Havana: storage/Glance/Havana/using-glusterfs-for-glance-with-rdo-havana
+  Using GlusterFS for Glance with RDO Liberty: storage/Glance/Liberty/using-glusterfs-for-glance-with-rdo-liberty
   Tests/Storage/Cinder: /testday/tests/storage/cinder
   Tests/Storage/Glance: /testday/tests/storage/glance
   RDO test day January 2014 Metadata: testday/rdo-test-day-january-2014-metadata
