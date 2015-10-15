@@ -37,13 +37,13 @@ For a collection of links to alternative cloud-ready images, check out [image re
 
 ## Step 5: Launch the instance.
 
-In the main portion of the screen, under the "Images" heading, click the "Launch" button for the "F19" image. In the resulting dialog, provide a name in the "Instance Name" field, and click the "Launch" button.
+In the main portion of the screen, under the "Images" heading, click the "Launch Instance" button for the "Fedora22" image. In the resulting dialog, provide a name in the "Instance Name" field, select "m1.small" in the "Flavor" field and click the "Launch" button.
 
-You have to assign a network, either click on the "+" next to "private" or drag & drop the "private" box from "Available networks" to "Selected networks".
+You have to assign a network, under "Networking" tab, either click on the "+" next to "private" or drag & drop the "private" box from "Available networks" to "Selected networks".
 
 ## Step 6: Associate Floating IP
 
-In the main portion of the screen, under the "Instances" heading, click the "More" (down arrow in "Actions" column) button for your instance you just launched, followed by the "Associate Floating IP". Click on "+" next to "IP Address" and select the "public" Pool in the "Allocate Floating IP" dialog, continue by clicking "Allocate IP". Being back in the "Manage Floating IP Associations" dialog you can select the allicated IP Address and click "Associate".
+In the main portion of the screen, under the "Instances" heading, click the down arrow button under "Actions" column for your instance you just launched, followed by the "Associate Floating IP". Click on "+" next to "IP Address" and select the "public" Pool in the "Allocate Floating IP" dialog, continue by clicking "Allocate IP". Being back in the "Manage Floating IP Associations" dialog you can select the allicated IP Address and click "Associate".
 
 The associated Floating IPs can be spotted in the "IP Address" for each instance.
 
@@ -53,4 +53,4 @@ For additional details, please read [how to set a floating IP range](Floating IP
 
 Using the key pair file from step 3, ssh into the running vm using its floating ip address:
 
-    $ ssh -l root -i my_key_pair.pem floating_ip_address
+    $ ssh -i my_key_pair.pem fedora@floating_ip_address
