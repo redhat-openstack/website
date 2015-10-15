@@ -40,11 +40,14 @@ index: false
                 begin
                   item = {
                     title: talk.title,
-                    start: Chronic::parse(talk.start).strftime("%Y-%m-%d"),
-                    end: Chronic::parse(talk.end).strftime("%Y-%m-%d"),
+                    start: Chronic::parse(talk.start),#.strftime("%Y-%m-%d"),
+                    speaker: talk.speaker,
+                    end: Chronic::parse(talk.end),#.strftime("%Y-%m-%d"),
                     url: current ? fragment : page + fragment,
                     className: current ? "current" : "old",
-                    allDay: true
+                    location: talk.location,
+                    tags: talk.tags || conf.tags,
+                    allDay: false
                   }
 
                   conferences.push item
@@ -57,13 +60,18 @@ index: false
           else
             fragment = "##{conf_label.parameterize}"
 
+            className = current ? 'current ' : 'old '
+            className += conf[:allDay].nil? ? 'fc-x-conf' : 'fc-x-talk'
             {
               title: conf.name,
+              speaker: conf.speaker,
               start: conf.start || time_pool.min.to_date,
               end: conf.end || conf.start || time_pool.max.to_date,
               url: current ? fragment : page + fragment,
-              className: current ? "current" : "old",
-              allDay: true
+              className: className,
+              location: conf.location,
+              tags: conf.tags,
+              allDay: conf[:allDay].nil?,
             }
           end
         end
