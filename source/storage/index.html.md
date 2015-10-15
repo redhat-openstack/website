@@ -20,6 +20,7 @@ Below you can find guides and some test suggestions for the storage components.
 *   [Using Ceph for Cinder with RDO Havana](storage/Cinder/Havana/using-ceph-for-cinder-with-rdo-havana.html.md)
 *   [Using GlusterFS for Cinder with RDO Havana](storage/Cinder/Havana/using-glusterfs-for-cinder-with-rdo-havana.html.md)
 *   [Using GlusterFS for Cinder with RDO Grizzly](http://www.gluster.org/community/documentation/index.php/GlusterFS_Cinder)
+*   [Using ThinLVM for Cinder with RDO Liberty](storage/Cinder/Liberty/using-thinlvm-for-cinder-with-rdo-liberty.html.md)
 *   [Using ThinLVM for Cinder with RDO Havana](storage/Cinder/Havana/using-thinlvm-for-cinder-with-rdo-havana.html.md)
 *   [Using Dell EqualLogic for Cinder with RDO](storage/using-dell-equallogic-for-cinder-with-rdo.html.md)
 *   [Using NetApp for Cinder with RDO](storage/using-netapp-for-cinder-with-rdo.html.md)
