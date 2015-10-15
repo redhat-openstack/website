@@ -10,6 +10,8 @@ wiki_last_updated: 2014-10-06
 
 The following questions are the most commonly asked questions for [TryStack](http://trystack.org). Hopefully you can find your answer here. If you can't then ask it and add the answer here after you get one.
 
+See also [the other Trystack doc](/documentation/using-rdo-on-trystack/)
+
 ## TryStack operational boundaries
 
 1. Instances are deleted after 24 hours

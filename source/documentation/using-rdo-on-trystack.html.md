@@ -67,4 +67,9 @@ To make the storage available to use in your instance, you will need to make it 
 
 You now can use this volume to store data on your instance.
 
+# See also
+
+See also the [TryStack FAQ](/community/trystackfaq/) for more
+information.
+
 <Category:Documentation>
