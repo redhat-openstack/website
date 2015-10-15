@@ -15,22 +15,24 @@ wiki_last_updated: 2015-07-22
 This is a collection of various OpenStack-ready images of different distributions and operating systems.
 
 *   Fedora 22 [cloud images](https://getfedora.org/cloud/download/)
+*   Fedora 21: [32-bit](http://ftp.kaist.ac.kr/fedora/releases/21/Cloud/Images/i386/Fedora-Cloud-Base-20141203-21.i386.qcow2) / [64 bit](http://ftp.kaist.ac.kr/fedora/releases/21/Cloud/Images/x86_64/Fedora-Cloud-Base-20141203-21.x86_64.qcow2) ([*more info*](http://cloud.fedoraproject.org/))
 *   Fedora 20: [32-bit](http://cloud.fedoraproject.org/fedora-20.i386.qcow2) / [64 bit](http://cloud.fedoraproject.org/fedora-20.x86_64.qcow2) ([*more info*](http://cloud.fedoraproject.org/))
-*   Fedora 19: [32-bit](http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/19/Images/i386/Fedora-i386-19-20130627-sda.qcow2) / [64 bit](http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/19/Images/x86_64/Fedora-x86_64-19-20130627-sda.qcow2) ([*more info*](http://cloud.fedoraproject.org/)) **Outdated:** already in archive
 *   [CentOS 7 images](http://cloud.centos.org/centos/7/images/)
 *   [CentOS 6 images](http://cloud.centos.org/centos/6/images/)
 *   [Ubuntu cloud images](//cloud-images.ubuntu.com/)
 *   [RHEL 7 image](https://access.redhat.com/downloads/content/69/ver=/rhel---7/7.0/x86_64/product-downloads) (Requires RHEL subscription)
 *   [RHEL 6 image](https://rhn.redhat.com/rhn/software/channel/downloads/Download.do?cid=16952) (Requires RHEL subscription)
 *   [Windows Server 2012 test image](http://www.cloudbase.it/ws2012/)
+*   [openSUSE cloud images](http://download.opensuse.org/repositories/Cloud:/Images:/)
+*   [Debian cloud images](http://cdimage.debian.org/cdimage/openstack/)
 *   See also [the oz-image-build list on Github](https://github.com/rackerjoe/oz-image-build)
 
 ## Importing Images into Glance
 
 You can load an image from the command line with glance, eg:
 
-      glance image-create --name 'Fedora 20 x86_64' --disk-format qcow2 --container-format bare --is-public true \
-`--copy-from `[`http://cloud.fedoraproject.org/fedora-20.x86_64.qcow2`](http://cloud.fedoraproject.org/fedora-20.x86_64.qcow2)
+    $ wget https://download.fedoraproject.org/pub/fedora/linux/releases/22/Cloud/x86_64/Images/Fedora-Cloud-Base-22-20150521.x86_64.qcow2
+    $ glance --os-image-api-version 2 image-create --name 'Fedora-22-x86_64' --disk-format qcow2 --container-format bare --file Fedora-Cloud-Base-22-20150521.x86_64.qcow2 
 
 ... or go to the 'Images and Snapshots' tab in your OpenStack dashboard to add them via the gui.
 
