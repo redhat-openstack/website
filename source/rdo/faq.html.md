@@ -54,10 +54,6 @@ Feel free to contribute any packaging and integration patches via our developer 
 
 RDO is not a fork of OpenStack, but a community focused on packaging and integrating code from the upstream OpenStack project on CentOS, Red Hat Enterprise Linux and Fedora based platforms. Red Hat continues to participate in the development of the core OpenStack projects upstream, and all relevant patches and bug reports are routed directly to the OpenStack community codebase.
 
-## What does RDO mean for OpenStack for EPEL?
-
-RDO replaces OpenStack for EPEL ([Extra Packages for Enterprise Linux](http://fedoraproject.org/wiki/EPEL)). The current OpenStack release in EPEL, based on OpenStack Folsom, will continue to work in EPEL. Users who wish to upgrade to Grizzly should move to RDO.
-
 ## What does RDO mean for OpenStack on Fedora?
 
 Development of OpenStack for Fedora will continue unchanged. Fedora will continue to ship whatever the latest OpenStack release is, at the time when each Fedora release cycle hits its development freeze date. For Fedora users who want to run a more recent version of OpenStack than that which is available in the Fedora repository, we provide RPMs through RDO. For example, if you are running Fedora 20, and you would like to try Icehouse, then the RDO packages are for you. If you would like to run Havana on Fedora 19, then you should install OpenStack packages from the Fedora repository.
