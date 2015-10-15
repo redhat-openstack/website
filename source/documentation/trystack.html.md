@@ -10,6 +10,9 @@ wiki_last_updated: 2013-06-05
 
 # Using RDO on TryStack
 
+*TODO: Add this stuff to the upstream doc at trystack.org rather than
+maintaining it here.*
+
 If you want to get familiar with the OpenStack dashboard interface, 
 and experiment with the creation of instances and shared volumes, 
 [TryStack](http://trystack.org) could be for you. 
@@ -66,10 +69,5 @@ To make the storage available to use in your instance, you will need to make it 
         mount /dev/vdb /mnt/myvolume
 
 You now can use this volume to store data on your instance.
-
-# See also
-
-See also the [TryStack FAQ](/community/trystackfaq/) for more
-information.
 
 <Category:Documentation>
