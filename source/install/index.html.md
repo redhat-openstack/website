@@ -32,7 +32,7 @@ install directory**
 *   [Getting started with Ceilometer](CeilometerQuickStart)
 *   [Launching your first VM ](Running an instance)
 *   [Image Resources](Image resources)
-*   [Deploy Heat and launch your first Application (RDO Grizzly)](Deploy Heat and launch your first Application)
+*   [Deploy Heat and launch your first Application (RDO Grizzly)](Deploy Heat and launch your first Application) 
 *   [Deploy Heat and launch your first Application (RDO Havana)](DeployHeatOnHavana)
 *   [Repository information ](Repositories)
 *   [Adding a compute node](Adding a compute node)
