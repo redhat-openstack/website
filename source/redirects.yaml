@@ -33,7 +33,6 @@
     netsted kvm, virt-manager and qcow2 images
   Using Ceph for Block Storage with RDO: Using Ceph for block storage with RDO
   Virtualized Foreman Dev Setup: Virtualized Foreman dev setup
-  Using Ceph for block storage with RDO: Using Ceph for Cinder with RDO Havana
   Modular Layer 2 (ML2) Plugin: ML2 plugin
   QuickStartLatest: QuickStartDevelRelease
   LBaaS Havana: LBaaS
@@ -91,7 +90,6 @@
   External Connectivity: networking/external-connectivity
   Network Interfaces: networking/network-interfaces
   Neutron with OVS and VLANs: networking/neutron-with-ovs-and-vlans
-  Using Ceph for Cinder with RDO Havana: source/storage/Cinder/Havana/using-ceph-for-cinder-with-rdo-havana
   Books: documentation/books
   Neutron-ovs with vlans: networking/neutron-ovs-with-vlans
   Neutron with OVS and vlans: networking/neutron-with-ovs-and-vlans
@@ -175,15 +173,11 @@
   Using VXLAN Tenant Networks: networking/using-vxlan-tenant-networks
   RDO test day January 2014: testday/rdo-test-day-january-2014
   TestedSetups 2014 01: testday/testedsetups-2014-01
-  Using ThinLVM for Cinder with RDO Havana: storage/Cinder/Havana/using-thinlvm-for-cinder-with-rdo-havana
   Using ThinLVM for Cinder with RDO Liberty: storage/Cinder/Liberty/using-thinlvm-for-cinder-with-rdo-liberty
   Workarounds 2014 01: testday/workarounds-2014-01
-  Using Swift for Glance with RDO Havana: storage/Glance/Havana/using-swift-for-glance-with-rdo-havana
   Using Swift for Glance with RDO Liberty: storage/Glance/Liberty/using-swift-for-glance-with-rdo-liberty
-  Using GlusterFS for Cinder with RDO Havana: storage/Cinder/Havana/using-glusterfs-for-cinder-with-rdo-havana
   Using GlusterFS for Cinder with RDO Liberty: storage/Cinder/Liberty/using-glusterfs-for-cinder-with-rdo-liberty
   DeveloperTips: needsupdate/developertips
-  Using GlusterFS for Glance with RDO Havana: storage/Glance/Havana/using-glusterfs-for-glance-with-rdo-havana
   Using GlusterFS for Glance with RDO Liberty: storage/Glance/Liberty/using-glusterfs-for-glance-with-rdo-liberty
   Tests/Storage/Cinder: /testday/tests/storage/cinder
   Tests/Storage/Glance: /testday/tests/storage/glance
