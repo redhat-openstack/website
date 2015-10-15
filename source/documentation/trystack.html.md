@@ -10,6 +10,9 @@ wiki_last_updated: 2013-06-05
 
 # Using RDO on TryStack
 
+*TODO: Add this stuff to the upstream doc at trystack.org rather than
+maintaining it here.*
+
 If you want to get familiar with the OpenStack dashboard interface, 
 and experiment with the creation of instances and shared volumes, 
 [TryStack](http://trystack.org) could be for you. 
