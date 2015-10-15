@@ -17,13 +17,10 @@ RDO is two things. It's a freely-available, community-supported distribution of 
 
 ## What does RDO stand for?
 
-RDO has no expansion or longer name, officially. It is not an acronym or abbreviation for anything.
-
-However, RDO does focus on building a distribution of OpenStack specific to Red Hat operating systems (and clones of Red Hat operating systems). So, in some sense you can think of RDO as being a project started by Red Hat to build a distribution of OpenStack.
-
-The 3 letter meaningless acronym sort of comes from that line of thinking.
-
-If you prefer, you can think of it as 'Really Darned Obvious', representing our view that it should be easy to deploy an OpenStack cloud using RDO. Or, possibly, 'Ridiculously Dedicated OpenStackers', representing our OpenStack engineering team and their passion about making this stuff work.
+RDO is the RPM Distribution of OpenStack. It's a group of Rediculously
+Dedicated OpenStackers who are here to help you [Rapidly Deploy OpenStack](/quickstart),
+in a way that is Really Darned Obvious. RDO is [Rebuilt
+Daily](http://trunk.rdoproject.org), and Regularly Delivered.
 
 ## What is OpenStack?
 
@@ -56,10 +53,6 @@ Feel free to contribute any packaging and integration patches via our developer 
 ## Is RDO a fork of OpenStack?
 
 RDO is not a fork of OpenStack, but a community focused on packaging and integrating code from the upstream OpenStack project on CentOS, Red Hat Enterprise Linux and Fedora based platforms. Red Hat continues to participate in the development of the core OpenStack projects upstream, and all relevant patches and bug reports are routed directly to the OpenStack community codebase.
-
-## What does RDO mean for OpenStack for EPEL?
-
-RDO replaces OpenStack for EPEL ([Extra Packages for Enterprise Linux](http://fedoraproject.org/wiki/EPEL)). The current OpenStack release in EPEL, based on OpenStack Folsom, will continue to work in EPEL. Users who wish to upgrade to Grizzly should move to RDO.
 
 ## What does RDO mean for OpenStack on Fedora?
 
