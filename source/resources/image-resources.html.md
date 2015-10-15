@@ -31,8 +31,8 @@ This is a collection of various OpenStack-ready images of different distribution
 
 You can load an image from the command line with glance, eg:
 
-      glance image-create --name 'Fedora 20 x86_64' --disk-format qcow2 --container-format bare --is-public true \
-`--copy-from `[`http://cloud.fedoraproject.org/fedora-20.x86_64.qcow2`](http://cloud.fedoraproject.org/fedora-20.x86_64.qcow2)
+    $ wget https://download.fedoraproject.org/pub/fedora/linux/releases/22/Cloud/x86_64/Images/Fedora-Cloud-Base-22-20150521.x86_64.qcow2
+    $ glance --os-image-api-version 2 image-create --name 'Fedora-22-x86_64' --disk-format qcow2 --container-format bare --file Fedora-Cloud-Base-22-20150521.x86_64.qcow2 
 
 ... or go to the 'Images and Snapshots' tab in your OpenStack dashboard to add them via the gui.
 
