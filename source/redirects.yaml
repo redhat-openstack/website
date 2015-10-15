@@ -179,6 +179,7 @@
   Workarounds 2014 01: testday/workarounds-2014-01
   Using Swift for Glance with RDO Havana: storage/using-swift-for-glance-with-rdo-havana
   Using GlusterFS for Cinder with RDO Havana: storage/Cinder/Havana/using-glusterfs-for-cinder-with-rdo-havana
+  Using GlusterFS for Cinder with RDO Liberty: storage/Cinder/Liberty/using-glusterfs-for-cinder-with-rdo-liberty
   DeveloperTips: needsupdate/developertips
   Using GlusterFS for Glance with RDO Havana: storage/Cinder/Havana/using-glusterfs-for-glance-with-rdo-havana
   Tests/Storage/Cinder: /testday/tests/storage/cinder

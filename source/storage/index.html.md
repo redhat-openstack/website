@@ -16,6 +16,7 @@ Below you can find guides and some test suggestions for the storage components.
 
 ## Cinder Manuals
 
+*   [Using Ceph for Cinder with RDO Liberty](storage/Cinder/Liberty/using-ceph-for-cinder-with-rdo-liberty.html.md)
 *   [Using Ceph for Cinder with RDO Havana](storage/Cinder/Havana/using-ceph-for-cinder-with-rdo-havana.html.md)
 *   [Using GlusterFS for Cinder with RDO Havana](storage/Cinder/Havana/using-glusterfs-for-cinder-with-rdo-havana.html.md)
 *   [Using GlusterFS for Cinder with RDO Grizzly](http://www.gluster.org/community/documentation/index.php/GlusterFS_Cinder)
