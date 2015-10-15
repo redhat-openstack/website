@@ -7,7 +7,7 @@ as "bundler".
 ## Initial setup
 
 ```
-sudo yum install -y ruby-devel rubygems-devel gcc-c++ curl-devel rubygem-bundler patch
+sudo yum install -y ruby-devel rubygems-devel gcc-c++ curl-devel rubygem-bundler patch zlib-devel
 git clone git@github.com:redhat-openstack/website.git
 cd website
 bundle install
