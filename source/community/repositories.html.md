@@ -49,7 +49,7 @@ The packages used from rhel-z channel are:
 
 *   rubygems
 
-### RHOSP
+### RHEL-OSP
 
 The separate [Red Hat Enterprise Linux OpenStack Platform](http://redhat.com/openstack) product does **not** require the Optional channel or EPEL enabled.
 
