@@ -66,12 +66,12 @@ index: false
               title: conf.name,
               speaker: conf.speaker,
               start: conf.start || time_pool.min.to_date,
-              end: conf.end || conf.start || time_pool.max.to_date,
+              end: (conf.end || conf.start || time_pool.max).to_date + 1,
               url: current ? fragment : page + fragment,
               className: className,
               location: conf.location,
               tags: conf.tags,
-              allDay: conf[:allDay].nil?,
+              allDay: true
             }
           end
         end
