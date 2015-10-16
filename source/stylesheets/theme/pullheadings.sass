@@ -1,0 +1,116 @@
+/* Some trickiness for the faint red lines behind the headers
+
+@mixin header-pull($hp-pullWidth, $hp-offset)
+  margin-left: calc(-#{$hp-pullWidth} - #{$hp-offset})
+  padding-left: calc(#{$hp-pullWidth} + #{$hp-offset})
+
+#bodyContent
+  $offsetWidth: 33.3333333vw
+  $blocksWidth: 12vw
+  $pullWidth: $offsetWidth - $blocksWidth
+  .block-heading h2
+    position: relative
+
+    > .mw-headline
+      position: relative
+      display: inline-block
+      background-color: white
+      padding: 0 1ex
+      margin-left: -1ex
+      top: 6px
+      z-index: 3
+
+    &:before
+      border-bottom: 6px solid #f72222
+      content: "\a0 " // equavalent to "&nbsp; "
+      width: 58px
+      position: absolute
+      left: 0
+      top: -16px // -( line-height + bar-height )
+      z-index: 2
+
+    &:after
+      border-bottom: 2px solid #fedede
+      content: "\a0 " // equavalent to "&nbsp; "
+      width: 100%
+      position: absolute
+      left: 0
+      top: -14px // -( line-height + (bar-height * 1.5) )
+      z-index: 0
+
+  $pulls: (s: -115px, m: -55px, l: 5px, o: 1px)
+
+  /* .pull-s, .pull-m, and .pull-l are defined here
+  @each $pullSize, $pullOffset in $pulls
+    /* .pull-#{$pullSize}
+    .pull-#{$pullSize} h2
+      @media (min-width: 980px)
+        @include header-pull($pullWidth, $pullOffset)
+      @media (min-width: 768px) and (max-width: 979px)
+        @include header-pull($pullWidth + 6, $pullOffset)
+
+  .bg-boxes
+    .row, h4, h5, h6
+      line-height: 20px
+
+    h1, h2, h3
+      line-height: 40px
+
+    p + pre
+      /* Needs to align to 20px rythm for blocks; pre has 5px margin by default
+      margin-top: 15px
+
+    ul, li
+      line-height: 20px
+
+    ul, ol
+      margin: 10px 0
+
+    &:not(.bg-boxes-single)
+      .block-heading
+        @extend .pad-sides
+        @extend .begin-content
+        @extend .col-sm-7
+        @extend .col-sm-offset-4
+        @media (min-width: 768px)
+          margin-left: 33.33333vw
+
+      .row
+        &:nth-child(5n + 1),
+          @extend .pull-l
+
+        &:nth-child(5n + 2),
+        &:nth-child(5n + 4)
+          @extend .pull-m
+
+        &:nth-child(5n + 3)
+          @extend .pull-s
+
+    &.bg-boxes-single
+      $offsetWidthSingle: 25vw
+      $blocksWidthSingle: 11vw
+      $pullWidthSingle: $offsetWidthSingle - $blocksWidthSingle
+
+      .block-heading
+        @extend .col-sm-8
+        @extend .col-sm-offset-3
+        @media (min-width: 768px)
+          margin-left: $offsetWidthSingle
+
+        h2
+          @extend .pull-s
+          $pullOffsetSingle: 1px
+          @media (min-width: 980px)
+            @include header-pull($pullWidthSingle, $pullOffsetSingle)
+          @media (min-width: 768px) and (max-width: 979px)
+            @include header-pull($pullWidthSingle + 5, $pullOffsetSingle)
+
+  .block-highlight
+    h2
+      &:before
+        border-color: #e62020
+      &:after
+        border-color: #eccece
+      > .mw-headline
+        background-color: #eeeeee
+

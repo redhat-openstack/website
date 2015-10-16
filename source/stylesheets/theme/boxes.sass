@@ -1,0 +1,65 @@
+.block-highlight
+  background: rgba(0, 0, 0, 0.07)
+  padding: 0 0 60px
+  margin: 60px 0
+  clear: both
+  overflow: hidden
+
+.bg-boxes .block-highlight
+  /* Fudge the numbers to make the section line up cleanly between blocks
+  margin: 63px 0 38px
+  padding: 7px 0 61px
+
+.bg-boxes
+  background: url(/images/bg-boxes.png) repeat-y 12vw 0
+  /* Overcome #bodyContent
+  margin-bottom: -16rem // Also needs to offset bodyContent padding
+  padding-bottom: 8rem
+  overflow: hidden
+
+.bg-boxes-single
+  background: url(/images/bg-boxes-single.png) repeat-y 11vw 0
+
+.hero-unit
+
+  .intro-stack
+    min-width: 177px
+    width: 40%
+    min-height: 186px
+    background: no-repeat url(/images/intro-stack.png) 12vw 100%
+    //background: url(/images/bg-boxes.png) repeat-y 14.75% 0
+    position: absolute
+    bottom: 6px
+    left: 0
+
+  .intro-text
+    @extend .col-sm-8
+    @extend .col-sm-offset-3
+    padding: 36px 0
+
+@media (min-width: 768px) and (max-width: 979px)
+  .hero-unit .intro-stack,
+  .bg-boxes
+    background-position: 6vw 0 !important
+  .bg-boxes-single
+    background-position: 5vw 0
+
+@media (max-width: 767px)
+  .bg-boxes
+    overflow: visible
+  .intro-stack
+    display: none
+  .bg-boxes
+    padding-left: 2em
+    padding-right: 2em
+    margin-left: -2em
+    margin-right: -2em
+    background-image: none
+    border: none !important
+    .block-highlight
+      //background-image: none
+      //border: none !important
+
+  .hero-unit p
+    padding: 0 1.5ex
+

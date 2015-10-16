@@ -1,0 +1,57 @@
+.forum-blurbs
+  overflow: hidden
+
+.forum-blurb
+  clear: both
+  width: 66%
+  + .forum-blurb
+    margin-top: 10px
+  &:nth-child(odd)
+    text-align: right
+    float: left
+    .forum-blurb-info
+      padding-left: 0
+  &:nth-child(even)
+    text-align: left
+    float: right
+    .forum-blurb-info
+      padding-right: 0
+
+.forum-blurb-content
+  font-size: 14pt
+  position: relative
+  background-color: white
+  text-align: center
+  a
+    display: block
+    padding: 20px 20px !important
+  &:after
+    content: "\a0"
+    height: 0
+    width: 0
+    border: 0 solid #eeeeee
+    border-top-color: white
+    border-width: 12px 35px 0 0
+    position: absolute
+    top: 100%
+    right: 20px
+    -moz-transform: skewX(-15deg)
+    -ms-transform: skewX(-15deg)
+    -o-transform: skewX(-15deg)
+    -webkit-transform: skewX(-15deg)
+    transform: skewX(-15deg)
+
+.forum-blurb:nth-child(even) > .forum-blurb-content:after
+  left: 20px
+  right: auto
+  border-width: 12px 0 0 35px
+  -moz-transform: skewX(15deg)
+  -ms-transform: skewX(15deg)
+  -o-transform: skewX(15deg)
+  -webkit-transform: skewX(15deg)
+  transform: skewX(15deg)
+
+.forum-blurb-info
+  color: #999999
+  padding: 5px 78px
+

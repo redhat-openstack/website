@@ -1,0 +1,31 @@
+/* Adjust for various widths (responsive)
+@media (min-width: 980px) and (max-width: 1199px)
+  .thumbinner
+    height: 310px
+    > iframe
+      height: 310px
+
+@media (min-width: 768px) and (max-width: 979px)
+  .thumbinner
+    height: 240px
+    > iframe
+      height: 240px
+
+@media (max-width: 767px)
+  body
+    padding: 0
+  .page
+    padding-left: 2em
+    padding-right: 2em
+  .intro-stack
+    display: none
+  #innerbodycontent, .block-highlight
+    padding-left: 4ex !important
+    padding-right: 4ex !important
+  .hero-unit.row, .block-highlight
+    margin-left: -4ex !important
+    margin-right: -4ex !important
+  #bodyContent h2
+    background-image: none
+    border: none !important
+
