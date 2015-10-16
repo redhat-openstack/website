@@ -13,6 +13,9 @@ layout: pullheadings
 
 Help us make the RDO community site a great place for users and cloud operators in the Red Hat ecosystem by sharing your OpenStack questions and solutions on [ask.openstack](http://ask.openstack.org), and by adding [the most useful solutions](/documentation/troubleshooting/) and [stories](/documentation/case-studies/) to the RDO website.
 
+Our community strives to operate according to the terms of the
+[OpenStack Code of Conduct](https://www.openstack.org/legal/community-code-of-conduct/).
+
 ## Discuss and stay informed
 
 Come and chat real-time with RDO users on **IRC** —you can usually find us in the #rdo channel—or hanging out with the wider OpenStack community in the #openstack channel on [Freenode](http://freenode.net). Discussion around the RDO Deployment with Packstack and OpenStack Puppet Modules takes place in the #rdo-puppet channel.
