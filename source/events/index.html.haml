@@ -17,7 +17,9 @@
 
 
   :ruby
-    relevant_events = if defined? year
+    archive_mode = defined? year
+
+    relevant_events = if archive_mode
       current_events data.events, Date.parse("#{year}-01-01"), Date.parse("#{year}-12-31")
     else
       current_events
@@ -95,6 +97,7 @@
 
               - conf.talks.each do |talk|
                 - next unless relevant_talk?(data.site.events_filter, conf, talk)
+                - next if !archive_mode && (talk.end || talk.start).to_time < Time.now
 
                 - talk_label = "#{conf_label.parameterize}--#{talk.title.parameterize}"
 

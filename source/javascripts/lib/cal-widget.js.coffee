@@ -47,7 +47,15 @@ $ ->
     adjustClasses = (event, element, view) ->
       past = event.end.isBefore now
 
-      $(element[0]).removeClass('current').addClass('old') if past
+      # Only adjust marked as current that should be old
+      if past && event.className.join() == 'current'
+        # Link to event on an archive page
+        url = "/events/#{event.end.year()}/#{event.url}"
+
+        # Change element's status and link
+        $(element[0])
+          .removeClass('current').addClass('old')
+          .attr('href', url)
 
       return
 
