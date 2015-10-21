@@ -20,7 +20,7 @@ RDO-Manager Repositories: <http://github.com/rdo-management>
 
 ## Documentation
 
-RDO-Manager User Guide: <http://docs.rdoproject.org/rdo-manager/master>
+RDO-Manager User Guide: <https://repos.fedorapeople.org/repos/openstack-m/rdo-manager-docs/liberty/>
 
 **Note:** Limit your environment specific content in the upper left corner of the documentation.
 
