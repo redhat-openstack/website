@@ -33,20 +33,6 @@ These instructions are to install the current ("**Liberty**") release.
 
 **Hardware:** Machine with at least 4GB RAM, processors with hardware virtualization extensions, and at least one network adapter.
 
-Make sure devices are named properly for the network daemon: i.e. the following line must be present in `/etc/sysconfig/network-scripts/ifcfg-<interface_name>`
-
-    DEVICE="<interface_name>"
-
-where `<interface_name>` is usually "eth0" or "em1".
-
-Take down all interfaces (but the one via you're connected to the machine) with:
-
-    ifdown <interface_name>
-
-Start the network daemon:
-
-    ifdown <interface_name> && systemctl start network
-
 ## Step 1: Software repositories
 
 Update your current packages:
