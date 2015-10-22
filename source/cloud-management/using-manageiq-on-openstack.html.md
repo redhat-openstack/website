@@ -2,10 +2,6 @@
 title: Using ManageIQ on OpenStack
 category: cloud-management
 authors: dneary
-wiki_category: Cloud management
-wiki_title: Using ManageIQ on OpenStack
-wiki_revision_count: 1
-wiki_last_updated: 2014-07-01
 ---
 
 # Using ManageIQ on OpenStack
