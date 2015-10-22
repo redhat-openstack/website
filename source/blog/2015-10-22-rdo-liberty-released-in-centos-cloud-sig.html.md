@@ -21,7 +21,7 @@ own onpremise, public or hybrid clouds.
 In addition to the comprehensive OpenStack services, libraries and
 clients, this release also provides Packstack, a simple installer for
 proof-of-concept installations, as small as a single all-in-one box and
-[RDO Manager](https://www.rdoproject.org/RDO-Manager) , an OpenStack
+[RDO Manager](https://www.rdoproject.org/RDO-Manager), an OpenStack
 deployment and management tool for production environments based on the
 OpenStack TripleO project.
 
