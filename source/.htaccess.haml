@@ -376,6 +376,11 @@ directory_index: false
     RewriteRule ^ http://%1%{REQUEST_URI} [R=301,L]
   </IfModule>
 
+  # Also ...
+  RewriteCond %{HTTPS} =on
+  RewriteCond %{HTTP_HOST} !^www [NC]
+  RewriteRule ^ https://www.rdoproject.org/%{REQUEST_URI} [R=301,L]
+
   # ----------------------------------------------------------------------
 
   # Option 2:
