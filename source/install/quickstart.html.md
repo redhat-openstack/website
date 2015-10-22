@@ -19,7 +19,7 @@ These instructions are to install the current ("**Liberty**") release.
 ## Summary for the Impatient
 
     sudo yum update -y
-    sudo yum install -y https://rdoproject.org/repos/rdo-release.rpm
+    sudo yum install -y https://www.rdoproject.org/repos/rdo-release.rpm
     sudo yum install -y openstack-packstack
     packstack --allinone
 
