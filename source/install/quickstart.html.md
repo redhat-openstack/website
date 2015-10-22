@@ -18,7 +18,7 @@ Below, we'll explain how to set up OpenStack on a single server. You'll be able 
 
 If you just want to try it out without installing anything, check out [TryStack](http://trystack.org). See also [Installation](Install#Installation) for alternate deployment methods.
 
-These instructions are to install the current ("**Kilo**") release.
+These instructions are to install the current ("**Liberty**") release.
 
 ## Summary for the Impatient
 
@@ -29,23 +29,9 @@ These instructions are to install the current ("**Kilo**") release.
 
 ## Step 0: Prerequisites
 
-**Software:** Red Hat Enterprise Linux (RHEL) **7** is the minimum recommended version, or the equivalent version of one of the RHEL-based Linux distributions such as CentOS, Scientific Linux, etc., or Fedora 21. **x86_64** is currently the only supported architecture. See also [RDO repository info](Repositories) for details on required repositories. Please name the host with a fully qualified domain name rather than a short-form name to avoid DNS issues with Packstack.
+**Software:** Red Hat Enterprise Linux (RHEL) **7** is the minimum recommended version, or the equivalent version of one of the RHEL-based Linux distributions such as CentOS, Scientific Linux, etc. **x86_64** is currently the only supported architecture. See also [RDO repository info](Repositories) for details on required repositories. Please name the host with a fully qualified domain name rather than a short-form name to avoid DNS issues with Packstack.
 
 **Hardware:** Machine with at least 4GB RAM, processors with hardware virtualization extensions, and at least one network adapter.
-
-Make sure devices are named properly for the network daemon: i.e. the following line must be present in `/etc/sysconfig/network-scripts/ifcfg-<interface_name>`
-
-    DEVICE="<interface_name>"
-
-where `<interface_name>` is usually "eth0" or "em1".
-
-Take down all interfaces (but the one via you're connected to the machine) with:
-
-    ifdown <interface_name>
-
-Start the network daemon:
-
-    ifdown <interface_name> && systemctl start network
 
 ## Step 1: Software repositories
 
