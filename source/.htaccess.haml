@@ -348,7 +348,6 @@ directory_index: false
   # RewriteCond %{REQUEST_URI} !(.*)/$
   # RewriteRule ^(.*)$ http://rdoproject.org/$1/ [R=301,L]
 
-
   # ----------------------------------------------------------------------
   # Suppress or force the "www." at the beginning of URLs
   # ----------------------------------------------------------------------
@@ -551,6 +550,8 @@ directory_index: false
     php_value session.cookie_httponly true
   </IfModule>
 
+  # Redirects
+  Redirect 301 /QuickStart /install/quickstart
 
 :ruby
 
