@@ -1,8 +1,16 @@
 .footer-rdo
+  :ruby
+    browse_bugs = [
+      'https://bugzilla.redhat.com/buglist.cgi?product=RDO',
+      'query_format=advanced',
+      'bug_status=NEW',
+      'bug_status=ASSIGNED'
+    ].join('&')
+
   :markdown
     Docs
     : [Download](/install/quickstart)
-    : [Common Questions](/rdo/faq)
+    : [Common questions](/rdo/faq)
     : [Troubleshooting](/troubleshooting/)
     : [About RDO](/rdo/about/)
     {:.}
@@ -10,16 +18,17 @@
     Use RDO
     : [Quickstart](/install/quickstart)
     <!--: [All Releases](FIXME-link-to-future-releases-page)-->
-    : [Trunk Builds](http://trunk.rdoproject.org/)
+    : [Trunk builds](http://trunk.rdoproject.org/)
     {:.}
 
     Community
     : [Participate](/community/)
-    : [Ask](http://ask.rdoproject.org/)
-    : [Report a Problem](https://bugzilla.redhat.com/buglist.cgi?quicksearch=RDO)
+    : [Ask (Q&A)](http://ask.rdoproject.org/)
+    : [Browse open issues](#{browse_bugs})
+    : [Report a problem](https://bugzilla.redhat.com/enter_bug.cgi?product=RDO)
     {:.}
 
     Support
     : [Red Hat Enterprise](http://redhat.com/openstack/)
-    : [Contact Us](https://www.redhat.com/mailman/listinfo/rdo-list)
+    : [Contact us](https://www.redhat.com/mailman/listinfo/rdo-list)
     {:.}
