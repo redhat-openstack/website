@@ -1,5 +1,59 @@
 -# Red Hat tracking
 
-/ eloqua
-%script{:src => "http://www.redhat.com/j/elqNow/elqCfg.js", :type => "text/javascript"}
-%script{:src => "http://www.redhat.com/j/elqNow/elqImg.js", :type => "text/javascript"}
+/ begin eloqua tracking
+%script{:language => "JavaScript", :src => "//www.redhat.com/j/elqNow/elqCfg.js", :type => "text/javascript"}
+%script{:language => "JavaScript", :src => "//www.redhat.com/j/elqNow/elqImg.js", :type => "text/javascript"}
+
+/ end eloqua tracking
+
+/ begin Omniture tracking
+/
+  SiteCatalyst code version: H.25.4
+
+  Copyright 1996-2013 Adobe, Inc. All Rights Reserved
+  More info available at http://www.omniture.com
+
+#oTags
+  %script{:src => "//www.redhat.com/assets/js/noncms_s_code.js", :type => "text/javascript"}
+  :javascript
+     /* You may give each page an identifying name, server, and channel on the next lines. */
+     var coreUrl = encodeURI(document.URL.split("?")[0]);
+     var urlSplit = coreUrl.toLowerCase().split(/\//);
+     var urlLast = urlSplit[urlSplit.length-1];
+     var pageNameString = "";
+     var minorSectionIndex = 3;
+     if (urlSplit[3] == "promo") {
+       minorSectionIndex = 4;
+     }
+     if (urlLast == "") {
+       urlSplit.splice(-1,1);
+     }
+     if (urlLast.search(/\./) >= 0) {
+       if (urlLast == "index.html" || urlLast == "index.php") {
+         urlSplit.splice(-1,1);
+       } else {
+         urlSplit[urlSplit.length-1] = urlLast.split(".").splice(0,1);
+       }
+     }
+     s.prop14 = s.eVar27 = "rdo";
+     s.prop15 = s.eVar28 = urlSplit[minorSectionIndex] || "";
+     s.prop16 = s.eVar29 = urlSplit[minorSectionIndex+1] || "";
+     pageNameString = urlSplit.splice(3).join(" | ");
+     s.pageName = "rh | microsite | rdo | " + pageNameString;
+     s.channel = "microsite";
+     s.prop4 = s.eVar23 = encodeURI(document.URL);
+     s.prop21 = s.eVar18 = coreUrl;
+     s.prop2 = s.eVar22 = "en";
+
+  %script{:src => "//www.redhat.com/j/rh_omni_footer.js", :type => "text/javascript"}
+
+  :javascript
+     if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+'-')
+
+  %noscript
+    %a{:href => "http://www.omniture.com", :title => "Web Analytics"}
+      %img{:alt => "", :border => "0", :height => "1", :src => "https://smtrcs.redhat.com/b/ss/redhatcom,redhatglobal/1/H.25.4--NS/0?[AQB]=3[AQE]", :width => "1"}/
+
+/ /DO NOT REMOVE/
+/ End SiteCatalyst code version: H.25.4
+/ End Omniture tracking
