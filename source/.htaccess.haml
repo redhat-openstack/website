@@ -597,6 +597,6 @@ directory_index: false
   - found = find_link(orig) || find_link(expand_redirect(orig))
 
   - if found
-    = "RedirectMatch 301 (?i)^/#{Regexp.escape(wikilink)}/?$ #{found}"
+    = "RedirectMatch 301 (?i)^/#{Regexp.escape(wikilink)}$ #{found}"
   - else
     = "Redirect 301 /#{wikilink} /search/##{orig.gsub(/[\/#:\- ]+/, '%20')}"

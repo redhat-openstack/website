@@ -121,7 +121,6 @@
   Configuring Neutron with OVS and GRE Tunnels using quickstack: networking/configuring-neutron-with-ovs-and-gre-tunnels-using-quickstack
   GettingStartedHavana w GRE: networking/gettingstartedhavana-w-gre
   Continuous Integration: uncategorized/continuous-integration
-  HA: ha/
   CeilometerQuickStart: install/ceilometerquickstart
   Securing Services Foreman: uncategorized/securing-services-foreman
   People/: rdo/people
