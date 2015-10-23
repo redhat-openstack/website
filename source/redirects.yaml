@@ -4,6 +4,8 @@
   Get Involved: Get involved
   FAQ: Frequently Asked Questions
   RDO:About: About RDO
+  QuickStart: quickstart
+  Quickstart: quickstart
   Licensing: Legal
   Floating ip range: Floating IP range
   OSAS Test Lab: OSAS test lab
@@ -125,8 +127,6 @@
   Securing Services Foreman: uncategorized/securing-services-foreman
   People/: rdo/people
   HorizonSSL: install/horizonssl
-  QuickStart: install/quickstart
-  Quickstart: install/quickstart
   quickstart: install/quickstart
   Upgrading RDO: install/upgrading-rdo
   Highly Available Qpid for OpenStack: ha/highly-available-qpid-for-openstack
