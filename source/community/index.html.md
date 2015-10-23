@@ -35,7 +35,7 @@ Follow us on Twitter at [@rdocommunity](//twitter.com/rdocommunity), on [Google+
 ## Solve
 
 - Check our [Frequently Asked Questions (FAQ) page](/documentation/frequently-asked-questions/) for answers to common questions
-- Try our [troubleshooting page](/documentation/troubleshooting/) for solutions to common problems
+- Try our [troubleshooting page](/troubleshooting/) for solutions to common problems
 - Join the ask.openstack community to ask and answer questions:
 
 ### ask.openstack
