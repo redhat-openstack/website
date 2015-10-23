@@ -857,3 +857,25 @@ pre
 span, i, div
   &[class^=fa-]
     @extend .fa
+
+.splits
+  overflow: auto
+
+  .split-third
+    width: 30%
+    float: left
+    position: relative
+
+    + .split-third
+      margin-left: 5%
+
+  ul
+    padding-left: 2ex
+
+.with-more-link
+  li:last-child
+    list-style: none
+
+  a.more
+    padding-top: 1ex
+    display: block
