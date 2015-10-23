@@ -66,6 +66,7 @@ Since RDO sticks closely to the upstream OpenStack project, the documentation at
 
 * [FAQ](Frequently Asked Questions)
 * [Mailing lists](Mailing lists)
+* [Legal & Privacy](Legal)
 
 ## Upstream Documentation
 
