@@ -19,7 +19,9 @@
   - else
     - Time.now.year.to_s
 
-  .copyright= data.site.copyright || "&copy; #{year_string} #{data.site.owner || data.site.name}"
+  .copyright
+    = data.site.copyright || "&copy; #{year_string} #{data.site.owner || data.site.name}"
+    %span.legal= link_to 'Legal & Privacy', '/legal/'
 
   - if data.site.github
     .edit-this-page
