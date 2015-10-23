@@ -1,0 +1,31 @@
+%ul.ask-blurbs
+  :ruby
+    os_data = Oj.load open('https://ask.openstack.org/en/api/v1/questions/?tags=rdo')
+
+  - os_data['questions'].sort_by{|r| r['view_count']}.reverse.reject {|r| r['answer_count'] < 1}.take(20).each do |question|
+
+    -#- next if question['answer_count'] < 1
+    -#- next if question['score'] < 1
+    -#- next unless question['accepted_answer_id']
+
+    %li.ask-blurb
+      .ask-blurb-content
+        = link_to question['title'], question['url']
+      -#.ask-blurb-info
+        %span.author= question['author']['username']
+        -#.date= Time.at question['last_activity_at'].to_i
+        %time.timeago{datetime: Time.at(question['last_activity_at'].to_i).iso8601}
+          = Time.at(question['last_activity_at'].to_i).to_date
+        -#.summary= question['summary']
+        .answers
+          answers:
+          = question['answer_count']
+        .answer
+          accepted answer:
+          = question['accepted_answer_id']
+        .viewcount
+          views:
+          = question['view_count']
+        .score
+          score:
+          = question['score']
