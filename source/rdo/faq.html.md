@@ -20,7 +20,7 @@ RDO is two things. It's a freely-available, community-supported distribution of 
 RDO is the RPM Distribution of OpenStack. It's a group of Rediculously
 Dedicated OpenStackers who are here to help you [Rapidly Deploy OpenStack](/quickstart),
 in a way that is Really Darned Obvious. RDO is [Rebuilt
-Daily](http://trunk.rdoproject.org), and Regularly Delivered.
+Daily](http://trunk.rdoproject.org), Regularly Delivered, OpenStack.
 
 ## What is OpenStack?
 
