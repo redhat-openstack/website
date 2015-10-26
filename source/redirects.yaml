@@ -127,7 +127,7 @@
   Securing Services Foreman: uncategorized/securing-services-foreman
   People/: rdo/people
   HorizonSSL: install/horizonssl
-  quickstart: install/quickstart
+  Quickstart: install/quickstart
   Upgrading RDO: install/upgrading-rdo
   Highly Available Qpid for OpenStack: ha/highly-available-qpid-for-openstack
   HowToTest: testday/howto
