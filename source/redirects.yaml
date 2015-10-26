@@ -99,7 +99,6 @@
   OpenStack Summit Hong Kong: events/openstack-summit-hong-kong
   Highly Available MySQL server for OpenStack: ha/highly-available-mysql-server-for-openstack
   Floating IPs on the Lab Network: uncategorized/floating-ips-on-the-lab-network
-  Events: events/
   RDO Test Day September 2013: testday/rdo-test-day-september-2013
   HA OpenStack API: api/ha-openstack-api
   Highly Available MySQL server: ha/highly-available-mysql-server
@@ -127,7 +126,7 @@
   Securing Services Foreman: uncategorized/securing-services-foreman
   People/: rdo/people
   HorizonSSL: install/horizonssl
-  quickstart: install/quickstart
+  Quickstart: install/quickstart
   Upgrading RDO: install/upgrading-rdo
   Highly Available Qpid for OpenStack: ha/highly-available-qpid-for-openstack
   HowToTest: testday/howto

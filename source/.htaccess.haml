@@ -555,9 +555,10 @@ directory_index: false
     php_value session.cookie_httponly true
   </IfModule>
 
-  # Redirects
-  Redirect 301 /QuickStart /install/quickstart
+  # Hardcoded, special page
+  Redirect 301 /Events/ /events/
 
+  # Redirects, see source/redirects.yaml
 :ruby
 
   def find_link(title)
