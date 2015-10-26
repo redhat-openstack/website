@@ -555,6 +555,9 @@ directory_index: false
     php_value session.cookie_httponly true
   </IfModule>
 
+  # Hardcoded, special page
+  Redirect 301 /Events/ /events/
+
   # Redirects, see source/redirects.yaml
 :ruby
 
