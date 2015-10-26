@@ -101,6 +101,7 @@
   Floating IPs on the Lab Network: uncategorized/floating-ips-on-the-lab-network
   RDO Test Day September 2013: testday/rdo-test-day-september-2013
   HA OpenStack API: api/ha-openstack-api
+  HA: ha/
   Highly Available MySQL server: ha/highly-available-mysql-server
   Highly Available MySQL server on OpenStack: ha/highly-available-mysql-server-on-openstack
   Heat: documentation/heat
