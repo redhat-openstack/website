@@ -10,6 +10,9 @@ wiki_last_updated: 2014-10-30
 
 # Networking in too much detail
 
+1. toc
+{:toc}
+
 ## The players
 
 This document describes the architecture that results from a particular OpenStack configuration, specifically:
