@@ -6,13 +6,14 @@ wiki_category: Documentation
 wiki_title: PackStack All-in-One DIY Configuration
 wiki_revision_count: 24
 wiki_last_updated: 2014-09-01
+layout: toc
 ---
-
 # PackStack All-in-One DIY Configuration
 
-{:.no_toc}
-
 If you are interested in getting into the details of how OpenStack Networking with Neutron works and do not mind "getting your hands dirty", configuring the network in an all-in-one Packstack deployment is a great way to get familiar with how it works. In this set of instructions for configuring a working all-in-one with a single private network, a single router with two test VM instances, each step is described as well as checkpoints advising how to verify each step in the logs as well as immediate side-effects in the system.
+
+1. toc
+{:toc}
 
 Some preamble before we begin:
 
@@ -34,7 +35,7 @@ Running OpenStack commands are described in three parts:
 *   An example line.
 *   Example output.
 
-'' **packstack** is the exception to this convention. The general form of the command is not relevant and the volume of output is quite large.''
+**packstack** is the exception to this convention. The general form of the command is not relevant and the volume of output is quite large.
 
 #### Non-OpenStack Commands
 
@@ -53,6 +54,7 @@ Some steps include one or more sets of suggestions for optional steps aimed at v
 Visually confirm your pants are not on fire. Evident combustion indicates a time critical condition. Due to potential time zone variability and general apathy of core developers and PTLs, seeking assistance on the mailing lists or IRC is not recommended. Suggested courses of action include: immediate immersion in a NON-flammable fluid; or immediate cessation of forward locomation, adoption of a prone position followed by vigorous twisting of the body on a NON-flammable surface. Vocalizations including expletives, entreaties for immediate assistance from nearby entities corporeal or otherwise, or long strings of vowels are recommended, but optional.
 
 </div>
+
 ### General Pro-tips
 
 If you have available screen real estate, you may want to tail the log files in the /var/log/quantum directory after you have run packstack, possibly piping through grep with 'ERROR' as a search string. If you are log file hound, you might try keeping track of the time before running steps to help identify "before" and "after" when analyzing the files. If you are really into keeping track of what you have done, try running `screen` and logging (C-a H)everything you are entering and seeing. Combined with running `date` at key points, it is hard to get a better record of forensics. You might want to be careful to use that \*only\* for running the commands and small operations like examining the state of Open vSwitch, the interfaces, etc.
@@ -123,6 +125,7 @@ In `l3_agent.ini`, check the following settings:
       interface_driver = quantum.agent.linux.interface.OVSInterfaceDriver
 
 </div>
+
 You need to restart the services to pick up the new settings so run:
 
     service quantum-dhcp-agent restart
@@ -139,6 +142,7 @@ You need to restart the services to pick up the new settings so run:
 Using your favorite method, make sure that the L3 and dhcp agents are still running after restarting. Now is a good time to look for unusual errors in your log files. Any of the the log files in the /var/log/quantum directory are relevant, but the dhcp-agent.log, l3-agent.log, and openvswitch-agent.log files are directly relevant to this stage. `grep -i error *.log` works well, but be mindful of the timestamps. Errors that were logged before starting these steps are not necessarily relevant.
 
 </div>
+
 ## Step 2. Configure the Router and External Network
 
 Some elaboration on the terms used in this section's title is helpful. "External network" basically means the "public network" or "the network \*other\* than the one that connects your VMs together". The "router" is similar in function to the general meaning of the term in networking: it "routes" traffic to-and-from the "external network" and the VMs internal networks. Unlike an actual router, Neutron does not implement a routing per-se, but configures the system so it takes care of it for you. The software component in Neutron that takes care of this is the "L3 agent" being run as the `quantum-l3-agent`. Of course since Open vSwitch is being used to create network device connections, the `quantum-openvswitch-agent` is also important. It is important to note this so you know where to go looking if things go wrong!
