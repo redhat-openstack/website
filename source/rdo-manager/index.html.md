@@ -16,8 +16,6 @@ RDO-Manager Architecture Overview: <http://www.rdoproject.org/RDO_Manager_Archit
 
 RDO-Manager Components: <https://repos.fedorapeople.org/repos/openstack-m/docs/master/introduction/components.html>
 
-RDO-Manager Repositories: <http://github.com/rdo-management>
-
 ## Documentation
 
 RDO-Manager User Guide: <https://repos.fedorapeople.org/repos/openstack-m/rdo-manager-docs/liberty/>
@@ -25,10 +23,6 @@ RDO-Manager User Guide: <https://repos.fedorapeople.org/repos/openstack-m/rdo-ma
 **Note:** Limit your environment specific content in the upper left corner of the documentation.
 
 ## Presentations
-
-Demo 7 (June 19, 2015)
-
-*   [RDO-Manager: GUI End-to-End Deployment (non-narrated)](http://youtu.be/VVJ8-JrHduk)
 
 OpenStack Summit, Vancouver (May 22, 2015)
 
