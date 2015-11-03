@@ -50,7 +50,7 @@ Towards the end of developement cycle packages are imported into [CentOS Cloud S
 The RDO Project provides a Q&A service at ask.openstack.org, for more
 developer oriented content we recommend joining the [rdo-list mailing list](https://www.redhat.com/mailman/listinfo/rdo-list). Remember to post
 a brief introduction about yourself and your RDO story.
-You can also find extensive documentation [on the RDO website](https://www.rdoproject.org/Docs).	
+You can also find extensive documentation [on the RDO website](https://www.rdoproject.org/documentation).	
 
 We also welcome comments and requests on the [CentOS Mailing lists](https://lists.centos.org/) and the CentOS IRC Channels ( \#centos on
 irc.freenode.net ), however we have a more focused audience in the RDO venues.

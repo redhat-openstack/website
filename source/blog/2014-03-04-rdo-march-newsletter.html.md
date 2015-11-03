@@ -38,7 +38,7 @@ For RDO-specific statistics, we have [openstack.redhat.com/stats/](http://openst
 
 As always, a few reminders of how you can get involved in the RDO project.
 
-The wiki, at [openstack.redhat.com/Docs](http://openstack.redhat.com/Docs) , is one of the best ways you can share your experience with the rest of the RDO community. Articles about getting various scenarios working, corrections or addenda to existing articles, or suggestions for articles that you'd like to see written, are all a great help to people trying to run OpenStack.
+The wiki, at [openstack.redhat.com/docs](http://rdoproject.org/documentation) , is one of the best ways you can share your experience with the rest of the RDO community. Articles about getting various scenarios working, corrections or addenda to existing articles, or suggestions for articles that you'd like to see written, are all a great help to people trying to run OpenStack.
 
 If you have questions, or if you want to help answer other people's questions, go to [ask.openstack.org/](http://ask.openstack.org/) where there are questions from all over the OpenStack community - not just RDO users - and answers from experts on a variety of aspects of OpenStack. This is the best place to ask your questions, or to find other people who have already asked your question and received answers and advice.
 
