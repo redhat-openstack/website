@@ -11,7 +11,7 @@ A week ago in Tokyo, we held the third RDO Community Meetup at the
 OpenStack Summit. We had about 70 people in attendance, and some good
 discussion. The full agenda for the meeting is at [https://etherpad.openstack.org/p/rdo-tokyo](https://etherpad.openstack.org/p/rdo-tokyo) and below are some of the things that were discussed. (The complete recording is at the bottom of this post.)
 
-People who were in attendance, please feel free to [update and annote](https://github.com/redhat-openstack/website/tree/master/source/blog/2015-11-community-meetup-at-openstack-tokyo.html.md) your section of this report if you wish to add detail, or if I get anything wrong.
+People who were in attendance, please feel free to [update and annote](https://github.com/redhat-openstack/website/blob/master/source/blog/2015-11-04-community-meetup-at-openstack-tokyo.html.md) your section of this report if you wish to add detail, or if I get anything wrong.
 
 We started with a discussion of how the project is governed. It was observed that although we have a [weekly meeting](https://www.redhat.com/archives/rdo-list/2015-November/msg00028.html), it's not always possible for everyone to attend, but that these meetings are summarized back to the mailing list each week.
 
