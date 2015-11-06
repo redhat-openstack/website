@@ -2,7 +2,7 @@
 title: 'Mike Perez: Cinder in Liberty'
 author: rbowen
 date: 2015-11-06 18:59:15 UTC
-tags: 'Mike Perez: What''s new in Liberty for Cinder'
+tags: openstack, cinder, ptl
 comments: true
 published: true
 ---
