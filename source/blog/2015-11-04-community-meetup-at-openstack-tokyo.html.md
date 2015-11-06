@@ -42,5 +42,3 @@ If you'd like to hear more detail from the meetup, I've put the [complete record
 <audio controls>
   <source src="http://drbacchus.com/podcasts/openstack/rdo_meetup_tokyo.mp3" type="audio/mpeg">
 </audio>
-
-
