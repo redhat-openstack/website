@@ -7,7 +7,10 @@ comments: true
 published: true
 ---
 
-** RDO Liberty released in CentOS Cloud SIG**, by Alan Pevec
+Here's what RDO enthusiasts were blogging about this week. If you were at OpenStack Summit in Tokyo last month, don't forget to write up your experience.
+
+
+**RDO Liberty released in CentOS Cloud SIG**, by Alan Pevec
 
 > We are pleased to announce the general availability of the RDO build for OpenStack Liberty for CentOS Linux 7 x86_64, suitable for building private, public and hybrid clouds. OpenStack Liberty is the 12th release of the open source software collaboratively built by a large number of contributors around the OpenStack.org project space.
 
