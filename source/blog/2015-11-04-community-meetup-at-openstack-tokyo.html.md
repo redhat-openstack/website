@@ -33,7 +33,7 @@ An overview was given of the [RPM packaging](https://wiki.openstack.org/wiki/Rpm
 
 The relationship with CentOS was discussed, in particular the manual process required to push packages up to the repos. This process still requires that we ping the CentOS admins, but this will soon be an automated process. Haikel also enumerated the various reasons that the relationship with CentOS is still of great benefit to RDO, including exposure to a wider audience due to CentOS's recognized name. There was also a view expressed that we should run an RDO-based cloud, perhaps in addition to the CentOS infrastructure, so that we are testing on our own platform.
 
-Finally, Rich Megginson spoke about the data aggregation effort that he is working on with Tushar Katarki. Rich will be doing a more detailed writeup of that section in the coming days.
+Finally, Rich Megginson spoke about the data aggregation effort that he is working on with Tushar Katarki. Rich has written [a more detailed writeup of that section](http://richmegginson.livejournal.com/27696.html).
 
 Finally, a quick announcement was made of the upcoming [RDO Community Day at FOSDEM](https://www.redhat.com/archives/rdo-list/2015-November/msg00027.html). 
 
@@ -42,5 +42,3 @@ If you'd like to hear more detail from the meetup, I've put the [complete record
 <audio controls>
   <source src="http://drbacchus.com/podcasts/openstack/rdo_meetup_tokyo.mp3" type="audio/mpeg">
 </audio>
-
-
