@@ -26,9 +26,11 @@ release.
 
 ## Release fanfare
 
-A week before a release, we should write a release announcement, and run
-it past the entire community for comment. A release announcement should
-include:
+A week before a release, we should write a release announcement in a public etherpad,
+inviting a number of stakeholders to see it and comment on it. The invite list should
+be very inclusive, but not so large as to result in bikeshedding.
+
+A release announcement should include:
 
 * Where to get it
 * What's in it
