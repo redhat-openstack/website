@@ -10,7 +10,6 @@ category: documentation
 * [CentOS](/rdo/centos)
 * [Continuous Integration](/rdo/continuous-integration)
 * [FAQ](/rdo/faq)
-* [People](/rdo/people)
 * [What's In RDO?](/rdo/projectsinrdo)
 * [Videos](/rdo/rdo-videos)
 * [Release Cadence](/rdo/release-cadence)
