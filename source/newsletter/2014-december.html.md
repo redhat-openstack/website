@@ -14,15 +14,15 @@ As we head into what is typically a very quiet time of the year for Open Source 
 
 **Quick links:**
 
-*   Quick Start - <http://openstack.redhat.com/quickstart>
-*   Mailing Lists - <https://openstack.redhat.com/Mailing_lists>
+*   Quick Start - <http://rdoproject.org/quickstart>
+*   Mailing Lists - <https://rdoproject.org/Mailing_lists>
 *   RDO packages - <https://repos.fedorapeople.org/repos/openstack/openstack-juno/>
 *   RDO blog - <http://rdoproject.org/blog>
 *   Q&A - <http://ask.openstack.org/>
 
 **Holiday Slowdown and Stats**
 
-This is, as I said above, traditionally a slow time of year. If you take a look at our community statistics page at <https://openstack.redhat.com/stats/> you can see things start to slow down for the Christmas break, with a large number of people taking time off around the US Thanksgiving holiday, and even more time towards the end of the year.
+This is, as I said above, traditionally a slow time of year. If you take a look at our community statistics page at <https://rdoproject.org/stats/> you can see things start to slow down for the Christmas break, with a large number of people taking time off around the US Thanksgiving holiday, and even more time towards the end of the year.
 
 The community stats page is produced by Bitergia, who are the same people who produce the upstream OpenStack quarterly reports at <http://bitergia.com/openstack-releases-reports/> but customized to our community, including activity on RDO mailing lists and traffic on <http://ask.openstack.org/>
 
@@ -30,7 +30,7 @@ The community stats page is produced by Bitergia, who are the same people who pr
 
 We are right now in the process of scheduling Hangouts for the coming months. I don't have anything firm to report right now - watch rdo-list for more news soon. If you'd like to talk about what your company is doing with RDO and OpenStack, please let me know (rbowen@redhat.com) so that I can get you on the schedule.
 
-Meanwhile, you can watch all of our past hangouts at <https://openstack.redhat.com/Hangouts#Past_Hangouts>
+Meanwhile, you can watch all of our past hangouts at <https://rdoproject.org/Hangouts#Past_Hangouts>
 
 **Upcoming Events**
 
@@ -40,7 +40,7 @@ Following FOSDEM, don't miss Config Management Camp in nearby Ghent - <http://cf
 
 **Blogs**
 
-The weeks following OpenStack Summit in Paris have been very fruitful in terms of blog posts. You can read some of the posts from members of the RDO community on the RDO blog at <http://openstack.redhat.com/blog/>
+The weeks following OpenStack Summit in Paris have been very fruitful in terms of blog posts. You can read some of the posts from members of the RDO community on the RDO blog at <http://rdoproject.org/blog/>
 
 You should also watch the OpenStack Planet for a broader view of what's going on in the OpenStack community at large, at <http://planet.openstack.org/>
 
@@ -64,4 +64,4 @@ As always, I'll close with an encouragement to take a moment to connect with the
 
 Thanks again for being part of the RDO community!
 
--- Rich Bowen, OpenStack Community Liaison rbowen@redhat.com <http://openstack.redhat.com>
+-- Rich Bowen, OpenStack Community Liaison rbowen@redhat.com <http://rdoproject.org>

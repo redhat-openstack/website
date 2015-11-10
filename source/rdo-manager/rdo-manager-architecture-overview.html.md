@@ -101,7 +101,7 @@ Tuskar exposes a REST API and allows users to define, or update, a deployment pl
 
 Updating a deployed cloud follows a similar process: The deployment plan is Tuskar is amended to that, for example, it includes an increased number of Nova Compute nodes. That amended plan is then passed to Heat.
 
-There are notes here which described how to interact directly with the Tuskar API to retrieve and update a deployment plan. <https://openstack.redhat.com/Tuskar-API>
+There are notes here which described how to interact directly with the Tuskar API to retrieve and update a deployment plan. <https://rdoproject.org/Tuskar-API>
 
 For many users, the simplest way to read and update a deployment plan will be via the TripleO UI.
 

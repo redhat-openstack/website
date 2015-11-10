@@ -16,8 +16,8 @@ Thanks for being part of the RDO community.
 
 Quick links:
 
-*   Quick Start - <http://openstack.redhat.com/quickstart>
-*   Mailing Lists - <https://openstack.redhat.com/Mailing_lists>
+*   Quick Start - <http://rdoproject.org/quickstart>
+*   Mailing Lists - <https://rdoproject.org/Mailing_lists>
 *   RDO packages - <https://repos.fedorapeople.org/repos/openstack/openstack-juno/>
 *   RDO blog - <http://rdoproject.org/blog>
 *   Q&A - <http://ask.openstack.org/>
@@ -32,7 +32,7 @@ In the last few weeks of 2014, we strengthened that relationship with CentOS in 
 
 The first of these shifts is that we've moved the CI (Continuous Integration) effort to the CentOS community, where we can get a wider involvement in the process from people outside of Red Hat. So, starting early this year, you'll find RDO testing happening on <http://ci.centos.org/> so that we're always certain that everything is working on this important platform.
 
-Then, at our meeting in Paris, many people said that the packaging effort needed to be entirely in the open, whereas we'd been doing some of it "behind the wall" at Red Hat. So we're moving the RDO packaging effort into the CentOS CBS - the Community Build System. You can read more about the CBS at <http://wiki.centos.org/HowTos/CommunityBuildSystem> and you can read our documentation about packaging RDO at <http://openstack.redhat.com/packaging/> We need your feedback about this document, and your experiences as you try it out, so that we can improve that process, and get more people involved in packaging RDO.
+Then, at our meeting in Paris, many people said that the packaging effort needed to be entirely in the open, whereas we'd been doing some of it "behind the wall" at Red Hat. So we're moving the RDO packaging effort into the CentOS CBS - the Community Build System. You can read more about the CBS at <http://wiki.centos.org/HowTos/CommunityBuildSystem> and you can read our documentation about packaging RDO at <http://rdoproject.org/packaging/> We need your feedback about this document, and your experiences as you try it out, so that we can improve that process, and get more people involved in packaging RDO.
 
 And, as an umbrella for these efforts, we're working to create a Cloud Infrastructure SIG to coordinate the efforts of packaging OpenStack, and other cloud infrastructures, on the CentOS platform, as well as the interactions with other SIGs to ensure interoperability, so that people running CentOS can use all of these various things together seamlessly. You can read more about the Cloud SIG effort at <http://wiki.centos.org/SpecialInterestGroup/Cloud> and expect that to progress rapidly in the coming weeks and months.
 

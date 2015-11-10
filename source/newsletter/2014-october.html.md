@@ -24,13 +24,13 @@ The deadline for participation is tomorrow - Tuesday, October 7th.
 
 On September 5th, Lars Kellogg-Stedman gave an excellent hangout on deploying services with Heat. You can watch this [on YouTube](https://plus.google.com/events/c9u4sjn7ksb8jrmma7vd25aok94). The #openstack-heat channel, on Freenode, is the right place to go if you have questions about Heat. And, #RDO is a good place for other questions related to OpenStack on CentOS, RHEL, or Fedora.
 
-We expect to have another hangout later this month, but the details are still being worked out. Watch the rdo-list mailing list, and [Hangouts](http://openstack.redhat.com/Hangouts) for details as they become available.
+We expect to have another hangout later this month, but the details are still being worked out. Watch the rdo-list mailing list, and [Hangouts](http://rdoproject.org/Hangouts) for details as they become available.
 
 **Meetups**
 
-Each week, we post a list of upcoming Meetups to the [RDO-list mailing list](http://www.redhat.com/mailman/listinfo/rdo-list) and they also get added to the [Events page](https://openstack.redhat.com/Events).
+Each week, we post a list of upcoming Meetups to the [RDO-list mailing list](http://www.redhat.com/mailman/listinfo/rdo-list) and they also get added to the [Events page](https://rdoproject.org/Events).
 
-If you're speaking at a meetup or hangout of some kind, please let me know (rbowen@redhat.com) so that we can help you get the word out. If you're interested in starting a meetup in an area that doesn't have any kind of user group, there's some suggestions on the new [Organize A Meetup page](https://openstack.redhat.com/Organize-a-meetup)
+If you're speaking at a meetup or hangout of some kind, please let me know (rbowen@redhat.com) so that we can help you get the word out. If you're interested in starting a meetup in an area that doesn't have any kind of user group, there's some suggestions on the new [Organize A Meetup page](https://rdoproject.org/Organize-a-meetup)
 
 And if you attend an OpenStack meetup, please consider writing it up in a blog post or mailing list post, so that we can help get the word out about these meetups, and continue to build the OpenStack user community.
 
@@ -57,10 +57,10 @@ If you're in North America, you may want to wait for the OpenStack Summit North 
 
 With OpenStack Juno in Feature Freeze, coming up to the release on October 16th - <https://wiki.openstack.org/wiki/Juno_Release_Schedule> - the OpenStack engineers at Red Hat have been writing fairly prolifically, and you can see some of those recent blog posts on the RDO blog:
 
-*   [Week of September 1](https://openstack.redhat.com/forum/discussion/983/rdo-blog-roundup-week-of-september-1)
-*   [Week of September 8](https://openstack.redhat.com/forum/discussion/984/blog-roundup-week-of-september-8-2014)
-*   [Week of September 15](https://openstack.redhat.com/forum/discussion/986/blog-roundup-week-of-september-15-2014)
-*   [Week of September 22](https://openstack.redhat.com/forum/discussion/987/blog-roundup-week-of-september-22-2014)
+*   [Week of September 1](https://rdoproject.org/forum/discussion/983/rdo-blog-roundup-week-of-september-1)
+*   [Week of September 8](https://rdoproject.org/forum/discussion/984/blog-roundup-week-of-september-8-2014)
+*   [Week of September 15](https://rdoproject.org/forum/discussion/986/blog-roundup-week-of-september-15-2014)
+*   [Week of September 22](https://rdoproject.org/forum/discussion/987/blog-roundup-week-of-september-22-2014)
 
 For the latest blog posts about OpenStack, don't forget to follow the [OpenStack Planet](http://planet.openstack.org/). I'd particularly like to recommend Thierry Carrez's excellent article [#1 OpenStack Contributor: All of Us](http://ttx.re/largest-openstack-contributor.html)
 
@@ -83,4 +83,4 @@ Thanks again for being part of the RDO community!
          -- 
          Rich Bowen, OpenStack Community Liaison
          rbowen@redhat.com
-`   `[`http://openstack.redhat.com`](http://openstack.redhat.com)
+`   `[`http://rdoproject.org`](http://rdoproject.org)

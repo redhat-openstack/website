@@ -14,7 +14,7 @@ Here's some of what's going on in the RDO world lately, including blog posts, me
 
 Quick links:
 
-*   Quick Start - <http://openstack.redhat.com/quickstart>
+*   Quick Start - <http://rdoproject.org/quickstart>
 *   RDO packages - <https://repos.fedorapeople.org/repos/openstack/openstack-juno/>
 *   RDO blog - <http://rdoproject.org/blog>
 *   Open bugs - <http://tm3.org/rdobugs-20141030>
@@ -27,7 +27,7 @@ We're pleased to announce the availability of RDO packages for OpenStack Juno, f
 
 Fedora 21 is still in development and running RDO Juno on Fedora 21 is not recommended at this time. A separate announcement will be made when RDO Juno on Fedora 21 is ready.
 
-You can get started with RDO Juno via the process described in the Quickstart - <http://openstack.redhat.com/Quickstart> - and the various packages are available at <https://rdo.fedorapeople.org/openstack-juno/>
+You can get started with RDO Juno via the process described in the Quickstart - <http://rdoproject.org/Quickstart> - and the various packages are available at <https://rdo.fedorapeople.org/openstack-juno/>
 
 As always, if you have questions, you can bring them here, to the rdo-list mailing list, or to the IRC channel - #rdo on freenode.irc.net.
 
@@ -55,7 +55,7 @@ Docker: All the OpenStack Services - <https://openstacksummitnovember2014paris.s
 
 Meetups
 
-If you're not able to make it to Paris this week, remember that there are hundreds of OpenStack meetups every month, and we highlight a few of them every week on the rdo-list mailing list, as well as listing them on the RDO Events page at <http://openstack.redhat.com/Events>
+If you're not able to make it to Paris this week, remember that there are hundreds of OpenStack meetups every month, and we highlight a few of them every week on the rdo-list mailing list, as well as listing them on the RDO Events page at <http://rdoproject.org/Events>
 
 If you're running a Meetup, or attending one, we'd love to hear about it, so that we can help you get the word out. Add them to the events page, and drop me an email.
 
@@ -63,7 +63,7 @@ Hangouts
 
 Unfortunately, we didn't manage to do a hangout in October, but we are planning to do one this month. If there's a particular topic that you'd like to see us do a hangout about, watch for a thread about this in the coming days on the rdo-list mailing list, where you can speak up.
 
-You can watch all of our past hangouts at <https://openstack.redhat.com/Hangouts#Past_Hangouts>
+You can watch all of our past hangouts at <https://rdoproject.org/Hangouts#Past_Hangouts>
 
 Blog posts
 
@@ -90,4 +90,4 @@ Once again, you can always keep up to date a variety of ways:
 
 Thanks again for being part of the RDO community!
 
--- Rich Bowen, OpenStack Community Liaison rbowen@redhat.com <http://openstack.redhat.com>
+-- Rich Bowen, OpenStack Community Liaison rbowen@redhat.com <http://rdoproject.org>

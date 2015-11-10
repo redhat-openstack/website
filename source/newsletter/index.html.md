@@ -35,7 +35,7 @@ You can sign up to receive the newsletter [on the mailing list page](http://www.
 *   [August 2014](/newsletter/2014-august)
 *   [July 2014](/newsletter/2014-july)
 *   [June 2014](/newsletter/2014-june)
-*   [May 2014](http://openstack.redhat.com/Newsletter/2014-May)
+*   [May 2014](http://rdoproject.org/Newsletter/2014-May)
 *   [April 2014](https://www.redhat.com/archives/rdo-newsletter/2014-April/msg00000.html)
 *   [March 2014](https://www.redhat.com/archives/rdo-newsletter/2014-March/msg00000.html)
 *   [February 2014](https://www.redhat.com/archives/rdo-newsletter/2014-February/msg00000.html)

@@ -16,8 +16,8 @@ There's a lot in this month's newletter:
 
 ## Quick links:
 
-*   Quick Start - <http://openstack.redhat.com/quickstart>
-*   Mailing Lists - <https://openstack.redhat.com/Mailing_lists>
+*   Quick Start - <http://rdoproject.org/quickstart>
+*   Mailing Lists - <https://rdoproject.org/Mailing_lists>
 *   RDO packages - <https://repos.fedorapeople.org/repos/openstack/openstack-juno/>
 *   RDO blog - <http://rdoproject.org/blog>
 *   Q&A - <http://ask.openstack.org/>
@@ -56,7 +56,7 @@ L will be either Lizard, Love, London, or Liberty, and you can have a voice in m
 
 Thanks to everyone that stopped by to see us at FOSDEM. We had a lot of great conversations, with people who were completely new to OpenStack, with experts, and everything in between.
 
-We also had a good turn out on Friday at the CentOS dojo, where Haikel Guemar gave a hands-on walkthrough of installing RDO, and Jakub Ruzicka talked about RDO development, packaging and testing, and what the CentOS Cloud SIG is doing in this area. See <https://www.flickr.com/photos/rbowen/sets/72157648221256884/> for some photos of Haikel and others in action. Watch the RDO blog - <http://openstack.redhat.com/blog> - for video from the event in the next few days.
+We also had a good turn out on Friday at the CentOS dojo, where Haikel Guemar gave a hands-on walkthrough of installing RDO, and Jakub Ruzicka talked about RDO development, packaging and testing, and what the CentOS Cloud SIG is doing in this area. See <https://www.flickr.com/photos/rbowen/sets/72157648221256884/> for some photos of Haikel and others in action. Watch the RDO blog - <http://rdoproject.org/blog> - for video from the event in the next few days.
 
 There was also a great deal of great content at FOSDEM, in the IaaS dev room - <https://fosdem.org/2015/schedule/track/infrastructure_as_a_service/> - and scattered through various other tracks during the event.
 

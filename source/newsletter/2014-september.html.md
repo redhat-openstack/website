@@ -14,13 +14,13 @@ Hangouts
 
 Later this week, Lars Kellogg-Stedman will be doing a hangout on Heat, the OpenStack orchestration manager. He'll be teaching us how to deploy things using Heat. That presentation will happen this Friday, September 5th, 10am Eastern US time, and you can watch it live on YouTube at <https://plus.google.com/events/c9u4sjn7ksb8jrmma7vd25aok94> and, if the time isn't convenient for you, you can watch it at that same address after the fact. Drop by #rdo-hangout on Freenode IRC for questions and discussion during the event, or come to #rdo any time.
 
-You can watch any past RDO hangouts at <http://openstack.redhat.com/Hangouts>
+You can watch any past RDO hangouts at <http://rdoproject.org/Hangouts>
 
 Meetups
 
 Almost every day, there are several OpenStack meetups happening, somewhere in the world. I've started sending a weekly list of upcoming meetups to the RDO-list mailing list - <http://www.redhat.com/mailman/listinfo/rdo-list> - so that you can be aware of what nearby events you can attend.
 
-The RDO events page - <http://openstack.redhat.com/Events> - is being updated each week with the upcoming meetups where we think RDO enthusiasts might be present. Please update that page with events and meetups that you'll be attending.
+The RDO events page - <http://rdoproject.org/Events> - is being updated each week with the upcoming meetups where we think RDO enthusiasts might be present. Please update that page with events and meetups that you'll be attending.
 
 If you do go to an OpenStack meetup, please let me know. Take pictures. Write a blog post. Tell us about it so that we can spread the word. There's a ton of information online about OpenStack, but nothing quite measures up to sitting down with other people and learning what they're doing with OpenStack, and helping one another solve problems.
 
@@ -50,11 +50,11 @@ Blog posts
 
 If you're on the rdo-list mailing list, you'll have noticed that I've started posting weekly roundups of the blog posts from RDO engineers and other RDO enthusiasts. You can find the most recent editions of this on the RDO blog:
 
-Week of August 11th: <http://openstack.redhat.com/forum/discussion/978/blog-roundup-august-11-17-2014>
+Week of August 11th: <http://rdoproject.org/forum/discussion/978/blog-roundup-august-11-17-2014>
 
-Week of August 18th: <http://openstack.redhat.com/forum/discussion/979/rdo-blog-roundup-week-of-august-18>
+Week of August 18th: <http://rdoproject.org/forum/discussion/979/rdo-blog-roundup-week-of-august-18>
 
-You can best keep up with these by subscribing to the rdo-list mailing list (See information below) or by following the RDO blog at <http://openstack.redhat.com/blog/>
+You can best keep up with these by subscribing to the rdo-list mailing list (See information below) or by following the RDO blog at <http://rdoproject.org/blog/>
 
 In Closing ...
 
@@ -70,4 +70,4 @@ Once again, you can always keep up to date a variety of ways:
 
 Thanks again for being part of the RDO community!
 
--- Rich Bowen, OpenStack Community Liaison rbowen@redhat.com <http://openstack.redhat.com>
+-- Rich Bowen, OpenStack Community Liaison rbowen@redhat.com <http://rdoproject.org>
