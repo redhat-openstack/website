@@ -63,4 +63,5 @@ The release announcement should be sent to the following lists:
 * Continue to mention it on the above channels during the lifetime of
   the release, and when people mention that they're using older
   versions.
+* Update [what's in RDO](/rdo/projectsinrdo) with any added packages
 
