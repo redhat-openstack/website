@@ -63,7 +63,7 @@ Testing
 ## Prerequisite for Test Day
 
 *   A newly¹ installed Fedora 19, Centos 6.4 or RHEL 6.4 VM² or baremetal system
-*   With the updates-[testing repositories enabled](http://openstack.redhat.com/Repositories#Testing) and fully updated with: yum update
+*   With the updates-[testing repositories enabled](http://rdoproject.org/Repositories#Testing) and fully updated with: yum update
 
          yum-config-manager --enable updates-testing 
          yum update

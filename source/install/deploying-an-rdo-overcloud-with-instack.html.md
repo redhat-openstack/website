@@ -20,9 +20,9 @@ However, instack-undercloud provides a test script, `instack-deploy-overcloud` t
 
       command $(sudo cat /root/stackrc | xargs)
 
-2. If doing a baremetal deployment, create a json file describing your baremetal nodes. See [this FAQ](https://openstack.redhat.com/Instack_FAQ#What_is_the_NODES_JSON_file_format.3F) for the documentation of the format of the file. For a virtual deployment, this file has already been created as instackenv.json, and you do not need to edit this file.
+2. If doing a baremetal deployment, create a json file describing your baremetal nodes. See [this FAQ](https://rdoproject.org/Instack_FAQ#What_is_the_NODES_JSON_file_format.3F) for the documentation of the format of the file. For a virtual deployment, this file has already been created as instackenv.json, and you do not need to edit this file.
 
-3. A file named `deploy-overcloudrc` is used to define the needed environment variables to deploy an Overcloud. For a virtual environment setup, this file has already been created under `/home/stack`. For a baremetal setup, you will need to create the file yourself. There is a sample file included with instack-undercloud at `/usr/share/instack-undercloud/deploy-baremetal-overcloudrc`. Copy and edit the file as needed. For the NODES_JSON value, specify the path to the file that you created in the previous step. Example rc files containing values for the required variables can also be found in the [Instack FAQ](http://openstack.redhat.com/Instack_FAQ#Are_there_any_example_rc_files_for_Overcloud_deployment.3F). Note that the variables must be exported so that their values are picked up by `instack-deploy-overcloud`.
+3. A file named `deploy-overcloudrc` is used to define the needed environment variables to deploy an Overcloud. For a virtual environment setup, this file has already been created under `/home/stack`. For a baremetal setup, you will need to create the file yourself. There is a sample file included with instack-undercloud at `/usr/share/instack-undercloud/deploy-baremetal-overcloudrc`. Copy and edit the file as needed. For the NODES_JSON value, specify the path to the file that you created in the previous step. Example rc files containing values for the required variables can also be found in the [Instack FAQ](http://rdoproject.org/Instack_FAQ#Are_there_any_example_rc_files_for_Overcloud_deployment.3F). Note that the variables must be exported so that their values are picked up by `instack-deploy-overcloud`.
 
       source deploy-overcloudrc
 
@@ -35,7 +35,7 @@ However, instack-undercloud provides a test script, `instack-deploy-overcloud` t
       export TE_DATAFILE=instackenv.json
       source /etc/tripleo/overcloudrc
 
-Next steps: [ Testing an RDO Overcloud with Instack](Testing an RDO Overcloud with Instack). If you run into issues and want to redeploy your Overcloud the first step is to delete it using the instructions in the [FAQ](http://openstack.redhat.com/Instack_FAQ#How_do_I_delete_the_Overcloud.3F). You should then be able to re-execute instack-prepare-for-overcloud and deploy the Overcloud again.
+Next steps: [ Testing an RDO Overcloud with Instack](Testing an RDO Overcloud with Instack). If you run into issues and want to redeploy your Overcloud the first step is to delete it using the instructions in the [FAQ](http://rdoproject.org/Instack_FAQ#How_do_I_delete_the_Overcloud.3F). You should then be able to re-execute instack-prepare-for-overcloud and deploy the Overcloud again.
 
 # Deploying the Overcloud via the Tuskar UI
 
@@ -47,8 +47,8 @@ If you want to deploy the Overcloud via the UI you will need to open up port 80 
 
     sudo iptables -I INPUT -p tcp --dport 80 -j ACCEPT
 
-Note that if you are doing a virtual machine based deployment and your virt host is not the same host that you'll be running the web browser from, you can use an ssh tunnel for connectivity. See this [FAQ](http://openstack.redhat.com/Instack_FAQ#How_do_I_view_the_Undercloud_Dashboard_when_using_a_remote_virt_host.3F) for more information.
+Note that if you are doing a virtual machine based deployment and your virt host is not the same host that you'll be running the web browser from, you can use an ssh tunnel for connectivity. See this [FAQ](http://rdoproject.org/Instack_FAQ#How_do_I_view_the_Undercloud_Dashboard_when_using_a_remote_virt_host.3F) for more information.
 
-When logging into the dashboard the default user and password are found in the /root/stackrc file on the undercloud node, OS_USERNAME and OS_PASSWORD. Once you have logged into the Web UI use the [Tuskar UI guide](https://openstack.redhat.com/Tuskar-UI) to continue deploying your Overcloud.
+When logging into the dashboard the default user and password are found in the /root/stackrc file on the undercloud node, OS_USERNAME and OS_PASSWORD. Once you have logged into the Web UI use the [Tuskar UI guide](https://rdoproject.org/Tuskar-UI) to continue deploying your Overcloud.
 
 Tuskar WEB UI Deployment currently does not support testing an RDO Overcloud with Instack. The overcloud-passwords file is missing and the instack.json file needs to be updated. If you managed to correct these, then proceed to: [ Testing an RDO Overcloud with Instack ](Testing an RDO Overcloud with Instack)

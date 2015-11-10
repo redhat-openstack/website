@@ -14,7 +14,7 @@ wiki_last_updated: 2014-02-20
 
 The default OpenStack configuration doesn't include securing internal services with SSL. This document provides instructions for securing some of the services within a Foreman-managed environment.
 
-This can be seen as extending <http://openstack.redhat.com/Deploying_RDO_Using_Foreman>
+This can be seen as extending <http://rdoproject.org/Deploying_RDO_Using_Foreman>
 
 ## Preparation
 

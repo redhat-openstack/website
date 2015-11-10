@@ -38,7 +38,7 @@ Testing:
 ## Prerequisite for Test Day
 
 *   A newly¹ installed Fedora 19, Fedora 20 (pre-release) Centos 6.4, Scientific Linux 6.4, RHEL 6.4 or RHEL 6.5 Beta VM² or baremetal system
-*   With the updates-[testing repositories enabled](http://openstack.redhat.com/Repositories#Testing) and fully updated with: yum update
+*   With the updates-[testing repositories enabled](http://rdoproject.org/Repositories#Testing) and fully updated with: yum update
 
          yum-config-manager --enable updates-testing 
          yum update
@@ -76,7 +76,7 @@ Use something like RecordMyDesktop to record a screencast of your tests, and let
 
 *   Etherpad for quick notes from participants, to be edited/collated later
 *   Better promotion to the various mailing lists prior to event (2 weeks, 1 week, 2 days, day of event)
-*   Reference <http://openstack.redhat.com/HowToTest> for folks who want to test that way
-*   Make sure results are reflected on <http://openstack.redhat.com/TestedSetups> - start with empty matrix and combine afterwards
+*   Reference <http://rdoproject.org/HowToTest> for folks who want to test that way
+*   Make sure results are reflected on <http://rdoproject.org/TestedSetups> - start with empty matrix and combine afterwards
 *   Prioritize which setups need the most eyes/hands
 *   Ensure that tickets opened have followup in the weeks after the test

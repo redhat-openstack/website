@@ -50,7 +50,7 @@ Since RDO sticks closely to the upstream OpenStack project, the documentation at
 * [GlusterFS](Using GlusterFS for Cinder with RDO Havana)
 * [EMC](https://wiki.openstack.org/wiki/How to deploy cinder with EMC plug-in)
 * [ThinLVM](Using ThinLVM for Cinder with RDO Havana)
-* [Ceph](http://openstack.redhat.com/Using Ceph for Cinder with RDO Havana)
+* [Ceph](http://rdoproject.org/Using Ceph for Cinder with RDO Havana)
 * [More&hellip;](Docs/Storage){:.more}
 {:.with-more-link}
 </div>
@@ -71,7 +71,7 @@ Since RDO sticks closely to the upstream OpenStack project, the documentation at
 ## Upstream Documentation
 
 * [OpenStack docs](http://docs.openstack.org/)
-* [Books](http://openstack.redhat.com/Books)
+* [Books](http://rdoproject.org/Books)
 * [Glossary](http://docs.openstack.org/glossary/content/glossary.html)
 * [OpenStack Operations Guide](http://docs.openstack.org/trunk/openstack-ops/content/index.html)
 * [More&hellip;](UpstreaeDocs){:.more}

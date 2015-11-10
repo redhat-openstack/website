@@ -8,7 +8,7 @@ wiki_last_updated: 2013-10-15
 
 # Horizon SSL
 
-From a [post by carltm](http://openstack.redhat.com/forum/discussion/671/resolved-ssl-for-horizon-dashboard):
+From a [post by carltm](http://rdoproject.org/forum/discussion/671/resolved-ssl-for-horizon-dashboard):
 
 With the current (Oct. 2013) version of packstack the CONFIG_HORIZON_SSL=y fails for both grizzly and havana. Here is a guide to setting up ssl after the installation.
 

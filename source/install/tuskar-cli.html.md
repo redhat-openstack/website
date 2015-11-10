@@ -12,7 +12,7 @@ This tutorial covers how to deploy a TripleO Undercloud and Overcloud with the T
 
 ## Quick Install
 
-We recommend using Instack to setup the undercloud with Tuskar. Follow the [Instack instructions](https://openstack.redhat.com/Deploying_RDO_using_Instack) through "Deploying an Undercloud". This will create the undercloud with the Tuskar UI and Tuskar CLI setup.
+We recommend using Instack to setup the undercloud with Tuskar. Follow the [Instack instructions](https://rdoproject.org/Deploying_RDO_using_Instack) through "Deploying an Undercloud". This will create the undercloud with the Tuskar UI and Tuskar CLI setup.
 
 ## Quick Usage
 

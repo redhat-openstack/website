@@ -22,11 +22,11 @@ With the Havana milestone 3 due out the week of September 9th, we're
 planning to have an RDO Test Day on September 10th and 11th (to cover
 various time zones) where we can put it through its paces. The
 details of that test day will be at
-http://openstack.redhat.com/Test_Day_09_2013 as they become
+http://rdoproject.org/Test_Day_09_2013 as they become
 available, including what you'll need in order to participate.
 
 And, since we've noticed that a large percentage of questions on the
-RDO Forum - http://openstack.redhat.com/forum/ - are focused on
+RDO Forum - http://rdoproject.org/forum/ - are focused on
 networking, we're planning to have a Google Hangout on September
 24th, at 12pm Eastern time, (9am Pacific, 17:00 GMT,
 http://bit.ly/1cnEZEN for your local timezone.) You can see the
@@ -38,7 +38,7 @@ Conferences and Meetups
 
 There are so many events around OpenStack that it's hard to keep
 track of them all. We've put a page at
-http://openstack.redhat.com/Events for events where you're likely to
+http://rdoproject.org/Events for events where you're likely to
 encounter people from the RDO community, and we'd love it if you'd
 add your events there (it's a wiki!) or let us know that you're going
 to be there too.
@@ -80,13 +80,13 @@ RDO. Here's a few of them, but we also mention these on Twitter
 (@RDOCommunity) whenever we come across them.
 
 Load Balacing OpenStack API Services -
-http://openstack.redhat.com/Load_Balance_OpenStack_API This guide
+http://rdoproject.org/Load_Balance_OpenStack_API This guide
 will show how to manually deploy additional OpenStack controller
 nodes and configure HAProxy to load-balance each OpenStack API
 service.
 
 Using GRE Tenant Networks -
-http://openstack.redhat.com/Using_GRE_Tenant_Networks Using GRE
+http://rdoproject.org/Using_GRE_Tenant_Networks Using GRE
 tunnels as tenant networks in Neutron avoids the need for a network
 interface connected to a switch configured to trunk a range of VLANs.
 Here are simple instructions for taking advantage of GRE for tenant
@@ -111,11 +111,11 @@ Havana) on Fedora 19. You can read that at
 http://www.blog.sandro-mathys.ch/2013/08/install-rdo-havana-2-on-fedora-19-and.html
 
 Finally, Dave just posted list of recent articles and blog posts to the RDO forum at
-http://openstack.redhat.com/forum/discussion/520/a-tour-of-openstack-blogs
+http://rdoproject.org/forum/discussion/520/a-tour-of-openstack-blogs
 
 If you come across useful articles, please let us know on
 @RDOCommunity, or post links on the RDO Forum, at
-http://openstack.redhat.com/forum/
+http://rdoproject.org/forum/
 
 In Closing
 ----------
@@ -127,6 +127,6 @@ to the RDO Forum with their questions and stories.
 
   -- 
   Rich, for the RDO Community
-  http://openstack.redhat.com/
+  http://rdoproject.org/
   @RDOCommunity
   rbowen@redhat.com

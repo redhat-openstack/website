@@ -19,7 +19,7 @@ http://rdo.fedorapeople.org/openstack/openstack-trunk/
 Also we now have the more standard release repository for Havana,
 which contains the recently released Havana milestone 2 packages.
 The best way to interact with this repository is to follow
-the RDO quick start guide at: http://openstack.redhat.com/Quickstart
+the RDO quick start guide at: http://rdoproject.org/Quickstart
 while just replacing "grizzly" with "havana" in step 1.
 This package set can be used with EL6 based distros or Fedora 19.
 Fedora 19 contains OpenStack Grizzly packages in the official Fedora repositories,

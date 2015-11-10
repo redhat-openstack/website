@@ -10,7 +10,7 @@ wiki_last_updated: 2014-04-28
 
 This document outlines setting up HA of RabbitMQ on four nodes (rdo-rabbitmq1|rdo-rabbitmq2|rdo-rabbitmq3|rdo-rabbitmq4):
 
-These notes are based on this [reference](http://openstack.redhat.com/RabbitMQ).
+These notes are based on this [reference](http://rdoproject.org/RabbitMQ).
 
 Setup EPEL repositories:
 
