@@ -46,7 +46,7 @@ Image (Glance) and Messaging/Notification (Marconi) Juno Previews, with Flavio P
 
 Security, with Nathan Kinder - <http://redhatstackblog.redhat.com/2014/08/05/juno-updates-security/>
 
-To catch other mid-cycle previews as they come in, just follow us on Twitter, at @rdocommunity and watch for updates on <http://openstack.redhat.com/Juno_previews>
+To catch other mid-cycle previews as they come in, just follow us on Twitter, at @rdocommunity and watch for updates on <http://rdoproject.org/Juno_previews>
 
 **OSCON**
 
@@ -70,7 +70,7 @@ And, if you're in Europe, LinuxCon Dusseldorf is coming very soon - <http://even
 
 In July, Eoghan Glynn gave us an overview of what's planned for Ceilometer in the Juno cycle in the RDO hangout. If you missed that, you can still watch it at <https://plus.google.com/events/c6e8vjjn8klrf78ruhkr95j4tas> If you have any followup questions, stop by #rdo or #openstack-ceilometer on the Freenode IRC network, where there's always someone that can help you out.
 
-Stay tuned to @rdocommunity on Twitter to hear about our plans for a hangout in August, or see the Hangouts page on the RDO website, at <http://openstack.redhat.com/Hangouts>
+Stay tuned to @rdocommunity on Twitter to hear about our plans for a hangout in August, or see the Hangouts page on the RDO website, at <http://rdoproject.org/Hangouts>
 
 **In closing ...**
 
@@ -80,7 +80,7 @@ In closing, I wanted to mention a few articles that have caught my attention ove
 
 <!-- -->
 
-*   Using ManageIQ on OpenStack - <http://openstack.redhat.com/Using_ManageIQ_on_OpenStack>
+*   Using ManageIQ on OpenStack - <http://rdoproject.org/Using_ManageIQ_on_OpenStack>
 
 <!-- -->
 
@@ -102,4 +102,4 @@ Thanks again for being part of the RDO community!
 
          Rich Bowen, OpenStack Community Liaison
          rbowen@redhat.com
-`   `[`http://openstack.redhat.com`](http://openstack.redhat.com)
+`   `[`http://rdoproject.org`](http://rdoproject.org)

@@ -56,8 +56,8 @@ You'll want a fresh install with latest updates installed. (Fresh so that there'
     sudo yum install http://rdo.fedorapeople.org/openstack-juno/rdo-release-juno.rpm
 
 *   Check for any [ Workarounds](Workarounds) required for your platform before the main installation
-*   For Packstack based deployment start at step 2 of -- <http://openstack.redhat.com/Quickstart#Step_2:_Install_Packstack_Installer>
-*   For Foreman based deployment on RHEL & its derivatives, -- <http://openstack.redhat.com/Virtualized_Foreman_Dev_Setup>
+*   For Packstack based deployment start at step 2 of -- <http://rdoproject.org/Quickstart#Step_2:_Install_Packstack_Installer>
+*   For Foreman based deployment on RHEL & its derivatives, -- <http://rdoproject.org/Virtualized_Foreman_Dev_Setup>
 
 ### Test cases and results
 

@@ -70,12 +70,12 @@ mature yet, some people are having trouble getting networking
 running.
 
 To address this difficulty, we've added a networking resource in the
-wiki (http://openstack.redhat.com/Networking ) where we can share
+wiki (http://rdoproject.org/Networking ) where we can share
 what works, and what doesn't, to help you get things running
 smoothly.
 
 Also, we've updated the QuickStart instructions
-(http://openstack.redhat.com/Quickstart ) to disable Neutron
+(http://rdoproject.org/Quickstart ) to disable Neutron
 (formerly known as Quantum) networking, so that you can have a better
 first-time experience when installing RDO.
 
@@ -105,7 +105,7 @@ thoroughly hardened and tested.)
 
 As you're working through these problems, you may wish to have a look
 at the troubleshooting page on our wiki -
-http://openstack.redhat.com/Troubleshooting - where we're trying to
+http://rdoproject.org/Troubleshooting - where we're trying to
 document common scenarios that people are encountering, and tips for
 solving these problems.
 
@@ -129,7 +129,7 @@ directly to me at rbowen@redhat.com
 
 Thanks again for being part of the RDO community. We'd love to hear
 how we can do better. Let us know on the forum
-(http://openstack.redhat.com/forum/ ), or on Twitter (@rdocommunity),
+(http://rdoproject.org/forum/ ), or on Twitter (@rdocommunity),
 or just drop us email at rbowen@redhat.com or on the RDO mailing list
 (http://red.ht/12XFRiy )
 

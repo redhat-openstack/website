@@ -27,4 +27,4 @@ Speakers include:
 
 We'll have food and drink, so arrive by 6:30 to get settled, and we'll start the program at 7pm.
 
-See [the events page](http://openstack.redhat.com/Events) for more upcoming events.
+See [the events page](http://rdoproject.org/Events) for more upcoming events.

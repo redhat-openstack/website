@@ -44,11 +44,11 @@ Key features of the Tuskar-UI include:
 
 We recommend using Instack to install the Tuskar-UI:
 
-1. Start by following the [Instack instructions](https://openstack.redhat.com/Deploying_RDO_using_Instack) through "Deploying an Undercloud".
+1. Start by following the [Instack instructions](https://rdoproject.org/Deploying_RDO_using_Instack) through "Deploying an Undercloud".
 
-2. Follow the [Instack overcloud steps](https://openstack.redhat.com/Deploying_an_RDO_Overcloud_with_Instack) in "Deploying the Overcloud via the Tuskar UI".
+2. Follow the [Instack overcloud steps](https://rdoproject.org/Deploying_an_RDO_Overcloud_with_Instack) in "Deploying the Overcloud via the Tuskar UI".
 
-3. If using a remote virtual host, you may need to configure your ports and create an ssh tunnel, as detailed [here](https://openstack.redhat.com/Instack_FAQ#How_do_I_view_the_Undercloud_Dashboard_when_using_a_remote_virt_host.3F).
+3. If using a remote virtual host, you may need to configure your ports and create an ssh tunnel, as detailed [here](https://rdoproject.org/Instack_FAQ#How_do_I_view_the_Undercloud_Dashboard_when_using_a_remote_virt_host.3F).
 
 The next section will cover usage of the Tuskar UI.
 
@@ -123,7 +123,7 @@ User is allowed to set configuration for reduced list of options in the form tha
 
 ### Node Management
 
-Node registration is covered in this section: <https://openstack.redhat.com/Tuskar-UI#Register_nodes>.
+Node registration is covered in this section: <https://rdoproject.org/Tuskar-UI#Register_nodes>.
 
 #### Viewing Nodes Information
 
@@ -155,7 +155,7 @@ To activate nodes (move them from the maintenance state to the free state), use 
 
 ### Development installation
 
-If you wish to create a development installation of the Tuskar-UI, install as described in the [Quick Install instructions](https://openstack.redhat.com/Tuskar-UI#Quick_Install) first.
+If you wish to create a development installation of the Tuskar-UI, install as described in the [Quick Install instructions](https://rdoproject.org/Tuskar-UI#Quick_Install) first.
 
 Next, turn off the running instance of the Tuskar UI:
 

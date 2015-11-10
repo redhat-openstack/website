@@ -103,7 +103,7 @@ Environment: This machine is at home which means that it uses DHCP to acquire a 
     #   proto =&gt; 'all',
     # }
 
-    # implement workarounds found in "Workarounds 2014 01" (http://openstack.redhat.com/Workarounds_2014_01)
+    # implement workarounds found in "Workarounds 2014 01" (http://rdoproject.org/Workarounds_2014_01)
 
     setenforce 0
 
