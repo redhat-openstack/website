@@ -12,7 +12,8 @@ wiki_last_updated: 2014-01-13
 
 ### Cloud Images
 
-*   [CentOS 6.3+ qcow2 cloud images](http://wiki.centos.org/Cloud/OpenNebula)
+* [CentOS 7 qcow images](http://cloud.centos.org/centos/7/images/)
+* [CentOS 6 qcow images](http://wiki.centos.org/Cloud/OpenNebula)
 
 ### CentOS Wiki
 
