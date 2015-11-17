@@ -61,6 +61,8 @@ Since RDO sticks closely to the upstream OpenStack project, the documentation at
 
 * [Tips for New Developers](DeveloperTips)
 * [Packaging Guides](https://rdoproject.org/packaging/index.html)
+* [Open
+  Tickets](https://bugzilla.redhat.com/buglist.cgi?product=RDO&query_format=advanced&bug_status=NEW&bug_status=ASSIGNED)
 
 ## About RDO
 
