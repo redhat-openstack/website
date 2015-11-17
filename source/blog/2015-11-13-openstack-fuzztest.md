@@ -1,4 +1,11 @@
-Automated API testing workflow
+---
+title: Automated API testing workflow
+author: TristanCacqueray
+date: 2015-11-13 14:00:00 UTC
+tags: testing
+comments: true
+published: true
+---
 
 Services exposed to a network of any sort are in risk of security exploits.
 The API is the primary target of such attacks, and it is often abused by input that developers
