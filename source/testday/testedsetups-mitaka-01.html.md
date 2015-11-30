@@ -37,10 +37,10 @@ Please make sure to use the steps described in the [How To Test](/testday/rdo-te
 | Distributed -IPv6-Deployment- Sanity |  |  CentOS 7 |  | [QuickStart](/Quickstart) |  |   |  | 
 |                                      |  | F22       |  | [QuickStart](/Quickstart) |  |   |  | 
 |                                      |  | RHEL7.1   |  | [QuickStart](/Quickstart) |  |   |  |
-| Distributed -ML2- OVS-VXLAN –  LbaaS | | CentOS 7.1 |  | [QuickStart](/Quickstart) | astafeye |   |  | 
+| Distributed -ML2- OVS-VXLAN –  LbaaS | | CentOS 7.1 |  | [QuickStart](/Quickstart) |  |   |  | 
 |                                      | | F22        |  | [QuickStart](/Quickstart) |  |   |  | 
-|                                      | | RHEL7.1    |  | [QuickStart](/Quickstart) |  |   |   | 
-| Distributed -ML2- OVS-VXLAN-VRRP     | | CentOS 7.1 |  | [QuickStart](/Quickstart) |  |  |  | 
+|                                      | | RHEL7.1    |  | [QuickStart](/Quickstart) |  |   |  | 
+| Distributed -ML2- OVS-VXLAN-VRRP     | | CentOS 7.1 |  | [QuickStart](/Quickstart) |  |   |  | 
 | | | F22 |  | [QuickStart](/Quickstart) |  |   | | 
 | | | RHEL7.1 | | [QuickStart](/Quickstart) |  |   | | 
 | Distributed -ML2-OVS- VXLAN-IPv6 – VPNaaS | | CentOS 7.1 |  | [QuickStart](/Quickstart) |  |  |  | 
@@ -50,7 +50,7 @@ Please make sure to use the steps described in the [How To Test](/testday/rdo-te
 | | | F22 | | [QuickStart](/Quickstart) |  |  |  | 
 | | | RHEL7.1 | | [QuickStart](/Quickstart) |  |   | | 
 | Distributed -ML2-OVS- VXLAN DVR | | RHEL 7.1 | | [QuickStart](/Quickstart) | |   |  | 
-| Distributed -ML2-OVS- VXLAN DVR | | CentOS 7.1 | | [QuickStart](/Quickstart) |itbrown |   |  | 
+| Distributed -ML2-OVS- VXLAN DVR | | CentOS 7.1 | | [QuickStart](/Quickstart) |   |  |  | 
 | 3,node  -ML2-OVS- VXLAN |  | CentOS 7.1 |    | |   |   |  | 
 | 3,node  -ML2-OVS- GRE   |  | CentOS 7.1 |    | |   |   |  | 
 | 3,node  -ML2-OVS- VLAN  |  | CentOS 7.1 |    | |   |   |  | 
@@ -62,9 +62,9 @@ Please see [Docs - Storage](/documentation/storage) for configuration guides as 
 
 | Config Name | Release | BaseOS | Status | HOWTO | Who | Date | BZ/LP | Notes Page
 |----------------------------------------------------------------|------------------|-----------|----------------------------------------------|-----------------------------------------------------|--------|------------|--------------------------------------------------------------------|------------|
-| All-in-One | Glance=localfs, Cinder=lvm| CentOS 7.1 | Tested  | [QuickStart](/Quickstart) | coolsvap   |  2015-09-23  |  None | [Answer-file](https://gist.github.com/coolsvap/d90a5133d4bbccef1966)
-| All-in-One | Glance=localfs, Cinder=glusterfs| CentOS 7.1 | Tested  | [QuickStart](/Quickstart) | coolsvap   |  2015-09-23  |  None | [Answer-file](https://gist.github.com/coolsvap/e065358ae84ff80138a1)
-| All-in-One | Glance=swift, Cinder=thinlvm| CentOS 7.1 |  Tested | [QuickStart](/Quickstart) | coolsvap  | 2015-09-23   | None | [Answer-file](https://gist.github.com/coolsvap/183aadd91868801279de)
+| All-in-One | Glance=localfs, Cinder=lvm| CentOS 7.1 | | [QuickStart](/Quickstart) | |   |  None | 
+| All-in-One | Glance=localfs, Cinder=glusterfs| CentOS 7.1 | | [QuickStart](/Quickstart) | |  |  None | 
+| All-in-One | Glance=swift, Cinder=thinlvm| CentOS 7.1 |  | [QuickStart](/Quickstart) | | | None | 
 | All-in-One | Glance=s3(amazon s3), Cinder=nfs| CentOS 7.1 |  | [QuickStart](/Quickstart) | |    | None | None
 | All-in-One | Glance=s3(swift s3), Cinder=nfs| CentOS 7.1 |  | [QuickStart](/Quickstart) |  |    |  None|  None
 | All-in-One | Glance=ceph, Cinder=ceph| CentOS 7.1 |  | [QuickStart](/Quickstart) |  |    | None | None
@@ -78,7 +78,7 @@ Please see [Docs - Storage](/documentation/storage) for configuration guides as 
 | All-in-One | Glance=nfs, Cinder=netapp_iscsi|  RHEL7.1 | | [QuickStart](/Quickstart) |  |    |   | None
 | All-in-One | Glance=lvm, Cinder=netapp_nfs|  RHEL7.1 |  | [QuickStart](/Quickstart) |   |    | None | None
 | All-in-One | swift|  RHEL7.1 | | [QuickStart](/Quickstart) |   |   | None | None
-| All-in-One | Glance=lvm, Cinder=lvm, Manila=Generic | Fedora 22 | FAIL | [QuickStart](/Quickstart) | dustins | | [1265816](https://bugzilla.redhat.com/show_bug.cgi?id=1265816) | None
+| All-in-One | Glance=lvm, Cinder=lvm, Manila=Generic | Fedora 22 | | [QuickStart](/Quickstart) | | | | None
 
 ## Packstack Based Installation (Misc Components)
 
@@ -89,7 +89,7 @@ Various components which don't fit the large test efforts above.
 | Config Name | Release | BaseOS | Status | HOWTO | Who | Date | BZ/LP | Notes Page
 |----------------------------------------------------------------|------------------|-----------|----------------------------------------------|-----------------------------------------------------|--------|------------|--------------------------------------------------------------------|------------|
 | Ceilometer: All-in-One w/ Neutron Networking | RDO Mitaka | RHEL 7.1 |    |    |    |    |   |     
-| Ceilometer: All-in-One w/ Neutron Networking, Heat | RDO Mitaka | CentOS 7.1 | Tested || coolsvap | 2015-09-23  || [Answer-File](https://gist.github.com/coolsvap/d9e476f992f32ac28c6c)
+| Ceilometer: All-in-One w/ Neutron Networking, Heat | RDO Mitaka | CentOS 7.1 | || | || 
 
 ## Core Tests
 
