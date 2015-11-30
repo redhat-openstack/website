@@ -5,7 +5,7 @@ get feedback on what's working and what needs work.
 
 ## Upcoming test days
 
-* Mitaka-1 - Dec 10-11
+* [Mitaka-1 - Dec 10-11](/testday/rdo-test-day-mitaka-01)
 * Mitaka-2 - Jan 27-28
 * Mitaka-3 - Feb 18-19
 * Mitaka-RC - Mar 10-11
@@ -13,9 +13,9 @@ get feedback on what's working and what needs work.
 
 ## Past test days
 
-* [Liberty Test Day 2](rdo-test-day-liberty-02)
-* [Liberty test day 1](rdo-test-day-liberty-01)
-* [Kilo RC test day](rdo-test-day-kilo)
-* [Kilo-3 test day](rdo-test-day-juno-milestone-3)
+* [Liberty Test Day 2](/testday/rdo-test-day-liberty-02)
+* [Liberty test day 1](/testday/rdo-test-day-liberty-01)
+* [Kilo RC test day](/testday/rdo-test-day-kilo)
+* [Kilo-3 test day](/testday/rdo-test-day-juno-milestone-3)
 
 
