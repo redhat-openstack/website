@@ -49,7 +49,7 @@ The site [ask.openstack](http://ask.openstack.org) is the upstream Q&A for all m
 - [Find all questions on ask.openstack related to RDO](https://ask.openstack.org/en/questions/scope:all/sort:age-desc/page:1/query:rdo/).
 - If you're a frequent poster on ask.openstack and wish to identify yourself as part of the RDO community, consider adding the RDO logo to your avatar, like Lars: [https://ask.openstack.org/en/users/1745/larsks/](https://ask.openstack.org/en/users/1745/larsks/) .
 
-- Help improve our knowledge base by turning the best answers to questions on the [Mailing\_lists](/uncategorized/mailing-lists/) or on [ask.openstack.org](http://ask.openstack.org) into a page in our [troubleshooting section](/documentation/troubleshooting/). In case of ask.openstack.org, a link might be sufficient.
+- Help improve our knowledge base by turning the best answers to questions on the [Mailing\_lists](/community/mailing-lists/) or on [ask.openstack.org](http://ask.openstack.org) into a page in our [troubleshooting section](/documentation/troubleshooting/). In case of ask.openstack.org, a link might be sufficient.
 - Blog about how you're using RDO. If you blog frequently about RDO and OpenStack, consider [requesting that your blog be added](https://wiki.openstack.org/wiki/AddingYourBlog) to the upstream [Planet OpenStack](http://planet.openstack.org/).
 - [Fork the website on Github](https://github.com/redhat-openstack/website) and help us improve our documentation.
 
