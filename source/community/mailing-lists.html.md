@@ -12,7 +12,7 @@ There are two main mailing lists for RDO discussion:
 
 ## rdo-list
 
-The main discussion list for the RDO project, for users and contributors. The list is fairly low volume , averaging about 2-3 messages a day.
+The main discussion list for the RDO project, for users and contributors. The list is fairly low volume, averaging about 7 messages a day.
 
 *   [Subscribe](http://www.redhat.com/mailman/listinfo/rdo-list)
 *   [Archives](https://www.redhat.com/archives/rdo-list/)
