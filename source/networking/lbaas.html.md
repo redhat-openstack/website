@@ -10,9 +10,6 @@ wiki_last_updated: 2014-02-20
 
 {:.no_toc}
 
-<div class="bg-boxes bg-boxes-single">
-<div class="row">
-<div class="offset3 span8 pull-s">
 ## Configuring and Deploying LBaaS in OpenStack Havana
 
 The Neutron LBaaS (load-balancer-as-a-service) extension provides a means to load balance traffic for services running on virtual machines in the cloud. The LBaaS API provides an API to quickly and easily deploy a load balancer. This guide will show how to configure and deploy a load balancer using the LBaaS API with RDO.

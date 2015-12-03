@@ -9,9 +9,6 @@ wiki_last_updated: 2015-03-05
 
 {:.no_toc}
 
-<div class="bg-boxes bg-boxes-single">
-<div class="row">
-<div class="offset3 span8 pull-s">
 # Adding a compute node
 
 Expanding your single-node OpenStack cloud to include a second compute node requires a second network adapter: in order for our pair of nodes to share the same private network, we must replace the "lo" interface we used for the private network with a real nic.

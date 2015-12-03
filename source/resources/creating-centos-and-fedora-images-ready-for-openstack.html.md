@@ -8,8 +8,6 @@ wiki_revision_count: 2
 wiki_last_updated: 2014-12-09
 ---
 
-<div class="row">
-<div class="offset1 span10">
 # Creating CentOS and Fedora images ready for Openstack
 
 This is a short summary of steps you can use to successfully build CentOS and Fedora images capable of take advantage of Openstack's elasticity.
@@ -151,6 +149,4 @@ For the Fedora image I used appliance-creator and a kickstart (you can find a fe
 
 After it's done, you'll end up with a directory with the same name you use for -n (in my case it's f20-cloud_openstack) in which you'll find a qcow2 image ready to be uploaded to Openstack (f20-cloud_openstack-sda.qcow2) and an xml file which could be used with virsh define to start the image directly in libvirt.
 
-</div>
-</div>
 <Category:Resources> <Category:Documentation>

@@ -8,8 +8,6 @@ wiki_revision_count: 11
 wiki_last_updated: 2015-08-07
 ---
 
-<div class="row">
-<div class="offset1 span10">
 ## Miscellaneous Docs
 
 [ ← Docs](Docs)
