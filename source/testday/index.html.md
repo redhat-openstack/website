@@ -16,6 +16,6 @@ get feedback on what's working and what needs work.
 * [Liberty Test Day 2](/testday/rdo-test-day-liberty-02)
 * [Liberty test day 1](/testday/rdo-test-day-liberty-01)
 * [Kilo RC test day](/testday/rdo-test-day-kilo)
-* [Kilo-3 test day](/testday/rdo-test-day-juno-milestone-3)
+* [Juno-3 test day](/testday/rdo-test-day-juno-milestone-3)
 
 
