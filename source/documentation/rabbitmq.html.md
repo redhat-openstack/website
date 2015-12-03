@@ -10,9 +10,6 @@ wiki_last_updated: 2014-03-13
 
 {:.no_toc}
 
-<div class="bg-boxes bg-boxes-single">
-<div class="row">
-<div class="offset3 span8 pull-s">
 ## Using RabbitMQ with RDO Havana
 
 OpenStack requires a messaging service for internal communications between various components. Currently, this is done by using an AMQP broker. OpenStack can be configured to use either the Qpid broker or the RabbitMQ broker. In RDO, the default broker is Qpid. This guide will show how to replace Qpid with RabbitMQ, as well as how to deploy highly available RabbitMQ.
