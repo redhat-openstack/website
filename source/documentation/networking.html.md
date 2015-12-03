@@ -8,8 +8,6 @@ wiki_revision_count: 13
 wiki_last_updated: 2015-05-26
 ---
 
-<div class="row">
-<div class="offset1 span10">
 ## Networking
 
 [ ← Docs ](Docs)

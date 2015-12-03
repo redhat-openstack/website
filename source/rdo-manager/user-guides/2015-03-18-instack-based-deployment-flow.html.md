@@ -8,8 +8,6 @@ wiki_last_updated: 2015-03-19
 
 # 2015-03-18-instack-based-deployment-flow
 
-<div class="row">
-<div class="offset1 span10">
 ## March 18, 2015 - Instack Based Deployment Flow
 
 <hr style="margin-top: -8px"/>
@@ -352,5 +350,3 @@ We encourage to use a machine which you can fully dedicate to RDO-Manager becaus
     # launch instack testing script
     instack-test-overcloud
 
-</div>
-</div>

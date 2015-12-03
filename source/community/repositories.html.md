@@ -6,8 +6,6 @@ wiki_revision_count: 20
 wiki_last_updated: 2015-01-13
 ---
 
-<div class="row">
-<div class="offset1 span10">
 # RDO Repositories
 
 Please see the [Quickstart](Quickstart) for summarized instructions for interacting with these repositories.
@@ -60,5 +58,3 @@ To get the very latest packages for testing, like when participating in an RDO t
 *   Fedora: yum-config-manager --enable updates-testing
 *   RHEL (derivatives): yum-config-manager --enable epel-testing
 
-</div>
-</div>

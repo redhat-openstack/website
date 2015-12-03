@@ -6,8 +6,6 @@ wiki_revision_count: 3
 wiki_last_updated: 2013-12-19
 ---
 
-<div class="row">
-<div class="offset1 span10">
 ## Upstream documentation
 
 [ ← Docs ](Docs)
@@ -23,5 +21,3 @@ wiki_last_updated: 2013-12-19
 *   [Books](Books)
 *   [OpenStack End User Guide](http://docs.openstack.org/user-guide/content/)
 
-</div>
-</div>

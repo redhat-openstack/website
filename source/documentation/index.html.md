@@ -76,7 +76,7 @@ Since RDO sticks closely to the upstream OpenStack project, the documentation at
 * [Books](http://rdoproject.org/Books)
 * [Glossary](http://docs.openstack.org/glossary/content/glossary.html)
 * [OpenStack Operations Guide](http://docs.openstack.org/trunk/openstack-ops/content/index.html)
-* [More&hellip;](UpstreaeDocs){:.more}
+* [More&hellip;](/documentation/upstream-docs){:.more}
 {:.with-more-link}
 
 ## Other
