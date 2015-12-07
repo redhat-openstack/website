@@ -46,7 +46,7 @@ The things that should be tested are listed on the [Tested Setups](/testday/test
 
 * Pick an item from the list
 * Go through the scenario as though you were a beginner, just following the instructions. (Check the [workarounds](/testday/workarounds-mitaka-01) page for problems that others may have encountered and resolved.)
-* KEEP GOOD NOTES. You can use [the test day etherpad](https://etherpad.openstack.org/p/rdo_test_day_oct_2015) for these notes. Reviewing other peoples' notes may help you avoid problems that they've already encountered.
+* KEEP GOOD NOTES. You can use [the test day etherpad](https://etherpad.openstack.org/p/rdo-test-days-mitaka-m1) for these notes. Reviewing other peoples' notes may help you avoid problems that they've already encountered.
 * Compare your results to the [rdoproject f22 CI report](http://trunk.rdoproject.org/f22/report.html)
 * Execute the openstack test suite tempest @ [Testing Liberty using Tempest](/uncategorized/testing-liberty-using-tempest/)
 

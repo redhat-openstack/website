@@ -12,7 +12,7 @@ do not apply to Mitaka; make sure to follow the steps described in the
 [How To Test](/testday/rdo-test-day-mitaka-01#how-to-test) page instead.
 
 For convenience, during the test day, please feel free to use [the test
-day etherpad](https://etherpad.openstack.org/p/rdo_test_day_mitaka_01),
+day etherpad](https://etherpad.openstack.org/p/rdo-test-days-mitaka-m1),
 which we'll use to periodically update this page.
 
 ## Example Entry
