@@ -1,7 +1,7 @@
 ---
 title: Get involved
 category: community
-authors: beni, dneary, mrunge, rbowen, strider
+authors: beni, dneary, mrunge, rbowen, strider, dmsimard
 wiki_category: Community
 wiki_title: Get involved
 wiki_revision_count: 49
@@ -21,11 +21,17 @@ Our community strives to operate according to the terms of the
 
 ## Discuss
 
-Come and chat real-time with RDO users on **IRC** —you can usually find us in the #rdo channel—or hanging out with the wider OpenStack community in the #openstack channel on [Freenode](http://freenode.net). Discussion around the RDO Deployment with Packstack and OpenStack Puppet Modules takes place in the #rdo-puppet channel.
+Come chat in real-time with RDO users on **IRC** on the [Freenode](http://freenode.net) server:
+* **#rdo**: Discussion around RDO in general
+* **#rdo-puppet**: Discussion around deploying RDO with Packstack and it's puppet modules
+* **#openstack**: Discussion around OpenStack with the broader OpenStack community
+* **#centos-devel**: Discussion around the CentOS [Cloud Special Interest Group (SIG)](https://wiki.centos.org/SpecialInterestGroup/Cloud)
+
+We have weekly IRC meetings you can participate in:
+* RDO meetings @ every Wednesday at 15:00 UTC on #rdo
+* CentOS Cloud SIG meetings @ every Thursday at 15:00 UTC on #centos-devel
 
 Join us for various [Events](/events/) around the world. [Organize-a-meetup](/uncategorized/organize-a-meetup/).
-
-If you want to help with our packaging and integration work, consider [joining our contributor **mailing list**](//www.redhat.com/mailman/listinfo/rdo-list), and check out [Red Hat's OpenStack pages on github](//github.com/redhat-openstack).
 
 ## Stay Informed
 
@@ -69,10 +75,19 @@ start.
 
 ## Contribute
 
-If you see something which you'd like to improve in RDO, there is a good chance that the best place to make that happen is in [the OpenStack project](http://www.openstack.org).
+RDO is a large community interested in packaging and deploying [OpenStack](http://www.openstack.org) on RHEL and it's derivatives.
 
-The Puppet modules used in packstack are on [Github](https://github.com/redhat-openstack/openstack-puppet-modules) and packstack itself is on [Stackforge](https://github.com/stackforge/packstack). There's great information about contributing to Packstack in the [Packstack wiki page in OpenStack's wiki](https://wiki.openstack.org/wiki/Packstack).
+We can always use your feedback and contributions to make RDO better.
 
-Participate in the packaging effort by following the [RDO Packaging Documentation](https://rdoproject.org/packaging/). Come to our [bi-weekly RDO Packaging Meeting](https://etherpad.openstack.org/p/RDO-Packaging) and the weekly [CentOS Cloud SIG](http://wiki.centos.org/SpecialInterestGroup/Cloud) meeting (15:00 UTC, #centos-devel on Freenode IRC).
+### Help with packaging
 
-Contribute any packaging and integration patches via [our contributor mailing list](//www.redhat.com/mailman/listinfo/rdo-list), [fork us on GitHub](//github.com/redhat-openstack), or propose improvements to OpenStack on [the upstream Launchpad page](//launchpad.net/openstack).
+Get started by looking at the [RDO Packaging documentation](https://www.rdoproject.org/packaging/rdo-packaging.html), taking a glance at our [packages](https://github.com/openstack-packages) and help with [patch reviews](https://review.gerrithub.io/#/q/status:open+project:^openstack-packages/.*,n,z).
+
+### Help with installers
+
+Packages provided by RDO to install and configure OpenStack are available through several projects which could all use your help:
+
+* [Packstack](https://github.com/openstack/packstack)
+* [Packaged openstack-puppet-modules](https://github.com/redhat-openstack/openstack-puppet-modules) and [upstream Puppet Modules](https://wiki.openstack.org/wiki/Puppet)
+* [RDO Manager](https://www.rdoproject.org/rdo-manager/) and [Triple-O](https://wiki.openstack.org/wiki/TripleO)
+* [Kolla](https://github.com/openstack/kolla)
