@@ -22,12 +22,14 @@ Our community strives to operate according to the terms of the
 ## Discuss
 
 Come chat in real-time with RDO users on **IRC** on the [Freenode](http://freenode.net) server:
+
 * **#rdo**: Discussion around RDO in general
 * **#rdo-puppet**: Discussion around deploying RDO with Packstack and it's puppet modules
 * **#openstack**: Discussion around OpenStack with the broader OpenStack community
 * **#centos-devel**: Discussion around the CentOS [Cloud Special Interest Group (SIG)](https://wiki.centos.org/SpecialInterestGroup/Cloud)
 
 We have weekly IRC meetings you can participate in:
+
 * RDO meetings @ every Wednesday at 15:00 UTC on #rdo
 * CentOS Cloud SIG meetings @ every Thursday at 15:00 UTC on #centos-devel
 
