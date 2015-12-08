@@ -5,7 +5,6 @@ authors: eglynn
 wiki_title: HowToTest/Ceilometer/H/AlarmHistoryAPI
 wiki_revision_count: 2
 wiki_last_updated: 2013-10-23
-layout: pullheadings
 ---
 
 {:.no_toc}

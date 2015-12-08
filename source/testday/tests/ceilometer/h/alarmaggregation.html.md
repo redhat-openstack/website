@@ -4,7 +4,6 @@ authors: eglynn
 wiki_title: HowToTest/Ceilometer/H/AlarmAggregation
 wiki_revision_count: 1
 wiki_last_updated: 2013-10-23
-layout: pullheadings
 ---
 
 # Alarm Aggregation

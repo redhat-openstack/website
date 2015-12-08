@@ -5,7 +5,6 @@ authors: djschaap, rohara
 wiki_title: Load Balance OpenStack API
 wiki_revision_count: 11
 wiki_last_updated: 2013-09-13
-layout: pullheadings
 ---
 
 {:.no_toc}

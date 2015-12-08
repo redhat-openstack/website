@@ -6,7 +6,6 @@ wiki_category: Networking
 wiki_title: Running an instance with Neutron
 wiki_revision_count: 14
 wiki_last_updated: 2013-12-18
-layout: pullheadings
 ---
 
 {:.no_toc}
