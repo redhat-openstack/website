@@ -33,8 +33,8 @@ You'll want a fresh install with latest updates installed.
     yum -y install yum-plugin-priorities
     cd /etc/yum.repos.d/
     # for Centos 7 and RHEL 7
-    sudo wget http://trunk.rdoproject.org/centos7-mitaka/delorean-deps.repo
-    sudo wget http://trunk.rdoproject.org/centos7-mitaka/current-passed-ci/delorean.repo
+    sudo wget http://trunk.rdoproject.org/centos7/delorean-deps.repo
+    sudo wget http://trunk.rdoproject.org/centos7/current-passed-ci/delorean.repo
 
 * Check for any [workarounds](/testday/workarounds-mitaka-01) required for your platform before the main installation
 * For Packstack based deployment start at step 2 of the [packstack Quickstart](/install/quickstart#Step_2:_Install_Packstack_Installer)
