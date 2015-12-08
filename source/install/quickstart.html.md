@@ -3,7 +3,6 @@ title: Quickstart
 category: documentation
 authors: apevec, dneary, garrett, jasonbrooks, jlibosva, mmagr, pixelbeat, pmyers,
   rbowen
-layout: pullheadings
 wiki_category: Documentation
 wiki_title: Quickstart
 wiki_revision_count: 141

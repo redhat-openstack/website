@@ -6,7 +6,6 @@ wiki_category: Documentation
 wiki_title: CeilometerQuickStart
 wiki_revision_count: 43
 wiki_last_updated: 2014-11-26
-layout: pullheadings
 ---
 
 {:.no_toc}

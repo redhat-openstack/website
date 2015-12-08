@@ -8,7 +8,6 @@ wiki_category: Documentation
 wiki_title: Docs
 wiki_revision_count: 105
 wiki_last_updated: 2015-07-16
-layout: pullheadings
 ---
 
 # RDO documentation
