@@ -39,6 +39,7 @@ You'll want a fresh install with latest updates installed.
 * Check for any [workarounds](/testday/workarounds-mitaka-01) required for your platform before the main installation
 * For Packstack based deployment start at step 2 of the [packstack Quickstart](/install/quickstart#Step_2:_Install_Packstack_Installer)
 * For RDO Manager based deployments follow the documentation in the [RDO Manager liberty docs](https://repos.fedorapeople.org/repos/openstack-m/rdo-manager-docs/liberty/)
+* For a virtual setup of RDO Manager try out the [quickstart](https://github.com/trown/tripleo-quickstart)
 
 ### Test cases and results
 
