@@ -21,13 +21,6 @@ bash <(curl -s https://raw.githubusercontent.com/trown/tripleo-quickstart/master
     * [tripleo-heat-templates patch](https://review.openstack.org/#/c/253717/) - merged but not in delorean current-passed-ci repo
 
 # Packstack
-Script to work around known issues: https://gist.github.com/dmsimard/9ba4e52de736adac2ca0
-
-* Unable to upload images - Filesystem store is not configured properly: https://bugzilla.redhat.com/show_bug.cgi?id=1288179
-
-  * Fixed in https://review.openstack.org/#/c/254431/ and built in delorean
-
-* Unable to complete ceilometer installation - Alarming is not yet replaced by Aodh: https://bugzilla.redhat.com/show_bug.cgi?id=1285314
 
   * mitaka-1 testday workaround https://review.gerrithub.io/254640
 
