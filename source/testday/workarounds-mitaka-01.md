@@ -22,9 +22,3 @@ bash <(curl -s https://raw.githubusercontent.com/trown/tripleo-quickstart/master
     * [tripleo-heat-templates patch](https://review.openstack.org/#/c/253717/) - merged but not in delorean current-passed-ci repo
 
 # Packstack
-
-  * mitaka-1 testday workaround https://review.gerrithub.io/254640
-
-* aodh removes keystone configuration when manifest is applied (resulting in keystone 404's) - https://bugzilla.redhat.com/show_bug.cgi?id=1289667
-
-
