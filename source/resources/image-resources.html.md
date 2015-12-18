@@ -29,12 +29,12 @@ This is a collection of various OpenStack-ready images of different distribution
 
 ## Importing Images into Glance
 
-You can load an image from the command line with glance, eg:
+You can load an image from the command line with glance, e.g.,:
 
     $ wget https://download.fedoraproject.org/pub/fedora/linux/releases/22/Cloud/x86_64/Images/Fedora-Cloud-Base-22-20150521.x86_64.qcow2
     $ glance --os-image-api-version 2 image-create --name 'Fedora-22-x86_64' --disk-format qcow2 --container-format bare --file Fedora-Cloud-Base-22-20150521.x86_64.qcow2 
 
-... or go to the 'Images and Snapshots' tab in your OpenStack dashboard to add them via the gui.
+or go to the 'Images and Snapshots' tab in your OpenStack dashboard to add images via the GUI.
 
 See the [glance documentation](http://docs.openstack.org/trunk/openstack-compute/admin/content/adding-images.html) for more details about the glance command line tools.
 
@@ -48,7 +48,7 @@ Alternatively, one can use diskimage-builder, which is available in the RDO repo
     $ yum install diskimage-builder
     $ disk-image-create -a amd64 fedora vm -o fedora-image.qcow2
 
-Note: using the vm element as shown above is currently required for EPEL. Otherwise, one may instead not specify the vm element and extract the kernel and ramdisk as documented here: <https://wiki.openstack.org/wiki/Baremetal#Image_Requirements>
+Note: using the vm element as shown above is currently required for EPEL. Otherwise, one may instead not specify the vm element and extract the kernel and ramdisk as documented [here](https://wiki.openstack.org/wiki/Baremetal#Image_Requirements).
 
 The resulting image file can be imported into glance similar to any other image:
 
