@@ -17,7 +17,15 @@ we cannot guarantee that you'll be granted admission to the building.
 
 Our tentative schedule for the day is:
 
-**Opening Keynote: RDO at CERN**  - *Thomas Oulevey*
+**Opening Keynote: RDO In Production**  - *Thomas Oulevey*
+
+> CERN, the European laboratory for Particle Physics, uses some of the world's largest and most complex scientific instruments such as the Large Hadron Collider, a 27 KM ring 100m underground on the border between France and Switzerland.
+
+> CERN has been running OpenStack in production since July 2013 to uncover the mysteries of the Universe supporting the work of 13,000 physicists around the world.  
+
+> The CERN IT cloud is currently around 150,000 cores on more than 5,000 servers across the two data centres.
+
+> CERN deploy OpenStack based on an open source distribution from the RDO community. Let's go behind the scenes at CERN and see how RDO with the help of other open source projects help to scale OpenStack and what others can benefit from their experience.
 
 **Bare metal deployment and introspection in RDO Manager** -
 *Dmitry Tantsur, Imre Farkas*
