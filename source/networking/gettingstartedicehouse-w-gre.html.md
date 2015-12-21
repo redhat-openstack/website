@@ -6,20 +6,23 @@ wiki_revision_count: 3
 wiki_last_updated: 2014-05-13
 ---
 
-# GettingStartedIcehouse w GRE
+# Getting Started with Icehouse and GRE
 
 ## Installation Environment
 
-Everything that will be presented in the demo can be followed along with by using the [Quickstart](Quickstart) instalation.
+Everything that will be presented in the demo can be followed along with by using the [Quickstart](Quickstart) installation.
  This is not the exact same environment that will be presented from, but it is quicker and easier to install.
 
-If you would like to match the installation used for the presentation you'll need two virtual machines running a RedHat compatible install of linux, RHEL, Fedora, CentOS, Scientific are a few options to meet this requirement. The workshop at Summit will use Fedora 20
+If you would like to match the installation used for the presentation you'll need two virtual machines running a RedHat compatible install of Linux, RHEL, Fedora, CentOS and Scientific Linux are a few options to meet this requirement. The workshop at Summit will use Fedora 20
+
 * Each VM should have 2 network interfaces each configured with static IP addresses. For this installation eth0 will be "public traffic" and eth1 will be "private traffic". The following IP addresses will be used:
--- control host eth0 192.168.122.2, eth1 192.168.123.2
--- compute host eth0 192.168.122.3, eth1 192.168.123.3
+
+- control host eth0 192.168.122.2, eth1 192.168.123.2
+- compute host eth0 192.168.122.3, eth1 192.168.123.3
+
  Each visualization environment is different. [NeutronLibvirtMultinodeDevEnvironment](NeutronLibvirtMultinodeDevEnvironment) shows an example of how to setup these two hosts using libvirt.
 
-Ensure NetworkManager and firewalld are disabled. You may also have to set selinux to permissive, there has been a dhcp-agent bug that selinux had to be disabled because of.
+Ensure NetworkManager and firewalld are disabled. You may also have to set SElinux to permissive, there has been a dhcp-agent bug that SElinux had to be disabled because of.
 
 ## Installation
 
@@ -51,9 +54,9 @@ Edit the packstack answerfile and update the following configuration parameters.
     CONFIG_NEUTRON_OVS_TUNNEL_RANGES=1:1000
     CONFIG_NEUTRON_OVS_TUNNEL_IF=eth1
 
-Packstack will pre-populate the ip addresses and network interfaces based on the system you are installing from. If you are using a previously generated answers file on a new system you may need to update the ip addresses and network interface names.
+Packstack will pre-populate the IP addresses and network interfaces based on the system you are installing from. If you are using a previously generated answers file on a new system you may need to update the ip addresses and network interface names.
 
-Note that the interface identified in \`CONFIG_NEUTRON_OVS_TUNNEL_IF\` must be configured with an ip address prior to running packstack. You will need to create the appropriate interface configuration file (in this example, `/etc/sysconfig/network-scripts/ifcfg-eth1`) and run `ifup eth1` before running packstack.
+Note that the interface identified in `CONFIG_NEUTRON_OVS_TUNNEL_IF` must be configured with an IP address prior to running packstack. You will need to create the appropriate interface configuration file (in this example, `/etc/sysconfig/network-scripts/ifcfg-eth1`) and run `ifup eth1` before running packstack.
 
 Save and close the answer file and feed it into packstack to start the installation.
 
