@@ -128,6 +128,10 @@ index: false
 
       titlewords = page_title.downcase.split(wordsplit).map(&:strip)
 
+      # Make URL fragments from simpliy splitting dirs
+      # ...and also simpler keywords by splitting at other ASCII chars
+      url_frags = page.url.split('/') + page.url.tr('_/-:', ' ').split(' ')
+
       nickname = page.data.author
       author = []
 
@@ -139,7 +143,7 @@ index: false
       text = page_content.downcase.split(wordsplit) + titlewords
 
       text = text.map(&:strip).sort.uniq
-        .reject {|w| w.match /[=]/} - stopwords + author
+        .reject {|w| w.match /[=]/} + url_frags - stopwords + author
 
       # Add CJK words to the word list
       text += page_content.scan(/\p{Han}/).uniq
