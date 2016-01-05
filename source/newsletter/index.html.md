@@ -12,6 +12,10 @@ We send out a monthly newsletter covering anything of interest to the RDO Commun
 
 You can sign up to receive the newsletter [on the mailing list page](http://www.redhat.com/mailman/listinfo/rdo-newsletter).
 
+## 2016
+
+*  [January 2016](/newsletter/2016-january)
+
 ## 2015
 
 *   [December 2015](/newsletter/2015-december)
