@@ -7,6 +7,9 @@ comments: true
 published: true
 ---
 
+**The schedule has now been published at
+[https://www.rdoproject.org/events/rdo-day-fosdem-2016/](https://www.rdoproject.org/events/rdo-day-fosdem-2016/).**
+
 We're pleased to announce that we'll be holding an RDO Community Day in conjunction with the [CentOS Dojo](https://wiki.centos.org/Events/Dojo/Brussels2016) on the day before FOSDEM. This event will be held at the IBM Client Center in Brussels, Belgium, on Friday, January 29th, 2016.
 
 You are encouraged to send your proposed topics and sessions via the [Google form](http://goo.gl/forms/oDjI2BpCtm). If you have questions about the event, or proposed topics, bring them either to the [rdo-list](https://www.redhat.com/mailman/listinfo/rdo-list) mailing list, or to the \#rdo channel on the Freenode IRC network.
