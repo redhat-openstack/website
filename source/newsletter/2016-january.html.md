@@ -2,8 +2,6 @@
 
 ## Quick links:
 
-## Quick links:
-
 * [Quick Start](http://rdoproject.org/quickstart)
 * [Mailing Lists](http://rdoproject.org/Mailing_lists)
 * [RDO packages](http://rdoproject.org/repos/) with [trunk packages](http://rdoproject.org/repos/openstack/openstack-trunk/)
