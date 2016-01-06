@@ -150,7 +150,7 @@ RDO community. The best ways are ...
 * IRC - #rdo on Freenode.irc.net
 * Puppet module development - #rdo-puppet
 
-### Social Media: 
+### Social Media
 * [Follow us on Twitter](http://twitter.com/rdocommunity )
 * [Google+](http://tm3.org/rdogplus )
 * [Facebook](http://facebook.com/rdocommunity)
