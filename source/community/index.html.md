@@ -76,7 +76,7 @@ start.
 
 ## Contribute
 
-RDO is a large community interested in packaging and deploying [OpenStack](http://www.openstack.org) on RHEL and it's derivatives.
+RDO is a large community interested in packaging and deploying [OpenStack](http://www.openstack.org) on RHEL and its derivatives.
 
 We can always use your feedback and contributions to make RDO better.
 

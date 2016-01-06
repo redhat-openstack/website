@@ -16,20 +16,19 @@ Below you can find guides and some test suggestions for the storage components.
 
 ## Cinder Manuals
 
-*   [Using Ceph for Cinder with RDO Liberty](storage/Cinder/Liberty/using-ceph-for-cinder-with-rdo-liberty.html.md)
-*   [Using GlusterFS for Cinder with RDO Liberty](storage/Cinder/Liberty/using-glusterfs-for-cinder-with-rdo-liberty.html.md)
-*   [Using ThinLVM for Cinder with RDO Liberty](storage/Cinder/Liberty/using-thinlvm-for-cinder-with-rdo-liberty.html.md)
-*   [Using Dell EqualLogic for Cinder with RDO](storage/using-dell-equallogic-for-cinder-with-rdo.html.md)
-*   [Using NetApp for Cinder with RDO](storage/using-netapp-for-cinder-with-rdo.html.md)
-*   [Using NFS for Cinder with RDO](storage/using-nfs-for-cinder-with-rdo.html.md)
-*   [Setting up HA of Cinder with RDO](storage/setting-up-ha-of-cinder.html.md)
+*   [Using GlusterFS for Cinder with RDO Liberty](Using GlusterFS for Cinder with RDO Liberty)
+*   [Using ThinLVM for Cinder with RDO Liberty](Using ThinLVM for Cinder with RDO Liberty)
+*   [Using Dell EqualLogic for Cinder with RDO](Using Dell EqualLogic for Cinder with RDO)
+*   [Using NetApp for Cinder with RDO](Using NetApp for Cinder with RDO)
+*   [Using NFS for Cinder with RDO](Using NFS for Cinder with RDO)
+*   [Setting up HA of Cinder with RDO](Setting up HA of Cinder)
 
 ## Glance Manuals
 
-*   [Using GlusterFS for Glance with RDO Liberty](storage/Glance/Liberty/using-glusterfs-for-glance-with-rdo-liberty.html.md)
-*   [Using Swift for Glance with RDO Liberty](storage/Glance/Liberty/using-swift-for-glance-with-rdo-liberty.html.md)
-*   [Using Ceph for Glance with RDO](storage/Glance/using-ceph-for-glance-with-rdo.html.md)
-*   [Setting up HA of Glance](storage/Glance/setting-up-ha-of-glance.html.md)
+*   [Using GlusterFS for Glance with RDO Liberty](Using GlusterFS for Glance with RDO Liberty)
+*   [Using Swift for Glance with RDO Liberty](Using Swift for Glance with RDO Liberty)
+*   [Using Ceph for Glance with RDO](Using Ceph for Glance with RDO)
+*   [Setting up HA of Glance](Setting up HA of Glance)
 
 ## Swift Manuals
 
