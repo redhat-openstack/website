@@ -10,7 +10,7 @@ wiki_last_updated: 2015-08-10
 
 # Get Involved
 
-Help us make the RDO community site a great place for users and cloud operators in the Red Hat ecosystem by sharing your OpenStack questions and solutions on [ask.openstack](http://ask.openstack.org), and by adding [the most useful solutions](/documentation/troubleshooting/) and [stories](/documentation/case-studies/) to the RDO website.
+Help us make the RDO community site a great place for users and cloud operators in the Red Hat ecosystem by sharing your OpenStack questions and solutions on [ask.openstack](http://ask.openstack.org), and by adding [the most useful solutions](/troubleshooting/) and [stories](/documentation/case-studies/) to the RDO website.
 
 Our community strives to operate according to the terms of the
 [OpenStack Code of Conduct](https://www.openstack.org/legal/community-code-of-conduct/).
@@ -45,7 +45,7 @@ Join our [newsletter mailing list](//www.redhat.com/mailman/listinfo/rdo-newslet
 
 ## Ask and Answer
 
-- Check our [Frequently Asked Questions (FAQ) page](/documentation/frequently-asked-questions/) for answers to common questions
+- Check our [Frequently Asked Questions (FAQ) page](/rdo/faq/) for answers to common questions
 - Try our [troubleshooting page](/troubleshooting/) for solutions to common problems
 - Join the ask.openstack community to ask and answer questions:
 
@@ -56,7 +56,7 @@ The site [ask.openstack](http://ask.openstack.org) is the upstream Q&A for all m
 - [Find all questions on ask.openstack related to RDO](https://ask.openstack.org/en/questions/scope:all/sort:age-desc/page:1/query:rdo/).
 - If you're a frequent poster on ask.openstack and wish to identify yourself as part of the RDO community, consider adding the RDO logo to your avatar, like Lars: [https://ask.openstack.org/en/users/1745/larsks/](https://ask.openstack.org/en/users/1745/larsks/) .
 
-- Help improve our knowledge base by turning the best answers to questions on the [Mailing\_lists](/community/mailing-lists/) or on [ask.openstack.org](http://ask.openstack.org) into a page in our [troubleshooting section](/documentation/troubleshooting/). In case of ask.openstack.org, a link might be sufficient.
+- Help improve our knowledge base by turning the best answers to questions on the [Mailing\_lists](/community/mailing-lists/) or on [ask.openstack.org](http://ask.openstack.org) into a page in our [troubleshooting section](/troubleshooting/). In case of ask.openstack.org, a link might be sufficient.
 - Blog about how you're using RDO. If you blog frequently about RDO and OpenStack, consider [requesting that your blog be added](https://wiki.openstack.org/wiki/AddingYourBlog) to the upstream [Planet OpenStack](http://planet.openstack.org/).
 - [Fork the website on Github](https://github.com/redhat-openstack/website) and help us improve our documentation.
 
