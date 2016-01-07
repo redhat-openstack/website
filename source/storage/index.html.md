@@ -32,7 +32,7 @@ Below you can find guides and some test suggestions for the storage components.
 
 ## Swift Manuals
 
-*   [Using Swift for Glance with RDO Liberty](storage/Swift/Liberty/using-swift-for-glance-with-rdo-liberty.html.md)
+*   [Using Swift for Glance with RDO Liberty](Using Swift for Glance with RDO Liberty)
 
 ## Test Suggestions
 
