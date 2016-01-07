@@ -1,11 +1,11 @@
 ---
 title: Image resources
 category: resources
-authors: berendt, dneary, jpeeler, kallies, mattdm, pixelbeat, pmyers, rbowen, rdo
+authors: berendt, dneary, jpeeler, kallies, mattdm, pixelbeat, pmyers, rbowen, rdo, snecklifter
 wiki_category: Resources
 wiki_title: Image resources
 wiki_revision_count: 29
-wiki_last_updated: 2015-07-22
+wiki_last_updated: 2016-01-07
 ---
 
 # Image resources
@@ -14,9 +14,7 @@ wiki_last_updated: 2015-07-22
 
 This is a collection of various OpenStack-ready images of different distributions and operating systems.
 
-*   Fedora 22 [cloud images](https://getfedora.org/cloud/download/)
-*   Fedora 21: [32-bit](http://ftp.kaist.ac.kr/fedora/releases/21/Cloud/Images/i386/Fedora-Cloud-Base-20141203-21.i386.qcow2) / [64 bit](http://ftp.kaist.ac.kr/fedora/releases/21/Cloud/Images/x86_64/Fedora-Cloud-Base-20141203-21.x86_64.qcow2) ([*more info*](http://cloud.fedoraproject.org/))
-*   Fedora 20: [32-bit](http://cloud.fedoraproject.org/fedora-20.i386.qcow2) / [64 bit](http://cloud.fedoraproject.org/fedora-20.x86_64.qcow2) ([*more info*](http://cloud.fedoraproject.org/))
+*   Fedora [cloud images](https://getfedora.org/cloud/download/)
 *   [CentOS 7 images](http://cloud.centos.org/centos/7/images/)
 *   [CentOS 6 images](http://cloud.centos.org/centos/6/images/)
 *   [Ubuntu cloud images](//cloud-images.ubuntu.com/)
@@ -31,8 +29,8 @@ This is a collection of various OpenStack-ready images of different distribution
 
 You can load an image from the command line with glance, e.g.,:
 
-    $ wget https://download.fedoraproject.org/pub/fedora/linux/releases/22/Cloud/x86_64/Images/Fedora-Cloud-Base-22-20150521.x86_64.qcow2
-    $ glance --os-image-api-version 2 image-create --name 'Fedora-22-x86_64' --disk-format qcow2 --container-format bare --file Fedora-Cloud-Base-22-20150521.x86_64.qcow2 
+    $ wget https://www.mirrorservice.org/sites/dl.fedoraproject.org/pub/fedora/linux/releases/23/Cloud/x86_64/Images/Fedora-Cloud-Base-23-20151030.x86_64.qcow2
+    $ glance --os-image-api-version 2 image-create --name 'Fedora-23-x86_64' --disk-format qcow2 --container-format bare --file Fedora-Cloud-Base-23-20151030.x86_64.qcow2 
 
 or go to the 'Images and Snapshots' tab in your OpenStack dashboard to add images via the GUI.
 
@@ -40,13 +38,9 @@ See the [glance documentation](http://docs.openstack.org/trunk/openstack-compute
 
 ## Building Your Own Images
 
-*   Information on building an image via Oz for OpenStack (RHOS and RDO) is available in the [RHOS 3.0 Installation and Configuration Guide](https://access.redhat.com/site/documentation/en-US/Red_Hat_OpenStack/3/html/Installation_and_Configuration_Guide/Building_a_Custom_Disk_Image.html).
+*   Upstream has good guidance on various methods for doing this [here](http://docs.openstack.org/image-guide/create-images-automatically.html)
+*   Also see [Creating custom images for OpenStack](Creating CentOS and Fedora images ready for Openstack)
 *   [Building a Windows Image for OpenStack](http://poolsidemenace.wordpress.com/2011/06/16/porting-windows-to-openstack/)
-
-Alternatively, one can use diskimage-builder, which is available in the RDO repository:
-
-    $ yum install diskimage-builder
-    $ disk-image-create -a amd64 fedora vm -o fedora-image.qcow2
 
 Note: using the vm element as shown above is currently required for EPEL. Otherwise, one may instead not specify the vm element and extract the kernel and ramdisk as documented [here](https://wiki.openstack.org/wiki/Baremetal#Image_Requirements).
 
