@@ -12,7 +12,7 @@ get feedback on what's working and what needs work.
 
 ## Past test days
 
-* [Mitaka-1 - Dec 10-11](/testday/rdo-test-day-mitaka-01)
+* [Mitaka-1 - Dec 10-11](/testday/mitaka/milestone1)
 * [Liberty Test Day 2](/testday/rdo-test-day-liberty-02)
 * [Liberty test day 1](/testday/rdo-test-day-liberty-01)
 * [Kilo RC test day](/testday/rdo-test-day-kilo)

@@ -43,7 +43,7 @@ You'll want a fresh install with latest updates installed.
 
 ### Test cases and results
 
-The things that should be tested are listed on the [Tested Setups](/testday/testedsetups-mitaka-01) page.
+The things that should be tested are listed on the [Tested Setups](/testday/mitaka/testedsetups1) page.
 
 * Pick an item from the list
 * Go through the scenario as though you were a beginner, just following the instructions. (Check the [workarounds](/testday/workarounds-mitaka-01) page for problems that others may have encountered and resolved.)
@@ -55,4 +55,4 @@ If you have problems with any of the tests, report a bug to [Bugzilla](https://b
 [openstack-nova](https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&component=openstack-nova), [openstack-glance](https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&component=openstack-glance), [openstack-keystone](https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&component=openstack-keystone), [openstack-cinder](https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&component=openstack-cinder),
 [openstack-neutron](https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&component=openstack-neutron), [openstack-swift](https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&component=openstack-swift),  [python-django-horizon](https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&component=python-django-horizon), [openstack-heat](https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&component=openstack-heat) or [openstack-ceilometer](https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&component=openstack-ceilometer) components. If you are unsure about exactly how to file the report or what other information to include, just ask on IRC (#rdo, freenode.net)  and we will help you.
 
-Once you have completed the tests, add your results to the table on the [TestedSetups](/testday/testedsetups-mitaka-01) page, following the examples already there. Be sure to check the [Workarounds](/testday/workarounds-mitaka-01) page for things that may have already have fixes or workarounds.
+Once you have completed the tests, add your results to the table on the [TestedSetups](/testday/mitaka/testedsetups1) page, following the examples already there. Be sure to check the [Workarounds](/testday/workarounds-mitaka-01) page for things that may have already have fixes or workarounds.
