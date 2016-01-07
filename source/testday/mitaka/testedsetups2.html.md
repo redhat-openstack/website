@@ -3,21 +3,23 @@ title: TestedSetups Mitaka 1
 authors: rbowen
 ---
 
-# TestedSetups 2015 01
+# Test cases for Mitaka Milestone 2 test day
 
-Tested Setups for [RDO test day Mitaka 1](/testday/mitaka/milestone1). 
+Tested Setups for [RDO test day Mitaka 2](/testday/mitaka/milestone2),
+January 27th and 28th, 2016.
+
+See also the [workarounds page](/testday/mitaka/workarounds2).
 
 Some steps from the official Quickstart guide
 do not apply to Mitaka; make sure to follow the steps described in the
-[How To Test](/testday/mitaka/milestone1#how-to-test) page instead.
+[How To Test](/testday/mitaka/milestone2#how-to-test) page instead.
 
 For convenience, during the test day, please feel free to use [the test
-day etherpad](https://etherpad.openstack.org/p/rdo-test-days-mitaka-m1),
+day etherpad](https://etherpad.openstack.org/p/rdo-test-days-mitaka-m2),
 which we'll use to periodically update this page.
 
 1. toc
 {:toc}
-
 
 ## Example Entry
 
@@ -31,7 +33,7 @@ Here's how you might fill out an entry once you've tested it. Mark a given test 
 
 ## Packstack Based Installation (Neutron Networking)
 
-Please make sure to use the steps described in the [How To Test](/testday/mitaka/milestone1#how-to-test)  when installing the base RDO system. Do not go through the Quickstart steps unmodified which will instead give you an RDO kilo deployment. 
+Please make sure to use the steps described in the [How To Test](/testday/mitaka/milestone2#how-to-test)  when installing the base RDO system. Do not go through the Quickstart steps unmodified which will instead give you an RDO kilo deployment. 
 
 | Config Name | Release | BaseOS | Status | HOWTO | Who | Date | BZ/LP | Notes Page
 |----------------------------------------------------------------|------------------|-----------|----------------------------------------------|-----------------------------------------------------|--------|------------|--------------------------------------------------------------------|------------|
@@ -62,7 +64,7 @@ Please make sure to use the steps described in the [How To Test](/testday/mitaka
 
 ## Packstack Based Installation (Storage Components)
 
-Please see [Docs - Storage](/documentation/storage) for configuration guides as well as suggestions on what could be tested for both Cinder and Glance and make sure to use the steps described in the [How To Test](testday/mitaka/milestone1#how-to-test) page when installing the base RDO system. '''Do not''' go through the Quickstart steps unmodified which will instead give you an RDO Liberty deployment.
+Please see [Docs - Storage](/documentation/storage) for configuration guides as well as suggestions on what could be tested for both Cinder and Glance and make sure to use the steps described in the [How To Test](testday/mitaka/milestone2#how-to-test) page when installing the base RDO system. '''Do not''' go through the Quickstart steps unmodified which will instead give you an RDO Liberty deployment.
 
 | Config Name | Release | BaseOS | Status | HOWTO | Who | Date | BZ/LP | Notes Page
 |----------------------------------------------------------------|------------------|-----------|----------------------------------------------|-----------------------------------------------------|--------|------------|--------------------------------------------------------------------|------------|

@@ -2,7 +2,12 @@
 title: RDO Mitaka Test Day
 ---
 
+[ ← Test Days](/testday)
+
 # Mitaka Test Day 2
+
+[ [Workarounds](/testday/mitaka/workarounds2) | 
+[Test cases](/testday/mitaka/testedsetups2) ]
 
 We will be holding a RDO test day on January 27th and 28th, 2016.
 This will be coordinated through the **#rdo channel on Freenode**, and
@@ -18,6 +23,9 @@ We will also be available for people that want to try the stable
 Update this page by submitting pull requests to [this
 repo](https://github.com/redhat-openstack/website), or by clicking the
 "Edit on Github" banner at the top right.
+
+1. toc
+{:toc}
 
 ## Prerequisites
 
