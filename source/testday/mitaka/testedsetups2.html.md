@@ -37,9 +37,9 @@ Please make sure to use the steps described in the [How To Test](/testday/mitaka
 
 | Config Name | Release | BaseOS | Status | HOWTO | Who | Date | BZ/LP | Notes Page
 |----------------------------------------------------------------|------------------|-----------|----------------------------------------------|-----------------------------------------------------|--------|------------|--------------------------------------------------------------------|------------|
-| All-in-One - Sanity |  | CentOS 7 |   | [QuickStart](/Quickstart) |  |    |    | 
-|                     |  | F22      |   | [QuickStart](/Quickstart) |  |    |    | 
-|                     |  | RHEL7.1  |   | [QuickStart](/Quickstart) |  |    |    | 
+| All-in-One - Sanity |  | CentOS 7 |   | [How To Test](/testday/mitaka/milestone2#how-to-test) |  |    |    | 
+|                     |  | F22      |   | [How To Test](/testday/mitaka/milestone2#how-to-test) |  |    |    | 
+|                     |  | RHEL7.1  |   | [How To Test](/testday/mitaka/milestone2#how-to-test) |  |    |    | 
 | Distributed -IPv6-Deployment- Sanity |  |  CentOS 7 |  | [QuickStart](/Quickstart) |  |   |  | 
 |                                      |  | F22       |  | [QuickStart](/Quickstart) |  |   |  | 
 |                                      |  | RHEL7.1   |  | [QuickStart](/Quickstart) |  |   |  |
@@ -60,6 +60,14 @@ Please make sure to use the steps described in the [How To Test](/testday/mitaka
 | 3,node  -ML2-OVS- VXLAN |  | CentOS 7.1 |    | |   |   |  | 
 | 3,node  -ML2-OVS- GRE   |  | CentOS 7.1 |    | |   |   |  | 
 | 3,node  -ML2-OVS- VLAN  |  | CentOS 7.1 |    | |   |   |  | 
+
+## RDO Manager
+
+| Config Name | Release | BaseOS | Status | HOWTO | Who | Date | BZ/LP | Notes Page
+|-------------|---------|--------|--------|-------|-----|------|-------|-----------
+| Sanity Check | | CentOS 7 | | [Install Guide](https://repos.fedorapeople.org/repos/openstack-m/rdo-manager-docs/liberty/) | | | | 
+| | | F23 | | [Install Guide](https://repos.fedorapeople.org/repos/openstack-m/rdo-manager-docs/liberty/) | | | | 
+| | | RHEL 7.1 | | [Install Guide](https://repos.fedorapeople.org/repos/openstack-m/rdo-manager-docs/liberty/) | | | | 
 
 
 ## Packstack Based Installation (Storage Components)
