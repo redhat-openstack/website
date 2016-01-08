@@ -26,8 +26,7 @@ install directory**
 
 *   [Configuring Horizon to use SSL](HorizonSSL)
 *   [Securing services](Securing_services)
-*   [Setting up high availability](Setting-up-High-Availability)
-*   [HA and LB Control Services ](RDO_HighlyAvailable_and_LoadBalanced_Control_Services)
+*   [Setting up high availability](/ha)
 *   [Getting started with Ceilometer](CeilometerQuickStart)
 *   [Launching your first VM ](Running an instance)
 *   [Image Resources](Image resources)

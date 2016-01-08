@@ -49,7 +49,6 @@ Since RDO sticks closely to the upstream OpenStack project, the documentation at
 * [GlusterFS](Using GlusterFS for Cinder with RDO Liberty)
 * [EMC](https://wiki.openstack.org/wiki/How to deploy cinder with EMC plug-in)
 * [ThinLVM](Using ThinLVM for Cinder with RDO Liberty)
-* [Ceph](Ceph for Cinder on RDO)
 * [More&hellip;](Docs/Storage){:.more}
 {:.with-more-link}
 </div>
