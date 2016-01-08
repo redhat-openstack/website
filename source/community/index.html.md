@@ -80,11 +80,11 @@ RDO is a large community interested in packaging and deploying [OpenStack](http:
 
 We can always use your feedback and contributions to make RDO better.
 
-### Help with packaging
+### Packaging
 
 Get started by looking at the [RDO Packaging documentation](https://www.rdoproject.org/packaging/rdo-packaging.html), taking a glance at our [packages](https://github.com/openstack-packages) and help with [patch reviews](https://review.gerrithub.io/#/q/status:open+project:^openstack-packages/.*,n,z).
 
-### Help with installers
+### Installers
 
 Packages provided by RDO to install and configure OpenStack are available through several projects which could all use your help:
 
@@ -92,3 +92,11 @@ Packages provided by RDO to install and configure OpenStack are available throug
 * [Packaged openstack-puppet-modules](https://github.com/redhat-openstack/openstack-puppet-modules) and [upstream Puppet Modules](https://wiki.openstack.org/wiki/Puppet)
 * [RDO Manager](https://www.rdoproject.org/rdo-manager/) and [Triple-O](https://wiki.openstack.org/wiki/TripleO)
 * [Kolla](https://github.com/openstack/kolla)
+
+### Docs and Website
+
+Help improve the documentation and website:
+
+* [Open issues list](https://github.com/redhat-openstack/website/issues)
+* [Fork the site on Github](https://github.com/redhat-openstack/website)
+
