@@ -124,7 +124,7 @@ The first rule...
 
      cookie=0x0, duration=422.158s, table=0, n_packets=2, n_bytes=120, idle_age=55, priority=3,tun_id=0x2,dl_dst=01:00:00:00:00:00/01:00:00:00:00:00 actions=mod_vlan_vid:1,output:1
 
-...matches all multicast traffic (see [ovs-ofctl(8)](http://openvswitch.org/cgi-bin/ovsman.cgi?page=utilities%2Fovs-ofctl.8)) on tunnel id 2 (`tun_id=0x2`), tags the ethernet frame with VLAN ID 1 (`actions=mod_vlan_vid:1`), and sends it out port 1. We can see from `ovs-ofctl show br-tun` that port 1 is `patch-int`:
+...matches all multicast traffic (see [ovs-ofctl(8)](http://openvswitch.org/support/dist-docs/ovs-ofctl.8.txt)) on tunnel id 2 (`tun_id=0x2`), tags the ethernet frame with VLAN ID 1 (`actions=mod_vlan_vid:1`), and sends it out port 1. We can see from `ovs-ofctl show br-tun` that port 1 is `patch-int`:
 
     # ovs-ofctl show br-tun
     OFPT_FEATURES_REPLY (xid=0x2): dpid:0000068df4e44a49

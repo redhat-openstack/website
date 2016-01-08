@@ -32,7 +32,7 @@ We have weekly IRC meetings you can participate in:
 * RDO meetings @ every Wednesday at 15:00 UTC on #rdo
 * CentOS Cloud SIG meetings @ every Thursday at 15:00 UTC on #centos-devel
 
-Join us for various [Events](/events/) around the world. [Organize-a-meetup](/uncategorized/organize-a-meetup/).
+Join us for various [Events](/events/) around the world. [Organize-a-meetup](/community/organize-a-meetup/).
 
 ## Stay Informed
 

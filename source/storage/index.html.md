@@ -21,14 +21,15 @@ Below you can find guides and some test suggestions for the storage components.
 *   [Using Dell EqualLogic for Cinder with RDO](Using Dell EqualLogic for Cinder with RDO)
 *   [Using NetApp for Cinder with RDO](Using NetApp for Cinder with RDO)
 *   [Using NFS for Cinder with RDO](Using NFS for Cinder with RDO)
-*   [Setting up HA of Cinder with RDO](Setting up HA of Cinder)
+*   [Setting up HA of Cinder with
+    RDO](/storage/Cinder/setting-up-ha-of-cinder)
 
 ## Glance Manuals
 
 *   [Using GlusterFS for Glance with RDO Liberty](Using GlusterFS for Glance with RDO Liberty)
 *   [Using Swift for Glance with RDO Liberty](Using Swift for Glance with RDO Liberty)
 *   [Using Ceph for Glance with RDO](Using Ceph for Glance with RDO)
-*   [Setting up HA of Glance](Setting up HA of Glance)
+*   [Setting up HA of Glance](/storage/Glance/setting-up-ha-of-glance)
 
 ## Swift Manuals
 
@@ -38,7 +39,6 @@ Below you can find guides and some test suggestions for the storage components.
 
 *   [Tests/Storage/Cinder](Tests/Storage/Cinder)
 *   [Tests/Storage/Glance](Tests/Storage/Glance)
-*   [Tests/Storage/Swift](Tests/Storage/Swift)
 
 ## Contacts
 
