@@ -37,7 +37,7 @@ However, if you are installing on a resource-constrained VM, some prior setup ca
 
 ## Verification
 
-Once your `packstack` run is complete, you're probably eager to verify that Ceilometer is properly installed and working it should.
+Once your `packstack` run is complete, you're probably eager to verify that Ceilometer is properly installed and working as it should.
 
 Before we do that, a few words on how Ceilometer is realized as a set of agents and services. It comprises at least four separate daemons, each with a specific function in the metering pipeline:
 
