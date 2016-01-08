@@ -19,7 +19,7 @@
 
 %header#branding.masthead.hidden-print(role="banner")
 
-  - unless source_file.match /events\/index/
+  - unless source_file.match /events\/index/ or source_file.match /blog/
     %a{:href => github_url }
       %img{:alt => "Edit on GitHub", "data-canonical-src" => "/images/edit.png", :src => "/images/edit.png", :style => "position: absolute; top: 0; right: 0; border: 0;"}
 
