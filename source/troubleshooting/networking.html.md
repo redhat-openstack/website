@@ -12,7 +12,7 @@ wiki_last_updated: 2013-12-19
 
 {:.no_toc}
 
-(See Also: [:Category:Networking](:Category:Networking))
+(See Also: [Networking](/networking))
 
 Check out this webcast - an overview of networking principles and how they apply to Neutron and OpenvSwitch - by Dave Neary.
 

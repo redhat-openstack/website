@@ -623,7 +623,7 @@ Requests to the web service on dashboard.example.com now be redirected to the SS
 
 ## Securing qpidd with SSL (WIP)
 
-Configuring qpidd does not currently work without making some manual changes, depending on the version of OpenStack you are running. nova and glance do not properly allow SSL configuration due to launchpad bug <https://bugs.launchpad.net/oslo/+bug/1158807> . It is a one-line change to make in the nova and cinder python files.
+Configuring qpidd does not currently work without making some manual changes, depending on the version of OpenStack you are running. nova and glance do not properly allow SSL configuration due to launchpad bug <https://bugs.launchpad.net/oslo-incubator/+bug/1158807> . It is a one-line change to make in the nova and cinder python files.
 
 *   Install the qpid-cpp-server-ssl package
 
