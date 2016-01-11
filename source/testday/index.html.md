@@ -10,12 +10,14 @@ get feedback on what's working and what needs work.
 * Mitaka-RC - Mar 10-11
 * Mitaka GA - Apr 13-14
 
-## Past test days
+## Past test days, stats and tickets
 
-* [Mitaka-1 - Dec 10-11](/testday/mitaka/milestone1)
-* [Liberty Test Day 2](/testday/rdo-test-day-liberty-02)
-* [Liberty test day 1](/testday/rdo-test-day-liberty-01)
-* [Kilo RC test day](/testday/rdo-test-day-kilo)
-* [Juno-3 test day](/testday/rdo-test-day-juno-milestone-3)
+| Milestone | Date | Tickets opened | IRC participation | URL(s) |
+|-----------|------|----------------|-------------------|--------|
+| Mitaka 1  | Dec 10-11, 2015 | 9 | 61 | [Tickets](https://goo.gl/51Dz97) |
+| Liberty 2 | Oct 12-13 | 23 | 42 | [Tickets](https://goo.gl/D6VeQ0) |
+| Liberty 1 | Sep 23-24 | 17 |  | [Tickets](https://goo.gl/OIPNt3) |
+
+
 
 
