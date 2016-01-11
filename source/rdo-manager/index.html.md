@@ -1,14 +1,12 @@
 ---
 title: RDO-Manager
-authors: athomas, hewbrocca, jcoufal, jistr
+authors: athomas, hewbrocca, jcoufal, jistr, snecklifter
 wiki_title: RDO-Manager
 wiki_revision_count: 49
-wiki_last_updated: 2015-07-23
+wiki_last_updated: 2016-01-11
 ---
 
 # RDO-Manager
-
-## About
 
 RDO-Manager is an OpenStack Deployment & Management tool for RDO. It is based on [OpenStack TripleO](http://wiki.openstack.org/wiki/TripleO) project and its philosophy is inspired by Spinal Stack project.
 
@@ -21,6 +19,8 @@ RDO-Manager Components: <https://repos.fedorapeople.org/repos/openstack-m/rdo-ma
 RDO-Manager User Guide: <https://repos.fedorapeople.org/repos/openstack-m/rdo-manager-docs/liberty/>
 
 > **Note:** Limit your environment specific content in the upper left corner of the documentation.
+
+[RDO-Manager troubleshooting](RDO-Manager troubleshooting)
 
 RDO-Manager with HA <https://remote-lab.net/rdo-manager-ha-openstack-deployment/>
 
