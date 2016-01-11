@@ -1,14 +1,14 @@
 ---
-title: RDO-Manager test day Kilo
-authors: egallen, jcoufal, ohochman, shardy
+title: RDO-Manager test day template
+authors: egallen, jcoufal, ohochman, shardy, snecklifter
 wiki_title: RDO-Manager test day Kilo
 wiki_revision_count: 8
-wiki_last_updated: 2015-05-14
+wiki_last_updated: 2016-01-11
 ---
 
-# RDO-Manager test day Kilo
+# RDO-Manager test day
 
-We plan to hold a RDO-Manager test day on **May 14th**, 2015. This will be coordinated through the #rdo channel on Freenode, and through this wiki and the rdo-list mailing list, using [RDO-Manager] tag.
+We plan to hold a RDO-Manager test day on ???. This will be coordinated through the #rdo channel on Freenode, and through this wiki and the rdo-list mailing list, using [RDO-Manager] tag.
 
 We'll be testing deployment of RDO Kilo release.
 
@@ -19,10 +19,7 @@ Quick Links:
 
 ## Who's Participating
 
-*   jcoufal - Wiki, IRC, testing (CentOS)
-*   egallen - IRC, testing (CentOS)
-*   ohochman - IRC, testing (CentOS - as agreed RHEL should not be tested)
-*   shardy - IRC, testing (CentOS)
+*   handle - Wiki, IRC, testing (CentOS)
 
 ## Prerequisites
 
@@ -34,7 +31,7 @@ Hardware:
 
 Operating system:
 
-*   **CentOS 7.1**
+*   **CentOS v???**
 
 ## How To Test
 
@@ -52,7 +49,7 @@ Follow by:
 ## Goal for Testing Day
 
 *   Use CentOS only
-*   The goal is to deploy RDO Kilo cloud having 1 Controller and 1 Compute.
+*   The goal is to deploy RDO ??? cloud having 1 Controller and 1 Compute.
 *   To make sure that your RDO cloud works properly you can run testing script:
         instack-test-overcloud
 
@@ -60,7 +57,7 @@ Follow by:
 
 ## Keep Notes from Testing
 
-You can use <https://etherpad.openstack.org/p/rdo-manager_kilo_test_day> for notes. Reviewing other peoples' notes may help you avoid problems that they've already encountered.
+You can use INSERT_ETHERPAD_LINK_HERE for notes. Reviewing other peoples' notes may help you avoid problems that they've already encountered.
 
 ## Troubleshooting and Communication
 
