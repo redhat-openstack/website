@@ -1,9 +1,9 @@
 ---
 title: Using NetApp for Cinder with RDO
-authors: rhefner
+authors: rhefner, snecklifter
 wiki_title: Using NetApp for Cinder with RDO
 wiki_revision_count: 7
-wiki_last_updated: 2015-01-13
+wiki_last_updated: 2016-01-11
 ---
 
 # Using NetApp for Cinder with RDO
@@ -24,7 +24,7 @@ Generate a Packstack answer file:
 
     packstack --gen-answer-file=~/answers.txt
 
-Help text is provided above each parameter to whether it’s required for a given NetApp configuration. For more information about the specific parameters and examples of their use, see the [NetApp unified driver docs](http://docs.openstack.org/juno/config-reference/content/netapp-volume-driver.html) and choose the page detailing your storage family and protocol.
+Help text is provided above each parameter to whether it’s required for a given NetApp configuration. For more information about the specific parameters and examples of their use, see the [NetApp unified driver docs](http://docs.openstack.org/liberty/config-reference/content/netapp-volume-driver.html) and choose the page detailing your storage family and protocol.
 
 The Packstack parameters are the same as those found in the docs, but in all caps and with `CONFIG_CINDER_` prepended. For example, entering the following into the answer file:
 
@@ -71,7 +71,7 @@ Add NetApp arguments when installing:
 
     packstack --arg1=... --argN=... --cinder-netapp-storage-family=ontap_cluster
 
-Again, refer to the [NetApp unified driver docs](http://docs.openstack.org/juno/config-reference/content/netapp-volume-driver.html) for details about specific parameters.
+Again, refer to the [NetApp unified driver docs](http://docs.openstack.org/liberty/config-reference/content/netapp-volume-driver.html) for details about specific parameters.
 
 The Packstack parameters are the same as those found in the docs, but with `cinder-` prepended and all underscores turned into hyphens. For example, running Packstack with these arguments:
 
