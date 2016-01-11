@@ -20,7 +20,7 @@ RDO-Manager User Guide: <https://repos.fedorapeople.org/repos/openstack-m/rdo-ma
 
 > **Note:** Limit your environment specific content in the upper left corner of the documentation.
 
-[RDO-Manager troubleshooting](RDO-Manager troubleshooting)
+[RDO-Manager troubleshooting](rdo-manager-troubleshooting)
 
 RDO-Manager with HA <https://remote-lab.net/rdo-manager-ha-openstack-deployment/>
 
