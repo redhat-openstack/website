@@ -52,7 +52,7 @@ Special thanks to Allan St. George, Kashyap and the RDO maillist for the tips wh
     --os-type=linux --os-variant=rhel6
 
 *   After install, reboot the vm and log in as root.
-*   Modify /etc/sysconfig/network-scripts/ifcfg-eth0 so it looks like the following (the improtant bits are: no mac defined and bootproto dhcp):
+*   Modify /etc/sysconfig/network-scripts/ifcfg-eth0 so it looks like the following (the important bits are: no mac defined and bootproto dhcp):
 
 <!-- -->
 
@@ -145,7 +145,7 @@ For the Fedora image I used appliance-creator and a kickstart (you can find a fe
 
     appliance-creator -c fedora-20-cloud.ks -n f20-cloud_openstack -f qcow2
 
-*   Grab a coffe and wait since appliance creator works like a netinstall so most of the time spent will be downloading the packages
+*   Grab a coffee and wait, since appliance creator works like a netinstall so most of the time spent will be downloading the packages
 
 After it's done, you'll end up with a directory with the same name you use for -n (in my case it's f20-cloud_openstack) in which you'll find a qcow2 image ready to be uploaded to Openstack (f20-cloud_openstack-sda.qcow2) and an xml file which could be used with virsh define to start the image directly in libvirt.
 
