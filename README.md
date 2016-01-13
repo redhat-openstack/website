@@ -5,14 +5,17 @@ as "bundler".
 
 
 ## Initial setup
+Clone this repository and run the `setup.sh` script located in the checked out repository directory.
+
+The script will initialize and update the git submodules, install system dependencies, and run a
+`bundle install`.
+
+It is expected that you are on a YUM based system with `sudo` access.
 
 ```
-sudo yum install -y ruby-devel rubygems-devel gcc-c++ curl-devel rubygem-bundler patch zlib-devel
-git clone git@github.com:redhat-openstack/website.git
 cd website
-bundle install
+./setup.sh
 ```
-
 
 ## Running a local server
 
@@ -50,6 +53,9 @@ To add a post to the community blog use:
 
 After getting it how you want, you can build the static site by running:
 
+> *NOTE*: On CentOS / RHEL 7 you will be presented with a warning that
+> ImageMagick is less than the recommended 6.8.0.
+
 `bundle exec middleman build`
 
 
@@ -57,7 +63,7 @@ After getting it how you want, you can build the static site by running:
 
 ### Setting up deployment
 
-FIXME: Right now, please reference <data/site.yml>
+FIXME: Right now, please reference `<data/site.yml>`
 
 ### Actual deployment
 
