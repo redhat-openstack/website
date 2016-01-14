@@ -24,6 +24,7 @@ This is a collection of various OpenStack-ready images of different distribution
 *   [openSUSE cloud images](http://download.opensuse.org/repositories/Cloud:/Images:/)
 *   [Debian cloud images](http://cdimage.debian.org/cdimage/openstack/)
 *   See also [the oz-image-build list on Github](https://github.com/rackerjoe/oz-image-build)
+*   The [OpenStack Community App Catalog](https://apps.openstack.org/#tab=glance-images) includes lots of OpenStack-ready Glance images
 
 ## Importing Images into Glance
 
