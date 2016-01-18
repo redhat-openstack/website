@@ -23,5 +23,3 @@ for q in questions:
     print q['url']
     print "Tags: " + ", ".join( q['tags'] )
 
-print r
-
