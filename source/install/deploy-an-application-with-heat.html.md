@@ -53,3 +53,6 @@ After the VMs are launched, the mysql/httpd/wordpress installation and configura
       $ wget ${WebsiteURL} # that is an URL from the previous command!
 
 If anything goes wrong, check the logs at `/var/log/heat/engine.log` or look at the scripts passed as `UserData` to the instances, these should be found in `/var/lib/cloud/data/`. Time to hack your very own template and delete the test deployment! :)
+
+TAGS: needs-update
+
