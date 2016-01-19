@@ -215,3 +215,6 @@ After the live upgrade is complete (i.e. all nodes are running on Icehouse), the
       #compute=icehouse-compat
 
 A restart of all services will be required for the above to take effect.
+
+TAGS: needs-update
+
