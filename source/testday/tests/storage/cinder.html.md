@@ -1,16 +1,12 @@
 ---
-title: Cinder
-authors: gfidente, yrabl
+title: Cinder Test
+authors: gfidente, yrabl, snecklifter
 wiki_title: Tests/Storage/Cinder
 wiki_revision_count: 19
-wiki_last_updated: 2014-01-06
+wiki_last_updated: 2015-01-20
 ---
 
-# Cinder
-
-Marker
-
-## January 2014 Test Day
+# Cinder Test
 
 The general idea for the Cinder's test is to test the actions of the component in different environments and with different back ends. Cinder should be able to do the following actions with each back end and in every topology:
 
