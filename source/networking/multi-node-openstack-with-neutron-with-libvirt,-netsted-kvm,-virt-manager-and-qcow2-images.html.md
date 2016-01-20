@@ -231,6 +231,8 @@ Since parsing human-readable output from CLI commands that are just wrappers for
 
 ### Add the eth1 network script
 
+Add a second network adapter using Virtual Machine Manager for the script to bind to.
+
 View -> Console Virtual Machine -> Run
 
 Add a startup script for the "data" interface:
