@@ -22,15 +22,15 @@ Check out this webcast - an overview of networking principles and how they apply
 
 A number of tools come in handy when troubleshooting Neutron/Quantum networking issues.
 
-*   [Open vSwitch](//openvswitch.org/) ([documentation](http://openvswitch.org/support/))
-    -   [ovs-vsctl](//openvswitch.org/cgi-bin/ovsman.cgi?page=utilities%2Fovs-vsctl.8) - tool for querying and configuring ovs-vswitchd
-    -   [ovs-ofctl](//openvswitch.org/cgi-bin/ovsman.cgi?page=utilities%2Fovs-ofctl.8) - OpenFlow configuration tool
-    -   [ovs-dpctl](//openvswitch.org/cgi-bin/ovsman.cgi?page=utilities%2Fovs-vsctl.8) - query and configure Open vSwitch datapaths
+*   [Open vSwitch](http://openvswitch.org/) ([documentation](http://openvswitch.org/support/))
+    -   [ovs-vsctl](http://openvswitch.org/cgi-bin/ovsman.cgi?page=utilities%2Fovs-vsctl.8) - tool for querying and configuring ovs-vswitchd
+    -   [ovs-ofctl](http://openvswitch.org/cgi-bin/ovsman.cgi?page=utilities%2Fovs-ofctl.8) - OpenFlow configuration tool
+    -   [ovs-dpctl](http://openvswitch.org/cgi-bin/ovsman.cgi?page=utilities%2Fovs-vsctl.8) - query and configure Open vSwitch datapaths
 *   [iproute tools](//www.linuxfoundation.org/collaborate/workgroups/networking/iproute2)
-    -   [iproute2 HOWTO](//www.policyrouting.org/iproute2.doc.html)
-    -   [iproute2 examples](//www.linuxfoundation.org/collaborate/workgroups/networking/iproute2_examples)
-*   [tcpdump](//www.tcpdump.org/) (see next section)
-    -   [tcpdump documentation](//www.tcpdump.org/#documentation)
+    -   [iproute2 HOWTO](http://www.policyrouting.org/iproute2.doc.html)
+    -   [iproute2 examples](http://www.linuxfoundation.org/collaborate/workgroups/networking/iproute2_examples)
+*   [tcpdump](http://www.tcpdump.org/) (see next section)
+    -   [tcpdump documentation](http://www.tcpdump.org/#documentation)
 
 ### tcpdump
 
