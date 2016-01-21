@@ -3,14 +3,14 @@ title: RDO Manager Troubleshooting
 authors: snecklifter
 wiki_title: RDO Manager Troubleshooting
 wiki_revision_count: 1
-wiki_last_updated: 2016-01-20
+wiki_last_updated: 2016-01-21
 ---
 
 # RDO Manager Troubleshooting
 
 ## Undercloud
 
-The undercloud is a basic OpenStack cloud leveraging Ironic, Heat and others for installing the main production cloud
+The undercloud is a basic OpenStack cloud leveraging Ironic, Heat and others for installing the main production cloud. Although you can enable debug for all undercloud components as part of the undercloud.conf file, this generates a huge amount of log output. Leaving this as false is usually fine.
 
 ##### Installation Errors
 ~~~
@@ -29,7 +29,11 @@ Remove the errant dns domain from the search parameter in /etc/resolv.conf. Usua
 
 ## Overcloud
 
-The overcloud is the main production cloud deployed to baremetal or virtual machines from the undercloud. Expect most of your problems to arise here.
+The overcloud is the main production cloud deployed to baremetal or virtual machines from the undercloud. Expect most of your problems to arise here. Check logs for ironic, nova, heat and glance.
+
+### Heat
+
+Some good documentation on the main OpenStack wiki [here](https://wiki.openstack.org/wiki/Heat/TroubleShooting)
 
 ##### ipmitool
 
@@ -43,6 +47,7 @@ If this works you should get the following output:
 ~~~
 [SOL Session operational.  Use ~? for help]
 ~~~
+
 ##### No valid host was found. There are not enough hosts available
 
 This is usually due to a flavor/node mismatch. Try:
