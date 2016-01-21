@@ -29,7 +29,7 @@ Come chat in real-time with RDO users on **IRC** on the [Freenode](http://freeno
 
 We have weekly IRC meetings you can participate in:
 
-* RDO meetings @ every Wednesday at 15:00 UTC on #rdo
+* [RDO meetings @ every Wednesday at 15:00 UTC on #rdo](/community/community-meeting)
 * CentOS Cloud SIG meetings @ every Thursday at 15:00 UTC on #centos-devel
 
 Join us for various [Events](/events/) around the world. [Organize-a-meetup](/community/organize-a-meetup/).
