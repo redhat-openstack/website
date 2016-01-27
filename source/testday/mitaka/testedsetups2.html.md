@@ -30,7 +30,6 @@ Here's how you might fill out an entry once you've tested it. Mark a given test 
 | All-in-One w/ Quantum OVS (no tunnels, fake bridge) Networking | Grizzly 2013.1.3 | RHEL 6.4  | <span style="background:#00ff00">Good</span> | [Neutron-Quickstart](Neutron-Quickstart) | pmyers | 2013-09-08 | None                                                               | None       |
 |                                                                |                  | Fedora 19 | <span style="background:#ff0000">FAIL</span> | [Neutron-Quickstart](Neutron-Quickstart) | rbowen | 2013-10-09 | ~~[1017421](https://bugzilla.redhat.com/show_bug.cgi?id=1017421)~~ | None       |
 
-
 ## Packstack Based Installation (Neutron Networking)
 
 Please make sure to use the steps described in the [How To Test](/testday/mitaka/milestone2#how-to-test)  when installing the base RDO system. Do not go through the Quickstart steps unmodified which will instead give you an RDO kilo deployment. 
@@ -104,6 +103,7 @@ Various components which don't fit the large test efforts above.
 |----------------------------------------------------------------|------------------|-----------|----------------------------------------------|-----------------------------------------------------|--------|------------|--------------------------------------------------------------------|------------|
 | Ceilometer: All-in-One w/ Neutron Networking | RDO Mitaka | RHEL 7.1 |    |    |    |    |   |     
 | Ceilometer: All-in-One w/ Neutron Networking, Heat | RDO Mitaka | CentOS 7.1 | || | || 
+| Nova Compute: 2 Distributed Compute nodes  | RDO Mitaka | CentOS 7.1 | <span style="background:#00ff00">Good</span> |[How To Test](/testday/mitaka/milestone2#how-to-test)| imcsk8 | || 
 
 ## Core Tests
 
