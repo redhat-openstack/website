@@ -65,10 +65,10 @@ Please make sure to use the steps described in the [How To Test](/testday/mitaka
 
 | Config Name | Release | BaseOS | Status | HOWTO | Who | Date | BZ/LP | Notes Page
 |-------------|---------|--------|--------|-------|-----|------|-------|-----------
-| Sanity Check | | CentOS 7 | | [Install Guide](https://repos.fedorapeople.org/repos/openstack-m/rdo-manager-docs/liberty/) | | | | 
-| | | F23 | | [Install Guide](https://repos.fedorapeople.org/repos/openstack-m/rdo-manager-docs/liberty/) | | | | 
-| | | RHEL 7.1 | | [Install Guide](https://repos.fedorapeople.org/repos/openstack-m/rdo-manager-docs/liberty/) | | | | 
-
+| Minimal | Mitaka | CentOS 7 | | [Install Guide](https://www.rdoproject.org/rdo-manager/) | | | | 
+| | Liberty | CentOS 7 | | [Install Guide](https://www.rdoproject.org/rdo-manager/) | | | | 
+| HA | Mitaka | CentOS 7 | | [Install Guide](https://www.rdoproject.org/rdo-manager/) | | | | 
+| | Liberty | CentOS 7 | | [Install Guide](https://www.rdoproject.org/rdo-manager/) | | | | 
 
 ## Packstack Based Installation (Storage Components)
 
