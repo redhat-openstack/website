@@ -104,6 +104,9 @@ Various components which don't fit the large test efforts above.
 |----------------------------------------------------------------|------------------|-----------|----------------------------------------------|-----------------------------------------------------|--------|------------|--------------------------------------------------------------------|------------|
 | Ceilometer: All-in-One w/ Neutron Networking | RDO Mitaka | RHEL 7.1 |    |    |    |    |   |     
 | Ceilometer: All-in-One w/ Neutron Networking, Heat | RDO Mitaka | CentOS 7.1 | || | || 
+| Nova Compute: 2 Distributed Compute nodes  | RDO Mitaka | RHEL 7.1 | |[How To Test](/testday/mitaka/milestone2#how-to-test)| imcsk8 | || 
+| Nova Compute: 2 Distributed Compute nodes  | RDO Mitaka | CentOS 7.1 | <span style="background:#00ff00">Good</span> |[How To Test](/testday/mitaka/milestone2#how-to-test)| imcsk8 | || 
+
 
 ## Core Tests
 
