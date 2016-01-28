@@ -52,9 +52,9 @@ Please make sure to use the steps described in the [How To Test](/testday/mitaka
 | Distributed -ML2-OVS- VXLAN-IPv6 – VPNaaS | | CentOS 7.1 |  | [QuickStart](/Quickstart) |  |  |  | 
 | | | F22 |  | [QuickStart](/Quickstart) |  |   |  | 
 | | | RHEL7.1 |  | [QuickStart](/Quickstart) | |  |  | 
-| Distributed -ML2-OVS- VXLAN Security Groups | | CentOS 7.1 |  | [QuickStart](/Quickstart) | zgreenbe@redhat.com |   |  | 
+| Distributed -ML2-OVS- VXLAN Security Groups | | CentOS 7.1 |  | [QuickStart](/Quickstart) |  |   |  | 
 | | | F22 | | [QuickStart](/Quickstart) |  |  |  | 
-| | | RHEL7.1 | | [QuickStart](/Quickstart) |  |   | | 
+| | | RHEL7.1 | | [QuickStart](/Quickstart) |zgreenbe  |   | | 
 | Distributed -ML2-OVS- VXLAN DVR | | RHEL 7.1 | | [QuickStart](/Quickstart) | |   |  | 
 | Distributed -ML2-OVS- VXLAN DVR | | CentOS 7.1 | | [QuickStart](/Quickstart) |   |  |  | 
 | 3,node  -ML2-OVS- VXLAN |  | CentOS 7.1 |    | |   |   |  | 
