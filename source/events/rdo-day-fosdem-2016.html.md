@@ -5,17 +5,11 @@ authors: rbowen
 
 # RDO Community Day @ FOSDEM 2016
 
-RDO Community Day at FOSDEM will be held in conjunction with the [CentOS
+RDO Community Day at FOSDEM 2016 was held in conjunction with the [CentOS
 Dojo](https://wiki.centos.org/Events/Dojo/Brussels2016) on the day 
-before FOSDEM. It will be held at the IBM Client Center in Brussels, 
-Belgium, on Friday, January 29th, 2016, from 09:00 to 17:00.
+before FOSDEM.
 
-
-If you're thinking of attending either the RDO Day, or the CentOS Dojo, 
-you **must** [register](https://www.eventbrite.co.uk/e/centos-dojo-brussels-belgium-jan-29th-2016-tickets-19589843750). If you do not register,
-we cannot guarantee that you'll be granted admission to the building.
-
-Our tentative schedule for the day is:
+The schedule of talks was as follows:
 
 **Opening Keynote: RDO In Production**  - *Thomas Oulevey*
 
@@ -27,10 +21,9 @@ Our tentative schedule for the day is:
 
 > CERN deploy OpenStack based on an open source distribution from the RDO community. Let's go behind the scenes at CERN and see how RDO with the help of other open source projects help to scale OpenStack and what others can benefit from their experience.
 
-**Bare metal deployment and introspection in RDO Manager** -
-*Dmitry Tantsur, Imre Farkas*
-
-> The OpenStack Bare Metal service (codenamed Ironic) is one of the key compoments of RDO Manager. A separate service called Ironic Inspector is used to conduct bare metal introspection before deployment. This talk gives a brief introduction into Ironic's architecture and explains how it is used in RDO Manager. It then covers common problems with deployment and introspection processes, as well as possible solutions.
+<iframe width="420" height="315"
+src="https://www.youtube.com/embed/3hgVKQI-U38" frameborder="0"
+allowfullscreen></iframe>
 
 **Build a Basic Cloud Using RDO-manager** -
 *K Rain Leander*
@@ -41,8 +34,10 @@ Our tentative schedule for the day is:
 
 > After this presentation, you will be able to build your own basic cloud using RDO-manager.
 
+**Bare metal deployment and introspection in RDO Manager** -
+*Dmitry Tantsur, Imre Farkas*
 
-**LUNCH**
+> The OpenStack Bare Metal service (codenamed Ironic) is one of the key compoments of RDO Manager. A separate service called Ironic Inspector is used to conduct bare metal introspection before deployment. This talk gives a brief introduction into Ironic's architecture and explains how it is used in RDO Manager. It then covers common problems with deployment and introspection processes, as well as possible solutions.
 
 
 **Delorean Hands On, and How To Contribute to RDO** - 
