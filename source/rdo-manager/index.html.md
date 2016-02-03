@@ -18,10 +18,10 @@ You will need a host machine with at least 16G of RAM, preferably 32G,
 with CentOS 7 installed, and able to be ssh'd to as root
 without password from the machine running ansible.
 
-A quick way to test that your host machine is ready to rock is
+A quick way to test that your host machine (referred to as `$VIRTHOST`) is
+ready to rock is::
 
-    export VIRTHOST='my_test_machine.example.com'
-    ssh root@$VIRTHOST -C 'uname -a'
+    ssh root@$VIRTHOST uname -a
 
 The defaults are meant to "just work", so it is as easy as
 downloading and running the quickstart.sh script.
@@ -32,7 +32,7 @@ regularly, so we need to use wget for the built in retry with
 resume. From the machine that will be the virthost, create a
 directory for the undercloud image and wget it. Note, the
 image location should be world readable since a ``stack`` user
-is used for most steps.
+is used for most steps.::
 
     mkdir -p /usr/share/quickstart_images/mitaka/
     cd /usr/share/quickstart_images/mitaka/
@@ -47,15 +47,16 @@ is used for most steps.
 Then use the quickstart.sh script to install this repo along
 with ansible in a virtual environment and run the quickstart
 playbook. Note, the quickstart playbook will delete the ``stack``
-user on the virthost and recreate it.
+user on the virthost and recreate it.::
 
     export VIRTHOST='my_test_machine.example.com'
     export UNDERCLOUD_QCOW2_LOCATION=file:///usr/share/quickstart_images/mitaka/undercloud.qcow2
-    bash <(curl -s https://raw.githubusercontent.com/redhat-openstack/tripleo-quickstart/master/quickstart.sh) [release]
+
+    wget https://raw.githubusercontent.com/redhat-openstack/tripleo-quickstart/master/quickstart.sh
+    bash quickstart.sh -u $UNDERCLOUD_QCOW2_LOCATION $VIRTHOST
 
 This script will output instructions at the end to access the
-deployed undercloud. If a release name is not given, ``mitaka``
-is used. Note that to use a different release you will need to
+deployed undercloud.  Note that to use a different release you will need to
 download a different undercloud image in the first step above.
 For example, for liberty:
 https://ci.centos.org/artifacts/rdo/images/liberty/delorean/stable/undercloud.qcow2
