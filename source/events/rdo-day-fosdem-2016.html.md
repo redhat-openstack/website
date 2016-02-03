@@ -39,6 +39,10 @@ allowfullscreen></iframe>
 > Using RDO-manager, get a basic cloud up and running with the fewest steps and minimal hardware so you can focus on the fun stuff - development!
 > After this presentation, you will be able to build your own basic cloud using RDO-manager.
 
+<iframe width="420" height="315"
+src="https://www.youtube.com/embed/CtkBEkYDLDI" frameborder="0"
+allowfullscreen></iframe>
+
 ## Bare metal deployment and introspection in RDO Manager - *Dmitry Tantsur, Imre Farkas*
 
 [Slides - [Dmitry](http://dtantsur.github.io/talks/fosdem2016/),
