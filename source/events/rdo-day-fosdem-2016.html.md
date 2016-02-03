@@ -39,6 +39,10 @@ allowfullscreen></iframe>
 > Using RDO-manager, get a basic cloud up and running with the fewest steps and minimal hardware so you can focus on the fun stuff - development!
 > After this presentation, you will be able to build your own basic cloud using RDO-manager.
 
+<iframe width="420" height="315"
+src="https://www.youtube.com/embed/CtkBEkYDLDI" frameborder="0"
+allowfullscreen></iframe>
+
 ## Bare metal deployment and introspection in RDO Manager - *Dmitry Tantsur, Imre Farkas*
 
 [Slides - [Dmitry](http://dtantsur.github.io/talks/fosdem2016/),
@@ -48,6 +52,8 @@ allowfullscreen></iframe>
 
 
 ## Delorean Hands On, and How To Contribute to RDO - *Haïkel Guémar, Alan Pevec*
+
+[[Slides](https://github.com/hguemar/rdo-packaging-slides/tree/fosdem16)]
 
 >In this session, we'll learn how to setup delorean to contribute to RDO. There'll be a quick presentation and then we roll our sleeves and start adding packages to RDO
 
