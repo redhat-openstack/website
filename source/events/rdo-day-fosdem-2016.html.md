@@ -32,6 +32,8 @@ allowfullscreen></iframe>
 
 ## Build a Basic Cloud Using RDO-manager - *K Rain Leander*
 
+[[Slides](http://www.slideshare.net/KRainLeander/build-a-basic-cloud-using-rdomanager)]
+
 > One of the impediments to becoming an active technical contributor in the OpenStack community is setting up your own R&D environment which includes making your own cloud.  How much RAM do you really need? How important is processor speed?  What else do I need to know?
 
 > Using RDO-manager, get a basic cloud up and running with the fewest steps and minimal hardware so you can focus on the fun stuff - development!
