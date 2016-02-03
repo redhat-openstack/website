@@ -35,7 +35,6 @@ allowfullscreen></iframe>
 > One of the impediments to becoming an active technical contributor in the OpenStack community is setting up your own R&D environment which includes making your own cloud.  How much RAM do you really need? How important is processor speed?  What else do I need to know?
 
 > Using RDO-manager, get a basic cloud up and running with the fewest steps and minimal hardware so you can focus on the fun stuff - development!
-
 > After this presentation, you will be able to build your own basic cloud using RDO-manager.
 
 ## Bare metal deployment and introspection in RDO Manager - *Dmitry Tantsur, Imre Farkas*
@@ -60,10 +59,11 @@ allowfullscreen></iframe>
 [[Slides](http://mangelajo.github.io/openstack-debugging-presentation/)]
 
 > Debugging across several openstack services, specially network issues, is becoming increasingly difficult. In this talk I plan to present a methodology for debugging live/production deployments, and development systems as well.
-
 > Also, I will present the oslogmerger tool, which is capable of aggregating logs across several hosts and several services into a single linear one, making cross project/cross agents calls much more easy to follow.
 
 ## RPM factory for RDO - *Frederic Lepied*
+
+[[Slides](http://www.slideshare.net/flepied/rpm-factory-for-rdo)]
 
 > How to use an OpenStack like workflow to build RDO packages
 
