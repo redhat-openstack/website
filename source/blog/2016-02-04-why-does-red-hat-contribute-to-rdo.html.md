@@ -7,7 +7,7 @@ published: false
 comments: true
 ---
 
-Red Hat's philosophy is 'Upstream First'. When we participate in an open source project, our contributions go into the upstream project first, as a prerequisite to deliver it in the downstream offering. Our continued focus, over the past years and in the future, is to reduce to a bare minimum the differences between Upstream, RDO and RHEL OpenStack Platform at General Availabilty time, as we believe this is the only way we can maximise our velocity in delivering new features. In doing so, we, as any successful enterprise would do, need to focus our efforts on what matters in respect to our "downstream" startegy, and it means that we do prioritize our efforts accordingly as we are contributing particular features and fixes.
+Red Hat's philosophy is 'Upstream First'. When we participate in an open source project, our contributions go into the upstream project first, as a prerequisite to deliver it in the downstream offering. Our continued focus, over the past years and in the future, is to reduce to a bare minimum the differences between Upstream, RDO and RHEL OpenStack Platform at General Availabilty time, as we believe this is the only way we can maximise our velocity in delivering new features. In doing so, we, as any successful enterprise would do, need to focus our efforts on what matters in respect to our "downstream" strategy, and it means that we do prioritize our efforts accordingly as we are contributing particular features and fixes.
 
 Thus, it's useful to consider why Red Hat participates in RDO in the specific ways that we do.
 
