@@ -1,5 +1,9 @@
 # February 2016 RDO Community Newsletter
 
+1. toc
+{:toc}
+
+
 ## Quick links:
 
 * [Quick Start](http://rdoproject.org/quickstart)
@@ -18,6 +22,8 @@ Thanks for being part of the RDO community!
 We're just a few days into February, and there's already a lot to
 report on!
 
+### FOSDEM and the RDO Community Day
+
 Last week, around 45 RDO enthusiasts gathered at the IBM Client Center
 in Brussels for our first all-day RDO Community Day, which was held in
 conjunction with the CentOS Dojo. We had a great opening keynote from
@@ -35,7 +41,9 @@ Over the weekend, RDO had a big presence at FOSDEM, both at our table
 in the expo hall, and as part of the Virtualiazation devroom.
 https://fosdem.org/2016/schedule/track/virtualisation_and_iaas/
 
-And tomorrow, we will be at [DevConf](http://devconf.cz) with many of
+### DevConf.cz
+
+Tomorrow, we will be at [DevConf](http://devconf.cz) with many of
 our engineers, and we'll have a table where you can get RDO tshirts
 and stickers. We would love to see you there. Follow @RDOCommunity on
 Twitter for reminders of upcoming OpenStack-related sessions.
@@ -45,7 +53,7 @@ world, are always listed at [on the RDO events page](http://rdoproject.org/event
 
 Instructions for submitting your event may be found [here](https://www.rdoproject.org/events/edit/).
 
-### Test Days, Doc Days
+## Test Days, Doc Days
 
 This year we are trying to do a test day, and a doc sprint day, every
 month. See the [test day schedule](https://www.rdoproject.org/testday/)
@@ -59,7 +67,7 @@ the doc day dates for February, since so many of us have been
 traveling. But watch our Twitter feed and the rdo-list mailing list
 for updates.
 
-### Packaging meetings 
+## Packaging meetings 
 
 Every Wednesday at 15:00 UTC, we have the weekly RDO community meeting
 on the #RDO channel on Freenode IRC. And at 15:00 UTC Thursdays, we
@@ -68,7 +76,7 @@ have the CentOS Cloud SIG Meeting on #centos-devel.
 The minutes for each of these meetings are posted each week [here](https://www.rdoproject.org/community/community-meeting) and
 [here](https://www.rdoproject.org/community/cloud-sig-meeting) respectively.
 
-### Bug Statistics 
+## Bug Statistics 
 
 Chandan Kumar has started posting weekly bug statistics summaries.
 These are great for tracking the progress of the project, and are also
