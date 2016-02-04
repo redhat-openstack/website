@@ -16,3 +16,7 @@ The most exciting part of the event, for me anyways, was discovering that RDO is
 Below you can see some photos from the event.
 
 <a data-flickr-embed="true" data-header="true"  href="https://www.flickr.com/photos/rbowen/albums/72157664110725992" title="RDO Community Day, FOSDEM 2016"><img src="https://farm2.staticflickr.com/1462/24185123104_c50c8448e0_b.jpg" width="1024" height="576" alt="RDO Community Day, FOSDEM 2016"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+
+The day started with a marvelous keynote from Thomas Oulevey about CERN's OpenStack deployment, which uses RDO. From there, we had presentations about RDO-Manager, and other talks about deploying, configuring, and managing OpenStack. 
+
+I'd like to thank the folks that worked so hard to make this event happen, including especially the speakers, and Eliska Malakova who handled many of the logistics.
