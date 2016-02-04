@@ -60,6 +60,8 @@ allowfullscreen></iframe>
 
 ## RDO configuration files: do's, dont's, gotchas, and rfc - *Ihar Hrachyshka*
 
+[[Slides](https://docs.google.com/presentation/d/1MElADyGDLx_26poFDqMRdpDV0HJkBb8drhvE2604mf4/pub)
+
 > This presentation will give overview of how we configure OpenStack services, in general as well from RDO perspective. Audience should expect brief overview of libraries and techniques used in upstream to manage configuration, new developments in upstream, things to consider when doing packaging for RDO and derived distributions, things upstream projects do wrong about configurations, and how to fix it. At the end, I will present configuration scheme Neutron RDO packages adopted in Kilo+, and suggest it for wider adoption by other projects.
 
 ## Debugging openstack with ansible and oslogmerger - *Miguel Angel Ajo*
