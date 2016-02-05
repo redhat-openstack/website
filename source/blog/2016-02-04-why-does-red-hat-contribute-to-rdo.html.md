@@ -1,6 +1,6 @@
 ---
 title: Why does Red Hat contribute to RDO?
-author: rbowen
+author: Nick Barcet
 date: 2016-02-04 10:20:56 UTC
 tags: redhat, openstack, upstream, philosophy
 comments: true
