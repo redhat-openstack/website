@@ -50,6 +50,9 @@ allowfullscreen></iframe>
 
 > The OpenStack Bare Metal service (codenamed Ironic) is one of the key compoments of RDO Manager. A separate service called Ironic Inspector is used to conduct bare metal introspection before deployment. This talk gives a brief introduction into Ironic's architecture and explains how it is used in RDO Manager. It then covers common problems with deployment and introspection processes, as well as possible solutions.
 
+<iframe width="560" height="315"
+src="https://www.youtube.com/embed/2CiIIaOFU0Q" frameborder="0"
+allowfullscreen></iframe>
 
 ## Delorean Hands On, and How To Contribute to RDO - *Haïkel Guémar, Alan Pevec*
 
@@ -57,6 +60,9 @@ allowfullscreen></iframe>
 
 >In this session, we'll learn how to setup delorean to contribute to RDO. There'll be a quick presentation and then we roll our sleeves and start adding packages to RDO
 
+<iframe width="560" height="315"
+src="https://www.youtube.com/embed/yx6p35aGNF8" frameborder="0"
+allowfullscreen></iframe>
 
 ## RDO configuration files: do's, dont's, gotchas, and rfc - *Ihar Hrachyshka*
 
