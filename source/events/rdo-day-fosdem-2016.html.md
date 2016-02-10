@@ -56,7 +56,7 @@ allowfullscreen></iframe>
 
 ## Delorean Hands On, and How To Contribute to RDO - *Haïkel Guémar, Alan Pevec*
 
-[[Slides](https://github.com/hguemar/rdo-packaging-slides/tree/fosdem16)]
+[[Slides](https://hguemar.fedorapeople.org/slides/rdo-packaging-fosdem16/)]
 
 >In this session, we'll learn how to setup delorean to contribute to RDO. There'll be a quick presentation and then we roll our sleeves and start adding packages to RDO
 
