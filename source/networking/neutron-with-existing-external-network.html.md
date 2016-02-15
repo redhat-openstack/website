@@ -50,7 +50,7 @@ This means, we will bring up the interface, and plug it into br-ex OVS bridge as
 
 Modify the following config parameter:
 
-    openstack-config --set /etc/neutron/plugins/openvswitch/ovs_neutron_plugin.ini ovs bridge_mappings extnet:br-ex
+    openstack-config --set /etc/neutron/plugins/ml2/openvswitch_agent.ini ovs bridge_mappings extnet:br-ex
 
 This will define a logical name for our external physical L2 segment, as "extnet", this will be referenced as a provider network when we create the external networks.
 
