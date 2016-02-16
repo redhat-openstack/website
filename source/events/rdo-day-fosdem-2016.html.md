@@ -70,6 +70,10 @@ allowfullscreen></iframe>
 
 > This presentation will give overview of how we configure OpenStack services, in general as well from RDO perspective. Audience should expect brief overview of libraries and techniques used in upstream to manage configuration, new developments in upstream, things to consider when doing packaging for RDO and derived distributions, things upstream projects do wrong about configurations, and how to fix it. At the end, I will present configuration scheme Neutron RDO packages adopted in Kilo+, and suggest it for wider adoption by other projects.
 
+<iframe width="560" height="315"
+src="https://www.youtube.com/embed/JAmZhXtIIXc" frameborder="0"
+allowfullscreen></iframe>
+
 ## Debugging openstack with ansible and oslogmerger - *Miguel Angel Ajo*
 
 [[Slides](http://mangelajo.github.io/openstack-debugging-presentation/)]
