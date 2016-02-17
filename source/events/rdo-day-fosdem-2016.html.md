@@ -81,6 +81,10 @@ allowfullscreen></iframe>
 > Debugging across several openstack services, specially network issues, is becoming increasingly difficult. In this talk I plan to present a methodology for debugging live/production deployments, and development systems as well.
 > Also, I will present the oslogmerger tool, which is capable of aggregating logs across several hosts and several services into a single linear one, making cross project/cross agents calls much more easy to follow.
 
+<iframe width="560" height="315"
+src="https://www.youtube.com/embed/bb_TfRiZdSM" frameborder="0"
+allowfullscreen></iframe>
+
 ## RPM factory for RDO - *Frederic Lepied*
 
 [[Slides](http://www.slideshare.net/flepied/rpm-factory-for-rdo)]
