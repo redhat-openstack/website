@@ -8,13 +8,13 @@ wiki_last_updated: 2015-10-15
 
 # Using Swift for Glance with RDO Liberty
 
-The default backend driver configured for Glance is the local filesystem but it supports a set of alternative backends, including Swift. If you want to store the Glance images on Swift, a few post-install configuration steps are needed:
-        # openstack-config --set /etc/glance/glance-api.conf DEFAULT stores file,http,swift
-       # openstack-config --set /etc/glance/glance-api.conf DEFAULT default_store swift
-` # openstack-config --set /etc/glance/glance-api.conf DEFAULT swift_store_auth_address `[`http://$KEYSTONE_HOST:5000/v2.0/`](http://$KEYSTONE_HOST:5000/v2.0/)
-       # openstack-config --set /etc/glance/glance-api.conf DEFAULT swift_store_user services:glance
-       # openstack-config --set /etc/glance/glance-api.conf DEFAULT swift_store_key $SERVICE_PASSWORD
-       # openstack-config --set /etc/glance/glance-api.conf DEFAULT swift_store_create_container_on_put True
+The default backend driver configured for Glance is the local filesystem but it supports a set of alternative backends, including Swift. If you want to store the Glance images on Swift, a few post-install configuration steps are needed:  
+    ` # openstack-config --set /etc/glance/glance-api.conf DEFAULT default_store swift`  
+    ` # openstack-config --set /etc/glance/glance-api.conf DEFAULT swift_store_auth_address `[`http://$KEYSTONE_HOST:5000/v2.0/`](http://$KEYSTONE_HOST:5000/v2.0/)  
+    ` # openstack-config --set /etc/glance/glance-api.conf DEFAULT swift_store_user services:glance`  
+    ` # openstack-config --set /etc/glance/glance-api.conf DEFAULT swift_store_key $SERVICE_PASSWORD`  
+    ` # openstack-config --set /etc/glance/glance-api.conf DEFAULT swift_store_create_container_on_put True`  
+
 
 **NOTE**: you should replace $KEYSTONE_HOST with the IP address of the node running Keystone and $SERVICE_PASSWORD with the password assigned to the "glance" user. If you installed using packstack, that is in your answer file, search for `CONFIG_GLANCE_KS_PW`
 
