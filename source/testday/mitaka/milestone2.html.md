@@ -11,7 +11,8 @@ title: RDO Mitaka Test Day
 
 We will be holding a RDO test day on January 27th and 28th, 2016.
 This will be coordinated through the **#rdo channel on Freenode**, and
-through this website and the rdo-list mailing list.
+through this website and the [rdo-list](http://www.redhat.com/mailman/listinfo/rdo-list)
+mailing list.
 
 We'll be testing the second Mitaka milestone release. If you can do
 any testing on your own ahead of time, that will help ensure that
@@ -20,9 +21,9 @@ everyone isn't encountering the same problems.
 We will also be available for people that want to try the stable
 (Liberty) release.
 
-Update this page by submitting pull requests to [this
-repo](https://github.com/redhat-openstack/website), or by clicking the
-"Edit on Github" banner at the top right.
+Update this page by submitting pull requests to the
+[redhat-openstack/website repo](https://github.com/redhat-openstack/website),
+or by clicking the **Edit on Github** banner at the top right.
 
 1. toc
 {:toc}
@@ -39,11 +40,23 @@ You'll want a fresh install with latest updates installed.
 
 ## How To Test
 
-    yum -y install yum-plugin-priorities
-    cd /etc/yum.repos.d/
-    # for Centos 7 and RHEL 7
-    sudo wget http://trunk.rdoproject.org/centos7/delorean-deps.repo
-    sudo wget http://trunk.rdoproject.org/centos7/current-passed-ci/delorean.repo
+Run the following commands as root.
+
+* Install the `yum-plugin-priorities` package:
+
+  ```
+  yum -y install yum-plugin-priorities
+  ```
+
+  Note: for RHEL 7, the `yum-plugin-priorities` package is available in the Optional channel.
+
+* For CentOS 7 and RHEL 7, install the required `.repo` files:
+
+  ```
+  cd /etc/yum.repos.d/
+  wget http://trunk.rdoproject.org/centos7/delorean-deps.repo
+  wget http://trunk.rdoproject.org/centos7/current-passed-ci/delorean.repo
+  ```
 
 * Check for any [workarounds](/testday/mitaka/workarounds2) required for your platform before the main installation
 * For Packstack based deployment start at step 2 of the [packstack Quickstart](/install/quickstart#Step_2:_Install_Packstack_Installer)
