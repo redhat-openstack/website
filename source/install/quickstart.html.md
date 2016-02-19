@@ -21,6 +21,13 @@ These instructions are to install the current ("**Liberty**") release.
 
 ## Summary for the Impatient
 
+    ** Make sure your /etc/environment is populated. In case it is not, as a suggestion, add the following content:
+    
+    LANG=en_US.utf-8
+    LC_ALL=en_US.utf-8
+    
+    Next, enter the commands:
+    
     sudo yum install -y https://www.rdoproject.org/repos/rdo-release.rpm
     sudo yum update -y
     sudo yum install -y openstack-packstack
@@ -31,6 +38,8 @@ These instructions are to install the current ("**Liberty**") release.
 **Software:** Red Hat Enterprise Linux (RHEL) **7** is the minimum recommended version, or the equivalent version of one of the RHEL-based Linux distributions such as CentOS, Scientific Linux, etc. **x86_64** is currently the only supported architecture. See also [RDO repository info](Repositories) for details on required repositories. Please name the host with a fully qualified domain name rather than a short-form name to avoid DNS issues with Packstack.
 
 **Hardware:** Machine with at least 4GB RAM, processors with hardware virtualization extensions, and at least one network adapter.
+
+**Network:** In case you are planning on having _external_ network access to the server and instances, this is a good moment to properly configure your network settings. A static IP address to you network card and disabling NetworkManager are sound advices. If you are planing on something more fancy, you might want to check this topic about advanced networking BEFORE PROCEDING [https://www.rdoproject.org/networking/neutron-with-existing-external-network/](https://www.rdoproject.org/networking/neutron-with-existing-external-network/).
 
 ## Step 1: Software repositories
 
