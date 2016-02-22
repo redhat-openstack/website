@@ -25,7 +25,8 @@ before you leave at the end of the day.
 Close to the meeting room is a non-smoking terrace (access with a badge),
 restrooms, kitchen with coffee, tea and other kind of usual hot drinks.
 
-Be aware about the rooms booked: 
+The rooms we have booked are:
+
 * 10th March - Tower Small all day, Tower Big room 9:00 - 16:30 (after 16:30 there is a meeting in Tower Big, which can not be moved anywhere else).
 * 11th March - Tower Small and Tower Big all day long.
 
