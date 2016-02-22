@@ -3,8 +3,8 @@ title: RDO blog roundup, 16 Feb 2016
 author: rbowen
 date: 2016-02-16 15:54:08 UTC
 tags: blog,rdocommunity,openstack
-published: false
 comments: true
+published: true
 ---
 
 Here's what's hit the RDO blogs in the last few weeks.
@@ -82,3 +82,8 @@ name of cinder volume and instance name may be passed to script via CLI.
 
 ... read more at [http://tm3.org/50](http://tm3.org/50)
 
+**Boosting the NFV datapath with RHEL OpenStack Platform** by Nir Yechiel
+
+> A post I wrote for the Red Hat Stack blog, trying to clarify what we are doing with RHEL OpenStack Platform to accelerate the datapath for NFV applications.
+
+... read more at [http://tm3.org/51](http://tm3.org/51)
