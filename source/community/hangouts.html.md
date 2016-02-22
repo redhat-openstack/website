@@ -12,7 +12,11 @@ RDO conducts periodic Google Hangouts on a variety of OpenStack-related topics. 
 
 ## Upcoming Hangouts
 
-Stay tuned. We hope to have a number of hangouts about what's coming in Kilo in the coming weeks.
+John Trownbridge will be doing a demo of [deploying OpenStack with
+TripleO](http://www.youtube.com/watch?v=4O8KvC66eeU) on March 9th at
+[16:00
+UTC](http://www.timeanddate.com/worldclock/fixedtime.html?iso=20160309T1600),
+immediately following our weekly IRC meeting.
 
 ## Past Hangouts
 
