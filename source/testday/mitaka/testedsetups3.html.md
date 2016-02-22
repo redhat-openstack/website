@@ -61,7 +61,7 @@ Please make sure to use the steps described in the [How To Test](/testday/mitaka
 | 3,node  -ML2-OVS- GRE   |  | CentOS 7.1 |    | |   |   |  | 
 | 3,node  -ML2-OVS- VLAN  |  | CentOS 7.1 |    | |   |   |  | 
 
-## RDO Manager
+## TripleO
 
 | Config Name | Release | BaseOS | Status | HOWTO | Who | Date | BZ/LP | Notes Page
 |-------------|---------|--------|--------|-------|-----|------|-------|-----------
