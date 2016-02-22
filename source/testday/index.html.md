@@ -6,6 +6,7 @@ get feedback on what's working and what needs work.
 ## Upcoming test days
 
 * [Mitaka 3, RC - Mar 10-11](/testday/mitaka/milestone3)
+* [Mitaka 3 on-site test day in Brno, CZ](/testday/mitaka/brno-on-site)
 * Mitaka GA - Apr 13-14
 
 ## Past test days, stats and tickets
