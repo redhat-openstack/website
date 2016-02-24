@@ -37,12 +37,12 @@ Please make sure to use the steps described in the [How To Test](/testday/mitaka
 
 | Config Name | Release | BaseOS | Status | HOWTO | Who | Date | BZ/LP | Notes Page
 |----------------------------------------------------------------|------------------|-----------|----------------------------------------------|-----------------------------------------------------|--------|------------|--------------------------------------------------------------------|------------|
-| All-in-One - Sanity |  | CentOS 7 | <span style="background:#00ff00">Good</span>  | [How To Test](/testday/mitaka/milestone2#how-to-test) | imcsk8 |    |    | 
+| All-in-One - Sanity |  | CentOS 7 | <span style="background:#00ff00">Good</span>  | [How To Test](/testday/mitaka/milestone2#how-to-test) | |    |    | 
 |                     |  | F22      |   | [How To Test](/testday/mitaka/milestone2#how-to-test) |  |    |    | 
-|                     |  | RHEL7.2  |   | [How To Test](/testday/mitaka/milestone2#how-to-test) | edannon |  2016-01-31  |  <span style="background:#00ff00">Good</span>  | 
+|                     |  | RHEL7.2  |   | [How To Test](/testday/mitaka/milestone2#how-to-test) | |  |    | 
 | Distributed -IPv6-Deployment- Sanity |  |  CentOS 7 |  | [QuickStart](/Quickstart) |  |   |  | 
 |                                      |  | F22       |  | [QuickStart](/Quickstart) |  |   |  | 
-|                                      |  | RHEL7.1   |  | [QuickStart](/Quickstart) | ekuris |   |  |
+|                                      |  | RHEL7.1   |  | [QuickStart](/Quickstart) |  |   |  |
 | Distributed -ML2- OVS-VXLAN –  LbaaS | | CentOS 7.1 |  | [QuickStart](/Quickstart) |  |   |  | 
 |                                      | | F22        |  | [QuickStart](/Quickstart) |  |   |  | 
 |                                      | | RHEL7.1    |  | [QuickStart](/Quickstart) |  |   |  | 
@@ -83,7 +83,7 @@ Please see [Docs - Storage](/documentation/storage) for configuration guides as 
 | All-in-One | Glance=s3(swift s3), Cinder=nfs| CentOS 7.1 |  | [QuickStart](/Quickstart) |  |    |  None|  None
 | All-in-One | Glance=ceph, Cinder=ceph| CentOS 7.1 |  | [QuickStart](/Quickstart) |  |    | None | None
 | All-in-One | Glance=XtreamIO, Cinder=XtreamIO| CentOS 7.1 |  | [QuickStart](/Quickstart) |  |   | None | None
-| All-in-One | Glance=localfs, Cinder=windows_iscsi| CentOS 7.1 |  | [QuickStart](/Quickstart) |  | 2015-00-00  | None | None
+| All-in-One | Glance=localfs, Cinder=windows_iscsi| CentOS 7.1 |  | [QuickStart](/Quickstart) |  |  | None | None
 | All-in-One | Glance=swift, Cinder=thinlvm|  RHEL7.1 |   | [QuickStart](/Quickstart) |   |    | None | None
 | All-in-One | Glance=s3, Cinder=nfs|  RHEL7.1 |   | [QuickStart](/Quickstart) |    |   | None | None
 | All-in-One | Glance=ceph, Cinder=ceph|  RHEL7.1 | | [QuickStart](/Quickstart) |   |    | None | None
@@ -104,8 +104,8 @@ Various components which don't fit the large test efforts above.
 |----------------------------------------------------------------|------------------|-----------|----------------------------------------------|-----------------------------------------------------|--------|------------|--------------------------------------------------------------------|------------|
 | Ceilometer: All-in-One w/ Neutron Networking | RDO Mitaka | RHEL 7.1 |    |    |    |    |   |     
 | Ceilometer: All-in-One w/ Neutron Networking, Heat | RDO Mitaka | CentOS 7.1 | || | || 
-| Nova Compute: 2 Distributed Compute nodes  | RDO Mitaka | RHEL 7.1 | |[How To Test](/testday/mitaka/milestone2#how-to-test)| imcsk8 | || 
-| Nova Compute: 2 Distributed Compute nodes  | RDO Mitaka | CentOS 7.1 | <span style="background:#00ff00">Good</span> |[How To Test](/testday/mitaka/milestone2#how-to-test)| imcsk8 | || 
+| Nova Compute: 2 Distributed Compute nodes  | RDO Mitaka | RHEL 7.1 | |[How To Test](/testday/mitaka/milestone2#how-to-test)| | || 
+| Nova Compute: 2 Distributed Compute nodes  | RDO Mitaka | CentOS 7.1 | |[How To Test](/testday/mitaka/milestone2#how-to-test)| | || 
 
 
 ## Core Tests
@@ -123,9 +123,9 @@ Various components which don't fit the large test efforts above.
 | All-in-one Nova tests | RDO Mitaka | RHEL7.1 |  |  |   |  | Packstack + nova sanity |
 | All-in-one Nova tests | RDO Mitaka | Centos7.1 |   |  |    |  |  |
 | RDO Mitaka | Fedora 21 |   |  |   |  |  | |
-| 2.node Nova tests | RDO Mitaka | RHEL7.1 | Fail  | Prasanth Anbalagan(panbalag@redhat.com) |   |BZ#1302804  | Packstack + nova live migration (block / shared storage) |
+| 2.node Nova tests | RDO Mitaka | RHEL7.1 | | |   | | Packstack + nova live migration (block / shared storage) |
 |  | RDO Mitaka | Fedora 21 |   |  |    |  |  |
-|  | RDO Mitaka | Centos7.1 | Fail  | Prasanth Anbalagan(panbalag@redhat.com) |     | BZ#1302804 |  | 
+|  | RDO Mitaka | Centos7.1 | |  |     |  |  | 
 
 
 ## Manual configuration of OpenStack
