@@ -54,8 +54,8 @@ Run the following commands as root.
 
   ```
   cd /etc/yum.repos.d/
-  wget http://trunk.rdoproject.org/centos7/delorean-deps.repo
-  wget http://trunk.rdoproject.org/centos7/current-passed-ci/delorean.repo
+  curl -O http://trunk.rdoproject.org/centos7/delorean-deps.repo
+  curl -O http://trunk.rdoproject.org/centos7/current-passed-ci/delorean.repo
   ```
 
 * Check for any [workarounds](/testday/mitaka/workarounds3) required for your platform before the main installation
