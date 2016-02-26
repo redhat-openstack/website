@@ -22,43 +22,16 @@ In this guide, haproxy will be used as the load balancer. Be sure that you eithe
 
 ### Installation
 
-The Neutron LBaaS extension can be enabled and configured by packstack at install time. To do so, use the --neutron-lbaas-hosts option to specify the IP address of the host that will run the LBaaS agent:
+The Neutron LBaaS extension can be enabled and configured by packstack at install time. To do so, use the `--os-neutron-lbaas-install` option to indicate you want to install the LBaaS agent:
 
-    # packstack --allinone --neutron-lbaas-hosts=192.168.1.10
+    # packstack --allinone --os-neutron-lbaas-install=y
 
-In the above example, packstack will do an all-in-one install on the local host, which has an IP address of 192.168.1.10. In the future it may be possible to have packstack install and configure the LBaaS agent on multiple hosts. For now, using the local host's IP address for the --neutron-lbaas-hosts option will configure LBaaS on the all-one-one deployment.
+In the above example, packstack will do an all-in-one install on the local host. In the future it may be possible to have packstack install and configure the LBaaS agent on multiple hosts.
 
-### Configuration
-
-For LBaaS to be configured properly, various configuration files must have the following changes.
-
-The service_provider parameter should be set in /usr/share/neutron/neutron-dist.conf:
-
-    service_provider = LOADBALANCER:Haproxy:neutron.services.loadbalancer.drivers.haproxy.plugin_driver.HaproxyOnHostPluginDriver:default
-
-The service_plugin should be set in /etc/neutron/neutron.conf:
-
-    service_plugins = neutron.services.loadbalancer.plugin.LoadBalancerPlugin
-
-The interface_driver and device_driver should be set in /etc/neutron/lbaas_agent.ini. Since the load balancer will be haproxy, set the device_driver accordingly:
-
-    device_driver = neutron.services.loadbalancer.drivers.haproxy.namespace_driver.HaproxyNSDriver
-
-The interface_driver will depend on the core L2 plugin being used.
-
-For OpenVSwitch:
-
-    interface_driver = neutron.agent.linux.interface.OVSInterfaceDriver
-
-For linuxbridge:
-
-    interface_driver = neutron.agent.linux.interface.BridgeInterfaceDriver
-
-If the above configuration files were changed manually, restart the neutron-server service and neutron-lbaas-agent service.
 
 ### Deploy
 
-Now that the LBaaS plugin is configured and the LBaaS agent is running, the next step is to boot the virtual machines and deploy a load balancer. In the example shown here, the "demo" tenant, which is provisioned by packstack, will be used.
+After the install the LBaaS plugin is configured and the LBaaS agent is running, the next step is to boot the virtual machines and deploy a load balancer. In the example shown here, the "demo" tenant, which is provisioned by packstack, will be used.
 
 This example also makes use of a custom image that has the httpd service enabled. This is the service that will be load-balanced. In addition, the image was built such that the virtual machine's host name is retrieved from the metadata service and placed in /var/www/html/index.html. This is done by using a simple curl command in rc.local:
 
