@@ -2,7 +2,7 @@
 title: '"RDO Manager" is now "TripleO"'
 author: rleander
 date: 2016-02-29 19:59:46 UTC
-tags: openstack, rdo, tripleo,
+tags: 'openstack, rdo, tripleo, '
 comments: true
 published: true
 ---
