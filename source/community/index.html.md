@@ -90,7 +90,7 @@ Packages provided by RDO to install and configure OpenStack are available throug
 
 * [Packstack](https://github.com/openstack/packstack)
 * [Packaged openstack-puppet-modules](https://github.com/redhat-openstack/openstack-puppet-modules) and [upstream Puppet Modules](https://wiki.openstack.org/wiki/Puppet)
-* [RDO Manager](https://www.rdoproject.org/rdo-manager/) and [Triple-O](https://wiki.openstack.org/wiki/TripleO)
+* [Triple-O](https://wiki.openstack.org/wiki/TripleO)
 * [Kolla](https://github.com/openstack/kolla)
 
 ### Docs and Website

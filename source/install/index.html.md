@@ -20,7 +20,6 @@ install directory**
 ### Installation
 
 *   [Quick start guide with Packstack](Quickstart)
-*   [OpenStack with RDO Manager](RDO-Manager)
 
 ### Configuration
 
@@ -34,7 +33,6 @@ install directory**
 *   [Adding a compute node](Adding a compute node)
 *   [Troubleshooting](Troubleshooting)
 *   [Uninstalling RDO](Uninstalling RDO)
-*   [Deploying RDO using TripleO](TripleO_VM_Setup)
 *   [Packstack Cookbook](Packstack_cookbook)
 *   [Virtualized Foreman dev setup](Virtualized_Foreman_dev_setup)
 *   [Creating CentOS and Fedora images ready for Openstack](Creating CentOS and Fedora images ready for Openstack)

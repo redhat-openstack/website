@@ -25,7 +25,6 @@ wiki_last_updated: 2015-08-07
 *   [Testing IceHouse using Tempest](Testing IceHouse using Tempest)
 *   [Setting-up-High-Availability](/ha)
 *   [Using ManageIQ on OpenStack](/cloud-management/using-manageiq-on-openstack)
-*   [RDO Manager Architecture Overview](RDO Manager Architecture Overview)
 *   [Testing RDO with Rally](Testing RDO with Rally)
 
 <Category:Documentation>

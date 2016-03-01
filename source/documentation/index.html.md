@@ -29,7 +29,6 @@ Since RDO sticks closely to the upstream OpenStack project, the documentation at
 * [Image resources](Image resources)
 * [Adding a compute node](Adding a compute node)
 * [Troubleshooting](Troubleshooting)
-* [RDO-Manager](RDO-Manager)
 * [More&hellip;](Install){:.more}
 {:.with-more-link}
 </div>
