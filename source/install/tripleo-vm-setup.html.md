@@ -9,7 +9,7 @@ wiki_last_updated: 2015-05-05
 # TripleO VM Setup
 
 <h2 style="color: #B40B0C">
-**Note:** These instructions are outdated. Please follow [RDO-Manager](RDO-Manager) site which replaces this setup.
+**Note:** These instructions are outdated. Please follow [TripleO Quickstart](RDO-Manager) site which replaces this setup.
 
 </h2>
 ## Background
