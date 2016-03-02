@@ -10,7 +10,7 @@ wiki_last_updated: 2015-08-10
 
 # Get Involved
 
-Help us make the RDO community site a great place for users and cloud operators in the Red Hat ecosystem by sharing your OpenStack questions and solutions on [ask.openstack](http://ask.openstack.org), and by adding [the most useful solutions](/troubleshooting/) and [stories](/documentation/case-studies/) to the RDO website.
+Help us make the RDO community site a great place for users and cloud operators in the Red Hat ecosystem by sharing your OpenStack questions and solutions on [ask.openstack](http://ask.openstack.org), and by adding [the most useful solutions](/troubleshooting/) and [stories](/case-studies/) to the RDO website.
 
 Our community strives to operate according to the terms of the
 [OpenStack Code of Conduct](https://www.openstack.org/legal/community-code-of-conduct/).
