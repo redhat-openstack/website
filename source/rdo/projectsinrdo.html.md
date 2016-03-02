@@ -8,7 +8,7 @@ wiki_last_updated: 2015-07-31
 
 # Projects in RDO
 
-The following is a list of Openstack Projects which are already packaged or currently in the process of being packaged and shipped as part of RDO
+The following is a list of Openstack Projects which are already packaged or currently in the process of being packaged and shipped as part of RDO. For the full list, see [rdo.yml](https://github.com/redhat-openstack/rdoinfo/blob/master/rdo.yml)
 
 ### Keystone
 
