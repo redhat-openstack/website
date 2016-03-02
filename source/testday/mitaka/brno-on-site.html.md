@@ -4,6 +4,10 @@ In conjunction with the [Mitaka 3 test day](/testday/mitaka/milestone3),
 we will be holding an on-site test day in Brno, Czech Republic, on March
 10th and 11th. If you are nearby, we would love to have you attend this event.
 
+Please
+[REGISTER](https://www.eventbrite.com/e/rdo-on-site-test-day-brno-tickets-5934822213)
+so that we know how much pizza to order!
+
 The event will be held in the 'Tower Big' and 'Tower Small' meeting
 rooms in the FBC1 building, on the 5th floor. We will begin at 09:00
 each morning, and end at 16:30.
@@ -30,4 +34,5 @@ The rooms we have booked are:
 * 10th March - Tower Small all day, Tower Big room 9:00 - 16:30 (after 16:30 there is a meeting in Tower Big, which can not be moved anywhere else).
 * 11th March - Tower Small and Tower Big all day long.
 
-
+[REGISTER
+HERE](https://www.eventbrite.com/e/rdo-on-site-test-day-brno-tickets-5934822213)
