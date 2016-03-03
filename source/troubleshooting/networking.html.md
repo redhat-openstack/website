@@ -23,9 +23,9 @@ Check out this webcast - an overview of networking principles and how they apply
 A number of tools come in handy when troubleshooting Neutron/Quantum networking issues.
 
 *   [Open vSwitch](http://openvswitch.org/) ([documentation](http://openvswitch.org/support/))
-    -   [ovs-vsctl](http://openvswitch.org/cgi-bin/ovsman.cgi?page=utilities%2Fovs-vsctl.8) - tool for querying and configuring ovs-vswitchd
-    -   [ovs-ofctl](http://openvswitch.org/cgi-bin/ovsman.cgi?page=utilities%2Fovs-ofctl.8) - OpenFlow configuration tool
-    -   [ovs-dpctl](http://openvswitch.org/cgi-bin/ovsman.cgi?page=utilities%2Fovs-vsctl.8) - query and configure Open vSwitch datapaths
+    -   [ovs-vsctl](http://openvswitch.org/support/dist-docs/ovs-vsctl.8.txt) - tool for querying and configuring ovs-vswitchd
+    -   [ovs-ofctl](http://openvswitch.org/support/dist-docs/ovs-ofctl.8.txt) - OpenFlow configuration tool
+    -   [ovs-dpctl](http://openvswitch.org/support/dist-docs/ovs-dpctl.8.txt) - query and configure Open vSwitch datapaths
 *   [iproute tools](//www.linuxfoundation.org/collaborate/workgroups/networking/iproute2)
     -   [iproute2 HOWTO](http://www.policyrouting.org/iproute2.doc.html)
     -   [iproute2 examples](http://www.linuxfoundation.org/collaborate/workgroups/networking/iproute2_examples)
@@ -154,13 +154,9 @@ After this, you will no longer need to bring up eth0, and all going well you wil
 *   If you are using a virtual machine as a node in OpenStack, you must use the virtio network driver when using VLANs. The default rt8139 driver seems to drop VLAN information.
 *   You must have an external network set as the gateway to the router if you want to get network traffic out of the private instance network.
 
-...
-
 ## Useful resources
 
 *   [Quantum L3 workflow](//docs.openstack.org/trunk/openstack-network/admin/content/l3_workflow.html)
 *   [Network troubleshooting](//docs.openstack.org/trunk/openstack-ops/content/network_troubleshooting.html)
 
-...
-
-<Category:Troubleshooting> <Category:Documentation> [Category:In progress](Category:In progress) <Category:Networking>
+<Category:Troubleshooting> <Category:Documentation> <Category:In progress> <Category:Networking>
