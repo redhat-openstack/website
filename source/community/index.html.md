@@ -10,7 +10,7 @@ wiki_last_updated: 2015-08-10
 
 # Get Involved
 
-Help us make the RDO community site a great place for users and cloud operators in the Red Hat ecosystem by sharing your OpenStack questions and solutions on [ask.openstack](http://ask.openstack.org), and by adding [the most useful solutions](/troubleshooting/) and [stories](/case-studies/) to the RDO website.
+Help us make the RDO community site a great place for users and cloud operators in the Red Hat ecosystem by sharing your OpenStack questions and solutions on [ask.openstack](http://ask.openstack.org), and by adding [the most useful solutions](/troubleshooting/) and [user stories](/user-stories/) to the RDO website.
 
 Our community strives to operate according to the terms of the
 [OpenStack Code of Conduct](https://www.openstack.org/legal/community-code-of-conduct/).
@@ -56,7 +56,7 @@ The site [ask.openstack](http://ask.openstack.org) is the upstream Q&A for all m
 - [Find all questions on ask.openstack related to RDO](https://ask.openstack.org/en/questions/scope:all/sort:age-desc/page:1/query:rdo/).
 - If you're a frequent poster on ask.openstack and wish to identify yourself as part of the RDO community, consider adding the RDO logo to your avatar, like Lars: [https://ask.openstack.org/en/users/1745/larsks/](https://ask.openstack.org/en/users/1745/larsks/) .
 
-- Help improve our knowledge base by turning the best answers to questions on the [Mailing\_lists](/community/mailing-lists/) or on [ask.openstack.org](http://ask.openstack.org) into a page in our [troubleshooting section](/troubleshooting/). In case of ask.openstack.org, a link might be sufficient.
+- Help improve our knowledge base by turning the best answers to questions on the [mailing lists](/community/mailing-lists/) or on [ask.openstack.org](http://ask.openstack.org) into a page in our [troubleshooting section](/troubleshooting/). In case of ask.openstack.org, a link might be sufficient.
 - Blog about how you're using RDO. If you blog frequently about RDO and OpenStack, consider [requesting that your blog be added](https://wiki.openstack.org/wiki/AddingYourBlog) to the upstream [Planet OpenStack](http://planet.openstack.org/).
 - [Fork the website on Github](https://github.com/redhat-openstack/website) and help us improve our documentation.
 
@@ -95,8 +95,16 @@ Packages provided by RDO to install and configure OpenStack are available throug
 
 ### Docs and Website
 
-Help improve the documentation and website:
+Help improve the documentation and website! The main pages for contributed content are [documentation](/documentation/), [troubleshooting](/troubleshooting/) and [user stories](/user-stories/).
 
-* [Open issues list](https://github.com/redhat-openstack/website/issues)
-* [Fork the site on Github](https://github.com/redhat-openstack/website)
+* Take a look at the open issues list: [https://github.com/redhat-openstack/website/issues](https://github.com/redhat-openstack/website/issues)
+* Update this or another page by submitting pull requests to the [https://github.com/redhat-openstack/website](https://github.com/redhat-openstack/website) repo, or by clicking the `Edit on Github` banner at the top right.
+* Fork the whole website: [https://github.com/redhat-openstack/website](https://github.com/redhat-openstack/website)
+
+Here are a few guidelines for contributing new content to the website:
+
+*   Please [search](/search/) first to check if there is a similar page which you can update.
+*   Use normal English case for page names. [Running an instance](Running an instance) is correct, [Get Involved](Get Involved) is not.
+*   Please keep the website content connected! When you add a new page, add a link to it from the appropriate page(s).
+*   Please be aware of our [terms of use](terms of use) — among other things, you agree to license your contributions under the [Creative Commons Attribution License version 3.0](http://creativecommons.org/licenses/by/3.0/), and you agree not to submit illegal content.
 

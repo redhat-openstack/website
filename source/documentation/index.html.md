@@ -12,7 +12,7 @@ wiki_last_updated: 2015-07-16
 
 # RDO documentation
 
-Since RDO sticks closely to the upstream OpenStack project, the documentation at [docs.openstack.org](http://docs.openstack.org) will also prove helpful. If you've come across useful tips for resolving issues on OpenStack, or if you're interested in sharing details of your deployment, please consider sharing this information with the community at our [troubleshooting](troubleshooting) and [case studies](case studies) pages.
+Since RDO sticks closely to the upstream OpenStack project, the documentation at [docs.openstack.org](http://docs.openstack.org) will also prove helpful. If you've come across useful tips for resolving issues on OpenStack, or if you're interested in sharing details of your deployment, please consider sharing this information with the community at our [troubleshooting](troubleshooting) and [user stories](/user-stories/) pages.
 
 ## Get started with RDO
 
