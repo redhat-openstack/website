@@ -1,19 +1,19 @@
 ---
-title: How i started contributing to RDO Project
+title: How i started contributing to the RDO Project
 author: chandankumar
 tags: 
 date: 2016-03-02 22:20:36 IST
 ---
 
-During my internship period at Red Hat, [Kushal](https://kushaldas.in/) used to play with OpenStack and got a problem that created instance is not able to get a public IP address so that he can access from outside.
+During my internship period at Red Hat, [Kushal](https://kushaldas.in/) used to play with OpenStack and got a problem that a created instance is not able to get a public IP address so that he can access it from outside.
 
-From there I got introduced with OpenStack, I started tried to install OpenStack (Icehouse) following upstream documentation to produce this problem.
-There i found the steps wrong and from there I sent my first patch to OpenStack docs and then [contribution](http://stackalytics.com/report/users/chandankumar-093047) to OpenStack begins.
-I used to try devstack, packstack, and other installers to deploy OpenStack.
+From there I got introduced to OpenStack. I started by trying to install OpenStack (Icehouse) following the upstream documentation, to reproduce this problem.
+There, I found the steps were wrong, and from there I sent my first patch to the OpenStack docs which is when my [contribution](http://stackalytics.com/report/users/chandankumar-093047) to OpenStack begins.
+I tried devstack, packstack, and other installers to deploy OpenStack.
 
 But I exactly don't remember how I got involved with [RDO Project](https://www.rdoproject.org/). As per [Gerrit Hub Review history](https://review.gerrithub.io/#/q/owner:chkumar246%2540gmail.com+status:merged),
-I made my first contribution to RDO packages in March 2015. Since last year, I started attending RDO meeting regularly.
-In the beginning, I just used to read meeting logs and try to find out what is happening in the community.
+I made my first contribution to the RDO packages in March 2015. Since last year, I started attending [RDO meetings](https://www.rdoproject.org/community/community-meeting) regularly.
+In the beginning, I just used to read the meeting logs and try to find out what is happening in the community.
 But later on, I started taking action items and tried to prepare for next meeting. 
 I failed a lot of times in the beginning and worked with the motive to complete the tasks properly.
 One day, I accidently raised my hand for chairing RDO meeting and it was a nice experience.
@@ -21,13 +21,13 @@ Now I usually volunteer for chairing the RDO meeting.
 
 During the starting of liberty release, the RDO CI used to break due to missing packages. It was then I learned about [RPM packaging](https://www.rdoproject.org/packaging/rdo-packaging.html) and started fixing those packages. Currently, I am maintaining 16 [Fedora packages](https://admin.fedoraproject.org/pkgdb/packager/chandankumar/) and have learned a lot on how to fix packages when things went wrong.
 
-At the same time, I had started sending out RDO Bug Statistics to RDO mailing list. It's a plain text report of how many new bugs filed for different component linked with RDO product from Bugzilla with comparison with the previous week. You can look out for RDO bug statistics email on every Wednesday in the RDO mailing list.
+At the same time, I had started sending out [RDO Bug Statistics](https://www.redhat.com/archives/rdo-list/2016-March/msg00004.html) to the RDO mailing list. It's a plain text report of how many new bugs were filed for different component, linked with the RDO product from Bugzilla, with comparisons to the previous week. You can look out for RDO bug statistics email on every Wednesday on the RDO mailing list.
 
-I am also involved in Python3 porting and including test requirements for RDO packages which are still in progress. I learned how to help other package maintainers to improve their packages which are consumed as a dependency in RDO.
+I am also involved in Python3 porting and including test requirements for RDO packages, which are still in progress. I learned how to help other package maintainers to improve their packages, which are consumed as a dependency in RDO.
 
-In last three months, I worked with CERN guys to package Magnum and Magnum client, learned how a new OpenStack service is packaged and imported in RDO.
+In last three months, I worked with the CERN guys to package Magnum and Magnum client, where I learned how a new OpenStack service is packaged and imported in RDO.
 
-Apart from that, I am contributing to Delorean Project which powers the RDO CI and the RDO website during DOC and RDO test days. I've been also maintaining 4 [RDO packages](https://github.com/redhat-openstack/rdoinfo/blob/master/rdo.yml).
+Apart from that, I am contributing to the Delorean Project which powers the RDO CI and the RDO website during DOC and RDO test days. I've been also maintaining 4 [RDO packages](https://github.com/redhat-openstack/rdoinfo/blob/master/rdo.yml).
 
 **So, is contributing to RDO easy?**
 Yes.
