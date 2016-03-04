@@ -1,7 +1,7 @@
 ---
 title: 2015-03-18-instack-based-deployment-flow
 authors: jcoufal
-wiki_title: RDO-Manager/user-guides/2015-03-18-instack-based-deployment-flow
+wiki_title: tripleo/user-guides/2015-03-18-instack-based-deployment-flow
 wiki_revision_count: 17
 wiki_last_updated: 2015-03-19
 ---
@@ -35,7 +35,7 @@ There is a slightly different workflow to ensure that your host machine is set u
 <hr style="margin-top: -8px"/>
 Operations in this sections are performed on hosting bare metal machine.
 
-We encourage to use a machine which you can fully dedicate to RDO-Manager because during virtual setup Instack will enable multiple repositories and manipulate with your libvirt setup.
+We encourage to use a machine which you can fully dedicate to TripleO because during virtual setup Instack will enable multiple repositories and manipulate with your libvirt setup.
 
 **\1**
 
@@ -188,7 +188,7 @@ We encourage to use a machine which you can fully dedicate to RDO-Manager becaus
     sudo chmod g+rw /dev/kvm
     sudo virsh start rdo_manager
 
-## Stand up RDO-Manager (Undercloud)
+## Stand up TripleO (Undercloud)
 
 <hr style="margin-top: -8px"/>
 **\1**
@@ -248,7 +248,7 @@ We encourage to use a machine which you can fully dedicate to RDO-Manager becaus
     sudo cp /root/tripleo-undercloud-passwords .
     sudo cp /root/stackrc .
 
-## Use RDO-Manager for Deploying RDO (Overcloud)
+## Use TripleO for Deploying RDO (Overcloud)
 
 <hr style="margin-top: -8px"/>
 **\1**
