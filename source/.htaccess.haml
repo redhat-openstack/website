@@ -413,6 +413,7 @@ directory_index: false
   Redirect 301 /case-studies/osas-test-lab /user-stories
   Redirect 301 /case-studies /user-stories
   Redirect 301 /rdo-manager /tripleo
+  RedirectMatch 301 /(rdo\-manager|tripleo)/rdo\-manager\-(architecture\-overview|troubleshooting) /tripleo/$2
 
   # Redirects, see source/redirects.yaml
 :ruby

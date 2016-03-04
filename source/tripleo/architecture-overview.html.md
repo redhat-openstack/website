@@ -1,20 +1,20 @@
 ---
-title: RDO Manager Architecture Overview
+title: TripleO Architecture Overview
 authors: athomas, chrisw
-wiki_title: RDO Manager Architecture Overview
+wiki_title: TripleO Architecture Overview
 wiki_revision_count: 16
 wiki_last_updated: 2015-04-08
 ---
 
-# RDO Manager Architecture Overview
+# TripleO Architecture Overview
 
 ## QuickStart
 
-This document lists the main components of RDO Manager, and gives some description of how each component is used. There are links to additional sources of information throughout the document. For those wishing to start actually using RDO Manager, the current installation documentation is here - <https://repos.fedorapeople.org/repos/openstack-m/rdo-manager-docs/liberty/introduction/introduction.html>
+This document lists the main components of TripleO, and gives some description of how each component is used. There are links to additional sources of information throughout the document. For those wishing to start actually using TripleO, the current installation documentation is here - <https://repos.fedorapeople.org/repos/openstack-m/rdo-manager-docs/liberty/introduction/introduction.html>
 
-## Introduction - RDO Manager and TripleO
+## Introduction - TripleO
 
-RDO Manager is a set of tools for deploying, and managing OpenStack which is built upon the TripleO project - <https://wiki.openstack.org/wiki/TripleO>
+TripleO is a set of tools for deploying, and managing OpenStack - <https://wiki.openstack.org/wiki/TripleO>
 
 The name TripleO refers to three related things:
 
@@ -26,21 +26,21 @@ The design pattern, where a sophisticated, general-purpose OpenStack instance is
 
 ## Benefits
 
-Using RDO Manager’s combination of OpenStack components, and their APIs, as the infrastructure to deploy and operate OpenStack itself delivers several benefits:
+Using TripleO’s combination of OpenStack components, and their APIs, as the infrastructure to deploy and operate OpenStack itself delivers several benefits:
 
-*   RDO Manager’s APIs \*are\* the OpenStack APIs. They’re well maintained, well documented, and come with client libraries and command line tools. Users who invest time in learning about RDO manager’s APIs are also learning about OpenStack itself, and users who are already familiar with OpenStack will find a great deal in RDO Manager that they already understand.
-*   Using the OpenStack components allows more rapid feature development of RDO Manager than might otherwise be the case; RDO Manager automatically inherits all the new features which are added to Glance, Heat etc., even when the developer of the new feature didn’t explicitly have TripleO and RDO Manager in mind.
-*   The same applies to bug fixes and security updates. When OpenStack developers fix bugs in the common components, those fixes are inherited by RDO Manager
-*   Users’ can invest time in integrating their own scripts and utilities with RDO Manager’s APIs with some confidence. Those APIs are cooperatively maintained and developed by the OpenStack community. They’re not at risk of being suddenly changed or retired by a single controlling vendor.
+*   TripleO’s APIs \*are\* the OpenStack APIs. They’re well maintained, well documented, and come with client libraries and command line tools. Users who invest time in learning about TripleO’s APIs are also learning about OpenStack itself, and users who are already familiar with OpenStack will find a great deal in TripleOthat they already understand.
+*   Using the OpenStack components allows more rapid feature development of TripleO than might otherwise be the case; TripleO automatically inherits all the new features which are added to Glance, Heat etc., even when the developer of the new feature didn’t explicitly have TripleO and TripleO in mind.
+*   The same applies to bug fixes and security updates. When OpenStack developers fix bugs in the common components, those fixes are inherited by TripleO
+*   Users’ can invest time in integrating their own scripts and utilities with TripleO’s APIs with some confidence. Those APIs are cooperatively maintained and developed by the OpenStack community. They’re not at risk of being suddenly changed or retired by a single controlling vendor.
 *   For developers, tight integration with the openstack APIs provides a solid architecture, which has gone through extensive community review.
 
-It should be noted that not everything in RDO Manager is a reused OpenStack element. The Tuskar API, for example (which lets users design the workload cloud that they want to deploy), is found in RDO Manager but not, so far at least, in a typical Openstack instance. The Tuskar API is described in more detail below.
+It should be noted that not everything in TripleO is a reused OpenStack element. The Tuskar API, for example (which lets users design the workload cloud that they want to deploy), is found in TripleO but not, so far at least, in a typical Openstack instance. The Tuskar API is described in more detail below.
 
-## Deploying the workload cloud with RDO Manager
+## Deploying the workload cloud with TripleO
 
-To begin using RDO Manager, it is necessary to install the deployment cloud (sometimes referred to as the *undercloud*). The deployment cloud is a working instance of OpenStack, typically on a single machine. It is somewhat limited, because it only really exists for a single purpose: to deploy, and then manage, the workload cloud (sometimes referred to as the *overcloud*).
+To begin using TripleO, it is necessary to install the deployment cloud (sometimes referred to as the *undercloud*). The deployment cloud is a working instance of OpenStack, typically on a single machine. It is somewhat limited, because it only really exists for a single purpose: to deploy, and then manage, the workload cloud (sometimes referred to as the *overcloud*).
 
-In RDO Manager, installing and configuring the deployment cloud is done using a script called instack. Detailed instructions are included in the QuickStart link at the head of this document.
+In TripleO, installing and configuring the deployment cloud is done using a script called instack. Detailed instructions are included in the QuickStart link at the head of this document.
 
 The setup that instack carries out includes:
 
@@ -79,7 +79,7 @@ In the case of the “Compute” role:
 *   the flavor (at least for a deployment which isn’t a simple proof of concept), should specify that the machine has enough CPU capacity and RAM to host several VMs concurrently
 *   the Heat templates will take care of ensuring that the Nova service is correctly configured on each node when it first boots.
 
-The roles in the current version of RDO Manager aren’t intended to be very customisable. The associated image can be updated, to allow for newer images with bug fixes, and the associated flavors can be changed (unless the deployment is only a proof of concept - see below), but the Heat templates which configure a node for its role cannot easily be altered, neither can roles be added or removed.
+The roles in the current version of TripleO aren’t intended to be very customisable. The associated image can be updated, to allow for newer images with bug fixes, and the associated flavors can be changed (unless the deployment is only a proof of concept - see below), but the Heat templates which configure a node for its role cannot easily be altered, neither can roles be added or removed.
 
 In principle, a user might create their own role definition which did just about anything; they could even be used to deploy something other than an OpenStack workload cloud. However, the inter-related OS images (composed from TripleO image elements) and instance configuration rules (contained in TripleO Heat templates) are complex. A small amount of changes could prevent them from adding up to an operational workload cloud. Roles are used when the user designs the workload cloud they wish to deploy, which is described in a later section.
 
@@ -89,7 +89,7 @@ When users are creating virtual machines (VMs) in an OpenStack cloud, the flavor
 
 In the deployment cloud, where the machines are usually physical rather than virtual (or, at least, pre-existing, rather than created on demand), flavors have a slightly different effect. Essentially, they act as a constraint. Of all of the discovered hardware, only nodes which match a specified flavor are suitable for a particular role. This can be used to ensure that the large machines with a great deal of RAM and CPU capacity are used to run Nova in the workload cloud, and the smaller machines run less demanding services, such as Keystone.
 
-The version of TripleO included in RDO Manager is capable of handling flavors in two different modes. The simpler PoC (Proof of Concept) mode is intended to enable new users to experiment, without worrying about matching hardware profiles. In the mode, there’s one single, global flavor, and any hardware can match it. That effectively removes flavor matching. Users can use whatever hardware they wish.
+The version of TripleO included in TripleO is capable of handling flavors in two different modes. The simpler PoC (Proof of Concept) mode is intended to enable new users to experiment, without worrying about matching hardware profiles. In the mode, there’s one single, global flavor, and any hardware can match it. That effectively removes flavor matching. Users can use whatever hardware they wish.
 
 For the second mode, named Scale because it is suited to larger scale workload cloud deployments, flavor matching is in full effect. A node will only be considered suitable for a given role if the role is associated with a flavor which matches the capacity of the node. Nodes without a matching flavor are effectively unusable.
 
@@ -105,7 +105,7 @@ There are notes here which described how to interact directly with the Tuskar AP
 
 For many users, the simplest way to read and update a deployment plan will be via the TripleO UI.
 
-In a default installation of RDO Manager, there’s a single pre-loaded deployment plan in Tuskar. The details can be retrieved with this command on the deployment cloud node:
+In a default installation of TripleO, there’s a single pre-loaded deployment plan in Tuskar. The details can be retrieved with this command on the deployment cloud node:
 
 `curl -v -X GET -H 'Content-Type: application/json' -H 'Accept: application/json' `[`http://0.0.0.0:8585/v2/plans/`](http://0.0.0.0:8585/v2/plans/)
 
