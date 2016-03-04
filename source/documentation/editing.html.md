@@ -25,4 +25,15 @@ To post long lines, such as log output or script lines, wrap a block in
              ...
          </pre>
 
+The site is set up to use Kramdown, which is a featureful version of
+Markdown. It mirrors GitHub's settings and then a few
+features on top. You can see the settings in [config.rb](https://github.com/redhat-openstack/website/blob/master/config.rb#L22-L32)
+
+Basically, you get everything from GitHub's configuration, so preview
+works, and you can also do special Kramdown stuff, like adding CSS, like
+so: {:.foo} (for a class called foo, which can be applied to a block or
+inline, based on its position). More info on the [kramdown site](http://kramdown.gettalong.org/syntax.html#attribute-list-definitions)
+
+See also the [Quick reference for simple tables](http://kramdown.gettalong.org/quickref.html#tables) and the [full table docs](http://kramdown.gettalong.org/syntax.html#tables)
+
 <Category:Documentation>
