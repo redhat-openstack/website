@@ -15,7 +15,7 @@ If you want to spin up a proof of concept cloud on one node, this is the
 place to be. You'll be able to [add more nodes](Adding_a_compute_node) to your OpenStack cloud later, if you choose.
 
 If you are looking for instructions to deploy a production cloud,
-possibly with HA, see the [TripleO Quickstart](/rdo-manager).  
+possibly with HA, see the [TripleO Quickstart](/triplep).  
 If you just want to try it out without installing anything, check out [TryStack](http://trystack.org). 
 
 These instructions are to install the current ("**Liberty**") release.
