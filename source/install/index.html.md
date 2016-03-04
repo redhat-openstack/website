@@ -17,7 +17,7 @@ While the [Quickstart](Quickstart) is sufficient for an initial test deployment,
 ### Installation
 
 *  [Quick start guide with Packstack](Quickstart)
-*  [TripleO Quickstart](/rdo-manager)
+*  [TripleO Quickstart](/tripleo)
 
 ### Configuration
 
