@@ -12,7 +12,6 @@ wiki_last_updated: 2015-08-07
 
 [ ← Docs](Docs)
 
-*   [Tips for New Developers](DeveloperTips)
 *   [RDO stable client branches](Clients)
 *   [Heat Links](Heat)
 *   [Ironic Links](Ironic)
