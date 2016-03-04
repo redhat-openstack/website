@@ -6,9 +6,9 @@ wiki_revision_count: 49
 wiki_last_updated: 2016-01-11
 ---
 
-# RDO-Manager
+# TripleO
 
-RDO-Manager is an OpenStack Deployment & Management tool for RDO. It is based on [OpenStack TripleO](http://wiki.openstack.org/wiki/TripleO) project and its philosophy is inspired by Spinal Stack project.
+TripleO is an OpenStack Deployment & Management tool. It is developed upstream as the [OpenStack TripleO](http://wiki.openstack.org/wiki/TripleO) project, but we have a special love for it in RDO-land.
 
 ## Virtual Environment Quickstart
 
