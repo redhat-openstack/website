@@ -14,13 +14,19 @@ wiki_last_updated: 2015-07-16
 
 Since RDO sticks closely to the upstream OpenStack project, the documentation at [docs.openstack.org](http://docs.openstack.org) will also prove helpful. If you've come across useful tips for resolving issues on OpenStack, or if you're interested in sharing details of your deployment, please consider sharing this information with the community at our [troubleshooting](troubleshooting) and [user stories](/user-stories/) pages.
 
-## Get started with RDO
+## About RDO
+
+* [FAQ](Frequently Asked Questions)
+* [Mailing lists](Mailing lists)
+* [Legal & Privacy](Legal)
+
+## Getting started
 
 * [Quickstart - Proof of concept for single node](/install/quickstart)
 * [TripleO Quickstart - production deployment, with HA](/tripleo)
 * [Try out OpenStack at TryStack.org](http://trystack.org/)
 
-## Installation and configuration
+## Configuration
 
 <div class="splits">
 
@@ -58,15 +64,8 @@ Since RDO sticks closely to the upstream OpenStack project, the documentation at
 ## Development
 
 * [Packaging Guides](packaging)
-* [Tips for New Developers](DeveloperTips)
 * [Open
   Tickets](https://bugzilla.redhat.com/buglist.cgi?product=RDO&query_format=advanced&bug_status=NEW&bug_status=ASSIGNED)
-
-## About RDO
-
-* [FAQ](Frequently Asked Questions)
-* [Mailing lists](Mailing lists)
-* [Legal & Privacy](Legal)
 
 ## Upstream Documentation
 
