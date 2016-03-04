@@ -11,22 +11,23 @@ wiki_last_updated: 2015-06-30
 
 # RDO Quickstart
 
-Deploying RDO is a quick and easy process. Setting up an OpenStack cloud takes approximately 15 minutes, and can be as short as 3 steps.
+If you want to spin up a proof of concept cloud on one node, this is the
+place to be. You'll be able to [add more nodes](Adding_a_compute_node) to your OpenStack cloud later, if you choose.
 
-Below, we'll explain how to set up OpenStack on a single server. You'll be able to [add more nodes](Adding_a_compute_node) to your OpenStack cloud later, if you choose.
-
-If you just want to try it out without installing anything, check out [TryStack](http://trystack.org). See also [Installation](Install#Installation) for alternate deployment methods.
+If you are looking for instructions to deploy a production cloud,
+possibly with HA, see the [TripleO Quickstart](/rdo-manager).  
+If you just want to try it out without installing anything, check out [TryStack](http://trystack.org). 
 
 These instructions are to install the current ("**Liberty**") release.
 
 ## Summary for the Impatient
 
-    ** Make sure your /etc/environment is populated. In case it is not, as a suggestion, add the following content:
+Make sure your /etc/environment is populated:
     
     LANG=en_US.utf-8
     LC_ALL=en_US.utf-8
     
-    Next, enter the commands:
+Next, enter the commands:
     
     sudo yum install -y https://www.rdoproject.org/repos/rdo-release.rpm
     sudo yum update -y
@@ -35,11 +36,22 @@ These instructions are to install the current ("**Liberty**") release.
 
 ## Step 0: Prerequisites
 
-**Software:** Red Hat Enterprise Linux (RHEL) **7** is the minimum recommended version, or the equivalent version of one of the RHEL-based Linux distributions such as CentOS, Scientific Linux, etc. **x86_64** is currently the only supported architecture. See also [RDO repository info](Repositories) for details on required repositories. Please name the host with a fully qualified domain name rather than a short-form name to avoid DNS issues with Packstack.
+**Software:** Red Hat Enterprise Linux (RHEL) **7** is the minimum recommended version, or 
+the equivalent version of one of the RHEL-based Linux distributions such as CentOS, 
+Scientific Linux, etc. **x86_64** is currently the only supported architecture. 
+See also [RDO repository info](Repositories) for details on required repositories. 
+Please name the host with a fully qualified domain name rather than a short-form 
+name to avoid DNS issues with Packstack.
 
-**Hardware:** Machine with at least 4GB RAM, processors with hardware virtualization extensions, and at least one network adapter.
+**Hardware:** Machine with at least 4GB RAM, processors with hardware 
+virtualization extensions, and at least one network adapter.
 
-**Network:** In case you are planning on having _external_ network access to the server and instances, this is a good moment to properly configure your network settings. A static IP address to you network card and disabling NetworkManager are sound advices. If you are planing on something more fancy, you might want to check this topic about advanced networking BEFORE PROCEDING [https://www.rdoproject.org/networking/neutron-with-existing-external-network/](https://www.rdoproject.org/networking/neutron-with-existing-external-network/).
+**Network:** If you plan on having _external_ network access to the 
+server and instances, this is a good moment to properly configure your network settings.
+A static IP address to your network card, and disabling NetworkManager are good ideas. 
+If you are planing on something fancier, read [this document on advanced
+networking](https://www.rdoproject.org/networking/neutron-with-existing-external-network/)
+BEFORE PROCEDING.
 
 ## Step 1: Software repositories
 
