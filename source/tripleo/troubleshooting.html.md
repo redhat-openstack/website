@@ -1,12 +1,12 @@
 ---
-title: RDO Manager Troubleshooting
+title: TripleO Troubleshooting
 authors: snecklifter
-wiki_title: RDO Manager Troubleshooting
+wiki_title: TripleO Troubleshooting
 wiki_revision_count: 1
 wiki_last_updated: 2016-01-21
 ---
 
-# RDO Manager Troubleshooting
+# TripleO Troubleshooting
 
 ## Undercloud
 
