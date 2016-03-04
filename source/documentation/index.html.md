@@ -63,14 +63,13 @@ Since RDO sticks closely to the upstream OpenStack project, the documentation at
 
 ## Development
 
-* [Packaging Guides](packaging)
+* [Packaging Guides](/packaging)
 * [Open
   Tickets](https://bugzilla.redhat.com/buglist.cgi?product=RDO&query_format=advanced&bug_status=NEW&bug_status=ASSIGNED)
 
 ## Upstream Documentation
 
 * [OpenStack docs](http://docs.openstack.org/)
-* [Books](http://rdoproject.org/Books)
 * [Glossary](http://docs.openstack.org/glossary/content/glossary.html)
 * [OpenStack Operations Guide](http://docs.openstack.org/trunk/openstack-ops/content/index.html)
 * [More&hellip;](/documentation/upstream-docs){:.more}
