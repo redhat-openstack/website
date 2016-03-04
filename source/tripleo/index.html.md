@@ -1,7 +1,7 @@
 ---
-title: RDO-Manager
+title: TripleO
 authors: athomas, hewbrocca, jcoufal, jistr, snecklifter, trown
-wiki_title: RDO-Manager
+wiki_title: RDO Manager
 wiki_revision_count: 49
 wiki_last_updated: 2016-01-11
 ---
@@ -12,7 +12,7 @@ TripleO is an OpenStack Deployment & Management tool. It is developed upstream a
 
 ## Virtual Environment Quickstart
 
-There is a recent project called [tripleo-quickstart](https://github.com/redhat-openstack/tripleo-quickstart) whose main goal is to quickly stand up TripleO/RDO-Manager environments using an image based undercloud aproach similar to the [OPNFV Apex project](http://artifacts.opnfv.org/apex/docs/installation-instructions/).
+There is a recent project called [tripleo-quickstart](https://github.com/redhat-openstack/tripleo-quickstart) whose main goal is to quickly stand up TripleO environments using an image based undercloud aproach similar to the [OPNFV Apex project](http://artifacts.opnfv.org/apex/docs/installation-instructions/).
 
 You will need a host machine with at least 16G of RAM, preferably 32G,
 with CentOS 7 installed, and able to be ssh'd to as root
@@ -69,7 +69,7 @@ Upstream TripleO docs: <http://docs.openstack.org/developer/tripleo-docs/>
 
 > **Note:** Limit your environment specific content in the upper left corner of the documentation.
 
-[RDO-Manager troubleshooting](rdo-manager-troubleshooting)
+[Troubleshooting](/tripleo/troubleshooting)
 
 [Great blog on RDO-Manager HA setup](https://remote-lab.net/rdo-manager-ha-openstack-deployment/)
 
@@ -90,4 +90,4 @@ Demo 3 (March 9, 2015)
 ## Get in Touch
 
 *   IRC: **#rdo** channel on [Freenode](http://freenode.net)
-*   Mailing List: [**rdo-list**](//www.redhat.com/mailman/listinfo/rdo-list), using **[RDO-Manager]** tag in the subject of the e-mail
+*   Mailing List: [**rdo-list**](//www.redhat.com/mailman/listinfo/rdo-list), using **[TripleO]** tag in the subject of the e-mail
