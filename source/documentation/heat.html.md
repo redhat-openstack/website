@@ -11,4 +11,6 @@ wiki_last_updated: 2016-01-07
 Heat is a service to orchestrate multiple composite cloud applications using the AWS CloudFormation template format, through both an OpenStack-native ReST API and a CloudFormation-compatible Query API.
 
 *   [Heat overview in the OpenStack wiki](https://wiki.openstack.org/wiki/Heat)
+*   [Orchestration Service Developer Documentation](http://docs.openstack.org/developer/heat/)
 *   [Heat Nested Resource Introspection](http://hardysteven.blogspot.co.uk/2013/08/heat-nested-resource-introspection.html)
+
