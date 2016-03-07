@@ -12,7 +12,7 @@ wiki_last_updated: 2016-01-07
 
 ## Download pre-built images for OpenStack
 
-This is a collection of various OpenStack-ready images of different distributions and operating systems.
+You can run a number of different Linux distributions and operating systems on top of your RDO cloud. This is a collection of various OpenStack-ready images that you can use:
 
 *   Fedora [cloud images](https://getfedora.org/cloud/download/)
 *   [RHEL 7 image](https://access.redhat.com/downloads/content/69/ver=/rhel---7/7.0/x86_64/product-downloads) (requires RHEL subscription)
