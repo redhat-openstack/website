@@ -113,7 +113,6 @@
   Workarounds: testday/workarounds
   RDO videos: rdo/rdo-videos
   Deploying Heat on Havana: install/deploying-heat-on-havana
-  Deploy an application with Heat: install/deploy-an-application-with-heat
   Multi-node Openstack with Neutron with libvirt, netsted kvm, virt-manager and qcow2 images: networking/multi-node-openstack-with-neutron-with-libvirt,-netsted-kvm,-virt-manager-and-qcow2-images
   Clients: needsupdate/clients
   Neutron with existing external network: networking/neutron-with-existing-external-network

@@ -28,7 +28,6 @@ While the [Quickstart](Quickstart) is sufficient for an initial test deployment,
 *   [Launching your first VM ](Running an instance)
 *   [Image resources](Image resources)
 *   [Repository information ](Repositories)
-*   [Deploying an application with OpenStack Orchestration (Heat)](deploy-an-application-with-heat)
 *   [Adding a compute node](Adding a compute node)
 *   [Troubleshooting](Troubleshooting)
 *   [Uninstalling RDO](Uninstalling RDO)
