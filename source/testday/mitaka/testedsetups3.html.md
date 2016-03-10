@@ -38,22 +38,16 @@ Please make sure to use the steps described in the [How To Test](/testday/mitaka
 | Config Name | Release | BaseOS | Status | HOWTO | Who | Date | BZ/LP | Notes Page
 |----------------------------------------------------------------|------------------|-----------|----------------------------------------------|-----------------------------------------------------|--------|------------|--------------------------------------------------------------------|------------|
 | All-in-One - Sanity |  | CentOS 7 | <span style="background:#00ff00">Good</span>  | [How To Test](/testday/mitaka/milestone2#how-to-test) | |    |    | 
-|                     |  | F22      |   | [How To Test](/testday/mitaka/milestone2#how-to-test) |  |    |    | 
 |                     |  | RHEL7.2  |   | [How To Test](/testday/mitaka/milestone2#how-to-test) | |  |    | 
 | Distributed -IPv6-Deployment- Sanity |  |  CentOS 7 |  | [QuickStart](/Quickstart) |  |   |  | 
-|                                      |  | F22       |  | [QuickStart](/Quickstart) |  |   |  | 
 |                                      |  | RHEL7.1   |  | [QuickStart](/Quickstart) |  |   |  |
 | Distributed -ML2- OVS-VXLAN –  LbaaS | | CentOS 7.1 |  | [QuickStart](/Quickstart) |  |   |  | 
-|                                      | | F22        |  | [QuickStart](/Quickstart) |  |   |  | 
 |                                      | | RHEL7.1    |  | [QuickStart](/Quickstart) |  |   |  | 
 | Distributed -ML2- OVS-VXLAN-VRRP     | | CentOS 7.1 |  | [QuickStart](/Quickstart) |  |   |  | 
-| | | F22 |  | [QuickStart](/Quickstart) |  |   | | 
 | | | RHEL7.1 | | [QuickStart](/Quickstart) |  |   | | 
 | Distributed -ML2-OVS- VXLAN-IPv6 – VPNaaS | | CentOS 7.1 |  | [QuickStart](/Quickstart) |  |  |  | 
-| | | F22 |  | [QuickStart](/Quickstart) |  |   |  | 
 | | | RHEL7.1 |  | [QuickStart](/Quickstart) | |  |  | 
 | Distributed -ML2-OVS- VXLAN Security Groups | | CentOS 7.1 |  | [QuickStart](/Quickstart) |  |   |  | 
-| | | F22 | | [QuickStart](/Quickstart) |  |  |  | 
 | | | RHEL7.1 | | [QuickStart](/Quickstart) |zgreenbe  |   | | 
 | Distributed -ML2-OVS- VXLAN DVR | | RHEL 7.1 | | [QuickStart](/Quickstart) | |   |  | 
 | Distributed -ML2-OVS- VXLAN DVR | | CentOS 7.1 | | [QuickStart](/Quickstart) |   |  |  | 
