@@ -19,12 +19,11 @@ width="600" height="450" frameborder="0" style="border:0"
 allowfullscreen></iframe>
 
 If you are a visitor, and not a Red Hat employee,
-you need to go to 4th floor to sign in, providing
-your name and the purpose of your visit, to receive 
-a visitor's badge, before you join the
-testing day. You will need to return the badge to the Facilities office 
-(4th floor, in front of main entrance), or to someone from Red Hat,
-before you leave at the end of the day.
+you need to go to front desk in FBCII 1st floor to sign in, providing
+your name and the purpose of your visit, to receive a visitor's badge,
+before you join the testing day. You will need to return the badge
+to the front desk or to someone from Red Hat, before you leave
+at the end of the day.
 
 Close to the meeting room is a non-smoking terrace (access with a badge),
 restrooms, kitchen with coffee, tea and other kind of usual hot drinks.
