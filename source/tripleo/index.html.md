@@ -12,11 +12,11 @@ TripleO is an OpenStack Deployment & Management tool. It is developed upstream a
 
 ## Virtual Environment Quickstart
 
-There is a recent project called [tripleo-quickstart](https://github.com/redhat-openstack/tripleo-quickstart) whose main goal is to quickly stand up TripleO environments using an image based undercloud aproach similar to the [OPNFV Apex project](http://artifacts.opnfv.org/apex/docs/installation-instructions/).
+There is a recent project called [tripleo-quickstart](https://github.com/redhat-openstack/tripleo-quickstart) whose main goal is to quickly stand up TripleO environments using an image-based undercloud approach similar to the [OPNFV Apex project](http://artifacts.opnfv.org/apex/docs/installation-instructions/).
 
-You will need a host machine with at least 16G of RAM, preferably 32G,
+You will need a host machine with at least 16G of RAM (preferably 32G)
 with CentOS 7 installed, and able to be ssh'd to as root
-without password from the machine running ansible.
+without password from the machine running Ansible.
 
 A quick way to test that your host machine (referred to as `$VIRTHOST`) is
 ready to rock is::
@@ -24,17 +24,20 @@ ready to rock is::
     ssh root@$VIRTHOST uname -a
 
 The defaults are meant to "just work", so it is as easy as
-downloading and running the quickstart.sh script.
+downloading and running the `quickstart.sh` script.
 
-The quickstart.sh script will install this repo along
-with ansible in a virtual environment and run the quickstart
-playbook. Note, the quickstart playbook will delete the ``stack``
-user on the virthost and recreate it.::
+The `quickstart.sh` script will install this repo along
+with Ansible in a virtual environment and run the `quickstart`
+playbook. 
 
-    export VIRTHOST='my_test_machine.example.com'
-
-    wget https://raw.githubusercontent.com/redhat-openstack/tripleo-quickstart/master/quickstart.sh
-    bash quickstart.sh $VIRTHOST
+> **Note:** The `quickstart` playbook will delete the ``stack``
+> user on the virthost and recreate it.::
+>    ```
+>    export VIRTHOST='my_test_machine.example.com'
+>
+>    wget https://raw.githubusercontent.com/redhat-openstack/tripleo-quickstart/master/quickstart.sh
+>    bash quickstart.sh $VIRTHOST
+>    ```
 
 This script will output instructions at the end to access the
 deployed undercloud. If a release name is not given, ``mitaka``
