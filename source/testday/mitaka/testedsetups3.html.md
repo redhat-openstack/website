@@ -65,7 +65,7 @@ Please make sure to use the steps described in the [How To Test](/testday/mitaka
 
 | Config Name | Release | BaseOS | Status | HOWTO | Who | Date | BZ/LP | Notes Page
 |-------------|---------|--------|--------|-------|-----|------|-------|-----------
-| Minimal | Mitaka | CentOS 7 | | [Install Guide](https://www.rdoproject.org/rdo-manager/) | | | | 
+| Minimal | Mitaka | CentOS 7 | | [Install Guide](https://www.rdoproject.org/rdo-manager/) | rwsu | | | 
 | | Liberty | CentOS 7 | | [Install Guide](https://www.rdoproject.org/rdo-manager/) | | | | 
 | HA | Mitaka | CentOS 7 | | [Install Guide](https://www.rdoproject.org/rdo-manager/) | | | | 
 | | Liberty | CentOS 7 | | [Install Guide](https://www.rdoproject.org/rdo-manager/) | | | | 
