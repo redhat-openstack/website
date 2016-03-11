@@ -39,7 +39,7 @@ Please make sure to use the steps described in the [How To Test](/testday/mitaka
 |----------------------------------------------------------------|------------------|-----------|----------------------------------------------|-----------------------------------------------------|--------|------------|--------------------------------------------------------------------|------------|
 | All-in-One - Sanity | Mitaka  | CentOS 7.2 | <span style="background:#00ff00">Good</span>  | [How To Test](/testday/mitaka/milestone3#how-to-test) | chandankumar | 2016-03-11 | None | [Notes](https://gist.github.com/chkumar246/e849a8e9b21d55eb2ee6) 
 |                     | Mitaka | RHEL 7.2  | <span style="background:#00ff00">Good</span>  | [How To Test](/testday/mitaka/milestone3#how-to-test) | leanderthal | 2016-03-10 | None | [Notes](http://groningenrain.nl/all-your-repos-are-belong-to-us/) 
-| Distributed -IPv6-Deployment- Sanity | Mitaka |  CentOS 7.2 |  |[How To Test](/testday/mitaka/milestone3#how-to-test) |  |   |  | 
+| Distributed -IPv6-Deployment- Sanity | Mitaka |  CentOS 7.2 | <span style="background:#ff9900">Partialy good</span> | [How To Test](/testday/mitaka/milestone3#how-to-test) | mmagr | 2016-03-10 | In notes | [Notes](https://etherpad.openstack.org/p/rdo-test-days-mitaka-m3-mmagr) | 
 |                                      |Mitaka | RHEL 7.2   |  | [How To Test](/testday/mitaka/milestone3#how-to-test) |  |   |  |
 | Distributed -ML2- OVS-VXLAN –  LbaaS |Mitaka | CentOS 7.2 |  | [How To Test](/testday/mitaka/milestone3#how-to-test) |  |   |  | 
 |                                      |Mitaka | RHEL 7.2 |  | [How To Test](/testday/mitaka/milestone3#how-to-test) |  |   |  | 
