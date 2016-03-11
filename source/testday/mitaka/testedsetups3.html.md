@@ -37,26 +37,26 @@ Please make sure to use the steps described in the [How To Test](/testday/mitaka
 
 | Config Name | Release | BaseOS | Status | HOWTO | Who | Date | BZ/LP | Notes Page
 |----------------------------------------------------------------|------------------|-----------|----------------------------------------------|-----------------------------------------------------|--------|------------|--------------------------------------------------------------------|------------|
-| All-in-One - Sanity |  | CentOS 7.2 | <span style="background:#00ff00">Good</span>  | [How To Test](/testday/mitaka/milestone3#how-to-test) | |    |    | 
+| All-in-One - Sanity | Mitaka  | CentOS 7.2 | <span style="background:#00ff00">Good</span>  | [How To Test](/testday/mitaka/milestone3#how-to-test) | |    |    | 
 |                     | Mitaka | RHEL 7.2  | <span style="background:#00ff00">Good</span>  | [How To Test](/testday/mitaka/milestone3#how-to-test) | leanderthal | 2016-03-10 | None | [Notes](http://groningenrain.nl/all-your-repos-are-belong-to-us/) 
-| Distributed -IPv6-Deployment- Sanity |  |  CentOS 7.2 |  |[How To Test](/testday/mitaka/milestone3#how-to-test) |  |   |  | 
-|                                      |  | RHEL 7.2   |  | [How To Test](/testday/mitaka/milestone3#how-to-test) |  |   |  |
-| Distributed -ML2- OVS-VXLAN –  LbaaS | | CentOS 7.2 |  | [How To Test](/testday/mitaka/milestone3#how-to-test) |  |   |  | 
-|                                      | | RHEL 7.2 |  | [How To Test](/testday/mitaka/milestone3#how-to-test) |  |   |  | 
-| Distributed -ML2- OVS-VXLAN-VRRP     | | CentOS 7.2 |  | [How To Test](/testday/mitaka/milestone3#how-to-test) |  |   |  | 
-| | | RHEL7.2 | | [How To Test](/testday/mitaka/milestone3#how-to-test) |  |   | | 
-| Distributed -ML2-OVS- VXLAN-IPv6 – VPNaaS | | CentOS 7.2 |  | [How To Test](/testday/mitaka/milestone3#how-to-test) |  |  |  | 
-| | | RHEL7.2 |  | [How To Test](/testday/mitaka/milestone3#how-to-test) | |  |  | 
-| Distributed -ML2-OVS- VXLAN Security Groups | | CentOS 7.2 |  | [How To Test](/testday/mitaka/milestone3#how-to-test) |  |   |  | 
-| | | RHEL7.2 | | [How To Test](/testday/mitaka/milestone3#how-to-test) |zgreenbe  |   | | 
-| Distributed -ML2-OVS- VXLAN DVR | | RHEL 7.2 | |[How To Test](/testday/mitaka/milestone3#how-to-test) | |   |  | 
-| Distributed -ML2-OVS- VXLAN DVR | | CentOS 7.2 | | [How To Test](/testday/mitaka/milestone3#how-to-test) |   |  |  | 
-| 3,node  -ML2-OVS- VXLAN |  | CentOS 7.2 |    |[How To Test](/testday/mitaka/milestone3#how-to-test) |   |   |  | 
-| |  | RHEL 7.2 |    |[How To Test](/testday/mitaka/milestone3#how-to-test) |   |   |  | 
-| 3,node  -ML2-OVS- GRE   |  | CentOS 7.2 |    |[How To Test](/testday/mitaka/milestone3#how-to-test) |   |   |  | 
-| |  | RHEL 7.2 |    |[How To Test](/testday/mitaka/milestone3#how-to-test) |   |   |  | 
-| 3,node  -ML2-OVS- VLAN  |  | CentOS 7.2 |    |[How To Test](/testday/mitaka/milestone3#how-to-test) |   |   |  | 
-| |  | RHEL 7.2 |    |[How To Test](/testday/mitaka/milestone3#how-to-test) |   |   |  | 
+| Distributed -IPv6-Deployment- Sanity | Mitaka |  CentOS 7.2 |  |[How To Test](/testday/mitaka/milestone3#how-to-test) |  |   |  | 
+|                                      |Mitaka | RHEL 7.2   |  | [How To Test](/testday/mitaka/milestone3#how-to-test) |  |   |  |
+| Distributed -ML2- OVS-VXLAN –  LbaaS |Mitaka | CentOS 7.2 |  | [How To Test](/testday/mitaka/milestone3#how-to-test) |  |   |  | 
+|                                      |Mitaka | RHEL 7.2 |  | [How To Test](/testday/mitaka/milestone3#how-to-test) |  |   |  | 
+| Distributed -ML2- OVS-VXLAN-VRRP     |Mitaka | CentOS 7.2 |  | [How To Test](/testday/mitaka/milestone3#how-to-test) |  |   |  | 
+| |Mitaka | RHEL7.2 | | [How To Test](/testday/mitaka/milestone3#how-to-test) |  |   | | 
+| Distributed -ML2-OVS- VXLAN-IPv6 – VPNaaS |Mitaka | CentOS 7.2 |  | [How To Test](/testday/mitaka/milestone3#how-to-test) |  |  |  | 
+| |Mitaka | RHEL7.2 |  | [How To Test](/testday/mitaka/milestone3#how-to-test) | |  |  | 
+| Distributed -ML2-OVS- VXLAN Security Groups |Mitaka | CentOS 7.2 |  | [How To Test](/testday/mitaka/milestone3#how-to-test) |  |   |  | 
+| |Mitaka | RHEL7.2 | | [How To Test](/testday/mitaka/milestone3#how-to-test) |zgreenbe  |   | | 
+| Distributed -ML2-OVS- VXLAN DVR |Mitaka | RHEL 7.2 | |[How To Test](/testday/mitaka/milestone3#how-to-test) | |   |  | 
+|  |Mitaka | CentOS 7.2 | | [How To Test](/testday/mitaka/milestone3#how-to-test) |   |  |  | 
+| 3,node  -ML2-OVS- VXLAN |Mitaka  | CentOS 7.2 |    |[How To Test](/testday/mitaka/milestone3#how-to-test) |   |   |  | 
+| | Mitaka | RHEL 7.2 |    |[How To Test](/testday/mitaka/milestone3#how-to-test) |   |   |  | 
+| 3,node  -ML2-OVS- GRE   | Mitaka | CentOS 7.2 |    |[How To Test](/testday/mitaka/milestone3#how-to-test) |   |   |  | 
+| | Mitaka | RHEL 7.2 |    |[How To Test](/testday/mitaka/milestone3#how-to-test) |   |   |  | 
+| 3,node  -ML2-OVS- VLAN  | Mitaka | CentOS 7.2 |    |[How To Test](/testday/mitaka/milestone3#how-to-test) |   |   |  | 
+| | Mitaka | RHEL 7.2 |    |[How To Test](/testday/mitaka/milestone3#how-to-test) |   |   |  | 
 
 ## TripleO
 
@@ -69,7 +69,7 @@ Please make sure to use the steps described in the [How To Test](/testday/mitaka
 | HA | Mitaka | CentOS 7.2 | | [Install Guide](https://www.rdoproject.org/tripleo/) | | | | 
 | | Mitaka | RHEL 7.2 | | [Install Guide](https://www.rdoproject.org/tripleo/) | | | | 
 | | Liberty | CentOS 7.2 | | [Install Guide](https://www.rdoproject.org/tripleo/) | | | | 
-| | Liberty | CentOS 7.2 | | [Install Guide](https://www.rdoproject.org/tripleo/) | | | | 
+| | Liberty | RHEL 7.2 | | [Install Guide](https://www.rdoproject.org/tripleo/) | | | | 
 
 ## Packstack Based Installation (Storage Components)
 
