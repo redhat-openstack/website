@@ -63,7 +63,7 @@ Please make sure to use the steps described in the [How To Test](/testday/mitaka
 | Config Name | Release | BaseOS | Status | HOWTO | Who | Date | BZ/LP | Notes Page
 |-------------|---------|--------|--------|-------|-----|------|-------|-----------
 | Minimal | Mitaka | CentOS 7.2 | | [Install Guide](https://www.rdoproject.org/tripleo/) | | | | 
-| | Mitaka | RHEL 7.2 | | [Install Guide](https://www.rdoproject.org/tripleo/) | | | | 
+| | Mitaka | RHEL 7.2 | <span style="background:#00ff00">Good</span> | [Install Guide](https://www.rdoproject.org/tripleo/) | rwsu | 2016-03-11 |  | [Notes](https://etherpad.openstack.org/p/rdo-test-days-mitaka-m3-rwsu)
 | | Liberty | CentOS 7.2 | | [Install Guide](https://www.rdoproject.org/tripleo/) | | | | 
 | | Liberty | RHEL 7.2 | | [Install Guide](https://www.rdoproject.org/tripleo/) | | | | 
 | HA | Mitaka | CentOS 7.2 | <span style="background:#00ff00">Good</span> | [Install Guide](https://www.rdoproject.org/tripleo/) | dtantsur | 2016-03-11 | | [Notes](https://etherpad.openstack.org/p/rdo-test-days-mitaka-m3-dtantsur)
