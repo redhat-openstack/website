@@ -34,6 +34,11 @@ The overcloud is the main production cloud deployed to baremetal or virtual mach
 ### Heat
 
 Some good documentation on the main OpenStack wiki [here](https://wiki.openstack.org/wiki/Heat/TroubleShooting)
+A good Red Hat article on debugging the overcloud [here](https://access.redhat.com/solutions/1982603)
+
+#### Tips
+
+Interface naming: Try using the specific interface names in templates (e.g. eno1, enps01) rather than the default nic1, nic2 etc. Some hardware ships with built-in usb ethernet devices which tripleo currently sees as an active device.
 
 ##### ipmitool
 
