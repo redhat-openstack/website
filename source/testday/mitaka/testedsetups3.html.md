@@ -33,12 +33,12 @@ Here's how you might fill out an entry once you've tested it. Mark a given test 
 
 ## Packstack Based Installation (Neutron Networking)
 
-Please make sure to use the steps described in the [How To Test](/testday/mitaka/milestone2#how-to-test)  when installing the base RDO system. Do not go through the Quickstart steps unmodified which will instead give you an RDO kilo deployment. 
+Please make sure to use the steps described in the [How To Test](/testday/mitaka/milestone3#how-to-test)  when installing the base RDO system. Do not go through the Quickstart steps unmodified which will instead give you an RDO Liberty deployment. 
 
 | Config Name | Release | BaseOS | Status | HOWTO | Who | Date | BZ/LP | Notes Page
 |----------------------------------------------------------------|------------------|-----------|----------------------------------------------|-----------------------------------------------------|--------|------------|--------------------------------------------------------------------|------------|
-| All-in-One - Sanity |  | CentOS 7 | <span style="background:#00ff00">Good</span>  | [How To Test](/testday/mitaka/milestone2#how-to-test) | |    |    | 
-|                     | Mitaka | RHEL7.2  | <span style="background:#00ff00">Good</span>  | [How To Test](/testday/mitaka/milestone2#how-to-test) | leanderthal | 2016-03-10 | None | 
+| All-in-One - Sanity |  | CentOS 7 | <span style="background:#00ff00">Good</span>  | [How To Test](/testday/mitaka/milestone3#how-to-test) | |    |    | 
+|                     | Mitaka | RHEL7.2  | <span style="background:#00ff00">Good</span>  | [How To Test](/testday/mitaka/milestone3#how-to-test) | leanderthal | 2016-03-10 | None | None 
 | Distributed -IPv6-Deployment- Sanity |  |  CentOS 7 |  | [QuickStart](/Quickstart) |  |   |  | 
 |                                      |  | RHEL7.1   |  | [QuickStart](/Quickstart) |  |   |  |
 | Distributed -ML2- OVS-VXLAN –  LbaaS | | CentOS 7.1 |  | [QuickStart](/Quickstart) |  |   |  | 
@@ -59,14 +59,14 @@ Please make sure to use the steps described in the [How To Test](/testday/mitaka
 
 | Config Name | Release | BaseOS | Status | HOWTO | Who | Date | BZ/LP | Notes Page
 |-------------|---------|--------|--------|-------|-----|------|-------|-----------
-| Minimal | Mitaka | CentOS 7 | | [Install Guide](https://www.rdoproject.org/rdo-manager/) | | | | 
-| | Liberty | CentOS 7 | | [Install Guide](https://www.rdoproject.org/rdo-manager/) | | | | 
-| HA | Mitaka | CentOS 7 | | [Install Guide](https://www.rdoproject.org/rdo-manager/) | | | | 
-| | Liberty | CentOS 7 | | [Install Guide](https://www.rdoproject.org/rdo-manager/) | | | | 
+| Minimal | Mitaka | CentOS 7 | | [Install Guide](https://www.rdoproject.org/tripleo/) | | | | 
+| | Liberty | CentOS 7 | | [Install Guide](https://www.rdoproject.org/tripleo/) | | | | 
+| HA | Mitaka | CentOS 7 | | [Install Guide](https://www.rdoproject.org/tripleo/) | | | | 
+| | Liberty | CentOS 7 | | [Install Guide](https://www.rdoproject.org/tripleo/) | | | | 
 
 ## Packstack Based Installation (Storage Components)
 
-Please see [Docs - Storage](/documentation/storage) for configuration guides as well as suggestions on what could be tested for both Cinder and Glance and make sure to use the steps described in the [How To Test](testday/mitaka/milestone2#how-to-test) page when installing the base RDO system. '''Do not''' go through the Quickstart steps unmodified which will instead give you an RDO Liberty deployment.
+Please see [Docs - Storage](/documentation/storage) for configuration guides as well as suggestions on what could be tested for both Cinder and Glance and make sure to use the steps described in the [How To Test](testday/mitaka/milestone3#how-to-test) page when installing the base RDO system. '''Do not''' go through the Quickstart steps unmodified which will instead give you an RDO Liberty deployment.
 
 | Config Name | Release | BaseOS | Status | HOWTO | Who | Date | BZ/LP | Notes Page
 |----------------------------------------------------------------|------------------|-----------|----------------------------------------------|-----------------------------------------------------|--------|------------|--------------------------------------------------------------------|------------|
@@ -98,8 +98,8 @@ Various components which don't fit the large test efforts above.
 |----------------------------------------------------------------|------------------|-----------|----------------------------------------------|-----------------------------------------------------|--------|------------|--------------------------------------------------------------------|------------|
 | Ceilometer: All-in-One w/ Neutron Networking | RDO Mitaka | RHEL 7.1 |    |    |    |    |   |     
 | Ceilometer: All-in-One w/ Neutron Networking, Heat | RDO Mitaka | CentOS 7.1 | || | || 
-| Nova Compute: 2 Distributed Compute nodes  | RDO Mitaka | RHEL 7.1 | |[How To Test](/testday/mitaka/milestone2#how-to-test)| | || 
-| Nova Compute: 2 Distributed Compute nodes  | RDO Mitaka | CentOS 7.1 | |[How To Test](/testday/mitaka/milestone2#how-to-test)| | || 
+| Nova Compute: 2 Distributed Compute nodes  | RDO Mitaka | RHEL 7.1 | |[How To Test](/testday/mitaka/milestone3#how-to-test)| | || 
+| Nova Compute: 2 Distributed Compute nodes  | RDO Mitaka | CentOS 7.1 | |[How To Test](/testday/mitaka/milestone3#how-to-test)| | || 
 
 
 ## Core Tests
