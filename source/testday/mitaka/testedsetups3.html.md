@@ -101,8 +101,6 @@ Please see [Docs - Storage](/documentation/storage) for configuration guides as 
 | | Mitaka | RHEL 7.2 |  |[QuickStart](/Quickstart) |   |    |  |
 | Glance=nfs, Cinder=netapp_iscsi | Mitaka | CentOS 7.2 | | [QuickStart](/Quickstart) |  |    |   |
 | | Mitaka | RHEL 7.2 | |[QuickStart](/Quickstart) |  |    |   |
-| Swift | Mitaka | RHEL 7.2 | | [QuickStart](/Quickstart) |   |   |  |
-|  | Mitaka | CentOS 7.2 | | [QuickStart](/Quickstart) | |   |  |
 
 ## Packstack Based Installation (Misc Components)
 
@@ -124,14 +122,10 @@ Various components which don't fit the large test efforts above.
 
 | Config Name | Release | BaseOS | Status | HOWTO | Who | Date | BZ/LP | Notes Page
 |----------------------------------------------------------------|------------------|-----------|----------------------------------------------|-----------------------------------------------------|--------|------------|--------------------------------------------------------------------|------------|
-|All-in-one Keystone tests | Mitaka | CentOS 7.2 |   | [How To Test](/testday/mitaka/milestone3#how-to-test)  |   |  |  | 
-| | Mitaka | RHEL 7.2 |   | [How To Test](/testday/mitaka/milestone3#how-to-test) |  |    | | | 
 | Distributed Horizon | Mitaka | RHEL 7.2 |   | [How To Test](/testday/mitaka/milestone3#how-to-test)  |     |  |   | 
 | | Mitaka | CentOS 7.2 | |[How To Test](/testday/mitaka/milestone3#how-to-test) | | | | | 
 | Heat tests | Mitaka | RHEL 7.2 |   |[How To Test](/testday/mitaka/milestone3#how-to-test) |    |  | Packstack + environment creation sanity |
 | | Mitaka | CentOS 7.2 | |[How To Test](/testday/mitaka/milestone3#how-to-test) | | | | |-
-| All-in-one Nova tests | Mitaka | RHEL 7.2 |  |[How To Test](/testday/mitaka/milestone3#how-to-test)  |   |  | Packstack + nova sanity |
-| | Mitaka | Centos 7.2 |   |[How To Test](/testday/mitaka/milestone3#how-to-test)  |    |  |  |
 | 2.node Nova tests | Mitaka | RHEL 7.2 | |[How To Test](/testday/mitaka/milestone3#how-to-test) |   | | Packstack + nova live migration (block / shared storage) |
 |  | Mitaka | Centos 7.2 | | [How To Test](/testday/mitaka/milestone3#how-to-test) |     |  |  | 
 
