@@ -38,7 +38,7 @@ Please make sure to use the steps described in the [How To Test](/testday/mitaka
 | Config Name | Release | BaseOS | Status | HOWTO | Who | Date | BZ/LP | Notes Page
 |----------------------------------------------------------------|------------------|-----------|----------------------------------------------|-----------------------------------------------------|--------|------------|--------------------------------------------------------------------|------------|
 | All-in-One - Sanity |  | CentOS 7 | <span style="background:#00ff00">Good</span>  | [How To Test](/testday/mitaka/milestone3#how-to-test) | |    |    | 
-|                     | Mitaka | RHEL7.2  | <span style="background:#00ff00">Good</span>  | [How To Test](/testday/mitaka/milestone3#how-to-test) | leanderthal | 2016-03-10 | None | None 
+|                     | Mitaka | RHEL7.2  | <span style="background:#00ff00">Good</span>  | [How To Test](/testday/mitaka/milestone3#how-to-test) | leanderthal | 2016-03-10 | None | [Notes](http://groningenrain.nl/all-your-repos-are-belong-to-us/) 
 | Distributed -IPv6-Deployment- Sanity |  |  CentOS 7 |  | [QuickStart](/Quickstart) |  |   |  | 
 |                                      |  | RHEL7.1   |  | [QuickStart](/Quickstart) |  |   |  |
 | Distributed -ML2- OVS-VXLAN –  LbaaS | | CentOS 7.1 |  | [QuickStart](/Quickstart) |  |   |  | 
@@ -86,7 +86,6 @@ Please see [Docs - Storage](/documentation/storage) for configuration guides as 
 | All-in-One | Glance=nfs, Cinder=netapp_iscsi|  RHEL7.1 | | [QuickStart](/Quickstart) |  |    |   | None
 | All-in-One | Glance=lvm, Cinder=netapp_nfs|  RHEL7.1 |  | [QuickStart](/Quickstart) |   |    | None | None
 | All-in-One | swift|  RHEL7.1 | | [QuickStart](/Quickstart) |   |   | None | None
-| All-in-One | Glance=lvm, Cinder=lvm, Manila=Generic | Fedora 22 | | [QuickStart](/Quickstart) | dustins/dschoenb | | | None
 
 ## Packstack Based Installation (Misc Components)
 
@@ -109,30 +108,31 @@ Various components which don't fit the large test efforts above.
 | Config Name | Release | BaseOS | Status | HOWTO | Who | Date | BZ/LP | Notes Page
 |----------------------------------------------------------------|------------------|-----------|----------------------------------------------|-----------------------------------------------------|--------|------------|--------------------------------------------------------------------|------------|
 |All-in-one Keystone tests | RDO Mitaka | CentOS 7.1 |   |   |   |  |  | 
-|All-in-one Keystone tests | RDO Mitaka | RHEL 7.1 |   |   |  |    | | | 
-|All-in-one Keystone tests | RDO Mitaka | Fedora 21 |  |  |    | |  | 
+| | RDO Mitaka | RHEL 7.1 |   |   |  |    | | | 
 |All-in-one installation tests | RDO Mitaka | RHEL 7.1 |   |   |   |   | |    |
-| Distributed Horizon | RDO Mitaka | RHEL7.1 |   |   |     |  |   | 
-| Heat tests | RDO Mitaka | RHEL7.1|   | |    |  | Packstack + environment creation + sanity |
-| All-in-one Nova tests | RDO Mitaka | RHEL7.1 |  |  |   |  | Packstack + nova sanity |
-| All-in-one Nova tests | RDO Mitaka | Centos7.1 |   |  |    |  |  |
-| RDO Mitaka | Fedora 21 |   |  |   |  |  | |
-| 2.node Nova tests | RDO Mitaka | RHEL7.1 | | |   | | Packstack + nova live migration (block / shared storage) |
-|  | RDO Mitaka | Fedora 21 |   |  |    |  |  |
-|  | RDO Mitaka | Centos7.1 | |  |     |  |  | 
+| | RDO Mitaka | CentOS 7.1 | | | | | | | 
+| Distributed Horizon | RDO Mitaka | RHEL 7.1 |   |   |     |  |   | 
+| | RDO Mitaka | CentOS 7.1 | | | | | | | 
+| Heat tests | RDO Mitaka | RHEL 7.1|   | |    |  | Packstack + environment creation + sanity |
+| | RDO Mitaka | CentOS 7.1 | | | | | | |-
+| All-in-one Nova tests | RDO Mitaka | RHEL 7.1 |  |  |   |  | Packstack + nova sanity |
+| | RDO Mitaka | Centos 7.1 |   |  |    |  |  |
+| 2.node Nova tests | RDO Mitaka | RHEL 7.1 | | |   | | Packstack + nova live migration (block / shared storage) |
+|  | RDO Mitaka | Centos 7.1 | |  |     |  |  | 
 
 
 ## Manual configuration of OpenStack
 
 | Config Name | Release | BaseOS | Status | HOWTO | Who | Date | BZ/LP | Notes Page
 |----------------------------------------------------------------|------------------|-----------|----------------------------------------------|-----------------------------------------------------|--------|------------|--------------------------------------------------------------------|------------|
-|2,node+minimal OpenStack+Neutron+OVS+GRE |RDO Mitaka | Fedora 21 |  |  |  |  | None | None
+|2,node+minimal OpenStack+Neutron+OVS+GRE |RDO Mitaka | RHEL 7.1 |  |  |  |  | None | None
 |2,node+minimal OpenStack+Neutron+OVS+GRE |RDO Mitaka | CentOS 7.1 |  |   |  |  | None | None
 
 ## Post Installation Tests
 
 | Config Name | Release | BaseOS | Status | HOWTO | Who | Date | BZ/LP | Notes Page
 |----------------------------------------------------------------|------------------|-----------|----------------------------------------------|-----------------------------------------------------|--------|------------|--------------------------------------------------------------------|------------|
-| Post Installation | RDO Mitaka |  CentOS 7.1 |  | [[Post Installation Tests]]|  |  | None | 
+| Post Installation | RDO Mitaka |  CentOS 7.1 |  | |  |  | None | 
+| | RDO Mitaka | RHEL 7.1 | | | | | | 
 
 
