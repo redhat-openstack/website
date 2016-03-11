@@ -75,7 +75,7 @@ Please note: 192.168.122.1/24 is the router and CIDR we defined in /etc/sysconfi
     # neutron subnet-create --name public_subnet --enable_dhcp=False --allocation-pool=start=192.168.122.10,end=192.168.122.20 \
                             --gateway=192.168.122.1 external_network 192.168.122.0/24
 
-Get a cirrus image, not provisioned without demo provisioning:
+Get a cirros image, not provisioned without demo provisioning:
 
     curl http://download.cirros-cloud.net/0.3.4/cirros-0.3.4-x86_64-disk.img | glance \
              image-create --name='cirros image' --visibility=public --container-format=bare --disk-format=qcow2
