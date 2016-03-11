@@ -147,7 +147,7 @@ Various components which don't fit the large test efforts above.
 
 | Config Name | Release | BaseOS | Status | HOWTO | Who | Date | BZ/LP | Notes Page
 |----------------------------------------------------------------|------------------|-----------|----------------------------------------------|-----------------------------------------------------|--------|------------|--------------------------------------------------------------------|------------|
-| Post Installation | Mitaka |  CentOS 7.2 |  |[How To Test](/testday/mitaka/milestone3#how-to-test) |  |  |  | 
-| | Mitaka | RHEL 7.2 | |[How To Test](/testday/mitaka/milestone3#how-to-test) | | | | 
+| Post Installation | Mitaka |  CentOS 7.2 |  |[Post Deployment Test](docs.openstack.org/developer/tripleo-docs/basic_deployment/basic_deployment_cli.html#post-deployment) |  |  |  | 
+| | Mitaka | RHEL 7.2 | |[Post Deployment Test](docs.openstack.org/developer/tripleo-docs/basic_deployment/basic_deployment_cli.html#post-deployment)  | | | | 
 
 
