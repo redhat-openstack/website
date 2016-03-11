@@ -38,10 +38,7 @@ Please make sure to use the steps described in the [How To Test](/testday/mitaka
 | Config Name | Release | BaseOS | Status | HOWTO | Who | Date | BZ/LP | Notes Page
 |----------------------------------------------------------------|------------------|-----------|----------------------------------------------|-----------------------------------------------------|--------|------------|--------------------------------------------------------------------|------------|
 | All-in-One - Sanity |  | CentOS 7 | <span style="background:#00ff00">Good</span>  | [How To Test](/testday/mitaka/milestone2#how-to-test) | |    |    | 
-|                     | Mitaka | RHEL7.2  | <span
-style="background:#00ff00">Good</span>  | [How To
-Test](/testday/mitaka/milestone2#how-to-test) | leanderthal | 2016-03-10 |
-None | 
+|                     | Mitaka | RHEL7.2  | <span style="background:#00ff00">Good</span>  | [How To Test](/testday/mitaka/milestone2#how-to-test) | leanderthal | 2016-03-10 | None | 
 | Distributed -IPv6-Deployment- Sanity |  |  CentOS 7 |  | [QuickStart](/Quickstart) |  |   |  | 
 |                                      |  | RHEL7.1   |  | [QuickStart](/Quickstart) |  |   |  |
 | Distributed -ML2- OVS-VXLAN –  LbaaS | | CentOS 7.1 |  | [QuickStart](/Quickstart) |  |   |  | 
