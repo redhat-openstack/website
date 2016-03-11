@@ -30,14 +30,14 @@ The `quickstart.sh` script will install this repo along
 with Ansible in a virtual environment and run the `quickstart`
 playbook. 
 
-> **Note:** The `quickstart` playbook will delete the ``stack``
-> user on the virthost and recreate it.::
->    ```
->    export VIRTHOST='my_test_machine.example.com'
->
->    wget https://raw.githubusercontent.com/redhat-openstack/tripleo-quickstart/master/quickstart.sh
->    bash quickstart.sh $VIRTHOST
->    ```
+**Note:** The `quickstart` playbook will delete the ``stack``
+user on the virthost and recreate it.::
+
+    export VIRTHOST='my_test_machine.example.com'
+
+    wget https://raw.githubusercontent.com/redhat-openstack/tripleo-quickstart/master/quickstart.sh
+    bash quickstart.sh $VIRTHOST
+
 
 This script will output instructions at the end to access the
 deployed undercloud. If a release name is not given, ``mitaka``
