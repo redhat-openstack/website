@@ -74,27 +74,38 @@ Please note: 192.168.122.1/24 is the router and CIDR we defined in /etc/sysconfi
 
     # neutron subnet-create --name public_subnet --enable_dhcp=False --allocation-pool=start=192.168.122.10,end=192.168.122.20 \
                             --gateway=192.168.122.1 external_network 192.168.122.0/24
-    # neutron router-create router1
-    # neutron router-gateway-set router1 external_network
 
-Now create a private network and subnet, since that provisioning has been disabled:
-
-    # neutron net-create private_network
-    # neutron subnet-create --name private_subnet private_network 192.168.100.0/24
-
-And connect this private network to the public network via the router, which will provide the floating IP addresses.
-
-    # neutron router-interface-add router1 private_subnet
-
-Get a cirrus image, not provisioned without demo provisioning:
+Get a cirros image, not provisioned without demo provisioning:
 
     curl http://download.cirros-cloud.net/0.3.4/cirros-0.3.4-x86_64-disk.img | glance \
              image-create --name='cirros image' --visibility=public --container-format=bare --disk-format=qcow2
 
-Finally, for your user, you need to create a network and connect that network through a router to your shared and external network. Since you haven't created a user yet:
+That's all you need to do from admin perspective to allow your users to connect their private networks to the outside world. Now let's switch to the user.
+
+Since you haven't created a user yet:
 
     openstack project create --enable internal
     openstack user create --project internal --password foo --email bar@corp.com --enable internal
+
+Now, let's switch to the newly created user:
+
+    # export OS_USERNAME=internal
+    # export OS_TENANT_NAME=internal
+    # export OS_PASSWORD=foo
+
+Then create a router and set its gateway using the external network created by the admin in one of previous steps: 
+
+    # neutron router-create router1
+    # neutron router-gateway-set router1 external_network
+
+Now create a private network and a subnet in it, since demo provisioning has been disabled:
+
+    # neutron net-create private_network
+    # neutron subnet-create --name private_subnet private_network 192.168.100.0/24
+
+Finally, connect your new private network to the public network through the router, which will provide floating IP addresses.
+
+    # neutron router-interface-add router1 private_subnet
 
 Easiest way to the network and to launch instances is via horizon, which was set up by packstack.
 
