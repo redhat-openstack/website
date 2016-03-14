@@ -39,7 +39,7 @@ Please make sure to use the steps described in the [How To Test](/testday/mitaka
 |----------------------------------------------------------------|------------------|-----------|----------------------------------------------|-----------------------------------------------------|--------|------------|--------------------------------------------------------------------|------------|
 | All-in-One - Sanity | Mitaka  | CentOS 7.2 | <span style="background:#00ff00">Good</span>  | [How To Test](/testday/mitaka/milestone3#how-to-test) | chandankumar | 2016-03-11 | None | [Notes](https://gist.github.com/chkumar246/e849a8e9b21d55eb2ee6) 
 |                     | Mitaka | RHEL 7.2  | <span style="background:#00ff00">Good</span>  | [How To Test](/testday/mitaka/milestone3#how-to-test) | leanderthal | 2016-03-10 | None | [Notes](http://groningenrain.nl/all-your-repos-are-belong-to-us/) 
-| Distributed -IPv6-Deployment- Sanity | Mitaka |  CentOS 7.2 | <span style="background:#ff9900">Partialy good</span> | [How To Test](/testday/mitaka/milestone3#how-to-test) | mmagr | 2016-03-10 | In notes | [Notes](https://etherpad.openstack.org/p/rdo-test-days-mitaka-m3-mmagr) | 
+| Distributed -IPv6-Deployment- Sanity | Mitaka |  CentOS 7.2 |<span style="background:#ff0000">FAIL</span> | [How To Test](/testday/mitaka/milestone3#how-to-test) | mmagr | 2016-03-10 | In notes | [Notes](https://etherpad.openstack.org/p/rdo-test-days-mitaka-m3-mmagr) | 
 |                                      |Mitaka | RHEL 7.2   |  | [How To Test](/testday/mitaka/milestone3#how-to-test) |  |   |  |
 | Distributed -ML2- OVS-VXLAN –  LbaaS |Mitaka | CentOS 7.2 |  | [How To Test](/testday/mitaka/milestone3#how-to-test) |  |   |  | 
 |                                      |Mitaka | RHEL 7.2 |  | [How To Test](/testday/mitaka/milestone3#how-to-test) |  |   |  | 
@@ -63,10 +63,10 @@ Please make sure to use the steps described in the [How To Test](/testday/mitaka
 | Config Name | Release | BaseOS | Status | HOWTO | Who | Date | BZ/LP | Notes Page
 |-------------|---------|--------|--------|-------|-----|------|-------|-----------
 | Minimal | Mitaka | CentOS 7.2 | | [Install Guide](https://www.rdoproject.org/tripleo/) | | | | 
-| | Mitaka | RHEL 7.2 | <span style="background:#00ff00">Good</span> | [Install Guide](https://www.rdoproject.org/tripleo/) | rwsu | 2016-03-11 |  | [Notes](https://etherpad.openstack.org/p/rdo-test-days-mitaka-m3-rwsu)
+| | Mitaka | RHEL 7.2 | <span style="background:#00ff00">Good</span> |[Install Guide](https://www.rdoproject.org/tripleo/) | rwsu | 2016-03-11 |None  | [Notes](https://etherpad.openstack.org/p/rdo-test-days-mitaka-m3-rwsu)
 | | Liberty | CentOS 7.2 | | [Install Guide](https://www.rdoproject.org/tripleo/) | | | | 
 | | Liberty | RHEL 7.2 | | [Install Guide](https://www.rdoproject.org/tripleo/) | | | | 
-| HA | Mitaka | CentOS 7.2 | <span style="background:#00ff00">Good</span> | [Install Guide](https://www.rdoproject.org/tripleo/) | dtantsur | 2016-03-11 | | [Notes](https://etherpad.openstack.org/p/rdo-test-days-mitaka-m3-dtantsur)
+| HA | Mitaka | CentOS 7.2 | <span style="background:#00ff00">Good</span> |[Install Guide](https://www.rdoproject.org/tripleo/) | dtantsur | 2016-03-11|None | [Notes](https://etherpad.openstack.org/p/rdo-test-days-mitaka-m3-dtantsur)
 | | Mitaka | RHEL 7.2 | | [Install Guide](https://www.rdoproject.org/tripleo/) | | | | 
 | | Liberty | CentOS 7.2 | | [Install Guide](https://www.rdoproject.org/tripleo/) | | | | 
 | | Liberty | RHEL 7.2 | | [Install Guide](https://www.rdoproject.org/tripleo/) | | | | 
@@ -77,23 +77,23 @@ Please see [Docs - Storage](/documentation/storage) for configuration guides as 
 
 | Config Name | Release | BaseOS | Status | HOWTO | Who | Date | BZ/LP | Notes Page
 |----------------------------------------------------------------|------------------|-----------|----------------------------------------------|-----------------------------------------------------|--------|------------|--------------------------------------------------------------------|------------|
-| Glance=localfs, Cinder=lvm | Mitaka | CentOS 7.2 | | [QuickStart](/Quickstart) | |   |   |-
+| Glance=localfs, Cinder=lvm | Mitaka | CentOS 7.2 | | [QuickStart](/Quickstart) | |   |   |
 | | Mitaka | RHEL 7.2 | | [QuickStart](/Quickstart) | |   |   | 
 | Glance=localfs, Cinder=glusterfs | Mitaka | CentOS 7.2 | | [QuickStart](/Quickstart) | |  | | 
-| | Mitaka | RHEL 7.2 | | [QuickStart](/Quickstart) | |  | |-
+| | Mitaka | RHEL 7.2 | | [QuickStart](/Quickstart) | |  | |
 | Glance=localfs, Cinder=windows_iscsi | Mitaka | CentOS 7.2 |  | [QuickStart](/Quickstart) |  |  |  |
 | | Mitaka | RHEL 7.2 |  | [QuickStart](/Quickstart) |  |  |  |
 | Glance=swift, Cinder=thinlvm | Mitaka | CentOS 7.2 |  | [QuickStart](/Quickstart) | | | | 
-| | Mitaka | RHEL 7.2 |  | [QuickStart](/Quickstart) | | | |-
+| | Mitaka | RHEL 7.2 |  | [QuickStart](/Quickstart) | | | |
 | Glance=s3(amazon s3), Cinder=nfs | Mitaka | CentOS 7.2 |  | [QuickStart](/Quickstart) | |    | | 
 | | Mitaka | RHEL 7.2 |  | [QuickStart](/Quickstart) |  |    | |
-| Glance=s3(swift s3), Cinder=nfs | Mitaka | CentOS 7.2 |  | [QuickStart](/Quickstart) | |    | |-
+| Glance=s3(swift s3), Cinder=nfs | Mitaka | CentOS 7.2 |  | [QuickStart](/Quickstart) | |    | |
 | | Mitaka | RHEL 7.2 |  | [QuickStart](/Quickstart) |  |    | |
 | Glance=ceph, Cinder=ceph | Mitaka | CentOS 7.2 |  | [QuickStart](/Quickstart) |  |    |  |
 | | Mitaka | RHEL 7.2 |  | [QuickStart](/Quickstart) |  |    |  |
 | Glance=XtreamIO, Cinder=XtreamIO | Mitaka | CentOS 7.2 |  | [QuickStart](/Quickstart) |  |   |  |
 | | Mitaka | RHEL 7.2 |  |[QuickStart](/Quickstart) |  |   |  |
-| Glance=lvm, Cinder=glusterfs | Mitaka |  CentOS 7.2 |  | [QuickStart](/Quickstart) |    |   |  |-
+| Glance=lvm, Cinder=glusterfs | Mitaka |  CentOS 7.2 |  | [QuickStart](/Quickstart) |    |   |  |
 | | Mitaka |  RHEL 7.2 |  | [QuickStart](/Quickstart) |    |   |  | 
 | Glance=lvm, Cinder=netapp_iscsi | Mitaka |CentOS 7.2 |  |[QuickStart](/Quickstart) |  |    | |
 | | Mitaka | RHEL 7.2 |  | [QuickStart](/Quickstart) |  |    | |
@@ -125,7 +125,7 @@ Various components which don't fit the large test efforts above.
 | Distributed Horizon | Mitaka | RHEL 7.2 |   | [How To Test](/testday/mitaka/milestone3#how-to-test)  |     |  |   | 
 | | Mitaka | CentOS 7.2 | |[How To Test](/testday/mitaka/milestone3#how-to-test) | | | | | 
 | Heat tests | Mitaka | RHEL 7.2 |   |[How To Test](/testday/mitaka/milestone3#how-to-test) |    |  | Packstack + environment creation sanity |
-| | Mitaka | CentOS 7.2 | |[How To Test](/testday/mitaka/milestone3#how-to-test) | | | | |-
+| | Mitaka | CentOS 7.2 | |[How To Test](/testday/mitaka/milestone3#how-to-test) | | | | |
 | 2.node Nova tests | Mitaka | RHEL 7.2 | |[How To Test](/testday/mitaka/milestone3#how-to-test) |   | | Packstack + nova live migration (block / shared storage) |
 |  | Mitaka | Centos 7.2 | | [How To Test](/testday/mitaka/milestone3#how-to-test) |     |  |  | 
 
