@@ -38,6 +38,7 @@ Please make sure to use the steps described in the [How To Test](/testday/mitaka
 | Config Name | Release | BaseOS | Status | HOWTO | Who | Date | BZ/LP | Notes Page
 |----------------------------------------------------------------|------------------|-----------|----------------------------------------------|-----------------------------------------------------|--------|------------|--------------------------------------------------------------------|------------|
 | All-in-One - Sanity | Mitaka  | CentOS 7.2 | <span style="background:#00ff00">Good</span>  | [How To Test](/testday/mitaka/milestone3#how-to-test) | chandankumar | 2016-03-11 | None | [Notes](https://gist.github.com/chkumar246/e849a8e9b21d55eb2ee6) 
+| All-in-One - Sanity | Mitaka  | CentOS 7.2 | <span style="background:#00ff00">Good</span>  | [How To Test](/testday/mitaka/milestone3#how-to-test) | fhubik | 2016-03-11 | In notes | Full tempest <br> 1477/~16 errors/~93 skipped <br> [Notes](https://etherpad.openstack.org/p/rdo-test-days-mitaka-m3-fhubik)
 |                     | Mitaka | RHEL 7.2  | <span style="background:#00ff00">Good</span>  | [How To Test](/testday/mitaka/milestone3#how-to-test) | leanderthal | 2016-03-10 | None | [Notes](http://groningenrain.nl/all-your-repos-are-belong-to-us/) 
 | Distributed -IPv6-Deployment- Sanity | Mitaka |  CentOS 7.2 |<span style="background:#ff0000">FAIL</span> | [How To Test](/testday/mitaka/milestone3#how-to-test) | mmagr | 2016-03-10 | In notes | [Notes](https://etherpad.openstack.org/p/rdo-test-days-mitaka-m3-mmagr) | 
 |                                      |Mitaka | RHEL 7.2   |  | [How To Test](/testday/mitaka/milestone3#how-to-test) |  |   |  |
@@ -64,9 +65,12 @@ Please make sure to use the steps described in the [How To Test](/testday/mitaka
 |-------------|---------|--------|--------|-------|-----|------|-------|-----------
 | Minimal | Mitaka | CentOS 7.2 | | [Install Guide](https://www.rdoproject.org/tripleo/) | | | | 
 | | Mitaka | RHEL 7.2 | <span style="background:#00ff00">Good</span> |[Install Guide](https://www.rdoproject.org/tripleo/) | rwsu | 2016-03-11 |None  | [Notes](https://etherpad.openstack.org/p/rdo-test-days-mitaka-m3-rwsu)
+| | Mitaka | RHEL 7.2 | <span style="background:#ff0000">Fail</span> |[Install Guide](https://www.rdoproject.org/tripleo/) | fhubik | 2016-03-11 |None  | Slow repos, download errors, missing pkgs <br> [Notes](https://etherpad.openstack.org/p/rdo-test-days-mitaka-m3-fhubik)
+| | Mitaka | CentOS 7.2 | <span style="background:#00ff00">Good</span> |[Install Guide](https://www.rdoproject.org/tripleo/) | fhubik | 2016-03-11 | in notes  | Full tempest 1429/~95 errors/~75 skipped <br> [Notes](https://etherpad.openstack.org/p/rdo-test-days-mitaka-m3-fhubik)
 | | Liberty | CentOS 7.2 | | [Install Guide](https://www.rdoproject.org/tripleo/) | | | | 
 | | Liberty | RHEL 7.2 | | [Install Guide](https://www.rdoproject.org/tripleo/) | | | | 
 | HA | Mitaka | CentOS 7.2 | <span style="background:#00ff00">Good</span> |[Install Guide](https://www.rdoproject.org/tripleo/) | dtantsur | 2016-03-11|None | [Notes](https://etherpad.openstack.org/p/rdo-test-days-mitaka-m3-dtantsur)
+| | Mitaka | CentOS 7.2 | <span style="background:#ff0000">Tempest <br> breaks <br> deployment!</span> |[Install Guide](https://www.rdoproject.org/tripleo/) | fhubik | 2016-03-11| in notes | Full tempest ~700/~250 errors/~50 skipped <br> Deployed OK, but tempest breaks HA in random point - makes depl. unusable! <br> [Notes](https://etherpad.openstack.org/p/rdo-test-days-mitaka-m3-fhubik)
 | | Mitaka | RHEL 7.2 | | [Install Guide](https://www.rdoproject.org/tripleo/) | | | | 
 | | Liberty | CentOS 7.2 | | [Install Guide](https://www.rdoproject.org/tripleo/) | | | | 
 | | Liberty | RHEL 7.2 | | [Install Guide](https://www.rdoproject.org/tripleo/) | | | | 
