@@ -9,7 +9,7 @@ wiki_revision_count: 141
 wiki_last_updated: 2015-06-30
 ---
 
-# RDO Quickstart
+# Packstack quickstart: Proof of concept for single node
 
 If you want to spin up a proof of concept cloud on one node, this is the
 place to be. You'll be able to [add more nodes](Adding_a_compute_node) to your OpenStack cloud later, if you choose.
