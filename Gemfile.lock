@@ -1,6 +1,5 @@
 GEM
   remote: https://rubygems.org/
-  remote: https://rails-assets.org/
   specs:
     activesupport (4.1.10)
       i18n (~> 0.6, >= 0.6.9)
@@ -159,14 +158,6 @@ GEM
       rack
     rack-test (0.6.3)
       rack (>= 1.0)
-    rails-assets-bootstrap-sortable (1.11.1)
-      rails-assets-moment (>= 2.3.1)
-    rails-assets-fullcalendar (2.4.0)
-      rails-assets-jquery (>= 1.7.1)
-      rails-assets-moment (>= 2.5.0)
-    rails-assets-jquery (1.11.3)
-    rails-assets-moment (2.10.2)
-    rails-assets-momentjs (2.10.6)
     rb-fsevent (0.9.4)
     rb-inotify (0.9.5)
       ffi (>= 0.5.0)
@@ -241,10 +232,6 @@ DEPENDENCIES
   open-uri-cached
   pry
   pry-stack_explorer
-  rails-assets-bootstrap-sortable
-  rails-assets-fullcalendar
-  rails-assets-jquery (~> 1)
-  rails-assets-momentjs
   ruby18_source_location
   stringex
   therubyracer

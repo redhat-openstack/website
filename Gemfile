@@ -1,7 +1,6 @@
 # If you have OpenSSL installed, we recommend updating
 # the following line to use "https"
 source 'https://rubygems.org'
-source 'https://rails-assets.org'
 
 gem "middleman", "~> 3.3.10"
 
@@ -53,11 +52,6 @@ gem "builder", "~> 3.0"
 # Better JSON lib
 gem "oj"
 
-# Lock jQuery to 1.x, for better IE support (6 - 8)
-# Fixes and features are backported from 2.x to 1.x; only diff is IE support.
-# see http://blog.jquery.com/2013/01/15/jquery-1-9-final-jquery-2-0-beta-migrate-final-released/
-gem 'rails-assets-jquery', '~> 1'
-
 # Friendly date library
 gem 'chronic'
 
@@ -94,8 +88,4 @@ gem 'font-awesome-middleman'
 # RSS/Atom parsing
 gem "feedjira"
 
-gem 'rails-assets-bootstrap-sortable'
-
-gem 'rails-assets-momentjs'
-gem 'rails-assets-fullcalendar'
 gem 'icalendar', '~> 1.5'

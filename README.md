@@ -7,8 +7,9 @@ as "bundler".
 ## Initial setup
 Clone this repository and run the `setup.sh` script located in the checked out repository directory.
 
-The script will initialize and update the git submodules, install system dependencies, and run a
-`bundle install`.
+The script will initialize and update the git submodules, install system dependencies, and run
+`bundle install` and `npm install`. All dependencies are installed into the 'vendor' directory,
+which can be safely removed.
 
 It is expected that you are on a YUM based system with `sudo` access.
 
@@ -38,6 +39,11 @@ cd website
 ## Customizing your site
 
 The site can be easily customized by editing `data/site.yml`.
+
+External assets are symlinked from the Node path (vendor/node_modules)
+to the 'app/assets/{javascripts,stylesheets}' directories. To add new
+materials you just need to 'npm install --save' a Node module and add
+a few *relative* symlinks.
 
 
 ## Adding a Post
