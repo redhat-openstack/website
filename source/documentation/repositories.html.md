@@ -28,16 +28,6 @@ If using RHEL, then RDO needs the `Optional`, `Extras`, and `RH Common` channels
 
 The `Optional` channel is not available for CentOS or Scientific Linux. The required packages are included in the main repositories for those distributions. `Extras` is enabled by default on CentOS7.
 
-**NOTE:** For CentOS, you need to use packages from the Cloud SIG repository available at <http://cbs.centos.org/repos/cloud7-testing/x86_64/os/Packages/>.
-
-### RHEL-Z
-
-If using RHEL, then `rhel-z` must be enabled. In CentOS or Scientific Linux, this is not necessary.
-
-The package used from the `rhel-z` channel is as follows:
-
-* `rubygems`
-
 ### RHEL-OSP
 
 The separate [Red Hat Enterprise Linux OpenStack Platform](http://www.redhat.com/en/technologies/linux-platforms/openstack-platform) product does **not** require the `Optional`, `Extras`, and `RH Common` channels enabled.
