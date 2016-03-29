@@ -22,7 +22,7 @@ There are two exceptions:
 
 ## Packages Review Process
 
-* All reviews **must** block the review tracker using the alias RDO-<release>-REVIEW.
+* All reviews **must** block the review tracker using the alias RDO-**release**-REVIEW.
 Announcing reviews on the RDO mailing list is encouraged to raise awareness within the
 community and speed up the process.
 
