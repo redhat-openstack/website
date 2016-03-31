@@ -22,6 +22,13 @@ immediately following our weekly IRC meeting.
 
 If you missed a hangout, and are watching the video, you can always ask followup questions on the #rdo IRC channel on Freenode, or on the [rdo-list mailing list](http://www.redhat.com/mailman/listinfo/rdo-list). RDO hangout videos are also available in the [RDO Hangout Playlist](https://www.youtube.com/watch?v=Pmq4FJlP0UE&list=PL27cQhFqK1QzpTJl6CAFabXB1mZAdN_fu).
 
+### TripleO Quickstart Demo - John Trownbridge
+
+*March 2016*
+
+<iframe width="630" src="//youtube.com/embed/4O8KvC66eeU" frameborder="0" align="center" allowfullscreen="true"> </iframe>
+
+
 ### Gnocci: Rebasing Ceilometer reporting for Kilo, By Eoghan Glynn
 
 *February 2015*
