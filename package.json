@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "bootstrap-sortable": "https://github.com/drvic10k/bootstrap-sortable/archive/2.0.0.tar.gz",
+    "fullcalendar": "^2.6.1",
+    "jquery": "^2.2.2",
+    "moment": "^2.12.0"
+  }
+}
