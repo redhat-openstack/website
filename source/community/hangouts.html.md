@@ -12,11 +12,8 @@ RDO conducts periodic Google Hangouts on a variety of OpenStack-related topics. 
 
 ## Upcoming Hangouts
 
-John Trownbridge will be doing a demo of [deploying OpenStack with
-TripleO](http://www.youtube.com/watch?v=4O8KvC66eeU) on March 9th at
-[16:00
-UTC](http://www.timeanddate.com/worldclock/fixedtime.html?iso=20160309T1600),
-immediately following our weekly IRC meeting.
+We don't have any hangouts scheduled right now, but check back in April
+for something.
 
 ## Past Hangouts
 
