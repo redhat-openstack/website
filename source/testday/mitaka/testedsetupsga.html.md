@@ -36,9 +36,9 @@ Please make sure to use the steps described in the [How To Test](/testday/mitaka
 
 | Config Name | Release | BaseOS | Status | HOWTO | Who | Date | BZ/LP | Notes Page
 |----------------------------------------------------------------|------------------|-----------|----------------------------------------------|-----------------------------------------------------|--------|------------|--------------------------------------------------------------------|------------|
-| All-in-One - Sanity | Mitaka  | CentOS 7.2 | <span style="background:#00ff00">Good</span>  | [How To Test](/testday/mitaka/milestone3#how-to-test) | | | None |  
-| All-in-One - Sanity | Mitaka  | CentOS 7.2 | <span style="background:#00ff00">Good</span>  | [How To Test](/testday/mitaka/milestone3#how-to-test) | | | In notes | Full tempest <br> 
-|                     | Mitaka | RHEL 7.2  | <span style="background:#00ff00">Good</span>  | [How To Test](/testday/mitaka/milestone3#how-to-test) | | | None | 
+| All-in-One - Sanity | Mitaka  | CentOS 7.2 |  | [How To Test](/testday/mitaka/milestone3#how-to-test) | | | None |  
+| All-in-One - Sanity | Mitaka  | CentOS 7.2 |  | [How To Test](/testday/mitaka/milestone3#how-to-test) | | | | 
+|                     | Mitaka | RHEL 7.2  |   | [How To Test](/testday/mitaka/milestone3#how-to-test) | | | None | 
 | Distributed -IPv6-Deployment- Sanity | Mitaka |  CentOS 7.2 | | [How To Test](/testday/mitaka/milestone3#how-to-test) | | | In notes | | 
 |                                      |Mitaka | RHEL 7.2   |  | [How To Test](/testday/mitaka/milestone3#how-to-test) |  |   |  |
 | Distributed -ML2- OVS-VXLAN –  LbaaS |Mitaka | CentOS 7.2 |  | [How To Test](/testday/mitaka/milestone3#how-to-test) |  |   |  | 
