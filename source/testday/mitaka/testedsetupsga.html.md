@@ -39,16 +39,16 @@ Please make sure to use the steps described in the [How To Test](/testday/mitaka
 | All-in-One - Sanity | Mitaka  | CentOS 7.2 | <span style="background:#00ff00">Good</span>  | [How To Test](/testday/mitaka/milestone3#how-to-test) | | | None |  
 | All-in-One - Sanity | Mitaka  | CentOS 7.2 | <span style="background:#00ff00">Good</span>  | [How To Test](/testday/mitaka/milestone3#how-to-test) | | | In notes | Full tempest <br> 
 |                     | Mitaka | RHEL 7.2  | <span style="background:#00ff00">Good</span>  | [How To Test](/testday/mitaka/milestone3#how-to-test) | | | None | 
-| Distributed -IPv6-Deployment- Sanity | Mitaka |  CentOS 7.2 |<span style="background:#ff0000">FAIL</span> | [How To Test](/testday/mitaka/milestone3#how-to-test) | | | In notes | | 
+| Distributed -IPv6-Deployment- Sanity | Mitaka |  CentOS 7.2 | | [How To Test](/testday/mitaka/milestone3#how-to-test) | | | In notes | | 
 |                                      |Mitaka | RHEL 7.2   |  | [How To Test](/testday/mitaka/milestone3#how-to-test) |  |   |  |
 | Distributed -ML2- OVS-VXLAN –  LbaaS |Mitaka | CentOS 7.2 |  | [How To Test](/testday/mitaka/milestone3#how-to-test) |  |   |  | 
-|                                      |Mitaka | RHEL 7.2 |  | [How To Test](/testday/mitaka/milestone3#how-to-test) |  |   |  | 
+|                                      |Mitaka | RHEL 7.2   |  | [How To Test](/testday/mitaka/milestone3#how-to-test) |  |   |  | 
 | Distributed -ML2- OVS-VXLAN-VRRP     |Mitaka | CentOS 7.2 |  | [How To Test](/testday/mitaka/milestone3#how-to-test) |  |   |  | 
 | |Mitaka | RHEL7.2 | | [How To Test](/testday/mitaka/milestone3#how-to-test) |  |   | | 
-| Distributed -ML2-OVS- VXLAN-IPv6 – VPNaaS |Mitaka | CentOS 7.2 |  | [How To Test](/testday/mitaka/milestone3#how-to-test) |  |  |  | 
+| Distributed -ML2-OVS- VXLAN-IPv6 – VPNaaS | Mitaka | CentOS 7.2 |  | [How To Test](/testday/mitaka/milestone3#how-to-test) |  |  |  | 
 | |Mitaka | RHEL7.2 |  | [How To Test](/testday/mitaka/milestone3#how-to-test) | |  |  | 
 | Distributed -ML2-OVS- VXLAN Security Groups |Mitaka | CentOS 7.2 |  | [How To Test](/testday/mitaka/milestone3#how-to-test) |  |   |  | 
-| |Mitaka | RHEL7.2 | | [How To Test](/testday/mitaka/milestone3#how-to-test) |zgreenbe  |   | | 
+| |Mitaka | RHEL7.2 | | [How To Test](/testday/mitaka/milestone3#how-to-test) |  |   | | 
 | Distributed -ML2-OVS- VXLAN DVR |Mitaka | RHEL 7.2 | |[How To Test](/testday/mitaka/milestone3#how-to-test) | |   |  | 
 |  |Mitaka | CentOS 7.2 | | [How To Test](/testday/mitaka/milestone3#how-to-test) |   |  |  | 
 | 3,node  -ML2-OVS- VXLAN |Mitaka  | CentOS 7.2 |    |[How To Test](/testday/mitaka/milestone3#how-to-test) |   |   |  | 
@@ -63,13 +63,13 @@ Please make sure to use the steps described in the [How To Test](/testday/mitaka
 | Config Name | Release | BaseOS | Status | HOWTO | Who | Date | BZ/LP | Notes Page
 |-------------|---------|--------|--------|-------|-----|------|-------|-----------
 | Minimal | Mitaka | CentOS 7.2 | | [Install Guide](https://www.rdoproject.org/tripleo/) | | | | 
-| | Mitaka | RHEL 7.2 | <span style="background:#00ff00">Good</span> |[Install Guide](https://www.rdoproject.org/tripleo/) | rwsu | 2016-03-11 |None  | [Notes](https://etherpad.openstack.org/p/rdo-test-days-mitaka-m3-rwsu)
-| | Mitaka | RHEL 7.2 | <span style="background:#ff0000">Fail</span> |[Install Guide](https://www.rdoproject.org/tripleo/) | fhubik | 2016-03-11 |None  | Slow repos, download errors, missing pkgs <br> [Notes](https://etherpad.openstack.org/p/rdo-test-days-mitaka-m3-fhubik)
-| | Mitaka | CentOS 7.2 | <span style="background:#00ff00">Good</span> |[Install Guide](https://www.rdoproject.org/tripleo/) | fhubik | 2016-03-11 | in notes  | Full tempest 1429/~95 errors/~75 skipped <br> [Notes](https://etherpad.openstack.org/p/rdo-test-days-mitaka-m3-fhubik)
+| | Mitaka | RHEL 7.2 | |[Install Guide](https://www.rdoproject.org/tripleo/) | | | None  | 
+| | Mitaka | RHEL 7.2 |  |[Install Guide](https://www.rdoproject.org/tripleo/) | | |None  | 
+| | Mitaka | CentOS 7.2 | |[Install Guide](https://www.rdoproject.org/tripleo/) | | |   | 
 | | Liberty | CentOS 7.2 | | [Install Guide](https://www.rdoproject.org/tripleo/) | | | | 
 | | Liberty | RHEL 7.2 | | [Install Guide](https://www.rdoproject.org/tripleo/) | | | | 
-| HA | Mitaka | CentOS 7.2 | <span style="background:#00ff00">Good</span> |[Install Guide](https://www.rdoproject.org/tripleo/) | dtantsur | 2016-03-11|None | [Notes](https://etherpad.openstack.org/p/rdo-test-days-mitaka-m3-dtantsur)
-| | Mitaka | CentOS 7.2 | <span style="background:#ff0000">Tempest <br> breaks <br> deployment!</span> |[Install Guide](https://www.rdoproject.org/tripleo/) | fhubik | 2016-03-11| in notes | Full tempest ~700/~250 errors/~50 skipped <br> Deployed OK, but tempest breaks HA in random point - makes depl. unusable! <br> [Notes](https://etherpad.openstack.org/p/rdo-test-days-mitaka-m3-fhubik)
+| HA | Mitaka | CentOS 7.2 |  |[Install Guide](https://www.rdoproject.org/tripleo/) | |  | 
+| | Mitaka | CentOS 7.2 |  |[Install Guide](https://www.rdoproject.org/tripleo/) | | |  |
 | | Mitaka | RHEL 7.2 | | [Install Guide](https://www.rdoproject.org/tripleo/) | | | | 
 | | Liberty | CentOS 7.2 | | [Install Guide](https://www.rdoproject.org/tripleo/) | | | | 
 | | Liberty | RHEL 7.2 | | [Install Guide](https://www.rdoproject.org/tripleo/) | | | | 
