@@ -66,9 +66,25 @@ success, so we'll probably do this again. If you'd like to host an
 on-site test day at your office, please [let me know](mailto:rbowen@redhat.com) so that I can
 help get the word out.
 
-## Upcoming Events 
+## Upcoming Hangout
 
-There's several events on the horizon that you should be aware of.
+On Friday, April 8th, at [14:00
+UTC](http://www.timeanddate.com/worldclock/converted.html?iso=20160408T14&p1=0&p2=848),
+Dmitry Tantsur will be hosting a [Google
+Hangout](https://plus.google.com/events/cs6n7g4uihrap7ua4dt52vsdjfo)
+where he will be discussing the recent work on Ironic, and what will
+be included in the Mitaka release.
+
+If you can't make it at that time, the event will be recorded, and
+will be available at that same location afterwards.
+
+You can watch any of our past hangouts on [the RDO
+website](http://rdoproject.org/community/hangouts/). If you would like
+to present a hangout about your RDO experiences, please speak up on
+[this thread on
+rdo-list](https://www.redhat.com/archives/rdo-list/2016-April/msg00001.html).
+
+## Other events
 
 Other RDO events, including the many OpenStack meetups around the
 world, are always listed at http://rdoproject.org/events  If you have
@@ -76,21 +92,30 @@ an RDO-related event, please feel free to add it by submitting a pull
 request to
 https://github.com/rbowen/rh-events/blob/master/2016/RDO-Meetups.yml
 
+If you are hosting or attending a meetup, please let me know, so that
+I can help you spread the word to the larger community.
+
 ## Community Meetings 
 
 Every Wednesday at 15:00 UTC, we have the weekly RDO community meeting
 on the #RDO channel on Freenode IRC. And at 15:00 UTC Thursdays, we
-have the CentOS Cloud SIG Meeting on #centos-devel.
+have the CentOS Cloud SIG Meeting on #centos-devel. The notes from
+these meetings are posted each week [on the community
+page](/community/#discuss).
+
+If you would like to participate in the RDO community, attending these
+meetings is an excellent way to find out where you can help, or to
+tell the rest of the community what you'd like to work on.
 
 ## Bug Statistics 
 
-Chandan Kumar has started posting weekly bug statistics summaries.
+Chandan Kumar has for some time been posting weekly bug statistics summaries.
 These are great for tracking the progress of the project, and are also
 an excellent place to look if you're getting started and looking for
 something to start working on.
 
-You can see the latest of these messages at
-http://rdo.fosslists.org/thread.html/Zer5przzb89rhai
+You can see the latest of these messages [in the mailing list
+archive](https://www.redhat.com/archives/rdo-list/2016-March/msg00185.html).
 
 ## Keep in touch 
 
