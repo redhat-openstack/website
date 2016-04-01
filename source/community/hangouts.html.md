@@ -12,8 +12,9 @@ RDO conducts periodic Google Hangouts on a variety of OpenStack-related topics. 
 
 ## Upcoming Hangouts
 
-We don't have any hangouts scheduled right now, but check back in April
-for something.
+On Friday, April 8th, 14:00 UTC, Dmitry Tantsur will be [presenting on
+his work on
+Ironic](https://plus.google.com/events/cs6n7g4uihrap7ua4dt52vsdjfo).
 
 ## Past Hangouts
 
