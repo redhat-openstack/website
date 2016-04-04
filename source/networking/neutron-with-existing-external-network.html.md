@@ -50,6 +50,16 @@ Note: if on Centos7, the file could be /etc/sysconfig/network-scripts/enp2s0
     DEVICETYPE=ovs
     OVS_BRIDGE=br-ex
     ONBOOT=yes
+    
+It is also possible to use a bond. In that case /etc/sysconfig/network-scripts/ifcfg-bond0 may look like this:
+
+    DEVICE=bond0
+    DEVICETYPE=ovs
+    TYPE=OVSPort
+    OVS_BRIDGE=br-ex
+    ONBOOT=yes
+    BONDING_MASTER=yes
+    BONDING_OPTS="mode=802.3ad"
 
 This means, we will bring up the interface and plug it into br-ex OVS bridge as a port, providing the uplink connectivity.
 
