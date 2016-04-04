@@ -232,6 +232,3 @@ DEPENDENCIES
   therubyracer
   wdm (~> 0.1.0)
   wikicloth
-
-BUNDLED WITH
-   1.10.6
