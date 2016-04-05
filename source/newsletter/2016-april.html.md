@@ -60,6 +60,8 @@ It's been a very busy month in the community, as we get ready for the Mitaka rel
 
 * [The Mitaka trunk repositories have been "branched" in preparation for stable release](https://www.redhat.com/archives/rdo-list/2016-March/msg00135.html)
 
+* [So You Wanna Be An OpenStack RDO TripleO Active Technical Contributor](http://groningenrain.nl/so-you-wanna-be-an-openstack-rdo-tripleo-active-technical-contributor/)
+
 ## Mitaka release next week
 
 The OpenStack Mitaka release is [almost
