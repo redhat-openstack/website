@@ -68,7 +68,8 @@ The OpenStack Mitaka release is [almost
 here](http://releases.openstack.org/mitaka/schedule.html) and the RDO
 Mitaka packages will follow close behind. We'll be doing another test
 day to make sure that it's the best RDO release yet, and we could use
-your help. You can find details about the test day, and instructions for testing,
+your help. The test day will be held April 13-14.
+You can find details about the test day, and instructions for testing,
 on the [Mitaka GA Test Day](https://www.rdoproject.org/testday/mitaka/ga) page. As
 usual, we'll be in #rdo on the Freenode IRC network for questions and conversation.
 
