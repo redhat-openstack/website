@@ -60,13 +60,16 @@ It's been a very busy month in the community, as we get ready for the Mitaka rel
 
 * [The Mitaka trunk repositories have been "branched" in preparation for stable release](https://www.redhat.com/archives/rdo-list/2016-March/msg00135.html)
 
+* [So You Wanna Be An OpenStack RDO TripleO Active Technical Contributor](http://groningenrain.nl/so-you-wanna-be-an-openstack-rdo-tripleo-active-technical-contributor/)
+
 ## Mitaka release next week
 
 The OpenStack Mitaka release is [almost
 here](http://releases.openstack.org/mitaka/schedule.html) and the RDO
 Mitaka packages will follow close behind. We'll be doing another test
 day to make sure that it's the best RDO release yet, and we could use
-your help. You can find details about the test day, and instructions for testing,
+your help. The test day will be held April 13-14.
+You can find details about the test day, and instructions for testing,
 on the [Mitaka GA Test Day](https://www.rdoproject.org/testday/mitaka/ga) page. As
 usual, we'll be in #rdo on the Freenode IRC network for questions and conversation.
 
