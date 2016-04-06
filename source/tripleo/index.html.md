@@ -12,7 +12,7 @@ TripleO is an OpenStack Deployment & Management tool. It is developed upstream a
 
 ## Virtual environment quickstart
 
-There is a recent project called [tripleo-quickstart](https://github.com/redhat-openstack/tripleo-quickstart) whose main goal is to quickly stand up TripleO environments using an image-based undercloud approach similar to the [OPNFV Apex project](http://artifacts.opnfv.org/apex/docs/installation-instructions/).
+There is a recent project called [tripleo-quickstart](https://github.com/openstack/tripleo-quickstart) whose main goal is to quickly stand up TripleO environments using an image-based undercloud approach similar to the [OPNFV Apex project](http://artifacts.opnfv.org/apex/docs/installation-instructions/).
 
 You will need a host machine with at least 16G of RAM (preferably 32G)
 with CentOS 7 installed, and able to be ssh'd to as root
@@ -34,7 +34,7 @@ playbook.
 user on the virthost and recreate it.::
 
     $ export VIRTHOST='my_test_machine.example.com'
-    $ curl -O https://raw.githubusercontent.com/redhat-openstack/tripleo-quickstart/master/quickstart.sh
+    $ curl -O https://raw.githubusercontent.com/openstack/tripleo-quickstart/master/quickstart.sh
     $ bash quickstart.sh $VIRTHOST
 
 This script will output instructions at the end to access the
