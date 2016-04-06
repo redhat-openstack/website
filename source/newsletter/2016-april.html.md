@@ -60,8 +60,6 @@ It's been a very busy month in the community, as we get ready for the Mitaka rel
 
 * [The Mitaka trunk repositories have been "branched" in preparation for stable release](https://www.redhat.com/archives/rdo-list/2016-March/msg00135.html)
 
-* [So You Wanna Be An OpenStack RDO TripleO Active Technical Contributor](http://groningenrain.nl/so-you-wanna-be-an-openstack-rdo-tripleo-active-technical-contributor/)
-
 ## Mitaka release next week
 
 The OpenStack Mitaka release is [almost
@@ -132,6 +130,8 @@ March was a super awesome month, we are quite busy in delivering final RDO Mitak
 * Victor Stinner had presented his updates on the [Status of Python 3 in OpenStack Mitaka](https://blogs.rdoproject.org/7894/status-of-python-3-in-openstack-mitaka).
 
 * Red Hat confirms over 35 sessions at OpenStack Summit, Austin – [Have a look!](http://redhatstackblog.redhat.com/2016/03/16/red-hat-confirms-over-35-sessions-at-openstack-summit-austin-have-a-look/)
+
+* Rain Leander's excellent post [So You Wanna Be An OpenStack RDO TripleO Active Technical Contributor](http://groningenrain.nl/so-you-wanna-be-an-openstack-rdo-tripleo-active-technical-contributor/)
 
 ## Bug Statistics 
 
