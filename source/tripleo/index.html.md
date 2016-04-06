@@ -55,7 +55,7 @@ Troubleshooting:
 
 TripleO (RDO-Manager) HA setup:
 
-*   [Great blog post on RDO-Manager HA setup](https://remote-lab.net/rdo-manager-ha-openstack-deployment/)
+*   [Great blog post on RDO-Manager HA setup](https://remote-lab.net/rdo-manager-ha-openstack-deployment)
 
 ## Presentations
 
