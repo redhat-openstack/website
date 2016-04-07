@@ -74,7 +74,7 @@ or, alternatively:
 Now, create the external network with Neutron.
 
     # . keystonerc_admin
-    # neutron net-create external_network --provider:network_type flat --provider:physical_network extnet  --router:external --shared
+    # neutron net-create external_network --provider:network_type flat --provider:physical_network extnet  --router:external
 
 Please note: "extnet" is the L2 segment we defined with --os-neutron-ovs-bridge-mappings above.
 
