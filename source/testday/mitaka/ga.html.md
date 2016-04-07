@@ -56,7 +56,7 @@ Run the following commands as root.
 
 * Check the [test day etherpad][] for any workarounds required for your platform before the main installation
 * For Packstack based deployment start at step 2 of the [packstack Quickstart](/install/quickstart#Step_2:_Install_Packstack_Installer)
-* For RDO Manager based deployments follow the documentation in the [RDO Manager docs](https://www.rdoproject.org/rdo-manager/)
+* For TripleO (Former RDO Manager) based deployments follow the documentation in the [TripleO docs](https://www.rdoproject.org/tripleo/)
 
 ### Test cases and results
 
