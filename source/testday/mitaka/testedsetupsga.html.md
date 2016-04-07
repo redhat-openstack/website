@@ -139,6 +139,7 @@ Various components which don't fit the large test efforts above.
 |----------------------------------------------------------------|------------------|-----------|----------------------------------------------|-----------------------------------------------------|--------|------------|--------------------------------------------------------------------|------------|
 |2,node+minimal OpenStack+Neutron+OVS+GRE | Mitaka | RHEL 7.2 |  |[How To Test](/testday/mitaka/milestone3#how-to-test)  |  |  |  |
 | | Mitaka | CentOS 7.2 |  | [How To Test](/testday/mitaka/milestone3#how-to-test)  |  |  | |
+| Ceph quickstart | Mitaka | CentOS 7 |  | [Ceph quickstart](https://wiki.centos.org/SpecialInterestGroup/Storage/ceph-Quickstart) | | | | 
 
 ## Post Installation Tests
 
