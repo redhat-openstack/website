@@ -22,8 +22,8 @@ Since RDO sticks closely to the upstream OpenStack project, the documentation at
 
 ## Getting started
 
-* [Quickstart - Proof of concept for single node](/install/quickstart)
 * [TripleO Quickstart - production deployment, with HA](/tripleo)
+* [Packstack Quickstart - Proof of concept for single node](/install/quickstart)
 * [Try out OpenStack at TryStack.org](http://trystack.org/)
 
 ## Configuration
@@ -35,6 +35,7 @@ Since RDO sticks closely to the upstream OpenStack project, the documentation at
 * [Running an instance](Running an instance)
 * [Image resources](Image resources)
 * [Adding a compute node](Adding a compute node)
+* [Upgrading Packstack ](/install/upgrading-rdo-overview)
 * [Troubleshooting](Troubleshooting)
 * [More&hellip;](Install){:.more}
 {:.with-more-link}
