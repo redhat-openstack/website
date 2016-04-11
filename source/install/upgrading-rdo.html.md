@@ -1,67 +1,49 @@
----
-title: Upgrading RDO
-authors: carltm, dansmith, pranavs
-wiki_title: Upgrading RDO
-wiki_revision_count: 6
-wiki_last_updated: 2014-06-02
----
+# Upgrading from Liberty to Mitaka: Overview
 
-# Upgrading RDO
+This document is primarily intended to cover upgrading from Liberty to
+Mitaka for Packstack users. The document describes different upgrade
+scenarios that you can use.
 
-There are basically two methods for upgrading RDO. Which you use depends on your tolerance for downtime and complexity. Note that all of the below assumes a nova-network installation. If you are moving from quantum to neutron, there may be other steps involved.
+The following holds true for all of the described upgrade scenarios:
 
-## Option 0: Parallel Cloud
+- All scenarios involve some service interruptions.
+- Running instances will not be affected by the upgrade process unless
+  you (a) reboot a compute node or (b) explicitly shut down an
+  instance.
 
-The easiest way to do an upgrade is to deploy a completely separate OpenStack environment on Havana and slowly migrate resources over. This is likely overkill for a lot of users, but it is something that may be considered as the least-intrusive alternative to the options below.
+## Scenario 1: All at once
 
-## Option 1: Atomic Offline Upgrade
+In this scenario, you will take down all of your OpenStack
+services at the same time, and will not bring them back up until the
+upgrade process is complete.
 
-The high level task of upgrading everything in place looks like this:
+**Pros**: This process is very simple. Because everything is down
+there is no orchestration involved.
 
-1.  Take down all the services on all the nodes
-2.  Upgrade the packages
-3.  Upgrade the databases
-4.  Start up all the services on all the nodes
+**Cons**: All of your services are unavailable all at once. In a large
+environment, this can result in a potentially extensive downtime as
+you wait for database schema upgrades to complete.
 
-The first step depends on how your services are distributed among your nodes, but something like this should work for a nova node, which can be extended for the other services:
+Read about this scenario in [Upgrade Scenario 1][1].
 
-      cd /etc/init.d
-      for service in openstack-nova*; do service $service stop; done
+## Scenario 2: Service-by-service with live compute upgrade
 
-Upgrading the packages means installing the new version of rdo-release and running "yum update":
+In this scenario, you upgrade one service at a time. You perform
+rolling upgrades of your compute hosts, taking advantage of the fact
+that `nova-compute` from Liberty can communicate with a Mitaka control
+plane.
 
-`yum install `[`http://rdo.fedorapeople.org/openstack-havana/rdo-release-havana.rpm`](http://rdo.fedorapeople.org/openstack-havana/rdo-release-havana.rpm)
-      yum -y update
+This is our recommended upgrade procedure for most environments.
 
-Once you get to this point, you need to upgrade the database schema for every service before you start them up running new code. This only needs to be done once per service. Most of the services use a similar command, but there are some unfortunate variations that make this difficult. The commands to do this are:
+**Pros**: This process minimizes the downtime to your existing
+compute workloads.
 
-      nova-manage db sync
-      cinder-manage db sync
-      glance-manage upgrade
-      keystone-manage db_sync
+**Cons**: This is a more complex procedure, and mistakes or
+undiscovered compatibility issues can unexpectedly turn it into
+Scenario 1.
 
-Now that the code and the databases have been upgraded, you can restart the services. Like above, this depends on how you have your services distributed, but this should work for a nova node:
+Read about this scenario in [Upgrade Scenario 2][3].
 
-      cd /etc/init.d
-      for service in openstack-nova*; do service $service restart; done
+[1]: upgrading-rdo-1
+[3]: upgrading-rdo-2
 
-## Option 2: Service-by-Service Upgrade
-
-This method involves more work, but has the potential to impact a working cluster for smaller periods of time. In general, the compute upgrade will require the longest period of downtime, but there are ways to mitigate that impact in exchange for more complexity and resource consumption. The explanation of each step is abbreviated, assuming that it can be inferred from reading the description of Option 1 above.
-
-The high-level task of upgrading services looks like this:
-
-For each service:
-
-1.  Take down that service
-2.  Upgrade the packages
-3.  Upgrade the database
-4.  Start up the service
-
-The above pattern can be applied to keystone, glance, cinder, and nova in that order. This eliminates having everything down for the duration required to complete all of the upgrades at once. Further, it provides the opportunity to parallelize the nova upgrade.
-
-## Option 2.5: Service-by-Service Upgrade with Parallel Computes
-
-This is just a small variation of the above, but with a change in how nova is upgraded. Once keystone, glance, and cinder are upgraded, a new nova deployment based on the current release can be created, utilizing the already-upgraded smaller services that are also in use by the old un-upgraded nova deployment. This allows you to slowly migrate workloads to the new compute deployment, moving/upgrading physical hosts over to the new release as they become vacated.
-
-With this model, far less downtime of the overall cluster is required, with only a few minutes for the smaller services, and a longer migration interval for the workloads moving to newly-upgraded compute hosts.
