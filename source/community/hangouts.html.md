@@ -12,15 +12,24 @@ RDO conducts periodic Google Hangouts on a variety of OpenStack-related topics. 
 
 ## Upcoming Hangouts
 
-John Trownbridge will be doing a demo of [deploying OpenStack with
-TripleO](http://www.youtube.com/watch?v=4O8KvC66eeU) on March 9th at
-[16:00
-UTC](http://www.timeanddate.com/worldclock/fixedtime.html?iso=20160309T1600),
-immediately following our weekly IRC meeting.
+Stay tuned for our May hangout!
 
 ## Past Hangouts
 
 If you missed a hangout, and are watching the video, you can always ask followup questions on the #rdo IRC channel on Freenode, or on the [rdo-list mailing list](http://www.redhat.com/mailman/listinfo/rdo-list). RDO hangout videos are also available in the [RDO Hangout Playlist](https://www.youtube.com/watch?v=Pmq4FJlP0UE&list=PL27cQhFqK1QzpTJl6CAFabXB1mZAdN_fu).
+
+### What's new in Mitaia Ironic, and what's coming in Newton - Dmitry Dantsur
+
+*April 2016*
+
+<iframe width="630" src="//youtube.com/embed/NOpRit6wK-Y" frameborder="0" align="center" allowfullscreen="true"> </iframe>
+
+### TripleO Quickstart Demo - John Trownbridge
+
+*March 2016*
+
+<iframe width="630" src="//youtube.com/embed/4O8KvC66eeU" frameborder="0" align="center" allowfullscreen="true"> </iframe>
+
 
 ### Gnocci: Rebasing Ceilometer reporting for Kilo, By Eoghan Glynn
 

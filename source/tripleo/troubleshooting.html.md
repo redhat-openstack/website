@@ -34,6 +34,11 @@ The overcloud is the main production cloud deployed to baremetal or virtual mach
 ### Heat
 
 Some good documentation on the main OpenStack wiki [here](https://wiki.openstack.org/wiki/Heat/TroubleShooting)
+A good Red Hat article on debugging the overcloud [here](https://access.redhat.com/solutions/1982603)
+
+#### Tips
+
+Interface naming: Try using the specific interface names in templates (e.g. eno1, enps01) rather than the default nic1, nic2 etc. Some hardware ships with built-in usb ethernet devices which tripleo currently sees as an active device.
 
 ##### ipmitool
 
@@ -54,4 +59,35 @@ This is usually due to a flavor/node mismatch. Try:
 
 ~~~
 openstack baremetal configure boot
+~~~
+
+#### Building images behind a proxy server
+
+You need to create http and https local proxy variables, and also add the proxy to curl and yum files.
+
+For example - 
+
+~~~
+export NODE_DIST="centos7"
+export http_proxy=http://[proxy]:[port]
+export https_proxy=http://[proxy]:[port]
+export DIB_CLOUD_IMAGES="http://cloud.centos.org/centos/7/images/"
+export BASE_IMAGE_FILE="CentOS-7-x86_64-GenericCloud-1511.qcow2"
+export DELOREAN_TRUNK_REPO="http://trunk.rdoproject.org/centos7-liberty/current/"
+export USE_DELOREAN_TRUNK=1
+export DELOREAN_REPO_FILE="delorean.repo"
+~~~
+
+~~~
+cat ~/.curlrc
+proxy = http://[proxy]:[port]
+
+sudo grep proxy /etc/yum.conf 
+proxy = http://[proxy]:[port]
+~~~
+
+Then build images - 
+
+~~~
+openstack overcloud image build --all
 ~~~

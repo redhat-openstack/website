@@ -99,7 +99,7 @@ Special thanks to Allan St. George, Kashyap and the RDO maillist for the tips wh
 
 <!-- -->
 
-    NOZERCONF=yes
+    NOZEROCONF=yes
 
 *   Poweroff the vm
 

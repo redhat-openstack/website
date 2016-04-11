@@ -69,7 +69,7 @@ By default lots of stuff seems to go to /var, if possible put /var on a bigger, 
          Use jumbo frames for interfaces carrying GRE/VXLAN traffic:
          Compute node(s):
 `      echo MTU=`<MTU>` >> /etc/sysconfig/network-scripts/ifcfg-`<interface>
-            nova_device_mtu=`<Guest MTU>` (50b less than tunnel interface for vxaln, 28b less for gre ) in the nova.conf file 
+            network_device_mtu=`<Guest MTU>` (50b less than tunnel interface for vxaln, 28b less for gre ) in the nova.conf file 
          Network node(s):
 `      echo MTU=`<MTU>` >> /etc/sysconfig/network-scripts/ifcfg-`<interface>
             echo dnsmasq_config_file=/etc/neutron/dnsmasq-neutron.conf >> /etc/neutron/dhcp_agent.ini

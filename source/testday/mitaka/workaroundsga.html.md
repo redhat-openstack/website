@@ -1,4 +1,4 @@
-# Mitaka Milestone 3 workarounds
+# Mitaka GA workarounds
 
 Please use the [test day
 etherpad](https://etherpad.openstack.org/p/rdo-test-days-mitaka-m3) to record

@@ -1,6 +1,6 @@
 # If you have OpenSSL installed, we recommend updating
 # the following line to use "https"
-source 'http://rubygems.org'
+source 'https://rubygems.org'
 source 'https://rails-assets.org'
 
 gem "middleman", "~> 3.3.10"
@@ -9,11 +9,6 @@ gem 'compass', '~> 1'
 
 # Live-reloading plugin
 gem "middleman-livereload"
-
-# Debugger / REPL alternative to irb
-gem 'pry'
-gem 'pry-stack_explorer'
-gem 'middleman-pry'
 
 # Cross-templating language block fix for Ruby 1.8
 platforms :mri_18 do

@@ -12,6 +12,9 @@ etherpad](https://etherpad.openstack.org/p/centos-cloud-sig).
 
 The minutes for these meetings are below:
 
-* [January 21, 2016](https://www.centos.org/minutes/2016/centos-devel.2016-01-21-15.00.txt)
-* [January 14, 2016](https://www.centos.org/minutes/2016/centos-devel.2016-01-14-15.00.txt)
-* [January 7, 2016](https://www.centos.org/minutes/2016/centos-devel.2016-01-07-15.00.txt)
+* [March 17, 2016](https://www.centos.org/minutes/2016/march/centos-devel.2016-03-17-15.03.html)
+* [February 25, 2016](https://www.centos.org/minutes/2016/february/centos-devel.2016-02-25-15.11.html)
+* [February 18, 2016](https://www.centos.org/minutes/2016/february/centos-devel.2016-02-18-15.00.html)
+* [January 21, 2016](https://www.centos.org/minutes/2016/january/centos-devel.2016-01-21-15.00.html)
+* [January 14, 2016](https://www.centos.org/minutes/2016/january/centos-devel.2016-01-14-15.00.html)
+* [January 7, 2016](https://www.centos.org/minutes/2016/january/centos-devel.2016-01-07-15.00.html)

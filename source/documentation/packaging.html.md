@@ -31,8 +31,8 @@ This process will be discussed and fleshed out in more detail on
 
 ### Packaging Guides
 
-* [RDO Packaging Guide](rdo-packaging)
-* [RDO Packaging Guidelines](rdo-packaging-guidelines)
+* [RDO Packaging Guide](../rdo-packaging)
+* [RDO Packaging Guidelines](../rdo-packaging-guidelines)
 * [`rdopkg` manual](/packaging/rdopkg/rdopkg.1.html)
 
 

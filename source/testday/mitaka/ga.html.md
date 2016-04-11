@@ -4,21 +4,18 @@ title: RDO Mitaka Test Day
 
 [ ← Test Days](/testday)
 
-# Mitaka Test Day 3
+# Mitaka GA Test
 
 [ [test day etherpad][] | [Tested Setups][] ]
 
-We will be holding a RDO test day on March 10-11, 2016.
+We will be holding a RDO test day on April 13-14, 2016.
 This will be coordinated through the **#rdo channel on Freenode**, and
 through this website and the [rdo-list](http://www.redhat.com/mailman/listinfo/rdo-list)
 mailing list.
 
-We'll be testing the second Mitaka milestone release. If you can do
+We'll be testing the Mitaka GA release. If you can do
 any testing on your own ahead of time, that will help ensure that
 everyone isn't encountering the same problems.
-
-We will also be available for people that want to try the stable
-(Liberty) release.
 
 Update this page by submitting pull requests to the
 [redhat-openstack/website repo](https://github.com/redhat-openstack/website),
@@ -59,7 +56,7 @@ Run the following commands as root.
 
 * Check the [test day etherpad][] for any workarounds required for your platform before the main installation
 * For Packstack based deployment start at step 2 of the [packstack Quickstart](/install/quickstart#Step_2:_Install_Packstack_Installer)
-* For RDO Manager based deployments follow the documentation in the [RDO Manager docs](https://www.rdoproject.org/rdo-manager/)
+* For TripleO (Former RDO Manager) based deployments follow the documentation in the [TripleO docs](https://www.rdoproject.org/tripleo/)
 
 ### Test cases and results
 
@@ -78,5 +75,5 @@ If you have problems with any of the tests, report a bug to [Bugzilla](https://b
 Once you have completed the tests, add your results to the table on the [Tested Setups][] page, following the examples already there. Be sure to check the [test day etherpad][] page for things that may have already have fixes or workarounds.
 
 
-[test day etherpad]: https://etherpad.openstack.org/p/rdo-test-days-mitaka-m3
-[Tested Setups]: /testday/mitaka/testedsetups3
+[test day etherpad]: https://etherpad.openstack.org/p/rdo-test-days-mitaka-ga
+[Tested Setups]: /testday/mitaka/testedsetupsga
