@@ -1,10 +1,10 @@
 ---
 title: What, Why, and How is the CentOS Cloud SIG?
 author: rbowen
-date: 2016-04-05 18:48:08 UTC
+date: 2016-04-16 18:48:08 UTC
 tags: centos, sig, packaging
-published: false
 comments: true
+published: true
 ---
 
 2 years ago we started the [CentOS Cloud SIG](https://wiki.centos.org/SpecialInterestGroup/Cloud). Progress has been slow but steady. Slow, I think, because we've not done a wonderful job of explaining what it's for, and why it matters. But it has been a very important aspect of moving the [RDO project](http://rdoproject.org/) forward, so it deserves better explanation.
