@@ -200,7 +200,6 @@
   HA Architecture: ha/ha-architecture
   Deploying Multi Node Overcloud Using TripleO And Tuskar: install/deploying-multi-node-overcloud-using-tripleo-and-tuskar
   User stories: case-studies/user-stories
-  Upgrading RDO To Icehouse: install/upgrading-rdo-to-icehouse
   Tunings and tweaks: documentation/tunings-and-tweaks
   Deploying RDO using Instack: install/deploying-rdo-using-instack
   Deploying RDO on a Baremetal Environment using Instack: install/deploying-rdo-on-a-baremetal-environment-using-instack
