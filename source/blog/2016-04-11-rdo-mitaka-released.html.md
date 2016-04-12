@@ -3,8 +3,8 @@ title: RDO Mitaka released
 author: rbowen
 date: 2016-04-11 15:47:19 UTC
 tags: openstack, rdo, mitaka, release
-published: false
 comments: true
+published: true
 ---
 
 The RDO community is pleased to announce the general availability of the RDO build for OpenStack Mitaka for RPM-based distributions - CentOS Linux 7 and Red Hat Enterprise Linux. RDO is suitable for building private, public, and hybrid clouds and Mitaka is the 13th release from the [OpenStack project](http://openstack.org), which is the work of more than 2500 contributors from around the world. 
