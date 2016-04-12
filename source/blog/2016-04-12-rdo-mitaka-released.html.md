@@ -1,7 +1,7 @@
 ---
 title: RDO Mitaka released
 author: rbowen
-date: 2016-04-11 15:47:19 UTC
+date: 2016-04-12 15:47:19 UTC
 tags: openstack, rdo, mitaka, release
 comments: true
 published: true
