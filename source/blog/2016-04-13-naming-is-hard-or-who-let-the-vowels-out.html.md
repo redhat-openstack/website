@@ -1,7 +1,7 @@
 ---
 title: Naming is hard or Who Let The Vowels Out
 author: apevec
-date: 2016-04-13 13:00:00 UTC
+date: 2016-04-13 12:00:00 UTC
 tags: openstack, trunk, packaging
 comments: true
 published: true
