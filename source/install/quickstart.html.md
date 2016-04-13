@@ -18,7 +18,7 @@ If you are looking for instructions to deploy a production cloud,
 possibly with HA, see the [TripleO Quickstart](/tripleo).
 If you just want to try it out without installing anything, check out [TryStack](http://trystack.org). 
 
-These instructions are to install the current **Liberty** release.
+These instructions are to install the current **Mitaka** release.
 
 ## Summary for the impatient
 
