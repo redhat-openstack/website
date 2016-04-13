@@ -1,10 +1,11 @@
 ---
 title: Naming is hard or Who Let The Vowels Out
 author: apevec
+date: 2016-04-13 13:00:00 UTC
 tags: openstack, trunk, packaging
-date: 2016-04-10 00:00:00 CEST
+comments: true
+published: true
 ---
-
 
 When [Derek Higgins](http://www.openstack.org/blog/2014/02/open-mic-spotlight-derek-higgins/) started the [tool](https://github.com/openstack-packages/DLRN/commit/496baa4eb177873ba1421c6fbd7cc7041bd584a4) to build OpenStack packages based on latest upstream aka "trunk" changes, the name Delorean seemed like a good choice: the tool is keeping older builds so you could "go back in time" like with a [time machine](https://en.wikipedia.org/wiki/DeLorean_time_machine), it's geeky enough and there's [Irish connection](https://en.wikipedia.org/wiki/DeLorean_Motor_Company#Manufacturing_facility).
 
