@@ -3,6 +3,7 @@ title: "Newbie in RDO: one size doesn't fit all"
 author: amoralej
 tags: openstack, rdo, repos
 date: 2016-04-08 19:50:56 CEST
+published: false
 ---
 
 As a new contributor to the RDO project, one of my first tasks was to understand what is actually being produced by the project. According to [RDO faq](https://www.rdoproject.org/rdo/faq/), the main goal is to maintain a freely-available, community-supported distribution of OpenStack based on RPM packages able to run Red Hat Enterprise Linux, CentOS, Fedora, and their derivatives. But the RDO community is diverse and different use patterns have been found over the time with different requirements:
