@@ -3,8 +3,8 @@ title: 'Newbie in RDO (2): RDO Trunk from a bird''s eye view'
 author: amoralej
 date: 2016-04-14 14:47:18 UTC
 tags: rdo, openstack, trunk
+published: false
 comments: true
-published: true
 ---
 
 Time goes fast as a RDO newbie and once I understood what the RDO Trunk and Stable repos provide (read my [previous post](https://www.rdoproject.org/blog/2016/04/new-in-rdo-repos-one-size-doesn-t-fit-all/) if you still have doubts), my next goal was to have a clear high level perspective of the entire delivery workflow followed in the project.
