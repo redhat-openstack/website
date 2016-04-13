@@ -6,9 +6,9 @@ wiki_revision_count: 1
 wiki_last_updated: 2015-10-15
 ---
 
-# Using GlusterFS for Cinder with RDO Liberty
+# Using GlusterFS for Cinder with RDO
 
-With the RDO Liberty release it is now possible to have Packstack configure Cinder to use GlusterFS as its backend. This assumes you have a GlusterFS share already available for the purpose; if you don't, just go trough the [GlusterFS QuickStart](http://www.gluster.org/community/documentation/index.php/QuickStart) guide to set that up.
+Since the RDO Liberty release, it has been possible to have Packstack configure Cinder to use GlusterFS as its back end. This assumes you have a GlusterFS share already available for the purpose; if you don't, just go trough the [GlusterFS QuickStart](http://www.gluster.org/community/documentation/index.php/QuickStart) guide to set that up.
 
 ## Automatic configuration with Packstack
 

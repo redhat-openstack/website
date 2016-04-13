@@ -6,7 +6,7 @@ wiki_revision_count: 1
 wiki_last_updated: 2015-10-15
 ---
 
-# Using GlusterFS for Glance with RDO Liberty
+# Using GlusterFS for Glance with RDO
 
 To use GlusterFS with Glance one needs to go trough a few manual steps after RDO is installed. This also assumes you have a GlusterFS share already available for the purpose; if you don't, just go trough the [GlusterFS QuickStart](http://www.gluster.org/community/documentation/index.php/QuickStart) guide to set that up.
 
