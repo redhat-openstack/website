@@ -169,11 +169,11 @@
   Using VXLAN Tenant Networks: networking/using-vxlan-tenant-networks
   RDO test day January 2014: testday/rdo-test-day-january-2014
   TestedSetups 2014 01: testday/testedsetups-2014-01
-  Using ThinLVM for Cinder with RDO Liberty: storage/Cinder/Liberty/using-thinlvm-for-cinder-with-rdo-liberty
+  Using ThinLVM for Cinder with RDO Liberty: storage/Cinder/using-thinlvm-for-cinder-with-rdo
   Workarounds 2014 01: testday/workarounds-2014-01
-  Using Swift for Glance with RDO Liberty: storage/Glance/Liberty/using-swift-for-glance-with-rdo-liberty
-  Using GlusterFS for Cinder with RDO Liberty: storage/Cinder/Liberty/using-glusterfs-for-cinder-with-rdo-liberty
-  Using GlusterFS for Glance with RDO Liberty: storage/Glance/Liberty/using-glusterfs-for-glance-with-rdo-liberty
+  Using Swift for Glance with RDO Liberty: storage/Glance/using-swift-for-glance-with-rdo
+  Using GlusterFS for Cinder with RDO Liberty: storage/Cinder/using-glusterfs-for-cinder-with-rdo
+  Using GlusterFS for Glance with RDO Liberty: storage/Glance/using-glusterfs-for-glance-with-rdo
   Tests/Storage/Cinder: /testday/tests/storage/cinder
   Tests/Storage/Glance: /testday/tests/storage/glance
   RDO test day January 2014 Metadata: testday/rdo-test-day-january-2014-metadata

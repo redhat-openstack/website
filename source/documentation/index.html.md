@@ -22,8 +22,8 @@ Since RDO sticks closely to the upstream OpenStack project, the documentation at
 
 ## Getting started
 
-* [TripleO Quickstart - production deployment, with HA](/tripleo)
-* [Packstack Quickstart - Proof of concept for single node](/install/quickstart)
+* [TripleO Quickstart &ndash; production deployment, with HA](/tripleo)
+* [Packstack Quickstart &ndash; proof of concept for single node](/install/quickstart)
 * [Try out OpenStack at TryStack.org](http://trystack.org/)
 
 ## Configuration
@@ -53,9 +53,9 @@ Since RDO sticks closely to the upstream OpenStack project, the documentation at
 
 <div class="split-third">
 ### Storage
-* [GlusterFS](Using GlusterFS for Cinder with RDO Liberty)
+* [GlusterFS](/storage/Cinder/using-glusterfs-for-cinder-with-rdo)
 * [EMC](https://wiki.openstack.org/wiki/How to deploy cinder with EMC plug-in)
-* [ThinLVM](Using ThinLVM for Cinder with RDO Liberty)
+* [ThinLVM](/storage/Cinder/using-thinlvm-for-cinder-with-rdo)
 * [More&hellip;](Docs/Storage){:.more}
 {:.with-more-link}
 </div>
