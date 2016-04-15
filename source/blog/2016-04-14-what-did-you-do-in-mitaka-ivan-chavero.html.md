@@ -7,8 +7,9 @@ comments: true
 published: true
 ---
 
-*This is the first in what will hopefully be a long series of interviews with OpenStack engineers about what they worked on in the Mitaka cycle.
-*
+*This is the first in what will hopefully be a long series of interviews with OpenStack engineers about what they worked on in the Mitaka cycle.*
+
+
 The [OpenStack](http://openstack.org/)  cloud software project recently released the [Mitaka
 release](http://releases.openstack.org/mitaka/index.html). 
 [RDO](http://rdoproject.org/) is a community distribution of OpenStack. I've invited
@@ -16,9 +17,9 @@ several of the engineers that work on RDO to talk about what they did
 in the Mitaka cycle.
 
 <iframe id="audio_iframe" src="https://www.podbean.com/media/player/spvip-5e6b58" width="100%" height="100" frameborder="0" scrolling="no"></iframe>
-
+  
 If the above player doesn't appear, or doesn't work for you, you can listen <a href="http://rdocommunity.podbean.com/mf/play/urpzjr/ivan_chavero_packstack.mp3">here</a>.
-
+ 
 **Rich**: Mitaka is ready now, and before we move on to Newton, we should
 celebrate what we've done in Mitaka. I'm speaking with [Ivan
 Chavero](http://tm3.org/63). I
