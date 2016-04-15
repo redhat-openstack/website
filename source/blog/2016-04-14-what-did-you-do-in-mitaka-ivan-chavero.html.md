@@ -15,13 +15,9 @@ release](http://releases.openstack.org/mitaka/index.html).
 several of the engineers that work on RDO to talk about what they did
 in the Mitaka cycle.
 
+<iframe id="audio_iframe" src="http://www.podbean.com/media/player/spvip-5e6b58" width="100%" height="100" frameborder="0" scrolling="no"></iframe>
 
-<audio controls>
-  <source src="http://feathercast.apache.org/podcasts/etc/ivan_chavero_packstack.mp3" type="audio/mpeg">
-Your browser does not support the audio element.
-</audio>
-
-If the above player doesn't appear, or doesn't work for you, you can listen <a href="http://feathercast.apache.org/podcasts/etc/ivan_chavero_packstack.mp3">here</a>.
+If the above player doesn't appear, or doesn't work for you, you can listen <a href="http://rdocommunity.podbean.com/mf/play/urpzjr/ivan_chavero_packstack.mp3">here</a>.
 
 **Rich**: Mitaka is ready now, and before we move on to Newton, we should
 celebrate what we've done in Mitaka. I'm speaking with [Ivan
@@ -88,4 +84,3 @@ lightweight, and it's very easy to modify.
 coming in Newton!
 
 **I**: Thank you!
-
