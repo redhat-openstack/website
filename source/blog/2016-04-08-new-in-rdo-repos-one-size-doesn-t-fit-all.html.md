@@ -15,8 +15,24 @@ As a new contributor to the RDO project, one of my first tasks was to understand
 
 Providing a suitable distribution for all these scenarios is not an easy task and the RDO community ended up with two different distribution set of repos targetting different purposes:
 
+### RDO Stable repos
+Provide a set of stable OpenStack packages through CentOS CloudSIG repos based on CBS, [CentOS Community Build System](https://wiki.centos.org/HowTos/CommunityBuildSystem):
+
+- The RDO Stable repos are only published after GA of a upstream release (only stable branches are used, not master).
+- New packages are created only when a new point release is published (release tag created) on upstream stable repositories. The RDO community is currently working to automate as much as possible the process to build these packages in rpmfactory.
+- In addition to the vanilla upstream code, some patches may be applied during packaging:
+  - Fixes for security issues or critical bugs not backported upstream. Note that an upstream-first policy is applied so these patches will be applied only after merged in upstream master.
+  - Patches required for the packaging process.
+- Packages are created through a controlled workflow. This is accomplished by koji (the technology behind CBS) which ensures reproducibility of the building process by:
+  - Creating a self-contained build environment (buildroot) that provides all the dependencies by a controlled package. No network access exist int this build environment.
+  - Recording both the spec file defining the package to be built and the packages included in the buildroot. This information allows to recreate exactly the same build environment to create the package at a later point in time.
+- The criteria for pubishing any new release includes both thechnical (a set of CI jobs must pass as aggreed in [RDO community meeting](https://meetbot.fedoraproject.org/rdo/2016-04-06/rdo_meeting_%282016-04-06%29.2016-04-06-15.00.html)) and non-technical requirements (documentation, etc...).
+
+This is probably what you want to use for your stable cloud with a community-supported OpenStack distribution and what you will use following the [official upstream install guide](http://docs.openstack.org/mitaka/install-guide-rdo/environment-packages.html) or [RDO docummentation](https://www.rdoproject.org/install/) to deploy and manage OpenStack.
+
+
 ### RDO Trunk repos
-Provide RPM package repositories for OpenStack projects as close as possible to the vanilla upstream code in order to test any change and catch any bug or impact on packaging as soon as possible. These packages are built when a commit is merged in upstream master or any of the supported stable branches. Once a build is done, a set of CI jobs is passed to validate installation and basic functionalities. As part of RDO Trunk we provide different repos for CentOS 7 under http://buildlogs.centos.org/centos/7/cloud/x86_64/ :
+Provide RPM package repositories for OpenStack projects as close as possible to the vanilla upstream code in order to test any change and catch any bug or impact on packaging as soon as possible. These packages are built when a commit is merged in upstream master or any of the supported stable branches. This means that new packages are provided even during the development phase of a new release (before GA). Once a build is done, a set of CI jobs is passed to validate installation and basic functionalities. As part of RDO Trunk we provide different repos for CentOS 7 under http://buildlogs.centos.org/centos/7/cloud/x86_64/ :
 
 - **rdo-trunk-&lt;branch>:** provides the latest snapshot of packages successfully built (i.e. rdo-trunk-mitaka).
 - **rdo-trunk-&lt;branch>-tested:** provides the latest snapshot of packages built and with CI jobs successfully passed (i.e. rdo-trunk-master-tested).
@@ -32,22 +48,7 @@ If you are a OpenStack developer, using RDO trunk may be a good option to build 
 
 Finally, if you are a packager, you probably want to know how the build process went for a specific commit or even to perform an installation based on it. RDO provides both build reports and RPM repos based on each commit for both CentOS and Fedora from https://trunk.rdoproject.org.
 
-[Fred](http://blogs.rdoproject.org/author/fred) wrote an excelent [post](http://blogs.rdoproject.org/7834/delorean-openstack-packages-from-the-future) describing how DLRN (f.k.a. delorean) build packages for RDO trunk repos.
-
-### RDO Stable repos
-Provide a more stable set of packages through CentOS CloudSIG repos based on CBS, [CentOS Community Build System](https://wiki.centos.org/HowTos/CommunityBuildSystem). These repos differ from RDO Trunk in several ways:
-
-- Packages are only published after GA of a upstream release (only stable branches are used, not master).
-- New packages are created only when a new point release is published (release tag created) on upstream repositories. The RDO community is currently working to automate as much as possible the process to build these packages in rpmfactory.
-- In addition to the vanilla upstream code, some patches may be applied during packaging:
-  - Fixes for security issues or critical bugs not backported upstream. Note that an upstream-first policy is applied so these patches will be applied only after merged in upstream master.
-  - Patches required for the packaging process.
-- Packages are created through a controlled workflow. This is accomplished by koji (the technology behind CBS) which ensures reproducibility of the building process by:
-  - Creating a self-contained build environment (buildroot) that provides all the dependencies by a controlled package. No network access exist int this build environment.
-  - Recording both the spec file defining the package to be built and the packages included in the buildroot. This information allows to recreate exactly the same build environment to create the package at a later point in time.
-- The criteria to pubishing any new release includes both thechnical (a set of CI jobs must pass as aggreed in [RDO community meeting](https://meetbot.fedoraproject.org/rdo/2016-04-06/rdo_meeting_%282016-04-06%29.2016-04-06-15.00.html)) and non-technical requirements (documentation, etc...).
-
-This is probably what you want to use for your stable cloud with a community-supported OpenStack distribution and what you will use following the [official upstream install guide](http://docs.openstack.org/mitaka/install-guide-rdo/environment-packages.html) or [RDO docummentation](https://www.rdoproject.org/install/) to deploy and manage OpenStack.
+[Fred](http://blogs.rdoproject.org/author/fred) wrote an excelent [post](http://blogs.rdoproject.org/7834/delorean-openstack-packages-from-the-future) describing how DLRN (f.k.a. delorean) builds packages for RDO trunk repos.
 
 If you are interested in the details about how to build RDO packages, you'll find a lot of interesting information in [RDO documentation](https://www.rdoproject.org/documentation/packaging/).
 
