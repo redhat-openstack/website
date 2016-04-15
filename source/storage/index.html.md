@@ -10,30 +10,29 @@ wiki_last_updated: 2014-10-30
 
 # Storage
 
-Welcome to Openstack RDO Storage page!
+Welcome to OpenStack RDO Storage page!
 
 Below you can find guides and some test suggestions for the storage components.
 
 ## Cinder Manuals
 
-*   [Using GlusterFS for Cinder with RDO Liberty](Using GlusterFS for Cinder with RDO Liberty)
-*   [Using ThinLVM for Cinder with RDO Liberty](Using ThinLVM for Cinder with RDO Liberty)
+*   [Using GlusterFS for Cinder with RDO](Cinder/using-glusterfs-for-cinder-with-rdo)
+*   [Using ThinLVM for Cinder with RDO](Cinder/using-thinlvm-for-cinder-with-rdo)
 *   [Using Dell EqualLogic for Cinder with RDO](Using Dell EqualLogic for Cinder with RDO)
 *   [Using NetApp for Cinder with RDO](Using NetApp for Cinder with RDO)
 *   [Using NFS for Cinder with RDO](Using NFS for Cinder with RDO)
-*   [Setting up HA of Cinder with
-    RDO](/storage/Cinder/setting-up-ha-of-cinder)
+*   [Setting up HA of Cinder with RDO](Cinder/setting-up-ha-of-cinder)
 
 ## Glance Manuals
 
-*   [Using GlusterFS for Glance with RDO Liberty](Using GlusterFS for Glance with RDO Liberty)
-*   [Using Swift for Glance with RDO Liberty](Using Swift for Glance with RDO Liberty)
+*   [Using GlusterFS for Glance with RDO](Glance/using-glusterfs-for-glance-with-rdo)
+*   [Using Swift for Glance with RDO](Glance/using-swift-for-glance-with-rdo)
 *   [Using Ceph for Glance with RDO](Using Ceph for Glance with RDO)
-*   [Setting up HA of Glance](/storage/Glance/setting-up-ha-of-glance)
+*   [Setting up HA of Glance](Glance/setting-up-ha-of-glance)
 
 ## Swift Manuals
 
-*   [Using Swift for Glance with RDO Liberty](Using Swift for Glance with RDO Liberty)
+*   [Using Swift for Glance with RDO](Glance/using-swift-for-glance-with-rdo)
 
 ## Test Suggestions
 

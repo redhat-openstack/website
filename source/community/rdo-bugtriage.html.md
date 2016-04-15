@@ -22,20 +22,20 @@ We generally try to conduct a public bug triage every third Tuesday of the month
 
 ### Initial Triage
 
-Since RDO (say a mid-stream? ) is akin to what Fedora is to RHEL, we try to follow Fedora's bug triage method (see *References* section below) while closely monitoring upstream OpenStack issue tracker (details below in *Upstream OpenStack bug triage* section.)
+Since RDO (say a mid-stream? ) is akin to what Fedora is to RHEL, we try to follow the Fedora bug triage method (see *References* section below) while closely monitoring upstream OpenStack issue tracker (details below in *Upstream OpenStack bug triage* section).
 
-If a bug/RFE has already been fixed in the 'current' current stable RDO release (Say Liberty), then
+If a bug/RFE has already been fixed in the *current* stable RDO release (say Mitaka), then:
 
-*   Update the "Fixed In Version" field with the NVR (Name-Version-Release) of the package
-*   Move the bug to CLOSED->CURRENTRELEASE
+*   Update the "Fixed In Version" field with the NVR (Name-Version-Release) of the package.
+*   Move the bug to CLOSED->CURRENTRELEASE.
 
 ## References
 
-Upstream OpenStack bug triage
+Upstream OpenStack bug triage:
 
 *   <https://wiki.openstack.org/wiki/BugTriage>
 
-Some existing community projects which use Red Hat bugzilla, and their workflows for bug triage:
+Some existing community projects which use Red Hat Bugzilla, and their workflows for bug triage:
 
 *   <http://fedoraproject.org/wiki/BugZappers/BugStatusWorkFlow>
 *   <http://fedoraproject.org/wiki/BugZappers/StockBugzillaResponses>
