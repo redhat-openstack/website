@@ -15,7 +15,7 @@ release](http://releases.openstack.org/mitaka/index.html).
 several of the engineers that work on RDO to talk about what they did
 in the Mitaka cycle.
 
-<iframe id="audio_iframe" src="http://www.podbean.com/media/player/spvip-5e6b58" width="100%" height="100" frameborder="0" scrolling="no"></iframe>
+<iframe id="audio_iframe" src="https://www.podbean.com/media/player/spvip-5e6b58" width="100%" height="100" frameborder="0" scrolling="no"></iframe>
 
 If the above player doesn't appear, or doesn't work for you, you can listen <a href="http://rdocommunity.podbean.com/mf/play/urpzjr/ivan_chavero_packstack.mp3">here</a>.
 

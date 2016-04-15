@@ -11,7 +11,7 @@ In this installment of our "What did you do in Mitaka?" series, Ihar Hrachyshka 
 
 You can listen below. If the player doesn't work for you, you can listen [HERE](http://rdocommunity.podbean.com/mf/web/sipki2/ihar_hrachyshka_mitaka.mp3/).
 
-<iframe id="audio_iframe" src="http://www.podbean.com/media/player/7ximn-5e7230" width="100%" height="100" frameborder="0" scrolling="no"></iframe>
+<iframe id="audio_iframe" src="https://www.podbean.com/media/player/7ximn-5e7230" width="100%" height="100" frameborder="0" scrolling="no"></iframe>
 
 **Rich**: Hello, I'm speaking with [Ihar Hrachyshka](http://tm3.org/64) about the work that he did
 in the RDO community on the [Mitaka release of OpenStack](http://releases.openstack.org/mitaka/index.html). Thank you for
@@ -96,4 +96,3 @@ that's collaboration.
 what comes in Newton.
 
 I: Thank you.
-
