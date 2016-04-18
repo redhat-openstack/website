@@ -19,7 +19,7 @@ This page describes a possible Keystone and Red Hat IdM integration scenario. Th
 *   Tenants and Roles are managed by Keystone.
 *   The Keystone service catalog is stored in MySQL.
 
-Roles and privileges are created so that a Keystone administrator (or service) can not inadvertantly write to objects in the standard Red Hat IdM tree.
+Roles and privileges are created so that a Keystone administrator (or service) can not inadvertently write to objects in the standard Red Hat IdM tree.
 
 ## Example Architecture
 
@@ -138,7 +138,7 @@ After running `keystone-manage db_sync`, edit `/etc/keystone/keystone.conf`. In 
     #driver = keystone.identity.backends.sql.Identity
     driver = keystone.identity.backends.ldap.Identity
 
-If you wish to store assignements in the LDAP store, configure the `ldap` section to use the Red Hat IdM LDAP database.
+If you wish to store assignments in the LDAP store, configure the `ldap` section to use the Red Hat IdM LDAP database.
 
     [ldap]
     url = ldap://ipa01.example.com
@@ -327,7 +327,7 @@ The `rdoadmin` user should also be able to list all users as it was granted the 
 
 ## Creating Service Users
 
-The glance, nova, ec2, cinder, and swift services all have service accounts in IdM to authenticate to Keystone. To create these accounts, use the following proceedure:
+The glance, nova, ec2, cinder, and swift services all have service accounts in IdM to authenticate to Keystone. To create these accounts, use the following procedure:
 
 *   Create the user account in IdM
 

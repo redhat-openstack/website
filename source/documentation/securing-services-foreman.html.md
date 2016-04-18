@@ -190,7 +190,7 @@ The default location for the certificates are defined in the node hostgroup. The
       horizon_cert /etc/pki/tls/certs/FQDN-horizon.crt
       horizon_key  /etc/pki/tls/certs/FQDN-horizon.key
 
-Where FQDN is the fully-qualfied domain name of the private interface of the node. Change these as needed. These settings are found in the Foreman UI under More -> Configuration -> Host groups. Select each hostgroup then look in Parameters for the SSL options. To change a value select override, then add a new value at the bottom of the page.
+Where FQDN is the fully-qualified domain name of the private interface of the node. Change these as needed. These settings are found in the Foreman UI under More -> Configuration -> Host groups. Select each hostgroup then look in Parameters for the SSL options. To change a value select override, then add a new value at the bottom of the page.
 
 Don't worry about file ownership, puppet should set them as needed.
 
@@ -337,7 +337,7 @@ Remove the private key and certificate pem files for the mysql and horizon certi
 
 #### On the IPA master
 
-The controller node has permission to request a certificiate for its public interface but not permission to revoke or replace it so you'll need to do that in advance:
+The controller node has permission to request a certificate for its public interface but not permission to revoke or replace it so you'll need to do that in advance:
 
       # ipa service-show horizon/hostname.public.example.com
 

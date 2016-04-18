@@ -48,7 +48,7 @@ If the service already enabled and the service link points to the packaged versi
        systemctl enable rabbitmq-server
        systemctl  start rabbitmq-server
 
-The systemd confing files need to be reload after configuration changes:
+The systemd config files need to be reload after configuration changes:
 
        systemctl daemon-reload
 

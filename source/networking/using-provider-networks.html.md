@@ -33,7 +33,7 @@ If vlans are to be created by the users as tenant networks, the `tenant_network_
     tenant_network_types = vxlan
     # Example: tenant_network_types = vlan,gre,vxlan
 
-It is possible to list all the "flat" networks that will be used or \`\*\` can be used. For vlans the range should be specified along with the physical network that is decribed.
+It is possible to list all the "flat" networks that will be used or \`\*\` can be used. For vlans the range should be specified along with the physical network that is described.
 
     [ml2_type_flat]
     # (ListOpt) List of physical_network names with which flat networks
@@ -53,7 +53,7 @@ It is possible to list all the "flat" networks that will be used or \`\*\` can b
     # network_vlan_ranges =
     network_vlan_ranges = physnet1:1689:1689
 
-Next editing the openvswitch configuration file '/etc/neutron/plugins/openvswitch/ovs_neutron_plugin.ini' within the ovs_neutron_plugin vlans and flat networks are treated much the same way. If vlan tagging is not being used then leave off the vlan tag id from the 'network_vlan_range'. Both the vlan_range as well as bridge_mappings can have multiple comma seperated values in it.
+Next editing the openvswitch configuration file '/etc/neutron/plugins/openvswitch/ovs_neutron_plugin.ini' within the ovs_neutron_plugin vlans and flat networks are treated much the same way. If vlan tagging is not being used then leave off the vlan tag id from the 'network_vlan_range'. Both the vlan_range as well as bridge_mappings can have multiple comma separated values in it.
 
     [ovs]
     network_vlan_ranges = default:2000:3999

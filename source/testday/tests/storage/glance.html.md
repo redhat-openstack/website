@@ -22,7 +22,7 @@ Glance testing should include image manipulation commands below, tested on diffe
 *   Image details:
     -   list images.
     -   show specific detail of an image.
-*   Image-update, change image aparmanters check that it updated.
+*   Image-update, change image parameters check that it updated.
 *   Use images:
     -   Boot instance from image, using nova boot from image, to test a bootable image.
     -   Test several instances for different operating systems (Linux\\Windows..).
