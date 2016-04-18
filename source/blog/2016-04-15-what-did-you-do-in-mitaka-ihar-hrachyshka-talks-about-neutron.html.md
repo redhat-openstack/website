@@ -58,18 +58,18 @@ scope of Quality of Service (QOS). The initial support for QOS in
 Neutron was merged in Liberty, but it's still quite limited, so we
 expand on what we had done in that release. Specifically, the initial
 support was just for OpenVSwitch, but in Mitaka we added support for
-Linuxbridge ml2 drive. We also added role-based access control for QOS
+Linuxbridge ml2 driver. We also added role-based access control for QOS
 policies. We added support for so-called DSCP tags, which is a feature
 to prioritize traffic based on which port it came from.
 
 Another interesting thing that we finally tackled in Mitaka is MTU
-support. This is one of the huge pain pain points that were identified
+support. This is one of the huge pain points that were identified
 by operators in the past, that Neutron, while being the networking
 solution for OpenStack, cannot actually properly handle MTUs - which
-stands for Minimum Transfer Unit. Neutron could not actually handle,
+stands for Maximum Transfer Unit. Neutron could not actually handle,
 neither standard MTUs for ethernet, nor so-called jumbo frames, which
 is really bad. It means that instances did not have access to the full
-capabilities of the underlying physicaly infrastructure. That should
+capabilities of the underlying physical infrastructure. That should
 hopefully go away in Mitaka, because there were several changes there,
 both on the Neutron side, and on Nova, which now should make Neutron
 work out of the box, both for non-standard and standard MTU sizes.
