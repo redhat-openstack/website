@@ -178,7 +178,7 @@ Those capabilities are integrated into the TripleO UI. From the command line, th
 
 ## Monitoring the workload cloud
 
-When the workload cloud is deployed, Ceilometer can be configured to track a set of OS metrics for each node (system load, CPU utiization, swap usage etc.) These metrics are graphed in the TripleO UI, both for individual nodes, and for groups of nodes, such as the collection of nodes which are all delivering a particular role.
+When the workload cloud is deployed, Ceilometer can be configured to track a set of OS metrics for each node (system load, CPU utilization, swap usage etc.) These metrics are graphed in the TripleO UI, both for individual nodes, and for groups of nodes, such as the collection of nodes which are all delivering a particular role.
 
 Additionally, Ironic exports IPMI metrics for nodes, which can also be stored in Ceilometer. This enables checks on hardware state such as fan operation/failure and internal chassis temperatures.
 

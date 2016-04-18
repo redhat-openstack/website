@@ -20,7 +20,7 @@ At a high level, the required steps are:
 *   Run the puppet agent to get the Mysql cluster up and verify that the cluster was set up with no errors.
 *   Run the puppet agent again to create the OpenStack databases and users.
 
-Note the above does not set up any fencing configuration. In a production enviornment fencing is critical: you can either use pacemaker commands to setup fencing, or update the default HA mysql puppet manifests.
+Note the above does not set up any fencing configuration. In a production environment fencing is critical: you can either use pacemaker commands to setup fencing, or update the default HA mysql puppet manifests.
 
 **HA Mysql Resources**
 

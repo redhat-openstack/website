@@ -31,7 +31,7 @@ Now that the databases have been dumped, stop and disable the MySQL service.
     % service mysqld stop
     % chkconfig mysqld off
 
-Now deploy the MariaDB+Galera cluster. It is recommended to use at least 3 nodes for this cluster. In this example, the MariaDB+Galera cluster will be deployed on three additional nodes that will be referred to as 'node-02', 'node-03'. and 'node-04' with addressses 10.15.85.142, 10.15.85.143, and 10.15.85.144 respectively.
+Now deploy the MariaDB+Galera cluster. It is recommended to use at least 3 nodes for this cluster. In this example, the MariaDB+Galera cluster will be deployed on three additional nodes that will be referred to as 'node-02', 'node-03'. and 'node-04' with addresses 10.15.85.142, 10.15.85.143, and 10.15.85.144 respectively.
 
 On each of the MariaDB+Galera cluster nodes, configure the yum repo from which the packages will be retrieved. In this example, each machine is running RHEL6, x86_64. Appropriate yum repositories for other operating systems and/or architectures can be found using the MariaDB [repository configuration tool](http://downloads.mariadb.org/mariadb/repositories/).
 

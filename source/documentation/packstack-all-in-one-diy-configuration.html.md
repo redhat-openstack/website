@@ -51,7 +51,7 @@ Some steps include one or more sets of suggestions for optional steps aimed at v
 #### Checkpoint: OpenStack Guru Health Check
 
 <div style="background-color:#e0e0f0; padding-left:2em;padding-right:2em;padding-top:5px;padding-bottom:5px;">
-Visually confirm your pants are not on fire. Evident combustion indicates a time critical condition. Due to potential time zone variability and general apathy of core developers and PTLs, seeking assistance on the mailing lists or IRC is not recommended. Suggested courses of action include: immediate immersion in a NON-flammable fluid; or immediate cessation of forward locomation, adoption of a prone position followed by vigorous twisting of the body on a NON-flammable surface. Vocalizations including expletives, entreaties for immediate assistance from nearby entities corporeal or otherwise, or long strings of vowels are recommended, but optional.
+Visually confirm your pants are not on fire. Evident combustion indicates a time critical condition. Due to potential time zone variability and general apathy of core developers and PTLs, seeking assistance on the mailing lists or IRC is not recommended. Suggested courses of action include: immediate immersion in a NON-flammable fluid; or immediate cessation of forward locomotion, adoption of a prone position followed by vigorous twisting of the body on a NON-flammable surface. Vocalizations including expletives, entreaties for immediate assistance from nearby entities corporeal or otherwise, or long strings of vowels are recommended, but optional.
 
 </div>
 
@@ -278,7 +278,7 @@ We need the network ID and the router ID. We can get them by running the appropr
     | 6e6f71df-cca2-4959-bdc5-ff97adf8fc8e | rdorouter |                                                        |
     +--------------------------------------+-----------+--------------------------------------------------------+
 
-Now we have what we need to set the gatway:
+Now we have what we need to set the gateway:
 
     #quantum router-gateway-set [router id] [subnet id]
     quantum router-gateway-set 6e6f71df-cca2-4959-bdc5-ff97adf8fc8e c4e92c69-1621-4acc-9196-899e2989c1b1
@@ -375,7 +375,7 @@ Whoa! Another new interface! This is a bit more interesting. First take note of 
 
 ## Step 3. Create a Tenant
 
-This is actually a little boring and is not specific to Neutron, so we will just barrell through and not worry too much about side-effects. Not to say Keystone is boring, it is not! It is actually really cool and is such a shockingly fundamental part of the OpenStack system... well, it really is too much to go into. So remember, this \*part\* is boring, not Keystone.
+This is actually a little boring and is not specific to Neutron, so we will just barrel through and not worry too much about side-effects. Not to say Keystone is boring, it is not! It is actually really cool and is such a shockingly fundamental part of the OpenStack system... well, it really is too much to go into. So remember, this \*part\* is boring, not Keystone.
 
 *... the Keystone guys know where I live.*
 
@@ -1148,7 +1148,7 @@ You could say that a lot goes on when you boot a VM!
 
 ## Step 10. Getting VMs to Communicate with the Outside World
 
-Chances are you want to be able to do things with these VMs, like communicate with other hosts, etc. While we technically have followed the steps of setting up external communications, we have only been dealing with an external network as a conceptual entity. Unfortunately getting access to the public network we have defined as if it were an actual external network is problematic. Making it so those VMs can communicate with the outside world through that public network is straighforward, if a little hackish.
+Chances are you want to be able to do things with these VMs, like communicate with other hosts, etc. While we technically have followed the steps of setting up external communications, we have only been dealing with an external network as a conceptual entity. Unfortunately getting access to the public network we have defined as if it were an actual external network is problematic. Making it so those VMs can communicate with the outside world through that public network is straightforward, if a little hackish.
 
 ### NAT Trick
 
