@@ -20,10 +20,8 @@ On all of your hosts:
         yum upgrade openstack-selinux
 
    This is necessary to ensure that the upgraded services will run
-   correctly on a system with [SELinux][selinux] enabled.
+   correctly on a system with [SELinux](http://selinuxproject.org/page/Main_Page)
+   enabled.
 
-1. Go back to [Upgrade Scenario 2][2].
-
-[selinux]: http://selinuxproject.org/page/Main_Page
-[2]: upgrading-rdo-2
+1. Go back to [Upgrade scenario 2](upgrading-rdo-2).
 

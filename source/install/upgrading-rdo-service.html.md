@@ -25,3 +25,8 @@ running:
 
     # yum install openstack-utils
 
+## References
+
+* [Upgrade scenario 1](upgrading-rdo-1)
+* [Upgrade scenario 2](upgrading-rdo-2)
+

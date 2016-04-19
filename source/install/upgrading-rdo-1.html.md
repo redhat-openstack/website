@@ -10,16 +10,17 @@ On all of your hosts:
 
         # yum install https://www.rdoproject.org/repos/rdo-release.rpm
 
-1. [Stop all your OpenStack services][stop].
+1. [Stop all your OpenStack services](upgrading-rdo-service#stop).
 
 1. Perform a complete upgrade of all packages:
 
         # yum upgrade
 
-1. Perform any necessary [configuration updates][config] for each of
-   your services.
+1. Perform any necessary [configuration updates](upgrading-rdo-config-upgrade)
+   for each of your services.
 
-1. Perform [database schema upgrades][dbsync] for each of your services:
+1. Perform [database schema upgrades](upgrading-rdo-database-upgrade) for each
+   of your services:
 
     - Keystone
     - Cinder
@@ -42,10 +43,9 @@ On all of your hosts:
      logs for any deprecation warnings, because these may cause
      problems during a future upgrade.
 
-1. [Start all your OpenStack services][start].
+1. [Start all your OpenStack services](upgrading-rdo-service#start).
 
-[stop]: upgrading-rdo-service#stop
-[start]: upgrading-rdo-service#start
-[config]: upgrading-rdo-config-upgrade
-[dbsync]: upgrading-rdo-database-upgrade
+## References
+
+* [Upgrading from Liberty to Mitaka: Overview](upgrading-rdo)
 

@@ -4,9 +4,7 @@ In this scenario, you upgrade one service at a time in a non-HA environment.
 
 ## Pre-upgrade
 
-Perform the necessary [pre-upgrade][] steps.
-
-[pre-upgrade]: upgrading-rdo-pre-upgrade
+Perform the necessary [pre-upgrade](upgrading-rdo-pre-upgrade) steps.
 
 ## Service upgrades
 
@@ -26,7 +24,7 @@ The following is a reasonable order in which to perform the upgrade:
 The procedure for upgrading an individual OpenStack service looks like
 this:
 
-1. [Stop the service][stop]:
+1. [Stop the service](upgrading-rdo-service#stop):
 
          # openstack-service stop <service>
 
@@ -34,22 +32,21 @@ this:
 
          # yum upgrade \*<service>\*
 
-1. Perform any necessary [configuration updates][config] for that service.
+1. Perform any necessary [configuration updates](upgrading-rdo-config-upgrade)
+   for that service.
 
-1. Perform [database schema upgrades][dbsync] for that service.
+1. Perform [database schema upgrades](upgrading-rdo-database-upgrade) for that
+   service.
 
-1. [Restart the service][start]:
+1. [Restart the service](upgrading-rdo-service#start):
 
          # openstack-service start <service>
 
-[config]: upgrading-rdo-config-upgrade
-[dbsync]: upgrading-rdo-database-upgrade
-[stop]: upgrading-rdo-service#stop
-[start]: upgrading-rdo-service#start
+## Post-upgrade
 
-# Post-upgrade
+Perform the necessary [post-upgrade](upgrading-rdo-post-upgrade) steps.
 
-Perform the necessary [post-upgrade][] steps.
+## References
 
-[post-upgrade]: upgrading-rdo-post-upgrade
+* [Upgrading from Liberty to Mitaka: Overview](upgrading-rdo)
 

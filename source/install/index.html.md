@@ -30,6 +30,7 @@ While the [Quickstart](Quickstart) is sufficient for an initial test deployment,
 *   [Repository information ](Repositories)
 *   [Adding a compute node](Adding a compute node)
 *   [Troubleshooting](Troubleshooting)
+*   [Upgrading RDO &ndash; primarily for manual and Packstack-based deployments](upgrading-rdo)
 *   [Uninstalling RDO](Uninstalling RDO)
 *   [Packstack cookbook](Packstack_cookbook)
 *   [Virtualized Foreman dev setup](Virtualized_Foreman_dev_setup)
