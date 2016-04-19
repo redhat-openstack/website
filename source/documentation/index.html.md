@@ -35,8 +35,8 @@ Since RDO sticks closely to the upstream OpenStack project, the documentation at
 * [Running an instance](Running an instance)
 * [Image resources](Image resources)
 * [Adding a compute node](Adding a compute node)
-* [Upgrading Packstack ](/install/upgrading-rdo)
 * [Troubleshooting](Troubleshooting)
+* [Upgrading RDO &ndash; primarily for manual and Packstack-based deployments](/install/upgrading-rdo)
 * [More&hellip;](Install){:.more}
 {:.with-more-link}
 </div>

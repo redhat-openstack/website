@@ -27,3 +27,8 @@ see the
 You should also review your OpenStack logs for any deprecation warnings,
 because these may cause problems during a future upgrade.
 
+## References
+
+* [Upgrade scenario 1](upgrading-rdo-1)
+* [Upgrade scenario 2](upgrading-rdo-2)
+

@@ -17,3 +17,8 @@ upgrade that is not covered by the `openstack-db` command. For more
 information, see the
 [OpenStack Projects Release Notes for Mitaka](http://releases.openstack.org/mitaka/index.html).
 
+## References
+
+* [Upgrade scenario 1](upgrading-rdo-1)
+* [Upgrade scenario 2](upgrading-rdo-2)
+
