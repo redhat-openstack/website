@@ -24,7 +24,7 @@ there is no orchestration involved.
 environment, this can result in a potentially extensive downtime as
 you wait for database schema upgrades to complete.
 
-Read about this scenario in [Upgrade Scenario 1][1].
+Read about this scenario in [Upgrade Scenario 1](/install/upgrading-rdo-1/).
 
 ## Scenario 2: Service-by-service with live compute upgrade
 
@@ -42,8 +42,6 @@ compute workloads.
 undiscovered compatibility issues can unexpectedly turn it into
 Scenario 1.
 
-Read about this scenario in [Upgrade Scenario 2][3].
+Read about this scenario in [Upgrade Scenario 2](/install/upgrading-rdo-2/).
 
-[1]: upgrading-rdo-1
-[3]: upgrading-rdo-2
 
