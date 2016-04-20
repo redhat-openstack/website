@@ -14,7 +14,7 @@ TripleO is an OpenStack Deployment & Management tool. It is developed upstream a
 
 There is an [Ansible-based](https://www.ansible.com/) project called [tripleo-quickstart](https://github.com/openstack/tripleo-quickstart) whose main goal is to quickly stand up TripleO environments using an image-based undercloud approach similar to the [OPNFV Apex project](http://artifacts.opnfv.org/apex/docs/installation-instructions/).
 
-You will need a host machine (referred to as `$VIRTHOST`) with at least 16G of RAM, preferably 32G, and you must be able to ssh to the `$VIRTHOST` machine as root without a password from the machine running Ansible. The `$VIRTHOST` machine must be running a recent Red Hat-based Linux distribution (such as CentOS 7 or RHEL 7, but only CentOS 7 is currently tested).
+You will need a host machine (referred to as `$VIRTHOST`) with at least 16GB of RAM, preferably 32GB, and you must be able to ssh to the `$VIRTHOST` machine as root without a password from the machine running Ansible. The `$VIRTHOST` machine must be running a recent Red Hat-based Linux distribution (such as CentOS 7 or RHEL 7, but only CentOS 7 is currently tested).
 
 A quick way to test that your `$VIRTHOST` machine is ready to rock is:
 
