@@ -83,7 +83,6 @@
   Packstack with Multiple Compute nodes: uncategorized/packstack-with-multiple-compute-nodes
   Network Configuration Overview: networking/network-configuration-overview
   Neutron-Quickstart: install/neutron-quickstart
-  Running an instance with Neutron: networking/running-an-instance-with-neutron
   Tools: networking/tools
   Networking Solutions: networking/networking-solutions
   Tenant Networks: networking/tenant-networks
