@@ -12,7 +12,7 @@ Next in our series of "What Did You Do In Mitaka" articles, I spoke with Chandan
 
 
 
-<iframe id='audio_iframe' src='http://www.podbean.com/media/player/8wg55-5e987c?from=yiiadmin' data-link='http://www.podbean.com/media/player/8wg55-5e987c?from=yiiadmin' height='100' width='100%' frameborder='0' scrolling='no' data-name='pb-iframe-player' ></iframe>
+<iframe id='audio_iframe' src='https://www.podbean.com/media/player/8wg55-5e987c?from=yiiadmin' data-link='http://www.podbean.com/media/player/8wg55-5e987c?from=yiiadmin' height='100' width='100%' frameborder='0' scrolling='no' data-name='pb-iframe-player' ></iframe>
 
 (If the above player doesn't work for you, you can download the podcast recording [HERE](https://rdocommunity.podbean.com/mf/play/94gwty/chandan-kumar-mitaka.mp3/).)
 
