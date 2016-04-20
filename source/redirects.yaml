@@ -120,7 +120,6 @@
   RDO Test Day October 2013: testday/rdo-test-day-october-2013
   LaunchHeatApplication: uncategorized/launchheatapplication
   Configuring Neutron with OVS and GRE Tunnels using quickstack: networking/configuring-neutron-with-ovs-and-gre-tunnels-using-quickstack
-  GettingStartedHavana w GRE: networking/gettingstartedhavana-w-gre
   Continuous Integration: uncategorized/continuous-integration
   CeilometerQuickStart: install/ceilometerquickstart
   Securing Services Foreman: uncategorized/securing-services-foreman
