@@ -1,3 +1,8 @@
+---
+title: Upgrading from Liberty to Mitaka
+authors: larsks, pmkovar
+---
+
 # Upgrading from Liberty to Mitaka: Overview
 
 This document is primarily intended to cover upgrading from Liberty to
@@ -24,7 +29,7 @@ there is no orchestration involved.
 environment, this can result in a potentially extensive downtime as
 you wait for database schema upgrades to complete.
 
-Read about this scenario in [Upgrade scenario 1](upgrading-rdo-1).
+Read about this scenario in [Upgrade scenario 1](/install/upgrading-rdo-1/).
 
 ## Scenario 2: Service-by-service with live compute upgrade
 
@@ -40,7 +45,7 @@ compute workloads.
 
 **Cons**: This is a more complex procedure, and mistakes or
 undiscovered compatibility issues can unexpectedly turn it into
-Scenario 1.
+[Scenario 1](/install/upgrading-rdo-1/).
 
 Read about this scenario in [Upgrade scenario 2](upgrading-rdo-2).
 
