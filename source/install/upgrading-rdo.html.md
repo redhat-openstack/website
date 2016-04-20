@@ -47,5 +47,5 @@ compute workloads.
 undiscovered compatibility issues can unexpectedly turn it into
 [Scenario 1](/install/upgrading-rdo-1/).
 
-Read about this scenario in [Upgrade scenario 2](upgrading-rdo-2).
+Read about this scenario in [Upgrade scenario 2](/install/upgrading-rdo-2/).
 

@@ -51,6 +51,6 @@ For information on upgrading other OpenStack services, see the
 
 ## References
 
-* [Upgrade scenario 1](upgrading-rdo-1)
-* [Upgrade scenario 2](upgrading-rdo-2)
+* [Upgrade scenario 1](/install/upgrading-rdo-1/)
+* [Upgrade scenario 2](/install/upgrading-rdo-2/)
 

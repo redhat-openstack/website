@@ -23,5 +23,5 @@ On all of your hosts:
    correctly on a system with [SELinux](http://selinuxproject.org/page/Main_Page)
    enabled.
 
-1. Go back to [Upgrade scenario 2](upgrading-rdo-2).
+1. Go back to [Upgrade scenario 2](/install/upgrading-rdo-2/).
 
