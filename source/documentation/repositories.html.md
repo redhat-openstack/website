@@ -1,5 +1,5 @@
 ---
-title: Repositories
+title: RDO repositories
 authors: apevec, kashyap, larsks, mangelajo, pixelbeat, pmyers, srikanth1239, strider
 wiki_title: Repositories
 wiki_revision_count: 20
@@ -8,25 +8,25 @@ wiki_last_updated: 2015-01-13
 
 # RDO repositories
 
-Please see the [Quickstart](/install/quickstart/) for summarized instructions for interacting with these repositories.
+See the [Packstack quickstart](/install/quickstart/) for summarized instructions on how to interact with the repositories described in this document.
 
-Here we expand on the details of the various repositories involved.
+This document expands on the details of the various repositories involved.
 
 ### Browsing
 
-The RDO packages can be browsed at [RDO repositories](http://rdo.fedorapeople.org/openstack/).
+The RDO packages can be browsed at [RDO repositories](http://rdoproject.org/repos/).
 
-### Optional, Extras, and RH Common channels
+### Enabling the Optional, Extras, and RH Common channels on RHEL
 
-If using RHEL, then RDO needs the `Optional`, `Extras`, and `RH Common` channels enabled:
+If using RHEL, then RDO needs the `Optional`, `Extras`, and `RH Common` channels to be enabled:
 
-`# subscription-manager repos --enable rhel-7-server-optional-rpms`
+    $ sudo subscription-manager repos --enable rhel-7-server-optional-rpms
 
-`# subscription-manager repos --enable rhel-7-server-extras-rpms`
+    $ sudo subscription-manager repos --enable rhel-7-server-extras-rpms
 
-`# subscription-manager repos --enable=rhel-7-server-rh-common-rpms`
+    $ sudo subscription-manager repos --enable=rhel-7-server-rh-common-rpms
 
-The `Optional` channel is not available for CentOS or Scientific Linux. The required packages are included in the main repositories for those distributions. `Extras` is enabled by default on CentOS7.
+The `Optional` channel is not available for CentOS or Scientific Linux. The required packages are included in the main repositories for those distributions. `Extras` is enabled by default on CentOS 7.
 
 ### RHEL-OSP
 

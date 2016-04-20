@@ -1,45 +1,36 @@
 ---
-title: TripleO
+title: TripleO quickstart
 authors: athomas, hewbrocca, jcoufal, jistr, snecklifter, trown
 wiki_title: RDO Manager
 wiki_revision_count: 49
 wiki_last_updated: 2016-01-11
 ---
 
-# TripleO
+# TripleO quickstart
 
 TripleO is an OpenStack Deployment & Management tool. It is developed upstream as the [OpenStack TripleO](http://wiki.openstack.org/wiki/TripleO) project, but we have a special love for it in RDO-land.
 
 ## Virtual environment quickstart
 
-There is a recent project called [tripleo-quickstart](https://github.com/openstack/tripleo-quickstart) whose main goal is to quickly stand up TripleO environments using an image-based undercloud approach similar to the [OPNFV Apex project](http://artifacts.opnfv.org/apex/docs/installation-instructions/).
+There is an [Ansible-based](https://www.ansible.com/) project called [tripleo-quickstart](https://github.com/openstack/tripleo-quickstart) whose main goal is to quickly stand up TripleO environments using an image-based undercloud approach similar to the [OPNFV Apex project](http://artifacts.opnfv.org/apex/docs/installation-instructions/).
 
-You will need a host machine with at least 16G of RAM (preferably 32G)
-with CentOS 7 installed, and able to be ssh'd to as root
-without password from the machine running Ansible.
+You will need a host machine (referred to as `$VIRTHOST`) with at least 16G of RAM, preferably 32G, and you must be able to ssh to the `$VIRTHOST` machine as root without a password from the machine running Ansible. The `$VIRTHOST` machine must be running a recent Red Hat-based Linux distribution (such as CentOS 7 or RHEL 7, but only CentOS 7 is currently tested).
 
-A quick way to test that your host machine (referred to as `$VIRTHOST`) is
-ready to rock is::
+A quick way to test that your `$VIRTHOST` machine is ready to rock is:
 
     $ ssh root@$VIRTHOST uname -a
 
-The defaults are meant to *just work*, so it is as easy as
-downloading and running the `quickstart.sh` script.
+The defaults are meant to *just work*, so it is as easy as downloading and running the `quickstart.sh` script.
 
-The `quickstart.sh` script will install this repo along
-with Ansible in a virtual environment and run the `quickstart`
-playbook. 
+The `quickstart.sh` script will install this repo along with Ansible in a virtual environment and run the `quickstart` playbook.
 
-**Note:** The `quickstart` playbook will delete the ``stack``
-user on the virthost and recreate it.::
+**Note:** The `quickstart` playbook will delete the ``stack`` user on the $VIRTHOST and recreate it:
 
     $ export VIRTHOST='my_test_machine.example.com'
     $ curl -O https://raw.githubusercontent.com/openstack/tripleo-quickstart/master/quickstart.sh
     $ bash quickstart.sh $VIRTHOST
 
-This script will output instructions at the end to access the
-deployed undercloud. If a release name is not given, ``mitaka``
-is used.
+This script will output instructions at the end to access the deployed undercloud. If a release name is not given, ``mitaka`` is used.
 
 ## Further reading
 
@@ -77,5 +68,6 @@ Demo 3 (March 9, 2015):
 
 ## Get in touch
 
-*   IRC: **#tripleo** and **#rdo** channels on [Freenode](http://freenode.net)
-*   Mailing list: [**rdo-list**](//www.redhat.com/mailman/listinfo/rdo-list), using **[TripleO]** tag in the subject of the e-mail
+*   IRC: **#tripleo** and **#rdo** channels on [Freenode](http://freenode.net).
+*   Mailing list: [**rdo-list**](//www.redhat.com/mailman/listinfo/rdo-list), using **[TripleO]** tag in the subject of the email.
+
