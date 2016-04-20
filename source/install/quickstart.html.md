@@ -1,5 +1,5 @@
 ---
-title: Quickstart
+title: Packstack quickstart
 category: documentation
 authors: apevec, dneary, garrett, jasonbrooks, jlibosva, mmagr, pixelbeat, pmyers,
   rbowen
@@ -9,16 +9,15 @@ wiki_revision_count: 141
 wiki_last_updated: 2015-06-30
 ---
 
-# RDO quickstart: Proof of concept for single node
+# Packstack quickstart: Proof of concept for single node
 
-If you want to spin up a proof of concept cloud on one node, this is the
-place to be. You will be able to [add more nodes](Adding_a_compute_node) to your OpenStack cloud later, if you choose.
+Packstack is an installation utility that lets you spin up a proof of concept cloud on one node. You will be able to [add more nodes](Adding_a_compute_node) to your OpenStack cloud later, if you choose.
 
-If you are looking for instructions to deploy a production cloud,
-possibly with HA, see the [TripleO Quickstart](/tripleo).
-If you just want to try it out without installing anything, check out [TryStack](http://trystack.org). 
+* If you are looking for instructions on how to deploy a production-ready cloud, possibly with HA, see the [TripleO quickstart](/tripleo).
 
-These instructions are to install the current **Mitaka** release.
+* If you just want to try out OpenStack without installing anything, check out [TryStack](http://trystack.org).
+
+This document describes installing the current **Mitaka** release.
 
 ## Summary for the impatient
 
@@ -27,44 +26,54 @@ Make sure your `/etc/environment` is populated:
     LANG=en_US.utf-8
     LC_ALL=en_US.utf-8
 
-If your system meets all the prerequisites mentioned below, proceed with running the following commands:
+If your system meets all the prerequisites mentioned below, proceed with running the following commands.
 
-    $ sudo yum install -y https://www.rdoproject.org/repos/rdo-release.rpm
-    $ sudo yum update -y
-    $ sudo yum install -y openstack-packstack
-    $ packstack --allinone
+* On RHEL:
+
+  ```
+  $ sudo yum install -y https://www.rdoproject.org/repos/rdo-release.rpm
+  $ sudo yum update -y
+  $ sudo yum install -y openstack-packstack
+  $ packstack --allinone
+  ```
+
+* On CentOS:
+
+  ```
+  $ sudo yum install -y centos-release-openstack-mitaka
+  $ sudo yum update -y
+  $ sudo yum install -y openstack-packstack
+  $ packstack --allinone
+  ```
 
 ## Step 0: Prerequisites
 
 ### Software
 
-**Red Hat Enterprise Linux (RHEL) 7** is the minimum recommended version, or 
-the equivalent version of one of the RHEL-based Linux distributions such as CentOS, 
-Scientific Linux, and so on. **x86_64** is currently the only supported architecture. 
-See also [RDO repository info](repositories) for details on required repositories. 
-Please name the host with a fully qualified domain name rather than a short-form 
-name to avoid DNS issues with Packstack.
+**Red Hat Enterprise Linux (RHEL) 7** is the minimum recommended version, or the equivalent version of one of the RHEL-based Linux distributions such as **CentOS**, **Scientific Linux**, and so on. **x86_64** is currently the only supported architecture.
+
+* See [RDO repositories](repositories) for details on required repositories.
+
+Name the host with a fully qualified domain name rather than a short-form name to avoid DNS issues with Packstack.
 
 ### Hardware
 
-Machine with at least 4GB RAM, processors with hardware 
-virtualization extensions, and at least one network adapter.
+Machine with at least 4GB RAM, processors with hardware virtualization extensions, and at least one network adapter.
 
 ### Network
 
-If you plan on having **external** network access to the 
-server and instances, this is a good moment to properly configure your network settings.
-A static IP address to your network card, and disabling NetworkManager are good ideas. 
-If you are planing on something fancier, read [this document on advanced
-networking](https://www.rdoproject.org/networking/neutron-with-existing-external-network/)
-**before proceeding**.
+If you plan on having **external** network access to the server and instances, this is a good moment to properly configure your network settings. A static IP address to your network card, and disabling NetworkManager are good ideas. If you are planing on something fancier, read [the document on advanced networking](https://www.rdoproject.org/networking/neutron-with-existing-external-network/) **before proceeding**.
 
 ## Step 1: Software repositories
 
-Setup the RDO repositories:
+On RHEL, download and install the RDO repository RPM to set up the OpenStack repository:
 
     $ sudo yum install -y https://rdoproject.org/repos/rdo-release.rpm
-    
+
+On CentOS, the `Extras` repository provides the RPM that enables the OpenStack repository. `Extras` is enabled by default on CentOS 7, so you can simply install the RPM to set up the OpenStack repository:
+
+    $ sudo yum install -y centos-release-openstack-mitaka
+
 Update your current packages:
 
     $ sudo yum update -y
@@ -87,7 +96,7 @@ If you have run Packstack previously, there will be a file in your home director
 
 The installer will ask you to enter the root password for each host node you are installing on the network, to enable remote configuration of the host so it can remotely configure each node using Puppet.
 
-Once the process is complete, you can log in to the OpenStack web interface Horizon by going to [http://$YOURIP/dashboard](http://$YOURIP/dashboard). The user name is `admin`. The password can be found in the file `keystonerc_admin` in the `/root` directory of the control node.
+Once the process is complete, you can log in to the OpenStack web interface Horizon by going to `http://$YOURIP/dashboard`. The user name is `admin`. The password can be found in the file `keystonerc_admin` in the `/root` directory of the control node.
 
 # Next steps
 
