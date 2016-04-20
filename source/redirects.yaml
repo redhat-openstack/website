@@ -83,7 +83,6 @@
   Packstack with Multiple Compute nodes: uncategorized/packstack-with-multiple-compute-nodes
   Network Configuration Overview: networking/network-configuration-overview
   Neutron-Quickstart: install/neutron-quickstart
-  Running an instance with Neutron: networking/running-an-instance-with-neutron
   Tools: networking/tools
   Networking Solutions: networking/networking-solutions
   Tenant Networks: networking/tenant-networks
@@ -120,7 +119,6 @@
   RDO Test Day October 2013: testday/rdo-test-day-october-2013
   LaunchHeatApplication: uncategorized/launchheatapplication
   Configuring Neutron with OVS and GRE Tunnels using quickstack: networking/configuring-neutron-with-ovs-and-gre-tunnels-using-quickstack
-  GettingStartedHavana w GRE: networking/gettingstartedhavana-w-gre
   Continuous Integration: uncategorized/continuous-integration
   CeilometerQuickStart: install/ceilometerquickstart
   Securing Services Foreman: uncategorized/securing-services-foreman
