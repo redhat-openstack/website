@@ -58,7 +58,7 @@ Name the host with a fully qualified domain name rather than a short-form name t
 
 ### Hardware
 
-Machine with at least 4GB RAM, processors with hardware virtualization extensions, and at least one network adapter.
+Machine with at least 4GB RAM, preferably 6GB RAM, processors with hardware virtualization extensions, and at least one network adapter.
 
 ### Network
 

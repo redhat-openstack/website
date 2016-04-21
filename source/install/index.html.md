@@ -12,12 +12,14 @@ wiki_last_updated: 2016-01-07
 
 [ ← Docs](Docs)
 
-While the [Quickstart](Quickstart) is sufficient for an initial test deployment, there are many other ways that you may wish to deploy OpenStack with RDO. Documents here also cover configuring your deployment.
+For an initial test deployment, follow the [Packstack quickstart](/install/quickstart). While using Packstack is sufficient as a proof-of-concept, there are other ways that you can use to deploy OpenStack with RDO. If you need to deploy a production-ready cloud, possibly with HA, see the [TripleO quickstart](/tripleo).
+
+Documents on this page also cover configuring your deployment.
 
 ### Installation
 
-*  [Quick start guide with Packstack](Quickstart)
-*  [TripleO Quickstart](/tripleo)
+* [TripleO quickstart &ndash; production deployment, with HA](/tripleo)
+* [Packstack quickstart &ndash; proof of concept for single node](/install/quickstart)
 
 ### Configuration
 

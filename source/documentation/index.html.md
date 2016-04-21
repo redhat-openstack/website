@@ -22,8 +22,8 @@ Since RDO sticks closely to the upstream OpenStack project, the documentation at
 
 ## Getting started
 
-* [TripleO Quickstart &ndash; production deployment, with HA](/tripleo)
-* [Packstack Quickstart &ndash; proof of concept for single node](/install/quickstart)
+* [TripleO quickstart &ndash; production deployment, with HA](/tripleo)
+* [Packstack quickstart &ndash; proof of concept for single node](/install/quickstart)
 * [Try out OpenStack at TryStack.org](http://trystack.org/)
 
 ## Configuration
