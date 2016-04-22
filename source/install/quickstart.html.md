@@ -21,7 +21,7 @@ This document describes installing the current **Mitaka** release.
 
 ## Summary for the impatient
 
-Make sure your `/etc/environment` is populated:
+If you are using non-English locale make sure your `/etc/environment` is populated:
     
     LANG=en_US.utf-8
     LC_ALL=en_US.utf-8
