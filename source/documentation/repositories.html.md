@@ -12,10 +12,6 @@ See the [Packstack quickstart](/install/quickstart/) for summarized instructions
 
 This document expands on the details of the various repositories involved.
 
-### Browsing
-
-The RDO packages can be browsed at [RDO repositories](http://rdoproject.org/repos/).
-
 ### Enabling the Optional, Extras, and RH Common channels on RHEL
 
 If using RHEL, then RDO needs the `Optional`, `Extras`, and `RH Common` channels to be enabled:
