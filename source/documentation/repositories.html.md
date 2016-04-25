@@ -24,7 +24,7 @@ If using RHEL, then RDO needs the `Optional`, `Extras`, and `RH Common` channels
 
 The `Optional` channel is not available for CentOS or Scientific Linux. The required packages are included in the main repositories for those distributions. `Extras` is enabled by default on CentOS 7.
 
-### RHEL-OSP
+### Red Hat OpenStack Platform
 
-The separate [Red Hat OpenStack Platform](https://www.redhat.com/en/technologies/linux-platforms/openstack-platform) product does **not** require the `Optional`, `Extras`, and `RH Common` channels enabled.
+The separate [Red Hat OpenStack Platform](https://access.redhat.com/products/red-hat-openstack-platform/) product does **not** require the `Optional`, `Extras`, and `RH Common` channels enabled.
 
