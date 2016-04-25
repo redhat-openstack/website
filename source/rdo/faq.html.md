@@ -13,7 +13,9 @@ wiki_last_updated: 2014-10-07
 
 ## What is RDO?
 
-RDO is two things. It's a freely-available, community-supported distribution of OpenStack that runs on Red Hat Enterprise Linux, CentOS, Fedora, and their derivatives. In addition to providing a set of software packages, it's also a community of users of cloud computing platform on Red Hat Linux operating systems to get help and compare notes on running OpenStack.
+RDO is two things. It's a freely-available, community-supported distribution of OpenStack that runs on Red Hat Enterprise Linux (RHEL), CentOS, Fedora, and their derivatives. In addition to providing a set of software packages, it's also a community of users of cloud computing platform on Red Hat-based operating systems to get help and compare notes on running OpenStack.
+
+RDO aims to be the natural option for anyone that wants to run the most recently released version of OpenStack on supported systems. Whether you are interested in running OpenStack on RHEL in a production environment, or doing a proof-of-concept deployment on CentOS, RDO is for you.
 
 ## What does RDO stand for?
 
@@ -36,7 +38,7 @@ The OpenStack project benefits from a broad group of providers and distributors,
 
 ## For which distributions does RDO provide packages?
 
-RDO targets CentOS, Fedora, and Red Hat Enterprise Linux, and their derivatives. Specifically, RDO packages are available for RHEL 6.3 or later (and CentOS 6.3+, ScientificLinux 6.3+ and other similar derivatives), as well as Fedora 18 and later.
+RDO targets Red Hat Enterprise Linux, CentOS, and Fedora, and their derivatives. Specifically, RDO packages are available for RHEL 7.0 or later (and CentOS 7.0, Scientific Linux 7.0 and other similar derivatives). The latest OpenStack development release is also made available for Fedora. More information is available at [Release-cadence](release-cadence).
 
 ## How is RDO different from upstream?
 
@@ -46,62 +48,56 @@ The OpenStack project develops code, and does not handle packaging for specific 
 
 ## How can I participate?
 
-Sign up to [ask.openstack](Get involved#ask.openstack) and help others with their RDO questions. Add your [User_stories](User_stories) to the wiki. Take well answered questions from ask.openstack and turn them into howto documents on the [Docs](Docs) pages.
+Sign up to [ask.openstack](https://ask.openstack.org/) and help others with their RDO questions. Add your [user stories](/user-stories/). Take well answered questions from ask.openstack and turn them into howto documents on the [RDO documentation](/documentation/) pages.
 
 Feel free to contribute any packaging and integration patches via our developer mailing lists, or propose improvements to OpenStack on the upstream Launchpad page. For more information, see [ getting involved](get involved).
 
 ## Is RDO a fork of OpenStack?
 
-RDO is not a fork of OpenStack, but a community focused on packaging and integrating code from the upstream OpenStack project on CentOS, Red Hat Enterprise Linux and Fedora based platforms. Red Hat continues to participate in the development of the core OpenStack projects upstream, and all relevant patches and bug reports are routed directly to the OpenStack community codebase.
+RDO is not a fork of OpenStack, but a community focused on packaging and integrating code from the upstream OpenStack project on CentOS, Red Hat Enterprise Linux and Fedora-based platforms. Red Hat continues to participate in the development of the core OpenStack projects upstream, and all relevant patches and bug reports are routed directly to the OpenStack community code base.
 
 ## What does RDO mean for OpenStack on Fedora?
 
-Development of OpenStack for Fedora will continue unchanged. Fedora will continue to ship whatever the latest OpenStack release is, at the time when each Fedora release cycle hits its development freeze date. For Fedora users who want to run a more recent version of OpenStack than that which is available in the Fedora repository, we provide RPMs through RDO. For example, if you are running Fedora 20, and you would like to try Icehouse, then the RDO packages are for you. If you would like to run Havana on Fedora 19, then you should install OpenStack packages from the Fedora repository.
+The OpenStack package maintainer team keeps only the latest OpenStack development release available for Fedora in RDO Trunk repositories. For more information, see the [Fedora project wiki](http://fedoraproject.org/wiki/OpenStack).
 
-Users of OpenStack on Fedora are welcome to participate in the discusson on [ask.openstack.org](http://ask.openstack.org/), and in the Fedora Cloud SIG. There is more information on OpenStack in Fedora [in the Fedora project wiki](http://fedoraproject.org/wiki/OpenStack).
+Users of OpenStack on Fedora are welcome to participate in the discussion on [ask.openstack.org](https://ask.openstack.org/), and in the Fedora Cloud SIG.
 
 ## How do I deploy RDO?
 
 You have two options:
 
-1. For Proof Of Concept (PoC) or Development environments, Packstack, an installation utility which uses Puppet modules to deploy OpenStack, is the primary tool. Instructions on installing RDO with Packstack are available on the [ quick start](Quickstart) page.
-2. For Production, you should consider[TripleO](https://www.rdoproject.org/tripleo) to provision baremetal machines and deploy a production cloud environment.
+1. For proof of concept (PoC) environments, Packstack, an installation utility which uses Puppet modules to deploy OpenStack, is the primary tool. Instructions on installing RDO with Packstack are available on the [Packstack quickstart](/install/quickstart) page.
+2. For production environments, consider[TripleO](/tripleo) to provision bare-metal machines and deploy a production cloud environment.
 
 ## Where can I find help with RDO?
 
-You can find documentation and get help through [ask.openstack](Get involved#ask.openstack), [IRC](http://webchat.freenode.net/?channels=rdo), or [mailing lists](Mailing_lists) and from others in the RDO community. And don't hesitate to answer someone else's question if you know the answer. You can find all of the ways you can get involved in the RDO community at [ getting involved](get involved).
+You can find documentation and get help through [ask.openstack.org](https://ask.openstack.org/), [IRC](/community/#discuss), or [mailing lists](Mailing_lists) and from others in the RDO community. And don't hesitate to answer someone else's question if you know the answer. You can find all of the ways you can get involved in the RDO community at [Get involved](/community/).
 
 ## Can I buy commercial support for RDO?
 
-No commercial support for RDO will be available from Red Hat. If you need support for your OpenStack deployments, Red Hat offers [Red Hat Enterprise Linux OpenStack Platform](https://access.redhat.com/products/red-hat-enterprise-linux-openstack-platform/) including a Partner Certification Program and Red Hat's award-winning support offering.
+No commercial support for RDO will be available from Red Hat. If you need support for your OpenStack deployments, Red Hat offers [Red Hat OpenStack Platform](https://access.redhat.com/products/red-hat-openstack-platform) including a Partner Certification Program and Red Hat's award-winning support offering.
 
 ## What is the errata or updates policy for RDO?
 
-RDO updates when the OpenStack project provides updates. RDO provides no lifecycle guarantees beyond what the upstream project provides. If you require additional guarantees see [Red Hat Enterprise Linux OpenStack Platform](https://access.redhat.com/products/red-hat-enterprise-linux-openstack-platform/).
+RDO updates when the OpenStack project provides updates. RDO provides no lifecycle guarantees beyond what the upstream project provides. If you require additional guarantees see [Red Hat OpenStack Platform](https://access.redhat.com/products/red-hat-openstack-platform).
 
 ## Can I upgrade between versions of RDO?
 
 We plan to enable RDO users to upgrade between consecutive OpenStack versions (from Icehouse to Juno, for instance). The RDO project will strive to release updated OpenStack versions as soon as possible following upstream releases, on the order of hours to a few days.
 
-## How often are bugfix updates of RDO made available?
+## How often are bug fix updates of RDO made available?
 
-RDO bugfix updates will be available every 8 weeks or so, in line with the release schedule of the upstream OpenStack project.
-
-## Who is RDO for?
-
-RDO aims to be the natural option for anyone that wants to run the most recently released version of OpenStack on RHEL, Fedora or their derivatives. Whether you are interested in running OpenStack on RHEL in a production environment, or doing a proof-of-concept deployment on CentOS, RDO is for you.
+RDO bug fix updates will be available every 8 weeks or so, in line with the release schedule of the upstream OpenStack project.
 
 ## Which OpenStack components does RDO include?
 
-This is answered in detail on the [Projects In RDO](/rdo/projectsinrdo/)
-page.
+This is answered in detail on the [Projects in RDO](/rdo/projectsinrdo/) page.
 
 ## Where is RDO built?
 
-RDO is built using Koji infrastructure, similar to how Fedora packages are built. The build system is accessible at [Fedora Buildsystem](http://koji.fedoraproject.org/koji/).
+RDO is built using CentOS infrastructure, similar to how CentOS packages are built. The build system is accessible at [CBS](http://cbs.centos.org/koji/).
 
 ## What is the relationship between RDO and Red Hat's commercial OpenStack product?
 
 RDO is a community-supported OpenStack distribution that tracks the latest version of OpenStack upstream, beginning with OpenStack Grizzly. [Red Hat OpenStack Platform](http://www.redhat.com/en/technologies/linux-platforms/openstack-platform) is an enterprise-ready commercially-supported product from Red Hat.
 
-<Category:Documentation>

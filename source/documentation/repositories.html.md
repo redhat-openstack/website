@@ -26,5 +26,5 @@ The `Optional` channel is not available for CentOS or Scientific Linux. The requ
 
 ### RHEL-OSP
 
-The separate [Red Hat Enterprise Linux OpenStack Platform](http://www.redhat.com/en/technologies/linux-platforms/openstack-platform) product does **not** require the `Optional`, `Extras`, and `RH Common` channels enabled.
+The separate [Red Hat OpenStack Platform](https://www.redhat.com/en/technologies/linux-platforms/openstack-platform) product does **not** require the `Optional`, `Extras`, and `RH Common` channels enabled.
 
