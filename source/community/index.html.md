@@ -82,7 +82,7 @@ We can always use your feedback and contributions to make RDO better.
 
 ### Packaging
 
-Get started by looking at the [RDO Packaging documentation](https://www.rdoproject.org/packaging/rdo-packaging.html), taking a glance at our [packages](https://github.com/openstack-packages) and help with [patch reviews](https://review.gerrithub.io/#/q/status:open+project:^openstack-packages/.*,n,z).
+Get started by looking at the [RDO Packaging documentation](https://www.rdoproject.org/documentation/packaging/), taking a glance at our [packages](https://github.com/rdo-packages) and help with [patch reviews](https://review.rdoproject.org/r/#/q/status:open+project:%255Eopenstack.*,n,z).
 
 ### Installers
 
@@ -107,4 +107,3 @@ Here are a few guidelines for contributing new content to the website:
 *   Use normal English case for page names. [Running an instance](Running an instance) is correct, [Get Involved](Get Involved) is not.
 *   Please keep the website content connected! When you add a new page, add a link to it from the appropriate page(s).
 *   Please be aware of our [terms of use](terms of use) — among other things, you agree to license your contributions under the [Creative Commons Attribution License version 3.0](http://creativecommons.org/licenses/by/3.0/), and you agree not to submit illegal content.
-
