@@ -82,7 +82,7 @@ We can always use your feedback and contributions to make RDO better.
 
 ### Packaging
 
-Get started by looking at the [RDO Packaging documentation](https://www.rdoproject.org/packaging/rdo-packaging.html), taking a glance at our [packages](https://github.com/openstack-packages) and help with [patch reviews](https://review.gerrithub.io/#/q/status:open+project:^openstack-packages/.*,n,z).
+Get started by looking at the [RDO Packaging documentation](https://www.rdoproject.org/documentation/packaging/), taking a glance at our [packages](https://github.com/rdo-packages) and help with [patch reviews](https://review.rdoproject.org/r/#/q/status:open+project:%255Eopenstack.*,n,z).
 
 ### Installers
 
