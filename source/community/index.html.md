@@ -8,7 +8,7 @@ wiki_revision_count: 49
 wiki_last_updated: 2015-08-10
 ---
 
-# Get Involved
+# Get involved
 
 Help us make the RDO community site a great place for users and cloud operators in the Red Hat ecosystem by sharing your OpenStack questions and solutions on [ask.openstack](http://ask.openstack.org), and by adding [the most useful solutions](/troubleshooting/) and [user stories](/user-stories/) to the RDO website.
 
@@ -34,7 +34,7 @@ We have weekly IRC meetings you can participate in:
 
 Join us for various [Events](/events/) around the world. [Organize-a-meetup](/community/organize-a-meetup/).
 
-## Stay Informed
+## Stay informed
 
 Follow us on Twitter at [@rdocommunity](//twitter.com/rdocommunity), on [Google+](https://plus.google.com/communities/110409030763231732154), or on [Facebook](https://www.facebook.com/rdocommunity), as you prefer.
 
@@ -43,7 +43,7 @@ Follow us on Twitter at [@rdocommunity](//twitter.com/rdocommunity), on [Google+
 
 Join our [newsletter mailing list](//www.redhat.com/mailman/listinfo/rdo-newsletter) for monthly updates on RDO and the larger OpenStack world.
 
-## Ask and Answer
+## Ask and answer
 
 - Check our [Frequently Asked Questions (FAQ) page](/rdo/faq/) for answers to common questions
 - Try our [troubleshooting page](/troubleshooting/) for solutions to common problems
@@ -93,7 +93,7 @@ Packages provided by RDO to install and configure OpenStack are available throug
 * [Triple-O](https://wiki.openstack.org/wiki/TripleO)
 * [Kolla](https://github.com/openstack/kolla)
 
-### Docs and Website
+### Docs and website
 
 Help improve the documentation and website! The main pages for contributed content are [documentation](/documentation/), [troubleshooting](/troubleshooting/) and [user stories](/user-stories/).
 

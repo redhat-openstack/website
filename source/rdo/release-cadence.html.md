@@ -14,7 +14,7 @@ This page describes the release cadence of RDO packages in relation to different
 
 ### Fedora
 
-The OpenStack package maintainers team keeps only the latest OpenStack development release available for Fedora in RDO Trunk repositories. For more information, see:
+The OpenStack package maintainer team keeps only the latest OpenStack development release available for Fedora in RDO Trunk repositories. For more information, see:
 
 * [https://fedoraproject.org/wiki/OpenStack](https://fedoraproject.org/wiki/OpenStack)
 
