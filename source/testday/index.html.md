@@ -1,12 +1,20 @@
 # Test Days
 
-We periodically hold a public test day, to encourage participation, and
-get feedback on what's working and what needs work.
+Test days are help roughly every month, on the week after an upstream
+milestone. See the [release
+schedule](http://releases.openstack.org/newton/schedule.html) for when
+those milestones occur.
 
 ## Upcoming test days
 
-Stay tuned. We'll post a schedule of test days for Newton in the coming
-weeks.
+The (tentative) test day schedule is:
+
+* Newton 1 - June 2, 3
+* Newton 2 - July 21, 22
+* Newton 3 - September 8, 9
+* RC1   - September 22, 23
+* Newton Final - October 13, 14
+
 
 ## Past test days, stats and tickets
 
