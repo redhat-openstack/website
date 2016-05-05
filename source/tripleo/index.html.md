@@ -24,6 +24,12 @@ The defaults are meant to *just work*, so it is as easy as downloading and runni
 
 The `quickstart.sh` script will install this repo along with Ansible in a virtual environment and run the `quickstart` playbook.
 
+The ```quickstart.sh``` script also has some dependencies that must be installed on the local system before it can run. You can install the necessary dependencies by running:
+
+```
+$ sudo bash quickstart.sh --install-deps
+```
+
 **Note:** The `quickstart` playbook will delete the ``stack`` user on the $VIRTHOST and recreate it:
 
     $ export VIRTHOST='my_test_machine.example.com'
