@@ -15,7 +15,7 @@ If you'd like to talk about what you did in Mitaka, please contact me at [rbowen
 
 (If the above player doesn't work for you, please download the audio [HERE](https://rdocommunity.podbean.com/mf/play/uinm26/emilien_macchi.mp3).
 
-**Rich**: I'm speaking with Emilian Macchi, who is one of the people that
+**Rich**: I'm speaking with Emilien Macchi, who is one of the people that
 worked on the Mitaka release of OpenStack. Thank you for taking time
 to speak with me.
 
