@@ -20,6 +20,14 @@ The Neutron LBaaS (load-balancer-as-a-service) extension provides a means to loa
 
 In this guide, haproxy will be used as the load balancer. Be sure that you either have haproxy installed or have access to a yum repository that provides the haproxy package.
 
+To avoid issues with networking, it is best to provide a static IP address and disabling NetworkManager
+
+    # systemctl disable NetworkManager
+    # systemctl enable network
+    # systemctl stop NetworkManager.service
+    # systemctl start network.service
+
+
 ### Installation
 
 The Neutron LBaaS extension can be enabled and configured by packstack at install time. To do so, use the `--os-neutron-lbaas-install` option to indicate you want to install the LBaaS agent:
