@@ -62,7 +62,9 @@ In case you get a "This account is currently not available." error, you will nee
 
       # usermod -s /bin/bash nova
 
----> SELinux?
+<!--
+FIXME: SELinux?
+-->
 
 At this point, you should be able to use the offline migration and resize commands (i.e. "nova migrate" and "nova resize") properly.
 
