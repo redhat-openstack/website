@@ -58,6 +58,10 @@ To test that this is working, try ssh'ing from one compute node to another as th
       It worked!
       $
 
+In case you get a "This account is currently not available." error, you will need to enable logins to the "nova" user with:
+
+      # usermod -s /bin/bash nova
+
 ---> SELinux?
 
 At this point, you should be able to use the offline migration and resize commands (i.e. "nova migrate" and "nova resize") properly.
