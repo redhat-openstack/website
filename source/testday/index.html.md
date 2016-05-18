@@ -5,6 +5,9 @@ milestone. See the [release
 schedule](http://releases.openstack.org/newton/schedule.html) for when
 those milestones occur.
 
+See also the [bug triage
+schedule](https://www.rdoproject.org/community/rdo-bugtriage/).
+
 ## Upcoming test days
 
 The (tentative) test day schedule is:
