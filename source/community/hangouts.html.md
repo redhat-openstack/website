@@ -18,7 +18,7 @@ Stay tuned for our May hangout!
 
 If you missed a hangout, and are watching the video, you can always ask followup questions on the #rdo IRC channel on Freenode, or on the [rdo-list mailing list](http://www.redhat.com/mailman/listinfo/rdo-list). RDO hangout videos are also available in the [RDO Hangout Playlist](https://www.youtube.com/watch?v=Pmq4FJlP0UE&list=PL27cQhFqK1QzpTJl6CAFabXB1mZAdN_fu).
 
-### What's new in Mitaia Ironic, and what's coming in Newton - Dmitry Dantsur
+### What's new in Mitaka Ironic, and what's coming in Newton - Dmitry Dantsur
 
 *April 2016*
 
