@@ -12,13 +12,21 @@ User stories feature a number of projects that have successfully deployed an Ope
 
 ### Submit your own user story
 
-Do you have a novel or interesting environment in which you have deployed RDO? Share your stories here -- tell us what your production environment looks like, what components you have integrated and how you did it. See [Get Involved](/community/) for contact details.
+Do you have a novel or interesting environment in which you have deployed RDO? 
+Share your stories here -- tell us what your production environment looks like, 
+what components you have integrated and how you did it. You can [contact
+Rich directly](mailto:rbowen@redhat.com), or [send a pull request for
+this page](https://github.com/redhat-openstack/website/edit/master/source/user-stories/index.html.md).
+
+## Cumulus Networks
+
+![](/images/cumulus_networks.png) Cumulus demoed their [rack on a
+laptop](https://support.cumulusnetworks.com/hc/en-us/articles/215832697-Demo-OpenStack-Cumulus-VX-Rack-on-a-Laptop-Part-I-L2-MLAG-)
+at OpenStack Summit in Austin.
 
 ## CERN
 
-![](Cern.jpg "fig:Cern.jpg")
-
-[CERN](http://openstack-in-production.blogspot.com/) has more than 100,000 cores running OpenStack using RDO for deployment.
+![](/images/wiki/Cern.jpg) [CERN](http://openstack-in-production.blogspot.com/) has more than 100,000 cores running OpenStack using RDO for deployment.
 
 > We use the RDO client packages on our Linux machines. The upgrade was a change of repository and yum update. --[OpenStack In Production blog](http://openstack-in-production.blogspot.com/)
 
