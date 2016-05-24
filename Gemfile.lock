@@ -69,6 +69,8 @@ GEM
     icalendar (1.5.4)
     json (1.8.2)
     kramdown (1.6.0)
+    launchy (2.4.3)
+      addressable (~> 2.3)
     less (2.6.0)
       commonjs (~> 0.2.7)
     libv8 (3.16.14.7)
@@ -126,7 +128,7 @@ GEM
       rouge (~> 1.0)
     mini_portile (0.6.0)
     minitest (5.6.0)
-    multi_json (1.11.0)
+    multi_json (1.12.1)
     net-sftp (2.1.2)
       net-ssh (>= 2.6.5)
     net-ssh (2.9.2)
@@ -140,7 +142,7 @@ GEM
     padrino-support (0.12.5)
       activesupport (>= 3.1)
     ptools (1.3.2)
-    rack (1.6.0)
+    rack (1.6.4)
     rack-livereload (0.3.15)
       rack
     rack-test (0.6.3)
@@ -161,7 +163,8 @@ GEM
     ruby18_source_location (0.2)
     sass (3.4.13)
     sax-machine (1.3.1)
-    sprockets (2.12.3)
+    slop (4.3.0)
+    sprockets (2.12.4)
       hike (~> 1.2)
       multi_json (~> 1.0)
       rack (~> 1.0)
@@ -212,6 +215,7 @@ DEPENDENCIES
   font-awesome-middleman
   icalendar (~> 1.5)
   kramdown
+  launchy
   less
   middleman (~> 3.3.10)
   middleman-blog
@@ -228,7 +232,11 @@ DEPENDENCIES
   rails-assets-jquery (~> 1)
   rails-assets-momentjs
   ruby18_source_location
+  slop (~> 4)
   stringex
   therubyracer
   wdm (~> 0.1.0)
   wikicloth
+
+BUNDLED WITH
+   1.10.6
