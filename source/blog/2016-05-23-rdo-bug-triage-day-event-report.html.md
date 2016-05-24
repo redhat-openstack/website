@@ -14,7 +14,7 @@ The main aim of the triage day was :
 
 * Mass Closing of "End of Life" Bugs through automation with proper EOL statement.
   On 19th May, 2016 RDO meeting, after evaluating the Fedora EOL statement, we came up with this :
-  **"This bug is against a Version which has reached End of Life. f it's still present in supported release (http://releases.openstack.org), please update Version and reopen."**
+  **"This bug is against a Version which has reached End of Life. If it's still present in supported release (http://releases.openstack.org), please update Version and reopen."**
   Thanks to Rich Bowen for proposing it,
 * Analysis the bug and assign proper component, target-release and ask for more information if the bug is incomplete
 * Close the Bug if it is already fixed in the current release
