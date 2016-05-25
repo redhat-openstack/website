@@ -4,11 +4,13 @@ title: RDO Newton Test Day
 
 # Newton Test Day 1
 
-We will be holding a RDO test day on December 10th and 11th, 2015.
+We will be holding a RDO test day on June 2 and 3, 2016.
+
 This will be coordinated through the **#rdo channel on Freenode**, and
 through this website and the rdo-list mailing list.
 
-We'll be testing the first Newton milestone release. If you can do
+We'll be testing the first [Newton milestone
+release](http://releases.openstack.org/newton/schedule.html). If you can do
 any testing on your own ahead of time, that will help ensure that
 everyone isn't encountering the same problems.
 
