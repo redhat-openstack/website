@@ -268,11 +268,9 @@
   Newsletter/2015 February: newsletter/2015-february
   Juno-TripleO-CLI-install: uncategorized/juno-tripleo-cli-install
   TripleO-CLI: uncategorized/tripleo-cli
-  RDO-Manager: tripleo/
+  rdo-manager: tripleo/
   RDO Manager Architecture Overview: tripleo/architecture-overview
   Release-Cadence: rdo/release-cadence
-  RDO-Manager/user-guides/2015-03-18-instack-based-deployment-flow: tripleo/user-guides/2015-03-18-instack-based-deployment-flow
-  RDO-Manager/user-guides: documentation/user-guides
   JunoForeman: uncategorized/junoforeman
   Newsletter/2015 April: newsletter/2015-april
   Newsletter/2015 March: newsletter/2015-march
@@ -280,7 +278,6 @@
   RDO test day Kilo: testday/rdo-test-day-kilo
   RDO test day Kilo RC milestone test cases: testday/rdo-test-day-kilo-rc-milestone-test-cases
   Newsletter/2015 May: newsletter/2015-may
-  RDO-Manager test day Kilo: testday/rdo-manager-test-day-kilo
   Node/add: node/add
   Newsletter/2015 June: newsletter/2015-june
   ProjectsInRDO: rdo/projectsinrdo
