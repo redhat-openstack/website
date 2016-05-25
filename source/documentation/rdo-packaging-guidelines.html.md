@@ -14,7 +14,7 @@ This document collects guidelines and practical tips
 
 ## Packaging Guidelines
 
-RDO packages mostly follow [Fedora Packaging Guidelines](/packaging/rdopkg/rdopkg.1.html).
+RDO packages mostly follow [Fedora Packaging Guidelines](https://fedoraproject.org/wiki/Packaging:Guidelines).
 There are two exceptions:
 
  * Override rules listed in this document.
@@ -22,7 +22,7 @@ There are two exceptions:
 
 ## Packages Review Process
 
-* All reviews **must** block the review tracker using the alias RDO-**release**-REVIEW.
+* All reviews **must** block the review tracker using the alias RDO-**release** .
 Announcing reviews on the RDO mailing list is encouraged to raise awareness within the
 community and speed up the process.
 
