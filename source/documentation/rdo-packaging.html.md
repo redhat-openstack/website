@@ -67,8 +67,8 @@ Packaging resources for OpenStack services are now hosted in the
 
 The layout used for branches is:
 
- * `rpm-<master>` = tracks upstream master branch (Delorean)
- * `rpm-<release>` = tracks upstream stable/<release> branch (Delorean)
+ * `rpm-<master>` = tracks upstream master branch (DLRN)
+ * `rpm-<release>` = tracks upstream stable/<release> branch (DLRN)
  * `rdo-<release>` = based upon rpm-<release> and used to build RDO stable packages
 
 Clients and general-purpose libraries are still **included** in Fedora.
@@ -215,31 +215,31 @@ See [rdopkg on github](https://github.com/redhat-openstack/rdopkg) and also
 ## Master Packaging Guide
 
 In order to build an `RPM` with the master packaging you'll need to
-install [delorean](https://github.com/openstack-packages/delorean),
+install [DLRN](https://github.com/openstack-packages/DLRN),
 following the instructions described in this
-[README](https://github.com/openstack-packages/delorean/blob/master/README.rst).
+[README](https://github.com/openstack-packages/DLRN/blob/master/README.rst).
 
-### Run Delorean
+### Run DLRN
 
-Run `delorean` for the package you are trying to build.
+Run `dlrn` for the package you are trying to build.
 
 ```bash
-$> delorean --config-file projects.ini --local --package-name openstack-cinder
+$> dlrn --config-file projects.ini --local --package-name openstack-cinder
 ```
 
 This will clone the packaging for the project you're interested in into
 `data/openstack-cinder_repo`, you can now change this packaging and
-rerun the `delorean` command in test your changes.
+rerun the `dlrn` command in test your changes.
 
 If you have locally changed the packaging make sure to include `--dev`
-in the command line. This switches `delorean` into "dev mode" which
+in the command line. This switches `dlrn` into "dev mode" which
 causes it to preserve local changes to your packaging between runs so
 you can iterate on spec changes. It will also cause the most current
 public master repository to be installed in your build image(as some
 of its contents will be needed for dependencies) so that the packager
 doesn't have to build the entire set of packages.
 
-The output from `delorean` is a repository containing the packages you
+The output from `dlrn` is a repository containing the packages you
 just built along with the most recent successfully built version of
 each package. To find the most recent repository follow the symbolic
 link `./data/repos/current`
@@ -266,12 +266,12 @@ To look at all open patches for the upstream packaging simply use the following 
 There are a number of expected differences between the master packaging and
 the packaging in rawhide
 
-* The `delorean` packaging has had `Version:` and `Release:` fields
-  both set to `XXX` in the `delorean` packaging as we take both of
+* The `dlrn` packaging has had `Version:` and `Release:` fields
+  both set to `XXX` in the `dlrn` packaging as we take both of
   these from the tags set on the git repositories
 
 * Because we are packaging master, patches aren't backported into the
-  `delorean` packaging
+  `dlrn` packaging
 
 * All of the master specs contain a reference to `%{upstream_version}`
   in the `%setup macro`, this is because the subdirectory contained in
@@ -288,7 +288,7 @@ the packaging in rawhide
 * In `%files` avoid using `%{version}` and use instead wildcard `*`
 
 To Assist in identifing difference the report being output by the
-production `delorean` includes a spec delta link showing a diff
+production `dlrn` includes a spec delta link showing a diff
 between the two repositories:
 
 * [Fedora 23](http://trunk.rdoproject.org/f21/report.html)
