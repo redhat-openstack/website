@@ -107,4 +107,3 @@ Here are a few guidelines for contributing new content to the website:
 *   Use normal English case for page names. [Running an instance](Running an instance) is correct, [Get Involved](Get Involved) is not.
 *   Please keep the website content connected! When you add a new page, add a link to it from the appropriate page(s).
 *   Please be aware of our [terms of use](terms of use) — among other things, you agree to license your contributions under the [Creative Commons Attribution License version 3.0](http://creativecommons.org/licenses/by/3.0/), and you agree not to submit illegal content.
-
