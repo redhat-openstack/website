@@ -125,11 +125,6 @@ rpm-&lt;release> and &lt;release>-rdo branches:
 
 * In `%files` avoid using `%{version}` and use instead wildcard `*`
 
-To assist in identifying differences, the report being output by the
-production `dlrn` includes a spec delta link showing a diff
-between the two repositories:
-
-* **TODO:URL**
 
 
 ### Patches branch
