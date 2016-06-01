@@ -16,7 +16,19 @@ This document attempts to be the definitive source of information about
 
 ### Packaging overview
 
-![RDO packaging workflow](../images/rdo-full-workflow-high-level.png)
+RDO produces two set of packages repositories:
+
+* **RDO CloudSIG** repositories provide packages of upstream point
+releases created through a controlled process using CentOS Community Build
+System. This is kind of "stable RDO".
+
+* **RDO Trunk** repositories provide packages of latest upstream code without any
+additional patches. New packages are created on each commit merged on upstream
+OpenStack projects.
+
+Following diagram shows the global packaging process in RDO.
+
+![RDO packaging workflow](../images/rdo-full-workflow-high-level-no-buildlogs.png)
 
 
 <a id="distgit"></a>
@@ -29,7 +41,8 @@ such as patches to apply, init scripts etc.
 
 RDO packages' distgit repos are hosted on
 [review.rdoproject.org](https://review.rdoproject.org/r/gitweb?p=openstack/nova-distgit.git;a=summary)
-and follow `$PROJECT-distgit` naming.
+and follow `$PROJECT-distgit` naming. You can navigate the full list of distgit repos using this
+[link](https://review.rdoproject.org/r/#/admin/projects/?filter=distgit).
 
 You can use [rdopkg](#rdopkg) to clone a RDO package `distgit` and also setup related
 remotes:
@@ -76,65 +89,56 @@ Submit distgit changes for review:
 ```bash
 $> rdopkg review-spec
 ```
+<a id="branches in distgits"></a>
 
-#### CloudSIG vs RDO Trunk
+#### Branches in distgits
 
-**TODO**: explain `rpm-{master,$RELEASE}` vs `$RELEASE-rdo`. Not sure where to
-put this in the doc...
+Because of the different build tools used for RDO CloudSIG and Trunk repos and
+the differences in dependencies and content in packages for each OpenStack
+release, RDO maintains several branches in distgits:
+
+- **rpm-&lt;release>:** is used to package RDO trunk (version can be master,
+  mitaka or liberty )
+- **&lt;release>-rdo:** is used for RDO CloudSIG.
+
+There are a number of expected differences between the spec files in
+rpm-&lt;release> and &lt;release>-rdo branches:
+
+* For RDO trunk, packaging has had `Version:` and `Release:` fields
+  both set to `XXX` as `dlrn` takes both of
+  these from the tags set on the git repositories. For &lt;release>-rdo branches
+  they must be manually set to the right version and release.
+
+* %changelog section is empty in rpm-&lt;release>.
+
+* Because we are packaging vanilla upstream code, patches aren't backported into the RDO Trunk repositories.
+
+* All of the specs in rpm-&lt;release> branches contain a reference to `%{upstream_version}`
+  in the `%setup macro`, this is because the subdirectory contained in
+  the source tarball contains both the version and release, this is
+  being passed into `rpmbuild`. In the Fedora packaging, spec can
+  include compatibility macro e.g. [Nova](https://review.rdoproject.org/r/gitweb?p=openstack/nova-distgit.git;a=blob;f=openstack-nova.spec;h=1dc49d1f8aacbaef235f1decc2319ce42fa68156;hb=refs/heads/liberty-rdo#l12)
+  to avoid conflicts when backporting change from master packaging.
+
+* The files `sources` and `.gitignore` have been truncated in the
+  master packaging
+
+* In `%files` avoid using `%{version}` and use instead wildcard `*`
 
 
-<a id="patches-branch"></a>
 
 ### Patches branch
 
-Because we rebase often, manual management of patch files in
+Because we rebase often in RDO CloudSIG repos, manual management of patch files in
 distgit would be _unbearable_. That's why each distgit branch
 has an associated **patches branch** which contains upstream git tree with
-extra downstream patches on top. 
+extra downstream patches on top.
 
 A distgit can be automatically updated by `rdopkg` to include patches from
-associated **patches branch** and thus RPM patches are managed with `git`. 
+associated **patches branch** and thus RPM patches are managed with `git`.
 
 Individual RDO patches are maintained in form of gerrit reviews on
 [review.rdoproject.org](https://review.rdoproject.org/r/#/q/status%3Aopen+project%3Aopenstack/nova).
-
-You can check out package's patches branch using `rdopkg get-patches` if you
-have remotes set up correctly (`rdopkg clone` sets them up for you):
-
-```bash
-$> git checkout mitaka-rdo
-$> rdopkg get-patches
-```
-
-Send new/modified patches for review using `rdopkg review-patch`:
-
-```bash
-$> rdopkg review-patch
-```
-
-#### patches branch workflow
-
-```
-     +------------------------+
-     |        upstream        |
-     |  github.com/openstack  |
-     +------------------------+
-                 |
- git cherry-pick | rdopkg review-patch
-                 V
-     +-------------------------+
-     |      patches branch     |
-     |  review.rdoproject.org  |
-     +-------------------------+
-                 |
-    rdopkg patch | rdopkg review-spec
-                 V
-     +-------------------------+
-     |        distgit         |
-     |  review.rdoproject.org  |
-     +-------------------------+
-```
-
 
 <a id="rdopkg"></a>
 
@@ -158,7 +162,7 @@ with its own quirks.
 Install `rdopkg` from [`jruzicka/rdopkg` copr](https://copr.fedorainfracloud.org/coprs/jruzicka/rdopkg/):
 
 ```bash
-$> dnf copr enable jruzicka/rdopkg 
+$> dnf copr enable jruzicka/rdopkg
 $> dnf install rdopkg
 ```
 
@@ -199,16 +203,35 @@ $> rdopkg info maintainers:jruzicka@redhat.com
 To integrate `rdoinfo` in your software, use `rdopkg.actionmods.rdoinfo`
 module.
 
-
 ### DLRN
 
-**TODO**
+[DLRN](https://github.com/openstack-packages/DLRN) is a tool used to build RPM
+packages on each commit merged in a set of configurable git repositories. DLRN
+uses rdoinfo to retrieve the metadata and repositories associated with each
+project in RDO (code and distgit) and mock to carry out the actual build in an
+isolated environment.
+
+DLRN is used to build the packages in RDO Trunk repositories that are available
+from [http://trunk.rdoproject.org](http://trunk.rdoproject.org).
+
+NVR for packages generated by DLRN follows some rules:
+
+* Version is set to MAJOR.MINOR.PATCH of the next upstream version.
+* Release is 0.&lt;timestamp>.&lt;short commit hash>
+
+For example `openstack-neutron-8.1.1-0.20160531171125.ddfe09c.el7.centos.noarch.rpm`.
+
+
+### Prerequisites for packagers
+
+ * You need a [github](https://github.com) account which is used to log into
+[review.rdoproject.org](https://review.rdoproject.org/auth/login).
+ * You need to install [rdopkg](#rdopkg) tool.
 
 
 ## RDO Trunk Packaging Guide
 
-RDO Trunk repositories provide packages of latest upstream code without any
-additional patches. Packages are built automatically by [DLRN](#DLRN) from
+In RDO Trunk packages are built automatically by [DLRN](#DLRN) from
 `.spec` templates residing in `rpm-master` and `rpm-$RELEASE` [distgits](#distgit).
 
 In order to build an `RPM` with the master packaging you'll need to
@@ -218,14 +241,14 @@ following the instructions described in this
 
 ### Run DLRN
 
-Run `dlrn` for the package you are trying to build.
+Once DLRN is installed, run `dlrn` for the package you are trying to build.
 
 ```bash
 $> dlrn --config-file projects.ini --local --package-name openstack-cinder
 ```
 
-This will clone the packaging for the project you're interested in into
-`data/openstack-cinder_repo`, you can now change this packaging and
+This will clone the distgit for the project you're interested in into
+`data/openstack-cinder_distro`, you can now change this packaging and
 rerun the `dlrn` command in test your changes.
 
 If you have locally changed the packaging make sure to include `--dev`
@@ -241,81 +264,45 @@ just built along with the most recent successfully built version of
 each package. To find the most recent repository follow the symbolic
 link `./data/repos/current`
 
-### Submitting changes to gerrit
+### Submitting distgit changes to gerrit
 
-Once you are happy that you have your changes ready to be reviewed,
+When modifying spec files for RDO Trunk keep in mind the considerations shown
+in [Branches in distgits](#branches-in-distgits) and follow the recommendations
+in the [RDO Packaging Guidelines](https://www.rdoproject.org/documentation/rdo-packaging-guidelines/).
+Once you are happy that you have your changes in distgit ready to be reviewed,
 create a `git commit` with an appropriate comment, add a `git remote`
 pointing to gerrit and then submit your patch
 
 ```bash
-$> git clone -o gerrit TODO:URL
+$> git review -s
 $> git commit -p
 $> git review rpm-master
 ```
 
 ### Browsing gerrit for reviews
 
-To look at all open patches for the upstream packaging simply use the following link
-**TODO:URL**
+To look at all open patches for the upstream packaging simply use the this
+[link](https://review.rdoproject.org/r/#/q/status:open) and look for your
+desired project, for example `openstack/cinder-distgit`.
 
-### Differences between master and rawhide packaging
+### How to add a new package to RDO Trunk
 
-There are a number of expected differences between the master packaging and
-the packaging in rawhide
+When a new package is required in RDO, it must be added to RDO Trunk packaging.
+To include new packages, following steps are required:
 
-* The `dlrn` packaging has had `Version:` and `Release:` fields
-  both set to `XXX` in the `dlrn` packaging as we take both of
-  these from the tags set on the git repositories
+* Add the required information to the [rdoinfo metadata](#rdoinfo-metadata).
+* Add new projects into [https://review.rdoproject.org](https://review.rdoproject.org)
 
-* Because we are packaging master, patches aren't backported into the
-  `dlrn` packaging
-
-* All of the master specs contain a reference to `%{upstream_version}`
-  in the `%setup macro`, this is because the subdirectory contained in
-  the source tarball contains both the version and release, this is
-  being passed into `rpmbuild`. In the Fedora packaging, spec can
-  include compatibility macro e.g. [Nova](https://review.rdoproject.org/r/gitweb?p=openstack/nova-distgit.git;a=blob;f=openstack-nova.spec;h=1dc49d1f8aacbaef235f1decc2319ce42fa68156;hb=refs/heads/liberty-rdo#l12)
-  to avoid conflicts when backporting change from master packaging.
-
-* %changelog section is empty in master packaging
-
-* The files `sources` and `.gitignore` have been truncated in the
-  master packaging
-
-* In `%files` avoid using `%{version}` and use instead wildcard `*`
-
-To Assist in identifing difference the report being output by the
-production `dlrn` includes a spec delta link showing a diff
-between the two repositories:
-
-* **TODO:URL**
-
-* **TODO:URL**
-
-
-### How to add a new package to RDO master packaging
-
-**TODO**
-
-
+RDO project is working to automate as much as possible this process. If you need
+help to add new packages, you can ask on `#rdo` or `rdo-list` mailing list.
 
 <a id="#rdo-pkg-guide"></a>
 
 ## RDO CloudSIG Packaging Guide
 
-RDO CloudSIG OpenStack repositories provide packages of upstream stable
-releases. This is kind of "stable RDO" living in `$RELEASE-rdo`
+Packaging files for CloudSIG repos live in `$RELEASE-rdo` branches of
 [distgit](#distgit). Patches can be introduced as needed through associated
 [patches branch](#patches-branch).
-
-**TODO**: links to repos?
-
-
-### Prerequisites
-
- * You need a [github](https://github.com) account which is used to log into
-[review.rdoproject.org](http://review.rdoproject.org).
- * You need to install [rdopkg](#rdopkg) tool.
 
 
 ### Initial repository setup
@@ -384,19 +371,19 @@ provided and displays the diff:
    -Release:          1%{?dist}
    +Release:          2%{?dist}
     Summary:          OpenStack Compute (nova)
-    
+
     ...
 
     Requires:         bridge-utils
     Requires:         sg3_utils
     Requires:         sysfsutils
    +Requires:         banana
-    
+
     %description compute
     OpenStack Compute (codename Nova) is open source software designed to
 
     ...
-    
+
     %changelog
    +* Mon May 09 2016 Jakub Ruzicka <jruzicka@redhat.com> 1:13.0.0-2
    +- Require banana package for the lulz
@@ -415,6 +402,29 @@ $> rdopkg review-spec
 ### Introducing/removing patches
 
 See [patches branch](#patches-branch) for introduction.
+
+Following schema shows the workflow to maintain patches applied in the packaging process.
+
+```
+     +------------------------+
+     |        upstream        |
+     |  github.com/openstack  |
+     +------------------------+
+                 |
+ git cherry-pick | rdopkg review-patch
+                 V
+     +-------------------------+
+     |      patches branch     |
+     |  review.rdoproject.org  |
+     +-------------------------+
+                 |
+    rdopkg patch | rdopkg review-spec
+                 V
+     +-------------------------+
+     |        distgit          |
+     |  review.rdoproject.org  |
+     +-------------------------+
+```
 
 First, use `rdopkg get-patches` to get a [patches branch](#patches-branch)
 associated with current [distgit](#distgit), cherry pick your patch(es) on
