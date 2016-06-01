@@ -14,7 +14,7 @@ This document expands on the details of the various repositories involved.
 
 ### Enabling the Optional, Extras, and RH Common channels on RHEL
 
-If using RHEL, then RDO needs the `Optional`, `Extras`, and `RH Common` channels to be enabled:
+If using RHEL it's assumed that `rhel-7-server-rpms` is enabled by default. RDO also needs the `Optional`, `Extras`, and `RH Common` channels to be enabled:
 
     $ sudo subscription-manager repos --enable rhel-7-server-optional-rpms
 
