@@ -290,8 +290,26 @@ desired project, for example `openstack/cinder-distgit`.
 When a new package is required in RDO, it must be added to RDO Trunk packaging.
 To include new packages, following steps are required:
 
-* Add the required information to the [rdoinfo metadata](#rdoinfo-metadata).
-* Add new projects into [https://review.rdoproject.org](https://review.rdoproject.org)
+* Create a "Package Review" bug in [Red Hat bugzilla](https://bugzilla.redhat.com/)
+following the best practices described in [RDO OpenStack Packaging Guidelines](/documentation/rdo-packaging-guidelines/).
+* Once the package review is approved, create a git repository publicly accesible
+(i.e. in github) with the required content of the distgit for rpm-master
+(remember the specific requirements for dlrn as explained in [Branches in
+  distgits](#branches-in-distgits)).
+* Send a review to the [rdoinfo project in
+review.rdoproject.org](https://review.rdoproject.org/r/#/q/project:rdoinfo)
+with the project information, a reference to the Package Review bugzilla
+ticket and the public git repo with the desired distgit content.
+As part of the review process and before merging the review in rdoinfo project,
+some tasks will be carried out by the RDO team:
+  * The required projects will be created in [https://review.rdoproject.org](https://review.rdoproject.org).
+  * The new projects will be added to zuul configuration in review.rdoproject.org
+  (as in [this example](https://review.rdoproject.org/r/#/c/1257/)).
+  * The content provided in the public git repo will be imported into the mew
+  distgit repo.
+
+Once the change is merged in rdoinfo, a new package should be automatically built
+and published in the [RDO Trunk repos](http://trunk.rdoproject.org/centos7-master/report.html).
 
 RDO project is working to automate as much as possible this process. If you need
 help to add new packages, you can ask on `#rdo` or `rdo-list` mailing list.
