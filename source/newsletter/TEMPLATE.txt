@@ -9,7 +9,7 @@
 * [Q&A](http://ask.openstack.org/)
 * [Open Tickets](http://tm3.org/rdobugs)
 * [Twitter](http://twitter.com/rdocommunity)
-* [Mitaka release schedule](http://docs.openstack.org/releases/schedules/mitaka.html)
+* [Newton release schedule](http://releases.openstack.org/newton/schedule.html)
 
 Thanks for being part of the RDO community!
 
