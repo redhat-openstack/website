@@ -4,7 +4,8 @@
 
 * [Quick Start](http://rdoproject.org/quickstart)
 * [Mailing Lists](http://rdoproject.org/Mailing_lists)
-* [RDO packages](http://rdoproject.org/repos/) with [trunk packages](http://rdoproject.org/repos/openstack/openstack-trunk/)
+* [RDO release packages](https://trunk.rdoproject.org/)
+* [Review.RDOProject.org](http://review.rdoproject.org/)
 * [RDO blog](http://rdoproject.org/blog)
 * [Q&A](http://ask.openstack.org/)
 * [Open Tickets](http://tm3.org/rdobugs)
