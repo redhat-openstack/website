@@ -15,7 +15,7 @@ any testing on your own ahead of time, that will help ensure that
 everyone isn't encountering the same problems.
 
 We will also be available for people that want to try the stable
-(Liberty) release.
+(Mitaka) release.
 
 Update this page by submitting pull requests to [this
 repo](https://github.com/redhat-openstack/website).
@@ -40,8 +40,7 @@ You'll want a fresh install with latest updates installed.
 
 * Check for any [workarounds](/testday/newton/workarounds1) required for your platform before the main installation
 * For Packstack based deployment start at step 2 of the [packstack Quickstart](/install/quickstart#Step_2:_Install_Packstack_Installer)
-* For RDO Manager based deployments follow the documentation in the [RDO Manager liberty docs](https://repos.fedorapeople.org/repos/openstack-m/rdo-manager-docs/liberty/)
-* For a virtual setup of RDO Manager try out the [quickstart](https://github.com/trown/tripleo-quickstart)
+* For a TripleO-based installs, try the [TripleO quickstart](https://www.rdoproject.org/tripleo/).
 
 ### Test cases and results
 
@@ -50,7 +49,6 @@ The things that should be tested are listed on the [Tested Setups](/testday/newt
 * Pick an item from the list
 * Go through the scenario as though you were a beginner, just following the instructions. (Check the [workarounds](/testday/newton/workarounds1) page for problems that others may have encountered and resolved.)
 * KEEP GOOD NOTES. You can use [the test day etherpad](https://etherpad.openstack.org/p/rdo-test-days-newton-m1) for these notes. Reviewing other peoples' notes may help you avoid problems that they've already encountered.
-* Execute the openstack test suite tempest @ [Testing Liberty using Tempest](/uncategorized/testing-liberty-using-tempest/)
 
 If you have problems with any of the tests, report a bug to [Bugzilla](https://bugzilla.redhat.com) usually for one of the
 [openstack-packstack](https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&component=openstack-packstack),
