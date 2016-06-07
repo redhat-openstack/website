@@ -290,19 +290,28 @@ desired project, for example `openstack/cinder-distgit`.
 When a new package is required in RDO, it must be added to RDO Trunk packaging.
 To include new packages, following steps are required:
 
-* Create a "Package Review" bug in [Red Hat bugzilla](https://bugzilla.redhat.com/)
+1. Create a "Package Review" bug in [Red Hat bugzilla](https://bugzilla.redhat.com/)
 following the best practices described in [RDO OpenStack Packaging Guidelines](/documentation/rdo-packaging-guidelines/).
-* Send a review to the [rdoinfo project in
-review.rdoproject.org](https://review.rdoproject.org/r/#/q/project:rdoinfo)
-with the project information and a reference to the Package Review bugzilla
-ticket. As part of the review process, some tasks will be carried out by the RDO team:
+
+2. Send a review adding the new project in rdo.yml to the [rdoinfo project in
+review.rdoproject.org](https://review.rdoproject.org/r/#/q/project:rdoinfo). In
+this change you must provide the project information and Package Review bugzilla
+ticket in the commit message. In the project definition in rdo.yml file, specify
+only `under-review` as project tags (see [this example](https://review.rdoproject.org/r/#/c/1327/)).
+As part of the review process, some tasks will be carried out by the RDO team:
   * The required projects will be created in [https://review.rdoproject.org](https://review.rdoproject.org).
   * The new projects will be added to zuul configuration in review.rdoproject.org
   (as in [this example](https://review.rdoproject.org/r/#/c/1257/)).
-  * Once the projects are created, the change requestor will be notified to send
-  a review to the new distgit project with the needed content (spec file, etc...).
-  * Only when the repository has the required content, the rdoinfo change will
-  be approved and merged.
+  * Once the projects are created, the change will be merged in rdoinfo project.
+
+3. Create a new review to the new distgit project with the needed content (spec
+file, etc...) for the initial import. This will trigger a CI job to test the
+package build.
+
+4. Once the initial import in the distgit is merged, send a new review to rdoinfo
+project to replace the `under-review` tag with the required versions where the
+package must be built. This change can be sent before merging review in step 3
+if a `Depends-On: <gerrit-change-id step 3>` is added.
 
 Once the change is merged in rdoinfo, a new package should be automatically built
 and published in the [RDO Trunk repos](http://trunk.rdoproject.org/centos7-master/report.html).
