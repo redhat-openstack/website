@@ -64,12 +64,14 @@ Machine with at least 4GB RAM, preferably 6GB RAM, processors with hardware virt
 
 If you plan on having **external** network access to the server and instances, this is a good moment to properly configure your network settings. A static IP address to your network card, and disabling NetworkManager are good ideas.
 
-  ```
-  $ sudo systemctl disable NetworkManager
-  $ sudo systemctl enable network
-  $ sudo systemctl stop NetworkManager.service
-  $ sudo systemctl start network.service
-  ```
+```
+$ sudo systemctl disable firewalld
+$ sudo systemctl stop firewalld
+$ sudo systemctl disable NetworkManager
+$ sudo systemctl stop NetworkManager
+$ sudo systemctl enable network
+$ sudo systemctl start network
+```
 
 If you are planing on something fancier, read [the document on advanced networking](https://www.rdoproject.org/networking/neutron-with-existing-external-network/) **before proceeding**.
 
@@ -77,37 +79,37 @@ If you are planing on something fancier, read [the document on advanced networki
 
 On RHEL, download and install the RDO repository RPM to set up the OpenStack repository:
 
-  ```
-  $ sudo yum install -y https://rdoproject.org/repos/rdo-release.rpm
-  ```
+```
+$ sudo yum install -y https://rdoproject.org/repos/rdo-release.rpm
+```
   
 On CentOS, the `Extras` repository provides the RPM that enables the OpenStack repository. `Extras` is enabled by default on CentOS 7, so you can simply install the RPM to set up the OpenStack repository:
 
-  ```
-  $ sudo yum install -y centos-release-openstack-mitaka
-  ```
+```
+$ sudo yum install -y centos-release-openstack-mitaka
+```
 
 Update your current packages:
 
-  ```
-  $ sudo yum update -y
-  ```
+```
+$ sudo yum update -y
+```
 
 _Looking for an older version? See [http://rdoproject.org/repos/](http://rdoproject.org/repos/) for the full listing._
 
 ## Step 2: Install Packstack Installer
 
-  ```
-  $ sudo yum install -y openstack-packstack
-  ```
+```
+$ sudo yum install -y openstack-packstack
+```
 
 ## Step 3: Run Packstack to install OpenStack
 
 Packstack takes the work out of manually setting up OpenStack. For a single node OpenStack deployment, run the following command:
 
-  ```
-  $ packstack --allinone
-  ```
+```
+$ packstack --allinone
+```
   
 If you encounter failures, see the [Workarounds](Workarounds) page for tips.
 
