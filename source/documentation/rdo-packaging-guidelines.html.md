@@ -69,9 +69,6 @@ on %post, %preun and %postun (more details [here](https://fedoraproject.org/wiki
 
 ### python packaging guidelines
 
-* Some recommendations about python packaging can be found in
-[https://fedoraproject.org/wiki/Packaging:Python](https://fedoraproject.org/wiki/Packaging:Python).
-
 * Remove requirements files used by pip to download dependencies from the network.
 That may hide missing dependencies or integration issues (e.g. a dependency package only available in an incompatible version)
 
@@ -115,7 +112,7 @@ oslo-config-generator --config-file=config-generator/keystone.conf
 ### Tests packaging
 
 OpenStack projects provide different tests including unit tests and functional
-tests,  typically using the tempest framework.
+tests, typically using the tempest framework.
 
 * Core packages shouldn't include tests as are not required in runtime.
 
@@ -139,10 +136,11 @@ requiring &lt;package name>-tests-tempest and &lt;package name>-tests-unit.
 %global service keystone
 ```
 
-Depending on the package type (OpenStack service, library, client, etc...) There
-different variables are required. The examples specs in
+RDO project provides different examples specs in
 [openstack-example-spec](https://github.com/openstack-packages/openstack-example-spec)
-can be used as template.
+for the different package types (OpenStack service, library, client, dashboard
+plugin, etc...). This examples can be used as templates for new packages being
+added to RDO repositories.
 
 ### Patches
 
