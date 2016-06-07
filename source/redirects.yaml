@@ -224,17 +224,12 @@
   Deploying an RDO Undercloud with Instack: install/deploying-an-rdo-undercloud-with-instack
   ML2 from OVS: networking/ml2-from-ovs
   Newsletter: newsletter/newsletter
-  Newsletter/2014 May: newsletter/2014-may
   Creating CentOS and Fedora images ready for Openstack: resources/creating-centos-and-fedora-images-ready-for-openstack
   GettingStartedIcehouse w GRE: networking/gettingstartedicehouse-w-gre
-  Newsletter/2014 June: newsletter/2014-june
   Deployment methods: install/deployment-methods
   Twitter: uncategorized/twitter
   Using ManageIQ on OpenStack: cloud-management/using-manageiq-on-openstack
-  Newsletter/2014 July: newsletter/2014-july
   Juno previews: uncategorized/juno-previews
-  Newsletter/2014 August: newsletter/2014-august
-  Newsletter/2014 September: newsletter/2014-september
   RDO test day Juno milestone 3: testday/rdo-test-day-juno-milestone-3
   Test: uncategorized/test
   RDO test day Juno milestone 3 test cases: testday/rdo-test-day-juno-milestone-3-test-cases
@@ -246,10 +241,8 @@
   Workaround archive: testday/workaround-archive
   Post installation bugs: install/post-installation-bugs
   Organize-a-meetup: community/organize-a-meetup
-  Newsletter/2014 October: newsletter/2014-october
   Tuskar-UI: uncategorized/tuskar-ui
   Using NetApp for Cinder with RDO: storage/Cinder/using-netapp-for-cinder-with-rdo
-  Newsletter/2014 November: newsletter/2014-november
   Brochures: community/brochures
   MidoNet integration: uncategorized/midonet-integration
   Workaround for newtron installtion error: testday/workaround-for-newtron-installtion-error
@@ -257,31 +250,19 @@
   Ironic: documentation/ironic
   Ironic Developer Quick-Start: uncategorized/ironic-developer-quick-start
   Helium OpenDaylight Juno OpenStack: networking/helium-opendaylight-juno-openstack
-  Newsletter/2014 December: newsletter/2014-december
   Home lab: hardware/home-lab
   Deploying RHELOSP using TripleO: install/deploying-rhelosp-using-tripleo
-  Newsletters/2015 January: newsletter/2015-january
   Tuskar-CLI: uncategorized/tuskar-cli
   Tuskar-API: api/tuskar-api
   Connecting to TripleO Baremetal VMs from remote machine: documentation/connecting-to-tripleo-baremetal-vms-from-remote-machine
   Docs/Connecting to TripleO Baremetal VMs from remote machine: docs/connecting-to-tripleo-baremetal-vms-from-remote-machine
-  Newsletter/2015 February: newsletter/2015-february
   Juno-TripleO-CLI-install: uncategorized/juno-tripleo-cli-install
   TripleO-CLI: uncategorized/tripleo-cli
   rdo-manager: tripleo/
   RDO Manager Architecture Overview: tripleo/architecture-overview
   Release-Cadence: rdo/release-cadence
   JunoForeman: uncategorized/junoforeman
-  Newsletter/2015 April: newsletter/2015-april
-  Newsletter/2015 March: newsletter/2015-march
   Using provider networks: networking/using-provider-networks
-  RDO test day Kilo: testday/rdo-test-day-kilo
-  RDO test day Kilo RC milestone test cases: testday/rdo-test-day-kilo-rc-milestone-test-cases
-  Newsletter/2015 May: newsletter/2015-may
-  Node/add: node/add
-  Newsletter/2015 June: newsletter/2015-june
   ProjectsInRDO: rdo/projectsinrdo
-  Newsletter/2015 July: newsletter/2015-july
-  Newsletter/2015 August: newsletter/2015-august
   Allinone.yaml: install/allinone.yaml
   Testing RDO with Rally: testday/testing-rdo-with-rally
