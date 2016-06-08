@@ -7,6 +7,8 @@ comments: true
 published: true
 ---
 
+![](https://www.redhat.com/cms/managed-files/styles/max_size/s3/summit_logo_170_0.png?itok=Ck4KjHH-)
+
 [Red Hat Summit](https://www.redhat.com/en/summit) is just a few weeks away, and it's a great place to learn about RDO, and deploying OpenStack on Red Hat Enterprise Linux or CentOS.
 
 If you're coming, be sure to drop by the RDO booth in the Community Central section of the exhibit hall. Grab an RDO tshirt, watch demos of what people are doing on top of RDO, and we'll have experts there to answer your questions.
