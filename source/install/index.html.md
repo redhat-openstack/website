@@ -34,7 +34,7 @@ Documents on this page also cover configuring your deployment.
 *   [Troubleshooting](Troubleshooting)
 *   [Upgrading RDO &ndash; primarily for manual and Packstack-based deployments](upgrading-rdo)
 *   [Uninstalling RDO](Uninstalling RDO)
-*   [Packstack cookbook](Packstack_cookbook)
+*   [Packstack](Packstack_cookbook)
 *   [Virtualized Foreman dev setup](Virtualized_Foreman_dev_setup)
 *   [Creating CentOS and Fedora images ready for Openstack](Creating CentOS and Fedora images ready for Openstack)
 

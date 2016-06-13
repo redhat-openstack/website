@@ -1,14 +1,15 @@
 ---
-title: Packstack cookbook
+title: Packstack
 authors: rbowen
 wiki_title: Packstack cookbook
 wiki_revision_count: 5
 wiki_last_updated: 2013-11-21
 ---
 
-# Packstack Cookbook
+# Packstack
 
-Recipes for setting up various kinds of OpenStack installations using the packstack command line.
+For full Packstack documentation, see the [upstream wiki
+page](https://wiki.openstack.org/wiki/Packstack).
 
 ### Basics
 
@@ -35,3 +36,4 @@ Any other command line options may be provided with this one, to produce a reusa
 #### Reuse an answer file
 
          packstack --answer-file=/path/to/packstack_answers.txt
+
