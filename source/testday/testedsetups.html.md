@@ -76,7 +76,7 @@ Please see [Deploying RDO Using Foreman](Deploying RDO Using Foreman) for direct
 
 | Config Name                          | Release    | BaseOS     | Status | HOWTO                                                                                                               | Who | Date | BZ/LP | Notes Page |
 |--------------------------------------|------------|------------|--------|---------------------------------------------------------------------------------------------------------------------|-----|------|-------|------------|
-| 2 Node install with Nova Networking  | Havana H-3 | RHEL 6.4   | ??     | [ 2 Node install with Nova Networking](Deploying_RDO_Using_Foreman #2_Node_install_with_Nova_Networking) | ??  | ??   | None  | None       |
+| 2 Node install with Nova Networking  | Havana H-3 | RHEL 6.4   | ??     | [ 2 Node install with Nova Networking](Deploying_RDO_Using_Foreman#2_Node_install_with_Nova_Networking) | ??  | ??   | None  | None       |
 |                                      |            | CentOS 6.4 | ??     | [ 2 Node install with Nova Networking](Deploying_RDO_Using_Foreman#2_Node_install_with_Nova_Networking)  | ??  | ??   | None  | None       |
 | 3 Node install with Neutron          | Havana H-3 | RHEL 6.4   | ??     | [ 3 Node install with Neutron](Deploying_RDO_Using_Foreman#Neutron_with_Networker_Node)                  | ??  | ??   | None  | None       |
 |                                      |            | CentOS 6.4 | ??     | [ 3 Node install with Neutron](Deploying_RDO_Using_Foreman#Neutron_with_Networker_Node)                  | ??  | ??   | None  | None       |
