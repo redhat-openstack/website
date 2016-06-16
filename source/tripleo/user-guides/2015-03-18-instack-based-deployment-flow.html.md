@@ -27,20 +27,17 @@ wiki_last_updated: 2015-03-19
 
 ## Select Your Operating System
 
-<hr style="margin-top: -8px"/>
 There is a slightly different workflow to ensure that your host machine is set up correctly to proceed with the following steps. You should choose one of the supported operating systems and execute the commands listed for that Operating System, ignoring the other Operating Systems. For any section NOT tagged, this should work identically regardless of your Operating System.'
 
 ## Preparing Virtual Environment
 
-<hr style="margin-top: -8px"/>
 Operations in this sections are performed on hosting bare metal machine.
 
 We encourage to use a machine which you can fully dedicate to TripleO because during virtual setup Instack will enable multiple repositories and manipulate with your libvirt setup.
 
-**\1**
+1.
 
-<hr style="margin-top: 0"/>
-[CentOS]
+### CentOS
 
     # provision your host machine with CentOS 7
 
@@ -50,7 +47,7 @@ We encourage to use a machine which you can fully dedicate to TripleO because du
         echo "CentOS 7 is NOT your operating system."
     fi
 
-[RHEL]
+### RHEL
 
     # provision your host machine with RHEL 7.1
 
@@ -65,9 +62,8 @@ We encourage to use a machine which you can fully dedicate to TripleO because du
         echo "RHEL 7.1 is NOT your operating system. Commands were not executed."
     fi
 
-**\1**
+2.
 
-<hr style="margin-top: 0"/>
     sudo useradd stack
     sudo passwd stack  # specify a password
 
@@ -76,9 +72,8 @@ We encourage to use a machine which you can fully dedicate to TripleO because du
 
     su - stack
 
-**\1**
+3.
 
-<hr style="margin-top: 0"/>
     export DELOREAN_REPO=${DELOREAN_REPO:-"http://104.130.230.24/centos70/4a/1d/4a1d1169acdf6b63239b60a898a33caf428acb5c_291a4aa4/delorean.repo"}
     sudo curl -o /etc/yum.repos.d/delorean.repo $DELOREAN_REPO
 
@@ -101,7 +96,7 @@ We encourage to use a machine which you can fully dedicate to TripleO because du
     sudo yum install -y openstack-heat-templates
     sudo yum install -y openstack-tripleo-puppet-elements
 
-[RHEL] - add on top of above listed repositories
+## RHEL - add on top of above listed repositories
 
     # for RHEL enable extra repositories from subscription-manager on top of above listed repositories
 
@@ -113,15 +108,13 @@ We encourage to use a machine which you can fully dedicate to TripleO because du
         echo "RHEL 7.1 is NOT your operating system. Commands were not executed."
     fi
 
-**\1**
+1.
 
-<hr style="margin-top: 0"/>
     sudo yum install -y instack-undercloud
 
-**\1**
+2.
 
-<hr style="margin-top: 0"/>
-[CentOS]
+### CentOS
 
     if $(grep -Eqs 'CentOS Linux release 7' /etc/redhat-release); then
         # use in case of cloud based image
@@ -140,7 +133,7 @@ We encourage to use a machine which you can fully dedicate to TripleO because du
         echo "CentOS 7 is NOT your operating system. Commands were not executed."
     fi
 
-[RHEL]
+### RHEL
 
     if $(grep -Eqs 'Red Hat Enterprise Linux' /etc/redhat-release) && $(grep -Eqs 'release 7.1' /etc/redhat-release); then
         # use in case of cloud based image
@@ -167,9 +160,8 @@ We encourage to use a machine which you can fully dedicate to TripleO because du
         echo "RHEL 7.1 is NOT your operating system. Commands were not executed."
     fi
 
-**\1**
+3.
 
-<hr style="margin-top: 0"/>
     export UNDERCLOUD_VM_NAME="rdo_manager"
     export UNDERCLOUD_NODE_MEM=4096
     export UNDERCLOUD_NODE_CPU=1
@@ -178,9 +170,8 @@ We encourage to use a machine which you can fully dedicate to TripleO because du
     export NODE_MEM=4096
     export NODE_CPU=1
 
-**\1**
+4.
 
-<hr style="margin-top: 0"/>
     instack-virt-setup
 
     # if above script fails with KVM permission denied then
@@ -190,21 +181,17 @@ We encourage to use a machine which you can fully dedicate to TripleO because du
 
 ## Stand up TripleO (Undercloud)
 
-<hr style="margin-top: -8px"/>
-**\1**
+1.
 
-<hr style="margin-top: 0"/>
     ssh root@<instack-vm-ip>
     # you can get the IP with 'arp -n' command
 
-**\1**
+2.
 
-<hr style="margin-top: 0"/>
     su - stack
 
-**\1**
+3.
 
-<hr style="margin-top: 0"/>
     export DELOREAN_REPO=${DELOREAN_REPO:-"http://104.130.230.24/centos70/4a/1d/4a1d1169acdf6b63239b60a898a33caf428acb5c_291a4aa4/delorean.repo"}
     sudo curl -o /etc/yum.repos.d/delorean.repo $DELOREAN_REPO
 
@@ -227,39 +214,32 @@ We encourage to use a machine which you can fully dedicate to TripleO because du
     sudo yum install -y openstack-heat-templates
     sudo yum install -y openstack-tripleo-puppet-elements
 
-**\1**
+4.
 
-<hr style="margin-top: 0"/>
     sudo yum install -y instack-undercloud
 
-**\1**
+5.
 
-<hr style="margin-top: 0"/>
     cp /usr/share/instack-undercloud/instack.answers.sample ~/instack.answers
 
-**\1**
+6.
 
-<hr style="margin-top: 0"/>
     instack-install-undercloud
 
-**\1**
+7.
 
-<hr style="margin-top: 0"/>
     sudo cp /root/tripleo-undercloud-passwords .
     sudo cp /root/stackrc .
 
 ## Use TripleO for Deploying RDO (Overcloud)
 
-<hr style="margin-top: -8px"/>
-**\1**
+1.
 
-<hr style="margin-top: 0"/>
     source stackrc
 
-**\1**
+2.
 
-<hr style="margin-top: 0"/>
-[CentOS]
+### CentOS
 
     if $(grep -Eqs 'CentOS Linux release 7' /etc/redhat-release); then
         # use in case of cloud based image
@@ -278,7 +258,7 @@ We encourage to use a machine which you can fully dedicate to TripleO because du
         echo "CentOS 7 is NOT your operating system. Commands were not executed."
     fi
 
-[RHEL]
+### RHEL
 
     if $(grep -Eqs 'Red Hat Enterprise Linux' /etc/redhat-release) && $(grep -Eqs 'release 7.1' /etc/redhat-release); then
         # use in case of cloud based image
@@ -305,35 +285,29 @@ We encourage to use a machine which you can fully dedicate to TripleO because du
         echo "RHEL 7.1 is NOT your operating system. Commands were not executed."
     fi
 
-**\1**
+3.
 
-<hr style="margin-top: 0"/>
     instack-build-images
 
-**\1**
+4.
 
-<hr style="margin-top: 0"/>
     instack-prepare-for-overcloud
 
-**\1**
+5.
 
-<hr style="margin-top: 0"/>
     instack-ironic-deployment --nodes-json instackenv.json --register-nodes
 
-**\1**
+6.
 
-<hr style="margin-top: 0"/>
     instack-ironic-deployment --discover-nodes
     instack-ironic-deployment --show-profile
 
-**\1**
+7.
 
-<hr style="margin-top: 0"/>
     instack-ironic-deployment --setup-flavors
 
-**\1**
+8.
 
-<hr style="margin-top: 0"/>
     # source proper network settings for virtual environment
     source /usr/share/instack-undercloud/deploy-virt-overcloudrc
 
@@ -342,7 +316,6 @@ We encourage to use a machine which you can fully dedicate to TripleO because du
 
 ## Test Overcloud
 
-<hr style="margin-top: -8px"/>
     # download testing image (Fedora) and add path to variables
     curl -O https://repos.fedorapeople.org/repos/openstack-m/tripleo-images-rdo-juno/fedora-user.qcow2
     export IMAGE_PATH=/home/stack/
