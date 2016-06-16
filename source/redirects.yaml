@@ -108,7 +108,6 @@
   Deploying RDO using Foreman: install/deploying-rdo-using-foreman
   Securing services: uncategorized/securing-services
   Test Day 09 2013: testday/test-day-09-2013
-  TripleO images: uncategorized/tripleo-images
   Workarounds: testday/workarounds
   RDO videos: rdo/rdo-videos
   Deploying Heat on Havana: install/deploying-heat-on-havana
@@ -188,7 +187,6 @@
   Hangouts: community/hangouts
   TestedSetups 2014 02: testday/testedsetups-2014-02
   Workarounds 2014 02: testday/workarounds-2014-02
-  TripleO VM Setup: uncategorized/tripleo-vm-setup
   RabbitMQ: documentation/rabbitmq
   IRC etiquette: community/irc-etiquette
   OpenDaylight integration: networking/opendaylight-integration
