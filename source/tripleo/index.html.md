@@ -46,10 +46,6 @@ Upstream TripleO documentation:
 
 > **Note:** Limit your environment specific content in the menu on the left-hand side of the documentation page.
 
-Troubleshooting:
-
-*   [TripleO Troubleshooting](/tripleo/troubleshooting)
-
 TripleO (RDO-Manager) HA setup:
 
 *   [Great blog post on RDO-Manager HA setup](https://remote-lab.net/rdo-manager-ha-openstack-deployment)
