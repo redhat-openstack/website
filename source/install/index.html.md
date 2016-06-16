@@ -23,7 +23,6 @@ Documents on this page also cover configuring your deployment.
 
 ### Configuration
 
-*   [Configuring Horizon to use SSL](HorizonSSL)
 *   [Securing services](Securing_services)
 *   [Setting up high availability](/ha)
 *   [Getting started with Ceilometer](CeilometerQuickStart)
@@ -35,7 +34,6 @@ Documents on this page also cover configuring your deployment.
 *   [Upgrading RDO &ndash; primarily for manual and Packstack-based deployments](upgrading-rdo)
 *   [Uninstalling RDO](Uninstalling RDO)
 *   [Packstack](Packstack_cookbook)
-*   [Virtualized Foreman dev setup](Virtualized_Foreman_dev_setup)
 *   [Creating CentOS and Fedora images ready for Openstack](Creating CentOS and Fedora images ready for Openstack)
 
 ### Hardware
