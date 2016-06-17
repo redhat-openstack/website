@@ -37,10 +37,10 @@ RHEL 7 support is experimental and may not work with the currently released pack
 
 2. The user performing all of the installation steps on the virt host needs to have sudo enabled. You can use an existing user or use the following commands to create a new user called **stack** with password-less sudo enabled. **Do not run the rest of the steps in this guide as root.**
 
-       sudo useradd stack
-       sudo passwd stack  # specify a password
-       echo "stack ALL=(root) NOPASSWD:ALL" | sudo tee -a /etc/sudoers.d/stack
-       sudo chmod 0440 /etc/sudoers.d/stack
+       sudo useradd stack
+       sudo passwd stack  # specify a password
+       echo "stack ALL=(root) NOPASSWD:ALL" | sudo tee -a /etc/sudoers.d/stack
+       sudo chmod 0440 /etc/sudoers.d/stack
 
 If you have previously used the host machine to run TripleO's devtest setup, then that could potentially conflict with the scripts installed from RDO packages. It is recommended to clean up from any previous devtest runs by deleting ~/.cache/tripleo and making sure there is no $TRIPLEO_ROOT defined in your environment.
 
@@ -52,25 +52,25 @@ These steps will setup your virtual host for a virtual environment for testing t
 
 2. Add export of LIBVIRT_DEFAULT_URI to your bashrc file.
 
-        echo 'export LIBVIRT_DEFAULT_URI="qemu:///system"' >> ~/.bashrc
+        echo 'export LIBVIRT_DEFAULT_URI="qemu:///system"' >> ~/.bashrc
 
 3. Enable the RDO juno repository
 
-`  sudo yum install -y `[`http://rdo.fedorapeople.org/openstack-juno/rdo-release-juno.rpm`](http://rdo.fedorapeople.org/openstack-juno/rdo-release-juno.rpm)
+`  sudo yum install -y `[`http://rdo.fedorapeople.org/openstack-juno/rdo-release-juno.rpm`](http://rdo.fedorapeople.org/openstack-juno/rdo-release-juno.rpm)
 
 If on RHEL 7, enable the EPEL repository too
 
-` sudo yum install -y `[`http://download.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-5.noarch.rpm`](http://download.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-5.noarch.rpm)
+` sudo yum install -y `[`http://download.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-5.noarch.rpm`](http://download.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-5.noarch.rpm)
 
 4 . Install the instack-undercloud package.
 
-       sudo yum install -y instack-undercloud
+       sudo yum install -y instack-undercloud
 
 5. Configure your environment for your selected distribution, replacing the values in [] with the appropriate ones for your environment.
 
 Fedora 20
 
-       export NODE_DIST="fedora"
+       export NODE_DIST="fedora"
 
 RHEL 7, registered with the customer portal
 
@@ -88,28 +88,28 @@ RHEL 7, registered with the customer portal
 
 6. Run scripts to install required dependencies
 
-       source /usr/libexec/openstack-tripleo/devtest_variables.sh
-       tripleo install-dependencies
-       tripleo set-usergroup-membership
-       # The previous command has added the user to the libvirtd group, so we need to login to the new group
-       newgrp libvirtd
-       newgrp
+       source /usr/libexec/openstack-tripleo/devtest_variables.sh
+       tripleo install-dependencies
+       tripleo set-usergroup-membership
+       # The previous command has added the user to the libvirtd group, so we need to login to the new group
+       newgrp libvirtd
+       newgrp
 
 ### Virtual Machine Creation
 
 1. Verify again that your user has been added to the libvirtd group. The command shown below should show the libvirtd group listed in the output.
 
-      id | grep libvirtd
+      id | grep libvirtd
 
 2. Run the script to setup your virtual environment.
 
-       instack-virt-setup
+       instack-virt-setup
 
 When the script has completed successfully it will output the IP address of the instack vm.
 
 Running `virsh list --all` will show you now have one virtual machine called instack" and four called "baremetal[0-4]", all shut off. The "instack" vm runs a minimal install of Fedora 20 x86_64 and will be used to install the undercloud on. You can login to the instack vm by running:
 
-` ssh -i .ssh/id_rsa_virt_power root@`<instack-vm-ip>
+` ssh -i .ssh/id_rsa_virt_power root@`<instack-vm-ip>
 
 The vm contains a user "stack" that uses the password "stack" and is granted password-less sudo privileges. Once logged in as root to the instack vm, you can su to the stack user. The other vm's don't have an operating system yet installed but will eventually become part of the "overcloud".
 

@@ -129,11 +129,11 @@ There are delete scripts included with the instack-undercloud package If you wan
 
 1. While logged into the undercloud node export the required variables into your shell in order to use the CLI tools for the undercloud and overcloud. If you copied the stackrc file into your home directory at the end of the undercloud installation, simply source that file. Alternatively, you can use the following command directly to set the needed environment variables.
 
-      command $(sudo cat /root/stackrc | xargs)
+      command $(sudo cat /root/stackrc | xargs)
 
 2. Run one of the following examples that matches how you deployed the overcloud.
 
-       instack-delete-overcloud
+       instack-delete-overcloud
 
 ## How do I load new Overcloud images?
 
@@ -141,18 +141,18 @@ If new images are made available for download, or you build new images, you will
 
 1. While logged into the undercloud node export the required variables into your shell in order to use the CLI tools for the undercloud and overcloud. If you copied the stackrc file into your home directory at the end of the undercloud installation, simply source that file. Alternatively, you can use the following command directly to set the needed environment variables.
 
-      command $(sudo cat /root/stackrc | xargs)
+      command $(sudo cat /root/stackrc | xargs)
 
 2. Use the following command to load new images. Pass the command whatever new image file you want loaded into glance.
 
-      tripleo load-image -d overcloud-control.qcow2
+      tripleo load-image -d overcloud-control.qcow2
 
 ## How do I view the Undercloud Dashboard when using a remote virt host?
 
 If your virt host is a remote system, and not the same system that you're running your web browser from, you can create an ssh tunnel from the virt host to the instack virtual machine for connectivity. On the virt host enter the following:
 
-       sudo iptables -I INPUT -p tcp --dport 8080 -j ACCEPT
-      `  ssh -g -N -L 8080:192.168.122.55:80 `hostname` `
+       sudo iptables -I INPUT -p tcp --dport 8080 -j ACCEPT
+      `  ssh -g -N -L 8080:192.168.122.55:80 `hostname` `
 
 where 192.168.122.55 is the IP address of the instack virtual machine. Update appropriately for your environment. With the ssh tunnel created you can launch a browser on a system with connectivity to the virt host and go to <http://><virt-host>:8080/dashboard and the dashboard should appear. If you need to connect remotely through the virt host, you can chain ssh tunnels as needed.
 

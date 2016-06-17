@@ -24,52 +24,52 @@ Start with a working Packstack installation with Neutron, such as is described i
 
 Install the server and client RPMs:
 
-      yum install openstack-neutron-gbp
-      yum install python-gbpclient
+      yum install openstack-neutron-gbp
+      yum install python-gbpclient
 
 Stop the Neutron server:
 
-      systemctl stop neutron-server
+      systemctl stop neutron-server
 
 Edit the Neutron configuration to include the GBP service plugin and its reference policy drivers:
 
-      ` crudini --set /etc/neutron/neutron.conf DEFAULT service_plugins "`crudini --get /etc/neutron/neutron.conf DEFAULT service_plugins`,group_policy" `
-      crudini --set /etc/neutron/neutron.conf group_policy policy_drivers "implicit_policy,resource_mapping"
+      ` crudini --set /etc/neutron/neutron.conf DEFAULT service_plugins "`crudini --get /etc/neutron/neutron.conf DEFAULT service_plugins`,group_policy" `
+      crudini --set /etc/neutron/neutron.conf group_policy policy_drivers "implicit_policy,resource_mapping"
 
 Update the Neutron DB schema to include the GBP tables:
 
-      gbp-db-manage --config-file /usr/share/neutron/neutron-dist.conf --config-file /etc/neutron/neutron.conf --config-file /etc/neutron/plugin.ini upgrade head
+      gbp-db-manage --config-file /usr/share/neutron/neutron-dist.conf --config-file /etc/neutron/neutron.conf --config-file /etc/neutron/plugin.ini upgrade head
 
 Start the Neutron server and check its status:
 
-      systemctl start neutron-server
-      systemctl status neutron-server
+      systemctl start neutron-server
+      systemctl status neutron-server
 
 ### Configuring Horizon
 
 Install the RPMs:
 
-       yum install openstack-dashboard-gbp
+       yum install openstack-dashboard-gbp
 
 Restart the web server and check its status:
 
-      systemctl restart httpd
-      systemctl status httpd
+      systemctl restart httpd
+      systemctl status httpd
 
 ### Configuring Heat
 
 Assuming Heat is enabled in your RDO deployment, install the RPM:
 
-      yum install openstack-heat-gbp
+      yum install openstack-heat-gbp
 
 Edit the Heat configuration to include the GBP plugin:
 
-      crudini --set /etc/heat/heat.conf DEFAULT plugin_dirs "/usr/lib64/heat,/usr/lib/heat,/usr/lib/python2.7/site-packages/gbpautomation/heat"
+      crudini --set /etc/heat/heat.conf DEFAULT plugin_dirs "/usr/lib64/heat,/usr/lib/heat,/usr/lib/python2.7/site-packages/gbpautomation/heat"
 
 Restart the Heat engine and check its status:
 
-      systemctl restart openstack-heat-engine
-      systemctl status openstack-heat-engine
+      systemctl restart openstack-heat-engine
+      systemctl status openstack-heat-engine
 
 ## Using GBP
 
@@ -77,27 +77,27 @@ Once the neutron server is configured with GBP and running, basic operation can 
 
 Create a group:
 
-      gbp group-create test1 --description "first test group"
+      gbp group-create test1 --description "first test group"
 
 The response should show the details of the group.
 
 List the groups:
 
-      gbp group-list
+      gbp group-list
 
 You should see the group you just created.
 
 Verify that implicit L2 and L3 policies were created:
 
-      gbp l2policy-list
-      gbp l3policy-list
+      gbp l2policy-list
+      gbp l3policy-list
 
 You should see an L2 policy with the same name as the group, and an L3 policy named "default".
 
 Verify that neutron resources were created:
 
-      neutron net-list
-      neutron subnet-list
+      neutron net-list
+      neutron subnet-list
 
 You should see a network and a subnet with names derived from the group name.
 

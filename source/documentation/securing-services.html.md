@@ -34,25 +34,25 @@ Note that this example uses 192.168.200.x as the OpenStack private network for e
 
 Ensure the hostname of your IPA server is the FQDN on the private network:
 
-      echo "$(hostname -s).openstack.priv" > /etc/hostname
-      echo "$(hostname -i) $(hostname -s).openstack.priv" >> /etc/hosts
-      sed -i "s/^`\(HOSTNAME=\)`.*$/\1$(hostname -s).openstack.priv/" \
-         /etc/sysconfig/network
-         hostname $(hostname -s).openstack.priv
+      echo "$(hostname -s).openstack.priv" > /etc/hostname
+      echo "$(hostname -i) $(hostname -s).openstack.priv" >> /etc/hosts
+      sed -i "s/^`\(HOSTNAME=\)`.*$/\1$(hostname -s).openstack.priv/" \
+         /etc/sysconfig/network
+         hostname $(hostname -s).openstack.priv
 
 Instal the IPA server:
 
-      yum install freeipa-server bind bind-dyndb-ldap
-      ipa-server-install --setup-dns --forwarder=192.168.200.1 \
-        --hostname=$(hostname -s).openstack.priv -r OPENSTACK.PRIV \
-        -n openstack.priv -p Secret123 -P Secret123 -a Secret123 -U
+      yum install freeipa-server bind bind-dyndb-ldap
+      ipa-server-install --setup-dns --forwarder=192.168.200.1 \
+        --hostname=$(hostname -s).openstack.priv -r OPENSTACK.PRIV \
+        -n openstack.priv -p Secret123 -P Secret123 -a Secret123 -U
 
 Verify the IP for the subnet you are using (192.168.200.1, in our example), is in /etc/resolv.conf.
 
 Create your controller host entry:
 
-      ipa dnsrecord-add openstack.priv v3controller --a-rec=192.168.200.10
-       --a-create-reverse
+      ipa dnsrecord-add openstack.priv v3controller --a-rec=192.168.200.10
+       --a-create-reverse
 
 #### On OpenStack Controller
 
@@ -60,12 +60,12 @@ Make sure the ipa server is in resolv.conf (listed first)
 
 Install and configure the IPA client software. If you are using the IPA DNS then the domain and server will be autodiscovered. For authentication you can use the IPA admin user and password.
 
-      yum install ipa-client
+      yum install ipa-client
       ipa-client-install
 
 If you have dhclient running on your machine(s), you will also want to update the config in /etc/dhcp/dhclient-<nic>.conf to have the line:
 
-      option domain-name-servers 192.168.200.1, `<domain-server-ip-2>`, `<etc>`;
+      option domain-name-servers 192.168.200.1, `<domain-server-ip-2>`, `<etc>`;
 
 Otherwise dhclient will overwrite /etc/resolv.conf causing DNS resolution to fail.
 
@@ -156,7 +156,7 @@ Configuring qpidd does not currently work without making some manual changes, de
 
 *   Install the qpid-cpp-server-ssl package
 
-      # yum install qpid-cpp-server-ssl
+      # yum install qpid-cpp-server-ssl
 
 *   Create a directory to store the NSS certificate database for qpidd
 
@@ -227,15 +227,15 @@ To manually configure the horizon/dashboard service you will need to obtain an S
 
 *   Install the mod_ssl package
 
-      # yum install mod_ssl
+      # yum install mod_ssl
 
 *   Modify /etc/httpd/conf/httpd.conf and add
 
-      Listen 0.0.0.0:443
-      SSLEngine on
-      SSLCertificateKeyFile /path/to/server.key
-      SSLCertificateFile /path/to/server.crt
-      SSLCertificateCAFile /path/to/ca.crt
+      Listen 0.0.0.0:443
+      SSLEngine on
+      SSLCertificateKeyFile /path/to/server.key
+      SSLCertificateFile /path/to/server.crt
+      SSLCertificateCAFile /path/to/ca.crt
 
 *   Restart httpd
 
@@ -243,8 +243,8 @@ Some care is needed depending on your configuration. You may already have a defa
 
 You can optionally remove the listener on port 80, or always forward requests made on the non-secure port to the secure port by adding this to your configuration file and restarting httpd:
 
-      RewriteEngine On
-      RewriteCond %{HTTPS} !=on
-      RewriteRule ^/?(.*) `[`https://`](https://)`%{SERVER_NAME}/$1 [R,L]
+      RewriteEngine On
+      RewriteCond %{HTTPS} !=on
+      RewriteRule ^/?(.*) `[`https://`](https://)`%{SERVER_NAME}/$1 [R,L]
 
 Automating this configuration relies on upstream patch <https://review.openstack.org/49799> . The current horizon puppet module includes a listen_ssl option which makes Apache listen on port 443 but it doesn't require the mod_ssl package or enable the other SSL configuration options.

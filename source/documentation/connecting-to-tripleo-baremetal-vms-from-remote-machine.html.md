@@ -38,93 +38,93 @@ This is a pretty simple setup, since the VM host (if set up with Instack) will a
 
 2. Set up a new switch to be used for a VxLAN tunnel
 
-         cat << EOF > /etc/sysconfig/network-scripts/ifcfg-ovsbr2
-         DEVICE=ovsbr2
-         DEVICETYPE=ovs
-         ONBOOT=yes
-         TYPE=OVSBridge
-         BOOTPROTO=none
-         DELAY=0
-         HOTPLUG=no
-         EOF
+         cat << EOF > /etc/sysconfig/network-scripts/ifcfg-ovsbr2
+         DEVICE=ovsbr2
+         DEVICETYPE=ovs
+         ONBOOT=yes
+         TYPE=OVSBridge
+         BOOTPROTO=none
+         DELAY=0
+         HOTPLUG=no
+         EOF
 
 Now start the bridge
 
-         ifup ovsbr2
+         ifup ovsbr2
 
 3. Setup up the tunnel
 
-         ovs-vsctl add-port ovsbr2 vx1 -- set interface vx1 type=vxlan options:remote_ip=10.0.0.2
+         ovs-vsctl add-port ovsbr2 vx1 -- set interface vx1 type=vxlan options:remote_ip=10.0.0.2
 
 4. Open up a port
 
 with firewall-cmd (recommended, F20+, RHEL 7+, F19 doesn't seem to work):
 
-         firewall-cmd --permanent --add-rich-rule 'rule family="ipv4" source address="10.0.0.2/32" port port="4789" protocol="udp" accept'
-         firewall-cmd --reload
+         firewall-cmd --permanent --add-rich-rule 'rule family="ipv4" source address="10.0.0.2/32" port port="4789" protocol="udp" accept'
+         firewall-cmd --reload
 
 iptables can also be used directly:
 
-         lineno=$(iptables -nvL INPUT --line-numbers | grep "state RELATED,ESTABLISHED" | awk '{print $1}')
-         iptables -I INPUT $lineno -s `<vxlan-endpoint>`/32 -p udp -m multiport --dports 4789 -m comment --comment "001 vxlan incoming `<vxlan-endpoint>`" -j ACCEPT
+         lineno=$(iptables -nvL INPUT --line-numbers | grep "state RELATED,ESTABLISHED" | awk '{print $1}')
+         iptables -I INPUT $lineno -s `<vxlan-endpoint>`/32 -p udp -m multiport --dports 4789 -m comment --comment "001 vxlan incoming `<vxlan-endpoint>`" -j ACCEPT
 
 5. Now, create the veth pair, and bring the interfaces up.
 
-         ip link add name veth0 type veth peer name veth1
-         ip link set veth0 up && ip link set veth1 up
+         ip link add name veth0 type veth peer name veth1
+         ip link set veth0 up && ip link set veth1 up
 
 6. Give one of the interfaces an IP address on the subnet into which you are connecting.
 
-         ip addr add 192.168.100.9/24 dev veth0
-         ovs-vsctl add-port ovsbr2 veth1
+         ip addr add 192.168.100.9/24 dev veth0
+         ovs-vsctl add-port ovsbr2 veth1
 
 7. Do the same on the virtual host (10.0.0.2), except we don't need to give the veth an IP address.
 
-         cat << EOF > /etc/sysconfig/network-scripts/ifcfg-ovsbr2
-         DEVICE=ovsbr2
-         DEVICETYPE=ovs
-         ONBOOT=yes
-         TYPE=OVSBridge
-         BOOTPROTO=none
-         DELAY=0
-         HOTPLUG=no
-         EOF
+         cat << EOF > /etc/sysconfig/network-scripts/ifcfg-ovsbr2
+         DEVICE=ovsbr2
+         DEVICETYPE=ovs
+         ONBOOT=yes
+         TYPE=OVSBridge
+         BOOTPROTO=none
+         DELAY=0
+         HOTPLUG=no
+         EOF
 
 Now start the bridge
 
-         ifup ovsbr2
+         ifup ovsbr2
 
 8. Setup up the tunnel
 
-         ovs-vsctl add-port ovsbr2 vx1 -- set interface vx1 type=vxlan options:remote_ip=10.0.0.1
+         ovs-vsctl add-port ovsbr2 vx1 -- set interface vx1 type=vxlan options:remote_ip=10.0.0.1
 
 9. Open up a port
 
 with firewall-cmd (recommended, F20+, RHEL 7+, F19 doesn't seem to work):
 
-         firewall-cmd --permanent --add-rich-rule 'rule family="ipv4" source address="10.0.0.1/32" port port="4789" protocol="udp" accept'
-         firewall-cmd --reload
+         firewall-cmd --permanent --add-rich-rule 'rule family="ipv4" source address="10.0.0.1/32" port port="4789" protocol="udp" accept'
+         firewall-cmd --reload
 
 iptables can also be used directly:
 
-         lineno=$(iptables -nvL INPUT --line-numbers | grep "state RELATED,ESTABLISHED" | awk '{print $1}')
-         iptables -I INPUT $lineno -s `<vxlan-endpoint>`/32 -p udp -m multiport --dports 4789 -m comment --comment "001 vxlan incoming `<vxlan-endpoint>`" -j ACCEPT
+         lineno=$(iptables -nvL INPUT --line-numbers | grep "state RELATED,ESTABLISHED" | awk '{print $1}')
+         iptables -I INPUT $lineno -s `<vxlan-endpoint>`/32 -p udp -m multiport --dports 4789 -m comment --comment "001 vxlan incoming `<vxlan-endpoint>`" -j ACCEPT
 
 10. Now, create the veth pair, and bring the interfaces up.
 
-         ip link add name veth0 type veth peer name veth1
-         ip link set veth0 up && ip link set veth1 up
+         ip link add name veth0 type veth peer name veth1
+         ip link set veth0 up && ip link set veth1 up
 
 11. Plug one veth into the brbm
 
-         ovs-vsctl add-port brbm veth1
+         ovs-vsctl add-port brbm veth1
 
 12. Plug the other veth into the tunnel switch
 
-         ovs-vsctl add-port ovsbr2 veth0
+         ovs-vsctl add-port ovsbr2 veth0
 
 13. At this point, you should be able to ping a VM from the remote host.
 
-         (From 10.0.0.1): ping 192.168.100.55
+         (From 10.0.0.1): ping 192.168.100.55
 
 <Category:Documentation> <Category:Networking> <Category:TripleO>

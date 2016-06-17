@@ -38,21 +38,21 @@ In order to provide high availability and fault tolerance of the MySQL database,
 
 Typically, these physical hosts should easily be able to host the necessary VMs for all OpenStack control services provided they have enough RAM:
 
-       +---------------------+ +---------------------+
-        |   host system 1     | |   host system 2     |
-        | +-----------------+ | | +-----------------+ |
-        | | load balancer 1 | | | | load balancer 2 | |
-        | +-----------------+ | | +-----------------+ |
-        | +-----------------+ | | +-----------------+ |
-        | | mysql server 1  | | | | mysql server 2  | |
-        | +-----------------+ | | +-----------------+ |
-        | +-----------------+ | | +-----------------+ |
-        | | amqp server 1   | | | | amqp server 2   | |
-        | +-----------------+ | | +-----------------+ |
-        | +-----------------+ | | +-----------------+ |
-        | | controller 1    | | | | controller 2    | |
-        | +-----------------+ | | +-----------------+ |
-        +---------------------+ +---------------------+
+       +---------------------+ +---------------------+
+        |   host system 1     | |   host system 2     |
+        | +-----------------+ | | +-----------------+ |
+        | | load balancer 1 | | | | load balancer 2 | |
+        | +-----------------+ | | +-----------------+ |
+        | +-----------------+ | | +-----------------+ |
+        | | mysql server 1  | | | | mysql server 2  | |
+        | +-----------------+ | | +-----------------+ |
+        | +-----------------+ | | +-----------------+ |
+        | | amqp server 1   | | | | amqp server 2   | |
+        | +-----------------+ | | +-----------------+ |
+        | +-----------------+ | | +-----------------+ |
+        | | controller 1    | | | | controller 2    | |
+        | +-----------------+ | | +-----------------+ |
+        +---------------------+ +---------------------+
 
 The OpenStack MySQL database is not very large, but requires enough disk space for storing binary logs which are the key for database replication. For a medium sized cloud with 64 compute nodes and support for 4,000 2GB VMs, the following VM parameters are recommended:
 
@@ -82,8 +82,8 @@ To solve "The Arp Problem" in Direct Routing mode (see [1](http://www.austintek.
 
 1) Add the following lines to /etc/sysctl.conf then run 'sysctl -p':
 
-      net.ipv4.conf.all.arp_announce = 2
-      net.ipv4.conf.all.arp_ignore = 1
+      net.ipv4.conf.all.arp_announce = 2
+      net.ipv4.conf.all.arp_ignore = 1
 
 2) Create the file /etc/sysconfig/network-scripts/ifcfg-lo:3 with the following contents and start the interface by running 'ifup lo:3':
 
@@ -105,11 +105,11 @@ The following guide are based on the "Advanced MySQL Replication Techniques" ( [
 
 1) On each system, install the mysql client and server:
 
-      yum -y install mysql mysql-server 
+      yum -y install mysql mysql-server 
 
 2) Stop the mysql server on each system:
 
-      service mysqld stop 
+      service mysqld stop 
 
 3) Edit the /etc/my.cnf file on each system (NB: the my.cnf on each system will be slightly different).
 
@@ -117,182 +117,182 @@ On sql1, my.cnf should look like the following:
 
       ############################################################################
       [client]
-      port = 3306
-      socket = /var/lib/mysql/mysql.sock
-       
+      port = 3306
+      socket = /var/lib/mysql/mysql.sock
+       
       [mysqld_safe]
-      socket = /var/lib/mysql/mysql.sock
-      nice = 0
-      log = /var/log/mysqld.log
-      log-error = /var/log/mysqld.log
-      err-log = /var/log/mysqld.log
-      log-warnings = 2
-       
+      socket = /var/lib/mysql/mysql.sock
+      nice = 0
+      log = /var/log/mysqld.log
+      log-error = /var/log/mysqld.log
+      err-log = /var/log/mysqld.log
+      log-warnings = 2
+       
       [mysqld]
-      user = mysql
-      pid-file = /var/run/mysqld/mysqld.pid
-      socket = /var/lib/mysql/mysql.sock
-      port = 3306
-      basedir = /usr
-      datadir = /var/lib/mysql
-      tmpdir = /tmp
+      user = mysql
+      pid-file = /var/run/mysqld/mysqld.pid
+      socket = /var/lib/mysql/mysql.sock
+      port = 3306
+      basedir = /usr
+      datadir = /var/lib/mysql
+      tmpdir = /tmp
       skip-external-locking
-      bind-address = 0.0.0.0
-      key_buffer_size = 512M
-      table_cache = 512
-      myisam_sort_buffer_size = 100M
-      max_connections = 500
-      max_connect_errors = 1000
-      max_allowed_packet = 16M
-      thread_stack = 192K
-      thread_cache_size = 8
-      myisam-recover = BACKUP
-      query_cache_limit = 1M
-      query_cache_size = 16M
-      log_error = /var/log/mysqld.log
-      log-warning = 2
-      expire_logs_days = 14
-      max_binlog_size = 100M
-       
-      # If innodb is used
-      innodb_flush_log_at_trx_commit = 1
-       
-      # For replication. **Note** server-id and auto_increment_offset values!
-      server_id = 1
-      auto_increment_offset = 1
-      auto_increment_increment = 10
-      master-host = sql2.example.com
-      master-user = replication
-      master-password = secret_pw
-      sync_binlog = 1
-      log-bin = mysql-bin
+      bind-address = 0.0.0.0
+      key_buffer_size = 512M
+      table_cache = 512
+      myisam_sort_buffer_size = 100M
+      max_connections = 500
+      max_connect_errors = 1000
+      max_allowed_packet = 16M
+      thread_stack = 192K
+      thread_cache_size = 8
+      myisam-recover = BACKUP
+      query_cache_limit = 1M
+      query_cache_size = 16M
+      log_error = /var/log/mysqld.log
+      log-warning = 2
+      expire_logs_days = 14
+      max_binlog_size = 100M
+       
+      # If innodb is used
+      innodb_flush_log_at_trx_commit = 1
+       
+      # For replication. **Note** server-id and auto_increment_offset values!
+      server_id = 1
+      auto_increment_offset = 1
+      auto_increment_increment = 10
+      master-host = sql2.example.com
+      master-user = replication
+      master-password = secret_pw
+      sync_binlog = 1
+      log-bin = mysql-bin
       log-slave-updates
-      relay-log = sql1-relay-bin
-      slave_exec_mode = IDEMPOTENT
-       
-      # slave-skip-errors = 1062
-      # replicate-ignore-table = test.test
-      ############################################################################ 
+      relay-log = sql1-relay-bin
+      slave_exec_mode = IDEMPOTENT
+       
+      # slave-skip-errors = 1062
+      # replicate-ignore-table = test.test
+      ############################################################################ 
 
 On sql2, my.cnf should look like the following:
 
       ############################################################################
       [client]
-      port = 3306
-      socket = /var/lib/mysql/mysql.sock
-       
+      port = 3306
+      socket = /var/lib/mysql/mysql.sock
+       
       [mysqld_safe]
-      socket = /var/lib/mysql/mysql.sock
-      nice = 0
-      log = /var/log/mysqld.log
-      log-error = /var/log/mysqld.log
-      err-log = /var/log/mysqld.log
-      log-warnings = 2
-       
+      socket = /var/lib/mysql/mysql.sock
+      nice = 0
+      log = /var/log/mysqld.log
+      log-error = /var/log/mysqld.log
+      err-log = /var/log/mysqld.log
+      log-warnings = 2
+       
       [mysqld]
-      user = mysql
-      pid-file = /var/run/mysqld/mysqld.pid
-      socket = /var/lib/mysql/mysql.sock
-      port = 3306
-      basedir = /usr
-      datadir = /var/lib/mysql
-      tmpdir = /tmp
+      user = mysql
+      pid-file = /var/run/mysqld/mysqld.pid
+      socket = /var/lib/mysql/mysql.sock
+      port = 3306
+      basedir = /usr
+      datadir = /var/lib/mysql
+      tmpdir = /tmp
       skip-external-locking
-      bind-address = 0.0.0.0
-      key_buffer_size = 512M
-      table_cache = 512
-      myisam_sort_buffer_size = 100M
-      max_connections = 500
-      max_connect_errors = 1000
-      max_allowed_packet = 16M
-      thread_stack = 192K
-      thread_cache_size = 8
-      myisam-recover = BACKUP
-      query_cache_limit = 1M
-      query_cache_size = 16M
-      log_error = /var/log/mysqld.log
-      log-warning = 2
-      expire_logs_days = 14
-      max_binlog_size = 100M
-       
-      # If innodb is used
-      innodb_flush_log_at_trx_commit = 1
-       
-      # For replication. **Note** server-id and auto_increment_offset values!
-      server_id = 2
-      auto_increment_offset = 2
-      auto_increment_increment = 10
-      master-host = sql1.example.com
-      master-user = replication
-      master-password = secret_pw
-      sync_binlog = 1
-      log-bin = mysql-bin
+      bind-address = 0.0.0.0
+      key_buffer_size = 512M
+      table_cache = 512
+      myisam_sort_buffer_size = 100M
+      max_connections = 500
+      max_connect_errors = 1000
+      max_allowed_packet = 16M
+      thread_stack = 192K
+      thread_cache_size = 8
+      myisam-recover = BACKUP
+      query_cache_limit = 1M
+      query_cache_size = 16M
+      log_error = /var/log/mysqld.log
+      log-warning = 2
+      expire_logs_days = 14
+      max_binlog_size = 100M
+       
+      # If innodb is used
+      innodb_flush_log_at_trx_commit = 1
+       
+      # For replication. **Note** server-id and auto_increment_offset values!
+      server_id = 2
+      auto_increment_offset = 2
+      auto_increment_increment = 10
+      master-host = sql1.example.com
+      master-user = replication
+      master-password = secret_pw
+      sync_binlog = 1
+      log-bin = mysql-bin
       log-slave-updates
-      relay-log = sql2-relay-bin
-      slave_exec_mode = IDEMPOTENT
-       
-      # slave-skip-errors = 1062
-      # replicate-ignore-table = test.test
+      relay-log = sql2-relay-bin
+      slave_exec_mode = IDEMPOTENT
+       
+      # slave-skip-errors = 1062
+      # replicate-ignore-table = test.test
       ############################################################################
 
 4) On sql1 start the mysqld service and ignore any errors that may indicate that that the master-host options have been deprecated and will be removed in a future release. These errors are indeed correct, however, on the initialization of the multi-master replication database the options included in the my.cnf file will be used to generate an appropriate /var/lib/mysql/master.info file which then takes precedence over the options in my.cnf and the errors will go away in subsequent restarts.
 
 5) Start the mysql client on sql1 and issue the following commands:
 
-      mysql> grant replication slave, replication client on *.* to 'replication'@'sql2.example.com' identified by 'secret_pw';
-      mysql> grant replication slave, replication client on *.* to'replication'@'sql1.example.com' identified by 'secret_pw';
-      mysql> flush privileges;
+      mysql> grant replication slave, replication client on *.* to 'replication'@'sql2.example.com' identified by 'secret_pw';
+      mysql> grant replication slave, replication client on *.* to'replication'@'sql1.example.com' identified by 'secret_pw';
+      mysql> flush privileges;
 
 6) Remain logged into the mysql client and issue the following command to obtain the log file name and log position - record these values. (NB: do NOT terminate the mysql client session after you complete these commands - remain logged in to maintain the read lock):
 
-      mysql> slave stop;
-      mysql> flush tables with read lock;
-      mysql> show master status;
+      mysql> slave stop;
+      mysql> flush tables with read lock;
+      mysql> show master status;
 
 7) Start another login session into sql1 as root and rsync the mysql database directory from sql1 to sql2, excluding and deleting several files that are node specific:
 
-      [root sql1 ]# rsync -av -e ssh --delete --exclude=*relay-bin* --exclude=mysql-bin.* --exclude=*.info /var/lib/mysql/sql2.example.com:/var/lib/mysql 
+      [root sql1 ]# rsync -av -e ssh --delete --exclude=*relay-bin* --exclude=mysql-bin.* --exclude=*.info /var/lib/mysql/sql2.example.com:/var/lib/mysql 
 
 8) You may now safely log out of the mysql client on sql1.
 
 9) On sql2, start the mysqld:
 
-      service mysqld start 
+      service mysqld start 
 
 10) Start a mysql client session on sql2 and perform the following commands using the log file name and position recorded, above. NB: punctuation is very important:
 
-      mysql> slave stop; 
-      mysql> change master to master_log_file='<recorded log file name, above>', master_log_pos=<recorded log position, above>; # <- note lack of quotes mysql> start slave;
+      mysql> slave stop; 
+      mysql> change master to master_log_file='<recorded log file name, above>', master_log_pos=<recorded log position, above>; # <- note lack of quotes mysql> start slave;
 
 11) As with sql1, issue the following command to obtain the log file name and log position - record these values. (NB: do NOT terminate the mysql client session after you complete these commands - remain logged in to maintain the read lock):
 
-      mysql> flush tables with read lock;
-      mysql> show master status;
+      mysql> flush tables with read lock;
+      mysql> show master status;
 
 12) Log into sql1, start a mysql client session, and issue the following commands:
 
-      mysql> slave stop;
-      mysql> change master to master_log_file='<recorded log file name, above>', master_log_pos=<recorded log position, above>; # <- note lack of quotes mysql> start slave;
+      mysql> slave stop;
+      mysql> change master to master_log_file='<recorded log file name, above>', master_log_pos=<recorded log position, above>; # <- note lack of quotes mysql> start slave;
 
 13) It is now safe to exit any mysql client sessions that may be open to unlock the databases.
 
 14) Each database should now be in sync with each other, but to verify this, start a mysql client session on each system and issue the following command:
 
-      mysql> show slave status\G; 
+      mysql> show slave status\G; 
 
 15) Look at the values of Slave_IO_State, Slave_IO_Running, Slave_SQL_Running, and Seconds_Behind_Master. There should be no errors. If there are errors, then re-start the procedure at step 6.
 
 16) Additionally, create a test table and input some data on both systems. On sql1, run:
 
-      mysql> create table test.tester ( col1 int not null auto_increment, col2 int, primary key (col1) );
-      mysql> insert into tester (col2) values ('1'),('3'),('5');
-      mysql> select * from test.tester; 
+      mysql> create table test.tester ( col1 int not null auto_increment, col2 int, primary key (col1) );
+      mysql> insert into tester (col2) values ('1'),('3'),('5');
+      mysql> select * from test.tester; 
 
 On sql2, run:
 
-      mysql> select * from test.tester;
-      mysql> insert into tester (col2) values ('2'),('4'),('6');
-      mysql> select * from test.tester; 
+      mysql> select * from test.tester;
+      mysql> insert into tester (col2) values ('2'),('4'),('6');
+      mysql> select * from test.tester; 
 
 The select output should be the same on each system.
 
@@ -302,107 +302,107 @@ The select output should be the same on each system.
 
 1) On lb1 and lb2, install the piranha load balancing packages:
 
-       yum install piranha  
+       yum install piranha  
 
 2) Create the file /usr/local/bin/check_tcp_port.sh with the following contents, and make it executable:
 
       ############################################################################
       #!/bin/sh
-       
-      if [ -z $1 ] && [ -z $2 ]; then
-        echo "Usage: $0 addr port"
-        exit 1
+       
+      if [ -z $1 ] && [ -z $2 ]; then
+        echo "Usage: $0 addr port"
+        exit 1
       fi
-       
-      ` TEST=`/usr/bin/nc -zvv $1 $2 2>/dev/null | grep -c succeed` `
-       
-      if [ $TEST == 1 ]; then
-        echo "OK"
+       
+      ` TEST=`/usr/bin/nc -zvv $1 $2 2>/dev/null | grep -c succeed` `
+       
+      if [ $TEST == 1 ]; then
+        echo "OK"
       else
-        echo "FAIL"
+        echo "FAIL"
       fi
-       
-      exit 0
+       
+      exit 0
       ############################################################################
-        
+        
 
 3) Edit the /etc/sysconfig/ha/lvs.cf file on each load balancer and make it look like the following:
 
-      serial_no = 2013042401
-      service = lvs
-      primary = 10.0.0.1
-      service = lvs
-      rsh_command = ssh
-      backup_active = 1
-      backup = 10.0.0.2
-      heartbeat = 1
-      heartbeat_port = 539
-      keepalive = 6
-      deadtime = 18
-      debug_level = NONE
-      monitor_links = 1
-      syncdaemon = 1
-      hard_shutdown = 0
-      network = direct
-       
-      virtual openstack_mysql_3306 {
-        active = 1
-        address = 10.0.0.3 eth0:6
-        vip_nmask = 255.255.240.0
-        port = 3306
-        persistent = 60
-        pmask = 255.255.240.0
-        use_regex = 0
-        send_program = "/usr/local/bin/check_tcp_port.sh %h 3306"
-        send = "\n"
-        expect = "OK"
-        load_monitor = none
-        scheduler = wlc
-        protocol = tcp
-        timeout = 5
-        reentry = 10
-        quiesce_server = 1
-        server sql1.example.com {
-        address = 10.0.0.4
-        active = 1
-        weight = 1
-        }
-        server sql2.example.com {
-        address = 10.0.0.5
-        active = 1
-        weight = 1
-        }
+      serial_no = 2013042401
+      service = lvs
+      primary = 10.0.0.1
+      service = lvs
+      rsh_command = ssh
+      backup_active = 1
+      backup = 10.0.0.2
+      heartbeat = 1
+      heartbeat_port = 539
+      keepalive = 6
+      deadtime = 18
+      debug_level = NONE
+      monitor_links = 1
+      syncdaemon = 1
+      hard_shutdown = 0
+      network = direct
+       
+      virtual openstack_mysql_3306 {
+        active = 1
+        address = 10.0.0.3 eth0:6
+        vip_nmask = 255.255.240.0
+        port = 3306
+        persistent = 60
+        pmask = 255.255.240.0
+        use_regex = 0
+        send_program = "/usr/local/bin/check_tcp_port.sh %h 3306"
+        send = "\n"
+        expect = "OK"
+        load_monitor = none
+        scheduler = wlc
+        protocol = tcp
+        timeout = 5
+        reentry = 10
+        quiesce_server = 1
+        server sql1.example.com {
+        address = 10.0.0.4
+        active = 1
+        weight = 1
+        }
+        server sql2.example.com {
+        address = 10.0.0.5
+        active = 1
+        weight = 1
+        }
       }
-       
+       
 
 4) Shutdown the pulse service on lb2 and restart the pulse service on lb1.
 
-      service pulse restart
-        
+      service pulse restart
+        
 
 5) Verify that service is working by running the following command on lb1:
 
-      ipvsadm -Ln
-        
+      ipvsadm -Ln
+        
 
 The output should look like this:
 
-      IP Virtual Server version 1.2.1 (size=4096)
-      Prot LocalAddress:Port Scheduler Flags
-        -> RemoteAddress:Port Forward Weight ActiveConn InActConn
-      TCP 10.0.0.3:3306 wlc persistent 60 mask 255.255.240.0
-        -> 10.0.0.4:3306 Route 1 0 0
-        -> 10.0.0.5:3306 Route 1 0 0
-        
+      IP Virtual Server version 1.2.1 (size=4096)
+      Prot LocalAddress:Port Scheduler Flags
+        -> RemoteAddress:Port Forward Weight ActiveConn InActConn
+      TCP 10.0.0.3:3306 wlc persistent 60 mask 255.255.240.0
+        -> 10.0.0.4:3306 Route 1 0 0
+        -> 10.0.0.5:3306 Route 1 0 0
+        
 
 Also, tail /var/log/messages on the load balancers and look for the following:
 
-      Apr 3 15:02:13 lb1.example.com nanny[29298]: [ active ] making 10.0.0.5:3306 available
-        
+      Apr 3 15:02:13 lb1.example.com nanny[29298]: [ active ] making 10.0.0.5:3306 available
+        
 
 6) From a client on the network (NB: NOT the load balancer), connect to the service IP of the sql server:
 
-      [root client ]# mysql -u nova -h 10.0.0.3 -p
-        
+      [root client ]# mysql -u nova -h 10.0.0.3 -p
+        
 
 If this is successful, then congratulations, you have a fully functioning load-balanced multi-master mysql replication database system for your Red Hat OpenStack Cloud.
