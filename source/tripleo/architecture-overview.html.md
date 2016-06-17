@@ -107,33 +107,33 @@ For many users, the simplest way to read and update a deployment plan will be vi
 
 In a default installation of TripleO, there’s a single pre-loaded deployment plan in Tuskar. The details can be retrieved with this command on the deployment cloud node:
 
-`curl -v -X GET -H 'Content-Type: application/json' -H 'Accept: application/json' `[`http://0.0.0.0:8585/v2/plans/`](http://0.0.0.0:8585/v2/plans/)
+`curl -v -X GET -H 'Content-Type: application/json' -H 'Accept: application/json' `[`http://0.0.0.0:8585/v2/plans/`](http://0.0.0.0:8585/v2/plans/)
 
 There’s a large amount of output, the majority of which is the array of parameters which the deployment plans contain, these cover multiple passwords, some usernames, networking options, the name of the flavor to request when creating an instance of a particular role etc..
 
 On the command line, the complete set of details of a plan, including all the parameters, can be seen by first, retrieving the plan ID:
 
-      [stack@localhost ~]$ tuskar plan-list
+      [stack@localhost ~]$ tuskar plan-list
       +--------------------------------------+-----------+-------------+----------------------------------------------------+
-      | uuid                                 | name      | description | roles                                              |
+      | uuid                                 | name      | description | roles                                              |
       +--------------------------------------+-----------+-------------+----------------------------------------------------+
-      | 193f7d1d-a1a9-4605-a54f-2c4ead45a7ab | overcloud | None        | controller, swift-storage, compute, cinder-storage |
+      | 193f7d1d-a1a9-4605-a54f-2c4ead45a7ab | overcloud | None        | controller, swift-storage, compute, cinder-storage |
       +--------------------------------------+-----------+-------------+----------------------------------------------------+
 
 and then by using the uuid for the default plan to run:
 
-      [stack@localhost ~]$ tuskar plan-show 193f7d1d-a1a9-4605-a54f-2c4ead45a7ab
+      [stack@localhost ~]$ tuskar plan-show 193f7d1d-a1a9-4605-a54f-2c4ead45a7ab
 
 That command lists a lot of output, including all the plan’s set of parameters.
 
 It is possible to alter the parameters associated with a plan, via the command line, or via the REST API. The following command increases the number of instances of the “compute” role which the plan will deploy to 6:
 
-      tuskar plan-patch -A compute-1::count=6 193f7d1d-a1a9-4605-a54f-2c4ead45a7ab
+      tuskar plan-patch -A compute-1::count=6 193f7d1d-a1a9-4605-a54f-2c4ead45a7ab
 
 Once the deployment plan is complete, it’s ready to be passed to Heat, the service which actually launches the workload cloud. The command-line tools for Heat consume yaml files. Those yaml files, containing the whole deployment, can be output from Tuskar with this command:
 
-      [stack@localhost tmp]$ tuskar plan-templates -O /tmp 193f7d1d-a1a9-4605-a54f-2c4ead45a7ab
-      Following templates has been written:
+      [stack@localhost tmp]$ tuskar plan-templates -O /tmp 193f7d1d-a1a9-4605-a54f-2c4ead45a7ab
+      Following templates has been written:
       /tmp/plan.yaml
       /tmp/environment.yaml
       /tmp/provider-swift-storage-1.yaml
@@ -151,7 +151,7 @@ Heat’s own term for the applications that it creates is stack. The workload cl
 
 Creating the stack with the CLI can be done like this:
 
-      [stack@localhost tmp]$ heat stack create -f tuskar_templates/plan.yaml -e tuskar_templates/environment.yaml
+      [stack@localhost tmp]$ heat stack create -f tuskar_templates/plan.yaml -e tuskar_templates/environment.yaml
 
 In order to the stack to be deployed, Heat makes successive calls to Nova, OpenStack’s compute service controller. Nova depends upon Ironic,which, as described above has acquired an inventory of discovered hardware by this stage in the process
 
@@ -163,11 +163,11 @@ Once the nodes are booted, Heat also manages passing parameters to the newly lau
 
 The status of the deploying stack, and the completion of the deployment can be seen with this command:
 
-      [stack@localhost ~]$ heat stack-list
+      [stack@localhost ~]$ heat stack-list
       +--------------------------------------+------------+-----------------+----------------------+
-      | id                                   | stack_name | stack_status    | creation_time        |
+      | id                                   | stack_name | stack_status    | creation_time        |
       +--------------------------------------+------------+-----------------+----------------------+
-      | 5b5dc570-c62c-4026-aa70-098c1ac383cb | overcloud  | CREATE_COMPLETE | 2015-03-12T20:15:16Z |
+      | 5b5dc570-c62c-4026-aa70-098c1ac383cb | overcloud  | CREATE_COMPLETE | 2015-03-12T20:15:16Z |
       +--------------------------------------+------------+-----------------+----------------------+
 
 “heat stack-show” will return a complete description of the state of the cloud.
@@ -186,61 +186,61 @@ The metrics which Ceilometer gathers can be queried for Ceilometer's REST API, o
 
 The first stage is to get the Instance UUID which will be used to identify the node we want to report on:
 
-      [stack@localhost ~]$ ironic node-list
+      [stack@localhost ~]$ ironic node-list
       +--------------------------------------+--------------------------------------+-------------+--------------------+-------------+
-      | UUID                                 | Instance UUID                        | Power State | Provisioning State | Maintenance |
+      | UUID                                 | Instance UUID                        | Power State | Provisioning State | Maintenance |
       +--------------------------------------+--------------------------------------+-------------+--------------------+-------------+
-      | 15739d49-90ab-4a42-9620-fe140f5bdcb5 | 9282131d-5e25-495c-82ce-dcbcd34158f7 | power on    | active             | False       |
-      | 3fb4021c-5a79-47ca-af39-f0dcde7109a4 | 31fac73a-90d0-44ef-b3ef-014b43f735e8 | power on    | active             | False       |
-      | 4c9915f1-8f6e-4110-85e3-6dcb8539f51d | d52ebd4f-a28b-49cf-8adc-61847e6bb525 | power on    | active             | False       |
-      | 3ef1e9e9-9f6b-4bbd-aab1-dd0941fb1ae1 | 0a00e394-be74-45b2-9046-1d81dac3d4a4 | power on    | active             | False       |
+      | 15739d49-90ab-4a42-9620-fe140f5bdcb5 | 9282131d-5e25-495c-82ce-dcbcd34158f7 | power on    | active             | False       |
+      | 3fb4021c-5a79-47ca-af39-f0dcde7109a4 | 31fac73a-90d0-44ef-b3ef-014b43f735e8 | power on    | active             | False       |
+      | 4c9915f1-8f6e-4110-85e3-6dcb8539f51d | d52ebd4f-a28b-49cf-8adc-61847e6bb525 | power on    | active             | False       |
+      | 3ef1e9e9-9f6b-4bbd-aab1-dd0941fb1ae1 | 0a00e394-be74-45b2-9046-1d81dac3d4a4 | power on    | active             | False       |
       +--------------------------------------+--------------------------------------+-------------+--------------------+-------------+
 
 Having looked up the nodes, we can then look up the available meters for that node:
 
-      [stack@localhost ~]$ ceilometer meter-list --query resource=d52ebd4f-a28b-49cf-8adc-61847e6bb525
+      [stack@localhost ~]$ ceilometer meter-list --query resource=d52ebd4f-a28b-49cf-8adc-61847e6bb525
       +------------------------------------------+------------+-----------+--------------------------------------+---------+------------+
-      | Name                                     | Type       | Unit      | Resource ID                          | User ID | Project ID |
+      | Name                                     | Type       | Unit      | Resource ID                          | User ID | Project ID |
       +------------------------------------------+------------+-----------+--------------------------------------+---------+------------+
-      | hardware.cpu.load.15min                  | gauge      | process   | d52ebd4f-a28b-49cf-8adc-61847e6bb525 | None    | None       |
-      | hardware.cpu.load.1min                   | gauge      | process   | d52ebd4f-a28b-49cf-8adc-61847e6bb525 | None    | None       |
-      | hardware.cpu.load.5min                   | gauge      | process   | d52ebd4f-a28b-49cf-8adc-61847e6bb525 | None    | None       |
-      | hardware.memory.swap.avail               | gauge      | B         | d52ebd4f-a28b-49cf-8adc-61847e6bb525 | None    | None       |
-      | hardware.memory.swap.total               | gauge      | B         | d52ebd4f-a28b-49cf-8adc-61847e6bb525 | None    | None       |
-      | hardware.memory.total                    | gauge      | B         | d52ebd4f-a28b-49cf-8adc-61847e6bb525 | None    | None       |
-      | hardware.memory.used                     | gauge      | B         | d52ebd4f-a28b-49cf-8adc-61847e6bb525 | None    | None       |
-      | hardware.network.ip.incoming.datagrams   | cumulative | datagrams | d52ebd4f-a28b-49cf-8adc-61847e6bb525 | None    | None       |
-      | hardware.network.ip.outgoing.datagrams   | cumulative | datagrams | d52ebd4f-a28b-49cf-8adc-61847e6bb525 | None    | None       |
-      | hardware.system_stats.cpu.idle           | gauge      | %         | d52ebd4f-a28b-49cf-8adc-61847e6bb525 | None    | None       |
-      | hardware.system_stats.cpu.util           | gauge      | %         | d52ebd4f-a28b-49cf-8adc-61847e6bb525 | None    | None       |
-      | hardware.system_stats.io.incoming.blocks | cumulative | blocks    | d52ebd4f-a28b-49cf-8adc-61847e6bb525 | None    | None       |
-      | hardware.system_stats.io.outgoing.blocks | cumulative | blocks    | d52ebd4f-a28b-49cf-8adc-61847e6bb525 | None    | None       |
+      | hardware.cpu.load.15min                  | gauge      | process   | d52ebd4f-a28b-49cf-8adc-61847e6bb525 | None    | None       |
+      | hardware.cpu.load.1min                   | gauge      | process   | d52ebd4f-a28b-49cf-8adc-61847e6bb525 | None    | None       |
+      | hardware.cpu.load.5min                   | gauge      | process   | d52ebd4f-a28b-49cf-8adc-61847e6bb525 | None    | None       |
+      | hardware.memory.swap.avail               | gauge      | B         | d52ebd4f-a28b-49cf-8adc-61847e6bb525 | None    | None       |
+      | hardware.memory.swap.total               | gauge      | B         | d52ebd4f-a28b-49cf-8adc-61847e6bb525 | None    | None       |
+      | hardware.memory.total                    | gauge      | B         | d52ebd4f-a28b-49cf-8adc-61847e6bb525 | None    | None       |
+      | hardware.memory.used                     | gauge      | B         | d52ebd4f-a28b-49cf-8adc-61847e6bb525 | None    | None       |
+      | hardware.network.ip.incoming.datagrams   | cumulative | datagrams | d52ebd4f-a28b-49cf-8adc-61847e6bb525 | None    | None       |
+      | hardware.network.ip.outgoing.datagrams   | cumulative | datagrams | d52ebd4f-a28b-49cf-8adc-61847e6bb525 | None    | None       |
+      | hardware.system_stats.cpu.idle           | gauge      | %         | d52ebd4f-a28b-49cf-8adc-61847e6bb525 | None    | None       |
+      | hardware.system_stats.cpu.util           | gauge      | %         | d52ebd4f-a28b-49cf-8adc-61847e6bb525 | None    | None       |
+      | hardware.system_stats.io.incoming.blocks | cumulative | blocks    | d52ebd4f-a28b-49cf-8adc-61847e6bb525 | None    | None       |
+      | hardware.system_stats.io.outgoing.blocks | cumulative | blocks    | d52ebd4f-a28b-49cf-8adc-61847e6bb525 | None    | None       |
       +------------------------------------------+------------+-----------+--------------------------------------+---------+------------+
 
 Retrieving the actual performance metrics for a node involves a query to return a set of samples:
 
-      [stack@localhost ~]$ ceilometer sample-list --meter hardware.cpu.load.5min -q 'resource_id=d52ebd4f-a28b-49cf-8adc-61847e6bb525'
+      [stack@localhost ~]$ ceilometer sample-list --meter hardware.cpu.load.5min -q 'resource_id=d52ebd4f-a28b-49cf-8adc-61847e6bb525'
       +--------------------------------------+------------------------+-------+--------+---------+---------------------+
-      | Resource ID                          | Name                   | Type  | Volume | Unit    | Timestamp           |
+      | Resource ID                          | Name                   | Type  | Volume | Unit    | Timestamp           |
       +--------------------------------------+------------------------+-------+--------+---------+---------------------+
-      | d52ebd4f-a28b-49cf-8adc-61847e6bb525 | hardware.cpu.load.5min | gauge | 4.32   | process | 2015-03-13T11:02:27 |
-      | d52ebd4f-a28b-49cf-8adc-61847e6bb525 | hardware.cpu.load.5min | gauge | 4.09   | process | 2015-03-13T10:52:28 |
-      | d52ebd4f-a28b-49cf-8adc-61847e6bb525 | hardware.cpu.load.5min | gauge | 4.2    | process | 2015-03-13T10:42:27 |
-      | d52ebd4f-a28b-49cf-8adc-61847e6bb525 | hardware.cpu.load.5min | gauge | 4.07   | process | 2015-03-13T10:32:27 |
-      | d52ebd4f-a28b-49cf-8adc-61847e6bb525 | hardware.cpu.load.5min | gauge | 4.26   | process | 2015-03-13T10:22:27 |
-      | d52ebd4f-a28b-49cf-8adc-61847e6bb525 | hardware.cpu.load.5min | gauge | 4.02   | process | 2015-03-13T10:12:27 |
-      | d52ebd4f-a28b-49cf-8adc-61847e6bb525 | hardware.cpu.load.5min | gauge | 4.14   | process | 2015-03-13T10:02:27 |
-      | d52ebd4f-a28b-49cf-8adc-61847e6bb525 | hardware.cpu.load.5min | gauge | 4.26   | process | 2015-03-13T09:52:27 |
-      | d52ebd4f-a28b-49cf-8adc-61847e6bb525 | hardware.cpu.load.5min | gauge | 4.09   | process | 2015-03-13T09:42:27 |
-      | d52ebd4f-a28b-49cf-8adc-61847e6bb525 | hardware.cpu.load.5min | gauge | 4.65   | process | 2015-03-13T09:32:27 |
-      | d52ebd4f-a28b-49cf-8adc-61847e6bb525 | hardware.cpu.load.5min | gauge | 4.17   | process | 2015-03-13T09:22:27 |
-      | d52ebd4f-a28b-49cf-8adc-61847e6bb525 | hardware.cpu.load.5min | gauge | 4.39   | process | 2015-03-13T09:12:27 |
-      | d52ebd4f-a28b-49cf-8adc-61847e6bb525 | hardware.cpu.load.5min | gauge | 4.13   | process | 2015-03-13T09:02:27 |
-      | d52ebd4f-a28b-49cf-8adc-61847e6bb525 | hardware.cpu.load.5min | gauge | 4.28   | process | 2015-03-13T08:52:27 |
-      | d52ebd4f-a28b-49cf-8adc-61847e6bb525 | hardware.cpu.load.5min | gauge | 4.05   | process | 2015-03-13T08:42:27 |
-      | d52ebd4f-a28b-49cf-8adc-61847e6bb525 | hardware.cpu.load.5min | gauge | 4.2    | process | 2015-03-13T08:32:27 |
-      | d52ebd4f-a28b-49cf-8adc-61847e6bb525 | hardware.cpu.load.5min | gauge | 4.03   | process | 2015-03-13T08:22:27 |
-      | d52ebd4f-a28b-49cf-8adc-61847e6bb525 | hardware.cpu.load.5min | gauge | 4.14   | process | 2015-03-13T08:12:27 |
+      | d52ebd4f-a28b-49cf-8adc-61847e6bb525 | hardware.cpu.load.5min | gauge | 4.32   | process | 2015-03-13T11:02:27 |
+      | d52ebd4f-a28b-49cf-8adc-61847e6bb525 | hardware.cpu.load.5min | gauge | 4.09   | process | 2015-03-13T10:52:28 |
+      | d52ebd4f-a28b-49cf-8adc-61847e6bb525 | hardware.cpu.load.5min | gauge | 4.2    | process | 2015-03-13T10:42:27 |
+      | d52ebd4f-a28b-49cf-8adc-61847e6bb525 | hardware.cpu.load.5min | gauge | 4.07   | process | 2015-03-13T10:32:27 |
+      | d52ebd4f-a28b-49cf-8adc-61847e6bb525 | hardware.cpu.load.5min | gauge | 4.26   | process | 2015-03-13T10:22:27 |
+      | d52ebd4f-a28b-49cf-8adc-61847e6bb525 | hardware.cpu.load.5min | gauge | 4.02   | process | 2015-03-13T10:12:27 |
+      | d52ebd4f-a28b-49cf-8adc-61847e6bb525 | hardware.cpu.load.5min | gauge | 4.14   | process | 2015-03-13T10:02:27 |
+      | d52ebd4f-a28b-49cf-8adc-61847e6bb525 | hardware.cpu.load.5min | gauge | 4.26   | process | 2015-03-13T09:52:27 |
+      | d52ebd4f-a28b-49cf-8adc-61847e6bb525 | hardware.cpu.load.5min | gauge | 4.09   | process | 2015-03-13T09:42:27 |
+      | d52ebd4f-a28b-49cf-8adc-61847e6bb525 | hardware.cpu.load.5min | gauge | 4.65   | process | 2015-03-13T09:32:27 |
+      | d52ebd4f-a28b-49cf-8adc-61847e6bb525 | hardware.cpu.load.5min | gauge | 4.17   | process | 2015-03-13T09:22:27 |
+      | d52ebd4f-a28b-49cf-8adc-61847e6bb525 | hardware.cpu.load.5min | gauge | 4.39   | process | 2015-03-13T09:12:27 |
+      | d52ebd4f-a28b-49cf-8adc-61847e6bb525 | hardware.cpu.load.5min | gauge | 4.13   | process | 2015-03-13T09:02:27 |
+      | d52ebd4f-a28b-49cf-8adc-61847e6bb525 | hardware.cpu.load.5min | gauge | 4.28   | process | 2015-03-13T08:52:27 |
+      | d52ebd4f-a28b-49cf-8adc-61847e6bb525 | hardware.cpu.load.5min | gauge | 4.05   | process | 2015-03-13T08:42:27 |
+      | d52ebd4f-a28b-49cf-8adc-61847e6bb525 | hardware.cpu.load.5min | gauge | 4.2    | process | 2015-03-13T08:32:27 |
+      | d52ebd4f-a28b-49cf-8adc-61847e6bb525 | hardware.cpu.load.5min | gauge | 4.03   | process | 2015-03-13T08:22:27 |
+      | d52ebd4f-a28b-49cf-8adc-61847e6bb525 | hardware.cpu.load.5min | gauge | 4.14   | process | 2015-03-13T08:12:27 |
 
 Further information on using the Ceilometer to is available here: <https://www.rdoproject.org/CeilometerQuickStart>
 
@@ -255,17 +255,17 @@ As in the case of the original deployment of the overcloud via Heat, that status
 
 It's also possible to see a history of the events associated with a stack with this command:
 
-      [stack@localhost ~]$ heat event-list overcloud
+      [stack@localhost ~]$ heat event-list overcloud
       +-----------------------------------+--------------------------------------+------------------------+--------------------+----------------------+
-      | resource_name                     | id                                   | resource_status_reason | resource_status    | event_time           |
+      | resource_name                     | id                                   | resource_status_reason | resource_status    | event_time           |
       +-----------------------------------+--------------------------------------+------------------------+--------------------+----------------------+
-      | CephStorageNodesPostDeployment    | 72670265-5145-4bae-b445-f920ccc9aa64 | state changed          | CREATE_COMPLETE    | 2015-03-12T20:19:40Z |
-      | CephStorageNodesPostDeployment    | b41db82a-6e17-4eb6-8666-0d5f60a234f9 | state changed          | CREATE_IN_PROGRESS | 2015-03-12T20:19:37Z |
-      | ControllerNodesPostDeployment     | f91ede39-f2b8-44b2-8644-072a04d619f0 | state changed          | CREATE_COMPLETE    | 2015-03-12T20:19:37Z |
-      | ComputeNodesPostDeployment        | 80912537-d95c-44a6-9975-9ce43d739f8b | state changed          | CREATE_COMPLETE    | 2015-03-12T20:17:58Z |
-      | ControllerNodesPostDeployment     | eadbef1a-e932-4f60-a94d-417007ae6578 | state changed          | CREATE_IN_PROGRESS | 2015-03-12T20:17:38Z |
-      | ControllerCephDeployment          | 47482901-69a7-4699-973d-c507e762dce8 | state changed          | CREATE_COMPLETE    | 2015-03-12T20:17:38Z |
-      | ControllerAllNodesDeployment      | 44436938-71e5-452e-a37f-956f3c8cec8e | state changed          | CREATE_COMPLETE    | 2015-03-12T20:17:38Z |
-      | ComputeNodesPostDeployment        | 4ac03e96-b9e3-437a-b0bb-a21774069abc | state changed          | CREATE_IN_PROGRESS | 2015-03-12T20:17:13Z |
-      | ComputeAllNodesDeployment         | 253244ba-aae4-4cb0-8d85-968699425217 | state changed          | CREATE_COMPLETE    | 2015-03-12T20:17:13Z |
-      | BlockStorageNodesPostDeployment   | cbc1a747-f683-4b74-bbc0-72a8095c8af1 | state changed          | CREATE_COMPLETE    | 2015-03-12T20:17:09Z |
+      | CephStorageNodesPostDeployment    | 72670265-5145-4bae-b445-f920ccc9aa64 | state changed          | CREATE_COMPLETE    | 2015-03-12T20:19:40Z |
+      | CephStorageNodesPostDeployment    | b41db82a-6e17-4eb6-8666-0d5f60a234f9 | state changed          | CREATE_IN_PROGRESS | 2015-03-12T20:19:37Z |
+      | ControllerNodesPostDeployment     | f91ede39-f2b8-44b2-8644-072a04d619f0 | state changed          | CREATE_COMPLETE    | 2015-03-12T20:19:37Z |
+      | ComputeNodesPostDeployment        | 80912537-d95c-44a6-9975-9ce43d739f8b | state changed          | CREATE_COMPLETE    | 2015-03-12T20:17:58Z |
+      | ControllerNodesPostDeployment     | eadbef1a-e932-4f60-a94d-417007ae6578 | state changed          | CREATE_IN_PROGRESS | 2015-03-12T20:17:38Z |
+      | ControllerCephDeployment          | 47482901-69a7-4699-973d-c507e762dce8 | state changed          | CREATE_COMPLETE    | 2015-03-12T20:17:38Z |
+      | ControllerAllNodesDeployment      | 44436938-71e5-452e-a37f-956f3c8cec8e | state changed          | CREATE_COMPLETE    | 2015-03-12T20:17:38Z |
+      | ComputeNodesPostDeployment        | 4ac03e96-b9e3-437a-b0bb-a21774069abc | state changed          | CREATE_IN_PROGRESS | 2015-03-12T20:17:13Z |
+      | ComputeAllNodesDeployment         | 253244ba-aae4-4cb0-8d85-968699425217 | state changed          | CREATE_COMPLETE    | 2015-03-12T20:17:13Z |
+      | BlockStorageNodesPostDeployment   | cbc1a747-f683-4b74-bbc0-72a8095c8af1 | state changed          | CREATE_COMPLETE    | 2015-03-12T20:17:09Z |

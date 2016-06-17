@@ -12,7 +12,7 @@ wiki_last_updated: 2013-11-05
 
 To use HA/Mysql within an OpenStack deployment, you need to make sure to have your Mysql cluster up and running \*before\* spinning up the controller node(s), and make sure the controller Host Group has correct database IP (the virtual Mysql cluster IP) specified. You also need the HA channel enabled if you are on RHEL. Centos should not need this.
 
-      # yum-config-manager --enable rhel-ha-for-rhel-6-server-rpms
+      # yum-config-manager --enable rhel-ha-for-rhel-6-server-rpms
 
 At a high level, the required steps are:
 
@@ -26,12 +26,12 @@ Note the above does not set up any fencing configuration. In a production enviro
 
 The HA Mysql Host Group is responsible for starting Pacemaker and configuring the following resources within a resource group: the floating IP, shared storage for the Mysql server, and the mysql server process. E.g.:
 
-      # pcs status
+      # pcs status
       ...
-      Resource Group: mysqlgrp
-          ip-192.168.200.10  (ocf::heartbeat:IPaddr2):       Started 192.168.202.11
-          fs-varlibmysql     (ocf::heartbeat:Filesystem):    Started 192.168.202.11
-          mysql-ostk-mysql   (ocf::heartbeat:mysql): Started 192.168.202.11
+      Resource Group: mysqlgrp
+          ip-192.168.200.10  (ocf::heartbeat:IPaddr2):       Started 192.168.202.11
+          fs-varlibmysql     (ocf::heartbeat:Filesystem):    Started 192.168.202.11
+          mysql-ostk-mysql   (ocf::heartbeat:mysql): Started 192.168.202.11
 
 **Repository Requirements**
 

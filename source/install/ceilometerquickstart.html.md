@@ -28,12 +28,12 @@ The general prerequisites are identical to the [Havana QuickStart](QuickStartLat
 
 However, if you are installing on a resource-constrained VM, some prior setup can make your life easier. The default & most feature-complete storage driver used by Ceilometer is `mongodb`, which on installation eagerly pre-allocates large journal files *etc*. This is not normally an issue, but the default service timeout of 90 seconds imposed by systemd *may* not suffice for the pre-allocation to complete on resource-starved VMs. However this can be easily worked around in that scenarion by pre-installing mongo with a modified startup timeout, as follows:
 
-         sudo yum install -y mongodb-server mongodb
-         sudo sed -i '/^`\[Service\]`$/ a\
-           TimeoutStartSec=360' /usr/lib/systemd/system/mongod.service
-         sudo service mongod start
-         sudo service mongod status
-         sudo service mongod stop
+         sudo yum install -y mongodb-server mongodb
+         sudo sed -i '/^`\[Service\]`$/ a\
+           TimeoutStartSec=360' /usr/lib/systemd/system/mongod.service
+         sudo service mongod start
+         sudo service mongod status
+         sudo service mongod stop
 
 ## Verification
 
@@ -50,12 +50,12 @@ Before we do that, a few words on how Ceilometer is realized as a set of agents 
 
  In a `packstack` "all in one" installation, all of these services will be running on your single node. In a wider deployment, the main location constraint is that the compute agent is required to run on all nova compute nodes. Assuming "all in one" for now, check that all services are running smoothly:
 
-       export CEILO_SVCS='compute central collector api alarm-evaluator alarm-notifier'
-       for svc in $CEILO_SVCS ; do sudo service openstack-ceilometer-$svc status ; done
+       export CEILO_SVCS='compute central collector api alarm-evaluator alarm-notifier'
+       for svc in $CEILO_SVCS ; do sudo service openstack-ceilometer-$svc status ; done
 
 For your peace of mind, ensure that there are no errors in the Ceilometer logs at this time:
 
-       for svc in $CEILO_SVCS ; do sudo grep ERROR /var/log/ceilometer/${svc}.log ; done
+       for svc in $CEILO_SVCS ; do sudo grep ERROR /var/log/ceilometer/${svc}.log ; done
 
 ## Basic Concepts
 
@@ -135,30 +135,30 @@ The most likely pipeline config elements you might want to experiment initially 
 
  To become more familiar with the possibilities offered by this configuration file, let's examine the shipped `pipeline.yaml`:
 
-       ---
-       -
-           name: meter_pipeline
-           interval: 600
-           meters:
-               - "*"
-           transformers:
-           publishers:
-               - rpc://
-       -
-           name: cpu_pipeline
-           interval: 600
-           meters:
-               - "cpu"
-           transformers:
-               - name: "rate_of_change"
-                 parameters:
-                     target:
-                         name: "cpu_util"
-                         unit: "%"
-                         type: "gauge"
-                         scale: "100.0 / (10**9 * (resource_metadata.cpu_number or 1))"
-           publishers:
-               - rpc://
+       ---
+       -
+           name: meter_pipeline
+           interval: 600
+           meters:
+               - "*"
+           transformers:
+           publishers:
+               - rpc://
+       -
+           name: cpu_pipeline
+           interval: 600
+           meters:
+               - "cpu"
+           transformers:
+               - name: "rate_of_change"
+                 parameters:
+                     target:
+                         name: "cpu_util"
+                         unit: "%"
+                         type: "gauge"
+                         scale: "100.0 / (10**9 * (resource_metadata.cpu_number or 1))"
+           publishers:
+               - rpc://
 
 This file defines two separate pipeline, named `meter_pipeline` and `cpu_pipeline`,
 
@@ -168,8 +168,8 @@ The second is more interesting, applying to only the `cpu` meter, transforming t
 
 An example modification would be something like increasing the cadence of `cpu_util` from once per 10 minutes to once a minute:
 
-       sudo sed -i '/^ *name: cpu_pipeline$/ { n ; s/interval: 600$/interval: 60/ }' /etc/ceilometer/pipeline.yaml
-       sudo service openstack-ceilometer-compute restart
+       sudo sed -i '/^ *name: cpu_pipeline$/ { n ; s/interval: 600$/interval: 60/ }' /etc/ceilometer/pipeline.yaml
+       sudo service openstack-ceilometer-compute restart
 
 Note that we only need to restart the `compute` and not the `central` even though both share the same pipeline config by default, because the particular meter impacted by the change is only gathered by the former agent.
 
@@ -184,7 +184,7 @@ The service configuration is read by default from two sources, via the same patt
 
 As always, you can choose to manually edit this file or else use the convenient `openstack-config` utility from the `openstack-utils` package, for example:
 
-       sudo openstack-config --set /etc/ceilometer/ceilometer.conf DEFAULT debug true
+       sudo openstack-config --set /etc/ceilometer/ceilometer.conf DEFAULT debug true
 
 to set the logging level to debug as opposed to the default warning. As always, services must be restarted for config changes to take effect.
 
@@ -192,70 +192,70 @@ to set the logging level to debug as opposed to the default warning. As always, 
 
 First ensure that the latest version of CLI package is installed:
 
-       sudo rpm -qa | awk -F- '/python-ceilometerclient/ {print $3}'
-       1.0.8
+       sudo rpm -qa | awk -F- '/python-ceilometerclient/ {print $3}'
+       1.0.8
 
 which will allow you to access the latest API additions, for example alarm history and the separation of alarm representation from the encapsulated rules.
 
 We will proceed to explore each of the basic concepts described earlier in this guide. But before we do so, it's worth mentioning a common conceptual banana skin that often confuses new Ceilometer users at this early stage. Recall that metering is all about measuring user-visible cloud resource usage - if there ain't any user-visible resources in your cloud, no metering data will be generated. So let's start by ensuring some resources are actually present, firstly the basic building blocks, some VM images in `glance`:
 
-       glance image-list
+       glance image-list
 
 If this list empty, let's quickly grab a small basic `cirros` image that we'll later use to spin up some instances:
 
-       sudo yum install -y wget
-` wget `[`http://launchpad.net/cirros/trunk/0.3.0/+download/cirros-0.3.0-x86_64-uec.tar.gz`](http://launchpad.net/cirros/trunk/0.3.0/+download/cirros-0.3.0-x86_64-uec.tar.gz)
-       tar zxvf cirros-0.3.0-x86_64-uec.tar.gz 
-       glance image-create --name cirros-aki --is-public True --container-format aki --disk-format aki \
-         --file cirros-0.3.0-x86_64-vmlinuz
-       glance image-create --name cirros-ari --is-public True --container-format ari --disk-format ari \
-         --file cirros-0.3.0-x86_64-initrd
-       glance image-create --name cirros-ami --is-public True --container-format ami --disk-format ami \
-         --property kernel_id=$(glance image-list | awk '/cirros-aki/ {print $2}') \
-         --property ramdisk_id=$(glance image-list | awk '/cirros-ari/ {print $2}') --file cirros-0.3.0-x86_64-blank.img
+       sudo yum install -y wget
+` wget `[`http://launchpad.net/cirros/trunk/0.3.0/+download/cirros-0.3.0-x86_64-uec.tar.gz`](http://launchpad.net/cirros/trunk/0.3.0/+download/cirros-0.3.0-x86_64-uec.tar.gz)
+       tar zxvf cirros-0.3.0-x86_64-uec.tar.gz 
+       glance image-create --name cirros-aki --is-public True --container-format aki --disk-format aki \
+         --file cirros-0.3.0-x86_64-vmlinuz
+       glance image-create --name cirros-ari --is-public True --container-format ari --disk-format ari \
+         --file cirros-0.3.0-x86_64-initrd
+       glance image-create --name cirros-ami --is-public True --container-format ami --disk-format ami \
+         --property kernel_id=$(glance image-list | awk '/cirros-aki/ {print $2}') \
+         --property ramdisk_id=$(glance image-list | awk '/cirros-ari/ {print $2}') --file cirros-0.3.0-x86_64-blank.img
 
 Then spin up an instance booted from that image:
 
-       IMAGE_ID=$(glance image-list | awk '/cirros-ami/ {print $2}')
-       nova boot --image $IMAGE_ID --flavor 1 test_instance
+       IMAGE_ID=$(glance image-list | awk '/cirros-ami/ {print $2}')
+       nova boot --image $IMAGE_ID --flavor 1 test_instance
 
 Wait for that instance to become active and we're good to go!
 
-       watch 'nova show test_instance'
+       watch 'nova show test_instance'
 
 ### Displaying meters
 
 Individual meters are displayed via the CLI `meter-list` command:
 
-       $ ceilometer meter-list
-       +----------------------------+------------+-----------+---------------+-----------+--------------+
-       | Name                       | Type       | Unit      | Resource ID   | User ID   | Project ID   |
-       +----------------------------+------------+-----------+---------------+-----------+--------------+
-       | cpu                        | cumulative | ns        | INSTANCE_ID_1 | USER_ID_A | PROJECT_ID_X |
-       | cpu                        | cumulative | ns        | INSTANCE_ID_2 | USER_ID_B | PROJECT_ID_Y |
-       | cpu                        | cumulative | ns        | INSTANCE_ID_3 | USER_ID_C | PROJECT_ID_Z |
-       | cpu_util                   | gauge      | %         | INSTANCE_ID_1 | USER_ID_A | PROJECT_ID_X |
-       | cpu_util                   | gauge      | %         | INSTANCE_ID_3 | USER_ID_C | PROJECT_ID_Z |
-       | disk.ephemeral.size        | gauge      | GB        | INSTANCE_ID_1 | USER_ID_A | PROJECT_ID_X |
-       | disk.ephemeral.size        | gauge      | GB        | INSTANCE_ID_2 | USER_ID_B | PROJECT_ID_Y |
-       | disk.ephemeral.size        | gauge      | GB        | INSTANCE_ID_3 | USER_ID_C | PROJECT_ID_Z |
-       | ... [snip]                                                                                     |
-       +----------------------------+------------+-----------+---------------+-----------+--------------+
+       $ ceilometer meter-list
+       +----------------------------+------------+-----------+---------------+-----------+--------------+
+       | Name                       | Type       | Unit      | Resource ID   | User ID   | Project ID   |
+       +----------------------------+------------+-----------+---------------+-----------+--------------+
+       | cpu                        | cumulative | ns        | INSTANCE_ID_1 | USER_ID_A | PROJECT_ID_X |
+       | cpu                        | cumulative | ns        | INSTANCE_ID_2 | USER_ID_B | PROJECT_ID_Y |
+       | cpu                        | cumulative | ns        | INSTANCE_ID_3 | USER_ID_C | PROJECT_ID_Z |
+       | cpu_util                   | gauge      | %         | INSTANCE_ID_1 | USER_ID_A | PROJECT_ID_X |
+       | cpu_util                   | gauge      | %         | INSTANCE_ID_3 | USER_ID_C | PROJECT_ID_Z |
+       | disk.ephemeral.size        | gauge      | GB        | INSTANCE_ID_1 | USER_ID_A | PROJECT_ID_X |
+       | disk.ephemeral.size        | gauge      | GB        | INSTANCE_ID_2 | USER_ID_B | PROJECT_ID_Y |
+       | disk.ephemeral.size        | gauge      | GB        | INSTANCE_ID_3 | USER_ID_C | PROJECT_ID_Z |
+       | ... [snip]                                                                                     |
+       +----------------------------+------------+-----------+---------------+-----------+--------------+
 
 As you can see in the example output above, all meters are listed for all resources that existed since metering began (modulo data expiry if configured). We can use the `--query` option to limit the output to a specific resource, project or user for example.
 
-       $ ceilometer meter-list --query project=PROJECT_ID_Y;user=USER_ID_B
-       +----------------------------+------------+-----------+---------------+-----------+--------------+
-       | Name                       | Type       | Unit      | Resource ID   | User ID   | Project ID   |
-       +----------------------------+------------+-----------+---------------+-----------+--------------+
-       | cpu                        | cumulative | ns        | INSTANCE_ID_2 | USER_ID_B | PROJECT_ID_Y |
-       | disk.ephemeral.size        | gauge      | GB        | INSTANCE_ID_2 | USER_ID_B | PROJECT_ID_Y |
-       | ... [snip]                                                                                     |
-       +----------------------------+------------+-----------+---------------+-----------+--------------+
+       $ ceilometer meter-list --query project=PROJECT_ID_Y;user=USER_ID_B
+       +----------------------------+------------+-----------+---------------+-----------+--------------+
+       | Name                       | Type       | Unit      | Resource ID   | User ID   | Project ID   |
+       +----------------------------+------------+-----------+---------------+-----------+--------------+
+       | cpu                        | cumulative | ns        | INSTANCE_ID_2 | USER_ID_B | PROJECT_ID_Y |
+       | disk.ephemeral.size        | gauge      | GB        | INSTANCE_ID_2 | USER_ID_B | PROJECT_ID_Y |
+       | ... [snip]                                                                                     |
+       +----------------------------+------------+-----------+---------------+-----------+--------------+
 
 The syntax of that `--query` (or `-q`) option is common across several CLI commands target'ing the v2 API, the syntax being:
 
-` -q `<field1><operator1><value1>`;`<field2><operator2><value2>`;...;`<field_n><operator_n><value_n>
+` -q `<field1><operator1><value1>`;`<field2><operator2><value2>`;...;`<field_n><operator_n><value_n>
 
 which are translated by the CLI to a sequence of [WSME](//pypi.python.org/pypi/WSME) query parameters.
 
@@ -263,34 +263,34 @@ which are translated by the CLI to a sequence of [WSME](//pypi.python.org/pypi/W
 
 Individual datapoints for a particular meter name are displayed via the CLI `samples-list` command:
 
-       $ ceilometer sample-list --meter cpu
-       +---------------+------+------------+---------------+------+---------------------+
-       | Resource ID   | Name | Type       | Volume        | Unit | Timestamp           |
-       +---------------+------+------------+---------------+------+---------------------+
-       | INSTANCE_ID_1 | cpu  | cumulative | 1.6844e+11    | ns   | 2013-10-01T08:48:29 |
-       | INSTANCE_ID_1 | cpu  | cumulative | 1.7039e+11    | ns   | 2013-10-01T08:58:28 |
-       | INSTANCE_ID_1 | cpu  | cumulative | 1.7234e+11    | ns   | 2013-10-01T09:08:28 |
-       | INSTANCE_ID_1 | cpu  | cumulative | 1.743e+11     | ns   | 2013-10-01T09:18:28 |
-       | INSTANCE_ID_1 | cpu  | cumulative | 1.7626e+11    | ns   | 2013-10-01T09:28:28 |
-       | ... [snip]                                                                     |
-       | INSTANCE_ID_2 | cpu  | cumulative | 2.9833e+11    | ns   | 2013-10-01T08:48:29 |
-       | INSTANCE_ID_2 | cpu  | cumulative | 2.6028e+11    | ns   | 2013-10-01T08:58:28 |
-       | INSTANCE_ID_2 | cpu  | cumulative | 3.7156e+11    | ns   | 2013-10-01T09:08:28 |
-       | INSTANCE_ID_2 | cpu  | cumulative | 3.7987e+11    | ns   | 2013-10-01T09:18:28 |
-       | INSTANCE_ID_2 | cpu  | cumulative | 2.6555e+11    | ns   | 2013-10-01T09:28:28 |
-       | ... [snip]                                                                     |
-       +---------------+------+------------+---------------+------+---------------------+
+       $ ceilometer sample-list --meter cpu
+       +---------------+------+------------+---------------+------+---------------------+
+       | Resource ID   | Name | Type       | Volume        | Unit | Timestamp           |
+       +---------------+------+------------+---------------+------+---------------------+
+       | INSTANCE_ID_1 | cpu  | cumulative | 1.6844e+11    | ns   | 2013-10-01T08:48:29 |
+       | INSTANCE_ID_1 | cpu  | cumulative | 1.7039e+11    | ns   | 2013-10-01T08:58:28 |
+       | INSTANCE_ID_1 | cpu  | cumulative | 1.7234e+11    | ns   | 2013-10-01T09:08:28 |
+       | INSTANCE_ID_1 | cpu  | cumulative | 1.743e+11     | ns   | 2013-10-01T09:18:28 |
+       | INSTANCE_ID_1 | cpu  | cumulative | 1.7626e+11    | ns   | 2013-10-01T09:28:28 |
+       | ... [snip]                                                                     |
+       | INSTANCE_ID_2 | cpu  | cumulative | 2.9833e+11    | ns   | 2013-10-01T08:48:29 |
+       | INSTANCE_ID_2 | cpu  | cumulative | 2.6028e+11    | ns   | 2013-10-01T08:58:28 |
+       | INSTANCE_ID_2 | cpu  | cumulative | 3.7156e+11    | ns   | 2013-10-01T09:08:28 |
+       | INSTANCE_ID_2 | cpu  | cumulative | 3.7987e+11    | ns   | 2013-10-01T09:18:28 |
+       | INSTANCE_ID_2 | cpu  | cumulative | 2.6555e+11    | ns   | 2013-10-01T09:28:28 |
+       | ... [snip]                                                                     |
+       +---------------+------+------------+---------------+------+---------------------+
 
 Note that the samples relate to multiple resources (assuming more than one instances was spun up in this case) and are grouped by resource ID, and sorted by timestamp. Since the query applies to this meter name as it pertains to *all* resources, if metering has been running for any reasonable duration, this command unadorned can turn into a bit of a firehose in terms the sheer volume of data returned. As before, we can rely on the `-q` option to constrain the query, for example by resource id and timestamp:
 
-       $ ceilometer sample-list --meter cpu -q 'resource_id=INSTANCE_ID_1;timestamp>2013-10-01T09:00:00;timestamp<=2013-10-01T09:30:00'
-       +---------------+------+------------+---------------+------+---------------------+
-       | Resource ID   | Name | Type       | Volume        | Unit | Timestamp           |
-       +---------------+------+------------+---------------+------+---------------------+
-       | INSTANCE_ID_1 | cpu  | cumulative | 1.7234e+11    | ns   | 2013-10-01T09:08:28 |
-       | INSTANCE_ID_1 | cpu  | cumulative | 1.743e+11     | ns   | 2013-10-01T09:18:28 |
-       | INSTANCE_ID_1 | cpu  | cumulative | 1.7626e+11    | ns   | 2013-10-01T09:28:28 |
-       +---------------+------+------------+---------------+------+---------------------+
+       $ ceilometer sample-list --meter cpu -q 'resource_id=INSTANCE_ID_1;timestamp>2013-10-01T09:00:00;timestamp<=2013-10-01T09:30:00'
+       +---------------+------+------------+---------------+------+---------------------+
+       | Resource ID   | Name | Type       | Volume        | Unit | Timestamp           |
+       +---------------+------+------------+---------------+------+---------------------+
+       | INSTANCE_ID_1 | cpu  | cumulative | 1.7234e+11    | ns   | 2013-10-01T09:08:28 |
+       | INSTANCE_ID_1 | cpu  | cumulative | 1.743e+11     | ns   | 2013-10-01T09:18:28 |
+       | INSTANCE_ID_1 | cpu  | cumulative | 1.7626e+11    | ns   | 2013-10-01T09:28:28 |
+       +---------------+------+------------+---------------+------+---------------------+
 
 to restrict the query to samples for a particular instance that occurred within the specified half hour time window,
 
@@ -298,12 +298,12 @@ to restrict the query to samples for a particular instance that occurred within 
 
 Individual datapoints for a particular meter may be aggregated into consolidated statistics via the CLI `statistics` command:
 
-       $ ceilometer statistics --meter cpu_util
-       +--------+--------------+------------+-------+------+-----+-----+-----+----------+----------------+----
-       | Period | Period Start | Period End | Count | Min  | Max | Sum | Avg | Duration | Duration Start | ...
-       +--------+--------------+------------+-------+------+-----+-----+-----+----------+----------------+----
-       | 0      | PERIOD_START | PERIOD_END | 2024  | 0.25 | 6.2 | 550 | 2.9 | 85196.0  | DURATION_START | ...
-       +--------+--------------+------------+-------+------+-----+-----+-----+----------+----------------+----
+       $ ceilometer statistics --meter cpu_util
+       +--------+--------------+------------+-------+------+-----+-----+-----+----------+----------------+----
+       | Period | Period Start | Period End | Count | Min  | Max | Sum | Avg | Duration | Duration Start | ...
+       +--------+--------------+------------+-------+------+-----+-----+-----+----------+----------------+----
+       | 0      | PERIOD_START | PERIOD_END | 2024  | 0.25 | 6.2 | 550 | 2.9 | 85196.0  | DURATION_START | ...
+       +--------+--------------+------------+-------+------+-----+-----+-----+----------+----------------+----
 
 (output is narrowed for brevity here). The thing to notice here is that by default *all* samples for *all* meters matching the given name are aggregated for *all* time. It would be more normal to require that:
 
@@ -313,63 +313,63 @@ Individual datapoints for a particular meter may be aggregated into consolidated
 
  These extra constraints may all be expressed on the command line:
 
-       $ ceilometer --debug statistics -m cpu_util -q 'timestamp>START;timestamp<=END' --period 60
-       +--------+--------------+------------+-------+-----+-----+-----+-----+----------+----------------+----
-       | Period | Period Start | Period End | Count | Min | Max | Sum | Avg | Duration | Duration Start | ...
-       +--------+--------------+------------+-------+-----+-----+-----+-----+----------+----------------+----
-       | 60     | START        | START+60   | 2     | 1.5 | 2.5 | 4.0 | 2.0 | 0.0      | DURATION_START | ...
-       | 60     | START+60     | START+120  | 2     | 2.5 | 3.5 | 6.0 | 3.0 | 0.0      | DURATION_START | ...
-       | ...[snip]
-       +--------+--------------+------------+-------+-----+-----+-----+-----+----------+----------------+----
+       $ ceilometer --debug statistics -m cpu_util -q 'timestamp>START;timestamp<=END' --period 60
+       +--------+--------------+------------+-------+-----+-----+-----+-----+----------+----------------+----
+       | Period | Period Start | Period End | Count | Min | Max | Sum | Avg | Duration | Duration Start | ...
+       +--------+--------------+------------+-------+-----+-----+-----+-----+----------+----------------+----
+       | 60     | START        | START+60   | 2     | 1.5 | 2.5 | 4.0 | 2.0 | 0.0      | DURATION_START | ...
+       | 60     | START+60     | START+120  | 2     | 2.5 | 3.5 | 6.0 | 3.0 | 0.0      | DURATION_START | ...
+       | ...[snip]
+       +--------+--------------+------------+-------+-----+-----+-----+-----+----------+----------------+----
 
 ### Using alarms
 
 Before creating any alarms, ensure that the relevant Ceilometer alarming services are running:
 
-       export CEILO_ALARM_SVCS='evaluator notifier'
-       for svc in $CEILO_ALARM_SVCS; do sudo service openstack-ceilometer-alarm-$svc status; done
+       export CEILO_ALARM_SVCS='evaluator notifier'
+       for svc in $CEILO_ALARM_SVCS; do sudo service openstack-ceilometer-alarm-$svc status; done
 
 An example of creating a threshold-oriented alarm, based on a upper bound on the CPU utilization for a particular instance:
 
-       $ ceilometer alarm-threshold-create --name cpu_high --description 'instance running hot'  \
-         --meter-name cpu_util  --threshold 70.0 --comparison-operator gt  --statistic avg \
-         --period 600 --evaluation-periods 3 \
-         --alarm-action 'log://' \
-         --query resource_id=INSTANCE_ID
-       +---------------------------+-----------------------------------------------------+
-       | Property                  | Value                                               |
-       +---------------------------+-----------------------------------------------------+
-       | meter_name                | cpu_util                                            |
-       | alarm_actions             | [u'log://']                                         |
-       | user_id                   | USER_ID                                             |
-       | name                      | cpu_high                                            |
-       | evaluation_periods        | 3                                                   |
-       | statistic                 | avg                                                 |
-       | enabled                   | True                                                |
-       | period                    | 600                                                 |
-       | alarm_id                  | ALARM_ID                                            |
-       | state                     | insufficient data                                   |
-       | query                     | resource_id == INSTANCE_ID                          |
-       | insufficient_data_actions | []                                                  |
-       | repeat_actions            | False                                               |
-       | threshold                 | 70.0                                                |
-       | ok_actions                | []                                                  |
-       | project_id                | PROJECT_ID                                          |
-       | type                      | threshold                                           |
-       | comparison_operator       | gt                                                  |
-       | description               | instance running hot                                |
-       +---------------------------+-----------------------------------------------------+
+       $ ceilometer alarm-threshold-create --name cpu_high --description 'instance running hot'  \
+         --meter-name cpu_util  --threshold 70.0 --comparison-operator gt  --statistic avg \
+         --period 600 --evaluation-periods 3 \
+         --alarm-action 'log://' \
+         --query resource_id=INSTANCE_ID
+       +---------------------------+-----------------------------------------------------+
+       | Property                  | Value                                               |
+       +---------------------------+-----------------------------------------------------+
+       | meter_name                | cpu_util                                            |
+       | alarm_actions             | [u'log://']                                         |
+       | user_id                   | USER_ID                                             |
+       | name                      | cpu_high                                            |
+       | evaluation_periods        | 3                                                   |
+       | statistic                 | avg                                                 |
+       | enabled                   | True                                                |
+       | period                    | 600                                                 |
+       | alarm_id                  | ALARM_ID                                            |
+       | state                     | insufficient data                                   |
+       | query                     | resource_id == INSTANCE_ID                          |
+       | insufficient_data_actions | []                                                  |
+       | repeat_actions            | False                                               |
+       | threshold                 | 70.0                                                |
+       | ok_actions                | []                                                  |
+       | project_id                | PROJECT_ID                                          |
+       | type                      | threshold                                           |
+       | comparison_operator       | gt                                                  |
+       | description               | instance running hot                                |
+       +---------------------------+-----------------------------------------------------+
 
 This creates an alarm that will fire when the average CPU utilization for an individual instance exceeds 70% for three consecutive 10 minute periods. The notification is this case is simply a log message, though it could alternatively be a webhook URL.
 
 You can display all your alarms via:
 
-       $ ceilometer alarm-list 
-       +----------+----------+-------------------+---------+------------+---------------------------------+
-       | Alarm ID | Name     | State             | Enabled | Continuous | Alarm condition                 |
-       +----------+----------+-------------------+---------+------------+---------------------------------+
-       | ALARM_ID | cpu_high | insufficient data | True    | False      | cpu_util > 70.0 during 3 x 600s |
-       +----------+----------+-------------------+---------+------------+---------------------------------+
+       $ ceilometer alarm-list 
+       +----------+----------+-------------------+---------+------------+---------------------------------+
+       | Alarm ID | Name     | State             | Enabled | Continuous | Alarm condition                 |
+       +----------+----------+-------------------+---------+------------+---------------------------------+
+       | ALARM_ID | cpu_high | insufficient data | True    | False      | cpu_util > 70.0 during 3 x 600s |
+       +----------+----------+-------------------+---------+------------+---------------------------------+
 
 In this case, the state is reported as `insufficient data` which could indicate that:
 
@@ -379,54 +379,54 @@ In this case, the state is reported as `insufficient data` which could indicate 
 
  Once the state of the alarm has settled down, we might decide that we set that bar too low with 70%, in which case the threshold (or most any other alarm attribute) can be updated as follows:
 
-       $ ceilometer alarm-update --threshold 75 -a ALARM_ID
-       +---------------------------+-----------------------------------------------------+
-       | Property                  | Value                                               |
-       +---------------------------+-----------------------------------------------------+
-       | meter_name                | cpu_util                                            |
-       | alarm_actions             | [u'log://']                                         |
-       | user_id                   | USER_ID                                             |
-       | name                      | cpu_high                                            |
-       | evaluation_periods        | 3                                                   |
-       | statistic                 | avg                                                 |
-       | enabled                   | True                                                |
-       | period                    | 600                                                 |
-       | alarm_id                  | ALARM_ID                                            |
-       | state                     | insufficient data                                   |
-       | query                     | resource_id == INSTANCE_ID                          |
-       | insufficient_data_actions | []                                                  |
-       | repeat_actions            | False                                               |
-       | threshold                 | 75.0                                                |
-       | ok_actions                | []                                                  |
-       | project_id                | PROJECT_ID                                          |
-       | type                      | threshold                                           |
-       | comparison_operator       | gt                                                  |
-       | description               | instance running hot                                |
-       +---------------------------+-----------------------------------------------------+
+       $ ceilometer alarm-update --threshold 75 -a ALARM_ID
+       +---------------------------+-----------------------------------------------------+
+       | Property                  | Value                                               |
+       +---------------------------+-----------------------------------------------------+
+       | meter_name                | cpu_util                                            |
+       | alarm_actions             | [u'log://']                                         |
+       | user_id                   | USER_ID                                             |
+       | name                      | cpu_high                                            |
+       | evaluation_periods        | 3                                                   |
+       | statistic                 | avg                                                 |
+       | enabled                   | True                                                |
+       | period                    | 600                                                 |
+       | alarm_id                  | ALARM_ID                                            |
+       | state                     | insufficient data                                   |
+       | query                     | resource_id == INSTANCE_ID                          |
+       | insufficient_data_actions | []                                                  |
+       | repeat_actions            | False                                               |
+       | threshold                 | 75.0                                                |
+       | ok_actions                | []                                                  |
+       | project_id                | PROJECT_ID                                          |
+       | type                      | threshold                                           |
+       | comparison_operator       | gt                                                  |
+       | description               | instance running hot                                |
+       +---------------------------+-----------------------------------------------------+
 
 The change will take effect from the next evaluation cycle, which by default occurs every minute.
 
 Over time the state of the alarm may change often, especially if the threshold is chosen to be close to the trending value of the statistic. We can follow the history of an alarm over its lifecycle via the audit API:
 
-       $ ceilometer alarm-history -a ALARM_ID
-       +------------------+----------------------------+---------------------------------------+
-       | Type             | Timestamp                  | Detail                                |
-       +------------------+----------------------------+---------------------------------------+
-       | creation         | 2013-10-01T16:20:29.238000 | name: cpu_high                        |
-       |                  |                            | description: instance running hot     |
-       |                  |                            | type: threshold                       |
-       |                  |                            | rule: cpu_util > 70.0 during 3 x 600s |
-       | state transition | 2013-10-01T16:20:40.626000 | state: ok                             |
-       | rule change      | 2013-10-01T16:22:40.718000 | rule: cpu_util > 75.0 during 3 x 600s |
-       +------------------+----------------------------+---------------------------------------+
+       $ ceilometer alarm-history -a ALARM_ID
+       +------------------+----------------------------+---------------------------------------+
+       | Type             | Timestamp                  | Detail                                |
+       +------------------+----------------------------+---------------------------------------+
+       | creation         | 2013-10-01T16:20:29.238000 | name: cpu_high                        |
+       |                  |                            | description: instance running hot     |
+       |                  |                            | type: threshold                       |
+       |                  |                            | rule: cpu_util > 70.0 during 3 x 600s |
+       | state transition | 2013-10-01T16:20:40.626000 | state: ok                             |
+       | rule change      | 2013-10-01T16:22:40.718000 | rule: cpu_util > 75.0 during 3 x 600s |
+       +------------------+----------------------------+---------------------------------------+
 
 Finally, an alarm that's no longer required can be disabled:
 
-      $ ceilometer alarm-update --enabled False -a ALARM_ID
+      $ ceilometer alarm-update --enabled False -a ALARM_ID
 
 or deleted permanently:
 
-      $ ceilometer alarm-delete -a ALARM_ID
+      $ ceilometer alarm-delete -a ALARM_ID
 
 ## Exploring the metering store
 
@@ -434,32 +434,32 @@ Ceilometer uses `mongodb` by default to store metering data, though alternative 
 
 Before we begin to explore the datastore, ensure that the `mongo` client is installed locally:
 
-       sudo yum install -y mongodb
+       sudo yum install -y mongodb
 
 The top-level structure can be seen by showing the available collections:
 
-       $ mongo ceilometer
-       MongoDB shell version: 2.4.6
-       connecting to: ceilometer
-       > show collections
-       alarm
-       alarm_history
-       meter
-       project
-       resource
-       system.indexes
-       user
+       $ mongo ceilometer
+       MongoDB shell version: 2.4.6
+       connecting to: ceilometer
+       > show collections
+       alarm
+       alarm_history
+       meter
+       project
+       resource
+       system.indexes
+       user
 
 At the heart of the datastore is the `meter` collection containing the actual metering datapoints, and from which queries on meters, samples and statistics are satisfied. The `alarm` and `alarm_history` collections contain alarm rules & state and audit trails respectively. The `project` and `user` collections concern identity, referring to the known tenants and users respectively. Whereas the `resource` collection contains an entry per unique metered resource (instance, image, volume etc.), storing the metadata thereof and linking back to the related meters.
 
 Note also the explicitly established system indices, which are created on demand by the storage driver:
 
-       > query = {'name': {$ne: '_id_'}}             // only include explicitly named indices
-       > projection = {'key': 1, 'ns': 1, 'name': 1} // project onto key, namespace, name
-       > db.system.indexes.find(query, projection)
-       { "key" : { "user_id" : 1, "source" : 1 }, "ns" : "ceilometer.resource", "name" : "resource_idx" }
-       { "key" : { "resource_id" : 1, "user_id" : 1, "counter_name" : 1, "timestamp" : 1, "source" : 1 }, "ns" : "ceilometer.meter", "name" : "meter_idx" }
-       { "key" : { "timestamp" : -1 }, "ns" : "ceilometer.meter", "name" : "timestamp_idx" }
+       > query = {'name': {$ne: '_id_'}}             // only include explicitly named indices
+       > projection = {'key': 1, 'ns': 1, 'name': 1} // project onto key, namespace, name
+       > db.system.indexes.find(query, projection)
+       { "key" : { "user_id" : 1, "source" : 1 }, "ns" : "ceilometer.resource", "name" : "resource_idx" }
+       { "key" : { "resource_id" : 1, "user_id" : 1, "counter_name" : 1, "timestamp" : 1, "source" : 1 }, "ns" : "ceilometer.meter", "name" : "meter_idx" }
+       { "key" : { "timestamp" : -1 }, "ns" : "ceilometer.meter", "name" : "timestamp_idx" }
 
 The keys over which each index extends, in addition to the sort order (1 indicating ascending, -1 indicating decending) is revealed in the query result above. So for example, we see there's an index over the meter collection based on the timestamp attribute, ordered from most to least recent.
 
@@ -469,35 +469,35 @@ Now you could of course continue your exploration by looking at the raw document
 
 Say for example you wanted to see how much variance in CPU utilization there has been across the instances owned by a certain tenant. Casting your mind back to stats 101, you recall that such a question can be answered with the familiar concept of standard deviation. Now since standard deviation is not currently included in the set of statistical aggregates exposed in the v2 Ceilometer API, you could proceed to calculate it directly in `mongo` via map-reduce with some simple javascript:
 
-       > function map() {
-             emit(this.resource_id, {sum: this.counter_volume, count: 1, weighted_distances: 0});
-         }
-       > function reduce(key, mapped) { 
-             var merge = mapped[0];
-             for (var i = 1 ; i < mapped.length ; i++) {
-                 var deviance = (merge.sum / merge.count) - mapped[i].sum;
-                 var weight = merge.count / ++merge.count;
-                 merge.weighted_distances += (Math.pow(deviance, 2) * weight);
-                 merge.sum += mapped[i].sum;
-             }      
-             return merge; 
-         }
-       > function complete(key, reduced) {
-             reduced.stddev = Math.sqrt(reduced.weighted_distances / reduced.count);
-             return reduced;
-        }
-       > db.meter.mapReduce(map,
-                            reduce,
-                            {finalize: complete,
-                             out: {merge: 'cpu_util_deviation'},
-                             query: {'counter_name': 'cpu_util',
-                                     'project_id': PROJECT_ID}})
-        ...
-       > projection = { 'value.stddev': 1 }  // ignore partial results 
-       > db.cpu_util_deviation.find({}, projection)
-       { "_id" : "INSTANCE_ID_1", "value" : { "stddev" : 0.030034533016630435 } }
-       { "_id" : "INSTANCE_ID_2", "value" : { "stddev" : 0.3418399151135359 } }
-       ...
+       > function map() {
+             emit(this.resource_id, {sum: this.counter_volume, count: 1, weighted_distances: 0});
+         }
+       > function reduce(key, mapped) { 
+             var merge = mapped[0];
+             for (var i = 1 ; i < mapped.length ; i++) {
+                 var deviance = (merge.sum / merge.count) - mapped[i].sum;
+                 var weight = merge.count / ++merge.count;
+                 merge.weighted_distances += (Math.pow(deviance, 2) * weight);
+                 merge.sum += mapped[i].sum;
+             }      
+             return merge; 
+         }
+       > function complete(key, reduced) {
+             reduced.stddev = Math.sqrt(reduced.weighted_distances / reduced.count);
+             return reduced;
+        }
+       > db.meter.mapReduce(map,
+                            reduce,
+                            {finalize: complete,
+                             out: {merge: 'cpu_util_deviation'},
+                             query: {'counter_name': 'cpu_util',
+                                     'project_id': PROJECT_ID}})
+        ...
+       > projection = { 'value.stddev': 1 }  // ignore partial results 
+       > db.cpu_util_deviation.find({}, projection)
+       { "_id" : "INSTANCE_ID_1", "value" : { "stddev" : 0.030034533016630435 } }
+       { "_id" : "INSTANCE_ID_2", "value" : { "stddev" : 0.3418399151135359 } }
+       ...
 
 We leave it as an exercise for the reader to compare the aggregate values directly calculated above in the partial results (sum, count) with those reported via the statistics API.
 

@@ -32,13 +32,13 @@ Download the RHEL 7 guest image from the Red Hat Customer Portal [<https://acces
 
 The following environment variables must be defined in the shell environment
 
-      export RHOS=1
-      export NODE_DIST="rhel7"
-      export DIB_YUM_REPO_CONF=/path/to/yum/repo-file.repo
-      # The name of the guest image downloaded from the Red Hat Customer Portal
-      export DIB_LOCAL_IMAGE="/path/to/rhel-guest-image-7.0-20140930.0.x86_64.qcow2"
-      export REG_METHOD=disable
-      export REG_HALT_UNREGISTER=1
+      export RHOS=1
+      export NODE_DIST="rhel7"
+      export DIB_YUM_REPO_CONF=/path/to/yum/repo-file.repo
+      # The name of the guest image downloaded from the Red Hat Customer Portal
+      export DIB_LOCAL_IMAGE="/path/to/rhel-guest-image-7.0-20140930.0.x86_64.qcow2"
+      export REG_METHOD=disable
+      export REG_HALT_UNREGISTER=1
 
 Then proceed with running `instack-virt-setup`
 
@@ -50,13 +50,13 @@ Download the RHEL 7 guest image from the Red Hat Customer Portal [<https://acces
 
 The following environment variables must be defined in the shell environment
 
-      export RHOS=1
-      export NODE_DIST="rhel7"
-      export DIB_YUM_REPO_CONF=/path/to/yum/repo-file.repo
-      # The name of the guest image downloaded from the Red Hat Customer Portal
-      export DIB_LOCAL_IMAGE="/path/to/rhel-guest-image-7.0-20140930.0.x86_64.qcow2"
-      export REG_METHOD=disable
-      export REG_HALT_UNREGISTER=1
+      export RHOS=1
+      export NODE_DIST="rhel7"
+      export DIB_YUM_REPO_CONF=/path/to/yum/repo-file.repo
+      # The name of the guest image downloaded from the Red Hat Customer Portal
+      export DIB_LOCAL_IMAGE="/path/to/rhel-guest-image-7.0-20140930.0.x86_64.qcow2"
+      export REG_METHOD=disable
+      export REG_HALT_UNREGISTER=1
 
 The following command will then create all the Overcloud images, and they will be saved in the current directory.
 
@@ -66,7 +66,7 @@ The following command will then create all the Overcloud images, and they will b
 
 Prior to running `instack-test-overcloud` in a virtual machine environment, an updated version of the Fedora cloud image must be downloaded as the RHEL guest image does not boot under qemu only virtualization. Use the following command on the Undercloud to download the updated Fedora cloud image.
 
-`curl -o /home/stack/fedora-user.qcow2 `[`http://dl.fedoraproject.org/pub/alt/openstack/20/x86_64/Fedora-x86_64-20-20140618-sda.qcow2`](http://dl.fedoraproject.org/pub/alt/openstack/20/x86_64/Fedora-x86_64-20-20140618-sda.qcow2)
+`curl -o /home/stack/fedora-user.qcow2 `[`http://dl.fedoraproject.org/pub/alt/openstack/20/x86_64/Fedora-x86_64-20-20140618-sda.qcow2`](http://dl.fedoraproject.org/pub/alt/openstack/20/x86_64/Fedora-x86_64-20-20140618-sda.qcow2)
 
 ## Using a Satellite Server for RHELOSP and RHEL Content
 
@@ -74,16 +74,16 @@ While not as extensively tested, it is also possible to use a Satellite server f
 
 When using a Satellite Server, the following set of environment variables should be defined in your environment prior to running `instack-virt-setup`, `instack-install-undercloud`, or `instack-build-images`.
 
-      export RHOS=1
-      export NODE_DIST="rhel7"
-      # The name of the guest image downloaded from the Red Hat Customer Portal
-      export DIB_LOCAL_IMAGE="/path/to/rhel-guest-image-7.0-20140930.0.x86_64.qcow2"
-      export REG_METHOD=satellite
-`export REG_SAT_URL="`[`http://`](http://)<satellite-server"
+      export RHOS=1
+      export NODE_DIST="rhel7"
+      # The name of the guest image downloaded from the Red Hat Customer Portal
+      export DIB_LOCAL_IMAGE="/path/to/rhel-guest-image-7.0-20140930.0.x86_64.qcow2"
+      export REG_METHOD=satellite
+`export REG_SAT_URL="`[`http://`](http://)<satellite-server"
  # Find this with `subscription-manager list --available`
  export REG_POOL_ID="<pool-id>`"`
-      export REG_USER="`&lt;username&gt;`"
-      export REG_PASSWORD="`<password>`"
-      export REG_REPOS="`<list of space separated repositories>`"
+      export REG_USER="`&lt;username&gt;`"
+      export REG_PASSWORD="`<password>`"
+      export REG_REPOS="`<list of space separated repositories>`"
 
 `REG_REPOS` should be a space seperated list of repository id's for RHELOSP 6, RHEL 7 Base, RHEL 7 Optional, RHEL 7 Extras, and RHEL 7 HA.

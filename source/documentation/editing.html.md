@@ -21,9 +21,9 @@ More help pages on using MediaWiki are linked on [MediaWiki's help pages](https:
 
 To post long lines, such as log output or script lines, wrap a block in
 
-         <pre style="white-space: pre; overflow-x: auto; word-wrap: normal">
-             ...
-         </pre>
+         <pre style="white-space: pre; overflow-x: auto; word-wrap: normal">
+             ...
+         </pre>
 
 The site is set up to use Kramdown, which is a featureful version of
 Markdown. It mirrors GitHub's settings and then a few

@@ -722,20 +722,20 @@ You can secure qpidd with either Kerberos or SSL, but not both. Securing with Ke
 
 <!-- -->
 
-    [admin@ipa01]$ ipa service-add qpidd/openstack.example.com
+    [admin@ipa01]$ ipa service-add qpidd/openstack.example.com
 
 *   Retrieve a keytab for this new service
 
 <!-- -->
 
-    [root@openstack]# ipa-getkeytab -s ipa01.example.com -k /etc/qpidd.keytab -p qpidd/openstack.example.com
+    [root@openstack]# ipa-getkeytab -s ipa01.example.com -k /etc/qpidd.keytab -p qpidd/openstack.example.com
 
 *   Fix permissions and ownership of the keytab
 
 <!-- -->
 
-    [root@openstack]# chown qpidd /etc/qpidd.keytab
-    [root@openstack]# chmod 600 /etc/qpidd.keytab
+    [root@openstack]# chown qpidd /etc/qpidd.keytab
+    [root@openstack]# chmod 600 /etc/qpidd.keytab
 
 *   Configure qpidd by setting auth and realm in `/etc/qpidd.conf`
 
@@ -748,7 +748,7 @@ You can secure qpidd with either Kerberos or SSL, but not both. Securing with Ke
 
 <!-- -->
 
-    mech_list: GSSAPI
+    mech_list: GSSAPI
 
 *   Create the file `/etc/sysconfig/qpidd` to tell qpidd the location of its Kerberos keytab:
 
@@ -772,13 +772,13 @@ You can secure qpidd with either Kerberos or SSL, but not both. Securing with Ke
 
 <!-- -->
 
-    [root@openstack]# service qpidd restart
+    [root@openstack]# service qpidd restart
 
 *   `/var/log/messages` should be complaining now about cinder and nova
 
 <!-- -->
 
-    ERROR [cinder.openstack.common.rpc.impl_qpid] Unable to connect to AMQP server: Error in sasl_client_start (-1) SASL(-1): generic failure: GSSAPI Error: Unspecified GSS failure.  Minor code may provide more information (Cannot determine realm for numeric host address).
+    ERROR [cinder.openstack.common.rpc.impl_qpid] Unable to connect to AMQP server: Error in sasl_client_start (-1) SASL(-1): generic failure: GSSAPI Error: Unspecified GSS failure.  Minor code may provide more information (Cannot determine realm for numeric host address).
 
 *   Configure nova to use a DNS name instead of an IP address in `/etc/nova/nova.conf`
 
@@ -796,70 +796,70 @@ You can secure qpidd with either Kerberos or SSL, but not both. Securing with Ke
 
 <!-- -->
 
-    [root@openstack]# service openstack-cinder-api restart
-    [root@openstack]# service openstack-cinder-scheduler restart 
-    [root@openstack]# service openstack-cinder-volume restart 
-    [root@openstack]# service openstack-nova-api restart
-    [root@openstack]# service openstack-nova-cert restart
-    [root@openstack]# service openstack-nova-compute restart
-    [root@openstack]# service openstack-nova-conductor restart
-    [root@openstack]# service openstack-nova-consoleauth restart
-    [root@openstack]# service openstack-nova-network restart
-    [root@openstack]# service openstack-nova-novncproxy restart
+    [root@openstack]# service openstack-cinder-api restart
+    [root@openstack]# service openstack-cinder-scheduler restart 
+    [root@openstack]# service openstack-cinder-volume restart 
+    [root@openstack]# service openstack-nova-api restart
+    [root@openstack]# service openstack-nova-cert restart
+    [root@openstack]# service openstack-nova-compute restart
+    [root@openstack]# service openstack-nova-conductor restart
+    [root@openstack]# service openstack-nova-consoleauth restart
+    [root@openstack]# service openstack-nova-network restart
+    [root@openstack]# service openstack-nova-novncproxy restart
 
 *   Now if you look in `/var/log/messages` there should be errors about a missing credentials cache:
 
 <!-- -->
 
-    GSSAPI Error: Unspecified GSS failure.  Minor code may provide more information (Credentials cache file '/tmp/krb5cc_162' not found)
+    GSSAPI Error: Unspecified GSS failure.  Minor code may provide more information (Credentials cache file '/tmp/krb5cc_162' not found)
 
 *   Create an IPA service for nova and cinder
 
 <!-- -->
 
-    [admin@ipa01]$ ipa service-add nova/openstack.example.com
-    [admin@ipa01]$ ipa service-add cinder/openstack.example.com
+    [admin@ipa01]$ ipa service-add nova/openstack.example.com
+    [admin@ipa01]$ ipa service-add cinder/openstack.example.com
 
 *   Get the uid for nova and cinder
 
 <!-- -->
 
-    [root@openstack]# id nova
-    uid=162(nova) gid=162(nova) groups=162(nova),99(nobody),107(qemu)
-    [root@openstack# id cinder
-    uid=165(cinder) gid=165(cinder) groups=165(cinder),99(nobody)
+    [root@openstack]# id nova
+    uid=162(nova) gid=162(nova) groups=162(nova),99(nobody),107(qemu)
+    [root@openstack]# id cinder
+    uid=165(cinder) gid=165(cinder) groups=165(cinder),99(nobody)
 
 *   Create a keytab for nova
 
 <!-- -->
 
-    [root@openstack#  ipa-getkeytab -s ipa01.example.com -k /etc/nova.keytab -p nova/openstack.example.com
+    [root@openstack]#  ipa-getkeytab -s ipa01.example.com -k /etc/nova.keytab -p nova/openstack.example.com
 
 *   Create a keytab for cinder
 
 <!-- -->
 
-    [root@openstack#  ipa-getkeytab -s ipa01.example.com -k /etc/cinder.keytab -p cinder/openstack.example.com
+    [root@openstack]#  ipa-getkeytab -s ipa01.example.com -k /etc/cinder.keytab -p cinder/openstack.example.com
 
 *   Create a credentials cache for nova using the id for the nova user
 
 <!-- -->
 
-    [root@openstack# kinit -k /etc/nova.keytab -c /tmp/krb5cc_162 nova/openstack.example.com
-    [root@openstack# chown nova /tmp/krb5cc_162
+    [root@openstack]# kinit -k /etc/nova.keytab -c /tmp/krb5cc_162 nova/openstack.example.com
+    [root@openstack]# chown nova /tmp/krb5cc_162
 
 *   Create a credentials cache for cinder using the id for the cinder user
 
 <!-- -->
 
-    [root@openstack# kinit -k /etc/cinder.keytab -c /tmp/krb5cc_165 cinder/openstack.example.com
-    [root@openstack# chown cinder /tmp/krb5cc_165
+    [root@openstack]# kinit -k /etc/cinder.keytab -c /tmp/krb5cc_165 cinder/openstack.example.com
+    [root@openstack]# chown cinder /tmp/krb5cc_165
 
 *   Restart qpidd again to force a reconnection attempt
 
 <!-- -->
 
-    [root@openstack]# service qpidd restart
+    [root@openstack]# service qpidd restart
 
 The GSSAPI errors should be gone, nova and cinder are now using Kerberos for authentication and encryption.
 
@@ -867,9 +867,9 @@ The problem with this is that the key we just obtained is only good for a specif
 
 The fix for now is to create a cron job which will renew these credentials.
 
-      [root@openstack]# crontab -e
-      1 0,6,12,18 * * * su - nova -c "kinit nova/openstack.example.com -kt /etc/nova.keytab -c /tmp/krb5cc_162"
-      1 0,6,12,18 * * * su - cinder -c "kinit cinder/openstack.example.com -kt /etc/cinder.keytab -c /tmp/krb5cc_165"
+      [root@openstack]# crontab -e
+      1 0,6,12,18 * * * su - nova -c "kinit nova/openstack.example.com -kt /etc/nova.keytab -c /tmp/krb5cc_162"
+      1 0,6,12,18 * * * su - cinder -c "kinit cinder/openstack.example.com -kt /etc/cinder.keytab -c /tmp/krb5cc_165"
 
 ## Securing Keystone
 

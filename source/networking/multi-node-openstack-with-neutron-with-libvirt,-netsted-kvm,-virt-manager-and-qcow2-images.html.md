@@ -128,7 +128,7 @@ NOTE: Repository mirroring isn't in the scope of this document, but if you are n
     reposync -n -c yum.conf
     for i in */;do createrepo -c cache $i;done.
 
-      and a quick and dirty way to serve them up is:
+      and a quick and dirty way to serve them up is:
 
     sudo python -m SimpleHTTPServer 80
 

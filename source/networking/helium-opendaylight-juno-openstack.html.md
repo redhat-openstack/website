@@ -45,13 +45,13 @@ Rerun packstack, packstack --answer-file=packstack-answers.txt. This should inst
 
 I like to create really small VM images when testing so do the following if you want the smaller images. Then you can use m1.nano for VM instantiation.
 
-      glance image-create \
-        --copy-from http://download.cirros-cloud.net/0.3.1/cirros-0.3.1-x86_64-disk.img \
-        --is-public true \
-        --container-format bare \
-        --disk-format qcow2 \
-        --name cirros
-      nova flavor-create m1.nano auto 128 1 1
+      glance image-create \
+        --copy-from http://download.cirros-cloud.net/0.3.1/cirros-0.3.1-x86_64-disk.img \
+        --is-public true \
+        --container-format bare \
+        --disk-format qcow2 \
+        --name cirros
+      nova flavor-create m1.nano auto 128 1 1
 
 Now we should have a functioning setup using ML2 and OpenvSwitch networking. You can create some VMs and see what happens.
 
@@ -67,139 +67,139 @@ By default the allinone install created OpenvSwitch bridges and OpenStack projec
 
 This script is more of a template for some neutron commands to run to clean out the existing projects and networks. If your system is clean there is no need to run the commands. Use the neutron list commands to see if these steps are needed.
 
-      neutron port-list
-      neutron port-delete id
+      neutron port-list
+      neutron port-delete id
 
-      neutron net-list
-      neutron dhcp-agent-list-hosting-net vx-net
-      neutron dhcp-agent-network-remove <subnet UUID from previous command> vx-net
+      neutron net-list
+      neutron dhcp-agent-list-hosting-net vx-net
+      neutron dhcp-agent-network-remove <subnet UUID from previous command> vx-net
 
-      neutron router-list
-      neutron router-port-list vx-rtr
-      neutron router-interface-delete vx-rtr <subnet_id>
-      neutron router-gateway-clear vx-rtr <subnet_id> - the 172.x address
-      neutron router-delete vx-rtr
+      neutron router-list
+      neutron router-port-list vx-rtr
+      neutron router-interface-delete vx-rtr <subnet_id>
+      neutron router-gateway-clear vx-rtr <subnet_id> - the 172.x address
+      neutron router-delete vx-rtr
 
-      neutron subnet-list
-      neutron subnet-list id|name
-      neutron subnet-delete private-subnet
+      neutron subnet-list
+      neutron subnet-list id|name
+      neutron subnet-delete private-subnet
 
-      neutron net-list
-      neutron net-show private
-      neutron net-delete private
+      neutron net-list
+      neutron net-show private
+      neutron net-delete private
 
-      keystone tenant-list
-      keystone tenant-delete demo
+      keystone tenant-list
+      keystone tenant-delete demo
 
-      neutron subnet-delete public-subnet
-      neutron net-delete public
+      neutron subnet-delete public-subnet
+      neutron net-delete public
 
 ## Configure Control+Network+Compute Node to use OpenDaylight ML2 Plugin
 
 Packstack does not have support for OpenDaylight yet so we need to do manual steps to enable the support. The below steps will disable the openvswitch agent, add ML2 OpenDaylight support and restart neutron. Recall that in this setup the OpenDaylight controll is running on the host at 192.168.120.1. Change the value below if you have a different address.
 
-      sudo systemctl stop neutron-server
-      sudo systemctl stop neutron-openvswitch-agent
-      sudo systemctl disable neutron-openvswitch-agent
+      sudo systemctl stop neutron-server
+      sudo systemctl stop neutron-openvswitch-agent
+      sudo systemctl disable neutron-openvswitch-agent
 
-      # Stops, cleans and restarts openvswitch and logs captured.
+      # Stops, cleans and restarts openvswitch and logs captured.
 
-      sudo systemctl stop openvswitch
-      sudo rm -rf /var/log/openvswitch/*
-      sudo rm -rf /etc/openvswitch/conf.db
-      sudo systemctl start openvswitch
+      sudo systemctl stop openvswitch
+      sudo rm -rf /var/log/openvswitch/*
+      sudo rm -rf /etc/openvswitch/conf.db
+      sudo systemctl start openvswitch
 
-      sudo crudini --set /etc/neutron/plugins/ml2/ml2_conf.ini ml2 mechanism_drivers opendaylight 
-      sudo crudini --set /etc/neutron/plugins/ml2/ml2_conf.ini ml2 tenant_network_types vxlan
+      sudo crudini --set /etc/neutron/plugins/ml2/ml2_conf.ini ml2 mechanism_drivers opendaylight 
+      sudo crudini --set /etc/neutron/plugins/ml2/ml2_conf.ini ml2 tenant_network_types vxlan
 
-      cat <<EOT | sudo tee -a /etc/neutron/plugins/ml2/ml2_conf.ini > /dev/null
+      cat <<EOT | sudo tee -a /etc/neutron/plugins/ml2/ml2_conf.ini > /dev/null
       [ml2_odl]
-      password = admin
-      username = admin
-      url = http://192.168.120.1:8080/controller/nb/v2/neutron
+      password = admin
+      username = admin
+      url = http://192.168.120.1:8080/controller/nb/v2/neutron
       EOT
 
-      sudo mysql -e "drop database if exists neutron_ml2;"
-      sudo mysql -e "create database neutron_ml2 character set utf8;"
-      sudo mysql -e "grant all on neutron_ml2.* to 'neutron'@'%';"
-      sudo neutron-db-manage --config-file /usr/share/neutron/neutron-dist.conf --config-file /etc/neutron/neutron.conf --config-file /etc/neutron/plugin.ini upgrade head
+      sudo mysql -e "drop database if exists neutron_ml2;"
+      sudo mysql -e "create database neutron_ml2 character set utf8;"
+      sudo mysql -e "grant all on neutron_ml2.* to 'neutron'@'%';"
+      sudo neutron-db-manage --config-file /usr/share/neutron/neutron-dist.conf --config-file /etc/neutron/neutron.conf --config-file /etc/neutron/plugin.ini upgrade head
 
-      sudo systemctl start neutron-server
+      sudo systemctl start neutron-server
 
 This next script will attempt to clean up any namespaces, ports or bridges still hanging around. Make sure to use `sudo ovs-vsctl show` to determine if this is even needed.
 
       #!/bin/bash
 
-      ` for ns in `ip netns` `
+      ` for ns in `ip netns` `
       do
-      `     `sudo ip netns del $ns` `
+      `     `sudo ip netns del $ns` `
       done
 
-      ` for qvb in `ifconfig -a | grep qvb | cut -d' ' -f1` `
+      ` for qvb in `ifconfig -a | grep qvb | cut -d' ' -f1` `
       do
-      `     `sudo ip link set $qvb down` `
-      `     `sudo ip link delete $qvb` `
+      `     `sudo ip link set $qvb down` `
+      `     `sudo ip link delete $qvb` `
       done
-      ` for qbr in `ifconfig -a | grep qbr | cut -d' ' -f1` `
+      ` for qbr in `ifconfig -a | grep qbr | cut -d' ' -f1` `
       do
-      `     `sudo ip link set $qbr down` `
-      `     `sudo ip link delete $qbr` `
+      `     `sudo ip link set $qbr down` `
+      `     `sudo ip link delete $qbr` `
       done
-      ` for qvo in `ifconfig -a | grep qvo | cut -d' ' -f1` `
+      ` for qvo in `ifconfig -a | grep qvo | cut -d' ' -f1` `
       do
-      `     `sudo ovs-vsctl --if-exists del-port br-int $qvo` `
+      `     `sudo ovs-vsctl --if-exists del-port br-int $qvo` `
       done
-      ` for tap in `ifconfig -a | grep tap | cut -d' ' -f1` `
+      ` for tap in `ifconfig -a | grep tap | cut -d' ' -f1` `
       do
-          tap="${tap%?}"
-      `     `sudo ip link set $tap down` `
-      `     `sudo ovs-vsctl --if-exists del-port br-int $tap` `
+          tap="${tap%?}"
+      `     `sudo ip link set $tap down` `
+      `     `sudo ovs-vsctl --if-exists del-port br-int $tap` `
       done
 
-      ` for i in `sudo ovs-vsctl show | grep Bridge | awk '{print $2}'` ; do `
-          if [[ $i == *br-eth1* ]]; then
-              sudo ovs-vsctl --if-exists del-br 'br-eth1'
-          else
-              sudo ovs-vsctl --if-exists del-br $i
-          fi
+      ` for i in `sudo ovs-vsctl show | grep Bridge | awk '{print $2}'` ; do `
+          if [[ $i == *br-eth1* ]]; then
+              sudo ovs-vsctl --if-exists del-br 'br-eth1'
+          else
+              sudo ovs-vsctl --if-exists del-br $i
+          fi
       done
 
-      ` for i in `ip addr | grep tap | awk '{print $2}'`; do `
-          tap="${i%?}"
-          echo "tap=$tap"
-          sudo ip link del dev $tap
+      ` for i in `ip addr | grep tap | awk '{print $2}'`; do `
+          tap="${i%?}"
+          echo "tap=$tap"
+          sudo ip link del dev $tap
       done
 
-      for i in phy-br-eth1 int-br-eth1; do
-          ip -o link show dev $i &> /dev/null
-          if [ $? -eq 0 ]; then
-              sudo ip link del dev $i
-          fi
+      for i in phy-br-eth1 int-br-eth1; do
+          ip -o link show dev $i &> /dev/null
+          if [ $? -eq 0 ]; then
+              sudo ip link del dev $i
+          fi
       done
 
-      for iface in br-ex br-int br-tun; do
-          sudo ovs-dpctl del-if ovs-system $iface
+      for iface in br-ex br-int br-tun; do
+          sudo ovs-dpctl del-if ovs-system $iface
       done
 
-      echo "Delete vxlan_xxx if present"
-      ` for iface in `sudo ovs-dpctl show | awk 'match($0, /[Pp]ort\s+[[:digit:]]+\s*\:\s*(.+).+\(vxlan/, m) { print m[1]; }'` ; do `
-         echo ${iface} ; sudo ovs-dpctl del-if ovs-system ${iface}
+      echo "Delete vxlan_xxx if present"
+      ` for iface in `sudo ovs-dpctl show | awk 'match($0, /[Pp]ort\s+[[:digit:]]+\s*\:\s*(.+).+\(vxlan/, m) { print m[1]; }'` ; do `
+         echo ${iface} ; sudo ovs-dpctl del-if ovs-system ${iface}
       done
 
-      sudo ovs-dpctl show
+      sudo ovs-dpctl show
 
 At this point the control node should be clean so now clean up the compute node. Use the above two steps to clean anything up. Then use the following script to stop the openvswitch agent and reset OpenvSwitch:
 
-      sudo systemctl stop neutron-openvswitch-agent
-      sudo systemctl disable neutron-openvswitch-agent
+      sudo systemctl stop neutron-openvswitch-agent
+      sudo systemctl disable neutron-openvswitch-agent
 
-      # Stops, cleans and restarts openvswitch and logs captured.
+      # Stops, cleans and restarts openvswitch and logs captured.
 
-      sudo systemctl stop openvswitch
-      sudo rm -rf /var/log/openvswitch/*
-      sudo rm -rf /etc/openvswitch/conf.db
-      sudo systemctl start openvswitch
-      sudo ovs-vsctl show
+      sudo systemctl stop openvswitch
+      sudo rm -rf /var/log/openvswitch/*
+      sudo rm -rf /etc/openvswitch/conf.db
+      sudo systemctl start openvswitch
+      sudo ovs-vsctl show
 
 ## Start OpenDaylight
 
@@ -211,25 +211,25 @@ The nodes need to be configured to use the OpenDaylight controller. Recall that 
 
       #/bin/bash
 
-      eth2=$(ip -o addr show dev eth2 | grep -w inet | awk '{print $4}' | sed -e 's/\/.*//g')
-      ovs-vsctl set-manager tcp:192.168.120.1:6640
-      read ovstbl <<< $(ovs-vsctl get Open_vSwitch . _uuid)
-      ovs-vsctl set Open_vSwitch $ovstbl other_config:bridge_mappings=physnet1:eth1,physnet3:eth3
-      ovs-vsctl set Open_vSwitch $ovstbl other_config:local_ip=$eth2
+      eth2=$(ip -o addr show dev eth2 | grep -w inet | awk '{print $4}' | sed -e 's/\/.*//g')
+      ovs-vsctl set-manager tcp:192.168.120.1:6640
+      read ovstbl <<< $(ovs-vsctl get Open_vSwitch . _uuid)
+      ovs-vsctl set Open_vSwitch $ovstbl other_config:bridge_mappings=physnet1:eth1,physnet3:eth3
+      ovs-vsctl set Open_vSwitch $ovstbl other_config:local_ip=$eth2
 
-      ovs-vsctl list Manager
+      ovs-vsctl list Manager
       echo
-      ovs-vsctl list Open_vSwitch
+      ovs-vsctl list Open_vSwitch
 
 ## Verification
 
 Setup a vxlan tunnel between the two nodes to verify the setup. Use the vnc console of one of the VM's and try to ping the other VM. In the test below the two VMs should have the addresses 10.100.5.2 and 10.100.5.4 if ran the first time.
 
-      neutron net-create vx-net --provider:network_type vxlan --provider:segmentation_id 1400
-      neutron subnet-create vx-net 10.100.5.0/24 --name vx-subnet
-      neutron router-create vx-rtr
-      neutron router-interface-add vx-rtr vx-subnet
-      nova boot --flavor m1.nano --image $(nova image-list | grep 'uec\s' | awk '{print $2}' | tail -1) --nic net-id=$(neutron net-list | grep -w vx-net | awk '{print $2}') vmvx1 --availability_zone=nova:fedora51
-      nova boot --flavor m1.nano --image $(nova image-list | grep 'cirros\s' | awk '{print $2}' | tail -1) --nic net-id=$(neutron net-list | grep -w vx-net | awk '{print $2}') vmvx2 --availability_zone=nova:fedora52
-      nova get-vnc-console vmvx1 novnc
-      nova get-vnc-console vmvx2 novnc
+      neutron net-create vx-net --provider:network_type vxlan --provider:segmentation_id 1400
+      neutron subnet-create vx-net 10.100.5.0/24 --name vx-subnet
+      neutron router-create vx-rtr
+      neutron router-interface-add vx-rtr vx-subnet
+      nova boot --flavor m1.nano --image $(nova image-list | grep 'uec\s' | awk '{print $2}' | tail -1) --nic net-id=$(neutron net-list | grep -w vx-net | awk '{print $2}') vmvx1 --availability_zone=nova:fedora51
+      nova boot --flavor m1.nano --image $(nova image-list | grep 'cirros\s' | awk '{print $2}' | tail -1) --nic net-id=$(neutron net-list | grep -w vx-net | awk '{print $2}') vmvx2 --availability_zone=nova:fedora52
+      nova get-vnc-console vmvx1 novnc
+      nova get-vnc-console vmvx2 novnc

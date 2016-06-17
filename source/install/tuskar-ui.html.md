@@ -159,7 +159,7 @@ If you wish to create a development installation of the Tuskar-UI, install as de
 
 Next, turn off the running instance of the Tuskar UI:
 
-       sudo service httpd stop
+       sudo service httpd stop
 
 Now you can follow the [development instance installation instructions](http://tuskar-ui.readthedocs.org/en/latest/install.html).
 
@@ -173,32 +173,32 @@ Use the Tuskar CLI to modify additional parameters. This process is described in
 
 The Tuskar CLI can be used to perform additional operations. In order to use it, access the Instack virtual machine and source stackrc:
 
-       source /home/stack/stackrc
+       source /home/stack/stackrc
 
 Many of the CLI operations require the overcloud plan uuid:
 
-       [stack@localhost ~]$ tuskar plan-list
-       +--------------------------------------+-----------+-------------+----------------------------------------------------+
-       | uuid                                 | name      | description | roles                                              |
-       +--------------------------------------+-----------+-------------+----------------------------------------------------+
-       | 1289d499-de0a-4688-86e2-b0caf7ae06ea | overcloud | None        | controller, swift-storage, compute, cinder-storage |
-       +--------------------------------------+-----------+-------------+----------------------------------------------------+
+       [stack@localhost ~]$ tuskar plan-list
+       +--------------------------------------+-----------+-------------+----------------------------------------------------+
+       | uuid                                 | name      | description | roles                                              |
+       +--------------------------------------+-----------+-------------+----------------------------------------------------+
+       | 1289d499-de0a-4688-86e2-b0caf7ae06ea | overcloud | None        | controller, swift-storage, compute, cinder-storage |
+       +--------------------------------------+-----------+-------------+----------------------------------------------------+
 
 #### View Overcloud templates
 
 To view the Heat templates used for the Overcloud deployment, run the following:
 
-` [stack@localhost ~]$ tuskar plan-templates -O output-dir `<plan uuid>
-       Following templates has been written:
-       output-dir/plan.yaml
-       output-dir/environment.yaml
-       output-dir/provider-swift-storage-1.yaml
-       output-dir/provider-cinder-storage-1.yaml
-       output-dir/provider-controller-1.yaml
-       output-dir/provider-compute-1.yaml
+` [stack@localhost ~]$ tuskar plan-templates -O output-dir `<plan uuid>
+       Following templates has been written:
+       output-dir/plan.yaml
+       output-dir/environment.yaml
+       output-dir/provider-swift-storage-1.yaml
+       output-dir/provider-cinder-storage-1.yaml
+       output-dir/provider-controller-1.yaml
+       output-dir/provider-compute-1.yaml
 
 #### Modify Overcloud parameters
 
 Available Overcloud parameters can be viewed in the environment.yaml file. To modify a specific parameter, run the following:
 
-` [stack@localhost ~]$ tuskar plan-patch -A `<key>`=`<value>` `<plan uuid>
+` [stack@localhost ~]$ tuskar plan-patch -A `<key>`=`<value>` `<plan uuid>
