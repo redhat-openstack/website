@@ -21,15 +21,11 @@ For the steps shown here, be sure you have at least the following requirements a
 *   A Linux host of course (I used Fedora 20 x64 on a dual core machine)
 *   libvirt, virt-manager. Get it with:
 
-<!-- -->
-
-    yum groupinstall -y @virtualization
+        yum groupinstall -y @virtualization
 
 *   Libguestfs tools. Get it with:
 
-<!-- -->
-
-    yum install -y libguestfs-tools-c
+        yum install -y libguestfs-tools-c
 
 *   A CentOS 6.5 minimal ISO, you can get one from here: [mirror.globo.com/centos/6.5/isos/x86_64](http://mirror.globo.com/centos/6.5/isos/x86_64/)
 *   A Text editor if you want to change kickstarts
@@ -41,83 +37,61 @@ Special thanks to Allan St. George, Kashyap and the RDO maillist for the tips wh
 *   Use virt-manager to install CentOS with a small disk (I used one of 10 GB) and do a *minimal* install, make special note of the name as it will be used later, for this guide the name chosen is **centos-6.5**. Also, during installation you need to create only *one* partition for / in *ext4* format (this means, no lvm, no swap, etc.)
     -   Alternatively you could do something like:
 
-<!-- -->
-
-    $ qemu-img create -f qcow2 /tmp/centos-6.5-working.qcow2 10G
-    $ virt-install --virt-type kvm --name centos-6.5 --ram 1024 \
-    --cdrom=/tmp/CentOS-6.5-x86_64-minimal.iso \
-    --disk /tmp/centos-6.5-working.qcow2,format=qcow2 \
-    --network network=default \
-    --graphics vnc,listen=0.0.0.0 --noautoconsole \
-    --os-type=linux --os-variant=rhel6
+            $ qemu-img create -f qcow2 /tmp/centos-6.5-working.qcow2 10G
+            $ virt-install --virt-type kvm --name centos-6.5 --ram 1024 \
+            --cdrom=/tmp/CentOS-6.5-x86_64-minimal.iso \
+            --disk /tmp/centos-6.5-working.qcow2,format=qcow2 \
+            --network network=default \
+            --graphics vnc,listen=0.0.0.0 --noautoconsole \
+            --os-type=linux --os-variant=rhel6
 
 *   After install, reboot the vm and log in as root.
 *   Modify /etc/sysconfig/network-scripts/ifcfg-eth0 so it looks like the following (the important bits are: no mac defined and bootproto dhcp):
 
-<!-- -->
-
-    TYPE=Ethernet
-    DEVICE=eth0
-    ONBOOT=yes
-    BOOTPROTO=dhcp
-    NM_CONTROLLED=no
+        TYPE=Ethernet
+        DEVICE=eth0
+        ONBOOT=yes
+        BOOTPROTO=dhcp
+        NM_CONTROLLED=no
 
 *   Install the EPEL repository
 
-<!-- -->
-
-    $ yum install -y http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
+        $ yum install -y http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
 
 *   Update the system
 
-<!-- -->
-
-    $ yum -y distro-sync
+        $ yum -y distro-sync
 
 *   Install cloud-init packages and git (this one is required to install linux rootfs resize)
 
-<!-- -->
-
-    yum install -y cloud-utils cloud-init parted git
+        yum install -y cloud-utils cloud-init parted git
 
 *   Install linux rootfs resize
 
-<!-- -->
-
-    cd /tmp
-    git clone https://github.com/flegmatik/linux-rootfs-resize.git
-    cd linux-rootfs-resize
-    ./install
+        cd /tmp
+        git clone https://github.com/flegmatik/linux-rootfs-resize.git
+        cd linux-rootfs-resize
+        ./install
 
 *   Edit /etc/cloud/cloud.cfg and under *cloud_init_modules* add:
 
-<!-- -->
-
-      - resolv-conf
+        - resolv-conf
 
 *   Add the following line to /etc/sysconfig/network (this is to avoid problems accessing the EC2 metadata service)
 
-<!-- -->
-
-    NOZEROCONF=yes
+        NOZEROCONF=yes
 
 *   Poweroff the vm
 
-<!-- -->
+        $ poweroff
 
-    $ poweroff
+*   Reset and clean the image so it can be reused without issues
 
-1.  Reset and clean the image so it can be reused without issues
-
-<!-- -->
-
-    $ virt-sysprep -d centos-6.5
+        $ virt-sysprep -d centos-6.5
 
 *   Reduce image size by zero-in unused blocks in the virtual disk (Run as root to avoid issues changing selinux context on the final step)
 
-<!-- -->
-
-    $ virt-sparsify --compress /tmp/centos-6.5-working.qcow2 centos-6.5-cloud.qcow2
+        $ virt-sparsify --compress /tmp/centos-6.5-working.qcow2 centos-6.5-cloud.qcow2
 
 You're done!
 
@@ -135,15 +109,11 @@ For the Fedora image I used appliance-creator and a kickstart (you can find a fe
 
 *   Install appliance-tools
 
-<!-- -->
-
-    yum install -y appliance-tools
+        yum install -y appliance-tools
 
 *   Run appliance-creator with kickstart of your preference. The arguments here are **-c** for config, **-n** for name and **-f** for disk format.
 
-<!-- -->
-
-    appliance-creator -c fedora-20-cloud.ks -n f20-cloud_openstack -f qcow2
+        appliance-creator -c fedora-20-cloud.ks -n f20-cloud_openstack -f qcow2
 
 *   Grab a coffee and wait, since appliance creator works like a netinstall so most of the time spent will be downloading the packages
 
