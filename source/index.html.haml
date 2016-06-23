@@ -56,36 +56,91 @@ hide_metadata: true
 
     .intro-text
       :markdown
-        OpenStack: Packaged by the RDO Community for the Enterprise Linux communities
+        RDO is a community of people using and deploying OpenStack on 
+        CentOS, Fedora, and Red Hat Enterprise Linux.
 
         <span class="btn">[Try RDO Now →](/install/quickstart/)</span>
 
-  .bg-boxes
+
+  .container.getstarted
+    .row
+      .col-md-4
+        .block-heading
+          %h2 The Sandbox
+ 
+          %p.lead
+            The easiest way to try out OpenStack.
+            %a( href="http://trystack.org" ) TryStack.org
+            lets you try OpenStack with your own applications in our
+            sandbox environment.
+
+      .col-md-4
+        .block-heading
+          %h2 Proof-of-Concept
+
+          %p.lead
+            To spin up a proof of concept cloud on a single computer or 
+            a virtual machine, follow the
+            %a( href="/quickstart/" ) All-In-One QuickStart
+            instructions.
+                        
+      .col-md-4
+        .block-heading
+          %h2 Production Ready
+          %p.lead
+            If you want to create a production-ready cloud, you'll want to
+            use the 
+            =link_to("TripleO Quickstart", "/tripleo")
+            guide.
 
     .row
-      .block-heading
-        :markdown
-          ## Get started
+      .col-md-6
+        .block-heading
+          %h2 Get Involved
 
-          Want to try out OpenStack without installing anything?
-          [TryStack](http://trystack.org/) is a free public OpentStack
-          instance where you can experiment.
+          %p.lead            
+            RDO project is made of people like you! If you want to 
+            help out, 
+            %a( href="/community" ) here's how 
+            you can get involved.
+          %p
+            If you are interested in our community, please have a look
+            at our
+            %a( href="https://review.rdoproject.org/" ) Code Review process
+            and follow the discussion on the 
+            %a( href="https://www.redhat.com/mailman/listinfo/rdo-list" ) RDO Mailing List
+            where the discussion covers topics like installing, running, 
+            and using OpenStack on Red&nbsp;Hat based distributions.
 
-          To spin up a proof of concept cloud on a single node, try an
-          all in one installation with the
-          [QuickStart](/install/quickstart).
 
-          If you want to create a production-ready cloud, you'll want to
-          use the [TripleO](/tripleo) quickstart guide.
+          %p
+            Want to update this documentation? Great! All you need is a 
+            GitHub account, then visit the link at the very bottom 
+            of each page, entitled "Edit this page on GitHub".
 
-          And if you want to jump in and help out, [here's how you can
-          get involved](/community).
+          %p
+            There are many ways to 
+            %a( href="/community/" ) get involved
+            with the RDO community once you 
+            %a( href="/quickstart/" ) get started
+            &mdash; the simplest way is to 
+            %a( href="http://ask.openstack.org" ) head over to the ask.openstack.org forum
+            and help answer questions. 
+
+          The Puppet modules used in packstack are on
+          %a( href="https://github.com/packstack") GitHub
+          and packstack itself is on 
+          %a( href="https://github.com/stackforge/packstack") Stackforge.
+
+          For a commercially-supported enterprise ready OpenStack solution, Red Hat provides
+          %a( href="http://access.redhat.com/products/red-hat-openstack-platform/") Red Hat OpenStack Platform
+          &mdash; an enterprise-class cloud platform based on OpenStack.
 
 
-    .row
-      .block-heading
-        :markdown
-          ## What is RDO?
+      .col-md-6
+        .block-heading
+          :markdown
+            ## What is RDO?
 
             {:.floatright.openstack-distro}
             ![An Openstack Distribution](openstack-distribution.png)
@@ -96,28 +151,15 @@ hide_metadata: true
 
             OpenStack relies on the underlying operating system and hypervisor — and what better operating system to build on than the industry's leading enterprise operating system? The RDO community is your one-stop community site for all things related to using OpenStack on Red Hat based platforms.
 
+
     .row
       .block-heading
+
         :markdown
-          ## Get involved
 
-          Want to update this documentation? Great! All you need is a GitHub account, then visit the link at the very middle bottom of each page, entitled "Edit this page on GitHub"
+          ## What's happening?
 
-          There are many ways to [get involved](get involved) with the RDO community once you [ get started](quickstart). The simplest way is to [head over to the ask.openstack.org forum](http://ask.openstack.org) and help answer questions. Or try out OpenStack for yourself right now at [TryStack.org](http://trystack.org/).
+          Come to one of the main [events](events) where some of us will be. Follow us on [Twitter](http://twitter.com/rdocommunity/), [Facebook](http://facebook.com/rdocommunity), and [Google+](https://plus.google.com/communities/110409030763231732154). Subscribe to the [rdo-list mailing list](http://www.redhat.com/mailman/listinfo/rdo-list) for technical questions, or to the [newsletter mailing list](http://www.redhat.com/mailman/listinfo/rdo-newsletter) for monthly community updates.
 
-          The Puppet modules used in packstack are on [Github](https://github.com/packstack) and packstack itself is on [Stackforge](https://github.com/stackforge/packstack).
-
-          For a commercially-supported enterprise ready OpenStack solution, Red Hat provides [Red Hat OpenStack Platform](//access.redhat.com/products/red-hat-openstack-platform/), an enterprise-class cloud platform based on OpenStack.
-
-    .block-highlight
-      .row
-        .block-heading
-
-          :markdown
-
-            ## What's happening?
-
-            Come to one of the main [events](events) where some of us will be. Follow us on [Twitter](http://twitter.com/rdocommunity/), [Facebook](http://facebook.com/rdocommunity), and [Google+](https://plus.google.com/communities/110409030763231732154). Subscribe to the [rdo-list mailing list](http://www.redhat.com/mailman/listinfo/rdo-list) for technical questions, or to the [newsletter mailing list](http://www.redhat.com/mailman/listinfo/rdo-newsletter) for monthly community updates.
-
-            #{social_icons}
+          #{social_icons}
 
