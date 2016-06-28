@@ -297,24 +297,27 @@ following the best practices described in [RDO OpenStack Packaging Guidelines](/
 review.rdoproject.org](https://review.rdoproject.org/r/#/q/project:rdoinfo). In
 this change you must provide the project information and Package Review bugzilla
 ticket in the commit message. In the project definition in rdo.yml file, specify
-only `under-review` as project tags (see [this example](https://review.rdoproject.org/r/#/c/1327/)).
+only `under-review` as project tags (see [this example](https://review.rdoproject.org/r/#/c/1408/)).
 As part of the review process, some tasks will be carried out by the RDO team:
   * The required projects will be created in [https://review.rdoproject.org](https://review.rdoproject.org).
   * The new projects will be added to zuul configuration in review.rdoproject.org
-  (as in [this example](https://review.rdoproject.org/r/#/c/1257/)).
+  (as in [this example](https://review.rdoproject.org/r/#/c/1418/)).
   * Once the projects are created, the change will be merged in rdoinfo project.
 
 3. Create a new review to the new distgit project with the needed content (spec
-file, etc...) for the initial import. This will trigger a CI job to test the
-package build.
+file, etc...) for the initial import as in [this example](https://review.rdoproject.org/r/#/c/1417/).
+This will trigger a CI job to test the package build.
 
 4. Once the initial import in the distgit is merged, send a new review to rdoinfo
 project to replace the `under-review` tag with the required versions where the
-package must be built. This change can be sent before merging review in step 3
-if a `Depends-On: <gerrit-change-id step 3>` is added.
+package must be built ([example](https://review.rdoproject.org/r/#/c/1422/)).
+This change can be sent before merging review in step 3 if a `Depends-On: <gerrit-change-id step 3>` is added.
 
 Once the change is merged in rdoinfo, a new package should be automatically built
 and published in the [RDO Trunk repos](http://trunk.rdoproject.org/centos7-master/report.html).
+
+In order to track all review requests related to a new package process, it's recommended
+to use the same topic (as `add-osc-lib` in the above examples) for all these reviews.
 
 RDO project is working to automate as much as possible this process. If you need
 help to add new packages, you can ask on `#rdo` or `rdo-list` mailing list.
