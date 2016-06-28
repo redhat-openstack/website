@@ -16,9 +16,9 @@ This document expands on the details of the various repositories involved.
 
 If using RHEL it's assumed that `rhel-7-server-rpms` is enabled by default. RDO also needs the `Optional`, `Extras`, and `RH Common` channels to be enabled:
 
-    $ sudo subscription-manager repos --enable rhel-7-server-optional-rpms
+    $ sudo subscription-manager repos --enable=rhel-7-server-optional-rpms
 
-    $ sudo subscription-manager repos --enable rhel-7-server-extras-rpms
+    $ sudo subscription-manager repos --enable=rhel-7-server-extras-rpms
 
     $ sudo subscription-manager repos --enable=rhel-7-server-rh-common-rpms
 
