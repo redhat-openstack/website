@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:y="http://www.yworks.com/xml/graphml" xmlns:yed="http://www.yworks.com/xml/yed/3" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://www.yworks.com/xml/schema/graphml/1.1/ygraphml.xsd">
+  <!--Created by yEd 3.12.2-->
+  <key attr.name="Description" attr.type="string" for="graph" id="d0"/>
+  <key for="port" id="d1" yfiles.type="portgraphics"/>
+  <key for="port" id="d2" yfiles.type="portgeometry"/>
+  <key for="port" id="d3" yfiles.type="portuserdata"/>
+  <key attr.name="url" attr.type="string" for="node" id="d4"/>
+  <key attr.name="description" attr.type="string" for="node" id="d5"/>
+  <key for="node" id="d6" yfiles.type="nodegraphics"/>
+  <key for="graphml" id="d7" yfiles.type="resources"/>
+  <key attr.name="url" attr.type="string" for="edge" id="d8"/>
+  <key attr.name="description" attr.type="string" for="edge" id="d9"/>
+  <key for="edge" id="d10" yfiles.type="edgegraphics"/>
+  <graph edgedefault="directed" id="G">
+    <data key="d0"/>
+    <node id="n0">
+      <data key="d6">
+        <y:SVGNode>
+          <y:Geometry height="58.21099853515625" width="79.36499786376953" x="1111.1175010681154" y="199.91604232788086"/>
+          <y:Fill color="#CCCCFF" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="16" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="22.625" modelName="sandwich" modelPosition="s" textColor="#000000" visible="true" width="131.0" x="-25.817501068115234" y="62.21099853515625">RDO Trunk user</y:NodeLabel>
+          <y:SVGNodeProperties usingVisualBounds="true"/>
+          <y:SVGModel svgBoundsPolicy="0">
+            <y:SVGContent refid="1"/>
+          </y:SVGModel>
+        </y:SVGNode>
+      </data>
+    </node>
+    <node id="n1">
+      <data key="d6">
+        <y:SVGNode>
+          <y:Geometry height="32.34901428222656" width="83.94099426269531" x="302.23750286865226" y="212.8470344543457"/>
+          <y:Fill color="#CCCCFF" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="16" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="41.25" modelName="sandwich" modelPosition="s" textColor="#000000" visible="true" width="171.1953125" x="-43.627159118652344" y="36.34901428222656">Internal build server 
+@ ci.centos.org</y:NodeLabel>
+          <y:SVGNodeProperties usingVisualBounds="true"/>
+          <y:SVGModel svgBoundsPolicy="0">
+            <y:SVGContent refid="2"/>
+          </y:SVGModel>
+        </y:SVGNode>
+      </data>
+    </node>
+    <node id="n2">
+      <data key="d6">
+        <y:SVGNode>
+          <y:Geometry height="72.18098449707031" width="54.69300079345703" x="722.6534996032715" y="395.1745071411133"/>
+          <y:Fill color="#CCCCFF" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" modelName="sandwich" modelPosition="s" textColor="#000000" visible="true" width="4.0" x="25.346500396728516" y="76.18098449707031"/>
+          <y:SVGNodeProperties usingVisualBounds="true"/>
+          <y:SVGModel svgBoundsPolicy="0">
+            <y:SVGContent refid="3"/>
+          </y:SVGModel>
+        </y:SVGNode>
+      </data>
+    </node>
+    <node id="n3">
+      <data key="d6">
+        <y:SVGNode>
+          <y:Geometry height="32.34901428222656" width="83.94099426269531" x="708.0295028686523" y="313.8254928588867"/>
+          <y:Fill color="#CCCCFF" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" borderDistance="130.0" fontFamily="Dialog" fontSize="16" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="41.25" modelName="sandwich" modelPosition="s" textColor="#000000" visible="true" width="222.8515625" x="-69.45528411865234" y="162.34901428222656">Public-facing server
+https://trunk.rdoproject.org</y:NodeLabel>
+          <y:SVGNodeProperties usingVisualBounds="true"/>
+          <y:SVGModel svgBoundsPolicy="0">
+            <y:SVGContent refid="2"/>
+          </y:SVGModel>
+        </y:SVGNode>
+      </data>
+    </node>
+    <node id="n4">
+      <data key="d5"/>
+      <data key="d6">
+        <y:SVGNode>
+          <y:Geometry height="72.4351806640625" width="170.85003662109375" x="664.5749816894531" y="83.78240966796875"/>
+          <y:Fill color="#CCCCFF" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="16" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="41.25" modelName="sandwich" modelPosition="n" textColor="#000000" visible="true" width="406.7890625" x="-117.96951293945312" y="-45.25">CentOS CDN 
+http://buildlogs.centos.org/centos/7/cloud/x86_64/</y:NodeLabel>
+          <y:SVGNodeProperties usingVisualBounds="true"/>
+          <y:SVGModel svgBoundsPolicy="0">
+            <y:SVGContent refid="4"/>
+          </y:SVGModel>
+        </y:SVGNode>
+      </data>
+    </node>
+    <node id="n5">
+      <data key="d5"/>
+      <data key="d6">
+        <y:ShapeNode>
+          <y:Geometry height="487.2" width="26.80000000000001" x="453.87659520000034" y="29.599999999999994"/>
+          <y:Fill color="#C0C0C0" transparent="false"/>
+          <y:BorderStyle color="#000000" type="dashed" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" modelName="custom" textColor="#000000" visible="true" width="4.0" x="11.399999999999977" y="241.6">
+            <y:LabelModel>
+              <y:SmartNodeLabelModel distance="4.0"/>
+            </y:LabelModel>
+            <y:ModelParameter>
+              <y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/>
+            </y:ModelParameter>
+          </y:NodeLabel>
+          <y:Shape type="rectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <edge id="e0" source="n2" target="n3">
+      <data key="d9"/>
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="-36.05000000000001" tx="0.0" ty="17.839999999999918"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="none"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e1" source="n1" target="n4">
+      <data key="d9"/>
+      <data key="d10">
+        <y:GenericEdge configuration="com.yworks.edge.framed">
+          <y:Path sx="-0.5704447999999047" sy="-19.961451995458873" tx="-54.71244480000007" ty="0.0">
+            <y:Point x="343.6375552" y="120.0"/>
+          </y:Path>
+          <y:LineStyle color="#000000" type="line" width="3.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="17.96875" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true" width="102.296875" x="166.0591813852824" y="-68.04446411132812">CI-passed builds<y:LabelModel>
+              <y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/>
+            </y:LabelModel>
+            <y:ModelParameter>
+              <y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="right" ratio="0.8203045271589575" segment="-1"/>
+            </y:ModelParameter>
+            <y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/>
+          </y:EdgeLabel>
+          <y:StyleProperties>
+            <y:Property class="java.awt.Color" name="FramedEdgePainter.fillColor" value="#000000"/>
+          </y:StyleProperties>
+        </y:GenericEdge>
+      </data>
+    </edge>
+    <edge id="e2" source="n1" target="n3">
+      <data key="d9"/>
+      <data key="d10">
+        <y:GenericEdge configuration="com.yworks.edge.framed">
+          <y:Path sx="41.939555200000086" sy="0.5185480045411452" tx="0.0" ty="-17.41991039999988">
+            <y:Point x="750.0" y="229.54008960000013"/>
+          </y:Path>
+          <y:LineStyle color="#000000" type="line" width="3.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="31.9375" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true" width="121.486328125" x="367.2657109680175" y="25.784475406122624">All repos - synced
+as they are created<y:LabelModel>
+              <y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/>
+            </y:LabelModel>
+            <y:ModelParameter>
+              <y:SmartEdgeLabelModelParameter angle="6.283185307179586" distance="64.20083059692377" distanceToCenter="true" position="left" ratio="0.6594350537491417" segment="-1"/>
+            </y:ModelParameter>
+            <y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/>
+          </y:EdgeLabel>
+          <y:StyleProperties>
+            <y:Property class="java.awt.Color" name="FramedEdgePainter.fillColor" value="#000000"/>
+          </y:StyleProperties>
+        </y:GenericEdge>
+      </data>
+    </edge>
+    <edge id="e3" source="n0" target="n4">
+      <data key="d9"/>
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="-32.662246400000186" sy="2.7411144045411504" tx="73.48534520000032" ty="0.0">
+            <y:Point x="990.0" y="231.76265600000013"/>
+            <y:Point x="990.0" y="120.0"/>
+          </y:Path>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e4" source="n0" target="n3">
+      <data key="d9"/>
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="-32.67248640000025" sy="2.8731080045411375" tx="41.9391999999998" ty="0.0">
+            <y:Point x="990.0" y="231.89464960000012"/>
+            <y:Point x="990.0" y="330.0"/>
+          </y:Path>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+  </graph>
+  <data key="d7">
+    <y:Resources>
+      <y:Resource id="1">&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;!-- Generator: Adobe Illustrator 15.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  --&gt;
+&lt;!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"&gt;
+&lt;svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="216px" height="216px" viewBox="0 0 216 216" enable-background="new 0 0 216 216" xml:space="preserve"&gt;
+&lt;path d="M147.203,131.479l-7.787-9.717c-0.099-1.07-0.621-2.014-1.391-2.682c0.854-0.742,1.405-1.824,1.405-3.041V81.99
+	c0-2.232-1.814-4.049-4.047-4.049H80.735c-2.231,0-4.047,1.816-4.047,4.049v34.049c0,1.217,0.551,2.299,1.405,3.041
+	c-0.764,0.662-1.283,1.598-1.386,2.66l-8.406,9.709c-0.157,0.182-0.243,0.414-0.243,0.654c0,2.686,1.025,4.049,3.048,4.049h73.269
+	c2.021,0,3.048-1.363,3.048-4.049C147.423,131.877,147.346,131.656,147.203,131.479z M78.688,116.039V81.99
+	c0-1.129,0.918-2.049,2.047-2.049h54.648c1.13,0,2.047,0.92,2.047,2.049v34.049c0,1.129-0.917,2.047-2.047,2.047H80.735
+	C79.606,118.086,78.688,117.168,78.688,116.039z M144.375,134.152H71.106c-0.438,0-0.976,0-1.043-1.684l8.381-9.68
+	c0.157-0.182,0.244-0.414,0.244-0.654c0-1.131,0.918-2.049,2.047-2.049h54.648c1.13,0,2.047,0.918,2.047,2.049
+	c0,0.227,0.079,0.447,0.221,0.625l7.766,9.688C145.354,134.152,144.814,134.152,144.375,134.152z M132.706,82.254H109.62
+	c0.009-0.068,0.02-0.135,0.02-0.205c0-0.869-0.703-1.574-1.572-1.574c-0.87,0-1.573,0.705-1.573,1.574
+	c0,0.07,0.011,0.137,0.02,0.205H83.428c-1.376,0-2.497,1.199-2.497,2.67v28.57c0,1.473,1.121,2.67,2.497,2.67h49.278
+	c1.377,0,2.496-1.197,2.496-2.67v-28.57C135.202,83.453,134.083,82.254,132.706,82.254z M133.702,113.494
+	c0,0.645-0.446,1.17-0.996,1.17H83.428c-0.549,0-0.997-0.525-0.997-1.17v-28.57c0-0.645,0.448-1.17,0.997-1.17h49.278
+	c0.55,0,0.996,0.525,0.996,1.17V113.494z M80.274,122.588c0-0.277,0.224-0.5,0.5-0.5h54.678c0.276,0,0.5,0.223,0.5,0.5
+	c0,0.275-0.224,0.5-0.5,0.5H80.774C80.498,123.088,80.274,122.863,80.274,122.588z M78.487,125.963c0-0.277,0.224-0.5,0.5-0.5
+	h57.995c0.274,0,0.5,0.223,0.5,0.5c0,0.275-0.226,0.5-0.5,0.5H78.987C78.711,126.463,78.487,126.238,78.487,125.963z
+	 M76.055,128.838h62.859c0.276,0,0.5,0.223,0.5,0.5c0,0.275-0.224,0.5-0.5,0.5H76.055c-0.277,0-0.5-0.225-0.5-0.5
+	C75.555,129.061,75.777,128.838,76.055,128.838z M127.2,91.012c0.154,0.229,0.095,0.539-0.134,0.693l-14.396,9.668
+	c-0.086,0.057-0.184,0.086-0.281,0.086c-0.159,0-0.316-0.078-0.413-0.221c-0.155-0.229-0.096-0.539,0.133-0.693l14.396-9.668
+	C126.734,90.723,127.045,90.783,127.2,91.012z M119.93,99.633c0.155,0.229,0.095,0.541-0.135,0.695l-11.401,7.703
+	c-0.086,0.057-0.184,0.086-0.28,0.086c-0.16,0-0.318-0.078-0.414-0.221c-0.156-0.229-0.095-0.539,0.134-0.695l11.402-7.701
+	C119.463,99.346,119.775,99.404,119.93,99.633z"/&gt;
+&lt;/svg&gt;
+</y:Resource>
+      <y:Resource id="2">&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;!-- Generator: Adobe Illustrator 15.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  --&gt;
+&lt;!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"&gt;
+&lt;svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="216px" height="216px" viewBox="0 0 216 216" enable-background="new 0 0 216 216" xml:space="preserve"&gt;
+&lt;g&gt;
+	&lt;g&gt;
+		&lt;path d="M149.924,120.314H68.266c-0.553,0-1-0.447-1-1V95.934c0-0.552,0.447-1,1-1h81.658c0.553,0,1,0.448,1,1v23.381
+			C150.924,119.867,150.477,120.314,149.924,120.314z M69.266,118.314h79.658V96.934H69.266V118.314z"/&gt;
+		&lt;path d="M68.266,96.934c-0.365,0-0.719-0.201-0.893-0.55c-0.25-0.494-0.051-1.095,0.443-1.343l13.846-6.969
+			c0.141-0.07,0.293-0.107,0.449-0.107h53.967c0.156,0,0.311,0.037,0.449,0.107l13.846,6.969c0.494,0.248,0.691,0.849,0.443,1.343
+			c-0.246,0.493-0.848,0.693-1.342,0.443l-13.635-6.862H82.35l-13.635,6.862C68.57,96.899,68.418,96.934,68.266,96.934z"/&gt;
+		&lt;path d="M149.924,111.092h-9.844c-1.912,0-3.467-1.555-3.467-3.467s1.555-3.468,3.467-3.468h9.844c0.275,0,0.5,0.224,0.5,0.5
+			s-0.225,0.5-0.5,0.5h-9.844c-1.359,0-2.467,1.106-2.467,2.468c0,1.36,1.107,2.467,2.467,2.467h9.844c0.275,0,0.5,0.224,0.5,0.5
+			S150.199,111.092,149.924,111.092z"/&gt;
+		&lt;g&gt;
+			&lt;path d="M74.182,109c-0.371,0-0.721-0.15-0.98-0.41c-0.25-0.25-0.4-0.609-0.4-0.97s0.15-0.71,0.4-0.97
+				c0.51-0.51,1.439-0.51,1.949,0c0.25,0.26,0.4,0.609,0.4,0.97c0,0.37-0.15,0.72-0.4,0.97C74.9,108.85,74.541,109,74.182,109z"/&gt;
+			&lt;path d="M124.621,107.62c0-0.761,0.619-1.37,1.379-1.37l0,0c0.762,0,1.371,0.609,1.371,1.37l0,0c0,0.76-0.609,1.38-1.371,1.38
+				l0,0C125.24,109,124.621,108.38,124.621,107.62z M118.861,107.62c0-0.761,0.619-1.37,1.379-1.37l0,0
+				c0.76,0,1.371,0.609,1.371,1.37l0,0c0,0.76-0.611,1.38-1.371,1.38l0,0C119.48,109,118.861,108.38,118.861,107.62z
+				 M113.111,107.62c0-0.761,0.609-1.37,1.369-1.37l0,0c0.76,0,1.381,0.609,1.381,1.37l0,0c0,0.76-0.621,1.38-1.381,1.38l0,0
+				C113.721,109,113.111,108.38,113.111,107.62z M107.352,107.62c0-0.761,0.609-1.37,1.369-1.37l0,0c0.76,0,1.381,0.609,1.381,1.37
+				l0,0c0,0.76-0.621,1.38-1.381,1.38l0,0C107.961,109,107.352,108.38,107.352,107.62z M101.592,107.62
+				c0-0.761,0.619-1.37,1.379-1.37l0,0c0.76,0,1.371,0.609,1.371,1.37l0,0c0,0.76-0.611,1.38-1.371,1.38l0,0
+				C102.211,109,101.592,108.38,101.592,107.62z M95.83,107.62c0-0.761,0.621-1.37,1.381-1.37l0,0c0.76,0,1.369,0.609,1.369,1.37
+				l0,0c0,0.76-0.609,1.38-1.369,1.38l0,0C96.451,109,95.83,108.38,95.83,107.62z M90.08,107.62c0-0.761,0.611-1.37,1.371-1.37l0,0
+				c0.76,0,1.379,0.609,1.379,1.37l0,0c0,0.76-0.619,1.38-1.379,1.38l0,0C90.691,109,90.08,108.38,90.08,107.62z M84.32,107.62
+				c0-0.761,0.611-1.37,1.371-1.37l0,0c0.76,0,1.379,0.609,1.379,1.37l0,0c0,0.76-0.619,1.38-1.379,1.38l0,0
+				C84.932,109,84.32,108.38,84.32,107.62z M78.561,107.62c0-0.761,0.621-1.37,1.381-1.37l0,0c0.75,0,1.369,0.609,1.369,1.37l0,0
+				c0,0.76-0.619,1.38-1.369,1.38l0,0C79.182,109,78.561,108.38,78.561,107.62z"/&gt;
+			&lt;path d="M131.75,109c-0.359,0-0.709-0.15-0.969-0.41c-0.25-0.25-0.4-0.6-0.4-0.97c0-0.36,0.15-0.71,0.4-0.97
+				c0.52-0.51,1.439-0.51,1.949,0c0.25,0.26,0.4,0.609,0.4,0.97c0,0.37-0.15,0.72-0.4,0.979C132.471,108.85,132.121,109,131.75,109z
+				"/&gt;
+		&lt;/g&gt;
+		&lt;g&gt;
+			&lt;path d="M74.182,103.42c-0.371,0-0.721-0.15-0.98-0.41c-0.25-0.25-0.4-0.609-0.4-0.97s0.15-0.72,0.4-0.97
+				c0.52-0.51,1.439-0.51,1.949,0c0.25,0.25,0.4,0.61,0.4,0.97s-0.15,0.72-0.4,0.97C74.891,103.27,74.541,103.42,74.182,103.42z"/&gt;
+			&lt;path d="M124.621,102.04c0-0.76,0.619-1.37,1.379-1.37l0,0c0.762,0,1.371,0.61,1.371,1.37l0,0c0,0.761-0.609,1.38-1.371,1.38l0,0
+				C125.24,103.42,124.621,102.801,124.621,102.04z M118.861,102.04c0-0.76,0.619-1.37,1.379-1.37l0,0c0.76,0,1.371,0.61,1.371,1.37
+				l0,0c0,0.761-0.611,1.38-1.371,1.38l0,0C119.48,103.42,118.861,102.801,118.861,102.04z M113.111,102.04
+				c0-0.76,0.609-1.37,1.369-1.37l0,0c0.76,0,1.381,0.61,1.381,1.37l0,0c0,0.761-0.621,1.38-1.381,1.38l0,0
+				C113.721,103.42,113.111,102.801,113.111,102.04z M107.352,102.04c0-0.76,0.609-1.37,1.369-1.37l0,0
+				c0.76,0,1.381,0.61,1.381,1.37l0,0c0,0.761-0.621,1.38-1.381,1.38l0,0C107.961,103.42,107.352,102.801,107.352,102.04z
+				 M101.592,102.04c0-0.76,0.619-1.37,1.379-1.37l0,0c0.76,0,1.371,0.61,1.371,1.37l0,0c0,0.761-0.611,1.38-1.371,1.38l0,0
+				C102.211,103.42,101.592,102.801,101.592,102.04z M95.83,102.04c0-0.76,0.621-1.37,1.381-1.37l0,0c0.76,0,1.369,0.61,1.369,1.37
+				l0,0c0,0.761-0.609,1.38-1.369,1.38l0,0C96.451,103.42,95.83,102.801,95.83,102.04z M90.08,102.04c0-0.76,0.611-1.37,1.371-1.37
+				l0,0c0.76,0,1.379,0.61,1.379,1.37l0,0c0,0.761-0.619,1.38-1.379,1.38l0,0C90.691,103.42,90.08,102.801,90.08,102.04z
+				 M84.32,102.04c0-0.76,0.611-1.37,1.371-1.37l0,0c0.76,0,1.379,0.61,1.379,1.37l0,0c0,0.761-0.619,1.38-1.379,1.38l0,0
+				C84.932,103.42,84.32,102.801,84.32,102.04z M78.561,102.04c0-0.76,0.621-1.37,1.381-1.37l0,0c0.75,0,1.369,0.61,1.369,1.37l0,0
+				c0,0.761-0.619,1.38-1.369,1.38l0,0C79.182,103.42,78.561,102.801,78.561,102.04z"/&gt;
+			&lt;path d="M131.75,103.42c-0.35,0-0.709-0.15-0.969-0.41c-0.25-0.25-0.4-0.609-0.4-0.97s0.15-0.71,0.4-0.97
+				c0.52-0.52,1.439-0.51,1.949,0c0.25,0.25,0.4,0.61,0.4,0.97s-0.15,0.72-0.4,0.97C132.471,103.27,132.121,103.42,131.75,103.42z"
+				/&gt;
+		&lt;/g&gt;
+		&lt;g&gt;
+			&lt;path d="M74.182,114.58c-0.371,0-0.721-0.15-0.98-0.4c-0.25-0.26-0.4-0.609-0.4-0.97c0-0.37,0.15-0.72,0.4-0.979
+				c0.52-0.51,1.439-0.51,1.949,0c0.25,0.26,0.4,0.609,0.4,0.979c0,0.36-0.15,0.71-0.4,0.97
+				C74.891,114.43,74.541,114.58,74.182,114.58z"/&gt;
+			&lt;path d="M124.621,113.21c0-0.76,0.619-1.38,1.379-1.38l0,0c0.762,0,1.371,0.62,1.371,1.38l0,0c0,0.761-0.609,1.37-1.371,1.37l0,0
+				C125.24,114.58,124.621,113.971,124.621,113.21z M118.861,113.21c0-0.76,0.619-1.38,1.379-1.38l0,0c0.76,0,1.371,0.62,1.371,1.38
+				l0,0c0,0.761-0.611,1.37-1.371,1.37l0,0C119.48,114.58,118.861,113.971,118.861,113.21z M113.111,113.21
+				c0-0.76,0.609-1.38,1.369-1.38l0,0c0.76,0,1.381,0.62,1.381,1.38l0,0c0,0.761-0.621,1.37-1.381,1.37l0,0
+				C113.721,114.58,113.111,113.971,113.111,113.21z M107.352,113.21c0-0.76,0.609-1.38,1.369-1.38l0,0
+				c0.76,0,1.381,0.62,1.381,1.38l0,0c0,0.761-0.621,1.37-1.381,1.37l0,0C107.961,114.58,107.352,113.971,107.352,113.21z
+				 M101.592,113.21c0-0.76,0.619-1.38,1.379-1.38l0,0c0.76,0,1.371,0.62,1.371,1.38l0,0c0,0.761-0.611,1.37-1.371,1.37l0,0
+				C102.211,114.58,101.592,113.971,101.592,113.21z M95.83,113.21c0-0.76,0.621-1.38,1.381-1.38l0,0c0.76,0,1.369,0.62,1.369,1.38
+				l0,0c0,0.761-0.609,1.37-1.369,1.37l0,0C96.451,114.58,95.83,113.971,95.83,113.21z M90.08,113.21c0-0.76,0.611-1.38,1.371-1.38
+				l0,0c0.76,0,1.379,0.62,1.379,1.38l0,0c0,0.761-0.619,1.37-1.379,1.37l0,0C90.691,114.58,90.08,113.971,90.08,113.21z
+				 M84.32,113.21c0-0.76,0.611-1.38,1.371-1.38l0,0c0.76,0,1.379,0.62,1.379,1.38l0,0c0,0.761-0.619,1.37-1.379,1.37l0,0
+				C84.932,114.58,84.32,113.971,84.32,113.21z M78.561,113.21c0-0.76,0.621-1.38,1.381-1.38l0,0c0.75,0,1.369,0.62,1.369,1.38l0,0
+				c0,0.761-0.619,1.37-1.369,1.37l0,0C79.182,114.58,78.561,113.971,78.561,113.21z"/&gt;
+			&lt;path d="M131.75,114.58c-0.35,0-0.709-0.15-0.969-0.4c-0.25-0.26-0.4-0.609-0.4-0.97c0-0.37,0.15-0.72,0.4-0.979
+				c0.52-0.51,1.439-0.51,1.949,0.01c0.25,0.25,0.4,0.6,0.4,0.97c0,0.36-0.15,0.71-0.4,0.97
+				C132.471,114.43,132.121,114.58,131.75,114.58z"/&gt;
+		&lt;/g&gt;
+	&lt;/g&gt;
+&lt;/g&gt;
+&lt;/svg&gt;
+</y:Resource>
+      <y:Resource id="3">&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;!-- Generator: Adobe Illustrator 15.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  --&gt;
+&lt;!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"&gt;
+&lt;svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="216px" height="216px" viewBox="0 0 216 216" enable-background="new 0 0 216 216" xml:space="preserve"&gt;
+&lt;path d="M99.827,124.133c2.902,0.244,5.941,0.369,9.037,0.369c8.541,0,16.537-0.965,21.393-2.58
+	c0.396-0.131,0.818,0.082,0.949,0.475s-0.082,0.818-0.475,0.949c-5,1.664-13.174,2.656-21.867,2.656
+	c-3.137,0-6.221-0.125-9.164-0.375c-0.412-0.035-0.717-0.398-0.684-0.811C99.052,124.404,99.417,124.096,99.827,124.133z
+	 M93.749,123.643c-2.967-0.488-5.506-1.123-7.344-1.838c-0.258-0.102-0.547,0.027-0.648,0.283c-0.1,0.258,0.027,0.549,0.285,0.648
+	c1.93,0.75,4.469,1.387,7.545,1.893c0.027,0.004,0.055,0.006,0.082,0.006c0.24,0,0.453-0.174,0.492-0.418
+	C94.206,123.943,94.022,123.688,93.749,123.643z M133.417,117.361c1.428,0.857,2.275,1.865,2.275,3.045v15.244
+	c0,5.207-16.348,7.096-27.334,7.096c-10.988,0-27.334-1.889-27.334-7.096v-15.244c0-1.18,0.848-2.188,2.275-3.045
+	c-1.428-0.855-2.275-1.863-2.275-3.045V99.074c0-1.195,0.869-2.215,2.332-3.078c-1.477-0.866-2.357-1.89-2.357-3.092V77.661
+	c0-5.206,16.346-7.096,27.334-7.096c10.986,0,27.332,1.89,27.332,7.096v15.243c0,1.195-0.869,2.215-2.33,3.078
+	c1.477,0.866,2.357,1.89,2.357,3.092v15.243C135.692,115.498,134.845,116.506,133.417,117.361z M85.663,94.926
+	c0.879,0.363,1.984,0.724,3.295,1.065C93.21,97.103,99.69,98,108.333,98c8.66,0,15.148-0.901,19.4-2.015
+	c1.309-0.344,2.418-0.705,3.295-1.069c1.744-0.723,2.637-1.445,2.637-2.013V77.661c0-1.778-8.699-5.096-25.332-5.096
+	s-25.334,3.317-25.334,5.096v15.243C82.999,93.473,83.903,94.201,85.663,94.926z M131.146,118.43
+	c-5.643,2.131-15.418,2.982-22.787,2.982c-7.371,0-17.146-0.852-22.787-2.982c-1.688,0.711-2.547,1.42-2.547,1.977v15.244
+	c0,1.777,8.701,5.096,25.334,5.096s25.334-3.318,25.334-5.096v-15.244C133.692,119.85,132.833,119.141,131.146,118.43z
+	 M133.692,99.074c0-0.569-0.904-1.297-2.664-2.022c-5.654,2.106-15.365,2.949-22.695,2.949c-7.32,0-17.012-0.841-22.67-2.939
+	c-1.744,0.723-2.639,1.445-2.639,2.013v15.243c0,0.559,0.859,1.268,2.547,1.979c0.861,0.363,1.961,0.723,3.252,1.066
+	c4.248,1.131,10.781,2.051,19.535,2.051s15.285-0.92,19.533-2.051c1.291-0.344,2.393-0.703,3.254-1.066
+	c1.688-0.711,2.547-1.42,2.547-1.979V99.074z M130.257,100.588c-4.854,1.615-12.85,2.58-21.393,2.58
+	c-3.107,0-6.146-0.125-9.037-0.37c-0.41-0.036-0.775,0.271-0.811,0.684c-0.033,0.413,0.271,0.775,0.684,0.811
+	c2.932,0.25,6.016,0.376,9.164,0.376c8.695,0,16.869-0.993,21.867-2.656c0.393-0.131,0.605-0.556,0.475-0.949
+	C131.075,100.67,130.653,100.459,130.257,100.588z M93.749,102.308c-2.963-0.485-5.502-1.121-7.344-1.838
+	c-0.258-0.101-0.547,0.027-0.648,0.284c-0.1,0.258,0.027,0.548,0.285,0.647c1.934,0.753,4.473,1.39,7.545,1.893
+	c0.027,0.005,0.055,0.007,0.082,0.007c0.24,0,0.453-0.174,0.492-0.419C94.206,102.61,94.022,102.352,93.749,102.308z M99.675,82.88
+	c2.943,0.25,6.027,0.376,9.164,0.376c8.693,0,16.867-0.993,21.867-2.657c0.393-0.131,0.605-0.556,0.475-0.949
+	s-0.555-0.603-0.949-0.475c-4.855,1.616-12.852,2.581-21.393,2.581c-3.096,0-6.135-0.125-9.037-0.37
+	c-0.402-0.031-0.775,0.271-0.811,0.684C98.956,82.483,99.263,82.845,99.675,82.88z M93.644,81.889c0.24,0,0.453-0.174,0.492-0.419
+	c0.045-0.272-0.139-0.529-0.412-0.574c-2.967-0.487-5.506-1.123-7.344-1.838c-0.258-0.101-0.547,0.027-0.646,0.284
+	c-0.102,0.258,0.025,0.548,0.283,0.647c1.93,0.751,4.469,1.388,7.545,1.893C93.589,81.887,93.616,81.889,93.644,81.889z"/&gt;
+&lt;/svg&gt;
+</y:Resource>
+      <y:Resource id="4">&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;!-- Generator: Adobe Illustrator 17.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  --&gt;
+&lt;!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"&gt;
+&lt;svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 216 216" enable-background="new 0 0 216 216" xml:space="preserve"&gt;
+&lt;g&gt;
+	&lt;path d="M138.764,104.067c-2.93-9.574-11.86-16.211-21.922-16.211c-10.088,0-18.944,6.576-21.901,16.121
+		c-1.644-0.586-3.361-0.883-5.119-0.883c-7.135,0-13.273,4.908-14.89,11.783c-6.375,0.234-11.747,4.662-13.167,10.932
+		c-0.062,0.281,0.004,0.578,0.186,0.805c0.181,0.225,0.454,0.357,0.743,0.357h90.032c0.463,0,0.859-0.334,0.938-0.791
+		c0.2-1.164,0.298-2.236,0.298-3.277C153.961,113.802,147.604,105.974,138.764,104.067z M151.909,125.069H63.943
+		c1.636-4.941,6.215-8.295,11.585-8.295h0.009l0.146,0.006c0.482,0.045,0.875-0.32,0.959-0.781
+		c1.155-6.375,6.698-11.002,13.18-11.002c1.736,0,3.423,0.344,5.027,0.996c0.992,0.482,3.113,1.709,4.423,3.908
+		c0.156,0.26,0.452,0.387,0.737,0.336c0.083-0.016,0.165-0.043,0.24-0.09c0.338-0.201,0.449-0.639,0.248-0.977
+		c-1.127-1.891-2.729-3.137-3.949-3.877c2.471-9.156,10.782-15.535,20.294-15.535c9.14,0,17.202,5.844,19.965,14.49
+		c-2.454-0.016-4.279,0.871-4.388,0.916c-0.361,0.15-0.537,0.566-0.386,0.932c0.15,0.363,0.567,0.537,0.931,0.387
+		c0.027-0.012,2.541-1.012,5.4-0.539c7.964,1.721,13.694,8.76,13.694,16.959C152.059,123.599,152.01,124.312,151.909,125.069z"/&gt;
+&lt;/g&gt;
+&lt;/svg&gt;
+</y:Resource>
+    </y:Resources>
+  </data>
+</graphml>
