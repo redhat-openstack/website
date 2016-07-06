@@ -3,7 +3,7 @@
 ## Quick links:
 
 * [Quick Start](http://rdoproject.org/quickstart)
-* [Mailing Lists](http://rdoproject.org/Mailing_lists)
+* [Mailing Lists](https://www.rdoproject.org/community/mailing-lists/)
 * [RDO release packages](https://trunk.rdoproject.org/)
 * [Review.RDOProject.org](http://review.rdoproject.org/)
 * [RDO blog](http://rdoproject.org/blog)
