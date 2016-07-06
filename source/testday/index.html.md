@@ -12,7 +12,7 @@ schedule](https://www.rdoproject.org/community/rdo-bugtriage/).
 
 The (tentative) test day schedule is:
 
-* [Newton 2 - July 21, 22](/testday/newton/mileston2)
+* [Newton 2 - July 21, 22](/testday/newton/milestone2)
 * Newton 3 - September 8, 9
 * RC1   - September 22, 23
 * Newton Final - October 13, 14
