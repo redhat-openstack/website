@@ -1,11 +1,11 @@
 ---
-title: MEM 5.0 Integration with RHOSP Liberty on RHEL 7
+title: MEM 5.0 Integration with RHOSP Kilo on RHEL 7 using Packstack
 ---
 
-# MEM 5.0 Integration with RHOSP Liberty on RHEL 7
+# MEM 5.0 Integration with RHOSP Kilo on RHEL 7 using Packstack
 
 This guide covers the basic steps for the integration of
-[Midokura Enterprise MidoNet (MEM)][mem] 5.0 into an RHOSP Liberty Packstack
+[Midokura Enterprise MidoNet (MEM)][mem] 5.0 into an RHOSP Kilo Packstack
 All-in-One installation on RHEL 7.
 
 It does not cover topics like the installation of a multi-node environment, BGP
@@ -68,17 +68,16 @@ mode, as well as the firewall being disabled.
 
 ## Repository Configuration
 
-1. Enable Red Hat base repositories
+1. Enable Red Hat base repository
 
    ```
    # subscription-manager repos --enable=rhel-7-server-rpms
-   # subscription-manager repos --enable=rhel-7-server-extras-rpms
    ```
 
 2. Enable Red Hat OSP repository
 
    ```
-   # subscription-manager repos --enable=rhel-7-server-openstack-8-rpms
+   # subscription-manager repos --enable=rhel-7-server-openstack-7.0-rpms
    ```
 
 3. Enable DataStax repository
@@ -111,7 +110,7 @@ mode, as well as the firewall being disabled.
 
    [mem-openstack-integration]
    name=MEM OpenStack Integration
-   baseurl=http://repo.midokura.com/openstack-liberty/stable/el7/
+   baseurl=http://repo.midokura.com/openstack-kilo/stable/el7/
    enabled=1
    gpgcheck=1
    gpgkey=https://repo.midokura.com/midorepo.key
@@ -207,7 +206,7 @@ mode, as well as the firewall being disabled.
 1. Install the MidoNet Plug-in
 
    ```
-   # yum install python-networking-midonet
+   # yum install python-neutron-plugin-midonet
    ```
 
 2. Edit the `/etc/neutron/neutron.conf` file and configure the following
@@ -217,7 +216,7 @@ mode, as well as the firewall being disabled.
    [DEFAULT]
    core_plugin = midonet.neutron.plugin_v2.MidonetPluginV2
 
-   service_plugins = lbaas,midonet.neutron.services.firewall.plugin.MidonetFirewallPlugin,midonet.neutron.services.l3.l3_midonet.MidonetL3ServicePlugin
+   service_plugins = lbaas
 
    dhcp_agent_notification = False
 
@@ -290,23 +289,11 @@ Packstack already created some Neutron networks that have to be removed
 
 ### Horizon Integration
 
-To enable firewalling in the Horizon Dashboard, change the `enable_firewall`
-option to `True` in the `/etc/openstack-dashboard/local_settings` file:
-
-```
-OPENSTACK_NEUTRON_NETWORK = {
-   ...
-   'enable_firewall': True,
-   ...
-}
-```
-
 To enable load balancing in the Horizon Dashboard, change the `enable_lb` option
 to `True` in the `/etc/openstack-dashboard/local_settings` file:
 
 ```
 OPENSTACK_NEUTRON_NETWORK = {
-   ...
    'enable_lb': True,
    ...
 }
@@ -354,8 +341,6 @@ OPENSTACK_NEUTRON_NETWORK = {
 
    ```
    server.1=<HOST_NAME>:2888:3888
-   autopurge.snapRetainCount=10
-   autopurge.purgeInterval=12
    ```
 
 3. Create data directory:
@@ -402,7 +387,7 @@ OPENSTACK_NEUTRON_NETWORK = {
 1. Install the Cassandra package:
 
    ```
-   # yum install dsc22
+   # yum install dsc20
    ```
 
 2. Configure the cluster.
@@ -467,7 +452,7 @@ OPENSTACK_NEUTRON_NETWORK = {
    running in a non-error state:
 
    ```
-   $ nodetool --host 127.0.0.1 status
+   $ nodetool -host 127.0.0.1 status
    [...]
    Status=Up/Down
    |/ State=Normal/Leaving/Joining/Moving
@@ -515,14 +500,13 @@ OPENSTACK_NEUTRON_NETWORK = {
 
    ```
    # cat << EOF | mn-conf set -t default
-   cat << EOF | mn-conf set -t default
    cluster.auth {
-      provider_class = "org.midonet.cluster.auth.keystone.KeystoneService"
-      admin_role = "admin"
-      keystone.tenant_name = "admin"
-      keystone.admin_token = "<ADMIN_TOKEN>"
-      keystone.host = <HOST_NAME>
-      keystone.port = 35357
+       provider_class = "org.midonet.cluster.auth.keystone.v2_0.KeystoneService"
+       admin_role = "admin"
+       keystone.tenant_name = "admin"
+       keystone.admin_token = "<ADMIN_TOKEN>"
+       keystone.host = <HOST_NAME>
+       keystone.port = 35357
    }
    EOF
    ```

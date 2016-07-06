@@ -1,8 +1,8 @@
 ---
-title: MidoNet 5.1 Integration with RDO Liberty on CentOS 7
+title: MidoNet 5.1 Integration with RDO Liberty on CentOS 7 using Packstack
 ---
 
-# MidoNet 5.1 Integration with RDO Liberty on CentOS 7
+# MidoNet 5.1 Integration with RDO Liberty on CentOS 7 using Packstack
 
 This guide covers the basic steps for the integration of
 [MidoNet][midonet] 5.1 into an RDO Liberty Packstack All-in-One installation
