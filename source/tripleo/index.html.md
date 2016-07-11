@@ -39,7 +39,7 @@ $ sudo bash quickstart.sh --install-deps
 This script will output instructions at the end to access the deployed undercloud. If a release name is not given, ``mitaka`` is used.
 
 ## TripleO USB key
-[Try out the TripleO USB key here] (ooq-usbkey.html.md)
+[Try out the TripleO USB key here](/tripleo/oooq-usbkey)
 
 ## Further reading
 
