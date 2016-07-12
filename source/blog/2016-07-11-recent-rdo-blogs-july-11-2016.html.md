@@ -9,11 +9,6 @@ published: true
 
 Here's what RDO enthusiasts have been blogging about in the last few weeks:
 
-**Red Hat Summit, day 1** by Rich Bowen
-
-> The first day at Red Hat Summit in San Francisco was, as always, very busy, with hundreds of people coming by the Community Central area of the exhibit hall to learn about RDO, as wlel as other community projects including ManageIQ, Ceph, CentOS, and many others.
-
-... read more at [http://tm3.org/7j](http://tm3.org/7j)
 
 **Who is Testing Your Cloud?** by Maria Bracho 
 
