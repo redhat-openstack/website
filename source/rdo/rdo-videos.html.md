@@ -8,14 +8,19 @@ wiki_last_updated: 2014-10-22
 
 # RDO videos
 
-See also:
+## RDO BoF @ OpenStack Summit Austin
+
+<iframe width="630" src="//youtube.com/embed/pmb3RA1GmGs" frameborder="0" align="center" allowfullscreen="true"> </iframe>
+
+## FOSDEM 2016
+
+*   [RDO Community Day](https://www.youtube.com/playlist?list=PL27cQhFqK1QwGg15Yd4jeZVLtuvyboGSi)
+
+# Archived videos
+
+## OpenStack Summit Atlanta
 
 *   [OpenStack Summit Atlanta presentations](https://www.openstack.org/summit/openstack-summit-atlanta-2014/session-videos/)
-*   Past RDO [Hangouts](Hangouts)
-
-<!-- -->
-
-*   [OpenStack Summit Hong Kong presentations](OpenStack Summit Hong Kong presentations).
 
 ## OpenStack Networking Part II
 
