@@ -23,7 +23,6 @@ Documents on this page also cover configuring your deployment.
 
 ### Configuration
 
-*   [Securing services](Securing_services)
 *   [Setting up high availability](/ha)
 *   [Getting started with Ceilometer](CeilometerQuickStart)
 *   [Launching your first VM ](Running an instance)
