@@ -39,8 +39,8 @@ You'll want a fresh install with latest updates installed.
     sudo wget http://trunk.rdoproject.org/centos7/current-passed-ci/delorean.repo
 
 * Check for any [workarounds](/testday/newton/workarounds2) required for your platform before the main installation
-* For Packstack based deployment start at step 2 of the [packstack Quickstart](/install/quickstart#Step_2:_Install_Packstack_Installer)
-* For a TripleO-based installs, try the [TripleO quickstart](https://www.rdoproject.org/tripleo/).
+* For **Packstack** based deployment start at step 2 of the [packstack Quickstart](/install/quickstart#Step_2:_Install_Packstack_Installer)
+* For **TripleO** based installs, try the [TripleO quickstart](https://www.rdoproject.org/tripleo/) or the [TripleO QuickStart USB Key](https://www.rdoproject.org/tripleo/oooq-usbkey/).
 
 ### Test cases and results
 
