@@ -103,7 +103,6 @@
   HA: ha/
   Highly Available MySQL server: ha/highly-available-mysql-server
   Highly Available MySQL server on OpenStack: ha/highly-available-mysql-server-on-openstack
-  Heat: documentation/heat
   TestedSetups: testday/testedsetups
   Securing services: uncategorized/securing-services
   Test Day 09 2013: testday/test-day-09-2013
@@ -238,8 +237,6 @@
   MidoNet integration: uncategorized/midonet-integration
   Workaround for newtron installtion error: testday/workaround-for-newtron-installtion-error
   Neutron GBP: networking/neutron-gbp
-  Ironic: documentation/ironic
-  Ironic Developer Quick-Start: uncategorized/ironic-developer-quick-start
   Helium OpenDaylight Juno OpenStack: networking/helium-opendaylight-juno-openstack
   Home lab: hardware/home-lab
   Deploying RHELOSP using TripleO: install/deploying-rhelosp-using-tripleo

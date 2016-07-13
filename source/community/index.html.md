@@ -43,6 +43,8 @@ Follow us on Twitter at [@rdocommunity](//twitter.com/rdocommunity), on [Google+
 
 Join our [newsletter mailing list](//www.redhat.com/mailman/listinfo/rdo-newsletter) for monthly updates on RDO and the larger OpenStack world.
 
+Watch [RDO videos](/rdo/rdo-videos). These include recorded talks, meetups, and other community events.
+
 ## Ask and answer
 
 - Check our [Frequently Asked Questions (FAQ) page](/rdo/faq/) for answers to common questions
