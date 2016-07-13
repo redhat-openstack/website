@@ -17,6 +17,13 @@ The (tentative) test day schedule is:
 * RC1   - September 22, 23
 * Newton Final - October 13, 14
 
+## Test, every day
+
+Of course, you don't have to wait for a scheduled test day to test RDO.
+We would love to hear about your experiences, with either a [packstack
+installation](/install/quickstart) or the [TripleO
+Quickstart](/tripleo).
+
 
 ## Past test days, stats and tickets
 
