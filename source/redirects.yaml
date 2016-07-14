@@ -26,7 +26,6 @@
   'A Case Study: Starting From Scratch With Havana': 'A case study: starting from
     scratch with Havana'
   Deploying RDO Using Foreman: Deploying RDO using Foreman
-  Securing Services: Securing services
   Using GRE Tenant Networks: Using GRE tenant networks
   DeployHeatOnHavana: Deploying Heat on Havana
   Cookbook: Packstack cookbook
@@ -93,18 +92,15 @@
   Neutron-ovs with vlans: networking/neutron-ovs-with-vlans
   Neutron with OVS and vlans: networking/neutron-with-ovs-and-vlans
   Using GRE tenant networks: networking/using-gre-tenant-networks
-  Load Balance OpenStack API: api/load-balance-openstack-api
   Scratch: documentation/scratch
   OpenStack Summit Hong Kong: events/openstack-summit-hong-kong
   Highly Available MySQL server for OpenStack: ha/highly-available-mysql-server-for-openstack
   Floating IPs on the Lab Network: uncategorized/floating-ips-on-the-lab-network
   RDO Test Day September 2013: testday/rdo-test-day-september-2013
-  HA OpenStack API: api/ha-openstack-api
   HA: ha/
   Highly Available MySQL server: ha/highly-available-mysql-server
   Highly Available MySQL server on OpenStack: ha/highly-available-mysql-server-on-openstack
   TestedSetups: testday/testedsetups
-  Securing services: uncategorized/securing-services
   Test Day 09 2013: testday/test-day-09-2013
   Workarounds: testday/workarounds
   RDO videos: rdo/rdo-videos
@@ -137,7 +133,6 @@
   OpenStack Summit Hong Kong Presentations: uncategorized/openstack-summit-hong-kong-presentations
   RDO Videos: rdo/rdo-videos
   'A Case Study: Starting From Scratch With Havana': a-case-study/starting-from-scratch-with-havana
-  Securing Services: uncategorized/securing-services
   Using GRE Tenant Networks: networking/using-gre-tenant-networks
   Packstack cookbook: documentation/packstack-cookbook
   DeployHeatOnHavana: install/deployheatonhavana
