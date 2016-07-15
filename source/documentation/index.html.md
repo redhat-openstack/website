@@ -16,7 +16,7 @@ Since RDO sticks closely to the upstream OpenStack project, the documentation at
 
 <div class="splits">
 
-<div class="split-third">
+<div class="split-third with-more">
 ## Getting started
 
 * [TripleO quickstart &ndash; production deployment, with HA](/tripleo)
@@ -24,7 +24,7 @@ Since RDO sticks closely to the upstream OpenStack project, the documentation at
 * [Try out OpenStack at TryStack.org](http://trystack.org/)
 </div>
 
-<div class="split-third with-more">
+<div class="split-third">
 ## About RDO
 
 * [FAQ](Frequently Asked Questions)
