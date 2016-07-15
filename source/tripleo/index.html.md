@@ -39,7 +39,10 @@ $ sudo bash quickstart.sh --install-deps
 This script will output instructions at the end to access the deployed undercloud. If a release name is not given, ``mitaka`` is used.
 
 ## TripleO USB key
-[Try out the TripleO USB key here](/tripleo/oooq-usbkey)
+
+The TripleO USB key combines tripleo-quickstart and prebuilt RDO OpenStack images into a USB key for a plug and play TripleO install experience.
+
+*    [Learn more about the TripleO USB key](/tripleo/oooq-usbkey)
 
 ## Further reading
 
