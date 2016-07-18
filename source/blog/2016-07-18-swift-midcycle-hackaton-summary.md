@@ -52,7 +52,7 @@ subset) will be accepted to be merged to master.
 ## Crypto retro & what's next
 
 Swift 2.9.0 has been released the past week and includes the merged crypto
-branch [[3]][3]. Kudos to everyone involved, especially Jane and Alistair! This
+branch [[3]][3]. Kudos to everyone involved, especially Janie and Alistair! This
 middleware make it possible for operators to fully encrypt object data on
 disk.
 
@@ -122,15 +122,16 @@ in Swift, because writes to that container can get slow then. Matt started
 working on container sharding sometime ago [[9]][9], and iterated once again because
 he faced new problems with the previous ideas. My impression is that the new
 idea is getting much closer to something that will eventually be merged, thanks
-to Matts persistence on this topic.
+to Matt's persistence on this topic.
 
 ## Summary
 
 There were a lot more (smaller) topics that have been discussed, but this
 should give you an overview of the current work going on in the Swift
 community and the interesting new features that we'll see hopefully soon in
-Swift itself. Thanks everyone who contributed and participated, it was a great
-week and I'm looking forward to the next months!
+Swift itself. Thanks everyone who contributed and participated and special
+thanks to Richard for organizing the hackathon - it was a great week and I'm
+looking forward to the next months!
 
 [1]: http://lists.openstack.org/pipermail/openstack-dev/2016-May/094549.html
 [2]: https://review.openstack.org/#/c/339175/
