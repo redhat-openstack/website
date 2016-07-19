@@ -1,3 +1,4 @@
+# coding: utf-8
 ###
 # Site settings
 ###
@@ -163,7 +164,7 @@ ready do
           ignore: true
   end
 
-  proxy '/blog/feed.xml', 'feed.xml', ignore: true
+  proxy '/blog/feed.xml', 'feed.xml', ignore: false
   proxy '/blog/tag/index.html', 'tag.html', ignore: true
 
   sitemap.resources.reject { |p| p.data.wiki_title.nil? }.each do |p|
