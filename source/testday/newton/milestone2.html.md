@@ -4,7 +4,7 @@ title: RDO Newton Test Day
 
 # Newton Test Day 2
 
-We will be holding a RDO test day on July 21 and 22, 2016.
+We will be holding a RDO test day on July 28 and 29, 2016.
 
 This will be coordinated through the **#rdo channel on Freenode**, and
 through this website and the rdo-list mailing list.
