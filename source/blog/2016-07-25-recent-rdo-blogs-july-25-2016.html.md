@@ -29,10 +29,8 @@ Here's what RDO enthusiasts have been writing about over the past week:
 ... read more at [http://tm3.org/83](http://tm3.org/83)
 
 
-**Cinder Active-Active HA – Newton mid-cycle ** by Gorka Eguileor
+**Cinder Active-Active HA – Newton mid-cycle** by Gorka Eguileor
 
 > Last week took place the OpenStack Cinder mid-cycle sprint in Fort Collins, and on the first day we discussed the Active-Active HA effort that’s been going on for a while now and the plans for the future. This is a summary of that session.
 
 ... read more at [http://tm3.org/84](http://tm3.org/84)
-
-
