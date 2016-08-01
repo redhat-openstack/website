@@ -66,7 +66,7 @@ Please see [Docs - Storage](/documentation/storage) for configuration guides as 
 
 | Config Name | Release | BaseOS | Status | HOWTO | Who | Date | BZ/LP | Notes Page
 |----------------------------------------------------------------|------------------|-----------|----------------------------------------------|-----------------------------------------------------|--------|------------|--------------------------------------------------------------------|------------|
-| All-in-One | Glance=localfs, Cinder=lvm| CentOS 7.1 | | [QuickStart](/Quickstart) | |   |  None | 
+| All-in-One | Glance=localfs, Cinder=lvm| CentOS 7.1 | <span style="background:#00ff00">Good</span> | [QuickStart](/Quickstart) | imcsk8 | 2016-07-29 | None | None
 | All-in-One | Glance=localfs, Cinder=glusterfs| CentOS 7.1 | | [QuickStart](/Quickstart) | |  |  None | 
 | All-in-One | Glance=swift, Cinder=thinlvm| CentOS 7.1 |  | [QuickStart](/Quickstart) | | | None | 
 | All-in-One | Glance=s3(amazon s3), Cinder=nfs| CentOS 7.1 |  | [QuickStart](/Quickstart) | |    | None | None
