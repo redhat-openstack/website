@@ -13,6 +13,8 @@
 
 Thanks for being part of the RDO community!
 
+Not subscribed to the newsletter? [Subscribe here](http://www.redhat.com/mailman/listinfo/rdo-newsletter).
+
 ### Upcoming Events 
 
 This week, we're conducting a documentation sprint for the RDO

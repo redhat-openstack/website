@@ -13,6 +13,8 @@
 
 Thanks for being part of the RDO community!
 
+Not subscribed to the newsletter? [Subscribe here](http://www.redhat.com/mailman/listinfo/rdo-newsletter).
+
 ## Join us at OpenStack Summit!
 
 [OpenStack Summit](https://www.openstack.org/summit/austin-2016/) is

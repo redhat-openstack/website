@@ -14,6 +14,8 @@
 
 Thanks for being part of the RDO community!
 
+Not subscribed to the newsletter? [Subscribe here](http://www.redhat.com/mailman/listinfo/rdo-newsletter).
+
 ## Mitaka 2
 
 After a lot of work by the TripleO team, we have Mitaka milestone 2
