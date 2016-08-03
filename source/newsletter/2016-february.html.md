@@ -17,6 +17,8 @@
 
 Thanks for being part of the RDO community!
 
+Not subscribed to the newsletter? [Subscribe here](http://www.redhat.com/mailman/listinfo/rdo-newsletter).
+
 ## Community Events
 
 We're just a few days into February, and there's already a lot to

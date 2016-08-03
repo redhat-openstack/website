@@ -13,6 +13,8 @@
 
 Thanks for being part of the RDO community!
 
+Not subscribed to the newsletter? [Subscribe here](http://www.redhat.com/mailman/listinfo/rdo-newsletter).
+
 As usual, things slowed down a lot over the New Years break, but
 they're showing signs of picking up again as we get into the year, and
 the push towards Mitaka.

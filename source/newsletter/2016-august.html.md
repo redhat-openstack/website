@@ -14,9 +14,11 @@
 
 Thanks for being part of the RDO community!
 
-## Mitaka 2
+Not subscribed to the newsletter? [Subscribe here](http://www.redhat.com/mailman/listinfo/rdo-newsletter).
 
-After a lot of work by the TripleO team, we have Mitaka milestone 2
+## Newton 2
+
+After a lot of work by the TripleO team, we have Newton milestone 2
 packages available for RDO. To give it a try, you can use either
 Packstack or TripleO.
 
