@@ -48,13 +48,15 @@ The TripleO USB key combines tripleo-quickstart and prebuilt RDO OpenStack image
 
 Upstream TripleO documentation:
 
-*    [http://docs.openstack.org/developer/tripleo-docs/](http://docs.openstack.org/developer/tripleo-docs/)
+* [http://docs.openstack.org/developer/tripleo-docs/](http://docs.openstack.org/developer/tripleo-docs/)
 
 > **Note:** Limit your environment specific content in the menu on the left-hand side of the documentation page.
 
 TripleO (RDO-Manager) HA setup:
 
-*   [Great blog post on RDO-Manager HA setup](https://remote-lab.net/rdo-manager-ha-openstack-deployment)
+* [Great blog post on RDO-Manager HA setup](https://remote-lab.net/rdo-manager-ha-openstack-deployment)
+
+* [TripleO YouTube Channel](https://www.youtube.com/channel/UCNGDxZGwUELpgaBoLvABsTA/)
 
 ## Presentations
 
