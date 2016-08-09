@@ -21,12 +21,12 @@ which we'll use to periodically update this page.
 
 ## Example Entry
 
-Here's how you might fill out an entry once you've tested it. Mark a given test "Good" or "Fail", as appropriate, and link to any tickets that you've opened as a result, and to any place where you've written up your test notes. Mark as Workaround if you have a failure but can get past it. Link to your writeup of the workaround.
+Here's how you might fill out an entry once you've tested it. Mark a given test "Good" or "Fail", as appropriate, and link to any tickets that you've opened as a result, and to any place where you've written up your test notes. Mark as Workaround if you have a failure but can get past it. Link to your writeup of the [workaround](/testday/newton/workarounds3).
 
 | Config Name                                                    | Release          | BaseOS    | Status                                       | HOWTO                                               | Who    | Date       | BZ/LP                                                              | Notes Page |
 |----------------------------------------------------------------|------------------|-----------|----------------------------------------------|-----------------------------------------------------|--------|------------|--------------------------------------------------------------------|------------|
 | All-in-One w/ Quantum OVS (no tunnels, fake bridge) Networking | Grizzly 2013.1.3 | RHEL 6.4  | <span style="background:#00ff00">Good</span> | [Neutron-Quickstart](Neutron-Quickstart) | pmyers | 2013-09-08 | None                                                               | None       |
-|                                                                |                  | Fedora 19 | <span style="background:#ff0000">FAIL</span> | [Neutron-Quickstart](Neutron-Quickstart) | rbowen | 2013-10-09 | ~~[1017421](https://bugzilla.redhat.com/show_bug.cgi?id=1017421)~~ | None       |
+|                                                                |                  | CentOS 7 | <span style="background:#ff0000">FAIL</span> | [Neutron-Quickstart](Neutron-Quickstart) | rbowen | 2013-10-09 | ~~[1017421](https://bugzilla.redhat.com/show_bug.cgi?id=1017421)~~ | None       |
 
 
 ## Packstack Based Installation (Neutron Networking)
@@ -82,7 +82,6 @@ Please see [Docs - Storage](/documentation/storage) for configuration guides as 
 | All-in-One | Glance=nfs, Cinder=netapp_iscsi|  RHEL7.1 | | [QuickStart](/Quickstart) |  |    |   | None
 | All-in-One | Glance=lvm, Cinder=netapp_nfs|  RHEL7.1 |  | [QuickStart](/Quickstart) |   |    | None | None
 | All-in-One | swift|  RHEL7.1 | | [QuickStart](/Quickstart) |   |   | None | None
-| All-in-One | Glance=lvm, Cinder=lvm, Manila=Generic | Fedora 22 | | [QuickStart](/Quickstart) | | | | None
 
 ## Packstack Based Installation (Misc Components)
 
@@ -103,15 +102,12 @@ Various components which don't fit the large test efforts above.
 |----------------------------------------------------------------|------------------|-----------|----------------------------------------------|-----------------------------------------------------|--------|------------|--------------------------------------------------------------------|------------|
 |All-in-one Keystone tests | RDO Newton | CentOS 7.1 |   |   |   |  |  | 
 |All-in-one Keystone tests | RDO Newton | RHEL 7.1 |   |   |  |    | | | 
-|All-in-one Keystone tests | RDO Newton | Fedora 21 |  |  |    | |  | 
 |All-in-one installation tests | RDO Newton | RHEL 7.1 |   |   |   |   | |    |
 | Distributed Horizon | RDO Newton | RHEL7.1 |   |   |     |  |   | 
 | Heat tests | RDO Newton | RHEL7.1|   | |    |  | Packstack + environment creation + sanity |
 | All-in-one Nova tests | RDO Newton | RHEL7.1 |  |  |   |  | Packstack + nova sanity |
 | All-in-one Nova tests | RDO Newton | Centos7.1 |   |  |    |  |  |
-| RDO Newton | Fedora 21 |   |  |   |  |  | |
 | 2.node Nova tests | RDO Newton | RHEL7.1 |   |  |   |  | Packstack + nova live migration (block / shared storage) |
-|  | RDO Newton | Fedora 21 |   |  |    |  |  |
 |  | RDO Newton | Centos7.1 |   |  |     |  |  | 
 
 
@@ -119,7 +115,6 @@ Various components which don't fit the large test efforts above.
 
 | Config Name | Release | BaseOS | Status | HOWTO | Who | Date | BZ/LP | Notes Page
 |----------------------------------------------------------------|------------------|-----------|----------------------------------------------|-----------------------------------------------------|--------|------------|--------------------------------------------------------------------|------------|
-|2,node+minimal OpenStack+Neutron+OVS+GRE |RDO Newton | Fedora 21 |  |  |  |  | None | None
 |2,node+minimal OpenStack+Neutron+OVS+GRE |RDO Newton | CentOS 7.1 |  |   |  |  | None | None
 
 ## Post Installation Tests
