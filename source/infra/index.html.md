@@ -7,7 +7,8 @@ category: documentation,infrastructure
 
 RDO is a packaging effort, but this involves a number of infrastructure
 components, including CI, this website, and package repositories, among
-other things. Here's what it all looks like
+other things. Here's what it all looks like. See also [this blog
+post](https://www.rdoproject.org/blog/2016/07/improving-the-rdo-trunk-infrastructure/)
 
 ## www
 
