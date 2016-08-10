@@ -19,7 +19,7 @@ post](https://www.rdoproject.org/blog/2016/07/improving-the-rdo-trunk-infrastruc
 trunk, aka DLRN, aka Delorean. Builds upstream trunk to RDO packages.
 [trunk.rdoproject.org](http://trunk.rdoproject.org)
 
-## Review
+## Code Review
 
 RDO Gerrit. [review.rdoproject.org](https://review.rdoproject.org/)
 
@@ -47,4 +47,13 @@ A subset of the planet.openstack.org, tracks RDO bloggers.
 ## Code
 
 The code lives on [github](https://github.com/redhat-openstack)
+
+## CentOS
+
+A number of parts of our infrastructure run at CentOS, including
+
+* [Mirroring](http://buildlogs.centos.org/centos/7/cloud/x86_64/)
+* [CI](https://ci.centos.org/view/rdo/view/promotion-pipeline/)
+* [CentOS Cloud SIG](https://wiki.centos.org/SpecialInterestGroup/Cloud)
+  (not infrastructure, but governance/process)
 
