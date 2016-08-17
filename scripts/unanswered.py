@@ -1,13 +1,16 @@
 #!/usr/bin/python
 import urllib2
 import json
+import sys
 
 # Magic
 import sys    # sys.setdefaultencoding is cancelled by site.py
 reload(sys)    # to re-enable sys.setdefaultencoding()
 sys.setdefaultencoding('utf-8')
 
-url = 'https://ask.openstack.org/en/api/v1/questions/?scope=unanswered&query=rdo&sort=age-desc'
+keyword = sys.argv[1] if len(sys.argv) >= 2 else 'rdo'
+
+url = 'https://ask.openstack.org/en/api/v1/questions/?scope=unanswered&query=' + keyword + '&sort=age-desc'
 
 response = urllib2.urlopen(url)
 m = response.read()
