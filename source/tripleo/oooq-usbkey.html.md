@@ -89,7 +89,7 @@ Simply remove the option `-extra-vars undercloud_image_url=file:///home/foo/moun
     cd tripleo-quickstart
     bash quickstart.sh --requirements ci-scripts/usbkey/usb_requirements.txt --playbook quickstart-usb.yml --extra-vars image_cache_dir=/home/foo   localhost
 
-If you would like to have tripleo-quickstart deploy your overloud and validate automatically, simply add `--tags all`.
+If you would like to have tripleo-quickstart deploy your overcloud and validate automatically, simply add `--tags all`.
 
     cd tripleo-quickstart
     bash quickstart.sh --tags all --requirements ci-scripts/usbkey/usb_requirements.txt --playbook quickstart-usb.yml --extra-vars image_cache_dir=/home/foo   localhost
