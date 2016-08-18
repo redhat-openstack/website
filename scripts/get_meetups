@@ -15,7 +15,8 @@ print "Rounding up the ponies ..."
 
 # NOTE: This is Rich's personal API key. Get your own.
 key = "3a7711454d145e404e531c2ee6f391d"
-keyword = "openstack"
+
+keyword = sys.argv[1] if len(sys.argv) >= 2 else 'openstack'
 url = "https://api.meetup.com/2/open_events?&sign=true&photo-host=public&state=ky&city=lexington&country=usa&text=" + keyword + "&radius=10000&sign=true&key=" + key
 
 week = 7
@@ -54,6 +55,8 @@ grp_deets = {}
 for g in grps:
     grp_deets[ g['id'] ] = g
 
+seen = set()
+
 print "Ok, ready to print meetup details ..."
 
 weeklater = (nowts * 1000 ) + ( week * 86400 * 1000 )
@@ -91,6 +94,13 @@ for meetup in meetups:
     endtimeutc = datetime.datetime.fromtimestamp(eventutc/1000 + 3600)
     eventtime = date.fromtimestamp( eventts/1000 )
     t = eventtime.strftime("%A %B %d")
+
+    # Skip it if we've already seen it
+    uniq = meetup['name'] + t
+    if uniq in seen:
+        continue
+    seen.add( uniq )
+
 
     # Group information ...
     grp = grp_deets[ meetup['group']['id'] ]
