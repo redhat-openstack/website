@@ -10,11 +10,13 @@ wiki_last_updated: 2014-10-30
 
 # Storage
 
-Welcome to OpenStack RDO Storage page!
+[ ← Docs](Docs)
 
-Below you can find guides and some test suggestions for the storage components.
+Below you can find guides, test suggestions, and contact information for the storage components.
 
-## Cinder Manuals
+<div class="splits">
+<div class="split-third with-more">
+### Cinder
 
 *   [Using GlusterFS for Cinder with RDO](Cinder/using-glusterfs-for-cinder-with-rdo)
 *   [Using ThinLVM for Cinder with RDO](Cinder/using-thinlvm-for-cinder-with-rdo)
@@ -22,27 +24,32 @@ Below you can find guides and some test suggestions for the storage components.
 *   [Using NetApp for Cinder with RDO](Using NetApp for Cinder with RDO)
 *   [Using NFS for Cinder with RDO](Using NFS for Cinder with RDO)
 *   [Setting up HA of Cinder with RDO](Cinder/setting-up-ha-of-cinder)
+</div>
 
-## Glance Manuals
+<div class="split-third with-more">
+### Glance
 
 *   [Using GlusterFS for Glance with RDO](Glance/using-glusterfs-for-glance-with-rdo)
 *   [Using Swift for Glance with RDO](Glance/using-swift-for-glance-with-rdo)
 *   [Using Ceph for Glance with RDO](Using Ceph for Glance with RDO)
 *   [Setting up HA of Glance](Glance/setting-up-ha-of-glance)
+</div>
 
-## Swift Manuals
+<div class="split-third">
+### Swift
 
 *   [Using Swift for Glance with RDO](Glance/using-swift-for-glance-with-rdo)
+</div>
+</div>
 
-## Test Suggestions
+### Test Suggestions
 
 *   [Tests/Storage/Cinder](Tests/Storage/Cinder)
 *   [Tests/Storage/Glance](Tests/Storage/Glance)
 
-## Contacts
+### Contacts
 
-You can find some people from the Red Hat storage team on IRC in the #rdo channel on Freenode:
+You can find some people from the Red Hat storage team on IRC in the **#rdo** channel on Freenode:
 
-Nathan Levinkind (nlevinki), Yogev Rabl (yrabl), Tzach Shefi (tshefi), Benny Kopilov (bkopilov), Prasanth Anbalagan (panbalag), Luigi Toscano (tosky), Tomas Rusnak (trusnak), Swapnil Kulkarni (coolsvap)
+Nathan Levinkind (nlevinki), Yogev Rabl (yrabl), Tzach Shefi (tshefi), Benny Kopilov (bkopilov), Prasanth Anbalagan (panbalag), Luigi Toscano (tosky), Tomas Rusnak (trusnak), Swapnil Kulkarni (coolsvap).
 
-<Category:Storage>

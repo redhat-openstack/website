@@ -148,7 +148,6 @@
   Docs/Storage: storage/
   Docs/About: docs/about
   Upstream Docs: community/upstream-docs
-  Docs/Misc: documentation/misc
   Category:Networking: networking/index
   Using VXLAN Tenant Networks: networking/using-vxlan-tenant-networks
   RDO test day January 2014: testday/rdo-test-day-january-2014
@@ -247,4 +246,3 @@
   Using provider networks: networking/using-provider-networks
   ProjectsInRDO: rdo/projectsinrdo
   Allinone.yaml: install/allinone.yaml
-  Testing RDO with Rally: testday/testing-rdo-with-rally
