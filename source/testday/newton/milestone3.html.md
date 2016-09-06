@@ -9,7 +9,7 @@ We will be holding a RDO test day on September 8th and 9th, 2016
 This will be coordinated through the **#rdo channel on Freenode**, and
 through this website and the rdo-list mailing list.
 
-We'll be testing the first [Newton milestone
+We'll be testing the third [Newton milestone
 release](http://releases.openstack.org/newton/schedule.html). If you can do
 any testing on your own ahead of time, that will help ensure that
 everyone isn't encountering the same problems.
