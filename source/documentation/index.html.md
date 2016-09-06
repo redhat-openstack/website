@@ -34,12 +34,12 @@ Since RDO sticks closely to the upstream OpenStack project, the documentation at
 
 </div>
 
-## Configuration
+## Administration
 
 <div class="splits">
 
 <div class="split-third with-more">
-### Installation
+### Installation and configuration
 * [Running an instance](Running an instance)
 * [Image resources](Image resources)
 * [Adding a compute node](Adding a compute node)
@@ -76,12 +76,8 @@ Since RDO sticks closely to the upstream OpenStack project, the documentation at
 * [Open
   Tickets](https://bugzilla.redhat.com/buglist.cgi?product=RDO&query_format=advanced&bug_status=NEW&bug_status=ASSIGNED)
 
-## Upstream Documentation
+## Upstream documentation
 
 * [OpenStack docs](http://docs.openstack.org/)
 * [Books](/documentation/books)
-
-## Other
-
-* [Miscellaneous Docs](Docs/Misc)
 
