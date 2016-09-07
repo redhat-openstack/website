@@ -14,7 +14,8 @@
 
 Thanks for being part of the RDO community!
 
-## Newton Milestone 3 Test Day
+
+## Newton milestone 3 test day
 
 Please join us on Thursday and Friday of this week to test the RDO
 packages of the Newton milestone 3 release. Milestone 3 released
@@ -25,10 +26,15 @@ yet, and we need your help to ensure that this is the case.
 We'll be gathering on the #rdo channel on the Freenode IRC network, as
 well as posting our findings to the rdo-list mailing list.
 
-For more information about this test day, see the test day web page at
-https://www.rdoproject.org/testday/newton/milestone3/
+For more information about this test day, see the [test day web 
+page](https://www.rdoproject.org/testday/newton/milestone3/).
 
-### OpenStack Summit Coming Soon
+And we're just a few weeks out from the [scheduled Newton
+release](https://releases.openstack.org/newton/schedule.html), on the
+week of October 3rd.
+
+
+## OpenStack Summit coming soon
 
 OpenStack Summit is just a few weeks away - October 25-29 in Barcelona,
 Spain - and we would love to see you there. We'll be in the expo hall,
@@ -39,24 +45,67 @@ like to demo at our pod, or if you just want to help answer RDO
 questions, please let me know - we'd love to have you as part of our
 demo schedule.
 
-You can register for the summit at https://www.openstack.org/summit
+We also expect to have a community meetup at the Summit, as we usually
+do. Details are still being worked out. We'll notify the rdo-list
+mailing list as soon we we have a time and place confirmed.
 
-### Blog Posts
+You can register for the summit at 
+[openstack.org/summit](https://www.openstack.org/summit).
 
-### Packaging meetings 
 
-Every Wednesday at 15:00 UTC, we have the weekly RDO community meeting
+## Upcoming events
+
+In addition to OpenStack Summit, RDO will have a presence at a number of
+other upcoming events. Each week, upcoming meetups are posted to
+rdo-list, and also to the [RDO events
+calendar](https://www.rdoproject.org/events/).
+
+In particular, you will want to mark your calendar for the following
+events:
+
+* [The Red Hat OpenStack 
+  Platform](http://www.meetup.com/Pittsburgh-Red-Hat-User-Group/events/233282275/),
+  September 8th in Pittsburgh.
+
+* [MAD for
+  OpenStack](http://www.meetup.com/MAD-for-OpenStack/events/233790123/),
+  Madrid. September 14th.
+
+* [PyCon India](https://in.pycon.org/2016/), September 24th and 25th in
+  New Delhi.
+
+* [LinuxDays Prague](https://www.linuxdays.cz/2016/), October 8th and
+  9th.
+
+
+## Community meeting
+
+
+Ever  Wednesday at 15:00 UTC, we have the weekly RDO community meeting
 on the #RDO channel on Freenode IRC. And at 15:00 UTC Thursdays, we
 have the CentOS Cloud SIG Meeting on #centos-devel.
+
+In a recent discussion, it was the consensus that there's sufficient
+overlap in these meetings that it makes sense to just have the one
+meeting - the one on Wedneday - and the other one has been put on hold
+indefinitely. So we encourage you to come to #RDO at 15:00 UTC on
+Wednesdays to see what's up in the community.
+
+The agendas, and minutes, from these meetings, may be found in the
+[rdo-list mail archives](https://www.redhat.com/archives/rdo-list/)
+each week. The meeting typically covers everything from project status,
+to upcoming event participation, to discussion of technical decisions.
+Major decisions are always taken back to the mailing list for
+consideration by the wider community.
 
 ## Keep in touch 
 
 There's lots of ways to stay in in touch with what's going on in the
 RDO community. The best ways are ...
 
-
 ### WWW 
 * [RDO](http://rdoproject.org/)
+* [Project Status](http://dashboards.rdoproject.org/)
 * [OpenStack Q&A](http://ask.openstack.org/ )
 
 ### Mailing Lists: 
@@ -71,6 +120,7 @@ RDO community. The best ways are ...
 * [Follow us on Twitter](http://twitter.com/rdocommunity )
 * [Google+](http://tm3.org/rdogplus )
 * [Facebook](http://facebook.com/rdocommunity)
+
 
 Thanks again for being part of the RDO community!
 
