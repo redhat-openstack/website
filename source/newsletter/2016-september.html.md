@@ -78,18 +78,34 @@ events:
   9th.
 
 
+## Contributing to the documentation
+
+With the Newton release just around the corner, it's a good time to
+refresh the website and the documentation. If you'd like to help with
+this effort, here's what you need to get started.
+
+Clone the Git repository at 
+[https://github.com/redhat-openstack/website](https://github.com/redhat-openstack/website)
+and follow the instructions in the README to get a local version of the
+website running.
+
+Look through the site, and identify documents that are outdated,
+incorrect, or anything that you feel is missing. You can either correct
+these yourself, and send pull requests, or open tickets at
+[https://github.com/redhat-openstack/website/issues](https://github.com/redhat-openstack/website/issues).
+
+Where we particularly need help is identifying documents that need to be
+written. To this end, we need the help of beginners, to go through the
+website, and see what information you need, which isn't readily
+available.
+
+
 ## Community meeting
 
 
 Ever  Wednesday at 15:00 UTC, we have the weekly RDO community meeting
 on the #RDO channel on Freenode IRC. And at 15:00 UTC Thursdays, we
 have the CentOS Cloud SIG Meeting on #centos-devel.
-
-In a recent discussion, it was the consensus that there's sufficient
-overlap in these meetings that it makes sense to just have the one
-meeting - the one on Wedneday - and the other one has been put on hold
-indefinitely. So we encourage you to come to #RDO at 15:00 UTC on
-Wednesdays to see what's up in the community.
 
 The agendas, and minutes, from these meetings, may be found in the
 [rdo-list mail archives](https://www.redhat.com/archives/rdo-list/)
