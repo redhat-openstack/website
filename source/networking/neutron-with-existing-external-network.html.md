@@ -43,7 +43,7 @@ The file above will move the network parameters from eth0 to br-ex.
 
 Make /etc/sysconfig/network-scripts/ifcfg-eth0 resemble (no BOOTPROTO!):
 
-Note: if on Centos7, the file could be /etc/sysconfig/network-scripts/ifcfg-enp2s0
+Note: if on Centos7, the file could be /etc/sysconfig/network-scripts/ifcfg-enp2s0 and DEVICE should be enp2s0
 
     DEVICE=eth0
     TYPE=OVSPort
