@@ -32,12 +32,8 @@ You'll want a fresh install with latest updates installed.
 
 ## How To Test
 
-    yum -y install yum-plugin-priorities
-    cd /etc/yum.repos.d/
-    # for Centos 7 and RHEL 7
-    sudo wget http://trunk.rdoproject.org/centos7/delorean-deps.repo
-    sudo wget http://trunk.rdoproject.org/centos7/current-passed-ci/delorean.repo
-
+    yum -y install https://rdoproject.org/repos/openstack-newton/rdo-release-newton.rpm
+    
 * Check for any [workarounds](/testday/newton/workarounds3) required for your platform before the main installation
 * For Packstack based deployment start at step 2 of the [packstack Quickstart](/install/quickstart#Step_2:_Install_Packstack_Installer)
 * For a TripleO-based installs, try the [TripleO quickstart](https://www.rdoproject.org/tripleo/).
