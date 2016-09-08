@@ -37,6 +37,10 @@ You'll want a fresh install with latest updates installed.
 * Check for any [workarounds](/testday/newton/workarounds3) required for your platform before the main installation
 * For Packstack based deployment start at step 2 of the [packstack Quickstart](/install/quickstart#Step_2:_Install_Packstack_Installer)
 * For a TripleO-based installs, try the [TripleO quickstart](https://www.rdoproject.org/tripleo/).
+* See also the [baremetal deployment
+  docs](http://images.rdoproject.org/docs/baremetal/) and [(minimal)
+  virt deployment docs](http://images.rdoproject.org/docs/virt/) for the
+  TripleO Quickstart. (Ping hrybacki on IRC for questions/comments.)
 
 ### Test cases and results
 
