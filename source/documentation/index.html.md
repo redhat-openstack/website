@@ -43,8 +43,6 @@ Since RDO sticks closely to the upstream OpenStack project, the documentation at
 * [Running an instance](Running an instance)
 * [Image resources](Image resources)
 * [Adding a compute node](Adding a compute node)
-* [Troubleshooting](Troubleshooting)
-* [Upgrading RDO &ndash; primarily for manual and Packstack-based deployments](/install/upgrading-rdo)
 * [More&hellip;](Install){:.more}
 {:.with-more-link}
 </div>
@@ -54,7 +52,6 @@ Since RDO sticks closely to the upstream OpenStack project, the documentation at
 * [Neutron with an existing external network](Neutron with existing external network)
 * [ML2 plugin](ML2 plugin)
 * [Floating vs Private IPs](Difference between Floating IP and private IP)
-* [Networking in detail](Networking in too much detail)
 * [More&hellip;](Docs/Networking){:.more}
 {:.with-more-link}
 </div>
@@ -62,8 +59,8 @@ Since RDO sticks closely to the upstream OpenStack project, the documentation at
 <div class="split-third">
 ### Storage
 * [GlusterFS](/storage/Cinder/using-glusterfs-for-cinder-with-rdo)
-* [EMC](https://wiki.openstack.org/wiki/How to deploy cinder with EMC plug-in)
 * [ThinLVM](/storage/Cinder/using-thinlvm-for-cinder-with-rdo)
+* [EMC](https://wiki.openstack.org/wiki/How to deploy cinder with EMC plug-in)
 * [More&hellip;](Docs/Storage){:.more}
 {:.with-more-link}
 </div>

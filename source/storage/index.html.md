@@ -24,6 +24,7 @@ Below you can find guides, test suggestions, and contact information for the sto
 *   [Using NetApp for Cinder with RDO](Using NetApp for Cinder with RDO)
 *   [Using NFS for Cinder with RDO](Using NFS for Cinder with RDO)
 *   [Setting up HA of Cinder with RDO](Cinder/setting-up-ha-of-cinder)
+*   [Deploying Cinder with EMC plug-in](https://wiki.openstack.org/wiki/How to deploy cinder with EMC plug-in)
 </div>
 
 <div class="split-third with-more">
