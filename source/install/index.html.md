@@ -34,6 +34,7 @@ For an initial test deployment, follow the [Packstack quickstart](/install/quick
 <div class="split-third">
 ### Configuration
 
+*   [Running an instance](Running an instance)
 *   [Adding a compute node](Adding a compute node)
 *   [Setting up high availability](/ha)
 *   [Getting started with Ceilometer](CeilometerQuickStart)
