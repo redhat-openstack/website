@@ -54,4 +54,4 @@ If using SELinux, enable the following on the Nova node:
 
 Restart the Cinder's services.
 
-       # for i in $(chkconfig --list | awk ' /cinder/ { print $1 } ' ); do service $i restart; done
+       # for i in $(systemctl list-unit-files | awk ' /cinder/ { print $1 } ' ); do systemctl restart $i; done
