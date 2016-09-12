@@ -105,6 +105,12 @@ for meetup in meetups:
     # Group information ...
     grp = grp_deets[ meetup['group']['id'] ]
 
+    # Skip it if it doesn't actually mention the keyword
+    if (re.search(keyword, grp['name'], re.IGNORECASE) == None) \
+        and (re.search(keyword, meetup['name'], re.IGNORECASE) == None) \
+        and (re.search(keyword, meetup['event_url'], re.IGNORECASE) == None):
+        continue
+
     # For the wiki ...
     # eventout = "* " + t + ' [' + meetup['event_url'] + ' ' + meetup['name'] + "], " + grp['city'] + ', '
     # if 'state' in grp.keys():
