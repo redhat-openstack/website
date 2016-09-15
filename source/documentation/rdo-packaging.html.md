@@ -313,6 +313,9 @@ project to replace the `under-review` tag with the required versions where the
 package must be built ([example](https://review.rdoproject.org/r/#/c/1422/)).
 This change can be sent before merging review in step 3 if a `Depends-On: <gerrit-change-id step 3>` is added.
 
+  > Maintainers must be registered in gerrit and use the registered email in the rdoinfo review.
+  > This is required to set your permissions on your project.
+
 Once the change is merged in rdoinfo, a new package should be automatically built
 and published in the [RDO Trunk repos](http://trunk.rdoproject.org/centos7-master/report.html).
 
