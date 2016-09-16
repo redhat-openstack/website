@@ -62,7 +62,7 @@ print "Ok, ready to print meetup details ..."
 weeklater = (nowts * 1000 ) + ( week * 86400 * 1000 )
 twoweeklater = (nowts * 1000 ) + ( twoweek * 86400 * 1000 )
 
-tweets = open('meetups.tweets', 'w')
+tweets = open('meetups.tweets.csv', 'w')
 mlist = open('meetups.mlist', 'w')
 # wiki = open('meetups.wiki', 'w')
 # md = open('meetups.md', 'w')
@@ -154,10 +154,10 @@ for meetup in meetups:
         continue
 
     # For Twitter
-    eventout = t + ' in ' + grp['city'] + ', '
+    eventout = '"01/01/2016 00:00:00","' + t + ' in ' + grp['city'] + ', '
     if 'state' in grp.keys():
         eventout = eventout + grp['state'] + ', '
-    eventout = eventout + grp['country'] + ': ' + meetup['name'] + ' - ' + meetup['event_url'] + "\n"
+    eventout = eventout + grp['country'] + ': ' + meetup['name'] + '","' + meetup['event_url'] + '"' + "\n"
     tweets.write( str( eventout ))
 
     # For mailing list
