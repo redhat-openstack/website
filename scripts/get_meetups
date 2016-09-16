@@ -154,7 +154,7 @@ for meetup in meetups:
         continue
 
     # For Twitter
-    eventout = '"01/01/2016 00:00:00","01/01/2016 00:00:00","' + t + ' in ' + grp['city'] + ', '
+    eventout = '"01/01/2016 00:00:00","' + t + ' in ' + grp['city'] + ', '
     if 'state' in grp.keys():
         eventout = eventout + grp['state'] + ', '
     eventout = eventout + grp['country'] + ': ' + meetup['name'] + '","' + meetup['event_url'] + '"' + "\n"
