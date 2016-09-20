@@ -37,6 +37,8 @@ foreach ( $feed->entries ) {
 
     $body =~ s/^.*?<p[^>]*?>//i;
     $body =~ s!</p>.*$!!is;
+    $body =~ s/<[^>]+>//igs; # Strip HTML
+    $body =~ s/[\r\n]/  /gs; # Strip newlines from whatever's left
     print $md "> $body\n\n";
 
     my $link = $_->link;
