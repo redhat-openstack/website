@@ -25,8 +25,8 @@ Here's how you might fill out an entry once you've tested it. Mark a given test 
 
 | Config Name                                                    | Release          | BaseOS    | Status                                       | HOWTO                                               | Who    | Date       | BZ/LP                                                              | Notes Page |
 |----------------------------------------------------------------|------------------|-----------|----------------------------------------------|-----------------------------------------------------|--------|------------|--------------------------------------------------------------------|------------|
-| All-in-One w/ Quantum OVS (no tunnels, fake bridge) Networking | Grizzly 2013.1.3 | RHEL 6.4  | <span style="background:#00ff00">Good</span> | [Neutron-Quickstart](Neutron-Quickstart) | pmyers | 2013-09-08 | None                                                               | None       |
-|                                                                |                  | CentOS 7 | <span style="background:#ff0000">FAIL</span> | [Neutron-Quickstart](Neutron-Quickstart) | rbowen | 2013-10-09 | ~~[1017421](https://bugzilla.redhat.com/show_bug.cgi?id=1017421)~~ | None       |
+| All-in-One w/ Quantum OVS (no tunnels, fake bridge) Networking | Grizzly 2013.1.3 | RHEL 6.4  | <span style="background:#00ff00">Good</span> | [Quickstart](/Quickstart) | pmyers | 2013-09-08 | None                                                               | None       |
+|                                                                |                  | CentOS 7 | <span style="background:#ff0000">FAIL</span> | [Quickstart](/Quickstart) | rbowen | 2013-10-09 | ~~[1017421](https://bugzilla.redhat.com/show_bug.cgi?id=1017421)~~ | None       |
 
 
 ## Packstack Based Installation (Neutron Networking)
@@ -36,22 +36,16 @@ Please make sure to use the steps described in the [How To Test](/testday/newton
 | Config Name | Release | BaseOS | Status | HOWTO | Who | Date | BZ/LP | Notes Page
 |----------------------------------------------------------------|------------------|-----------|----------------------------------------------|-----------------------------------------------------|--------|------------|--------------------------------------------------------------------|------------|
 | All-in-One - Sanity |  | CentOS 7 |   | [QuickStart](/Quickstart) |  |    |    | 
-|                     |  | F22      |   | [QuickStart](/Quickstart) |  |    |    | 
 |                     |  | RHEL7.1  |   | [QuickStart](/Quickstart) |  |    |    | 
 | Distributed -IPv6-Deployment- Sanity |  |  CentOS 7 |  | [QuickStart](/Quickstart) |  |   |  | 
-|                                      |  | F22       |  | [QuickStart](/Quickstart) |  |   |  | 
 |                                      |  | RHEL7.1   |  | [QuickStart](/Quickstart) |  |   |  |
 | Distributed -ML2- OVS-VXLAN –  LbaaS | | CentOS 7.1 |  | [QuickStart](/Quickstart) |  |   |  | 
-|                                      | | F22        |  | [QuickStart](/Quickstart) |  |   |  | 
 |                                      | | RHEL7.1    |  | [QuickStart](/Quickstart) |  |   |  | 
 | Distributed -ML2- OVS-VXLAN-VRRP     | | CentOS 7.1 |  | [QuickStart](/Quickstart) |  |   |  | 
-| | | F22 |  | [QuickStart](/Quickstart) |  |   | | 
 | | | RHEL7.1 | | [QuickStart](/Quickstart) |  |   | | 
 | Distributed -ML2-OVS- VXLAN-IPv6 – VPNaaS | | CentOS 7.1 |  | [QuickStart](/Quickstart) |  |  |  | 
-| | | F22 |  | [QuickStart](/Quickstart) |  |   |  | 
 | | | RHEL7.1 |  | [QuickStart](/Quickstart) | |  |  | 
 | Distributed -ML2-OVS- VXLAN Security Groups | | CentOS 7.1 |  | [QuickStart](/Quickstart) |  |   |  | 
-| | | F22 | | [QuickStart](/Quickstart) |  |  |  | 
 | | | RHEL7.1 | | [QuickStart](/Quickstart) |  |   | | 
 | Distributed -ML2-OVS- VXLAN DVR | | RHEL 7.1 | | [QuickStart](/Quickstart) | |   |  | 
 | Distributed -ML2-OVS- VXLAN DVR | | CentOS 7.1 | | [QuickStart](/Quickstart) |   |  |  | 
