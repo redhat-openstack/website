@@ -491,6 +491,10 @@ $> rdopkg patch
 $> rdopkg review-spec
 ```
 
+For **more specific example**, please see
+[Introducing patches to RDO CloudSIG packages RDO blog post](
+https://www.rdoproject.org/blog/2016/09/introducing-patches-to-rdo-cloudsig-packages/).
+
 
 ### Rebasing on new version
 
@@ -499,4 +503,15 @@ tl;dr `rdopkg new-verison` should take care of that:
 ```bash
 $> git checkout mitaka-rdo
 $> rdopkg new-version
+```
+
+or `rdopkg new-version 1.2.3` to select specific version.
+
+Inspect resulting distgit commit and if you need to adjust anything, use
+`rdopkg amend` to amend and regenerate commit message from changelog.
+
+Finally, once happy with your change submit it for review with
+
+```bash
+$> rdopkg review-spec
 ```
