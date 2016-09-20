@@ -296,25 +296,41 @@ following the best practices described in [RDO OpenStack Packaging Guidelines](/
 2. Send a review adding the new project in rdo.yml to the [rdoinfo project in
 review.rdoproject.org](https://review.rdoproject.org/r/#/q/project:rdoinfo). In
 this change you must provide the project information and Package Review bugzilla
-ticket in the commit message. In the project definition in rdo.yml file, specify
-only `under-review` as project tags (see [this example](https://review.rdoproject.org/r/#/c/1408/)).
-As part of the review process, some tasks will be carried out by the RDO team:
-  * The required projects will be created in [https://review.rdoproject.org](https://review.rdoproject.org).
-  * The new projects will be added to zuul configuration in review.rdoproject.org
-  (as in [this example](https://review.rdoproject.org/r/#/c/1418/)).
-  * Once the projects are created, the change will be merged in rdoinfo project.
+ticket in the commit message (see [this example](https://review.rdoproject.org/r/#/c/1408/)).
+In the project definition in **rdo.yml** file, only `under-review` must be uncommented as project tags
+and comment all releases where package should be built, as for example:
+    
+        - project: murano-dashboard
+          name: openstack-murano-ui
+          tags:
+            under-review:
+            #newton-uc:
+            #newton:
+            #mitaka:
+          conf: rpmfactory-core
+          maintainers:
+          - atsamutali@mirantis.com
+          - iyozhikov@mirantis.com
+     
+    **Note:** Maintainers must be registered in review.rdoproject.org and use the registered email in the rdoinfo review.
+    This is required to set your permissions on your project.
+
+    As part of the review process, some tasks will be carried out by the RDO team:
+
+    * The required projects will be created in [https://review.rdoproject.org](https://review.rdoproject.org).
+    * Users included in maintainers list will received required permissions to manage the project.
+    * The new projects will be added to zuul configuration in review.rdoproject.org
+    (as in [this example](https://review.rdoproject.org/r/#/c/1418/)).
+    * Once the projects are created, the change will be merged in rdoinfo project.
 
 3. Create a new review to the new distgit project with the needed content (spec
 file, etc...) for the initial import as in [this example](https://review.rdoproject.org/r/#/c/1417/).
 This will trigger a CI job to test the package build.
 
 4. Once the initial import in the distgit is merged, send a new review to rdoinfo
-project to replace the `under-review` tag with the required versions where the
+project to remove the `under-review` tag and uncomment the required versions where the
 package must be built ([example](https://review.rdoproject.org/r/#/c/1422/)).
 This change can be sent before merging review in step 3 if a `Depends-On: <gerrit-change-id step 3>` is added.
-
-  > Maintainers must be registered in gerrit and use the registered email in the rdoinfo review.
-  > This is required to set your permissions on your project.
 
 Once the change is merged in rdoinfo, a new package should be automatically built
 and published in the [RDO Trunk repos](http://trunk.rdoproject.org/centos7-master/report.html).
