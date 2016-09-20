@@ -1,18 +1,18 @@
 ---
-title: TestedSetups Newton 3
+title: TestedSetups Newton RC
 authors: rbowen
 ---
 
-# TestedSetups, Newton milestone 3
+# TestedSetups for Newton Release Candidate
 
-Tested Setups for [RDO test day Newton 3](/testday/newton/milestone3). 
+Tested Setups for [RDO test day Newton RC](/testday/newton/milestone_rc). 
 
 Some steps from the official Quickstart guide
 do not apply to Newton; make sure to follow the steps described in the
-[How To Test](/testday/newton/milestone3#how-to-test) page instead.
+[How To Test](/testday/newton/milestone_rc#how-to-test) page instead.
 
 For convenience, during the test day, please feel free to use [the test
-day etherpad](https://etherpad.openstack.org/p/rdo-test-days-newton-m3),
+day etherpad](https://etherpad.openstack.org/p/rdo-test-days-newton-rc),
 which we'll use to periodically update this page.
 
 1. toc

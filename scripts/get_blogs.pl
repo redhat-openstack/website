@@ -7,8 +7,9 @@ use URI;
 use JSON::Parse;
 use Data::Dumper;
 use WWW::Shorten::Yourls;
-    use XML::Simple;
-    use LWP::Simple;
+use XML::Simple;
+use LWP::Simple;
+use Term::ProgressBar;
 
 $|++;
 
@@ -19,9 +20,11 @@ my $feed = XML::Feed->parse($url);
 open (my $md, '>', 'blogs.md');
 open (my $tweets, '>', 'blogs.tweets.csv');
 
+my $p = Term::ProgressBar->new({count => 60});
+
 foreach ( $feed->entries ) {
 
-    print '.';
+    $p->update();
 
     print $md "**" . $_->title . "** by " . $_->author . "\n\n";
     my $body = $_->content->body;
