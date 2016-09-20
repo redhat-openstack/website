@@ -491,6 +491,10 @@ $> rdopkg patch
 $> rdopkg review-spec
 ```
 
+For **more specific example**, please see
+[Introducing patches to RDO CloudSIG packages RDO blog post](
+https://www.rdoproject.org/blog/2016/09/introducing-patches-to-rdo-cloudsig-packages/).
+
 
 ### Rebasing on new version
 
