@@ -4,7 +4,6 @@ use warnings;
 
 use XML::Feed;
 use URI;
-use JSON::Parse;
 use XML::Simple;
 use LWP::Simple;
 use Term::ProgressBar;
