@@ -6,7 +6,6 @@ use XML::Feed;
 use URI;
 use JSON::Parse;
 use Data::Dumper;
-use WWW::Shorten::Yourls;
 use XML::Simple;
 use LWP::Simple;
 use Term::ProgressBar;
