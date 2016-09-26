@@ -4,9 +4,6 @@ use warnings;
 
 use XML::Feed;
 use URI;
-use JSON::Parse;
-use Data::Dumper;
-use WWW::Shorten::Yourls;
 use XML::Simple;
 use LWP::Simple;
 use Term::ProgressBar;
@@ -37,6 +34,8 @@ foreach ( $feed->entries ) {
 
     $body =~ s/^.*?<p[^>]*?>//i;
     $body =~ s!</p>.*$!!is;
+    $body =~ s/<[^>]+>//igs; # Strip HTML
+    $body =~ s/[\r\n]/  /gs; # Strip newlines from whatever's left
     print $md "> $body\n\n";
 
     my $link = $_->link;
