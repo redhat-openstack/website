@@ -14,12 +14,7 @@
 
 Thanks for being part of the RDO community!
 
-## Community Updates 
-
-In case you missed it, here's a few highlights from rdo-list that you
-may have missed.
-
-### Upcoming Events 
+## Upcoming Events 
 
 There's several events on the horizon that you should be aware of.
 
@@ -30,23 +25,20 @@ an RDO-related event, please feel free to add it by submitting a pull
 request to
 https://github.com/rbowen/rh-events/blob/master/2016/RDO-Meetups.yml
 
-### Blog Posts
+## Mailing list catch-up
 
-### Packaging meetings 
+In case you missed it, here's a few highlights from rdo-list that you
+may have missed.
+
+## Blog Posts
+
+There's been some great blog posts in the last month. Here's a sampling:
+
+## Community meetings 
 
 Every Wednesday at 15:00 UTC, we have the weekly RDO community meeting
 on the #RDO channel on Freenode IRC. And at 15:00 UTC Thursdays, we
 have the CentOS Cloud SIG Meeting on #centos-devel.
-
-### Bug Statistics 
-
-Chandan Kumar has started posting weekly bug statistics summaries.
-These are great for tracking the progress of the project, and are also
-an excellent place to look if you're getting started and looking for
-something to start working on.
-
-You can see the latest of these messages at
-http://rdo.fosslists.org/thread.html/Zer5przzb89rhai
 
 ## Keep in touch 
 
