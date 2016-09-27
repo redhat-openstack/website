@@ -12,7 +12,6 @@ Upgrade each of your services, following the process described above.
 The following is a reasonable order in which to perform the upgrade:
 
 1. Keystone
-1. Cinder
 1. Glance
 1. Cinder
 1. Heat
