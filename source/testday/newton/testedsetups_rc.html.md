@@ -5,7 +5,7 @@ authors: rbowen
 
 # TestedSetups for Newton Release Candidate
 
-Tested Setups for [RDO test day Newton RC](/testday/newton/milestone_rc). 
+Tested Setups for [RDO test day Newton RC](/testday/newton/milestone/rc). 
 
 Some steps from the official Quickstart guide
 do not apply to Newton; make sure to follow the steps described in the
