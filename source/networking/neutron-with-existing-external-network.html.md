@@ -119,8 +119,6 @@ Finally, connect your new private network to the public network through the rout
 
 Easiest way to the network and to launch instances is via horizon, which was set up by packstack.
 
-You should now be able to follow the steps at [running an instance with Neutron](running an instance with Neutron) to launch an instance with external network access as admin, if you want other tenants you may need to create them manually.
-
 ## See also
 
 Watch this video for a demonstration of how to use DHCP on the bridge, including cloning the MAC address from eth0: <https://www.youtube.com/watch?v=8zFQG5mKwPk>
