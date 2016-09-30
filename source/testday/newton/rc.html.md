@@ -33,7 +33,8 @@ You'll want a fresh install with latest updates installed.
 ## How To Test
 
     yum -y install https://rdoproject.org/repos/openstack-newton/rdo-release-newton.rpm
-    
+
+* For Packstack make sure you set CONFIG_ENABLE_RDO_TESTING=y in your answer file, or that you use the –enable-rdo-testing=y command-line argument.
 * Check for any [workarounds](/testday/newton/workarounds_rc) required for your platform before the main installation
 * For Packstack based deployment start at step 2 of the [packstack Quickstart](/install/quickstart#Step_2:_Install_Packstack_Installer)
 * For a TripleO-based installs, try the [TripleO quickstart](https://www.rdoproject.org/tripleo/).
