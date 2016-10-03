@@ -1,4 +1,4 @@
-# _MONTH_ 2016 RDO Community Newsletter
+# October 2016 RDO Community Newsletter
 
 ## Quick links:
 
