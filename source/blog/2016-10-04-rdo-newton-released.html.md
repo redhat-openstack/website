@@ -9,7 +9,7 @@ comments: true
 The RDO community is pleased to announce the general availability of the RDO build for OpenStack Newton for RPM-based distributions - CentOS Linux 7 and Red Hat Enterprise Linux. RDO is suitable for building private, public, and hybrid clouds. Newton is the 14th release from the [OpenStack project](http://openstack.org), which is the work of more than 2700 contributors from around the world. 
 ([Source](http://stackalytics.com/))
 
-The [RDO community project](https://www.rdoproject.org/) curates, packages, builds, tests, and maintains a complete OpenStack component set for RHEL and CentOS Linux and is a member of the [CentOS Cloud Infrastructure SIG](https://wiki.centos.org/SpecialInterestGroup/Cloud). The Cloud Infrastructure SIG focuses on delivering a great user experience for CentOS Linux users looking to build and maintain their own on-premise, public or hybrid clouds. At latest count, RDO contains [1157 packages](https://da.gd/j1YZ).
+The [RDO community project](https://www.rdoproject.org/) curates, packages, builds, tests, and maintains a complete OpenStack component set for RHEL and CentOS Linux and is a member of the [CentOS Cloud Infrastructure SIG](https://wiki.centos.org/SpecialInterestGroup/Cloud). The Cloud Infrastructure SIG focuses on delivering a great user experience for CentOS Linux users looking to build and maintain their own on-premise, public or hybrid clouds. At latest count, RDO contains [1157 packages](https://www.rdoproject.org/documentation/package-list/).
 
 All work on RDO, and on the downstream release, Red Hat OpenStack Platform, is 100% open source, with all code changes going upstream first. 
 
