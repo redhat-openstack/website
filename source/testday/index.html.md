@@ -12,7 +12,6 @@ schedule](https://www.rdoproject.org/community/rdo-bugtriage/).
 
 The (tentative) test day schedule is:
 
-* [RC   - September 29, 30](/testday/newton/rc)
 * [Newton Final - October 13, 14](/testday/newton/final)
 * Ocata 1 - TBD
 

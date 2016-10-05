@@ -115,6 +115,6 @@ Various components which don't fit the large test efforts above.
 
 | Config Name | Release | BaseOS | Status | HOWTO | Who | Date | BZ/LP | Notes Page
 |----------------------------------------------------------------|------------------|-----------|----------------------------------------------|-----------------------------------------------------|--------|------------|--------------------------------------------------------------------|------------|
-| Post Installation | RDO Newton |  CentOS 7.1 |  | [[Post Installation Tests]]|  |  | None | 
+| Post Installation | RDO Newton |  CentOS 7.1 |  | [Post Installation Tests](/install/post-installation-tests/) |  |  | None | 
 
 
