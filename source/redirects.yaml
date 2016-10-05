@@ -210,7 +210,6 @@
   Newsletter: newsletter/newsletter
   Creating CentOS and Fedora images ready for Openstack: resources/creating-centos-and-fedora-images-ready-for-openstack
   GettingStartedIcehouse w GRE: networking/gettingstartedicehouse-w-gre
-  Deployment methods: install/deployment-methods
   Twitter: uncategorized/twitter
   Using ManageIQ on OpenStack: cloud-management/using-manageiq-on-openstack
   Juno previews: uncategorized/juno-previews
