@@ -1,0 +1,132 @@
+[[chap-upgrade-all-at-once]]
+## Upgrading OpenStack Services Simultaneously
+
+This scenario upgrades from Mitaka to Newton in environments that *do not use the director*. This procedure upgrades all services on all nodes. This involves the following workflow:
+
+1. Disabling all OpenStack services
+2. Performing a package upgrade
+3. Performing synchronization of all databases
+4. Enabling all OpenStack services
+
+### Disabling all OpenStack Services
+
+The first step to performing a complete upgrade of OpenStack on a node involves shutting down all Openstack services. This step differs based on whether the node OpenStack uses high availability tools for management (e.g. using Pacemaker on Controller nodes). This step contains instructions for both node types.
+
+.Standard Nodes
+
+Install the `openstack-utils` package on all standard nodes:
+
+```
+# yum install openstack-utils
+```
+
+Disable all OpenStack services on all standard nodes:
+
+```
+# openstack-service stop
+```
+
+.High Availability Nodes
+
+Disable all Pacemaker-managed resources by setting the `stop-all-resources` property on the cluster. Run the following on a single member of your Pacemaker cluster:
+
+```
+# pcs property set stop-all-resources=true
+```
+
+Wait until all resources have stopped. Run the `pcs status` command to see the status of each resources:
+
+```
+# pcs status
+```
+
+### Performing a Package Upgrade
+
+The next step upgrades all packages on a node. Perform this step on each node with OpenStack services.
+
+Install the Newton release repository.
+
+On RHEL:
+
+```
+# yum install -y https://www.rdoproject.org/repos/rdo-release.rpm
+```
+
+On CentOS:
+
+```
+# yum install -y centos-release-openstack-newton
+```
+
+Run the `yum update` command on the node:
+
+```
+# yum update
+```
+
+Wait until the package upgrade completes.
+
+Review the resulting configuration files. The upgraded packages will have installed `.rpmnew` files appropriate to the Newton version of the service. New versions of OpenStack services may deprecate certain configuration options. You should also review your OpenStack logs for any deprecation warnings, because these may cause problems during future upgrades. For more information on the new, updated and deprecated configuration options for each service, see Configuration Reference available from http://docs.openstack.org/newton/config-reference.
+
+Perform the package upgrade on each node in your environment.
+
+### Performing Synchronization of all Databases
+
+The next step upgrades the database for each service.
+
+[NOTE]
+====
+Flush expired tokens in the Identity service to decrease the time required to synchronize the database.
+
+```
+# keystone-manage token_flush
+```
+====
+
+Upgrade the database schema for each service that uses the database. Run the following commands on the node hosting the service's database.
+
+.Commands to Synchronize OpenStack Service Databases
+|===
+|Service |Project name |Command
+
+|Identity |keystone |`# su -s /bin/sh -c "keystone-manage db_sync" keystone`
+|Image Service |glance |`# su -s /bin/sh -c "glance-manage db_sync" glance`
+|Block Storage |cinder |`# su -s /bin/sh -c "cinder-manage db sync" cinder`
+|Orchestration |heat |`# su -s /bin/sh -c "heat-manage db_sync" heat`
+|Compute |nova |
+`# su -s /bin/sh -c "nova-manage api_db sync" nova`
+
+`# su -s /bin/sh -c "nova-manage db sync" nova`
+|Telemetry |ceilometer |`# ceilometer-dbsync`
+|Networking |neutron |`# su -s /bin/sh -c "neutron-db-manage upgrade heads" neutron`
+|===
+
+### Enabling all OpenStack Services
+
+The final step enables the OpenStack services on the node. This step differs based on whether the node OpenStack uses high availability tools for management. For example, using Pacemaker on Controller nodes. This step contains instructions for both node types.
+
+.Standard Nodes
+
+Restart all OpenStack services:
+
+```
+# openstack-service start
+```
+
+.High Availability Nodes
+
+Restart your resources through Pacemaker. Reset the `stop-all-resources` property on a single member of your Pacemaker cluster. For example:
+
+```
+# pcs property set stop-all-resources=false
+```
+
+Wait until all resources have restarted. Run the `pcs status` command to see the status of each resources:
+
+```
+# pcs status
+```
+
+### Post-Upgrade Notes
+
+New versions of OpenStack services may deprecate certain configuration options. You should also review your OpenStack logs for any deprecation warnings, because these may cause problems during a future upgrade. For more information on the new, updated and deprecated configuration options for each service , see Configuration Reference available from http://docs.openstack.org/newton/config-reference.
