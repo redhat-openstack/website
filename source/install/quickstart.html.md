@@ -17,7 +17,7 @@ Packstack is an installation utility that lets you spin up a proof of concept cl
 
 * If you just want to try out OpenStack without installing anything, check out [TryStack](http://trystack.org).
 
-This document describes installing the current **Mitaka** release.
+This document describes installing the current **Newton** release.
 
 ## Summary for the impatient
 
@@ -40,7 +40,7 @@ If your system meets all the prerequisites mentioned below, proceed with running
 * On CentOS:
 
   ```
-  $ sudo yum install -y centos-release-openstack-mitaka
+  $ sudo yum install -y centos-release-openstack-newton
   $ sudo yum update -y
   $ sudo yum install -y openstack-packstack
   $ packstack --allinone
