@@ -12,16 +12,15 @@ schedule](https://www.rdoproject.org/community/rdo-bugtriage/).
 
 The (tentative) test day schedule is:
 
-* [Newton Final - October 13, 14](/testday/newton/final)
-* Ocata 1 - TBD
+* [Newton Final &ndash; October 13, 14](/testday/newton/final)
+* Ocata 1 &ndash; TBD
 
 ## Test, every day
 
 Of course, you don't have to wait for a scheduled test day to test RDO.
-We would love to hear about your experiences, with either a [packstack
+We would love to hear about your experiences, with either a [Packstack
 installation](/install/quickstart) or the [TripleO
 Quickstart](/tripleo).
-
 
 ## Past test days, stats and tickets
 
@@ -36,7 +35,4 @@ Quickstart](/tripleo).
 | Mitaka 1  | Dec 10-11, 2015 | 9 | 44 participants, 795 messages  | [Tickets](https://goo.gl/51Dz97) |
 | Liberty 2 | Oct 12-13 | 23 | 42 participants, 1074 messages | [Tickets](https://goo.gl/D6VeQ0) |
 | Liberty 1 | Sep 23-24 | 17 |  | [Tickets](https://goo.gl/OIPNt3) |
-
-
-
 
