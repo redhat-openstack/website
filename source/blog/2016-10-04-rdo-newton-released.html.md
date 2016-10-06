@@ -2,7 +2,7 @@
 title: RDO Newton Released
 author: rbowen
 date: 2016-10-04 16:37:34 UTC
-published: false
+published: true
 comments: true
 ---
 
