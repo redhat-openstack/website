@@ -40,7 +40,7 @@ If your system meets all the prerequisites mentioned below, proceed with running
 * On CentOS:
 
   ```
-  $ sudo yum install -y centos-release-openstack-mitaka
+  $ sudo yum install -y centos-release-openstack-newton
   $ sudo yum update -y
   $ sudo yum install -y openstack-packstack
   $ packstack --allinone
