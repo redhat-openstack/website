@@ -17,7 +17,7 @@ RDO is two things. It's a freely-available, community-supported distribution of 
 
 In addition to providing a set of software packages, RDO is also a community of users of cloud computing platform on Red Hat-based operating systems to get help and compare notes on running OpenStack.
 
-RDO aims to be the natural option for anyone that wants to run the most recently released version of OpenStack on supported systems. Whether you are interested in running OpenStack on RHEL in a production environment, or doing a proof-of-concept deployment on CentOS, RDO is for you.
+RDO aims to be the natural option for anyone that wants to run the most recently released version of OpenStack on supported systems. Whether you are interested in running OpenStack on RHEL in a production environment, or doing a proof of concept deployment on CentOS, RDO is for you.
 
 ## What does RDO stand for?
 

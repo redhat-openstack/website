@@ -6,8 +6,7 @@ published: true
 comments: true
 ---
 
-The RDO community is pleased to announce the general availability of the RDO build for OpenStack Newton for RPM-based distributions - CentOS Linux 7 and Red Hat Enterprise Linux. RDO is suitable for building private, public, and hybrid clouds. Newton is the 14th release from the [OpenStack project](http://openstack.org), which is the work of more than 2700 contributors from around the world. 
-([Source](http://stackalytics.com/))
+The RDO community is pleased to announce the general availability of the RDO build for OpenStack Newton for RPM-based distributions, CentOS Linux 7 and Red Hat Enterprise Linux. RDO is suitable for building private, public, and hybrid clouds. Newton is the 14th release from the [OpenStack project](http://openstack.org), which is the work of more than 2700 contributors from around the world ([source](http://stackalytics.com/)).
 
 The [RDO community project](https://www.rdoproject.org/) curates, packages, builds, tests, and maintains a complete OpenStack component set for RHEL and CentOS Linux and is a member of the [CentOS Cloud Infrastructure SIG](https://wiki.centos.org/SpecialInterestGroup/Cloud). The Cloud Infrastructure SIG focuses on delivering a great user experience for CentOS Linux users looking to build and maintain their own on-premise, public or hybrid clouds. At latest count, RDO contains [1157 packages](https://www.rdoproject.org/documentation/package-list/).
 
@@ -18,7 +17,7 @@ All work on RDO, and on the downstream release, Red Hat OpenStack Platform, is 1
 
 There are three ways to get started with RDO.
 
-To spin up a proof of concept cloud, quickly, and on limited hardware, try the [RDO QuickStart](http://rdoproject.org/Quickstart)  You can run RDO on a single node to get a feel for how it works.
+To spin up a proof of concept cloud, quickly, and on limited hardware, try the [All-In-One Quickstart](http://rdoproject.org/Quickstart). You can run RDO on a single node to get a feel for how it works.
 
 For a production deployment of RDO, use the [TripleO Quickstart](https://www.rdoproject.org/tripleo/) and you'll be running a production cloud in short order.
 
@@ -27,11 +26,11 @@ Finally, if you want to try out OpenStack, but don't have the time or hardware t
 
 **Getting Help**
     
-The RDO Project participates in a Q&A service at [ask.openstack.org](http://ask.openstack.org), for more developer oriented content we recommend joining the [rdo-list mailing list](https://www.redhat.com/mailman/listinfo/rdo-list). Remember to post a brief introduction about yourself and your RDO story. You can also find extensive documentation on the [RDO docs site](https://www.rdoproject.org/documentation).
+The RDO Project participates in a Q&A service at [ask.openstack.org](http://ask.openstack.org), for more developer-oriented content we recommend joining the [rdo-list mailing list](https://www.redhat.com/mailman/listinfo/rdo-list). Remember to post a brief introduction about yourself and your RDO story. You can also find extensive documentation on the [RDO docs site](https://www.rdoproject.org/documentation).
 
 The #rdo channel on Freenode IRC is also an excellent place to find help and give help.
 
-We also welcome comments and requests on the [CentOS Mailing lists](https://lists.centos.org/) and the CentOS IRC Channels (#centos, and #centos-devel, on irc.freenode.net), however we have a more focused audience in the RDO venues.
+We also welcome comments and requests on the [CentOS mailing lists](https://lists.centos.org/) and the CentOS and TripleO IRC channels (#centos, #centos-devel, and #tripleo on irc.freenode.net), however we have a more focused audience in the RDO venues.
 
 
 **Getting Involved**
