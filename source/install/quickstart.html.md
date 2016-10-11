@@ -86,7 +86,7 @@ $ sudo yum install -y https://rdoproject.org/repos/rdo-release.rpm
 On CentOS, the `Extras` repository provides the RPM that enables the OpenStack repository. `Extras` is enabled by default on CentOS 7, so you can simply install the RPM to set up the OpenStack repository:
 
 ```
-$ sudo yum install -y centos-release-openstack-mitaka
+$ sudo yum install -y centos-release-openstack-newton
 ```
 
 Update your current packages:
