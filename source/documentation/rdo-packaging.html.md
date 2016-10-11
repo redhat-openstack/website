@@ -176,7 +176,7 @@ Bugs are tracked as
 
 Poke `jruzicka` on `#rdo` for help/hate/suggestions about `rdopkg`.
 
-See also [man rdopkg](https://www.rdoproject.org/packaging/rdopkg/rdopkg.1.html).
+See also [man rdopkg](https://github.com/openstack-packages/rdopkg/blob/master/doc/rdopkg.1.adoc).
 
 
 <a id="rdoinfo"></a>

@@ -18,8 +18,8 @@ For an initial test deployment, follow the [Packstack quickstart](/install/quick
 <div class="split-third with-more">
 ### Installation
 
-*   [TripleO quickstart &ndash; production deployment, with HA](/tripleo)
-*   [Packstack quickstart &ndash; proof of concept for single node](/install/quickstart)
+*   [TripleO quickstart](/tripleo) &ndash; production deployment, with HA
+*   [Packstack quickstart](/install/quickstart) &ndash; proof of concept for single node
 *   [More information on Packstack](Packstack_cookbook)
 *   [Repositories](Repositories)
 </div>
@@ -27,7 +27,7 @@ For an initial test deployment, follow the [Packstack quickstart](/install/quick
 <div class="split-third with-more">
 ### Upgrade and uninstallation
 
-*   [Upgrading RDO &ndash; primarily for manual and Packstack-based deployments](upgrading-rdo)
+*   [Upgrading RDO](upgrading-rdo) &ndash; primarily for manual deployments
 *   [Uninstalling RDO](Uninstalling RDO)
 </div>
 
