@@ -35,7 +35,8 @@ You'll want a fresh install with latest updates installed.
     $ sudo yum -y install https://rdoproject.org/repos/openstack-newton/rdo-release-newton.rpm
 
 * Check for any [known workarounds](https://etherpad.openstack.org/p/rdo-newton-ga-testday-workarounds) required for your platform before the main installation.
-* For Packstack make sure you set `CONFIG_ENABLE_RDO_TESTING=y` in your answer file, or that you use the `--enable-rdo-testing=y` command-line argument.
+
+[//]: # * For Packstack make sure you set `CONFIG_ENABLE_RDO_TESTING=y` in your answer file, or that you use the `--enable-rdo-testing=y` command-line argument.
 
 ### Using the Packstack installer
 
@@ -53,9 +54,13 @@ Assuming you have a VM running [CentOS 7](https://www.centos.org/download/) or [
 
        $ sudo yum install -y openstack-packstack
 
-4. Run Packstack by enabling the RDO GA testing repo:
+4. Run the Packstack installer:
 
-       $ packstack --enable-rdo-testing=y --allinone
+       $ packstack --allinone
+
+[//]: # 4. Run the Packstack installer by enabling the RDO testing repo:
+
+[//]: #        $ packstack --enable-rdo-testing=y --allinone
 
 For additional information, see the [Packstack quickstart](/install/quickstart#Step_2:_Install_Packstack_Installer).
 
