@@ -3,8 +3,8 @@ title: RDO blog posts this week
 author: rbowen
 date: 2016-10-11 19:10:53 UTC
 tags: openstack,rdo,blog
-published: false
 comments: true
+published: true
 ---
 
 Here's what RDO enthusiasts have been blogging about in the last few days.
