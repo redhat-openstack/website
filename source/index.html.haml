@@ -66,33 +66,47 @@ hide_metadata: true
     .row
       .col-md-4
         .block-heading
-          %h2 The sandbox
+          %h2 Try it
  
           %p.lead
-            The easiest way to try out OpenStack.
+            Try out OpenStack in one of three ways.
             %a( href="http://trystack.org" ) TryStack.org
             lets you try OpenStack with your own applications in our
-            sandbox environment.
+            sandbox environment. Spin up an all-in-one concept cloud
+            with the 
+            %a( href="/install/quickstart" ) All-In-One Quickstart.
+            Deploy a production cloud with the
+            =link_to("TripleO Quickstart.", "/tripleo")
 
       .col-md-4
         .block-heading
-          %h2 Proof of concept
+          %h2 Join the conversation
+          %p.lead
+            The conversation happens several places: On the
+            =link_to("mailing lists", "/community/mailing-lists")
+            on #RDO on the Freenode IRC network,
+            and on
+            =link_to("ask.openstack.org", "http://ask.openstack.org")
+
+      .col-md-4
+        .block-heading
+          %h2 Hack on it
 
           %p.lead
-            To spin up a proof of concept cloud on a single computer or 
-            a virtual machine, follow the
-            %a( href="/install/quickstart/" ) All-In-One Quickstart
-            instructions.
+            Help out with 
+            %a( href="/documentation/rdo-packaging/") packaging
+            one of the OpenStack projects.
+          %p.lead
+            Tackle one of the
+            =link_to("open issues", "http://tm3.org/rdobugs")
+            or
+            %a( href="http://review.rdoproject.org") review
+            a pending changeset.
+          %p.lead
+            Check out the
+            =link_to("current status", "http://dashboards.rdoproject.org")
+            of the project.
                         
-      .col-md-4
-        .block-heading
-          %h2 Production ready
-          %p.lead
-            If you want to create a production-ready cloud, you'll want to
-            use the 
-            =link_to("TripleO Quickstart", "/tripleo")
-            guide.
-
     .row
       .col-md-6
         .block-heading
