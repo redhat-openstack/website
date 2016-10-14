@@ -18,6 +18,32 @@ A frequent request is: how can I install and configure a small OpenStack cloud f
 
 This page is for community hardware recommendations - if you have a home lab you're happy with, list hardware specs here and share prices.
 
+### David Moreau Simard's home lab
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">What does your home <a
+href="https://twitter.com/hashtag/OpenStack?src=hash">#OpenStack</a> lab
+look like? I'll start. <a
+href="https://t.co/QvPxAmtbqt">pic.twitter.com/QvPxAmtbqt</a></p>&mdash;
+David Moreau Simard (@dmsimard) <a href="https://twitter.com/dmsimard/status/778646409293733888">September 21, 2016</a>
+</blockquote>
+
+### Javier Pena's home lab
+
+**Creating a home OpenStack lab with RDO and a couple spare laptops**
+
+Since part of my daily job is related to maintaining the Packstack
+codebase, I routinely run OpenStack installations every day… in a single
+VM, in my laptop, just to delete them a couple hours later. But
+sometimes I need to test some script or code over a live OpenStack
+installation, and I’d like to have a more stable environment to play
+with. Sure, there are public environments like TryStack, but I had a
+couple old laptops lying around, so why not play with them?
+
+![environment](http://www.jpena.net/wp-content/uploads/2016/02/2nodesetup-1.png)
+
+... Read the rest [here](http://www.jpena.net/?p=31).
+
+
 ### Micro-ATX hosts
 
 *Credit: Kodiak Firesmith*
@@ -73,4 +99,5 @@ Several people have suggested Gen8 or N54L HP Proliant servers.
 *   4 drive bays allow for lots of (potentially noisy) storage. 8 drive possible in 2.5".
 *   Start at about $180 (more if you want more RAM)
 
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 <Category:Hardware>
