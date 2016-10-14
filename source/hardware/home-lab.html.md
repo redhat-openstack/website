@@ -8,15 +8,17 @@ wiki_revision_count: 12
 wiki_last_updated: 2015-03-09
 ---
 
-# Home lab
+# What are you running at home?
 
 {:.no_toc}
 
-## Hardware for a home lab
+Want to run a small OpenStack cloud for personal use, with
+whatever old hardware you have laying around? Here's some
+recommendations and examples of what we're running RDO on at home.
 
-A frequent request is: how can I install and configure a small OpenStack cloud for personal use, with cheap, quiet PCs I can keep in a home office. A typical hardware configuration would be three or more hosts, with one host serving as control node, and the others as compute nodes.
+Are you running RDO at home? [Tell us about
+it](mailto:rbowen@redhat.com) and we'll add you to the list.
 
-This page is for community hardware recommendations - if you have a home lab you're happy with, list hardware specs here and share prices.
 
 ### David Moreau Simard's home lab
 
