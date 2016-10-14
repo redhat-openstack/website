@@ -108,7 +108,7 @@ $ sudo yum install -y openstack-packstack
 Packstack takes the work out of manually setting up OpenStack. For a single node OpenStack deployment, run the following command:
 
 ```
-$ packstack --allinone
+$ sudo packstack --allinone
 ```
   
 If you encounter failures, see the [Workarounds](Workarounds) page for tips.
