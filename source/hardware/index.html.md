@@ -5,5 +5,5 @@ RDO.
 
 * [Recommended hardware for production RDO deployment](-----) (Someone
   needs to write this)
-* [Hardware for a home lab](hardware/home-lab)
+* [Hardware for a home lab](/hardware/home-lab)
 
