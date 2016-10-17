@@ -3,8 +3,8 @@ title: Next week in Barcelona
 author: rbowen
 date: 2016-10-17 14:27:38 UTC
 tags: openstack, openstacksummit, redhat
-published: false
 comments: true
+published: true
 ---
 
 Join us next week in Barcelona for [OpenStack Summit](https://www.openstack.org/summit). We'll be gathering from around the world to celebrate the Newton release, and plan for the Ocata cycle.
