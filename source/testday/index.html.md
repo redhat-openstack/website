@@ -12,7 +12,6 @@ schedule](https://www.rdoproject.org/community/rdo-bugtriage/).
 
 The (tentative) test day schedule is:
 
-* [Newton Final &ndash; October 13, 14](/testday/newton/final)
 * Ocata 1 &ndash; TBD
 
 ## Test, every day
@@ -26,6 +25,7 @@ Quickstart](/tripleo).
 
 | Milestone | Date | Tickets opened | IRC participation | URL(s) |
 |-----------|------|----------------|-------------------|--------|
+| Newton GA | October 13-14 | 4 | 53 participants, 1680 messages | [Tickets](https://bugzilla.redhat.com/buglist.cgi?bug_status=NEW&bug_status=ASSIGNED&bug_status=POST&bug_status=MODIFIED&bug_status=ON_DEV&bug_status=ON_QA&bug_status=VERIFIED&bug_status=RELEASE_PENDING&chfield=%5BBug%20creation%5D&chfieldfrom=2016-10-12&chfieldto=2016-10-15&classification=Community&list_id=4344410&product=RDO&query_format=advanced)  |
 | Newton RC | September 29-30 | 1 | 44 participants , 828 messages | [Tickets](https://bugzilla.redhat.com/buglist.cgi?bug_status=NEW&bug_status=ASSIGNED&bug_status=POST&bug_status=MODIFIED&bug_status=ON_DEV&bug_status=ON_QA&bug_status=VERIFIED&bug_status=RELEASE_PENDING&chfield=%5BBug%20creation%5D&chfieldfrom=2016-09-28&chfieldto=2016-10-01&classification=Community&list_id=4344410&product=RDO&query_format=advanced)  |
 | Newton 3  | September 8-9 | 5 | 38 participants, 1088 messages | [Tickets](https://bugzilla.redhat.com/buglist.cgi?bug_status=NEW&bug_status=ASSIGNED&bug_status=POST&bug_status=MODIFIED&bug_status=ON_DEV&bug_status=ON_QA&bug_status=VERIFIED&bug_status=RELEASE_PENDING&chfield=%5BBug%20creation%5D&chfieldfrom=2016-09-07&chfieldto=2016-09-10&classification=Community&list_id=4344410&product=RDO&query_format=advanced)  |
 | Newton 2  | July 28-29 | 2 | | [Tickets](https://bugzilla.redhat.com/buglist.cgi?bug_status=NEW&bug_status=ASSIGNED&bug_status=POST&bug_status=MODIFIED&bug_status=ON_DEV&bug_status=ON_QA&bug_status=VERIFIED&bug_status=RELEASE_PENDING&chfield=%5BBug%20creation%5D&chfieldfrom=2016-07-27&chfieldto=2016-07-30&classification=Community&list_id=4344410&product=RDO&query_format=advanced) |
