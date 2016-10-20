@@ -32,9 +32,9 @@ Roll out a vm of [CentOS 7](https://www.centos.org/download/), Follow these step
 
 	    # yum install -y openstack-packstack
 
-4. Run packstack by enabling RDO GA testing repo:
+4. Run packstack to deploy OpenStack Newton release:
 
-	    # packstack --enable-rdo-testing=y --allinone
+	    # packstack --allinone
 
    Once packstack installation is done, we are good to go ahead.
 
@@ -58,11 +58,26 @@ Roll out a vm of [CentOS 7](https://www.centos.org/download/), Follow these step
 	      python-neutron-tests python-cinder-tests python-nova-tests python-swift-tests \
 	      python-ceilometer-tests python-gnocchi-tests python-aodh-tests
 
+	OR you can automatically install the required tempest plugins of the configured services on the environment.
+
+	    # python /usr/share/openstack-tempest-*/tools/install_test_packages.py
+
 3. To find what are tempest plugins installed:
 
 	    # tempest list-plugins
 
    Once done, you are ready to run tempest.
+
+   If you face any entry point issues while running tempest, you can debug using [entry_point_inspector](https://pypi.python.org/pypi/entry_point_inspector) tool
+   Install entry_point_inspector from epel.repo.
+
+            # yum install epel-release
+
+            # yum install python-epi
+
+   Run epi command to show the entry points of tempest plugins:
+
+	    # epi group show tempest.test_plugins
 
 **Configuring and Running tempest**
 
