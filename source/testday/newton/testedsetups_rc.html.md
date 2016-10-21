@@ -5,11 +5,11 @@ authors: rbowen
 
 # TestedSetups for Newton Release Candidate
 
-Tested Setups for [RDO test day Newton RC](/testday/newton/milestone/rc). 
+Tested Setups for [RDO test day Newton RC](/testday/newton/rc). 
 
 Some steps from the official Quickstart guide
 do not apply to Newton; make sure to follow the steps described in the
-[How To Test](/testday/newton/milestone_rc#how-to-test) page instead.
+[How To Test](/testday/newton/rc#how-to-test) page instead.
 
 For convenience, during the test day, please feel free to use [the test
 day etherpad](https://etherpad.openstack.org/p/rdo-test-days-newton-rc),
@@ -31,7 +31,7 @@ Here's how you might fill out an entry once you've tested it. Mark a given test 
 
 ## Packstack Based Installation (Neutron Networking)
 
-Please make sure to use the steps described in the [How To Test](/testday/newton/milestone1#how-to-test)  when installing the base RDO system. Do not go through the Quickstart steps unmodified which will instead give you an RDO kilo deployment. 
+Please make sure to use the steps described in the [How To Test](/testday/newton/rc#how-to-test)  when installing the base RDO system. Do not go through the Quickstart steps unmodified which will instead give you an RDO kilo deployment. 
 
 | Config Name | Release | BaseOS | Status | HOWTO | Who | Date | BZ/LP | Notes Page
 |----------------------------------------------------------------|------------------|-----------|----------------------------------------------|-----------------------------------------------------|--------|------------|--------------------------------------------------------------------|------------|
@@ -56,7 +56,7 @@ Please make sure to use the steps described in the [How To Test](/testday/newton
 
 ## Packstack Based Installation (Storage Components)
 
-Please see [Docs - Storage](/documentation/storage) for configuration guides as well as suggestions on what could be tested for both Cinder and Glance and make sure to use the steps described in the [How To Test](testday/newton/milestone1#how-to-test) page when installing the base RDO system. '''Do not''' go through the Quickstart steps unmodified which will instead give you an RDO Mitaka deployment.
+Please see [Docs - Storage](/documentation/storage) for configuration guides as well as suggestions on what could be tested for both Cinder and Glance and make sure to use the steps described in the [How To Test](testday/newton/rc#how-to-test) page when installing the base RDO system. '''Do not''' go through the Quickstart steps unmodified which will instead give you an RDO Mitaka deployment.
 
 | Config Name | Release | BaseOS | Status | HOWTO | Who | Date | BZ/LP | Notes Page
 |----------------------------------------------------------------|------------------|-----------|----------------------------------------------|-----------------------------------------------------|--------|------------|--------------------------------------------------------------------|------------|
@@ -115,6 +115,6 @@ Various components which don't fit the large test efforts above.
 
 | Config Name | Release | BaseOS | Status | HOWTO | Who | Date | BZ/LP | Notes Page
 |----------------------------------------------------------------|------------------|-----------|----------------------------------------------|-----------------------------------------------------|--------|------------|--------------------------------------------------------------------|------------|
-| Post Installation | RDO Newton |  CentOS 7.1 |  | [[Post Installation Tests]]|  |  | None | 
+| Post Installation | RDO Newton |  CentOS 7.1 |  | [Post Installation Tests](/install/post-installation-tests/) |  |  | None | 
 
 

@@ -84,7 +84,7 @@ We can always use your feedback and contributions to make RDO better.
 
 ### Packaging
 
-Get started by looking at the [RDO Packaging documentation](https://www.rdoproject.org/documentation/packaging/), taking a glance at our [packages](https://github.com/rdo-packages) and help with [patch reviews](https://review.rdoproject.org/r/#/q/status:open+project:%255Eopenstack.*,n,z).
+Get started by looking at the [RDO packaging documentation](/documentation/rdo-packaging), taking a glance at our [packages](https://github.com/rdo-packages) and help with [patch reviews](https://review.rdoproject.org/r/#/q/status:open+project:%255Eopenstack.*,n,z).
 
 ### Installers
 

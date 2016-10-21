@@ -9,15 +9,15 @@ wiki_revision_count: 141
 wiki_last_updated: 2015-06-30
 ---
 
-# Packstack quickstart: Proof of concept for single node
+# All-in-one quickstart: Proof of concept for single node
 
-Packstack is an installation utility that lets you spin up a proof of concept cloud on one node. You will be able to [add more nodes](Adding_a_compute_node) to your OpenStack cloud later, if you choose.
+This document shows how to spin up a proof of concept cloud on one node, using the Packstack installation utility. You will be able to [add more nodes](Adding_a_compute_node) to your OpenStack cloud later, if you choose.
 
 * If you are looking for instructions on how to deploy a production-ready cloud, possibly with HA, see the [TripleO quickstart](/tripleo).
 
 * If you just want to try out OpenStack without installing anything, check out [TryStack](http://trystack.org).
 
-This document describes installing the current **Mitaka** release.
+The instructions apply to the current **Newton** release.
 
 ## Summary for the impatient
 
@@ -40,7 +40,7 @@ If your system meets all the prerequisites mentioned below, proceed with running
 * On CentOS:
 
   ```
-  $ sudo yum install -y centos-release-openstack-mitaka
+  $ sudo yum install -y centos-release-openstack-newton
   $ sudo yum update -y
   $ sudo yum install -y openstack-packstack
   $ packstack --allinone
@@ -86,7 +86,7 @@ $ sudo yum install -y https://rdoproject.org/repos/rdo-release.rpm
 On CentOS, the `Extras` repository provides the RPM that enables the OpenStack repository. `Extras` is enabled by default on CentOS 7, so you can simply install the RPM to set up the OpenStack repository:
 
 ```
-$ sudo yum install -y centos-release-openstack-mitaka
+$ sudo yum install -y centos-release-openstack-newton
 ```
 
 Update your current packages:
@@ -108,7 +108,7 @@ $ sudo yum install -y openstack-packstack
 Packstack takes the work out of manually setting up OpenStack. For a single node OpenStack deployment, run the following command:
 
 ```
-$ packstack --allinone
+$ sudo packstack --allinone
 ```
   
 If you encounter failures, see the [Workarounds](Workarounds) page for tips.
