@@ -1,7 +1,7 @@
 [[chap-upgrade-all-at-once]]
 ## Upgrading OpenStack Services Simultaneously
 
-This scenario upgrades from Mitaka to Newton in environments that *do not use the director*. This procedure upgrades all services on all nodes. This involves the following workflow:
+This scenario upgrades from Mitaka to Newton in environments that *do not use TripleO*. This procedure upgrades all services on all nodes. This involves the following workflow:
 
 1. Disabling all OpenStack services
 2. Performing a package upgrade
@@ -14,7 +14,7 @@ The first step to performing a complete upgrade of OpenStack on a node involves 
 
 .Standard Nodes
 
-Install the `openstack-utils` package on all standard nodes:
+Install the `openstack-utils` package on all standard nodes to be able to manage services with the `openstack-service` command:
 
 ```
 # yum install openstack-utils
@@ -28,17 +28,28 @@ Disable all OpenStack services on all standard nodes:
 
 .High Availability Nodes
 
-Disable all Pacemaker-managed resources by setting the `stop-all-resources` property on the cluster. Run the following on a single member of your Pacemaker cluster:
+You need to disable all OpenStack services but leave the database and load balancing services active. For example, switch the HAProxy, Galera, and MongoDB services to unmanaged in Pacemaker:
+
+```
+# pcs resource unmanage haproxy
+# pcs resource unmanage galera
+# pcs resource unmanage mongod
+```
+
+Disable the remaining Pacemaker-managed resources by setting the `stop-all-resources` property on the cluster. Run the following on a single member of your Pacemaker cluster:
 
 ```
 # pcs property set stop-all-resources=true
 ```
 
-Wait until all resources have stopped. Run the `pcs status` command to see the status of each resources:
+Wait until all Pacemaker-managed resources have stopped. Run the `pcs status` command to see the status of each resource.
 
 ```
 # pcs status
 ```
+
+[IMPORTANT]
+HAProxy might show a broadcast message for unavailable services. This is normal behavior.
 
 ### Performing a Package Upgrade
 
@@ -56,6 +67,12 @@ On CentOS:
 
 ```
 # yum install -y centos-release-openstack-newton
+```
+
+Make sure that any previous release repositories are disabled. For example:
+
+```
+# yum-config-manager --disable centos-release-openstack-mitaka
 ```
 
 Run the `yum update` command on the node:
@@ -121,10 +138,18 @@ Restart your resources through Pacemaker. Reset the `stop-all-resources` propert
 # pcs property set stop-all-resources=false
 ```
 
-Wait until all resources have restarted. Run the `pcs status` command to see the status of each resources:
+Wait until all resources have started. Run the `pcs status` command to see the status of each resource:
 
 ```
 # pcs status
+```
+
+Enable Pacemaker management for any unmanaged resources, such as the databases and load balancer:
+
+```
+# pcs resource manage haproxy
+# pcs resource manage galera
+# pcs resource manage mongod
 ```
 
 ### Post-Upgrade Notes

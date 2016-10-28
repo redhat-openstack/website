@@ -1,7 +1,7 @@
 [[section_upgrade-one-by-one-HA]]
 ## Upgrading Individual OpenStack Services (Live Compute) in a High Availability Environment
 
-This chapter describes the steps you should follow to upgrade your cloud deployment by updating one service at a time with live compute in a High Availability (HA) environment. This scenario upgrades from Mitaka to Newton in environments that *do not use the director*.
+This chapter describes the steps you should follow to upgrade your cloud deployment by updating one service at a time with live compute in a High Availability (HA) environment. This scenario upgrades from Mitaka to Newton in environments that *do not use TripleO*.
 
 A live Compute upgrade minimizes interruptions to your Compute service, with only a few minutes for the smaller services, and a longer migration interval for the workloads moving to newly-upgraded Compute hosts. Existing workloads can run indefinitely, and you do not need to wait for a database migration.
 
@@ -27,7 +27,13 @@ On CentOS:
 # yum install -y centos-release-openstack-newton
 ```
 
-Install the `openstack-utils` package:
+Make sure that any previous release repositories are disabled. For example:
+
+```
+# yum-config-manager --disable centos-release-openstack-mitaka
+```
+
+Install the `openstack-utils` package to be able to manage services with the `openstack-service` command and use the `crudini` tool:
 
 ```
 # yum install openstack-utils
