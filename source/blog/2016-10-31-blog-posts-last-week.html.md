@@ -6,6 +6,8 @@ comments: true
 published: true
 ---
 
+With OpenStack Summit last week, we have a lot of summit-focused blog posts today, and expect more to come in the next few days.
+
 **Attending OpenStack Summit Ocata** by Julien Danjou
 
 >   For the last time in 2016, I flew out to the OpenStack Summit in Barcelona, where I had the chance to meet (again) a lot of my fellow OpenStack contributors there.
