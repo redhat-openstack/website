@@ -20,12 +20,11 @@ There's several events on the horizon that you should be aware of.
 
 
 Other RDO events, including the many OpenStack meetups around the
-world, are always listed at http://rdoproject.org/events  If you have
-an RDO-related event, please feel free to add it by submitting a pull
-request to
-https://github.com/rbowen/rh-events/blob/master/2016/RDO-Meetups.yml
+world, are always listed on the [RDO events page](http://rdoproject.org/events).
+If you have an RDO-related event, please feel free to add it by submitting a pull
+request [on Github](https://github.com/OSAS/rh-events/blob/master/2016/RDO-Meetups.yml).
 
-## Mailing list catch-up
+### Mailing list catch-up
 
 In case you missed it, here's a few highlights from rdo-list that you
 may have missed.
