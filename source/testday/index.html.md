@@ -2,7 +2,7 @@
 
 Test days are help roughly every month, on the week after an upstream
 milestone. See the [release
-schedule](http://releases.openstack.org/newton/schedule.html) for when
+schedule](http://releases.openstack.org/ocata/schedule.html) for when
 those milestones occur.
 
 See also the [bug triage
@@ -12,10 +12,9 @@ schedule](https://www.rdoproject.org/community/rdo-bugtriage/).
 
 The (tentative) test day schedule is:
 
-* Ocata 1 &ndash; November 24, 25, 2016
-* Ocata 2 &ndash; December 22, 23, 2016
-* Ocata 3 &ndash; February 2, 3, 2017
-* Ocata Final &ndash; March 2, 3, 2017
+* Ocata 1 &ndash; December 1st and 2nd, 2016
+* Ocata 3 &ndash; February 2nd and 3rd, 2017
+* Ocata Final &ndash; March 2nd and 3rd, 2017
 
 ## Test, every day
 
