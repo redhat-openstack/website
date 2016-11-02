@@ -2,7 +2,7 @@
 
 Test days are help roughly every month, on the week after an upstream
 milestone. See the [release
-schedule](http://releases.openstack.org/newton/schedule.html) for when
+schedule](http://releases.openstack.org/ocata/schedule.html) for when
 those milestones occur.
 
 See also the [bug triage
