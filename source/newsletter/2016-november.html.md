@@ -44,6 +44,7 @@ experience. Here's some of the event recaps from our community:
 
 * [Attending OpenStack Summit Ocata](https://julien.danjou.info/blog/2016/openstack-summit-ocata-barcelona-review)
 * [OpenStack Summit, Barcelona: 2 of N](http://drbacchus.com/openstack-summit-barcelona-2-of-n/)
+* [What you missed at OpenStack Summit](https://www.mirantis.com/blog/what-you-missed-at-openstack-barcelona/)
 
 Two highlights of OpenStack Summit for the RDO community were 
 the RDO Infrastructure meeting, and the Evening with RDO and Ceph.

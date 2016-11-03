@@ -18,3 +18,5 @@ A huge thank you to all of the speakers, and to all of the people who turned out
 [![pool](http://rdoproject.org/images/pool.jpg)](https://www.flickr.com/photos/rbowen/albums/72157675620637236)
 
 More photos [HERE](https://www.flickr.com/photos/rbowen/albums/72157675620637236).
+
+Some of the presentations from the event are available [HERE]( /events/ceph-rdo-barcelona)

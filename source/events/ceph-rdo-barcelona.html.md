@@ -11,3 +11,6 @@ Here are some of the presentations from that event:
 * [Alfredo Moralejo - Testing in RDO](http://www.slideshare.net/amoralej/rdo-and-ceph-meetup-bcn-testing-in-rdo)
 * [Gulio Fidente - Ceph, TripleO and the Newton release](http://giuliofidente.com/2016/08/ceph-tripleo-and-the-newton-release.html)
 
+You can see some photos from the event [on
+Flickr](https://www.flickr.com/photos/rbowen/sets/72157675620637236).
+
