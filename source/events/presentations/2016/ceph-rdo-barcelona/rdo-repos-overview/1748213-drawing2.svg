@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+
+<svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="svg8" version="1.1" viewBox="0 0 1920 1200" height="1200" width="1920">
+  <defs id="defs2">
+    <pattern patternTransform="translate(-1327.8,278.35)" id="pattern5587" xlink:href="#pattern5542"></pattern>
+    <pattern patternTransform="translate(-1053.4,552.71)" id="pattern5542" xlink:href="#pattern5536"></pattern>
+    <pattern patternTransform="translate(-1094.4,511.7)" id="pattern5536" xlink:href="#pattern4811"></pattern>
+    <pattern id="pattern4811" patternTransform="translate(0,1117.5)" height="62" width="62.004" patternUnits="userSpaceOnUse">
+      <path d="M 0,0 V 0.7 L 30.273,31 0,61.3 V 62 H 0.722 L 31.003,31.7 61.282,62 h 0.722 V 61.3 L 31.729,31 62.003,0.7 V 0 H 61.262 L 31.003,30.3 0.74,0 Z M 7.159,0 31,23.8 54.843,0 H 53.39 L 31,22.4 8.612,0 Z M 15.028,0 31,16 46.978,0 H 45.521 L 31,14.5 16.484,0 Z M 22.897,0 31,8.1 39.105,0 H 37.649 L 31,6.6 24.354,0 Z M 0,7.1 V 8.6 L 22.401,31 0,53.4 v 1.4 L 23.86,31 Z M 62.003,7.1 38.145,31 62.003,54.8 V 53.4 L 39.602,31 62.003,8.6 Z M 0,15 v 1.4 L 14.532,31 0,45.5 V 47 L 15.991,31 Z M 62.003,15 46.015,31 62.003,47 V 45.5 L 47.471,31 62.003,16.4 Z M 0,22.9 v 1.4 L 6.663,31 0,37.6 v 1.5 L 8.119,31 Z m 62.003,0 -8.12,8.1 8.12,8.1 V 37.6 L 55.339,31 62.003,24.3 Z M 31,38.1 7.137,62 H 8.594 L 31,39.6 53.41,62 h 1.456 z M 31,46 15.006,62 h 1.459 L 30.999,47.5 45.54,62 h 1.459 z m 0,7.9 -8.124,8.1 h 1.459 L 31,55.3 37.668,62 h 1.459 z" id="rect4163"></path>
+    </pattern>
+  </defs>
+  <use transform="translate(1772,326)" id="use5540" xlink:href="#rect5534" y="0" x="0"></use>
+  <rect transform="rotate(-45)" style="opacity:0.15;fill:url(#pattern5587)" width="1920" height="62" x="-1327.8" y="278.35" id="rect5534"></rect>
+  <path style="opacity:0.05" id="rect5549" d="m 2534.1,0 h 1200 l -1200,1200 h -1200 z"></path>
+  <use style="opacity:0.5" transform="translate(-2909)" id="use5564" xlink:href="#rect5549" y="0" x="0"></use>
+
+</svg>
