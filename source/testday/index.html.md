@@ -12,7 +12,7 @@ schedule](https://www.rdoproject.org/community/rdo-bugtriage/).
 
 The (tentative) test day schedule is:
 
-* Ocata 1 &ndash; December 1st and 2nd, 2016
+* [Ocata 1 &ndash; December 1st and 2nd, 2016](/testday/ocata/milestone1)
 * Ocata 3 &ndash; February 2nd and 3rd, 2017
 * Ocata Final &ndash; March 2nd and 3rd, 2017
 
