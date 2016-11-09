@@ -1,6 +1,6 @@
 # Test Days
 
-Test days are help roughly every month, on the week after an upstream
+Test days are held roughly every month, on the week after an upstream
 milestone. See the [release
 schedule](http://releases.openstack.org/ocata/schedule.html) for when
 those milestones occur.
