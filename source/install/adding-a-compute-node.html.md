@@ -45,6 +45,6 @@ In case you do not want to run the installation over again on the already config
 
 Run Packstack again, specifying your modified "answer file":
 
-    sudo packstack --answer-file=$youranswerfile
+    packstack --answer-file=$youranswerfile
 
 Packstack will prompt you for the root password for each of your nodes.
