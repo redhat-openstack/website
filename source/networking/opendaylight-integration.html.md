@@ -8,7 +8,7 @@ wiki_last_updated: 2015-01-22
 
 # OpenDaylight integration
 
-**This page covers Hydrogen Opendaylight with Havana and Icehouse OpenStack. Use this link for Helium OpenDaylight and Juno Openstack [Helium_OpenDaylight_Juno_OpenStack](Helium_OpenDaylight_Juno_OpenStack)**
+**This page covers Hydrogen Opendaylight with Havana and Icehouse OpenStack. Use this link for Helium OpenDaylight and Juno Openstack [Helium_OpenDaylight_Juno_OpenStack](/networking/helium-opendaylight-juno-openstack/)**
 
 **See also <https://wiki.opendaylight.org/view/OpenStack_and_OpenDaylight> for a more up to date version of this from the OpenDaylight side.**
 
@@ -50,7 +50,7 @@ Modify the values to match your configuration. For example, --provider_mappings 
 
 ## Start RDO
 
-Start RDO as suggested in [ RDO Quickstart](Quickstart). After OpenStack is up and running, you can [ add compute nodes](Adding_a_compute_node). Then follow steps in [ ML2 plugin](ML2_plugin) to configure Neutron ML2 plugin.
+Start RDO as suggested in [RDO Quickstart](/install/quickstart/). After OpenStack is up and running, you can [add compute nodes](/install/adding-a-compute-node/). Then follow steps in [ML2 plugin](/networking/ml2-plugin/) to configure Neutron ML2 plugin.
 
 ## Enable ML2 plugin with OpenDaylight controller
 
@@ -159,7 +159,7 @@ Create network and attach subnet by neutron commands
 `neutron net-create `<network name>` --provider:network_type `<gre or vxlan>` --provider:segmentation_id `<id>
       neutron  subnet-create `<network name>`10.100.2.0/24 --name `<subnet name>` 
 
-Add VM instance to the subnet by [ running instances](Running_an_instance). VM on different compute nodes should be able to ping each other through GRE or VxLAN tunnels provisioned by ODL controller.
+Add VM instance to the subnet by [running instances](/install/running-an-instance/). VM on different compute nodes should be able to ping each other through GRE or VxLAN tunnels provisioned by ODL controller.
 
 ## odl.sh script
 

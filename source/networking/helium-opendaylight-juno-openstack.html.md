@@ -10,7 +10,7 @@ wiki_last_updated: 2015-02-01
 
 ## Introduction
 
-This page describes how to setup a two node OpenStack setup using ml2 to integrate with Helium-SR1 and Helium OpenDaylight and Juno OpenStack. The setup guide for Hydrogen OpenDaylight and Icehouse Openstack can be found [OpenDaylight_integration](OpenDaylight_integration).
+This page describes how to setup a two node OpenStack setup using ml2 to integrate with Helium-SR1 and Helium OpenDaylight and Juno OpenStack. The setup guide for Hydrogen OpenDaylight and Icehouse Openstack can be found [OpenDaylight_integration](/networking/opendaylight-integration/).
 
 The topology:
 
@@ -25,7 +25,7 @@ Follow the instructions [OVSDB:Helium and OpenStack on Fedora 20](https://wiki.o
 
 ## Packstack
 
-Use [Quickstart](Quickstart) to install the packstack on the control node and install the OpenStack components. This will create the packstack file that we will change to also install OpenStack on the second node. Try these forms of the command to keep the system as clean as possible: `packstack --allinone --provision-demo=n --provision-all-in-one-ovs-bridge=n` and `packstack --answer-file=packstack-answers.txt --provision-demo=n --provision-all-in-one-ovs-bridge=n`.
+Use [Quickstart](/install/quickstart/) to install the packstack on the control node and install the OpenStack components. This will create the packstack file that we will change to also install OpenStack on the second node. Try these forms of the command to keep the system as clean as possible: `packstack --allinone --provision-demo=n --provision-all-in-one-ovs-bridge=n` and `packstack --answer-file=packstack-answers.txt --provision-demo=n --provision-all-in-one-ovs-bridge=n`.
 
 I ran packstack once, changed all the 192.168.122.xx addresses to 192.168.120.51 and reran packstack. I did this because by default the allinone used eth0 for the control addresses but in my setup I wanted eth2 to be the controller interface.
 

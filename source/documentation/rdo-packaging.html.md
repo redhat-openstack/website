@@ -28,7 +28,7 @@ OpenStack projects.
 
 Following diagram shows the global packaging process in RDO.
 
-![RDO packaging workflow](../images/rdo-full-workflow-high-level-no-buildlogs.png)
+![RDO packaging workflow](/images/documentation/rdo-full-workflow-high-level-no-buildlogs.png)
 
 
 <a id="distgit"></a>

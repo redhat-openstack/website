@@ -22,7 +22,7 @@ RDO aims to be the natural option for anyone that wants to run the most recently
 ## What does RDO stand for?
 
 RDO is the RPM Distribution of OpenStack. It's a group of Rediculously
-Dedicated OpenStackers who are here to help you [Rapidly Deploy OpenStack](/quickstart),
+Dedicated OpenStackers who are here to help you [Rapidly Deploy OpenStack](/install/quickstart/),
 in a way that is Really Darned Obvious. RDO is [Rebuilt
 Daily](http://trunk.rdoproject.org), Regularly Delivered, OpenStack.
 
@@ -40,7 +40,7 @@ The OpenStack project benefits from a broad group of providers and distributors,
 
 ## For which distributions does RDO provide packages?
 
-RDO targets Red Hat Enterprise Linux, CentOS, and Fedora, and their derivatives. Specifically, RDO packages are available for RHEL 7.0 or later (and CentOS 7.0, Scientific Linux 7.0 and other similar derivatives). The latest OpenStack development release is also made available for Fedora. More information is available at [Release-cadence](release-cadence).
+RDO targets Red Hat Enterprise Linux, CentOS, and Fedora, and their derivatives. Specifically, RDO packages are available for RHEL 7.0 or later (and CentOS 7.0, Scientific Linux 7.0 and other similar derivatives). The latest OpenStack development release is also made available for Fedora. More information is available at [Release-cadence](/rdo/release-cadence/).
 
 ## How is RDO different from upstream?
 
@@ -52,7 +52,7 @@ The OpenStack project develops code, and does not handle packaging for specific 
 
 Sign up to [ask.openstack](https://ask.openstack.org/) and help others with their RDO questions. Add your [user stories](/user-stories/). Take well answered questions from ask.openstack and turn them into howto documents on the [RDO documentation](/documentation/) pages.
 
-Feel free to contribute any packaging and integration patches via our developer mailing lists, or propose improvements to OpenStack on the upstream Launchpad page. For more information, see [ getting involved](get involved).
+Feel free to contribute any packaging and integration patches via our developer mailing lists, or propose improvements to OpenStack on the upstream Launchpad page. For more information, see [getting involved](/community/).
 
 ## Is RDO a fork of OpenStack?
 
@@ -73,7 +73,7 @@ You have two options:
 
 ## Where can I find help with RDO?
 
-You can find documentation and get help through [ask.openstack.org](https://ask.openstack.org/), [IRC](/community/#discuss), or [mailing lists](Mailing_lists) and from others in the RDO community. And don't hesitate to answer someone else's question if you know the answer. You can find all of the ways you can get involved in the RDO community at [Get involved](/community/).
+You can find documentation and get help through [ask.openstack.org](https://ask.openstack.org/), [IRC](/community/#discuss), or [mailing lists](/community/mailing-lists/) and from others in the RDO community. And don't hesitate to answer someone else's question if you know the answer. You can find all of the ways you can get involved in the RDO community at [Get involved](/community/).
 
 ## Can I buy commercial support for RDO?
 

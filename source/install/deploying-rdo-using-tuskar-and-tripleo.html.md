@@ -10,7 +10,7 @@ wiki_last_updated: 2014-09-15
 
 {:.no_toc}
 
-## **Note: These instructions are outdated. There's a new setup published [ here](Deploying_RDO_using_Instack) which is designed to be an easier process for trying TripleO.**
+## **Note: These instructions are outdated. There's a new setup published [here](/install/deploying-rdo-using-instack/) which is designed to be an easier process for trying TripleO.**
 
 ## Deploying RDO Using Tuskar and TripleO
 

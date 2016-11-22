@@ -10,20 +10,20 @@ wiki_last_updated: 2015-05-26
 
 # Networking
 
-[ ← Docs ](Docs)
+[← Docs](/documentation/)
 
-*   [Using GRE Tenant Networks](Using GRE Tenant Networks)
-*   [Using provider networks](Using provider networks)
-*   [Modular Layer 2 (ML2) Plugin](ML2 plugin)
-*   [Difference between Floating IP and private IP](Difference between Floating IP and private IP)
-*   [Setting a Floating IP Range](Floating IP range)
-*   [Configuring Neutron with existing external network](Neutron_with_existing_external_network)
-*   [Configuring and Deploying LBaaS in OpenStack](LBaaS)
-*   [Connecting to TripleO Baremetal VMs from a remote machine](Connecting_to_TripleO_Baremetal_VMs_from_remote_machine)
+*   [Using GRE Tenant Networks](/networking/using-gre-tenant-networks/)
+*   [Using provider networks](/networking/using-provider-networks/)
+*   [Modular Layer 2 (ML2) Plugin](/networking/ml2-plugin/)
+*   [Difference between Floating IP and private IP](/networking/difference-between-floating-ip-and-private-ip/)
+*   [Setting a Floating IP Range](/networking/floating-ip-range/)
+*   [Configuring Neutron with existing external network](/networking/neutron-with-existing-external-network/)
+*   [Configuring and Deploying LBaaS in OpenStack](/networking/lbaas/)
+*   [Connecting to TripleO Baremetal VMs from a remote machine](/documentation/connecting-to-tripleo-baremetal-vms-from-remote-machine/)
 *   [RDO Openstack & OpenContrail Integration](http://www.opencontrail.org/rdo-openstack-opencontrail-integration/)
 
 ### More resources
 
-*   [Networking in detail](Networking in too much detail)
-*   [ Other networking resources ](Networking)
+*   [Networking in detail](/networking/networking-in-too-much-detail/)
+*   [Other networking resources](/troubleshooting/networking/)
 

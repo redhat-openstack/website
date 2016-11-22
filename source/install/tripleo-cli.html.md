@@ -10,7 +10,7 @@ wiki_last_updated: 2015-03-10
 
 ## Management System Installation
 
-Instack is used to create the undercloud. This can be either done on a fully virtualised environment or with bare metal. Follow the steps described in [deploying an RDO Undercloud](Deploying_an_RDO_Undercloud_with_Instack) to create the undercloud for this installation. The log for the instack install can be found in `~/.instack/install-undercloud.log`
+Instack is used to create the undercloud. This can be either done on a fully virtualised environment or with bare metal. Follow the steps described in [deploying an RDO Undercloud](/install/deploying-an-rdo-undercloud-with-instack/) to create the undercloud for this installation. The log for the instack install can be found in `~/.instack/install-undercloud.log`
 
 ## Environment Setup
 

@@ -12,7 +12,7 @@ wiki_last_updated: 2013-12-18
 
 Are you wondering about the difference between a private IP address and a floating IP address in OpenStack? Here is a short explanation that should make it clearer.
 
-(See also: [ Setting a floating IP range](Floating_IP_range))
+(See also: [Setting a floating IP range](/networking/floating-ip-range/))
 
 ## Private IP Address
 
@@ -24,7 +24,7 @@ A floating IP address is a service provided by Neutron. It's not using any DHCP 
 
 ------------------------------------------------------------------------
 
-A floating IP address and a private IP address can be used at the same time on a single network-interface. The private IP address is likely to be used for accessing the instance by other instances in private networks while the floating IP address would be used for accessing the instance from public networks. How to configure floating IP range describes [Floating IP range](Floating IP range) document.
+A floating IP address and a private IP address can be used at the same time on a single network-interface. The private IP address is likely to be used for accessing the instance by other instances in private networks while the floating IP address would be used for accessing the instance from public networks. How to configure floating IP range describes [Floating IP range](/networking/floating-ip-range/) document.
 
 ## Example
 

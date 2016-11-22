@@ -6,7 +6,7 @@ wiki_revision_count: 84
 wiki_last_updated: 2014-11-17
 ---
 
-[ ← Deploying RDO using Instack](Deploying RDO using Instack)
+[← Deploying RDO using Instack](/install/deploying-rdo-using-instack/)
 
 Now that you have a working undercloud, let's deploy an overcloud.
 
@@ -35,7 +35,7 @@ However, instack-undercloud provides a test script, `instack-deploy-overcloud` t
       export TE_DATAFILE=instackenv.json
       source /etc/tripleo/overcloudrc
 
-Next steps: [ Testing an RDO Overcloud with Instack](Testing an RDO Overcloud with Instack). If you run into issues and want to redeploy your Overcloud the first step is to delete it using the instructions in the [FAQ](http://rdoproject.org/Instack_FAQ#How_do_I_delete_the_Overcloud.3F). You should then be able to re-execute instack-prepare-for-overcloud and deploy the Overcloud again.
+Next steps: [Testing an RDO Overcloud with Instack](/testday/testing-an-rdo-overcloud-with-instack/). If you run into issues and want to redeploy your Overcloud the first step is to delete it using the instructions in the [FAQ](http://rdoproject.org/Instack_FAQ#How_do_I_delete_the_Overcloud.3F). You should then be able to re-execute instack-prepare-for-overcloud and deploy the Overcloud again.
 
 # Deploying the Overcloud via the Tuskar UI
 
@@ -51,4 +51,4 @@ Note that if you are doing a virtual machine based deployment and your virt host
 
 When logging into the dashboard the default user and password are found in the /root/stackrc file on the undercloud node, OS_USERNAME and OS_PASSWORD. Once you have logged into the Web UI use the [Tuskar UI guide](https://rdoproject.org/Tuskar-UI) to continue deploying your Overcloud.
 
-Tuskar WEB UI Deployment currently does not support testing an RDO Overcloud with Instack. The overcloud-passwords file is missing and the instack.json file needs to be updated. If you managed to correct these, then proceed to: [ Testing an RDO Overcloud with Instack ](Testing an RDO Overcloud with Instack)
+Tuskar WEB UI Deployment currently does not support testing an RDO Overcloud with Instack. The overcloud-passwords file is missing and the instack.json file needs to be updated. If you managed to correct these, then proceed to: [Testing an RDO Overcloud with Instack](/testday/testing-an-rdo-overcloud-with-instack/)

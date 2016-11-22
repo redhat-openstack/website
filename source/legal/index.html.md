@@ -26,6 +26,6 @@ At Red Hat, your privacy is important to us. By joining the RDO community, you w
 
 ## Terms of use
 
-Contributors to this site are responsible for the contributions they make. By contributing to the site, you agree not to post any illegal material, to respect the copyrights of others, and to take responsibility for any content posted from your account. For more information, please consult the extended [terms of use](terms of use).
+Contributors to this site are responsible for the contributions they make. By contributing to the site, you agree not to post any illegal material, to respect the copyrights of others, and to take responsibility for any content posted from your account. For more information, please consult the extended [terms of use](/legal/terms-of-use/).
 
 <Category:Legal>

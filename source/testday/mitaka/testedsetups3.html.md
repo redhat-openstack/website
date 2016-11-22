@@ -81,30 +81,30 @@ Please see [Docs - Storage](/documentation/storage) for configuration guides as 
 
 | Config Name | Release | BaseOS | Status | HOWTO | Who | Date | BZ/LP | Notes Page
 |----------------------------------------------------------------|------------------|-----------|----------------------------------------------|-----------------------------------------------------|--------|------------|--------------------------------------------------------------------|------------|
-| Glance=localfs, Cinder=lvm | Mitaka | CentOS 7.2 | | [QuickStart](/Quickstart) | |   |   |
-| | Mitaka | RHEL 7.2 | | [QuickStart](/Quickstart) | |   |   | 
-| Glance=localfs, Cinder=glusterfs | Mitaka | CentOS 7.2 | | [QuickStart](/Quickstart) | |  | | 
-| | Mitaka | RHEL 7.2 | | [QuickStart](/Quickstart) | |  | |
-| Glance=localfs, Cinder=windows_iscsi | Mitaka | CentOS 7.2 |  | [QuickStart](/Quickstart) |  |  |  |
-| | Mitaka | RHEL 7.2 |  | [QuickStart](/Quickstart) |  |  |  |
-| Glance=swift, Cinder=thinlvm | Mitaka | CentOS 7.2 |  | [QuickStart](/Quickstart) | | | | 
-| | Mitaka | RHEL 7.2 |  | [QuickStart](/Quickstart) | | | |
-| Glance=s3(amazon s3), Cinder=nfs | Mitaka | CentOS 7.2 |  | [QuickStart](/Quickstart) | |    | | 
-| | Mitaka | RHEL 7.2 |  | [QuickStart](/Quickstart) |  |    | |
-| Glance=s3(swift s3), Cinder=nfs | Mitaka | CentOS 7.2 |  | [QuickStart](/Quickstart) | |    | |
-| | Mitaka | RHEL 7.2 |  | [QuickStart](/Quickstart) |  |    | |
-| Glance=ceph, Cinder=ceph | Mitaka | CentOS 7.2 |  | [QuickStart](/Quickstart) |  |    |  |
-| | Mitaka | RHEL 7.2 |  | [QuickStart](/Quickstart) |  |    |  |
-| Glance=XtreamIO, Cinder=XtreamIO | Mitaka | CentOS 7.2 |  | [QuickStart](/Quickstart) |  |   |  |
-| | Mitaka | RHEL 7.2 |  |[QuickStart](/Quickstart) |  |   |  |
-| Glance=lvm, Cinder=glusterfs | Mitaka |  CentOS 7.2 |  | [QuickStart](/Quickstart) |    |   |  |
-| | Mitaka |  RHEL 7.2 |  | [QuickStart](/Quickstart) |    |   |  | 
-| Glance=lvm, Cinder=netapp_iscsi | Mitaka |CentOS 7.2 |  |[QuickStart](/Quickstart) |  |    | |
-| | Mitaka | RHEL 7.2 |  | [QuickStart](/Quickstart) |  |    | |
-| Glance=lvm, Cinder=netapp_nfs | Mitaka | CentOS 7.2 |  |[QuickStart](/Quickstart) |   |    |  |
-| | Mitaka | RHEL 7.2 |  |[QuickStart](/Quickstart) |   |    |  |
-| Glance=nfs, Cinder=netapp_iscsi | Mitaka | CentOS 7.2 | | [QuickStart](/Quickstart) |  |    |   |
-| | Mitaka | RHEL 7.2 | |[QuickStart](/Quickstart) |  |    |   |
+| Glance=localfs, Cinder=lvm | Mitaka | CentOS 7.2 | | [QuickStart](/install/quickstart/) | |   |   |
+| | Mitaka | RHEL 7.2 | | [QuickStart](/install/quickstart/) | |   |   | 
+| Glance=localfs, Cinder=glusterfs | Mitaka | CentOS 7.2 | | [QuickStart](/install/quickstart/) | |  | | 
+| | Mitaka | RHEL 7.2 | | [QuickStart](/install/quickstart/) | |  | |
+| Glance=localfs, Cinder=windows_iscsi | Mitaka | CentOS 7.2 |  | [QuickStart](/install/quickstart/) |  |  |  |
+| | Mitaka | RHEL 7.2 |  | [QuickStart](/install/quickstart/) |  |  |  |
+| Glance=swift, Cinder=thinlvm | Mitaka | CentOS 7.2 |  | [QuickStart](/install/quickstart/) | | | | 
+| | Mitaka | RHEL 7.2 |  | [QuickStart](/install/quickstart/) | | | |
+| Glance=s3(amazon s3), Cinder=nfs | Mitaka | CentOS 7.2 |  | [QuickStart](/install/quickstart/) | |    | | 
+| | Mitaka | RHEL 7.2 |  | [QuickStart](/install/quickstart/) |  |    | |
+| Glance=s3(swift s3), Cinder=nfs | Mitaka | CentOS 7.2 |  | [QuickStart](/install/quickstart/) | |    | |
+| | Mitaka | RHEL 7.2 |  | [QuickStart](/install/quickstart/) |  |    | |
+| Glance=ceph, Cinder=ceph | Mitaka | CentOS 7.2 |  | [QuickStart](/install/quickstart/) |  |    |  |
+| | Mitaka | RHEL 7.2 |  | [QuickStart](/install/quickstart/) |  |    |  |
+| Glance=XtreamIO, Cinder=XtreamIO | Mitaka | CentOS 7.2 |  | [QuickStart](/install/quickstart/) |  |   |  |
+| | Mitaka | RHEL 7.2 |  |[QuickStart](/install/quickstart/) |  |   |  |
+| Glance=lvm, Cinder=glusterfs | Mitaka |  CentOS 7.2 |  | [QuickStart](/install/quickstart/) |    |   |  |
+| | Mitaka |  RHEL 7.2 |  | [QuickStart](/install/quickstart/) |    |   |  | 
+| Glance=lvm, Cinder=netapp_iscsi | Mitaka |CentOS 7.2 |  |[QuickStart](/install/quickstart/) |  |    | |
+| | Mitaka | RHEL 7.2 |  | [QuickStart](/install/quickstart/) |  |    | |
+| Glance=lvm, Cinder=netapp_nfs | Mitaka | CentOS 7.2 |  |[QuickStart](/install/quickstart/) |   |    |  |
+| | Mitaka | RHEL 7.2 |  |[QuickStart](/install/quickstart/) |   |    |  |
+| Glance=nfs, Cinder=netapp_iscsi | Mitaka | CentOS 7.2 | | [QuickStart](/install/quickstart/) |  |    |   |
+| | Mitaka | RHEL 7.2 | |[QuickStart](/install/quickstart/) |  |    |   |
 
 ## Packstack Based Installation (Misc Components)
 
