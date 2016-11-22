@@ -30,7 +30,7 @@ Since RDO sticks closely to the upstream OpenStack project, the documentation at
 
 * [FAQ](/rdo/faq/)
 * [Mailing lists](/community/mailing-lists/)
-* [Legal & privacy](Legal)
+* [Legal & privacy](/legal/)
 
 </div>
 </div>
@@ -45,7 +45,7 @@ Since RDO sticks closely to the upstream OpenStack project, the documentation at
 * [Running an instance](/install/running-an-instance/)
 * [Image resources](/resources/image-resources/)
 * [Adding a compute node](/install/adding-a-compute-node/)
-* [More&hellip;](Install){:.more}
+* [More&hellip;](/install/){:.more}
 {:.with-more-link}
 
 </div>
@@ -56,7 +56,7 @@ Since RDO sticks closely to the upstream OpenStack project, the documentation at
 * [Neutron with an existing external network](/networking/neutron-with-existing-external-network/)
 * [ML2 plugin](/networking/ml2-plugin/)
 * [Floating vs private IPs](/networking/difference-between-floating-ip-and-private-ip/)
-* [More&hellip;](Docs/Networking){:.more}
+* [More&hellip;](/documentation/networking/){:.more}
 {:.with-more-link}
 
 </div>
@@ -67,7 +67,7 @@ Since RDO sticks closely to the upstream OpenStack project, the documentation at
 * [GlusterFS](/storage/Cinder/using-glusterfs-for-cinder-with-rdo)
 * [ThinLVM](/storage/Cinder/using-thinlvm-for-cinder-with-rdo)
 * [EMC](https://wiki.openstack.org/wiki/How to deploy cinder with EMC plug-in)
-* [More&hellip;](Docs/Storage){:.more}
+* [More&hellip;](/storage/){:.more}
 {:.with-more-link}
 
 </div>
