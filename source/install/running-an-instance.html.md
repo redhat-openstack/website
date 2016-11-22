@@ -41,7 +41,7 @@ In the left-side navigation menu, click "Images" under the heading "Compute." Cl
 
 ![](Runninganinstance-step4.png "Running an instance - step4.png")
 
-For a collection of links to alternative cloud-ready images, check out [image resources](image resources).
+For a collection of links to alternative cloud-ready images, check out [image resources](/resources/image-resources/).
 
 ## Step 5: Launch the instance.
 
@@ -61,7 +61,7 @@ In the main portion of the screen, under the "Instances" heading, click the down
 
 The associated Floating IPs can be spotted in the "IP Address" for each instance.
 
-For additional details, please read [how to set a floating IP range](Floating IP range).
+For additional details, please read [how to set a floating IP range](/networking/floating-ip-range/).
 
 ## Step 7: SSH to Your Instance
 

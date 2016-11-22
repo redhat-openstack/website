@@ -8,7 +8,7 @@ wiki_last_updated: 2014-10-28
 
 # Deploying RDO on a Baremetal Environment using Instack
 
-[ ← Deploying RDO using Instack](Deploying RDO using Instack)
+[← Deploying RDO using Instack](/install/deploying-rdo-using-instack/)
 
 ## Minimum System Requirements
 
@@ -66,4 +66,4 @@ The overcloud nodes will be deployed from the undercloud machine and therefore t
         echo "stack        ALL=(ALL)       NOPASSWD: ALL" > /etc/sudoers.d/stack
         chmod 0440 /etc/sudoers.d/stack
 
-You're ready to move onto [ Deploying an RDO Undercloud with Instack ](Deploying an RDO Undercloud with Instack).
+You're ready to move onto [Deploying an RDO Undercloud with Instack](/install/deploying-an-rdo-undercloud-with-instack/).

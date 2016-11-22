@@ -8,7 +8,7 @@ wiki_last_updated: 2014-01-09
 
 # SELinux in an RDO Deployment
 
-RDO releases should operate with SELinux in enforcing mode without issue. If it does not work for you, please see the [SELinux_issues](SELinux_issues) page for more information on how to troubleshoot and what information to gather for filing bugzillas.
+RDO releases should operate with SELinux in enforcing mode without issue. If it does not work for you, please see the [SELinux_issues](/documentation/selinux-issues/) page for more information on how to troubleshoot and what information to gather for filing bugzillas.
 
 From time to time, especially with the EL6 releases of RDO, certain measures are taken to ensure that RDO works and are distributed as part of the *openstack-selinux* package. This package contains fixes to ensure RDO continues working on top of the latest Red Hat Enterprise Linux 6 and CentOS 6 releases. It always advised to run the very latest *selinux-policy* package appropriate for your distribution, even if you upgrade nothing else. For example, if you are running CentOS 6.4, it is recommended to run the latest selinux-policy package from CentOS 6.5 if at all possible.
 

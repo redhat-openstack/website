@@ -45,4 +45,4 @@ Member of tenant:
 
 **Please add any bugs link page below**
 
-[post_installation_bugs](post_installation_bugs)
+[post_installation_bugs](/install/post-installation-bugs/)

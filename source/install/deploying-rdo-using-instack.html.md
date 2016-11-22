@@ -12,7 +12,7 @@ wiki_last_updated: 2015-05-05
 **Note:** These instructions are outdated. Please follow [TripleO Quickstart](/tripleo) site which replaces this setup.
 
 </h2>
-[ ← Installation and Configuration](Install)
+[← Installation and Configuration](/install/)
 
 This tutorial covers how to deploy a [TripleO](https://wiki.openstack.org/wiki/TripleO) [Undercloud](http://docs.openstack.org/developer/tripleo-incubator/devtest_undercloud.html) and [Overcloud](http://docs.openstack.org/developer/tripleo-incubator/devtest_overcloud.html) using RDO and Instack on an all bare metal or an all virtual environment. TripleO is a program aimed at installing, upgrading and operating OpenStack clouds using OpenStack's own cloud facilities as the foundations - building on Nova, Neutron and Heat to automate fleet management at datacenter scale (and scaling down to as few as 2 machines).
 
@@ -26,24 +26,24 @@ The following sections describe the steps for preparing for an Undercloud deploy
 
 ### Baremetal Setup
 
-[ Deploying RDO on a Bare metal Environment using Instack](Deploying RDO on a Baremetal Environment using Instack)
+[Deploying RDO on a Bare metal Environment using Instack](/install/deploying-rdo-on-a-baremetal-environment-using-instack/)
 
 ### Virtual Machine Setup
 
-[ Deploying RDO on a Virtual Machine Environment using Instack](Deploying RDO on a Virtual Machine Environment using Instack)
+[Deploying RDO on a Virtual Machine Environment using Instack](/install/deploying-rdo-on-a-virtual-machine-environment-using-instack/)
 
 ## Deploying an Undercloud
 
-[ Deploying an RDO Undercloud with Instack ](Deploying an RDO Undercloud with Instack)
+[Deploying an RDO Undercloud with Instack](/install/deploying-an-rdo-undercloud-with-instack/)
 
 ## Deploying an Overcloud
 
-[ Deploying an RDO Overcloud with Instack ](Deploying an RDO Overcloud with Instack)
+[Deploying an RDO Overcloud with Instack](/install/deploying-an-rdo-overcloud-with-instack/)
 
 ## Testing the Overcloud
 
-[ Testing an RDO Overcloud with Instack ](Testing an RDO Overcloud with Instack)
+[Testing an RDO Overcloud with Instack](/testday/testing-an-rdo-overcloud-with-instack/)
 
 ## Instack FAQ
 
-[ Instack FAQ ](Instack FAQ)
+[Instack FAQ](/install/instack-faq/)

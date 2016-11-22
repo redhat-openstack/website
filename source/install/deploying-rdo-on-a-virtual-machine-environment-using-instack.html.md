@@ -8,7 +8,7 @@ wiki_last_updated: 2015-01-09
 
 # Deploying RDO on a Virtual Machine Environment using Instack
 
-[ ← Deploying RDO using Instack](Deploying RDO using Instack)
+[← Deploying RDO using Instack](/install/deploying-rdo-using-instack/)
 
 If you are connecting to the virtual host remotely using ssh, you will need to use the -t flag to force pseudo-tty allocation or enable notty via a $USER.notty file.
 
@@ -115,4 +115,4 @@ The vm contains a user "stack" that uses the password "stack" and is granted pas
 
 You may also with to install `virt-manager` on the virt host as it can be very helpful if monitoring when the vm's for the Overcloud nodes are powered on and off. You can also use virt-manager to login to the console on the Overcloud nodes.
 
-Next steps: [ Deploying an RDO Undercloud with Instack ](Deploying an RDO Undercloud with Instack)
+Next steps: [Deploying an RDO Undercloud with Instack](/install/deploying-an-rdo-undercloud-with-instack/)

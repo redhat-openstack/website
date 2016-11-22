@@ -18,7 +18,7 @@ Note that this describes use of the GBP's resource_mapping reference policy driv
 
 ## Configuring GBP
 
-Start with a working Packstack installation with Neutron, such as is described in [Quickstart](Quickstart). If you plan to use Heat with GBP, be sure to generate an answer file, edit it to enable Heat, and use that answer file when running packstack. The remaining steps are all executed as root on the controller node(s) where neutron-server runs. No changes are needed on compute or network nodes when using the resource_mapping policy driver.
+Start with a working Packstack installation with Neutron, such as is described in [Quickstart](/install/quickstart/). If you plan to use Heat with GBP, be sure to generate an answer file, edit it to enable Heat, and use that answer file when running packstack. The remaining steps are all executed as root on the controller node(s) where neutron-server runs. No changes are needed on compute or network nodes when using the resource_mapping policy driver.
 
 ### Configuring Neutron
 

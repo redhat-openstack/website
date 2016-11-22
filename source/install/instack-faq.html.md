@@ -8,7 +8,7 @@ wiki_last_updated: 2015-02-13
 
 # Instack FAQ
 
-[ ← Deploying RDO using Instack](Deploying RDO using Instack)
+[← Deploying RDO using Instack](/install/deploying-rdo-using-instack/)
 
 This page includes tips, fixes and debugging steps for Instack installs:
 

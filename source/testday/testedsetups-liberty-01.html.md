@@ -31,26 +31,26 @@ Please make sure to use the steps described in the [How To Test](/testday/rdo-te
 
 | Config Name | Release | BaseOS | Status | HOWTO | Who | Date | BZ/LP | Notes Page
 |----------------------------------------------------------------|------------------|-----------|----------------------------------------------|-----------------------------------------------------|--------|------------|--------------------------------------------------------------------|------------|
-| All-in-One - Sanity |  | CentOS 7 |   | [QuickStart](/Quickstart) |  |    |    | 
-|                     |  | F22      |   | [QuickStart](/Quickstart) |  |    |    | 
-|                     |  | RHEL7.1  |   | [QuickStart](/Quickstart) |  |    |    | 
-| Distributed -IPv6-Deployment- Sanity |  |  CentOS 7 |  | [QuickStart](/Quickstart) |  |   |  | 
-|                                      |  | F22       |  | [QuickStart](/Quickstart) |  |   |  | 
-|                                      |  | RHEL7.1   |  | [QuickStart](/Quickstart) |  |   |  |
-| Distributed -ML2- OVS-VXLAN –  LbaaS | | CentOS 7.1 |  | [QuickStart](/Quickstart) | astafeye |   |  | 
-|                                      | | F22        |  | [QuickStart](/Quickstart) |  |   |  | 
-|                                      | | RHEL7.1    |  | [QuickStart](/Quickstart) |  |   |   | 
-| Distributed -ML2- OVS-VXLAN-VRRP     | | CentOS 7.1 |  | [QuickStart](/Quickstart) |  |  |  | 
-| | | F22 |  | [QuickStart](/Quickstart) |  |   | | 
-| | | RHEL7.1 | | [QuickStart](/Quickstart) |  |   | | 
-| Distributed -ML2-OVS- VXLAN-IPv6 – VPNaaS | | CentOS 7.1 |  | [QuickStart](/Quickstart) |  |  |  | 
-| | | F22 |  | [QuickStart](/Quickstart) |  |   |  | 
-| | | RHEL7.1 |  | [QuickStart](/Quickstart) | |  |  | 
-| Distributed -ML2-OVS- VXLAN Security Groups | | CentOS 7.1 |  | [QuickStart](/Quickstart) |  |   |  | 
-| | | F22 | | [QuickStart](/Quickstart) |  |  |  | 
-| | | RHEL7.1 | | [QuickStart](/Quickstart) |  |   | | 
-| Distributed -ML2-OVS- VXLAN DVR | | RHEL 7.1 | | [QuickStart](/Quickstart) | |   |  | 
-| Distributed -ML2-OVS- VXLAN DVR | | CentOS 7.1 | | [QuickStart](/Quickstart) |itbrown |   |  | 
+| All-in-One - Sanity |  | CentOS 7 |   | [QuickStart](/install/quickstart/) |  |    |    | 
+|                     |  | F22      |   | [QuickStart](/install/quickstart/) |  |    |    | 
+|                     |  | RHEL7.1  |   | [QuickStart](/install/quickstart/) |  |    |    | 
+| Distributed -IPv6-Deployment- Sanity |  |  CentOS 7 |  | [QuickStart](/install/quickstart/) |  |   |  | 
+|                                      |  | F22       |  | [QuickStart](/install/quickstart/) |  |   |  | 
+|                                      |  | RHEL7.1   |  | [QuickStart](/install/quickstart/) |  |   |  |
+| Distributed -ML2- OVS-VXLAN –  LbaaS | | CentOS 7.1 |  | [QuickStart](/install/quickstart/) | astafeye |   |  | 
+|                                      | | F22        |  | [QuickStart](/install/quickstart/) |  |   |  | 
+|                                      | | RHEL7.1    |  | [QuickStart](/install/quickstart/) |  |   |   | 
+| Distributed -ML2- OVS-VXLAN-VRRP     | | CentOS 7.1 |  | [QuickStart](/install/quickstart/) |  |  |  | 
+| | | F22 |  | [QuickStart](/install/quickstart/) |  |   | | 
+| | | RHEL7.1 | | [QuickStart](/install/quickstart/) |  |   | | 
+| Distributed -ML2-OVS- VXLAN-IPv6 – VPNaaS | | CentOS 7.1 |  | [QuickStart](/install/quickstart/) |  |  |  | 
+| | | F22 |  | [QuickStart](/install/quickstart/) |  |   |  | 
+| | | RHEL7.1 |  | [QuickStart](/install/quickstart/) | |  |  | 
+| Distributed -ML2-OVS- VXLAN Security Groups | | CentOS 7.1 |  | [QuickStart](/install/quickstart/) |  |   |  | 
+| | | F22 | | [QuickStart](/install/quickstart/) |  |  |  | 
+| | | RHEL7.1 | | [QuickStart](/install/quickstart/) |  |   | | 
+| Distributed -ML2-OVS- VXLAN DVR | | RHEL 7.1 | | [QuickStart](/install/quickstart/) | |   |  | 
+| Distributed -ML2-OVS- VXLAN DVR | | CentOS 7.1 | | [QuickStart](/install/quickstart/) |itbrown |   |  | 
 | 3,node  -ML2-OVS- VXLAN |  | CentOS 7.1 |    | |   |   |  | 
 | 3,node  -ML2-OVS- GRE   |  | CentOS 7.1 |    | |   |   |  | 
 | 3,node  -ML2-OVS- VLAN  |  | CentOS 7.1 |    | |   |   |  | 
@@ -62,23 +62,23 @@ Please see [Docs - Storage](/documentation/storage) for configuration guides as 
 
 | Config Name | Release | BaseOS | Status | HOWTO | Who | Date | BZ/LP | Notes Page
 |----------------------------------------------------------------|------------------|-----------|----------------------------------------------|-----------------------------------------------------|--------|------------|--------------------------------------------------------------------|------------|
-| All-in-One | Glance=localfs, Cinder=lvm| CentOS 7.1 | Tested  | [QuickStart](/Quickstart) | coolsvap   |  2015-09-23  |  None | [Answer-file](https://gist.github.com/coolsvap/d90a5133d4bbccef1966)
-| All-in-One | Glance=localfs, Cinder=glusterfs| CentOS 7.1 | Tested  | [QuickStart](/Quickstart) | coolsvap   |  2015-09-23  |  None | [Answer-file](https://gist.github.com/coolsvap/e065358ae84ff80138a1)
-| All-in-One | Glance=swift, Cinder=thinlvm| CentOS 7.1 |  Tested | [QuickStart](/Quickstart) | coolsvap  | 2015-09-23   | None | [Answer-file](https://gist.github.com/coolsvap/183aadd91868801279de)
-| All-in-One | Glance=s3(amazon s3), Cinder=nfs| CentOS 7.1 |  | [QuickStart](/Quickstart) | |    | None | None
-| All-in-One | Glance=s3(swift s3), Cinder=nfs| CentOS 7.1 |  | [QuickStart](/Quickstart) |  |    |  None|  None
-| All-in-One | Glance=ceph, Cinder=ceph| CentOS 7.1 |  | [QuickStart](/Quickstart) |  |    | None | None
-| All-in-One | Glance=XtreamIO, Cinder=XtreamIO| CentOS 7.1 |  | [QuickStart](/Quickstart) |  |   | None | None
-| All-in-One | Glance=localfs, Cinder=windows_iscsi| CentOS 7.1 |  | [QuickStart](/Quickstart) |  | 2015-00-00  | None | None
-| All-in-One | Glance=swift, Cinder=thinlvm|  RHEL7.1 |   | [QuickStart](/Quickstart) |   |    | None | None
-| All-in-One | Glance=s3, Cinder=nfs|  RHEL7.1 |   | [QuickStart](/Quickstart) |    |   | None | None
-| All-in-One | Glance=ceph, Cinder=ceph|  RHEL7.1 | | [QuickStart](/Quickstart) |   |    | None | None
-| All-in-One | Glance=lvm, Cinder=glusterfs|  RHEL7.1 |  | [QuickStart](/Quickstart) |    |   | None | None
-| All-in-One | Glance=lvm, Cinder=netapp_iscsi|  RHEL7.1 |  | [QuickStart](/Quickstart) |  |    | None | None
-| All-in-One | Glance=nfs, Cinder=netapp_iscsi|  RHEL7.1 | | [QuickStart](/Quickstart) |  |    |   | None
-| All-in-One | Glance=lvm, Cinder=netapp_nfs|  RHEL7.1 |  | [QuickStart](/Quickstart) |   |    | None | None
-| All-in-One | swift|  RHEL7.1 | | [QuickStart](/Quickstart) |   |   | None | None
-| All-in-One | Glance=lvm, Cinder=lvm, Manila=Generic | Fedora 22 | FAIL | [QuickStart](/Quickstart) | dustins | | [1265816](https://bugzilla.redhat.com/show_bug.cgi?id=1265816) | None
+| All-in-One | Glance=localfs, Cinder=lvm| CentOS 7.1 | Tested  | [QuickStart](/install/quickstart/) | coolsvap   |  2015-09-23  |  None | [Answer-file](https://gist.github.com/coolsvap/d90a5133d4bbccef1966)
+| All-in-One | Glance=localfs, Cinder=glusterfs| CentOS 7.1 | Tested  | [QuickStart](/install/quickstart/) | coolsvap   |  2015-09-23  |  None | [Answer-file](https://gist.github.com/coolsvap/e065358ae84ff80138a1)
+| All-in-One | Glance=swift, Cinder=thinlvm| CentOS 7.1 |  Tested | [QuickStart](/install/quickstart/) | coolsvap  | 2015-09-23   | None | [Answer-file](https://gist.github.com/coolsvap/183aadd91868801279de)
+| All-in-One | Glance=s3(amazon s3), Cinder=nfs| CentOS 7.1 |  | [QuickStart](/install/quickstart/) | |    | None | None
+| All-in-One | Glance=s3(swift s3), Cinder=nfs| CentOS 7.1 |  | [QuickStart](/install/quickstart/) |  |    |  None|  None
+| All-in-One | Glance=ceph, Cinder=ceph| CentOS 7.1 |  | [QuickStart](/install/quickstart/) |  |    | None | None
+| All-in-One | Glance=XtreamIO, Cinder=XtreamIO| CentOS 7.1 |  | [QuickStart](/install/quickstart/) |  |   | None | None
+| All-in-One | Glance=localfs, Cinder=windows_iscsi| CentOS 7.1 |  | [QuickStart](/install/quickstart/) |  | 2015-00-00  | None | None
+| All-in-One | Glance=swift, Cinder=thinlvm|  RHEL7.1 |   | [QuickStart](/install/quickstart/) |   |    | None | None
+| All-in-One | Glance=s3, Cinder=nfs|  RHEL7.1 |   | [QuickStart](/install/quickstart/) |    |   | None | None
+| All-in-One | Glance=ceph, Cinder=ceph|  RHEL7.1 | | [QuickStart](/install/quickstart/) |   |    | None | None
+| All-in-One | Glance=lvm, Cinder=glusterfs|  RHEL7.1 |  | [QuickStart](/install/quickstart/) |    |   | None | None
+| All-in-One | Glance=lvm, Cinder=netapp_iscsi|  RHEL7.1 |  | [QuickStart](/install/quickstart/) |  |    | None | None
+| All-in-One | Glance=nfs, Cinder=netapp_iscsi|  RHEL7.1 | | [QuickStart](/install/quickstart/) |  |    |   | None
+| All-in-One | Glance=lvm, Cinder=netapp_nfs|  RHEL7.1 |  | [QuickStart](/install/quickstart/) |   |    | None | None
+| All-in-One | swift|  RHEL7.1 | | [QuickStart](/install/quickstart/) |   |   | None | None
+| All-in-One | Glance=lvm, Cinder=lvm, Manila=Generic | Fedora 22 | FAIL | [QuickStart](/install/quickstart/) | dustins | | [1265816](https://bugzilla.redhat.com/show_bug.cgi?id=1265816) | None
 
 ## Packstack Based Installation (Misc Components)
 

@@ -12,7 +12,7 @@ wiki_last_updated: 2015-07-16
 
 # RDO documentation
 
-Since RDO sticks closely to the upstream OpenStack project, the documentation at [docs.openstack.org](http://docs.openstack.org) will also prove helpful. If you've come across useful tips for resolving issues on OpenStack, or if you're interested in sharing details of your deployment, please consider sharing this information with the community at our [troubleshooting](troubleshooting) and [user stories](/user-stories/) pages.
+Since RDO sticks closely to the upstream OpenStack project, the documentation at [docs.openstack.org](http://docs.openstack.org) will also prove helpful. If you've come across useful tips for resolving issues on OpenStack, or if you're interested in sharing details of your deployment, please consider sharing this information with the community at our [troubleshooting](/troubleshooting/) and [user stories](/user-stories/) pages.
 
 <div class="splits">
 <div class="split-third with-more">
@@ -28,8 +28,8 @@ Since RDO sticks closely to the upstream OpenStack project, the documentation at
 
 ## About RDO
 
-* [FAQ](Frequently Asked Questions)
-* [Mailing lists](Mailing lists)
+* [FAQ](/rdo/faq/)
+* [Mailing lists](/community/mailing-lists/)
 * [Legal & privacy](Legal)
 
 </div>
@@ -42,9 +42,9 @@ Since RDO sticks closely to the upstream OpenStack project, the documentation at
 
 ### Installation and configuration
 
-* [Running an instance](Running an instance)
-* [Image resources](Image resources)
-* [Adding a compute node](Adding a compute node)
+* [Running an instance](/install/running-an-instance/)
+* [Image resources](/resources/image-resources/)
+* [Adding a compute node](/install/adding-a-compute-node/)
 * [More&hellip;](Install){:.more}
 {:.with-more-link}
 
@@ -53,9 +53,9 @@ Since RDO sticks closely to the upstream OpenStack project, the documentation at
 
 ### Networking
 
-* [Neutron with an existing external network](Neutron with existing external network)
-* [ML2 plugin](ML2 plugin)
-* [Floating vs private IPs](Difference between Floating IP and private IP)
+* [Neutron with an existing external network](/networking/neutron-with-existing-external-network/)
+* [ML2 plugin](/networking/ml2-plugin/)
+* [Floating vs private IPs](/networking/difference-between-floating-ip-and-private-ip/)
 * [More&hellip;](Docs/Networking){:.more}
 {:.with-more-link}
 

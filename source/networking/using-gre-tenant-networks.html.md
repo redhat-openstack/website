@@ -12,7 +12,7 @@ wiki_last_updated: 2014-04-11
 
 The ability to use GRE tunnels with Open vSwitch has finally arrived in RHEL! GRE tunnels encapsulate isolated layer 2 network traffic in IP packets that are routed between compute and networking nodes using the hosts' network connectivity and routing tables. Using GRE tunnels as tenant networks in Neutron avoids the need for a network interface connected to a switch configured to trunk a range of VLANs. Here are simple instructions for taking advantage of GRE for tenant networks.
 
-See Also: [Configuring Neutron with OVS and GRE Tunnels using quickstack](Configuring Neutron with OVS and GRE Tunnels using quickstack)
+See Also: [Configuring Neutron with OVS and GRE Tunnels using quickstack](/networking/configuring-neutron-with-ovs-and-gre-tunnels-using-quickstack/)
 
 ## Packstack GRE Tenant Network Configuration
 

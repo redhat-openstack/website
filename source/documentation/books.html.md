@@ -10,7 +10,7 @@ wiki_last_updated: 2015-06-02
 
 # Books
 
-[ ← Docs](Docs)
+[← Docs](/documentation/)
 
 *   [OpenStack Cloud Computing Cookbook](https://amzn.com/1782174788), by Kevin Jackson
 *   [OpenStack Essentials](https://www.packtpub.com/books/info/authors/dan-radez), by Dan Radez

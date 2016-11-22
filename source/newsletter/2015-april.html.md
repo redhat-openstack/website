@@ -10,7 +10,7 @@ wiki_last_updated: 2015-04-09
 
 ## April 2015 RDO Community Newsletter
 
-[Previous newsletters](Newsletter), Sign up to receive the newsletter [on the mailing list page](http://www.redhat.com/mailman/listinfo/rdo-newsletter).
+[Previous newsletters](/newsletter/), Sign up to receive the newsletter [on the mailing list page](http://www.redhat.com/mailman/listinfo/rdo-newsletter).
 
 Thanks, as always, for being part of the RDO community!
 

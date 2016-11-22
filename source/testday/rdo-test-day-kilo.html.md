@@ -16,8 +16,8 @@ We'll be testing the Kilo release. If you can do any testing on your own ahead o
 
 Quick Links:
 
-*   [Quickstart](Quickstart)
-*   [Workarounds](Workarounds)
+*   [Quickstart](/install/quickstart/)
+*   [Workarounds](/testday/workarounds/)
 
 **Note:** We are going to push **RDO-Manager** testing ahead a few more days to give us time to stabilize the Kilo repositories we depend on. The exact date will be announced on rdo-list but you can expect it to happen during the week of May 11.
 
@@ -61,7 +61,7 @@ You'll want a fresh install (or VM) with latest updates installed. (Fresh so tha
 
     sudo yum install http://rdoproject.org/repos/openstack-kilo/rdo-testing-kilo.rpm
 
-*   Check for any [ Workarounds](Workarounds) required for your platform before the main installation
+*   Check for any [Workarounds](/testday/workarounds/) required for your platform before the main installation
 *   For Packstack based deployment start at step 2 of -- <https://www.rdoproject.org/Quickstart#Step_2:_Install_Packstack_Installer>
 *   Install and run tempest:
 
@@ -80,12 +80,12 @@ You'll want a fresh install (or VM) with latest updates installed. (Fresh so tha
 
 ### Test cases and results
 
-**[RDO_test_day_Kilo_RC_milestone_test_cases](RDO_test_day_Kilo_RC_milestone_test_cases)**
+**[RDO_test_day_Kilo_RC_milestone_test_cases](/testday/rdo-test-day-kilo-rc-milestone-test-cases/)**
 
 *   Pick an item from the list
-*   Go through the scenario as though you were a beginner, just following the instructions. (Check the [ Workarounds](Workarounds) page for problems that others may have encountered and resolved.)
+*   Go through the scenario as though you were a beginner, just following the instructions. (Check the [Workarounds](/testday/workarounds/) page for problems that others may have encountered and resolved.)
 *   KEEP GOOD NOTES. You can use <https://etherpad.openstack.org/p/rdo_kilo_test_day> for these notes. Reviewing other peoples' notes may help you avoid problems that they've already encountered.
 
 If you have problems with any of the tests, report a bug to [Bugzilla](https://bugzilla.redhat.com) usually for one of the [openstack-packstack](https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&version=18&component=openstack-packstack), [openstack-nova](https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&version=18&component=openstack-nova), [openstack-glance](https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&version=18&component=openstack-glance), [openstack-keystone](https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&version=18&component=openstack-keystone), [openstack-cinder](https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&version=18&component=openstack-cinder), [openstack-neutron](https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&version=18&component=openstack-neutron), [openstack-swift](https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&version=18&component=openstack-swift), [python-django-horizon](https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&version=18&component=python-django-horizon), [openstack-heat](https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&version=18&component=openstack-heat) or [openstack-ceilometer](https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&version=18&component=openstack-ceilometer) components. If you are unsure about exactly how to file the report or what other information to include, just ask on IRC (#rdo, freenode.net) and we will help you.
 
-Once you have completed the tests, add your results to the table on the [TestedSetups](RDO_test_day_Kilo_RC_milestone_test_cases) page, following the examples already there. Be sure to check the [ Workarounds](Workarounds) page for things that may have already have fixes or workarounds. Please also upload the tempest results to a public site and add the link to the test entry in [TestedSetups](RDO_test_day_Kilo_RC_milestone_test_cases) page.
+Once you have completed the tests, add your results to the table on the [TestedSetups](/testday/rdo-test-day-kilo-rc-milestone-test-cases/) page, following the examples already there. Be sure to check the [Workarounds](/testday/workarounds/) page for things that may have already have fixes or workarounds. Please also upload the tempest results to a public site and add the link to the test entry in [TestedSetups](/testday/rdo-test-day-kilo-rc-milestone-test-cases/) page.

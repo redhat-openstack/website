@@ -16,10 +16,10 @@ An all-in-one packstack deployment provides some basic default networking functi
 
 Planning an OpenStack deployment's network configuration involves a number of decisions.
 
-*   [Choose a networking solution](Networking Solutions)
+*   [Choose a networking solution](/networking/networking-solutions/)
 *   [Choose type for tenant networks](Tenant Networks)
 *   [Plan network interface usage](Network Interfaces)
-*   [External connectivity options](External Connectivity)
+*   [External connectivity options](/networking/external-connectivity/)
 *   [Plugin configuration](Plugin Configuration)
 *   [L2 agent configuration](L2 Agent Configuration)
 *   [DHCP agent configuration](DHCP Agent Configuration)
