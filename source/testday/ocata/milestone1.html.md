@@ -4,7 +4,7 @@ title: RDO Ocata Test Day
 
 # Ocata Test Day 1
 
-We will be holding a RDO test day on June 9 and 10, 2016.
+We will be holding a RDO test day on December 1 and 2, 2016.
 
 This will be coordinated through the **#rdo channel on Freenode**, and
 through this website and the rdo-list mailing list.
