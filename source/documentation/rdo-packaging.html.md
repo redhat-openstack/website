@@ -126,6 +126,27 @@ rpm-&lt;release> and &lt;release>-rdo branches:
 * In `%files` avoid using `%{version}` and use instead wildcard `*`
 
 
+#### rpm-master and rpm-master-head branches
+
+As previously stated, the `rpm-master` branch is used to package RDO Trunk using
+the master source branch. However, There are two RDO Trunk builder building
+packages from that branch:
+
+* The **main** builder, which pins libraries and clients to the versions included
+  in [upper-constraints](http://git.openstack.org/cgit/openstack/requirements/plain/upper-constraints.txt).
+
+* The **master-head**, that chases master in all packages, including libraries, clients, etc.
+
+Initially, both builders use the `rpm-master` distgit branch. However, we may
+find an issue for a client or library in `master-head` that does not show up
+on the `main` builder yet. In those cases, we will create a temporary distgit
+branch called `rpm-master-head`, where the fix will be merged.
+
+Having this temporary `rpm-master-head` branch will allow us to fix the build
+for the package, and once the change in the master repo reaches a tagged release
+used by the `main` builder, we can simply cherry-pick the change and remove
+the temporary branch.
+
 
 ### Patches branch
 
