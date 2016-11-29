@@ -41,6 +41,12 @@ We can use DLRN to build a new RDO python package before sending them for packag
 
 Now your system is ready to use DLRN.
 
+## Add the user you intend to run as to the mock group:
+
+    $ sudo usermod -a -G mock $USER
+    $ newgrp mock
+    $ newgrp $USER
+
 ## Let us package "congress" OpenStack project for RDO
 
 [1.] create a project "congress-distgit" and initialize the project using git init
@@ -65,9 +71,9 @@ Now your system is ready to use DLRN.
     $ rdopkg info && cp -r ~/.rdopkg/rdoinfo $SOMEWHERE_LOCAL
     $ cd $SOMEWHERE_LOCAL/.rdopkg/rdoinfo
 
-[2.] Edit the rdoinfo.yml file and add package entry in the last
+[2.] Edit the rdo.yml file and add package entry in the last
 
-    $ vim rdoinfo.yml
+    $ vim rdo.yml
     - project: congress # project name
       name: openstack-congress # RDO package name
       upstream: git://github.com/openstack/%(project)s # Congress project source code git repository
