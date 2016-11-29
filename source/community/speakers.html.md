@@ -13,6 +13,10 @@ If you're willing to be added to this list, please add your information
 via a pull request. (Click on the "edit this page" banner at the top
 right corner of the page.)
 
+See also the [OpenStack Foundation speakers
+bureau](https://www.openstack.org/community/speakers/results?search_query=RDO)
+for more general OpenStack-related speakers.
+
 
 
 | Speaker Name | Expertise or topic | Location |
