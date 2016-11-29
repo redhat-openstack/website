@@ -30,6 +30,20 @@ We plan to have packages for the following platforms:
 You'll want a fresh install with latest updates installed.
 (Fresh so that there's no hard-to-reproduce interactions with other things.)
 
+### Using CentOS 7.3 pre-release
+
+For this test day, there is a pre-release available of CentOS 7.3. Users
+willing to tests RDO using it must follow these steps:
+
+1. Enable CentOS continuous release (CR) repository and update your system:
+
+        sudo yum-config-manager --enable cr
+        sudo yum update -y
+
+2. Add the requirements repos for 7.3 pre-release:
+
+        sudo wget -O /etc/yum.repos.d/rdo-reqs-pre-7.3.repo http://trunk.rdoproject.org/rdo-reqs-pre-7.3/rdo-reqs-pre-7.3.repo
+
 ## How To Test
 
     yum -y install yum-plugin-priorities
@@ -37,6 +51,7 @@ You'll want a fresh install with latest updates installed.
     # for Centos 7 and RHEL 7
     sudo wget http://trunk.rdoproject.org/centos7/delorean-deps.repo
     sudo wget http://trunk.rdoproject.org/centos7/current-passed-ci/delorean.repo
+    sudo yum update -y
 
 * Check for any [workarounds](/testday/ocata/workarounds1) required for your platform before the main installation
 * For Packstack based deployment start at step 2 of the [packstack Quickstart](/install/quickstart#Step_2:_Install_Packstack_Installer)
