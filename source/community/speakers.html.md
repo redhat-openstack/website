@@ -18,6 +18,7 @@ bureau](https://www.openstack.org/community/speakers/results?search_query=RDO)
 for more general OpenStack-related speakers.
 
 
+## Speakers
 
 | Speaker Name | Expertise or topic | Location |
 |--------------|--------------------|----------|
