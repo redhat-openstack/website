@@ -23,4 +23,5 @@ for more general OpenStack-related speakers.
 | Speaker Name | Expertise or topic | Location |
 |--------------|--------------------|----------|
 | Rich Bowen   | Intro to RDO, Community topics | Kentucky, USA |
+| Graeme Gillies | Operations, TripleO | Brisbane, Australia, GMT +10 |
 
