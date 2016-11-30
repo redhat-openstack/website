@@ -24,4 +24,5 @@ for more general OpenStack-related speakers.
 |--------------|--------------------|----------|
 | Rich Bowen   | Intro to RDO, Community topics | Kentucky, USA |
 | Graeme Gillies | Operations, TripleO | Brisbane, Australia, GMT +10 |
+| Haïkel Guémar | RDO, Containers, sponsor | France |
 
