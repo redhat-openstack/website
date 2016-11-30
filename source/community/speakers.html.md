@@ -23,4 +23,5 @@ for more general OpenStack-related speakers.
 | Speaker Name | Expertise or topic | Location |
 |--------------|--------------------|----------|
 | Rich Bowen   | Intro to RDO, Community topics | Kentucky, USA |
+| Javier Peña  | RDO, packaging, deployment tools | Madrid, Spain |
 
