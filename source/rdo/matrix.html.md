@@ -8,53 +8,50 @@ title: Project matrix
 |---------|-----|-----------|---------|
 |barbican|   |   |   |
 |Chef OpenStack|   |   |   |
-|cinder|   |   |   |
+|cinder| x  |   |   |
 |cloudkitty|   |   |   |
 |congress|   |   |   |
-|designate|   |   |   |
+|designate|  x  |   |   |
 |dragonflow|   |   |   |
 |ec2-api|   |   |   |
 |freezer|   |   |   |
 |fuel|   |   |   |
-|glance|   |   |   |
-|heat|   |   |   |
-|horizon|   |   |   |
-|ironic|   |   |   |
+|glance| x  |   |   |
+|heat| x  |   |   |
+|horizon|x   |   |   |
+|ironic| x  |   |   |
 |karbor|   |   |   |
-|keystone|   |   |   |
+|keystone| x  |   |   |
 |kolla|   |   |   |
 |kuryr|   |   |   |
 |magnum|   |   |   |
-|manila|   |   |   |
+|manila| x  |   |   |
 |mistral|   |   |   |
 |monasca|   |   |   |
 |murano|   |   |   |
-|neutron|   |   |   |
-|nova|   |   |   |
+|neutron| x  |   |   |
+|nova| x  |   |   |
 |octavia|   |   |   |
 |OpenStack Charms|   |   |   |
 |OpenStack UX|   |   |   |
 |OpenStackAnsible|   |   |   |
 |OpenStackClient|   |   |   |
 |oslo|   |   |   |
-|Packaging-deb|   |   |   |
-|Packaging-rpm|   |   |   |
 |Puppet OpenStack|   |   |   |
-|Quality Assurance|   |   |   |
 |rally|   |   |   |
 |RefStack|   |   |   |
 |requirements|   |   |   |
-|sahara|   |   |   |
+|sahara| x  |   |   |
 |searchlight|   |   |   |
-|Security|   |   |   |
 |senlin|   |   |   |
 |solum|   |   |   |
-|swift|   |   |   |
+|swift| x  |   |   |
 |tacker|   |   |   |
-|Telemetry|   |   |   |
+|Telemetry (ceilometer)| x   |   |   |
+|tempest | x  |   |   |
 |tricircle|   |   |   |
 |tripleo|   |   |   |
-|trove|   |   |   |
+|trove| x   |   |   |
 |vitrage|   |   |   |
 |watcher|   |   |   |
 |winstackers|   |   |   |
