@@ -8,7 +8,7 @@ title: Project matrix
 |---------|-----|-----------|---------|
 |barbican|   |   |   |
 |Chef OpenStack|   |   |   |
-|cinder| x  |   |   |
+|cinder| x  | x |   |
 |cloudkitty|   |   |   |
 |congress|   |   |   |
 |designate|  x  |   |   |
@@ -16,21 +16,21 @@ title: Project matrix
 |ec2-api|   |   |   |
 |freezer|   |   |   |
 |fuel|   |   |   |
-|glance| x  |   |   |
-|heat| x  |   |   |
-|horizon|x   |   |   |
-|ironic| x  |   |   |
+|glance| x  | x |   |
+|heat| x  | x |   |
+|horizon|x   | x |   |
+|ironic| x  | x |   |
 |karbor|   |   |   |
-|keystone| x  |   |   |
+|keystone| x  | x |   |
 |kolla|   |   |   |
 |kuryr|   |   |   |
-|magnum|   |   |   |
-|manila| x  |   |   |
+|magnum|   | x (Since Ocata)  |   |
+|manila| x  | x |   |
 |mistral|   |   |   |
 |monasca|   |   |   |
 |murano|   |   |   |
-|neutron| x  |   |   |
-|nova| x  |   |   |
+|neutron| x  | x |   |
+|nova| x  | x |   |
 |octavia|   |   |   |
 |OpenStack Charms|   |   |   |
 |OpenStack UX|   |   |   |
@@ -41,17 +41,17 @@ title: Project matrix
 |rally|   |   |   |
 |RefStack|   |   |   |
 |requirements|   |   |   |
-|sahara| x  |   |   |
+|sahara| x  | x |   |
 |searchlight|   |   |   |
 |senlin|   |   |   |
 |solum|   |   |   |
-|swift| x  |   |   |
+|swift| x  | x |   |
 |tacker|   |   |   |
-|Telemetry (ceilometer)| x   |   |   |
+|Telemetry (ceilometer)| x   | x |   |
 |tempest | x  |   |   |
 |tricircle|   |   |   |
 |tripleo|   |   |   |
-|trove| x   |   |   |
+|trove| x   | x |   |
 |vitrage|   |   |   |
 |watcher|   |   |   |
 |winstackers|   |   |   |
