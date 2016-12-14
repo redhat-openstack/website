@@ -8,11 +8,11 @@ wiki_revision_count: 27
 wiki_last_updated: 2013-12-19
 ---
 
-# Networking
+# Network troubleshooting
 
 {:.no_toc}
 
-(See Also: [Networking](/troubleshooting/networking/))
+* See also: [Networking](/networking/).
 
 Check out this webcast - an overview of networking principles and how they apply to Neutron and OpenvSwitch - by Dave Neary.
 
@@ -67,7 +67,7 @@ Here are some diagnostics commands for networking (assuming you are using Neutro
     $ ip netns exec qrouter-1fabd5f0-f80b-468d-b733-1b80d0c3e80f \
       ip a
 
-    # Check routing table inside the router namespace     
+    # Check routing table inside the router namespace
     $ ip netns exec qrouter-1fabd5f0-f80b-468d-b733-1b80d0c3e80f \
       ip r
 
@@ -154,9 +154,8 @@ After this, you will no longer need to bring up eth0, and all going well you wil
 *   If you are using a virtual machine as a node in OpenStack, you must use the virtio network driver when using VLANs. The default rt8139 driver seems to drop VLAN information.
 *   You must have an external network set as the gateway to the router if you want to get network traffic out of the private instance network.
 
-## Useful resources
+## Other resources
 
-*   [Quantum L3 workflow](//docs.openstack.org/trunk/openstack-network/admin/content/l3_workflow.html)
-*   [Network troubleshooting](//docs.openstack.org/trunk/openstack-ops/content/network_troubleshooting.html)
+*   [Network troubleshooting (OpenStack Operations Guide)](//docs.openstack.org/ops-guide/ops-network-troubleshooting.html)
 
 <Category:Troubleshooting> <Category:Documentation> <Category:In progress> <Category:Networking>
