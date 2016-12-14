@@ -8,4 +8,9 @@ wiki_last_updated: 2013-12-18
 
 # Networking
 
-Category: Networking
+[← Docs](/documentation/)
+
+## Useful resources
+
+*   [Network troubleshooting](/troubleshooting/networking/)
+

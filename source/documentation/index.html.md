@@ -54,9 +54,9 @@ Since RDO sticks closely to the upstream OpenStack project, the documentation at
 ### Networking
 
 * [Neutron with an existing external network](/networking/neutron-with-existing-external-network/)
-* [ML2 plugin](/networking/ml2-plugin/)
 * [Floating vs private IPs](/networking/difference-between-floating-ip-and-private-ip/)
-* [More&hellip;](/documentation/networking/){:.more}
+* [Networking in detail](/networking/networking-in-too-much-detail/)
+* [More&hellip;](/networking/){:.more}
 {:.with-more-link}
 
 </div>
