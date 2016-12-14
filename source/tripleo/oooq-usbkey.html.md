@@ -16,7 +16,7 @@ The TripleO USB key a.k.a oooq-usbkey combines tripleo-quickstart and prebuilt R
 
 First download the following image:
 
-    curl -O http://artifacts.ci.centos.org/artifacts/rdo/images/mitaka/ooo-usbkey.img
+    curl -O https://images.rdoproject.org/ooo-usbkey/mitaka.img
 
 Make sure you know the device your USB key is assigned to:
 
