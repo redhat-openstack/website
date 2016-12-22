@@ -34,7 +34,7 @@ If your system meets all the prerequisites mentioned below, proceed with running
   $ sudo yum install -y https://www.rdoproject.org/repos/rdo-release.rpm
   $ sudo yum update -y
   $ sudo yum install -y openstack-packstack
-  $ packstack --allinone
+  $ sudo packstack --allinone
   ```
 
 * On CentOS:
@@ -43,7 +43,7 @@ If your system meets all the prerequisites mentioned below, proceed with running
   $ sudo yum install -y centos-release-openstack-newton
   $ sudo yum update -y
   $ sudo yum install -y openstack-packstack
-  $ packstack --allinone
+  $ sudo packstack --allinone
   ```
 
 ## Step 0: Prerequisites
