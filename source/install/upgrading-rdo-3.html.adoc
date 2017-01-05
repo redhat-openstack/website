@@ -33,12 +33,6 @@ Make sure that any previous release repositories are disabled. For example:
 # yum-config-manager --disable centos-release-openstack-mitaka
 ```
 
-Install the `openstack-utils` package to be able to manage services with the `openstack-service` command and use the `crudini` tool:
-
-```
-# yum install openstack-utils
-```
-
 Upgrade the `openstack-selinux` package:
 
 ```
@@ -107,7 +101,7 @@ This procedure upgrades MongoDB, which acts as the backend database for the Open
 3. Upgrade the relevant packages:
 +
 ```
-#  yum upgrade 'mongodb*' 'python-pymongo*'
+# yum upgrade 'mongodb*' 'python-pymongo*'
 ```
 4. Reload `systemd` to account for updated unit files:
 +
@@ -119,7 +113,7 @@ This procedure upgrades MongoDB, which acts as the backend database for the Open
 ```
 # systemctl start mongod
 ```
-6. Clean up the resource to Pacemaker control:
+6. Clean up the resource:
 +
 ```
 # pcs resource cleanup mongod-clone
@@ -135,26 +129,29 @@ This procedure upgrades MongoDB, which acts as the backend database for the Open
 
 This procedure upgrades the packages for the Identity service on all Controller nodes simultaneously.
 
-1. Remove Identity service from Pacemaker's control:
+1. Remove the service from Pacemaker's control:
 +
 ```
-# pcs resource unmanage openstack-keystone-clone
+# pcs resource unmanage httpd-clone
 ```
-2. Stop the Identity service by running the following on each Controller node:
+2. Stop the `httpd` service by running the following on each Controller node:
 +
 ```
-# systemctl stop openstack-keystone
+# systemctl stop httpd
 ```
 3. Upgrade the relevant packages:
 +
 ```
-# yum upgrade 'openstack-keystone*' 'python-keystone*'
+# yum -d1 -y upgrade \*keystone\*
+# yum -y upgrade \*horizon\* \*openstack-dashboard\* httpd
+# yum -d1 -y upgrade \*horizon\* \*python-django\*
 ```
 4. Reload `systemd` to account for updated unit files on each Controller node:
 +
 ```
 # systemctl daemon-reload
 ```
+
 5. Earlier versions of the installer may not have configured your system to automatically purge expired Keystone token, it is possible that your token table has a large number of expired entries. This can dramatically increase the time it takes to complete the database schema upgrade.
 +
 Flush expired tokens from the database to alleviate the problem. Run the `keystone-manage` command before running the Identity database upgrade.
@@ -173,17 +170,17 @@ This flushes expired tokens from the database. You can arrange to run this comma
 7. Restart the service by running the following on each Controller node:
 +
 ```
-# systemctl start openstack-keystone
+# systemctl start httpd
 ```
 8. Clean up the Identity service using Pacemaker:
 +
 ```
-# pcs resource cleanup openstack-keystone-clone
+# pcs resource cleanup httpd-clone
 ```
 9. Return the resource to Pacemaker control:
 +
 ```
-# pcs resource manage openstack-keystone-clone
+# pcs resource manage httpd-clone
 ```
 10. Wait until the output of `pcs status` shows that the above resources are running.
 
@@ -202,7 +199,7 @@ This procedure upgrades the packages for the Image service on all Controller nod
 3. Upgrade the relevant packages:
 +
 ```
-# yum upgrade 'openstack-glance*' 'python-glance*'
+# yum upgrade '*glance*'
 ```
 4. Reload `systemd` to account for updated unit files:
 +
@@ -244,7 +241,7 @@ This procedure upgrades the packages for the Block Storage service on all Contro
 3. Upgrade the relevant packages:
 +
 ```
-# yum upgrade 'openstack-cinder*' 'python-cinder*'
+# yum upgrade '*cinder*'
 ```
 4. Reload `systemd` to account for updated unit files:
 +
@@ -289,7 +286,7 @@ This procedure upgrades the packages for the Orchestration service on all Contro
 3. Upgrade the relevant packages:
 +
 ```
-# yum upgrade 'openstack-heat*' 'python-heat*'
+# yum upgrade '*heat*'
 ```
 4. Reload `systemd` to account for updated unit files:
 +
@@ -326,12 +323,15 @@ This procedure upgrades the packages for the Telemetry service on all Controller
 1. Stop all Telemetry resources in Pacemaker:
 +
 ```
-# pcs resource disable openstack-ceilometer-central
 # pcs resource disable openstack-ceilometer-api-clone
-# pcs resource disable openstack-ceilometer-alarm-evaluator-clone
 # pcs resource disable openstack-ceilometer-collector-clone
 # pcs resource disable openstack-ceilometer-notification-clone
-# pcs resource disable openstack-ceilometer-alarm-notifier-clone
+# pcs resource disable openstack-ceilometer-central-clone
+# pcs resource disable openstack-aodh-evaluator-clone
+# pcs resource disable openstack-aodh-listener-clone
+# pcs resource disable openstack-aodh-notifier-clone
+# pcs resource disable openstack-gnocchi-metricd-clone
+# pcs resource disable openstack-gnocchi-statsd-clone
 # pcs resource disable delay-clone
 ```
 2. Wait until the output of `pcs status` shows that the above services have stopped running.
@@ -339,7 +339,7 @@ This procedure upgrades the packages for the Telemetry service on all Controller
 3. Upgrade the relevant packages:
 +
 ```
-# yum upgrade 'openstack-ceilometer*' 'python-ceilometer*'
+# yum upgrade '*ceilometer*' '*aodh*' '*gnocchi*'
 ```
 4. Reload `systemd` to account for updated unit files:
 +
@@ -350,29 +350,37 @@ This procedure upgrades the packages for the Telemetry service on all Controller
 +
 ```
 # ceilometer-dbsync
+# aodh-dbsync
+# gnocchi-upgrade
 ```
 
 6. Clean up the Telemetry service using Pacemaker:
 +
 ```
 # pcs resource cleanup delay-clone
-# pcs resource cleanup openstack-ceilometer-alarm-notifier-clone
-# pcs resource cleanup openstack-ceilometer-notification-clone
-# pcs resource cleanup openstack-ceilometer-collector-clone
-# pcs resource cleanup openstack-ceilometer-alarm-evaluator-clone
 # pcs resource cleanup openstack-ceilometer-api-clone
-# pcs resource cleanup openstack-ceilometer-central
+# pcs resource cleanup openstack-ceilometer-collector-clone
+# pcs resource cleanup openstack-ceilometer-notification-clone
+# pcs resource cleanup openstack-ceilometer-central-clone
+# pcs resource cleanup openstack-aodh-evaluator-clone
+# pcs resource cleanup openstack-aodh-listener-clone
+# pcs resource cleanup openstack-aodh-notifier-clone
+# pcs resource cleanup openstack-gnocchi-metricd-clone
+# pcs resource cleanup openstack-gnocchi-statsd-clone
 ```
 7. Restart all Telemetry resources in Pacemaker:
 +
 ```
 # pcs resource enable delay-clone
-# pcs resource enable openstack-ceilometer-alarm-notifier-clone
-# pcs resource enable openstack-ceilometer-notification-clone
-# pcs resource enable openstack-ceilometer-collector-clone
-# pcs resource enable openstack-ceilometer-alarm-evaluator-clone
 # pcs resource enable openstack-ceilometer-api-clone
-# pcs resource enable openstack-ceilometer-central
+# pcs resource enable openstack-ceilometer-collector-clone
+# pcs resource enable openstack-ceilometer-notification-clone
+# pcs resource enable openstack-ceilometer-central-clone
+# pcs resource enable openstack-aodh-evaluator-clone
+# pcs resource enable openstack-aodh-listener-clone
+# pcs resource enable openstack-aodh-notifier-clone
+# pcs resource enable openstack-gnocchi-metricd-clone
+# pcs resource enable openstack-gnocchi-statsd-clone
 ```
 8. Wait until the output of `pcs status` shows that the above resources are running.
 
@@ -402,7 +410,7 @@ This procedure upgrades the packages for the Compute service on all Controller n
 3. Upgrade the relevant packages:
 +
 ```
-# yum upgrade 'openstack-nova*' 'python-nova*'
+# yum upgrade '*nova*'
 ```
 4. Reload `systemd` to account for updated unit files:
 +
@@ -424,6 +432,15 @@ Before starting Compute services on Controller or Compute nodes, set the `comput
 ```
 +
 This ensures the Controller node can still communicate to the Compute nodes, which are still using the previous version.
++
+[NOTE]
+====
+If  the `crudini` command is not available, install the `crudini` package:
+
+```
+# yum install crudini
+```
+====
 +
 You will need to first unmanage the Compute resources by running `pcs resource unmanage` on one Controller node:
 +
@@ -469,6 +486,47 @@ You should return control to the Pacemaker after upgrading all of your compute h
 # pcs resource enable openstack-nova-novncproxy-clone
 ```
 9. Wait until the output of `pcs status` shows that the above resources are running.
+
+### Upgrading Clustering service (sahara)
+
+This procedure upgrades the packages for the Clustering service on all Controller nodes simultaneously.
+
+1. Stop all Clustering service resources in Pacemaker:
++
+```
+# pcs resource disable openstack-sahara-api-clone
+# pcs resource disable openstack-sahara-engine-clone
+```
+2. Wait until the output of `pcs status` shows that the above services have stopped running.
+
+3. Upgrade the relevant packages:
++
+```
+# yum upgrade '*sahara*'
+```
+4. Reload `systemd` to account for updated unit files:
++
+```
+# systemctl daemon-reload
+```
+5. Update the Clustering service database schema:
++
+```
+# su -s /bin/sh -c "sahara-db-manage upgrade heads" sahara
+```
+6. Clean up the Clustering service using Pacemaker:
++
+```
+# pcs resource cleanup openstack-sahara-api-clone
+# pcs resource cleanup openstack-sahara-engine-clone
+```
+7. Restart all Block Storage service resources in Pacemaker:
++
+```
+# pcs resource enable openstack-sahara-api-clone
+# pcs resource enable openstack-sahara-engine-clone
+```
+8. Wait until the output of `pcs status` shows that the above resources are running.
 
 ### Upgrading OpenStack Networking (neutron)
 
@@ -527,45 +585,6 @@ This procedure upgrades the packages for the Networking service on all Controlle
 ```
 8. Wait until the output of `pcs status` shows that the above resources are running.
 
-### Upgrading Dashboard (horizon)
-
-This procedure upgrades the packages for the Dashboard on all Controller nodes simultaneously.
-
-1. Stop the Dashboard resource in Pacemaker:
-+
-```
-# pcs resource disable httpd-clone
-```
-2. Wait until the output of `pcs status` shows that the service has stopped running.
-
-3. Upgrade the relevant packages:
-+
-```
-# yum upgrade httpd 'openstack-dashboard*' 'python-django*'
-```
-4. Reload `systemd` to account for updated unit files:
-+
-```
-# systemctl daemon-reload
-```
-
-5. Restart the web server on all your controllers to apply all changes:
-+
-```
-# service httpd restart
-```
-6. Clean up the Dashboard resource in Pacemaker:
-+
-```
-#  pcs resource cleanup httpd-clone
-```
-7. Restart the Dashboard resource in Pacemaker:
-+
-```
-#  pcs resource enable httpd-clone
-```
-8. Wait until the output of `pcs status` shows that the above resource is running.
-
 ### Upgrading Compute (nova) Nodes
 
 This procedure upgrades the packages for on a single Compute node. Run this procedure on each Compute node individually.
@@ -578,12 +597,18 @@ Before starting Compute services on Controller or Compute nodes, set the `comput
 # crudini --set /etc/nova/nova.conf upgrade_levels compute mitaka
 ```
 
+Before updating, take a `systemd` snapshot of the OpenStack services.
+
+```
+# systemctl snapshot openstack-services
+```
+
 This ensures the Controller node can still communicate to the Compute nodes, which are still using the previous version.
 
 1. Stop all OpenStack services on the host:
 +
 ```
-# openstack-service stop
+# systemctl stop 'openstack*' '*nova*'
 ```
 2. Upgrade all packages:
 +
@@ -603,7 +628,7 @@ This ensures the Controller node can still communicate to the Compute nodes, whi
 5. Restart all OpenStack services on the host:
 +
 ```
-# openstack-service restart
+# systemctl isolate openstack-services.snapshot
 ```
 
 ### Post-Upgrade Tasks
@@ -618,4 +643,4 @@ This will ensure that all packages are up-to-date. You may want to schedule a re
 
 Review the resulting configuration files. The upgraded packages will have installed `.rpmnew` files appropriate to the Newton version of the service.
 
-New versions of OpenStack services may deprecate certain configuration options. You should also review your OpenStack logs for any deprecation warnings, because these may cause problems during a future upgrade. For more information on the new, updated and deprecated configuration options for each service , see Configuration Reference available from http://docs.openstack.org/newton/config-reference.
+New versions of OpenStack services may deprecate certain configuration options. You should also review your OpenStack logs for any deprecation warnings, because these may cause problems during a future upgrade. For more information on the new, updated and deprecated configuration options for each service, see Configuration Reference available from http://docs.openstack.org/newton/config-reference.
