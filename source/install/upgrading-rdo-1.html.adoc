@@ -14,16 +14,18 @@ The first step to performing a complete upgrade of OpenStack on a node involves 
 
 .Standard Nodes
 
-Install the `openstack-utils` package on all standard nodes to be able to manage services with the `openstack-service` command:
+Before updating, take a `systemd` snapshot of the OpenStack services.
 
 ```
-# yum install openstack-utils
+# systemctl snapshot openstack-services
 ```
 
-Disable all OpenStack services on all standard nodes:
+Disable the main OpenStack services:
 
 ```
-# openstack-service stop
+# systemctl stop 'openstack-*'
+# systemctl stop 'neutron-*'
+# systemctl stop 'openvswitch'
 ```
 
 .High Availability Nodes
@@ -115,6 +117,9 @@ Upgrade the database schema for each service that uses the database. Run the fol
 
 `# su -s /bin/sh -c "nova-manage db sync" nova`
 |Telemetry |ceilometer |`# ceilometer-dbsync`
+|Telemetry Alarming |aodh |`# aodh-dbsync`
+|Telemetry Metrics |gnocchi |`# gnocchi-upgrade`
+|Clustering |sahara | `# su -s /bin/sh -c "sahara-db-manage upgrade heads" sahara`
 |Networking |neutron |`# su -s /bin/sh -c "neutron-db-manage upgrade heads" neutron`
 |===
 
@@ -127,7 +132,7 @@ The final step enables the OpenStack services on the node. This step differs bas
 Restart all OpenStack services:
 
 ```
-# openstack-service start
+# systemctl isolate openstack-services.snapshot
 ```
 
 .High Availability Nodes
@@ -154,4 +159,4 @@ Enable Pacemaker management for any unmanaged resources, such as the databases a
 
 ### Post-Upgrade Notes
 
-New versions of OpenStack services may deprecate certain configuration options. You should also review your OpenStack logs for any deprecation warnings, because these may cause problems during a future upgrade. For more information on the new, updated and deprecated configuration options for each service , see Configuration Reference available from http://docs.openstack.org/newton/config-reference.
+New versions of OpenStack services may deprecate certain configuration options. You should also review your OpenStack logs for any deprecation warnings, because these may cause problems during a future upgrade. For more information on the new, updated and deprecated configuration options for each service, see Configuration Reference available from http://docs.openstack.org/newton/config-reference.
