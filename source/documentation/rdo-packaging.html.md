@@ -368,6 +368,30 @@ help to add new packages, you can ask on `#rdo` or `rdo-list` mailing list.
 
 <a id="#rdo-pkg-guide"></a>
 
+### How to add a new puppet module to RDO Trunk
+
+Adding a new puppet module to RDO Trunk is done using the same process as adding a new
+package to RDO Trunk with a few small differences. Use the following steps referencing the above
+[How to add a new package to RDO Trunk](/documentation/rdo-packaging/#how-to-add-a-new-package-to-rdo-trunk)
+for details on submitting a new puppet module. The steps here correspond to the
+steps above offering details specific to puppet modules.
+
+1. Submit the Package Review, instead of including a spec file reference that the
+spec file will be generated.
+
+2. Send a review to rdoinfo according to the package requirements. The under-review tag
+is still required. Use this as example content:
+        - project: puppet-congress
+          conf: rpmfactory-puppet
+          tags:
+            under-review:
+            #ocata-uc:
+            #ocata:
+
+3. Generate the spec file to submit to the new distgit project using https://github.com/strider/opm-toolbox
+
+4. Process is the same as standard packages
+
 ## RDO CloudSIG Packaging Guide
 
 Packaging files for CloudSIG repos live in `$RELEASE-rdo` branches of
