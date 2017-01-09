@@ -46,7 +46,7 @@ this template if tests are added/modified.
 * Results:
 * Tickets:
 
-##Packstack Based Installation (Storage Components)
+## Packstack Based Installation (Storage Components)
 
 ### All-in-One        Glance=localfs, Cinder=lvm
 * CentOS 7
