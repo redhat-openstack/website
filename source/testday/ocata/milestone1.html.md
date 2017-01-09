@@ -17,7 +17,7 @@ everyone isn't encountering the same problems.
 We will also be available for people that want to try the stable
 (Newton) release.
 
-### Quick links:
+### Quick links
 
 * [Test matrix](/testday/tests)
 * [Workarounds](/testday/ocata/workarounds1)
@@ -44,7 +44,8 @@ willing to test RDO using the pre-release must follow these steps:
 
 1. Add the requirements repos for 7.3 pre-release:
 
-       $ sudo curl -O /etc/yum.repos.d/rdo-reqs-pre-7.3.repo http://trunk.rdoproject.org/rdo-reqs-pre-7.3/rdo-reqs-pre-7.3.repo
+       $ cd /etc/yum.repos.d/
+       $ sudo curl -O http://trunk.rdoproject.org/rdo-reqs-pre-7.3/rdo-reqs-pre-7.3.repo
 
 ## How to test?
 

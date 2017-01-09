@@ -17,7 +17,7 @@ everyone isn't encountering the same problems.
 We will also be available for people that want to try the stable
 (Newton) release.
 
-### Quick links:
+### Quick links
 
 * [Test matrix](/testday/tests)
 * [Workarounds](/testday/ocata/workarounds3)
