@@ -312,7 +312,7 @@ When a new package is required in RDO, it must be added to RDO Trunk packaging.
 To include new packages, following steps are required:
 
 1. Create a "Package Review" bug in [Red Hat bugzilla](https://bugzilla.redhat.com/)
-following the best practices described in [RDO OpenStack Packaging Guidelines](/documentation/rdo-packaging-guidelines/).
+following the best practices described in [RDO OpenStack Packaging Guidelines](/documentation/rdo-packaging-guidelines/). Once the bug has been created, and an initial license check has been conducted, you can continue with steps 2 and 3.
 
 2. Send a review adding the new project in rdo.yml to the [rdoinfo project in
 review.rdoproject.org](https://review.rdoproject.org/r/#/q/project:rdoinfo). In
@@ -348,10 +348,14 @@ and comment all releases where package should be built, as for example:
 file, etc...) for the initial import as in [this example](https://review.rdoproject.org/r/#/c/1417/).
 This will trigger a CI job to test the package build.
 
-4. Once the initial import in the distgit is merged, send a new review to rdoinfo
-project to remove the `under-review` tag and uncomment the required versions where the
-package must be built ([example](https://review.rdoproject.org/r/#/c/1422/)).
-This change can be sent before merging review in step 3 if a `Depends-On: <gerrit-change-id step 3>` is added.
+4. Once the initial distgit import is merged, go back to the Package Review
+Bugzilla and update it with the final spec and SRPM. Then, the formal package 
+review will be conducted by the reviewer, who will set the `rdo-review +` flag.
+
+5. Finally, send a new review to rdoinfo project to remove the `under-review` tag and uncomment the required versions where the package must be built ([example](https://review.rdoproject.org/r/#/c/1422/)).
+This change can be sent before merging review in step 3 if a `Depends-On: <gerrit-change-id step 3>`
+is added, but the review will only be approved once the `rdo-review +` flag has been
+set in the Bugzilla.
 
 Once the change is merged in rdoinfo, a new package should be automatically built
 and published in the [RDO Trunk repos](http://trunk.rdoproject.org/centos7-master/report.html).
