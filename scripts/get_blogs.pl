@@ -49,7 +49,7 @@ foreach ( $feed->entries ) {
 
     print $md "Read more at [$short]($short)\n\n\n";
 
-    print $tweets '"01/01/2016 00:00:00","' . $_->title 
+    print $tweets '"01/01/2017 00:00:00","' . $_->title 
             . ' #OpenStack #RDOCommunity","'
             . $short . '"' . "\n";
 }
