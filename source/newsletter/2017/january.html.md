@@ -1,4 +1,4 @@
-# Jauary 2017 RDO Community Newsletter
+# January 2017 RDO Community Newsletter
 
 ## Quick links:
 
