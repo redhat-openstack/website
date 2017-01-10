@@ -1,18 +1,12 @@
 ---
-title: Newsletter
+title: Newsletter Archive - 2016
 ---
 
-# Newsletter
+# Newsletter Archive - 2016
 
-We send out a monthly newsletter covering anything of interest to the RDO Community.
+We send out a monthly [newsletter](/newsletter) covering anything of interest to the RDO Community.
 
 You can sign up to receive the newsletter [on the mailing list page](http://www.redhat.com/mailman/listinfo/rdo-newsletter).
-
-## 2017
-
-* [January 2017](/newsletter/2017/january)
-
-## 2016
 
 *  [December 2016](/newsletter/2016/december)
 *  [November 2016](/newsletter/2016/november)
