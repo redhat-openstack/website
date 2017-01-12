@@ -1,11 +1,6 @@
 ---
 title: Legal
 category: legal
-authors: dneary
-wiki_category: Legal
-wiki_title: Legal
-wiki_revision_count: 8
-wiki_last_updated: 2013-04-13
 ---
 
 # Legal

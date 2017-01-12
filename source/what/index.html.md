@@ -27,7 +27,7 @@ TODO: Intro paragraph
     * [RDO Trunk repos](/what/trunk-repos)
     * [Promotion pipeline](/what/promotion-pipeline)
     * [I want a new package in RDO, now what?](/what/new-package)
-* Workflow after the cycle (once an OpenStack release is launched)
-    * Overview and infrastructure
-    * Repositories
+* [Workflow after the cycle](/what/release) (once an OpenStack release is launched)
+    * [Overview and infrastructure](/what/release-overview)
+    * [Repositories](/what/release-repos)
 
