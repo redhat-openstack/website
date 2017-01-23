@@ -3,8 +3,8 @@ title: Last week's blog posts
 author: rbowen
 date: 2017-01-23 15:04:27 UTC
 tags: blogs,openstack
-published: false
 comments: true
+published: true
 ---
 
 **Making sure your Gerrit changes aren't broken** by Lars Kellogg-Stedman
