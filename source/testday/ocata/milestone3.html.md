@@ -19,7 +19,7 @@ We will also be available for people that want to try the stable
 
 ### Quick links
 
-* [Test matrix](/testday/tests)
+* [Test matrix](https://etherpad.openstack.org/p/rdo-test-days-ocata-m3)
 * [Workarounds](/testday/ocata/workarounds3)
 
 ## Prerequisites
@@ -52,7 +52,7 @@ You'll want a fresh install with latest updates installed.
 
 ### Test cases and results
 
-The scenarios that should be tested are listed on the [test matrix](/testday/tests) page. This will be copied to an etherpad the day of the test, for easier annotation during the event.
+The scenarios that should be tested are listed on the [test matrix](/testday/tests) page. This will be copied to an [etherpad](https://etherpad.openstack.org/p/rdo-test-days-ocata-m3) the day of the test, for easier annotation during the event.
 
 1. Pick an item from the list.
 1. Go through the scenario as though you were a beginner, just following the instructions. (Check the [workarounds](/testday/ocata/workarounds3) page for problems that others may have encountered and resolved.)
