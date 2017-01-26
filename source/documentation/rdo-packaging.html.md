@@ -392,6 +392,17 @@ is still required. Use this as example content:
 
 4. Process is the same as standard packages
 
+### How to add a new puppet module to openstack-puppet-modules (OPM)
+
+For a puppet module to be included as a part of the collection of puppet
+modules used to deploy RDO, the package that was created in the previous
+section must be added to the requires list of the
+openstack-puppet-modules-distgit package.
+
+Clone the openstack-puppet-modules-distgit project using rdopkg. Submit a
+review with the puppet module package name added to the list of requires in
+the spec file maintained in the openstack-puppet-modules-distgit project.
+
 ## RDO CloudSIG Packaging Guide
 
 Packaging files for CloudSIG repos live in `$RELEASE-rdo` branches of
