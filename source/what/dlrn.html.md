@@ -1,5 +1,5 @@
 ---
-title: DLRN: What is it, what we use it for
+title: DLRN - What is it, what we use it for
 ---
 
 # DLRN: What it is, what we use it for
