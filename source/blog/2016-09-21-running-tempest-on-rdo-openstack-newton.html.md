@@ -5,6 +5,8 @@ tags: rdo,packstack,tempest,newton,packaging
 date: 2016-09-26 11:23:29 IST
 ---
 
+> UPDATES: RDO Ocata introduces few changes that partially obsoletes the
+> content of this article; check the [updated article](/blog/2017/02/testing-rdo-with-tempest-new-features-in-ocata/) for details.
 
 [Tempest](http://docs.openstack.org/developer/tempest/overview.html) is a set of integration tests to run against an OpenStack cluster.
 
