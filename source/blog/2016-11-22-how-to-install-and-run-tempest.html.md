@@ -5,6 +5,9 @@ tags: tempest,install,configure,virtualenv
 date: 2016-11-22 11:10:15 UTC
 ---
 
+> UPDATES: RDO Ocata introduces few changes that partially obsoletes the
+> content of this article; check the [updated article](/blog/2017/02/testing-rdo-with-tempest-new-features-in-ocata/) for details.
+
 [Tempest](http://docs.openstack.org/developer/tempest/overview.html) is a set of integration tests to run against an OpenStack cluster. In this blog I'm going to show you, how to install tempest from git repository, how to install all requirements and run tests against an OpenStack cluster.
 
 I'm going to use a fresh installation of [Centos7](https://www.centos.org/download/) and OpenStack cluster provided by [packstack](https://www.rdoproject.org/install/quickstart/). If you've done that, follow the instructions below.
