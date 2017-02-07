@@ -12,7 +12,6 @@ schedule](https://www.rdoproject.org/community/rdo-bugtriage/).
 
 The (tentative) test day schedule is:
 
-* [Ocata 3 &ndash; February 2nd and 3rd, 2017](/testday/ocata/milestone3)
 * [Ocata Final &ndash; March 2nd and 3rd, 2017](/testday/ocata/final)
 
 ## Test, every day
@@ -26,6 +25,7 @@ Quickstart](/tripleo).
 
 | Milestone | Date | Tickets opened | IRC participation | URL(s) |
 |-----------|------|----------------|-------------------|--------|
+| [Ocata 3](/testday/ocata/milestone3) | February 2-3 2017 | | | [Tickets](https://bugzilla.redhat.com/buglist.cgi?bug_status=NEW&bug_status=ASSIGNED&bug_status=POST&bug_status=MODIFIED&bug_status=ON_DEV&bug_status=ON_QA&bug_status=VERIFIED&bug_status=RELEASE_PENDING&chfield=%5BBug%20creation%5D&chfieldfrom=2016-12-04&chfieldto=2017-02-03&classification=Community&list_id=7044698&product=RDO&query_format=advanced) |
 | [Ocata 1](/testday/ocata/milestone1) | December 2-3 | 6  | 55 participants, 1334 messages  | [Tickets](http://tm3.org/cu) |
 | Newton GA | October 13-14 | 4 | 53 participants, 1680 messages | [Tickets](https://bugzilla.redhat.com/buglist.cgi?bug_status=NEW&bug_status=ASSIGNED&bug_status=POST&bug_status=MODIFIED&bug_status=ON_DEV&bug_status=ON_QA&bug_status=VERIFIED&bug_status=RELEASE_PENDING&chfield=%5BBug%20creation%5D&chfieldfrom=2016-10-12&chfieldto=2016-10-15&classification=Community&list_id=4344410&product=RDO&query_format=advanced)  |
 | Newton RC | September 29-30 | 1 | 44 participants , 828 messages | [Tickets](https://bugzilla.redhat.com/buglist.cgi?bug_status=NEW&bug_status=ASSIGNED&bug_status=POST&bug_status=MODIFIED&bug_status=ON_DEV&bug_status=ON_QA&bug_status=VERIFIED&bug_status=RELEASE_PENDING&chfield=%5BBug%20creation%5D&chfieldfrom=2016-09-28&chfieldto=2016-10-01&classification=Community&list_id=4344410&product=RDO&query_format=advanced)  |
@@ -37,4 +37,3 @@ Quickstart](/tripleo).
 | Mitaka 1  | Dec 10-11, 2015 | 9 | 44 participants, 795 messages  | [Tickets](https://goo.gl/51Dz97) |
 | Liberty 2 | Oct 12-13 | 23 | 42 participants, 1074 messages | [Tickets](https://goo.gl/D6VeQ0) |
 | Liberty 1 | Sep 23-24 | 17 |  | [Tickets](https://goo.gl/OIPNt3) |
-
