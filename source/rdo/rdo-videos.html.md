@@ -8,6 +8,12 @@ wiki_last_updated: 2014-10-22
 
 # RDO videos
 
+## CentOS Dojo, Brussels, 2017
+
+* Watch videos from the event in [Videos from the CentOS Dojo, Brussels, 2017](http://0.0.0.0:4567/blog/2017/02/centos-dojo-brussels-2017-videos/).
+
+# Archived videos
+
 ## RDO BoF @ OpenStack Summit Austin
 
 <iframe width="630" src="//youtube.com/embed/pmb3RA1GmGs" frameborder="0" align="center" allowfullscreen="true"> </iframe>
@@ -15,8 +21,6 @@ wiki_last_updated: 2014-10-22
 ## FOSDEM 2016
 
 *   [RDO Community Day](https://www.youtube.com/playlist?list=PL27cQhFqK1QwGg15Yd4jeZVLtuvyboGSi)
-
-# Archived videos
 
 ## OpenStack Summit Atlanta
 
@@ -44,6 +48,6 @@ wiki_last_updated: 2014-10-22
 
 ## Heat, OpenStack and Red Hat
 
-Interview with Steve Hardy at [Open World Forum 2013](//www.openworldforum.org/en/).
+* Interview with Steve Hardy at [Open World Forum 2013](//www.openworldforum.org/en/).
 
 <iframe width="630" src="//youtube.com/embed/I3V6MFUg3vk" frameborder="0" align="center" allowfullscreen="true"> </iframe>
