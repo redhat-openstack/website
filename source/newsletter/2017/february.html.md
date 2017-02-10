@@ -119,7 +119,7 @@ Read more at [http://tm3.org/dm](http://tm3.org/dm)
 Read more at [http://tm3.org/do](http://tm3.org/do)
 
 
-If you blog about anything OpenStack, please let me know, so that I can add you to the list of blogs that I review each week.
+If you blog about anything OpenStack, please let me know, so that I can add you to the list of blogs that I review each week. And see rdo-list, where I post a round-up of RDO bloggers almost every week.
 
 ## Community meetings 
 
