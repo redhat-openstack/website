@@ -7,22 +7,11 @@ title: MidoNet and MEM Integration
 ## RHOSP Director Integration
 
 The following guide covers the basic steps for the integration of
-**Midokura Enterprise MidoNet (MEM)** into a RHOSP Director based OpenStack
-installation:
+**Midokura Enterprise MidoNet (MEM)** and **MidoNet** into a RHOSP
+Director based deployment:
 
-* [MEM 5.0 Integration with RHOSP 8 (Liberty) on RHEL 7 using Director](../midonet-integration_mem-5-rhel-7-liberty-osp-director)
+* [MidoNet 5.4 Integration with RHOSP 10 (Newton) on RHEL 7](../midonet-integration_midonet-54-rhel7-rhosp10)
 
-## Packstack All-in-One Integration
-
-The following guides cover the basic steps for the integration of **MidoNet** or
-**Midokura Enterprise MidoNet (MEM)** into a Packstack All-in-One OpenStack
-installation:
-
-* [MidoNet 5.1 Integration with RDO Liberty on CentOS 7 using Packstack](../midonet-integration_mn-51-centos-7-liberty-rdo-packstack)
-
-* [MEM 5.0 Integration with RHOSP Liberty on RHEL 7 using Packstack](../midonet-integration_mem-5-rhel-7-liberty-osp-packstack)
-
-* [MEM 5.0 Integration with RHOSP Kilo on RHEL 7 using Packstack](../midonet-integration_mem-5-rhel-7-kilo-osp-packstack)
 
 ## About MidoNet
 
@@ -39,7 +28,7 @@ Midokura Enterprise MidoNet (MEM) is a commercial product from
 [Midokura][midokura], combining the most stable, production-hardened version of
 MidoNet with the graphical administration tool MidoNet Manager, additional data
 analytics and visualization, longer term support, and enterprise-class 24x7
-service level agreement. 
+service level agreement.
 
 See the [MEM web site][mem] for further information about MEM, or check the
 [MEM Documentation][mem-docs] web site for advanced installation and
