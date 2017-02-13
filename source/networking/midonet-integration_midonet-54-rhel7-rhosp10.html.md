@@ -7,7 +7,7 @@ title: MidoNet 5.4 Integration with RHOSP 10 (Newton) on RHEL 7
 
 This guide covers the basic steps for the integration of [MidoNet][midonet]
 5.4 into a RHOSP 10 deployment using RHEL 7, assuming basic knowledge about
-RHOSP 10 and its composable services[composable-services-docs].
+RHOSP 10 and its [composable services][composable-services-docs].
 
 ## Initial configuration
 
