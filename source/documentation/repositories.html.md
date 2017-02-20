@@ -14,17 +14,13 @@ This document expands on the details of the various repositories involved.
 
 ### Enabling the Optional, Extras, and RH Common channels on RHEL
 
-If using RHEL it's assumed that `rhel-7-server-rpms` is enabled by default. RDO also needs the `Optional`, `Extras`, and `RH Common` channels to be enabled:
+If using RHEL it is assumed that you have registered your system using Red Hat Subscription Management and that you have the `rhel-7-server-rpms` repository enabled by default. RDO also needs the `Optional`, `Extras`, and `RH Common` channels to be enabled:
 
-    $ sudo subscription-manager repos --enable=rhel-7-server-optional-rpms
+    $ sudo subscription-manager repos --enable=rhel-7-server-optional-rpms \
+    --enable=rhel-7-server-extras-rpms --enable=rhel-7-server-rh-common-rpms
 
-    $ sudo subscription-manager repos --enable=rhel-7-server-extras-rpms
-
-    $ sudo subscription-manager repos --enable=rhel-7-server-rh-common-rpms
-
-The `Optional` channel is not available for CentOS or Scientific Linux. The required packages are included in the main repositories for those distributions. `Extras` is enabled by default on CentOS 7.
+The `Optional` channel does not exist in CentOS or Scientific Linux. The required packages are included in the main repositories for those distributions. `Extras` is enabled by default on CentOS 7.
 
 ### Red Hat OpenStack Platform
 
-The separate [Red Hat OpenStack Platform](https://access.redhat.com/products/red-hat-openstack-platform/) product does **not** require the `Optional`, `Extras`, and `RH Common` channels enabled.
-
+The separate [Red Hat OpenStack Platform](https://access.redhat.com/products/red-hat-openstack-platform/) product has different repository requirements. For more information, see the [Red Hat OpenStack Platform Release Notes](https://access.redhat.com/documentation/en-us/red_hat_openstack_platform/10/html/release_notes/content_delivery_network_cdn_channels).
