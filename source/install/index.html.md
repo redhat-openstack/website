@@ -21,7 +21,8 @@ For an initial test deployment, follow the [Packstack quickstart](/install/quick
 *   [TripleO quickstart](/tripleo) &ndash; production deployment, with HA
 *   [Packstack quickstart](/install/quickstart) &ndash; proof of concept for single node
 *   [More information on Packstack](/documentation/packstack-cookbook/)
-*   [Repositories](/documentation/repositories/)
+*   [Manual Installation Tutorial](https://docs.openstack.org/ocata/install-guide-rdo/) &ndash; OpenStack upstream documentation
+*   [RDO repositories](/documentation/repositories/)
 </div>
 
 <div class="split-third with-more">
