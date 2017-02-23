@@ -21,7 +21,7 @@ Interesting things in the Ocata release include:
 
 For cloud operators, RDO now provides packages for some new OpenStack Services:
 
-* [Tacke] (https://docs.openstack.org/developer/tacker/): an ETSI MANO NFV Orchestrator and VNF Manager
+* [Tacker](https://docs.openstack.org/developer/tacker/): an ETSI MANO NFV Orchestrator and VNF Manager
 * [Congress](https://docs.openstack.org/developer/congress/architecture.html): an open policy framework for the cloud
 * [Vitrage](https://docs.openstack.org/developer/vitrage/): the OpenStack RCA (Root Cause Analysis) Service
 * [Kolla](https://github.com/openstack/kolla): The Kolla project provides tooling to build production-ready container images for deploying OpenStack clouds
