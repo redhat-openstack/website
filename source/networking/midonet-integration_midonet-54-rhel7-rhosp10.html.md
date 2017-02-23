@@ -49,7 +49,8 @@ export DIB_MIDONET_openstack_version=newton
 As you can see above, we will be installing MidoNet 5.4 from its stable branch,
 for the Newton release. Then clone these two repositories from the MidoNet
 GitHub organization (while the patches are being reviewed upstream) and place
-them inside `/home/stack/custom-images/`.
+them inside `/home/stack/custom-images/`. Then checkout the
+`stable/newton_midonet` branch, as it's the branch that contains all changes.
 
 * [tripleo-puppet-elements][midonet-tpe]
 * [tripleo-heat-templates][midonet-tht]
