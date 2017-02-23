@@ -89,7 +89,9 @@ The MidoNet Heat templates define the following composable services:
 | `midonet_gateway` | Configure the uplink on a gateway node.
 | `midonet_nsdb`    | Install and configure Zookeeper and Cassandra.
 
-Add these services as you need to the nodes you are going to deploy.
+Distribute these services as you need to on the nodes you are planning on
+deploying. These services and more are defined in the file `roles_data.yaml`,
+inside the previously cloned `tripleo-heat-templates` folder.
 
 ### Set environment variables
 
