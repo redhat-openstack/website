@@ -53,7 +53,7 @@ From the [Packstack](https://github.com/openstack/packstack) side, we have sever
 
 There are three ways to get started with RDO.
 
-To spin up a proof of concept cloud, quickly, and on limited hardware, try the [All-In-One Quickstart](http://rdoproject.org/Quickstart). You can run RDO on a single node to get a feel for how it works.
+To spin up a proof of concept cloud, quickly, and on limited hardware, try the [All-In-One Quickstart](https://www.rdoproject.org/install/quickstart/). You can run RDO on a single node to get a feel for how it works.
 
 For a production deployment of RDO, use the [TripleO Quickstart](https://www.rdoproject.org/tripleo/) and you'll be running a production cloud in short order.
 
