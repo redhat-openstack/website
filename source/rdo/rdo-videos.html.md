@@ -8,11 +8,13 @@ wiki_last_updated: 2014-10-22
 
 # RDO videos
 
+## OpenStack PTG, Atlanta, 2017
+
+* [What did you do in OpenStack Ocata?](https://www.youtube.com/playlist?list=PL27cQhFqK1QzaZL1XrX_CzT7uCOWQ64xM)
+
 ## CentOS Dojo, Brussels, 2017
 
-* Watch videos from the event in [Videos from the CentOS Dojo, Brussels, 2017](http://0.0.0.0:4567/blog/2017/02/centos-dojo-brussels-2017-videos/).
-
-# Archived videos
+* Watch videos from the event in [Videos from the CentOS Dojo, Brussels, 2017](/blog/2017/02/centos-dojo-brussels-2017-videos/).
 
 ## RDO BoF @ OpenStack Summit Austin
 
