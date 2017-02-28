@@ -10,7 +10,7 @@ wiki_last_updated: 2014-10-22
 
 ## OpenStack PTG, Atlanta, 2017
 
-* [What did you do in OpenStack Ocata?](https://www.youtube.com/playlist?list=PL27cQhFqK1QzaZL1XrX_CzT7uCOWQ64xM)
+* [What did you do in OpenStack Ocata?](https://www.youtube.com/playlist?list=PLOuHvpVx7kYksG0NFaCaQsSkrUlj3Oq4S)
 
 ## CentOS Dojo, Brussels, 2017
 
