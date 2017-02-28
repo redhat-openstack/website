@@ -17,7 +17,7 @@ This document shows how to spin up a proof of concept cloud on one node, using t
 
 * If you just want to try out OpenStack without installing anything, check out [TryStack](http://trystack.org).
 
-The instructions apply to the current **Newton** release.
+The instructions apply to the current **Ocata** release.
 
 ## Summary for the impatient
 
@@ -40,7 +40,7 @@ If your system meets all the prerequisites mentioned below, proceed with running
 * On CentOS:
 
   ```
-  $ sudo yum install -y centos-release-openstack-newton
+  $ sudo yum install -y centos-release-openstack-ocata
   $ sudo yum update -y
   $ sudo yum install -y openstack-packstack
   $ sudo packstack --allinone
@@ -86,7 +86,7 @@ $ sudo yum install -y https://rdoproject.org/repos/rdo-release.rpm
 On CentOS, the `Extras` repository provides the RPM that enables the OpenStack repository. `Extras` is enabled by default on CentOS 7, so you can simply install the RPM to set up the OpenStack repository:
 
 ```
-$ sudo yum install -y centos-release-openstack-newton
+$ sudo yum install -y centos-release-openstack-ocata
 ```
 
 Update your current packages:
