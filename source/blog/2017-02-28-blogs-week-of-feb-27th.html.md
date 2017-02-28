@@ -7,7 +7,7 @@ comments: true
 published: true
 ---
 
-Here's what RDO enthusiasts have been blogging about in the last couple of weeks. I encourage you to particularly read [Julie' excellent writeup](http://tm3.org/eb) of the OpenStack Pike PTG last week in Atlanta. And have a look at my [video series](https://www.youtube.com/playlist?list=PL27cQhFqK1QzaZL1XrX_CzT7uCOWQ64xM) from the PTG for other engineers' perspectives.
+Here's what RDO enthusiasts have been blogging about in the last couple of weeks. I encourage you to particularly read [Julie' excellent writeup](http://tm3.org/eb) of the OpenStack Pike PTG last week in Atlanta. And have a look at my [video series](https://www.youtube.com/playlist?list=PLOuHvpVx7kYksG0NFaCaQsSkrUlj3Oq4S) from the PTG for other engineers' perspectives.
 
 
 **OpenStack Pike PTG: OpenStack Client  - Tips and background for interested contributors** by jpichon
