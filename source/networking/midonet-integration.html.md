@@ -10,6 +10,7 @@ The following guide covers the basic steps for the integration of
 **Midokura Enterprise MidoNet (MEM)** and **MidoNet** into a RHOSP
 Director based deployment:
 
+* [MEM 5.4 Integration with RHOSP 10 (Newton) on RHEL 7](../midonet-integration_mem-54-rhel7-rhosp10)
 * [MidoNet 5.4 Integration with RHOSP 10 (Newton) on RHEL 7](../midonet-integration_midonet-54-rhel7-rhosp10)
 
 
