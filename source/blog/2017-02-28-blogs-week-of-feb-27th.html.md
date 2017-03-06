@@ -54,7 +54,7 @@ Read more at [http://tm3.org/e1](http://tm3.org/e1)
 
 **ANNOUNCE: libosinfo 1.0.0 release** by Daniel Berrange
 
->     NB, this blog post was intended to be published back in November last year, but got forgotten in draft stage. Publishing now in case anyone missed the release…  
+>  NB, this blog post was intended to be published back in November last year, but got forgotten in draft stage. Publishing now in case anyone missed the release…  
 
 Read more at [http://tm3.org/e2](http://tm3.org/e2)
 
