@@ -196,7 +196,7 @@ openstack overcloud deploy --templates /home/stack/custom-images/tripleo-heat-te
 ```
 
 
-[midonet]: https://www.midonet.org/
+[mem]: http://www.midokura.com/midonet-enterprise/
 [composable-services-docs]: http://docs.openstack.org/developer/tripleo-docs/developer/tht_walkthrough/tht_walkthrough.html
 [rhosp-10-docs]: https://access.redhat.com/documentation/en/red-hat-openstack-platform/10/paged/director-installation-and-usage/
 [tripleo-images]: http://tripleo.org/troubleshooting/troubleshooting-image-build.html
