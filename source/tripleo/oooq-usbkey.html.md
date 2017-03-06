@@ -97,4 +97,4 @@ If you would like to have tripleo-quickstart deploy your overcloud and validate 
     cd tripleo-quickstart
     bash quickstart.sh --tags all --requirements ci-scripts/usbkey/usb_requirements.txt --playbook quickstart-usb.yml --extra-vars image_cache_dir=/home/foo   localhost
 
-Thanks for reading through this and we hope you are successful with your deployments! We will be updating the image from time to time, so be on the look out for the Newton version.
+Thanks for reading through this and we hope you are successful with your deployments!
