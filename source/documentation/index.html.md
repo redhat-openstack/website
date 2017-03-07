@@ -90,6 +90,7 @@ Since RDO sticks closely to the upstream OpenStack project, the documentation at
 ### Testing
 
 * [RDO test days](/testday) &ndash; trying a pre-release
+* [RDO trunk development](https://trunk.rdoproject.org/)
 * [Open
   tickets](https://bugzilla.redhat.com/buglist.cgi?product=RDO&query_format=advanced&bug_status=NEW&bug_status=ASSIGNED)
 
