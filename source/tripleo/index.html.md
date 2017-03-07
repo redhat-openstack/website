@@ -41,13 +41,7 @@ $ sudo bash quickstart.sh --install-deps
     $ curl -O https://raw.githubusercontent.com/openstack/tripleo-quickstart/master/quickstart.sh
     $ bash quickstart.sh $VIRTHOST
 
-This script will output instructions at the end to access the deployed undercloud. If a release name is not given, the latest stable release name is used.
-
-## TripleO USB key
-
-The TripleO USB key combines tripleo-quickstart and prebuilt RDO OpenStack images into a USB key for a plug and play TripleO install experience.
-
-*    [Learn more about the TripleO USB key](/tripleo/oooq-usbkey)
+This script will output instructions at the end to access the deployed undercloud. If a release name is not given, the latest stable release name is used.  Further documentation about TripleO Quickstart is available from the [TripleO Quickstart Documentation](https://docs.openstack.org/developer/tripleo-quickstart/).
 
 ## <a name="reading">Further reading</a>
 
