@@ -17,7 +17,7 @@ Thanks for being part of the RDO community!
 
 ## Ocata Released!!!
 
-* The RDO community is proud to announce the release of RDO packages for OpenStack Ocata. Following just a few hours after the upstream release of Ocata, RDO's packages passed CI, and were delivered to our RPM repositories around the Internet.
+The RDO community is proud to announce the release of RDO packages for OpenStack Ocata. Following just a few hours after the upstream release of Ocata, RDO's packages passed CI, and were delivered to our RPM repositories around the Internet.
 
 Javier Pena did a great writeup of the release on the RDO blog, including details of what is new in Ocata, and where to try out the new RDO packages. You can read that [here](https://www.rdoproject.org/blog/2017/02/rdo-ocata-released/). We recommend using the [TripleO Quickstart](https://www.rdoproject.org/tripleo/) to get started trying out Ocata.
 
@@ -82,7 +82,7 @@ Read more at [http://rdoproject.org/blog/2017/02/rdo-ocata-release-behind-the-sc
 Read more at [http://hardysteven.blogspot.com/2017/03/developing-mistral-workflows-for-tripleo.html](http://hardysteven.blogspot.com/2017/03/developing-mistral-workflows-for-tripleo.html)
 
 
-**OpenStack Pike PTG: TripleO, TripleO UI  | Some highlights** by jpichon
+**OpenStack Pike PTG: TripleO, TripleO UI Some highlights** by jpichon
 
 > For the second part of the PTG (vertical projects), I mainly stayed in the TripleO room, moving around a couple of times to attend cross-project sessions related to i18n.
 
