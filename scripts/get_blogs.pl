@@ -41,17 +41,18 @@ foreach ( $feed->entries ) {
     my $link = $_->link;
 
     # tm3.org URL shortener
-    my $shorten = "http://tm3.org/yourls-api.php?signature=9d8634af7a&action=shorturl&url=" . $link;
-    my $parser = new XML::Simple;
-    my $content = get $shorten or die "Unable to get $url\n";
-    my $data = $parser->XMLin($content);
-    my $short = $data->{shorturl};
+# my $shorten = "http://tm3.org/yourls-api.php?signature=9d8634af7a&action=shorturl&url=" . $link;
+# my $parser = new XML::Simple;
+# my $content = get $shorten or die "Unable to get $url\n";
+# my $data = $parser->XMLin($content);
+# my $short = $data->{shorturl};
 
-    print $md "Read more at [$short]($short)\n\n\n";
+# print $md "Read more at [$short]($short)\n\n\n";
+    print $md "Read more at [$link]($link)\n\n\n";
 
     print $tweets '"01/01/2017 00:00:00","' . $_->title 
             . ' #OpenStack #RDOCommunity","'
-            . $short . '"' . "\n";
+            . $link . '"' . "\n";
 }
 
 close $md;
