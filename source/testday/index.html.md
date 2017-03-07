@@ -12,7 +12,7 @@ schedule](https://www.rdoproject.org/community/rdo-bugtriage/).
 
 The (tentative) test day schedule is:
 
-* [Ocata Final &ndash; March 2nd and 3rd, 2017](/testday/ocata/final)
+* TBD
 
 ## Test, every day
 
@@ -25,6 +25,7 @@ Quickstart](/tripleo).
 
 | Milestone | Date | Tickets opened | IRC participation | URL(s) |
 |-----------|------|----------------|-------------------|--------|
+| [Ocata Final](/testday/ocata/final) | March 2-3 2017 | | | [Tickets](https://bugzilla.redhat.com/buglist.cgi?bug_status=NEW&bug_status=ASSIGNED&bug_status=POST&bug_status=MODIFIED&bug_status=ON_DEV&bug_status=ON_QA&bug_status=VERIFIED&bug_status=RELEASE_PENDING&chfield=%5BBug%20creation%5D&chfieldfrom=2017-02-04&chfieldto=2017-03-03&classification=Community&product=RDO&query_format=advanced) |
 | [Ocata 3](/testday/ocata/milestone3) | February 2-3 2017 | | | [Tickets](https://bugzilla.redhat.com/buglist.cgi?bug_status=NEW&bug_status=ASSIGNED&bug_status=POST&bug_status=MODIFIED&bug_status=ON_DEV&bug_status=ON_QA&bug_status=VERIFIED&bug_status=RELEASE_PENDING&chfield=%5BBug%20creation%5D&chfieldfrom=2016-12-04&chfieldto=2017-02-03&classification=Community&list_id=7044698&product=RDO&query_format=advanced) |
 | [Ocata 1](/testday/ocata/milestone1) | December 2-3 | 6  | 55 participants, 1334 messages  | [Tickets](http://tm3.org/cu) |
 | Newton GA | October 13-14 | 4 | 53 participants, 1680 messages | [Tickets](https://bugzilla.redhat.com/buglist.cgi?bug_status=NEW&bug_status=ASSIGNED&bug_status=POST&bug_status=MODIFIED&bug_status=ON_DEV&bug_status=ON_QA&bug_status=VERIFIED&bug_status=RELEASE_PENDING&chfield=%5BBug%20creation%5D&chfieldfrom=2016-10-12&chfieldto=2016-10-15&classification=Community&list_id=4344410&product=RDO&query_format=advanced)  |
