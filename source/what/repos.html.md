@@ -1,5 +1,5 @@
 ---
-title: RDO: Overview of available RDO repos
+title: RDO - Overview of available RDO repos
 ---
 
 # Overview of available RDO repos
