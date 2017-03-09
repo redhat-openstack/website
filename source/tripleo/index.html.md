@@ -1,13 +1,9 @@
 ---
 title: TripleO quickstart
 authors: athomas, hewbrocca, jcoufal, jistr, snecklifter, trown
-wiki_title: RDO Manager
-wiki_revision_count: 49
-wiki_last_updated: 2016-01-11
 ---
 
 * [Virtual Environment Quickstart](#veqs)
-* [Quickstart USB Key](/tripleo/oooq-usbkey)
 * [Further reading](#reading)
 * [Presentations](#presentations)
 
@@ -49,7 +45,7 @@ Upstream TripleO documentation:
 
 * [http://docs.openstack.org/developer/tripleo-docs/](http://docs.openstack.org/developer/tripleo-docs/)
 
-> **Note:** Limit your environment specific content in the menu on the left-hand side of the documentation page.
+**Note:** Limit your environment-specific content in the menu on the left-hand side of the documentation page.
 
 TripleO (RDO-Manager) HA setup:
 
@@ -79,4 +75,3 @@ Demo 3 (March 9, 2015):
 
 *   IRC: **#tripleo** and **#rdo** channels on [Freenode](http://freenode.net).
 *   Mailing list: [**rdo-list**](//www.redhat.com/mailman/listinfo/rdo-list), using **[TripleO]** tag in the subject of the email.
-
