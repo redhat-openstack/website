@@ -11,7 +11,7 @@ wiki_last_updated: 2015-03-05
 
 # Adding a compute node
 
-Expanding your single-node OpenStack cloud to include a second compute node requires a second network adapter. In order for your pair of nodes to share the same private network, replace the `lo` interface used for the private network with a real NIC.
+Expanding your single-node OpenStack cloud to include a second compute node requires a second network adapter, if you want to separate the Neutron tenant network traffic.
 
 ### Edit the answer file
 
@@ -25,7 +25,7 @@ Replace `$EDITOR` with your preferred editor.
 
 #### Adjust network card names
 
-Change both `CONFIG_NOVA_COMPUTE_PRIVIF` and `CONFIG_NOVA_NETWORK_PRIVIF` from `lo` to `eth1` or whatever name your network card uses.
+Set `CONFIG_NEUTRON_OVS_TUNNEL_IF` to `eth1` or whatever name your network card uses. Note this is not mandatory, but it may be a good idea to separate tunnel traffic through a separate interface.
 
 Your second NIC may have a different name. You can find the names of your devices by running:
 
@@ -33,13 +33,19 @@ Your second NIC may have a different name. You can find the names of your device
 
 #### Change IP addresses
 
-Change the value for `CONFIG_COMPUTE_HOSTS` from the value of your first host IP address to the value of your second host IP address. Ensure that the key `CONFIG_NETWORK_HOSTS` exists and is set to the IP address of your first host.
+If you want to have your new node as the only compute node, change the value for `CONFIG_COMPUTE_HOSTS` from the value of your first host IP address to the value of your second host IP address. You can also have both systems as compute nodes, if you add them as a comma-separated list:
+
+    CONFIG_COMPUTE_HOSTS=<serverIP>,<serverIP>,...
+
+Ensure that the key `CONFIG_NETWORK_HOSTS` exists and is set to the IP address of your first host.
 
 #### Skip installing on an already existing servers
 
-In case you do not want to run the installation over again on the already configured servers, add the following parameter to the "answer file":
+In case you do not want to apply any modification on the already configured servers, add the following parameter to the "answer file":
 
-      EXCLUDE_SERVERS=<serverIP>,<serverIP>,...
+    EXCLUDE_SERVERS=<serverIP>,<serverIP>,...
+
+You may not want to exclude the existing server if it will stay as a compute node, since live migration between compute nodes needs to add the SSH keys to each of them.
 
 ### Re-run Packstack with the new values
 
