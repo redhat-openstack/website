@@ -40,7 +40,7 @@ foreach ( $feed->entries ) {
 
     my $link = $_->link;
 
-    # tm3.org URL shortener
+# tm3.org URL shortener
 # my $shorten = "http://tm3.org/yourls-api.php?signature=9d8634af7a&action=shorturl&url=" . $link;
 # my $parser = new XML::Simple;
 # my $content = get $shorten or die "Unable to get $url\n";
