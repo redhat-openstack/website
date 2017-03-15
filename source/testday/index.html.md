@@ -12,7 +12,10 @@ schedule](https://www.rdoproject.org/community/rdo-bugtriage/).
 
 The (tentative) test day schedule is:
 
-* TBD
+* Apr 20, 21 Pike 1 test day (for Apr 10 - Apr 14 Pike-1 milestone)
+* Jun 15, 16 Pike 2 test day (for Jun 05 - Jun 09 Pike-2 milestone)
+* Aug 3, 4 Pike 3 test day (for Jul 24 - Jul 28 Pike-3 milestone)
+* Sep 7, 8 Pike final test day (for Aug 28 - Sep 01 Pike release)
 
 ## Test, every day
 
