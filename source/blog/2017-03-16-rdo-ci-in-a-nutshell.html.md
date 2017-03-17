@@ -28,7 +28,7 @@ let us know in #rdo channel in freenode or rdo-list mailing list.
 Promotion pipelines are composed by a set of related CI jobs that are executed
 for each supported OpenStack release to test the content of a specific RDO repository.
 Currently promotion pipelines are executed in diferent phases:
-<img src="../images/blog/rdo-ci-1.png" width="70%">
+<img src="/images/blog/rdo-ci-1.png" width="70%">
 
 1. **Define the repository to be tested.** RDO Trunk repositories are identified
 by a hash based on the upstream commit of the last built package. The content of
@@ -120,7 +120,7 @@ release.
 * [*RDO Dashboard*](https://dashboards.rdoproject.org/rdo-dev) shows the overal
 status of RDO packaging and CI.
 
-<img src="../images/blog/rdo-ci-2.png" width="70%">
+<img src="/images/blog/rdo-ci-2.png" width="70%">
 
 
 ### More info
