@@ -4,11 +4,18 @@ title: MEM 5.4 Integration with RHOSP 10 (Newton) on RHEL 7
 
 # MEM 5.4 Integration with RHOSP 10 (Newton) on RHEL 7
 
-
 This guide covers the basic steps for the integration of
 [MidoNet Enterprise Manager][mem] 5.4 into a RHOSP 10 deployment using
 RHEL 7, assuming basic knowledge about RHOSP 10 and its
 [composable services][composable-services-docs].
+
+
+## Limitations
+
+This installer has the following limitations:
+
+* Only _one_ MidoNet Gateway can be deployed at a time. If you need more gateway nodes in your deployment these should be configured manually.
+* Only _one_ floating IP network can be created at a time with the installer. The installer creates an initial floating IP network. If more than one of these networks are required, this should be done manually afterwards.
 
 
 ## Initial configuration
@@ -17,9 +24,13 @@ Follow the [RHOSP 10][rhosp-10-docs] documentation until you have an Undercloud
 installed. Stop at the _Obtaining Images for Overcloud Nodes_ section. We're
 going to build our own images with the necessary components to run MEM.
 
+
 ## Building the base images
 
-Download RHEL 7 guest images and place them inside a folder. Let's assume the
+**NOTE**: This step is just temporary. Later on Midokura will host a series of
+base images ready to be consumed.
+
+Download a RHEL 7.3 cloud image and place them inside a folder. Let's assume the
 working directory will be `/home/stack/custom-images/`.
 
 Then export these variables (filling in the necessary values) in order to be
@@ -75,6 +86,7 @@ openstack overcloud image build --type overcloud-full --elements-path $ELEMENTS_
 If for whatever reason the process of building the image fails, refer to the
 [TripleO documentation on the topic][tripleo-images].
 
+
 ## Upload the images
 
 Just as you would normally do following the RHOSP documentation, unpack the IPA
@@ -84,6 +96,7 @@ inside `/home/stack/custom-images/`. Finally upload these images using:
 ```
 openstack overcloud image upload
 ```
+
 
 ## Configure MidoNet composable services
 
@@ -99,9 +112,19 @@ The MidoNet Heat templates define the following composable services:
 | `midonet_mem`       | Install and configure the MidoNet Manager.
 | `midonet_analytics` | Install and configure Analytics (Elasticsearch, Logstash).
 
+### How do these services have to be distributed amongst roles?
+
 Distribute these services as you need to on the nodes you are planning on
 deploying. These services and more are defined in the file `roles_data.yaml`,
 inside the previously cloned `tripleo-heat-templates` folder.
+
+* `midonet_agent` should be present in the controller, computes and gateway.
+* `midonet_cluster` should be placed in the controller role (but doesn't have to).
+* `midonet_config` is configured through the environment file (see below). No need to instantiate this service manually in `roles_data.yaml`.
+* `midonet_gateway` should be configured in a separate gateway node or in any other (as long as there's only 1).
+* `midonet_nsdb` can be placed in a dedicated role or placed along any other.
+* `midonet_mem` must be placed in the controller role.
+* `midonet_analytics` should be placed in a separate role.
 
 ### Set environment variables
 
@@ -185,6 +208,7 @@ on which these nodes will be deployed:
 neutron subnet-list
 neutron subnet-update [subnet-uuid] --dns-nameserver [nameserver-ip]
 ```
+
 
 ## Deploy the overcloud
 
