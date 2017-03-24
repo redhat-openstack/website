@@ -10,7 +10,7 @@ date: 2017-03-22 19:22:55 CET
 When new contributors join RDO, they ask for recommendations about
 how to add new services and help RDO users to adopt it. This post is
 not a official policy document nor a detailed description about how to carry
-out some activities but provides some high level recommendations to newcomers
+out some activities, but provides some high level recommendations to newcomers
 based on what I have learned and observed in the last year working in RDO.
 
 Note that you are not required to follow all these steps and even you can
@@ -19,15 +19,21 @@ have your own ideas about it. If you want to discuss it, let us know your though
 ### 1. Adding the package to RDO
 
 The first step is to add the package(s) to RDO repositories as shown
-in [RDO documentation](https://www.rdoproject.org/documentation/rdo-packaging/#how-to-add-a-new-package-to-rdo-trunk).
+in [RDO documentation](https://www.rdoproject.org/what/new-package/).
 This tipically includes the main service package, client library and maybe
-a package with a plugin for horizon. In some cases you may need to add new
-libraries to Fedora which are required for the new packages.
+a package with a plugin for horizon.
+
+In some cases new packages require some general purpose libraries. If they
+are not in CentOS base channels, RDO imports them from Fedora packages
+into a dependencies repository. If you need a new dependency which already
+exists in Fedora, just let us know and we'll import it into the repo. If it
+doesn't exist, you'll have to add the new package into Fedora following
+the [existing process.](https://fedoraproject.org/wiki/New_package_process_for_existing_contributors)
 
 ### 2. Create a puppet module
 
 Although there are multiple deployment tools for OpenStack based on several
-frameworks, the use of puppet is widely used by different tools or even directly
+frameworks, puppet is widely used by different tools or even directly
 by operators so we recommend to create a puppet module to deploy your new service
 following the [Puppet OpenStack Guide](https://docs.openstack.org/developer/puppet-openstack-guide/).
 Once the puppet module is ready, remember to follow the [RDO new package
@@ -45,7 +51,7 @@ of how to add a new service into p-o-i is in [this review](https://review.openst
 
 ### 4. Adding deployment support in Packstack
 
-If you want to make easier for RDO users to evaluate a new service, adding
+If you want to make it easier for RDO users to evaluate a new service, adding
 it to [Packstack](https://wiki.openstack.org/wiki/Packstack) is a good idea.
 Packstack is a puppet-based deployment tool used by RDO users to deploy small proof
 of concept (PoC) environments to evaluate new services or configurations
@@ -78,7 +84,8 @@ containers will have it easier it if you add containers for new services.
 RDO methodology and tooling is conceived according to OpenStack upstream
 release model, so following policies about [release management](https://github.com/openstack/releases/blob/master/README.rst)
 and [requirements](https://github.com/openstack/requirements/blob/master/README.rst)
-will help to make package maintenance easier in RDO.
+is a big help to maintain packages in RDO. It's specially important to create
+branches and version tags as defined by the releases team.
 
 
 #### Advertise your work to the RDO community
@@ -87,7 +94,9 @@ Making potential users aware of availability of new services or other
 improvements is a good practice. RDO provides several ways to do this as
 sending mails to [our mailing lists](https://www.rdoproject.org/community/mailing-lists/),
 writing a post in [the blog](https://www.rdoproject.org/blog/), adding
-references in our documentation, creating screencast demos, etc...
+references in our documentation, creating screencast demos, etc... You
+can also join the [RDO weekly meeting](https://www.rdoproject.org/community/community-meeting/)
+to let us know about your work.
 
 
 ####  Join RDO Test Days
