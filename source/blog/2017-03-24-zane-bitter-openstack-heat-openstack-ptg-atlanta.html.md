@@ -1,7 +1,7 @@
 ---
 title: 'Zane Bitter - OpenStack Heat, OpenStack PTG, Atlanta '
 author: rbowen
-date: 2017-03-17 19:07:50 UTC
+date: 2017-03-24 15:07:50 UTC
 tags: openstack,heat,openstackptg
 comments: true
 published: true
