@@ -176,11 +176,11 @@ Setting up a BGP uplink requires setting four additional environment variables.
 For a real-life example please check `environments/neutron-midonet-bgp.yaml`
 inside the `tripleo-heat-templates` folder.
 
-| `BgpUplinkLocalASNumber`      | Local AS number, which must be a string (e.g. `65497`).
-| `BgpUplinkNeighborsIps`       | Array containing the IPs of the BGP neighbors (e.g. `["10.88.88.5"]`).
-| `BgpUplinkNeighborsAsns`      | Array containing the ASNs of the BGP neighbors (e.g. `["65535"]`).
-| `BgpUplinkNeighborsNetworks`  | Array containing the CIDR of the networks in which the BGP neighbors are (e.g. `["10.88.88.0/29"]`).
-| `BgpUplinkAdvertisedNetworks` | Floating IP networks that the gateway is going to advertise (e.g. `172.16.0.0/12`).
+| `BgpUplinkLocalASNumber`      | Local AS number, which must be a string (e.g. `"'65497'"`).
+| `BgpUplinkNeighborsIps`       | Array containing the IPs of the BGP neighbors (e.g. `'["10.88.88.5"]'`).
+| `BgpUplinkNeighborsAsns`      | Array containing the ASNs of the BGP neighbors (e.g. `'["65535"]'`).
+| `BgpUplinkNeighborsNetworks`  | Array containing the CIDR of the networks in which the BGP neighbors are (e.g. `'["10.88.88.0/29"]'`).
+| `BgpUplinkAdvertisedNetworks` | Floating IP networks that the gateway is going to advertise (e.g. `'172.16.0.0/12'`).
 
 For more information on setting up a BGP uplink please check the
 [MidoNet documentation][midonet-bgp].
