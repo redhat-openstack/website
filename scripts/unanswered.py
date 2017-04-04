@@ -4,14 +4,13 @@ import json
 import sys
 import argparse
 
-# Command-line switches
+# Command-line switches and arguments
 parser = argparse.ArgumentParser()
 parser.add_argument("-t", "--tags", help="Output questions by tags", action="store_true")
+parser.add_argument("keyword", nargs='?', type=str, default='rdo');
 args = parser.parse_args()
 
-keyword = sys.argv[1] if len(sys.argv) >= 2 else 'rdo'
-
-url = 'https://ask.openstack.org/en/api/v1/questions/?scope=unanswered&query=' + keyword + '&sort=age-desc'
+url = 'https://ask.openstack.org/en/api/v1/questions/?scope=unanswered&query=' + args.keyword + '&sort=age-desc'
 
 response = urllib2.urlopen(url)
 m = response.read()
