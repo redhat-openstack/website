@@ -21,7 +21,7 @@ There's a number of ways that you can get involved in the RDO project today.
 
 We are currently conducting a contributor survey to find out what we're doing well, and what we can do better, in the contributor process. Please take 10 minutes to [fill out the survey](https://goo.gl/forms/3aygehBsvM8TCegI2) to give us your feedback.
 
-* Every week, hundreds of OpenStack users visit ask.openstack.org with their questions, and, of course, some of these are about RDO. As of this writing, there are [50 unanswered RDO questions](https://goo.gl/cl8wDn). Take a few moments today to look through them and see if you can answer one of the, or point the questioner to a solution previously provided.
+Every week, hundreds of OpenStack users visit ask.openstack.org with their questions, and, of course, some of these are about RDO. As of this writing, there are [50 unanswered RDO questions](https://goo.gl/cl8wDn). Take a few moments today to look through them and see if you can answer one of the, or point the questioner to a solution previously provided.
 
 Also each week, Chandan Kumar posts the open ticket summary to the rdo-list mailing list. You can see the latest report [in the archive](https://www.redhat.com/archives/rdo-list/2017-April/msg00010.html). The list is categorized by component, so you can jump directly to the section that you would like to work on, and find issues waiting for attention.
 
