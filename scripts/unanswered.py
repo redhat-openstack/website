@@ -2,11 +2,12 @@
 import urllib2
 import json
 import sys
+import argparse
 
-# Magic
-import sys    # sys.setdefaultencoding is cancelled by site.py
-reload(sys)    # to re-enable sys.setdefaultencoding()
-sys.setdefaultencoding('utf-8')
+# Command-line switches
+parser = argparse.ArgumentParser()
+parser.add_argument("-t", "--tags", help="Output questions by tags", action="store_true")
+args = parser.parse_args()
 
 keyword = sys.argv[1] if len(sys.argv) >= 2 else 'rdo'
 
@@ -17,12 +18,24 @@ m = response.read()
 r = json.loads(m)
 questions = r['questions']
 count = r['count']
+tags = {}
 
 print str(count) + " unanswered questions:"
 
 for q in questions:
-    print
-    print q['title']
-    print q['url']
-    print "Tags: " + ", ".join( q['tags'] )
+    if not args.tags:
+        print "\n" + q['title'] + q['url'] + "\nTags: " + ", ".join( q['tags'] )
+
+    for t in q['tags']:
+        if t not in tags:
+            tags[t] = "* " + q['title'] + ": " + q['url']
+        else:
+            tags[t]+= "\n" + "* " + q['title'] + ": " + q['url']
+
+print "\n"
+
+if args.tags:
+    for t in sorted(tags):
+        print "\n\n" + t + "\n" + tags[t]
+
 
