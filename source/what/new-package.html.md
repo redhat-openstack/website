@@ -3,7 +3,7 @@ title: I want a new package in RDO, now what?
 ---
 
 # I want a new package in RDO. Now what?
-First of all, thanks for contributing! The process to have a new package in RDO can be intimidating at first, but if you are familiar with the creation of RPM packages it should not bee too complicated, and there is always someone willing to help at #rdo on the Freenode IRC network.
+First of all, thanks for contributing! The process to have a new package in RDO can be intimidating at first, but if you are familiar with the creation of RPM packages it should not be too complicated, and there is always someone willing to help at #rdo on the Freenode IRC network.
 
 ## Getting started
 The first step to have a new package in RDO is to follow the process to [add it to RDO Trunk](https://www.rdoproject.org/documentation/rdo-packaging/#how-to-add-a-new-package-to-rdo-trunk). Once a package is in RDO Trunk, it will be built for every new commit of the project, and it will end up in the next GA version.
@@ -54,7 +54,7 @@ The above snippet tells DLRN to use a specific tagged release (0.7.0) when build
 
 In addition to the release names, we can use some special tags:
 
-- `under-review` is used during the review phase for a new package. Having this tag allows our CI jobs to build the package while being reviewed, but prevent our RDO Trunk builders from adding it to the repos.
+- `under-review` is used during the review phase for a new package. Having this tag allows our CI jobs to build the package while being reviewed, but prevents our RDO Trunk builders from adding it to the repos.
 
 - `version-locked` is used to prevent our periodic jobs from proposing updates to the source-branch tag in projects managed by the [upper-constraints file](https://github.com/openstack/requirements/blob/master/upper-constraints.txt). Check [this blog post](https://www.rdoproject.org/blog/2016/11/chasing-the-trunk-but-not-too-fast/) for details on the upper-constraints usage by RDO Trunk packages.
 
@@ -73,9 +73,7 @@ Let's use a fictional project `test123` as an example. This is a shiny, new proj
 - project: test123
   conf: rpmfactory-core
   tags:
-    pike-uc:
-    pike:
-    ocata:
+    under-review:
   maintainers:
   - jpena@redhat.com
 ```
