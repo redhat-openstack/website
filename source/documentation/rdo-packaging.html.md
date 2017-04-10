@@ -558,7 +558,7 @@ https://www.rdoproject.org/blog/2016/09/introducing-patches-to-rdo-cloudsig-pack
 
 ### Rebasing on new version
 
-tl;dr `rdopkg new-verison` should take care of that:
+tl;dr `rdopkg new-version` should take care of that:
 
 ```bash
 $> git checkout mitaka-rdo
