@@ -23,7 +23,7 @@ print str(count) + " unanswered questions:"
 
 for q in questions:
     if not args.tags:
-        print "\n" + q['title'] + q['url'] + "\nTags: " + ", ".join( q['tags'] )
+        print "\n" + q['title'] + " " + q['url'] + "\nTags: " + ", ".join( q['tags'] )
 
     for t in q['tags']:
         if t not in tags:
