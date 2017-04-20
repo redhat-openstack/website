@@ -82,6 +82,14 @@ up a brief summary of what was covered.
 
 ''')
 
+yml.write( '''name: RDO Meetups
+type: series
+tags: RDO
+
+talks:
+
+''')
+
 for meetup in meetups:
     eventts = int( meetup['time'] + meetup['utc_offset'] )
     eventutc = meetup['time']
