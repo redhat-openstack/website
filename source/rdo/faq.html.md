@@ -66,10 +66,13 @@ Users of OpenStack on Fedora are welcome to participate in the discussion on [as
 
 ## How do I deploy RDO?
 
-You have two options:
+You have multiple options, including:
 
-1. For proof of concept (PoC) environments, Packstack, an installation utility which uses Puppet modules to deploy OpenStack, is the primary tool. Instructions on installing RDO with Packstack are available on the [Packstack quickstart](/install/quickstart) page.
-2. For production environments, consider[TripleO](/tripleo) to provision bare-metal machines and deploy a production cloud environment.
+1. For production environments, consider [TripleO](/tripleo) to provision bare-metal machines and deploy a production cloud environment.
+
+2. For proof of concept (PoC) environments, Packstack, an installation utility which uses Puppet modules to deploy OpenStack, is the primary tool. Instructions on installing RDO with Packstack are available on the [Packstack quickstart](/install/quickstart) page.
+
+3. For manual deployments using RDO packages, read the upstream [OpenStack Installation Tutorial for Red Hat Enterprise Linux and CentOS](https://docs.openstack.org/ocata/install-guide-rdo/).
 
 ## Where can I find help with RDO?
 
@@ -81,15 +84,17 @@ No commercial support for RDO will be available from Red Hat. If you need suppor
 
 ## What is the errata or updates policy for RDO?
 
-RDO updates when the OpenStack project provides updates. RDO provides no lifecycle guarantees beyond what the upstream project provides. If you require additional guarantees see [Red Hat OpenStack Platform](https://access.redhat.com/products/red-hat-openstack-platform).
+RDO updates when the OpenStack project provides updates. RDO provides no lifecycle guarantees beyond what the upstream project provides. If you require additional guarantees, see [Red Hat OpenStack Platform](https://access.redhat.com/products/red-hat-openstack-platform).
 
 ## Can I upgrade between versions of RDO?
 
-We plan to enable RDO users to upgrade between consecutive OpenStack versions (from Icehouse to Juno, for instance). The RDO project will strive to release updated OpenStack versions as soon as possible following upstream releases, on the order of hours to a few days.
+RDO users are advised to upgrade between consecutive OpenStack versions. The RDO project strives to release updated OpenStack versions as soon as possible following upstream releases, on the order of hours to a few days.
+
+The upgrade process differs depending on whether your deployment is TripleO-based or manual. For more information on upgrading with TripleO, see the [TripleO documentation](https://docs.openstack.org/developer/tripleo-docs/). For more information on manual upgrades, see the [Upgrading documentation](/install/upgrading-rdo/).
 
 ## How often are bug fix updates of RDO made available?
 
-RDO bug fix updates will be available every 8 weeks or so, in line with the release schedule of the upstream OpenStack project.
+We make RDO bug fix updates available asynchronously by following the stable bug fix releases of upstream OpenStack projects.
 
 ## Which OpenStack components does RDO include?
 
