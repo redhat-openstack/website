@@ -157,6 +157,19 @@ this template if tests are added/modified.
 * Results:
 * Tickets:
 
+## Upstream Install Documentation
+
+Work through the [upstream install
+documentation](https://docs.openstack.org/newton/install-guide-rdo/)
+keeping notes on the following points:
+
+* Did you know what the doc assumed that you'd know?
+* Did the steps work as described?
+* What error conditions did you encounter? Could you work around them?
+  If so, how?
+* When you were done did it work as expected? If not, what happened, and
+  how did it differ from what you expected to happen?
+
 ## Post Installation Tests - does it work?
 
 ### Post Installation
