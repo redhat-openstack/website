@@ -12,7 +12,6 @@ schedule](https://www.rdoproject.org/community/rdo-bugtriage/).
 
 The (tentative) test day schedule is:
 
-* [Apr 20, 21 Pike 1 test day](/testday/pike/milestone1) (for Apr 10 - Apr 14 Pike-1 milestone)
 * [Jun 15, 16 Pike 2 test day](/testday/pike/milestone2) (for Jun 05 - Jun 09 Pike-2 milestone)
 * Aug 3, 4 Pike 3 test day (for Jul 24 - Jul 28 Pike-3 milestone)
 * Sep 7, 8 Pike final test day (for Aug 28 - Sep 01 Pike release)
@@ -24,21 +23,22 @@ We would love to hear about your experiences, with either a [Packstack
 installation](/install/quickstart) or the [TripleO
 Quickstart](/tripleo).
 
-We also encourage you to work through the [upstream install
-documentation](https://docs.openstack.org/newton/install-guide-rdo/)
+We also encourage you to work through the [upstream installation
+tutorial](https://docs.openstack.org/draft/install-guide-rdo/)
 while keeping detailed notes on the following points:
 
-* Did you know what the doc assumed that you'd know?
+* Did you know what the document assumed that you'd know?
 * Did the steps work as described?
 * What error conditions did you encounter? Could you work around them?
   If so, how?
-* When you were done did it work as expected? If not, what happened, and
+* When you were done, did it work as expected? If not, what happened, and
   how did it differ from what you expected to happen?
 
 ## Past test days, stats and tickets
 
 | Milestone | Date | Tickets opened | IRC participation | URL(s) |
 |-----------|------|----------------|-------------------|--------|
+| [Pike 1](/testday/pike/milestone1) | Apr 20, 21 2017 | | | [Tickets](https://bugzilla.redhat.com/buglist.cgi?bug_status=NEW&bug_status=ASSIGNED&bug_status=POST&bug_status=MODIFIED&bug_status=ON_DEV&bug_status=ON_QA&bug_status=VERIFIED&bug_status=RELEASE_PENDING&chfield=%5BBug%20creation%5D&chfieldfrom=2017-03-04&chfieldto=2017-04-21&classification=Community&product=RDO&query_format=advanced) |
 | [Ocata Final](/testday/ocata/final) | March 2-3 2017 | | | [Tickets](https://bugzilla.redhat.com/buglist.cgi?bug_status=NEW&bug_status=ASSIGNED&bug_status=POST&bug_status=MODIFIED&bug_status=ON_DEV&bug_status=ON_QA&bug_status=VERIFIED&bug_status=RELEASE_PENDING&chfield=%5BBug%20creation%5D&chfieldfrom=2017-02-04&chfieldto=2017-03-03&classification=Community&product=RDO&query_format=advanced) |
 | [Ocata 3](/testday/ocata/milestone3) | February 2-3 2017 | | | [Tickets](https://bugzilla.redhat.com/buglist.cgi?bug_status=NEW&bug_status=ASSIGNED&bug_status=POST&bug_status=MODIFIED&bug_status=ON_DEV&bug_status=ON_QA&bug_status=VERIFIED&bug_status=RELEASE_PENDING&chfield=%5BBug%20creation%5D&chfieldfrom=2016-12-04&chfieldto=2017-02-03&classification=Community&list_id=7044698&product=RDO&query_format=advanced) |
 | [Ocata 1](/testday/ocata/milestone1) | December 2-3 | 6  | 55 participants, 1334 messages  | [Tickets](http://tm3.org/cu) |

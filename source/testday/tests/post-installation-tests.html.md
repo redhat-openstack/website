@@ -8,7 +8,7 @@ wiki_last_updated: 2014-10-01
 
 # Post Installation Tests
 
-## After installation, please run the following on your setup:
+## After installation, run the following on your setup:
 
 setting up:
 
@@ -42,7 +42,3 @@ Admin in tenant:
 Member of tenant:
 
 1.  log in to horizon using Peter Griffin's user
-
-**Please add any bugs link page below**
-
-[post_installation_bugs](/install/post-installation-bugs/)

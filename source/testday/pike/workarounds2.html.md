@@ -2,12 +2,12 @@
 title: RDO Ocata Test Day Workarounds
 ---
 
-# Workarounds, Ocata Test Day 2
+# Workarounds, Pike Test Day 2
 
 If you discover a way to work around a known problem, please document it
 here, so that others may benefit from your experience.
 
-[Test Day Details](/testday/ocata/milestone2)
+* [Test Day Details](/testday/pike/milestone2)
 
 ## All
 
