@@ -73,7 +73,7 @@ $ sudo systemctl enable network
 $ sudo systemctl start network
 ```
 
-If you are planing on something fancier, read [the document on advanced networking](https://www.rdoproject.org/networking/neutron-with-existing-external-network/) **before proceeding**.
+If you are planning on something fancier, read [the document on advanced networking](https://www.rdoproject.org/networking/neutron-with-existing-external-network/) **before proceeding**.
 
 ## Step 1: Software repositories
 
