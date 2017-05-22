@@ -12,11 +12,11 @@ authors: dneary
 
 ### Installing ManageIQ
 
-There are [basic instructions](http://manageiq.org/download/) available for downloading and installing ManageIQ. To display the instructions for OpenStack, choose OpenStack as your platform and select a desired release. The basic process is uploading an appliance to Glance, and launching it with an appropriately provisioned instance (ManageIQ needs a minimum of 6 GB RAM and a 45 GB persistent disk).
+To download and install ManageIQ for OpenStack, go to the [ManageIQ Download page](http://manageiq.org/download/) and choose either a current stable release or a nightly build. Then, follow the [installation instructions for OpenStack](http://manageiq.org/docs/reference/latest/doc-Installing_on_Red_Hat_Enterprise_Linux_OpenStack_Platform/miq/). The installation process is, essentially, uploading an appliance to Glance, and launching it with an appropriately provisioned instance. ManageIQ needs a minimum of 6 GB RAM and a 45 GB persistent disk.
 
 Once the application is installed, you can manage your OpenStack cloud by configuring it as a cloud provider for ManageIQ. 
 
-See the [Documentation section](http://manageiq.org/documentation/) on the ManageIQ website for more information on deploying and using ManageIQ.
+See the [Documentation page](http://manageiq.org/documentation/) on the ManageIQ website for more detailed information on deploying and using ManageIQ.
 
 ### Common cloud management tasks
 
@@ -32,4 +32,3 @@ Many common cloud management tasks can be accomplished with the ManageIQ tagging
 Most of these tasks combine fleecing, monitoring, and events with tagging.
 
 For example, you can ensure that VMs are protected against CVEs by comparing the software version to exposed versions, tag VMs which are vulnerable, and test for that tag when VM lifecycle events occur. You can tag instances with specific requirements (for example, a database server which has high I/O requirements) and ensure that it is launched in a configuration which meets its quality of service requirements. You can detect a threshold event on a host in a cluster, and kick off a rebalancing operation which will live-migrate some instances to different hosts, when it occurs.
-
