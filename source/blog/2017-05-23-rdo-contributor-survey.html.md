@@ -7,7 +7,7 @@ comments: true
 published: true
 ---
 
-We recently ran a contributor survey in the RDO community, and while the participation was disappointing  (21 respondants), we still gained a few useful insights from it.
+We recently ran a contributor survey in the RDO community, and while the participation was fairly small  (21 respondants), there's a lot of important insight we can glean from it.
 
 First, and unsurprisingly:
 
