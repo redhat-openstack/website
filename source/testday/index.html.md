@@ -2,7 +2,7 @@
 
 Test days are held roughly every month, on the week after an upstream
 milestone. See the [release
-schedule](http://releases.openstack.org/ocata/schedule.html) for when
+schedule](http://releases.openstack.org/pike/schedule.html) for when
 those milestones occur.
 
 See also the [bug triage
