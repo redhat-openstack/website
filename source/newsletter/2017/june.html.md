@@ -84,15 +84,43 @@ where members of the RDO community will be out in force.
 Next week, there's two OpenStack Days events.
 
 First, there's [OpenStack Israel](http://www.openstack-israel.org/), in
-Tel Aviv, on June 5.
+Tel Aviv, on June 5. As always, this is a [full day of OpenStack
+content](http://www.openstack-israel.org/agenda) from leading experts in
+the field. But it's also a great opportunity to connect with the
+community, share stories with colleagues, and learn about best practices
+in the real world.
 
-OpenStack Budapest - June 7 - http://openstackceeday.com/
+Later next week, on June 7 [OpenStack Days Budapest](http://openstackceeday.com/) will be held at the Nokia Skypark Office. There will be
+[three tracks](http://openstackceeday.com/schedule) of OpenStack
+Content, and another opportunity to mingle with the community.
 
-OpenStack Tage München - June 27, 28 - https://openstack-tage.de/
+And, towards the end of the month - on June 27th and 28th,
+[Deutche OpenStack Tage](https://openstack-tage.de/) will be held in 
+München, at the Leonardo Royal, with another [two days of great
+OpenStack content](https://openstack-tage.de/programm/), and another
+opportunity to rub shoulders with the people who make OpenStack happen.
 
-CERN Dojo
+Looking a little further out, please mark your calendars for the two
+upcoming events:
 
-ORNL Dojo
+On September 5th, we have tentatively scheduled a meetup at LOPSA 
+(League of Professional System Administrators) in Oak Ridge, Tennesee,
+in conjunction with the data scientists at Oak Ridge National
+Laboratories. We'll have more details in the coming weeks, but expect
+lots of OpenStack content, and lots of cool use cases from ORNL, where
+they use OpenStack as part of their nuclear research program.
+
+On October 20th, the CentOS community will be holding a Dojo (that's
+what they call their one-day events) at CERN. This event will focus on
+HPC (High Performance Computing) and OpenStack on CentOS. As you may
+know, CERN has one of the largest OpenStack clouds in the world, running
+RDO on CentOS, and so we'll have access to some of the leading experts
+in running OpenStack at scale. This is the Friday immediately before the
+Open Source Summit in Prague, and so it's an opportunity to combine two
+trips into one, and learn twice as much. Details to come within the next
+month.
+
+Meetups
 
 
 ## Community meetings 
