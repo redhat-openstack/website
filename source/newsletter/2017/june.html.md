@@ -69,11 +69,22 @@ for being part of the RDO effort. Thanks to all who attended. (You can
 see some photos of the event on
 [Google+](https://plus.google.com/+RichBowen/posts/jTqcvYw4maS)
 
-Red Hat Summit
+We appreciate each of you who visited us at our booth. We would love to
+hear more from you. Join us on the [RDO-list mailing
+list](https://www.rdoproject.org/community/mailing-lists/), or drop in
+on the #RDO channel on the Freenode IRC network.
 
 ## Upcoming Events 
 
-OpenStack Israel - June 5 - http://www.openstack-israel.org/
+There's lots of opportunities to connect with the RDO community in
+person, in the coming weeks and months. We'd love to hear your RDO
+stories, and find out what we can do better. Here's some of the places
+where members of the RDO community will be out in force.
+
+Next week, there's two OpenStack Days events.
+
+First, there's [OpenStack Israel](http://www.openstack-israel.org/), in
+Tel Aviv, on June 5.
 
 OpenStack Budapest - June 7 - http://openstackceeday.com/
 
