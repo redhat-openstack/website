@@ -37,22 +37,47 @@ blog](https://www.rdoproject.org/blog/2017/05/rdo-contributor-survey/)
 and you can see the detailed feedback on the [RDO mailing
 list](https://www.redhat.com/archives/rdo-list/2017-May/msg00051.html)
 
-We'll also be running an RDO Documentation Sprint Day in the coming
+To this end, we'll be running an RDO Documentation Sprint Day in the coming
 weeks. See the 'Upcoming Events' section below for more details.
 
-See also RDO User Survey - link here
+See also the [RDO User Survey
+results](https://www.rdoproject.org/blog/2016/11/how-are-you-using-rdo/)
+from last last year.
 
 ## Recent Events
 
-OpenStack Summit
+In May, there were two big events for RDO. 
+
+The first week of May we had a booth at Red Hat Summit in Boston, where
+we showcased the RDO minicluster, running RDO Newton on 4 Intel NUC
+machines. (There will be a longer writeup of this cluster on the [RDO
+blog](http://rdoproject.org/blog/) next week!)  We also shared space
+with the ManageIQ project, who connected their NUC cluster to ours, and
+managed our RDO cloud from their control panel. We also had a lot of
+great conversations with users of RDO.
+
+The following week, we were back in Boston for OpenStack Summit, this
+time at the Hynes convention center. RDO shared space with Red Hat at
+the headline sponsor booth, where we had many more great conversations
+with RDO users, and once again demo'ed our minicluster. And, of course,
+as at every OpenStack Summit, we had
+[ducks](https://www.rdoproject.org/blog/2015/10/ducks/).
+
+On Wednesday evening, we had a gathering of RDO users and developers,
+with about 60 in attendance, to celebrate the community, and thank you
+for being part of the RDO effort. Thanks to all who attended. (You can
+see some photos of the event on
+[Google+](https://plus.google.com/+RichBowen/posts/jTqcvYw4maS)
 
 Red Hat Summit
 
 ## Upcoming Events 
 
-OpenStack Israel - June 5
+OpenStack Israel - June 5 - http://www.openstack-israel.org/
 
-OpenStack Budapest - June 7
+OpenStack Budapest - June 7 - http://openstackceeday.com/
+
+OpenStack Tage München - June 27, 28 - https://openstack-tage.de/
 
 CERN Dojo
 
