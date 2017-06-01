@@ -1,4 +1,4 @@
-# April 2017 RDO Community Newsletter
+# June 2017 RDO Community Newsletter
 
 ## Quick links:
 
@@ -120,12 +120,18 @@ Open Source Summit in Prague, and so it's an opportunity to combine two
 trips into one, and learn twice as much. Details to come within the next
 month.
 
-Meetups
-
+And, every week, there are OpenStack meetups, around the world. These
+are the best place to connect with your local community, and learn the
+skills you need to be an effective cloud operator. You can get an update
+of upcoming OpenStack meetups every week on the [rdo-list mailing
+list](http://www.redhat.com/mailman/listinfo/rdo-list), or on the [RDO
+events page](http://rdoproject.org/events/).
 
 ## Community meetings 
 
-Every Wednesday at 15:00 UTC, we have the weekly RDO community meeting on the #RDO channel on Freenode IRC. The agenda for this meeting is posted each week in a [public etherpad](https://etherpad.openstack.org/p/RDO-Meeting) and the minutes from the meeting are posted [on the RDO website](https://www.rdoproject.org/community/community-meeting/). If there's something you'd like to see happen in RDO - a package that is missing, a tool that you'd like to see included, or a change in how things are governed - this is the best time and place to help make that happen.
+Every Wednesday at 15:00 UTC, we have the weekly RDO community meeting on the #RDO channel on Freenode IRC. The agenda for this meeting is posted each week in a [public etherpad](https://etherpad.openstack.org/p/RDO-Meeting) and the minutes from the meeting are posted [on the RDO website](https://www.rdoproject.org/community/community-meeting/). 
+
+If there's something you'd like to see happen in RDO - a package that is missing, a tool that you'd like to see included, or a change in how things are governed - this is the best time and place to help make that happen.
 
 ## Keep in touch 
 
