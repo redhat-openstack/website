@@ -1,12 +1,11 @@
 ---
 title: IRC etiquette
-authors: kashyap, larsks
-wiki_title: IRC etiquette
-wiki_revision_count: 11
-wiki_last_updated: 2014-07-08
 ---
 
 # IRC etiquette
+
+Also see [/community/irc](the general IRC document) for more
+information.
 
 ## IRC communication guidelines and etiquette
 
