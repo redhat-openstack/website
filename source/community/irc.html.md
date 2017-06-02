@@ -32,7 +32,7 @@ of these channels are on Freenode IRC network.
 ## Who?
 
 Often half the problem is finding who you need to ask your questions, so
-that you don't get passed form person to person looking for the expert.
+that you don't get passed from person to person looking for the expert.
 The below list is intended to help you find the expert right away, so
 that you can ping them directly.
 
