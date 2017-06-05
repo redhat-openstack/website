@@ -25,7 +25,6 @@ Due to the slower release cadence of RHEL and therefore CentOS, only the most re
 |----------------------|----------|-----------|
 | RHEL 7 and CentOS 7  | Ocata    | supported |
 | RHEL 7 and CentOS 7  | Newton   | supported |
-| RHEL 7 and CentOS 7  | Mitaka   | supported |
 
 ### References
 
