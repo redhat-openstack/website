@@ -17,7 +17,7 @@ There's a lot in this month's newletter:
 ## Quick links:
 
 *   Quick Start - <http://rdoproject.org/quickstart>
-*   Mailing Lists - <https://rdoproject.org/Mailing_lists>
+*   Mailing Lists - <https://rdoproject.org/community/mailing-lists/>
 *   RDO packages - <https://repos.fedorapeople.org/repos/openstack/openstack-juno/>
 *   RDO blog - <http://rdoproject.org/blog>
 *   Q&A - <http://ask.openstack.org/>

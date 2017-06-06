@@ -17,7 +17,7 @@ Thanks, as always, for being part of the RDO community!
 Quick links:
 
 *   Quick Start - <http://rdoproject.org/quickstart>
-*   Mailing Lists - <http://rdoproject.org/Mailing_lists>
+*   Mailing Lists - <http://rdoproject.org/community/mailing-lists/>
 *   RDO packages - <https://repos.fedorapeople.org/repos/openstack/openstack-juno/>
 *   RDO blog - <http://rdoproject.org/blog>
 *   Q&A - <http://ask.openstack.org/>
