@@ -1,11 +1,5 @@
 ---
 title: Home lab
-category: hardware
-authors: crashradtke, dneary, lbrigman124, madko
-wiki_category: Hardware
-wiki_title: Home lab
-wiki_revision_count: 12
-wiki_last_updated: 2015-03-09
 ---
 
 # What are you running at home?
@@ -13,21 +7,18 @@ wiki_last_updated: 2015-03-09
 {:.no_toc}
 
 Want to run a small OpenStack cloud for personal use, with
-whatever old hardware you have laying around? Here's some
-recommendations and examples of what we're running RDO on at home.
+whatever old hardware you have laying around? Here's what some of our
+community are running at home.
 
-Are you running RDO at home? [Tell us about
-it](mailto:rbowen@redhat.com) and we'll add you to the list.
+See also the [RDO minicluster](/hardware/minicluster) for an example of
+what you can do.
 
+Are you running RDO at home? Write it up and [tell us about
+it](mailto:rdo-list@redhat.com) and we'll add you to the list.
 
-### David Moreau Simard's home lab
-
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">What does your home <a
-href="https://twitter.com/hashtag/OpenStack?src=hash">#OpenStack</a> lab
-look like? I'll start. <a
-href="https://t.co/QvPxAmtbqt">pic.twitter.com/QvPxAmtbqt</a></p>&mdash;
-David Moreau Simard (@dmsimard) <a href="https://twitter.com/dmsimard/status/778646409293733888">September 21, 2016</a>
-</blockquote>
+|---|---|
+| [ ![](/images/documentation/dmsimard_home_lab.png) ](https://twitter.com/dmsimard/status/778646409293733888) |  |
+| [David Moreau Simard's home lab](https://twitter.com/dmsimard/status/778646409293733888) | |
 
 ### Javier Pena's home lab
 
