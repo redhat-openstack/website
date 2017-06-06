@@ -13,7 +13,7 @@ July 2015 RDO Community Newsletter
 Quick links:
 
 *   Quick Start - <http://rdoproject.org/quickstart>
-*   Mailing Lists - <http://rdoproject.org/Mailing_lists>
+*   Mailing Lists - <http://rdoproject.org/community/mailing-lists/>
 *   RDO packages - <http://rdoproject.org/repos/>
 *   RDO blog - <http://rdoproject.org/blog>
 *   Q&A - <http://ask.openstack.org/>
