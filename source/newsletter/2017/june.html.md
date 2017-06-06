@@ -81,7 +81,7 @@ person, in the coming weeks and months. We'd love to hear your RDO
 stories, and find out what we can do better. Here's some of the places
 where members of the RDO community will be out in force.
 
-Next week, there's two OpenStack Days events.
+This week, there's two OpenStack Days events.
 
 First, there's [OpenStack Israel](http://www.openstack-israel.org/), in
 Tel Aviv, on June 5. As always, this is a [full day of OpenStack
@@ -90,7 +90,7 @@ the field. But it's also a great opportunity to connect with the
 community, share stories with colleagues, and learn about best practices
 in the real world.
 
-Later next week, on June 7 [OpenStack Days Budapest](http://openstackceeday.com/) will be held at the Nokia Skypark Office. There will be
+Later this week, on June 7 [OpenStack Days Budapest](http://openstackceeday.com/) will be held at the Nokia Skypark Office. There will be
 [three tracks](http://openstackceeday.com/schedule) of OpenStack
 Content, and another opportunity to mingle with the community.
 
