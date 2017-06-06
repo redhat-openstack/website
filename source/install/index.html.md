@@ -60,7 +60,10 @@ For an initial test deployment, follow the [Packstack quickstart](/install/quick
 <div class="split-third">
 ### Hardware
 
-*   [Cheap hardware for a home cloud/lab](/hardware/home-lab/)
+* [Recommended hardware configuration](/hardware/recommended)
+* [What are you running at hime?](/hardware/home/)
+* [RDO mini-cluster](/hardware/minicluster)
+
 </div>
 </div>
 
