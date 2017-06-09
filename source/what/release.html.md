@@ -13,7 +13,6 @@ doc](/what/workflow).
 TODO Intro paragraph here?
 
 * [Overview and infrastructure](/what/release-overview)
-* [Repositories](/what/release-repos)
 
 ----
 
