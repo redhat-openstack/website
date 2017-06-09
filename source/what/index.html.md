@@ -29,5 +29,5 @@ TODO: Intro paragraph
     * [I want a new package in RDO, now what?](/what/new-package)
 * [Workflow after the cycle](/what/release) (once an OpenStack release is launched)
     * [Overview and infrastructure](/what/release-overview)
-    * [Repositories](/what/release-repos)
+
 
