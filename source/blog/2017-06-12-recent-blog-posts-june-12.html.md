@@ -16,7 +16,7 @@ Read more at [http://openstack-in-production.blogspot.com/2017/06/experiences-wi
 
 **Using Ansible Validations With Red Hat OpenStack Platform – Part 1** by August Simonelli, Technical Marketing Manager, Cloud
 
->     Ansible is helping to change the way admins look after their     infrastructure    . It is flexible, simple to use, and powerful. Ansible uses a modular structure to deploy controlled pieces of code against infrastructure, utilizing     thousands of available modules    , providing everything from server management to network switch configuration.  
+>  Ansible is helping to change the way admins look after their infrastructure. It is flexible, simple to use, and powerful. Ansible uses a modular structure to deploy controlled pieces of code against infrastructure, utilizing     thousands of available modules, providing everything from server management to network switch configuration.  
 
 Read more at [http://redhatstackblog.redhat.com/2017/06/08/using-ansible-validations-with-red-hat-openstack-platform-part-1/](http://redhatstackblog.redhat.com/2017/06/08/using-ansible-validations-with-red-hat-openstack-platform-part-1/)
 
