@@ -1,12 +1,13 @@
 ---
-title: Upgrading from Mitaka to Newton
+title: Upgrading from Newton to Ocata
 authors: larsks, pmkovar
 ---
 
-# Upgrading from Mitaka to Newton: Overview
+# Manual upgrades from Newton to Ocata: Overview
 
-This document is primarily intended to cover upgrading from Mitaka to Newton for  manually deployed environments. This document
-describes different upgrade scenarios that you can use.
+This document is primarily intended to cover upgrading from Newton to Ocata
+for manually deployed environments. This document describes different upgrade
+scenarios that you can use.
 
 The following holds true for all of the described upgrade scenarios:
 
@@ -14,6 +15,9 @@ The following holds true for all of the described upgrade scenarios:
 * Running instances will not be affected by the upgrade process unless
   you (a) reboot a compute node or (b) explicitly shut down an
   instance.
+
+For upgrading TripleO-based OpenStack environments, see the
+[TripleO documentation](https://docs.openstack.org/developer/tripleo-docs/).
 
 ## Scenario 1: All at once
 
@@ -32,10 +36,8 @@ Read about this scenario in [Upgrade scenario 1](/install/upgrading-rdo-1/).
 
 ## Scenario 2: Service-by-service with live compute upgrade
 
-In this scenario, you upgrade one service at a time. You perform
-rolling upgrades of your compute hosts, taking advantage of the fact
-that `nova-compute` from Mitaka can communicate with a Newton control
-plane.
+In this scenario, you upgrade one service at a time and perform
+rolling upgrades of your compute hosts.
 
 This is our recommended upgrade procedure for most environments.
 

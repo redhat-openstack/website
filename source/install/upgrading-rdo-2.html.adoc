@@ -1,7 +1,7 @@
 [[section_upgrade-one-by-one]]
 ## Upgrading Individual OpenStack Services (Live Compute) in a Standard Environment
 
-This section describes the steps you should follow to upgrade your cloud deployment by updating one service at a time with live compute in a non High Availability (HA) environment. This scenario upgrades from Mitaka to Newton in environments that *do not use TripleO*.
+This section describes the steps you should follow to upgrade your cloud deployment by updating one service at a time with Live Compute in a non High Availability (HA) environment. This scenario upgrades from Newton to Ocata in environments that *do not use TripleO*.
 
 A live Compute upgrade minimizes interruptions to your Compute service, with only a few minutes for the smaller services, and a longer migration interval for the workloads moving to newly-upgraded Compute hosts. Existing workloads can run indefinitely, and you do not need to wait for a database migration.
 
@@ -13,7 +13,7 @@ This method may require additional hardware resources to bring up the Compute no
 
 ### Pre-Upgrade Tasks
 
-On each node, install the Newton release repository.
+On each node, install the Ocata release repository.
 
 On RHEL:
 
@@ -24,16 +24,16 @@ On RHEL:
 On CentOS:
 
 ```
-# yum install -y centos-release-openstack-newton
+# yum install -y centos-release-openstack-ocata
 ```
 
 Make sure that any previous release repositories are disabled. For example:
 
 ```
-# yum-config-manager --disable centos-release-openstack-mitaka
+# yum-config-manager --disable centos-release-openstack-newton
 ```
 
-Before updating, take a `systemd` snapshot of the OpenStack services.
+Before updating, take a `systemd` snapshot of the OpenStack services:
 
 ```
 # systemctl snapshot openstack-services
@@ -80,7 +80,7 @@ It is possible that the Identity service's token table has a large number of exp
 
 This flushes expired tokens from the database. You can arrange to run this command periodically using `cron`.
 
-Restart the `httpd` service.
+Restart the `httpd` service:
 
 ```
 # systemctl start httpd
@@ -157,7 +157,7 @@ On your Orchestration host, run:
 # systemctl stop '*gnocchi*'
 # yum -d1 -y upgrade \*ceilometer\* \*aodh\* \*gnocchi\*
 ```
-2.  On the controller node, where database is installed, run:
+2.  On the Controller node, where database is installed, run:
 +
 ```
 # ceilometer-dbsync
@@ -180,12 +180,12 @@ On your Orchestration host, run:
 
 ### Upgrading Compute (nova)
 
-1.  If you are performing a rolling upgrade of your compute hosts you need to set explicit API version limits to ensure compatibility in your environment.
+.  If you are performing a rolling upgrade of your Compute hosts, you need to set explicit API version limits to ensure compatibility in your environment.
 +
-Before starting Compute services on Controller or Compute nodes, set the `compute` option in the `[upgrade_levels]` section of `nova.conf` to the previous OpenStack version (`mitaka`):
+Before starting Compute services on Controller or Compute nodes, set the `compute` option in the `[upgrade_levels]` section of `nova.conf` to the previous OpenStack version (`newton`):
 +
 ```
-# crudini --set /etc/nova/nova.conf upgrade_levels compute mitaka
+# crudini --set /etc/nova/nova.conf upgrade_levels compute newton
 ```
 +
 You need to make this change on your Controller and Compute nodes.
@@ -201,21 +201,138 @@ If  the `crudini` command is not available, install the `crudini` package:
 ```
 ====
 
-2.  On your Compute host, run:
+. On your Controller and Compute nodes, run:
 +
 ```
 # systemctl stop '*nova*'
 # yum -d1 -y upgrade \*nova\*
-# su -s /bin/sh -c "nova-manage api_db sync" nova
+```
++
+[NOTE]
+====
+Unless stated otherwise, run the following commands on your Controller host.
+====
+
+. In Ocata, the Compute service needs at least the `cell0` database and one Cell V2 cell database, which you can name, for example, `cell1`.
++
+If you have not created the `cell0` database in your Newton environment, you need to create it in Ocata, similarly to how you created other nova databases in the past. The database name should follow the form of `nova_cell0`, where `nova` is the name of the existing nova database.
+
+. After creating the `cell0` database, create a Placement service user. For example:
++
+```
+$ openstack user create --domain default --password-prompt placement
+```
+
+. Add the appropriate role to the Placement service user. For example:
++
+```
+$ openstack role add --project service --user placement admin
+```
+
+. Create the Placement API entry. For example:
++
+```
+$ openstack service create --name placement --description "Placement API" placement
+```
+
+. Create the appropriate Placement API service endpoints. For example:
++
+```
+$ openstack endpoint create --region RegionOne placement public http://controller:8778
+
+$ openstack endpoint create --region RegionOne placement internal http://controller:8778
+
+$ openstack endpoint create --region RegionOne placement admin http://controller:8778
+```
+
+. Make sure that you have the required Placement API package installed:
++
+```
+# yum install openstack-nova-placement-api
+```
+
+. Configure the Placement API in the `[placement]` section of the `/etc/nova/nova.conf` file.
++
+[NOTE]
+====
+Configure the `[placement]` section in `/etc/nova/nova.conf` on both the Controller and Compute nodes.
+====
++
+For example:
++
+```
+[placement]
+
+os_region_name = RegionOne
+project_domain_name = Default
+project_name = service
+auth_type = password
+user_domain_name = Default
+auth_url = http://controller:35357/v3
+username = placement
+password = MyPlacementPassword
+```
++
+[NOTE]
+====
+Due to a known issue, you might need to enable access to the Placement API by configuring the related Apache virtual host. For more information, see the link:https://bugzilla.redhat.com/show_bug.cgi?id=1430540[bug report] and the link:https://docs.openstack.org/ocata/install-guide-rdo/nova-controller-install.html[OpenStack Installation Tutorial].
+====
+
+. Create and map the `cell0` database with Cells V2:
++
+```
+# su -s /bin/sh -c "nova-manage cell_v2 map_cell0" nova
+```
+
+. Populate the `cell0` database by updating the `db` database schema:
++
+```
 # su -s /bin/sh -c "nova-manage db sync" nova
 ```
 
-3.  After you have upgraded all of your hosts, you will want to remove the API limits configured in the previous step. On all of your hosts:
+. Create a `cell1` cell:
++
+```
+# su -s /bin/sh -c "nova-manage --config-file /etc/nova/nova.conf cell_v2 create_cell --name=cell1 --verbose" nova
+```
++
+Run this command for each cell in your environment.
+
+. Discover Compute hosts:
++
+```
+# su -s /bin/sh -c "nova-manage cell_v2 discover_hosts --verbose" nova
+```
++
+[NOTE]
+====
+If you add more Compute hosts in your environment, remember to run the `discover_hosts` command again.
+====
+
+. List registered cells to get their UUIDs:
++
+```
+# nova-manage cell_v2 list_cells
+```
+
+. Pass the UUIDs to the `map_instances` command to map instances to cells:
++
+```
+# su -s /bin/sh -c "nova-manage cell_v2 map_instances --cell_uuid <cell UUID>" nova
+```
+
+. Update the `api_db` database schema:
++
+```
+# su -s /bin/sh -c "nova-manage api_db sync" nova
+```
+
+.  After you have upgraded all of your hosts, you will want to remove the API limits configured in the previous step. On all of your hosts:
 +
 ```
 # crudini --del /etc/nova/nova.conf upgrade_levels compute
 ```
-4.  Restart the Compute service on all the Controller and Compute nodes:
+. Restart the Compute service on all Controller nodes:
 +
 ```
 # systemctl start openstack-nova-api \
@@ -223,6 +340,12 @@ If  the `crudini` command is not available, install the `crudini` package:
     openstack-nova-consoleauth \
     openstack-nova-novncproxy \
     openstack-nova-scheduler
+```
+
+. Restart the Compute service on all Compute nodes:
++
+```
+# systemctl start openstack-nova-compute
 ```
 
 ### Upgrading Clustering (sahara)
@@ -233,7 +356,7 @@ If  the `crudini` command is not available, install the `crudini` package:
 # systemctl stop '*sahara*'
 # yum -d1 -y upgrade \*sahara\*
 ```
-2.  On the controller node, where database is installed, run:
+2.  On the Controller node, where database is installed, run:
 +
 ```
 # su -s /bin/sh -c "sahara-db-manage upgrade heads" sahara
@@ -283,6 +406,6 @@ After completing all of your individual service upgrades, you should perform a c
 
 This will ensure that all packages are up-to-date. You may want to schedule a restart of your OpenStack hosts at a future date in order to ensure that all running processes are using updated versions of the underlying binaries.
 
-Review the resulting configuration files. The upgraded packages will have installed `.rpmnew` files appropriate to the Newton version of the service.
+Review the resulting configuration files. The upgraded packages will have installed `.rpmnew` files appropriate to the Ocata version of the service.
 
-New versions of OpenStack services may deprecate certain configuration options. You should also review your OpenStack logs for any deprecation warnings, because these may cause problems during a future upgrade. For more information on the new, updated and deprecated configuration options for each service, see Configuration Reference available from http://docs.openstack.org/newton/config-reference.
+New versions of OpenStack services may deprecate certain configuration options. You should also review your OpenStack logs for any deprecation warnings, because these may cause problems during a future upgrade. For more information on the new, updated and deprecated configuration options for each service, see Configuration Reference available from http://docs.openstack.org/ocata/config-reference.

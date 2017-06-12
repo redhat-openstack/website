@@ -1,7 +1,7 @@
 [[chap-upgrade-all-at-once]]
 ## Upgrading OpenStack Services Simultaneously
 
-This scenario upgrades from Mitaka to Newton in environments that *do not use TripleO*. This procedure upgrades all services on all nodes. This involves the following workflow:
+This scenario upgrades from Newton to Ocata in environments that *do not use TripleO*. This procedure upgrades all services on all nodes. This involves the following workflow:
 
 1. Disabling all OpenStack services
 2. Performing a package upgrade
@@ -10,11 +10,11 @@ This scenario upgrades from Mitaka to Newton in environments that *do not use Tr
 
 ### Disabling all OpenStack Services
 
-The first step to performing a complete upgrade of OpenStack on a node involves shutting down all Openstack services. This step differs based on whether the node OpenStack uses high availability tools for management (e.g. using Pacemaker on Controller nodes). This step contains instructions for both node types.
+The first step to performing a complete upgrade of OpenStack on a node involves shutting down all Openstack services. This step differs based on whether the node OpenStack uses high availability tools for management (for example, using Pacemaker on Controller nodes). This step contains instructions for both node types.
 
 .Standard Nodes
 
-Before updating, take a `systemd` snapshot of the OpenStack services.
+Before updating, take a `systemd` snapshot of the OpenStack services:
 
 ```
 # systemctl snapshot openstack-services
@@ -44,7 +44,7 @@ Disable the remaining Pacemaker-managed resources by setting the `stop-all-resou
 # pcs property set stop-all-resources=true
 ```
 
-Wait until all Pacemaker-managed resources have stopped. Run the `pcs status` command to see the status of each resource.
+Wait until all Pacemaker-managed resources have stopped. Run the `pcs status` command to see the status of each resource:
 
 ```
 # pcs status
@@ -57,7 +57,7 @@ HAProxy might show a broadcast message for unavailable services. This is normal 
 
 The next step upgrades all packages on a node. Perform this step on each node with OpenStack services.
 
-Install the Newton release repository.
+Install the Ocata release repository.
 
 On RHEL:
 
@@ -68,13 +68,13 @@ On RHEL:
 On CentOS:
 
 ```
-# yum install -y centos-release-openstack-newton
+# yum install -y centos-release-openstack-ocata
 ```
 
 Make sure that any previous release repositories are disabled. For example:
 
 ```
-# yum-config-manager --disable centos-release-openstack-mitaka
+# yum-config-manager --disable centos-release-openstack-newton
 ```
 
 Run the `yum update` command on the node:
@@ -85,7 +85,7 @@ Run the `yum update` command on the node:
 
 Wait until the package upgrade completes.
 
-Review the resulting configuration files. The upgraded packages will have installed `.rpmnew` files appropriate to the Newton version of the service. New versions of OpenStack services may deprecate certain configuration options. You should also review your OpenStack logs for any deprecation warnings, because these may cause problems during future upgrades. For more information on the new, updated and deprecated configuration options for each service, see Configuration Reference available from http://docs.openstack.org/newton/config-reference.
+Review the resulting configuration files. The upgraded packages will have installed `.rpmnew` files appropriate to the Ocata version of the service. New versions of OpenStack services may deprecate certain configuration options. You should also review your OpenStack logs for any deprecation warnings, because these may cause problems during future upgrades. For more information on the new, updated and deprecated configuration options for each service, see Configuration Reference available from http://docs.openstack.org/ocata/config-reference.
 
 Perform the package upgrade on each node in your environment.
 
@@ -95,7 +95,7 @@ The next step upgrades the database for each service.
 
 [NOTE]
 ====
-Flush expired tokens in the Identity service to decrease the time required to synchronize the database.
+Flush expired tokens in the Identity service to decrease the time required to synchronize the database:
 
 ```
 # keystone-manage token_flush
@@ -112,16 +112,131 @@ Upgrade the database schema for each service that uses the database. Run the fol
 |Image Service |glance |`# su -s /bin/sh -c "glance-manage db_sync" glance`
 |Block Storage |cinder |`# su -s /bin/sh -c "cinder-manage db sync" cinder`
 |Orchestration |heat |`# su -s /bin/sh -c "heat-manage db_sync" heat`
-|Compute |nova |
-`# su -s /bin/sh -c "nova-manage api_db sync" nova`
-
-`# su -s /bin/sh -c "nova-manage db sync" nova`
+|Compute |nova | See xref:upgrading-compute-all-at-once[Upgrading Compute (nova)].
 |Telemetry |ceilometer |`# ceilometer-dbsync`
 |Telemetry Alarming |aodh |`# aodh-dbsync`
 |Telemetry Metrics |gnocchi |`# gnocchi-upgrade`
 |Clustering |sahara | `# su -s /bin/sh -c "sahara-db-manage upgrade heads" sahara`
 |Networking |neutron |`# su -s /bin/sh -c "neutron-db-manage upgrade heads" neutron`
 |===
+
+[[upgrading-compute-all-at-once]]
+### Upgrading Compute (nova)
+
+In Ocata, the Compute service needs at least the `cell0` database and one Cell V2 cell database, which you can name, for example, `cell1`.
+
+If you have not created the `cell0` database in your Newton environment, you need to create it in Ocata, similarly to how you created other nova databases in the past. The database name should follow the form of `nova_cell0`, where `nova` is the name of the existing nova database.
+
+After creating the `cell0` database, create a Placement service user. For example:
+
+```
+$ openstack user create --domain default --password-prompt placement
+```
+
+Add the appropriate role to the Placement service user. For example:
+
+```
+$ openstack role add --project service --user placement admin
+```
+
+Create the Placement API entry. For example:
+
+```
+$ openstack service create --name placement --description "Placement API" placement
+```
+
+Create the appropriate Placement API service endpoints. For example:
+
+```
+$ openstack endpoint create --region RegionOne placement public http://controller:8778
+
+$ openstack endpoint create --region RegionOne placement internal http://controller:8778
+
+$ openstack endpoint create --region RegionOne placement admin http://controller:8778
+```
+
+Make sure that you have the required Placement API package installed:
+
+```
+# yum install openstack-nova-placement-api
+```
+
+Configure the Placement API in the `[placement]` section of the `/etc/nova/nova.conf` file.
+
+[NOTE]
+====
+Configure the `[placement]` section in `/etc/nova/nova.conf` on both the Controller and Compute nodes.
+====
+
+For example:
+
+```
+[placement]
+
+os_region_name = RegionOne
+project_domain_name = Default
+project_name = service
+auth_type = password
+user_domain_name = Default
+auth_url = http://controller:35357/v3
+username = placement
+password = MyPlacementPassword
+```
+[NOTE]
+====
+Due to a known issue, you might need to enable access to the Placement API by configuring the related Apache virtual host. For more information, see the link:https://bugzilla.redhat.com/show_bug.cgi?id=1430540[bug report] and the link:https://docs.openstack.org/ocata/install-guide-rdo/nova-controller-install.html[OpenStack Installation Tutorial].
+====
+
+Create and map the `cell0` database with Cells V2:
+
+```
+# su -s /bin/sh -c "nova-manage cell_v2 map_cell0" nova
+```
+
+Create a `cell1` cell:
+
+```
+# su -s /bin/sh -c "nova-manage --config-file /etc/nova/nova.conf cell_v2 create_cell --name=cell1 --verbose" nova
+```
+
+You only need to run this command once as it defaults to all cells in your environment.
+
+Populate the `cell0` database by updating the `db` database schema:
+
+```
+# su -s /bin/sh -c "nova-manage db sync" nova
+```
+
+Discover Compute hosts:
+
+```
+# su -s /bin/sh -c "nova-manage cell_v2 discover_hosts --verbose" nova
+```
+
+[NOTE]
+====
+If you add more Compute hosts in your environment, remember to run the `discover_hosts` command again.
+====
+
+List registered cells to get their UUIDs:
+
+```
+# nova-manage cell_v2 list_cells
+```
+
+Pass the UUIDs to the `map_instances` command to map instances to cells:
+
+```
+# su -s /bin/sh -c "nova-manage cell_v2 map_instances --cell_uuid <cell UUID>" nova
+```
+
+Use the `cell1` UUID if there is only one cell in your environment.
+
+Update the `api_db` database schema:
+
+```
+# su -s /bin/sh -c "nova-manage api_db sync" nova
+```
 
 ### Enabling all OpenStack Services
 
