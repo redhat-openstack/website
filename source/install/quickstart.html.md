@@ -2,20 +2,16 @@
 title: Packstack quickstart
 category: documentation
 authors: apevec, dneary, garrett, jasonbrooks, jlibosva, mmagr, pixelbeat, pmyers,
-  rbowen, gbraad
+  rbowen, gbraad, cbrown2
 wiki_category: Documentation
 wiki_title: Quickstart
 wiki_revision_count: 141
 wiki_last_updated: 2015-06-30
 ---
 
-# All-in-one quickstart: Proof of concept for single node
+# Packstack: Create a proof of concept cloud
 
 This document shows how to spin up a proof of concept cloud on one node, using the Packstack installation utility. You will be able to [add more nodes](/install/adding-a-compute-node/) to your OpenStack cloud later, if you choose.
-
-* If you are looking for instructions on how to deploy a production-ready cloud, possibly with HA, see the [TripleO quickstart](/tripleo).
-
-* If you just want to try out OpenStack without installing anything, check out [TryStack](http://trystack.org).
 
 The instructions apply to the current **Ocata** release.
 
