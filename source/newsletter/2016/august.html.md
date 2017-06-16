@@ -30,7 +30,7 @@ To get started, on a fresh CentOS or RHEL VM:
     sudo wget http://trunk.rdoproject.org/centos7/current-passed-ci/delorean.repo
 
 Then for a packstack-based install, start with step 2 of the
-[quickstart](https://www.rdoproject.org/install/packstack/), or, for
+[quickstart](https://www.rdoproject.org/install/quickstart/), or, for
 TripleO-based installs, see the [TripleO
 quickstart](https://www.rdoproject.org/tripleo/) or the [TripleO
 quickstart USB key](https://www.rdoproject.org/tripleo/oooq-usbkey/).

@@ -33,7 +33,7 @@ Apart from that, I am contributing to the Delorean Project which powers the RDO 
 Yes.
 
 * Are you a newcomer (want to dive into OpenStack)?
-    - First try and test it using RDO Project [quick start guide](https://www.rdoproject.org/install/packstack/) and get your cloud running in 15 minutes.
+    - First try and test it using RDO Project [quick start guide](https://www.rdoproject.org/install/quickstart/) and get your cloud running in 15 minutes.
     - Next, try out different scenarios and configure OpenStack services using RDO website documentation, look for anything wrong or enhancements that can be made in the documentation.
       RDO Project [website source](https://github.com/redhat-openstack/website) is on Github and requires Markdown, so feel free to create an issue and send a pull request.
 * Participate in weekly RDO meeting every Wednesday on #rdo channel on Freenode. Take action items and participate in the conversation. It will help you to know what is happening in the community and what's new coming.

@@ -6,7 +6,7 @@ date: 2016-10-05 10:10:15 UTC
 ---
 
 [Rally](https://rally.readthedocs.io/en/latest/overview.html) is a benchmarking tool that automates and unifies multi-node OpenStack deployment, cloud verification, benchmarking & profiling.
-For OpenStack deployment I used [packstack](https://www.rdoproject.org/install/packstack/) tool.
+For OpenStack deployment I used [packstack](https://www.rdoproject.org/install/quickstart/) tool.
 
 ## Install Rally
 

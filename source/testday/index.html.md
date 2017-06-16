@@ -20,7 +20,7 @@ The (tentative) test day schedule is:
 
 Of course, you don't have to wait for a scheduled test day to test RDO.
 We would love to hear about your experiences, with either a [Packstack
-installation](/install/packstack) or the [TripleO
+installation](/install/quickstart) or the [TripleO
 Quickstart](/tripleo).
 
 We also encourage you to work through the [upstream installation
