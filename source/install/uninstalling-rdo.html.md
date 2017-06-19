@@ -8,6 +8,18 @@ wiki_last_updated: 2015-03-31
 
 # Uninstalling RDO
 
-There is no automated uninstall process for RDO (or OpenStack in general). This is because OpenStack consists of multiple services, (possibly) running across multiple systems, and there is not, at this time, any way to identify all of the various parts, where they are, and a safe way to uninstall them.
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+There is no automated uninstall process for RDO (or OpenStack in general) because OpenStack consists of multiple services, (possibly) running across multiple systems. At this time there is no way to identify all of the various parts, locate them, and safely uninstall them.
+=======
+There is no automated uninstall process for RDO (or OpenStack in general) because OpenStack consists of multiple services, (possibly) running across multiple systems.  At this time there is no way to identify all of the various parts, locate them, & safely uninstall them.
+>>>>>>> a31b1fa... Grammatical fixes
+=======
+There is no automated uninstall process for RDO (or OpenStack in general) because OpenStack consists of multiple services, (possibly) running across multiple systems.  At this time there is no way to identify all of the various parts, locate them, and safely uninstall them.
+>>>>>>> a90ae36... Create uninstalling-rdo.html.md
+=======
+There is no automated uninstall process for RDO (or OpenStack in general) because OpenStack consists of multiple services, (possibly) running across multiple systems. At this time there is no way to identify all of the various parts, locate them, and safely uninstall them.
+>>>>>>> 35caa5c... Update uninstalling-rdo.html.md
 
-Since OpenStack installations are almost certain to be deployed on dedicates systems (or VMs), the reasonable way to "uninstall" RDO is to reinstall the base OS and start fresh.
+Since OpenStack installations are almost certain to be deployed on dedicated systems (or VMs), the most reasonable way to "uninstall" RDO is to reinstall the base OS and start fresh.
