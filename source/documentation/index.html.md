@@ -80,9 +80,7 @@ Since RDO sticks closely to the upstream OpenStack project, the documentation at
 
 ### Packaging
 
-* [RDO packaging guide](/documentation/rdo-packaging)
-* [RDO packaging guidelines](/documentation/rdo-packaging-guidelines)
-* [`rdopkg` documentation](https://github.com/openstack-packages/rdopkg)
+* [RDO Packager guide](/documentation/rdo-packaging)
 
 </div>
 <div class="split-third">
