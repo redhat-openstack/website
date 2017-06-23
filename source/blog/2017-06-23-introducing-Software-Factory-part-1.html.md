@@ -2,7 +2,7 @@
 title: Introducing Software Factory - part 1
 author: Software Factory Team
 tags: openstack,infra,nodepool,software-factory,zuul,CI,CD
-date: 2017-06-10 00:00:00 UTC
+date: 2017-06-23 00:00:00 UTC
 ---
 
 # Introducing Software Factory
