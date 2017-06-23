@@ -75,7 +75,7 @@ help to add new packages, you can ask on `#rdo` or `rdo-list` mailing list.
 
 Adding a new puppet module to RDO Trunk is done using the same process as adding a new
 package to RDO Trunk with a few small differences. Use the following steps referencing the above
-[How to add a new packGage to RDO Trunk](/documentation/rdo-packaging/#how-to-add-a-new-package-to-rdo-trunk)
+[How to add a new packGage to RDO Trunk](#how-to-add-a-new-openstack-package-to-rdo-trunk)
 for details on submitting a new puppet module. The steps here correspond to the
 steps above offering details specific to puppet modules.
 
