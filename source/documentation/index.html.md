@@ -21,7 +21,7 @@ Since RDO sticks closely to the upstream OpenStack project, the documentation at
 
 * [TripleO](http://tripleo.org) &ndash; Deploy a production cloud
 * [TripleO quickstart](/tripleo) &ndash; Develop and Test OpenStack
-* [Packstack](/install/quickstart) &ndash; Spin up an all-in-one concept cloud
+* [Packstack](/install/packstack) &ndash; Spin up an all-in-one concept cloud
 
 </div>
 <div class="split-third">
