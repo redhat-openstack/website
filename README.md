@@ -1,5 +1,16 @@
 # RDO website
 
+To get started, just fork a copy of this repository, make your changes and create a pull request.
+
+1. [Forking a github repository](https://help.github.com/articles/fork-a-repo/)
+2. [Making changes](https://help.github.com/articles/editing-files-in-your-repository/)
+3. [Pull Requests](https://help.github.com/articles/about-pull-requests/)
+
+# Run your own copy
+
+PLEASE NOTE: There is no requirement to run your own copy, the following is just a reference
+for those who may wish to do so.
+
 To get started, you need to have Ruby and Ruby Gems installed, as well
 as "bundler".
 
