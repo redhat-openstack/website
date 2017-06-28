@@ -14,14 +14,32 @@ post](https://www.rdoproject.org/blog/2016/07/improving-the-rdo-trunk-infrastruc
 
 [This site](http://rdoproject.org/).
 
-## DLRN
+## RDO Trunk
 
-trunk, aka DLRN, aka Delorean. Builds upstream trunk to RDO packages.
-[trunk.rdoproject.org](http://trunk.rdoproject.org)
+RDO Trunk, aka DLRN, aka Delorean. Builds upstream trunk to RDO packages. Its infrastructure
+is composed of several servers:
 
-## Code Review
+* A private build server, running inside the ci.centos.org infrastructure.
+* A public server, [trunk.rdoproject.org](http://trunk.rdoproject.org), hosting the repositories.
+* A database server, running in the RDO Cloud (dlrn-db.rdoproject.org).
+* A slave database server, which mirrors the main database and also serves as offsite backup server
+  for other services (backup.rdoproject.org).
 
-RDO Gerrit. [review.rdoproject.org](https://review.rdoproject.org/)
+In addition to this, a separate DLRN instance is supporting the upstream
+[rpm-packaging](https://github.com/openstack/rpm-packaging) project with up to date packages built
+from its spec templates, [rpm-packaging-ci.rdoproject.org](https://rpm-packaging-ci.rdoproject.org/repos/status_report.html).
+
+## Code Review and CI
+
+The RDO Gerrit instance is running at [review.rdoproject.org](https://review.rdoproject.org/). It makes use
+of a pool of VMs for CI managed by nodepool and running on the RDO Cloud.
+
+Some additional pieces of infrastructure used for CI are:
+
+* [registry.rdoproject.org](https://console.registry.rdoproject.org/) is a Docker registry used for our
+  containerization efforts.
+* [logs.rdoproject.org](https://logs.rdoproject.org) provides a log storage service for our CI jobs.
+* [images.rdoproject.org](https://images.rdoproject.org) store disk images used by the TripleO CI.
 
 ## Blogs
 
@@ -46,7 +64,11 @@ A subset of the planet.openstack.org, tracks RDO bloggers.
 
 ## Code
 
-The code lives on [github](https://github.com/redhat-openstack)
+The code lives on several organizations at GitHub:
+
+* [Package specs](https://github.com/rdo-packages)
+* [Infrastructure definition and CI](https://github.com/rdo-infra)
+* [Website, rdoinfo and others](https://github.com/redhat-openstack) 
 
 ## CentOS
 
