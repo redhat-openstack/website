@@ -35,7 +35,6 @@ For an initial test deployment, follow the [Packstack quickstart](/install/quick
 <div class="split-third">
 ### Configuration
 
-*   [Running an instance](/install/running-an-instance/)
 *   [Adding a compute node](/install/adding-a-compute-node/)
 *   [Setting up high availability](/ha/)
 </div>
@@ -45,7 +44,7 @@ For an initial test deployment, follow the [Packstack quickstart](/install/quick
 <div class="split-third with-more">
 ### VMs and images
 
-*   [Launching your first VM](/install/running-an-instance/)
+*   [Launching your first VM](https://docs.openstack.org/user-guide/dashboard-launch-instances.html) - Upstream documentation
 *   [Image resources](/resources/image-resources/)
 *   [Creating CentOS and Fedora images ready for Openstack](/resources/creating-centos-and-fedora-images-ready-for-openstack/)
 </div>

@@ -117,4 +117,4 @@ Once the process is complete, you can log in to the OpenStack web interface Hori
 
 # Next steps
 
-Now that your single node OpenStack instance is up and running, you can read on about [running an instance](/install/running-an-instance/), configuring a [floating IP range](/networking/floating-ip-range/), configuring RDO to [work with your existing network](/networking/neutron-with-existing-external-network/), or about expanding your installation by [adding a compute node](/install/adding-a-compute-node/).
+Now that your single node OpenStack instance is up and running, you can read on about creating instances, networks, volumes and more on the [OpenStack website](https://docs.openstack.org/user-guide/).
