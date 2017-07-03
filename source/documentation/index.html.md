@@ -42,7 +42,6 @@ Since RDO sticks closely to the upstream OpenStack project, the documentation at
 
 ### Installation and configuration
 
-* [Running an instance](/install/running-an-instance/)
 * [Image resources](/resources/image-resources/)
 * [Adding a compute node](/install/adding-a-compute-node/)
 * [More&hellip;](/install/){:.more}
