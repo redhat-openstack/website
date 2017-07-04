@@ -20,7 +20,7 @@ a global perspective.
 
 ## Managing OpenStack requirements in RDO
 
-RDO provides all requirements for packaged services in rpm format from their own repos,
+RDO provides all requirements for packaged services in RPM format from their own repos,
 so that no software should be installed from external repositories. This packages can
 be provided by:
 
@@ -38,8 +38,8 @@ If you have questions or special requests, don't hesitate in contacting RDO usin
 
 ### Adding a new requirement to RDO
 
-When a new requirement is needed for a OpenStack project included in RDO, following process
-must be followed by package maintainers:
+When a new requirement is needed for an OpenStack project included in RDO, package maintainers
+must follow by package maintainers:
 
 ![RDO dependencies](/images/cbs-requirements.png)
 
@@ -49,7 +49,7 @@ added to global-requirements.txt and upper-constraints.txt files as described in
 documentation](https://github.com/openstack/requirements/#proposing-changes)
     
     <br />
-2. Check if the new requirement is present in CentOS base channels. The easies way to do this
+2. Check if the new requirement is present in CentOS base channels. The easiest way to do this
 is using yum command from a system running CentOS 7:
     
         yum list "*<dependency>"
@@ -104,11 +104,11 @@ the inclussion of the package in RDO repos. RDO Core members will handle the req
 browser](https://apps.fedoraproject.org/packages/). If the package exists you can open a bug in [Red Hat Bugzilla for
 RDO product](https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&component=distribution) requesting
 the rebuild of the package in RDO repos. RDO Core members will rebuild the package using latest existing version
-in fedora.
+in Fedora.
     
     <br />
-6. When the packages doesn't exist even in fedora you need to add the package following the [New package
-process](https://fedoraproject.org/wiki/New_package_process_for_existing_contributors). Note that a fedora
+6. When the packages doesn't exist even in Fedora you need to add the package following the [New package
+process](https://fedoraproject.org/wiki/New_package_process_for_existing_contributors). Note that a Fedora
 packager needs to participate in this process. While RDO core members may maintain the new package for
 common requirements used by different projects, dependencies for specific project must be maintained in
 Fedora by the project team. Once the package is included in Fedora repos you can create a bugzilla as
@@ -124,7 +124,7 @@ not be added as Requires but installed only when needed.
 
 There are some rules to follow when a requirement update is needed by a OpenStack project:
 
-* If the dependency is included in upstream requirements project, the required version must be lower or equal to
+* If the dependency is included in upstream requirements project, the required version must be equal to
 the version in [upper-constraints](https://github.com/openstack/requirements/blob/master/upper-constraints.txt) file.
 
 * For packages installed from CentOS base repos, the package should be updated in CentOS/RHEL repos. This can
