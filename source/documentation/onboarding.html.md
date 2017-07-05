@@ -17,7 +17,7 @@ You need a [github](https://github.com) account which is used to log in.
 5. Read our [RDO packaging introduction](/documentation/intro-packaging/). It provides some
 interesting information for newcomers.
 6. Install [rdopkg](/documentation/intro-packaging/#rdopkg) tool, you'll need it!
-7. You can start getting familiar with RDO by reviewing patches in [RDO Gerrit instance](https://review.rdoproject.org/r)
+7. You can start getting familiar with RDO by reviewing patches in [RDO Gerrit instance](https://review.rdoproject.org/r/)
 or by sending your own patches for existing packages.
 8. If you want to become maintainer for one or more packages, you can request to be added to the
 core group for them by sending a review to [rdoinfo](https://github.com/redhat-openstack/rdoinfo/) 
