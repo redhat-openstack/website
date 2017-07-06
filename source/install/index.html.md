@@ -12,7 +12,7 @@ wiki_last_updated: 2016-01-07
 
 [← Docs](/documentation/)
 
-For an initial test deployment, follow the [Packstack](/install/packstack). While using Packstack is sufficient as a proof of concept, there are other ways that you can use to deploy OpenStack with RDO. If you need to deploy a production-ready cloud, possibly with HA, see the [TripleO quickstart](/tripleo).
+For an initial test deployment, follow the [Packstack](/install/packstack) instructions. While using Packstack is sufficient as a proof of concept, there are other ways that you can use to deploy OpenStack with RDO. If you need to deploy a production-ready cloud, possibly with HA, see the [TripleO quickstart](/tripleo).
 
 <div class="splits">
 <div class="split-third with-more">
