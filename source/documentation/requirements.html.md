@@ -39,7 +39,7 @@ If you have questions or special requests, don't hesitate in contacting RDO usin
 ### Adding a new requirement to RDO
 
 When a new requirement is needed for an OpenStack project included in RDO, package maintainers
-must follow by package maintainers:
+must follow this procedure:
 
 ![RDO dependencies](/images/cbs-requirements.png)
 
