@@ -53,11 +53,11 @@ First, use the demo tenant:
 
 Import the custom image that has httpd enabled and a modified rc.local script:
 
-    # glance image-create --name rhel-http --is-public true --disk-format qcow2 --container-format bare --file rhel.qcow2
+    # openstack image create --name rhel-http --public true --disk-format qcow2 --container-format bare --file rhel.qcow2
 
 Check that the image was imported:
 
-    # glance image-list
+    # openstack image list
     +--------------------------------------+-----------+-------------+------------------+------------+--------+
     | ID                                   | Name      | Disk Format | Container Format | Size       | Status |
     +--------------------------------------+-----------+-------------+------------------+------------+--------+
@@ -67,19 +67,20 @@ Check that the image was imported:
 
 Next, create a keypair to use when we boot the image:
 
-    # nova keypair-add rdo-key > rdo-key.pem
-    # nova keypair-list
-    +---------+-------------------------------------------------+
-    | Name    | Fingerprint                                     |
-    +---------+-------------------------------------------------+
-    | rdo-key | 35:4a:79:73:94:74:d1:5b:bc:10:6a:01:01:69:a7:51 |
-    +---------+-------------------------------------------------+
+    #  openstack keypair create --public-key ~/.ssh/rdo_key.pub rdo_key
++-------------+-------------------------------------------------+
+| Field       | Value                                           |
++-------------+-------------------------------------------------+
+| fingerprint | 4e:89:51:ff:90:9b:f8:2c:01:27:c2:7c:ac:8d:36:98 |
+| name        | rdo_key                                         |
+| user_id     | b32cd586eb3b4bfe925913a6b51da7f1                |
++-------------+-------------------------------------------------+
 
 Create the virtual machines by booting the custom image. Each of the resulting instances will be running the httpd service, which we can then load balance. This example will use three httpd servers.
 
-    # nova boot --flavor 2 --image rhel-http --key-name rdo_key rhel-01
-    # nova boot --flavor 2 --image rhel-http --key-name rdo_key rhel-02
-    # nova boot --flavor 2 --image rhel-http --key-name rdo_key rhel-03
+    # openstack server create rhel-01 --flavor 2 --image rhel-http --key-name rdo_key
+    # openstack server create rhel-02 --flavor 2 --image rhel-http --key-name rdo_key
+    # openstack server create rhel-03 --flavor 2 --image rhel-http --key-name rdo_key
 
 Once the virtual machines are up and running, check that each is active and has an IP address on the private network.
 
@@ -96,49 +97,49 @@ Before creating a load balancer, optionally test that each server is running the
 
 Check to see what networks are available:
 
-    # neutron net-list
-    +--------------------------------------+---------+--------------------------------------------------+
-    | id                                   | name    | subnets                                          |
-    +--------------------------------------+---------+--------------------------------------------------+
-    | 3f006c95-f46e-4d93-87e5-4107cff5cd8f | public  | 348baf31-c788-4617-a82f-3ba684054cf3             |
-    | bae98178-f724-4b06-9d66-3f2b687cd731 | private | a4f17073-298e-4d92-8c19-8f3333145fd0 10.0.0.0/24 |
-    +--------------------------------------+---------+--------------------------------------------------+
+    # openstack network list
+    +--------------------------------------+---------+--------------------------------------+
+    | ID                                   | Name    | Subnets                              |
+    +--------------------------------------+---------+--------------------------------------+
+    | 63d4d6bf-24e6-4063-9f92-402d78ce3fc2 | private | 3b4be857-7705-4e47-80a2-5f15beb675c2 |
+    | f33a8dc9-cee6-48c2-9f7d-6fef8bead932 | public  | 64377ee4-cb4d-4e91-98bd-c7f1aa4b2484 |
+    +--------------------------------------+---------+--------------------------------------+
 
 Create three floating IP addresses on the 'public' network by running the following command three times:
 
-    # neutron floatingip-create public
+    # openstack floating ip create public
 
 Check to see which floating IP addresses were created:
 
-    # neutron floatingip-list --sort-key floating_ip_address --sort-dir asc
-    +--------------------------------------+------------------+---------------------+---------+
-    | id                                   | fixed_ip_address | floating_ip_address | port_id |
-    +--------------------------------------+------------------+---------------------+---------+
-    | 5064e824-d4a2-4c8d-9c91-e8d864df0b94 |                  | 172.24.4.227        |         |
-    | 85905522-6354-4728-a6fa-ff76a3e79e50 |                  | 172.24.4.228        |         |
-    | 96943920-105e-4017-9393-873ef4607b5f |                  | 172.24.4.229        |         |
-    +--------------------------------------+------------------+---------------------+---------+
+    # openstack floating ip list
+    +--------------------------------------+---------------------+------------------+------+
+    | ID                                   | Floating IP Address | Fixed IP Address | Port |
+    +--------------------------------------+---------------------+------------------+------+
+    | 01707a5a-d049-463a-9358-5f98d1c31e5e | 172.24.4.227        | None             | None |
+    | eb6003f5-d50f-4cf3-9115-bdd0343f8571 | 172.24.4.228        | None             | None |
+    | f9a20cdb-d31d-4f81-9a91-164a34d94443 | 172.24.4.229        | None             | None |
+    +--------------------------------------+---------------------+------------------+------+
 
 Now associate a floating IP address with each instance.
 
-    # nova add-floating-ip rhel-01 172.24.4.227
-    # nova add-floating-ip rhel-02 172.24.4.228
-    # nova add-floating-ip rhel-03 172.24.4.229
+    # openstack server add floating ip rhel-01 172.24.4.227
+    # openstack server add floating ip rhel-02 172.24.4.228
+    # openstack server add floating ip rhel-03 172.24.4.229
 
 Verify that the floating IP addresses were correctly associated with each virtual machine.
 
-    # neutron floatingip-list --sort-key floating_ip_address --sort-dir asc
-    +--------------------------------------+------------------+---------------------+--------------------------------------+
-    | id                                   | fixed_ip_address | floating_ip_address | port_id                              |
-    +--------------------------------------+------------------+---------------------+--------------------------------------+
-    | 5064e824-d4a2-4c8d-9c91-e8d864df0b94 | 10.0.0.3         | 172.24.4.227        | f4369fd1-ff7e-422f-aabf-ebba6f9416c9 |
-    | 85905522-6354-4728-a6fa-ff76a3e79e50 | 10.0.0.4         | 172.24.4.228        | 8d3d59c6-b1cc-482c-b2ab-018d6a3b6de1 |
-    | 96943920-105e-4017-9393-873ef4607b5f | 10.0.0.5         | 172.24.4.229        | e5938653-ecbc-484a-99bb-235627935c8b |
-    +--------------------------------------+------------------+---------------------+--------------------------------------+
+    # openstack floating ip list
+    +--------------------------------------+---------------------+------------------+--------------------------------------+
+    | ID                                   | Floating IP Address | Fixed IP Address | Port                                 |
+    +--------------------------------------+---------------------+------------------+--------------------------------------+
+    | 01707a5a-d049-463a-9358-5f98d1c31e5e | 172.24.4.227        | 10.0.0.7         | 8a6782e5-dbad-4b7d-86f2-7c5ac5c832a6 |
+    | eb6003f5-d50f-4cf3-9115-bdd0343f8571 | 172.24.4.228        | 10.0.0.12        | 820c4722-4459-46d8-a799-2360c56d21bf |
+    | f9a20cdb-d31d-4f81-9a91-164a34d94443 | 172.24.4.229        | 10.0.0.6         | e155ddb5-fbb8-408a-93c5-6dc02142a457 |
+    +--------------------------------------+---------------------+------------------+--------------------------------------+
 
 Before sending HTTP requests to each virtual machine, add a security group rule that will allow TCP traffic on port 80 to be passed to the virtual machines.
 
-    # neutron security-group-rule-create --protocol tcp --port-range-min 80 --port-range-max 80 --direction ingress default
+    # openstack security group rule create default --protocol tcp --dst-port 80:80 --src-ip 0.0.0.0/0
 
 Use curl to send an HTTP request to each instance. Since each instance has its hostname in /var/www/html/index.html, each HTTP response should simply contain the hostname.
 
@@ -155,29 +156,30 @@ These results confirm that each virtual machine will respond to a simple HTTP re
 
 The floating IP addresses that were associated with each virtual machine are no longer needed, so it is safe is disassociate them.
 
-    # nova floating-ip-list
-    +--------------+--------------------------------------+----------+--------+
-    | Ip           | Instance Id                          | Fixed Ip | Pool   |
-    +--------------+--------------------------------------+----------+--------+
-    | 172.24.4.227 | 1fffa4ec-2bd6-426d-89b0-ead561545de7 | 10.0.0.3 | public |
-    | 172.24.4.228 | ae1f4f60-18c1-4001-8a55-7b7036ca6b3c | 10.0.0.4 | public |
-    | 172.24.4.229 | 429be6ec-a069-4dcd-bfca-33cd42606d39 | 10.0.0.5 | public |
-    +--------------+--------------------------------------+----------+--------+
 
-    # nova remove-floating-ip rhel-01 172.24.4.227
-    # nova remove-floating-ip rhel-02 172.24.4.228
-    # nova remove-floating-ip rhel-03 172.24.4.229
+    # openstack floating ip list
+    +--------------------------------------+---------------------+------------------+--------------------------------------+
+    | ID                                   | Floating IP Address | Fixed IP Address | Port                                 |
+    +--------------------------------------+---------------------+------------------+--------------------------------------+
+    | 01707a5a-d049-463a-9358-5f98d1c31e5e | 172.24.4.227        | 10.0.0.7         | 8a6782e5-dbad-4b7d-86f2-7c5ac5c832a6 |
+    | eb6003f5-d50f-4cf3-9115-bdd0343f8571 | 172.24.4.228        | 10.0.0.12        | 820c4722-4459-46d8-a799-2360c56d21bf |
+    | f9a20cdb-d31d-4f81-9a91-164a34d94443 | 172.24.4.229        | 10.0.0.6         | e155ddb5-fbb8-408a-93c5-6dc02142a457 |
+    +--------------------------------------+---------------------+------------------+--------------------------------------+
+
+    # openstack server remove floating ip rhel-01 172.24.4.227
+    # openstack server remove floating ip rhel-02 172.24.4.228
+    # openstack server remove floating ip rhel-03 172.24.4.229
 
 Confirm that the floating IP addresses still exist but are no longer associated with the virtual machines.
 
-    # nova floating-ip-list
-    +--------------+-------------+----------+--------+
-    | Ip           | Instance Id | Fixed Ip | Pool   |
-    +--------------+-------------+----------+--------+
-    | 172.24.4.227 | None        | None     | public |
-    | 172.24.4.228 | None        | None     | public |
-    | 172.24.4.229 | None        | None     | public |
-    +--------------+-------------+----------+--------+
+    # openstack floating ip list
+    +--------------------------------------+---------------------+------------------+------+
+    | ID                                   | Floating IP Address | Fixed IP Address | Port |
+    +--------------------------------------+---------------------+------------------+------+
+    | 01707a5a-d049-463a-9358-5f98d1c31e5e | 172.24.4.227        | None             | None |
+    | eb6003f5-d50f-4cf3-9115-bdd0343f8571 | 172.24.4.228        | None             | None |
+    | f9a20cdb-d31d-4f81-9a91-164a34d94443 | 172.24.4.229        | None             | None |
+    +--------------------------------------+---------------------+------------------+------+
 
 ### Create the load balancer
 
@@ -185,7 +187,7 @@ The first step when creating a load balancer is to create a pool. A pool is a gr
 
 First, get the subnet ID from neutron.
 
-    # neutron subnet-list
+    # openstack subnet list
     +--------------------------------------+----------------+-------------+--------------------------------------------+
     | id                                   | name           | cidr        | allocation_pools                           |
     +--------------------------------------+----------------+-------------+--------------------------------------------+
@@ -194,7 +196,7 @@ First, get the subnet ID from neutron.
 
 Next, create the pool.
 
-    # neutron lb-pool-create --name http-pool --lb-method ROUND_ROBIN --protocol HTTP --subnet-id a4f17073-298e-4d92-8c19-8f3333145fd0
+    # neutron lbaas-pool-create --name http-pool --lb-method ROUND_ROBIN --protocol HTTP --subnet-id a4f17073-298e-4d92-8c19-8f3333145fd0
     Created a new pool:
     +------------------------+--------------------------------------+
     | Field                  | Value                                |
@@ -218,14 +220,14 @@ Next, create the pool.
 
 The example above creates a pool named "http-pool", which uses the HTTP protocol and a round-robin load balancing algorithm. This pool is associated with the private subnet. The lb-pool-list and lb-pool-show commands may be used to get information about existing pools.
 
-    # neutron lb-pool-list
+    # neutron lbaas-pool-list
     +--------------------------------------+-----------+----------+-------------+----------+----------------+----------------+
     | id                                   | name      | provider | lb_method   | protocol | admin_state_up | status         |
     +--------------------------------------+-----------+----------+-------------+----------+----------------+----------------+
     | 01745519-f910-4393-b237-a24a4f9c2a7d | http-pool | haproxy  | ROUND_ROBIN | HTTP     | True           | PENDING_CREATE |
     +--------------------------------------+-----------+----------+-------------+----------+----------------+----------------+
 
-    # neutron lb-pool-show http-pool
+    # neutron lbaas-pool-show http-pool
     +------------------------+--------------------------------------+
     | Field                  | Value                                |
     +------------------------+--------------------------------------+
@@ -248,9 +250,9 @@ The example above creates a pool named "http-pool", which uses the HTTP protocol
 
 The next step is to create members and add them to the pool. A member is nothing more than the IP address and port of a virtual machine that can provide the service being load-balanced. In this example there are three virtual machines listening on port 80. Create a member for each of these servers and add them to the pool.
 
-    # neutron lb-member-create --address 10.0.0.3 --protocol-port 80 http-pool
-    # neutron lb-member-create --address 10.0.0.4 --protocol-port 80 http-pool
-    # neutron lb-member-create --address 10.0.0.5 --protocol-port 80 http-pool
+    # neutron lbaas-member-create --address 10.0.0.3 --protocol-port 80 http-pool
+    # neutron lbaas-member-create --address 10.0.0.4 --protocol-port 80 http-pool
+    # neutron lbaas-member-create --address 10.0.0.5 --protocol-port 80 http-pool
 
 The lb-member-list and lb-member-show commands may be used to get information about existing members.
 
@@ -263,7 +265,7 @@ The lb-member-list and lb-member-show commands may be used to get information ab
     | 63f009cf-f6bc-4274-8e5d-f9c2613d7912 | 10.0.0.5 |            80 | True           | PENDING_CREATE |
     +--------------------------------------+----------+---------------+----------------+----------------+
 
-    # neutron lb-member-show 5750769c-3131-41bd-b0f1-be6c41aa15c9
+    # neutron lbaas-member-show 5750769c-3131-41bd-b0f1-be6c41aa15c9
     +--------------------+--------------------------------------+
     | Field              | Value                                |
     +--------------------+--------------------------------------+
@@ -280,7 +282,7 @@ The lb-member-list and lb-member-show commands may be used to get information ab
 
 Note that the member shown above has a pool ID that corresponds to the 'http-pool'. The lb-pool-show command may also be used to see the members of a given pool.
 
-    # neutron lb-pool-show http-pool
+    # neutron lbaas-pool-show http-pool
     +------------------------+--------------------------------------+
     | Field                  | Value                                |
     +------------------------+--------------------------------------+
@@ -305,7 +307,7 @@ Note that the member shown above has a pool ID that corresponds to the 'http-poo
 
 The next step is to create a health monitor and associate it with othe pool. The health monitor is responsible for periodically checking the health of each member of the pool.
 
-    # neutron lb-healthmonitor-create --delay 5 --type HTTP --max-retries 3 --timeout 2
+    # neutron lbaas-healthmonitor-create --delay 5 --type HTTP --max-retries 3 --timeout 2
     Created a new health_monitor:
     +----------------+--------------------------------------+
     | Field          | Value                                |
@@ -327,7 +329,7 @@ In this example, the health monitor will perform an HTTP GET of the "/" path. Th
 
 At this point the health monitor has not yet been associated with a pool, so it is not actually performing any health checks. Associating the health monitor with the 'http-pool' will cause each of the members of the pool to be checked in the manner described above.
 
-    # neutron lb-healthmonitor-associate 1de041b8-37bd-4b9a-aac6-a4669110eb46 http-pool
+    # neutron lbaas-healthmonitor-associate 1de041b8-37bd-4b9a-aac6-a4669110eb46 http-pool
 
 The lb-healthmonitor-list and lb-healthmonitor-show may be used to get information about existing health monitors.
 
@@ -338,7 +340,7 @@ The lb-healthmonitor-list and lb-healthmonitor-show may be used to get informati
     | 1de041b8-37bd-4b9a-aac6-a4669110eb46 | HTTP | True           |
     +--------------------------------------+------+----------------+
 
-    # neutron lb-healthmonitor-show 1de041b8-37bd-4b9a-aac6-a4669110eb46
+    # neutron lbaas-healthmonitor-show 1de041b8-37bd-4b9a-aac6-a4669110eb46
     +----------------+-------------------------------------------------------------------------------------------------------------+
     | Field          | Value                                                                                                       |
     +----------------+-------------------------------------------------------------------------------------------------------------+
@@ -357,7 +359,7 @@ The lb-healthmonitor-list and lb-healthmonitor-show may be used to get informati
 
 The final step in creating the load balancer is to create the virtual IP address, or VIP. This will create a VIP for the load balancer on the private subnet and associate the virtual IP address with the pool. The VIP must be created on the same subnet as the pool, which in this example is the 'private' subnet. A floating IP address on the 'public' network can then be associated with the virtual IP address on the 'private_subnet' such that the load balancer will be externally accessible. First, create the VIP.
 
-    # neutron lb-vip-create --name http-vip --protocol-port 80 --protocol HTTP --subnet-id a4f17073-298e-4d92-8c19-8f3333145fd0 http-pool
+    # neutron lbaas-vip-create --name http-vip --protocol-port 80 --protocol HTTP --subnet-id a4f17073-298e-4d92-8c19-8f3333145fd0 http-pool
     Created a new vip:
     +--------------------+--------------------------------------+
     | Field              | Value                                |
@@ -380,14 +382,14 @@ The final step in creating the load balancer is to create the virtual IP address
 
 The lb-vip-list and lb-vip-show commands may be used to get information about existing virtual IP addresses:
 
-    # neutron lb-vip-list
+    # neutron lbaas-vip-list
     +--------------------------------------+----------+----------+----------+----------------+--------+
     | id                                   | name     | address  | protocol | admin_state_up | status |
     +--------------------------------------+----------+----------+----------+----------------+--------+
     | 72848e0a-bb58-406d-aa9b-dcb6ca93a69f | http-vip | 10.0.0.6 | HTTP     | True           | ACTIVE |
     +--------------------------------------+----------+----------+----------+----------------+--------+
 
-    # neutron lb-vip-show 72848e0a-bb58-406d-aa9b-dcb6ca93a69f
+    # neutron lbaas-vip-show 72848e0a-bb58-406d-aa9b-dcb6ca93a69f
     +--------------------+--------------------------------------+
     | Field              | Value                                |
     +--------------------+--------------------------------------+
@@ -409,7 +411,7 @@ The lb-vip-list and lb-vip-show commands may be used to get information about ex
 
 At this point the load-balancer has been successfully created and should be functional. Traffic sent to address 10.0.0.6 on port 80 will be load-balanced across all active members of our pool. To make the load balancer externally accessible, create a floating IP address and associate it with the virtual IP address.
 
-    # neutron floatingip-create public
+    # openstack floating ip create public
     Created a new floatingip:
     +---------------------+--------------------------------------+
     | Field               | Value                                |
@@ -427,7 +429,7 @@ At this point the load-balancer has been successfully created and should be func
 
 Use the floatingip-list command to see that the floating IP address (172.24.4.230) is associated with the virtual IP address (10.0.0.6).
 
-    # neutron floatingip-list --sort-key floating_ip_address --sort-dir asc
+    # openstack  floating ip list
     +--------------------------------------+------------------+---------------------+--------------------------------------+
     | id                                   | fixed_ip_address | floating_ip_address | port_id                              |
     +--------------------------------------+------------------+---------------------+--------------------------------------+
@@ -441,7 +443,7 @@ Use the floatingip-list command to see that the floating IP address (172.24.4.23
 
 Now that the load balancer is running and externally accessible, test that traffic is properly load-balanced and the health checker works correctly. First, check what members are active.
 
-    # neutron lb-member-list --sort-key address --sort-dir asc
+    # neutron lbaas-member-list --sort-key address --sort-dir asc
     +--------------------------------------+----------+---------------+----------------+--------+
     | id                                   | address  | protocol_port | admin_state_up | status |
     +--------------------------------------+----------+---------------+----------------+--------+
@@ -462,7 +464,7 @@ Since this example has a single pool and all members are marked 'active', succes
 
 Next, mark one of the member's 'admin_state_up' flag to False. A member with 'admin_state_up' set to False should not be considered for load-balancing.
 
-    # neutron lb-member-update 5750769c-3131-41bd-b0f1-be6c41aa15c9 --admin_state_up False
+    # neutron lbaas-member-update 5750769c-3131-41bd-b0f1-be6c41aa15c9 --admin_state_up False
     Updated member: 5750769c-3131-41bd-b0f1-be6c41aa15c9
 
     # neutron lb-member-list --sort-key address --sort-dir asc
@@ -486,10 +488,10 @@ The member with IP address 10.0.0.3 (rhel-01) should no longer receive traffic f
 
 As expected, virtual machine 'rhel-01' is not considered for load-balancing. Set the admin_state_up flag back to True and rerun the test.
 
-    # neutron lb-member-update 5750769c-3131-41bd-b0f1-be6c41aa15c9 --admin_state_up True
+    # neutron lbaas-member-update 5750769c-3131-41bd-b0f1-be6c41aa15c9 --admin_state_up True
     Updated member: 5750769c-3131-41bd-b0f1-be6c41aa15c9
 
-    # neutron lb-member-list --sort-key address --sort-dir asc
+    # neutron lbaas-member-list --sort-key address --sort-dir asc
     +--------------------------------------+----------+---------------+----------------+--------+
     | id                                   | address  | protocol_port | admin_state_up | status |
     +--------------------------------------+----------+---------------+----------------+--------+
@@ -510,10 +512,10 @@ As expected, 'rhel-01' is again eligible to receive HTTP requests via the load b
 
 A member can also be disabled by setting its weight to 0.
 
-    # neutron lb-member-update 5750769c-3131-41bd-b0f1-be6c41aa15c9 --weight 0
+    # neutron lbaas-member-update 5750769c-3131-41bd-b0f1-be6c41aa15c9 --weight 0
     Updated member: 5750769c-3131-41bd-b0f1-be6c41aa15c9
 
-    # neutron lb-member-show 5750769c-3131-41bd-b0f1-be6c41aa15c9
+    # neutron lbaas-member-show 5750769c-3131-41bd-b0f1-be6c41aa15c9
     +--------------------+--------------------------------------+
     | Field              | Value                                |
     +--------------------+--------------------------------------+
@@ -538,7 +540,7 @@ A member can also be disabled by setting its weight to 0.
 
 Notice that the member is still marked active and the admin_state_up flag is True, but the member's weight has been changed to 0. Regardless of the algorithm being used, a member with a weight of 0 will not receive any new connections from the load balancer. Set the member's weight back to 1 for it to once again be considered for load balancing.
 
-    # neutron lb-member-update 5750769c-3131-41bd-b0f1-be6c41aa15c9 --weight 1
+    # neutron lbaas-member-update 5750769c-3131-41bd-b0f1-be6c41aa15c9 --weight 1
     Updated member: 5750769c-3131-41bd-b0f1-be6c41aa15c9
 
     # for i in {1..6} ; do curl -w "\n" 172.24.4.230 ; done
@@ -553,7 +555,7 @@ As expected, 'rhel-01' is again eligible to receive HTTP requests via the load b
 
 A simple way to demonstrate the health checker is to shutdown one of the virtual machines. This will cause the health check to fail and the member should be marked inactive. Stop one of the virtual machines that is an active member of the pool and check that it is marked inactive.
 
-    # nova list
+    # openstack server list
     +--------------------------------------+---------+--------+------------+-------------+------------------+
     | ID                                   | Name    | Status | Task State | Power State | Networks         |
     +--------------------------------------+---------+--------+------------+-------------+------------------+
@@ -562,8 +564,8 @@ A simple way to demonstrate the health checker is to shutdown one of the virtual
     | 429be6ec-a069-4dcd-bfca-33cd42606d39 | rhel-03 | ACTIVE | None       | Running     | private=10.0.0.5 |
     +--------------------------------------+---------+--------+------------+-------------+------------------+
 
-    # nova stop rhel-03
-    # nova list
+    # openstack server stop rhel-03
+    # openstack server list
     +--------------------------------------+---------+---------+------------+-------------+------------------+
     | ID                                   | Name    | Status  | Task State | Power State | Networks         |
     +--------------------------------------+---------+---------+------------+-------------+------------------+
@@ -572,7 +574,7 @@ A simple way to demonstrate the health checker is to shutdown one of the virtual
     | 429be6ec-a069-4dcd-bfca-33cd42606d39 | rhel-03 | SHUTOFF | None       | Shutdown    | private=10.0.0.5 |
     +--------------------------------------+---------+---------+------------+-------------+------------------+
 
-    # neutron lb-member-list
+    # neutron lbaas-member-list
     +--------------------------------------+----------+---------------+----------------+----------+
     | id                                   | address  | protocol_port | admin_state_up | status   |
     +--------------------------------------+----------+---------------+----------------+----------+
@@ -593,8 +595,8 @@ Notice that 'rhel-03' (which has address 10.0.0.5) is now marked as an inactive 
 
 As expected, 'rhel-03' does not receive any traffic from the load balancer. Although this virtual machine is down, it is still a member of the pool and therefore is still being health checked every 5 seconds. If the virtual machine is restarted, health checks of this member will once again be successful when httpd is responsive. The member should then be marked active and again be eligible to receive HTTP requests via the load-balancer.
 
-    # nova start rhel-03
-    # nova list
+    # openstack server start rhel-03
+    # openstack server list
     +--------------------------------------+---------+--------+------------+-------------+------------------+
     | ID                                   | Name    | Status | Task State | Power State | Networks         |
     +--------------------------------------+---------+--------+------------+-------------+------------------+
@@ -603,7 +605,7 @@ As expected, 'rhel-03' does not receive any traffic from the load balancer. Alth
     | 429be6ec-a069-4dcd-bfca-33cd42606d39 | rhel-03 | ACTIVE | None       | Running     | private=10.0.0.5 |
     +--------------------------------------+---------+--------+------------+-------------+------------------+
 
-    # neutron lb-member-list
+    # neutron lbaas-member-list
     +--------------------------------------+----------+---------------+----------------+--------+
     | id                                   | address  | protocol_port | admin_state_up | status |
     +--------------------------------------+----------+---------------+----------------+--------+
