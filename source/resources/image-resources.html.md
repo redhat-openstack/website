@@ -23,15 +23,19 @@ You can run a number of different Linux distributions and operating systems on t
 *   [Windows Server 2012 test image](http://www.cloudbase.it/ws2012/)
 *   [openSUSE cloud images](http://download.opensuse.org/repositories/Cloud:/Images:/)
 *   [Debian cloud images](http://cdimage.debian.org/cdimage/openstack/)
+
+### Additional resources
+
 *   The [OpenStack Community App Catalog](https://apps.openstack.org/#tab=glance-images) contains a large number of OpenStack-ready Glance images
+*   The [OpenStack Virtual Machine Image Guide](https://docs.openstack.org/image-guide/obtain-images.html) provides another list of Glance images
 
 ## Import images into Glance
 
 You can load an image from the command line with Glance. For example:
 
-    $ curl -O https://download.fedoraproject.org/pub/fedora/linux/releases/24/CloudImages/x86_64/images/Fedora-Cloud-Base-24-1.2.x86_64.qcow2
+    $ curl -O https://download.fedoraproject.org/pub/fedora/linux/releases/25/CloudImages/x86_64/images/Fedora-Cloud-Base-25-1.3.x86_64.qcow2
 
-    $ glance --os-image-api-version 2 image-create --name 'Fedora-24-x86_64' --disk-format qcow2 --container-format bare --file Fedora-Cloud-Base-24-1.2.x86_64.qcow2
+    $ glance --os-image-api-version 2 image-create --name 'Fedora-25-x86_64' --disk-format qcow2 --container-format bare --file Fedora-Cloud-Base-25-1.3.x86_64.qcow2
 
 Alternatively, go to the **Images** tab in your OpenStack dashboard to add images via the GUI.
 
@@ -39,10 +43,11 @@ See the [OpenStack documentation](http://docs.openstack.org/user-guide/common/cl
 
 ## Build your own images
 
-*   The OpenStack documentation has good guidance on various methods for building your own images: [http://docs.openstack.org/image-guide/create-images-automatically.html](http://docs.openstack.org/image-guide/create-images-automatically.html)
-*   See also [Creating custom images for OpenStack](/resources/creating-centos-and-fedora-images-ready-for-openstack/)
-*   [A blog post on building a Windows image for OpenStack](http://poolsidemenace.wordpress.com/2011/06/16/porting-windows-to-openstack/)
+*   Section [Tool support for image creation](http://docs.openstack.org/image-guide/create-images-automatically.html) in the OpenStack Virtual Machine Image Guide provides a list of tools you can use to build your own images
+*   Section [Create images manually](https://docs.openstack.org/image-guide/create-images-manually.html) in the OpenStack Virtual Machine Image Guide contains instructions on how to manually create images based on various operating systems, including CentOS and Fedora
+
+### Import your own images
 
 The resulting image file can be imported into Glance similarly to any other image:
 
-    $ glance image-create --name Fedora-24-x86_64 --disk-format qcow2 --container-format bare --is-public True < fedora-image.qcow2
+    $ glance image-create --name Fedora-Image-x86_64 --disk-format qcow2 --container-format bare --is-public True < fedora-image.qcow2
