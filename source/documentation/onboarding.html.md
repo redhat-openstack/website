@@ -3,119 +3,142 @@ author: jruzicka,chandankumar
 title: Getting started at RDO
 ---
 
-# Let's Contribute to RDO Project
+# Let's Contribute to the RDO Project!
 
-Welcome on board!. As new contributor there are some things that you must do to
-get ready:
+Welcome on board! As a new contributor there are some things you'll want to do
+to get ready:
 
 ## Let's get prerequisites ready.
 * [Join the RDO Mailing List](#join-mailing-list)
-* [Join IRC channel #rdo on Freenode server](#join-irc-channel)
-* [Create Github account](#github-account)
-* [Sign to review.rdoproject.org](#sign-in)
-* [Add SSH key to review.rdoproject.org](#add-ssh)
-* [It would be good to have Red Hat Bugzilla account.](#bugzilla-account)
-* [Configure your git and git review.](#git-review)
-* [Install rdopkg tool](#rdopkg)
+* [Join the IRC channel `#rdo` on Freenode](#join-irc-channel)
+* [Create a GitHub account](#github-account)
+* [Sign up to `review.rdoproject.org`](#sign-in)
+* [Add an SSH key to `review.rdoproject.org`](#add-ssh)
+* [Create a Red Hat Bugzilla account](#bugzilla-account)
+* [Configure `git` and `git review`](#git-review)
+* [Install the `rdopkg` tool](#rdopkg)
 
 ## What's Next!
-* [Do your first contribution](#first-contribution)
-* [Reviewing RDO Patches](#review-rdo)
-* [Become a RDO package Maintainer.](#pkg-maintainer)
+* [Make your first contribution](#first-contribution)
+* [Review RDO patches](#review-rdo)
+* [Become an RDO package maintainer.](#pkg-maintainer)
 
 <a name="join-mailing-list"/>
 
 ### Join the RDO Mailing List
-* Go to [RDO mailing list](https://www.redhat.com/mailman/listinfo/rdo-list) and enter your email
-  address and password and click on *subscribe*. Once done, open your mailbox, you will get a
-  confirmation email, click on the verification link and you are subscribed to the RDO List.
-* You can introduce yourself sending a mail to the mailing list. Tell us what are your interests
-  and how you will participate.
+* Go to [RDO mailing list](https://www.redhat.com/mailman/listinfo/rdo-list)
+  and enter your email address and password and click on *subscribe*. Once
+  done, open your mailbox, you will get a confirmation email, click on the
+  verification link and you are subscribed to the RDO List.
+* You can introduce yourself by sending a mail to the mailing list. Tell us
+  what your interests are and how you plan to participate.
 
 <a name="join-irc-channel"/>
 
-### Join IRC channel #rdo on Freenode server
-* All the development and communication related to RDO Project happens on #rdo IRC channel on
-  Freenode server. Click [this link](http://webchat.freenode.net/?channels=#rdo) to join the same and feel free to say Hello!, we are always there to help.
+### Join the IRC channel `#rdo` on Freenode
+* All the development and communication related to the RDO Project happens on
+  the `#rdo` IRC channel on Freenode. Click [this link](http://webchat.freenode.net/?channels=#rdo)
+  to join the channel and feel free to say Hello! We are always there to help.
 * Feel free to check out the [IRC etiquette](https://www.rdoproject.org/community/irc-etiquette/)
+  guide.
 
  <a name="github-account"/>
 
-### Create Github account
- Go to [Github Sign Up](https://github.com/join) and enter your username, email address and
- password and you are done. If you already have a GitHub account, you can skip this step.
+### Create a GitHub account
+Go to the [GitHub Sign Up](https://github.com/join) page and enter your
+username, email address, and password, and you are done. If you already have a
+GitHub account, you can skip this step.
 
 <a name="sign-in"/>
 
-### Sign to review.rdoproject.org
-Sign-in to [review.rdoproject.org](https://review.rdoproject.org/auth/login) using github account.
+### Sign up to `review.rdoproject.org`
+Sign-in to [review.rdoproject.org](https://review.rdoproject.org/auth/login)
+using your GitHub account.
 
 <a name="add-ssh"/>
 
-### Add SSH key to review.rdoproject.org
-* Generate your SSH key, if you don't have.
-  Follow these instructions on [Generating a new SSH key](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/#generating-a-new-ssh-key)
-* Then, go to [ssh-key](https://review.rdoproject.org/r/#/settings/ssh-keys) and click on "Add Key" button and copy the contents of id_rsa.pub (SSH Key public key) and paste it there and then click on 'Add' button and you are done.
+### Add an SSH key to `review.rdoproject.org`
+* Generate an SSH key, if you don't have one you already use. Follow these
+  instructions on [Generating a new SSH key](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/#generating-a-new-ssh-key)
+  if necessary.
+* Then, go to [ssh-key](https://review.rdoproject.org/r/#/settings/ssh-keys)
+  and click on the "Add Key" button and copy the contents of `id_rsa.pub` (your
+  SSH public key) and paste it there, and then click on the 'Add' button and
+  you are done.
 
 <a name="bugzilla-account"/>
 
-### It would be good to have Red Hat Bugzilla account.
-All the bugs related to RDO packages are tracked on Red Hat Bugzilla under *RDO* product. OpenStack projects bugs are tracked on [Launchpad](https://launchpad.net/openstack).
-* You can create a Bugzilla account by clicking on [Create a new Red Hat Bugzilla account](https://bugzilla.redhat.com/createaccount.cgi)
-  and enter your email id and click on "send" button and check your mailbox and you are done.
+### Create a Red Hat Bugzilla account
+All the bugs related to RDO packages are tracked on Red Hat Bugzilla under the
+*RDO* product. OpenStack project bugs are tracked on
+[Launchpad](https://launchpad.net/openstack).
+
+* You can create a Bugzilla account by clicking on
+  [Create a new Red Hat Bugzilla account](https://bugzilla.redhat.com/createaccount.cgi),
+  enter your email, and click on the "send" button. Be sure to check your
+  mailbox, confirm your email address, and you're done.
 
 <a name="git-review"/>
 
-### Configure your git and git-review.
-* Run these steps to let git know about your email address:
+### Configure `git` and `git review`
+* Run these steps to let `git` know your email address:
 
 ```
-$ git config --global user.the name "Firstname Lastname"
+$ git config --global user.name "Firstname Lastname"
 $ git config --global user.email "your_email@youremail.com"
 ```
-* To check your git configuration:
+* To check your `git` configuration:
 
 ```
 $ git config --list
 ```
 
-* Install git-review tool
+* Install the `git-review` tool
 
+RHEL-based systems (e.g. RHEL7, CentOS 7)
 ```
 $ sudo yum install git-review
 ```
 
+Fedora-based systems (after F24)
+```
+$ sudo dnf install git-review
+```
+
 <a name="rdopkg"/>
 
-### Install rdopkg tool
-Follow this link to install [rdopkg](https://www.rdoproject.org/documentation/intro-packaging/#rdopkg)
-And you are set for making the contribution to RDO Project.
+### Install the `rdopkg` tool
+Follow this link to install
+[rdopkg](https://www.rdoproject.org/documentation/intro-packaging/#rdopkg), and
+you are set for making contributions to the RDO Project.
 
 <a name="first-contribution"/>
 
-### Do your first contribution
-* RDO Project has lots of easy fixes. Check out the [RDO easyfix](https://github.com/redhat-openstack/easyfix/issues)
-  and pick one issue and feel free to move ahead.
+### Make your first contribution
+* The RDO Project has lots of easy fixes. Check out the
+  [RDO easyfix](https://github.com/redhat-openstack/easyfix/issues) page, pick
+  an issue, and feel free to move ahead.
 * Clone the project.
-For example: for clonning keystone-distgit, we need to pass source code url.
+
+For example, cloning `keystone-distgit`, we need to pass the source code URL.
 
 ```
-$ git clone git clone https://review.rdoproject.org/r/openstack/keystone-distgit
+$ git clone https://review.rdoproject.org/r/openstack/keystone-distgit
 ```
 
-You can also use rdopkg to clone an RDO package.
+You can also use `rdopkg` to clone an RDO package.
 
 ```
 $ rdopkg clone package-name
 ```
-* Go inside the project directory, create and checkout a new branch.
-  Note: Always create a new branch to work on any issue.
+* Go inside the project directory, create, and checkout a new branch.
+  _Note_: Always create a new branch to work on any issue.
 
 ```
 $ cd <project_name>
 $ git checkout -b <issue name>
 ```
-* Make changes in the code and add the changed files to git
+* Make changes in the code and add the changed files to git.
 
 ```
 $ git add <chanaged files>
@@ -125,33 +148,41 @@ $ git add <chanaged files>
 ```
 $ git commit -m "Add the commit message"
 ```
-You can check this link on how to write [proper commit message](https://wiki.openstack.org/wiki/GitCommitMessages)
+You can check this link on how to write
+[proper commit messages](https://wiki.openstack.org/wiki/GitCommitMessages).
 
-* Something went wrong in the commit message, run the following command to edit the commit message
+* If something went wrong in the commit message, or you need to adjust it, run
+  the following command:
 
 ```
 $ git commit --amend
 ```
-* Now push the changes for Review using git-review.
+* Now push the changes for review using `git-review`.
 
 ```
 $ git review
 ```
 
-It will create a RDO Gerrit review link and someone from RDO project will review the changes and once everything looks fine,
-It will get merged and you made your first contribution.
+Running `git review` will create an RDO Gerrit review link, and someone from
+RDO project will review the changes. Once everything looks fine, and is
+approved, your changes will get merged, and you'll have made your first
+contribution. Thanks!
 
 <a name="review-rdo"/>
 
-### Reviewing RDO Patches
-* Reviewing other's patches is a good way to learn the stuff.
-* You can start getting familiar with RDO by reviewing patches in [RDO Gerrit instance](https://review.rdoproject.org/r/)
-  or by sending your own patches for existing packages.
+### Review RDO patches
+* Reviewing other peoples patches is a good way to learn things.
+* You can start getting familiar with RDO by reviewing patches in the
+  [RDO Gerrit instance](https://review.rdoproject.org/r/) or by sending your
+  own patches for existing packages.
 
 <a name="pkg-maintainer">
 
-### Become a RDO package Maintainer.
-If you want to become maintainer for one or more packages, you can request to be added to the
-core group for them by sending a review to [rdoinfo](https://github.com/redhat-openstack/rdoinfo/)
-as in [this example](https://review.rdoproject.org/r/#/c/7102/).
-Being a maintainer for a package provides the ability to approve reviews for it (grants +2 and +W in Gerrit terms).
+### Become an RDO package maintainer
+If you want to become a maintainer for one or more packages, you can request to
+be added to the core group for them by sending a review to
+[rdoinfo](https://github.com/redhat-openstack/rdoinfo/) as in
+[this example](https://review.rdoproject.org/r/#/c/7102/).
+
+Being a maintainer for a package provides the ability to approve reviews for it
+(grants `+2` and `+W` in Gerrit terms).
