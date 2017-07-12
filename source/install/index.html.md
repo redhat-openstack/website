@@ -36,7 +36,6 @@ For an initial test deployment, follow the [Packstack quickstart](/install/quick
 ### Configuration
 
 *   [Adding a compute node](/install/adding-a-compute-node/)
-*   [Setting up high availability](/ha/)
 </div>
 </div>
 
