@@ -19,9 +19,9 @@ Since RDO sticks closely to the upstream OpenStack project, the documentation at
 
 ## Getting started
 
-* [TripleO quickstart](/tripleo) &ndash; production deployment, with HA
-* [Packstack quickstart](/install/quickstart) &ndash; proof of concept for single node
-* [Try out OpenStack at TryStack.org](http://trystack.org/)
+* [TripleO](http://tripleo.org) &ndash; Deploy a production cloud
+* [TripleO quickstart](/tripleo) &ndash; Develop and Test OpenStack
+* [Packstack](/install/packstack) &ndash; Spin up an all-in-one concept cloud
 
 </div>
 <div class="split-third">
@@ -42,7 +42,6 @@ Since RDO sticks closely to the upstream OpenStack project, the documentation at
 
 ### Installation and configuration
 
-* [Running an instance](/install/running-an-instance/)
 * [Image resources](/resources/image-resources/)
 * [Adding a compute node](/install/adding-a-compute-node/)
 * [More&hellip;](/install/){:.more}
@@ -80,9 +79,7 @@ Since RDO sticks closely to the upstream OpenStack project, the documentation at
 
 ### Packaging
 
-* [RDO packaging guide](/documentation/rdo-packaging)
-* [RDO packaging guidelines](/documentation/rdo-packaging-guidelines)
-* [`rdopkg` documentation](https://github.com/openstack-packages/rdopkg)
+* [RDO Packager guide](/documentation/rdo-packaging)
 
 </div>
 <div class="split-third">

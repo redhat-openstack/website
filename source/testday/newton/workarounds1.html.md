@@ -1,5 +1,0 @@
-# All
-
-# TripleO
-
-# Packstack
