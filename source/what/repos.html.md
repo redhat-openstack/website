@@ -1,5 +1,5 @@
 ---
-title: RDO - Overview of available RDO repos
+title: Overview of available RDO repos
 ---
 
 # Overview of available RDO repos
@@ -7,7 +7,19 @@ title: RDO - Overview of available RDO repos
 There are a number of different repos that the RDO project works out of.
 This is an overview of each of them.
 
-## GA
+## RDO CloudSIG repositories
+
+Provide a set of stable OpenStack packages through CentOS CloudSIG repos based on CBS, [CentOS Community Build System](https://wiki.centos.org/HowTos/CommunityBuildSystem):
+
+- The RDO CloudSIG repos are only published after GA of a upstream release (only stable branches are used, not master).
+- New packages are created only when a new point release is published (release tag created) on upstream stable repositories.
+- In addition to the vanilla upstream code, some patches may be applied during packaging:
+  - Fixes for security issues or critical bugs not backported upstream. Note that an upstream-first policy is applied so these patches will be applied only after merged in upstream master.
+  - Patches required for the packaging process.
+
+For each OpenStack release RDO provides two repos:
+
+### CloudSIG GA repo
 
 The GA repository is the one you should be using for your production environment. It contains tested, digitally signed packages.
 
@@ -23,9 +35,9 @@ On a non-CentOS system (e.g. RHEL), you can run the following command to setup t
 
 This will configure the repositories for the most recent version of RDO. RPMs for previous releases are accessible from [this location](https://repos.fedorapeople.org/repos/openstack/).
 
-## Testing
+### CloudSIG Testing repo
 
-The testing repository contains packages that have gone through our complete test suite. These packages can be useful to test newer versions of the code, or when you need to quickly deliver a hotfix to your production environment. Please keep in mind that packages from the testing repository are not digitally signed.
+The testing repository contains packages that have not gone through our complete test suite. These packages can be useful to test newer versions of the code, or when you need to quickly deliver a hotfix to your production environment. Please keep in mind that packages from the testing repository are not digitally signed.
 
 If you enabled the RDO repositories using the ``centos-release-openstack-*`` RPM, run the following command to enable the testing repository:
 
@@ -35,7 +47,7 @@ If you used the ``rdo-release`` RPM, run the following command:
 
     $ sudo yum-config-manager --enable openstack-<release>-testing
 
-## Trunk
+## RDO Trunk repositories
 
 RDO Trunk repositories are built using the most recent commit from each of the OpenStack projects. They are used in different ways:
 
@@ -52,4 +64,5 @@ If you need a package using the latest commit, even before it passes CI (be awar
 ## More information:
 
 * [Previous - Delivery pipeline](/what/pipeline)
+* [Newbie in RDO: one size doesn't fit all](/blog/2016/05/new-in-rdo-repos-one-size-doesn-t-fit-all/)
 * [TOC](/what)

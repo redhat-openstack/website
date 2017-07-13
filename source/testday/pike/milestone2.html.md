@@ -48,7 +48,7 @@ You'll want a fresh install with latest updates installed.
 
 * For a TripleO-based installation, try the [TripleO quickstart](https://www.rdoproject.org/tripleo/).
 
-* For a Packstack-based deployment, start at step 2 of the [All-in-one quickstart](/install/quickstart#Step_2:_Install_Packstack_Installer).
+* For a Packstack-based deployment, start at step 2 of the [All-in-one quickstart](/install/packstack#Step_2:_Install_Packstack_Installer).
 
 ### Test cases and results
 
