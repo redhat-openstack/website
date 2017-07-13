@@ -1,9 +1,6 @@
 ---
 title: SELinux
 authors: lon
-wiki_title: SELinux
-wiki_revision_count: 1
-wiki_last_updated: 2014-01-09
 ---
 
 # SELinux in an RDO Deployment

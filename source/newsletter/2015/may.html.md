@@ -1,9 +1,6 @@
 ---
 title: 2015 May
 authors: rbowen
-wiki_title: Newsletter/2015 May
-wiki_revision_count: 3
-wiki_last_updated: 2015-05-01
 ---
 
 # 2015 May

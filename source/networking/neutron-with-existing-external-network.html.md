@@ -1,9 +1,6 @@
 ---
 title: Neutron with existing external network
 authors: dneary, fale, javexed, mangelajo, mrunge, rbowen
-wiki_title: Neutron with existing external network
-wiki_revision_count: 12
-wiki_last_updated: 2015-06-17
 ---
 
 # Neutron with existing external network

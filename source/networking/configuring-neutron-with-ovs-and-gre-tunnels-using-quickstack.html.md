@@ -1,9 +1,6 @@
 ---
 title: Configuring Neutron with OVS and GRE Tunnels using quickstack
 authors: gdubreui
-wiki_title: Configuring Neutron with OVS and GRE Tunnels using quickstack
-wiki_revision_count: 22
-wiki_last_updated: 2013-10-02
 ---
 
 # Configuring Neutron with OVS and GRE Tunnels using quickstack

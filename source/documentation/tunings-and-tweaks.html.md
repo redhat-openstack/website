@@ -1,9 +1,6 @@
 ---
 title: Tunings and tweaks
 authors: afazekas, lpeer, mwagner
-wiki_title: Tunings and tweaks
-wiki_revision_count: 8
-wiki_last_updated: 2015-03-11
 ---
 
 # Tunings and tweaks

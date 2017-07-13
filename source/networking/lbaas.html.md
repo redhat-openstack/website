@@ -1,9 +1,6 @@
 ---
 title: LBaaS
 authors: rohara
-wiki_title: LBaaS
-wiki_revision_count: 7
-wiki_last_updated: 2014-02-20
 ---
 
 # L Baa S

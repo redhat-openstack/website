@@ -1,9 +1,6 @@
 ---
 title: 2014 September
 authors: rbowen
-wiki_title: Newsletter/2014 September
-wiki_revision_count: 1
-wiki_last_updated: 2014-09-02
 ---
 
 # 2014 September
