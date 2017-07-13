@@ -1,0 +1,9 @@
+---
+
+- name: 'RDO'
+  summary: 'A community of people using and deploying OpenStack® on Red Hat Enterprise Linux, Fedora, and other Linux distributions based on these.'
+  dashboard: 'https://rdo.biterg.io/'
+  url: 'http://projects.bitergia.com/redhat-rdo-dashboard/browser/data/json/'
+  site: 'https://rdoproject.org/'
+  stats: [irc, its, mediawiki, mls, qaforums, scm]
+
