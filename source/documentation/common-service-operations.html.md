@@ -1,9 +1,6 @@
 ---
 title: Common service operations
 authors: kashyap
-wiki_title: Common service operations
-wiki_revision_count: 2
-wiki_last_updated: 2013-05-25
 ---
 
 # Common service operations

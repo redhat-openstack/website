@@ -2,10 +2,6 @@
 title: Image resources
 category: resources
 authors: berendt, dneary, jpeeler, kallies, mattdm, pixelbeat, pmyers, rbowen, rdo, snecklifter
-wiki_category: Resources
-wiki_title: Image resources
-wiki_revision_count: 29
-wiki_last_updated: 2016-01-07
 ---
 
 # Image resources

@@ -2,10 +2,6 @@
 title: Using GRE tenant networks
 category: networking
 authors: acalinciuc, jbainbri, jtaleric, rbowen, red trela, rkukura
-wiki_category: Networking
-wiki_title: Using GRE tenant networks
-wiki_revision_count: 18
-wiki_last_updated: 2014-04-11
 ---
 
 # Using GRE tenant networks

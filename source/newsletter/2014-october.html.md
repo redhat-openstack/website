@@ -1,9 +1,6 @@
 ---
 title: 2014 October
 authors: rbowen
-wiki_title: Newsletter/2014 October
-wiki_revision_count: 5
-wiki_last_updated: 2014-10-06
 ---
 
 # 2014 October

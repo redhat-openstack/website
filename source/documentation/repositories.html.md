@@ -1,9 +1,6 @@
 ---
 title: RDO repositories
 authors: apevec, kashyap, larsks, mangelajo, pixelbeat, pmyers, srikanth1239, strider
-wiki_title: Repositories
-wiki_revision_count: 20
-wiki_last_updated: 2015-01-13
 ---
 
 # RDO repositories

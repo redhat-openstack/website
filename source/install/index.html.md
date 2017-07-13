@@ -2,10 +2,6 @@
 title: Install
 category: documentation,install
 authors: cbrown ocf, dansmith, dneary, edmv, radez, rbowen, rlandy, slagle, snecklifter
-wiki_category: Documentation
-wiki_title: Install
-wiki_revision_count: 20
-wiki_last_updated: 2016-01-07
 ---
 
 # Installing and configuring RDO

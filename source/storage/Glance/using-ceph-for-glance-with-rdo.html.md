@@ -1,9 +1,6 @@
 ---
 title: Using Ceph for Glance with RDO
 authors: tshefi
-wiki_title: Using Ceph for Glance with RDO
-wiki_revision_count: 1
-wiki_last_updated: 2014-09-21
 ---
 
 # Using Ceph for Glance with RDO

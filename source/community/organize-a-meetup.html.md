@@ -1,9 +1,6 @@
 ---
 title: Organize-a-meetup
 authors: rbowen
-wiki_title: Organize-a-meetup
-wiki_revision_count: 2
-wiki_last_updated: 2014-10-01
 ---
 
 # Organize an RDO/OpenStack Meetup
