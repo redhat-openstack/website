@@ -84,6 +84,7 @@ spec file will be generated.
 
 2. Send a review to rdoinfo according to the package requirements. The under-review tag
 is still required. Use this as example content:
+
         - project: puppet-congress
           conf: rpmfactory-puppet
           tags:
@@ -91,7 +92,7 @@ is still required. Use this as example content:
             #ocata-uc:
             #ocata:
 
-3. Generate the spec file to submit to the new distgit project using https://github.com/strider/opm-toolbox
+3. Generate the spec file to submit to the new distgit project using this [script](https://github.com/strider/opm-toolbox)
 
 4. Process is the same as standard packages
 
