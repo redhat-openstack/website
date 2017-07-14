@@ -1,9 +1,6 @@
 ---
 title: RDO-BugTriage
 authors: kashyap, larsks
-wiki_title: RDO-BugTriage
-wiki_revision_count: 9
-wiki_last_updated: 2014-05-21
 ---
 
 # RDO-Bug Triage

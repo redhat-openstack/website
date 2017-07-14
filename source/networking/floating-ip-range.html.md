@@ -3,10 +3,6 @@ title: Floating IP range
 category: networking
 authors: acalinciuc, anandts, carltm, dneary, garrett, jasonbrooks, jeremykoerber,
   kallies, rbowen, vijai
-wiki_category: Networking
-wiki_title: Floating IP range
-wiki_revision_count: 22
-wiki_last_updated: 2015-07-22
 ---
 
 # Floating IP range

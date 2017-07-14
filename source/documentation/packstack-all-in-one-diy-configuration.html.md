@@ -2,10 +2,6 @@
 title: PackStack All-in-One DIY Configuration
 category: documentation
 authors: beagles, pixelbeat, psavage, rohara, tosky
-wiki_category: Documentation
-wiki_title: PackStack All-in-One DIY Configuration
-wiki_revision_count: 24
-wiki_last_updated: 2014-09-01
 layout: toc
 ---
 # PackStack All-in-One DIY Configuration
@@ -67,7 +63,7 @@ If you have available screen real estate, you may want to tail the log files in 
 
 ## Initial Setup
 
-If you have not already done so, run through the steps on the [Quickstart](/install/quickstart/) page **EXCEPT** for the final step on that page: "**Step 3: Run Packstack to install OpenStack**". This currently describes configuring OpenStack with Nova Networking instead of Neutron, so you need to run it a little differently. However, before running packstack, one of our goals is to help illustrate the changes openstack makes to your system. Run the following commands and take note of the output before running packstack.
+If you have not already done so, run through the steps on the [Quickstart](/install/packstack/) page **EXCEPT** for the final step on that page: "**Step 3: Run Packstack to install OpenStack**". This currently describes configuring OpenStack with Nova Networking instead of Neutron, so you need to run it a little differently. However, before running packstack, one of our goals is to help illustrate the changes openstack makes to your system. Run the following commands and take note of the output before running packstack.
 
     ifconfig
     ip netns

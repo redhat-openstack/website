@@ -42,13 +42,21 @@ in this area.
 
 ### Installation
 
+- amoralej
+
 ### Networking
+
+- amoralej
 
 ### Storage
 
 ### Packaging
 
+- amoralej
+
 ### Infrastructure
+
+- amoralej
 
 ## When?
 

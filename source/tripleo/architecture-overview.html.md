@@ -1,9 +1,6 @@
 ---
 title: TripleO Architecture Overview
 authors: athomas, chrisw
-wiki_title: TripleO Architecture Overview
-wiki_revision_count: 16
-wiki_last_updated: 2015-04-08
 ---
 
 # TripleO Architecture Overview

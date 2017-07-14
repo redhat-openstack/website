@@ -2,9 +2,6 @@
 title: Tuskar-API
 category: api
 authors: pblaho
-wiki_title: Tuskar-API
-wiki_revision_count: 1
-wiki_last_updated: 2015-01-23
 ---
 
 # Tuskar-API

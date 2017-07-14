@@ -1,9 +1,6 @@
 ---
 title: Juno previews
 authors: rbowen
-wiki_title: Juno previews
-wiki_revision_count: 16
-wiki_last_updated: 2014-09-08
 ---
 
 # Juno previews

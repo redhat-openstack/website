@@ -1,9 +1,6 @@
 ---
 title: 2014 November
 authors: rbowen
-wiki_title: Newsletter/2014 November
-wiki_revision_count: 1
-wiki_last_updated: 2014-11-04
 ---
 
 # 2014 November

@@ -2,10 +2,6 @@
 title: Get involved
 category: community
 authors: beni, dneary, mrunge, rbowen, strider, dmsimard
-wiki_category: Community
-wiki_title: Get involved
-wiki_revision_count: 49
-wiki_last_updated: 2015-08-10
 ---
 
 # Get involved
@@ -106,7 +102,7 @@ Help improve the documentation and website! The main pages for contributed conte
 Here are a few guidelines for contributing new content to the website:
 
 *   Please [search](/search/) first to check if there is a similar page which you can update.
-*   Use normal English case for page names. [Running an instance](/install/running-an-instance/) is correct, [Get Involved](/community/) is not.
+*   Use normal English case for page names. [Get involved](/community/) is correct, [Get Involved](/community/) is not.
 *   Please keep the website content connected! When you add a new page, add a link to it from the appropriate page(s).
 *   Please be aware of our [terms of use](/legal/terms-of-use/) — among other things, you agree to license your contributions under the [Creative Commons Attribution License version 3.0](http://creativecommons.org/licenses/by/3.0/), and you agree not to submit illegal content.
 

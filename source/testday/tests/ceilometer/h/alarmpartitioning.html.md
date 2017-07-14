@@ -1,9 +1,6 @@
 ---
 title: AlarmPartitioning
 authors: eglynn
-wiki_title: HowToTest/Ceilometer/H/AlarmPartitioning
-wiki_revision_count: 2
-wiki_last_updated: 2013-10-23
 ---
 
 {:.no_toc}
