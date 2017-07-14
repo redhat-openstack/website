@@ -1,9 +1,6 @@
 ---
 title: 2015 April
 authors: rbowen
-wiki_title: Newsletter/2015 April
-wiki_revision_count: 4
-wiki_last_updated: 2015-04-09
 ---
 
 # 2015 April

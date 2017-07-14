@@ -1,9 +1,6 @@
 ---
 title: Setting-up-memcached
 authors: kashyap
-wiki_title: Setting-up-memcached
-wiki_revision_count: 2
-wiki_last_updated: 2014-04-23
 ---
 
 ## Setting up memcached for HA

@@ -2,10 +2,6 @@
 title: Difference between Floating IP and private IP
 category: networking
 authors: jlibosva, kbreit, rbowen
-wiki_category: Networking
-wiki_title: Difference between Floating IP and private IP
-wiki_revision_count: 9
-wiki_last_updated: 2013-12-18
 ---
 
 # Difference between Floating IP and private IP

@@ -3,10 +3,6 @@ title: Frequently Asked Questions
 category: documentation
 authors: amuller, beni, dneary, garrett, jasonbrooks, jruzicka, jwinn, kashyap, rbowen,
   sgordon
-wiki_category: Documentation
-wiki_title: Frequently Asked Questions
-wiki_revision_count: 42
-wiki_last_updated: 2014-10-07
 ---
 
 # Frequently Asked Questions

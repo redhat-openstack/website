@@ -2,9 +2,6 @@
 title: Adding a compute node
 authors: alourie, carltm, dneary, fastingaciu, garrett, jasonbrooks, rbowen, sebastian,
   vaneldik
-wiki_title: Adding a compute node
-wiki_revision_count: 27
-wiki_last_updated: 2015-03-05
 ---
 
 {:.no_toc}

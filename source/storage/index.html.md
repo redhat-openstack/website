@@ -2,10 +2,6 @@
 title: Storage
 category: storage
 authors: dron, gfidente, rbowen, rhefner, tshefi, yrabl
-wiki_category: Storage
-wiki_title: Docs/Storage
-wiki_revision_count: 34
-wiki_last_updated: 2014-10-30
 ---
 
 # Storage

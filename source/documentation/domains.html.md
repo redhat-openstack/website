@@ -1,9 +1,6 @@
 ---
 title: Domains
 authors: msolberg
-wiki_title: Domains
-wiki_revision_count: 14
-wiki_last_updated: 2014-04-28
 ---
 
 # Domains

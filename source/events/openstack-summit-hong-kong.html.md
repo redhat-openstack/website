@@ -1,9 +1,6 @@
 ---
 title: OpenStack Summit Hong Kong
 authors: rbowen
-wiki_title: OpenStack Summit Hong Kong
-wiki_revision_count: 30
-wiki_last_updated: 2013-08-22
 ---
 
 # OpenStack Summit Hong Kong

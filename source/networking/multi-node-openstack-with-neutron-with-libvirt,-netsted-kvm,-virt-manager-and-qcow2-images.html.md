@@ -3,11 +3,7 @@ title: Multi-node Openstack with Neutron with libvirt, netsted kvm, virt-manager
   qcow2 images
 category: networking
 authors: otherwiseguy, rbowen
-wiki_category: Networking
-wiki_title: Multi-node Openstack with Neutron with libvirt, netsted kvm, virt-manager
   and qcow2 images
-wiki_revision_count: 4
-wiki_last_updated: 2013-12-18
 ---
 
 # Multi-node Openstack with Neutron with libvirt, netsted kvm, virt-manager and qcow2 images

@@ -1,9 +1,6 @@
 ---
 title: Setting-up-HA-of-Glance
 authors: kashyap
-wiki_title: Setting-up-HA-of-Glance
-wiki_revision_count: 3
-wiki_last_updated: 2014-04-22
 ---
 
 ## Setting up HA of Glance

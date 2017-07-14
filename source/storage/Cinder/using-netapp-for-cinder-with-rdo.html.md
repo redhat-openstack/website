@@ -1,9 +1,6 @@
 ---
 title: Using NetApp for Cinder with RDO
 authors: rhefner, snecklifter
-wiki_title: Using NetApp for Cinder with RDO
-wiki_revision_count: 7
-wiki_last_updated: 2016-01-11
 ---
 
 # Using NetApp for Cinder with RDO

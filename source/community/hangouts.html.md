@@ -1,9 +1,6 @@
 ---
 title: Hangouts
 authors: rbowen
-wiki_title: Hangouts
-wiki_revision_count: 33
-wiki_last_updated: 2015-02-09
 ---
 
 # Hangouts

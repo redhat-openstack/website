@@ -1,9 +1,6 @@
 ---
 title: NewsletterThanks
 authors: rbowen
-wiki_title: NewsletterThanks
-wiki_revision_count: 1
-wiki_last_updated: 2014-04-28
 ---
 
 # Newsletter Thanks
