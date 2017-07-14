@@ -54,6 +54,7 @@ First, use the demo tenant:
 
 Import the custom image that has httpd enabled and a modified rc.local script:
 
+
     # openstack image create rhel-http --public --disk-format qcow2 --container-format bare --file rhel.qcow2
 
 Check that the image was imported:
@@ -68,6 +69,7 @@ Check that the image was imported:
 
 Next, create a keypair to use when we boot the image:
 
+
     # openstack keypair create --public-key ~/.ssh/rdo-key.pub  rdo-key.pem
     +-------------+-------------------------------------------------+
     | Field       | Value                                           |
@@ -76,6 +78,7 @@ Next, create a keypair to use when we boot the image:
     | name        | rdo_key                                         |
     | user_id     | b32cd586eb3b4bfe925913a6b51da7f1                |
     +-------------+-------------------------------------------------+
+
 
 Create the virtual machines by booting the custom image. Each of the resulting instances will be running the httpd service, which we can then load balance. This example will use three httpd servers.
 
@@ -305,6 +308,7 @@ The next step is to create members and add them to the pool. A member is nothing
     # neutron lbaas-member-create --subnet private_subnet --address 10.0.0.4 --protocol-port 80 http-pool
     # neutron lbaas-member-create --subnet private_subnet --address 10.0.0.5 --protocol-port 80 http-pool
 
+
 The `lbaas-member-list` and `lbaas-member-show` commands may be used to get information about existing members.
 
     # neutron lbaas-member-list --sort-key address --sort-dir asc http-pool
@@ -317,6 +321,8 @@ The `lbaas-member-list` and `lbaas-member-show` commands may be used to get info
     +--------------------------------------+------+--------------+---------------+--------+--------------------------------------+----------------+
 
     # neutron lbaas-member-show a35f3365-2445-4a01-b6ba-995bd1313817 http-pool
+
+
     +----------------+--------------------------------------+
     | Field          | Value                                |
     +----------------+--------------------------------------+
@@ -375,45 +381,9 @@ The next step is to create a health monitor and associate it with the pool. The 
     | url_path         | /                                              |
     +------------------+------------------------------------------------+
 
+
 In this example, the health monitor will perform an HTTP GET of the "/" path. This health check expects an HTTP status of 200 in the response, and the connection must be established within 2 seconds. This check will be retried a maximum of 3 times before a member is determined to be failed.
 
-
-The commands `lb-healthmonitor-list` and `lb-healthmonitor-show` may be used to get information about existing health monitors.
-    
-    # neutron lbaas-healthmonitor-list
-    +--------------------------------------+------+------+----------------+
-    | id                                   | name | type | admin_state_up |
-    +--------------------------------------+------+------+----------------+
-    | ec8ff90c-7c5e-4883-a1a4-10cc22072bb0 |      | HTTP | True           |
-    +--------------------------------------+------+------+----------------+
-
-
-    # neutron lbaas-healthmonitor-show ec8ff90c-7c5e-4883-a1a4-10cc22072bb0
-    +------------------+------------------------------------------------+
-    | Field            | Value                                          |
-    +------------------+------------------------------------------------+
-    | admin_state_up   | True                                           |
-    | delay            | 5                                              |
-    | expected_codes   | 200                                            |
-    | http_method      | GET                                            |
-    | id               | ec8ff90c-7c5e-4883-a1a4-10cc22072bb0           |
-    | max_retries      | 3                                              |
-    | max_retries_down | 3                                              |
-    | name             |                                                |
-    | pools            | {"id": "11b75bf9-3349-43eb-be26-ecdf284d62a0"} |
-    | tenant_id        | c33d136a60e04e1fabf733acffa43058               |
-    | timeout          | 2                                              |
-    | type             | HTTP                                           |
-    | url_path         | /                                              |
-    +------------------+------------------------------------------------+
-
-At this point the load-balancer has been successfully created and should be functional. Traffic sent to address 10.0.0.6 on port 80 will be load-balanced across all active members of our pool. To make the load balancer externally accessible, create a floating IP address and associate it with the virtual IP address. Adding a floating IP address will also resolve haproxy error messages, such as the following:
-
-	Broadcast message from systemd-journald@trilliams-lbaas (Tue 2017-07-11 20:21:11 UTC):
-
-	haproxy[28842]: backend 58771be8-6f79-4e6e-a736-2e5c8329827b has no server available!
-
-First, we will need to create a new floating IP address:
 
     # openstack floating ip create public
     Created a new floatingip:
@@ -432,6 +402,7 @@ First, we will need to create a new floating IP address:
 
 Once the floating IP has been created, we will need to assign it to the load balancer port. We can locate the neutron port for our load balancer with the following command.
 
+
     # openstack port list
     +--------------------------------------+---------------------------------------------------+-------------------+--------------------------------------------------------+
     | ID                                   | Name                                              | MAC Address       | Fixed IP Addresses                                     |
@@ -447,7 +418,7 @@ Once the port UUID has been located, assign the floating IP to the load balancer
 
 Use the `floatingip-list` command to verify that the floating IP address (172.24.4.230) is associated with the virtual IP address (10.0.0.6).
 
-    # neutron floatingip-list --sort-key floating_ip_address --sort-dir asc
+    # openstack  floating ip list
     +--------------------------------------+------------------+---------------------+--------------------------------------+
     | id                                   | fixed_ip_address | floating_ip_address | port_id                              |
     +--------------------------------------+------------------+---------------------+--------------------------------------+
@@ -462,6 +433,8 @@ Use the `floatingip-list` command to verify that the floating IP address (172.24
 Now that the load balancer is running and externally accessible, test that traffic is properly load-balanced and the health checker works correctly. First, check what members are active in the LB pool, `http-pool`.
 
     # neutron lbaas-member-list http-pool --sort-key address --sort-dir asc
+
+
     +--------------------------------------+----------+---------------+----------------+--------+
     | id                                   | address  | protocol_port | admin_state_up | status |
     +--------------------------------------+----------+---------------+----------------+--------+
@@ -483,6 +456,8 @@ Since this example has a single pool and all members are marked 'active', succes
 Next, mark one of the member's 'admin_state_up' flag to False. A member with 'admin_state_up' set to False should not be considered for load-balancing.
 
     # neutron lbaas-member-update 5750769c-3131-41bd-b0f1-be6c41aa15c9 http-pool --admin_state_up False
+
+
     Updated member: 5750769c-3131-41bd-b0f1-be6c41aa15c9
 
     # neutron lbaas-member-list --sort-key address --sort-dir asc
@@ -507,6 +482,7 @@ The member with IP address 10.0.0.3 (rhel-01) should no longer receive traffic f
 As expected, virtual machine 'rhel-01' is not considered for load-balancing. Set the admin_state_up flag back to True and rerun the test.
 
     # neutron lbaas-member-update 5750769c-3131-41bd-b0f1-be6c41aa15c9 http-pool --admin_state_up True
+
     Updated member: 5750769c-3131-41bd-b0f1-be6c41aa15c9
 
     # neutron lbaas-member-list --sort-key address --sort-dir asc
@@ -530,10 +506,13 @@ As expected, 'rhel-01' is again eligible to receive HTTP requests via the load b
 
 A member can also be disabled by setting its weight to 0.
 
+
+
     # neutron lbaas-member-update 5750769c-3131-41bd-b0f1-be6c41aa15c9 http-pool --weight 0
+
     Updated member: 5750769c-3131-41bd-b0f1-be6c41aa15c9
 
-    # neutron lb-member-show 5750769c-3131-41bd-b0f1-be6c41aa15c9
+    # neutron lbaas-member-show 5750769c-3131-41bd-b0f1-be6c41aa15c9
     +--------------------+--------------------------------------+
     | Field              | Value                                |
     +--------------------+--------------------------------------+
@@ -557,6 +536,7 @@ A member can also be disabled by setting its weight to 0.
     rhel-03
 
 Notice that the member is still marked active and the admin_state_up flag is True, but the member's weight has been changed to 0. Regardless of the algorithm being used, a member with a weight of 0 will not receive any new connections from the load balancer. Set the member's weight back to 1 for it to once again be considered for load balancing.
+
 
     # neutron lbaas-member-update 5750769c-3131-41bd-b0f1-be6c41aa15c9 http-pool --weight 1
     Updated member: 5750769c-3131-41bd-b0f1-be6c41aa15c9
@@ -663,5 +643,6 @@ After saving and closing the file, restart Apache and memcached.
 
 	# systemctl restart httpd memcached
 	
+
 
 Now you should be able to view, create, and manage Neutron LBaaS under Projects --> Networking --> Load Balancers in the Horizon web dashboard.
