@@ -4,7 +4,6 @@ authors: rohara, trilliams
 wiki_title: LBaaS
 wiki_revision_count: 8
 wiki_last_updated: 2017-07-11
-
 ---
 
 # Neutron LBaaS v2
@@ -162,6 +161,7 @@ The floating IP addresses that were associated with each virtual machine are no 
 
 	# openstack floating ip list
 
+
 	+--------------------------------------+---------------------+------------------+--------------------------------------+
 	| ID                                   | Floating IP Address | Fixed IP Address | Port                                 |
 	+--------------------------------------+---------------------+------------------+--------------------------------------+
@@ -201,6 +201,7 @@ First, get the subnet ID from neutron.
 
 Once we have identified the name of our private subnet, we can then create a
 new load balancer using Neutron CLI.
+
 
     # neutron lbaas-loadbalancer-create --name http-lb private_subnet
     +---------------------+--------------------------------------+
@@ -245,6 +246,7 @@ Once the load balancer is online, you will then need to create a listener. For t
     +---------------------------+------------------------------------------------+
 
 
+
 Next, we will create an LBaaS pool. A pool is a group of virtual machines, known as members, that will provide the actual service. In this example there will be three members, each capable of providing the httpd service. In addition, the pool also defines the protocol, the load balancing algorithm, and the subnet with which to associate the load balancer. Note that the subnet must be the same as the subnet of the members that belong to the pool.
 
 
@@ -266,6 +268,7 @@ Next, we will create an LBaaS pool. A pool is a group of virtual machines, known
     | session_persistence |                                                |
     | tenant_id           | c33d136a60e04e1fabf733acffa43058               |
     +---------------------+------------------------------------------------+
+
 
 
 The example above creates a pool named "http-pool", which uses the HTTP protocol and a round-robin load balancing algorithm. This pool is associated with the http-pool load balancer created in a previous step. To get more information on existing LBaaS pools, we can run the commands `neutron lbaas-pool-list` and `neutron lbaas-pool-show`. The `lbaas-pool-list` command will list out all active load balancers, while `lbaas-pool-show` will display details on a specific load balancer.
@@ -425,8 +428,6 @@ First, we will need to create a new floating IP address:
     | router_id           |                                      |
     | tenant_id           | 47e1f8f3b8dc4ab2a5f931cdd502afae     |
     +---------------------+--------------------------------------+
-
-
 
 
 Once the floating IP has been created, we will need to assign it to the load balancer port. We can locate the neutron port for our load balancer with the following command.
@@ -662,5 +663,5 @@ After saving and closing the file, restart Apache and memcached.
 
 	# systemctl restart httpd memcached
 	
-Now you should be able to view, create, and manage Neutron LBaaS under Projects --> Networking --> Load Balancers in the Horizon web dashboard.
 
+Now you should be able to view, create, and manage Neutron LBaaS under Projects --> Networking --> Load Balancers in the Horizon web dashboard.
