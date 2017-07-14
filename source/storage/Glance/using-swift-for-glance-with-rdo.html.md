@@ -1,9 +1,6 @@
 ---
 title: Using Swift for Glance with RDO Liberty
 authors: coolsvap
-wiki_title: Using Swift for Glance with RDO Liberty
-wiki_revision_count: 1
-wiki_last_updated: 2015-10-15
 ---
 
 # Using Swift for Glance with RDO

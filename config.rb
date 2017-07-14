@@ -125,6 +125,8 @@ with_layout :feature do
   page "/md/source/feature/*" # Temporary dir
 end
 
+proxy 'stats.html', '/dashboard.html'
+
 # Don't make these URLs have pretty URLs
 page '/404.html', directory_index: false
 page '/.htacces.html', directory_index: false
@@ -166,11 +168,6 @@ ready do
 
   proxy '/blog/feed.xml', 'feed.xml', ignore: false
   proxy '/blog/tag/index.html', 'tag.html', ignore: true
-
-  sitemap.resources.reject { |p| p.data.wiki_title.nil? }.each do |p|
-    next unless p.data.wiki_title.match(/^category:/i)
-    page p.path, layout: 'category'
-  end
 end
 
 ###

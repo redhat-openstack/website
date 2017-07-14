@@ -1,9 +1,6 @@
 ---
 title: 2015 January
 authors: rbowen
-wiki_title: Newsletters/2015 January
-wiki_revision_count: 1
-wiki_last_updated: 2015-01-12
 ---
 
 # 2015 January

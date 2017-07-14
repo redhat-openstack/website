@@ -1,9 +1,6 @@
 ---
 title: Mailing lists
 authors: rbowen
-wiki_title: Mailing lists
-wiki_revision_count: 3
-wiki_last_updated: 2014-06-27
 ---
 
 # Mailing lists

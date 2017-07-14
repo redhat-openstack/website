@@ -1,9 +1,6 @@
 ---
 title: AlarmThresholdEvaluation
 authors: eglynn
-wiki_title: HowToTest/Ceilometer/H/AlarmThresholdEvaluation
-wiki_revision_count: 2
-wiki_last_updated: 2013-10-23
 ---
 
 # Alarm Threshold Evaluation

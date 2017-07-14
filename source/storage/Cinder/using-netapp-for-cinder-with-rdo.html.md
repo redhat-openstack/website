@@ -1,9 +1,6 @@
 ---
 title: Using NetApp for Cinder with RDO
 authors: rhefner, snecklifter
-wiki_title: Using NetApp for Cinder with RDO
-wiki_revision_count: 7
-wiki_last_updated: 2016-01-11
 ---
 
 # Using NetApp for Cinder with RDO
@@ -14,7 +11,7 @@ It is possible to have Packstack configure Cinder to use NetApp storage devices 
 *   NetApp Data ONTAP in 7-Mode (NFS/iSCSI)
 *   NetApp E-Series (iSCSI)
 
-If Packstack is not already installed, follow steps 1 & 2 in the [All-In-One Quickstart](https://www.rdoproject.org/install/quickstart/) guide to get it installed.
+If Packstack is not already installed, follow steps 1 & 2 in the [All-In-One Quickstart](https://www.rdoproject.org/install/packstack/) guide to get it installed.
 
 **Important:** For information regarding best practices using NetApp storage with Cinder and other OpenStack services, see the [NetApp Deployment and Operations Guide](http://netapp.github.io/openstack-deploy-ops-guide/). If you have any questions, you can get in touch with us on the [NetApp OpenStack Community](http://community.netapp.com/t5/OpenStack-Discussions/bd-p/openstack-discussions) page or join us on IRC in the #openstack-netapp channel on Freenode!
 

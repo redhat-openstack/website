@@ -48,7 +48,7 @@ You'll want a fresh install with latest updates installed.
 
 * For a TripleO-based installation, try the [TripleO quickstart](https://www.rdoproject.org/tripleo/).
 
-* For a Packstack-based deployment, start at step 2 of the [All-in-one quickstart](/install/quickstart#Step_2:_Install_Packstack_Installer).
+* For a Packstack-based deployment, start at step 2 of the [All-in-one quickstart](/install/packstack#Step_2:_Install_Packstack_Installer).
 
 ### Test cases and results
 
@@ -56,7 +56,7 @@ The scenarios that should be tested are listed on the [test matrix](/testday/tes
 
 1. Pick an item from the list.
 1. Go through the scenario as though you were a beginner, just following the instructions. (Check the [workarounds](/testday/pike/workarounds2) page for problems that others may have encountered and resolved.)
-1. **Keep good notes.** You can use [the test day etherpad](https://etherpad.openstack.org/p/rdo-test-days-pike-m1) for these notes. Reviewing other peoples' notes may help you avoid problems that they've already encountered.
+1. **Keep good notes.** You can use [the test day etherpad](https://etherpad.openstack.org/p/rdo-test-days-pike-m2) for these notes. Reviewing other peoples' notes may help you avoid problems that they've already encountered.
 
 If you have problems with any of the tests, report a bug to [Bugzilla](https://bugzilla.redhat.com) usually for one of the
 [openstack-packstack](https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&component=openstack-packstack),

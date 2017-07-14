@@ -2,10 +2,6 @@
 title: Terms of use
 category: legal
 authors: dneary, lhawthorn
-wiki_category: Legal
-wiki_title: Terms of use
-wiki_revision_count: 6
-wiki_last_updated: 2013-04-15
 ---
 
 # Terms of use

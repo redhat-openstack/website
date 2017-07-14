@@ -1,9 +1,6 @@
 ---
 title: 2015 August
 authors: rbowen
-wiki_title: Newsletter/2015 August
-wiki_revision_count: 3
-wiki_last_updated: 2015-08-03
 ---
 
 # 2015 August

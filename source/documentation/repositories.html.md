@@ -1,14 +1,11 @@
 ---
 title: RDO repositories
 authors: apevec, kashyap, larsks, mangelajo, pixelbeat, pmyers, srikanth1239, strider
-wiki_title: Repositories
-wiki_revision_count: 20
-wiki_last_updated: 2015-01-13
 ---
 
 # RDO repositories
 
-See the [Packstack quickstart](/install/quickstart/) for summarized instructions on how to interact with the repositories described in this document.
+See the [Packstack quickstart](/install/packstack/) for summarized instructions on how to interact with the repositories described in this document.
 
 This document expands on the details of the various repositories involved.
 

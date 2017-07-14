@@ -1,9 +1,6 @@
 ---
 title: Qpid errors
 authors: rbowen
-wiki_title: Qpid errors
-wiki_revision_count: 5
-wiki_last_updated: 2015-03-13
 ---
 
 # Qpid errors
