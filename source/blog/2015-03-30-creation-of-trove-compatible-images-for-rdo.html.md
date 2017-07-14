@@ -27,7 +27,7 @@ The trove-image-elements repository contains the code necessary to build the ima
 2. Download a RHEL-based guest image
 ====================================
 
-Get a base guest image for the distro of your choice. You can get RHEL 7, CentOS 7 and Fedora 21 guest images in https://openstack.redhat.com/Image_resources. You can also get images for RHEL 6, CentOS 6 or Fedora 20, but the image creation process has not been tested with those versions.
+Get a base guest image for the distro of your choice. You can get RHEL 7, CentOS 7 and Fedora 21 guest images in https://rdoproject.org/Image_resources. You can also get images for RHEL 6, CentOS 6 or Fedora 20, but the image creation process has not been tested with those versions.
 
 3. Create the image
 ===================

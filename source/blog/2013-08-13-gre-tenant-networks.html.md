@@ -7,6 +7,6 @@ tags: quantum, networking
 
 Support for GRE tenant networks with Quantum/Neutron is now available in RDO!
 
-See http://openstack.redhat.com/Using_GRE_Tenant_Networks  for details.
+See http://rdoproject.org/Using_GRE_Tenant_Networks  for details.
 
 Feedback is welcome (via this topic).

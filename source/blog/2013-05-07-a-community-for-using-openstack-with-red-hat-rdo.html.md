@@ -12,6 +12,6 @@ tags: redhat, news
 > 
 > RDO is also intended to be a community—the best place to get information about running OpenStack
 > on Red Hat Enterprise Linux, Fedora, or their derivatives, and to share knowledge with other
-> OpenStack users on these same platforms. openstack.redhat.com is the best place to interact with
+> OpenStack users on these same platforms. [rdoproject.org](http://rdoproject.org/) is the best place to interact with
 > other OpenStack users using Red Hat operating systems, and get access to the best information,
 > answers, and community support focused on getting RDO running in your environment.

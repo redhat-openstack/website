@@ -3,11 +3,7 @@ title: Multi-node Openstack with Neutron with libvirt, netsted kvm, virt-manager
   qcow2 images
 category: networking
 authors: otherwiseguy, rbowen
-wiki_category: Networking
-wiki_title: Multi-node Openstack with Neutron with libvirt, netsted kvm, virt-manager
   and qcow2 images
-wiki_revision_count: 4
-wiki_last_updated: 2013-12-18
 ---
 
 # Multi-node Openstack with Neutron with libvirt, netsted kvm, virt-manager and qcow2 images
@@ -128,7 +124,7 @@ NOTE: Repository mirroring isn't in the scope of this document, but if you are n
     reposync -n -c yum.conf
     for i in */;do createrepo -c cache $i;done.
 
-      and a quick and dirty way to serve them up is:
+      and a quick and dirty way to serve them up is:
 
     sudo python -m SimpleHTTPServer 80
 
@@ -230,6 +226,8 @@ It's ugly, but you can add that static DHCP entry for the VM by:
 Since parsing human-readable output from CLI commands that are just wrappers for an API is evil, I also wrote <https://github.com/otherwiseguy/virt-add-static-dhcp> to quickly do this part using the libvirt python bindings.
 
 ### Add the eth1 network script
+
+Add a second network adapter using Virtual Machine Manager for the script to bind to.
 
 View -> Console Virtual Machine -> Run
 

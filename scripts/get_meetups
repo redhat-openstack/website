@@ -1,0 +1,184 @@
+#!/usr/bin/python
+import datetime
+from datetime import date
+import urllib2
+import json
+import time
+import re
+
+# Magic
+import sys    # sys.setdefaultencoding is cancelled by site.py
+reload(sys)    # to re-enable sys.setdefaultencoding()
+sys.setdefaultencoding('utf-8')
+
+print "Rounding up the ponies ..."
+
+# NOTE: This is Rich's personal API key. Get your own.
+key = "3a7711454d145e404e531c2ee6f391d"
+
+keyword = sys.argv[1] if len(sys.argv) >= 2 else 'openstack'
+url = "https://api.meetup.com/2/open_events?&sign=true&photo-host=public&state=ky&city=lexington&country=usa&text=" + keyword + "&radius=10000&sign=true&key=" + key
+
+week = 7
+twoweek = 14
+now = datetime.datetime.now()
+nowts  = time.mktime(now.timetuple())
+
+print "Fetching meetups ..."
+
+response = urllib2.urlopen(url)
+m = response.read()
+
+print "Parsing results ..."
+r = json.loads(m)
+meetups = r['results']
+
+groups = {}
+
+print "Fetching group details ..."
+
+for meetup in meetups:
+    groups[ str( meetup['group']['id'] ) ] = meetup['group']['name']
+
+keys = groups.keys()
+keyarg = ",".join( keys )
+
+group_url = "https://api.meetup.com/2/groups?&sign=true&photo-host=public&group_id=" + keyarg + "&key=" + key
+
+response = urllib2.urlopen( group_url )
+m = response.read()
+r = json.loads(m)
+
+grps = r['results']
+
+grp_deets = {}
+for g in grps:
+    grp_deets[ g['id'] ] = g
+
+seen = set()
+
+print "Ok, ready to print meetup details ..."
+
+weeklater = (nowts * 1000 ) + ( week * 86400 * 1000 )
+twoweeklater = (nowts * 1000 ) + ( twoweek * 86400 * 1000 )
+
+tweets = open('meetups.tweets.csv', 'w')
+mlist = open('meetups.mlist', 'w')
+# wiki = open('meetups.wiki', 'w')
+# md = open('meetups.md', 'w')
+yml = open('meetups.yml', 'w')
+
+# Standard intro to mailing list post
+mlist.write( '''The following are the meetups I'm aware of in the coming week where
+OpenStack and/or RDO enthusiasts are likely to be present. If you know
+of others, please let me know, and/or add them to
+http://rdoproject.org/events
+
+If there's a meetup in your area, please consider attending. If you
+attend, please consider taking a few photos, and possibly even writing
+up a brief summary of what was covered.
+
+--Rain
+
+''')
+
+yml.write( '''name: RDO Meetups
+type: series
+tags: RDO
+
+talks:
+
+''')
+
+for meetup in meetups:
+    eventts = int( meetup['time'] + meetup['utc_offset'] )
+    eventutc = meetup['time']
+
+    # Skip it if it's more than two weeks away
+    if eventts > twoweeklater:
+        continue
+
+    eventtimeutc = datetime.datetime.fromtimestamp(eventutc/1000)
+    endtimeutc = datetime.datetime.fromtimestamp(eventutc/1000 + 3600)
+    eventtime = date.fromtimestamp( eventts/1000 )
+    t = eventtime.strftime("%A %B %d")
+
+    # Skip it if we've already seen it
+    uniq = meetup['name'] + t
+    if uniq in seen:
+        continue
+    seen.add( uniq )
+
+
+    # Group information ...
+    grp = grp_deets[ meetup['group']['id'] ]
+
+    # Skip it if it doesn't actually mention the keyword
+    if (re.search(keyword, grp['name'], re.IGNORECASE) == None) \
+        and (re.search(keyword, meetup['name'], re.IGNORECASE) == None) \
+        and (re.search(keyword, meetup['event_url'], re.IGNORECASE) == None):
+        continue
+
+    # For the wiki ...
+    # eventout = "* " + t + ' [' + meetup['event_url'] + ' ' + meetup['name'] + "], " + grp['city'] + ', '
+    # if 'state' in grp.keys():
+        # eventout = eventout + grp['state'] + ', '
+    # eventout = eventout + grp['country'] + "\n"
+    # wiki.write( str(eventout) )
+
+    # For Markdown ...
+    # eventout = "* " + t + ' [' + meetup['name'] + '](' + meetup['event_url'] + '), ' 
+    # eventout = eventout + grp['city'] + ', '
+    # if 'state' in grp.keys():
+    #    eventout = eventout + grp['state'] + ', '
+    # eventout = eventout + grp['country'] + "\n"
+    # md.write( str(eventout) )
+
+    # For yml
+    mname = meetup['name']
+    mname = mname.replace(':','')
+    eventout = '- title: ' + mname + "\n"
+    eventout = eventout + '  location: ' + grp['city'] + ', '
+    if 'state' in grp.keys():
+        eventout = eventout + grp['state'] + "\n"
+    else: 
+        eventout = eventout + grp['country'] + "\n"
+    eventout = eventout + '  speaker: ' + grp['name'] + "\n"
+    eventout = eventout + '  start: ' + eventtimeutc.strftime("%Y-%m-%d %H:%M") + ' UTC' + "\n"
+    eventout = eventout + '  end: ' + endtimeutc.strftime("%Y-%m-%d %H:%M") + ' UTC' + "\n"
+    eventout = eventout + '  description: |' + "\n"
+    eventout = eventout + '      ' + grp['city'] + ', '
+    if 'state' in grp.keys():
+        eventout = eventout + grp['state'] + ', '
+    eventout = eventout + grp['country'] + "\n"
+    eventout = eventout + '      ' + mname + "\n"
+    eventout = eventout + '      ' + meetup['event_url'] + "\n"
+
+    eventout = eventout + "\n"
+    yml.write( str(eventout) )
+
+    # For everything else, a week is enough
+    if eventts > weeklater:
+        continue
+
+    # For Twitter
+    eventout = '"01/01/2017 00:00:00","' + t + ' in ' + grp['city'] + ', '
+    if 'state' in grp.keys():
+        eventout = eventout + grp['state'] + ', '
+    eventout = eventout + grp['country'] + ': ' + meetup['name'] + '","' + meetup['event_url'] + '"' + "\n"
+    tweets.write( str( eventout ))
+
+    # For mailing list
+    eventout = '* ' + t + ' in ' + grp['city'] + ', '
+    if 'state' in grp.keys():
+        eventout = eventout + grp['state'] + ', '
+    eventout = eventout + grp['country'] + ': ' + meetup['name'] + ' - ' + meetup['event_url'] + "\n\n"
+    mlist.write( str( eventout ))
+
+# Barn door
+tweets.close()
+mlist.close()
+yml.close()
+
+print "Done!\n"
+

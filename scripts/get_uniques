@@ -1,0 +1,5 @@
+#!/bin/sh
+# scp raspberry:rdo/logs/stats.csv ./
+ssh aws.rdoproject.org "/mnt/download_log_archives/resolved/new_hosts.pl > /mnt/download_log_archives/resolved/unique_hosts.csv"
+scp aws.rdoproject.org:/mnt/download_log_archives/resolved/unique_hosts.csv ./
+

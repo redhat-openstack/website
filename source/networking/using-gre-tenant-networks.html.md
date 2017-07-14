@@ -2,17 +2,13 @@
 title: Using GRE tenant networks
 category: networking
 authors: acalinciuc, jbainbri, jtaleric, rbowen, red trela, rkukura
-wiki_category: Networking
-wiki_title: Using GRE tenant networks
-wiki_revision_count: 18
-wiki_last_updated: 2014-04-11
 ---
 
 # Using GRE tenant networks
 
 The ability to use GRE tunnels with Open vSwitch has finally arrived in RHEL! GRE tunnels encapsulate isolated layer 2 network traffic in IP packets that are routed between compute and networking nodes using the hosts' network connectivity and routing tables. Using GRE tunnels as tenant networks in Neutron avoids the need for a network interface connected to a switch configured to trunk a range of VLANs. Here are simple instructions for taking advantage of GRE for tenant networks.
 
-See Also: [Configuring Neutron with OVS and GRE Tunnels using quickstack](Configuring Neutron with OVS and GRE Tunnels using quickstack)
+See Also: [Configuring Neutron with OVS and GRE Tunnels using quickstack](/networking/configuring-neutron-with-ovs-and-gre-tunnels-using-quickstack/)
 
 ## Packstack GRE Tenant Network Configuration
 
@@ -41,19 +37,19 @@ The above assumes a provider external network is being used. If an external brid
 
 If modifying an existing deployment to use GRE tenant networks, run the following on the controller node:
 
-      # openstack-config --set /etc/quantum/plugins/openvswitch/ovs_quantum_plugin.ini OVS tenant_network_type gre
+      # openstack-config --set /etc/quantum/plugins/openvswitch/ovs_quantum_plugin.ini OVS tenant_network_type gre
 
 Then, for either a new or existing deployment, run these commands on the controller node:
 
-      # openstack-config --set /etc/quantum/plugins/openvswitch/ovs_quantum_plugin.ini OVS enable_tunneling True
-      # openstack-config --set /etc/quantum/plugins/openvswitch/ovs_quantum_plugin.ini OVS tunnel_id_ranges 1:1000
-      # service quantum-server restart
+      # openstack-config --set /etc/quantum/plugins/openvswitch/ovs_quantum_plugin.ini OVS enable_tunneling True
+      # openstack-config --set /etc/quantum/plugins/openvswitch/ovs_quantum_plugin.ini OVS tunnel_id_ranges 1:1000
+      # service quantum-server restart
 
 Finally, on each node where quantum-openvswitch-agent runs (all compute and network nodes), run:
 
-      # openstack-config --set /etc/quantum/plugins/openvswitch/ovs_quantum_plugin.ini OVS enable_tunneling True
-`# openstack-config --set /etc/quantum/plugins/openvswitch/ovs_quantum_plugin.ini OVS local_ip `<IP address>
-      # service quantum-openvswitch-agent restart
+      # openstack-config --set /etc/quantum/plugins/openvswitch/ovs_quantum_plugin.ini OVS enable_tunneling True
+`# openstack-config --set /etc/quantum/plugins/openvswitch/ovs_quantum_plugin.ini OVS local_ip `<IP address>
+      # service quantum-openvswitch-agent restart
 
 ## MTU
 
@@ -65,12 +61,12 @@ You should turn offloading such as TSO/LRO and GRO/GSO off on the instance physi
 
 This can be done with this command (replace ethX with your physical network interface name):
 
-      ethtool -K ethX tso off lro off gro off gso off
+      ethtool -K ethX tso off lro off gro off gso off
 
 You can modify the network script for this change to apply on startup:
 
       /etc/sysconfig/network-scripts/ifcfg-eth0
-      ETHTOOL_OPTS="-K ${DEVICE}  tso off lro off gro off gso off"
+      ETHTOOL_OPTS="-K ${DEVICE}  tso off lro off gro off gso off"
 
 ## Additional Configuration
 
@@ -82,6 +78,6 @@ New packstack deployments can specify the interface whose IP address will be use
 
 Once the above steps are complete, newly created tenant networks should be GRE tunnels, which can be verified by running the following with admin credentials and looking at the provider:network_type attribute:
 
-`# quantum net-show `<network name or UUID>
+`# quantum net-show `<network name or UUID>
 
 <Category:Networking>

@@ -9,6 +9,7 @@
 
 # Ignore the build directory
 /build
+data/dashboard/projects
 
 # Ignore Sass' cache
 /.sass-cache
@@ -19,3 +20,6 @@
 
 # Ignore emacs .. erm its backup files..
 *~
+
+# Ignore pycharm
+.idea*

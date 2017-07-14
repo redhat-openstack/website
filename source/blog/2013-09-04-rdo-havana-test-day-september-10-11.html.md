@@ -6,7 +6,7 @@ author: rbowen
 
 With the Havana milestone 3 due the week of September 9th, we're planning to hold a test day on September 10th and 11th. (Yes, that's two days. We're doing that in order to allow all timezones to participate.)
 
-The page where we'll track this is being built at http://openstack.redhat.com/Test_Day_09_2013 and you can follow that as it gets closer to the date.
+The page where we'll track this is being built at http://rdoproject.org/Test_Day_09_2013 and you can follow that as it gets closer to the date.
 
 If you have time and hardware, we need your help testing. Please put your name on the list, and commit to spending a couple hours in that time period testing the new milestone and filing bugs, so that we can get things hammered out before the Havana release in early October.
 

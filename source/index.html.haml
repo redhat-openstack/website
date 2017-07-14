@@ -1,15 +1,38 @@
 ---
 title: ''
 page_classes: front-page
-authors: dneary, garrett, mediawiki, mediawiki default, rbowen
-wiki_title: Main Page
-wiki_revision_count: 226
-wiki_last_updated: 2015-06-15
+authors: dneary, garrett, mediawiki, mediawiki default, rbowen, cbrown2
 pageable: false
 no_container: true
 index: false
 hide_metadata: true
 ---
+
+:ruby
+  # Social icons
+  def social_icons
+    s = [
+      ['calendar', 'Events', '/events/', 'green'],
+      ['envelope', 'Mailing list', '/community/mailing-lists/', 'green'],
+      ['twitter', 'Twitter', 'http://twitter.com/rdocommunity', 'lightblue'],
+      ['facebook', 'Facebook', 'http://facebook.com/rdocommunity', 'blue'],
+      ['google-plus', 'Google+', 'https://plus.google.com/communities/110409030763231732154', 'red'],
+    ]
+
+    capture_haml do
+      haml_tag :p, class: "social-icons" do
+        s.each do |site|
+          haml_tag :a, href: site[2] do
+            haml_tag :span, class: "fa-#{site[0]} social-icon"
+            haml_tag :span, class: "label" do
+              haml_concat site[1]
+            end
+          end
+        end
+      end
+    end
+  end
+
 
 - content_for :head do
   %link(href="/blog/feed.xml" rel="alternate" title="Atom feed" type="application/atom+xml")
@@ -25,76 +48,105 @@ hide_metadata: true
   -#.container
   #top
 
-  .bg-boxes
+  .hero-unit.row
+    .intro-stack &nbsp;
 
-    .hero-unit.row
-      .intro-stack &nbsp;
 
-      .intro-text
-        :markdown
-          OpenStack: Packaged by and for the CentOS community
+    .intro-text
+      :markdown
 
-          <span class="btn">[Quick start →](Quickstart)</span>
+        RDO is a community of people using and deploying OpenStack on 
+        CentOS and Red Hat Enterprise Linux.
 
+
+        <span class="btn">[Try RDO Now →](/tripleo)</span>
+
+  .container.getstarted
     .row
-      .block-heading
-        :markdown
-          ## Take Liberty for a spin!
-
-          Liberty, the upcoming version of OpenStack, will be released
-          soon! Join us for
-          [RDO Test Day](/testday/rdo-test-day-liberty-01/),
-          leading up to the October 15th release of Liberty.
-
-    .row
-      .block-heading
-        :markdown
-          ## RDO Manager
-
-          {:.floatright}
-          [![RDO Manager Logo](rdo-manager-logo.png)](RDO-Manager)
-
-          OpenStack deployment and management<br>
-          in production environments<br>
-          from the community
-
-          [Get started!](RDO-Manager)
-
-    .row
-      .block-heading
-        :markdown
-          ## Get Involved
-
-          There are many ways to [get involved](get involved) with the RDO community once you [ get started](quickstart). The simplest way is to [head over to the ask.openstack.org forum](http://ask.openstack.org) and help answer questions. Or try out OpenStack for your self right now at [TryStack.org](http://trystack.org/).
-
-          ![](github-mark-small.svg){: width="24"} The Puppet modules used in packstack are on [Github](https://github.com/packstack) and packstack itself is on [Stackforge](https://github.com/stackforge/packstack).
-
-          For a commercially-supported enterprise ready OpenStack solution, Red Hat provides [Red Hat Enterprise Linux OpenStack Platform](//redhat.com/openstack), an enterprise-class cloud platform based on OpenStack Juno.
-
-    .block-highlight
-      .row
+      .col-md-4
         .block-heading
+          %h2 Try it
+ 
+          %p.lead
+            Try out OpenStack in one of three ways:
+          %p.lead
+            Spin up an all-in-one concept cloud with
+            =link_to("Packstack", "/install/packstack/")
+          %p.lead
+            Deploy a production cloud with 
+            =link_to("TripleO", "http://tripleo.org/")
+          %p.lead
+            Develop and Test OpenStack with 
+            =link_to("TripleO Quickstart", "/tripleo")
 
-          :markdown
+      .col-md-4
+        .block-heading
+          %h2 Hack on it
 
-            ## What's happening?
+          %p.lead
+            There are different ways to get involved:
+          %p.lead
+            Help out with 
+            %a( href="/documentation/rdo-packaging/") packaging
+            one of the OpenStack projects.
+          %p.lead
+            Tackle one of the
+            =link_to("open issues", "http://tm3.org/rdobugs")
+            or
+            %a( href="http://review.rdoproject.org") review
+            a pending changeset.
+          %p.lead
+            Check out the
+            =link_to("current status", "http://dashboards.rdoproject.org")
+            of the project.
+                        
+      .col-md-4
+        .block-heading
+          %h2 Join the conversation
+          %p.lead
+            The conversation happens in several places:
+          %p.lead
+            On the
+            =link_to("mailing lists,", "/community/mailing-lists")
+            on #RDO on the Freenode IRC network,
+            and on
+            =link_to("ask.openstack.org.", "http://ask.openstack.org")
 
-            ![](Twitter.gif "fig:Twitter.gif") ![](Facebook.gif "fig:Facebook.gif") ![](G_plus.jpg "fig:G_plus.jpg") ![](Email.png "fig:Email.png")
-
-            Come to one of the main [Events](Events) where some of us will be. Follow us on [Twitter](http://twitter.com/rdocommunity/), [Facebook](http://facebook.com/rdocommunity), and [Google+](https://plus.google.com/communities/110409030763231732154). Subscribe to the [rdo-list mailing list](http://www.redhat.com/mailman/listinfo/rdo-list) for technical questions, or to the [newsletter mailing list](http://www.redhat.com/mailman/listinfo/rdo-newsletter) for monthly community updates.
-
-            Watch the various presentations on the [RDO videos](RDO videos) page from our hangouts and conference presentations you may have missed.
-
-      .row
+    .row
+      .col-md-6
         .block-heading
           :markdown
             ## What is RDO?
 
-            {:.floatright}
-            ![An Openstack Distribution](openstack-distribution.png)
+            {:.floatright.openstack-distro}
+            ![An Openstack Distribution](/images/wiki/Openstack-distribution.png)
 
-            RDO is a community of people using and deploying OpenStack on Red Hat Enterprise Linux, Fedora and distributions derived from these (such as CentOS, Scientific Linux and others). We have [documentation to help get started](Docs), [Mailing_lists](Mailing_lists) where you can connect with other users, and [community-supported packages](Quickstart) of the most up-to-date OpenStack releases available for download.
+            RDO is a community of people using and deploying OpenStack on CentOS, Fedora, and Red Hat Enterprise Linux. We have [documentation to help get started](/documentation/), [mailing lists](/community/mailing-lists/) where you can connect with other users, and [community-supported packages](/install/packstack/) of the most up-to-date OpenStack releases available for download.
 
-            If you are looking for enterprise-level support, or information on partner certification, Red Hat also offers [Red Hat Enterprise Linux OpenStack Platform](//redhat.com/openstack).
+            If you are looking for enterprise-level support, or information on partner certification, Red Hat also offers [Red Hat OpenStack Platform](//redhat.com/en/technologies/linux-platforms/openstack-platform).
 
             OpenStack relies on the underlying operating system and hypervisor — and what better operating system to build on than the industry's leading enterprise operating system? The RDO community is your one-stop community site for all things related to using OpenStack on Red Hat based platforms.
+
+      .col-md-6
+        .block-heading
+          %h2 What's happening?
+
+
+          :markdown
+            [@rdocommunity](https://twitter.com/RDOcommunity){:.twitter-timeline data-widget-id="482610699122638848" data-height="375"}
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='//platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+
+
+    .row
+      .block-heading
+
+
+        :markdown
+
+          ## Come join us
+
+          Come to one of the main [events](events) where some of us will be. Follow us on [Twitter](http://twitter.com/rdocommunity/), [Facebook](http://facebook.com/rdocommunity), and [Google+](https://plus.google.com/communities/110409030763231732154). Subscribe to the [rdo-list mailing list](http://www.redhat.com/mailman/listinfo/rdo-list) for technical questions, or to the [newsletter mailing list](http://www.redhat.com/mailman/listinfo/rdo-newsletter) for monthly community updates.
+
+          #{social_icons}
+

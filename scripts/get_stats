@@ -1,0 +1,5 @@
+#!/bin/sh
+# scp raspberry:rdo/logs/stats.csv ./
+scp aws.rdoproject.org:/mnt/download_log_archives/stats.csv ./
+
+

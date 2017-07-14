@@ -4,40 +4,93 @@ category: documentation
 authors: admin, apevec, awheeler, ccrouch, dansmith, dneary, fale, garrett, jlibosva,
   jruzicka, larsks, marafa, otherwiseguy, pixelbeat, pmyers, radez, rbowen, rkukura,
   rossturk, sdake, sgordon, shardy, strider, thoraxe
-wiki_category: Documentation
-wiki_title: Docs
-wiki_revision_count: 105
-wiki_last_updated: 2015-07-16
 ---
 
-# Docs
+# RDO documentation
 
-## RDO documentation
+Since RDO sticks closely to the upstream OpenStack project, the documentation at [docs.openstack.org](http://docs.openstack.org) will also prove helpful. If you've come across useful tips for resolving issues on OpenStack, or if you're interested in sharing details of your deployment, please consider sharing this information with the community at our [troubleshooting](/troubleshooting/) and [user stories](/user-stories/) pages.
 
-Since RDO sticks closely to the upstream OpenStack project, the documentation at [docs.openstack.org](http://docs.openstack.org) will also prove helpful. If you've come across useful tips for resolving issues on OpenStack, or if you're interested in sharing details of your deployment, please consider sharing this information with the community at our [troubleshooting](troubleshooting) and [case studies](case studies) pages.
+<div class="splits">
+<div class="split-third with-more">
 
-#### [Quickstart](Quickstart)
+## Getting started
 
-#### [Packaging Guides](https://rdoproject.org/packaging/index.html)
+* [TripleO](http://tripleo.org) &ndash; Deploy a production cloud
+* [TripleO quickstart](/tripleo) &ndash; Develop and Test OpenStack
+* [Packstack](/install/packstack) &ndash; Spin up an all-in-one concept cloud
 
-#### [Installation and configuration](Install)
+</div>
+<div class="split-third">
 
-<small>[Running_an_instance](Running_an_instance), [Image_resources](Image_resources), [Adding_a_compute_node](Adding_a_compute_node), [Troubleshooting](Troubleshooting), [RDO-Manager](RDO-Manager), [More](Install) ...</small>
+## About RDO
 
-#### [Networking](Docs/Networking)
+* [FAQ](/rdo/faq/)
+* [Mailing lists](/community/mailing-lists/)
+* [Legal & privacy](/legal/)
 
-<small>[Neutron with an existing external network](Neutron_with_existing_external_network), [ML2_plugin](ML2_plugin), [Floating vs Private IPs](Difference_between_Floating_IP_and_private_IP), [Networking in detail](Networking_in_too_much_detail), [More](Docs/Networking) ... </small>
+</div>
+</div>
 
-#### [Storage](Docs/Storage)
+## Administration
 
-<small>[GlusterFS](Using_GlusterFS_for_Cinder_with_RDO_Havana), [EMC](https://wiki.openstack.org/wiki/How_to_deploy_cinder_with_EMC_plug-in), [ThinLVM](Using_ThinLVM_for_Cinder_with_RDO_Havana), [Ceph](http://openstack.redhat.com/Using_Ceph_for_Cinder_with_RDO_Havana), [More](Docs/Storage) ...</small>
+<div class="splits">
+<div class="split-third with-more">
 
-#### [About RDO](Docs/About)
+### Installation and configuration
 
-<small>[FAQ](Frequently_Asked_Questions), [Get_involved](Get_involved), [Twitter](http://twitter.com/rdocommunity), [Mailing lists](Mailing_lists), [More](Docs/About) ...</small>
+* [Image resources](/resources/image-resources/)
+* [Adding a compute node](/install/adding-a-compute-node/)
+* [More&hellip;](/install/){:.more}
+{:.with-more-link}
 
-#### [Upstream Documentation](Upstream Docs)
+</div>
+<div class="split-third with-more">
 
-<small>[OpenStack docs](http://docs.openstack.org/), [Books](http://openstack.redhat.com/Books), [Glossary](http://docs.openstack.org/glossary/content/glossary.html), [OpenStack Operations Guide](http://docs.openstack.org/trunk/openstack-ops/content/index.html), [More](UpstreamDocs) ...</small>
+### Networking
 
-#### [Miscellaneous Docs](Docs/Misc)
+* [Neutron with an existing external network](/networking/neutron-with-existing-external-network/)
+* [Floating vs private IPs](/networking/difference-between-floating-ip-and-private-ip/)
+* [Networking in detail](/networking/networking-in-too-much-detail/)
+* [More&hellip;](/networking/){:.more}
+{:.with-more-link}
+
+</div>
+<div class="split-third">
+
+### Storage
+
+* [GlusterFS](/storage/Cinder/using-glusterfs-for-cinder-with-rdo)
+* [ThinLVM](/storage/Cinder/using-thinlvm-for-cinder-with-rdo)
+* [EMC](https://wiki.openstack.org/wiki/How to deploy cinder with EMC plug-in)
+* [More&hellip;](/storage/){:.more}
+{:.with-more-link}
+
+</div>
+</div>
+
+## Development
+
+<div class="splits">
+<div class="split-third with-more">
+
+### Packaging
+
+* [RDO Packager guide](/documentation/rdo-packaging)
+
+</div>
+<div class="split-third">
+
+### Testing
+
+* [RDO test days](/testday) &ndash; trying a pre-release
+* [RDO trunk development](https://trunk.rdoproject.org/)
+* [Open
+  tickets](https://bugzilla.redhat.com/buglist.cgi?product=RDO&query_format=advanced&bug_status=NEW&bug_status=ASSIGNED)
+
+</div>
+</div>
+
+## Upstream documentation
+
+* [OpenStack docs](http://docs.openstack.org/)
+* [Books](/documentation/books)

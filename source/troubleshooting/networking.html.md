@@ -2,17 +2,13 @@
 title: Networking
 category: troubleshooting
 authors: dneary, forrest, palmtown, rbowen
-wiki_category: Troubleshooting
-wiki_title: Networking
-wiki_revision_count: 27
-wiki_last_updated: 2013-12-19
 ---
 
-# Networking
+# Network troubleshooting
 
 {:.no_toc}
 
-(See Also: [:Category:Networking](:Category:Networking))
+* See also: [Networking](/networking/).
 
 Check out this webcast - an overview of networking principles and how they apply to Neutron and OpenvSwitch - by Dave Neary.
 
@@ -22,33 +18,33 @@ Check out this webcast - an overview of networking principles and how they apply
 
 A number of tools come in handy when troubleshooting Neutron/Quantum networking issues.
 
-*   [Open vSwitch](//openvswitch.org/) ([documentation](http://openvswitch.org/support/))
-    -   [ovs-vsctl](//openvswitch.org/cgi-bin/ovsman.cgi?page=utilities%2Fovs-vsctl.8) - tool for querying and configuring ovs-vswitchd
-    -   [ovs-ofctl](//openvswitch.org/cgi-bin/ovsman.cgi?page=utilities%2Fovs-ofctl.8) - OpenFlow configuration tool
-    -   [ovs-dpctl](//openvswitch.org/cgi-bin/ovsman.cgi?page=utilities%2Fovs-vsctl.8) - query and configure Open vSwitch datapaths
+*   [Open vSwitch](http://openvswitch.org/) ([documentation](http://openvswitch.org/support/))
+    -   [ovs-vsctl](http://openvswitch.org/support/dist-docs/ovs-vsctl.8.txt) - tool for querying and configuring ovs-vswitchd
+    -   [ovs-ofctl](http://openvswitch.org/support/dist-docs/ovs-ofctl.8.txt) - OpenFlow configuration tool
+    -   [ovs-dpctl](http://openvswitch.org/support/dist-docs/ovs-dpctl.8.txt) - query and configure Open vSwitch datapaths
 *   [iproute tools](//www.linuxfoundation.org/collaborate/workgroups/networking/iproute2)
-    -   [iproute2 HOWTO](//www.policyrouting.org/iproute2.doc.html)
-    -   [iproute2 examples](//www.linuxfoundation.org/collaborate/workgroups/networking/iproute2_examples)
-*   [tcpdump](//www.tcpdump.org/) (see next section)
-    -   [tcpdump documentation](//www.tcpdump.org/#documentation)
+    -   [iproute2 HOWTO](http://www.policyrouting.org/iproute2.doc.html)
+    -   [iproute2 examples](http://www.linuxfoundation.org/collaborate/workgroups/networking/iproute2_examples)
+*   [tcpdump](http://www.tcpdump.org/) (see next section)
+    -   [tcpdump documentation](http://www.tcpdump.org/#documentation)
 
 ### tcpdump
 
 tcpdump will be your best friend so it's best to learn and understand how to use it. When debugging routing issues with quantum, tcpdump can be used to investigate the ingress and egress of traffic. For example:
 
-           tcpdump -n -i br-int  
+           tcpdump -n -i br-int  
 
 The above command will capature all traffic on the internal bridge interface.
 
-           tcpdump -n -i br-int  -w tcpdump.pcap
+           tcpdump -n -i br-int  -w tcpdump.pcap
 
 The above command will capture all traffic on the internal bridge interface and dump it to a file named tcpdump.pcap.
 
-           tcpdump -r tcpdump.pcap
+           tcpdump -r tcpdump.pcap
 
 The above command will read in a previously created tcpdump file
 
-           tcpdump -n -i any
+           tcpdump -n -i any
 
 The above command will capture all traffic on any interface. ...
 
@@ -67,7 +63,7 @@ Here are some diagnostics commands for networking (assuming you are using Neutro
     $ ip netns exec qrouter-1fabd5f0-f80b-468d-b733-1b80d0c3e80f \
       ip a
 
-    # Check routing table inside the router namespace     
+    # Check routing table inside the router namespace
     $ ip netns exec qrouter-1fabd5f0-f80b-468d-b733-1b80d0c3e80f \
       ip r
 
@@ -154,13 +150,8 @@ After this, you will no longer need to bring up eth0, and all going well you wil
 *   If you are using a virtual machine as a node in OpenStack, you must use the virtio network driver when using VLANs. The default rt8139 driver seems to drop VLAN information.
 *   You must have an external network set as the gateway to the router if you want to get network traffic out of the private instance network.
 
-...
+## Other resources
 
-## Useful resources
+*   [Network troubleshooting (OpenStack Operations Guide)](//docs.openstack.org/ops-guide/ops-network-troubleshooting.html)
 
-*   [Quantum L3 workflow](//docs.openstack.org/trunk/openstack-network/admin/content/l3_workflow.html)
-*   [Network troubleshooting](//docs.openstack.org/trunk/openstack-ops/content/network_troubleshooting.html)
-
-...
-
-<Category:Troubleshooting> <Category:Documentation> [Category:In progress](Category:In progress) <Category:Networking>
+<Category:Troubleshooting> <Category:Documentation> <Category:In progress> <Category:Networking>

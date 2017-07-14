@@ -20,6 +20,11 @@ aenright:
 anandts:
   gravatar: 16ad6ab055a894211ff38b168479af83
 
+apevec:
+  name: Alan Pevec
+  organization: Red Hat
+  gravatar: 6993a4d145f48b14a80063f561baa577
+
 arindamchoudhury:
   gravatar: 055bd1c5fc55ef78d6bbb4fa3b4a9ffe
 
@@ -28,6 +33,11 @@ bvandenh:
 
 dbaxps:
   gravatar: 8b4abffbc97837e15b6ff13f5d1690d6
+
+dciabrin:
+  name: Damien Ciabrini
+  organization: Red Hat
+  gravatar: 64d745bf707f8c99eccbe4533ec16ffd
 
 dneary:
   photo: userpics/505/5LF6QIDLBDA3.png
@@ -44,6 +54,11 @@ frank:
   photo: userpics/655/0M6WGWVXENPZ.JPG
   gravatar: b7ce7ed3b2ed415b09d4fcbab5829b4d
 
+hguemar:
+  name: Haïkel Guémar
+  organization: RDO
+  gravatar: fcb6a76144dfca95aea54fd75fc2d422
+
 gfidente:
   photo: userpics/146/J4OCK3G5FJMQ.png
   gravatar: 2161f83109e1ad1ba05ab2eeb23a12be
@@ -53,6 +68,9 @@ ian_lawson:
   nick: Ian_Lawson
   gravatar: b9a7b1f51ef6ffe20aaca781fae93aef
 
+misc:
+  name: Michael Scherer
+  
 imcleod:
   gravatar: 4caa9e7acb68ef91f055edf3fc7e10f6
 
@@ -130,9 +148,29 @@ rlh100:
 
 rvaknin:
   gravatar: 3f2dbf5422630a4163700cfd0525c181
+  
+snecklifter:
+  gravatar: 47977ed954682855f74a1d2082c27055
 
 shardy:
   gravatar: d3a10de70fda6f02d2aa7b28115ee1ea
 
+trown:
+  name: John Trowbridge
+  organization: Red Hat
+  gravatar: ad66cfba3cda807c686cc96c93eaadae
+
 whayutin:
   gravatar: eabcbce5c8dbdb345c9c5b645f0003b3
+
+rleander:
+  name: K Rain Leander
+  organization: Red Hat
+  title: Software Engineer
+  gravatar: 393162e8cf938857611d0b45890063bf
+
+emalikova:
+  name: Eliska Malikova
+  organization: Red Hat
+  gravatar: 438c0632e9cf7f1d50d2ce9e84a7728b
+

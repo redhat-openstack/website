@@ -1,3 +1,3 @@
 #!/bin/sh
 
-bundle install --quiet && bundle exec middleman $@
+bundle install --verbose && bundle exec middleman $@

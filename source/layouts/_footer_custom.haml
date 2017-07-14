@@ -1,0 +1,35 @@
+.footer-rdo
+  :ruby
+    browse_bugs = [
+      'https://bugzilla.redhat.com/buglist.cgi?product=RDO',
+      'query_format=advanced',
+      'bug_status=NEW',
+      'bug_status=ASSIGNED'
+    ].join('&')
+
+  :markdown
+    Docs
+    : [Download](/install/packstack)
+    : [Common questions](/rdo/faq)
+    : [Troubleshooting](/troubleshooting/)
+    : [About RDO](/rdo/)
+    {:.}
+
+    Use RDO
+    : [Packstack](/install/packstack)
+    : [TripleO QuickStart](/tripleo/)
+    : [Releases](/rdo/release-cadence)
+    : [Trunk builds](http://trunk.rdoproject.org/)
+    {:.}
+
+    Community
+    : [Participate](/community/)
+    : [Ask (Q&A)](http://ask.rdoproject.org/)
+    : [Browse open issues](#{browse_bugs})
+    : [Report a problem](https://bugzilla.redhat.com/enter_bug.cgi?product=RDO)
+    {:.}
+
+    Support
+    : [Red Hat OpenStack Platform](https://access.redhat.com/products/red-hat-openstack-platform/)
+    : [Contact us](https://www.redhat.com/mailman/listinfo/rdo-list)
+    {:.}

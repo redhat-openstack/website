@@ -13,9 +13,9 @@ Recently there have been some great articles appearing describing how to do some
 
 We also have a number of compelling new pages which have been added to the wiki recently! In case you missed them:
 
-* [Using GRE tenant networks](http://openstack.redhat.com/Using_GRE_Tenant_Networks) by Bob Kukura describes how to create secure tunnels for your VLANs with GRE on RDO
-* [Highly Available MySQL server on OpenStack](http://openstack.redhat.com/Highly_Available_MySQL_server_on_OpenStack) walks you through configuring Pacemaker and MySQL to create a HA MySQL server for your OpenStack deployment, by Dan Radez
-* [Load balancing OpenStack API services](http://openstack.redhat.com/Load_Balance_OpenStack_API) from Ryan O'Hara shows you how to make your deployment more resilient by load balancing API endpoints
-* [Using Ceph for Block Storage with RDO](http://openstack.redhat.com/Using_Ceph_for_Block_Storage_with_RDO) will get you started using one of the most popular third-party storage engines, Ceph, as a back-end for your block storage needs - with thanks to Ross Turk from Inktank for adding the content here.
+* [Using GRE tenant networks](http://rdoproject.org/Using_GRE_Tenant_Networks) by Bob Kukura describes how to create secure tunnels for your VLANs with GRE on RDO
+* [Highly Available MySQL server on OpenStack](http://rdoproject.org/Highly_Available_MySQL_server_on_OpenStack) walks you through configuring Pacemaker and MySQL to create a HA MySQL server for your OpenStack deployment, by Dan Radez
+* [Load balancing OpenStack API services](http://rdoproject.org/Load_Balance_OpenStack_API) from Ryan O'Hara shows you how to make your deployment more resilient by load balancing API endpoints
+* [Using Ceph for Block Storage with RDO](http://rdoproject.org/Using_Ceph_for_Block_Storage_with_RDO) will get you started using one of the most popular third-party storage engines, Ceph, as a back-end for your block storage needs - with thanks to Ross Turk from Inktank for adding the content here.
 
 Keep them coming! And if you want to get regular email updates from the world of RDO, [sign up to our monthly newsletter](http://red.ht/11amemL).

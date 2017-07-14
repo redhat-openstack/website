@@ -1,3 +1,4 @@
+# coding: utf-8
 ###
 # Site settings
 ###
@@ -124,6 +125,8 @@ with_layout :feature do
   page "/md/source/feature/*" # Temporary dir
 end
 
+proxy 'stats.html', '/dashboard.html'
+
 # Don't make these URLs have pretty URLs
 page '/404.html', directory_index: false
 page '/.htacces.html', directory_index: false
@@ -135,6 +138,12 @@ page '/.htacces.html', directory_index: false
 proxy '/.htaccess', '/.htaccess.html', locals: {}, ignore: true
 
 ready do
+  # Add yearly calendar pages
+  data.events.each do |year, data|
+    next unless year.match(/[0-9]{4}/)
+    proxy "/events/#{year}.html", "events/index.html", locals: {year: year}
+  end
+
   # Add author pages
   sitemap.resources.group_by { |p| p.data['author'] }.each do |author, pages|
     next unless author
@@ -157,13 +166,8 @@ ready do
           ignore: true
   end
 
-  proxy '/blog/feed.xml', 'feed.xml', ignore: true
+  proxy '/blog/feed.xml', 'feed.xml', ignore: false
   proxy '/blog/tag/index.html', 'tag.html', ignore: true
-
-  sitemap.resources.reject { |p| p.data.wiki_title.nil? }.each do |p|
-    next unless p.data.wiki_title.match(/^category:/i)
-    page p.path, layout: 'category'
-  end
 end
 
 ###
@@ -191,101 +195,17 @@ activate :confcal
 require 'lib/monkeypatch_blog_date.rb'
 
 ###
-# Monkey patches
-###
-
-helpers do
-  alias_method :_link_to, :link_to
-  alias_method :_image_tag, :image_tag
-
-  # Monkey patch Middleman's image_tag to add missing image support
-  # (and look for space-to-underscore conversions like MediaWiki)
-  def image_tag(path, params = {})
-    unless path.include?('://')
-      real_path = path
-      real_path = File.join(images_dir, real_path) unless real_path.start_with?('/')
-      full_path = File.join(source_dir, real_path)
-      filename  = File.basename(path)
-
-      # Try harder. (Look all over the resources)
-      unless File.exist?(full_path)
-        match = sitemap.resources.select do |resource|
-          p = resource.path
-          result = p.match(/#{filename}|#{filename.gsub(/ /, '_')}$/i)
-
-          # Try even harder. (Look for similar filenames; handles conversions)
-          unless result
-            noext = filename.chomp(File.extname(filename))
-            exts = 'png|gif|jpg|jpeg|svg'
-            result = p.match(/(#{noext}|#{noext.gsub(/ /, '_')})\.(#{exts})$/i)
-          end
-
-          result
-        end.first
-
-        # resource's `url` is user-specified; `path` is a full path
-        path = match.url if match
-      end
-    end
-
-    _image_tag(path, params)
-  end
-
-  # WIP!!!
-
-  # Monkeypatch Middleman's link_to to add missing page support
-  # (and search MediaWiki imported files)
-  def link_to(*args, &block)
-    begin
-      url_index = block_given? ? 0 : 1
-      url = args[url_index]
-      current_file = current_page.source_file.gsub("#{root}/#{source}/", '')
-
-      # Strip site referential links
-      if args[url_index].respond_to?('gsub!')
-        args[url_index].gsub!(/https?:\/\/(www.)?ovirt.org\//, '')
-      end
-
-      if url.respond_to?('gsub') && url.respond_to?('match') && !url.match(/^http|^#/)
-        p args if url.match(/Special:/)
-
-        if url.match(/^(Special:|User:)/i)
-          # puts "WARNING: #{current_file}: Invalid link to '#{args[1]}'"
-          return "<span class='broken-link link-mediawiki' data-href='#{url}' title='Special MediaWiki link: original pointed to: #{url}'>#{args.first}</span>"
-        end
-
-        url_extra = ''
-
-        match = sitemap.resources.select do |resource|
-          extra = /[#\?].*/
-          url_extra = url.match(extra)
-          url_fixed = url.gsub(/_/, ' ').gsub(extra, '')
-          resource.data.wiki_title.to_s.downcase.strip == url_fixed.gsub(/_/, ' ').downcase.strip
-        end.sort_by { |r| File.stat(r.source_file).size }.reverse.first
-
-        args[url_index] = match.url + url_extra.to_s if match
-      end
-
-      result = _link_to(*args, &block)
-
-    rescue
-      puts "ERROR: #{current_file}: Issue with link to '#{args[1]}'"
-      return "<span class='broken-link link-error' data-href='#{url}' title='Broken link: original pointed to: #{url}'>#{args.first}</span>"
-    end
-
-    result
-  end
-end
-
-
-###
 # Development-only configuration
 ###
 #
 configure :development do
+  # workaround https://github.com/middleman-contrib/middleman-deploy/issues/51
+  next if ARGV.include? 'deploy'
+
   puts "\nUpdating git submodules..."
   puts `git submodule init && git submodule sync`
   puts `git submodule foreach "git pull -qf origin master"`
+  `git commit -q -m "updated events" data/events &>/dev/null`
   puts "\n"
   puts '== Administration is at http://0.0.0.0:4567/admin/'
 

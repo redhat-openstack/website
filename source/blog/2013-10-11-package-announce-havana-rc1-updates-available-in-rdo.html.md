@@ -8,7 +8,7 @@ author: rbowen
 
 The full Havana RC1 package set is now available in the RDO repos,
 for both el6 distros and Fedora 19.  Instructions to get started
-with these repos are at: http://openstack.redhat.com/QuickStartLatest
+with these repos are at: http://rdoproject.org/QuickStartLatest
 
 In this release we have:
 

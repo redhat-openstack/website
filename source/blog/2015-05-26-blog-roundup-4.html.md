@@ -1,7 +1,9 @@
 ---
-title: RDO blog roundup, week of May 26, 2016
-date: 2015-05-26 16:20:25
+title: RDO blog roundup, week of May 26, 2015
 author: rbowen
+date: 2015-05-26 16:20:25 UTC
+comments: true
+published: true
 ---
 
 Here's what RDO engineers have been writing about over the past week.
@@ -32,5 +34,3 @@ If you're writing about RDO, or about OpenStack on CentOS, Fedora or RHEL, and y
 > On Thursday morning at the OpenStack Summit in Vancouver, roughly 60 RDO enthusiasts gathered to discuss a variety of topics around the RDO project. Officially we had just 40 minutes, but since we were followed by a coffee break, we went overtime by about 20 minutes, and there was still some hallway discussion following that.
 
 ... read more at [http://tm3.org/i](http://tm3.org/i)
-
-
