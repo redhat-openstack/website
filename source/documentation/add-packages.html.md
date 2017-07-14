@@ -48,7 +48,7 @@ and comment all releases where package should be built, as for example:
     * Once the projects are created, the change will be merged in rdoinfo project.
 
 3. Create a new review to the new distgit project with the needed content (spec
-file, etc...) for the initial import as in [this example](https://review.rdoproject.org/r/#/c/1417/).
+file, etc...) for the initial import as in [this example](https://review.rdoproject.org/r/#/c/7645/).
 This will trigger a CI job to test the package build.
 
 4. Once the initial distgit import is merged, go back to the Package Review

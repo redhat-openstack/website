@@ -2,10 +2,6 @@
 title: Networking in too much detail
 category: networking
 authors: jtaleric, larsks, mpavlase, rbowen
-wiki_category: Networking
-wiki_title: Networking in too much detail
-wiki_revision_count: 6
-wiki_last_updated: 2014-10-30
 ---
 
 # Networking in too much detail

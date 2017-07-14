@@ -2,10 +2,6 @@
 title: Using RDO on TryStack
 category: documentation
 authors: dneary, sgordon
-wiki_category: Documentation
-wiki_title: Using RDO on TryStack
-wiki_revision_count: 8
-wiki_last_updated: 2013-06-05
 ---
 
 # Using RDO on TryStack

@@ -1,9 +1,6 @@
 ---
 title: 2015 February
 authors: rbowen
-wiki_title: Newsletter/2015 February
-wiki_revision_count: 4
-wiki_last_updated: 2015-02-05
 ---
 
 # 2015 February

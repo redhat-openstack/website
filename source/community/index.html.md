@@ -2,10 +2,6 @@
 title: Get involved
 category: community
 authors: beni, dneary, mrunge, rbowen, strider, dmsimard
-wiki_category: Community
-wiki_title: Get involved
-wiki_revision_count: 49
-wiki_last_updated: 2015-08-10
 ---
 
 # Get involved

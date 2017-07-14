@@ -2,10 +2,6 @@
 title: SELinux issues
 category: documentation
 authors: dneary, lon, vaneldik
-wiki_category: Documentation
-wiki_title: SELinux issues
-wiki_revision_count: 7
-wiki_last_updated: 2014-01-10
 ---
 
 # SELinux issues

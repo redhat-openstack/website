@@ -1,9 +1,6 @@
 ---
 title: Packstack
 authors: rbowen
-wiki_title: Packstack cookbook
-wiki_revision_count: 5
-wiki_last_updated: 2013-11-21
 ---
 
 # Packstack
