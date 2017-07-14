@@ -1,9 +1,6 @@
 ---
 title: Neutron with existing external network
 authors: dneary, fale, javexed, mangelajo, mrunge, rbowen
-wiki_title: Neutron with existing external network
-wiki_revision_count: 12
-wiki_last_updated: 2015-06-17
 ---
 
 # Neutron with existing external network
@@ -12,7 +9,7 @@ Many people have asked how to use packstack --allinone with an existing external
 
 These instructions have been tested on Centos 7.
 
-Initially, follow the [Quickstart](/install/quickstart/) but stop when you see the first "packstack --allinone" at Step 3, instead do:
+Initially, follow the [Quickstart](/install/packstack/) but stop when you see the first "packstack --allinone" at Step 3, instead do:
 
     # packstack --allinone --provision-demo=n --os-neutron-ovs-bridge-mappings=extnet:br-ex --os-neutron-ovs-bridge-interfaces=br-ex:eth0 --os-neutron-ml2-type-drivers=vxlan,flat
 

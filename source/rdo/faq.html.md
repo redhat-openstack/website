@@ -3,10 +3,6 @@ title: Frequently Asked Questions
 category: documentation
 authors: amuller, beni, dneary, garrett, jasonbrooks, jruzicka, jwinn, kashyap, rbowen,
   sgordon
-wiki_category: Documentation
-wiki_title: Frequently Asked Questions
-wiki_revision_count: 42
-wiki_last_updated: 2014-10-07
 ---
 
 # Frequently Asked Questions
@@ -22,7 +18,7 @@ RDO aims to be the natural option for anyone that wants to run the most recently
 ## What does RDO stand for?
 
 RDO is the RPM Distribution of OpenStack. It's a group of Rediculously
-Dedicated OpenStackers who are here to help you [Rapidly Deploy OpenStack](/install/quickstart/),
+Dedicated OpenStackers who are here to help you [Rapidly Deploy OpenStack](/install/packstack/),
 in a way that is Really Darned Obvious. RDO is [Rebuilt
 Daily](http://trunk.rdoproject.org), Regularly Delivered, OpenStack.
 
@@ -70,7 +66,7 @@ You have multiple options, including:
 
 1. For production environments, consider [TripleO](/tripleo) to provision bare-metal machines and deploy a production cloud environment.
 
-2. For proof of concept (PoC) environments, Packstack, an installation utility which uses Puppet modules to deploy OpenStack, is the primary tool. Instructions on installing RDO with Packstack are available on the [Packstack quickstart](/install/quickstart) page.
+2. For proof of concept (PoC) environments, Packstack, an installation utility which uses Puppet modules to deploy OpenStack, is the primary tool. Instructions on installing RDO with Packstack are available on the [Packstack quickstart](/install/packstack) page.
 
 3. For manual deployments using RDO packages, read the upstream [OpenStack Installation Tutorial for Red Hat Enterprise Linux and CentOS](https://docs.openstack.org/ocata/install-guide-rdo/).
 

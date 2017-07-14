@@ -12,15 +12,14 @@ schedule](https://www.rdoproject.org/community/rdo-bugtriage/).
 
 The (tentative) test day schedule is:
 
-* [Jun 15, 16 Pike 2 test day](/testday/pike/milestone2) (for Jun 05 - Jun 09 Pike-2 milestone)
-* Aug 3, 4 Pike 3 test day (for Jul 24 - Jul 28 Pike-3 milestone)
+* [Aug 3, 4 Pike 3 test day](/testday/pike/milestone3) (for Jul 24 - Jul 28 Pike-3 milestone)
 * Sep 7, 8 Pike final test day (for Aug 28 - Sep 01 Pike release)
 
 ## Test, every day
 
 Of course, you don't have to wait for a scheduled test day to test RDO.
 We would love to hear about your experiences, with either a [Packstack
-installation](/install/quickstart) or the [TripleO
+installation](/install/packstack) or the [TripleO
 Quickstart](/tripleo).
 
 We also encourage you to work through the [upstream installation

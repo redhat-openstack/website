@@ -1,9 +1,6 @@
 ---
 title: Post Installation Tests
 authors: dron, rbowen
-wiki_title: Post Installation Tests
-wiki_revision_count: 6
-wiki_last_updated: 2014-10-01
 ---
 
 # Post Installation Tests

@@ -6,7 +6,7 @@ title: Workflow overview and infrastructure
 
 During the cycle of a given OpenStack release, we have the following recurring activities:
 
-- [New packages are created when needed](https://www.rdoproject.org/documentation/rdo-packaging/#how-to-add-a-new-package-to-rdo-trunk).
+- [New packages are created when needed](https://www.rdoproject.org/documentation/add-packages/).
 - Each package is rebuilt anytime a new commit is available in the repository upstream on the RDO Trunk builder.
   - If the package build fails, a review is automatically opened in our [Gerrit review system](https://review.rdoproject.org), so the package maintainers can work on a fix.
 - Periodically, the latest repository where all packages had been successfully built goes through a number of CI jobs. If all jobs are successful, the repository is _promoted_, meaning it is considered as good enough for other upstream CIs to rely on it for their jobs.

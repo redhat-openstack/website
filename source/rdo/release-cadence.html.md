@@ -1,9 +1,6 @@
 ---
 title: Release-Cadence
 authors: apevec, kashyap, larsks, snecklifter
-wiki_title: Release-Cadence
-wiki_revision_count: 6
-wiki_last_updated: 2016-01-20
 ---
 
 # Release-cadence

@@ -1,9 +1,6 @@
 ---
 title: Enabling Migrations
 authors: dansmith
-wiki_title: Enabling Migrations
-wiki_revision_count: 4
-wiki_last_updated: 2014-04-24
 ---
 
 # Enabling Migrations

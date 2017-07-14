@@ -1,9 +1,6 @@
 ---
 title: CentOS
 authors: rbowen
-wiki_title: CentOS
-wiki_revision_count: 4
-wiki_last_updated: 2014-01-13
 ---
 
 # CentOS

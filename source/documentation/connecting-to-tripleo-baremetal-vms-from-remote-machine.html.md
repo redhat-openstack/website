@@ -2,10 +2,6 @@
 title: Connecting to TripleO Baremetal VMs from remote machine
 category: documentation
 authors: bcrochet, rbowen
-wiki_category: Documentation
-wiki_title: Connecting to TripleO Baremetal VMs from remote machine
-wiki_revision_count: 8
-wiki_last_updated: 2015-05-26
 ---
 
 # Connecting to TripleO Baremetal VMs from remote machine

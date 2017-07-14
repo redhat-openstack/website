@@ -1,9 +1,6 @@
 ---
 title: User stories
 authors: dneary, rbowen
-wiki_title: User stories
-wiki_revision_count: 12
-wiki_last_updated: 2015-04-09
 ---
 
 # User stories

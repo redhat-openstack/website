@@ -2,10 +2,6 @@
 title: Getting Started
 category: documentation
 authors: dneary, rbowen
-wiki_category: Documentation
-wiki_title: Getting Started
-wiki_revision_count: 5
-wiki_last_updated: 2013-06-22
 ---
 
 # Getting Started

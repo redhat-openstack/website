@@ -10,7 +10,7 @@ date: 2016-11-22 11:10:15 UTC
 
 [Tempest](http://docs.openstack.org/developer/tempest/overview.html) is a set of integration tests to run against an OpenStack cluster. In this blog I'm going to show you, how to install tempest from git repository, how to install all requirements and run tests against an OpenStack cluster.
 
-I'm going to use a fresh installation of [Centos7](https://www.centos.org/download/) and OpenStack cluster provided by [packstack](https://www.rdoproject.org/install/quickstart/). If you've done that, follow the instructions below.
+I'm going to use a fresh installation of [Centos7](https://www.centos.org/download/) and OpenStack cluster provided by [packstack](https://www.rdoproject.org/install/packstack/). If you've done that, follow the instructions below.
 
 # Tempest Installation
 You have two options how to install tempest. You can install it through RPM or you can clone tempest from GitHub repository. If you choose installation through RPM, follow [this link](https://www.rdoproject.org/blog/2016/09/running-tempest-on-rdo-openstack-newton/).
@@ -115,7 +115,7 @@ About `tempest.conf` and what it is used for you can read in [this documentation
 If you want to create `tempest.conf` let `config_tempest.py` do it for you. The tool is part of RPM tempest ([check this documentation](https://www.rdoproject.org/blog/2016/09/running-tempest-on-rdo-openstack-newton/)) or if you don’t want to install tempest globally, you can clone [RedHat's tempest fork](https://github.com/redhat-openstack/tempest/) and install it within a virtual environment as it was explained above.
 
 ### RedHat's tempest fork
-Create a virtual environment as I already mentioned and `source` credentials (if you installed OpenStack cluster by [packstack](https://www.rdoproject.org/install/quickstart/) credentials are saved in `/root/`):
+Create a virtual environment as I already mentioned and `source` credentials (if you installed OpenStack cluster by [packstack](https://www.rdoproject.org/install/packstack/) credentials are saved in `/root/`):
 
     (.venv) $ source /root/keystone_admin
 

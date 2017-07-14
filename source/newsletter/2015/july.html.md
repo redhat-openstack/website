@@ -1,9 +1,6 @@
 ---
 title: 2015 July
 authors: rbowen
-wiki_title: Newsletter/2015 July
-wiki_revision_count: 5
-wiki_last_updated: 2015-07-01
 ---
 
 # 2015 July

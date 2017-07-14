@@ -1,5 +1,5 @@
 ---
-title: RDO: Delivery pipeline
+title: Delivery pipeline
 author: hguemar
 ---
 
