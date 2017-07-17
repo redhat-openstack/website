@@ -36,7 +36,7 @@ gem 'middleman-deploy'
 gem "middleman-favicon-maker"
 
 # HTML & XML parsing smarts
-gem "nokogiri"
+gem "nokogiri", "~> 1.6.0"
 gem 'mini_portile'
 
 # Syntax highlighting
