@@ -48,7 +48,9 @@ and comment all releases where package should be built, as for example:
     * Once the projects are created, the change will be merged in rdoinfo project.
 
 3. Create a new review to the new distgit project with the needed content (spec
+
 file, etc...) for the initial import as in [this example](https://review.rdoproject.org/r/#/c/7645/).
+
 This will trigger a CI job to test the package build.
 
 4. Once the initial distgit import is merged, go back to the Package Review
@@ -75,7 +77,9 @@ help to add new packages, you can ask on `#rdo` or `rdo-list` mailing list.
 
 Adding a new puppet module to RDO Trunk is done using the same process as adding a new
 package to RDO Trunk with a few small differences. Use the following steps referencing the above
+
 [How to add a new package to RDO Trunk](#how-to-add-a-new-openstack-package-to-rdo-trunk)
+
 for details on submitting a new puppet module. The steps here correspond to the
 steps above offering details specific to puppet modules.
 

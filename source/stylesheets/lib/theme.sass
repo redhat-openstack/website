@@ -367,6 +367,7 @@ body > section
 /* Some trickiness for the faint red lines behind the headers
 
 #bodyContent
+
   $offsetWidth: 33.3333333vw
   $blocksWidth: 12vw
   $pullWidth: $offsetWidth - $blocksWidth
@@ -399,6 +400,7 @@ body > section
       left: 0
       top: -14px // -( line-height + (bar-height * 1.5) )
       z-index: 0
+
 
   @mixin header-pull($hp-pullWidth, $hp-offset)
     margin-left: calc(-#{$hp-pullWidth} - #{$hp-offset})
@@ -479,6 +481,35 @@ body > section
         border-color: #eccece
       > .mw-headline
         background-color: #eeeeee
+
+
+
+  .bg-boxes
+    &:not(.bg-boxes-single)
+      .block-heading
+        @extend .col-sm-7
+        @extend .col-sm-offset-4
+        @extend .pad-sides
+        @extend .begin-content
+
+      .row
+        @extend .pull-s
+
+        &:nth-child(5n + 2),
+        &:nth-child(5n + 4)
+          @extend .pull-m
+
+        &:nth-child(5n + 3)
+          @extend .pull-l
+
+    &.bg-boxes-single
+      .block-heading
+        @extend .col-sm-8
+        @extend .col-sm-offset-3
+        @extend .pull-s
+
+  .block-highlight h2 > .mw-headline
+    background-color: #eeeeee
 
 
 .forum-blurbs

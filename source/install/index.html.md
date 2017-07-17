@@ -39,6 +39,7 @@ For an initial test deployment, follow the [Packstack quickstart](/install/packs
 <div class="split-third with-more">
 ### VMs and images
 
+
 *   [Launching your first VM](https://docs.openstack.org/user-guide/dashboard-launch-instances.html) &ndash; OpenStack upstream documentation
 *   [Image resources](/resources/image-resources/)
 </div>
