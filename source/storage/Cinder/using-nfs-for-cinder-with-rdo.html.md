@@ -1,9 +1,6 @@
 ---
 title: Using NFS for Cinder with RDO
 authors: yrabl
-wiki_title: Using NFS for Cinder with RDO
-wiki_revision_count: 2
-wiki_last_updated: 2014-01-06
 ---
 
 # Using NFS for Cinder with RDO

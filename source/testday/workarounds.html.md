@@ -4,9 +4,6 @@ authors: apevec, arifali, avladu, dustymabe, eglynn, ekuris, eyepv6, fbayhan, fl
   hma, iovadia, jpichon, jruzicka, kashyap, larsks, mmagr, pixelbeat, rbowen, rdo,
   rohara, rwmjones, sasha, shardy, sschinna, stoner, stzilli, tshefi, vaneldik, weshayutin,
   whayutin, xqueralt
-wiki_title: Workarounds
-wiki_revision_count: 100
-wiki_last_updated: 2015-05-07
 ---
 
 # Workarounds

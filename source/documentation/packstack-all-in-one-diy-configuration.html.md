@@ -2,10 +2,6 @@
 title: PackStack All-in-One DIY Configuration
 category: documentation
 authors: beagles, pixelbeat, psavage, rohara, tosky
-wiki_category: Documentation
-wiki_title: PackStack All-in-One DIY Configuration
-wiki_revision_count: 24
-wiki_last_updated: 2014-09-01
 layout: toc
 ---
 # PackStack All-in-One DIY Configuration

@@ -1,9 +1,6 @@
 ---
 title: Neutron GBP
 authors: rkukura
-wiki_title: Neutron GBP
-wiki_revision_count: 21
-wiki_last_updated: 2015-02-08
 ---
 
 # Neutron GBP

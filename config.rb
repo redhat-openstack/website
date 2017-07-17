@@ -168,11 +168,6 @@ ready do
 
   proxy '/blog/feed.xml', 'feed.xml', ignore: false
   proxy '/blog/tag/index.html', 'tag.html', ignore: true
-
-  sitemap.resources.reject { |p| p.data.wiki_title.nil? }.each do |p|
-    next unless p.data.wiki_title.match(/^category:/i)
-    page p.path, layout: 'category'
-  end
 end
 
 ###

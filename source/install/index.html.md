@@ -2,10 +2,6 @@
 title: Install
 category: documentation,install
 authors: cbrown ocf, dansmith, dneary, edmv, radez, rbowen, rlandy, slagle, snecklifter
-wiki_category: Documentation
-wiki_title: Install
-wiki_revision_count: 20
-wiki_last_updated: 2016-01-07
 ---
 
 # Installing and configuring RDO
@@ -36,7 +32,6 @@ For an initial test deployment, follow the [Packstack quickstart](/install/packs
 ### Configuration
 
 *   [Adding a compute node](/install/adding-a-compute-node/)
-*   [Setting up high availability](/ha/)
 </div>
 </div>
 
@@ -44,9 +39,9 @@ For an initial test deployment, follow the [Packstack quickstart](/install/packs
 <div class="split-third with-more">
 ### VMs and images
 
-*   [Launching your first VM](https://docs.openstack.org/user-guide/dashboard-launch-instances.html) - Upstream documentation
+
+*   [Launching your first VM](https://docs.openstack.org/user-guide/dashboard-launch-instances.html) &ndash; OpenStack upstream documentation
 *   [Image resources](/resources/image-resources/)
-*   [Creating CentOS and Fedora images ready for Openstack](/resources/creating-centos-and-fedora-images-ready-for-openstack/)
 </div>
 
 <div class="split-third with-more">

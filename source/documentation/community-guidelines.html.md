@@ -2,10 +2,6 @@
 title: Community guidelines
 category: documentation
 authors: dneary, garrett twitter
-wiki_category: Community
-wiki_title: Community guidelines
-wiki_revision_count: 2
-wiki_last_updated: 2013-04-07
 ---
 
 # Community guidelines

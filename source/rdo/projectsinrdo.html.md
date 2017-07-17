@@ -1,9 +1,6 @@
 ---
 title: ProjectsInRDO
 authors: ggillies, hguemar, ihrachys
-wiki_title: ProjectsInRDO
-wiki_revision_count: 13
-wiki_last_updated: 2015-07-31
 ---
 
 # Projects in RDO

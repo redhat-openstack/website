@@ -3,10 +3,6 @@ title: Packstack quickstart
 category: documentation
 authors: apevec, dneary, garrett, jasonbrooks, jlibosva, mmagr, pixelbeat, pmyers,
   rbowen, gbraad, cbrown2
-wiki_category: Documentation
-wiki_title: Quickstart
-wiki_revision_count: 141
-wiki_last_updated: 2015-06-30
 ---
 
 # Packstack: Create a proof of concept cloud

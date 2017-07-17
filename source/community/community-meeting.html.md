@@ -12,6 +12,9 @@ etherpad](https://etherpad.openstack.org/p/RDO-Meeting).
 
 The minutes for these meetings are below:
 
+
+* [Jul 12, 2017](https://www.redhat.com/archives/rdo-list/2017-July/msg00022.html)
+* [Jul 5, 2017](https://www.redhat.com/archives/rdo-list/2017-July/msg00009.html)
 * [Jun 14, 2017](https://www.redhat.com/archives/rdo-list/2017-June/msg00040.html)
 * [Jun 7, 2017](https://www.redhat.com/archives/rdo-list/2017-June/msg00011.html)
 * [May 24, 2017](https://www.redhat.com/archives/rdo-list/2017-May/msg00053.html)
