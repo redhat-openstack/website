@@ -36,7 +36,7 @@ gem 'middleman-deploy'
 gem "middleman-favicon-maker"
 
 # HTML & XML parsing smarts
-gem "nokogiri"
+gem "nokogiri", "~> 1.6.0"
 gem 'mini_portile'
 
 # Syntax highlighting
@@ -65,6 +65,9 @@ gem "bootstrap-sass"
 
 #####
 # Formats
+
+# haml
+gem "haml", "~> 4.0"
 
 # less (css)
 gem "therubyracer"
