@@ -125,6 +125,8 @@ with_layout :feature do
   page "/md/source/feature/*" # Temporary dir
 end
 
+proxy 'stats.html', '/dashboard.html'
+
 # Don't make these URLs have pretty URLs
 page '/404.html', directory_index: false
 page '/.htacces.html', directory_index: false
