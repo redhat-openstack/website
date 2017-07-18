@@ -141,7 +141,7 @@ $ git checkout -b <issue name>
 * Make changes in the code and add the changed files to git.
 
 ```
-$ git add <chanaged files>
+$ git add <changed files>
 ```
 * Commit the changes
 
