@@ -39,7 +39,7 @@ to get ready:
 * All the development and communication related to the RDO Project happens on
   the `#rdo` IRC channel on Freenode. Click [this link](http://webchat.freenode.net/?channels=#rdo)
   to join the channel and feel free to say Hello! We are always there to help.
-* Feel free to check out the [IRC etiquette](https://www.rdoproject.org/community/irc-etiquette/)
+* Feel free to check out the [IRC etiquette](https://www.rdoproject.org/contribute/irc-etiquette/)
   guide.
 
  <a name="github-account"/>

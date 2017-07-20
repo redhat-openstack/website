@@ -34,7 +34,7 @@ be provided by RDO repositores. Note that it's required that these packages exis
 in Fedora so that they can be rebuilt with minimal changes (if any).
 
 If you have questions or special requests, don't hesitate in contacting RDO using our
-[mailing lists](/community/mailing-lists/) or #rdo channel in freenode.
+[mailing lists](/contribute/mailing-lists/) or #rdo channel in freenode.
 
 ### Adding a new requirement to RDO
 
@@ -139,4 +139,4 @@ send a [request to get it updated in RDO repos](https://bugzilla.redhat.com/ente
 ## Contact us
 
 If you have questions or special requests about requirements, don't hesitate to contact RDO community members using our
-[mailing lists](/community/mailing-lists/) or #rdo channel in freenode.
+[mailing lists](/contribute/mailing-lists/) or #rdo channel in freenode.

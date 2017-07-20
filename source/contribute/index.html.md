@@ -49,9 +49,9 @@ Our community strives to operate according to the terms of the
 
 ## People person
 
-* [Join the RDO mailing lists](/community/mailing-lists)
+* [Join the RDO mailing lists](/contribute/mailing-lists)
 * Chat on #rdo on Freenode
-* [Participate in weekly meetings](/community/community-meeting)
+* [Participate in weekly meetings](/contribute/community-meeting)
 * [Join upcoming events](/events)
 * [More&hellip;](#discuss){:.more}
 {:.with-more-link}
@@ -93,8 +93,8 @@ Come chat in real-time with RDO users on **IRC** on the [Freenode](http://freeno
 
 We have weekly IRC meetings you can participate in:
 
-* [RDO meetings @ every Wednesday at 15:00 UTC on #rdo](/community/community-meeting)
-* [CentOS Cloud SIG meetings @ every Thursday at 15:00 UTC on #centos-devel](/community/cloud-sig-meeting)
+* [RDO meetings @ every Wednesday at 15:00 UTC on #rdo](/contribute/community-meeting)
+* [CentOS Cloud SIG meetings @ every Thursday at 15:00 UTC on #centos-devel](/contribute/cloud-sig-meeting)
 
 Join us for various [events](/events/) around the world. [Organize your own meetup](/community/organize-a-meetup/). If you run a meetup group, or if you're speaking at a meetup [here's some of the ways we can help out](https://www.rdoproject.org/events/meetup_assistance/).
 
@@ -105,7 +105,7 @@ Join us for various [events](/events/) around the world. [Organize your own meet
 - Check our [Frequently Asked Questions (FAQ) page](/rdo/faq/) for answers to common questions
 - Try our [troubleshooting page](/troubleshooting/) for solutions to common problems
 - Watch [RDO videos](/rdo/rdo-videos). These include recorded talks and community events.
-- Help improve our knowledge base by turning the best answers to questions on the [mailing lists](/community/mailing-lists/) or on [ask.openstack.org](http://ask.openstack.org) into a page in our [troubleshooting section](/troubleshooting/). In case of ask.openstack.org, a link might be sufficient.
+- Help improve our knowledge base by turning the best answers to questions on the [mailing lists](/contribute/mailing-lists/) or on [ask.openstack.org](http://ask.openstack.org) into a page in our [troubleshooting section](/troubleshooting/). In case of ask.openstack.org, a link might be sufficient.
 - Blog about how you're using RDO. If you blog frequently about RDO and OpenStack, consider [requesting that your blog be added](https://wiki.openstack.org/wiki/AddingYourBlog) to the upstream [Planet OpenStack](http://planet.openstack.org/).
 - [Fork the website on Github](https://github.com/redhat-openstack/website) and help us improve our documentation.
 
