@@ -25,7 +25,7 @@ Since RDO sticks closely to the upstream OpenStack project, the documentation at
 ## About RDO
 
 * [FAQ](/rdo/faq/)
-* [Mailing lists](/community/mailing-lists/)
+* [Mailing lists](/contribute/mailing-lists/)
 * [Legal & privacy](/legal/)
 
 </div>

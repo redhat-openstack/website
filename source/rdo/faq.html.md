@@ -72,7 +72,7 @@ You have multiple options, including:
 
 ## Where can I find help with RDO?
 
-You can find documentation and get help through [ask.openstack.org](https://ask.openstack.org/), [IRC](/community/#discuss), or [mailing lists](/community/mailing-lists/) and from others in the RDO community. And don't hesitate to answer someone else's question if you know the answer. You can find all of the ways you can get involved in the RDO community at [Get involved](/community/).
+You can find documentation and get help through [ask.openstack.org](https://ask.openstack.org/), [IRC](/community/#discuss), or [mailing lists](/contribute/mailing-lists/) and from others in the RDO community. And don't hesitate to answer someone else's question if you know the answer. You can find all of the ways you can get involved in the RDO community at [Get involved](/community/).
 
 ## Can I buy commercial support for RDO?
 
