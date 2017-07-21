@@ -40,6 +40,7 @@ Since RDO sticks closely to the upstream OpenStack project, the documentation at
 
 * [Image resources](/resources/image-resources/)
 * [Adding a compute node](/install/adding-a-compute-node/)
+* [Cheatsheet bookmarks](/use/bookmarks)
 * [More&hellip;](/install/){:.more}
 {:.with-more-link}
 
