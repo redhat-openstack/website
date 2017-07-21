@@ -20,6 +20,7 @@ to get ready:
 
 ## What's Next!
 * [Make your first contribution](#first-contribution)
+* [How to fix git Merge conflicts](#merge-conflict)
 * [Review RDO patches](#review-rdo)
 * [Become an RDO package maintainer.](#pkg-maintainer)
 
@@ -167,6 +168,14 @@ Running `git review` will create an RDO Gerrit review link, and someone from
 RDO project will review the changes. Once everything looks fine, and is
 approved, your changes will get merged, and you'll have made your first
 contribution. Thanks!
+
+<a name="merge-conflict"/>
+
+### How to fix git Merge conflicts?
+You have submitted a patch and got merge conflict on your patch.
+You can check this link on how to [resolving merge conflicts][conflict].
+
+[conflict]: https://docs.openstack.org/contributor-guide/additional-git-workflow/rebase.html
 
 <a name="review-rdo"/>
 
