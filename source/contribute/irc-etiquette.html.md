@@ -4,8 +4,7 @@ title: IRC etiquette
 
 # IRC etiquette
 
-Also see [the general IRC document](/community/irc) for more
-information.
+Also see [the general IRC document](/contribute/irc) for more information.
 
 ## IRC communication guidelines and etiquette
 
