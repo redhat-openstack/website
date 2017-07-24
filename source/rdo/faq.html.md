@@ -48,7 +48,7 @@ The OpenStack project develops code, and does not handle packaging for specific 
 
 Sign up to [ask.openstack](https://ask.openstack.org/) and help others with their RDO questions. Add your [user stories](/user-stories/). Take well answered questions from ask.openstack and turn them into howto documents on the [RDO documentation](/documentation/) pages.
 
-Feel free to contribute any packaging and integration patches via our developer mailing lists, or propose improvements to OpenStack on the upstream Launchpad page. For more information, see [getting involved](/community/).
+Feel free to contribute any packaging and integration patches via our developer mailing lists, or propose improvements to OpenStack on the upstream Launchpad page. For more information, see [getting involved](/contribute/).
 
 ## Is RDO a fork of OpenStack?
 
@@ -72,7 +72,7 @@ You have multiple options, including:
 
 ## Where can I find help with RDO?
 
-You can find documentation and get help through [ask.openstack.org](https://ask.openstack.org/), [IRC](/community/#discuss), or [mailing lists](/contribute/mailing-lists/) and from others in the RDO community. And don't hesitate to answer someone else's question if you know the answer. You can find all of the ways you can get involved in the RDO community at [Get involved](/community/).
+You can find documentation and get help through [ask.openstack.org](https://ask.openstack.org/), [IRC](/contribute/#discuss), or [mailing lists](/contribute/mailing-lists/) and from others in the RDO community. And don't hesitate to answer someone else's question if you know the answer. You can find all of the ways you can get involved in the RDO community at [Get involved](/contribute/).
 
 ## Can I buy commercial support for RDO?
 

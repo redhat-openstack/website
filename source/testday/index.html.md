@@ -5,8 +5,7 @@ milestone. See the [release
 schedule](http://releases.openstack.org/pike/schedule.html) for when
 those milestones occur.
 
-See also the [bug triage
-schedule](https://www.rdoproject.org/community/rdo-bugtriage/).
+See also the [bug triage schedule](/contribute/rdo-bugtriage/).
 
 ## Upcoming test days
 
