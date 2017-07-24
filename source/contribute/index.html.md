@@ -96,7 +96,7 @@ We have weekly IRC meetings you can participate in:
 * [RDO meetings @ every Wednesday at 15:00 UTC on #rdo](/contribute/community-meeting)
 * [CentOS Cloud SIG meetings @ every Thursday at 15:00 UTC on #centos-devel](/contribute/cloud-sig-meeting)
 
-Join us for various [events](/events/) around the world. [Organize your own meetup](/community/organize-a-meetup/). If you run a meetup group, or if you're speaking at a meetup [here's some of the ways we can help out](https://www.rdoproject.org/events/meetup_assistance/).
+Join us for various [events](/events/) around the world. [Organize your own meetup](/contribute/organize-a-meetup/). If you run a meetup group, or if you're speaking at a meetup [here's some of the ways we can help out](/events/meetup_assistance/).
 
 <a name="ask-and-answer"/>
 
@@ -133,6 +133,6 @@ Help improve the documentation and website! The main pages for contributed conte
 Here are a few guidelines for contributing new content to the website:
 
 *   Please [search](/search/) first to check if there is a similar page which you can update.
-*   Use normal English case for page names. [Get involved](/community/) is correct, [Get Involved](/community/) is not.
+*   Use normal English case for page names. [Get involved](/contribute/) is correct, [Get Involved](/contribute/) is not.
 *   Please keep the website content connected! When you add a new page, add a link to it from the appropriate page(s).
 *   Please be aware of our [terms of use](/legal/terms-of-use/) — among other things, you agree to license your contributions under the [Creative Commons Attribution License version 3.0](http://creativecommons.org/licenses/by/3.0/), and you agree not to submit illegal content.
