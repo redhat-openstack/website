@@ -17,9 +17,9 @@ A quick way to test that your `$VIRTHOST` machine is ready to rock is:
 
 The defaults are meant to *just work*, so it is as easy as downloading and running the `quickstart.sh` script.
 
-The `quickstart.sh` script will install this repo along with Ansible in a virtual environment and run the `quickstart` playbook.
+    $ wget https://raw.githubusercontent.com/openstack/tripleo-quickstart/master/quickstart.sh
 
-The ```quickstart.sh``` script also has some dependencies that must be installed on the local system before it can run. You can install the necessary dependencies by running:
+The `quickstart.sh` script will install this repo along with Ansible in a virtual environment and run the `quickstart` playbook. The script also has some dependencies that must be installed on the local system before it can run. You can install the necessary dependencies by running:
 
 ```
 $ sudo bash quickstart.sh --install-deps
