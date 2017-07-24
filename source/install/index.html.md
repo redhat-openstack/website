@@ -53,7 +53,7 @@ For an initial test deployment, follow the [Packstack quickstart](/install/packs
 ### Hardware
 
 * [Recommended hardware configuration](/hardware/recommended)
-* [What are you running at hime?](/hardware/home/)
+* [What are you running at home?](/hardware/home/)
 * [RDO mini-cluster](/hardware/minicluster)
 
 </div>
