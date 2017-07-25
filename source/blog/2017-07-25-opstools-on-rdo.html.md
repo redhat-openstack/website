@@ -24,40 +24,16 @@ While the OpsTools are created for the CentOS community, it is also applicable a
 
 The centralized logging has the following components:
 
-|
+
 - A Log Collection Agent (Fluentd)
- |
-| --- |
-|   |
-
-|
 - A Log relay/transformer (Fluentd)
- |
-| --- |
-|   |
-
-|
 - A Data store (Elasticsearch)
- |
-| --- |
-|   |
-
 - An API/Presentation Layer (Kibana)
 
 With the minimum hardware requirement:
 
-|
 - 8GB of Memory
- |
-| --- |
-|   |
-
-|
 - Single Socket Xeon Class CPU
- |
-| --- |
-|   |
-
 - 500GB of Disk Space
 
 Detailed instruction to install can be found [here](https://github.com/centos-opstools/opstools-doc/blob/master/centralised-logging.txt).
