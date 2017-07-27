@@ -1,9 +1,6 @@
 ---
 title: Using GlusterFS for Cinder with RDO Liberty
 authors: coolsvap
-wiki_title: Using GlusterFS for Cinder with RDO Liberty
-wiki_revision_count: 1
-wiki_last_updated: 2015-10-15
 ---
 
 # Using GlusterFS for Cinder with RDO

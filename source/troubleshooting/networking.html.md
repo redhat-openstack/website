@@ -2,10 +2,6 @@
 title: Networking
 category: troubleshooting
 authors: dneary, forrest, palmtown, rbowen
-wiki_category: Troubleshooting
-wiki_title: Networking
-wiki_revision_count: 27
-wiki_last_updated: 2013-12-19
 ---
 
 # Network troubleshooting

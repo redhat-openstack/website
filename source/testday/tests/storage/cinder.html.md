@@ -1,9 +1,6 @@
 ---
 title: Cinder Test
 authors: gfidente, yrabl, snecklifter
-wiki_title: Tests/Storage/Cinder
-wiki_revision_count: 19
-wiki_last_updated: 2015-01-20
 ---
 
 # Cinder Test

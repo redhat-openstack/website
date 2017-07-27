@@ -1,9 +1,6 @@
 ---
 title: 2014 December
 authors: rbowen
-wiki_title: Newsletter/2014 December
-wiki_revision_count: 1
-wiki_last_updated: 2014-12-02
 ---
 
 # 2014 December

@@ -23,3 +23,6 @@ data/dashboard/projects
 
 # Ignore pycharm
 .idea*
+
+# ignore Gemfile.lock
+Gemfile.lock

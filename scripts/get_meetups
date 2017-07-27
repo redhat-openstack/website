@@ -69,7 +69,7 @@ mlist = open('meetups.mlist', 'w')
 yml = open('meetups.yml', 'w')
 
 # Standard intro to mailing list post
-mlist.write( '''The following are the meetups I'm aware of in the coming week where
+mlist.write( '''The following are the meetups I'm aware of in the next two weeks where
 OpenStack and/or RDO enthusiasts are likely to be present. If you know
 of others, please let me know, and/or add them to
 http://rdoproject.org/events
@@ -78,7 +78,7 @@ If there's a meetup in your area, please consider attending. If you
 attend, please consider taking a few photos, and possibly even writing
 up a brief summary of what was covered.
 
---Rain
+--Rich
 
 ''')
 
@@ -119,21 +119,6 @@ for meetup in meetups:
         and (re.search(keyword, meetup['event_url'], re.IGNORECASE) == None):
         continue
 
-    # For the wiki ...
-    # eventout = "* " + t + ' [' + meetup['event_url'] + ' ' + meetup['name'] + "], " + grp['city'] + ', '
-    # if 'state' in grp.keys():
-        # eventout = eventout + grp['state'] + ', '
-    # eventout = eventout + grp['country'] + "\n"
-    # wiki.write( str(eventout) )
-
-    # For Markdown ...
-    # eventout = "* " + t + ' [' + meetup['name'] + '](' + meetup['event_url'] + '), ' 
-    # eventout = eventout + grp['city'] + ', '
-    # if 'state' in grp.keys():
-    #    eventout = eventout + grp['state'] + ', '
-    # eventout = eventout + grp['country'] + "\n"
-    # md.write( str(eventout) )
-
     # For yml
     mname = meetup['name']
     mname = mname.replace(':','')
@@ -157,7 +142,14 @@ for meetup in meetups:
     eventout = eventout + "\n"
     yml.write( str(eventout) )
 
-    # For everything else, a week is enough
+    # For mailing list
+    eventout = '* ' + t + ' in ' + grp['city'] + ', '
+    if 'state' in grp.keys():
+        eventout = eventout + grp['state'] + ', '
+    eventout = eventout + grp['country'] + ': ' + meetup['name'] + ' - ' + meetup['event_url'] + "\n\n"
+    mlist.write( str( eventout ))
+
+    # For Twitter, a week is enough
     if eventts > weeklater:
         continue
 
@@ -167,13 +159,6 @@ for meetup in meetups:
         eventout = eventout + grp['state'] + ', '
     eventout = eventout + grp['country'] + ': ' + meetup['name'] + '","' + meetup['event_url'] + '"' + "\n"
     tweets.write( str( eventout ))
-
-    # For mailing list
-    eventout = '* ' + t + ' in ' + grp['city'] + ', '
-    if 'state' in grp.keys():
-        eventout = eventout + grp['state'] + ', '
-    eventout = eventout + grp['country'] + ': ' + meetup['name'] + ' - ' + meetup['event_url'] + "\n\n"
-    mlist.write( str( eventout ))
 
 # Barn door
 tweets.close()

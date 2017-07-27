@@ -1,9 +1,6 @@
 ---
 title: Keystone integration with IDM
 authors: admiyo, dneary, msolberg, rcritten
-wiki_title: Keystone integration with IDM
-wiki_revision_count: 25
-wiki_last_updated: 2014-04-17
 ---
 
 # Keystone integration with IDM
