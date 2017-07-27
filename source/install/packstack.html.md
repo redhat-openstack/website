@@ -3,7 +3,6 @@ title: Packstack
 category: documentation
 authors: apevec, dneary, garrett, jasonbrooks, jlibosva, mmagr, pixelbeat, pmyers,
   rbowen, gbraad, cbrown2
-=======
 ---
 
 # Packstack: Create a proof of concept cloud
