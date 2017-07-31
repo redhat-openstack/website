@@ -9,7 +9,7 @@ We will be holding a RDO test day on August 3 and 4, 2017.
 This will be coordinated through the **#rdo channel on Freenode**, and
 through this website and the [rdo-list](https://www.redhat.com/mailman/listinfo/rdo-list) mailing list.
 
-We'll be testing the second [Pike milestone
+We'll be testing the third [Pike milestone
 release](http://releases.openstack.org/pike/schedule.html). If you can do
 any testing on your own ahead of time, that will help ensure that
 everyone isn't encountering the same problems.
