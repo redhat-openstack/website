@@ -40,6 +40,15 @@ documentation, to helping promote events. Whatever your skills are, we
 need you on the project. So have a look, and see where you can plug in
 to the community.
 
+## Join us for Test Day!
+
+Milestone 3 of the Pike cycle was released last week, and so it's time
+to test the RDO packages. Join us on Thursday and Friday of this week
+for the [Pike M3 test
+day](https://www.rdoproject.org/testday/pike/milestone3/). We'll be on
+the #RDO channel on the Freenode IRC network to test, help, answer
+questions, and propose solutions.
+
 ## Upcoming Events 
 
 In the next few months there's a number of places where you can meet up
