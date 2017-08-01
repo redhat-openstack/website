@@ -1,7 +1,7 @@
 ---
 title: What's new in ZuulV3
 author: tristanC
-date: 2017-08-01 16:00:00 UTC
+date: 2017-08-01 15:00:00 UTC
 tags: openstack, infra, zuul, software-factory
 comments: true
 published: true
