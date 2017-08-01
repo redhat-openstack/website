@@ -4,7 +4,8 @@ title: IRC etiquette
 
 # IRC etiquette
 
-Also see [the general IRC document](/contribute/irc) for more information.
+Also see [the general IRC document](/contribute/mentors) for more
+suggestions of who you might ask.
 
 ## IRC communication guidelines and etiquette
 
