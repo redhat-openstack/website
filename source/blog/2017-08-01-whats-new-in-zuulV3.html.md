@@ -1,8 +1,10 @@
 ---
 title: What's new in ZuulV3
 author: tristanC
+date: 2017-08-01 16:00:00 UTC
 tags: openstack, infra, zuul, software-factory
-date: 2017-07-31 00:00:00 UTC
+comments: true
+published: true
 ---
 
 [Zuul](https://docs.openstack.org/infra/zuul/) is a program used to
