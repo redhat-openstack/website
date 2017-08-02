@@ -12,8 +12,8 @@ There's a number of upcoming events where RDO enthusiasts will be present. Mark 
 ## Join us for Test Day!
 
 Milestone 3 of the Pike cycle was released last week, and so it's time
-to test the RDO packages. Join us on Thursday and Friday of this week
-for the [Pike M3 test
+to test the RDO packages. Join us on Thursday and Friday of next week
+(August 10th and 11th) for the [Pike M3 test
 day](https://www.rdoproject.org/testday/pike/milestone3/). We'll be on
 the #RDO channel on the Freenode IRC network to test, help, answer
 questions, and propose solutions.
