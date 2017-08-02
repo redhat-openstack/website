@@ -29,6 +29,7 @@ Institute](https://wiki.openstack.org/wiki/OpenStack_Upstream_Institute).
 ### Installation
 
 - amoralej
+- Javier Peña - jpena
 
 ### Networking
 
@@ -39,10 +40,12 @@ Institute](https://wiki.openstack.org/wiki/OpenStack_Upstream_Institute).
 ### Packaging
 
 - amoralej
+- Javier Peña - jpena
 
 ### Infrastructure
 
 - amoralej
+- Javier Peña - jpena
 
 ### Documentation
 
