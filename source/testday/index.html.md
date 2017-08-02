@@ -11,7 +11,7 @@ See also the [bug triage schedule](/contribute/rdo-bugtriage/).
 
 The (tentative) test day schedule is:
 
-* [Aug 3, 4 Pike 3 test day](/testday/pike/milestone3) (for Jul 24 - Jul 28 Pike-3 milestone)
+* <strike>Aug 3, 4</strike> [August 10, 11, Pike 3 test day](/testday/pike/milestone3) (for Jul 24 - Jul 28 Pike-3 milestone)
 * Sep 7, 8 Pike final test day (for Aug 28 - Sep 01 Pike release)
 
 ## Test, every day
