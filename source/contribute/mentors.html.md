@@ -26,6 +26,19 @@ Institute](https://wiki.openstack.org/wiki/OpenStack_Upstream_Institute).
 
 ## Who to ask
 
+### General
+
+- Alfredo Moralejo - amoralej
+- Alan Pevec - apevec
+- Chandan Kumar - chandankumar
+- David Moreau Simard - dmsimard
+- Haikel Guemar - number80
+- Jakub Ružička - jruzicka
+- Javier Pena - jpena
+- Rich Bowen - rbowen
+- Lars Kellogg-Stedman - larsks
+- Jon Schlueter - jschlueter/yazug
+
 ### Installation
 
 - amoralej
