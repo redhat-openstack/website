@@ -19,7 +19,7 @@ We've been running the EasyFix program for about 3 weeks now, and in that time, 
 
 We're very pleased to welcome these new contributors, and hope they'll be around for a long time to come.
 
-**Christopher "snecklifer" Brown** - *I'm Christopher Brown, a HPC Cloud Engineer based in Sheffield in the UK. I've worked on OpenStack since June 2015. I used to work on packaging for the Fedora project so I am transferring and updating those skills to help out with RDO when I can.*
+**Christopher "snecklifter" Brown** - *I'm Christopher Brown, a HPC Cloud Engineer based in Sheffield in the UK. I've worked on OpenStack since June 2015. I used to work on packaging for the Fedora project so I am transferring and updating those skills to help out with RDO when I can.*
 
 **Anthony Chow** - *I am a software developer for legacy networking equipment wanting to be a Developer Advocate.  I have been venturing into other technologies such as cloud, container, and configuration management tools.  Passionate in learning and sharing technologies related topics.*
 
