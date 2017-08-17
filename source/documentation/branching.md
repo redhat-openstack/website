@@ -57,7 +57,7 @@ the package where the new branch is needed:
 If it doesn't have a `branches` sub-section, add it. Inside branches add a new line
 with the branch name:
     
-        <release>-rdo: <commit id for last commit in rpm-master>
+        <release>-rdo: <commit id for last commit in rpm-master in the project distgit>
     
     The commit id of the last commit in the project distgit must be specified as it
     will be used as starting point for the new branch. For example:
