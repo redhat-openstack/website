@@ -21,11 +21,16 @@ Interesting things in the Pike release include:
 
 For cloud operators, RDO now provides packages for some new OpenStack Services:
 
-...
+- [Kuryr](https://github.com/openstack/kuryr) and [Kuryr-kubernetes](https://github.com/openstack/kuryr-kubernetes): an integration between OpenStack and Kubernetes networking.
+- [Senlin](https://github.com/openstack/senlin): a clustering service for OpenStack clouds.
 
 Some other notable additions:
 
-...
+- [Shade](https://github.com/openstack-infra/shade): a simple client library for interacting with OpenStack clouds, used by Ansible among others.
+- [python-pankoclient](https://github.com/openstack/python-pankoclient):  a client library for the event storage and REST API for Ceilometer.
+- [python-scciclient](https://github.com/openstack/python-scciclient): a ServerView Common Command Interface Client Library, for the FUJITSU iRMC S4 - integrated Remote Management Controller.
+- We added OVN support to Packstack.
+- We added support to install the Horizon plugins for several services in Packstack.
 
 **Contributors**
 
