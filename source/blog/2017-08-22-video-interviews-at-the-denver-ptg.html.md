@@ -7,6 +7,8 @@ comments: true
 published: true
 ---
 
+TL;DR: Sign up here: [https://docs.google.com/spreadsheets/d/1KNHuo9Yb5kbjZAYGQ_PAo-YFndD8QTdaKzaPoct_aaU/edit#gid=0](https://docs.google.com/spreadsheets/d/1KNHuo9Yb5kbjZAYGQ_PAo-YFndD8QTdaKzaPoct_aaU/edit#gid=0)
+
 Earlier this year, at the [PTG in Atlanta](https://www.openstack.org/ptg) I did video interviews with some of  the Red Hat engineering who were there.
 
 You can see these videos on the [RDO YouTube channel](https://www.youtube.com/watch?v=5kT-Sv3rkTw&list=PLOuHvpVx7kYksG0NFaCaQsSkrUlj3Oq4S)
