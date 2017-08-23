@@ -1,5 +1,5 @@
 ---
-title: Packstack quickstart
+title: Packstack
 category: documentation
 authors: apevec, dneary, garrett, jasonbrooks, jlibosva, mmagr, pixelbeat, pmyers,
   rbowen, gbraad, cbrown2
