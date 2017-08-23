@@ -49,11 +49,14 @@ and comment all releases where package should be built, as for example:
 
 3. Create a new review to the new distgit project with the needed content (spec
 file, etc...) for the initial import as in [this example](https://review.rdoproject.org/r/#/c/7645/).
-This will trigger a CI job to test the package build.
+This will trigger a CI job to test the package build. The spec will be reviewed by the
+core RDO packagers, and **cannot be approved by the requester**.
 
-4. Once the initial distgit import is merged, go back to the Package Review
+4. Once the initial spec is considered ready to merge by the reviewers, go back to the Package Review
 Bugzilla and update it with the final spec and SRPM. Then, the formal package 
-review will be conducted by the reviewer, who will set the `rdo-review +` flag.
+review will be conducted by the reviewer, who will set the `rdo-review +` flag. Only after
+the `rdo-review +` flag is set in the Bugzilla bug, the initial spec review will be approved
+in Gerrit.
 
 5. Finally, send a new review to rdoinfo project to remove the `under-review` tag and uncomment the required versions where the package must be built ([example](https://review.rdoproject.org/r/#/c/1422/)).
 This change can be sent before merging review in step 3 if a `Depends-On: <gerrit-change-id step 3>`

@@ -2,9 +2,10 @@
 
 ## Quick links:
 
-* [TripleO Quick Start](https://www.rdoproject.org/tripleo/)
-* [All-In-One Quick Start](http://rdoproject.org/quickstart)
+* [TripleO Quickstart](http://rdoproject.org/tripleo)
+* [Packstack](http://rdoproject.org/install/packstack/)
 * [Mailing Lists](https://www.rdoproject.org/contribute/mailing-lists/)
+* [EasyFix](https://github.com/redhat-openstack/easyfix)
 * [RDO release packages](https://trunk.rdoproject.org/)
 * [Review.RDOProject.org](http://review.rdoproject.org/)
 * [RDO blog](http://rdoproject.org/blog)

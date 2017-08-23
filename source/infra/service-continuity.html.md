@@ -43,9 +43,9 @@ The following table details the high-level plan for each service. A link to a de
 
 | Service name  | Criticality           | Contingency plan  | More details |
 | ------------- |:---------------------:| ------------------| -------------|
-|review.rdoproject.org | Medium         | Current: backup to swift in RCIP-DEV. Future: backup to file, uploaded to server in offsite cloud. In case of an outage in the RDO Cloud, rebuild and restore data from backup. | [This URL](https://softwarefactory-project.io/docs/sfmanager.html?highlight=backup#create-a-new-backup) contains details about the backup process (to be updated)|
-| review.rdoproject.org (nodepool-builder) | Medium |   *Rebuild?* | |
-| review.rdoproject.org nodepool nodes | High | Have multiple clouds | Our current nodepool setup includes more than one cloud (RDO Cloud, Trystack and RCIP Cloud, which will be decommissioned). We need to keep more than one cloud in the configuration, to make sure we can always have some available node for nodepool needs.|
+| review.rdoproject.org | Medium         | Current: Periodic rsync from offsite node using the new sf-ops playbook to enable fast recovery. In case of an outage in the RDO Cloud, rebuild and restore data from backup. | [This URL](https://softwarefactory-project.io/docs/backup_restore.html#recover-a-backup) contains details about the backup process|
+| review.rdoproject.org (nodepool-builder) | Medium | Current: restore on the same offsite node | The Software Factory deployment architecture (arch.yaml) can be collapsed to run all the service on a single node (allinone). |
+| review.rdoproject.org nodepool nodes | High | Have multiple clouds | Our current nodepool setup only include one cloud (RDO Cloud). We need to keep more than one cloud in the configuration, to make sure we can always have some available node for nodepool needs. With a static node (or with the nodepool-drivers coming with ZuulV3), some job could still be executed without a cloud. |
 | review.rdo storage + logs | Medium | *Could we live without artifacts for a day or two? Could we lose them completely?* ||
 | RDO Trunk repositories | High | trunk.rdoproject.org runs on the offsite cloud, and hosts the repos created by the DLRN builder instance. In case of an outage in the offsite cloud, we can switch the DNS entry for trunk.rdoproject.org to the DLRN Builder instance in the RDO Cloud, which has the same repositories. ||
 | DLRN Builder instance | Medium | Built repos are synced using rsync to https://trunk.rdoproject.org (in the offsite cloud). ||

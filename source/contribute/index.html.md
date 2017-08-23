@@ -11,6 +11,9 @@ Help us make the RDO community site a great place for users and cloud operators 
 Our community strives to operate according to the terms of the
 [OpenStack Code of Conduct](https://www.openstack.org/legal/community-code-of-conduct/).
 
+If you're just getting started, and are looking for a little help,
+consult our [mentors list](/contribute/mentors).
+
 <div class="splits">
 <div class="split-third with-more">
 
