@@ -17,7 +17,7 @@ All work on RDO, and on the downstream release, Red Hat OpenStack Platform, is 1
 
 Interesting things in the Pike release include:
 
-...
+- [Ironic](https://github.com/openstack/ironic) now supports [booting from Cinder volumes](https://docs.openstack.org/ironic/pike/admin/boot-from-volume.html), [rolling upgrades](https://docs.openstack.org/ironic/pike/admin/upgrade-guide.html#rolling-upgrades) and [Redfish protocol](https://docs.openstack.org/ironic/pike/admin/drivers/redfish.html).
 
 For cloud operators, RDO now provides packages for some new OpenStack Services:
 
