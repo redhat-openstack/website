@@ -60,6 +60,7 @@ Other additions include:
 * upgrade liberasurecode and pyeclib libraries to 1.5.0 (update) (deps)
 
 ### Tempest Plugins
+
 * python-barbican-tests-tempest  (tempest-plugin)
 * python-keystone-testst-tempest  (tempest-plugin)
 * python-kuryr-tests-tempest (tempest-plugin)
@@ -67,19 +68,22 @@ Other additions include:
 * python-vmware-nsx-tests-tempest  (tempest-plugin)
 * python-watcher-tests-tempest  (tempest-plugin)
 
-### Puppet-Modules
+###  Puppet-Modules
+
 * puppet-murano
 * puppet-veritas_hyperscale
 * puppet-vitrage
 
-### OpenStack Projects
+###  OpenStack Projects
+
 * kuryr
 * kuryr-kubernetes
-* openstack-Senlin
 * openstack-glare
 * openstack-panko
+* openstack-senlin
 
 ### OpenStack Clients
+
 * mistral-lib
 * python-glareclient
 * python-pankoclient
