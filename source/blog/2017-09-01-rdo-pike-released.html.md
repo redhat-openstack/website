@@ -15,30 +15,88 @@ The Cloud Infrastructure SIG focuses on delivering a great user experience for C
 
 All work on RDO, and on the downstream release, Red Hat OpenStack Platform, is 100% open source, with all code changes going upstream first.
 
+## New and Improved
+
 Interesting things in the Pike release include:
 
 - [Ironic](https://github.com/openstack/ironic) now supports [booting from Cinder volumes](https://docs.openstack.org/ironic/pike/admin/boot-from-volume.html), [rolling upgrades](https://docs.openstack.org/ironic/pike/admin/upgrade-guide.html#rolling-upgrades) and [Redfish protocol](https://docs.openstack.org/ironic/pike/admin/drivers/redfish.html).
-
-For cloud operators, RDO now provides packages for some new OpenStack Services:
-
-- [Kuryr](https://github.com/openstack/kuryr) and [Kuryr-kubernetes](https://github.com/openstack/kuryr-kubernetes): an integration between OpenStack and Kubernetes networking.
-- [Senlin](https://github.com/openstack/senlin): a clustering service for OpenStack clouds.
-
-Some other notable additions:
-
-- [Shade](https://github.com/openstack-infra/shade): a simple client library for interacting with OpenStack clouds, used by Ansible among others.
-- [python-pankoclient](https://github.com/openstack/python-pankoclient):  a client library for the event storage and REST API for Ceilometer.
-- [python-scciclient](https://github.com/openstack/python-scciclient): a ServerView Common Command Interface Client Library, for the FUJITSU iRMC S4 - integrated Remote Management Controller.
 - We added OVN support to Packstack.
 - We added support to install the Horizon plugins for several services in Packstack.
 
-**Contributors**
+## Added/Updated packages
 
-During the Pike cycle, we saw contributions from the following individuals:
+The following packages and services were added or updated in this
+release:
 
-... Can someone generate a list of all contributors from git? ...
+- [Kuryr](https://github.com/openstack/kuryr) and [Kuryr-kubernetes](https://github.com/openstack/kuryr-kubernetes): an integration between OpenStack and Kubernetes networking.
+- [Senlin](https://github.com/openstack/senlin): a clustering service for OpenStack clouds.
+- [Shade](https://github.com/openstack-infra/shade): a simple client library for interacting with OpenStack clouds, used by Ansible among others.
+- [python-pankoclient](https://github.com/openstack/python-pankoclient):  a client library for the event storage and REST API for Ceilometer.
+- [python-scciclient](https://github.com/openstack/python-scciclient): a ServerView Common Command Interface Client Library, for the FUJITSU iRMC S4 - integrated Remote Management Controller.
 
-**Getting Started**
+Other additions include:
+
+### Python Libraries
+
+* os-xenapi
+* ovsdbapp (deps)
+* python-daiquiri (deps)
+* python-deprecation (deps)
+* python-exabgp
+* python-json-logger (deps)
+* python-netmiko (deps)
+* python-os-traits
+* python-paunch
+* python-scciclient
+* python-scrypt  (deps)
+* python-sphinxcontrib-actdiag (deps) (pending)
+* python-sphinxcontrib-websupport (deps)
+* python-stestr (deps)
+* python-subunit2sql  (deps)
+* python-sushy
+* shade (SDK)
+* update XStatic packages (update)
+* update crudini to 0.9 (deps) (update)
+* upgrade liberasurecode and pyeclib libraries to 1.5.0 (update) (deps)
+
+### Tempest Plugins
+* python-barbican-tests-tempest  (tempest-plugin)
+* python-keystone-testst-tempest  (tempest-plugin)
+* python-kuryr-tests-tempest (tempest-plugin)
+* python-patrole-tests-tempest  (tempest-plugin)
+* python-vmware-nsx-tests-tempest  (tempest-plugin)
+* python-watcher-tests-tempest  (tempest-plugin)
+
+### Puppet-Modules
+* puppet-murano
+* puppet-veritas_hyperscale
+* puppet-vitrage
+
+### OpenStack Projects
+* kuryr
+* kuryr-kubernetes
+* openstack-Senlin
+* openstack-glare
+* openstack-panko
+
+### OpenStack Clients
+* mistral-lib
+* python-glareclient
+* python-pankoclient
+* python-senlinclient
+
+## Contributors
+
+During the Pike cycle, we started the
+[EasyFix](https://github.com/redhat-openstack/easyfix) initiative, which
+has resulted in several new people joining our ranks. These include:
+
+* Christopher Brown
+* Anthony Chow
+* T. Nicole Williams
+* Ricardo Arguello
+
+## Getting Started
 
 There are three ways to get started with RDO.
 
@@ -47,7 +105,7 @@ There are three ways to get started with RDO.
 - Finally, if you want to try out OpenStack, but don't have the time or hardware to run it yourself, visit [TryStack](http://trystack.org/), where you can use a free public OpenStack instance, running RDO packages, to experiment with the OpenStack management interface and API, launch instances, configure networks, and generally familiarize yourself with OpenStack. (TryStack is not, at this time, running Pike, although it is running RDO.)
 
 
-**Getting Help**
+## Getting Help
     
 The RDO Project participates in a Q&A service at [ask.openstack.org](http://ask.openstack.org), for more developer-oriented content we recommend joining the [rdo-list mailing list](https://www.redhat.com/mailman/listinfo/rdo-list). Remember to post a brief introduction about yourself and your RDO story. You can also find extensive documentation on the [RDO docs site](https://www.rdoproject.org/use).
 
@@ -56,7 +114,7 @@ The #rdo channel on Freenode IRC is also an excellent place to find help and giv
 We also welcome comments and requests on the [CentOS mailing lists](https://lists.centos.org/) and the CentOS and TripleO IRC channels (#centos, #centos-devel, and #tripleo on irc.freenode.net), however we have a more focused audience in the RDO venues.
 
 
-**Getting Involved**
+## Getting Involved
 
 To get involved in the OpenStack RPM packaging effort, see the [RDO community pages](https://www.rdoproject.org/contribute/) and the [CentOS Cloud SIG page](https://wiki.centos.org/SpecialInterestGroup/Cloud). See also the [RDO packaging documentation](https://www.rdoproject.org/packaging/).
 
