@@ -42,7 +42,7 @@ During the Pike cycle, we saw contributions from the following individuals:
 
 There are three ways to get started with RDO.
 
-- To spin up a proof of concept cloud, quickly, and on limited hardware, try the [All-In-One Quickstart](https://www.rdoproject.org/install/packstack/). You can run RDO on a single node to get a feel for how it works.
+- To spin up a proof of concept cloud, quickly, and on limited hardware, try an [All-In-One Packstack](https://www.rdoproject.org/install/packstack/) installation. You can run RDO on a single node to get a feel for how it works.
 - For a production deployment of RDO, use the [TripleO Quickstart](https://www.rdoproject.org/tripleo/) and you'll be running a production cloud in short order.
 - Finally, if you want to try out OpenStack, but don't have the time or hardware to run it yourself, visit [TryStack](http://trystack.org/), where you can use a free public OpenStack instance, running RDO packages, to experiment with the OpenStack management interface and API, launch instances, configure networks, and generally familiarize yourself with OpenStack. (TryStack is not, at this time, running Pike, although it is running RDO.)
 
