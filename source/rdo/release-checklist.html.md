@@ -12,6 +12,15 @@ pointing out what we've done on top of that.
 
 Here's a helpful checklist of things that we should do around a release.
 
+## Communicate with the community
+
+* Notify CentOS that a release is imminent, so that we can queue any
+  additional jobs that must run, and get availability of support people
+  to help with that.
+* Notify various press outlets that this is coming, so that we can
+  schedule stories if desired.
+* Notify user community (RDO, CentOS) that a release is coming.
+
 ## Talking Points
 
 What's new or interesting in this release that we
