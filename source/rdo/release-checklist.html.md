@@ -20,9 +20,19 @@ to a release, rather than trying to put it together the day of the
 release.
 
 * What's in the release?
-* Who did awesome stuff in the release?
 * What upstream features are most important (point to upstream news
   source for this)
+* Who did awesome stuff in the release? This can be generated using data
+  from Gerrit, and the `gerritstats` project:
+  below instructions:
+    * Set up on a Fedora container based on the instructions on GitHub, then:
+
+    ./gerrit_downloader.sh --after-date 2017-02-22 --server review.rdoproject.org --output-dir gerrit_out/
+
+    * Enter the gerrit_out directory, and copy all the -distgit- json files to another directory `gerrit_distgit/` and run:
+
+    ./gerrit_stats.sh --branches rpm-master -f gerrit_distgit/
+
 
 ## Release fanfare
 
