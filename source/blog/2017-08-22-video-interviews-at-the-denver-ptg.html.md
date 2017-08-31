@@ -11,7 +11,7 @@ TL;DR: [Sign up here](https://docs.google.com/spreadsheets/d/1KNHuo9Yb5kbjZAYGQ_
 
 Earlier this year, at the [PTG in Atlanta](https://www.openstack.org/ptg) I did video interviews with some of  the Red Hat engineering who were there.
 
-You can see these videos on the [RDO YouTube channel](https://www.youtube.com/watch?v=5kT-Sv3rkTw&list=PLOuHvpVx7kYksG0NFaCaQsSkrUlj3Oq4S)
+You can see these videos on the [RDO YouTube channel](https://www.youtube.com/RDOCommunity)
 
 Or you can see the teaser video here:
 
