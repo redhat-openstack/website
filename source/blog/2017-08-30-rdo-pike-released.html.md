@@ -91,6 +91,10 @@ Other additions include:
 * python-pankoclient
 * python-senlinclient
 
+## Known issues
+
+* Magnum logs shows tracebacks due to certification verification failures. This is limited to experimental features of Magnum and workaround is described [here](https://bugzilla.redhat.com/show_bug.cgi?id=1487296)
+
 ## Contributors
 
 During the Pike cycle, we started the
