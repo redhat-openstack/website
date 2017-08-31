@@ -10,7 +10,7 @@ published: false
 The RDO community is pleased to announce the general availability of the RDO build for OpenStack Pike for RPM-based distributions, CentOS Linux 7 and Red Hat Enterprise Linux.
 RDO is suitable for building private, public, and hybrid clouds. Pike is the 16th release from the [OpenStack project](http://openstack.org), which is the work of more than 2300 contributors from around the world ([source](http://stackalytics.com/)).
 
-Please note that the release is making its way to official distributed CentOS mirrors, and may take some time to arrive on your favorite mirror.
+The release is making its way out to the CentOS mirror network, and should be on your favorite mirror site momentarily.
 
 The [RDO community project](https://www.rdoproject.org/) curates, packages, builds, tests and maintains a complete OpenStack component set for RHEL and CentOS Linux and is a member of the [CentOS Cloud Infrastructure SIG](https://wiki.centos.org/SpecialInterestGroup/Cloud).
 The Cloud Infrastructure SIG focuses on delivering a great user experience for CentOS Linux users looking to build and maintain their own on-premise, public or hybrid clouds.
