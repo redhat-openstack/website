@@ -4,7 +4,7 @@ author: rbowen
 date: 2017-08-30 15:00:00 UTC
 tags: release,pike,rdo,openstack,upstream
 comments: true
-published: true
+published: false
 ---
 
 The RDO community is pleased to announce the general availability of the RDO build for OpenStack Pike for RPM-based distributions, CentOS Linux 7 and Red Hat Enterprise Linux.
