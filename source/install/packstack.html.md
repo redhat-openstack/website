@@ -75,10 +75,16 @@ On RHEL, download and install the RDO repository RPM to set up the OpenStack rep
 $ sudo yum install -y https://rdoproject.org/repos/rdo-release.rpm
 ```
   
-On CentOS, the `Extras` repository provides the RPM that enables the OpenStack repository. `Extras` is enabled by default on CentOS 7, so you can simply install the RPM to set up the OpenStack repository:
+On CentOS, the `Extras` repository provides the RPM that enables the OpenStack repository. `Extras` is enabled by default on CentOS 7, so you can simply install the RPM to set up the OpenStack repository.
 
 ```
 $ sudo yum install -y centos-release-openstack-pike
+```
+
+Make sure the repository is enabled:
+
+```
+yum-config-manager --enable openstack-pike
 ```
 
 Update your current packages:
