@@ -9,7 +9,7 @@ authors: apevec, dneary, garrett, jasonbrooks, jlibosva, mmagr, pixelbeat, pmyer
 
 This document shows how to spin up a proof of concept cloud on one node, using the Packstack installation utility. You will be able to [add more nodes](/install/adding-a-compute-node/) to your OpenStack cloud later, if you choose.
 
-The instructions apply to the current **Ocata** release.
+The instructions apply to the current **Pike** release.
 
 ## Summary for the impatient
 
@@ -32,7 +32,7 @@ If your system meets all the prerequisites mentioned below, proceed with running
 * On CentOS:
 
   ```
-  $ sudo yum install -y centos-release-openstack-ocata
+  $ sudo yum install -y centos-release-openstack-pike
   $ sudo yum update -y
   $ sudo yum install -y openstack-packstack
   $ sudo packstack --allinone
@@ -78,7 +78,7 @@ $ sudo yum install -y https://rdoproject.org/repos/rdo-release.rpm
 On CentOS, the `Extras` repository provides the RPM that enables the OpenStack repository. `Extras` is enabled by default on CentOS 7, so you can simply install the RPM to set up the OpenStack repository:
 
 ```
-$ sudo yum install -y centos-release-openstack-ocata
+$ sudo yum install -y centos-release-openstack-pike
 ```
 
 Update your current packages:
