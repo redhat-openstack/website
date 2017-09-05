@@ -11,8 +11,7 @@ See also the [bug triage schedule](/contribute/rdo-bugtriage/).
 
 The (tentative) test day schedule is:
 
-* <strike>Aug 3, 4</strike> [August 10, 11, Pike 3 test day](/testday/pike/milestone3) (for Jul 24 - Jul 28 Pike-3 milestone)
-* Sep 7, 8 Pike final test day (for Aug 28 - Sep 01 Pike release)
+* [Sep 7, 8 Pike final test day](/testday/pike/final) (for Aug 28 - Sep 01 Pike release)
 
 ## Test, every day
 
@@ -36,10 +35,11 @@ while keeping detailed notes on the following points:
 
 | Milestone | Date | Tickets opened | IRC participation | URL(s) |
 |-----------|------|----------------|-------------------|--------|
+| [Pike 3](/testday/pike/milestone3) | Apr 10, 11 2017 | | | [Tickets](https://bugzilla.redhat.com/buglist.cgi?bug_status=NEW&bug_status=ASSIGNED&bug_status=POST&bug_status=MODIFIED&bug_status=ON_DEV&bug_status=ON_QA&bug_status=VERIFIED&bug_status=RELEASE_PENDING&chfield=%5BBug%20creation%5D&chfieldfrom=2017-04-22&chfieldto=2017-08-11&classification=Community&product=RDO&query_format=advanced) |
 | [Pike 1](/testday/pike/milestone1) | Apr 20, 21 2017 | | | [Tickets](https://bugzilla.redhat.com/buglist.cgi?bug_status=NEW&bug_status=ASSIGNED&bug_status=POST&bug_status=MODIFIED&bug_status=ON_DEV&bug_status=ON_QA&bug_status=VERIFIED&bug_status=RELEASE_PENDING&chfield=%5BBug%20creation%5D&chfieldfrom=2017-03-04&chfieldto=2017-04-21&classification=Community&product=RDO&query_format=advanced) |
-| [Ocata Final](/testday/ocata/final) | March 2-3 2017 | | | [Tickets](https://bugzilla.redhat.com/buglist.cgi?bug_status=NEW&bug_status=ASSIGNED&bug_status=POST&bug_status=MODIFIED&bug_status=ON_DEV&bug_status=ON_QA&bug_status=VERIFIED&bug_status=RELEASE_PENDING&chfield=%5BBug%20creation%5D&chfieldfrom=2017-02-04&chfieldto=2017-03-03&classification=Community&product=RDO&query_format=advanced) |
-| [Ocata 3](/testday/ocata/milestone3) | February 2-3 2017 | | | [Tickets](https://bugzilla.redhat.com/buglist.cgi?bug_status=NEW&bug_status=ASSIGNED&bug_status=POST&bug_status=MODIFIED&bug_status=ON_DEV&bug_status=ON_QA&bug_status=VERIFIED&bug_status=RELEASE_PENDING&chfield=%5BBug%20creation%5D&chfieldfrom=2016-12-04&chfieldto=2017-02-03&classification=Community&list_id=7044698&product=RDO&query_format=advanced) |
-| [Ocata 1](/testday/ocata/milestone1) | December 2-3 | 6  | 55 participants, 1334 messages  | [Tickets](http://tm3.org/cu) |
+| Ocata Final | March 2-3 2017 | | | [Tickets](https://bugzilla.redhat.com/buglist.cgi?bug_status=NEW&bug_status=ASSIGNED&bug_status=POST&bug_status=MODIFIED&bug_status=ON_DEV&bug_status=ON_QA&bug_status=VERIFIED&bug_status=RELEASE_PENDING&chfield=%5BBug%20creation%5D&chfieldfrom=2017-02-04&chfieldto=2017-03-03&classification=Community&product=RDO&query_format=advanced) |
+| Ocata 3 | February 2-3 2017 | | | [Tickets](https://bugzilla.redhat.com/buglist.cgi?bug_status=NEW&bug_status=ASSIGNED&bug_status=POST&bug_status=MODIFIED&bug_status=ON_DEV&bug_status=ON_QA&bug_status=VERIFIED&bug_status=RELEASE_PENDING&chfield=%5BBug%20creation%5D&chfieldfrom=2016-12-04&chfieldto=2017-02-03&classification=Community&list_id=7044698&product=RDO&query_format=advanced) |
+| Ocata 1 | December 2-3 | 6  | 55 participants, 1334 messages  | [Tickets](http://tm3.org/cu) |
 | Newton GA | October 13-14 | 4 | 53 participants, 1680 messages | [Tickets](https://bugzilla.redhat.com/buglist.cgi?bug_status=NEW&bug_status=ASSIGNED&bug_status=POST&bug_status=MODIFIED&bug_status=ON_DEV&bug_status=ON_QA&bug_status=VERIFIED&bug_status=RELEASE_PENDING&chfield=%5BBug%20creation%5D&chfieldfrom=2016-10-12&chfieldto=2016-10-15&classification=Community&list_id=4344410&product=RDO&query_format=advanced)  |
 | Newton RC | September 29-30 | 1 | 44 participants , 828 messages | [Tickets](https://bugzilla.redhat.com/buglist.cgi?bug_status=NEW&bug_status=ASSIGNED&bug_status=POST&bug_status=MODIFIED&bug_status=ON_DEV&bug_status=ON_QA&bug_status=VERIFIED&bug_status=RELEASE_PENDING&chfield=%5BBug%20creation%5D&chfieldfrom=2016-09-28&chfieldto=2016-10-01&classification=Community&list_id=4344410&product=RDO&query_format=advanced)  |
 | Newton 3  | September 8-9 | 5 | 38 participants, 1088 messages | [Tickets](https://bugzilla.redhat.com/buglist.cgi?bug_status=NEW&bug_status=ASSIGNED&bug_status=POST&bug_status=MODIFIED&bug_status=ON_DEV&bug_status=ON_QA&bug_status=VERIFIED&bug_status=RELEASE_PENDING&chfield=%5BBug%20creation%5D&chfieldfrom=2016-09-07&chfieldto=2016-09-10&classification=Community&list_id=4344410&product=RDO&query_format=advanced)  |
