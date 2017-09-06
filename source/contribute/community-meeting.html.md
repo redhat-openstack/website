@@ -11,6 +11,8 @@ The agenda for that meeting is [in this
 etherpad](https://etherpad.openstack.org/p/RDO-Meeting).
 
 The minutes for these meetings are below:
+
+* [Sep 6, 2017](https://www.redhat.com/archives/rdo-list/2017-September/msg00014.html)
 * [Aug 23, 2017](https://www.redhat.com/archives/rdo-list/2017-August/msg00075.html)
 * [Aug 16, 2017](https://www.redhat.com/archives/rdo-list/2017-August/msg00036.html)
 * [Aug 09, 2017](https://www.redhat.com/archives/rdo-list/2017-August/msg00019.html)
