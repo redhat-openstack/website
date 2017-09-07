@@ -10,6 +10,7 @@ You can sign up to receive the newsletter [on the mailing list page](http://www.
 
 ## 2017
 
+* [September 2017](/newsletter/2017/september)
 * [August 2017](/newsletter/2017/august)
 * [June 2017](/newsletter/2017/june)
 * [April 2017](/newsletter/2017/april)
