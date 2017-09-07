@@ -2,7 +2,7 @@
 title: 'Newbie in RDO (2): RDO Trunk from a bird''s eye view'
 author: amoralej
 tags: rdo, openstack, trunk
-date: 2016-05-30 18:45:18 CEST
+date: 2016-04-12 18:45:18 CEST
 published: true
 ---
 

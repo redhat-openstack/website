@@ -2,7 +2,7 @@
 title: Using a standalone Nodepool service to manage cloud instances
 author: tristanC
 tags: openstack, infra, nodepool, software-factory
-date: 2017-03-30 00:00:00 UTC
+date: 2017-03-29 00:00:01 UTC
 ---
 
 [Nodepool](https://docs.openstack.org/infra/system-config/nodepool.html) is a
