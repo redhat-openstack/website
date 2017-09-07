@@ -68,7 +68,7 @@ You have multiple options, including:
 
 2. For proof of concept (PoC) environments, Packstack, an installation utility which uses Puppet modules to deploy OpenStack, is the primary tool. Instructions on installing RDO with Packstack are available on the [Packstack quickstart](/install/packstack) page.
 
-3. For manual deployments using RDO packages, read the upstream [OpenStack Installation Tutorial for Red Hat Enterprise Linux and CentOS](https://docs.openstack.org/ocata/install-guide-rdo/).
+3. For manual deployments using RDO packages, read the upstream [OpenStack Installation Tutorial](https://docs.openstack.org/install-guide/).
 
 ## Where can I find help with RDO?
 
