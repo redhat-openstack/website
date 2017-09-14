@@ -175,10 +175,9 @@ that automates many operations on RDO packages including:
 repetitive and error prone processes involving several underlying tools, each
 with its own quirks.
 
-Install `rdopkg` from [`jruzicka/rdopkg` copr](https://copr.fedorainfracloud.org/coprs/jruzicka/rdopkg/):
+Install `rdopkg`:
 
 ```bash
-$> dnf copr enable jruzicka/rdopkg
 $> dnf install rdopkg
 ```
 
