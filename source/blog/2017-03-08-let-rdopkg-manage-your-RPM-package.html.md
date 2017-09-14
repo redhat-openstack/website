@@ -74,7 +74,6 @@ manually like he would with `.patch` files.
 
 [rdopkg][] page contains installation instructions. Most likely, this will do:
 
-    dnf copr enable jruzicka/rdopkg
     dnf install rdopkg
 
 

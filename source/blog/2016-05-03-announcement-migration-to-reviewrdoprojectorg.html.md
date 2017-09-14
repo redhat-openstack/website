@@ -34,7 +34,7 @@ changes for their projects.
 We're working to refresh documentation, but here's a short howto to hack
 on packaging:
 
-0. dnf copr enable jruzicka/rdopkg && dnf install -y rdopkg
+0. dnf install -y rdopkg
 1. rdopkg clone <mypackage> [-u <githubuser>]  This will create the following remotes
     - origin: dist-git
     - patches: upstream sources at current package version
