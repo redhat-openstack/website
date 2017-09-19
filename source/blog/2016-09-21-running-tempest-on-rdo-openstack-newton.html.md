@@ -2,7 +2,7 @@
 title: Running Tempest on RDO OpenStack Newton
 author: chandankumar
 tags: rdo,packstack,tempest,newton,packaging
-date: 2016-09-26 11:23:29 IST
+date: 2016-09-21 11:23:29 IST
 ---
 
 > UPDATES: RDO Ocata introduces few changes that partially obsoletes the

@@ -315,10 +315,10 @@ If you add more Compute hosts in your environment, remember to run the `discover
 # nova-manage cell_v2 list_cells
 ```
 
-. Pass the UUIDs to the `map_instances` command to map instances to cells:
+. Pass the UUID for *cell1* to the `map_instances` command to map instances to cells:
 +
 ```
-# su -s /bin/sh -c "nova-manage cell_v2 map_instances --cell_uuid <cell UUID>" nova
+# su -s /bin/sh -c "nova-manage cell_v2 map_instances --cell_uuid <cell1 UUID>" nova
 ```
 
 . Update the `api_db` database schema:

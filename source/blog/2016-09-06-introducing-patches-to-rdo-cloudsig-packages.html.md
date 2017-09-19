@@ -27,9 +27,10 @@ for additional information.
 ## First Things First
 
 Make sure you have latest
-[rdopkg](https://github.com/openstack-packages/rdopkg) from
-[jruzicka/rdopkg
-copr](https://copr.fedorainfracloud.org/coprs/jruzicka/rdopkg/).
+[rdopkg](https://github.com/openstack-packages/rdopkg):
+
+    $ dnf install rdopkg
+
 This is a new code added alongside existing functionality and it isn't well
 tested yet, bugs need to be ironed out. If you encounter `rdopkg` bug, please
 [report how it broke](https://github.com/openstack-packages/rdopkg/issues/new).

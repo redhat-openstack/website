@@ -160,7 +160,7 @@ Individual RDO patches are maintained in form of gerrit reviews on
 
 ### rdopkg
 
-[rdopkg](https://github.com/redhat-openstack/rdopkg) is a command line tool
+[rdopkg](https://github.com/softwarefactory-project/rdopkg) is a command line tool
 that automates many operations on RDO packages including:
 
  * cloning package distgit and setting up remotes
@@ -175,20 +175,19 @@ that automates many operations on RDO packages including:
 repetitive and error prone processes involving several underlying tools, each
 with its own quirks.
 
-Install `rdopkg` from [`jruzicka/rdopkg` copr](https://copr.fedorainfracloud.org/coprs/jruzicka/rdopkg/):
+Install `rdopkg` from Fedora/EPEL repos:
 
 ```bash
-$> dnf copr enable jruzicka/rdopkg
 $> dnf install rdopkg
 ```
 
 `rdopkg` source lives at
-[review.rdoproject.org](https://review.rdoproject.org/r/gitweb?p=rdopkg.git;a=summary)
+[softwarefactory-project.io](https://softwarefactory-project.io/dashboard/project_rdopkg)
 but it's also mirrored to
-[github](https://github.com/redhat-openstack/rdopkg).
+[github](https://github.com/softwarefactory-project/rdopkg).
 
 Bugs are tracked as
-[github issues](https://github.com/redhat-openstack/rdopkg/issues).
+[github issues](https://github.com/softwarefactory-project/rdopkg/issues).
 
 Poke `jruzicka` on `#rdo` for help/hate/suggestions about `rdopkg`.
 
