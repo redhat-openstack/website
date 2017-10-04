@@ -2,7 +2,7 @@
 
 Test days are held roughly every month, on the week after an upstream
 milestone. See the [release
-schedule](http://releases.openstack.org/pike/schedule.html) for when
+schedule](http://releases.openstack.org/queens/schedule.html) for when
 those milestones occur.
 
 See also the [bug triage schedule](/contribute/rdo-bugtriage/).
@@ -11,14 +11,16 @@ See also the [bug triage schedule](/contribute/rdo-bugtriage/).
 
 The (tentative) test day schedule is:
 
-* [Sep 7, 8 Pike final test day](/testday/pike/final) (for Aug 28 - Sep 01 Pike release)
+* [October 27, 28: Queens milestone 1 test day](/testday/queens/milestone1) (For October 16-20 Queens milestone)
+* December 14, 15: Queens milestone 2 test day (For December 4-8 Queens milestone)
+* February 1, 2: Queens milestone 3 test day (For January 22-26 Queens milestone)
+* March 8, 9: Queens final release test day (For February 19-23 Queens release)
 
 ## Test, every day
 
 Of course, you don't have to wait for a scheduled test day to test RDO.
 We would love to hear about your experiences, with either a [Packstack
-installation](/install/packstack) or the [TripleO
-Quickstart](/tripleo).
+installation](/install/packstack) or the [TripleO Quickstart](/tripleo).
 
 We also encourage you to work through the [upstream installation
 tutorial](https://docs.openstack.org/draft/install-guide-rdo/)
