@@ -47,4 +47,13 @@ The process to join the config-core group is:
 * Submit a review to the [config repo](https://github.com/rdo-infra/review.rdoproject.org-config/blob/master/resources/config.yaml#L3) with the proposal. See [this example](https://review.rdoproject.org/r/10008).
 * Enjoy!
 
+## Useful resources
 
+The following documentation can be useful when working on changes to the config repository:
+
+* [Introduction to Software Factory] (https://www.rdoproject.org/blog/2017/06/introducing-Software-Factory-part-1/)
+* [Software Factory user documentation](https://softwarefactory-project.io/docs/user/user.html)
+* [Managing Software Factory resources via the config repository](https://softwarefactory-project.io/docs/user/resources_user.html#managing-resources-via-the-config-repository)
+* [Contents of the Software Factory config repository](https://softwarefactory-project.io/docs/operator/deepdive.html#the-config-repo)
+* [Jenkins Job Builder documentation](https://docs.openstack.org/infra/jenkins-job-builder/)
+* [Zuul administration guide](https://docs.openstack.org/infra/zuul/admin/index.html)
