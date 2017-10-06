@@ -16,6 +16,8 @@ The `config-core` group for review.rdoproject.org takes care of managing all con
 * Frederic Lepied
 * Javier Peña
 * Tristan Cacqueray
+* John Trowbridge
+* Sagi Shnaidman
 
 ## Review rules for changes to the config project
 
@@ -40,7 +42,7 @@ The process to join the config-core group is:
 
 * Contribute to the repo by submitting changes and performing reviews on your area of expertise.
 * Once the time has come, add the nomination as a topic to the weekly RDO meeting. We will discuss the nomination and provide feedback.
-* Submit a review to the [config repo](https://github.com/rdo-infra/review.rdoproject.org-config/blob/master/resources/config.yaml#L3) with the proposal.
+* Submit a review to the [config repo](https://github.com/rdo-infra/review.rdoproject.org-config/blob/master/resources/config.yaml#L3) with the proposal. See [this example](https://review.rdoproject.org/r/10008).
 * Enjoy!
 
 

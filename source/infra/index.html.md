@@ -34,7 +34,7 @@ from its spec templates, [rpm-packaging-ci.rdoproject.org](https://rpm-packaging
 The RDO Gerrit instance is running at [review.rdoproject.org](https://review.rdoproject.org/). It makes use
 of a pool of VMs for CI managed by nodepool and running on the RDO Cloud.
 
-The review.rdoproject.org configuration is managed by the [infrastructure core administrators](/infra/review-rdo-infra-core)
+The review.rdoproject.org configuration is managed by the [infrastructure core administrators](/infra/review-rdo-infra-core).
 
 Some additional pieces of infrastructure used for CI are:
 
