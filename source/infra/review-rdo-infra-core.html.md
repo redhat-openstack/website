@@ -19,6 +19,8 @@ The `config-core` group for review.rdoproject.org takes care of managing all con
 * John Trowbridge
 * Sagi Shnaidman
 
+The `rdo-provenpackagers` group is also included. Members of this group who are not part of the `config-core` group are expected to focus on the packaging-related side of the configuration.
+
 ## Review rules for changes to the config project
 
 The Software Factory config project contains the configuration for the following aspects:
@@ -40,7 +42,7 @@ The policy to merge a change is:
 
 The process to join the config-core group is:
 
-* Contribute to the repo by submitting changes and performing reviews on your area of expertise.
+* Contribute to the repo by submitting changes and performing reviews on your area of expertise. During that period, you must show that you got a good grasp of the platform and dedication to help maintaining it.
 * Once the time has come, add the nomination as a topic to the weekly RDO meeting. We will discuss the nomination and provide feedback.
 * Submit a review to the [config repo](https://github.com/rdo-infra/review.rdoproject.org-config/blob/master/resources/config.yaml#L3) with the proposal. See [this example](https://review.rdoproject.org/r/10008).
 * Enjoy!
