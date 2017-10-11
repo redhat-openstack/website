@@ -51,7 +51,7 @@ The process to join the config-core group is:
 
 The following documentation can be useful when working on changes to the config repository:
 
-* [Introduction to Software Factory] (https://www.rdoproject.org/blog/2017/06/introducing-Software-Factory-part-1/)
+* [Introduction to Software Factory](https://www.rdoproject.org/blog/2017/06/introducing-Software-Factory-part-1/)
 * [Software Factory user documentation](https://softwarefactory-project.io/docs/user/user.html)
 * [Managing Software Factory resources via the config repository](https://softwarefactory-project.io/docs/user/resources_user.html#managing-resources-via-the-config-repository)
 * [Contents of the Software Factory config repository](https://softwarefactory-project.io/docs/operator/deepdive.html#the-config-repo)
