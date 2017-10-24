@@ -58,6 +58,7 @@ The following table details the high-level plan for each service. A link to a de
 | dashboards.rdoproject.org | Low | Hosted on the same VM as www. | Deployed using ansible like www. |
 | master.monitoring.rdoproject.org | Low | *Recreate machine (automated?)* |
 | ara.rdoproject.org | Low | *Recreate machine (automated?)* |
+| lists.rdoprojects.org | High | The server can be recreated using Ansible (<https://gitlab.com/osas/community-cage-infra-ansible>, later to be moved in the RDO repo). Important data are in a separate persistent storage and a regular backup is in place. MX2 is provided by OSAS/OSCI | This is using Mailman 2 (and would later need to be migrated to Mailman 3 when ready) |
 
 ## Service diagram
 
