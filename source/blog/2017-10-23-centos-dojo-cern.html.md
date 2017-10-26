@@ -2,7 +2,7 @@
 title: CentOS Dojo @ CERN
 author: hguemar
 date: 2017-10-23 11:11:24 UTC
-tags: CentOS,CERN,dojo,SIG,Cloud SIG
+tags: CentOS,CERN,dojo,SIG,Cloud-SIG
 published: true
 comments: true
 ---
