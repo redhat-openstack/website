@@ -2,7 +2,7 @@
 title: "Newbie in RDO: one size doesn't fit all"
 author: amoralej
 tags: openstack, rdo, repos
-date: 2016-05-30 17:18:23 CEST
+date: 2016-04-08 17:18:23 CEST
 published: true
 ---
 
