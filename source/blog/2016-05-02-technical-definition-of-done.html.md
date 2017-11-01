@@ -2,7 +2,7 @@
 title: Technical definition of done
 author: trown
 tags: openstack, packaging
-date: 2016-05-02 00:00:00 CEST
+date: 2016-05-02 08:00:00 CEST
 ---
 
 
