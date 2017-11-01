@@ -6,7 +6,8 @@ title: Newsletter
 
 We send out a monthly newsletter covering anything of interest to the RDO Community.
 
-You can sign up to receive the newsletter [on the mailing list page](http://www.redhat.com/mailman/listinfo/rdo-newsletter).
+You can sign up to receive the newsletter [on the mailing list
+page](https://lists.rdoproject.org/mailman/listinfo/newsletter).
 
 ## 2017
 
