@@ -4,7 +4,7 @@ title: RDO Queens Test Day
 
 # Queens Test Day 1
 
-We will be holding a RDO test day on **November 9th and 10th, 2017.**
+We will be holding a RDO test day on **November 16th and 17th, 2017.**
 
 This will be coordinated through the **#rdo channel on Freenode**, and
 through this website and the [rdo-list](https://www.redhat.com/mailman/listinfo/rdo-list) mailing list.
