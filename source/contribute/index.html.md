@@ -125,7 +125,7 @@ Join the ask.openstack community to ask and answer questions. The site [ask.open
 
 ### Contribute to the RDO Infrastructure
 
-You can contribute to the RDO Infrastructure maintenance. [This page](/infra/) describes the general infrastructure used by RDO.
+You can contribute to the RDO Infrastructure maintenance. [This page](/infra/) describes the general infrastructure used by RDO. The [infrastructure core administrators](/infra/review-rdo-infra-core) are available to help you if you need anything, and we are also available in the **#rdo** IRC channel in Freenode.
 
 ## Content writing
 
