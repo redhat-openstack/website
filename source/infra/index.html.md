@@ -72,6 +72,13 @@ The code lives on several organizations at GitHub:
 * [Infrastructure definition and CI](https://github.com/rdo-infra)
 * [Website, rdoinfo and others](https://github.com/redhat-openstack) 
 
+## Processes and maintenance windows
+
+Refer to the [service continuity page](/infra/service-continuity) for details on our service continuity plans.
+
+The [infrastructure maintenance window](/infra/maintenance-windows) page provides information on our planned
+maintenance windows.
+
 ## CentOS
 
 A number of parts of our infrastructure run at CentOS, including
