@@ -26,7 +26,7 @@ For stable releases, we also follow the upper-constraints approach.
 
 ## Hashed repos and special repos
 
-When each new upstream commit is built, a repository is created with the new package and the latest versions from every other package built by RDO Trunk. This new repository is located in a hashed URL, for example [https://trunk.rdoproject.org/centos7/51/29/51299ba1eca22462c5560854f53b668ad7872ac7_18d76a1f/](https://trunk.rdoproject.org/centos7/51/29/51299ba1eca22462c5560854f53b668ad7872ac7_18d76a1f/). This hash is built using:
+When each new upstream commit is built, a repository is created with the new package and the latest versions from every other package built by RDO Trunk. This new repository is located in a hashed URL, for example [https://www.rdoproject.org/what/trunk-repos/](https://www.rdoproject.org/what/trunk-repos/). This hash is built using:
 
 - The hash of the commit for the project that triggered the build. In the above example, it is [commit 51299ba from openstack-zaqar](https://github.com/openstack/zaqar/commit/51299ba1eca22462c5560854f53b668ad7872ac7).
 - The short hash of the distgit repo for the project. In the above example, it is [commit 18d76a1f from the zaqar-distgit repo](https://github.com/rdo-packages/zaqar-distgit/commit/18d76a1f8b95171e418b52a17001473af7d6fde5).
