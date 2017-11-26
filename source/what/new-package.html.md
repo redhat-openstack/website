@@ -9,7 +9,7 @@ First of all, thanks for contributing! The process to have a new package in RDO 
 The first step to have a new package in RDO is to follow the process to [add it to RDO Trunk](https://www.rdoproject.org/documentation/add-packages/). Once a package is in RDO Trunk, it will be built for every new commit of the project, and it will end up in the next GA version.
 
 ## Working with rdoinfo
-One of the first steps in the process is to edit the rdo.yml file from [rdoinfo](https://github.com/openstack-packages/rdoinfo). This file contains the metadata we use in RDO. An example section for a new package is:
+One of the first steps in the process is to edit the rdo.yml file from [rdoinfo](https://www.rdoproject.org/what/new-package/). This file contains the metadata we use in RDO. An example section for a new package is:
 
 ```yaml
 - project: tempestconf
