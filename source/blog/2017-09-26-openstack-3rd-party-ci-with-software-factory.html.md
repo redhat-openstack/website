@@ -42,7 +42,7 @@ You will need the following:
 
 # Basic Software Factory installation
 
-For a detailed installation walkthrough, refer to the [Software Factory documentation](https://softwarefactory-project.io/docs/deploy.html).
+For a detailed installation walkthrough, refer to the [Software Factory documentation](https://www.rdoproject.org/resources/use-a-ci-cd-workflow-to-manage-tripleo-life-cycle-full/).
 We will highlight here how we set it up on a test VM.
 
 ## Software installation
