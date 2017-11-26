@@ -26,7 +26,7 @@ Finally, if you want to try out OpenStack, but don't have the time or hardware t
 
 **Getting Help**
     
-The RDO Project participates in a Q&A service at [ask.openstack.org](http://ask.openstack.org), for more developer-oriented content we recommend joining the [rdo-list mailing list](https://www.redhat.com/mailman/listinfo/rdo-list). Remember to post a brief introduction about yourself and your RDO story. You can also find extensive documentation on the [RDO docs site](https://www.rdoproject.org/documentation).
+The RDO Project participates in a Q&A service at [ask.openstack.org](http://ask.openstack.org), for more developer-oriented content we recommend joining the [rdo-list mailing list](https://www.redhat.com/mailman/listinfo/rdo-list). Remember to post a brief introduction about yourself and your RDO story. You can also find extensive documentation on the RDO docs sites [Documnentation](https://www.rdoproject.org/documentation/), [FAQS](https://www.rdoproject.org/rdo/faq/), [Contribute](https://www.rdoproject.org/contribute/), [Storage](https://www.rdoproject.org/storage/), [Books](https://www.rdoproject.org/documentation/books/), [Networking](https://www.rdoproject.org/networking/), [Install](https://www.rdoproject.org/install/).
 
 The #rdo channel on Freenode IRC is also an excellent place to find help and give help.
 
