@@ -4,7 +4,7 @@ title: RDO Queens Test Day
 
 # Queens Test Day 1
 
-We will be holding a RDO test day on **November 2nd and 3rd, 2017.**
+We will be holding a RDO test day on **November 16th and 17th, 2017.**
 
 This will be coordinated through the **#rdo channel on Freenode**, and
 through this website and the [rdo-list](https://www.redhat.com/mailman/listinfo/rdo-list) mailing list.
@@ -30,21 +30,6 @@ We plan to have packages for the following platforms:
 
 You'll want a fresh install with latest updates installed.
 (Fresh so that there's no hard-to-reproduce interactions with other things.)
-
-### Using CentOS 7.3 pre-release
-
-For this test day, there is a pre-release available of CentOS 7.3. Users
-willing to test RDO using the pre-release must follow these steps:
-
-1. Enable CentOS continuous release (CR) repository and update your system:
-
-       $ sudo yum-config-manager --enable cr
-       $ sudo yum update -y
-
-1. Add the requirements repos for 7.3 pre-release:
-
-       $ cd /etc/yum.repos.d/
-       $ sudo curl -O http://trunk.rdoproject.org/rdo-reqs-pre-7.3/rdo-reqs-pre-7.3.repo
 
 ## How to test?
 

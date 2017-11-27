@@ -27,7 +27,7 @@ to get ready:
 <a name="join-mailing-list"/>
 
 ### Join the RDO Mailing List
-* Go to [RDO mailing list](https://www.redhat.com/mailman/listinfo/rdo-list)
+* Go to [RDO mailing list](https://www.rdoproject.org/contribute/mailing-lists/)
   and enter your email address and password and click on *subscribe*. Once
   done, open your mailbox, you will get a confirmation email, click on the
   verification link and you are subscribed to the RDO List.

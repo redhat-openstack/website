@@ -123,6 +123,10 @@ Join the ask.openstack community to ask and answer questions. The site [ask.open
 
 <a name="write-content"/>
 
+### Contribute to the RDO Infrastructure
+
+You can contribute to the RDO Infrastructure maintenance. [This page](/infra/) describes the general infrastructure used by RDO. The [infrastructure core administrators](/infra/review-rdo-infra-core) are available to help you if you need anything, and we are also available in the **#rdo** IRC channel in Freenode.
+
 ## Content writing
 
 Help improve the documentation and website! The main pages for contributed content are [documentation](/documentation/), [troubleshooting](/troubleshooting/) and [user stories](/user-stories/).
