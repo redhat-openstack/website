@@ -7,9 +7,9 @@ authors: gdubreui
 
 For now, quickstack neutron-controller is doing only GRE, it will therefore manage all the tunnels between the controller and the networker automatically.
 
-*   1. Assuming two NICs
-*   2. The physical interface (public/external network) IP will be moved to the br-ex OVS bridge
-*   3. The br-ex should be activated as well
+1. Assuming two NICs
+2. The physical interface (public/external network) IP will be moved to the br-ex OVS bridge
+3. The br-ex should be activated as well
 
 Besides other needed parameters, make sure you have the values required, for example:
 
