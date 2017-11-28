@@ -87,8 +87,8 @@ further processing. Here is the line processor I used, see the [Tokenizer module
   * Hashes which are hexa decimal words that are 32, 64 or 128 characters long
   * UUID4
   * Date names
-  * Random prefixes such as "(tmp|req-|qdhcp-)[^\s\/]+"
-* Discard every character that is not [a-z_\/]
+  * Random prefixes such as `(tmp|req-|qdhcp-)[^\s\/]+`
+* Discard every character that is not `[a-z_\/]`
 
 For example this line:
 ```
