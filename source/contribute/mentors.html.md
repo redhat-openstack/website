@@ -28,63 +28,43 @@ Institute](https://wiki.openstack.org/wiki/OpenStack_Upstream_Institute).
 
 ### General
 
-- Alfredo Moralejo - amoralej
-- Alan Pevec - apevec
-- Chandan Kumar - chandankumar
-- David Moreau Simard - dmsimard
-- Haikel Guemar - number80
-- Jakub Ružička - jruzicka
-- Javier Pena - jpena
-- Rich Bowen - rbowen
-- Lars Kellogg-Stedman - larsks
-- Jon Schlueter - jschlueter/yazug
+- Alfredo Moralejo &ndash; amoralej
+- Alan Pevec &ndash; apevec
+- Chandan Kumar &ndash; chandankumar
+- David Moreau Simard &ndash; dmsimard
+- Haikel Guemar &ndash; number80
+- Jakub Ružička &ndash; jruzicka
+- Javier Pena &ndash; jpena
+- Rich Bowen &ndash; rbowen
+- Lars Kellogg-Stedman &ndash; larsks
+- Jon Schlueter &ndash; jschlueter/yazug
 
 ### Installation
 
-- amoralej
-- Javier Peña - jpena
+- Alfredo Moralejo &ndash; amoralej
+- Javier Peña &ndash; jpena
 
 ### Networking
 
-- amoralej
+- Alfredo Moralejo &ndash; amoralej
 
 ### Storage
 
 ### Packaging
 
-- amoralej
-- Javier Peña - jpena
+- Alfredo Moralejo &ndash; amoralej
+- Javier Peña &ndash; jpena
 
 ### Infrastructure
 
-- amoralej
-- Javier Peña - jpena
+- Alfredo Moralejo &ndash; amoralej
+- Javier Peña &ndash; jpena
 
 ### Documentation
 
-- Rich Bowen - rbowen
-
+- Rich Bowen &ndash; rbowen
+- Petr Kovar &ndash; pkovar
 
 ## Where to ask
 
-Conversations about RDO happen a number of different places on IRC. All
-of these channels are on Freenode IRC network.
-
-* #RDO - Any general conversation about RDO, including developer issues
-  and user questions.
-
-* #tripleO - Discussion specifically of TripleO. This tends to be fairly
-  technical.
-
-* #trystack - Discussion of the [http://trystack.org/](Trystack)
-  service.
-
-* #centos-devel - If you have questions about the parts of the RDO
-  infrastructure that run in the CentOS Community Build System (cbs),
-  this is where you're most likely to get answers.
-
-* #openstack - Remember that RDO is just a small part of a larger
-  community. Questions about OpenStack in general, not specifically
-  about RDO, should go to the upstream channel.
-
-
+Conversations about RDO happen a number of different places on IRC. For a full list of IRC channels related to RDO, see the [IRC section](/contribute/#irc-channels) in [Contribute to RDO](/contribute/).
