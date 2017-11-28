@@ -106,7 +106,7 @@ Here are some diagnostics commands for networking (assuming you are using Neutro
     ip netns exec qrouter-de0b9dbe-6b65-45ee-9ff2-c752c7937a9e ping 10.10.0.7
     # IP address and qrouter ID correspond to the network namespace and private IP address for instance
 
-*   -   Check the OVS routing table to ensure that it is correctly routing traffic from internal to external.
+    -   Check the OVS routing table to ensure that it is correctly routing traffic from internal to external.
         You should see a route for each subnet attached to your virtual router, and you should see routing which will allow traffic from the VM to get to the subnet of the host from which you are trying to connect (or to a public gateway)
 
             ip netns exec qrouter-de0b9dbe-6b65-45ee-9ff2-c752c7937a9e route -n
