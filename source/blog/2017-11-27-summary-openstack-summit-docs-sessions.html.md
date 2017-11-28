@@ -4,6 +4,7 @@ author: pmkovar
 date: 2017-11-27 17:00:00 UTC
 tags: openstack, summit, sydney, docs, documentation
 published: true
+comments: true
 ---
 
 Here I'd like to give a summary of the [Sydney OpenStack Summit](https://www.openstack.org/summit/sydney-2017/) docs sessions that I took part in, and share my comments on them with the broader OpenStack community.
@@ -16,7 +17,7 @@ We also covered the most important updates from the [Documentation planning sess
 
 This session was recorded, you can watch the recording here:
 
-* https://www.youtube.com/watch?v=OZPPI7yju54
+* [https://www.youtube.com/watch?v=OZPPI7yju54](https://www.youtube.com/watch?v=OZPPI7yju54)
 
 # Docs/i18n project onboarding
 
@@ -38,7 +39,7 @@ The feedback received was mostly focused on three points:
 
 The session etherpad with more details can be found here:
 
-* https://etherpad.openstack.org/p/SYD-install-guide-testing
+* [https://etherpad.openstack.org/p/SYD-install-guide-testing](https://etherpad.openstack.org/p/SYD-install-guide-testing)
 
 # Ops guide transition and maintenance
 
@@ -48,7 +49,7 @@ We mostly discussed a number of challenges related to maintaining the technical 
 
 The session etherpad can be found here:
 
-* https://etherpad.openstack.org/p/SYD-forum-ops-guide-transition
+* [https://etherpad.openstack.org/p/SYD-forum-ops-guide-transition](https://etherpad.openstack.org/p/SYD-forum-ops-guide-transition)
 
 # Documentation and relnotes, what do you miss?
 
@@ -58,4 +59,4 @@ Again, Ops-focused docs tuned out to be a hot topic as well as providing more de
 
 You can read more about the discussion points here:
 
-* https://etherpad.openstack.org/p/SYD-forum-docs-relnotes
+* [https://etherpad.openstack.org/p/SYD-forum-docs-relnotes](https://etherpad.openstack.org/p/SYD-forum-docs-relnotes)
