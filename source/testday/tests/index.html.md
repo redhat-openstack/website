@@ -7,6 +7,16 @@ this template if tests are added or modified.
 
 * See the [old test matrix](https://www.rdoproject.org/testday/newton/testedsetups_rc/).
 
+## "Does it work" tests
+
+If you're using the test cloud ([details
+here](https://etherpad.openstack.org/p/rdo-queens-m2-cloud)) you are
+encouraged to perform some of the following test scenarios.
+
+* Launch VM
+* Log into VM
+* ...
+
 ## Packstack-Based Installation (Neutron Networking)
 
 ### Packstack All-in-One
