@@ -124,6 +124,12 @@ pixelbeat:
   photo: userpics/827/OCWLKHSPCOGW.png
   gravatar: 1ebbe5c880c35b4638cfdf065edb645a
 
+pmkovar:
+  name: Petr Kovar
+  nick: pkovar
+  organization: Red Hat
+  gravatar: 3d1fbf81df6f269bcef2ba108d6429b2
+
 pmyers:
   name: Perry Myers
   organization: Red Hat
