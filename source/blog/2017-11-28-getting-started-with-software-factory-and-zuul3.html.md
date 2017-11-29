@@ -7,11 +7,12 @@ date: 2017-11-28 15:10:00 CEST
 
 # Introduction
 
-Software Factory 2.7 has been recently [released](https://www.redhat.com/archives/softwarefactory-dev/2017-November/msg00014.html). Software Factory is an easy to
-deploy software development forge. It provides, among other features,
-code review and continuous integration (CI). This new release
-features [Zuul V3](https://docs.openstack.org/infra/zuul/) that is, now,
-the default CI component of Software Factory.
+Software Factory 2.7 has been recently [released](https://www.redhat.com/archives/softwarefactory-dev/2017-November/msg00014.html).
+Software Factory is an easy to deploy software development forge that is deployed at
+[review.rdoproject.org](https://review.rdoproject.org) and [softwarefactory-project.io](https://softwarefactory-project.io).
+Software Factory provides, among other features, code review and continuous integration (CI).
+This new release features [Zuul V3](https://docs.openstack.org/infra/zuul/) that is, now, the default CI
+component of Software Factory.
 
 In this blog post I will explain how to deploy a Software Factory
 instance for testing purposes in less than 30 minutes and initialize
@@ -91,7 +92,7 @@ And get the jobs' results on the corresponding Gerrit review page.
 
 ![Gerrit change](images/gerrit.png)
 
-Finally, you should find the links to the generated artifacts and the ARA reports.
+Finally, you should find the links to the generated artifacts and the [ARA](https://github.com/openstack/ara) reports.
 
 ![ARA report](images/ara.png)
 
