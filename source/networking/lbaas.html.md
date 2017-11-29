@@ -1,9 +1,6 @@
 ---
 title: LBaaS
 authors: rohara, trilliams
-wiki_title: LBaaS
-wiki_revision_count: 8
-wiki_last_updated: 2017-07-17
 ---
 
 # Neutron LBaaS v2
