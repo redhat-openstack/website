@@ -4,8 +4,7 @@ title: IRC etiquette
 
 # IRC etiquette
 
-Also see [the general IRC document](/contribute/mentors) for more
-suggestions of who you might ask.
+See also the list of [IRC channels](/contribute/#irc-channels), and the [general mentors list](/contribute/mentors) for more suggestions of who you might ask.
 
 ## IRC communication guidelines and etiquette
 
@@ -78,6 +77,5 @@ You see what a time drain the above has become which has not led to any meaningf
 ### Resources
 
 *   A fantastic resource from Eric S. Raymond [on how to ask smart questions](http://www.catb.org/~esr/faqs/smart-questions.html)
-*   Freenode's guide on [how to become a catalyst for problem solving](http://freenode.net/catalysts.shtml)
+*   Freenode's guide on [how to become a catalyst for problem solving](https://freenode.net/catalysts)
 *   Other communities (Fedora project) IRC communication [guidelines](https://fedoraproject.org/wiki/How_to_communicate_using_IRC)
-*   Bonus: [Email guidelines/posting-style](https://fedorahosted.org/rhevm-api/wiki/Email_Guidelines) when communicating in open source projects.

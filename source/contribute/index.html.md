@@ -87,17 +87,32 @@ consult our [mentors list](/contribute/mentors).
 
 ## Discuss
 
+<a name="irc-channels"/>
+
+### IRC channels
+
 Come chat in real-time with RDO users on **IRC** on the [Freenode](http://freenode.net) server:
 
-* **#rdo**: Discussion around RDO in general ([transcripts](http://eavesdrop.openstack.org/irclogs/%23rdo/))
-* **#rdo-puppet**: Discussion around deploying RDO with Packstack and it's puppet modules
-* **#openstack**: Discussion around OpenStack with the broader OpenStack community
-* **#centos-devel**: Discussion around the CentOS [Cloud Special Interest Group (SIG)](https://wiki.centos.org/SpecialInterestGroup/Cloud)
+* **#rdo**: Any general conversation about RDO, including developer issues and user questions. ([Transcripts.](http://eavesdrop.openstack.org/irclogs/%23rdo/))
+
+* **#rdo-puppet**: Discussion around deploying RDO with Packstack and its puppet modules.
+
+* **#tripleo**: Discussion specifically of TripleO. This tends to be fairly technical. ([Transcripts.](http://eavesdrop.openstack.org/irclogs/%23tripleo/))
+
+* **#trystack**: Discussion of the [http://trystack.org/](Trystack) service.
+
+* **#openstack**: Remember that RDO is just a small part of a larger community. Questions about OpenStack in general, not specifically about RDO, should go to the upstream channel. ([Transcripts.](http://eavesdrop.openstack.org/irclogs/%23openstack/))
+
+* **#centos-devel**: If you have questions about the CentOS [Cloud Special Interest Group (SIG)](https://wiki.centos.org/SpecialInterestGroup/Cloud) and the parts of the RDO  infrastructure that run in the CentOS Community Build System (cbs), this is where you're most likely to get answers.
+
+### IRC meetings
 
 We have weekly IRC meetings you can participate in:
 
 * [RDO meetings @ every Wednesday at 15:00 UTC on #rdo](/contribute/community-meeting)
 * [CentOS Cloud SIG meetings @ every Thursday at 15:00 UTC on #centos-devel](/contribute/cloud-sig-meeting)
+
+### Events
 
 Join us for various [events](/events/) around the world. [Organize your own meetup](/contribute/organize-a-meetup/). If you run a meetup group, or if you're speaking at a meetup [here's some of the ways we can help out](/events/meetup_assistance/).
 
@@ -140,6 +155,6 @@ Help improve the documentation and website! The main pages for contributed conte
 Here are a few guidelines for contributing new content to the website:
 
 *   Please [search](/search/) first to check if there is a similar page which you can update.
-*   Use normal English case for page names. [Get involved](/contribute/) is correct, [Get Involved](/contribute/) is not.
+*   Use sentence case for page titles and headings. [Get involved](/contribute/) is correct, [Get Involved](/contribute/) is not.
 *   Please keep the website content connected! When you add a new page, add a link to it from the appropriate page(s).
 *   Please be aware of our [terms of use](/legal/terms-of-use/) — among other things, you agree to license your contributions under the [Creative Commons Attribution License version 3.0](http://creativecommons.org/licenses/by/3.0/), and you agree not to submit illegal content.
