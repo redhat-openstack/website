@@ -90,7 +90,6 @@ consult our [mentors list](/contribute/mentors).
 Come chat in real-time with RDO users on **IRC** on the [Freenode](http://freenode.net) server:
 
 * **#rdo**: Discussion around RDO in general ([transcripts](http://eavesdrop.openstack.org/irclogs/%23rdo/))
-* **#rdo-puppet**: Discussion around deploying RDO with Packstack and it's puppet modules
 * **#openstack**: Discussion around OpenStack with the broader OpenStack community
 * **#centos-devel**: Discussion around the CentOS [Cloud Special Interest Group (SIG)](https://wiki.centos.org/SpecialInterestGroup/Cloud)
 

@@ -64,7 +64,6 @@ RDO community. The best ways are ...
 
 ### IRC 
 * IRC - #rdo on Freenode.irc.net
-* Puppet module development - #rdo-puppet
 
 ### Social Media
 * [Follow us on Twitter](http://twitter.com/rdocommunity )
