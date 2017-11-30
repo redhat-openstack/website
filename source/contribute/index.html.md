@@ -95,8 +95,6 @@ Come chat in real-time with RDO users on **IRC** on the [Freenode](http://freeno
 
 * **#rdo**: Any general conversation about RDO, including developer issues and user questions. ([Transcripts.](http://eavesdrop.openstack.org/irclogs/%23rdo/))
 
-* **#rdo-puppet**: Discussion around deploying RDO with Packstack and its puppet modules.
-
 * **#tripleo**: Discussion specifically of TripleO. This tends to be fairly technical. ([Transcripts.](http://eavesdrop.openstack.org/irclogs/%23tripleo/))
 
 * **#trystack**: Discussion of the [http://trystack.org/](Trystack) service.
