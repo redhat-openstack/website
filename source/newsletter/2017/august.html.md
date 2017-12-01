@@ -18,7 +18,7 @@ title: August 2017 RDO Community Newsletter
 * [Q&A](http://ask.openstack.org/)
 * [Open Tickets](http://tm3.org/rdobugs)
 * [Twitter](http://twitter.com/rdocommunity)
-* [Newton release schedule](http://releases.openstack.org/newton/schedule.html)
+* [Pike release schedule](http://releases.openstack.org/pike/schedule.html)
 
 Thanks for being part of the RDO community!
 
@@ -26,7 +26,7 @@ Thanks for being part of the RDO community!
 
 Your first contribution to any open source project can be intimidating
 and confusing. We want to help you get started, and welcome you to the
-RDO community. 
+RDO community.
 
 To that end, we've started the EasyFix initiative. We're
 collecting "easy" tickets in the
@@ -49,7 +49,7 @@ day](https://www.rdoproject.org/testday/pike/milestone3/). We'll be on
 the #RDO channel on the Freenode IRC network to test, help, answer
 questions, and propose solutions.
 
-## Upcoming Events 
+## Upcoming Events
 
 In the next few months there's a number of places where you can meet up
 with members of the RDO community.
@@ -111,7 +111,7 @@ world, are always listed on the [RDO events page](http://rdoproject.org/events).
 If you have an RDO-related event, please feel free to add it by submitting a pull
 request [on Github](https://github.com/OSAS/rh-events/blob/master/2016/RDO-Meetups.yml).
 
-## Community meetings 
+## Community meetings
 
 Every Wednesday at 15:00 UTC, we have the weekly RDO community meeting
 on the #RDO channel on Freenode IRC. The agenda for this meeting is
@@ -128,20 +128,20 @@ This meeting is for everyone - developers and users of RDO, but also
 anybody that has any interest in where the project is going. So please
 do come, and speak up!
 
-## Keep in touch 
+## Keep in touch
 
 There's lots of ways to stay in in touch with what's going on in the
 RDO community. The best ways are ...
 
-### WWW 
+### WWW
 * [RDO](https://rdoproject.org/)
 * [OpenStack Q&A](http://ask.openstack.org/ )
 
-### Mailing Lists: 
+### Mailing Lists:
 * [rdo-list mailing list](http://www.redhat.com/mailman/listinfo/rdo-list )
 * [This newsletter](http://www.redhat.com/mailman/listinfo/rdo-newsletter )
 
-### IRC 
+### IRC
 * IRC - #rdo on Freenode.irc.net
 * Puppet module development - #rdo-puppet
 
@@ -152,4 +152,3 @@ RDO community. The best ways are ...
 * [YouTube](https://www.youtube.com/channel/UCWYIPZ4lm4P3_pzZ9Hx9awg)
 
 Thanks again for being part of the RDO community!
-

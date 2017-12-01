@@ -10,7 +10,7 @@
 * [Q&A](http://ask.openstack.org/)
 * [Open Tickets](http://tm3.org/rdobugs)
 * [Twitter](http://twitter.com/rdocommunity)
-* [Newton release schedule](http://releases.openstack.org/newton/schedule.html)
+* [Ocata release schedule](http://releases.openstack.org/ocata/schedule.html)
 
 Thanks for being part of the RDO community!
 
@@ -20,13 +20,13 @@ With the Newton release behind us, we're working on the Ocata release
 now, with Milestone 1 already released. On December 1 and 2, we held the
 [first Ocata test
 day](https://www.rdoproject.org/testday/ocata/milestone1/), and have
-just [two more test days planned](https://www.rdoproject.org/testday/), 
+just [two more test days planned](https://www.rdoproject.org/testday/),
 since Ocata is a very short cycle.
 
 You can track daily status of RDO on the [RDO
-dashboard](https://dashboards.rdoproject.org/rdo-dev). 
+dashboard](https://dashboards.rdoproject.org/rdo-dev).
 
-## Upcoming Events 
+## Upcoming Events
 
 The first month after OpenStack Summit always tends to be a little slow,
 but things are picking up again. There's several events in the coming
@@ -39,7 +39,7 @@ held - OpenStack Days Mountain West. The event is two full days of
 OpenStack content, presented in a single track so that you don't miss
 anything. Among other great content, TripleO Evangelist Rain Leander
 will be participating in the ['Future of OpenStack'
-panel](http://sched.co/8WnZ), and OpenStack Architect Ken Savich will 
+panel](http://sched.co/8WnZ), and OpenStack Architect Ken Savich will
 be talking about[PCI Passthrough with Red Hat OpenStack
 Platform](http://sched.co/8ArY).
 
@@ -57,8 +57,8 @@ days.
 
 ### FOSDEM and the CentOS Dojo
 
-[FOSDEM](http://fosdem.org) will be held in Brussels, Belgium, at 
-the ULB Solbosch Campus. It's the largest gathering of free/open 
+[FOSDEM](http://fosdem.org) will be held in Brussels, Belgium, at
+the ULB Solbosch Campus. It's the largest gathering of free/open
 source software enthusiasts in the world, and has been going for more
 than 15 years. FOSDEM will be held February 4th and 5th.
 
@@ -96,9 +96,9 @@ website](http://www.openstack.org/ptg).
 ### Meetups
 
 Other RDO events, including the many OpenStack meetups around the
-world, are always listed on the 
+world, are always listed on the
 [RDO events page](http://rdoproject.org/events).
-If you have an RDO-related event, please feel free to add it by 
+If you have an RDO-related event, please feel free to add it by
 submitting a pull request [on Github](https://github.com/OSAS/rh-events/blob/master/2016/RDO-Meetups.yml).
 
 ## Blog Posts
@@ -143,7 +143,7 @@ Read more at [http://tm3.org/cb](http://tm3.org/cb)
 Follows us on Twitter, @rdocommunity, for daily and weekly updates of
 what the RDO community is blogging about.
 
-## Community meetings 
+## Community meetings
 
 Every Wednesday at 15:00 UTC, we have the weekly RDO community meeting
 on the #RDO channel on Freenode IRC. The agenda for this meeting is
@@ -156,21 +156,21 @@ missing, a tool that you'd like to see included, or a change in how
 things are governed - this is the best time and place to help make that
 happen.
 
-## Keep in touch 
+## Keep in touch
 
 There's lots of ways to stay in in touch with what's going on in the
 RDO community. The best ways are ...
 
 
-### WWW 
+### WWW
 * [RDO](http://rdoproject.org/)
 * [OpenStack Q&A](http://ask.openstack.org/ )
 
-### Mailing Lists: 
+### Mailing Lists:
 * [rdo-list mailing list](http://www.redhat.com/mailman/listinfo/rdo-list )
 * [This newsletter](http://www.redhat.com/mailman/listinfo/rdo-newsletter )
 
-### IRC 
+### IRC
 * IRC - #rdo on Freenode.irc.net
 * Puppet module development - #rdo-puppet
 
@@ -180,4 +180,3 @@ RDO community. The best ways are ...
 * [Facebook](http://facebook.com/rdocommunity)
 
 Thanks again for being part of the RDO community!
-

@@ -10,11 +10,11 @@
 * [Q&A](http://ask.openstack.org/)
 * [Open Tickets](http://tm3.org/rdobugs)
 * [Twitter](http://twitter.com/rdocommunity)
-* [Newton release schedule](http://releases.openstack.org/newton/schedule.html)
+* [Ocata release schedule](http://releases.openstack.org/ocata/schedule.html)
 
 Thanks for being part of the RDO community!
 
-## Upcoming Events 
+## Upcoming Events
 
 December is always a slow month around here, so there's not much to
 report on this month, but we do have a number of events coming up that
@@ -122,7 +122,7 @@ Read more at [http://tm3.org/d4](http://tm3.org/d4)
 Read more at [http://tm3.org/d5](http://tm3.org/d5)
 
 
-## Community meetings 
+## Community meetings
 
 Every Wednesday at 15:00 UTC, we have the weekly RDO community meeting
 on the #RDO channel on Freenode IRC. The agenda for this meeting is
@@ -135,21 +135,21 @@ missing, a tool that you'd like to see included, or a change in how
 things are governed - this is the best time and place to help make that
 happen.
 
-## Keep in touch 
+## Keep in touch
 
 There's lots of ways to stay in in touch with what's going on in the
 RDO community. The best ways are ...
 
 
-### WWW 
+### WWW
 * [RDO](http://rdoproject.org/)
 * [OpenStack Q&A](http://ask.openstack.org/ )
 
-### Mailing Lists: 
+### Mailing Lists:
 * [rdo-list mailing list](http://www.redhat.com/mailman/listinfo/rdo-list )
 * [This newsletter](http://www.redhat.com/mailman/listinfo/rdo-newsletter )
 
-### IRC 
+### IRC
 * IRC - #rdo on Freenode.irc.net
 * Puppet module development - #rdo-puppet
 
@@ -159,4 +159,3 @@ RDO community. The best ways are ...
 * [Facebook](http://facebook.com/rdocommunity)
 
 Thanks again for being part of the RDO community!
-

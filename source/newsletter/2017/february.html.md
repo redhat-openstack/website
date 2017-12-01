@@ -11,7 +11,7 @@
 * [Q&A](http://ask.openstack.org/)
 * [Open Tickets](http://tm3.org/rdobugs)
 * [Twitter](http://twitter.com/rdocommunity)
-* [Newton release schedule](http://releases.openstack.org/newton/schedule.html)
+* [Ocata release schedule](http://releases.openstack.org/ocata/schedule.html)
 
 Thanks for being part of the RDO community!
 
@@ -41,7 +41,7 @@ On February 3rd, CentOS held a Dojo (project gathering) in Brussels, Belgium, in
 
 On the weekend of February 4th and 5th, RDO had a table at [FOSDEM](http://fosdem.org/), one of the largest gatherings of open source enthusiasts in the world, with as many as 7000 attendees. Once again, we shared space with our friends from the CentOS community. Members of the RDO community also helped staff the OpenStack booth at the event, spreading the word about what OpenStack is doing in the the world of cloud computing.
 
-## Upcoming Events 
+## Upcoming Events
 
 In the coming months, we'll be present at a number of other events, and we hope to see you there.
 
@@ -121,7 +121,7 @@ Read more at [http://tm3.org/do](http://tm3.org/do)
 
 If you blog about anything OpenStack, please let me know, so that I can add you to the list of blogs that I review each week. And see rdo-list, where I post a round-up of RDO bloggers almost every week.
 
-## Community meetings 
+## Community meetings
 
 Every Wednesday at 15:00 UTC, we have the weekly RDO community meeting
 on the #RDO channel on Freenode IRC. The agenda for this meeting is
@@ -134,21 +134,21 @@ missing, a tool that you'd like to see included, or a change in how
 things are governed - this is the best time and place to help make that
 happen.
 
-## Keep in touch 
+## Keep in touch
 
 There's lots of ways to stay in in touch with what's going on in the
 RDO community. The best ways are ...
 
 
-### WWW 
+### WWW
 * [RDO](http://rdoproject.org/)
 * [OpenStack Q&A](http://ask.openstack.org/ )
 
-### Mailing Lists: 
+### Mailing Lists:
 * [rdo-list mailing list](http://www.redhat.com/mailman/listinfo/rdo-list )
 * [This newsletter](http://www.redhat.com/mailman/listinfo/rdo-newsletter )
 
-### IRC 
+### IRC
 * IRC - #rdo on Freenode.irc.net
 * Puppet module development - #rdo-puppet
 
@@ -158,4 +158,3 @@ RDO community. The best ways are ...
 * [Facebook](http://facebook.com/rdocommunity)
 
 Thanks again for being part of the RDO community!
-

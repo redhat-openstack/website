@@ -10,7 +10,7 @@
 * [Q&A](http://ask.openstack.org/)
 * [Open Tickets](http://tm3.org/rdobugs)
 * [Twitter](http://twitter.com/rdocommunity)
-* [Newton release schedule](http://releases.openstack.org/newton/schedule.html)
+* [Ocata release schedule](http://releases.openstack.org/ocata/schedule.html)
 
 Thanks for being part of the RDO community!
 
@@ -26,7 +26,7 @@ yet, and we need your help to ensure that this is the case.
 We'll be gathering on the #rdo channel on the Freenode IRC network, as
 well as posting our findings to the rdo-list mailing list.
 
-For more information about this test day, see the [test day web 
+For more information about this test day, see the [test day web
 page](https://www.rdoproject.org/testday/newton/milestone3/).
 
 And we're just a few weeks out from the [scheduled Newton
@@ -49,7 +49,7 @@ We also expect to have a community meetup at the Summit, as we usually
 do. Details are still being worked out. We'll notify the rdo-list
 mailing list as soon we we have a time and place confirmed.
 
-You can register for the summit at 
+You can register for the summit at
 [openstack.org/summit](https://www.openstack.org/summit).
 
 
@@ -63,7 +63,7 @@ calendar](https://www.rdoproject.org/events/).
 In particular, you will want to mark your calendar for the following
 events:
 
-* [The Red Hat OpenStack 
+* [The Red Hat OpenStack
   Platform](http://www.meetup.com/Pittsburgh-Red-Hat-User-Group/events/233282275/),
   September 8th in Pittsburgh.
 
@@ -84,7 +84,7 @@ With the Newton release just around the corner, it's a good time to
 refresh the website and the documentation. If you'd like to help with
 this effort, here's what you need to get started.
 
-Clone the Git repository at 
+Clone the Git repository at
 [https://github.com/redhat-openstack/website](https://github.com/redhat-openstack/website)
 and follow the instructions in the README to get a local version of the
 website running.
@@ -114,21 +114,21 @@ to upcoming event participation, to discussion of technical decisions.
 Major decisions are always taken back to the mailing list for
 consideration by the wider community.
 
-## Keep in touch 
+## Keep in touch
 
 There's lots of ways to stay in in touch with what's going on in the
 RDO community. The best ways are ...
 
-### WWW 
+### WWW
 * [RDO](http://rdoproject.org/)
 * [Project Status](http://dashboards.rdoproject.org/)
 * [OpenStack Q&A](http://ask.openstack.org/ )
 
-### Mailing Lists: 
+### Mailing Lists:
 * [rdo-list mailing list](http://www.redhat.com/mailman/listinfo/rdo-list )
 * [This newsletter](http://www.redhat.com/mailman/listinfo/rdo-newsletter )
 
-### IRC 
+### IRC
 * IRC - #rdo on Freenode.irc.net
 * Puppet module development - #rdo-puppet
 
@@ -139,4 +139,3 @@ RDO community. The best ways are ...
 
 
 Thanks again for being part of the RDO community!
-

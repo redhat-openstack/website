@@ -20,7 +20,7 @@
 * [Q&A](http://ask.openstack.org/)
 * [Open Tickets](http://tm3.org/rdobugs)
 * [Twitter](http://twitter.com/rdocommunity)
-* [Newton release schedule](http://releases.openstack.org/newton/schedule.html)
+* [Queens release schedule](http://releases.openstack.org/queens/schedule.html)
 
 Thanks for being part of the RDO community!
 
@@ -56,7 +56,7 @@ questions, explain what RDO is, and just be friendly.
 Coming up in just over a week, OpenStack and CentOS enthusiasts will be
 gathering in Meyrin, Switzerland, at the amazing CERN facility, for a
 CentOS Dojo. This will be Friady, October 20th, and you can find out
-more details at [cern.ch/centos](http://cern.ch/centos). 
+more details at [cern.ch/centos](http://cern.ch/centos).
 
 If you're
 planning to come, you **must** register, in order to be admitted to the
@@ -111,7 +111,7 @@ If you are interested in participating in this process, discussion and
 work will be happening primarily on the [RDO mailing
 list](https://www.redhat.com/mailman/listinfo/rdo-list).
 
-## Community meetings 
+## Community meetings
 
 Every Wednesday at 15:00 UTC, we have the weekly RDO community meeting
 on the #RDO channel on Freenode IRC. The agenda for this meeting is
@@ -124,20 +124,20 @@ missing, a tool that you'd like to see included, or a change in how
 things are governed - this is the best time and place to help make that
 happen.
 
-## Keep in touch 
+## Keep in touch
 
 There's lots of ways to stay in in touch with what's going on in the
 RDO community. The best ways are ...
 
-### WWW 
+### WWW
 * [RDO](http://rdoproject.org/)
 * [OpenStack Q&A](http://ask.openstack.org/ )
 
-### Mailing Lists: 
+### Mailing Lists:
 * [rdo-list mailing list](http://www.redhat.com/mailman/listinfo/rdo-list )
 * [This newsletter](http://www.redhat.com/mailman/listinfo/rdo-newsletter )
 
-### IRC 
+### IRC
 * IRC - #rdo on Freenode.irc.net
 * Puppet module development - #rdo-puppet
 
@@ -147,4 +147,3 @@ RDO community. The best ways are ...
 * [Facebook](http://facebook.com/rdocommunity)
 
 Thanks again for being part of the RDO community!
-

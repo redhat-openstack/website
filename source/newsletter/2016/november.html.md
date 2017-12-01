@@ -10,7 +10,7 @@
 * [Q&A](http://ask.openstack.org/)
 * [Open Tickets](http://tm3.org/rdobugs)
 * [Twitter](http://twitter.com/rdocommunity)
-* [Newton release schedule](http://releases.openstack.org/newton/schedule.html)
+* [Ocata release schedule](http://releases.openstack.org/ocata/schedule.html)
 
 Thanks for being part of the RDO community!
 
@@ -20,7 +20,7 @@ The RDO community is pleased to announce the general availability of the RDO bui
 
 The [RDO community project](https://www.rdoproject.org/) curates, packages, builds, tests, and maintains a complete OpenStack component set for RHEL and CentOS Linux and is a member of the [CentOS Cloud Infrastructure SIG](https://wiki.centos.org/SpecialInterestGroup/Cloud). The Cloud Infrastructure SIG focuses on delivering a great user experience for CentOS Linux users looking to build and maintain their own on-premise, public or hybrid clouds. At latest count, RDO contains [1157 packages](https://www.rdoproject.org/documentation/package-list/).
 
-All work on RDO, and on the downstream release, Red Hat OpenStack Platform, is 100% open source, with all code changes going upstream first. 
+All work on RDO, and on the downstream release, Red Hat OpenStack Platform, is 100% open source, with all code changes going upstream first.
 
 **Getting Started**
 
@@ -46,7 +46,7 @@ experience. Here's some of the event recaps from our community:
 * [OpenStack Summit, Barcelona: 2 of N](http://drbacchus.com/openstack-summit-barcelona-2-of-n/)
 * [What you missed at OpenStack Summit](https://www.mirantis.com/blog/what-you-missed-at-openstack-barcelona/)
 
-Two highlights of OpenStack Summit for the RDO community were 
+Two highlights of OpenStack Summit for the RDO community were
 the RDO Infrastructure meeting, and the Evening with RDO and Ceph.
 
 On Monday afternoon, before the Summit officially started, about 20 RDO
@@ -98,7 +98,7 @@ day, and moving tghe others around a little. This makes it all the more
 important that the community show up to test.
 
 
-## Upcoming Events 
+## Upcoming Events
 
 There's several events on the horizon that you should be aware of. There
 are some of the upcoming OpenStack Day events where we expect members of
@@ -117,27 +117,27 @@ world, are always listed on the [RDO events page](http://rdoproject.org/events).
 If you have an RDO-related event, please feel free to add it by submitting a pull
 request [on Github](https://github.com/OSAS/rh-events/blob/master/2016/RDO-Meetups.yml).
 
-## Community meetings 
+## Community meetings
 
 Every Wednesday at 15:00 UTC, we have the weekly RDO community meeting
 on the #RDO channel on Freenode IRC. And at 15:00 UTC Thursdays, we
 have the CentOS Cloud SIG Meeting on #centos-devel.
 
-## Keep in touch 
+## Keep in touch
 
 There's lots of ways to stay in in touch with what's going on in the
 RDO community. The best ways are ...
 
 
-### WWW 
+### WWW
 * [RDO](http://rdoproject.org/)
 * [OpenStack Q&A](http://ask.openstack.org/ )
 
-### Mailing Lists: 
+### Mailing Lists:
 * [rdo-list mailing list](http://www.redhat.com/mailman/listinfo/rdo-list )
 * [This newsletter](http://www.redhat.com/mailman/listinfo/rdo-newsletter )
 
-### IRC 
+### IRC
 * IRC - #rdo on Freenode.irc.net
 * Puppet module development - #rdo-puppet
 
@@ -147,4 +147,3 @@ RDO community. The best ways are ...
 * [Facebook](http://facebook.com/rdocommunity)
 
 Thanks again for being part of the RDO community!
-

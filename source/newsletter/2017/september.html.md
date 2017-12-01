@@ -12,7 +12,7 @@
 * [Q&A](http://ask.openstack.org/)
 * [Open Tickets](http://tm3.org/rdobugs)
 * [Twitter](http://twitter.com/rdocommunity)
-* [Newton release schedule](http://releases.openstack.org/newton/schedule.html)
+* [Mitaka release schedule](http://releases.openstack.org/mitaka/schedule.html)
 
 Thanks for being part of the RDO community!
 
@@ -20,9 +20,9 @@ Thanks for being part of the RDO community!
 
 The RDO community is pleased to announce the general availability of the RDO build for OpenStack Pike for RPM-based distributions, CentOS Linux 7 and Red Hat Enterprise Linux.
 
-Pike is the 16th release from the 
-[OpenStack project](http://openstack.org), which is the work 
-of more than 2300 contributors from around the world 
+Pike is the 16th release from the
+[OpenStack project](http://openstack.org), which is the work
+of more than 2300 contributors from around the world
 ([source](http://stackalytics.com/)). Pike released upstream on [August
 30th](https://releases.openstack.org/pike/index.html), after which RDO
 packages had to be created and tested through CI. These packages were
@@ -105,7 +105,7 @@ mark your calendar. Or you can search
 [meetup.com](https://www.meetup.com/) for events near you.
 
 
-## Community meetings 
+## Community meetings
 
 Every Wednesday at 15:00 UTC, we have the weekly RDO community meeting
 on the #RDO channel on Freenode IRC. The agenda for this meeting is
@@ -118,21 +118,21 @@ missing, a tool that you'd like to see included, or a change in how
 things are governed - this is the best time and place to help make that
 happen.
 
-## Keep in touch 
+## Keep in touch
 
 There's lots of ways to stay in in touch with what's going on in the
 RDO community. The best ways are ...
 
 
-### WWW 
+### WWW
 * [RDO](http://rdoproject.org/)
 * [OpenStack Q&A](http://ask.openstack.org/ )
 
-### Mailing Lists: 
+### Mailing Lists:
 * [rdo-list mailing list](http://www.redhat.com/mailman/listinfo/rdo-list )
 * [This newsletter](http://www.redhat.com/mailman/listinfo/rdo-newsletter )
 
-### IRC 
+### IRC
 * IRC - #rdo on Freenode.irc.net
 * Puppet module development - #rdo-puppet
 
@@ -142,4 +142,3 @@ RDO community. The best ways are ...
 * [Facebook](http://facebook.com/rdocommunity)
 
 Thanks again for being part of the RDO community!
-
