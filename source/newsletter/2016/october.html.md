@@ -10,11 +10,11 @@
 * [Q&A](http://ask.openstack.org/)
 * [Open Tickets](http://tm3.org/rdobugs)
 * [Twitter](http://twitter.com/rdocommunity)
-* [Newton release schedule](http://releases.openstack.org/newton/schedule.html)
+* [Ocata release schedule](http://releases.openstack.org/ocata/schedule.html)
 
 Thanks for being part of the RDO community!
 
-## Upcoming Events 
+## Upcoming Events
 
 There's several events on the horizon that you should be aware of.
 
@@ -34,7 +34,7 @@ of the keynotes.
 ### OpenStack Summit and the RDO Community Meetup
 
 In just a few weeks, many of us will be in Barcelona for the [OpenStack
-Summit](https://www.openstack.org/summit). The summit, which will be 
+Summit](https://www.openstack.org/summit). The summit, which will be
 held on October 25th through 28th, is
 where we will celebrate the Newton release, and begin planning for the
 Ocata release.
@@ -96,19 +96,19 @@ great blog posts over the past month.
 
 **Our Cloud in Liberty** by Tim Bell
 
-> The upgrade to Liberty for the CERN cloud was completed at the end of August. Working with the upstream OpenStack, Puppet and RDO communities, this went pretty smoothly without any issues so there is no significant advice to report. 
+> The upgrade to Liberty for the CERN cloud was completed at the end of August. Working with the upstream OpenStack, Puppet and RDO communities, this went pretty smoothly without any issues so there is no significant advice to report.
 
 Read more at [http://tm3.org/bc](http://tm3.org/bc)
 
 **Red Hat OpenStack Platform and Tesora Database-as-a-Service Platform: What’s New** by Rob Young, Principal Product Manager, Red Hat
 
->  As OpenStack users build or migrate more applications and services for private cloud deployment, users are expanding their plans for how these deployments will be serviced by non-core, emerging components. 
+>  As OpenStack users build or migrate more applications and services for private cloud deployment, users are expanding their plans for how these deployments will be serviced by non-core, emerging components.
 
 Read more at [http://tm3.org/b6](http://tm3.org/b6)
 
 **Integrating Red Hat Virtualization and Red Hat OpenStack Platform with Neutron Networking** by CaptainKVM
 
-> As applications are designed, redesigned, or even simply thought about at a high level, we frequently think about technical barriers along side business needs. 
+> As applications are designed, redesigned, or even simply thought about at a high level, we frequently think about technical barriers along side business needs.
 
 Read more at [http://tm3.org/b7](http://tm3.org/b7)
 
@@ -120,7 +120,7 @@ Read more at [http://tm3.org/b7](http://tm3.org/b7)
 
 **Red Hat OpenStack Platform 9 is here! So what’s new?** by Marcos Garcia
 
-> This week we released the latest version of our OpenStack product, Red Hat OpenStack Platform 9. This release contains more than 500 downstream enhancements, bug fixes, documentation changes, and security updates. 
+> This week we released the latest version of our OpenStack product, Red Hat OpenStack Platform 9. This release contains more than 500 downstream enhancements, bug fixes, documentation changes, and security updates.
 
 ... read more at [http://tm3.org/9z](http://tm3.org/9z)
 
@@ -128,27 +128,27 @@ Read more at [http://tm3.org/b7](http://tm3.org/b7)
 Follow the [http://rdoproject.org/blog/](RDO blog) for weekly updates of
 our community's blogging.
 
-## Community meetings 
+## Community meetings
 
 Every Wednesday at 15:00 UTC, we have the weekly RDO community meeting
 on the #RDO channel on Freenode IRC. And at 15:00 UTC Thursdays, we
 have the CentOS Cloud SIG Meeting on #centos-devel.
 
-## Keep in touch 
+## Keep in touch
 
 There's lots of ways to stay in in touch with what's going on in the
 RDO community. The best ways are ...
 
 
-### WWW 
+### WWW
 * [RDO](http://rdoproject.org/)
 * [OpenStack Q&A](http://ask.openstack.org/ )
 
-### Mailing Lists: 
+### Mailing Lists:
 * [rdo-list mailing list](http://www.redhat.com/mailman/listinfo/rdo-list )
 * [This newsletter](http://www.redhat.com/mailman/listinfo/rdo-newsletter )
 
-### IRC 
+### IRC
 * IRC - #rdo on Freenode.irc.net
 * Puppet module development - #rdo-puppet
 
@@ -158,4 +158,3 @@ RDO community. The best ways are ...
 * [Facebook](http://facebook.com/rdocommunity)
 
 Thanks again for being part of the RDO community!
-

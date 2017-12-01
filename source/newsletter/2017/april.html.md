@@ -11,7 +11,7 @@
 * [Q&A](http://ask.openstack.org/)
 * [Open Tickets](http://tm3.org/rdobugs)
 * [Twitter](http://twitter.com/rdocommunity)
-* [Newton release schedule](http://releases.openstack.org/newton/schedule.html)
+* [Pike release schedule](http://releases.openstack.org/pike/schedule.html)
 
 Thanks for being part of the RDO community!
 
@@ -37,13 +37,13 @@ RDO had a place at the Red Hat Open Source and Standards table at [SCALE](https:
 
 [OpenStack Days Poland](http://www.openstackday.pl/) was held March 22 in Warsaw. Community member Ana Krivokapic was there, and we expect to have a report from her in the coming days.
 
-## Upcoming Events 
+## Upcoming Events
 
 We are just a month out from [OpenStack Summit, Boston](https://www.openstack.org/summit/boston-2017) now, and the schedule is now posted. There's a ton of great content, including many sessions by RDO community members. We expect to have an RDO community gathering at Summit, but details are still up in the air. Be sure to follow us on Twitter - @RDOCommunity - so you'll be the first to know when we firm up the location and details.
 
 Later this month we'll have the first Pike test day for the milestone one. That will be held on April 20th and 21st. We'll be testing TripleO and Packstack deployments, along with the upstream deployment documentation, so we could really use your help to get full coverage of our test matrix. Details about test days are at [https://www.rdoproject.org/testday/](https://www.rdoproject.org/testday/).
 
-Next Sunday, April 16, in Pune, the Indian OpenStack User Group will be holding "[Pune, Let's OpenStack 2017](https://www.meetup.com/Indian-OpenStack-User-Group/events/238458999/)" This event will bring together the OpenStack community in the region, and will be useful whether you're a beginner just learning about OpenStack, or a seasoned cloud operator looking for a place to get deeper advice from your peers. 
+Next Sunday, April 16, in Pune, the Indian OpenStack User Group will be holding "[Pune, Let's OpenStack 2017](https://www.meetup.com/Indian-OpenStack-User-Group/events/238458999/)" This event will bring together the OpenStack community in the region, and will be useful whether you're a beginner just learning about OpenStack, or a seasoned cloud operator looking for a place to get deeper advice from your peers.
 
 Other RDO events, including the many OpenStack meetups around the world, are always listed on the [RDO events page](http://rdoproject.org/events). If you have an RDO-related event, please feel free to add it by submitting a pull request [on Github](https://github.com/OSAS/rh-events/blob/master/2016/RDO-Meetups.yml).
 
@@ -52,7 +52,7 @@ Other RDO events, including the many OpenStack meetups around the world, are alw
 In late February, the OpenStack PTG (Project Teams Gathering) was held in Atlanta, and Rich conducted intervews with 23 engineers that work on OpenStack and the RDO project. Over the last month, these interviews have been posted to YouTube, and you can watch them here: https://www.youtube.com/playlist?list=PLOuHvpVx7kYksG0NFaCaQsSkrUlj3Oq4S  The entire playlist runs about 2 1/2 hours, and will give you a broad view of what's new in the Ocata release of OpenStack across many of the subprojects. It will also give you some deep information about specific changes in some of these projects.
 
 We are also reposting these, with transcripts, on the RDO blog, and you can see the first few of those here:
-    
+
 **Stephen Finucane - OpenStack Nova - What's new in Ocata** by Rich Bowen
 
 > At the OpenStack PTG in February, Stephen Finucane speaks about what's new in Nova in the Ocata release of OpenStack.
@@ -73,25 +73,25 @@ Read more at [http://rdoproject.org/blog/2017/03/joe-talerico-and-openstack-perf
 
 Look for the rest in the coming weeks.
 
-## Community meetings 
+## Community meetings
 
 Every Wednesday at 15:00 UTC, we have the weekly RDO community meeting on the #RDO channel on Freenode IRC. The agenda for this meeting is posted each week in a [public etherpad](https://etherpad.openstack.org/p/RDO-Meeting) and the minutes from the meeting are posted [on the RDO website](https://www.rdoproject.org/community/community-meeting/). If there's something you'd like to see happen in RDO - a package that is missing, a tool that you'd like to see included, or a change in how things are governed - this is the best time and place to help make that happen.
 
-## Keep in touch 
+## Keep in touch
 
 There's lots of ways to stay in in touch with what's going on in the
 RDO community. The best ways are ...
 
 
-### WWW 
+### WWW
 * [RDO](http://rdoproject.org/)
 * [OpenStack Q&A](http://ask.openstack.org/ )
 
-### Mailing Lists: 
+### Mailing Lists:
 * [rdo-list mailing list](http://www.redhat.com/mailman/listinfo/rdo-list )
 * [This newsletter](http://www.redhat.com/mailman/listinfo/rdo-newsletter )
 
-### IRC 
+### IRC
 * IRC - #rdo on Freenode.irc.net
 * Puppet module development - #rdo-puppet
 
@@ -101,4 +101,3 @@ RDO community. The best ways are ...
 * [Facebook](http://facebook.com/rdocommunity)
 
 Thanks again for being part of the RDO community!
-

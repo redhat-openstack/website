@@ -11,7 +11,7 @@
 * [Q&A](http://ask.openstack.org/)
 * [Open Tickets](http://tm3.org/rdobugs)
 * [Twitter](http://twitter.com/rdocommunity)
-* [Newton release schedule](http://releases.openstack.org/newton/schedule.html)
+* [Pike release schedule](http://releases.openstack.org/pike/schedule.html)
 
 Thanks for being part of the RDO community!
 
@@ -46,7 +46,7 @@ from last last year.
 
 ## Recent Events
 
-In May, there were two big events for RDO. 
+In May, there were two big events for RDO.
 
 The first week of May we had a booth at Red Hat Summit in Boston, where
 we showcased the RDO minicluster, running RDO Newton on 4 Intel NUC
@@ -74,7 +74,7 @@ hear more from you. Join us on the [RDO-list mailing
 list](https://www.rdoproject.org/community/mailing-lists/), or drop in
 on the #RDO channel on the Freenode IRC network.
 
-## Upcoming Events 
+## Upcoming Events
 
 There's lots of opportunities to connect with the RDO community in
 person, in the coming weeks and months. We'd love to hear your RDO
@@ -95,7 +95,7 @@ Later this week, on June 7 [OpenStack Days Budapest](http://openstackceeday.com/
 Content, and another opportunity to mingle with the community.
 
 And, towards the end of the month - on June 27th and 28th,
-[Deutche OpenStack Tage](https://openstack-tage.de/) will be held in 
+[Deutche OpenStack Tage](https://openstack-tage.de/) will be held in
 München, at the Leonardo Royal, with another [two days of great
 OpenStack content](https://openstack-tage.de/programm/), and another
 opportunity to rub shoulders with the people who make OpenStack happen.
@@ -103,7 +103,7 @@ opportunity to rub shoulders with the people who make OpenStack happen.
 Looking a little further out, please mark your calendars for the two
 upcoming events:
 
-On September 5th, we have tentatively scheduled a meetup at LOPSA 
+On September 5th, we have tentatively scheduled a meetup at LOPSA
 (League of Professional System Administrators) in Oak Ridge, Tennesee,
 in conjunction with the data scientists at Oak Ridge National
 Laboratories. We'll have more details in the coming weeks, but expect
@@ -127,27 +127,27 @@ of upcoming OpenStack meetups every week on the [rdo-list mailing
 list](http://www.redhat.com/mailman/listinfo/rdo-list), or on the [RDO
 events page](http://rdoproject.org/events/).
 
-## Community meetings 
+## Community meetings
 
-Every Wednesday at 15:00 UTC, we have the weekly RDO community meeting on the #RDO channel on Freenode IRC. The agenda for this meeting is posted each week in a [public etherpad](https://etherpad.openstack.org/p/RDO-Meeting) and the minutes from the meeting are posted [on the RDO website](https://www.rdoproject.org/community/community-meeting/). 
+Every Wednesday at 15:00 UTC, we have the weekly RDO community meeting on the #RDO channel on Freenode IRC. The agenda for this meeting is posted each week in a [public etherpad](https://etherpad.openstack.org/p/RDO-Meeting) and the minutes from the meeting are posted [on the RDO website](https://www.rdoproject.org/community/community-meeting/).
 
 If there's something you'd like to see happen in RDO - a package that is missing, a tool that you'd like to see included, or a change in how things are governed - this is the best time and place to help make that happen.
 
-## Keep in touch 
+## Keep in touch
 
 There's lots of ways to stay in in touch with what's going on in the
 RDO community. The best ways are ...
 
 
-### WWW 
+### WWW
 * [RDO](http://rdoproject.org/)
 * [OpenStack Q&A](http://ask.openstack.org/ )
 
-### Mailing Lists: 
+### Mailing Lists:
 * [rdo-list mailing list](http://www.redhat.com/mailman/listinfo/rdo-list )
 * [This newsletter](http://www.redhat.com/mailman/listinfo/rdo-newsletter )
 
-### IRC 
+### IRC
 * IRC - #rdo on Freenode.irc.net
 * Puppet module development - #rdo-puppet
 
@@ -157,4 +157,3 @@ RDO community. The best ways are ...
 * [Facebook](http://facebook.com/rdocommunity)
 
 Thanks again for being part of the RDO community!
-
