@@ -36,7 +36,18 @@ You'll want a fresh install with latest updates installed.
 
 ## How to test?
 
-There are two ways to test. You can deploy OpenStack yourself, on your
+There are two ways to test. 
+
+### Test on our test cloud.
+
+You can test OpenStack on our [test
+cloud](https://etherpad.openstack.org/p/rdo-queens-m2-cloud). Read more
+about it on [David's
+blog](https://dmsimard.com/2017/11/29/come-try-a-real-openstack-queens-deployment/).
+
+### Test on your own hardware
+
+You can deploy OpenStack yourself, on your
 own hardware:
 
     $ yum -y install yum-plugin-priorities
@@ -46,9 +57,6 @@ own hardware:
     $ sudo yum update -y
 
 * These steps apply to both RHEL 7 and CentOS 7.
-
-Or, you can test OpenStack on our [test
-cloud](https://etherpad.openstack.org/p/rdo-queens-m2-cloud).
 
 ### Next steps
 
