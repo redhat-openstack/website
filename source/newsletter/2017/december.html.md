@@ -118,9 +118,8 @@ We had a great gathering of RDO folks at the Pumphouse on Tuesday night ([watch 
 
 Lastly, Rich had a chance to meet up with Emilien Macchi and talk to him about deploying TripleO in OpenStack Pike and Queens. Watch the video: [https://youtu.be/ot50Hdq--Do](https://youtu.be/ot50Hdq--Do)
 
-<!--- ### OpenStack Days France Recap (Nov 21)
-https://openstackdayfrance.fr/?lang=en
-Ask Haikel for a report? --->
+### OpenStack Days France Recap (Nov 21)
+350 people gathered two weeks ago at the second annual OpenStack Days France. Martin Andre has a [great recap of his talk](http://blog.mandre.org/2017/12/01/essential_tools_of_an_openstack_contributor.html) on his blog in case you missed it. Stay tuned for more recaps and videos to come on [openstack.fr](https://openstack.fr)
 
 ### Open Source Summit, Prague Recap
 We had a very small presence at the Open Source Summit in Prague, Czechia, at the end of October. Rich has a brief writeup on the [RDO blog](https://rdoproject.org/blog/2017/11/open-source-summit-prague/).
