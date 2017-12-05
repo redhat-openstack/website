@@ -12,7 +12,7 @@
 * [Q&A](http://ask.openstack.org/)
 * [Open Tickets](http://tm3.org/rdobugs)
 * [Twitter](http://twitter.com/rdocommunity)
-* [Mitaka release schedule](http://releases.openstack.org/mitaka/schedule.html)
+* [Queens release schedule](http://releases.openstack.org/queens/schedule.html)
 
 Thanks for being part of the RDO community!
 
