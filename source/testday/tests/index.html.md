@@ -15,6 +15,9 @@ encouraged to perform some of the following test scenarios.
 
 * Launch VM
 * Log into VM
+* Launch another VM
+* Can you connect from one VM to the other?
+* Run some kind of actual workload on your instances
 * ...
 
 ## Packstack-Based Installation (Neutron Networking)
