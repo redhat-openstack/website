@@ -52,9 +52,9 @@ But make sure to:
   configured with a self-signed certificate.
 - Check "Only on this account" for the question "Where can this Github app be installed".
 
-![Configuration of the app part 1](images/app1.png)
-![Configuration of the app part 2](images/app2.png)
-![Configuration of the app part 3](images/app3.png)
+![Configuration of the app part 1](/images/app1.png)
+![Configuration of the app part 2](/images/app2.png)
+![Configuration of the app part 3](/images/app3.png)
 
 After adding the github app settings in */etc/software-factory/sfconfig.yaml*, run:
 
@@ -67,7 +67,7 @@ on "Redeliver" in the advanced tab of the application. Having the green tick is 
 pre-requisite to go further. If you cannot get it, the rest of the article will not
 be able to be accomplished successfuly.
 
-![Configuration of the app part 4](images/app4.png)
+![Configuration of the app part 4](/images/app4.png)
 
 ## Define Zuul3 specific Github pipelines
 
@@ -285,20 +285,20 @@ git add zuulV3/myorg.yaml && git commit -m"Add ztestrepo to zuul" && git push gi
 1. Create a Pull Request via the Github UI
 2. Wait the for *check-github.com* pipeline to finish with success
 
-![Check test](images/CI1.png)
+![Check test](/images/CI1.png)
 
 3. Ask the collaborator to set his approval on the Pull request
 
-![Approval](images/approval.png)
+![Approval](/images/approval.png)
 
 4. Wait for Zuul to detect the approval
 5. Wait the for *gate-github.com* pipeline to finish with success
 
-![Gate test](images/CI2.png)
+![Gate test](/images/CI2.png)
 
 6. Wait for for the Pull Request to be merged by Zuul
 
-![Merged](images/CI3.png)
+![Merged](/images/CI3.png)
 
 As you can see, after the run of the check job and the reviewer's approval, Zuul has
 detected that the state of the Pull Request was ready to enter the gating
