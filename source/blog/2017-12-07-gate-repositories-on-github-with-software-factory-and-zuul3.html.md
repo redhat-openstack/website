@@ -191,7 +191,7 @@ of the Pull Request are ensured by Zuul.
 6. Check "Require status checks to pass before merging"
 7. Click "Save changes"
 
-![Attach the application](images/policy.png)
+![Attach the application](/images/policy.png)
 
 ## Add a collaborator
 
