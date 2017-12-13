@@ -14,7 +14,7 @@ repositories that can be smoothly used by our users:
 puppet modules, TripleO or kolla.
 
 To include new patches in RDO packages as soon as possible, in [RDO Trunk
-repos](https://www.rdoproject.org/blog/2016/05/newbie-in-rdo-2-rdo-trunk-from-a-bird-s-eye-view/)
+repos](https://www.rdoproject.org/blog/2016/04/newbie-in-rdo-2-rdo-trunk-from-a-bird-s-eye-view/)
 we build and publish new packages when commits are merged in upstream repositories.
 To ensure the content of theses packages is trustworthy, we run different tests which
 helps us to identify any problem introduced by the changes committed.

@@ -7,7 +7,7 @@ comments: true
 published: true
 ---
 
-It's been a very busy few weeks in the RDO travel schedule, and we wanted to share some photos with you from RDO's booth at[ DevConf.cz](http://http://devconf.cz/).
+It's been a very busy few weeks in the RDO travel schedule, and we wanted to share some photos with you from RDO's booth at [DevConf.cz](http://devconf.cz/).
 
 <a data-flickr-embed="true"  href="https://www.flickr.com/photos/rbowen/32444478880/in/album-72157678032428192/" title="RDO @ DevConf"><img src="https://c1.staticflickr.com/3/2117/32444478880_1cd54c8096.jpg" width="500" height="375" alt="RDO @ DevConf"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
 

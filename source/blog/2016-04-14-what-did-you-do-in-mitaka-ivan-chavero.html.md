@@ -10,23 +10,23 @@ published: true
 *This is the first in what will hopefully be a long series of interviews with OpenStack engineers about what they worked on in the Mitaka cycle.*
 
 
-The [OpenStack](http://openstack.org/)  cloud software project recently released the [Mitaka
-release](http://releases.openstack.org/mitaka/index.html). 
+The [OpenStack](http://openstack.org/) cloud software project recently released the [Mitaka
+release](http://releases.openstack.org/mitaka/index.html).
 [RDO](http://rdoproject.org/) is a community distribution of OpenStack. I've invited
 several of the engineers that work on RDO to talk about what they did
 in the Mitaka cycle.
 
 <iframe id="audio_iframe" src="https://www.podbean.com/media/player/spvip-5e6b58" width="100%" height="100" frameborder="0" scrolling="no"></iframe>
-  
+
 If the above player doesn't appear, or doesn't work for you, you can listen <a href="http://rdocommunity.podbean.com/mf/play/urpzjr/ivan_chavero_packstack.mp3">here</a>.
- 
+
 **Rich**: Mitaka is ready now, and before we move on to Newton, we should
 celebrate what we've done in Mitaka. I'm speaking with [Ivan
 Chavero](http://tm3.org/63). I
 understand that you worked primarily on [packstack](https://wiki.openstack.org/wiki/Packstack). I've had to
 correct a number of people over the last few months who think that
 packstack is abandoned, and we're not doing it any more. While, at the
-same time, the people at [CERN](www.cern.ch) use packstack for a lot of things. and I
+same time, the people at [CERN](https://home.cern/) use packstack for a lot of things. and I
 know that they're an unusual case, but there are other people that are
 using it.
 
@@ -37,7 +37,7 @@ there was some [migration from Keystone version 2 to Keystone version 3](http://
 We added some other components like, [Ceilometer was split into aodh
 and Gnocci](http://superuser.openstack.org/articles/ceilometer-gnocchi-and-aodh-liberty-progress), and we added that stuff.
 
-I think it's pretty stable right now. 
+I think it's pretty stable right now.
 
 We added more features to
 Neutron. Everything we have to ... the new stuff, we have to test. We

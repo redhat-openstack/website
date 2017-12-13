@@ -1,7 +1,7 @@
 ---
 title: How i started contributing to the RDO Project
 author: chandankumar
-tags: 
+tags:
 date: 2016-03-02 22:20:36 IST
 ---
 
@@ -14,7 +14,7 @@ I tried devstack, packstack, and other installers to deploy OpenStack.
 But I exactly don't remember how I got involved with [RDO Project](https://www.rdoproject.org/). As per [Gerrit Hub Review history](https://review.gerrithub.io/#/q/owner:chkumar246%2540gmail.com+status:merged),
 I made my first contribution to the RDO packages in March 2015. Since last year, I started attending [RDO meetings](https://www.rdoproject.org/community/community-meeting) regularly.
 In the beginning, I just used to read the meeting logs and try to find out what is happening in the community.
-But later on, I started taking action items and tried to prepare for next meeting. 
+But later on, I started taking action items and tried to prepare for next meeting.
 I failed a lot of times in the beginning and worked with the motive to complete the tasks properly.
 One day, I accidently raised my hand for chairing RDO meeting and it was a nice experience.
 Now I usually volunteer for chairing the RDO meeting.
@@ -39,7 +39,7 @@ Yes.
 * Participate in weekly RDO meeting every Wednesday on #rdo channel on Freenode. Take action items and participate in the conversation. It will help you to know what is happening in the community and what's new coming.
 * Check the RDO Bug stats each Wednesday and help them in getting it traised.
 * Participate in RDO Docs day and Mitaka RDO test days.
-* Help in answering OpenStack Questions on [ask.openstack.org](https:ask.openstack.org)
+* Help in answering OpenStack Questions on [ask.openstack.org](https://ask.openstack.org)
 * Learn RPM packaging and start reviewing new package review bugs and fix the spec of RDO Packaging.
 * Know Python, contribute to [Delorean](https://github.com/openstack-packages/delorean) and [rdopkg](https://github.com/redhat-openstack/rdopkg) which powers the RDO packages development.
 * Look for issues in the OpenStack services and feel free to report the issue to the OpenStack upstream.
