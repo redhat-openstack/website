@@ -129,4 +129,4 @@ Note that the Rally input task above uses `cirros` as image name and 'm1.tiny' a
     $ rally show images
     $ rally show flavors
 
-More about Rally tasks templates can be found on [Rally documentation](https://rally.readthedocs.io/en/latest/tutorial/step_5_task_templates.html)
+More about Rally tasks templates can be found on [Rally documentation](http://rally.readthedocs.io/en/0.6.0/tutorial/step_5_task_templates.html)

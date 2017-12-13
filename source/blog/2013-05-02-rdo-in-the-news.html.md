@@ -15,7 +15,7 @@ Hear the answers to these questions and more [at the Cloud Evangelist website](h
 
 ## OpenStack Summit review
 
-Jason Brooks from the RDO team [wrote up his experiences](http://community.redhat.com/openstack-summit-highlights-amazing-open-source-outcomes/) from the OpenStack Summit and the RDO launch.
+Jason Brooks from the RDO team [wrote up his experiences](http://community.redhat.com/blog/2013/05/openstack-summit-highlights-amazing-open-source-outcomes/) from the OpenStack Summit and the RDO launch.
 
 > What impressed me more than the growth of the project, however, was the way that
 > OpenStack embodies one of things I love most about open source, namely, its knack
@@ -49,7 +49,7 @@ We got a lot of attention during the launch. Here is a selection of some of the 
 OpenStack has a worldwide community, and the RDO release got worldwide attention. Here are some articles in various languages from around the world.
 
 * Chinese: [Red Hat releases open source RDO](http://www.lupaworld.com/article-223802-1.html)
-* Japanese: [Install instructions in Japanese](http://news.mynavi.jp/news/2013/05/02/051/)
+* Japanese: [Install instructions in Japanese](http://news.mynavi.jp/news/2013/04/16/309/)
 * Japanese: TechCrunch: [Red Hat announces RDO and OpenStack partner program](http://jp.techcrunch.com/2013/04/16/20130415red-hat-announces-rdo-and-openstack-partner-program/)
 * French: Le Mag IT: [Red Hat présente RDO une version communautaire de sa distribution OpenStack]http://www.lemagit.fr/economie/business/2013/04/18/red-hat-presente-rdo-une-version-communautaire-de-sa-distribution-openstack/
 * French: Le Monde Informatique: [Red Hat publie une distribution communautaire d'OpenStack](http://www.lemondeinformatique.fr/actualites/lire-red-hat-publie-une-distribution-communautaire-d-openstack-53255.html)

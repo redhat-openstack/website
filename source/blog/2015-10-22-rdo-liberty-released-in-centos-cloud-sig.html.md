@@ -50,13 +50,13 @@ Towards the end of developement cycle packages are imported into [CentOS Cloud S
 The RDO Project provides a Q&A service at ask.openstack.org, for more
 developer oriented content we recommend joining the [rdo-list mailing list](https://www.redhat.com/mailman/listinfo/rdo-list). Remember to post
 a brief introduction about yourself and your RDO story.
-You can also find extensive documentation [on the RDO website](https://www.rdoproject.org/documentation).	
+You can also find extensive documentation [on the RDO website](https://www.rdoproject.org/documentation).
 
 We also welcome comments and requests on the [CentOS Mailing lists](https://lists.centos.org/) and the CentOS IRC Channels ( \#centos on
 irc.freenode.net ), however we have a more focused audience in the RDO venues.
 
-To get involved in the OpenStack RPM packaging effort, see [the "Get Involved" docs](https://www.rdoproject.org/Get_involved) and [the Cloud SIG docs](https://wiki.centos.org/SpecialInterestGroup/Cloud)  Join us in #rdo on the
-Freenode IRC network, and follow us at [@RDOCommunity on Twitter](http://twitter.com/rdocommunity). And, if you're going to 
+To get involved in the OpenStack RPM packaging effort, see [the "Get Involved" docs](https://www.rdoproject.org/contribute/) and [the Cloud SIG docs](https://wiki.centos.org/SpecialInterestGroup/Cloud)  Join us in #rdo on the
+Freenode IRC network, and follow us at [@RDOCommunity on Twitter](http://twitter.com/rdocommunity). And, if you're going to
 be in Tokyo for the OpenStack Summit next week, join us on Wednesday at
 lunch for the [RDO community meetup](http://sched.co/4MYy).
 
@@ -74,7 +74,7 @@ especially
 Special thanks to all the folks who helped with last minute testing in
 IRC \#rdo channel !
 
-Thanks, 
+Thanks,
 
 Alan Pevec
 

@@ -18,7 +18,7 @@ RDO provides three packages for running tempest against any OpenStack installati
 * *openstack-tempest* : It provides python tempest library and required executables for running tempest.
 * *openstack-tempest-all* : It will install openstack-tempest as well as all the tempest plugins on the system.
 
-**Deploy [packstack](github.com/openstack/packstack) using latest RDO Newton packages**
+**Deploy [packstack](https://github.com/openstack/packstack) using latest RDO Newton packages**
 
 Roll out a vm of [CentOS 7](https://www.centos.org/download/), Follow these steps:
 
