@@ -52,8 +52,8 @@ own hardware:
 
     $ yum -y install yum-plugin-priorities
     $ cd /etc/yum.repos.d/
-    $ sudo curl -O http://trunk.rdoproject.org/centos7/delorean-deps.repo
-    $ sudo curl -O http://trunk.rdoproject.org/centos7/current-passed-ci/delorean.repo
+    $ sudo curl -O https://trunk.rdoproject.org/centos7/delorean-deps.repo
+    $ sudo curl -O https://trunk.rdoproject.org/centos7/current-passed-ci/delorean.repo
     $ sudo yum update -y
 
 * These steps apply to both RHEL 7 and CentOS 7.
