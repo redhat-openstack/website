@@ -43,7 +43,7 @@ The following table details the high-level plan for each service. A link to a de
 
 | Service name  | Criticality           | Contingency plan  | More details |
 | ------------- |:---------------------:| ------------------| -------------|
-| review.rdoproject.org | Medium         | Current: Periodic rsync from offsite node using the new sf-ops playbook to enable fast recovery. In case of an outage in the RDO Cloud, rebuild and restore data from backup. | [This URL](https://softwarefactory-project.io/docs/backup_restore.html#recover-a-backup) contains details about the backup process|
+| review.rdoproject.org | Medium         | Current: Periodic rsync from offsite node using the new sf-ops playbook to enable fast recovery. In case of an outage in the RDO Cloud, rebuild and restore data from backup. | [This URL](https://softwarefactory-project.io/docs/operator/backup_restore.html#recover-a-backup) contains details about the backup process|
 | review.rdoproject.org (nodepool-builder) | Medium | Current: restore on the same offsite node | The Software Factory deployment architecture (arch.yaml) can be collapsed to run all the service on a single node (allinone). |
 | review.rdoproject.org nodepool nodes | High | Have multiple clouds | Our current nodepool setup only include one cloud (RDO Cloud). We need to keep more than one cloud in the configuration, to make sure we can always have some available node for nodepool needs. With a static node (or with the nodepool-drivers coming with ZuulV3), some job could still be executed without a cloud. |
 | review.rdo storage + logs | Medium | *Could we live without artifacts for a day or two? Could we lose them completely?* ||
