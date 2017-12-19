@@ -76,12 +76,6 @@ gem "less"
 # asciidoctor
 gem "asciidoctor"
 
-# mediawiki
-gem "wikicloth"
-# workaround https://github.com/twitter/twitter-text/issues/211
-# also the configuration behavior changes and breaks wikicloth
-gem "twitter-text", '~> 1.14'
-
 gem "coderay"
 gem "stringex"
 
