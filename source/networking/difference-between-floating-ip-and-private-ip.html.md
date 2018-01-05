@@ -12,7 +12,7 @@ Are you wondering about the difference between a private IP address and a floati
 
 ## Private IP Address
 
-A private IP address is assigned to an instance's network-interface by the DHCP server. The address is visible from within the instance by using a command like “ip a”. The address is typically part of a private network and is used for communication between instances in the same broadcast domain via virtual switch (L2 agent on each compute node).  It can also be accessible from instances in other private networks via virtual router (L3 agent). 
+A private IP address is assigned to an instance's network-interface by the DHCP server. The address is visible from within the instance by using a command like “ip a”. The address is typically part of a private network and is used for communication between instances in the same broadcast domain via virtual switch (L2 agent on each compute node).  It can also be accessible from instances in other private networks via virtual router (L3 agent).
 
 ## Floating IP Address
 
@@ -24,7 +24,7 @@ A floating IP address and a private IP address can be used at the same time on a
 
 ## Example
 
-A setup with 2 compute nodes, one Neutron controller (where the Neutron service, dhcp agent and l3 agent run), a physical router and a user. Let the physical subnet be 10.0.0.0/24. On the compute nodes instances are running using the private IP range 192.168.1.0/24. One of the instances is a webserver that should be reachable from a public network. Network outline: ![](neutron_private_floaring_ip.png "fig:neutron_private_floaring_ip.png")
+A setup with 2 compute nodes, one Neutron controller (where the Neutron service, dhcp agent and l3 agent run), a physical router and a user. Let the physical subnet be 10.0.0.0/24. On the compute nodes instances are running using the private IP range 192.168.1.0/24. One of the instances is a webserver that should be reachable from a public network. Network outline: ![](neutron_private_floating_ip.png "fig:neutron_private_floating_ip.png")
 
 As shown in the picture above, the webserver is running on an instance with private IP 192.168.1.2. A User from network 10.0.0.0/24 wants to access the webserver but he's not part of private network 192.168.1.0/24. Using floating IP address 10.0.0.100 enables the user to fetch webpages from the webserver. The destination address is translated by the NAT table (iptables) within the virtual router deployed on the controller.
 

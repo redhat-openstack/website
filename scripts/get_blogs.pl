@@ -25,7 +25,7 @@ foreach ( $feed->entries ) {
 
     print $md "**" . $_->title . "** by " . $_->author . "\n\n";
     my $body = $_->content->body;
-    
+
     # Or possibly the summary?
     if ( !$body ) {
         $body = $_->summary->body;
@@ -50,7 +50,7 @@ foreach ( $feed->entries ) {
 # print $md "Read more at [$short]($short)\n\n\n";
     print $md "Read more at [$link]($link)\n\n\n";
 
-    print $tweets '"01/01/2017 00:00:00","' . $_->title 
+    print $tweets '"01/01/2017 00:00:00","' . $_->title
             . ' #OpenStack #RDOCommunity","'
             . $link . '"' . "\n";
 }
