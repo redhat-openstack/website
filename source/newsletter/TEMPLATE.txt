@@ -1,4 +1,4 @@
-# _MONTH_ 2017 RDO Community Newsletter
+# _MONTH_ 2018 RDO Community Newsletter
 
 ## Quick links:
 
@@ -18,7 +18,7 @@ Thanks for being part of the RDO community!
 
 ## Upcoming Events
 
-There's several events on the horizon that you should be aware of.
+There are several events on the horizon that you should be aware of.
 
 
 Other RDO events, including the many OpenStack meetups around the
