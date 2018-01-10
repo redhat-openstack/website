@@ -203,7 +203,7 @@ configure :development do
   next if ARGV.include? 'deploy'
 
   puts "\nUpdating git submodules..."
-  puts `git submodule init && git submodule sync`
+  puts `git submodule init && git submodule sync && git submodule update`
   puts `git submodule foreach "git pull -qf origin master"`
   `git commit -q -m "updated events" data/events &>/dev/null`
   puts "\n"
