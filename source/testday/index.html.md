@@ -11,7 +11,7 @@ See also the [bug triage schedule](/contribute/rdo-bugtriage/).
 
 The (tentative) test day schedule is:
 
-* [/testday/queens/milestone3](February 8, 9: Queens milestone 3 test day) (For January 22-26 Queens milestone)
+* [February 8, 9: Queens milestone 3 test day](/testday/queens/milestone3) (For January 22-26 Queens milestone)
 * March 8, 9: Queens final release test day (For February 19-23 Queens release)
 
 ## Test, every day
