@@ -12,7 +12,7 @@ The complete agenda can be seen in the [meeting etherpad](https://etherpad.opens
 
 * Perry Myers talked some about the packaging effort - the status, and where people can get involved in that. Several people in attendance expressed a desire to get more involved. There was also some talk about how we are going to handle packaging for Fedora in the future.
 
-* Jaromir Coufal gave an overview of the [RDO-Manager](https://www.rdoproject.org/RDO-Manager) project, which is the effort to build an installer/manager for your RDO OpenStack cloud, based on TripleO and other OpenStack projects.
+* Jaromir Coufal gave an overview of the RDO-Manager project, which is the effort to build an installer/manager for your RDO OpenStack cloud, based on TripleO and other OpenStack projects.
 
 * There was some discussion around what will be included in future packaging of RDO - for example, whether it will include the newly minted projects such as [Murano](https://wiki.openstack.org/wiki/Murano), [Congress](https://wiki.openstack.org/wiki/Congress), [Mistral](https://wiki.openstack.org/wiki/Mistral), and so on. The consensus appears to be that this is up to who steps up to do that work, and so is another incentive to get more people involved in packaging.
 

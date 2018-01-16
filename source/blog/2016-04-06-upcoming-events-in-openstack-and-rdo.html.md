@@ -13,11 +13,10 @@ There's also a huge surge in things to announce around the RDO community, as we
 
 * The [upstream release of Mitaka](http://releases.openstack.org/mitaka/schedule.html) is this week. [Stackalytics](http://stackalytics.com/?metric=commits) lists over 2500 people who have contributed to this release.
 
-* We'll be conducting a [test day for RDO Mitaka on April 13th and 14th](https://www.rdoproject.org/testday/mitaka/ga/).
+* We'll be conducting a [test day for RDO Mitaka on April 13th and 14th](https://www.rdoproject.org/testday/).
 
 * [OpenStack Summit](http://openstack.org/summit) is just 2 weeks away, and we'll be having an [RDO BoF](https://www.openstack.org/summit/austin-2016/summit-schedule/events/6892) (Birds of a Feather) gathering there.
 
 * If you have something you'd like to demo in the RDO booth at OpenStack Summit, add your idea to the [booth schedule etherpad](https://etherpad.openstack.org/p/rdo-austin-summit-booth).
 
 And, as every week, there are lots of [OpenStack Meetups](http://rdoproject.org/events/) all over the world this week. Especially don't miss Perry Meyers' RDO Q&A at the [Morgantown OpenStack Meetup](http://www.meetup.com/Morgantown-Linux-User-Group/events/227482742/).
-

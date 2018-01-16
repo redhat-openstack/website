@@ -127,5 +127,5 @@ status of RDO packaging and CI.
 
 * [TripleO quickstart demostration](https://www.youtube.com/watch?v=4O8KvC66eeU) by trown
 * [Weirdo: A talk about CI in OpenStack and RDO](https://dmsimard.com/2016/03/02/openstack-montreal-a-talk-about-ci-in-openstack-and-rdo/) by dmsimard.
-* [ARA blog posts](https://dmsimard.com/tag/ara.html) - from dmsimard blog
+* [ARA blog posts](https://dmsimard.com/categories/ara) - from dmsimard blog
 * [Ci in RDO: What do we test?](https://amoralej.fedorapeople.org/slides/RDO-CI-summit-bcn-final.pdf) - presentation in RDO and Ceph Meetup BCN.

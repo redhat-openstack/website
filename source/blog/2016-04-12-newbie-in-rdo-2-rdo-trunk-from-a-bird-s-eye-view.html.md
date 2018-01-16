@@ -6,7 +6,7 @@ date: 2016-04-12 18:45:18 CEST
 published: true
 ---
 
-Time goes fast as a RDO newbie and once I understood what the RDO Trunk and CloudSIG repos provide (read my [previous post](https://www.rdoproject.org/blog/2016/05/new-in-rdo-repos-one-size-doesn-t-fit-all/) if you still have doubts), my next goal was to have a clear high-level perspective of the entire delivery workflow followed in the project.
+Time goes fast as a RDO newbie and once I understood what the RDO Trunk and CloudSIG repos provide (read my [previous post](https://www.rdoproject.org/blog/2016/04/new-in-rdo-repos-one-size-doesn-t-fit-all/) if you still have doubts), my next goal was to have a clear high-level perspective of the entire delivery workflow followed in the project.
 
 Although there is a lot of detailed and great information in different sources (see [More info](####More info) at the end of the post), it may be useful for others to provide a high level and global description of it. In this post I'll focus in the process around RDO Trunk repositories as shown in the following diagram:
 

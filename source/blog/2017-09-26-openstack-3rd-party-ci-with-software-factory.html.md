@@ -1,7 +1,7 @@
 ---
 title: OpenStack 3rd Party CI with Software Factory
 author: jpena
-tags: 
+tags:
 date: 2017-09-26 11:34:30 CEST
 ---
 
@@ -143,7 +143,7 @@ nodepool:
 
 - The authentication options if you want other users to be able to log into your instance of
 Software Factory using OAuth providers like GitHub. This is not mandatory for a 3rd party CI.
-See [this part of the documentation](https://softwarefactory-project.io/docs/auths.html#oauth2-based-authentication) for details.
+See [this part of the documentation](https://softwarefactory-project.io/docs/operator/auths.html) for details.
 
 - If you want to use [LetsEncrypt](https://letsencrypt.org/) to get a proper SSL certificate, set:
 
@@ -316,7 +316,7 @@ image we just created in Nodepool.
 $ vi zuul/upstream.yaml
 ```
 
-We are creating a specific [Zuul pipeline](https://docs.openstack.org/infra/zuul/zuul.html#pipelines)
+We are creating a specific [Zuul pipeline](https://docs.openstack.org/infra/zuul/user/concepts.html)
 for changes coming from the OpenStack Gerrit, and specifying that we want to run a CI job for commits
 to the ci-sandbox project:
 
