@@ -11,7 +11,7 @@ Since launching on April 15th, RDO has garnered a lot of attention - both in pre
 
 In Portland during [the OpenStack Summit](https://www.openstack.org/summit/portland-2013/) Dave Neary sat down with Richard Morrell of Red hat to record a podcast, covering questions like "what is RDO?", "who is it for?" "why are Red Hat releasing a community distribution of OpenStack?"
 
-Hear the answers to these questions and more [at the Cloud Evangelist website](http://cloudevangelist.org/2013/04/17/podcast-openstack-developer-summit-2013/)
+Hear the answers to these questions and more [at the Cloud Evangelist website](http://thecloudevangelist.com/cloud-software/podcast-openstack-developer-summit-2013/)
 
 ## OpenStack Summit review
 

@@ -5,7 +5,7 @@ tags:
 date: 2016-11-22 10:10:08 CET
 ---
 
-As explained in [a previous post](https://www.rdoproject.org/blog/2016/05/new-in-rdo-repos-one-size-doesn-t-fit-all/),
+As explained in [a previous post](https://www.rdoproject.org/blog/2016/04/new-in-rdo-repos-one-size-doesn-t-fit-all/),
 in RDO Trunk repositories we try to provide packages for new commits in OpenStack
 projects as soon as possible after they are merged upstream. This has a number of advantages:
 

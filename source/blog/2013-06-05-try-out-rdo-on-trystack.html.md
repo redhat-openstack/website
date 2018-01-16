@@ -15,6 +15,6 @@ anyone can register and try out OpenStack.
 
 [The x86 OpenStack cluster at TryStack.org](http://x86.trystack.org) runs on RHEL 6.4 and thanks to some awesome work from Dan Radez we have recently completed the upgrade to the Grizzly release using packages from RDO. Red Hat has committed to the ongoing support and maintenance of the x86 cluster.
 
-Head over to [TryStack.org](http://trystack.org) now to register for an account, and [try out RDO for your self](http://rdoproject.org/Using_RDO_on_TryStack).
+Head over to [TryStack.org](http://trystack.org) now to register for an account, and [try out RDO for your self](https://www.rdoproject.org/documentation/trystack/ ).
 
-For more information on getting started with RDO on your own servers, visit rdoproject.org and [download the packages today](http://rdoproject.org/Quickstart).
+For more information on getting started with RDO on your own servers, visit rdoproject.org and [download the packages today](https://www.rdoproject.org/install/).

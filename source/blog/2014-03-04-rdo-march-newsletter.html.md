@@ -14,13 +14,13 @@ Last week, Lars Kellogg-Stedman hosted a Google Hangout in which he talked about
 
 When last I wrote, I was in Belgium attending FOSDEM. That event was fantastic, and a little overwhelming, with over 5000 Free/Libre/OpenSource Software enthusiasts descending on the University of Brussels to celebrate and learn about various software projects and the issues surrounding them. While there, I interviewed Ohad Levy, who works on deploying OpenStack with The Foreman, about his work. Unfortunately, I managed to turn off the recorder before we started talking, and I have nothing to show for it. We'll be having that conversation again over the phone in the coming days, and I'll publish that on the RDO website.
 
-Additionally, I attended Configuration Management Camp - [cfgmgmtcamp.eu/](http://cfgmgmtcamp.eu/) - and Infrastructure.next - [lanyrd.com/2014/infranext/](http://lanyrd.com/2014/infranext/) - in Ghent, which focused on issues that are important to us in the OpenStack world - configuration management, automation, and monitoring.
+Additionally, I attended Configuration Management Camp - [cfgmgmtcamp.eu/](http://cfgmgmtcamp.eu/) - and Infrastructure.next in Ghent, which focused on issues that are important to us in the OpenStack world - configuration management, automation, and monitoring.
 
 Last weekend, RDO had a table at SCaLE - the Southern California Linux Expo - [socallinuxexpo.org/blog/scale-12x](http://www.socallinuxexpo.org/blog/scale-12x) - where we had steady traffic through the whole event, with people telling us how much they love RDO, and other folks asking a lot of great questions about OpenStack, and where it fits into the larger cloud ecosystem, including projects like oVirt and OpenShift, who were our neighbors in our booth.
 
 **Upcoming events**
 
-We are planning our next RDO Test Days on March 19th and 20th. We'll be testing the third Icehouse milestone in preparation for the final release of Icehouse on April 17th. You can find more about the test day, and sign up to participate, at [rdoproject.org/RDO_test_day_Icehouse_milestone_3](http://rdoproject.org/RDO_test_day_Icehouse_milestone_3)
+We are planning our next RDO Test Days on March 19th and 20th. We'll be testing the third Icehouse milestone in preparation for the final release of Icehouse on April 17th. You can find more about the test day, and sign up to participate, at [rdoproject.org/RDO_test_day_Icehouse_milestone_3](/testday/).
 
 We'll be hosting another Google Hangout on Thursday, March 27th. Flavio Parcoco will be telling us about the Marconi project - [https://wiki.openstack.org/wiki/Marconi](https://wiki.openstack.org/wiki/Marconi) - what it is, what the plans are for the coming releases, and how you can get involved in the development of this new piece of OpenStack infrastructure. That presentation will be streamed live at [https://plus.google.com/u/1/events/ckjhm8rggnqvrnspftna845kubk](https://plus.google.com/u/1/events/ckjhm8rggnqvrnspftna845kubk) and also recorded there for viewing afterwards.
 
@@ -48,7 +48,7 @@ And finally, you can adjust your subscription to this newsletter, or invite your
 
 Thanks again for being part of the RDO community. We look forward to seeing your contibutions.
 
--- 
+--
 Rich Bowen, for the RDO community
 rbowen@redhat.com
 [rdoproject.org/](http://rdoproject.org/)

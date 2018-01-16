@@ -21,7 +21,7 @@ own onpremise, public or hybrid clouds.
 In addition to the comprehensive OpenStack services, libraries and
 clients, this release also provides Packstack, a simple installer for
 proof-of-concept installations, as small as a single all-in-one box and
-[RDO Manager](https://www.rdoproject.org/RDO-Manager), an OpenStack
+[TripleO](/tripleo), an OpenStack
 deployment and management tool for production environments based on the
 OpenStack TripleO project.
 
@@ -33,10 +33,9 @@ Ensure you have a fully updated CentOS Linux 7/x86\_64 machine, and run :
 	sudo yum install openstack-packstack
 	packstack --allinone
 
-For a more detailed quickstart please refer to the [RDO Project hosted
-guide](https://www.rdoproject.org/QuickStart).
+For a more detailed quickstart please refer to the [RDO Project hosted guide](/install).
 
-For RDO Manager consult the [RDO Manager page](https://www.rdoproject.org/RDO-Manager).
+For TripleO consult the [TripleO Quickstart page](/tripleo).
 
 RDO project is closely tracking upstream OpenStack projects using the [Delorean tool](http://trunk.rdoproject.org/) which is producing RPM packages from upstream development
 branches.

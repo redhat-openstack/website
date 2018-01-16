@@ -10,14 +10,14 @@ The RDO community is pleased to announce the general availability of the RDO bui
 
 The [RDO community project](https://www.rdoproject.org/) curates, packages, builds, tests, and maintains a complete OpenStack component set for RHEL and CentOS Linux and is a member of the [CentOS Cloud Infrastructure SIG](https://wiki.centos.org/SpecialInterestGroup/Cloud). The Cloud Infrastructure SIG focuses on delivering a great user experience for CentOS Linux users looking to build and maintain their own on-premise, public or hybrid clouds. At latest count, RDO contains [1157 packages](https://www.rdoproject.org/documentation/package-list/).
 
-All work on RDO, and on the downstream release, Red Hat OpenStack Platform, is 100% open source, with all code changes going upstream first. 
+All work on RDO, and on the downstream release, Red Hat OpenStack Platform, is 100% open source, with all code changes going upstream first.
 
 
 **Getting Started**
 
 There are three ways to get started with RDO.
 
-To spin up a proof of concept cloud, quickly, and on limited hardware, try the [All-In-One Quickstart](http://rdoproject.org/Quickstart). You can run RDO on a single node to get a feel for how it works.
+To spin up a proof of concept cloud, quickly, and on limited hardware, try [Packstack](https://www.rdoproject.org/install/packstack/). You can run RDO on a single node to get a feel for how it works.
 
 For a production deployment of RDO, use the [TripleO Quickstart](https://www.rdoproject.org/tripleo/) and you'll be running a production cloud in short order.
 
@@ -25,7 +25,7 @@ Finally, if you want to try out OpenStack, but don't have the time or hardware t
 
 
 **Getting Help**
-    
+
 The RDO Project participates in a Q&A service at [ask.openstack.org](http://ask.openstack.org), for more developer-oriented content we recommend joining the [rdo-list mailing list](https://www.redhat.com/mailman/listinfo/rdo-list). Remember to post a brief introduction about yourself and your RDO story. You can also find extensive documentation on the RDO docs sites [Documnentation](https://www.rdoproject.org/documentation/), [FAQS](https://www.rdoproject.org/rdo/faq/), [Contribute](https://www.rdoproject.org/contribute/), [Storage](https://www.rdoproject.org/storage/), [Books](https://www.rdoproject.org/documentation/books/), [Networking](https://www.rdoproject.org/networking/), [Install](https://www.rdoproject.org/install/).
 
 The #rdo channel on Freenode IRC is also an excellent place to find help and give help.

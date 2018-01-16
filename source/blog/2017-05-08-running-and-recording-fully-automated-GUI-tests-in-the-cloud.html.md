@@ -13,7 +13,7 @@ CI/CD pipelines. It is the engine behind [RDO's CI pipeline](https://review.rdop
 but it is also very versatile and suited for all kinds of software projects. Also,
 I happen to be one of Software Factory's main contributors. :)
 
-Software Factory has [many cool features that I won't list here](https://softwarefactory-project.io/docs/intro.html), but among these
+Software Factory has [many cool features that I won't list here](https://softwarefactory-project.io/docs/index.html), but among these
 is a unified web interface that helps navigating through its components. Obviously
 we want this interface thoroughly tested; ideally within Software Factory's
 own CI system, which runs on test nodes being provisioned on demand on an OpenStack
@@ -73,7 +73,8 @@ the dependencies we need:
 sudo yum install -y firefox Xvfb libXfont Xorg jre
 sudo mkdir /usr/lib/selenium /var/log/selenium /var/log/Xvfb
 sudo wget -O /usr/lib/selenium/selenium-server.jar http://selenium-release.storage.googleapis.com/3.4/selenium-server-standalone-3.4.0.jar
-sudo pip install selenium```
+sudo pip install selenium
+```
 
 The dependencies are:
 
@@ -88,13 +89,15 @@ in the background:
 
 ```bash
 /usr/bin/java -jar /usr/lib/selenium/selenium-server.jar -host 127.0.0.1 >/var/log/selenium/selenium.log 2>/var/log/selenium/error.log
-Xvfb :99 -ac -screen 0 1920x1080x24 >/var/log/Xvfb/Xvfb.log 2>/var/log/Xvfb/error.log```
+Xvfb :99 -ac -screen 0 1920x1080x24 >/var/log/Xvfb/Xvfb.log 2>/var/log/Xvfb/error.log
+```
 
 Finally, set the display environment variable to :99 (the Xvfb display) and run your tests:
 
 ```bash
 export DISPLAY=:99
-./path/to/seleniumtests```
+./path/to/seleniumtests
+```
 
 The tests will run as if the VM was plugged to a display.
 
@@ -166,7 +169,8 @@ sudo yum install -y ffmpeg
 
 To record the Xfvb buffer, you'd simply run
 ```bash
-export FFREPORT=file=/tmp/gui/ffmpeg-$(date +%Y%m%s).log && ffmpeg -f x11grab -video_size 1920x1080 -i 127.0.0.1$DISPLAY -codec:v mpeg4 -r 16 -vtag xvid -q:v 8 /tmp/gui/tests.avi ```
+export FFREPORT=file=/tmp/gui/ffmpeg-$(date +%Y%m%s).log && ffmpeg -f x11grab -video_size 1920x1080 -i 127.0.0.1$DISPLAY -codec:v mpeg4 -r 16 -vtag xvid -q:v 8 /tmp/gui/tests.avi
+```
 
 The catch is that ffmpeg expects the user to press __q__ to stop the recording
 and save the video (killing the process will corrupt the video). We can use

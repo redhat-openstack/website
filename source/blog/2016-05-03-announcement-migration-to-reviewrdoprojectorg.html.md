@@ -7,7 +7,7 @@ published: true
 ---
 
 After releasing RDO Mitaka, we migrated our current packaging workflow from gerrithub to a brand-new platform hosted at  [https://review.rdoproject.org](https://review.rdoproject.org) right before the Newton Summit.
-During the last cycle, we've worked with [Software Factory](https://software-factory.io) folks to build a new packaging workflow based on the very same foundations as upstream OpenStack (using gerrit, zuul, nodepool). We're now relying on RPMFactory which is a specialization of Software Factory fitted for RPM packaging needs.
+During the last cycle, we've worked with [Software Factory](https://softwarefactory-project.io) folks to build a new packaging workflow based on the very same foundations as upstream OpenStack (using gerrit, zuul, nodepool). We're now relying on RPMFactory which is a specialization of Software Factory fitted for RPM packaging needs.
 
 The migration was planned in order to satisfy some criteria:
 
