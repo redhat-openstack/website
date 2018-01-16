@@ -64,5 +64,5 @@ If you need a package using the latest commit, even before it passes CI (be awar
 ## More information:
 
 * [Previous - Delivery pipeline](/what/pipeline)
-* [Newbie in RDO: one size doesn't fit all](/blog/2016/05/new-in-rdo-repos-one-size-doesn-t-fit-all/)
+* [Newbie in RDO: one size doesn't fit all](/blog/2016/04/new-in-rdo-repos-one-size-doesn-t-fit-all/)
 * [TOC](/what)

@@ -8,7 +8,7 @@ While an upstream development cycle is in process, we package up what
 happens each day, using the following workflow. TODO
 
 For what we do once a release happens upstream, see [this
-doc](release-workflow).
+doc](/what/release/).
 
 * [Overview and infrastructure](/what/workflow-overview)
 * [DLRN: what it is, what we use it for](/what/dlrn)
@@ -20,5 +20,4 @@ doc](release-workflow).
 
 [← Available Repos](/what/repos) |
 [→ Workflow overview](/what/workflow-overview) |
-[↑ TOC](/what) 
-
+[↑ TOC](/what)
