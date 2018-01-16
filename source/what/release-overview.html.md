@@ -22,6 +22,5 @@ The following pieces of infrastructure are used for GA packages:
 
 ----
 
-[← Release workflow](/what/release-workflow) |
-[↑ TOC](/what) 
-
+[← Release workflow](/what/release) |
+[↑ TOC](/what)
