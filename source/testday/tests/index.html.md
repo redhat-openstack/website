@@ -5,7 +5,9 @@ Scenarios to test. If you test something that someone else has already made note
 Copy this outline to a public etherpad for each test day. Please update
 this template if tests are added or modified.
 
+<!-- link no longer works & no longer seems applicable
 * See the [old test matrix](https://www.rdoproject.org/testday/newton/testedsetups_rc/).
+-->
 
 ## "Does it work" tests
 
@@ -48,8 +50,8 @@ encouraged to perform some of the following test scenarios.
 ### Packstack 3 node
 * CentOS 7
 * Instructions: https://www.rdoproject.org/testday/newton/final/#how-to-test
-* Who: 
-* Results: 
+* Who:
+* Results:
 * Tickets:
 
 ### Packstack 3 node
@@ -109,7 +111,7 @@ encouraged to perform some of the following test scenarios.
 * CentOS 7
 * Instructions: https://etherpad.openstack.org/p/amoralej-testday-newton-ga
 * Who:
-* Results: 
+* Results:
 * Tickets:
 
 
@@ -130,19 +132,19 @@ encouraged to perform some of the following test scenarios.
 * Tickets:
 
 
-### TripleO Baremetal 
+### TripleO Baremetal
 * CentOS
 * Instructions: http://images.rdoproject.org/docs/baremetal/
-* Results: 
+* Results:
 * Tickets:
 
 
-### TripleO Baremetal 
+### TripleO Baremetal
 * RHEL
 * Instructions: http://images.rdoproject.org/docs/baremetal/
 * Who:
-* Results: 
-* Tickets: 
+* Results:
+* Tickets:
 
 
 ### TripleO Minimal virt deployment
