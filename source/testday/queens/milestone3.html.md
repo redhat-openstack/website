@@ -22,7 +22,7 @@ etherpad](https://etherpad.openstack.org/p/rdo-queens-m3-cloud)
 ### Quick links
 
 * [Test matrix](/testday/tests)
-* [Workarounds](/testday/queens/workarounds3)
+* [Workarounds](https://etherpad.openstack.org/p/rdo-test-days-queens3-workarounds)
 
 ## Prerequisites
 
@@ -36,7 +36,7 @@ You'll want a fresh install with latest updates installed.
 
 ## How to test?
 
-There are two ways to test. 
+There are two ways to test.
 
 ### Test on our test cloud.
 
@@ -60,7 +60,7 @@ own hardware:
 
 ### Next steps
 
-* Check for any [workarounds](/testday/queens/workarounds3) required for your platform before the main installation.
+* Check for any [workarounds](https://etherpad.openstack.org/p/rdo-test-days-queens3-workarounds) required for your platform before the main installation.
 
 * For a TripleO-based installation, try the [TripleO quickstart](https://www.rdoproject.org/tripleo/).
 
@@ -71,7 +71,7 @@ own hardware:
 The scenarios that should be tested are listed on the [test matrix](/testday/tests) page. This will be copied to an etherpad the day of the test, for easier annotation during the event.
 
 2. Pick an item from the list.
-1. Go through the scenario as though you were a beginner, just following the instructions. (Check the [workarounds](/testday/queens/workarounds3) page for problems that others may have encountered and resolved.)
+1. Go through the scenario as though you were a beginner, just following the instructions. (Check the [workarounds](https://etherpad.openstack.org/p/rdo-test-days-queens3-workarounds) page for problems that others may have encountered and resolved.)
 1. **Keep good notes.** You can use [the test day etherpad](https://etherpad.openstack.org/p/rdo-test-days-queens-m3) for these notes. Reviewing other peoples' notes may help you avoid problems that they've already encountered.
 
 If you have problems with any of the tests, report a bug to [Bugzilla](https://bugzilla.redhat.com) usually for one of the
@@ -79,4 +79,4 @@ If you have problems with any of the tests, report a bug to [Bugzilla](https://b
 [openstack-nova](https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&component=openstack-nova), [openstack-glance](https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&component=openstack-glance), [openstack-keystone](https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&component=openstack-keystone), [openstack-cinder](https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&component=openstack-cinder),
 [openstack-neutron](https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&component=openstack-neutron), [openstack-swift](https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&component=openstack-swift),  [python-django-horizon](https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&component=python-django-horizon), [openstack-heat](https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&component=openstack-heat) or [openstack-ceilometer](https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&component=openstack-ceilometer) components. If you are unsure about exactly how to file the report or what other information to include, just ask on IRC (#rdo, freenode.net)  and we will help you.
 
-Once you have completed the tests, add your results to the table on the [test matrix](/testday/tests) page, following the examples already there. Be sure to check the [workarounds](/testday/queens/workarounds3) page for things that may have already have fixes or workarounds.
+Once you have completed the tests, add your results to the table on the [test matrix](/testday/tests) page, following the examples already there. Be sure to check the [workarounds](https://etherpad.openstack.org/p/rdo-test-days-queens3-workarounds) page for things that may have already have fixes or workarounds.
