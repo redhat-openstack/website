@@ -20,7 +20,7 @@ it](mailto:rdo-list@redhat.com) and we'll add you to the list.
 
 |---|---|
 | [David Moreau Simard](https://twitter.com/dmsimard/status/778646409293733888) <br /> [ ![](/images/homelab/dmsimard_home_lab.png) ](https://twitter.com/dmsimard/status/778646409293733888) | [Javier Peña](http://www.jpena.net/creating-a-home-openstack-lab-with-rdo-and-a-couple-spare-laptops/) <br /> [ ![](/images/homelab/jpena.png) ](http://www.jpena.net/creating-a-home-openstack-lab-with-rdo-and-a-couple-spare-laptops/) |
-| [Donny Davis](/hardware/home/donny_davis) <br /> [ ![](/images/homelab/donny_davis_1_thumb.jpg) ](/hardware/home/donny_davis) |  |
+| [Donny Davis](http://project.fortnebula.com/) <br /> [ ![](/images/homelab/donny_davis_1_thumb.jpg) ](/hardware/home/donny_davis) |  |
 
 
 

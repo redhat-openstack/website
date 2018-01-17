@@ -45,12 +45,12 @@ For more information about how SELinux policies are developed for RDO, see [SELi
 
 ### PackStack fails if SELinux is disabled
 
-It has been reported that [PackStack will fail if SELinux is disabled](http://{{SERVERNAME}}/forum/discussion/46/install-on-centos-6-4-and-selinux-disabled/p1).
+It has been reported that PackStack will fail if SELinux is disabled.
 
 The error observed is:
 
-    ERROR : Error during puppet run : err: /Stage[main]//Exec[setenforce 0]/returns: 
-    change from notrun to 0 failed: setenforce 0 returned 1 instead of one of [0] 
+    ERROR : Error during puppet run : err: /Stage[main]//Exec[setenforce 0]/returns:
+    change from notrun to 0 failed: setenforce 0 returned 1 instead of one of [0]
     at /var/tmp/packstack/51a57c45478b4091b2eb6a1bbd4c2303/manifests/my_public_ip_ring_swift.pp:56
     Please check log file /var/tmp/packstack/20130421-002212-fYYLUA/openstack-setup.log for more information
 

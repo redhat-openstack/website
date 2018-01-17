@@ -6,17 +6,19 @@ authors: dneary, sgordon
 
 # Using RDO on TryStack
 
+<!--
 *TODO: Add this stuff to the upstream doc at trystack.org rather than
 maintaining it here.*
+-->
 
-If you want to get familiar with the OpenStack dashboard interface, 
-and experiment with the creation of instances and shared volumes, 
-[TryStack](http://trystack.org) could be for you. 
+If you want to get familiar with the OpenStack dashboard interface,
+and experiment with the creation of instances and shared volumes,
+[TryStack](http://trystack.org) could be for you.
 
 TryStack is a public OpenStack cloud where you can try out OpenStack
 without having to set it up yourself.
 
-If you connect to "OpenStack RDO Kilo on x86/RHEL", 
+If you connect to "OpenStack RDO Kilo on x86/RHEL",
 you will be connecting to a public sandboxed instance of RDO.
 
 

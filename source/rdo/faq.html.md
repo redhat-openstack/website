@@ -42,7 +42,7 @@ RDO targets Red Hat Enterprise Linux, CentOS, and Fedora, and their derivatives.
 
 The OpenStack project develops code, and does not handle packaging for specific platforms. As a distribution of OpenStack, RDO packages the upstream OpenStack components to run well together on CentOS, Red Hat Enterprise Linux, Fedora, and their derivatives, and provides you with installation tools to make it easier for you to deploy OpenStack.
 
-[Stable client branches](Clients) are maintained per release as part of RDO because client backward compatibility isn't guaranteed upstream.
+[Stable client branches](release-cadence) are maintained per release as part of RDO because client backward compatibility isn't guaranteed upstream.
 
 ## How can I participate?
 
@@ -103,4 +103,3 @@ RDO is built using CentOS infrastructure, similar to how CentOS packages are bui
 ## What is the relationship between RDO and Red Hat's commercial OpenStack product?
 
 RDO is a community-supported OpenStack distribution that tracks the latest version of OpenStack upstream, beginning with OpenStack Grizzly. [Red Hat OpenStack Platform](http://www.redhat.com/en/technologies/linux-platforms/openstack-platform) is an enterprise-ready commercially-supported product from Red Hat.
-

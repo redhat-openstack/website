@@ -121,7 +121,7 @@ Join us for various [events](/events/) around the world. [Organize your own meet
 - Check our [Frequently Asked Questions (FAQ) page](/rdo/faq/) for answers to common questions
 - Try our [troubleshooting page](/troubleshooting/) for solutions to common problems
 - Watch [RDO videos](/rdo/rdo-videos). These include recorded talks and community events.
-- Help improve our knowledge base by turning the best answers to questions on the [mailing lists](/contribute/mailing-lists/) or on [ask.openstack.org](http://ask.openstack.org) into a page in our [troubleshooting section](/troubleshooting/). In case of ask.openstack.org, a link might be sufficient.
+- Help improve our knowledge base by turning the best answers to questions on the [mailing lists](/contribute/mailing-lists/) or on [ask.openstack.org](http://ask.openstack.org) into a page in our [troubleshooting section](/troubleshooting/). In case of [ask.openstack.org](https://ask.openstack.org), a link might be sufficient.
 - Blog about how you're using RDO. If you blog frequently about RDO and OpenStack, consider [requesting that your blog be added](https://wiki.openstack.org/wiki/AddingYourBlog) to the upstream [Planet OpenStack](http://planet.openstack.org/).
 - [Fork the website on Github](https://github.com/redhat-openstack/website) and help us improve our documentation.
 
