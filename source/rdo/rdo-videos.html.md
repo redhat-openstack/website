@@ -47,6 +47,6 @@ authors: dneary, rbowen, vaneldik
 
 ## Heat, OpenStack and Red Hat
 
-* Interview with Steve Hardy at [Open World Forum 2013](//www.openworldforum.org/en/).
+* Interview with Steve Hardy at Open World Forum 2013.
 
 <iframe width="630" src="//youtube.com/embed/I3V6MFUg3vk" frameborder="0" align="center" allowfullscreen="true"> </iframe>

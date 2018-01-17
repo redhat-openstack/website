@@ -21,8 +21,7 @@ On the RDO side, we built with the following hardware.
 | Cables  | Various CAT5E cables for connectivity |
 | Switch  | TP-LINK TL-SG105 |
 | Router  | (Someone fill this in?) |
-| USB network adapters | [Axago ADE-SG](http://www.axago.cz/cz/produkty/usb-adaptery/ADE-SG.html) or
-similar |
+| USB network adapters | [Axago ADE-SG](http://www.axagon.eu/produkty/ade-sg) or similar |
 
 
 Note: The NUCs have only one NIC. The USB network adapters are to

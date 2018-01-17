@@ -5,7 +5,7 @@ title: Edit RDO events
 # Editing the RDO events calendar
 
 The RDO events calendar is maintained as part of the
-[community.redhat.com](community.redhat.com) events site. To edit or add
+[community.redhat.com](https://www.community.redhat.com) events site. To edit or add
 an RDO-related meetup, [edit this file](https://github.com/OSAS/rh-events/edit/master/2017/RDO-Meetups.yml) and send a pull request. If your event is some other
 community event, such as a mini-conference, [put it in this file
 instead](https://github.com/OSAS/rh-events/edit/master/2017/RDO-Community.yml).

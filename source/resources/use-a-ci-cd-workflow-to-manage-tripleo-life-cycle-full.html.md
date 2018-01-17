@@ -128,7 +128,7 @@ We will also download a CentOS image used to build the Nodepool slaves, let's do
     curl -O http://cloud.centos.org/centos/7/images/CentOS-7-x86_64-GenericCloud.qcow2
     openstack image create --disk-format qcow2 --container-format bare --file ~/CentOS-7-x86_64-GenericCloud.qcow2 centos7-cloud
 
-We can now deploy Software Factory using heat templates ([documentation](https://softwarefactory-project.io/docs/deploy.html))
+We can now deploy Software Factory using heat templates ([documentation](https://softwarefactory-project.io/docs/operator/deployment.html?highlight=deploy#deploying-with-heat))
 
     image_id=$(openstack image show sf-2.3.0 -f value -c id)
     key_name="sf-key"
@@ -347,7 +347,7 @@ You need to get the **credential-id** for each resource, select your credential,
 
 ![](/images/sf-credential_id.png)
 
-We have a Software Factory instance and a nodepool project with 2 slaves, it's now time to create demo-sf-tripleo project. We will use the new management system via the config repository ([documentation](https://softwarefactory-project.io/docs/resources_user.html#resources-user)). In the config directory, create resources/demo-tripleo.yaml with the following content:
+We have a Software Factory instance and a nodepool project with 2 slaves, it's now time to create demo-sf-tripleo project. We will use the new management system via the config repository ([documentation](https://softwarefactory-project.io/docs/user/index.html)). In the config directory, create resources/demo-tripleo.yaml with the following content:
 
     # resources/demo-tripleo.yaml
 	resources:
@@ -439,10 +439,10 @@ It's time to create our job, in config repository directory, create a file jobs/
 
 In this file we create a project named demo-sf-tripleo. We define 2 jobs for our project, the first one is a default job (it will run run_tests.sh that we will create in our project repository), the second one is a custom job we define later on the file). With the last statement, we specify the node (label) used to run the jobs.
 
-In the second part, we define the custom **deploy** job ([job documentation](https://softwarefactory-project.io/docs/jenkins_user.html)).
+In the second part, we define the custom **deploy** job ([job documentation](https://softwarefactory-project.io/docs/project_config/jenkins_user.html)).
 
 
-Now, we will create a file, zuul/tripleo.yaml with this content to define which job will be executed by each pipeline ([pipelines documentation](https://softwarefactory-project.io/docs/zuul_user.html#pipelines-default-configuration).
+Now, we will create a file, zuul/tripleo.yaml with this content to define which job will be executed by each pipeline ([pipelines documentation](https://softwarefactory-project.io/docs/project_config/zuul_user.html#pipelines-default-configuration)).
 
     projects:
       - name: demo-sf-tripleo
@@ -662,7 +662,7 @@ cat << EOF > patches/add_update_cmd_ovb_shell.patch
 @@ -294,5 +294,25 @@
          undercloud.ssh_pool.stop_all()
          exit(0)
- 
+
 +    if step == 'update':
 +        provisioner = config['provisioner']
 +        templates = provisioner.get('heat_templates_dir')
@@ -756,4 +756,3 @@ You can source overcloudrc openrc file if you want to interact with the deployed
 ### Update Openstack
 
 To update the openstack, you can edit the template file or add another template (update the deployment command), summit a review, validate it. The update command will be applied on the deployed openstack. If you want to do another deployment, you have to delete all the servers within sf-tripleo project, and push a reivew.
-

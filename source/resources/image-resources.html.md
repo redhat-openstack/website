@@ -22,7 +22,9 @@ You can run a number of different Linux distributions and operating systems on t
 
 ### Additional resources
 
+<!-- App Catalog no longer exists
 *   The [OpenStack Community App Catalog](https://apps.openstack.org/#tab=glance-images) contains a large number of OpenStack-ready Glance images
+-->
 *   The [OpenStack Virtual Machine Image Guide](https://docs.openstack.org/image-guide/obtain-images.html) provides another list of Glance images
 
 ## Import images into Glance
