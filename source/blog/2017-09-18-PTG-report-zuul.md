@@ -31,9 +31,9 @@ However, a new cutover attemp will occur in the next few weeks.
 The devstack job has been completely rewritten to a fully fledged Ansible job.
 This is a good example of what a job looks like in the new Zuul:
 
-* The [devstack job definition](http://git.openstack.org/cgit/openstack-infra/devstack-gate/tree/.zuul.yaml#n7)
-* The [devstack pre playbook](http://git.openstack.org/cgit/openstack-infra/devstack-gate/tree/playbooks/pre.yaml)
-* The [devstack's roles](http://git.openstack.org/cgit/openstack-infra/devstack-gate/tree/roles)
+* The [devstack job definition](http://git.openstack.org/cgit/openstack-dev/devstack/tree/.zuul.yaml)
+* The [devstack pre playbook](http://git.openstack.org/cgit/openstack-dev/devstack/tree/playbooks/pre.yaml)
+* The [devstack's roles](http://git.openstack.org/cgit/openstack-dev/devstack/tree/roles)
 * A [devstack job added to shade](https://review.openstack.org/500365)
 
 A project that needs a devstack CI job needs this new job definition:
