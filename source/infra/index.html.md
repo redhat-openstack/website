@@ -53,11 +53,14 @@ Wordpress blog site for RDO engineers.
 High-level status dashboards for the RDO project.
 [dashboards.rdoproject.org](https://dashboards.rdoproject.org/rdo-dev)
 
+<<<<<<< bad-links-011618
 ## Status
 
 [status.rdoproject.org](http://status.rdoproject.org/)
 aggregates status and monitoring information from
 the different systems part of the RDO infrastructure.
+=======
+>>>>>>> master
 
 ## Planet
 
