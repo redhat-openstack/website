@@ -41,7 +41,7 @@ Some additional pieces of infrastructure used for CI are:
 * [registry.rdoproject.org](https://console.registry.rdoproject.org/) is a Docker registry used for our
   containerization efforts.
 * [logs.rdoproject.org](https://logs.rdoproject.org) provides a log storage service for our CI jobs.
-* [images.rdoproject.org](https://images.rdoproject.org) store disk images used by the TripleO CI.
+* [images.rdoproject.org](https://images.rdoproject.org/master/rdo_trunk/) store disk images used by the TripleO CI.
 
 ## Blogs
 
@@ -52,15 +52,6 @@ Wordpress blog site for RDO engineers.
 
 High-level status dashboards for the RDO project.
 [dashboards.rdoproject.org](https://dashboards.rdoproject.org/rdo-dev)
-
-<<<<<<< bad-links-011618
-## Status
-
-[status.rdoproject.org](http://status.rdoproject.org/)
-aggregates status and monitoring information from
-the different systems part of the RDO infrastructure.
-=======
->>>>>>> master
 
 ## Planet
 
