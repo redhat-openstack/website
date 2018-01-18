@@ -6,7 +6,7 @@ authors: rbowen
 # RDO Community Day @ FOSDEM 2016
 
 RDO Community Day at FOSDEM 2016 was held in conjunction with the [CentOS
-Dojo](https://wiki.centos.org/Events/Dojo/Brussels2016) on the day 
+Dojo](https://wiki.centos.org/Events/Dojo/Brussels2016) on the day
 before FOSDEM.
 
 The schedule of talks was as follows:
@@ -66,7 +66,7 @@ allowfullscreen></iframe>
 
 ## RDO configuration files: do's, dont's, gotchas, and rfc - *Ihar Hrachyshka*
 
-[[Slides](./presentations/2016/FOSDEM/./configuration-files-in-rdo-fosdem-2016.pdf)]
+[[Slides](./presentations/2016/FOSDEM/configuration-files-in-rdo-fosdem-2016.pdf)]
 
 > This presentation will give overview of how we configure OpenStack services, in general as well from RDO perspective. Audience should expect brief overview of libraries and techniques used in upstream to manage configuration, new developments in upstream, things to consider when doing packaging for RDO and derived distributions, things upstream projects do wrong about configurations, and how to fix it. At the end, I will present configuration scheme Neutron RDO packages adopted in Kilo+, and suggest it for wider adoption by other projects.
 
@@ -90,5 +90,3 @@ allowfullscreen></iframe>
 [[Slides](http://www.slideshare.net/flepied/rpm-factory-for-rdo)]
 
 > How to use an OpenStack like workflow to build RDO packages
-
-
