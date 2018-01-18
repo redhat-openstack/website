@@ -18,7 +18,7 @@ indicate that they need, and what the community steps up to package.
 * [FAQ](/rdo/faq)
 * [Bugzilla ownership](/rdo/bugzilla-ownership)
 * [CentOS](/rdo/centos)
-* [Continuous Integration](/rdo/continuous-integration)
+* [Continuous Integration](/infra#codereview-ci)
 * [Videos](/rdo/rdo-videos)
 * [Release Cadence](/rdo/release-cadence)
 
@@ -27,4 +27,3 @@ indicate that they need, and what the community steps up to package.
 If you are happy with community support, and what you want is to use and test the latest version of OpenStack, then RDO is for you.
 
 If, however, what you are looking for is a stable, supported platform, with certification of partner applications, and a reliable partner with a great track record in enterprise infrastructure to build or scale out your production OpenStack cloud, consider [Red Hat OpenStack Platform](https://www.redhat.com/en/technologies/linux-platforms/openstack-platform).
-

@@ -29,7 +29,7 @@ In addition to this, a separate DLRN instance is supporting the upstream
 [rpm-packaging](https://github.com/openstack/rpm-packaging) project with up to date packages built
 from its spec templates, [rpm-packaging-ci.rdoproject.org](https://rpm-packaging-ci.rdoproject.org/repos/status_report.html).
 
-## Code Review and CI
+## <a name="codereivew-ci"></a> Code Review and CI
 
 The RDO Gerrit instance is running at [review.rdoproject.org](https://review.rdoproject.org/). It makes use
 of a pool of VMs for CI managed by nodepool and running on the RDO Cloud.
@@ -55,7 +55,7 @@ High-level status dashboards for the RDO project.
 
 ## Status
 
-[status.rdoproject.org](http://status.rdoproject.org/) 
+[status.rdoproject.org](http://status.rdoproject.org/)
 aggregates status and monitoring information from
 the different systems part of the RDO infrastructure.
 
@@ -70,7 +70,7 @@ The code lives on several organizations at GitHub:
 
 * [Package specs](https://github.com/rdo-packages)
 * [Infrastructure definition and CI](https://github.com/rdo-infra)
-* [Website, rdoinfo and others](https://github.com/redhat-openstack) 
+* [Website, rdoinfo and others](https://github.com/redhat-openstack)
 
 ## Processes and maintenance windows
 
@@ -87,4 +87,3 @@ A number of parts of our infrastructure run at CentOS, including
 * [CI](https://ci.centos.org/view/rdo/view/promotion-pipeline/)
 * [CentOS Cloud SIG](https://wiki.centos.org/SpecialInterestGroup/Cloud)
   (not infrastructure, but governance/process)
-
