@@ -126,7 +126,7 @@ for meetup in meetups:
     eventout = eventout + '  location: ' + grp['city'] + ', '
     if 'state' in grp.keys():
         eventout = eventout + grp['state'] + "\n"
-    else: 
+    else:
         eventout = eventout + grp['country'] + "\n"
     eventout = eventout + '  speaker: ' + grp['name'] + "\n"
     eventout = eventout + '  start: ' + eventtimeutc.strftime("%Y-%m-%d %H:%M") + ' UTC' + "\n"
@@ -154,7 +154,7 @@ for meetup in meetups:
         continue
 
     # For Twitter
-    eventout = '"01/01/2017 00:00:00","' + t + ' in ' + grp['city'] + ', '
+    eventout = '"01/01/2018 00:00:00","' + t + ' in ' + grp['city'] + ', '
     if 'state' in grp.keys():
         eventout = eventout + grp['state'] + ', '
     eventout = eventout + grp['country'] + ': ' + meetup['name'] + '","' + meetup['event_url'] + '"' + "\n"
@@ -166,4 +166,3 @@ mlist.close()
 yml.close()
 
 print "Done!\n"
-
