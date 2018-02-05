@@ -191,7 +191,7 @@ be lost unless they're uploaded to an external storage.
 
 Fortunately Software Factory handles this: predefined publishers can be appended
 to our jobs definitions; [one of
-which](https://softwarefactory-project.io/r/gitweb?p=config.git;a=blob;f=jobs/_default_jobs.yaml;#l39)
+which](https://softwarefactory-project.io/r/gitweb?p=config.git;a=history;f=jobs/_default_jobs.yaml;h=abedee1d8899afbea7cc1fb31e5b5ee959fba154;hb=04f4d5aa6887f63155ceef38231399a077aa0040)
 allows to push any artifact to a Swift object store. We can then retrieve our
 videos and screenshots easily.
 
