@@ -21,7 +21,7 @@ Note that if you are using provider flat or VLAN networks (i.e. as the external 
 
 ## Manual Conversion to GRE Tenant Networks
 
-Older versions of packstack did not have support for configuring GRE tunnels, so if GRE support is not available, start out with a normal multi-node openvswitch-based deployment, such as is described in [Neutron_with_OVS_and_VLANs](Neutron_with_OVS_and_VLANs).
+Older versions of packstack did not have support for configuring GRE tunnels, so if GRE support is not available, start out with a normal multi-node openvswitch-based deployment.
 
 New packstack deployments should install the GRE-enabled kernel and openvswitch packages by default. Existing deployments may need "yum update" run on each node. Make sure the following packages (or newer) are present:
 
