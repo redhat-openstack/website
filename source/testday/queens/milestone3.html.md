@@ -4,7 +4,7 @@ title: RDO Queens Test Day
 
 # Queens Test Day 3
 
-We will be holding a RDO test day on **February 8th and 9th, 2018.**
+We will be holding a RDO test day on **February 15th and 16th, 2018.**
 
 This will be coordinated through the **#rdo channel on Freenode**, and
 through this website and the [rdo-list](https://www.redhat.com/mailman/listinfo/rdo-list) mailing list.
