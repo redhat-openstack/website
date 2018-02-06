@@ -9,7 +9,7 @@
 * [EasyFix](https://github.com/redhat-openstack/easyfix)
 * [RDO release packages](https://trunk.rdoproject.org/)
 * [Review.RDOProject.org](http://review.rdoproject.org/)
-* [RDO blog](http://rdoproject.org/blog)
+* [RDO blog](http://blogs.rdoproject.org/)
 * [Q&A](http://ask.openstack.org/)
 * [Open Tickets](http://tm3.org/rdobugs)
 * [Twitter](http://twitter.com/rdocommunity)
