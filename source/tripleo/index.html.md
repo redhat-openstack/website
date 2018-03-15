@@ -5,7 +5,7 @@ authors: athomas, hewbrocca, jcoufal, jistr, cbrown2, trown
 
 # <a name="qs">TripleO Quickstart</a>
 
-TripleO is an OpenStack Deployment & Management tool. It is developed upstream as the [OpenStack TripleO](http://wiki.openstack.org/wiki/TripleO) project.
+TripleO is an OpenStack Deployment & Management tool. It is developed upstream as the [OpenStack TripleO](http://tripleo.org/) project.
 
 There is an [Ansible-based](https://www.ansible.com/) project called [tripleo-quickstart](https://github.com/openstack/tripleo-quickstart) whose main goal is to quickly stand up TripleO environments.
 
