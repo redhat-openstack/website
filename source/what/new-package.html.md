@@ -38,7 +38,7 @@ The rdo.yml file has some pre-defined configurations at the top. These configura
 So once you have defined a configuration in your new project section, most of the options are defined for you.
 
 ### Tags
-Tags are used by the RDO Trunk builders to determine which releases we need to build a package for, and if we need to use some release-specific information for a project. In the above example, we are building the `python-tempestconf` package for the Ocata and Pike (current master) releases.
+Tags are used by the RDO Trunk builders to determine which releases we need to build a package for, and if we need to use some release-specific information for a project. In the above example, we are building the `python-tempestconf` package for the Ocata and Pike releases.
 
 You can set some special information for a specific release, for example:
 
