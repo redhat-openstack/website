@@ -7,8 +7,9 @@
 # Ignore bundler config
 /.bundle
 
-# Ignore the build directory
+# Ignore the build directories
 /build
+/planet_cache
 data/dashboard/projects
 
 # Ignore Sass' cache
