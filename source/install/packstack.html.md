@@ -25,7 +25,7 @@ If your system meets all the prerequisites mentioned below, proceed with running
   ```
   $ sudo yum install -y https://www.rdoproject.org/repos/rdo-release.rpm
   $ sudo yum update -y
-  $ sudo yum install -y openstack-packstack
+  $ sudo yum install -y openstack-packstack python-pip
   $ sudo packstack --allinone
   ```
 
@@ -34,7 +34,7 @@ If your system meets all the prerequisites mentioned below, proceed with running
   ```
   $ sudo yum install -y centos-release-openstack-queens
   $ sudo yum update -y
-  $ sudo yum install -y openstack-packstack
+  $ sudo yum install -y openstack-packstack python-pip
   $ sudo packstack --allinone
   ```
 
