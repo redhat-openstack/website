@@ -24,3 +24,37 @@ Describe symptoms here
 ##### workaround
 
 Describe workaround here
+
+### Run packstack behind a proxy
+
+*   **Bug:** <https://bugs.launchpad.net/puppet-glance/+bug/1719874>
+*   **Affects:** RHEL 7
+*   **Installation:** packstack
+
+##### symptoms
+
+The installer fails to apply Puppet with the following error:
+
+```
+Error: Could not set 'present' on ensure: Network is unreachable - connect(2) at /var/tmp/packstack/f879707404cb448bb629827308990223/modules/packstack/manifests/provision/glance.pp:12
+```
+
+The installer cannot download the demo image because the puppet-glance
+module does not support proxy.
+
+##### workaround
+
+You can either disable the demo provisioning or use a local image.
+
+* Disable the demo provisioning
+
+```
+# packstack --allinone --provision-demo=n
+```
+
+* Use a local image
+
+```
+# curl http://download.cirros-cloud.net/0.3.5/cirros-0.3.5-x86_64-disk.img -o /root/cirros-0.3.5-x86_64-disk.img
+# packstack --allinone --provision-image-url=/root/cirros-0.3.5-x86_64-disk.img
+```
