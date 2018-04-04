@@ -2,7 +2,7 @@
 
 Test days are held roughly every month, on the week after an upstream
 milestone. See the [release
-schedule](http://releases.openstack.org/queens/schedule.html) for when
+schedule](http://releases.openstack.org/rocky/schedule.html) for when
 those milestones occur.
 
 See also the [bug triage schedule](/contribute/rdo-bugtriage/).
@@ -11,7 +11,10 @@ See also the [bug triage schedule](/contribute/rdo-bugtriage/).
 
 The (tentative) test day schedule is:
 
-* *Rocky test day schedule still pending*
+* M1 test day - April 26th, 27th
+* M2 test day - June 14th, 15th
+* M3 test day - August 2nd, 3rd
+* Rocky release test day - September 6th, 7th
 
 ## Test, every day
 
