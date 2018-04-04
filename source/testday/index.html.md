@@ -11,7 +11,7 @@ See also the [bug triage schedule](/contribute/rdo-bugtriage/).
 
 The (tentative) test day schedule is:
 
-* March 15, 16: Queens final release test day (For February 19-23 Queens release)
+* *Rocky test day schedule still pending*
 
 ## Test, every day
 
