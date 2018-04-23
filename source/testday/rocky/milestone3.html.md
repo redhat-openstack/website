@@ -2,7 +2,7 @@
 title: RDO Rocky Test Day
 ---
 
-# Rocky Test Day 1
+# Rocky Test Day 3
 
 We will be holding a RDO test day on **August 2nd and 3rd 2018.**
 

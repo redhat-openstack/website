@@ -2,17 +2,13 @@
 title: RDO Rocky Test Day
 ---
 
-# Rocky Test Day 1
+# Rocky Test Days FINAL
 
-We will be holding a RDO test day on **April 26th 2018.**
+We will be holding RDO test days for the final release on **September 6th and 7th 2018.**
 
-This will be coordinated through the **#rdo channel on Freenode**, and
-through this website and the [rdo-list](https://www.redhat.com/mailman/listinfo/rdo-list) mailing list.
+This will be coordinated through the **#rdo channel on Freenode**, and through this website and the [rdo-list](https://www.redhat.com/mailman/listinfo/rdo-list) mailing list.
 
-We'll be testing the first [Rocky milestone
-release](http://releases.openstack.org/rocky/schedule.html). If you can do
-any testing on your own ahead of time, that will help ensure that
-everyone isn't encountering the same problems.
+We'll be testing the first [Rocky milestone release](http://releases.openstack.org/rocky/schedule.html). If you can do any testing on your own ahead of time, that will help ensure that everyone isn't encountering the same problems.
 
 We will also be available for people that want to try the stable (Queens) release.
 
@@ -28,8 +24,7 @@ We plan to have packages for the following platforms:
 * [RHEL 7](https://access.redhat.com/products/red-hat-enterprise-linux/)
 * [CentOS 7](https://www.centos.org/download/)
 
-You'll want a fresh install with latest updates installed.
-(Fresh so that there's no hard-to-reproduce interactions with other things.)
+You'll want a fresh install with latest updates installed. (Fresh so that there's no hard-to-reproduce interactions with other things.)
 
 ## How to test?
 
