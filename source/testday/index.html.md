@@ -11,10 +11,10 @@ See also the [bug triage schedule](/contribute/rdo-bugtriage/).
 
 The (tentative) test day schedule is:
 
-* [M1 test day - April 26th, 27th](/testday/rocky/milestone1)
+* [M1 test day - May 3rd, 4th](/testday/rocky/milestone1)
 * [M2 test day - June 14th, 15th](/testday/rocky/milestone2)
 * [M3 test day - August 2nd, 3rd](/testday/rocky/milestone3)
-* [Rocky release test day - September 6th, 7th](testday/rocky/milest
+* [Rocky release test day - September 6th, 7th](testday/rocky/final)
 
 ## Test, every day
 
@@ -37,7 +37,7 @@ while keeping detailed notes on the following points:
 
 | Milestone | Date | Tickets opened | IRC participation | URL(s) |
 |-----------|------|----------------|-------------------|--------|
-| [Rocky 1](/testday/rocky/milestone1) | Apr 26-27 2018 | | |
+| [Rocky 1](/testday/rocky/milestone1) | May 3-4 2018 | | |
 [Tickets](https://bugzilla.redhat.com/buglist.cgi?bug_status=NEW&bug_status=ASSIGNED&bug_status=POST&bug_status=MODIFIED&bug_status=ON_DEV&bug_status=ON_QA&bug_status=VERIFIED&bug_status=RELEASE_PENDING&chfield=%5BBug%20creation%5D&chfieldfrom=2017-12-12&chfieldto=2017-12-17&classification=Community&product=RDO&query_format=advanced) |
 | [Rocky 2](/testday/rocky/milestone2) | June 14-15 2018 | | |
 [Tickets](https://bugzilla.redhat.com/buglist.cgi?bug_status=NEW&bug_status=ASSIGNED&bug_status=POST&bug_status=MODIFIED&bug_status=ON_DEV&bug_status=ON_QA&bug_status=VERIFIED&bug_status=RELEASE_PENDING&chfield=%5BBug%20creation%5D&chfieldfrom=2017-12-12&chfieldto=2017-12-17&classification=Community&product=RDO&query_format=advanced)
