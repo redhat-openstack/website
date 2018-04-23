@@ -4,10 +4,11 @@ title: RDO Rocky Test Day
 
 # Rocky Test Day 1
 
-We will be holding a RDO test day on **April 26th and 27th 2018.**
+We will be holding a RDO test day on **May 3rd and 4th 2018.**
 
 This will be coordinated through the **#rdo channel on Freenode**, and
-through this website and the [rdo-list](https://www.redhat.com/mailman/listinfo/rdo-list) mailing list.
+through this website and the
+[rdo-list](https://lists.rdoproject.org/mailman/listinfo/dev) mailing lists.
 
 We'll be testing the first [Rocky milestone
 release](http://releases.openstack.org/rocky/schedule.html). If you can do
