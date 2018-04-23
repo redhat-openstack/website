@@ -4,7 +4,7 @@ title: RDO Rocky Test Day
 
 # Rocky Test Day 1
 
-We will be holding a RDO test day on **April 26th 2018.**
+We will be holding a RDO test day on **August 2nd and 3rd 2018.**
 
 This will be coordinated through the **#rdo channel on Freenode**, and
 through this website and the [rdo-list](https://www.redhat.com/mailman/listinfo/rdo-list) mailing list.
@@ -19,7 +19,7 @@ We will also be available for people that want to try the stable (Queens) releas
 ### Quick links
 
 * [Test matrix](/testday/tests)
-* [Workarounds](https://etherpad.openstack.org/p/rdo-test-days-rocky1-workarounds)
+* [Workarounds](https://etherpad.openstack.org/p/rdo-test-days-rocky3-workarounds)
 
 ## Prerequisites
 
@@ -44,7 +44,7 @@ You'll want a fresh install with latest updates installed.
 ### Next steps
 
 * Check for any
-* [workarounds](https://etherpad.openstack.org/p/rdo-test-days-rocky1-workarounds) required for your platform before the main installation.
+* [workarounds](https://etherpad.openstack.org/p/rdo-test-days-rocky3-workarounds) required for your platform before the main installation.
 
 * For a TripleO-based installation, try the [TripleO quickstart](https://www.rdoproject.org/tripleo/).
 
@@ -57,7 +57,7 @@ The scenarios that should be tested are listed on the [test matrix](/testday/tes
 1. Pick an item from the list.
 1. Go through the scenario as though you were a beginner, just following the
 instructions. (Check the
-[workarounds](https://etherpad.openstack.org/p/rdo-test-days-rocky1-workarounds) page for problems that others may have encountered and resolved.)
+[workarounds](https://etherpad.openstack.org/p/rdo-test-days-rocky3-workarounds) page for problems that others may have encountered and resolved.)
 1. **Keep good notes.** You can use [the test day
 etherpad](https://etherpad.openstack.org/p/rdo-test-days-rocky-m1) for these notes. Reviewing other peoples' notes may help you avoid problems that they've already encountered.
 
@@ -68,4 +68,4 @@ If you have problems with any of the tests, report a bug to [Bugzilla](https://b
 
 Once you have completed the tests, add your results to the table on the [test
 matrix](/testday/tests) page, following the examples already there. Be sure to
-check the [workarounds](https://etherpad.openstack.org/p/rdo-test-days-rocky1-workarounds) page for things that may have already have fixes or workarounds.
+check the [workarounds](https://etherpad.openstack.org/p/rdo-test-days-rocky3-workarounds) page for things that may have already have fixes or workarounds.
