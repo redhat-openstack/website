@@ -9,12 +9,12 @@ See also the [bug triage schedule](/contribute/rdo-bugtriage/).
 
 ## Upcoming test days
 
-The (tentative) test day schedule is:
+The test day schedule is:
 
 * [M1 test day - May 3rd, 4th](/testday/rocky/milestone1)
 * [M2 test day - June 14th, 15th](/testday/rocky/milestone2)
 * [M3 test day - August 2nd, 3rd](/testday/rocky/milestone3)
-* [Rocky release test day - September 6th, 7th](testday/rocky/final)
+* [Rocky release test day - September 6th, 7th](/testday/rocky/final)
 
 ## Test, every day
 
