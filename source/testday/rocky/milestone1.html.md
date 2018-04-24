@@ -6,14 +6,10 @@ title: RDO Rocky Test Day
 
 We will be holding a RDO test day on **May 3rd and 4th 2018.**
 
-This will be coordinated through the **#rdo channel on Freenode**, and
-through this website and the
-[rdo-list](https://lists.rdoproject.org/mailman/listinfo/dev) mailing lists.
+This will be coordinated through the **#rdo channel on Freenode**, and through
+this website and the [dev@lists.rdoproject.org](https://lists.rdoproject.org/mailman/listinfo/dev) mailing list.
 
-We'll be testing the first [Rocky milestone
-release](http://releases.openstack.org/rocky/schedule.html). If you can do
-any testing on your own ahead of time, that will help ensure that
-everyone isn't encountering the same problems.
+We'll be testing the first [Rocky milestone release](http://releases.openstack.org/rocky/schedule.html). If you can do any testing on your own ahead of time, that will help ensure that everyone isn't encountering the same problems.
 
 We will also be available for people that want to try the stable (Queens) release.
 
@@ -44,8 +40,7 @@ You'll want a fresh install with latest updates installed.
 
 ### Next steps
 
-* Check for any
-* [workarounds](https://etherpad.openstack.org/p/rdo-test-days-rocky1-workarounds) required for your platform before the main installation.
+* Check for any [workarounds](https://etherpad.openstack.org/p/rdo-test-days-rocky1-workarounds) required for your platform before the main installation.
 
 * For a TripleO-based installation, try the [TripleO quickstart](https://www.rdoproject.org/tripleo/).
 
