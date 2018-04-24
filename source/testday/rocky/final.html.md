@@ -38,8 +38,7 @@ You'll want a fresh install with latest updates installed so that there's no har
 
 ### Next steps
 
-* Check for any
-* [workarounds](https://etherpad.openstack.org/p/rdo-test-days-rockyga-workarounds) required for your platform before the main installation.
+* Check for any [workarounds](https://etherpad.openstack.org/p/rdo-test-days-rockyga-workarounds) required for your platform before the main installation.
 
 * For a TripleO-based installation, try the [TripleO quickstart](https://www.rdoproject.org/tripleo/).
 
