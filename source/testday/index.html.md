@@ -1,9 +1,6 @@
 # Test Days
 
-Test days are held roughly every month, on the week after an upstream
-milestone. See the [release
-schedule](http://releases.openstack.org/rocky/schedule.html) for when
-those milestones occur.
+Test days are held roughly every month, on the week after an upstream milestone. See the [release schedule](http://releases.openstack.org/rocky/schedule.html) for when those milestones occur.
 
 See also the [bug triage schedule](/contribute/rdo-bugtriage/).
 
@@ -11,20 +8,15 @@ See also the [bug triage schedule](/contribute/rdo-bugtriage/).
 
 The test day schedule is:
 
-* [M1 test day - May 3rd, 4th](/testday/rocky/milestone1)
 * [M2 test day - June 14th, 15th](/testday/rocky/milestone2)
 * [M3 test day - August 2nd, 3rd](/testday/rocky/milestone3)
 * [Rocky release test day - September 6th, 7th](/testday/rocky/final)
 
 ## Test, every day
 
-Of course, you don't have to wait for a scheduled test day to test RDO.
-We would love to hear about your experiences, with either a [Packstack
-installation](/install/packstack) or the [TripleO Quickstart](/tripleo).
+Of course, you don't have to wait for a scheduled test day to test RDO. We would love to hear about your experiences, with either a [Packstack installation](/install/packstack) or the [TripleO Quickstart](/tripleo).
 
-We also encourage you to work through the [upstream installation
-tutorial](https://docs.openstack.org/rocky/install/)
-while keeping detailed notes on the following points:
+We also encourage you to work through the [upstream installation tutorial](https://docs.openstack.org/install/) while keeping detailed notes on the following points:
 
 * Did you know what the document assumed that you'd know?
 * Did the steps work as described?
@@ -37,7 +29,8 @@ while keeping detailed notes on the following points:
 
 | Milestone | Date | Tickets opened | IRC participation | URL(s) |
 |-----------|------|----------------|-------------------|--------|
-| [Queens 2](/testday/queens/milestone1) | Dec 14, 15 2017 | | | [Tickets](https://bugzilla.redhat.com/buglist.cgi?bug_status=NEW&bug_status=ASSIGNED&bug_status=POST&bug_status=MODIFIED&bug_status=ON_DEV&bug_status=ON_QA&bug_status=VERIFIED&bug_status=RELEASE_PENDING&chfield=%5BBug%20creation%5D&chfieldfrom=2017-12-12&chfieldto=2017-12-17&classification=Community&product=RDO&query_format=advanced) |
+| [Rocky 1](/testday/rocky/milestone1) | May 2, 3 2018 | | | [Tickets](https://bugzilla.redhat.com/buglist.cgi?bug_status=NEW&bug_status=ASSIGNED&bug_status=POST&bug_status=MODIFIED&bug_status=ON_DEV&bug_status=ON_QA&bug_status=VERIFIED&bug_status=RELEASE_PENDING&chfield=%5BBug%20creation%5D&chfieldfrom=2018-05-03&chfieldto=2018-05-04&classification=Community&product=RDO&query_format=advanced) |
+| [Queens 2](/testday/queens/milestone2) | Dec 14, 15 2017 | | | [Tickets](https://bugzilla.redhat.com/buglist.cgi?bug_status=NEW&bug_status=ASSIGNED&bug_status=POST&bug_status=MODIFIED&bug_status=ON_DEV&bug_status=ON_QA&bug_status=VERIFIED&bug_status=RELEASE_PENDING&chfield=%5BBug%20creation%5D&chfieldfrom=2017-12-12&chfieldto=2017-12-17&classification=Community&product=RDO&query_format=advanced) |
 | [Queens 1](/testday/queens/milestone1) | Nov 16, 17 2017 | | | [Tickets](https://bugzilla.redhat.com/buglist.cgi?bug_status=NEW&bug_status=ASSIGNED&bug_status=POST&bug_status=MODIFIED&bug_status=ON_DEV&bug_status=ON_QA&bug_status=VERIFIED&bug_status=RELEASE_PENDING&chfield=%5BBug%20creation%5D&chfieldfrom=2017-11-14&chfieldto=2017-11-18&classification=Community&product=RDO&query_format=advanced) |
 | [Pike 3](/testday/pike/milestone3) | Apr 10, 11 2017 | | | [Tickets](https://bugzilla.redhat.com/buglist.cgi?bug_status=NEW&bug_status=ASSIGNED&bug_status=POST&bug_status=MODIFIED&bug_status=ON_DEV&bug_status=ON_QA&bug_status=VERIFIED&bug_status=RELEASE_PENDING&chfield=%5BBug%20creation%5D&chfieldfrom=2017-04-22&chfieldto=2017-08-11&classification=Community&product=RDO&query_format=advanced) |
 | [Pike 1](/testday/pike/milestone1) | Apr 20, 21 2017 | | | [Tickets](https://bugzilla.redhat.com/buglist.cgi?bug_status=NEW&bug_status=ASSIGNED&bug_status=POST&bug_status=MODIFIED&bug_status=ON_DEV&bug_status=ON_QA&bug_status=VERIFIED&bug_status=RELEASE_PENDING&chfield=%5BBug%20creation%5D&chfieldfrom=2017-03-04&chfieldto=2017-04-21&classification=Community&product=RDO&query_format=advanced) |
