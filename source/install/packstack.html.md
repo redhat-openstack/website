@@ -11,6 +11,10 @@ This document shows how to spin up a proof of concept cloud on one node, using t
 
 The instructions apply to the current **Queens** release.
 
+###WARNING####
+READ this document in full, THEN choose your install path:
+Don't just start typing commands at "## Summary for the impatient" and proceed downwards through the page.
+
 ## Summary for the impatient
 
 If you are using non-English locale make sure your `/etc/environment` is populated:
