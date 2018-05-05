@@ -33,6 +33,7 @@ If your system meets all the prerequisites mentioned below, proceed with running
 
   ```
   $ sudo yum install -y centos-release-openstack-queens
+  $ sudo yum install -y python-pip
   $ sudo yum update -y
   $ sudo yum install -y openstack-packstack
   $ sudo packstack --allinone
