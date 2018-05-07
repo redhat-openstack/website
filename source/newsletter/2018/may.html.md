@@ -26,8 +26,9 @@
 * [Rocky release schedule](https://releases.openstack.org/rocky/schedule.html)
 
 ---
-
-Welcome to another month of the RDO Newsletter! I'm super excited that we've started work on an all in one installation for TripleO - if you've got use cases, thoughts, comments, or snarky feedback, we want to hear it, of course. And, as always, we absolutely can't wait to see YOU in Vancouver at OpenStack Summit NEXT MONTH! 
+Can you believe it's MAY ALREADY?!? We've had our first round of RDO Rocky M1
+Test Days, prepped for OpenStack Days Vancouver, and taken our first steps in
+getting Power TripleO Containers. I can't wait to see what we do NEXT! 
 
 ## <a name="housekeeping"></a>Housekeeping Items
 ### DEMOS Needed for the RDO Booth at OpenStack Summit Vancouver
@@ -97,13 +98,11 @@ The Project Teams Gathering (PTG) is an event organized by the OpenStack Foundat
 There are a handful of relevant conferences with open CFPs. Need help figuring
 out a good topic? Feel free to reach out in the #RDO channel on IRC.
 
-* (LISA18 October 29–31, 2018 Nashville, TN, USA)[https://www.usenix.org/conference/lisa18] is the premier conference for operations professionals, where sysadmins, systems engineers, IT operations professionals, SRE practitioners, developers, IT managers, and academic researchers share real-world knowledge about designing, building, securing, and maintaining the critical systems of our interconnected world. (The CFP Closes **Thursday, May 24, 2018, 11:59 pm PDT**)[https://www.usenix.org/conference/lisa18/call-for-participation].
+* [LISA18 October 29–31, 2018 Nashville, TN, USA](https://www.usenix.org/conference/lisa18) is the premier conference for operations professionals, where sysadmins, systems engineers, IT operations professionals, SRE practitioners, developers, IT managers, and academic researchers share real-world knowledge about designing, building, securing, and maintaining the critical systems of our interconnected world. [The CFP Closes **Thursday, May 24, 2018, 11:59 pm PDT**](https://www.usenix.org/conference/lisa18/call-for-participation).
 
-* (OpenStack Days Nordic 09-10 October 2018 Stockholm Sweden)[http://stockholm.openstacknordic.org/] is a two-day event with a mission to increase Awareness, Utilization, and Competence surrounding OpenStack, Containers, and related software/infrastructure. The event consists of presentations and educational opportunities over two days and the topics span everything from cloud strategy and business case development to operational best practices and technical deep dives.
+* [OpenStack Days Nordic 09-10 October 2018 Stockholm Sweden](http://stockholm.openstacknordic.org/] is a two-day event with a mission to increase Awareness, Utilization, and Competence surrounding OpenStack, Containers, and related software/infrastructure. The event consists of presentations and educational opportunities over two days and the topics span everything from cloud strategy and business case development to operational best practices and technical deep dives. The event is a platform for collaboration and discussion between existing and potential community members. Here you will find the majority of OpenStack experts, potential partners, customers and vendors in the nordic region. Apart from getting to know one of the largest open source communities in the world, you get insights from the core of the OpenStack project, success stories, technical briefs, training sessions and future development plans by users of the platform. The [CFP closes on **June 17, 2018 21:50 UTC**](https://www.papercall.io/osdn2018-stockholm).
 
-The event is a platform for collaboration and discussion between existing and potential community members. Here you will find the majority of OpenStack experts, potential partners, customers and vendors in the nordic region. Apart from getting to know one of the largest open source communities in the world, you get insights from the core of the OpenStack project, success stories, technical briefs, training sessions and future development plans by users of the platform. The (CFP closes on **June 17, 2018 21:50 UTC**)[https://www.papercall.io/osdn2018-stockholm].
-
-* (Open Source Summit Europe October 22-24, 2018 Edinburgh UK)[https://events.linuxfoundation.org/events/open-source-summit-europe-2018/] is the leading conference for developers, architects and other technologists – as well as open source community and industry leaders – to collaborate, share information, learn about the latest technologies and gain a competitive advantage by using innovative open solutions. (The CFP closes **Sunday, July 1 2018**)[https://events.linuxfoundation.org/events/open-source-summit-europe-2018/program/cfp/]
+* [Open Source Summit Europe October 22-24, 2018 Edinburgh UK](https://events.linuxfoundation.org/events/open-source-summit-europe-2018/) is the leading conference for developers, architects and other technologists – as well as open source community and industry leaders – to collaborate, share information, learn about the latest technologies and gain a competitive advantage by using innovative open solutions. [The CFP closes **Sunday, July 1 2018**](https://events.linuxfoundation.org/events/open-source-summit-europe-2018/program/cfp/).
 
 ### OpenStack Summit Vancouver
 There’s a lot happening in and around OpenStack Summit Vancouver! Here are a
@@ -117,7 +116,7 @@ to know your fellow community members. For more information and to get a
 (FREE!) ticket, see:
 [https://www.eventbrite.com/e/an-evening-of-ceph-and-rdo-tickets-43215726401](https://www.eventbrite.com/e/an-evening-of-ceph-and-rdo-tickets-43215726401)
 * RDO, ManageIQ, and Ceph combined booth presence
-Starting at Red Hat Summit and continuing at OpenStack Summit Vancouver, RDO is sharing a booth with [ManageIQ](https://www.openstack.org/community/events/openstackdays) and [Ceph](https://ceph.com/) which is particularly exciting because last year RDO and ManageIQ were right NEXT TO one another so we started a hardware demo that could show each of our projects separately or merge to show them working together. Yes, that’s right, totally like VOLTRON. And now the demos have evolved to include Ceph! Be sure to drop by to see the fully formed (not a) robot and interact with it yourself.
+Starting at Red Hat Summit and continuing at OpenStack Summit Vancouver, RDO is sharing a booth with [ManageIQ](https://www.openstack.org/community/events/openstackdays) and [Ceph](https://ceph.com/) which is particularly exciting because last year RDO and ManageIQ were RIGHT NEXT TO one another so we started a hardware demo that could show each of our projects separately or merge to show them working together. Yes, that’s right, totally like VOLTRON. And now the demos have evolved to include Ceph! Be sure to drop by to see the fully formed (not a) robot and interact with it yourself.
 * RDO-Specific Talks
 We’re gathering a list of RDO-specific talks that will be happening at OpenStack Summit Vancouver. If you haven’t already, please [add yours to the list](https://etherpad.openstack.org/p/OSSummit-RDOtalks). We’ll be promoting these talks via social media prior to as well as during the conference.
 * Looking for Volunteers
