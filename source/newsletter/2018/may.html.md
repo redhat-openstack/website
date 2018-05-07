@@ -26,9 +26,7 @@
 * [Rocky release schedule](https://releases.openstack.org/rocky/schedule.html)
 
 ---
-Can you believe it's MAY ALREADY?!? We've had our first round of RDO Rocky M1
-Test Days, prepped for OpenStack Days Vancouver, and taken our first steps in
-getting Power TripleO Containers. I can't wait to see what we do NEXT! 
+Can you believe it's May ALREADY?!? We've had our first round of RDO Rocky M1 Test Days, prepped for OpenStack Days Vancouver, taken our first steps in getting Power TripleO Containers, and so much more. I can't wait to see what we do NEXT! 
 
 ## <a name="housekeeping"></a>Housekeeping Items
 ### DEMOS Needed for the RDO Booth at OpenStack Summit Vancouver
@@ -86,12 +84,14 @@ We also encourage you to work through the [upstream installation tutorial](https
 Every Wednesday at 15:00 UTC, we have the weekly RDO community meeting on the #RDO channel on Freenode IRC. The agenda for this meeting is posted each week in a [public etherpad](https://etherpad.openstack.org/p/RDO-Meeting) and the minutes from the meeting are posted [on the RDO website](https://www.rdoproject.org/community/community-meeting/). If there's something you'd like to see happen in RDO - a package that is missing, a tool that you'd like to see included, or a change in how things are governed - this is the best time and place to help make that happen.
 
 ## <a name="openstack"></a>OpenStack News
-### OpenStack PTG Announced!
+### OpenStack Project Teams Gathering Announced!
+The Project Teams Gathering (PTG) is an event organized by the OpenStack Foundation. It provides meeting facilities allowing the various technical community groups working with OpenStack (user workgroups, development teams, operators, SIGs) to meet in-person, exchange and get work done in a productive setting. It lets those various groups discuss their priorities for the upcoming cycle, assign work items, iterate quickly on solutions for complex problems, and make fast progress on critical issues. The co-location of those various meetings, combined with the dynamic scheduling of the event, make it easy to get specific people in the same room to discuss a specific topic, or participate in multiple team meetings. Evenings allow for relationship building and problem sharing.
+
 [https://www.openstack.org/ptg/](https://www.openstack.org/ptg/)
 September 10-14, 2018
 Denver, Colorado
 
-The Project Teams Gathering (PTG) is an event organized by the OpenStack Foundation. It provides meeting facilities allowing the various technical community groups working with OpenStack (user workgroups, development teams, operators, SIGs) to meet in-person, exchange and get work done in a productive setting. It lets those various groups discuss their priorities for the upcoming cycle, assign work items, iterate quickly on solutions for complex problems, and make fast progress on critical issues. The co-location of those various meetings, combined with the dynamic scheduling of the event, make it easy to get specific people in the same room to discuss a specific topic, or participate in multiple team meetings. Evenings allow for relationship building and problem sharing.
+I've totally already booked my ticket. Have you? GREAT! See you there!
 
 ## <a name="events"></a>Recent and Upcoming Events
 ### Call For Papers
@@ -100,7 +100,7 @@ out a good topic? Feel free to reach out in the #RDO channel on IRC.
 
 * [LISA18 October 29–31, 2018 Nashville, TN, USA](https://www.usenix.org/conference/lisa18) is the premier conference for operations professionals, where sysadmins, systems engineers, IT operations professionals, SRE practitioners, developers, IT managers, and academic researchers share real-world knowledge about designing, building, securing, and maintaining the critical systems of our interconnected world. [The CFP Closes **Thursday, May 24, 2018, 11:59 pm PDT**](https://www.usenix.org/conference/lisa18/call-for-participation).
 
-* [OpenStack Days Nordic 09-10 October 2018 Stockholm Sweden](http://stockholm.openstacknordic.org/] is a two-day event with a mission to increase Awareness, Utilization, and Competence surrounding OpenStack, Containers, and related software/infrastructure. The event consists of presentations and educational opportunities over two days and the topics span everything from cloud strategy and business case development to operational best practices and technical deep dives. The event is a platform for collaboration and discussion between existing and potential community members. Here you will find the majority of OpenStack experts, potential partners, customers and vendors in the nordic region. Apart from getting to know one of the largest open source communities in the world, you get insights from the core of the OpenStack project, success stories, technical briefs, training sessions and future development plans by users of the platform. The [CFP closes on **June 17, 2018 21:50 UTC**](https://www.papercall.io/osdn2018-stockholm).
+* [OpenStack Days Nordic 09-10 October 2018 Stockholm Sweden](http://stockholm.openstacknordic.org/) is a two-day event with a mission to increase Awareness, Utilization, and Competence surrounding OpenStack, Containers, and related software/infrastructure. The event consists of presentations and educational opportunities over two days and the topics span everything from cloud strategy and business case development to operational best practices and technical deep dives. The event is a platform for collaboration and discussion between existing and potential community members. Here you will find the majority of OpenStack experts, potential partners, customers and vendors in the nordic region. Apart from getting to know one of the largest open source communities in the world, you get insights from the core of the OpenStack project, success stories, technical briefs, training sessions and future development plans by users of the platform. The [CFP closes on **June 17, 2018 21:50 UTC**](https://www.papercall.io/osdn2018-stockholm).
 
 * [Open Source Summit Europe October 22-24, 2018 Edinburgh UK](https://events.linuxfoundation.org/events/open-source-summit-europe-2018/) is the leading conference for developers, architects and other technologists – as well as open source community and industry leaders – to collaborate, share information, learn about the latest technologies and gain a competitive advantage by using innovative open solutions. [The CFP closes **Sunday, July 1 2018**](https://events.linuxfoundation.org/events/open-source-summit-europe-2018/program/cfp/).
 
