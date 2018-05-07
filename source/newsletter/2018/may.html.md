@@ -85,11 +85,7 @@ Every Wednesday at 15:00 UTC, we have the weekly RDO community meeting on the #R
 
 ## <a name="openstack"></a>OpenStack News
 ### OpenStack Project Teams Gathering Announced!
-The Project Teams Gathering (PTG) is an event organized by the OpenStack Foundation. It provides meeting facilities allowing the various technical community groups working with OpenStack (user workgroups, development teams, operators, SIGs) to meet in-person, exchange and get work done in a productive setting. It lets those various groups discuss their priorities for the upcoming cycle, assign work items, iterate quickly on solutions for complex problems, and make fast progress on critical issues. The co-location of those various meetings, combined with the dynamic scheduling of the event, make it easy to get specific people in the same room to discuss a specific topic, or participate in multiple team meetings. Evenings allow for relationship building and problem sharing.
-
-[https://www.openstack.org/ptg/](https://www.openstack.org/ptg/)
-September 10-14, 2018
-Denver, Colorado
+The [Project Teams Gathering (PTG)](https://www.openstack.org/ptg/) is an event organized by the OpenStack Foundation this 10-14 September 2018 in Denver Colorado. It provides meeting facilities allowing the various technical community groups working with OpenStack (user workgroups, development teams, operators, SIGs) to meet in-person, exchange and get work done in a productive setting. It lets those various groups discuss their priorities for the upcoming cycle, assign work items, iterate quickly on solutions for complex problems, and make fast progress on critical issues. The co-location of those various meetings, combined with the dynamic scheduling of the event, make it easy to get specific people in the same room to discuss a specific topic, or participate in multiple team meetings. Evenings allow for relationship building and problem sharing.
 
 I've totally already booked my ticket. Have you? GREAT! See you there!
 
@@ -123,7 +119,7 @@ We’re gathering a list of RDO-specific talks that will be happening at OpenSta
 As mentioned <a name=”housekeeping”>above</a>, we’re looking for volunteers give demonstrations at the RDO booth. Please consider [signing up for a shift](https://etherpad.openstack.org/p/rdo-vancouver-summit-booth).
 
 ### Other Events
-Other RDO events, including the many OpenStack meetups around the world, are always listed on the [RDO events page](http://rdoproject.org/events). If you have an RDO-related event, please feel free to add it by submitting a pull request [on Github](https://github.com/OSAS/rh-events/blob/master/2016/RDO-Meetups.yml).
+Other RDO events, including the many OpenStack meetups around the world, are always listed on the [RDO events page](http://rdoproject.org/events). If you have an RDO-related event, please feel free to add it by submitting a pull request [on Github](https://github.com/OSAS/rh-events/blob/master/2018/RDO-Meetups.yml).
 
 
 ## <a name="kit"></a>Keep in Touch
