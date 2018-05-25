@@ -17,7 +17,7 @@ Red Hat and the Shadowman logo are trademarks of Red Hat, Inc., registered in th
 
 ## Privacy policy
 
-At Red Hat, your privacy is important to us. By joining the RDO community, you will be giving us some personal information, including your name and an email address. For members of the RDO community, as of 25 May 2018, we are committed to a community specific [privacy policy](privacy.html.md) compliant with the [General Data Projection Regulation](https://en.wikipedia.org/wiki/General_Data_Protection_Regulation).
+At Red Hat, your privacy is important to us. By joining the RDO community, you will be giving us some personal information, including your name and an email address. For members of the RDO community, as of 25 May 2018, we are committed to a community specific [privacy policy](/legal/privacy/) compliant with the [General Data Projection Regulation](https://en.wikipedia.org/wiki/General_Data_Protection_Regulation).
 
 ## Terms of use
 
