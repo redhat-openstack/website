@@ -80,7 +80,9 @@ gem "coderay"
 gem "stringex"
 
 # Markdown
-gem "kramdown"
+# pinned to fix issue with https://github.com/gettalong/kramdown/pull/513
+# and https://github.com/redhat-openstack/website/pull/1218
+gem "kramdown", "~> 1.16.0"
 
 gem 'open-uri-cached'
 
