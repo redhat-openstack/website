@@ -32,6 +32,7 @@ If your system meets all the prerequisites mentioned below, proceed with running
 * On CentOS:
 
   ```
+  $ sudo yum update -y
   $ sudo yum install -y centos-release-openstack-queens
   $ sudo yum update -y
   $ sudo yum install -y openstack-packstack
