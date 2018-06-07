@@ -12,7 +12,7 @@ this template if tests are added or modified.
 ## "Does it work" tests
 
 If you're using the test cloud ([details
-here](https://etherpad.openstack.org/p/rdo-queens-m2-cloud)) you are
+here](https://etherpad.openstack.org/p/rdo-rocky-m2-cloud)) you are
 encouraged to perform some of the following test scenarios.
 
 * Launch VM
@@ -20,7 +20,6 @@ encouraged to perform some of the following test scenarios.
 * Launch another VM
 * Can you connect from one VM to the other?
 * Run some kind of actual workload on your instances
-* ...
 
 ## Packstack-Based Installation (Neutron Networking)
 
@@ -174,9 +173,7 @@ encouraged to perform some of the following test scenarios.
 
 ## Upstream Installation Tutorial
 
-Work through the [upstream installation
-tutorial](https://docs.openstack.org/draft/install-guide-rdo/) while
-keeping notes on the following points:
+Work through the [upstream installation tutorial](https://docs.openstack.org/install-guide/environment-packages-rdo.html) while keeping notes on the following points:
 
 * Did you know what the document assumed that you'd know?
 * Did the steps work as described?
