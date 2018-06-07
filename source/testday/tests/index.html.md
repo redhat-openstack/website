@@ -12,7 +12,7 @@ this template if tests are added or modified.
 ## "Does it work" tests
 
 If you're using the test cloud ([details
-here](https://etherpad.openstack.org/p/rdo-rocky-m2-cloud)) you are
+here](https://etherpad.openstack.org/p/rdo-rocky-m2-cloud) you are
 encouraged to perform some of the following test scenarios.
 
 * Launch VM
