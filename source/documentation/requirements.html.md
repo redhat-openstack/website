@@ -107,7 +107,7 @@ the CloudSIG using rdopkg:
       CBS but not pushed to any RDO repository.
       - `el7-build` (only available for Rocky and newer releases)
       is assigned to packages that only required to build other
-      packages but not to deploy or run any OpenStack service.
+      packages but are not a runtime requirement for any other package.
       - `testing` phase means that the package is used in deployments using RDO Trunk
       repo and published in a testing repo, but not official CloudSIG repository.
       - `release` phase means that is published in the official CloudSIG repository.
@@ -115,7 +115,9 @@ the CloudSIG using rdopkg:
       not for the one currently under development.
 
     For example, the package included in cloud7-openstack-queens-release will published
-    in the [CloudSIG repo for queens](http://mirror.centos.org/centos-7/7/cloud/x86_64/openstack-queens/).
+    in the [CloudSIG repo for queens](http://mirror.centos.org/centos-7/7/cloud/x86_64/openstack-queens/). The CBS tags flow will be:
+    - *Runtime requirements:* candidate -> testing -> release
+    - *Build requirements:* candidate -> el7-build
 
     Note that, for the release currently under development (rocky right now), only the
     testing phase will be available. The package included in cloud7-openstack-rocky-testing
@@ -167,7 +169,7 @@ Fedora by the project team. Once the package is included in Fedora repos you can
 create a gerrit review as explained in step 5.
 
     <br />
-7. Once the package is rebuilt in CBS (review in step 5 is merged) you can pushed
+7. Once the package is rebuilt in CBS (review in step 5 is merged) you can push
 it to the next phase, this means testing (for runtime dependencies) or el7-build
 (for build requirements in rocky or newer releases). This is done by sending a new
 review to [rdoinfo project](https://review.rdoproject.org/r/#/q/project:rdoinfo)
