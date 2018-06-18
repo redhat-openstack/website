@@ -25,6 +25,10 @@ We also encourage you to work through the [upstream installation tutorial](https
 * When you were done, did it work as expected? If not, what happened, and
   how did it differ from what you expected to happen?
 
+## Setting up the test cloud
+
+Our latest test days have included setting up a test cloud using RDO, so users can try it without having to get hardware themselves. The setup process is described in [this page](/testday/settingup).
+
 ## Past test days, stats and tickets
 
 | Milestone | Date | Tickets opened | IRC participation | URL(s) |
