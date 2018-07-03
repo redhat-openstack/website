@@ -58,9 +58,7 @@ TL;DR: They’ve been making good progress and have a [demo available for viewin
 
 ## <a name="community"></a>Community News
 ### A New Role for DMSimard
-As many of you know, David Moreau Simard has been an integral part of RDO for the past 2 years. It’s now time for him to move on to a new role as he mentioned in a [recent email](http://post-office.corp.redhat.com/archives/rh-openstack-dev/2018-May/msg00403.html).
-
-Please join us in thanking him for his time and efforts throughout the years and wishing him well on his new adventure as SRE for the OpenShift dedicated product.
+As many of you know, David Moreau Simard has been an integral part of RDO for the past 2 years. Please join us in thanking him for his time and efforts throughout the years and wishing him well on his new adventure as SRE for the OpenShift dedicated product.
 
 ### CentOS Pulse newsletter relaunched
 As we mentioned in [last month’s newsletter](https://www.rdoproject.org/newsletter/2018/june/#community), Rich Bowen has relaunched the [CentOS Pulse newsletter](https://wiki.centos.org/Newsletter/), and we’re excited to announce that [the first issue is OUT](https://wiki.centos.org/Newsletter/1801)!
