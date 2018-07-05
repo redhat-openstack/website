@@ -98,8 +98,3 @@ gem 'icalendar', '~> 1.5'
 gem 'slop', '~> 4'
 gem 'launchy'
 
-# for fetch-dashboard.rb script
-gem 'activesupport'
-# for dashboard display
-gem 'rails-assets-chartjs', '~> 2.1'
-
