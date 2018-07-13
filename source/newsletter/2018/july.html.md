@@ -38,7 +38,7 @@ Our next test day is [August 2-3](https://www.rdoproject.org/testday/rocky/miles
 
 Of course, you don't have to wait for a scheduled test day to test RDO. We would love to hear about your experiences, with either a [Packstack installation](https://www.rdoproject.org/install/packstack) or the [TripleO Quickstart](https://www.rdoproject.org/tripleo).
 
-We also encourage you to work through the [upstream installation tutorial](https://docs.openstack.org/queens/install/) while keeping detailed notes on the following points:
+We also encourage you to work through the [upstream installation tutorial](https://docs.openstack.org/rocky/install/) while keeping detailed notes on the following points:
 
 * Did you know what the document assumed that you'd know?
 * Did the steps work as described?
