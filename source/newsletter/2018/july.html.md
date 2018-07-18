@@ -1,4 +1,4 @@
-# June 2018 RDO Community Newsletter
+# July 2018 RDO Community Newsletter
 
 [← Newsletters](/newsletter)
 ## Quick links:
