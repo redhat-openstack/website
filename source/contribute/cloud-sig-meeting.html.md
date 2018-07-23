@@ -12,6 +12,7 @@ etherpad](https://etherpad.openstack.org/p/centos-cloud-sig).
 
 The minutes for these meetings are below:
 
+* [July 19 2018](https://www.centos.org/minutes/2018/July/centos-devel.2018-07-19-15.12.html)
 * [March 15 2018](https://www.centos.org/minutes/2018/March/centos-devel.2018-03-15-15.05.html)
 
 * [September 15 2016](https://www.centos.org/minutes/2016/september/centos-devel.2016-09-15-15.00.html)
