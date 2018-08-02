@@ -8,8 +8,7 @@ See also the [bug triage schedule](/contribute/rdo-bugtriage/).
 
 The test day schedule is:
 
-* [M3 test day - August 2nd, 3rd](/testday/rocky/milestone3)
-* [Rocky release test day - September 6th, 7th](/testday/rocky/final)
+* [Rocky GA test day - September 5th, 6th](/testday/rocky/final)
 
 ## Test, every day
 
