@@ -4,11 +4,11 @@ title: RDO Rocky Test Day
 
 # Rocky Test Days FINAL
 
-We will be holding RDO test days for the final release on **September 6th and 7th 2018.**
+We will be holding RDO test days for the GA release on **September 5th and 6th 2018.**
 
 This will be coordinated through the **#rdo channel on Freenode**, through this website and through the [dev@lists.rdoproject.org](https://lists.rdoproject.org/mailman/listinfo/dev) mailing list.
 
-We'll be testing the first [Rocky milestone release](http://releases.openstack.org/rocky/schedule.html). If you can do any testing on your own ahead of time, that will help ensure that everyone isn't encountering the same problems.
+We'll be testing the FINAL [Rocky milestone release](http://releases.openstack.org/rocky/schedule.html). If you can do any testing on your own ahead of time, that will help ensure that everyone isn't encountering the same problems.
 
 We will also be available for people that want to try the stable (Queens) release.
 
