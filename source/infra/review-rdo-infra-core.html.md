@@ -9,15 +9,7 @@ The `config-core` group for review.rdoproject.org takes care of managing all con
 
 ## Current core list
 
-* Alan Pevec
-* Attila Darazs
-* David Moreau Simard
-* Fabien Boucher
-* Frederic Lepied
-* Javier Peña
-* Tristan Cacqueray
-* John Trowbridge
-* Sagi Shnaidman
+The current core list can be found [at this link](https://review.rdoproject.org/r/#/admin/groups/6,members).
 
 The `rdo-provenpackagers` group is also included. Members of this group who are not part of the `config-core` group are expected to focus on the packaging-related side of the configuration.
 
