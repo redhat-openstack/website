@@ -12,6 +12,8 @@ etherpad](https://etherpad.openstack.org/p/RDO-Meeting).
 
 The minutes for these meetings are below:
 
+* [Aug 08, 2018](https://lists.rdoproject.org/pipermail/dev/2018-August/008868.html)
+* [Aug 01, 2018](https://lists.rdoproject.org/pipermail/dev/2018-August/008860.html)
 * [Jul 18, 2018](https://lists.rdoproject.org/pipermail/dev/2018-July/008836.html)
 * [Jul 11, 2018](https://lists.rdoproject.org/pipermail/users/2018-July/000282.html)
 * [Jun 27, 2018](https://lists.rdoproject.org/pipermail/users/2018-June/000274.html)
