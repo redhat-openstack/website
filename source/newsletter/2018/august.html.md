@@ -30,7 +30,7 @@ Yes, the newsletter is here. And short. But better late than never, right? With 
 
 ## <a name="housekeeping"></a>Housekeeping Items
 ### RDO Rocky Milestone Three Cancelled
-Just before RDO Rocky M3 Test Days, and the weekly RDO Community meeting on Wednesday at 15:00 UTC, the community discussed the pros and cons of fewer official test days. And after discussing it for two meetings, instead of official testing on M1, M2, M3, and GA, we’ll only have test days on M2 and GA. Starting NOW. Therefore, M3 Test Day was cancelled rather last minute, but we look forward to GA Test Days in early September!
+Just before RDO Rocky M3 Test Days, at the weekly RDO Community meeting on Wednesday at 15:00 UTC, the community discussed the pros and cons of fewer official test days. And after discussing it for two meetings, instead of official testing on M1, M2, M3, and GA, we’ll only have test days on M2 and GA. Starting NOW. Therefore, M3 Test Day was cancelled rather last minute, but we look forward to GA Test Days in early September!
 
 ## <a name="rdo"></a>RDO Changes
 ### RDO Test Days Changes Frequency!
