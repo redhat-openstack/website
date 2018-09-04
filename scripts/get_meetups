@@ -71,9 +71,7 @@ yml = open('meetups.yml', 'w')
 # Standard intro to mailing list post
 mlist.write( '''The following are the meetups I'm aware of over the next two weeks where OpenStack and/or RDO enthusiasts are likely to be present. If you know of others, please let me know, and/or add them to http://rdoproject.org/events
 
-If there's a meetup in your area, it'd be super keen if you attended, took a
-few pictures and especially wrote up a summary of what was covered. And, as
-always, if you give me enough notice, I can send swag along with you.
+If there's a meetup in your area, it'd be super keen if you attended, took a few pictures and especially wrote up a summary of what was covered. And, as always, if you give me enough notice, I can send swag along with you.
 
 ~Rain.
 
