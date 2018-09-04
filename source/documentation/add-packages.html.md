@@ -43,8 +43,8 @@ and comment all releases where package should be built, as for example:
 
     * The required projects will be created in [https://review.rdoproject.org](https://review.rdoproject.org).
     * Users included in maintainers list will received required permissions to manage the project.
-    * The new projects will be added to zuul configuration in review.rdoproject.org
-    (as in [this example](https://review.rdoproject.org/r/#/c/1418/)).
+    * The new projects will be added to zuul configuration in softwarefactory-project.io
+    (as in [this example](https://softwarefactory-project.io/r/13535))
     * Once the projects are created, the change will be merged in rdoinfo project.
 
 3. Create a new review to the new distgit project with the needed content (spec
