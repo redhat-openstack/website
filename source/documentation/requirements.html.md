@@ -137,7 +137,7 @@ the inclussion of the package in RDO repos. RDO Core members will handle the req
 
     <br />
 5. If the new package is not in CBS, you must check if it's packaged in Fedora using the [package
-browser](https://apps.fedoraproject.org/packages/). If the package exists, you need to open
+browser](https://src.fedoraproject.org/). If the package exists, you need to open
 a review to [rdoinfo project in RDO gerrit instance](https://review.rdoproject.org/r/#/q/project:rdoinfo)
 adding the new dependency to `deps.yml` file as in [this example](https://review.rdoproject.org/r/#/c/13280/3/deps.yml):
 
