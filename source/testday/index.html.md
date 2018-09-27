@@ -1,6 +1,6 @@
 # Test Days
 
-Test days are held roughly every month, on the week after an upstream milestone. See the [release schedule](http://releases.openstack.org/rocky/schedule.html) for when those milestones occur.
+Test days are held roughly every other month, on the week after upstream milestones one and three. See the [release schedule](http://releases.openstack.org/stein/schedule.html) for when those milestones occur.
 
 See also the [bug triage schedule](/contribute/rdo-bugtriage/).
 
@@ -8,7 +8,8 @@ See also the [bug triage schedule](/contribute/rdo-bugtriage/).
 
 The test day schedule is:
 
-* [Rocky GA test day - September 5th, 6th](/testday/rocky/final)
+* Stein Milestone 1 Test Days 01-02 November 2018
+* Stein Milestone 3 Test Days 14-15 March 2019
 
 ## Test, every day
 
