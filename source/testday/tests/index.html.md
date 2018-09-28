@@ -5,10 +5,6 @@ Scenarios to test. If you test something that someone else has already made note
 Copy this outline to a public etherpad for each test day. Please update
 this template if tests are added or modified.
 
-<!-- link no longer works & no longer seems applicable
-* See the [old test matrix](https://www.rdoproject.org/testday/newton/testedsetups_rc/).
--->
-
 ## "Does it work" tests
 
 If you're using the test cloud ([details
@@ -26,36 +22,28 @@ encouraged to perform some of the following test scenarios.
 ### Packstack All-in-One
 
 * CentOS 7
-* Instructions: https://www.rdoproject.org/testday/newton/final/#how-to-test
-* Who:
-* Results:
-* Tickets:
-
-### Packstack All-in-One
-
-* CentOS 7
-* Instructions: https://www.rdoproject.org/testday/newton/final/#how-to-test
+* Instructions: https://www.rdoproject.org/testday/stein/milestone1
 * Who:
 * Results:
 * Tickets:
 
 ### Packstack All-in-One
 * RHEL
-* Instructions: https://www.rdoproject.org/testday/newton/final/#how-to-test
+* Instructions: https://www.rdoproject.org/testday/stein/milestone1
 * Who:
 * Results:
 * Tickets:
 
 ### Packstack 3 node
 * CentOS 7
-* Instructions: https://www.rdoproject.org/testday/newton/final/#how-to-test
+* Instructions: https://www.rdoproject.org/testday/stein/milestone1
 * Who:
 * Results:
 * Tickets:
 
 ### Packstack 3 node
 * RHEL
-* Instructions: https://www.rdoproject.org/testday/newton/final/#how-to-test
+* Instructions: https://www.rdoproject.org/testday/stein/milestone1
 * Who:
 * Results:
 * Tickets:
@@ -64,42 +52,42 @@ encouraged to perform some of the following test scenarios.
 
 ### All-in-One        Glance=localfs, Cinder=lvm
 * CentOS 7
-* Instructions: https://www.rdoproject.org/testday/newton/final/#how-to-test
+* Instructions: https://www.rdoproject.org/testday/stein/milestone1
 * Who:
 * Results:
 * Tickets:
 
 ### All-in-One        Glance=localfs, Cinder=lvm
 * RHEL
-* Instructions: https://www.rdoproject.org/testday/newton/final/#how-to-test
+* Instructions: https://www.rdoproject.org/testday/stein/milestone1
 * Who:
 * Results:
 * Tickets:
 
 ### All-in-One        Glance=localfs, Cinder=glusterfs
 * CentOS 7
-* Instructions: https://www.rdoproject.org/testday/newton/final/#how-to-test
+* Instructions: https://www.rdoproject.org/testday/stein/milestone1
 * Who:
 * Results:
 * Tickets:
 
 ### All-in-One        Glance=localfs, Cinder=glusterfs
 * RHEL
-* Instructions: https://www.rdoproject.org/testday/newton/final/#how-to-test
+* Instructions: https://www.rdoproject.org/testday/stein/milestone1
 * Who:
 * Results:
 * Tickets:
 
 ### All-in-One        Glance=localfs, Cinder=ceph
 * CentOS 7
-* Instructions: https://www.rdoproject.org/testday/newton/final/#how-to-test
+* Instructions: https://www.rdoproject.org/testday/stein/milestone1
 * Who:
 * Results:
 * Tickets:
 
 ### All-in-One        Glance=localfs, Cinder=ceph
 * RHEL
-* Instructions: https://www.rdoproject.org/testday/newton/final/#how-to-test
+* Instructions: https://www.rdoproject.org/testday/stein/milestone1
 * Who:
 * Results:
 * Tickets:
