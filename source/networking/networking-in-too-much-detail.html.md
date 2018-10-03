@@ -21,6 +21,8 @@ Much of the document will be relevant to other configurations, but details will 
 
 The examples in this document were generated on a system with Quantum networking but will generally match what you see under Neutron as well, if you replace `quantum` by `neutron` in names.
 
+IRC NOTE by larsks: Also, I consider http://blog.oddbit.com/2013/11/14/quantum-in-too-much-detail/ to be the canonical version of that article. If I ever made any corrections, that's where you'll find them.
+
 ## The lay of the land
 
 This is a simplified architecture diagram of network connectivity in a quantum/neutron managed world:
