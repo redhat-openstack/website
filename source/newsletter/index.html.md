@@ -10,6 +10,7 @@ Never miss a community newsletter: [Sign up to receive it to your inbox monthly]
 
 ## 2018
 
+* [October 2018](/newsletter/2018/october)
 * [September 2018](/newsletter/2018/september)
 * [August 2018](/newsletter/2018/august)
 * [July 2018](/newsletter/2018/july)
