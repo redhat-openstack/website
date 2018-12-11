@@ -8,7 +8,6 @@ See also the [bug triage schedule](/contribute/rdo-bugtriage/).
 
 The test day schedule is:
 
-* [Stein Milestone 1 Test Days 01-02 November 2018](/testday/stein/milestone1)
 * [Stein Milestone 3 Test Days 14-15 March 2019](/testday/stein/milestone3)
 
 ## Test, every day
