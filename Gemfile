@@ -9,6 +9,8 @@ gem 'compass', '~> 1'
 
 # Live-reloading plugin
 gem "middleman-livereload"
+# Duck: lock version, later ones require a more recent Ruby
+gem "rb-inotify", "~> 0.9.10"
 
 # Cross-templating language block fix for Ruby 1.8
 platforms :mri_18 do
