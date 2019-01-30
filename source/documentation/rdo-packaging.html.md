@@ -50,6 +50,7 @@ title: RDO Package Maintainer Guide
 
 * [Adding new packages to RDO](/documentation/add-packages/)
 * [Adding a new requirement](/documentation/requirements/#adding-a-new-requirement-to-rdo)
+* [Updating a requirement](/documentation/requirements/#updating-a-requirement-in-rdo-cloudsig-repositories)
 * [Fixing a FTBFS (failed to build from source)](https://blogs.rdoproject.org/7903/how-to-fix-a-ftbfs-using-dlrn)
 * [Adding a patch](/documentation/intro-packaging/#introducingremoving-patches)
 * [Preparing for a new OpenStack release](/documentation/branching/)
