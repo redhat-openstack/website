@@ -24,12 +24,14 @@ RDO provides all requirements for packaged services in RPM format from their own
 so that no software should be installed from external repositories. This packages can
 be provided by:
 
-- CentOS base repositories (base, updates and extras). This is the preferred source of
+- CentOS base repositories ([base](http://mirror.centos.org/centos/7/os/),
+[updates](http://mirror.centos.org/centos/7/updates/) and
+[extras](http://mirror.centos.org/centos/7/extras/)). This is the preferred source of
 packages whenever possible.
 - Other [CentOS SIG repositories](https://wiki.centos.org/SpecialInterestGroup) (Virtualization,
 Storage, etc...). When a required package is being maintained by other CentOS SIG, it
 will be reused for RDO repos.
-- RDO CloudSIG repositories. When a package is not available from previous repos, it will
+- [RDO CloudSIG repositories](/what/repos/#rdo-cloudsig-repositories). When a package is not available from previous repos, it will
 be provided in RDO repositores. Note that it's required that these packages exist previously
 in Fedora so that they can be rebuilt with minimal changes (if any).
 
@@ -53,15 +55,18 @@ documentation](https://github.com/openstack/requirements/#proposing-changes)
 
     <br />
 2. Check if the new requirement is present in CentOS base channels. The easiest way to do this
-is using yum command from a system running CentOS 7:
+is using 'repoquery' command from a system running RPM based OS(CentOS/RHEL/Fedora):
 
-        yum list "*<dependency>"
+        repoquery --repofrompath=tmp,http://mirror.centos.org/centos/7/os/x86_64/ \
+        --repofrompath=tmp2,http://mirror.centos.org/centos/7/updates/x86_64/ \
+        --repofrompath=tmp3,http://mirror.centos.org/centos/7/extras/x86_64/ \
+        --disablerepo=* --enablerepo=tmp* "*<dependency>"
 
     If it's present, the desired package is already available to RDO users.
 
     <br />
 3. If the package is not in CentOS base repos, you can check if it has been already built by
-the CloudSIG using rdopkg:
+the CloudSIG using [rdopkg](/documentation/intro-packaging/#rdopkg):
 
         rdopkg info <package name>
 
@@ -78,16 +83,15 @@ the CloudSIG using rdopkg:
         buildsys-tags:
           cloud7-openstack-common-release: python-eventlet-0.17.4-4.el7
           cloud7-openstack-common-testing: python-eventlet-0.17.4-4.el7
-          cloud7-openstack-newton-release: python-eventlet-0.18.4-2.el7
-          cloud7-openstack-newton-testing: python-eventlet-0.18.4-2.el7
           cloud7-openstack-ocata-release: python-eventlet-0.18.4-2.el7
           cloud7-openstack-ocata-testing: python-eventlet-0.18.4-2.el7
-          cloud7-openstack-pike-testing: python-eventlet-0.20.1-2.el7
           cloud7-openstack-pike-release: python-eventlet-0.20.1-2.el7
-          cloud7-openstack-queens-release: python-eventlet-0.20.1-2.el7
-          cloud7-openstack-queens-testing: python-eventlet-0.20.1-2.el7
-          cloud7-openstack-rocky-testing: python-eventlet-0.20.1-2.el7
-
+          cloud7-openstack-pike-testing: python-eventlet-0.20.1-2.el7
+          cloud7-openstack-queens-release: python-eventlet-0.20.1-5.el7
+          cloud7-openstack-queens-testing: python-eventlet-0.20.1-5.el7
+          cloud7-openstack-rocky-release: python-eventlet-0.20.1-5.el7
+          cloud7-openstack-rocky-testing: python-eventlet-0.20.1-5.el7
+          cloud7-openstack-stein-testing: python-eventlet-0.24.1-3.el7
         master-distgit: https://github.com/rdo-common/python-eventlet.git
         review-origin: null
         review-patches: null
@@ -101,7 +105,7 @@ the CloudSIG using rdopkg:
     CBS tags applied to each package (shown under buildsys-tags section for each package).
     Tags have a format cloud7-openstack-&lt;release>-&lt;phase> where:
 
-    - release: is a the OpenStack release name, as pike, queens or rocky.
+    - release: is a the OpenStack release name, as pike, queens, rocky or stein.
     - phase:
       - `candidate` phase is assigned to packages to be rebuilt in
       CBS but not pushed to any RDO repository.
@@ -114,15 +118,15 @@ the CloudSIG using rdopkg:
       This phase is only available after a RDO version has been officially released
       not for the one currently under development.
 
-    For example, the package included in cloud7-openstack-queens-release will published
-    in the [CloudSIG repo for queens](http://mirror.centos.org/centos-7/7/cloud/x86_64/openstack-queens/). The CBS tags flow will be:
+    For example, the package included in cloud7-openstack-rocky-release will published
+    in the [CloudSIG repo for rocky](http://mirror.centos.org/centos-7/7/cloud/x86_64/openstack-rocky/). The CBS tags flow will be:
     - *Runtime requirements:* candidate -> testing -> release
     - *Build requirements:* candidate -> el7-build
 
-    Note that, for the release currently under development (rocky right now), only the
-    testing phase will be available. The package included in cloud7-openstack-rocky-testing
+    Note that, for the release currently under development (stein right now), testing and
+    el7-build phase will be available. The package included in cloud7-openstack-stein-testing
     will be the one used to deploy from RDO Trunk Master repositories and it will be
-    automatically pushed to cloud7-openstack-rocky-release at RDO Rocky is officially
+    automatically pushed to cloud7-openstack-stein-release at RDO Stein is officially
     released and published.
 
     If the package is found for the required CBS tag, it's already in RDO repositories
@@ -136,26 +140,31 @@ RDO product](https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&component=dis
 the inclussion of the package in RDO repos. RDO Core members will handle the request.
 
     <br />
-5. If the new package is not in CBS, you must check if it's packaged in Fedora using the [package
-browser](https://src.fedoraproject.org/). If the package exists, you need to open
+5. If the new package is not in CBS, you must check if it's packaged in Fedora using the [Koji Web
+Interface](https://koji.fedoraproject.org/koji/). If the package exists, you need to open
 a review to [rdoinfo project in RDO gerrit instance](https://review.rdoproject.org/r/#/q/project:rdoinfo)
-adding the new dependency to `deps.yml` file as in [this example](https://review.rdoproject.org/r/#/c/13280/3/deps.yml):
+adding the new dependency to `deps.yml` and buildsys-tag in `buildsys-tags/cloud7-openstack-stein-candidate.yml`
+file as in [this example](https://review.rdoproject.org/r/#/c/18691):
 
-        - project: sphinxcontrib-apidoc
-         buildsys-tags:
-           cloud7-openstack-rocky-candidate: python-sphinxcontrib-apidoc-0.2.1-6.el7
-         name: python-sphinxcontrib-apidoc
-         conf: fedora-dependency
+        # in deps.yml
+        - project: python-openshift
+          name: python-openshift
+          conf: fedora-dependency
+
+        # in buildsys-tags/cloud7-openstack-stein-candidate.yml
+        - project: python-openshift
+          buildsys-tags:
+            cloud7-openstack-stein-candidate: python-openshift-0.8.4-2.el7
 
      Where:
      - `project` and `name` must be the name of the main package (the same as in fedora).
      - `conf` must be `fedora-dependency`.
      - In `buildsys-tags` section a new line for the candidate tag in the OpenStack
-  release in development (cloud7-openstack-rocky-candidate) with the required
+  release in development (cloud7-openstack-stein-candidate) with the required
   NVR (name-version-release) required, which must be the same one found in Fedora
-  replacing fcXX part in release by el7. For example, for [python-sphinxcontrib-apidoc](https://apps.fedoraproject.org/packages/python-sphinxcontrib-apidoc/)
-  the latest build is python-sphinxcontrib-apidoc-0.2.1-6.fc29, so in deps.yml
-  cloud7-openstack-rocky-candidate must point point to python-sphinxcontrib-apidoc-0.2.1-6.el7.
+  replacing fcXX part in release by el7. For example, for [python-openshift](https://koji.fedoraproject.org/koji/buildinfo?buildID=1184872)
+  the build is python-openshift-0.8.4-2.fc30, so in buildsys-tags/cloud7-openstack-stein-candidate.yml,
+  cloud7-openstack-stein-candidate must point to python-openshift-0.8.4-2.el7.
 
     This review will rebuild the Fedora package in the CentOS Build System and make
   it available to be pushed to the next CBS phase.
@@ -173,14 +182,14 @@ create a gerrit review as explained in step 5.
 it to the next phase, this means testing (for runtime dependencies) or el7-build
 (for build requirements in rocky or newer releases). This is done by sending a new
 review to [rdoinfo project](https://review.rdoproject.org/r/#/q/project:rdoinfo)
-adding a new line under `buildsys-tags` to `deps.yml` file for the new tag as in
-[this example](https://review.rdoproject.org/r/#/c/13469/1/deps.yml):
+adding a new line under `buildsys-tags` to `buildsys-tags/cloud7-openstack-stein-candidate.yml`
+file for the new tag as in [this example](https://review.rdoproject.org/r/#/c/18692/5/buildsys-tags/cloud7-openstack-stein-testing.yml@698):
 
         buildsys-tags:
-         cloud7-openstack-rocky-el7-build: python-sphinxcontrib-apidoc-0.2.1-6.el7
+         cloud7-openstack-stein-testing: python-openshift-0.8.4-2.el7
 
     Once this review is merged, the tag will be applied to this build and the package
- will added to the testing repo for rocky (note that some delay, up to 30 minutes
+ will added to the testing repo for stein (note that some delay, up to 30 minutes
  is expected).
 
     <br />
@@ -201,9 +210,16 @@ be requested opening a [bug in bugzilla for RHEL product](https://bugzilla.redha
 This bug will be evaluated following the RHEL process.
 
 * For packages installed from RDO CloudSIG repos, the package must be updated in Fedora first to the required
-version. If it has not been updated first you can contact Fedora package maintainer or open a [bug for Fedora
-product](https://bugzilla.redhat.com/enter_bug.cgi?product=Fedora). Once the package has been updated, yo can
-send a [request to get it updated in RDO repos](https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&component=distribution).
+version. If it has not been updated first you can contact Fedora package maintainer or search for open bug against
+component, example [component:python-migrate](https://bugzilla.redhat.com/buglist.cgi?product=Fedora&component=python-migrate&bug_status=__open__), if bug not exist,open a [bug for Fedora product](https://bugzilla.redhat.com/enter_bug.cgi?product=Fedora).
+
+* Once the package is build in Fedora, you can update the requirement in RDO by sending a review to [rdoinfo project
+in RDO gerrit instance](https://review.rdoproject.org/r/#/q/project:rdoinfo) like [example](https://review.rdoproject.org/r/#/c/18702/).
+
+* Once the patch is merged, the package gets rebuild in CBS. Next step is to include the package in RDO Testing repo,
+this can be done by sending a patch to rdoinfo project like [example](https://review.rdoproject.org/r/#/c/18692/5/buildsys-tags/cloud7-openstack-stein-testing.yml@604)
+
+* Once the package exist in testing repository it's ready to be used in jobs or update in rpm spec.
 
 ## Contact us
 
