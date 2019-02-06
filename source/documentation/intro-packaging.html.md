@@ -199,13 +199,37 @@ See also [man rdopkg](https://github.com/openstack-packages/rdopkg/blob/master/d
 ### rdoinfo metadata
 
 `rdoinfo` is a git repository containing RDO packaging metadata such as
-releases, packages, maintainers and more, currently in a single `rdo.yml` YAML
-file.
+releases, packages, maintainers and more.
+
 
 `rdoinfo` lives at
 [review.rdoproject.org](https://review.rdoproject.org/r/gitweb?p=rdoinfo.git;a=summary)
-but it's also mirrored to
-[github](https://github.com/redhat-openstack/rdoinfo).
+and is also mirrored to [github](https://github.com/redhat-openstack/rdoinfo).
+
+Most of the metadata is stored in `rdo.yml` and `deps.yml`, `tags` and `buildsys-tags`
+are stored in multiple YAML files as described below:
+
+- [rdo.yml](https://github.com/redhat-openstack/rdoinfo/blob/master/rdo.yml)
+- [deps.yml](https://github.com/redhat-openstack/rdoinfo/blob/master/deps.yml)
+- [tags/\<tag\>.yml](https://github.com/redhat-openstack/rdoinfo/tree/master/tags)
+- [buildsys-tags/cloud7-openstack-\<release\>-\<phase\>.yml](https://github.com/redhat-openstack/rdoinfo/tree/master/buildsys-tags)
+
+The files under `tags` and `buildsys-tags` directories are named based on names of tags and buildsys-tags,
+this is defined as follows:-
+
+- release: is a the OpenStack release name, as pike, queens, rocky or stein.
+- tag: tag for which project is build, like queens, rocky, stein, stein-uc, stein-py3-uc, etc.
+- phase:
+  - `candidate` phase is assigned to packages to be rebuilt in
+  CBS but not pushed to any RDO repository.
+  - `el7-build` (only available for Rocky and newer releases)
+  is assigned to packages that only required to build other
+  packages but are not a runtime requirement for any other package.
+  - `testing` phase means that the package is used in deployments using RDO Trunk
+  repo and published in a testing repo, but not official CloudSIG repository.
+  - `release` phase means that is published in the official CloudSIG repository.
+  This phase is only available after a RDO version has been officially released
+  not for the one currently under development.
 
 To query `rdoinfo`, use `rdopkg info`:
 
