@@ -49,6 +49,7 @@ title: RDO Package Maintainer Guide
 ## Package Maintainer common tasks
 
 * [Adding new packages to RDO](/documentation/add-packages/)
+* [Retiring a package in RDO](/documentation/retire-packages/)
 * [Adding a new requirement](/documentation/requirements/#adding-a-new-requirement-to-rdo)
 * [Updating a requirement](/documentation/requirements/#updating-a-requirement-in-rdo-cloudsig-repositories)
 * [Fixing a FTBFS (failed to build from source)](https://blogs.rdoproject.org/7903/how-to-fix-a-ftbfs-using-dlrn)
