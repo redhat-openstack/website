@@ -218,7 +218,7 @@ The files under `tags` and `buildsys-tags` directories are named based on names 
 this is defined as follows:-
 
 - release: is a the OpenStack release name, as pike, queens, rocky or stein.
-- tag: tag for which project is build, like queens, rocky, stein, stein-uc, stein-py3-uc, etc.
+- tag: tag for which project is build, like queens, rocky, stein, train, train-uc, etc.
 - phase:
   - `candidate` phase is assigned to packages to be rebuilt in
   CBS but not pushed to any RDO repository.
