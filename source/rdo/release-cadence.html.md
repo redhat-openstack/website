@@ -23,7 +23,6 @@ Due to the slower release cadence of RHEL and therefore CentOS, only the most re
 | RHEL 7 and CentOS 7  | Stein    | supported |
 | RHEL 7 and CentOS 7  | Rocky    | supported |
 | RHEL 7 and CentOS 7  | Queens   | supported |
-| RHEL 7 and CentOS 7  | Pike     | supported |
 
 ### References
 
