@@ -85,6 +85,9 @@ gem "stringex"
 # and https://github.com/redhat-openstack/website/pull/1218
 gem "kramdown", "~> 1.16.0"
 
+# pinned to work on the CentOS 7 builder
+gem "hitimes", "~> 1.2.6"
+
 gem 'open-uri-cached'
 
 gem 'font-awesome-middleman'
@@ -95,7 +98,8 @@ gem "feedjira"
 gem 'rails-assets-bootstrap-sortable'
 
 gem 'rails-assets-momentjs'
-gem 'rails-assets-fullcalendar'
+# pinned to work on the CentOS 7 builder
+gem "rails-assets-fullcalendar", "~> 2.9.1"
 gem 'icalendar', '~> 1.5'
 
 gem 'slop', '~> 4'
