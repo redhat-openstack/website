@@ -91,7 +91,7 @@ $ sudo yum install -y centos-release-openstack-stein
 Make sure the repository is enabled:
 
 ```
-yum-config-manager --enable openstack-stein
+sudo yum-config-manager --enable openstack-stein
 ```
 
 Update your current packages:
