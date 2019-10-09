@@ -26,7 +26,7 @@
 * [Train Release Schedule](https://releases.openstack.org/train/schedule.html)
 
 ---
-INTRODUCTION
+This month we talk about the upcoming Open Infrastructure Summit in Shanghai and OpenShift on OpenStack and speaking opportunities within the community.
 
 ## <a name="housekeeping"></a>Housekeeping Items
 ### Volunteers Needed for the RDO Pod at Open Infrastructure Summit Shanghai
