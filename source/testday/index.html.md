@@ -1,6 +1,6 @@
 # Test Days
 
-Test days are held roughly every other month, on the week after upstream milestones one and three. See the [release schedule](http://releases.openstack.org/stein/schedule.html) for when those milestones occur.
+Test days are held roughly every other month, on the week after upstream milestones one and three. See the [release schedule](http://releases.openstack.org/train/schedule.html) for when those milestones occur.
 
 See also the [bug triage schedule](/contribute/rdo-bugtriage/).
 
@@ -8,7 +8,7 @@ See also the [bug triage schedule](/contribute/rdo-bugtriage/).
 
 The test day schedule is:
 
-* [Stein Milestone 3 Test Days 14-15 March 2019](/testday/stein/milestone3)
+* [Train Milestone 3 Test Days 24-25 October 2019](/testday/train/milestone3)
 
 ## Test, every day
 
