@@ -2,9 +2,9 @@
 title: RDO Train Test Day
 ---
 
-# Train Test Day 3
+# Train Milestone3 Test Days
 
-We will be holding a RDO test day on **24th and 25th October 2019.**
+We will be holding RDO test days on the **24th and 25th October 2019.**
 
 This will be coordinated through the **#rdo channel on Freenode**, through
 this website and through the [dev@lists.rdoproject.org](https://lists.rdoproject.org/mailman/listinfo/dev) mailing list.

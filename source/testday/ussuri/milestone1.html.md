@@ -2,7 +2,7 @@
 title: RDO Ussuri Test Day
 ---
 
-# Stein Milestone1 Test Day
+# Ussuri Milestone1 Test Day
 
 We will be holding a RDO test day on **19 and 20 December 2019.**
 
