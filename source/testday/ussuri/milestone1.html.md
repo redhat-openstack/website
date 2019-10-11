@@ -22,8 +22,8 @@ We will also be available for people that want to try the stable (Rocky) release
 
 We plan to have packages for the following platforms:
 
-* [RHEL 8](https://access.redhat.com/products/red-hat-enterprise-linux/)
-* [CentOS 8](https://www.centos.org/download/)
+* [RHEL 7](https://access.redhat.com/products/red-hat-enterprise-linux/)
+* [CentOS 7](https://www.centos.org/download/)
 
 You'll want a fresh install with latest updates installed.
 (Fresh so that there's no hard-to-reproduce interactions with other things.)
