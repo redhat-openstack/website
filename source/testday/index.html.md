@@ -54,4 +54,4 @@ Our latest test days have included setting up a test cloud using RDO, so users c
 | Mitaka M3 | 10-11 March 2016 | 14 | | | [Tickets](https://bugzilla.redhat.com/buglist.cgi?bug_status=NEW&bug_status=ASSIGNED&bug_status=POST&bug_status=MODIFIED&bug_status=ON_DEV&bug_status=ON_QA&bug_status=VERIFIED&bug_status=RELEASE_PENDING&chfield=%5BBug%20creation%5D&chfieldfrom=2016-03-09&chfieldto=2016-03-12&classification=Community&list_id=4344410&product=RDO&query_format=advanced) |
 | Mitaka M1 | 10-11 December 2015 | 9 | 44 | 795 | [Tickets](https://goo.gl/51Dz97) |
 | Liberty M2 | 12-13 October 2015 | 23 | 42 | 1074 | [Tickets](https://goo.gl/D6VeQ0) |
-| Liberty M1 | 23-24 September 2015 | 17 | |  | [Tickets](https://goo.gl/OIPNt3) |
+| Liberty M1 | 23-24 September 2015 | 17 | | | [Tickets](https://goo.gl/OIPNt3) |
