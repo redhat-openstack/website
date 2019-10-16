@@ -67,7 +67,6 @@ The release announcement should be sent to the following lists:
 * openstack - openstack@lists.openstack.org
 * Twitter - @rdocommunity
 * Facebook - http://facebook.com/rdocommunity
-* Google+ - https://plus.google.com/communities/110409030763231732154
 * RDO blog - http://rdoproject.org/blog
 
 ## What not to do
