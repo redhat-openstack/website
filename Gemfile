@@ -61,7 +61,7 @@ gem 'chronic'
 
 # Bootstrap, as SASS
 # Duck: 3.4 uses sassc which requires a more recent Ruby
-gem "bootstrap-sass", "~> 3.3.7"
+gem "bootstrap-sass", "~> 3.4.1"
 
 
 #####
