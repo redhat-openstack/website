@@ -57,7 +57,7 @@ GEM
       faraday_middleware (>= 0.9)
       loofah (>= 2.0)
       sax-machine (>= 1.0)
-    ffi (1.9.23)
+    ffi (1.11.1)
     font-awesome-middleman (4.5.0)
       middleman-core (~> 3.0)
     haml (4.0.7)
