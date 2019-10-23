@@ -20,6 +20,7 @@ The OpenStack package maintainer team keeps only the latest OpenStack developmen
 Due to the slower release cadence of RHEL and therefore CentOS, only the most recent release plus the previous one are supported, in keeping up with upstream policy. Older versions of the operating system such as CentOS 6 do not receive later releases.
 
 |----------------------|----------|-----------|
+| RHEL 7 and CentOS 7  | Train    | supported |
 | RHEL 7 and CentOS 7  | Stein    | supported |
 | RHEL 7 and CentOS 7  | Rocky    | supported |
 | RHEL 7 and CentOS 7  | Queens   | supported |
