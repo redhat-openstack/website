@@ -72,7 +72,7 @@ Registration, sponsorships, and additional information coming soon. Email [event
 ### Open Infrastructure Summit Shanghai
 There’s a lot happening in and around Open Infrastructure Summit Shanghai! Here are a few highlights:
 * **RDO-Specific talks** We’re gathering a list of RDO-specific talks that will be happening at Open Infrastructure Summit Shanghai. If you haven’t already, please [add yours to the list](https://etherpad.openstack.org/p/OISummitShanghai-RDOtalks). We’ll be promoting these talks via social media prior to as well as during the conference.
-* **Looking for Volunteers** As mentioned <a name=”#housekeeping”>above</a>, we’re looking for volunteers to spend time answering questions at the RDO booth. Please consider [signing up for a shift](https://etherpad.openstack.org/p/shanghai-summit-community-pod).
+* **Looking for Volunteers** As mentioned [above](#housekeeping), we’re looking for volunteers to spend time answering questions at the RDO booth. Please consider [signing up for a shift](https://etherpad.openstack.org/p/shanghai-summit-community-pod).
 
 ### Call For Papers
 There are a handful of relevant conferences with open CFPs. Need help figuring out a good topic or finalizing your abstract? Feel free to reach out in the #RDO channel on IRC.
