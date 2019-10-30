@@ -27,6 +27,7 @@
 * [YouTube](https://www.youtube.com/RDOcommunity)
 * [Train Release Schedule](https://releases.openstack.org/train/schedule.html)
 * [Ussuri Release Schedule](https://releases.openstack.org/ussuri/schedule.html)
+
 ---
 Do you hear that whistle? ALL ABOARD!! This month we're celebrating the release of the latest OpenStack RDO release cycle, Train, diving head first into the next release cycle, Ussuri, and zooming off to Shanghai in the process.
 
