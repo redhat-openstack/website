@@ -11,6 +11,7 @@ The agenda for that meeting is in [this
 etherpad](https://etherpad.openstack.org/p/centos-cloud-sig).
 
 The minutes for these meetings are below:
+* [October 31 2019](https://www.centos.org/minutes/2019/October/centos-meeting.2019-10-31-15.01.html)
 * [October 24 2019](https://www.centos.org/minutes/2019/October/centos-meeting.2019-10-24-15.02.html)
 
 * [July 19 2018](https://www.centos.org/minutes/2018/July/centos-devel.2018-07-19-15.12.html)
