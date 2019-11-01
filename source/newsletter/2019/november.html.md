@@ -32,14 +32,26 @@
 Do you hear that whistle? ALL ABOARD!! This month we're celebrating the release of the latest OpenStack RDO release cycle, Train, diving head first into the next release cycle, Ussuri, and zooming off to Shanghai in the process.
 
 ## <a name="housekeeping"></a>Housekeeping Items
-### Volunteers Needed for the RDO Pod at Open Infrastructure Summit Shanghai
-We are gearing up for [Open Infrastructure Summit Shanghai](https://www.openstack.org/summit/shanghai-2019) where we'll have our regular presence within the Red Hat booth. Our booth presence is substantially smaller at this event, so we will NOT be doing any community demos, BUT! 
+### Are You Attending Project Teams Gathering in Shanghai? We Want To Hear From YOU!
+Rain Leander is attending Open Infrastructure Summit and Project Teams Gathering in Shanghai and will [conduct interviews on Friday 08 November in room Liberty](https://docs.google.com/spreadsheets/d/1XwRC_nHm2hZs37Hlrb5fUl4zGtOGgekj1oHaGn3TBxA/edit?usp=sharing ). If you're keen and able, she'd love to talk with you.
 
-We're looking for people to spend their precious free time [answering questions](https://etherpad.openstack.org/p/shanghai-summit-community-pod) at the RDO booth. If you're attending, please consider spending one or more of your free moments with us. 
+These interviews have several purposes. Please consider all of the following when thinking about what you might want to say in your interview:
 
-Questions run the gamut from "What's RDO?" to "I found a bug in Neutron and need help troubleshooting it." Of course, you're not expected to know everything and you can always keep IRC open to access the RDO Community for help! Plus, you get cool stuff! If you show up for three or more shifts, we're going to hook you up with an RDO hoodie.
+* Tell the users/customers/press what you've been working on in Train
+* Give them some idea of what's (what might be?) coming in Ussuri
+* Put a human face on the OpenStack project and encourage new participants to join us
+* You're welcome to promote your company's involvement in OpenStack but we ask that you avoid any kind of product pitches or job recruitment
 
-Reach out to Rain Leander on IRC (leanderthal) or email (rain@redhat.com) for more information.
+In the interview I'll ask some leading questions and it'll go easier if you've given some thought to them ahead of time:
+
+* Who are you? (Your name, your employer, and the project(s) on which you are active.)
+* What did you accomplish in Train? (Focus on the 2-3 things that will be most interesting to cloud operators)
+* What do you expect to be the focus in Ussuri? (At the time of your interview, it may be that the meetings will not yet have decided anything firm. That's ok.)
+* Anything further about the project(s) you work on or the OpenStack community in general.
+
+Finally, note that there are only 15 interview slots available, so please consider coordinating with your project to designate the people that you want to represent the project, so that we don't end up with 12 interview about Neutron, or whatever. It's fine to have multiple people in one interview - Maximum 3, probably.
+
+Interview slots are 30 minutes, in which time we hope to capture somewhere between 10 and 20 minutes of content. It's fine to run shorter, but 15 minutes is probably an ideal length.
 
 ## <a name="rdo"></a>RDO Changes
 ### All Aboard The RDO OpenStack Train!
