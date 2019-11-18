@@ -11,7 +11,7 @@ this website and the [dev@lists.rdoproject.org](https://lists.rdoproject.org/mai
 
 We'll be testing the first [Ussuri milestone release](http://releases.openstack.org/ussuri/schedule.html). If you can do any testing on your own ahead of time, that will help ensure that everyone isn't encountering the same problems.
 
-We will also be available for people that want to try the stable (Rocky) release.
+We will also be available for people that want to try the stable (Train) release.
 
 ### Quick links
 
