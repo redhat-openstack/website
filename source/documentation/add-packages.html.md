@@ -63,8 +63,8 @@ the `rdo-review +` flag is set in the Bugzilla bug, the initial spec review will
 in Gerrit.
 
 5. Finally, send a new review to rdoinfo project to remove the `under-review` tag from `tags/under-review.yml` file
-and add tags for which package needs to be build, For current release Stein, 3 files need to be updated(`tags/stein.yml`,
-`tags/stein-uc.yml`, `tags/stein-py3-uc.yml`) ([example](https://review.rdoproject.org/r/#/c/18757/)).
+and add tags for which package needs to be build, For current release Train, 2 files need to be updated(`tags/train.yml`,
+`tags/train-uc.yml`) ([example](https://review.rdoproject.org/r/#/c/18757/)).
 This change can be sent before merging review in step 3 if a `Depends-On: <gerrit-change-id step 3>`
 is added, but the review will only be approved once the `rdo-review +` flag has been
 set in the Bugzilla.

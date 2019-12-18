@@ -24,7 +24,7 @@ maintainers can start carrying out the next steps.
 
 
 ### 2. Update package distgits.
-Around RC1 time ([check upstream schedule](https://releases.openstack.org/pike/schedule.html)), **package maintainers**
+Around RC1 time ([check upstream schedule](https://releases.openstack.org/train/schedule.html)), **package maintainers**
 should send required reviews to *rpm-master* branch to adjust distgits contents to the
 changes occurred during the cycle. This typically includes updating minimal versions for
 existing dependencies, removing not longer used requirements, etc... Note that
@@ -70,7 +70,10 @@ with the branch name:
             acl: openstack-novaclient-distgit
             description: Packaging of upstream novaclient
             branches:
-              ocata-rdo: ee8a6bfaba628ab610646fa27b1388b64678d222
+              pike-rdo: 71fafbb21c2dc8dd518a0c3d5f635b6b04100661
+              queens-rdo: c2e115b3283fd776cabaf68d0eb7940030fc1821
+              rocky-rdo: c0663f17adf0bc05999d8b2caabbe9270af93c27
+              stein-rdo: 9d0b15be17c3aaf39dccd5a0ab8fe01801d6484d
     
 4. Commit the change and send the review using commands:
     

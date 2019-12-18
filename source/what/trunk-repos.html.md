@@ -4,12 +4,21 @@ title: Workflow - RDO Trunk repos
 
 # Workflow: RDO Trunk repos
 
-RDO Trunk repositories are built using the most recent commit from each of the OpenStack projects. We host the RDO Trunk repositories at [https://trunk.rdoproject.org/](https://trunk.rdoproject.org/). On that server, you will find several repositories:
+RDO Trunk repositories are built using the most recent commit(or from the pin to a commit/tag/branch if ``source-branch`` is set for a release in [rdoinfo](https://github.com/redhat-openstack/rdoinfo/tree/master/tags)) from each of the OpenStack projects defined for a release. We host the RDO Trunk repositories at [https://trunk.rdoproject.org/](https://trunk.rdoproject.org/). On that server, you will find several repositories:
 
-- CentOS 7 master
-- CentOS 7 master, using versions from upper-constraints
-- CentOS 7 stable releases for the currently supported versions
-- Fedora Rawhide master
+- [CentOS 7 master, with everything from master](https://trunk.rdoproject.org/centos7-master-head/consistent/)
+- [CentOS 7 master, using versions from upper-constraints](https://trunk.rdoproject.org/centos7-master/consistent/)
+- [CentOS 7 stable releases for the currently supported versions](https://trunk.rdoproject.org)
+- [Fedora 28 master](https://trunk.rdoproject.org/fedora28-master/consistent/)
+
+[CentOS 7 master, with everything from master](https://trunk.rdoproject.org/centos7-master-head/consistent/) repo is not tested by any CI job, this repo is created as a result of building recent commits to get packaging issues early for the projects which are pinned in rdoinfo. 
+
+These repos contains packages build for each OpenStack project defined for a particular release in ``rdoinfo``. This mapping of repo and release is as follows:-
+
+- [CentOS 7 master, with everything from master] with current release rdoinfo tag i.e [train](https://github.com/redhat-openstack/rdoinfo/blob/master/tags/train.yml) 
+- [CentOS 7 master, using versions from upper-constraints] with current release rdoinfo tag i.e [train-uc](https://github.com/redhat-openstack/rdoinfo/blob/master/tags/train-uc.yml)
+- [CentOS 7 stable releases for the currently supported versions] with stable release rdoinfo tag other than current release [train, train-uc](https://github.com/redhat-openstack/rdoinfo/blob/master/tags/)
+- [Fedora 28 master] with current release rdoinfo tag i.e [train-uc](https://github.com/redhat-openstack/rdoinfo/blob/master/tags/train-uc.yml)
 
 ## The upper-constraints based repositories
 
@@ -19,7 +28,7 @@ Why is this file important? It defines an upper cap for every gate job, meaning 
 
 This is also important when packaging, because we want our generated repositories to be usable by upstream CIs, so we need to provide a set of packages that matches the versions available in the ``upper-constraints.txt`` file. Thus, we have two separate repositories for master:
 
-- [CentOS 7 master, using versions from upper-constraints](https://trunk.rdoproject.org/centos7), where all libraries and clients are built from the latest versions in ``upper-constraints.txt``, and every other project is built from the master branch.
+- [CentOS 7 master, using versions from upper-constraints](https://trunk.rdoproject.org/centos7-master), where all libraries and clients are built from the latest versions in ``upper-constraints.txt``, and every other project is built from the master branch.
 - [CentOS 7 master, with everything from master](https://trunk.rdoproject.org/centos7-master-head), where every project is built from the current master. This is used as a _canary in a coal mine_, as an early warning method for upcoming issues, so they can be fixed before they reach the upstream gates.
 
 For stable releases, we also follow the upper-constraints approach.

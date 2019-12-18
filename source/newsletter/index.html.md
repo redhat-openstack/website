@@ -8,6 +8,12 @@ We send out a monthly newsletter covering anything of interest to the RDO Commun
 
 Never miss a community newsletter: [Sign up to receive it to your inbox monthly](https://lists.rdoproject.org/mailman/listinfo/newsletter).
 
+## 2019
+
+* [December 2019](/newsletter/2019/december)
+* [November 2019](/newsletter/2019/november)
+* [October 2019](/newsletter/2019/october)
+
 ## 2018
 
 * [November 2018](/newsletter/2018/november)
