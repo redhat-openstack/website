@@ -8,7 +8,6 @@ See also the [bug triage schedule](/contribute/rdo-bugtriage/).
 
 The test day schedule is:
 
-* [Ussuri Milestone1 Test Days 19-20 December 2019](/testday/ussuri/milestone1)
 * [Ussuri Milestone3 Test Days 16-17 April 2020](/testday/ussuri/milestone3)
 
 ## Test, every day
@@ -33,7 +32,7 @@ Our latest test days have included setting up a test cloud using RDO, so users c
 | Milestone | Date | Tickets opened | IRC participation | URL(s) |
 |-----------|------|----------------|-------------------|--------|
 | [Ussuri M3](/testday/ussuri/milestone3) | 16-17 April 2020 | - | Pending | - |
-| [Ussuri M1](/testday/ussuri/milestone1) | 19-20 December 2019 | - | Pending | - |
+| [Ussuri M1](/testday/ussuri/milestone1) | 19-20 December 2019 | 0 | 26 participants, 869 msgs | [Tickets](https://bugzilla.redhat.com/buglist.cgi?bug_status=NEW&bug_status=ASSIGNED&bug_status=POST&bug_status=MODIFIED&bug_status=ON_DEV&bug_status=ON_QA&bug_status=VERIFIED&bug_status=RELEASE_PENDING&chfield=%5BBug%20creation%5D&chfieldfrom=2019-12-19&chfieldto=2019-12-20&classification=Community&product=RDO&query_format=advanced) |
 | [Train M3](/testday/train/milestone3) | 19-20 September 2019 | 1 | 16 participants, 1180 msgs | [Tickets](https://bugzilla.redhat.com/buglist.cgi?bug_status=NEW&bug_status=ASSIGNED&bug_status=POST&bug_status=MODIFIED&bug_status=ON_DEV&bug_status=ON_QA&bug_status=VERIFIED&bug_status=RELEASE_PENDING&chfield=%5BBug%20creation%5D&chfieldfrom=2019-09-19&chfieldto=2019-09-20&classification=Community&product=RDO&query_format=advanced) |
 | [Train M1](/testday/train/milestone1) | 13-14 June 2019 | 0 | 19 participants, 910 msgs | [Tickets](https://bugzilla.redhat.com/buglist.cgi?bug_status=NEW&bug_status=ASSIGNED&bug_status=POST&bug_status=MODIFIED&bug_status=ON_DEV&bug_status=ON_QA&bug_status=VERIFIED&bug_status=RELEASE_PENDING&chfield=%5BBug%20creation%5D&chfieldfrom=2019-06-13&chfieldto=2019-06-14&classification=Community&product=RDO&query_format=advanced) |
 | [Stein M3](/testday/stein/milestone3) | 14-15 March 2019 | 0 | 18 participants, 1041 msgs | [Tickets](https://bugzilla.redhat.com/buglist.cgi?bug_status=NEW&bug_status=ASSIGNED&bug_status=POST&bug_status=MODIFIED&bug_status=ON_DEV&bug_status=ON_QA&bug_status=VERIFIED&bug_status=RELEASE_PENDING&chfield=%5BBug%20creation%5D&chfieldfrom=2019-03-14&chfieldto=2019-03-15&classification=Community&product=RDO&query_format=advanced) |
