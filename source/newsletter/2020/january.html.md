@@ -31,10 +31,15 @@
 Welcome to the new decade of 2020 where it's a mere five months to Ussuri release! Ready? Set? GO!
 
 ## <a name="housekeeping"></a>Housekeeping Items
-### Thanks for all the help on RDO Ussuri Test Day Milestone ONE!
-We did a [RDO test day on 19 and 20 December 2019](http://rdoproject.org/testday/ussuri/milestone1/) and it went great! While we didn't open any tickets, we had 26 participants and 869 messages. The next RDO test day is for Milestone three on 16-17 April 2020.
+### We are gearing up for DevConf.CZ where we'll have our very own booth. While we're not planning on running any demos, we'd love to see your demos instead! If you've got something you'd like to show via video OR LIVE because you're not afraid of ANYTHING, [sign up](https://etherpad.openstack.org/p/dev-conf-cz-rdo-booth).
+
+We're also looking for people to spend their precious free time answering questions at the RDO booth. If you're attending, please consider spending one or more of your free moments with us. Questions run the gamut from "What's RDO?" to "I found a bug in Neutron and need help troubleshooting it." Of course, you're not expected to know everything and you can always keep IRC open to access the RDO Community for help! Plus, you get cool stuff! If you show up for three or more shifts, we're going to hook you up with an RDO hoodie.
+
+Reach out to Rain Leander on IRC (leanderthal) or email (rain@redhat.com) for more information.
 
 ## <a name="rdo"></a>RDO Changes
+### [RDO test day was 19 and 20 December 2019](http://rdoproject.org/testday/ussuri/milestone1/) and it went great! While we didn't open any tickets, we had 26 participants and 869 messages. The next RDO test day is for Milestone three on 16-17 April 2020.
+
 ## <a name="community"></a>Community News
 ### Community Meetings
 Every Tuesday at 13:30 UTC, we have a weekly **TripleO CI community meeting** on [https://meet.google.com/bqx-xwht-wky](https://meet.google.com/bqx-xwht-wky) with the agenda on [https://hackmd.io/IhMCTNMBSF6xtqiEd9Z0Kw](https://hackmd.io/IhMCTNMBSF6xtqiEd9Z0Kw). The TripleO CI meeting focuses on a group of people focusing on Continuous Integration tooling and system who would like to provide a comprehensive testing framework that is easily reproducible for TripleO contributors. This framework should also be consumable by other CI systems (OPNFV, RDO, vendor CI, etc.), so that TripleO can be tested the same way everywhere. This is NOT a place for TripleO usage questions, rather, check out the next meeting listed just below.
