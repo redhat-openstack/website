@@ -39,7 +39,8 @@ We're also looking for people to spend their precious free time answering questi
 Reach out to Rain Leander on IRC (leanderthal) or email (rain@redhat.com) for more information.
 
 ## <a name="rdo"></a>RDO Changes
-### [RDO test day was 19 and 20 December 2019](http://rdoproject.org/testday/ussuri/milestone1/) and it went great! While we didn't open any tickets, we had 26 participants and 869 messages. The next RDO test day is for Milestone three on 16-17 April 2020.
+### What a Fabulous Test Day!
+[RDO test day was 19 and 20 December 2019](http://rdoproject.org/testday/ussuri/milestone1/) and it went great! While we didn't open any tickets, we had 26 participants and 869 messages. The next RDO test day is for Milestone three on 16-17 April 2020.
 
 ## <a name="community"></a>Community News
 ### Community Meetings
