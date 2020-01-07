@@ -1,4 +1,4 @@
-# December 2019 RDO Community Newsletter
+# January 2020 RDO Community Newsletter
 
 [← Newsletters](/newsletter)
 ## Quick links:
@@ -28,7 +28,7 @@
 * [Ussuri Release Schedule](https://releases.openstack.org/ussuri/schedule.html)
 
 ---
-Welcome to the next decade where it's a mere five months to Ussuri release! Ready? Set? GO!
+Welcome to the new decade of 2020 where it's a mere five months to Ussuri release! Ready? Set? GO!
 
 ## <a name="housekeeping"></a>Housekeeping Items
 ### Thanks for all the help on RDO Ussuri Test Day Milestone ONE!
