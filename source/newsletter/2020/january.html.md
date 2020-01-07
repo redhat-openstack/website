@@ -31,7 +31,8 @@
 Welcome to the new decade of 2020 where it's a mere five months to Ussuri release! Ready? Set? GO!
 
 ## <a name="housekeeping"></a>Housekeeping Items
-### We are gearing up for DevConf.CZ where we'll have our very own booth. While we're not planning on running any demos, we'd love to see your demos instead! If you've got something you'd like to show via video OR LIVE because you're not afraid of ANYTHING, [sign up](https://etherpad.openstack.org/p/dev-conf-cz-rdo-booth).
+### Are You Headed to Brno?
+We are gearing up for DevConf.CZ where we'll have our very own booth. While we're not planning on running any demos, we'd love to see your demos instead! If you've got something you'd like to show via video OR LIVE because you're not afraid of ANYTHING, [sign up](https://etherpad.openstack.org/p/dev-conf-cz-rdo-booth).
 
 We're also looking for people to spend their precious free time answering questions at the RDO booth. If you're attending, please consider spending one or more of your free moments with us. Questions run the gamut from "What's RDO?" to "I found a bug in Neutron and need help troubleshooting it." Of course, you're not expected to know everything and you can always keep IRC open to access the RDO Community for help! Plus, you get cool stuff! If you show up for three or more shifts, we're going to hook you up with an RDO hoodie.
 
