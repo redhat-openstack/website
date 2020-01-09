@@ -68,7 +68,7 @@ gem "bootstrap-sass", "~> 3.3.7"
 # Formats
 
 # haml
-gem "haml", "~> 4.0"
+gem "haml", "~> 5.0"
 
 # less (css)
 gem "therubyracer"

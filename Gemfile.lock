@@ -60,7 +60,8 @@ GEM
     ffi (1.11.1)
     font-awesome-middleman (4.5.0)
       middleman-core (~> 3.0)
-    haml (4.0.7)
+    haml (5.0.0)
+      temple (>= 0.8.0)
       tilt
     hike (1.2.3)
     hitimes (1.2.6)
@@ -174,6 +175,7 @@ GEM
       sprockets (~> 2.0)
       tilt (~> 1.1)
     stringex (2.8.4)
+    temple (0.8.2)
     therubyracer (0.12.3)
       libv8 (~> 3.16.14.15)
       ref
@@ -201,7 +203,7 @@ DEPENDENCIES
   compass (~> 1)
   feedjira
   font-awesome-middleman
-  haml (~> 4.0)
+  haml (~> 5.0)
   hitimes (~> 1.2.6)
   icalendar (~> 1.5)
   kramdown (~> 1.16.0)
