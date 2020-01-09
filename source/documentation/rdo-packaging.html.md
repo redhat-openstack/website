@@ -24,7 +24,7 @@ title: RDO Package Maintainer Guide
 
 * [DLRN: What it is, what we use it for](/what/dlrn/)
 * [rdopkg: swiss army knife for RDO packagers](/documentation/intro-packaging/#rdopkg)
-* [rdoinfo: RDO packages metadata](https://github.com/redhat-openstack/rdoinfo/blob/master/README.rst)
+* [rdoinfo: RDO packages metadata](/documentation/intro-packaging/#rdoinfo)
 * [SoftwareFactory](https://www.rdoproject.org//blog/2017/06/introducing-Software-Factory-part-1/)
 
 </div>
@@ -49,7 +49,9 @@ title: RDO Package Maintainer Guide
 ## Package Maintainer common tasks
 
 * [Adding new packages to RDO](/documentation/add-packages/)
+* [Retiring a package in RDO](/documentation/retire-packages/)
 * [Adding a new requirement](/documentation/requirements/#adding-a-new-requirement-to-rdo)
+* [Updating a requirement](/documentation/requirements/#updating-a-requirement-in-rdo-cloudsig-repositories)
 * [Fixing a FTBFS (failed to build from source)](https://blogs.rdoproject.org/7903/how-to-fix-a-ftbfs-using-dlrn)
 * [Adding a patch](/documentation/intro-packaging/#introducingremoving-patches)
 * [Preparing for a new OpenStack release](/documentation/branching/)

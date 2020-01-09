@@ -20,35 +20,39 @@ following the best practices described in [RDO OpenStack Packaging Guidelines](/
 2. Send a review adding the new project in rdo.yml to the [rdoinfo project in
 review.rdoproject.org](https://review.rdoproject.org/r/#/q/project:rdoinfo). In
 this change you must provide the project information and Package Review bugzilla
-ticket in the commit message (see [this example](https://review.rdoproject.org/r/#/c/1408/)).
-In the project definition in **rdo.yml** file, only `under-review` must be uncommented as project tags
-and comment all releases where package should be built, as for example:
+ticket in the commit message (see [this example](https://review.rdoproject.org/r/#/c/18644/)).
+Add the project definition in **rdo.yml** file and `under-review` tag in **tags/under-review.yml** file,
+as for example:
     
-        - project: murano-dashboard
-          name: openstack-murano-ui
+        # in rdo.yml
+        - project: octavia-lib
+          conf: rpmfactory-lib
+          maintainers:
+          - nmagnezi@redhat.com
+          - cgoncalves@redhat.com
+          - bcafarel@redhat.com
+
+        # in tags/under-review.yml
+        - project: octavia-lib
           tags:
             under-review:
-            #newton-uc:
-            #newton:
-            #mitaka:
-          conf: rpmfactory-core
-          maintainers:
-          - atsamutali@mirantis.com
-          - iyozhikov@mirantis.com
      
     **Note:** Maintainers must be registered in review.rdoproject.org and use the registered email in the rdoinfo review.
     This is required to set your permissions on your project.
 
-    As part of the review process, some tasks will be carried out by the RDO team:
+    Once the patch is merged, following tasks are done by RDO automation process:-
 
-    * The required projects will be created in [https://review.rdoproject.org](https://review.rdoproject.org).
-    * Users included in maintainers list will received required permissions to manage the project.
-    * The new projects will be added to zuul configuration in review.rdoproject.org
-    (as in [this example](https://review.rdoproject.org/r/#/c/1418/)).
-    * Once the projects are created, the change will be merged in rdoinfo project.
+    * Patch is proposed to create project and assign permissions to maintainers to manage the project.
+    (as in [this example](https://review.rdoproject.org/r/#/c/18647/))
+    * Once the create project patch is merged, required projects will be created in [https://review.rdoproject.org](https://review.rdoproject.org)
+    with repo synched to [github.com](https://github.com/rdo-packages/octavia-lib-distgit).
+    * Patch is proposed to add new projects to rdo zuul configuration in [review.rdoproject.org](https://github.com/rdo-infra/review.rdoproject.org-config/blob/master/zuul/rdo.yaml).
+    * Patch is proposed to add check jobs to new projects in rdoproject.org.
+    (as in [this example](https://review.rdoproject.org/r/#/c/18648/)). CI jobs in this patch will fail
+    until the Patch to add new projects to rdo zuul configuration is merged.
 
 3. Create a new review to the new distgit project with the needed content (spec
-file, etc...) for the initial import as in [this example](https://review.rdoproject.org/r/#/c/7645/).
+file, etc...) for the initial import as in [this example](https://review.rdoproject.org/r/#/c/18682/).
 This will trigger a CI job to test the package build. The spec will be reviewed by the
 core RDO packagers, and **cannot be approved by the requester**.
 
@@ -58,7 +62,9 @@ review will be conducted by the reviewer, who will set the `rdo-review +` flag. 
 the `rdo-review +` flag is set in the Bugzilla bug, the initial spec review will be approved
 in Gerrit.
 
-5. Finally, send a new review to rdoinfo project to remove the `under-review` tag and uncomment the required versions where the package must be built ([example](https://review.rdoproject.org/r/#/c/1422/)).
+5. Finally, send a new review to rdoinfo project to remove the `under-review` tag from `tags/under-review.yml` file
+and add tags for which package needs to be build, For current release Train, 2 files need to be updated(`tags/train.yml`,
+`tags/train-uc.yml`) ([example](https://review.rdoproject.org/r/#/c/18757/)).
 This change can be sent before merging review in step 3 if a `Depends-On: <gerrit-change-id step 3>`
 is added, but the review will only be approved once the `rdo-review +` flag has been
 set in the Bugzilla.
@@ -67,7 +73,7 @@ Once the change is merged in rdoinfo, a new package should be automatically buil
 and published in the [RDO Trunk repos](http://trunk.rdoproject.org/centos7-master/report.html).
 
 In order to track all review requests related to a new package process, it's recommended
-to use the same topic (as `add-osc-lib` in the above examples) for all these reviews.
+to use the same topic (as `add-octavia-lib` in the above examples) for all these reviews.
 
 RDO project is working to automate as much as possible this process. If you need
 help to add new packages, you can ask on `#rdo` or `rdo-list` mailing list.
@@ -88,13 +94,16 @@ spec file will be generated.
 2. Send a review to rdoinfo according to the package requirements. The under-review tag
 is still required. Use this as example content:
 
+
+        # in rdo.yml
         - project: puppet-congress
           conf: rpmfactory-puppet
+
+        # in tags/under-review.yml
+        - project: puppet-congress
           tags:
             under-review:
-            #ocata-uc:
-            #ocata:
-
+     
 3. Generate the spec file to submit to the new distgit project using this [script](https://github.com/strider/opm-toolbox)
 
 4. Process is the same as standard packages

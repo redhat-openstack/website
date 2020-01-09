@@ -19,19 +19,11 @@ particular [test day](/testday).
 
 ##### symptoms
 
-Describe symptoms here
-
-##### workaround
-
-Describe workaround here
-
 ### Run packstack behind a proxy
 
 *   **Bug:** <https://bugs.launchpad.net/puppet-glance/+bug/1719874>
-*   **Affects:** RHEL 7
-*   **Installation:** packstack
 
-##### symptoms
+##### workaround
 
 The installer fails to apply Puppet with the following error:
 
@@ -41,6 +33,14 @@ Error: Could not set 'present' on ensure: Network is unreachable - connect(2) at
 
 The installer cannot download the demo image because the puppet-glance
 module does not support proxy.
+
+##### symptoms
+
+###  Nova instance provision fails when host is not mapped to any cell
+
+*   **Bug:** <https://bugzilla.redhat.com/show_bug.cgi?id=1480326>
+*   **Affects:** RHEL 7
+*   **Installation:** packstack
 
 ##### workaround
 
@@ -57,4 +57,32 @@ You can either disable the demo provisioning or use a local image.
 ```
 # curl http://download.cirros-cloud.net/0.3.5/cirros-0.3.5-x86_64-disk.img -o /root/cirros-0.3.5-x86_64-disk.img
 # packstack --allinone --provision-image-url=/root/cirros-0.3.5-x86_64-disk.img
+```
+
+The instance fails to start with the following error:
+
+```
+> Setup is incomplete.: HostMappingNotFound: Host '<hostname>' is not mapped to any cell
+```
+
+The host is not mapped to any cell:
+
+```
+[root@host ~(keystone_admin)]# nova-manage cell_v2 list_hosts
++-----------+-----------+----------+
+| Cell Name | Cell UUID | Hostname |
++-----------+-----------+----------+
++-----------+-----------+----------+
+```
+
+Manually run cell_v2 discover_hosts
+
+```
+[root@host ~(keystone_admin)]# nova-manage cell_v2 discover_hosts --verbose
+[root@host ~(keystone_admin)]# nova-manage cell_v2 list_hosts
++-----------+--------------------------------------+----------------+
+| Cell Name |              Cell UUID               |    Hostname    |
++-----------+--------------------------------------+----------------+
+|  default  | 88a398e2-846d-45ea-982b-58ae14dcf4df | host.lab.local |
++-----------+--------------------------------------+----------------+
 ```

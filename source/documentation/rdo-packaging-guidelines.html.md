@@ -26,8 +26,11 @@ some adjustments may be needed for each particular case.
 
 ## Packages Review Process
 
-* All reviews **must** block the review tracker using the alias RDO-**release** .
-Announcing reviews on the RDO mailing list is encouraged to raise awareness within the
+* All reviews **must** add the alias RDO-{**release**} to the "Blocks" field on the review request BZ.
+Each release has a BZ created aliased RDO-{**release**}. For example, for the R release add RDO-ROCKY to the Blocks field on the review request BZ.
+To see examples of other BZs that block on a release BZ select one from the block list on [RDO-ROCKY](https://bugzilla.redhat.com/show_bug.cgi?id=RDO-ROCKY)
+
+* Announcing reviews on the RDO mailing list is encouraged to raise awareness within the
 community and speed up the process.
 
 * General-purpose libraries and clients should be submitted through Fedora Package Review

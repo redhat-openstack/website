@@ -14,7 +14,6 @@ Below you can find guides, test suggestions, and contact information for the sto
 <div class="split-third with-more">
 ### Cinder
 
-*   [Using GlusterFS for Cinder with RDO](Cinder/using-glusterfs-for-cinder-with-rdo)
 *   [Using ThinLVM for Cinder with RDO](Cinder/using-thinlvm-for-cinder-with-rdo)
 *   [Using Dell EqualLogic for Cinder with RDO](/storage/Cinder/using-dell-equallogic-for-cinder-with-rdo/)
 *   [Using NetApp for Cinder with RDO](/storage/Cinder/using-netapp-for-cinder-with-rdo/)

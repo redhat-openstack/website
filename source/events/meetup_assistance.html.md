@@ -54,5 +54,5 @@ And mention #RDOCommunity when you tweet about your event.
 ## How to get it
 
 If you run a meetup, or if you're going to be speaking at a meetup,
-[contact Rich](mailto:rbowen@redhat.com) to see what we can work out.
+[contact Rain](mailto:rain@redhat.com) to see what we can work out.
 

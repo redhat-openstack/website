@@ -120,7 +120,7 @@ If you would like to present at this meetup, please provide details about your p
 The call for papers will close on March 11th, at which time we will select a schedule, so that we have a few weeks to promote this event through the usual channels.
 
 ### Other Events
-Other RDO events, including the many OpenStack meetups around the world, are always listed on the [RDO events page](http://rdoproject.org/events). If you have an RDO-related event, please feel free to add it by submitting a pull request [on Github](https://github.com/OSAS/rh-events/blob/master/2016/RDO-Meetups.yml).
+Other RDO events, including the many OpenStack meetups around the world, are always listed on the [RDO events page](http://rdoproject.org/events). If you have an RDO-related event, please feel free to add it by submitting a pull request [on Github](https://github.com/OSAS/rh-events/blob/master/2018/RDO-Meetups.yml).
 
 
 ## <a name="kit"></a>Keep in Touch

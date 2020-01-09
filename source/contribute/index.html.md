@@ -97,8 +97,6 @@ Come chat in real-time with RDO users on **IRC** on the [Freenode](http://freeno
 
 * **#tripleo**: Discussion specifically of TripleO. This tends to be fairly technical. ([Transcripts.](http://eavesdrop.openstack.org/irclogs/%23tripleo/))
 
-* **#trystack**: Discussion of the [http://trystack.org/](Trystack) service.
-
 * **#openstack**: Remember that RDO is just a small part of a larger community. Questions about OpenStack in general, not specifically about RDO, should go to the upstream channel. ([Transcripts.](http://eavesdrop.openstack.org/irclogs/%23openstack/))
 
 * **#centos-devel**: If you have questions about the CentOS [Cloud Special Interest Group (SIG)](https://wiki.centos.org/SpecialInterestGroup/Cloud) and the parts of the RDO  infrastructure that run in the CentOS Community Build System (cbs), this is where you're most likely to get answers.

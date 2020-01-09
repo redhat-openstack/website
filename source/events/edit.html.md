@@ -6,9 +6,9 @@ title: Edit RDO events
 
 The RDO events calendar is maintained as part of the
 [community.redhat.com](https://community.redhat.com) events site. To edit or add
-an RDO-related meetup, [edit this file](https://github.com/OSAS/rh-events/edit/master/2017/RDO-Meetups.yml) and send a pull request. If your event is some other
+an RDO-related meetup, [edit this file](https://github.com/OSAS/rh-events/edit/master/2018/RDO-Meetups.yml) and send a pull request. If your event is some other
 community event, such as a mini-conference, [put it in this file
-instead](https://github.com/OSAS/rh-events/edit/master/2017/RDO-Community.yml).
+instead](https://github.com/OSAS/rh-events/edit/master/2018/RDO-Community.yml).
 
 A few words of caution:
 
@@ -23,7 +23,7 @@ A few words of caution:
   event, it does occasionally happen.
 
 * The weekly mailing to
-  [rdo-list](https://www.redhat.com/mailman/listinfo/rdo-list) contains
+  [the rdo lists](https://lists.rdoproject.org/mailman/listinfo) contains
   only the upcoming 7 days of events, while the update to the events
   page is the upcoming 14 days. Check [the events page](/events) before
   deciding that your event is not on the list.

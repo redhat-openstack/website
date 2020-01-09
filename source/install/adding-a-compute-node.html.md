@@ -22,7 +22,12 @@ Replace `$EDITOR` with your preferred editor.
 
 #### Adjust network card names
 
-Set `CONFIG_NEUTRON_OVS_TUNNEL_IF` to `eth1` or whatever name your network card uses. Note this is not mandatory, but it may be a good idea to separate tunnel traffic through a separate interface.
+You need to set the following option to `eth1` or whatever name your network card uses. 
+
+- `CONFIG_NEUTRON_OVN_TUNNEL_IF`, if you set `CONFIG_NEUTRON_L2_AGENT` to `ovn` (default option since the Stein release).
+- `CONFIG_NEUTRON_OVS_TUNNEL_IF`, if you set `CONFIG_NEUTRON_L2_AGENT` to `openvswitch` (default option for Rocky and earlier releases).
+
+Note this is not mandatory, but it may be a good idea to separate tunnel traffic through a separate interface.
 
 Your second NIC may have a different name. You can find the names of your devices by running:
 

@@ -9,6 +9,8 @@ gem 'compass', '~> 1'
 
 # Live-reloading plugin
 gem "middleman-livereload"
+# Duck: lock version, later ones require a more recent Ruby
+gem "rb-inotify", "~> 0.9.10"
 
 # Cross-templating language block fix for Ruby 1.8
 platforms :mri_18 do
@@ -27,8 +29,6 @@ gem "middleman-blog"
 #gem "middleman-blog-drafts"
 #gem "middleman-blog-authors"
 
-gem 'middleman-deploy'
-
 # Thumbnailer
 #gem "middleman-thumbnailer", github: "nhemsley/middleman-thumbnailer"
 
@@ -46,7 +46,7 @@ gem "middleman-syntax"
 gem "builder", "~> 3.0"
 
 # Better JSON lib
-gem "oj"
+gem "oj", "~> 3.3"
 
 # Lock jQuery to 1.x, for better IE support (6 - 8)
 # Fixes and features are backported from 2.x to 1.x; only diff is IE support.
@@ -60,7 +60,8 @@ gem 'chronic'
 # Bootstrap
 
 # Bootstrap, as SASS
-gem "bootstrap-sass"
+# Duck: 3.4 uses sassc which requires a more recent Ruby
+gem "bootstrap-sass", "~> 3.3.7"
 
 
 #####
@@ -80,7 +81,12 @@ gem "coderay"
 gem "stringex"
 
 # Markdown
-gem "kramdown"
+# pinned to fix issue with https://github.com/gettalong/kramdown/pull/513
+# and https://github.com/redhat-openstack/website/pull/1218
+gem "kramdown", "~> 1.16.0"
+
+# pinned to work on the CentOS 7 builder
+gem "hitimes", "~> 1.2.6"
 
 gem 'open-uri-cached'
 
@@ -92,14 +98,10 @@ gem "feedjira"
 gem 'rails-assets-bootstrap-sortable'
 
 gem 'rails-assets-momentjs'
-gem 'rails-assets-fullcalendar'
+# pinned to work on the CentOS 7 builder
+gem "rails-assets-fullcalendar", "~> 2.9.1"
 gem 'icalendar', '~> 1.5'
 
 gem 'slop', '~> 4'
 gem 'launchy'
-
-# for fetch-dashboard.rb script
-gem 'activesupport'
-# for dashboard display
-gem 'rails-assets-chartjs', '~> 2.1'
 
