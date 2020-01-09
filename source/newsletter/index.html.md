@@ -17,15 +17,15 @@ Never miss a community newsletter: [Sign up to receive it to your inbox monthly]
 * [December 2019](/newsletter/2019/december)
 * [November 2019](/newsletter/2019/november)
 * [October 2019](/newsletter/2019/october)
-* [September 2019]()
-* [August 2019]()
-* [July 2019]()
-* [June 2019]()
-* [May 2019]()
-* [April 2019]()
-* [March 2019]()
-* [February 2019]()
-* [January 2019]()
+* [September 2019](/newsletter/2019/september)
+* [August 2019](/newsletter/2019/august)
+* [July 2019](/newsletter/2019/july)
+* [June 2019](/newsletter/2019/june)
+* [May 2019](/newsletter/2019/may)
+* [April 2019](/newsletter/2019/april)
+* [March 2019](/newsletter/2019/march)
+* [February 2019](/newsletter/2019/february)
+* [January 2019](/newsletter/2019/january)
 
 ## 2018
 
@@ -42,9 +42,23 @@ Never miss a community newsletter: [Sign up to receive it to your inbox monthly]
 * [February 2018](/newsletter/2018/february)
 * [January 2018](/newsletter/2018/january)
 
+## 2017
+
+* [December 2017](/newsletter/2017/december)
+* [November 2017](/newsletter/2017/november)
+* [October 2017](/newsletter/2017/october)
+* [September 2017](/newsletter/2017/september)
+* [August 2017](/newsletter/2017/august)
+* [July 2017](/newsletter/2017/july)
+* [June 2017](/newsletter/2017/june)
+* [May 2017](/newsletter/2017/may)
+* [April 2017](/newsletter/2017/april)
+* [March 2017](/newsletter/2017/march)
+* [February 2017](/newsletter/2017/february)
+* [January 2017](/newsletter/2017/january)
+
 ## Earlier
 
-* [2017](/newsletter/2017)
 * [2016](/newsletter/2016)
 * [2015](/newsletter/2015)
 * [2014](/newsletter/2014)
