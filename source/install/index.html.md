@@ -19,6 +19,7 @@ For an initial test deployment, follow the [Packstack](/install/packstack) instr
 *   [More information on Packstack](/documentation/packstack-cookbook/)
 *   [Manual Installation Tutorial](https://docs.openstack.org/install-guide/) &ndash; OpenStack upstream documentation
 *   [RDO repositories](/documentation/repositories/)
+*   [Install on LinuxONE](/install/linuxone)
 </div>
 
 <div class="split-third with-more">
