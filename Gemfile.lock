@@ -126,12 +126,12 @@ GEM
       middleman-core (>= 3.2)
       rouge (~> 2.0)
     mini_portile (0.6.2)
-    mini_portile2 (2.1.0)
+    mini_portile2 (2.4.0)
     minitest (5.11.3)
     multi_json (1.14.1)
     multipart-post (2.0.0)
-    nokogiri (1.6.8.1)
-      mini_portile2 (~> 2.1.0)
+    nokogiri (1.10.8)
+      mini_portile2 (~> 2.4.0)
     oj (3.5.0)
     open-uri-cached (0.0.5)
     padrino-helpers (0.12.9)
@@ -213,7 +213,7 @@ DEPENDENCIES
   middleman-livereload
   middleman-syntax
   mini_portile
-  nokogiri (~> 1.6.0)
+  nokogiri (~> 1.10.8)
   oj (~> 3.3)
   open-uri-cached
   rails-assets-bootstrap-sortable
