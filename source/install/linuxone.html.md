@@ -67,7 +67,7 @@ You need enable Redhat subscription to get update packages from Red Hat, and add
 ```Shell
 [rdo-train-upstream]
 name=rdo-train-upstream
-baseurl=https://trunk.rdoproject.org/rhel8-train/current/
+baseurl=https://trunk.rdoproject.org/rhel8-train/current-tripleo/
 enabled=1
 gpgcheck=0
 [rdo-train-linuxone-deps]
