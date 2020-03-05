@@ -67,7 +67,7 @@ You need enable Redhat subscription to get update packages from Red Hat, and add
 ```Shell
 [rdo-train-upstream]
 name=rdo-train-upstream
-baseurl=https://trunk.rdoproject.org/rhel8-train/current-tripleo/
+baseurl=https://trunk.rdoproject.org/centos8-train/puppet-passed-ci/
 enabled=1
 gpgcheck=0
 [rdo-train-linuxone-deps]
@@ -91,7 +91,7 @@ dnf module disable virt
 
 ## Prepare the answer file
 
-We use Openvswitch for network support, make sure your packstack answer file has following lines:
+Now OVN is not supported in OpenStack on LinuxONE, we need use Openvswitch for network support, make sure your packstack answer file has following lines:
 
 ```Shell
 CONFIG_NEUTRON_ML2_MECHANISM_DRIVERS=openvswitch,l2population
