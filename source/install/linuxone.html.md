@@ -91,7 +91,7 @@ dnf module disable virt
 
 ## Prepare the answer file
 
-Now OVN is not supported in OpenStack on LinuxONE, we need use Openvswitch for network support, make sure your packstack answer file has following lines:
+For now OVN is not supported in OpenStack on LinuxONE, we need to use Openvswitch for network support, make sure your packstack answer file has following lines:
 
 ```Shell
 CONFIG_NEUTRON_ML2_MECHANISM_DRIVERS=openvswitch,l2population
