@@ -218,4 +218,5 @@ You can get a cloud image for s390x architect for testing purpose from below loc
 * https://cloud-images.ubuntu.com/bionic/current/bionic-server-cloudimg-s390x.img
 
 # Next steps
-Now that your single node OpenStack instance is up and running, you can read on about configuring a floating IP range, configuring RDO to work with your existing network, or about expanding your installation by adding a compute node. 
+
+Now that your single node OpenStack instance is up and running, you can read on about configuring a [floating IP range](/networking/floating-ip-range/), configuring RDO to [work with your existing network](/networking/neutron-with-existing-external-network/), or about expanding your installation by [adding a compute node](/install/adding-a-compute-node/).
