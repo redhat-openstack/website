@@ -10,6 +10,7 @@ Never miss a community newsletter: [Sign up to receive it to your inbox monthly]
 
 ## 2020
 
+* [April 2020](/newsletter/2020/april)
 * [March 2020](/newsletter/2020/march)
 * [February 2020](/newsletter/2020/february)
 * [January 2020](/newsletter/2020/january)
