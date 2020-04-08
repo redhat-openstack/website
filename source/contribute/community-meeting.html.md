@@ -12,6 +12,8 @@ etherpad](https://etherpad.openstack.org/p/RDO-Meeting).
 
 The minutes for these meetings are below:
 
+* [Apr 08, 2020](https://lists.rdoproject.org/pipermail/dev/2020-April/009350.html)
+* [Apr 01, 2020](https://lists.rdoproject.org/pipermail/dev/2020-April/009347.html)
 * [Mar 25, 2020](https://lists.rdoproject.org/pipermail/dev/2020-March/009344.html)
 * [Mar 18, 2020](https://lists.rdoproject.org/pipermail/dev/2020-March/009335.html)
 * [Mar 11, 2020](https://lists.rdoproject.org/pipermail/dev/2020-March/009325.html)
