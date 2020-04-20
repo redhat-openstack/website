@@ -4,7 +4,7 @@ title: RDO Victoria Test Day
 
 # Victoria Milestone3 Test Day
 
-We will be holding a RDO test day on **XX and XX MONTH 2021.**
+We will be holding a RDO test day on **17 and 18 September 2020.**
 
 This will be coordinated through the **#rdo channel on Freenode**, and through
 this website and the [dev@lists.rdoproject.org](https://lists.rdoproject.org/mailman/listinfo/dev) mailing list.
