@@ -8,7 +8,8 @@ See also the [bug triage schedule](/contribute/rdo-bugtriage/).
 
 The test day schedule is:
 
-* [Ussuri Milestone3 Test Days 16-17 April 2020](/testday/ussuri/milestone3)
+* [Victoria Milestone 1 Test Days 25-26 June 2020](/testday/victoria/milestone1)
+* [Victoria Milestone 3 Test Days 17-18 September 2020](/testday/victoria/milestone3)
 
 ## Test, every day
 
@@ -18,10 +19,8 @@ We also encourage you to work through the [upstream installation tutorial](https
 
 * Did you know what the document assumed that you'd know?
 * Did the steps work as described?
-* What error conditions did you encounter? Could you work around them?
-  If so, how?
-* When you were done, did it work as expected? If not, what happened, and
-  how did it differ from what you expected to happen?
+* What error conditions did you encounter? Could you work around them? If so, how?
+* When you were done, did it work as expected? If not, what happened, and how did it differ from what you expected to happen?
 
 ## Setting up the test cloud
 
@@ -31,7 +30,9 @@ Our latest test days have included setting up a test cloud using RDO, so users c
 
 | Milestone | Date | Tickets opened | IRC participation | URL(s) |
 |-----------|------|----------------|-------------------|--------|
-| [Ussuri M3](/testday/ussuri/milestone3) | 16-17 April 2020 | - | Pending | - |
+| [Victoria M3](/testday/victoria/milestone3) | 17-18 September 2020 | - | - | - |
+| [Victoria M1](/testday/victoria/milestone1) | 25-26 June 2020 | - | - | - |
+| [Ussuri M3](/testday/ussuri/milestone3) | 16-17 April 2020 | 0 | 28 ppl 1076 msgs | [Tickets](https://bugzilla.redhat.com/buglist.cgi?bug_status=NEW&bug_status=ASSIGNED&bug_status=POST&bug_status=MODIFIED&bug_status=ON_DEV&bug_status=ON_QA&bug_status=VERIFIED&bug_status=RELEASE_PENDING&chfield=%5BBug%20creation%5D&chfieldfrom=2020-04-13&chfieldto=2020-04-19&classification=Community&product=RDO&query_format=advanced) |
 | [Ussuri M1](/testday/ussuri/milestone1) | 19-20 December 2019 | 1 | 26 ppl 869 msgs | [Tickets](https://bugzilla.redhat.com/buglist.cgi?bug_status=NEW&bug_status=ASSIGNED&bug_status=POST&bug_status=MODIFIED&bug_status=ON_DEV&bug_status=ON_QA&bug_status=VERIFIED&bug_status=RELEASE_PENDING&chfield=%5BBug%20creation%5D&chfieldfrom=2019-12-16&chfieldto=2019-12-22&classification=Community&product=RDO&query_format=advanced) |
 | [Train M3](/testday/train/milestone3) | 19-20 September 2019 | 1 | 16 ppl 1180 msgs | [Tickets](https://bugzilla.redhat.com/buglist.cgi?bug_status=NEW&bug_status=ASSIGNED&bug_status=POST&bug_status=MODIFIED&bug_status=ON_DEV&bug_status=ON_QA&bug_status=VERIFIED&bug_status=RELEASE_PENDING&chfield=%5BBug%20creation%5D&chfieldfrom=2019-09-19&chfieldto=2019-09-20&classification=Community&product=RDO&query_format=advanced) |
 | [Train M1](/testday/train/milestone1) | 13-14 June 2019 | 0 | 19 ppl 910 msgs | [Tickets](https://bugzilla.redhat.com/buglist.cgi?bug_status=NEW&bug_status=ASSIGNED&bug_status=POST&bug_status=MODIFIED&bug_status=ON_DEV&bug_status=ON_QA&bug_status=VERIFIED&bug_status=RELEASE_PENDING&chfield=%5BBug%20creation%5D&chfieldfrom=2019-06-13&chfieldto=2019-06-14&classification=Community&product=RDO&query_format=advanced) |
