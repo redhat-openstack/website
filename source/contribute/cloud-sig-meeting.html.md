@@ -10,6 +10,7 @@ The agenda for that meeting is in [this etherpad](https://etherpad.openstack.org
 
 The minutes for these meetings are below:
 
+* [14 May 2020](https://www.centos.org/minutes/2020/May/centos-meeting.2020-05-14-15.18.html)
 * [07 May 2020](https://www.centos.org/minutes/2020/May/centos-meeting.2020-05-07-14.08.html)
 * [30 April 2020](https://www.centos.org/minutes/2020/April/centos-meeting.2020-04-30-14.01.html)
 * [13 February 2020](https://www.centos.org/minutes/2020/February/centos-meeting.2020-02-13-15.02.html)
