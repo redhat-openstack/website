@@ -26,7 +26,7 @@ If you are using non-English locale make sure your `/etc/environment` is populat
 
 If your system meets all the prerequisites mentioned below, proceed with running the following commands.
 
-* On RHEL:
+* On RHEL 7:
 
   ```
   $ sudo yum install -y https://www.rdoproject.org/repos/rdo-release.rpm
@@ -35,13 +35,34 @@ If your system meets all the prerequisites mentioned below, proceed with running
   $ sudo packstack --allinone
   ```
 
-* On CentOS:
+* On RHEL 8:
+
+  ```
+  $ sudo dnf install -y https://www.rdoproject.org/repos/rdo-release.el8.rpm
+  $ sudo dnf update -y
+  $ subscription-manager repo --enable codeready-builder-for-rhel-8-x86_64-rpms
+  $ sudo dnf install -y openstack-packstack
+  $ sudo packstack --allinone
+  ```
+
+* On CentOS 7:
 
   ```
   $ sudo yum update -y
-  $ sudo yum install -y centos-release-openstack-stein
+  $ sudo yum install -y centos-release-openstack-train
   $ sudo yum update -y
   $ sudo yum install -y openstack-packstack
+  $ sudo packstack --allinone
+  ```
+
+* On CentOS 8:
+
+  ```
+  $ sudo dnf update -y
+  $ sudo dnf config-manager --enable PowerTools
+  $ sudo dnf install -y centos-release-openstack-ussuri
+  $ sudo dnf update -y
+  $ sudo dnf install -y openstack-packstack
   $ sudo packstack --allinone
   ```
 
@@ -76,28 +97,29 @@ If you are planning on something fancier, read [the document on advanced network
 
 ## Step 1: Software repositories
 
-On RHEL, download and install the RDO repository RPM to set up the OpenStack repository:
-
+On RHEL 7, install the RDO repository RPM to set up the OpenStack repository:
 ```
-$ sudo yum install -y https://rdoproject.org/repos/rdo-release.rpm
+$ sudo yum install -y https://www.rdoproject.org/repos/rdo-release.rpm
 ```
-
-On CentOS, the `Extras` repository provides the RPM that enables the OpenStack repository. `Extras` is enabled by default on CentOS 7, so you can simply install the RPM to set up the OpenStack repository.
-
+On RHEL 8, install the RDO repository RPM to setup the Openstack repository, then you must enable the `codeready-builder` option in `subscription-manager`:
 ```
-$ sudo yum install -y centos-release-openstack-stein
+$ sudo dnf install -y https://www.rdoproject.org/repos/rdo-release.el8.rpm
+$ subscription-manager repo --enable codeready-builder-for-rhel-8-x86_64-rpms
 ```
-
-Make sure the repository is enabled:
-
+On CentOS 7, the `Extras` repository provides the RPM that enables the OpenStack repository. `Extras` is enabled by default on CentOS 8, so you can simply install the RPM to set up the OpenStack repository:
 ```
-sudo yum-config-manager --enable openstack-stein
+$ sudo yum install -y centos-release-openstack-train
 ```
-
+On CentOS 8, first you need to enable the `PowerTools` repository.
+Then, the `Extras` repository provides the RPM that enables the OpenStack repository. `Extras` is enabled by default on CentOS 8, so you can simply install the RPM to set up the OpenStack repository:
+```
+$ sudo dnf config-manager --enable PowerTools
+$ sudo dnf install -y centos-release-openstack-ussuri
+```
 Update your current packages:
 
 ```
-$ sudo yum update -y
+$ sudo dnf update -y
 ```
 
 _Looking for an older version? See [http://rdoproject.org/repos/](http://rdoproject.org/repos/) for the full listing._
@@ -105,7 +127,7 @@ _Looking for an older version? See [http://rdoproject.org/repos/](http://rdoproj
 ## Step 2: Install Packstack Installer
 
 ```
-$ sudo yum install -y openstack-packstack
+$ sudo dnf install -y openstack-packstack
 ```
 
 ## Step 3: Run Packstack to install OpenStack
