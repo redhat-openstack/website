@@ -182,7 +182,7 @@ create a gerrit review as explained in step 5.
 it to the next phase, this means testing (for runtime dependencies) or el7-build
 (for build requirements in rocky or newer releases). This is done by sending a new
 review to [rdoinfo project](https://review.rdoproject.org/r/#/q/project:rdoinfo)
-adding a new line under `buildsys-tags` to `buildsys-tags/cloud7-openstack-stein-candidate.yml`
+adding a new line under `buildsys-tags` to `buildsys-tags/cloud7-openstack-stein-testing.yml`
 file for the new tag as in [this example](https://review.rdoproject.org/r/#/c/18692/5/buildsys-tags/cloud7-openstack-stein-testing.yml@698):
 
         buildsys-tags:
