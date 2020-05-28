@@ -74,7 +74,7 @@ The release announcement should be sent to the following lists:
 
 * rdo-list - rdo-list@redhat.com
 * centos-devel - centos-devel@centos.org
-* openstack - openstack@lists.openstack.org
+* openstack-discuss - openstack-discuss@lists.openstack.org
 * Twitter - @rdocommunity
 * Facebook - http://facebook.com/rdocommunity
 * RDO blog - http://rdoproject.org/blog
