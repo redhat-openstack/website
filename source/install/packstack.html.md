@@ -9,7 +9,7 @@ authors: apevec, dneary, garrett, jasonbrooks, jlibosva, mmagr, pixelbeat, pmyer
 
 This document shows how to spin up a proof of concept cloud on one node, using the Packstack installation utility. You will be able to [add more nodes](/install/adding-a-compute-node/) to your OpenStack cloud later, if you choose.
 
-The instructions apply to the current **Stein** release.
+The instructions apply to the current **Train** for RHEL 7/CentOS 7 and **Ussuri** for RHEL 8/CentOS 8 releases.
 
 ## WARNING ##
 
@@ -40,7 +40,7 @@ If your system meets all the prerequisites mentioned below, proceed with running
   ```
   $ sudo dnf install -y https://www.rdoproject.org/repos/rdo-release.el8.rpm
   $ sudo dnf update -y
-  $ subscription-manager repo --enable codeready-builder-for-rhel-8-x86_64-rpms
+  $ subscription-manager repos --enable codeready-builder-for-rhel-8-x86_64-rpms
   $ sudo dnf install -y openstack-packstack
   $ sudo packstack --allinone
   ```
