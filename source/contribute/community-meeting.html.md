@@ -5,12 +5,13 @@ title: Community meeting
 # Community meeting
 
 We hold our weekly community meeting on the \#rdo IRC channel (Freenode)
-every Wednesday at 15:00 UTC.
+every Wednesday at 14:00 UTC.
 
 The agenda for that meeting is [in this
 etherpad](https://etherpad.openstack.org/p/RDO-Meeting).
 
 The minutes for these meetings are below:
+* [Jun 24, 2020](https://lists.rdoproject.org/pipermail/dev/2020-June/009397.html)
 * [Jun 17, 2020](https://lists.rdoproject.org/pipermail/dev/2020-June/009394.html)
 * [Jun 10, 2020](https://lists.rdoproject.org/pipermail/dev/2020-June/009390.html)
 * [May 27, 2020](https://lists.rdoproject.org/pipermail/dev/2020-May/009385.html)
@@ -126,5 +127,3 @@ The minutes for these meetings are below:
 * [January 20, 2016](https://www.redhat.com/archives/rdo-list/2016-January/msg00125.html)
 * [January 13, 2016](https://www.redhat.com/archives/rdo-list/2016-January/msg00067.html)
 * [January 6,  2016](https://www.redhat.com/archives/rdo-list/2016-January/msg00015.html)
-
-
