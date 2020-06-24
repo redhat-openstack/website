@@ -42,6 +42,16 @@ release.
 
     ./gerrit_stats.sh --branches rpm-master -f gerrit_distgit/
 
+## Technical release criteria
+
+Before announcing a new release to the community formally it's needed to ensure that some technical conditions are met with CloudSIG builds:
+
+* The three packstack all-in-one upstream scenarios can be executed successfully.
+* The four puppet-openstack-integration scenarios can be executed successfully.
+* TripleO container images can be built.
+* TripleO standalone scenario001 can be deployed with the containers from CloudSIG builds.
+
+This criteria has been agreed for Ussuri GA and may be updated for next releases.
 
 ## Release fanfare
 
@@ -64,10 +74,9 @@ The release announcement should be sent to the following lists:
 
 * rdo-list - rdo-list@redhat.com
 * centos-devel - centos-devel@centos.org
-* openstack - openstack@lists.openstack.org
+* openstack-discuss - openstack-discuss@lists.openstack.org
 * Twitter - @rdocommunity
 * Facebook - http://facebook.com/rdocommunity
-* Google+ - https://plus.google.com/communities/110409030763231732154
 * RDO blog - http://rdoproject.org/blog
 
 ## What not to do

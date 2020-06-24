@@ -4,13 +4,21 @@ title: Cloud SIG Meeting
 
 # Cloud SIG Meeting
 
-The CentOS Cloud SIG meeting is held each Thursday at 15:00 UTC on the
-\#centos-devel channel on Freenode IRC.
+The CentOS Cloud SIG meeting is held each Thursday at 15:00 UTC on the \#centos-devel channel on Freenode IRC.
 
-The agenda for that meeting is in [this
-etherpad](https://etherpad.openstack.org/p/centos-cloud-sig).
+The agenda for that meeting is in [this etherpad](https://etherpad.openstack.org/p/centos-cloud-sig).
 
 The minutes for these meetings are below:
+
+* [14 May 2020](https://www.centos.org/minutes/2020/May/centos-meeting.2020-05-14-15.18.html)
+* [07 May 2020](https://www.centos.org/minutes/2020/May/centos-meeting.2020-05-07-14.08.html)
+* [30 April 2020](https://www.centos.org/minutes/2020/April/centos-meeting.2020-04-30-14.01.html)
+* [13 February 2020](https://www.centos.org/minutes/2020/February/centos-meeting.2020-02-13-15.02.html)
+* [09 January 2020](https://www.centos.org/minutes/2020/January/centos-meeting.2020-01-09-15.02.html)
+
+* [November 28 2019](https://www.centos.org/minutes/2019/November/centos-meeting.2019-11-28-15.00.html)
+* [October 31 2019](https://www.centos.org/minutes/2019/October/centos-meeting.2019-10-31-15.01.html)
+* [October 24 2019](https://www.centos.org/minutes/2019/October/centos-meeting.2019-10-24-15.02.html)
 
 * [July 19 2018](https://www.centos.org/minutes/2018/July/centos-devel.2018-07-19-15.12.html)
 * [March 15 2018](https://www.centos.org/minutes/2018/March/centos-devel.2018-03-15-15.05.html)

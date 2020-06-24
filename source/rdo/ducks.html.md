@@ -48,5 +48,17 @@ of ducks.
 
 ## 2018, Vancouver
 
+![](/images/ducks/vancouver_duck.jpg)
+
+## 2018, Berlin
+
+![](/images/ducks/berlin_duck.jpg)
+
+## 2019, Denver
+
+![](/images/ducks/denver_duck.jpg)
+
+## 2019, Shanghai
+
 ... Coming Soon!
 
