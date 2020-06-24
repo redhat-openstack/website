@@ -105,7 +105,7 @@ Come chat in real-time with RDO users on **IRC** on the [Freenode](http://freeno
 
 We have weekly IRC meetings you can participate in:
 
-* [RDO meetings @ every Wednesday at 15:00 UTC on #rdo](/contribute/community-meeting)
+* [RDO meetings @ every Wednesday at 14:00 UTC on #rdo](/contribute/community-meeting)
 * [CentOS Cloud SIG meetings @ every Thursday at 15:00 UTC on #centos-devel](/contribute/cloud-sig-meeting)
 
 ### Events
