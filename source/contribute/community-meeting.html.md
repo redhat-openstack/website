@@ -11,6 +11,7 @@ The agenda for that meeting is [in this
 etherpad](https://etherpad.openstack.org/p/RDO-Meeting).
 
 The minutes for these meetings are below:
+* [Aug 26, 2020](https://lists.rdoproject.org/pipermail/dev/2020-August/009459.html)
 * [Aug 19, 2020](https://lists.rdoproject.org/pipermail/dev/2020-August/009441.html)
 * [Aug 12, 2020](https://lists.rdoproject.org/pipermail/dev/2020-August/009434.html)
 * [Aug 05, 2020](https://lists.rdoproject.org/pipermail/dev/2020-August/009431.html)
