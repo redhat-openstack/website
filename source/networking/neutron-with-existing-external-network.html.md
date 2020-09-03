@@ -7,11 +7,15 @@ authors: dneary, fale, javexed, mangelajo, mrunge, rbowen
 
 Many people have asked how to use packstack --allinone with an existing external network. This method should allow any machine on the network to be able to access launched instances via their floating IPs. Also, at the end of this message, there are some ideas for making this process better that I thought we could discuss.
 
-These instructions have been tested on Centos 7.
+These instructions have been tested on CentOS 7 and CentOS 8.
 
 Initially, follow the [Quickstart](/install/packstack/) but stop when you see the first "packstack --allinone" at Step 3, instead do:
 
-    # packstack --allinone --provision-demo=n --os-neutron-ovs-bridge-mappings=extnet:br-ex --os-neutron-ovs-bridge-interfaces=br-ex:eth0 --os-neutron-ml2-type-drivers=vxlan,flat
+    # packstack --allinone --provision-demo=n --os-neutron-ovn-bridge-mappings=extnet:br-ex --os-neutron-ovn-bridge-interfaces=br-ex:eth0
+
+Since stein release packstack runs neutron with **ovn** backend by default, if you want to deploy with **ovs** as neutron backend, instead do:
+
+    # packstack --allinone --os-neutron-l2-agent=openvswitch --os-neutron-ml2-mechanism-drivers=openvswitch --os-neutron-ml2-tenant-network-types=vxlan --os-neutron-ml2-type-drivers=vxlan,flat --provision-demo=n --os-neutron-ovs-bridge-mappings=extnet:br-ex --os-neutron-ovs-bridge-interfaces=br-ex:eth0
 
 This will define a logical name for our external physical L2 segment as "extnet". Later we will reference to our provider network by the name when creating external networks.
 
@@ -84,7 +88,7 @@ Please note: 192.168.122.1/24 is the router and CIDR we defined in /etc/sysconfi
 
 Get a cirros image, not provisioned without demo provisioning:
 
-    curl http://download.cirros-cloud.net/0.3.4/cirros-0.3.4-x86_64-disk.img | glance \
+    curl -L http://download.cirros-cloud.net/0.3.4/cirros-0.3.4-x86_64-disk.img | glance \
              image-create --name='cirros image' --visibility=public --container-format=bare --disk-format=qcow2
 
 That's all you need to do from admin perspective to allow your users to connect their private networks to the outside world. Now let's switch to the user.

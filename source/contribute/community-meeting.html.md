@@ -5,12 +5,22 @@ title: Community meeting
 # Community meeting
 
 We hold our weekly community meeting on the \#rdo IRC channel (Freenode)
-every Wednesday at 15:00 UTC.
+every Wednesday at 14:00 UTC.
 
 The agenda for that meeting is [in this
 etherpad](https://etherpad.openstack.org/p/RDO-Meeting).
 
 The minutes for these meetings are below:
+* [Aug 26, 2020](https://lists.rdoproject.org/pipermail/dev/2020-August/009459.html)
+* [Aug 19, 2020](https://lists.rdoproject.org/pipermail/dev/2020-August/009441.html)
+* [Aug 12, 2020](https://lists.rdoproject.org/pipermail/dev/2020-August/009434.html)
+* [Aug 05, 2020](https://lists.rdoproject.org/pipermail/dev/2020-August/009431.html)
+* [Jul 29, 2020](https://lists.rdoproject.org/pipermail/dev/2020-July/009429.html)
+* [Jul 22, 2020](https://lists.rdoproject.org/pipermail/dev/2020-July/009421.html)
+* [Jul 15, 2020](https://lists.rdoproject.org/pipermail/dev/2020-July/009417.html)
+* [Jul 08, 2020](https://lists.rdoproject.org/pipermail/dev/2020-July/009410.html)
+* [Jul 01, 2020](https://lists.rdoproject.org/pipermail/dev/2020-July/009401.html)
+* [Jun 24, 2020](https://lists.rdoproject.org/pipermail/dev/2020-June/009397.html)
 * [Jun 17, 2020](https://lists.rdoproject.org/pipermail/dev/2020-June/009394.html)
 * [Jun 10, 2020](https://lists.rdoproject.org/pipermail/dev/2020-June/009390.html)
 * [May 27, 2020](https://lists.rdoproject.org/pipermail/dev/2020-May/009385.html)
@@ -126,5 +136,3 @@ The minutes for these meetings are below:
 * [January 20, 2016](https://www.redhat.com/archives/rdo-list/2016-January/msg00125.html)
 * [January 13, 2016](https://www.redhat.com/archives/rdo-list/2016-January/msg00067.html)
 * [January 6,  2016](https://www.redhat.com/archives/rdo-list/2016-January/msg00015.html)
-
-

@@ -84,6 +84,12 @@ Machine with at least 16GB RAM, processors with hardware virtualization extensio
 
 If you plan on having **external** network access to the server and instances, this is a good moment to properly configure your network settings. A static IP address to your network card, and disabling NetworkManager are good ideas.
 
+On RHEL 8/CentOS 8 network-scripts is deprecated and not installed by default, so needs to be installed explicitly.
+
+```
+$ sudo dnf install network-scripts -y
+```
+
 ```
 $ sudo systemctl disable firewalld
 $ sudo systemctl stop firewalld
