@@ -6,7 +6,7 @@ authors: cbrown ocf, dansmith, dneary, edmv, radez, rbowen, rlandy, slagle, snec
 
 # Installing and configuring RDO
 
-[← Docs](/documentation/)
+[← Use](/use/)
 
 For an initial test deployment, follow the [Packstack](/install/packstack) instructions. While using Packstack is sufficient as a proof of concept, there are other ways that you can use to deploy OpenStack with RDO. If you need to deploy a production-ready cloud, possibly with HA, see the [TripleO quickstart](/tripleo).
 
@@ -14,7 +14,7 @@ For an initial test deployment, follow the [Packstack](/install/packstack) instr
 <div class="split-third with-more">
 ### Installation
 
-*   [TripleO quickstart](/tripleo) &ndash; production deployment, with HA
+*   [TripleO quickstart](https://docs.openstack.org/tripleo-quickstart/latest/) &ndash; production deployment, with HA
 *   [Packstack](/install/packstack) &ndash; proof of concept for single node
 *   [More information on Packstack](/documentation/packstack-cookbook/)
 *   [Manual Installation Tutorial](https://docs.openstack.org/install-guide/) &ndash; OpenStack upstream documentation
