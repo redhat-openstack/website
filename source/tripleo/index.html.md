@@ -13,7 +13,7 @@ The name TripleO refers to three related things:
 *   The upstream program within the OpenStack project which develops the various scripts and utilities which are combined to deliver the complete software solution.
 
 The design pattern utilizes a single-purpose deployment OpenStack which deploys and manages a more sophisticated, general-purpose OpenStack instance which is what
-gies TripleO its name. TripleO is short for *OpenStack On OpenStack*.
+gives TripleO its name. TripleO is short for *OpenStack On OpenStack*.
 
 Upstream TripleO documentation:
 
