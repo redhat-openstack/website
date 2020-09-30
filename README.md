@@ -41,7 +41,7 @@ cd website
 
 3. Edit!
 
-   When you edit files (pages, layouts, CSS, etc.), the site will
+   When you edit file pages, layouts, using CSS then the site will
    dynamically update in development mode. (There's no need to refresh
    the page, unless you get a Ruby error.)
 
