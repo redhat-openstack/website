@@ -1,6 +1,6 @@
 # RDO website
 
-To get started, just fork a copy of this repository, make your changes and create a pull request.
+To get started, just fork a copy of this repository, make your changes and create a pull request. All contributions will be useful, make sure to Fork, Make change and just submit the Pull request that is it. Click on the links below to know more.
 
 1. [Forking a github repository](https://help.github.com/articles/fork-a-repo/)
 2. [Making changes](https://help.github.com/articles/editing-files-in-your-repository/)
