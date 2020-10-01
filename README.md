@@ -12,7 +12,7 @@ PLEASE NOTE: There is no requirement to run your own copy, the following is just
 for those who may wish to do so.
 
 To get started, you need to have Ruby and Ruby Gems installed, as well
-as "bundler".
+as "bundler" in your OS.
 
 
 ## Initial setup
