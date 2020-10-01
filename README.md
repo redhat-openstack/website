@@ -1,5 +1,5 @@
 # RDO website
-
+#RDO the amazing website.Check it out.
 To get started, just fork a copy of this repository, make your changes and create a pull request.
 
 1. [Forking a github repository](https://help.github.com/articles/fork-a-repo/)
