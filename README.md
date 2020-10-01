@@ -92,7 +92,7 @@ Simply add a new `gem 'some-gem-here'` line in the `Gemfile` and run
 `bundle install`
 
 
-## More info
+## More info and contact
 
 For more information, please check the excellent
 [Middleman documentation](https://middlemanapp.com/basics/install/).
