@@ -1,6 +1,6 @@
 # RDO website
 
-To get started, just fork a copy of this repository, make your changes and create a pull request.
+To get started, just fork a copy of this repository, make your changes, and create a pull request.
 
 1. [Forking a github repository](https://help.github.com/articles/fork-a-repo/)
 2. [Making changes](https://help.github.com/articles/editing-files-in-your-repository/)
@@ -11,12 +11,12 @@ To get started, just fork a copy of this repository, make your changes and creat
 PLEASE NOTE: There is no requirement to run your own copy, the following is just a reference
 for those who may wish to do so.
 
-To get started, you need to have Ruby and Ruby Gems installed, as well
+To get started, you need to have Ruby and Ruby's Gems installed, as well
 as "bundler".
 
 
 ## Initial setup
-Clone this repository and run the `setup.sh` script located in the checked out repository directory.
+Clone this repository and run the `setup.sh` script located in the checked-out repository directory.
 
 The script will initialize and update the git submodules, install system dependencies, and run a
 `bundle install`.
@@ -43,7 +43,7 @@ cd website
 
    When you edit files (pages, layouts, CSS, etc.), the site will
    dynamically update in development mode. (There's no need to refresh
-   the page, unless you get a Ruby error.)
+   the page unless you get a Ruby error.)
 
 
 ## Customizing your site
