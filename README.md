@@ -1,5 +1,4 @@
-# RDO website
-
+# RDO - A community of people using and deploying OpenStack on CentOS, Fedora, and Red Hat Enterprise Linux 
 To get started, just fork a copy of this repository, make your changes, and create a pull request.
 
 1. [Forking a github repository](https://help.github.com/articles/fork-a-repo/)
