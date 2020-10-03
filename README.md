@@ -1,6 +1,6 @@
-# RDO website
+#Amazing RDO website Get Started
 
-To get started, just fork a copy of this repository, make your changes and create a pull request.
+To get started, just fork a copy of this repository, make your changes and create a pull request.Please Follow Some Steps
 
 1. [Forking a github repository](https://help.github.com/articles/fork-a-repo/)
 2. [Making changes](https://help.github.com/articles/editing-files-in-your-repository/)
@@ -28,7 +28,7 @@ cd website
 ./setup.sh
 ```
 
-## Running a local server
+## Running a local server in your system
 
 1. Start a local Middleman server:
 
