@@ -30,11 +30,10 @@ You'll want a fresh install with latest updates installed.
 
 ## How to test?
 
-    $ yum -y install yum-plugin-priorities
     $ cd /etc/yum.repos.d/
     $ sudo curl -L -O http://trunk.rdoproject.org/centos8/delorean-deps.repo
     $ sudo curl -L -O http://trunk.rdoproject.org/centos8/current-passed-ci/delorean.repo
-    $ sudo yum update -y
+    $ sudo dnf update -y
 
 * These steps apply to both RHEL 8 and CentOS 8.
 
