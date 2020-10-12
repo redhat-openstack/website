@@ -119,6 +119,7 @@ you are set for making contributions to the RDO Project.
 * The RDO Project has lots of easy fixes. Check out the
   [RDO easyfix](https://github.com/redhat-openstack/easyfix/issues) page, pick
   an issue, and feel free to move ahead.
+* Feel free to familiarize yourself with [RDO Packaging](https://www.rdoproject.org/documentation/rdo-packaging/) documentation.
 * Clone the project.
 
 For example, cloning `keystone-distgit`, we need to pass the source code URL.
