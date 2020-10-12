@@ -21,6 +21,7 @@ consult our [mentors list](/contribute/mentors).
 
 * Review RDO patches
 * Become an RDO package maintainer
+* Get to know [RDO Packaging](https://www.rdoproject.org/documentation/rdo-packaging/) documentation
 * [Get started now!](/documentation/onboarding/){:.more}
 {:.with-more-link}
 
