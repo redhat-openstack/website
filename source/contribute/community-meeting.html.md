@@ -11,12 +11,16 @@ The agenda for that meeting is [in this
 etherpad](https://etherpad.openstack.org/p/RDO-Meeting).
 
 The minutes for these meetings are below:
+* [Nov 18, 2020](https://lists.rdoproject.org/pipermail/dev/2020-November/009498.html)
+* [Nov 11, 2020](https://lists.rdoproject.org/pipermail/dev/2020-November/009496.html)
+* [Oct 21, 2020](https://lists.rdoproject.org/pipermail/dev/2020-October/009490.html)
+* [Oct 14, 2020](https://lists.rdoproject.org/pipermail/dev/2020-October/009489.html)
 * [Oct 07, 2020](https://lists.rdoproject.org/pipermail/dev/2020-October/009485.html)
 * [Sep 30, 2020](https://lists.rdoproject.org/pipermail/dev/2020-September/009483.html)
 * [Sep 23, 2020](http://eavesdrop.openstack.org/meetings/rdo_meeting___2020_09_23/2020/rdo_meeting___2020_09_23.2020-09-23-14.01.html)
-* [Sep 16, 2020](https://lists.rdoproject.org/pipermail/users/2020-September/000874.html)
-* [Sep 09, 2020](https://lists.rdoproject.org/pipermail/users/2020-September/000868.html)
-* [Sep 02, 2020](https://lists.rdoproject.org/pipermail/users/2020-September/000860.html)
+* [Sep 16, 2020](https://lists.rdoproject.org/pipermail/dev/2020-September/009474.html)
+* [Sep 09, 2020](https://lists.rdoproject.org/pipermail/dev/2020-September/009467.html)
+* [Sep 02, 2020](https://lists.rdoproject.org/pipermail/dev/2020-September/009461.html)
 * [Aug 26, 2020](https://lists.rdoproject.org/pipermail/dev/2020-August/009459.html)
 * [Aug 19, 2020](https://lists.rdoproject.org/pipermail/dev/2020-August/009441.html)
 * [Aug 12, 2020](https://lists.rdoproject.org/pipermail/dev/2020-August/009434.html)
