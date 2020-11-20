@@ -4,8 +4,9 @@ title: Community meeting
 
 # Community meeting
 
-We hold our weekly community meeting on the \#rdo IRC channel (Freenode)
-every Wednesday at 14:00 UTC.
+We hold our weekly community meeting every Wednesday at 14:00 UTC. The first week of
+the month is a virtual meeting held at https://meet.google.com/uzo-tfkt-top. All
+other weeks, the meeting is held on the \#rdo IRC channel (Freenode).
 
 The agenda for that meeting is [in this
 etherpad](https://etherpad.openstack.org/p/RDO-Meeting).
