@@ -1,0 +1,19 @@
+---
+- job:
+    name: rdo-website-build
+    parent: base
+    description: Build RDO website
+    run: playbooks/build.yaml
+    nodeset:
+      nodes:
+        - name: rdo-centos-7
+          label: rdo-centos-7
+- project:
+    name: rdo-website
+    check:
+      jobs:
+        - rdo-website-build
+    gate:
+      jobs:
+        - rdo-website-build
+
