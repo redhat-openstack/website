@@ -1,7 +1,0 @@
-language: ruby
-rvm:
-- "2.0"
-sudo: false
-cache: bundler
-script: bundle exec middleman build --verbose
-dist: precise
