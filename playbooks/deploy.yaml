@@ -1,0 +1,22 @@
+- hosts: all
+  tasks:
+    - name: Install required packages
+      become: true
+      package:
+        name:
+          - rubygem-bundler
+          - ruby-devel
+          - gcc
+          - gcc-c++
+          - make
+          - redhat-rpm-config
+          - zlib-devel
+        state: present
+
+    - name: Install and build website
+      shell:
+        cmd: |
+          bundle install
+          bundle exec middleman build --verbose
+        chdir: '{{ zuul.project.src_dir }}'
+
