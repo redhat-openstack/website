@@ -1,0 +1,23 @@
+- hosts: all
+  tasks:
+    - name: Install required packages
+      become: true
+      package:
+        name:
+          - rubygem-bundler
+          - ruby-devel
+          - gcc
+          - gcc-c++
+          - make
+          - redhat-rpm-config
+          - zlib-devel
+        state: present
+
+    - name: Install and build website
+      shell:
+        cmd: |
+          export BUNDLE_GEMFILE=$PWD/Gemfile
+          bundle install --jobs=3 --retry=3 --deployment --path=$BUNDLE_PATH
+          bundle exec middleman build --verbose
+        chdir: '{{ zuul.project.src_dir }}'
+
