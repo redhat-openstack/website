@@ -1,0 +1,19 @@
+---
+- job:
+    name: rdo-website-deploy
+    parent: base
+    description: Install and build website
+    run: playbooks/deploy.yaml
+    nodeset:
+      nodes:
+        - name: cloud-centos-7
+          label: cloud-centos-7
+- project:
+    name: rdo-website
+    check:
+      jobs:
+        - rdo-website-deploy
+    gate:
+      jobs:
+        - rdo-website-deploy
+
