@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "18f181fb_e7d14897",
+        "filename": ".zuul.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 403
+      },
+      "writtenOn": "2020-12-03T15:16:29Z",
+      "side": 1,
+      "message": "let\u0027s use nodeset: rdo-centos-7 if there is no specific reason to redefine nodeset here.",
+      "range": {
+        "startLine": 7,
+        "startChar": 4,
+        "endLine": 7,
+        "endChar": 12
+      },
+      "revId": "2a6f60c661b3a32e373db1a1af9c27db702adc96",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
