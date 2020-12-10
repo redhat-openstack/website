@@ -1,0 +1,16 @@
+---
+- hosts: all
+  tasks:
+    - name: Upload logs
+      synchronize:
+        src: '{{ zuul.project.src_dir }}/build'
+        dest: '{{ zuul.executor.log_root }}'
+        mode: pull
+        copy_links: true
+        verify_host: true
+        rsync_opts:
+          - --include=/build/**
+          - --include=*/
+          - --exclude=*
+          - --prune-empty-dirs
+

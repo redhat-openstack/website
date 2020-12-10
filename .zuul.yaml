@@ -4,6 +4,7 @@
     parent: base
     description: Build RDO website
     run: playbooks/build.yaml
+    post-run: playbooks/retrieve-logs.yaml
     nodeset: rdo-centos-7
 
 - project:
