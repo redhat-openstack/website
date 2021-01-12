@@ -59,8 +59,8 @@ If your system meets all the prerequisites mentioned below, proceed with running
 
   ```
   $ sudo dnf update -y
-  $ sudo dnf config-manager --enable PowerTools
-  $ sudo dnf install -y centos-release-openstack-ussuri
+  $ sudo dnf config-manager --enable powertools
+  $ sudo dnf install -y centos-release-openstack-victoria
   $ sudo dnf update -y
   $ sudo dnf install -y openstack-packstack
   $ sudo packstack --allinone
@@ -116,11 +116,11 @@ On CentOS 7, the `Extras` repository provides the RPM that enables the OpenStack
 ```
 $ sudo yum install -y centos-release-openstack-train
 ```
-On CentOS 8, first you need to enable the `PowerTools` repository.
+On CentOS 8, first you need to enable the `powertools` repository.
 Then, the `Extras` repository provides the RPM that enables the OpenStack repository. `Extras` is enabled by default on CentOS 8, so you can simply install the RPM to set up the OpenStack repository:
 ```
-$ sudo dnf config-manager --enable PowerTools
-$ sudo dnf install -y centos-release-openstack-ussuri
+$ sudo dnf config-manager --enable powertools
+$ sudo dnf install -y centos-release-openstack-victoria
 ```
 Update your current packages:
 
