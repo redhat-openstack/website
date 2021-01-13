@@ -5,13 +5,14 @@ title: Community meeting
 # Community meeting
 
 We hold our weekly community meeting every Wednesday at 14:00 UTC. The first week of
-the month is a virtual meeting held at https://meet.google.com/uzo-tfkt-top. All
+the month is a virtual meeting held at [https://meet.google.com/uzo-tfkt-top](https://meet.google.com/uzo-tfkt-top). All
 other weeks, the meeting is held on the \#rdo IRC channel (Freenode).
 
 The agenda for that meeting is [in this
 etherpad](https://etherpad.openstack.org/p/RDO-Meeting).
 
 The minutes for these meetings are below:
+* [Jan 13. 2021](https://lists.rdoproject.org/pipermail/dev/2021-January/009521.html)
 * [Jan 06. 2021](https://lists.rdoproject.org/pipermail/dev/2021-January/009518.html)
 * [Dec 16. 2020](https://lists.rdoproject.org/pipermail/users/2020-December/000945.html)
 * [Dec 09. 2020](https://lists.rdoproject.org/pipermail/users/2020-December/000943.html)
