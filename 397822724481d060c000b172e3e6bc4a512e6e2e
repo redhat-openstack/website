@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d7a42480_9bd5e70b",
+        "filename": "source/contribute/community-meeting.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 403
+      },
+      "writtenOn": "2021-01-14T05:25:15Z",
+      "side": 1,
+      "message": "typo [https://meet.google.com/uzo-tfkt-top]",
+      "range": {
+        "startLine": 8,
+        "startChar": 39,
+        "endLine": 8,
+        "endChar": 77
+      },
+      "revId": "397822724481d060c000b172e3e6bc4a512e6e2e",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
