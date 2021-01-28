@@ -4,11 +4,14 @@ title: Cloud SIG Meeting
 
 # Cloud SIG Meeting
 
-The CentOS Cloud SIG meeting is held each Thursday at 15:00 UTC on the \#centos-devel channel on Freenode IRC.
+The CentOS Cloud SIG meeting is held on the last Thursday of the month at 15:00 UTC on the 
+\#centos-devel channel on Freenode IRC.
 
 The agenda for that meeting is in [this etherpad](https://etherpad.openstack.org/p/centos-cloud-sig).
 
 The minutes for these meetings are below:
+
+* [28 January 2021](https://www.centos.org/minutes/2021/January/centos-meeting.2021-01-28-15.01.html)
 
 * [14 May 2020](https://www.centos.org/minutes/2020/May/centos-meeting.2020-05-14-15.18.html)
 * [07 May 2020](https://www.centos.org/minutes/2020/May/centos-meeting.2020-05-07-14.08.html)
