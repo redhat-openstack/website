@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1e8a26e2_7445d8a4",
+        "filename": "source/contribute/cloud-sig-meeting.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2021-02-01T16:22:15Z",
+      "side": 1,
+      "message": "the meeting is on #centos-meeting channel, let\u0027s update it",
+      "range": {
+        "startLine": 8,
+        "startChar": 1,
+        "endLine": 8,
+        "endChar": 14
+      },
+      "revId": "fa3e7013ee5a6fd649b1080912544c68c90f176b",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
