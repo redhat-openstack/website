@@ -4,7 +4,7 @@ title: Cloud SIG Meeting
 
 # Cloud SIG Meeting
 
-The CentOS Cloud SIG meeting is held on the last Thursday of the month at 15:00 UTC on the 
+The CentOS Cloud SIG meeting is held on the fourth Thursday of the month at 15:00 UTC on the 
 \#centos-meeting channel on Freenode IRC.
 
 The agenda for that meeting is in [this etherpad](https://etherpad.openstack.org/p/centos-cloud-sig).
