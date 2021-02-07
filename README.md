@@ -1,10 +1,15 @@
 # RDO website
 
-To get started, just fork a copy of this repository, make your changes and create a pull request.
+The RDO website is now updated via Gerrit and can be cloned with the following
+command:
+```
+git clone https://review.rdoproject.org/r/rdo-website
+```
 
-1. [Forking a github repository](https://help.github.com/articles/fork-a-repo/)
-2. [Making changes](https://help.github.com/articles/editing-files-in-your-repository/)
-3. [Pull Requests](https://help.github.com/articles/about-pull-requests/)
+Instructions for configuring your
+environment can be found at https://www.rdoproject.org/documentation/onboarding/
+You will not need to sign up for Bugzilla or install the rdopkg in order to
+contribute to the website.
 
 # Run your own copy
 
