@@ -24,6 +24,20 @@ A set of examples for spec and other useful files can be found in
 [openstack-example-spec](https://github.com/openstack-packages/openstack-example-spec) github repository. These files can be used as templates for new packages although
 some adjustments may be needed for each particular case.
 
+## Package Naming Guidelines
+
+RDO packages mostly follow [Fedora Package Naming Guidelines](https://fedoraproject.org/wiki/Packaging:Naming).
+On top of it to maintain consistency in package names across different sets of RDO packages we follow:-
+
+- For service package: name it like 'openstack-<service name>', ex. openstack-nova, openstack-cinder, etc.
+- For python library: name it like 'python-<library name>', ex. python-oslo-cache, python-os-brick, etc.
+- For python client: name it like 'python-<service name>client', ex. python-novaclient, python-cinderclient, etc.
+- For puppet package: name it like 'puppet-<module name>', ex. puppet-nova, puppet-cinder, etc.
+- For tempest plugin: name it like 'python-<plugin name>-tests-tempest', ex. python-heat-tests-tempest, python-mistral-tests-tempest, etc.
+- For ui package: name it like 'openstack-<service>-ui', ex. openstack-heat-ui, openstack-octavia-ui, etc.
+- For ansible role: name it like 'ansible-role-<role name>', ex. ansible-role-container-registry, ansible-role-chrony, etc.
+- For ansible collection: name it like 'ansible-collection-<collection-name>, ex. ansible-collection-containers-podman, etc.
+
 ## Packages Review Process
 
 * All reviews **must** add the alias RDO-{**release**} to the "Blocks" field on the review request BZ.
