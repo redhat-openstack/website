@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "be5172b2_a3c641b0",
+        "filename": "source/documentation/rdo-packaging-guidelines.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2021-02-11T12:34:03Z",
+      "side": 1,
+      "message": "I\u0027d specify this is the srpm name, and subpackages with modules have python3- or python2-, or point to the fedora packaging guildelines specific to python.",
+      "range": {
+        "startLine": 33,
+        "startChar": 36,
+        "endLine": 33,
+        "endChar": 42
+      },
+      "revId": "e035a33aa160e2bb1785db0ef6c263a8d922cd8c",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e839d39d_d98ed2d3",
+        "filename": "source/documentation/rdo-packaging-guidelines.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2021-02-11T12:34:03Z",
+      "side": 1,
+      "message": "Actually, i\u0027d say python client is just a python library where the name of the library is \u003cservice\u003eclient upstream. I would not separate it.",
+      "range": {
+        "startLine": 34,
+        "startChar": 35,
+        "endLine": 34,
+        "endChar": 62
+      },
+      "revId": "e035a33aa160e2bb1785db0ef6c263a8d922cd8c",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5c629d8f_ba4112e0",
+        "filename": "source/documentation/rdo-packaging-guidelines.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2021-02-11T12:34:03Z",
+      "side": 1,
+      "message": "i\u0027d say the name is python-\u003ctested service\u003e-tests-tempest, i think the plugin is usually called things like heat-tempest-plugin, i.e.",
+      "range": {
+        "startLine": 36,
+        "startChar": 44,
+        "endLine": 36,
+        "endChar": 55
+      },
+      "revId": "e035a33aa160e2bb1785db0ef6c263a8d922cd8c",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
