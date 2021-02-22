@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "16c60b21_a7d2e47b",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2021-02-22T15:02:40Z",
+      "side": 1,
+      "message": "Maybe add a reference to the repo url itself?\n\nhttps://review.rdoproject.org/r/#/admin/projects/rdo-website\n\nor the clone command:\n\ngit clone https://review.rdoproject.org/r/rdo-website\n\nwdyt?",
+      "revId": "050bcc84cc612c28c20a56b0bdeb3c51f6dd7d8f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
