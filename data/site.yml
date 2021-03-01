@@ -23,7 +23,7 @@ logo: rdo-logo-white.png
 
 
 # Location where this repo exists on github
-github: redhat-openstack/website
+gerrit_url: https://review.rdoproject.org/r/#/q/project:rdo-website
 
 
 # Optional footer links

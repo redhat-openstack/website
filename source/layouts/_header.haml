@@ -12,16 +12,7 @@
     end
   end
 
-- if data.site.github
-  - source_file = current_page.source_file.sub(root, '')
-  - github_url = "https://github.com/#{data.site.github}/edit/master#{source_file}"
-
-
 %header#branding.masthead.hidden-print(role="banner")
-
-  - unless source_file.match /events\/index/ or source_file.match /blog/
-    %a{:href => github_url }
-      %img{:alt => "Edit on GitHub", "data-canonical-src" => "/images/edit.png", :src => "/images/edit.png", :style => "position: absolute; top: 0; right: 0; border: 0;"}
 
   %section.hgroup
     %h1
