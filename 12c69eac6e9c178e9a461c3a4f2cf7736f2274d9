@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "497478af_c0cbe95a",
+        "filename": "data/site.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 403
+      },
+      "writtenOn": "2021-03-01T12:51:28Z",
+      "side": 1,
+      "message": "gerrit",
+      "range": {
+        "startLine": 25,
+        "startChar": 37,
+        "endLine": 25,
+        "endChar": 43
+      },
+      "revId": "12c69eac6e9c178e9a461c3a4f2cf7736f2274d9",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
