@@ -22,8 +22,8 @@ logo: rdo-logo-white.png
 #copyright: "&copy; 2013 YOUR_NAME_HERE"
 
 
-# Location where this repo exists on github
-github: redhat-openstack/website
+# Location where the Gerrit project exists
+gerrit_url: https://review.rdoproject.org/r/#/q/project:rdo-website
 
 
 # Optional footer links
