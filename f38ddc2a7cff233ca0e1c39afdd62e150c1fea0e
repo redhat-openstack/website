@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f40c528f_b54f115a",
+        "filename": "source/contribute/community-meeting.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 403
+      },
+      "writtenOn": "2021-04-09T14:58:57Z",
+      "side": 1,
+      "message": "from some times seems we are using . instead of ,, but ok to fix all as follow up to be consistent.",
+      "range": {
+        "startLine": 15,
+        "startChar": 9,
+        "endLine": 15,
+        "endChar": 10
+      },
+      "revId": "f38ddc2a7cff233ca0e1c39afdd62e150c1fea0e",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": true
+    }
+  ]
+}
