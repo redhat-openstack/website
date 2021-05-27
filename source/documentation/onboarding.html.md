@@ -10,7 +10,7 @@ to get ready:
 
 ## Let's get prerequisites ready.
 * [Join the RDO Mailing List](#join-mailing-list)
-* [Join the IRC channel `#rdo` on Freenode](#join-irc-channel)
+* [Join the IRC channel `#rdo` on OFTC](#join-irc-channel)
 * [Create a GitHub account](#github-account)
 * [Sign up to `review.rdoproject.org`](#sign-in)
 * [Add an SSH key to `review.rdoproject.org`](#add-ssh)
@@ -36,9 +36,9 @@ to get ready:
 
 <a name="join-irc-channel"/>
 
-### Join the IRC channel `#rdo` on Freenode
+### Join the IRC channel `#rdo` on OFTC
 * All the development and communication related to the RDO Project happens on
-  the `#rdo` IRC channel on Freenode. Click [this link](http://webchat.freenode.net/?channels=#rdo)
+  the `#rdo` IRC channel on OFTC. Click [this link](http://webchat.oftc.net/?channels=#rdo)
   to join the channel and feel free to say Hello! We are always there to help.
 * Feel free to check out the [IRC etiquette](https://www.rdoproject.org/contribute/irc-etiquette/)
   guide.

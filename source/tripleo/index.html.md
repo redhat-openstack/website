@@ -28,5 +28,5 @@ TripleO YouTube channel:
 
 ## Get in touch
 
-*   IRC: **#tripleo** and **#rdo** channels on [Freenode](http://freenode.net).
+*   IRC: **#tripleo** and **#rdo** channels on [OFTC](http://oftc.net).
 *   Mailing list: [**rdo-list**](//www.redhat.com/mailman/listinfo/rdo-list), using **[TripleO]** tag in the subject of the email.

@@ -77,5 +77,4 @@ You see what a time drain the above has become which has not led to any meaningf
 ### Resources
 
 *   A fantastic resource from Eric S. Raymond [on how to ask smart questions](http://www.catb.org/~esr/faqs/smart-questions.html)
-*   Freenode's guide on [how to become a catalyst for problem solving](https://freenode.net/catalysts)
 *   Other communities (Fedora project) IRC communication [guidelines](https://fedoraproject.org/wiki/How_to_communicate_using_IRC)

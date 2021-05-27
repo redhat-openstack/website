@@ -45,7 +45,7 @@ Below you can find guides, test suggestions, and contact information for the sto
 
 ### Contacts
 
-You can find some people from the Red Hat storage team on IRC in the **#rdo** channel on Freenode:
+You can find some people from the Red Hat storage team on IRC in the **#rdo** channel on OFTC:
 
 Nathan Levinkind (nlevinki), Yogev Rabl (yrabl), Tzach Shefi (tshefi), Benny Kopilov (bkopilov), Prasanth Anbalagan (panbalag), Luigi Toscano (tosky), Tomas Rusnak (trusnak), Swapnil Kulkarni (coolsvap).
 
