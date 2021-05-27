@@ -3,7 +3,7 @@ title: I want a new package in RDO, now what?
 ---
 
 # I want a new package in RDO. Now what?
-First of all, thanks for contributing! The process to have a new package in RDO can be intimidating at first, but if you are familiar with the creation of RPM packages it should not be too complicated, and there is always someone willing to help at #rdo on the Freenode IRC network.
+First of all, thanks for contributing! The process to have a new package in RDO can be intimidating at first, but if you are familiar with the creation of RPM packages it should not be too complicated, and there is always someone willing to help at #rdo on the OFTC IRC network.
 
 ## Getting started
 The first step to have a new package in RDO is to follow the process to [add it to RDO Trunk](https://www.rdoproject.org/documentation/add-packages/). Once a package is in RDO Trunk, it will be built for every new commit of the project, and it will end up in the next GA version.

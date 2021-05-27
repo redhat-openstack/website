@@ -1,4 +1,4 @@
----
+w---
 title: Contribute to RDO
 category: community
 authors: beni, dneary, mrunge, rbowen, strider, dmsimard
@@ -54,7 +54,7 @@ consult our [mentors list](/contribute/mentors).
 ## People person
 
 * [Join the RDO mailing lists](/contribute/mailing-lists)
-* Chat on #rdo on Freenode
+* Chat on #rdo on OFTC
 * [Participate in weekly meetings](/contribute/community-meeting)
 * [Join upcoming events](/events)
 * [More&hellip;](#discuss){:.more}
@@ -92,7 +92,7 @@ consult our [mentors list](/contribute/mentors).
 
 ### IRC channels
 
-Come chat in real-time with RDO users on **IRC** on the [Freenode](http://freenode.net) server:
+Come chat in real-time with RDO users on **IRC** on the [OFTC](http://oftc.net) server:
 
 * **#rdo**: Any general conversation about RDO, including developer issues and user questions. ([Transcripts.](http://eavesdrop.openstack.org/irclogs/%23rdo/))
 
@@ -137,7 +137,7 @@ Join the ask.openstack community to ask and answer questions. The site [ask.open
 
 ### Contribute to the RDO Infrastructure
 
-You can contribute to the RDO Infrastructure maintenance. [This page](/infra/) describes the general infrastructure used by RDO. The [infrastructure core administrators](/infra/review-rdo-infra-core) are available to help you if you need anything, and we are also available in the **#rdo** IRC channel in Freenode.
+You can contribute to the RDO Infrastructure maintenance. [This page](/infra/) describes the general infrastructure used by RDO. The [infrastructure core administrators](/infra/review-rdo-infra-core) are available to help you if you need anything, and we are also available in the **#rdo** IRC channel on OFTC.
 
 ## Content writing
 
