@@ -12,6 +12,7 @@ The agenda for that meeting is [in this
 etherpad](https://etherpad.openstack.org/p/RDO-Meeting).
 
 The minutes for these meetings are below:
+* [Jun 09. 2021](https://lists.rdoproject.org/pipermail/dev/2021-June/009575.html)
 * [Jun 02. 2021](https://lists.rdoproject.org/pipermail/dev/2021-June/009573.html)
 * [May 19. 2021](https://lists.rdoproject.org/pipermail/dev/2021-May/009565.html)
 * [May 12. 2021](https://lists.rdoproject.org/pipermail/dev/2021-May/009563.html)
