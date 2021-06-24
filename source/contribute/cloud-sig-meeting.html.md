@@ -11,6 +11,7 @@ The agenda for that meeting is in [this etherpad](https://etherpad.openstack.org
 
 The minutes for these meetings are below:
 
+* [06 June 2021](https://lists.centos.org/pipermail/centos-devel/2021-June/077041.html)
 * [08 April 2021](https://lists.centos.org/pipermail/centos-devel/2021-April/076767.html)
 * [25 March 2021](https://lists.centos.org/pipermail/centos-devel/2021-March/076685.html)
 * [11 March 2021](https://lists.centos.org/pipermail/centos-devel/2021-March/076675.html)
