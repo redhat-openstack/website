@@ -9,7 +9,7 @@ authors: apevec, dneary, garrett, jasonbrooks, jlibosva, mmagr, pixelbeat, pmyer
 
 This document shows how to spin up a proof of concept cloud on one node, using the Packstack installation utility. You will be able to [add more nodes](/install/adding-a-compute-node/) to your OpenStack cloud later, if you choose.
 
-The instructions apply to the current **Train** for RHEL 7/CentOS 7 and **Ussuri** for RHEL 8/CentOS 8 releases.
+The instructions apply to the following Release and Operating Systems -  **Train** on RHEL 7/CentOS 7, **Ussuri and Victoria** on RHEL 8/CentOS 8, and **Wallaby** on CentOS Stream 8.
 
 ## WARNING ##
 
@@ -66,6 +66,17 @@ If your system meets all the prerequisites mentioned below, proceed with running
   $ sudo packstack --allinone
   ```
 
+* On CentOS Stream 8:
+
+  ```
+  $ sudo dnf update -y
+  $ sudo dnf config-manager --enable powertools
+  $ sudo dnf install -y centos-release-openstack-wallaby
+  $ sudo dnf update -y
+  $ sudo dnf install -y openstack-packstack
+  $ sudo packstack --allinone
+  ```
+
 ## Step 0: Prerequisites
 
 ### Software
@@ -84,7 +95,7 @@ Machine with at least 16GB RAM, processors with hardware virtualization extensio
 
 If you plan on having **external** network access to the server and instances, this is a good moment to properly configure your network settings. A static IP address to your network card, and disabling NetworkManager are good ideas.
 
-On RHEL 8/CentOS 8 network-scripts is deprecated and not installed by default, so needs to be installed explicitly.
+On RHEL 8/CentOS 8/CentS Stream 8, network-scripts is deprecated and not installed by default, so needs to be installed explicitly.
 
 ```
 $ sudo dnf install network-scripts -y
