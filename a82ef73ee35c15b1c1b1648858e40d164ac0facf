@@ -1,0 +1,9 @@
+Code-Review+2: Amy Marrich (spotz) <amy@demarco.com>
+Code-Review+2: Alfredo Moralejo <amoralej@redhat.com>
+Workflow+1: Alfredo Moralejo <amoralej@redhat.com>
+Verified+2: Zuul CI <zuul@review.rdoproject.org>
+Submitted-by: Zuul CI <zuul@review.rdoproject.org>
+Submitted-at: Thu, 08 Jul 2021 07:19:15 +0000
+Reviewed-on: https://review.rdoproject.org/r/c/rdo-website/+/34417
+Project: rdo-website
+Branch: refs/heads/master
