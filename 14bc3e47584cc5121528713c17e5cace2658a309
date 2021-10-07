@@ -1,0 +1,9 @@
+Code-Review+2: Amy Marrich (spotz) <amy@demarco.com>
+Code-Review+2: Joel Capitao <jcapitao@redhat.com>
+Workflow+1: Joel Capitao <jcapitao@redhat.com>
+Verified+2: Zuul CI <zuul@review.rdoproject.org>
+Submitted-by: Zuul CI <zuul@review.rdoproject.org>
+Submitted-at: Thu, 07 Oct 2021 12:38:49 +0000
+Reviewed-on: https://review.rdoproject.org/r/c/rdo-website/+/36056
+Project: rdo-website
+Branch: refs/heads/master
