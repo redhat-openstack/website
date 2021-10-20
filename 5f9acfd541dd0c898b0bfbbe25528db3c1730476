@@ -22,6 +22,29 @@
       "revId": "5f9acfd541dd0c898b0bfbbe25528db3c1730476",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "29b2a85e_69683c44",
+        "filename": "source/documentation/tripleo-in-xena.html.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 303
+      },
+      "writtenOn": "2021-10-20T15:26:23Z",
+      "side": 1,
+      "message": "I wonder if this is is even needed still since i think these were dropped in tcib",
+      "range": {
+        "startLine": 50,
+        "startChar": 79,
+        "endLine": 59,
+        "endChar": 21
+      },
+      "revId": "5f9acfd541dd0c898b0bfbbe25528db3c1730476",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": true
     }
   ]
 }
