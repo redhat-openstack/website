@@ -45,6 +45,30 @@
       "revId": "5f9acfd541dd0c898b0bfbbe25528db3c1730476",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8dbf5510_f0b9e372",
+        "filename": "source/documentation/tripleo-in-xena.html.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2021-10-20T15:30:02Z",
+      "side": 1,
+      "message": "Actually we dobn\u0027t need it, i\u0027m testing again without all those excludes.",
+      "parentUuid": "29b2a85e_69683c44",
+      "range": {
+        "startLine": 50,
+        "startChar": 79,
+        "endLine": 59,
+        "endChar": 21
+      },
+      "revId": "5f9acfd541dd0c898b0bfbbe25528db3c1730476",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": true
     }
   ]
 }
