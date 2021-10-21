@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7e3f363d_e9809001",
+        "filename": "source/documentation/tripleo-in-xena.html.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 403
+      },
+      "writtenOn": "2021-10-21T10:59:15Z",
+      "side": 1,
+      "message": "create them or build them.",
+      "range": {
+        "startLine": 16,
+        "startChar": 145,
+        "endLine": 16,
+        "endChar": 158
+      },
+      "revId": "cadd9462af2488244b906b1c2f1a013802d8052a",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "90176aee_3a2cb6cb",
+        "filename": "source/documentation/tripleo-in-xena.html.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 403
+      },
+      "writtenOn": "2021-10-21T10:59:15Z",
+      "side": 1,
+      "message": "iiuc this means that non tripleo packages will be unaffected by this change if yes may be following will be better:- The lifecycle for the non-TripleO packages will remain unaffected by this change i.e non-TripleO packages will keep following stable/xena releases.",
+      "range": {
+        "startLine": 18,
+        "startChar": 2,
+        "endLine": 18,
+        "endChar": 117
+      },
+      "revId": "cadd9462af2488244b906b1c2f1a013802d8052a",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "18ce46f5_6067c7be",
+        "filename": "source/documentation/tripleo-in-xena.html.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 403
+      },
+      "writtenOn": "2021-10-21T10:59:15Z",
+      "side": 1,
+      "message": "may be get those pinned already and link here?",
+      "range": {
+        "startLine": 22,
+        "startChar": 64,
+        "endLine": 22,
+        "endChar": 78
+      },
+      "revId": "cadd9462af2488244b906b1c2f1a013802d8052a",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": true
+    }
+  ]
+}
