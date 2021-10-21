@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "a7c67858_b3f86d15",
+        "filename": "source/documentation/tripleo-in-xena.html.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2021-10-21T11:31:26Z",
+      "side": 1,
+      "message": "Yes, I\u0027ll point to the instructions in section \"How to create...\"",
+      "parentUuid": "7e3f363d_e9809001",
+      "range": {
+        "startLine": 16,
+        "startChar": 145,
+        "endLine": 16,
+        "endChar": 158
+      },
+      "revId": "cadd9462af2488244b906b1c2f1a013802d8052a",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "90176aee_3a2cb6cb",
         "filename": "source/documentation/tripleo-in-xena.html.md",
         "patchSetId": 3
@@ -48,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "7962712a_3be6bea6",
+        "filename": "source/documentation/tripleo-in-xena.html.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2021-10-21T11:31:26Z",
+      "side": 1,
+      "message": "that\u0027s what i meant. Right, your sentence is much better.",
+      "parentUuid": "90176aee_3a2cb6cb",
+      "range": {
+        "startLine": 18,
+        "startChar": 2,
+        "endLine": 18,
+        "endChar": 117
+      },
+      "revId": "cadd9462af2488244b906b1c2f1a013802d8052a",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "18ce46f5_6067c7be",
         "filename": "source/documentation/tripleo-in-xena.html.md",
         "patchSetId": 3
@@ -59,6 +107,30 @@
       "writtenOn": "2021-10-21T10:59:15Z",
       "side": 1,
       "message": "may be get those pinned already and link here?",
+      "range": {
+        "startLine": 22,
+        "startChar": 64,
+        "endLine": 22,
+        "endChar": 78
+      },
+      "revId": "cadd9462af2488244b906b1c2f1a013802d8052a",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "81c442ba_1635233a",
+        "filename": "source/documentation/tripleo-in-xena.html.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2021-10-21T11:31:26Z",
+      "side": 1,
+      "message": "yes, i\u0027ll send the patch.",
+      "parentUuid": "18ce46f5_6067c7be",
       "range": {
         "startLine": 22,
         "startChar": 64,
