@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "440604de_2c9ee237",
+        "filename": "source/documentation/tripleo-in-xena.html.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 403
+      },
+      "writtenOn": "2021-10-21T13:45:12Z",
+      "side": 1,
+      "message": "following",
+      "range": {
+        "startLine": 16,
+        "startChar": 157,
+        "endLine": 16,
+        "endChar": 166
+      },
+      "revId": "a0ad44474017a4bbae9f2e5b8b39ed2ee54d0b5b",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": true
+    }
+  ]
+}
