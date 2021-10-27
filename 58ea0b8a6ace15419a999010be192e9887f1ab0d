@@ -1,0 +1,10 @@
+Code-Review+2: Alan Pevec <alan.pevec@redhat.com>
+Code-Review+2: Alex Schultz <aschultz@next-development.com>
+Code-Review+2: Yatin Karel <ykarel@redhat.com>
+Verified+2: Zuul CI <zuul@review.rdoproject.org>
+Workflow+1: Alan Pevec <alan.pevec@redhat.com>
+Submitted-by: Zuul CI <zuul@review.rdoproject.org>
+Submitted-at: Wed, 27 Oct 2021 11:17:38 +0000
+Reviewed-on: https://review.rdoproject.org/r/c/rdo-website/+/36342
+Project: rdo-website
+Branch: refs/heads/master
