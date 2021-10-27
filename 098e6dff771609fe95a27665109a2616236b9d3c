@@ -1,0 +1,9 @@
+Code-Review+2: Joel Capitao <jcapitao@redhat.com>
+Code-Review+2: Yatin Karel <ykarel@redhat.com>
+Workflow+1: Yatin Karel <ykarel@redhat.com>
+Verified+2: Zuul CI <zuul@review.rdoproject.org>
+Submitted-by: Zuul CI <zuul@review.rdoproject.org>
+Submitted-at: Wed, 27 Oct 2021 13:59:46 +0000
+Reviewed-on: https://review.rdoproject.org/r/c/rdo-website/+/36469
+Project: rdo-website
+Branch: refs/heads/master
