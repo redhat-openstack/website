@@ -71,7 +71,7 @@ If your system meets all the prerequisites mentioned below, proceed with running
   ```
   $ sudo dnf update -y
   $ sudo dnf config-manager --enable powertools
-  $ sudo dnf install -y centos-release-openstack-wallaby
+  $ sudo dnf install -y centos-release-openstack-xena
   $ sudo dnf update -y
   $ sudo dnf install -y openstack-packstack
   $ sudo packstack --allinone
