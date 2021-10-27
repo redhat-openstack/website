@@ -41,7 +41,7 @@ $ sudo yum-config-manager --set-enable ha
 ```
 $ sudo dnf module disable container-tools:rhel8 -y
 $ sudo dnf module enable container-tools:3.0 -y
-``
+```
 
 3. Install the package python3-tripleoclient
 
