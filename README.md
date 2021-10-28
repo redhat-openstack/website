@@ -101,3 +101,5 @@ Simply add a new `gem 'some-gem-here'` line in the `Gemfile` and run
 
 For more information, please check the excellent
 [Middleman documentation](https://middlemanapp.com/basics/install/).
+
+                Thank You!!!
