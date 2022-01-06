@@ -4,13 +4,17 @@ title: Cloud SIG Meeting
 
 # Cloud SIG Meeting
 
-The CentOS Cloud SIG meeting is held biweekly on even Thursdays of the month at 15:00 UTC on the 
+The CentOS Cloud SIG meeting is held biweekly on even Thursdays of the month at 15:00 UTC on the
 \#centos-meeting channel on Libera.chat IRC.
 
 The agenda for that meeting is in [this etherpad](https://etherpad.openstack.org/p/centos-cloud-sig).
 
 The minutes for these meetings are below:
 
+* [06 January 2022](https://lists.centos.org/pipermail/centos-devel/2022-January/120126.html)
+* [04 November 2021](https://lists.centos.org/pipermail/centos-devel/2021-November/098673.html)
+* [07 October 2021](https://lists.centos.org/pipermail/centos-devel/2021-October/098619.html)
+* [08 July 2021](https://lists.centos.org/pipermail/centos-devel/2021-July/098340.html)
 * [06 June 2021](https://lists.centos.org/pipermail/centos-devel/2021-June/077041.html)
 * [08 April 2021](https://lists.centos.org/pipermail/centos-devel/2021-April/076767.html)
 * [25 March 2021](https://lists.centos.org/pipermail/centos-devel/2021-March/076685.html)
