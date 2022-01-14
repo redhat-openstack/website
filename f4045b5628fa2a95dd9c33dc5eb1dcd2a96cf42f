@@ -1,0 +1,119 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a1463d22_5ac49978",
+        "filename": "source/documentation/requirements.html.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2022-01-14T11:47:32Z",
+      "side": 1,
+      "message": "Let\u0027s remove references to CentOS7 here, i doubt we will add any dep for cs7 now. Train is now in EM.",
+      "range": {
+        "startLine": 29,
+        "startChar": 0,
+        "endLine": 30,
+        "endChar": 52
+      },
+      "revId": "f4045b5628fa2a95dd9c33dc5eb1dcd2a96cf42f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "de3985a9_455d7af4",
+        "filename": "source/documentation/requirements.html.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 155,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2022-01-14T11:47:32Z",
+      "side": 1,
+      "message": "I\u0027d say someting like el\u003ccentos version\u003e-build here to not assume 9s or you can put \"el9s-build or el8-build\"",
+      "range": {
+        "startLine": 155,
+        "startChar": 9,
+        "endLine": 155,
+        "endChar": 13
+      },
+      "revId": "f4045b5628fa2a95dd9c33dc5eb1dcd2a96cf42f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d2d75033_f6d78d40",
+        "filename": "source/documentation/requirements.html.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 216,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2022-01-14T11:47:32Z",
+      "side": 1,
+      "message": "I\u0027d put more clear that \"last review\" refers to the one in rdoinfo. I wonder if we may make this a bit clearer by just adding something like:\n\nAfter the review in rdoinfo repo is merged, some changes in config need to be done in the config which will be automatically triggered. You can check when the distgit for the new dependency is created by monitoring if it appears in https://review.rdoproject.org/r/admin/repos/deps/\u003cdependency\u003e . WDYT?",
+      "range": {
+        "startLine": 216,
+        "startChar": 0,
+        "endLine": 216,
+        "endChar": 1
+      },
+      "revId": "f4045b5628fa2a95dd9c33dc5eb1dcd2a96cf42f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "201aa8a8_1567f504",
+        "filename": "source/documentation/requirements.html.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 229,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2022-01-14T11:47:32Z",
+      "side": 1,
+      "message": "I\u0027d put an example of command here",
+      "range": {
+        "startLine": 229,
+        "startChar": 0,
+        "endLine": 229,
+        "endChar": 1
+      },
+      "revId": "f4045b5628fa2a95dd9c33dc5eb1dcd2a96cf42f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "30aa9fb1_dd682622",
+        "filename": "source/documentation/requirements.html.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 294,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2022-01-14T11:47:32Z",
+      "side": 1,
+      "message": "I don\u0027t get this. FOR cs9 the user will need to create the review in deps/\u003crequirement\u003e updating the spec, isn\u0027t it?. I guess they can create setup_distgit.sh for that too?",
+      "range": {
+        "startLine": 293,
+        "startChar": 0,
+        "endLine": 294,
+        "endChar": 136
+      },
+      "revId": "f4045b5628fa2a95dd9c33dc5eb1dcd2a96cf42f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": true
+    }
+  ]
+}
