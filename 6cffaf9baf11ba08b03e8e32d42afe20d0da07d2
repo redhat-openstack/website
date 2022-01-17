@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "65425ed5_99a229f4",
+        "filename": "source/documentation/requirements.html.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2022-01-17T15:56:59Z",
+      "side": 0,
+      "message": "i\u0027d keep all these indents to get the code box indented under numbered list indent.",
+      "range": {
+        "startLine": 91,
+        "startChar": 0,
+        "endLine": 91,
+        "endChar": 14
+      },
+      "revId": "6cffaf9baf11ba08b03e8e32d42afe20d0da07d2",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "836677e6_57039cdd",
+        "filename": "source/documentation/requirements.html.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 178,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2022-01-17T15:56:59Z",
+      "side": 0,
+      "message": "This indent must be removed.",
+      "range": {
+        "startLine": 178,
+        "startChar": 0,
+        "endLine": 178,
+        "endChar": 2
+      },
+      "revId": "6cffaf9baf11ba08b03e8e32d42afe20d0da07d2",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "425ad655_374068f5",
+        "filename": "source/documentation/requirements.html.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 241,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2022-01-17T15:56:59Z",
+      "side": 0,
+      "message": "it\u0027s fine to remove this indent.",
+      "range": {
+        "startLine": 241,
+        "startChar": 0,
+        "endLine": 241,
+        "endChar": 2
+      },
+      "revId": "6cffaf9baf11ba08b03e8e32d42afe20d0da07d2",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b369b0d7_185331e8",
+        "filename": "source/documentation/requirements.html.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 249,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2022-01-17T15:56:59Z",
+      "side": 0,
+      "message": "ditto",
+      "range": {
+        "startLine": 249,
+        "startChar": 0,
+        "endLine": 249,
+        "endChar": 5
+      },
+      "revId": "6cffaf9baf11ba08b03e8e32d42afe20d0da07d2",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": true
+    }
+  ]
+}
