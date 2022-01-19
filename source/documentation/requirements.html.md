@@ -63,7 +63,7 @@ are particularities in adding new requirements for each of them.
 1. If the project follows global-requirements processes, make sure that the requirement has been
 added to global-requirements.txt and upper-constraints.txt files as described in the [upstream
 documentation](https://github.com/openstack/requirements/#proposing-changes)
-<br />
+    <br />
 
 2. Check if the new requirement is present in CentOS base channels. The easiest way to do this
 is using 'repoquery' command from a system running RPM based OS(CentOS/RHEL/Fedora):
@@ -83,7 +83,8 @@ is using 'repoquery' command from a system running RPM based OS(CentOS/RHEL/Fedo
         --disablerepo=* --enablerepo=tmp* "*<dependency>"
 
     If it's present, the desired package is already available to RDO users.
-<br />
+    <br />
+
 
 3. If the package is not in CentOS base repos, you can check if it has been already built by
 the CloudSIG using [rdopkg](/documentation/intro-packaging/#rdopkg):
@@ -174,14 +175,16 @@ the CloudSIG using [rdopkg](/documentation/intro-packaging/#rdopkg):
 
     If the package is found for the required CBS tag, it's already in RDO repositories
     and no more actions are needed to add it to the repos.
-<br />
+    <br />
+
 
 4. In case that the dependency is not in CentOS base or CloudSIG repo, you can check if it has been built
 by other SIGs in [CBS web interface](http://cbs.centos.org/koji/). You can use wildcards in the packages
 search expression. If you find the desired dependency, you can open a bug in [Red Hat Bugzilla for
 RDO product](https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&component=distribution) requesting
 the inclusion of the package in RDO repos. RDO Core members will handle the request.
-<br />
+    <br />
+
 
 5. If the new package is not in CBS, you must check if it's packaged in Fedora using the [Koji Web
 Interface](https://koji.fedoraproject.org/koji/). If the package exists, you need to open
@@ -236,7 +239,8 @@ a review to [rdoinfo project in RDO gerrit instance](https://review.rdoproject.o
 
     This review will rebuild the Fedora package in the CentOS Build System for CentOS Stream 9
     and make it available to be pushed to the next CBS phase.
-<br />
+    <br />
+
 
 
 6. When the packages doesn't exist even in Fedora you need to add the package following the [New package
@@ -245,7 +249,8 @@ packager needs to participate in this process. While RDO core members may mainta
 common requirements used by different projects, dependencies for specific project must be maintained in
 Fedora by the project team. Once the package is included in Fedora repos you can
 create a gerrit review as explained in step 5.
-<br />
+    <br />
+
 
 7. Once the package is rebuilt in CBS (review in step 5 is merged) you can push
 it to the next phase, this means testing (for runtime dependencies) or el9s-build (for build-time dependencies).
@@ -265,7 +270,8 @@ adding a new line under `buildsys-tags` to both `buildsys-tags/cloud9s-openstack
     Once this review is merged, the tag will be applied to this build and the package
      will be added to the testing repo for Yoga (note that some delay, up to 30 minutes
      is expected).
-<br />
+    <br />
+
 
 8. After the package is available in the repos, you can add it to the list of *Requires* or *BuildRequires* in
 your package spec file. Note that optional dependencies not used in default or common configurations should
