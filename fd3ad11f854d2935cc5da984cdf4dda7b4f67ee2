@@ -1,6 +1,7 @@
 {
   "comments": [
     {
+      "unresolved": true,
       "key": {
         "uuid": "c2756020_070eab3d",
         "filename": "source/documentation/requirements.html.md",
@@ -20,8 +21,31 @@
         "endChar": 5
       },
       "revId": "fd3ad11f854d2935cc5da984cdf4dda7b4f67ee2",
-      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
-      "unresolved": true
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0b743489_1fad9fab",
+        "filename": "source/documentation/requirements.html.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2022-01-19T14:30:56Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c2756020_070eab3d",
+      "range": {
+        "startLine": 71,
+        "startChar": 4,
+        "endLine": 71,
+        "endChar": 5
+      },
+      "revId": "fd3ad11f854d2935cc5da984cdf4dda7b4f67ee2",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
