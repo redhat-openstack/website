@@ -280,10 +280,13 @@ not be added as Requires but installed only when needed.
 
 ### Updating a requirement in RDO CloudSIG repositories
 
-There are some rules to follow when a requirement update is needed by a OpenStack project:
+There are some rules to follow when a requirement update is needed by a OpenStack project.
+
+![CloudSIG dependencies](/images/CloudSIG-dependencies.png)
 
 * If the dependency is included in upstream requirements project, the required version must be equal to
 the version in [upper-constraints](https://github.com/openstack/requirements/blob/master/upper-constraints.txt) file.
+This report can be used to quickly check the state of [packages](https://dashboards.rdoproject.org/report-uc-cs9).
 
 * For packages installed from CentOS base repos, the package should be updated in CentOS/RHEL repos. This can
 be requested opening a [bug in bugzilla for RHEL product](https://bugzilla.redhat.com/enter_bug.cgi?product=Red%20Hat%20Enterprise%20Linux%207).
@@ -294,10 +297,16 @@ version. If it has not been updated first you can contact Fedora package maintai
 component, example [component:python-migrate](https://bugzilla.redhat.com/buglist.cgi?product=Fedora&component=python-migrate&bug_status=__open__),
 if bug does not exist, open a [bug for Fedora product](https://bugzilla.redhat.com/enter_bug.cgi?product=Fedora).
 
+* The other way to update fedora package is to create own pull request, following
+[Fedora packaging guide](https://docs.fedoraproject.org/en-US/packaging-guidelines/) and [Fedora CI - Pull Requests](https://docs.fedoraproject.org/en-US/ci/pull-requests/).
+Once the pull request merged, the package must be built by its maintainer. Building Fedora’s packages can be monitored on [Koji](https://koji.fedoraproject.org/koji/packages).
+
 * Once the package is build in Fedora, you can update the requirement in RDO by sending a review to [rdoinfo project
 in RDO gerrit instance](https://review.rdoproject.org/r/#/q/project:rdoinfo) like [example](https://review.rdoproject.org/r/c/rdoinfo/+/37244).
 For CentOS Stream 9, you need to rebuild the package first with [setup_distgit.sh](https://review.rdoproject.org/cgit/gating_scripts/tree/setup_distgit.sh)
 (see 5. of 'Adding a new requirement in RDO').
+Be aware, that [setup_distgit.sh](https://review.rdoproject.org/cgit/gating_scripts/tree/setup_distgit.sh) is only automatically creating new-versioned distgit, but it’s not giving any
+warranty that the package will build successfully on Centos (pass CI jobs validation). It is good idea to test new package with [mock](https://fedoraproject.org/wiki/Using_Mock_to_test_package_builds) or rpm-build.
 
 * Once the patch is merged, the package are built and tagged in CBS. Next step is to include the package in RDO Testing repo,
 this can be done by sending a patch to rdoinfo project like [example](https://review.rdoproject.org/r/c/rdoinfo/+/37244)
