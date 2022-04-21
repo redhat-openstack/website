@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d14e2111_cc4b08fc",
+        "filename": "source/install/packstack.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 114,
+      "author": {
+        "id": 85
+      },
+      "writtenOn": "2022-04-21T21:02:13Z",
+      "side": 1,
+      "message": "crb",
+      "range": {
+        "startLine": 114,
+        "startChar": 35,
+        "endLine": 114,
+        "endChar": 45
+      },
+      "revId": "2a5511fcf5bd4915f7e0d8709e5884cd7b78ab84",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
