@@ -41,6 +41,7 @@ title: RDO Package Maintainer Guide
 ## Documents for packagers
 
 * [RDO Packager onboarding guide](/documentation/onboarding/)
+* [Package building process – overview](/documentation/package-building-overview)
 * [Introduction to packaging at RDO](/documentation/intro-packaging/)
 * [RDO Packaging guidelines](/documentation/rdo-packaging-guidelines/)
 * [Requirements management](/documentation/requirements/)
