@@ -1,6 +1,138 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "4512d95c_dccf227c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 709
+      },
+      "writtenOn": "2022-07-06T14:34:29Z",
+      "side": 1,
+      "message": "Some minor grammar changes",
+      "revId": "291401d2ee2983ff5d22342b6182b65316e298e8",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b9a5e0d9_9ce80b71",
+        "filename": "source/documentation/package-building-overview.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 709
+      },
+      "writtenOn": "2022-07-06T14:34:29Z",
+      "side": 1,
+      "message": "remove space",
+      "range": {
+        "startLine": 2,
+        "startChar": 13,
+        "endLine": 2,
+        "endChar": 14
+      },
+      "revId": "291401d2ee2983ff5d22342b6182b65316e298e8",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1e149914_26eba3d4",
+        "filename": "source/documentation/package-building-overview.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 709
+      },
+      "writtenOn": "2022-07-06T14:34:29Z",
+      "side": 1,
+      "message": "remove space",
+      "range": {
+        "startLine": 3,
+        "startChar": 34,
+        "endLine": 3,
+        "endChar": 35
+      },
+      "revId": "291401d2ee2983ff5d22342b6182b65316e298e8",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ef0a2b55_6b8bde52",
+        "filename": "source/documentation/package-building-overview.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 709
+      },
+      "writtenOn": "2022-07-06T14:34:29Z",
+      "side": 1,
+      "message": "Project,",
+      "range": {
+        "startLine": 8,
+        "startChar": 11,
+        "endLine": 8,
+        "endChar": 18
+      },
+      "revId": "291401d2ee2983ff5d22342b6182b65316e298e8",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "66933397_5a4ce126",
+        "filename": "source/documentation/package-building-overview.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 709
+      },
+      "writtenOn": "2022-07-06T14:34:29Z",
+      "side": 1,
+      "message": "Maybe change this to RDO Trunk repositories have",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 14
+      },
+      "revId": "291401d2ee2983ff5d22342b6182b65316e298e8",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ee32efbb_546307a5",
+        "filename": "source/documentation/package-building-overview.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 709
+      },
+      "writtenOn": "2022-07-06T14:34:29Z",
+      "side": 1,
+      "message": "should probably specify Stream",
+      "range": {
+        "startLine": 11,
+        "startChar": 4,
+        "endLine": 11,
+        "endChar": 11
+      },
+      "revId": "291401d2ee2983ff5d22342b6182b65316e298e8",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a51a06dd_ad0ec21a",
@@ -14,6 +146,29 @@
       "writtenOn": "2022-05-19T13:21:52Z",
       "side": 1,
       "message": "there should be better way to store the content under link persistently",
+      "revId": "291401d2ee2983ff5d22342b6182b65316e298e8",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6bc2b375_12ac29e1",
+        "filename": "source/documentation/package-building-overview.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 110,
+      "author": {
+        "id": 709
+      },
+      "writtenOn": "2022-07-06T14:34:29Z",
+      "side": 1,
+      "message": "remove space",
+      "range": {
+        "startLine": 110,
+        "startChar": 72,
+        "endLine": 110,
+        "endChar": 73
+      },
       "revId": "291401d2ee2983ff5d22342b6182b65316e298e8",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
