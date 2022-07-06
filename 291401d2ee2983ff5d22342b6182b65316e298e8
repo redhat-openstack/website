@@ -18,6 +18,23 @@
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "ace526ae_65183b24",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2022-07-06T16:21:38Z",
+      "side": 1,
+      "message": "I find this very useful for new RDO members. I\u0027m just proposing some modifications, specially to change the distinction of packages between openstack and dependencies (more that rdo trunk and cloudsig, i\u0027ve tried to explain why in a comment. Other than that, i think it\u0027s great and useful content. Thank you!",
+      "revId": "291401d2ee2983ff5d22342b6182b65316e298e8",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "b9a5e0d9_9ce80b71",
@@ -128,6 +145,98 @@
         "startChar": 4,
         "endLine": 11,
         "endChar": 11
+      },
+      "revId": "291401d2ee2983ff5d22342b6182b65316e298e8",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cc44eba8_ad893de1",
+        "filename": "source/documentation/package-building-overview.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2022-07-06T16:21:38Z",
+      "side": 1,
+      "message": "I\u0027m not sure wdym by this. Separated environment, you mean version of openstack or package?",
+      "range": {
+        "startLine": 16,
+        "startChar": 66,
+        "endLine": 17,
+        "endChar": 9
+      },
+      "revId": "291401d2ee2983ff5d22342b6182b65316e298e8",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "47dd4a1e_5a59cc45",
+        "filename": "source/documentation/package-building-overview.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2022-07-06T16:21:38Z",
+      "side": 1,
+      "message": "This is misleading. Actually we also have cloudsig packages for non-deps for stable releases. i.e. we have neutron and nova for yoga, xena, etc... However we don\u0027t have deps in rdo trunk. It\u0027s tricky to explain... i know.\n\nI\u0027d differentiate between:\n\n- OpenStack packages::\n  - RDO Trunk: dlrn process\n  - CloudSIG: CBS builds based on the same branches as RDO Trunk but only for non-master branch. To push them in CentOS official mirrors we use CBS tags.\n\n- Dependencies: packages are always created in CBS as the process you have explained here.\n  - RDO Trunk: the dependencies created in CBS are copied to the Trunk repo server in a dependencies repo (as in https://trunk.rdoproject.org/centos9-master/deps/latest/)\n  - CloudSIG: To push them in CentOS official mirrors we use CBS tags.\n\nIs this more clear now?",
+      "range": {
+        "startLine": 67,
+        "startChar": 0,
+        "endLine": 67,
+        "endChar": 1
+      },
+      "revId": "291401d2ee2983ff5d22342b6182b65316e298e8",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8d970139_3b0da64e",
+        "filename": "source/documentation/package-building-overview.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2022-07-06T16:21:38Z",
+      "side": 1,
+      "message": "I\u0027d be more specific, http://mirror.stream.centos.org/SIGs/9-stream/cloud/",
+      "range": {
+        "startLine": 68,
+        "startChar": 119,
+        "endLine": 68,
+        "endChar": 158
+      },
+      "revId": "291401d2ee2983ff5d22342b6182b65316e298e8",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1d9e262e_9e10df14",
+        "filename": "source/documentation/package-building-overview.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2022-07-06T16:21:38Z",
+      "side": 1,
+      "message": "This is very useful!. I\u0027m thinking if there may be some way to get this as a comment in the review or something from the job instead. It\u0027d be good to check if zuul provides any feature that helps us on this.",
+      "range": {
+        "startLine": 84,
+        "startChar": 0,
+        "endLine": 84,
+        "endChar": 1
       },
       "revId": "291401d2ee2983ff5d22342b6182b65316e298e8",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
