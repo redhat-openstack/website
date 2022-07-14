@@ -20,15 +20,15 @@ packages.
 ### FTBFS
 If build succeeds, package appears in [trunk]( https://trunk.rdoproject.org/). If fails, automatic
 FTBFS (Fail To Build From Source) review is created in [gerrit](https://review.rdoproject.org/r/), providing building
-logs and information which commit caused FTBFS, like in [example] (https://review.rdoproject.org/r/c/openstack/tacker-distgit/+/42687).
+logs and information which commit caused FTBFS, like in [example](https://review.rdoproject.org/r/c/openstack/tacker-distgit/+/42687).
 All FTBFS’ have to be reviewed and fixed. Current FTBFS can be easily spotted on [RDO dashboard](https://dashboards.rdoproject.org/rdo-dev).
 Other way to check statuses of last builds is checking [Latest Build Reports](https://trunk.rdoproject.org/centos9-master/report.html), for example for Centos 9 master.
 
 ### Trunk packages – branching and debugging
 Each trunk distgit has multiple branches. Under development one is rpm-master and the stable ones are named
-<release>-rdo. The rpm-master branch has *Version:* and *Release:* fields filled with XXX, which are automatically
-replaced with proper values during the DLRN building process. In <release>-rdo branch, those values are filled while
-cutting the branch:  master -> stable/<release> during the release process. 
+\<release\>-rdo. The rpm-master branch has *Version:* and *Release:* fields filled with XXX, which are automatically
+replaced with proper values during the DLRN building process. In \<release\>-rdo branch, those values are filled while
+cutting the branch:  master -> stable/\<release\> during the release process.
 Having such situation, a different procedure of bug/FTBFS reproduction is needed.
 
 ### Debugging with DLRN
@@ -36,26 +36,30 @@ Most reliable way to create a debugging or testing environment is Centos 9 conta
 Steps to reproduce FTBFS:
 
 1. clone DLRN repo
-
+```bash
         git clone https://github.com/softwarefactory-project/DLRN.git
+```
 
 2. Follow setup procedure from [README](https://github.com/softwarefactory-project/DLRN/blob/master/README.rst)
 
 3. Clone rdoinfo repository
-
+```bash
         git clone "https://review.rdoproject.org/r/rdoinfo"
+```
 
 4. Edit projects.ini files with desired data. If you don’t know how to reproduce a remote DLRN build, check logs from
 building in FTBFS review. Below you can see example of projects.ini preparation for Centos 9 master.
-
+```bash
         sed -i 's%target=.*%target=centos9-stream%' projects.ini
         sed -i 's%source=.*%source=master%' projects.ini
         sed -i 's%baseurl=.*%baseurl=https://trunk.rdoproject.org/centos9/%' projects.ini
         sed -i 's%tags=.*%tags=%' projects.ini
+```
 
 5. Run DLRN command (example package name)
-
+```bash
         dlrn --head-only --dev --local --verbose-build --package-name openstack-tacker --info-repo ../rdoinfo
+```
 
 You can find more information and explanation of DLRN usage in the [documentation](https://dlrn.readthedocs.io/en/latest/).
 
@@ -87,7 +91,7 @@ building failure happens, the true cause of it may be found in this job output o
 building job. In this [example](https://logserver.rdoproject.org/28/42728/3/check/deps-cbs-validate/b837f69/job-output.txt) build failure reason can be found in Zuul job output,
 but in [this one](https://logserver.rdoproject.org/23/42723/1/check/deps-cbs-validate/7a4055b/job-output.txt), the real reason has to be looked for in CBS logs,
 because Zuul jobs one doesn’t provide anything useful. This is happening when the error doesn’t refers to spec file,
-but the building process itself. The easiest way to find proper link to CBS build is to find “taskID” word 
+but the building process itself. The easiest way to find proper link to CBS build is to find “taskID” word
 in job_output.txt, the result should looks like: Task console is: [https://cbs.centos.org/koji/taskinfo?taskID=2800330](https://cbs.centos.org/koji/taskinfo?taskID=2800330).
 Note, that each job and each patchset has its own individual build number.
 
