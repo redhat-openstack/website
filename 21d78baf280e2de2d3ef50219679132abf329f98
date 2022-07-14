@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e438ccc6_7d712f10",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2022-07-14T10:32:54Z",
+      "side": 1,
+      "message": "Thanks Karolina! i\u0027m sure this will be helpful for new RDOers.",
+      "revId": "21d78baf280e2de2d3ef50219679132abf329f98",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
