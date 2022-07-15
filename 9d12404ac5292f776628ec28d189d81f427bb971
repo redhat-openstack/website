@@ -22,6 +22,30 @@
       },
       "revId": "9d12404ac5292f776628ec28d189d81f427bb971",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4f135ba6_1415d323",
+        "filename": "source/documentation/package-building-overview.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2022-07-15T08:45:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "04e2591b_9182264f",
+      "range": {
+        "startLine": 29,
+        "startChar": 43,
+        "endLine": 29,
+        "endChar": 53
+      },
+      "revId": "9d12404ac5292f776628ec28d189d81f427bb971",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
