@@ -60,7 +60,6 @@ building in FTBFS review. Below you can see example of projects.ini preparation 
 ```bash
         dlrn --head-only --dev --local --verbose-build --package-name openstack-tacker --info-repo ../rdoinfo
 ```
-
 You can find more information and explanation of DLRN usage in the [documentation](https://dlrn.readthedocs.io/en/latest/).
 
 6. Edit the package distgit or package code directly if needed. Both of them are now created inside DLRN directory,
@@ -103,34 +102,42 @@ hyperlink “buildArch“. Provided output is placed in following files:
 * mock_output.log
 * root.log
 * state.log
+
 If the error refers to dependencies, it will be placed in root.log.
 Also some errors may occur in other files, especially in build.log.
 
 ### Common package building issues
 * Missing dependency
-In a root.log file:
-EBUG util.py:444: No matching package to install: 'python3dist(xxx)'
-DEBUG util.py:444: Not all dependencies satisfied
-Solution: The dependency is not tagged yet in our repo or not available.
+
+In a root.log file: \
+*DEBUG util.py:444: No matching package to install: 'python3dist(xxx)' \
+DEBUG util.py:444: Not all dependencies satisfied*
+
+**Solution:** The dependency is not tagged yet in our repo or not available.
 Contact RDO maintainers to discuss adding a new dependency.
 
 * SPEC file syntax error
 
 * Infra issue (timeout)
-Solution: If there are timeouts in refreshing repo metadata or other steps, it’s good idea to recheck tests,
+
+**Solution:** If there are timeouts in refreshing repo metadata or other steps, it’s good idea to recheck tests,
 by typing comment “recheck” in Gerrit review.
 
-* failing %check phase
+* failing *%check* phase \
 Some unit tests failed during package building, like in [example](https://logserver.rdoproject.org/60/42260/8/check/DLRN-rpmbuild-centos9/a145af7/job-output.txt).
-Solution: Create testing environment and try to reproduce the error. Then, try to figure out and fix failing reason.
+
+**Solution:** Create testing environment and try to reproduce the error. Then, try to figure out and fix failing reason.
 It is possible to exclude failing test(s), but we only use that solution if it’s strongly
 justified (like issue created in bugzilla or other bug tracker).
 
 * missing macro
-in build.log file:
-RPM build errors:
-/var/tmp/rpm-tmp.s6H1EG: line 32: fg: no job control
+
+in build.log file: \
+*RPM build errors: \
+/var/tmp/rpm-tmp.s6H1EG: line 32: fg: no job control \
 error: Bad exit status from /var/tmp/rpm-tmp.s6H1EG (%generate_buildrequires)
 Bad exit status from /var/tmp/rpm-tmp.s6H1EG (%generate_buildrequires)
-Child return code was: 1
-Solution: add BuildRequires: pyproject-rpm-macros
+Child return code was: 1*
+
+**Solution:**
+ add *BuildRequires: pyproject-rpm-macros*
