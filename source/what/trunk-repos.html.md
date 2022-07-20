@@ -9,16 +9,14 @@ RDO Trunk repositories are built using the most recent commit(or from the pin to
 - [CentOS 7 master, with everything from master](https://trunk.rdoproject.org/centos7-master-head/consistent/)
 - [CentOS 7 master, using versions from upper-constraints](https://trunk.rdoproject.org/centos7-master/consistent/)
 - [CentOS 7 stable releases for the currently supported versions](https://trunk.rdoproject.org)
-- [Fedora 28 master](https://trunk.rdoproject.org/fedora28-master/consistent/)
 
-[CentOS 7 master, with everything from master](https://trunk.rdoproject.org/centos7-master-head/consistent/) repo is not tested by any CI job, this repo is created as a result of building recent commits to get packaging issues early for the projects which are pinned in rdoinfo. 
+[CentOS 7 master, with everything from master](https://trunk.rdoproject.org/centos7-master-head/consistent/) repo is not tested by any CI job, this repo is created as a result of building recent commits to get packaging issues early for the projects which are pinned in rdoinfo.
 
 These repos contains packages build for each OpenStack project defined for a particular release in ``rdoinfo``. This mapping of repo and release is as follows:-
 
-- [CentOS 7 master, with everything from master] with current release rdoinfo tag i.e [train](https://github.com/redhat-openstack/rdoinfo/blob/master/tags/train.yml) 
+- [CentOS 7 master, with everything from master] with current release rdoinfo tag i.e [train](https://github.com/redhat-openstack/rdoinfo/blob/master/tags/train.yml)
 - [CentOS 7 master, using versions from upper-constraints] with current release rdoinfo tag i.e [train-uc](https://github.com/redhat-openstack/rdoinfo/blob/master/tags/train-uc.yml)
 - [CentOS 7 stable releases for the currently supported versions] with stable release rdoinfo tag other than current release [train, train-uc](https://github.com/redhat-openstack/rdoinfo/blob/master/tags/)
-- [Fedora 28 master] with current release rdoinfo tag i.e [train-uc](https://github.com/redhat-openstack/rdoinfo/blob/master/tags/train-uc.yml)
 
 ## The upper-constraints based repositories
 
@@ -50,5 +48,5 @@ Besides hashed repositories, we have some special directories, created as symlin
 
 [← DLRN](/what/dlrn) |
 [→ Promotion pipeline](/what/promotion-pipeline) |
-[↑ TOC](/what) 
+[↑ TOC](/what)
 

@@ -30,7 +30,7 @@ Although it is expected that RDO works fine in Red Hat Enterprise Linux (RHEL) O
 
 ### Fedora
 
-The RDO team, in coordination with the the Fedora OpenStack SIG maintains the OpenStack Clients in Fedora repositories.
+The RDO team, in coordination with the Fedora OpenStack SIG maintains the OpenStack Clients in Fedora repositories.
 
 * [Fedopra OpenStack SIG](https://fedoraproject.org/wiki/SIGs/OpenStack)
 

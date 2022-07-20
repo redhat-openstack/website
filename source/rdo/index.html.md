@@ -7,7 +7,7 @@ category: documentation
 
 [OpenStack](http://openstack.org/) is one of the most exciting, fast-paced open source projects in the world right now. In a short period of time, the project has gained a critical mass of supporters, and is progressing swiftly. For the past three years, Red Hat has been fully engaged with the OpenStack project, and is now one of the [top contributors](http://stackalytics.com/) to the project.
 
-RDO brings you the latest version of OpenStack on Red Hat Enterprise Linux, CentOS, Scientific Linux and other RHEL-based platforms, and on Fedora. This community-supported distribution of OpenStack includes the Packstack installer, which makes it very easy to bootstrap and grow your RDO install.
+RDO brings you the latest version of OpenStack on Red Hat Enterprise Linux, CentOS Stream and Scientific Linux. This community-supported distribution of OpenStack includes the Packstack installer, which makes it very easy to bootstrap and grow your RDO install.
 
 While initially RDO consisted of the OpenStack core projects, since the
 Big Tent reorganization, that list has grown. The [projects packaged in

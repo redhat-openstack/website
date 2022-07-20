@@ -24,7 +24,7 @@ You will hit OS system limits as you scale (this is a big hammer, will need some
          *          soft    nproc     10240
          root       soft    nproc     unlimited
 
-Systemd (EL7, Fedora) uses per service limits and does not uses /etc/security/limits.conf . One possible way for setting a per service limit is creating a new service target in the /etc/systemd/system/ which will inherit and override from the packaged version of the target.
+Systemd (EL7) uses per service limits and does not uses /etc/security/limits.conf . One possible way for setting a per service limit is creating a new service target in the /etc/systemd/system/ which will inherit and override from the packaged version of the target.
 
 /etc/systemd/system/rabbitmq-server.service:
 
@@ -66,7 +66,7 @@ By default lots of stuff seems to go to /var, if possible put /var on a bigger, 
          Use jumbo frames for interfaces carrying GRE/VXLAN traffic:
          Compute node(s):
 `      echo MTU=`<MTU>` >> /etc/sysconfig/network-scripts/ifcfg-`<interface>
-            network_device_mtu=`<Guest MTU>` (50b less than tunnel interface for vxaln, 28b less for gre ) in the nova.conf file 
+            network_device_mtu=`<Guest MTU>` (50b less than tunnel interface for vxaln, 28b less for gre ) in the nova.conf file
          Network node(s):
 `      echo MTU=`<MTU>` >> /etc/sysconfig/network-scripts/ifcfg-`<interface>
             echo dnsmasq_config_file=/etc/neutron/dnsmasq-neutron.conf >> /etc/neutron/dhcp_agent.ini
@@ -77,11 +77,11 @@ By default lots of stuff seems to go to /var, if possible put /var on a bigger, 
              root_helper = sudo
          Edit the sudores file to allow neutron to use sudo without password for the commands required by neutron.
          It makes the command execution faster, but without filtering it is less secure.
-         Just by the sudoers files you cannot property filter an evil command patters like this: ip netns exec net-ns evil_command. 
+         Just by the sudoers files you cannot property filter an evil command patters like this: ip netns exec net-ns evil_command.
 
 **Compute node**
 
-         Ensure tuned is in place 
+         Ensure tuned is in place
 
          tuned-adm list
 
@@ -105,7 +105,7 @@ in /etc/my.cnf
          innodb_file_per_table
          innodb_flush_log_at_trx_commit = 0
          innodb_log_file_size=1500M
-         innodb_log_files_in_group=2 
+         innodb_log_files_in_group=2
 
 Consider using [thread_handling=pool-of-threads](https://mariadb.com/kb/en/mariadb/documentation/optimization-and-tuning/buffers-caches-and-threads/thread-pool/threadpool-in-55/) option when mariadb needs to handle large number of not too active connection. Mariadb by default creates a thread for every connection, which consumes a significant amount a memory when it needs to handle thousands of connections.
 
@@ -119,7 +119,7 @@ Avoid defining charset=utf8 without the use_unicode=0 in the mysql connection st
 
          Reduce default token duration on Keystone from 1 day  (86400) to 1 hour (3600)
 
-         Set expiration to 3600 in [token]  section in keystone.conf file on controller. 
+         Set expiration to 3600 in [token]  section in keystone.conf file on controller.
 
          Update revocation_cache_time from 1 to 300 with auth_token middleware. Till this is not changed in the code one need to update the each service specific file like glance-api.conf and add revocation_cache_time=300  in [keystone_authtoken] section.
 

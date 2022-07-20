@@ -112,9 +112,9 @@ Next, add the user to the `enabled_users` group in the `cn=openstack` tree. Use 
     > changetype: modify
     > add: member
     > member: uid=rdoadmin,cn=users,cn=accounts,dc=example,dc=com
-    > 
+    >
     > EOF
-    Enter LDAP Password: 
+    Enter LDAP Password:
     modifying entry "cn=enabled_users,cn=openstack,dc=example,dc=com"
 
 If the `ldapmodify` command does not succeed, troubleshoot the role, permission, and privilege created in the first step.
@@ -271,7 +271,7 @@ Once the initial tenants have been created, add the `rdoadmin` user to the `demo
     member: uid=rdoadmin,cn=users,cn=accounts,dc=example,dc=com
     EOF
 
-    Enter LDAP Password: 
+    Enter LDAP Password:
     modifying entry "cn=573429b5b7cc4312b981117890c1e9d8,ou=tenants,cn=openstack,dc=example,dc=com"
 
 Next, create the initial set of Roles for OpenStack users and services to use back on the `keystone` server. The following examples create an `admin` and `user` role.
@@ -354,16 +354,16 @@ The glance, nova, ec2, cinder, and swift services all have service accounts in I
 <!-- -->
 
     [admin@ipa01 ~]$ ipa passwd glance
-    New Password: 
-    Enter New Password again to verify: 
+    New Password:
+    Enter New Password again to verify:
     --------------------------------------------------
     Changed password for "glance@EXAMPLE.COM"
     --------------------------------------------------
     [admin@ipa01 ~]$ kinit glance@EXAMPLE.COM
-    Password for glance@EXAMPLE.COM: 
+    Password for glance@EXAMPLE.COM:
     Password expired.  You must change it now.
-    Enter new password: 
-    Enter it again: 
+    Enter new password:
+    Enter it again:
 
 *   Add the user to the `enabled_users` group in the `cn=openstack` subtree
 
@@ -375,7 +375,7 @@ The glance, nova, ec2, cinder, and swift services all have service accounts in I
     > add: member
     > member: uid=glance,cn=users,cn=accounts,dc=example,dc=com
     > EOF
-    Enter LDAP Password: 
+    Enter LDAP Password:
     modifying entry "cn=enabled_users,cn=openstack,dc=example,dc=com"
 
 *   Add the user to the `service` tenant in the `cn=openstack` subtree
@@ -388,7 +388,7 @@ The glance, nova, ec2, cinder, and swift services all have service accounts in I
     > add: member
     > member: uid=glance,cn=users,cn=accounts,dc=example,dc=com
     > EOF
-    Enter LDAP Password: 
+    Enter LDAP Password:
     modifying entry "cn=a459741dfa8f4a8cb74306f001c564e3,ou=tenants,cn=openstack,dc=example,dc=com"
 
 *   Add the `admin` role to the user account in the `service` tenant.
@@ -429,7 +429,7 @@ To grant privileges to an existing IdM user, use the following process:
     > add: member
     > member: uid=msolberg,cn=users,cn=accounts,dc=example,dc=com
     > EOF
-    Enter LDAP Password: 
+    Enter LDAP Password:
     modifying entry "cn=enabled_users,cn=openstack,dc=example,dc=com"
 
 *   Add the account to the appropriate tenant
@@ -437,13 +437,13 @@ To grant privileges to an existing IdM user, use the following process:
 <!-- -->
 
     [admin@ipa01 ~]$ ldapmodify -x -D"uid=rdoadmin,cn=users,cn=accounts,dc=example,dc=com" -W <<EOF
-    dn: cn=573429b5b7cc4312b981117890c1e9d8,ou=tenants,cn=openstack,dc=example,dc=com 
+    dn: cn=573429b5b7cc4312b981117890c1e9d8,ou=tenants,cn=openstack,dc=example,dc=com
     changetype: modify
-    add: member                                                               
+    add: member
     member: uid=msolberg,cn=users,cn=accounts,dc=example,dc=com
     EOF
 
-    Enter LDAP Password: 
+    Enter LDAP Password:
     modifying entry "cn=573429b5b7cc4312b981117890c1e9d8,ou=tenants,cn=openstack,dc=example,dc=com"
 
 *   Add the the appropriate role to the tenant in Keystone
@@ -753,12 +753,6 @@ You can secure qpidd with either Kerberos or SSL, but not both. Securing with Ke
 
     KRB5_KTNAME=/etc/qpidd.keytab
 
-*   In Fedora we need to do another couple of steps so systemd will load the sysconfig file. Create a copy of the qpidd systemd service:
-
-<!-- -->
-
-    # cp /usr/lib/systemd/system/qpidd.service /etc/systemd/system
-
 *   Edit the version in `/etc/systemd/system` and add this to the [Service] section
 
 <!-- -->
@@ -794,8 +788,8 @@ You can secure qpidd with either Kerberos or SSL, but not both. Securing with Ke
 <!-- -->
 
     [root@openstack]# service openstack-cinder-api restart
-    [root@openstack]# service openstack-cinder-scheduler restart 
-    [root@openstack]# service openstack-cinder-volume restart 
+    [root@openstack]# service openstack-cinder-scheduler restart
+    [root@openstack]# service openstack-cinder-volume restart
     [root@openstack]# service openstack-nova-api restart
     [root@openstack]# service openstack-nova-cert restart
     [root@openstack]# service openstack-nova-compute restart

@@ -9,11 +9,11 @@ authors: amuller, beni, dneary, garrett, jasonbrooks, jruzicka, jwinn, kashyap, 
 
 ## What is RDO?
 
-RDO is two things. It's a freely-available, community-supported distribution of OpenStack that runs on Red Hat Enterprise Linux (RHEL) and its derivatives, such as CentOS. RDO also makes the latest OpenStack development release available for Fedora.
+RDO is two things. It's a freely-available, community-supported distribution of OpenStack that runs on Red Hat Enterprise Linux (RHEL) and its derivatives, such as [CentOS Stream](CentOS).
 
 In addition to providing a set of software packages, RDO is also a community of users of cloud computing platform on Red Hat-based operating systems to get help and compare notes on running OpenStack.
 
-RDO aims to be the natural option for anyone that wants to run the most recently released version of OpenStack on supported systems. Whether you are interested in running OpenStack on RHEL in a production environment, or doing a proof of concept deployment on CentOS, RDO is for you.
+RDO aims to be the natural option for anyone that wants to run the most recently released version of OpenStack on supported systems. Whether you are interested in running OpenStack on RHEL in a production environment, or doing a proof of concept deployment on CentOS Stream, RDO is for you.
 
 ## What does RDO stand for?
 
@@ -28,7 +28,7 @@ OpenStack is an open source project for building a private or public infrastruct
 
 ## Why is RDO needed?
 
-Just as a traditional operating system relies on the hardware beneath it, so too does the OpenStack cloud operating system rely on the foundation of a hypervisor and OS platform. RDO makes it easy to install and deploy the most up-to-date OpenStack components on the industry's most trusted Linux platform, Red Hat Enterprise Linux. and on RHEL derivatives like Fedora, CentOS, and Scientific Linux.
+Just as a traditional operating system relies on the hardware beneath it, so too does the OpenStack cloud operating system rely on the foundation of a hypervisor and OS platform. RDO makes it easy to install and deploy the most up-to-date OpenStack components on the industry's most trusted Linux platform, Red Hat Enterprise Linux. and on RHEL derivatives like CentOS Stream, and Scientific Linux.
 
 ## Why should I use an OpenStack distribution from Red Hat?
 
@@ -36,11 +36,11 @@ The OpenStack project benefits from a broad group of providers and distributors,
 
 ## For which distributions does RDO provide packages?
 
-RDO targets Red Hat Enterprise Linux, CentOS, and Fedora, and their derivatives. Specifically, RDO packages are available for RHEL 7.0 or later (and CentOS 7.0, Scientific Linux 7.0 and other similar derivatives). The latest OpenStack development release is also made available for Fedora. More information is available at [Release-cadence](/rdo/release-cadence/).
+RDO targets Red Hat Enterprise Linux, CentOS Stream and their derivatives. Specifically, RDO packages are available for RHEL 7.0 or later (and CentOS 7.0, Scientific Linux 7.0 and other similar derivatives). More information is available at [Release-cadence](/rdo/release-cadence/).
 
 ## How is RDO different from upstream?
 
-The OpenStack project develops code, and does not handle packaging for specific platforms. As a distribution of OpenStack, RDO packages the upstream OpenStack components to run well together on CentOS, Red Hat Enterprise Linux, Fedora, and their derivatives, and provides you with installation tools to make it easier for you to deploy OpenStack.
+The OpenStack project develops code, and does not handle packaging for specific platforms. As a distribution of OpenStack, RDO packages the upstream OpenStack components to run well together on CentOS Stream, Red Hat Enterprise Linux and their derivatives, and provides you with installation tools to make it easier for you to deploy OpenStack.
 
 [Stable client branches](release-cadence) are maintained per release as part of RDO because client backward compatibility isn't guaranteed upstream.
 
@@ -52,13 +52,7 @@ Feel free to contribute any packaging and integration patches via our developer 
 
 ## Is RDO a fork of OpenStack?
 
-RDO is not a fork of OpenStack, but a community focused on packaging and integrating code from the upstream OpenStack project on CentOS, Red Hat Enterprise Linux and Fedora-based platforms. Red Hat continues to participate in the development of the core OpenStack projects upstream, and all relevant patches and bug reports are routed directly to the OpenStack community code base.
-
-## What does RDO mean for OpenStack on Fedora?
-
-The OpenStack package maintainer team keeps only the latest OpenStack development release available for Fedora in RDO Trunk repositories. For more information, see the [Fedora project wiki](http://fedoraproject.org/wiki/OpenStack).
-
-Users of OpenStack on Fedora are welcome to participate in the discussion on [ask.openstack.org](https://ask.openstack.org/), and in the Fedora Cloud SIG.
+RDO is not a fork of OpenStack, but a community focused on packaging and integrating code from the upstream OpenStack project on CentOS Stream and Red Hat Enterprise Linux. Red Hat continues to participate in the development of the core OpenStack projects upstream, and all relevant patches and bug reports are routed directly to the OpenStack community code base.
 
 ## How do I deploy RDO?
 

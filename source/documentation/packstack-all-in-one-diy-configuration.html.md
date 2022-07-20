@@ -102,7 +102,7 @@ Network namespaces create new "virtual" network environments that are isolated f
     crudini --set /etc/quantum/dhcp_agent.ini DEFAULT ovs_use_veth True
     crudini --set /etc/quantum/l3_agent.ini DEFAULT ovs_use_veth True
 
-The ovs_use_veth settings are primarily required to workaround some issues with the OpenStack RHEL kernel. If you are using recent versions of Fedora, you may not need to changes these settings.
+The ovs_use_veth settings are primarily required to workaround some issues with the OpenStack RHEL kernel.
 
 ### Checkpoint: Other Namespace Related Configuration
 
@@ -217,7 +217,7 @@ The external network needs a set of assignable IP addresses so let's create it n
 
     # quantum subnet-create [network name] --allocation-pool start=[beginning of IP range],end=[end of IP range] --gateway [address of gateway] \
     #   --enable_dhcp=False [cidr]
-    quantum subnet-create extnet --allocation-pool start=192.168.21.10,end=192.168.21.25  --gateway 192.168.21.1 --enable_dhcp=False  192.168.21.0/24 
+    quantum subnet-create extnet --allocation-pool start=192.168.21.10,end=192.168.21.25  --gateway 192.168.21.1 --enable_dhcp=False  192.168.21.0/24
     +------------------+----------------------------------------------------+
     | Field            | Value                                              |
     +------------------+----------------------------------------------------+
@@ -308,12 +308,12 @@ And now is a good time to do some "looking around". Let's start with the changes
 Note the new port and interface! This indicates that a new interface has been created with a device name of tap0f7a05c3-8c that has been connected through a port of the same name to the Open vSwitch bridge named by br-ex. Does this interface actually exist?
 
     ifconfig tap0f7a05c3-8c
-    tap0f7a05c3-8c Link encap:Ethernet  HWaddr BA:E7:96:F6:51:D4  
+    tap0f7a05c3-8c Link encap:Ethernet  HWaddr BA:E7:96:F6:51:D4
               inet6 addr: fe80::b8e7:96ff:fef6:51d4/64 Scope:Link
               UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
               RX packets:12 errors:0 dropped:0 overruns:0 frame:0
               TX packets:284 errors:0 dropped:0 overruns:0 carrier:0
-              collisions:0 txqueuelen:1000 
+              collisions:0 txqueuelen:1000
               RX bytes:720 (720.0 b)  TX bytes:18816 (18.3 KiB)
 
 Cool! This interface represents the addressable gateway for the router.
@@ -328,43 +328,43 @@ A new namespace has been created. Neutron uses an easily decipherable naming con
 Now that we have a namespace to play with, we are going to look at a new command.
 
     ifconfig lo
-    lo        Link encap:Local Loopback  
+    lo        Link encap:Local Loopback
               inet addr:127.0.0.1  Mask:255.0.0.0
               inet6 addr: ::1/128 Scope:Host
               UP LOOPBACK RUNNING  MTU:16436  Metric:1
               RX packets:22413410 errors:0 dropped:0 overruns:0 frame:0
               TX packets:22413410 errors:0 dropped:0 overruns:0 carrier:0
-              collisions:0 txqueuelen:0 
+              collisions:0 txqueuelen:0
               RX bytes:4735986307 (4.4 GiB)  TX bytes:4735986307 (4.4 GiB)
     ip netns exec qrouter-6e6f71df-cca2-4959-bdc5-ff97adf8fc8e ifconfig lo
-    lo        Link encap:Local Loopback  
+    lo        Link encap:Local Loopback
               inet addr:127.0.0.1  Mask:255.0.0.0
               inet6 addr: ::1/128 Scope:Host
               UP LOOPBACK RUNNING  MTU:16436  Metric:1
               RX packets:44 errors:0 dropped:0 overruns:0 frame:0
               TX packets:44 errors:0 dropped:0 overruns:0 carrier:0
-              collisions:0 txqueuelen:0 
+              collisions:0 txqueuelen:0
               RX bytes:4554 (4.4 KiB)  TX bytes:4554 (4.4 KiB)
 
 Since this is the loopback interface we cannot compare MAC addresses, but we can compare RX and TX bytes. Notice the difference? That is because the loopback adapter in the namespace is much newer than the one in the "global" namespace. What else is in the namespace?
 
     ip netns exec qrouter-6e6f71df-cca2-4959-bdc5-ff97adf8fc8e ifconfig
-    lo        Link encap:Local Loopback  
+    lo        Link encap:Local Loopback
               inet addr:127.0.0.1  Mask:255.0.0.0
               inet6 addr: ::1/128 Scope:Host
               UP LOOPBACK RUNNING  MTU:16436  Metric:1
               RX packets:44 errors:0 dropped:0 overruns:0 frame:0
               TX packets:44 errors:0 dropped:0 overruns:0 carrier:0
-              collisions:0 txqueuelen:0 
+              collisions:0 txqueuelen:0
               RX bytes:4554 (4.4 KiB)  TX bytes:4554 (4.4 KiB)
 
-    qg-0f7a05c3-8c Link encap:Ethernet  HWaddr FA:16:3E:56:BB:E8  
+    qg-0f7a05c3-8c Link encap:Ethernet  HWaddr FA:16:3E:56:BB:E8
               inet addr:192.168.21.10  Bcast:192.168.21.255  Mask:255.255.255.0
               inet6 addr: fe80::f816:3eff:fe56:bbe8/64 Scope:Link
               UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
               RX packets:300 errors:0 dropped:0 overruns:0 frame:0
               TX packets:12 errors:0 dropped:0 overruns:0 carrier:0
-              collisions:0 txqueuelen:1000 
+              collisions:0 txqueuelen:1000
               RX bytes:19872 (19.4 KiB)  TX bytes:720 (720.0 b)
 
 Whoa! Another new interface! This is a bit more interesting. First take note of the IP address 192.168.21.10. If you remember this is the beginning of the range we defined for our external network. Now take a look at the device name, qg-0f7a05c3-8c. If it does not look familiar, take a look at the output of ovs-vsctl show again. The interface connected to the br-ex has a similar name! tap-0f7a05c3-8c and gq-0f7a05c3-8c are complimentary interfaces. The tap-0f7a05c3-8c provides the connection point for the Open vSwitch bridge, while the qg-0f7a05c3-8c interface lives in the router's namespace and provides a point to route packets through. The two are linked together so packets that enter one, exit the other. Remember that tap-0f7a05c3-8c is bridged with br-ex, which is the external bridge, so these interfaces represent how things "a way in and out". What else can we look at? There are a few more things we could take a peek at, but let's not ruin the surprise.
@@ -519,42 +519,42 @@ Nothing new there! This is actually informative and worth remembering for later.
 Ahah! A new interface! This time it is connected to the integration bridge, br-int. Running ifconfig with the interface name produces predictable (now) results.
 
     ifconfig tap95c9c6a6-cb
-    tap95c9c6a6-cb Link encap:Ethernet  HWaddr F2:81:12:A6:AE:03  
+    tap95c9c6a6-cb Link encap:Ethernet  HWaddr F2:81:12:A6:AE:03
               inet6 addr: fe80::f081:12ff:fea6:ae03/64 Scope:Link
               UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
               RX packets:9 errors:0 dropped:0 overruns:0 frame:0
               TX packets:779 errors:0 dropped:0 overruns:0 carrier:0
-              collisions:0 txqueuelen:1000 
+              collisions:0 txqueuelen:1000
               RX bytes:594 (594.0 b)  TX bytes:152094 (148.5 KiB)
 
 Cool, but what is it for? Take a peek in the router namespace.
 
     ip netns exec qrouter-6e6f71df-cca2-4959-bdc5-ff97adf8fc8e ifconfig
-    lo        Link encap:Local Loopback  
+    lo        Link encap:Local Loopback
               inet addr:127.0.0.1  Mask:255.0.0.0
               inet6 addr: ::1/128 Scope:Host
               UP LOOPBACK RUNNING  MTU:16436  Metric:1
               RX packets:44 errors:0 dropped:0 overruns:0 frame:0
               TX packets:44 errors:0 dropped:0 overruns:0 carrier:0
-              collisions:0 txqueuelen:0 
+              collisions:0 txqueuelen:0
               RX bytes:4554 (4.4 KiB)  TX bytes:4554 (4.4 KiB)
 
-    qg-0f7a05c3-8c Link encap:Ethernet  HWaddr FA:16:3E:56:BB:E8  
+    qg-0f7a05c3-8c Link encap:Ethernet  HWaddr FA:16:3E:56:BB:E8
               inet addr:192.168.21.10  Bcast:192.168.21.255  Mask:255.255.255.0
               inet6 addr: fe80::f816:3eff:fe56:bbe8/64 Scope:Link
               UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
               RX packets:384 errors:0 dropped:0 overruns:0 frame:0
               TX packets:12 errors:0 dropped:0 overruns:0 carrier:0
-              collisions:0 txqueuelen:1000 
+              collisions:0 txqueuelen:1000
               RX bytes:25416 (24.8 KiB)  TX bytes:720 (720.0 b)
 
-    qr-95c9c6a6-cb Link encap:Ethernet  HWaddr FA:16:3E:32:96:1B  
+    qr-95c9c6a6-cb Link encap:Ethernet  HWaddr FA:16:3E:32:96:1B
               inet addr:192.168.90.1  Bcast:192.168.90.255  Mask:255.255.255.0
               inet6 addr: fe80::f816:3eff:fe32:961b/64 Scope:Link
               UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
               RX packets:775 errors:0 dropped:0 overruns:0 frame:0
               TX packets:9 errors:0 dropped:0 overruns:0 carrier:0
-              collisions:0 txqueuelen:1000 
+              collisions:0 txqueuelen:1000
               RX bytes:151318 (147.7 KiB)  TX bytes:594 (594.0 b)
 
 Something new there! Take a look at qr-95c9c6a6-cb. You might notice it that it shares the same "end" as the new interface discovered above tap95c9c6a6-cb. You might also notice that its assigned IP address is that of the newly created subnet. These are the connections used to get data to and from the integration network into the routing namespace to enable communication with other subnets and external networks.
@@ -828,7 +828,7 @@ Take note of the interface description part:
 
 This indicates that an interface named tap2c1f85af-d7 is created which is the host side of the primary network interface in the VM. tap2c1f85af-d7 is immediately added to the linux bridge named qbr2c1f85af-d7. If we are using Open vSwitch, why does use a linux bridge? If you are familiar with libvirt, you know that it natively supports Open vSwitch bridges. The reason is that the iptables rules manipulated by security groups does not work with Open vSwitch, so Neutron uses a linux bridge/Open vSwitch hybrid bridge to connect VMs to the integration bridge. While we are on the topic of linux bridges:
 
-    brctl show 
+    brctl show
     bridge name         bridge id           STP enabled interfaces
     qbr2c1f85af-d7      8000.c6b118a3dbc8   no          qvb2c1f85af-d7
                                                         tap2c1f85af-d7
@@ -836,12 +836,12 @@ This indicates that an interface named tap2c1f85af-d7 is created which is the ho
 So there's the aforementioned bridge, qbr2c1f85af-d7 and the tap2c1f85af-d7 interface for the VM. So what about qvb2c1f85af-d7? We can look at it:
 
     ifconfig qvb2c1f85af-d7
-    qvb2c1f85af-d7 Link encap:Ethernet  HWaddr C6:B1:18:A3:DB:C8  
+    qvb2c1f85af-d7 Link encap:Ethernet  HWaddr C6:B1:18:A3:DB:C8
               inet6 addr: fe80::c4b1:18ff:fea3:dbc8/64 Scope:Link
               UP BROADCAST RUNNING PROMISC MULTICAST  MTU:1500  Metric:1
               RX packets:12447 errors:0 dropped:0 overruns:0 frame:0
               TX packets:20214 errors:0 dropped:0 overruns:0 carrier:0
-              collisions:0 txqueuelen:1000 
+              collisions:0 txqueuelen:1000
               RX bytes:2218555 (2.1 MiB)  TX bytes:4101811 (3.9 MiB)
 
 Cool, but that does not tell us much. What about Open vSwitch?
@@ -891,7 +891,7 @@ There it is! The id for rdonet.
 
 The --dhcp-range obviously matches the subnet, so that makes sense. Now take a look at the --interface option. The interface name is ns-c328b9a9-3c, what happens if run ifconfig?
 
-    ifconfig ns-c328b9a9-3c 
+    ifconfig ns-c328b9a9-3c
     ns-c328b9a9-3c: error fetching interface information: Device not found
 
 Okay so it appears not to exist, but leave that alone for a minute and revisit the Open vSwitch database.
@@ -928,22 +928,22 @@ The first entry on the br-int integration bridge is tapc328b9a9-3c which, once a
 A new namespace and it has dhcp **and** the UUID of the network we are looking at in its name!
 
     ip netns exec qdhcp-51ccbe0f-11fd-4fbf-894a-ac1ee1809b75 ifconfig
-    lo        Link encap:Local Loopback  
+    lo        Link encap:Local Loopback
               inet addr:127.0.0.1  Mask:255.0.0.0
               inet6 addr: ::1/128 Scope:Host
               UP LOOPBACK RUNNING  MTU:16436  Metric:1
               RX packets:0 errors:0 dropped:0 overruns:0 frame:0
               TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
-              collisions:0 txqueuelen:0 
+              collisions:0 txqueuelen:0
               RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
 
-    ns-c328b9a9-3c Link encap:Ethernet  HWaddr FA:16:3E:73:5C:8E  
+    ns-c328b9a9-3c Link encap:Ethernet  HWaddr FA:16:3E:73:5C:8E
               inet addr:192.168.90.3  Bcast:192.168.90.255  Mask:255.255.255.0
               inet6 addr: fe80::f816:3eff:fe73:5c8e/64 Scope:Link
               UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
               RX packets:19567 errors:0 dropped:0 overruns:0 frame:0
               TX packets:10119 errors:0 dropped:0 overruns:0 carrier:0
-              collisions:0 txqueuelen:1000 
+              collisions:0 txqueuelen:1000
               RX bytes:4006741 (3.8 MiB)  TX bytes:2005045 (1.9 MiB)
 
 And there it is! It has the proper name and proper subnet and exists in a namespace with name that strong implicates that this is what we are looking for. If it is out here in the namespace and dnsmasq is configured to only use this interface, how does it work? Remember the tapc328b9a9-3c interface registered on the br-int integration bridge in Open vSwitch? ns-c328b9a9-3c and tapc328b9a9-3c are directly linked network interfaces. Packets appearing on one, appear on the other. So in the case of DHCP, the VM sends a DHCP Request packet through its chain of connections to the integration bridge, it is broadcasted to all all associated interfaces on the integration bridge (let's ignore VLANs and they part the play in isolating networks and broadcasts for now). The packet appears on tapc328b9a9-3c which is directly linked to ns-c328b9a9-3c which is what dnsmasq is listening on. The DHCP Reply packet goes back the same way. If you run tcpdump on any of these interfaces, you can watch it happen.
@@ -1054,31 +1054,31 @@ This is an address associated with a network that *routes* to the external netwo
     qdhcp-51ccbe0f-11fd-4fbf-894a-ac1ee1809b75
 
     ip netns exec qrouter-6e6f71df-cca2-4959-bdc5-ff97adf8fc8e ifconfig
-    lo        Link encap:Local Loopback  
+    lo        Link encap:Local Loopback
               inet addr:127.0.0.1  Mask:255.0.0.0
               inet6 addr: ::1/128 Scope:Host
               UP LOOPBACK RUNNING  MTU:16436  Metric:1
               RX packets:44 errors:0 dropped:0 overruns:0 frame:0
               TX packets:44 errors:0 dropped:0 overruns:0 carrier:0
-              collisions:0 txqueuelen:0 
+              collisions:0 txqueuelen:0
               RX bytes:4554 (4.4 KiB)  TX bytes:4554 (4.4 KiB)
 
-    qg-0f7a05c3-8c Link encap:Ethernet  HWaddr FA:16:3E:56:BB:E8  
+    qg-0f7a05c3-8c Link encap:Ethernet  HWaddr FA:16:3E:56:BB:E8
               inet addr:192.168.21.10  Bcast:192.168.21.255  Mask:255.255.255.0
               inet6 addr: fe80::f816:3eff:fe56:bbe8/64 Scope:Link
               UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
               RX packets:1082 errors:0 dropped:0 overruns:0 frame:0
               TX packets:12 errors:0 dropped:0 overruns:0 carrier:0
-              collisions:0 txqueuelen:1000 
+              collisions:0 txqueuelen:1000
               RX bytes:71484 (69.8 KiB)  TX bytes:720 (720.0 b)
 
-    qr-95c9c6a6-cb Link encap:Ethernet  HWaddr FA:16:3E:32:96:1B  
+    qr-95c9c6a6-cb Link encap:Ethernet  HWaddr FA:16:3E:32:96:1B
               inet addr:192.168.90.1  Bcast:192.168.90.255  Mask:255.255.255.0
               inet6 addr: fe80::f816:3eff:fe32:961b/64 Scope:Link
               UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
               RX packets:2105 errors:0 dropped:0 overruns:0 frame:0
               TX packets:9 errors:0 dropped:0 overruns:0 carrier:0
-              collisions:0 txqueuelen:1000 
+              collisions:0 txqueuelen:1000
               RX bytes:424450 (414.5 KiB)  TX bytes:594 (594.0 b)
 
 Nope, it is not there either. Sorry, wild goose chase! You can look for an interface all day, but you won't find it. It does not actually exist. Associating a floating IP address with a VM creates a *mapping* from one to the other and produces network address translation (NAT) rules to do source and destination translation on communications on the external network. Since this is a routing function, examine the iptables in the router namespace.
@@ -1094,13 +1094,13 @@ Nope, it is not there either. Sorry, wild goose chase! You can look for an inter
     :quantum-l3-agent-INPUT - [0:0]
     :quantum-l3-agent-OUTPUT - [0:0]
     :quantum-l3-agent-local - [0:0]
-    -A INPUT -j quantum-l3-agent-INPUT 
-    -A FORWARD -j quantum-filter-top 
-    -A FORWARD -j quantum-l3-agent-FORWARD 
-    -A OUTPUT -j quantum-filter-top 
-    -A OUTPUT -j quantum-l3-agent-OUTPUT 
-    -A quantum-filter-top -j quantum-l3-agent-local 
-    -A quantum-l3-agent-INPUT -d 127.0.0.1/32 -p tcp -m tcp --dport 9697 -j ACCEPT 
+    -A INPUT -j quantum-l3-agent-INPUT
+    -A FORWARD -j quantum-filter-top
+    -A FORWARD -j quantum-l3-agent-FORWARD
+    -A OUTPUT -j quantum-filter-top
+    -A OUTPUT -j quantum-l3-agent-OUTPUT
+    -A quantum-filter-top -j quantum-l3-agent-local
+    -A quantum-l3-agent-INPUT -d 127.0.0.1/32 -p tcp -m tcp --dport 9697 -j ACCEPT
     COMMIT
     # Completed on Fri Jul 19 14:48:09 2013
     # Generated by iptables-save v1.4.7 on Fri Jul 19 14:48:09 2013
@@ -1114,18 +1114,18 @@ Nope, it is not there either. Sorry, wild goose chase! You can look for an inter
     :quantum-l3-agent-float-snat - [0:0]
     :quantum-l3-agent-snat - [0:0]
     :quantum-postrouting-bottom - [0:0]
-    -A PREROUTING -j quantum-l3-agent-PREROUTING 
-    -A POSTROUTING -j quantum-l3-agent-POSTROUTING 
-    -A POSTROUTING -j quantum-postrouting-bottom 
-    -A OUTPUT -j quantum-l3-agent-OUTPUT 
-    1 => -A quantum-l3-agent-OUTPUT -d 192.168.21.11/32 -j DNAT --to-destination 192.168.90.2   
-    2 => -A quantum-l3-agent-POSTROUTING ! -i qg-0f7a05c3-8c ! -o qg-0f7a05c3-8c -m conntrack ! --ctstate DNAT -j ACCEPT 
-    -A quantum-l3-agent-PREROUTING -d 169.254.169.254/32 -p tcp -m tcp --dport 80 -j REDIRECT --to-ports 9697 
-    3 => -A quantum-l3-agent-PREROUTING -d 192.168.21.11/32 -j DNAT --to-destination 192.168.90.2 
-    4 => -A quantum-l3-agent-float-snat -s 192.168.90.2/32 -j SNAT --to-source 192.168.21.11 
-    -A quantum-l3-agent-snat -j quantum-l3-agent-float-snat 
-    5 => -A quantum-l3-agent-snat -s 192.168.90.0/24 -j SNAT --to-source 192.168.21.10 
-    -A quantum-postrouting-bottom -j quantum-l3-agent-snat 
+    -A PREROUTING -j quantum-l3-agent-PREROUTING
+    -A POSTROUTING -j quantum-l3-agent-POSTROUTING
+    -A POSTROUTING -j quantum-postrouting-bottom
+    -A OUTPUT -j quantum-l3-agent-OUTPUT
+    1 => -A quantum-l3-agent-OUTPUT -d 192.168.21.11/32 -j DNAT --to-destination 192.168.90.2
+    2 => -A quantum-l3-agent-POSTROUTING ! -i qg-0f7a05c3-8c ! -o qg-0f7a05c3-8c -m conntrack ! --ctstate DNAT -j ACCEPT
+    -A quantum-l3-agent-PREROUTING -d 169.254.169.254/32 -p tcp -m tcp --dport 80 -j REDIRECT --to-ports 9697
+    3 => -A quantum-l3-agent-PREROUTING -d 192.168.21.11/32 -j DNAT --to-destination 192.168.90.2
+    4 => -A quantum-l3-agent-float-snat -s 192.168.90.2/32 -j SNAT --to-source 192.168.21.11
+    -A quantum-l3-agent-snat -j quantum-l3-agent-float-snat
+    5 => -A quantum-l3-agent-snat -s 192.168.90.0/24 -j SNAT --to-source 192.168.21.10
+    -A quantum-postrouting-bottom -j quantum-l3-agent-snat
     COMMIT
     # Completed on Fri Jul 19 14:48:09 2013
     # Generated by iptables-save v1.4.7 on Fri Jul 19 14:48:09 2013
