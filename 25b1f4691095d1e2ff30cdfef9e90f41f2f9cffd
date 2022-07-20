@@ -33,6 +33,23 @@
       "message": "It looks fine to me as long as it\u0027s allowed in the project to mix in so many unrelated whitespace changes as well.",
       "revId": "25b1f4691095d1e2ff30cdfef9e90f41f2f9cffd",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7e5b6a4c_ec56bbab",
+        "filename": "source/documentation/packstack-all-in-one-diy-configuration.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 198
+      },
+      "writtenOn": "2022-07-20T13:00:33Z",
+      "side": 1,
+      "message": "Much of what is here is out of date, even for packstack. Has there been any discussion to updating it (for example OSC commands)?",
+      "revId": "25b1f4691095d1e2ff30cdfef9e90f41f2f9cffd",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
