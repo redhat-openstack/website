@@ -12,6 +12,11 @@ The agenda for that meeting is [in this
 etherpad](https://etherpad.openstack.org/p/RDO-Meeting).
 
 The minutes for these meetings are below:
+* [July 20, 2022](https://lists.rdoproject.org/archives/list/users@lists.rdoproject.org/thread/CXDSUNHFGQOT23CAW4OJ5Q6DF2CSZ5CQ/)
+* [July 13, 2022](https://lists.rdoproject.org/archives/list/users@lists.rdoproject.org/thread/PSIERFFAAN4236JEB476QVKMNHWNY6VP/)
+* [July 06, 2022](https://lists.rdoproject.org/archives/list/users@lists.rdoproject.org/thread/ZE2NK4QABKEAPX7KOOPZP224MQDUCNOD/)
+* [June 29, 2022](https://lists.rdoproject.org/archives/list/users@lists.rdoproject.org/thread/6Q6RG2Y6QJR43TUNQC7NFINVS5LLHMGH/)
+* [June 22, 2022](https://lists.rdoproject.org/archives/list/users@lists.rdoproject.org/thread/PC3D7G7CQ535MXYBWSLKE3MH7ATZDMFF/)
 * [June 15, 2022](https://lists.rdoproject.org/archives/list/dev@lists.rdoproject.org/thread/2EPYHRB2ZLRU2RR77SVNDGQD7N7AXUE6/)
 * [June 01, 2022](https://lists.rdoproject.org/archives/list/dev@lists.rdoproject.org/thread/FAE6VJTTO6A5ZO5PYABDTQYMMRJXXNED/)
 * [May 25, 2022](https://lists.rdoproject.org/archives/list/dev@lists.rdoproject.org/thread/5XEKQKUDFHYFAM6AHUF7J4N4V4ONNSEF/)
