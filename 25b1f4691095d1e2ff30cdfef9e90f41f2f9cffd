@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "71c0454d_72b71173",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2022-07-20T06:56:09Z",
+      "side": 1,
+      "message": "We need to update and clean some content, but let\u0027s start by removing references to fedora.",
+      "revId": "25b1f4691095d1e2ff30cdfef9e90f41f2f9cffd",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
