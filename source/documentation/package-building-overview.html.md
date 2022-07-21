@@ -12,7 +12,7 @@ For Centos9 Stream master Trunk (DLRN) packages are stored in [trunks](https://t
 CloudSIG packages ends up in [CentOS mirror](http://mirror.stream.centos.org/SIGs/9-stream/cloud/x86_64/).
 
 ## What is DLRN?
-In simplest words DLRN is a tool which builds packages. In automated way, DLRN is building package every time when new
+In simplest words, DLRN is a tool which builds packages. In automated way DLRN is building package every time when new
 commit is merged in observed upstream repos, creating individual, separated environment basing on code, distgit and
 [rdoinfo](https://review.rdoproject.org/r/q/project:rdoinfo) repo. DLRN can be also used to manually debug failing
 packages.
@@ -26,7 +26,7 @@ Other way to check statuses of last builds is checking [Latest Build Reports](ht
 
 ### Trunk packages – branching and debugging
 Each trunk distgit has multiple branches. Under development one is rpm-master and the stable ones are named
-\<release\>-rdo. The rpm-master branch has **Version:** and **Release:** fields filled with XXX, which are automatically
+\<release\>-rdo. The rpm-master branch has `Version:` and `Release:` fields filled with XXX, which are automatically
 replaced with proper values during the DLRN building process. In \<release\>-rdo branch, those values are filled while
 cutting the branch:  master -> stable/\<release\> during the release process.
 Having such situation, a different procedure of bug/FTBFS reproduction is needed.
@@ -35,20 +35,19 @@ Having such situation, a different procedure of bug/FTBFS reproduction is needed
 Most reliable way to create a debugging or testing environment is Centos 9 container or vm usage.
 Steps to reproduce FTBFS:
 
-1. clone DLRN repo
+1. Clone DLRN repo:
 ```bash
         git clone https://github.com/softwarefactory-project/DLRN.git
 ```
+2. Follow setup procedure from [README](https://github.com/softwarefactory-project/DLRN/blob/master/README.rst).
 
-2. Follow setup procedure from [README](https://github.com/softwarefactory-project/DLRN/blob/master/README.rst)
-
-3. Clone rdoinfo repository
+3. Clone rdoinfo repository:
 ```bash
         git clone "https://review.rdoproject.org/r/rdoinfo"
 ```
 
-4. Edit projects.ini files with desired data. If you don’t know how to reproduce a remote DLRN build, check logs from
-building in FTBFS review. Below you can see example of projects.ini preparation for Centos 9 master.
+4. Edit `projects.ini` files with desired data. If you don’t know how to reproduce a remote DLRN build, check logs from
+building in FTBFS review. Below you can see example of `projects.ini` preparation for Centos 9 master.
 ```bash
         sed -i 's%target=.*%target=centos9-stream%' projects.ini
         sed -i 's%source=.*%source=master%' projects.ini
@@ -56,7 +55,7 @@ building in FTBFS review. Below you can see example of projects.ini preparation 
         sed -i 's%tags=.*%tags=%' projects.ini
 ```
 
-5. Run DLRN command (example package name)
+5. Run DLRN command (example package name):
 ```bash
         dlrn --head-only --dev --local --verbose-build --package-name openstack-tacker --info-repo ../rdoinfo
 ```
@@ -74,8 +73,8 @@ DLRN is for trunk packages, while for CloudSIG ones there are [Koji](https://koj
 Whole package process building starts in Fedora. The packages exist in Fedora Package Sources [repository](https://src.fedoraproject.org/),
 maintained by packagers an builded by [Koji](https://koji.fedoraproject.org/koji/).
 If the package is needed in RDO project, it has to be rebuild for RDO. Process of building Fedora package for RDO
-using repo gating_script is well described in this [document](https://www.rdoproject.org/documentation/requirements/#adding-a-new-requirement-to-rdo).
-Creating such review will effect with rebuilding package in [CentOS Build System]((https://cbs.centos.org/koji/).
+using repo [gating_script](https://review.rdoproject.org/r/q/project:gating_scripts) is well described in this [document](https://www.rdoproject.org/documentation/requirements/#adding-a-new-requirement-to-rdo).
+Creating such review will effect with rebuilding package in [CentOS Build System](https://cbs.centos.org/koji/).
 On this level, there may occur some errors or misconfigurations, caused by different environment.
 
 ### Debugging package building failures
@@ -91,7 +90,7 @@ building job. In this [example](https://logserver.rdoproject.org/28/42728/3/chec
 but in [this one](https://logserver.rdoproject.org/23/42723/1/check/deps-cbs-validate/7a4055b/job-output.txt), the real reason has to be looked for in CBS logs,
 because Zuul jobs one doesn’t provide anything useful. This is happening when the error doesn’t refers to spec file,
 but the building process itself. The easiest way to find proper link to CBS build is to find “taskID” word
-in job_output.txt, the result should looks like: Task console is: [https://cbs.centos.org/koji/taskinfo?taskID=2800330](https://cbs.centos.org/koji/taskinfo?taskID=2800330).
+in **job_output.txt**, the result should looks like: Task console is: [https://cbs.centos.org/koji/taskinfo?taskID=2800330](https://cbs.centos.org/koji/taskinfo?taskID=2800330).
 Note, that each job and each patchset has its own individual build number.
 
 ### How to read CBS build logs?
@@ -103,14 +102,14 @@ hyperlink “buildArch“. Provided output is placed in following files:
 * root.log
 * state.log
 
-If the error refers to dependencies, it will be placed in root.log.
-Also some errors may occur in other files, especially in build.log.
+If the error refers to dependencies, it will be placed in **root.log**.
+Also some errors may occur in other files, especially in **build.log**.
 
 ### Common package building issues
 * Missing dependency
 
-In a root.log file: \
-*DEBUG util.py:444: No matching package to install: 'python3dist(xxx)' \
+In a root.log file:  
+*DEBUG util.py:444: No matching package to install: 'python3dist(xxx)'  
 DEBUG util.py:444: Not all dependencies satisfied*
 
 **Solution:** The dependency is not tagged yet in our repo or not available.
@@ -123,7 +122,7 @@ Contact RDO maintainers to discuss adding a new dependency.
 **Solution:** If there are timeouts in refreshing repo metadata or other steps, it’s good idea to recheck tests,
 by typing comment “recheck” in Gerrit review.
 
-* failing *%check* phase \
+* failing `%check` phase  
 Some unit tests failed during package building, like in [example](https://logserver.rdoproject.org/60/42260/8/check/DLRN-rpmbuild-centos9/a145af7/job-output.txt).
 
 **Solution:** Create testing environment and try to reproduce the error. Then, try to figure out and fix failing reason.
@@ -132,12 +131,12 @@ justified (like issue created in bugzilla or other bug tracker).
 
 * missing macro
 
-in build.log file: \
-*RPM build errors: \
-/var/tmp/rpm-tmp.s6H1EG: line 32: fg: no job control \
-error: Bad exit status from /var/tmp/rpm-tmp.s6H1EG (%generate_buildrequires)
-Bad exit status from /var/tmp/rpm-tmp.s6H1EG (%generate_buildrequires)
+in build.log file:  
+*RPM build errors:
+/var/tmp/rpm-tmp.s6H1EG: line 32: fg: no job control  
+error: Bad exit status from /var/tmp/rpm-tmp.s6H1EG (%generate_buildrequires)  
+Bad exit status from /var/tmp/rpm-tmp.s6H1EG (%generate_buildrequires)  
 Child return code was: 1*
 
 **Solution:**
- add *BuildRequires: pyproject-rpm-macros*
+ add `BuildRequires: pyproject-rpm-macros` to build requirements.
