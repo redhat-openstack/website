@@ -16,6 +16,24 @@
       "message": "I\u0027d mention that it should be run from rdo-website directory, just to clarify",
       "revId": "58c8b50906b09e10bd0298f3d864b76251b33be7",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "16a9777f_96624d8b",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2022-07-21T11:53:23Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a97dcba4_e0205876",
+      "revId": "58c8b50906b09e10bd0298f3d864b76251b33be7",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
