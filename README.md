@@ -11,6 +11,29 @@ environment can be found at https://www.rdoproject.org/documentation/onboarding/
 You will not need to sign up for Bugzilla or install the rdopkg in order to
 contribute to the website.
 
+
+# Run your own copy from a container (recommended method)
+
+**Note:** This procedure has been tested in a Fedora 35 system using podman container engine.
+It should run in other recent OSs using docker.
+
+1. Create your own container
+
+```
+$ podman build -t rdo-website .
+```
+
+2. Run the website using the local content. This container will run the middleman engine in the container
+using the local website content so that you can edit ant check the resulting webpage. You need to mount
+the data and source directory from the local git repo to the container:
+
+```
+$ podman run -v $PWD/source:/tmp/source:Z -v $PWD/data:/tmp/data:Z -p 4567:4567 --rm localhost/rdo-website
+```
+
+Now you can point your browser to http://localhost:4567/ and you'll see your local copy of the website. Note that you may need to refresh the page after
+editing the content to visualize the changes.
+
 # Run your own copy
 
 PLEASE NOTE: There is no requirement to run your own copy, the following is just a reference
