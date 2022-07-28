@@ -43,6 +43,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "d2192178_b339f024",
+        "filename": "source/what/trunk-repos.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2022-07-28T14:20:10Z",
+      "side": 1,
+      "message": "Actually, the links are in previous list, lines 9 and 10, i\u0027ll remove the brackets here.",
+      "parentUuid": "9bcfa8bb_343ee1fa",
+      "range": {
+        "startLine": 14,
+        "startChar": 65,
+        "endLine": 14,
+        "endChar": 66
+      },
+      "revId": "cd68a152d0f960f4038abcb7013b45601d0a8bc2",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "e1a761f7_f418aaff",
         "filename": "source/what/trunk-repos.html.md",
         "patchSetId": 1
@@ -77,6 +101,30 @@
       "writtenOn": "2022-07-28T08:46:07Z",
       "side": 1,
       "message": "I\u0027d add here link to tool usage manual",
+      "range": {
+        "startLine": 31,
+        "startChar": 246,
+        "endLine": 31,
+        "endChar": 257
+      },
+      "revId": "cd68a152d0f960f4038abcb7013b45601d0a8bc2",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "90cf5553_31c8f326",
+        "filename": "source/what/trunk-repos.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2022-07-28T14:20:10Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1979d673_da4417b0",
       "range": {
         "startLine": 31,
         "startChar": 246,
