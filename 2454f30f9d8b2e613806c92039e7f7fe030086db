@@ -1,0 +1,9 @@
+Code-Review+2: Joel Capitao <jcapitao@redhat.com>
+Code-Review+1: User karolinku <kkula@redhat.com>
+Verified+2: Zuul CI <zuul@review.rdoproject.org>
+Workflow+1: Joel Capitao <jcapitao@redhat.com>
+Submitted-by: Zuul CI <zuul@review.rdoproject.org>
+Submitted-at: Thu, 28 Jul 2022 09:46:50 +0000
+Reviewed-on: https://review.rdoproject.org/r/c/rdo-website/+/44118
+Project: rdo-website
+Branch: refs/heads/master
