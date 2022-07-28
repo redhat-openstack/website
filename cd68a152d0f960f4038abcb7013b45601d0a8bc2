@@ -1,0 +1,67 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9ea787d6_5953bd59",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2022-07-28T08:28:23Z",
+      "side": 1,
+      "message": "Just a few comments below, other than that it looks good",
+      "revId": "cd68a152d0f960f4038abcb7013b45601d0a8bc2",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9bcfa8bb_343ee1fa",
+        "filename": "source/what/trunk-repos.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2022-07-28T08:28:23Z",
+      "side": 1,
+      "message": "we should add (https://trunk.rdoproject.org/centos9-master/consistent/) to define the hyperlink",
+      "range": {
+        "startLine": 14,
+        "startChar": 65,
+        "endLine": 14,
+        "endChar": 66
+      },
+      "revId": "cd68a152d0f960f4038abcb7013b45601d0a8bc2",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e1a761f7_f418aaff",
+        "filename": "source/what/trunk-repos.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2022-07-28T08:28:23Z",
+      "side": 1,
+      "message": "ditto with (https://trunk.rdoproject.org)",
+      "range": {
+        "startLine": 15,
+        "startChar": 78,
+        "endLine": 15,
+        "endChar": 79
+      },
+      "revId": "cd68a152d0f960f4038abcb7013b45601d0a8bc2",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
