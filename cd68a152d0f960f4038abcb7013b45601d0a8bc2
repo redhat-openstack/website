@@ -62,6 +62,29 @@
       },
       "revId": "cd68a152d0f960f4038abcb7013b45601d0a8bc2",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1979d673_da4417b0",
+        "filename": "source/what/trunk-repos.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2022-07-28T08:46:07Z",
+      "side": 1,
+      "message": "I\u0027d add here link to tool usage manual",
+      "range": {
+        "startLine": 31,
+        "startChar": 246,
+        "endLine": 31,
+        "endChar": 257
+      },
+      "revId": "cd68a152d0f960f4038abcb7013b45601d0a8bc2",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
