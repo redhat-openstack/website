@@ -11,6 +11,8 @@ The agenda for that meeting is in [this etherpad](https://etherpad.openstack.org
 
 The minutes for these meetings are below:
 
+* [11 August 2022](https://lists.centos.org/pipermail/centos-devel/2022-August/120530.html)
+* [12 May 2022](https://lists.centos.org/pipermail/centos-devel/2022-May/120373.html)
 * [06 January 2022](https://lists.centos.org/pipermail/centos-devel/2022-January/120126.html)
 * [04 November 2021](https://lists.centos.org/pipermail/centos-devel/2021-November/098673.html)
 * [07 October 2021](https://lists.centos.org/pipermail/centos-devel/2021-October/098619.html)
