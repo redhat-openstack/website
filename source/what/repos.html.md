@@ -25,13 +25,24 @@ The GA repository is the one you should be using for your production environment
 
 To enable this repository on a CentOS system, run the following command:
 
+    For CentOS Linux 7:
     $ sudo yum install centos-release-openstack-<release>
+
+    For CentOS Stream 8 & 9:
+    $ sudo dnf install centos-release-openstack-<release>
 
 Where ``<release>`` is the name of the OpenStack release you want to install. The RDO community supports the same OpenStack releases [supported by upstream](https://releases.openstack.org/).
 
 On a non-CentOS system (e.g. RHEL), you can run the following command to setup the RDO GA repositories:
 
+    For CentOS Linux 7:
     $ sudo yum install https://www.rdoproject.org/repos/rdo-release.rpm
+
+    For CentOS Stream 8:
+    $ sudo dnf install https://www.rdoproject.org/repos/rdo-release.el8.rpm
+
+    For CentOS Stream 9:
+    $ sudo dnf install https://www.rdoproject.org/repos/rdo-release.el9.rpm
 
 This will configure the repositories for the most recent version of RDO. RPMs for previous releases are accessible from [this location](https://repos.fedorapeople.org/repos/openstack/).
 
