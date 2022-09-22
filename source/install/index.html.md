@@ -16,7 +16,6 @@ For an initial test deployment, follow the [Packstack](/install/packstack) instr
 
 *   [TripleO quickstart](https://docs.openstack.org/tripleo-quickstart/latest/) &ndash; production deployment, with HA
 *   [Packstack](/install/packstack) &ndash; proof of concept for single node
-*   [More information on Packstack](/documentation/packstack-cookbook/)
 *   [Manual Installation Tutorial](https://docs.openstack.org/install-guide/) &ndash; OpenStack upstream documentation
 *   [RDO repositories](/documentation/repositories/)
 *   [Install on LinuxONE](/install/linuxone)
