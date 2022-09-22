@@ -1,0 +1,10 @@
+Code-Review+1: Carlos Camacho <ccamacho@redhat.com>
+Code-Review+2: Amy Marrich (spotz) <amy@demarco.com>
+Code-Review+2: Alfredo Moralejo <amoralej@redhat.com>
+Workflow+1: Alfredo Moralejo <amoralej@redhat.com>
+Verified+2: Zuul CI <zuul@review.rdoproject.org>
+Submitted-by: Zuul CI <zuul@review.rdoproject.org>
+Submitted-at: Thu, 22 Sep 2022 13:39:23 +0000
+Reviewed-on: https://review.rdoproject.org/r/c/rdo-website/+/45219
+Project: rdo-website
+Branch: refs/heads/master
