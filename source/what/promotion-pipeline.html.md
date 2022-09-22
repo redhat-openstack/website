@@ -1,15 +1,23 @@
 ---
 title: Workflow - Promotion pipeline
-author: amoralej
+author: amoralej, kkula
 ---
 
 # Workflow: Promotion pipeline
 
+<img src="/images/blog/rdo-zuul-ci.png" width="90%">
+
 Promotion pipelines are composed by a set of related CI jobs that are executed
 for each supported OpenStack release to test the content of a specific RDO repository.
-Currently promotion pipelines are executed in diferent phases:
+There are two sets of promotion pipelines for each OpenStack release:
+  * TripleO promotion pipelines - to validate RDO packages with TripleO and promote
+  the content used by TripleO upstream check and gate jobs
+  * Puppet promotion pipelines -  to validate RDO packages with OpenStack Puppet
+  Modules and to promote the RDO packages used in upstream OpenStack Puppet modules check and gate jobs
 
-<img src="/images/blog/rdo-ci-1.png" width="70%">
+Both these pipelines run in parallel and are composed of different jobs.
+
+The promotion workflow can be described with following schema:
 
 1. **Define the repository to be tested.** RDO Trunk repositories are identified
 by a hash based on the upstream commit of the last built package. The content of
@@ -23,35 +31,31 @@ images are built.
 
 3. **Deploy and test RDO.** We run a set of jobs which deploy and test OpenStack
 using different installers and scenarios to ensure they behave as expected. Currently,
-the following deployment tools and configurations are tested:
-  * *TripleO deployments*. Using [tripleo-quickstart](https://github.com/openstack/tripleo-quickstart)
-  we deploy two different configurations, [minimal](https://github.com/openstack/tripleo-quickstart/blob/master/config/general_config/minimal.yml)
-  and [minimal_pacemaker](https://github.com/openstack/tripleo-quickstart/blob/master/config/general_config/minimal_pacemaker.yml)
-  which apply different settings that cover most common options.
+there are following main promotion testing methods:
+  * *TripleO deployments* - this kind of deployment (with many kinds of config) is managed by TripleO
+  promotion pipelines. Documentation of these pipelines and whole process description
+  can be found [here](https://docs.openstack.org/tripleo-docs/latest/ci/stages-overview.html).
   * *OpenStack Puppet scenarios*. Project [puppet-openstack-integration](https://github.com/openstack/puppet-openstack-integration/) (a.k.a. p-o-i)
   maintains a set of Puppet manifests to deploy different OpenStack services
   combinations and configurations (scenarios) in a single server using OpenStack
   Puppet Modules, and run tempest smoke tests for the deployed services. The
   tested services on each scenario can be found in the
   [README](https://github.com/openstack/puppet-openstack-integration/blob/master/README.md#description)
-  for p-o-i. Scenarios 1, 2 and 3 are currently tested in RDO CI as
-  * *Packstack deployment.* As part of the upstream testing, Packstack defines
-  three deployment [scenarios](https://github.com/openstack/packstack/blob/master/README.md#packstack-integration-tests)
-  to verify the correct behavior of the existing options. Note that tempest smoke tests
-  are executed also in these jobs. In RDO-CI we leverage those scenarios to test
-  new packages built in RDO repos.
+  for p-o-i. These scenarios, together with Packstack deployment ones, are executed in puppet
+  promotion pipelines to test new packages build in RDO Repos.
+  Part of scenarios are currently tested in RDO CI as Packstack deployment.
 
 4. **Repository and images promotion.** When all jobs in the previous phase succeed,
 the tested repository is considered good and it is promoted so that users can use these
 packages:
-  * The repo is published using CentOS CDN in [https://buildlogs.centos.org/centos/7/cloud/x86_64/rdo-trunk-&lt;release>-tested/](https://buildlogs.centos.org/centos/7/cloud/x86_64/rdo-trunk-ocata-tested/))
-  * The images are copied to [https://buildlogs.centos.org/centos/7/cloud/x86_64/tripleo_images/&lt;release>/delorean/](https://buildlogs.centos.org/centos/7/cloud/x86_64/tripleo_images/master/delorean/)
+  * The repo is published using RDO Trunk servers in [https://trunk.rdoproject.org/centos9-\<openstack_version\>/current-tripleo/delorean.repo](https://trunk.rdoproject.org/centos9-master/current-tripleo/delorean.repo)
+  * The images are copied to [http://images.rdoproject.org/centos8/](http://images.rdoproject.org/centos8/) and [http://images.rdoproject.org/centos9/](http://images.rdoproject.org/centos9/).
   to be used by TripleO users.
 
 ## Tools used in RDO CI
 
-* Jobs definitions are managed using [*Jenkings Job Builder, JJB*](https://docs.openstack.org/infra/jenkins-job-builder/),
-via a gerrit review workflow in [review.rdoproject.org]( https://review.rdoproject.org/r/#/q/project:rdo-infra/ci-config)
+* Jobs definitions are managed using [*Zuul*](https://review.rdoproject.org/zuul/status),
+via a gerrit review workflow in [review.rdoproject.org](https://github.com/rdo-infra/rdo-jobs)
 * [*WeIRDO*](http://weirdo.readthedocs.io/en/latest/how.html) is the tool we
 use to run p-o-i and Packstack testing scenarios defined upstream inside RDO CI.
 It is composed of a set of ansible roles and playbooks that prepare the environment
@@ -67,9 +71,7 @@ them.
 
 ## Infrastructure
 
-RDO is part of the CentOS Cloud Special Interest Group so we run promotion pipelines
-in the [CentOS CI](https://wiki.centos.org/QaWiki/CI) infrastructure where Jenkins
-is used as continuous integration server.
+RDO runs the promotion pipelines in the CI infrastructure managed by [Software Factory](https://softwarefactory-project.io/).
 
 ## Handling issues in RDO CI
 
@@ -85,23 +87,36 @@ One of the contributions of RDO to upstream projects is to increase test coverag
 the projects and help to identify the problems as soon as possible. When we find them,
 we report it upstream as Launchpad bugs and propose fixes when possible.
 
-Every time we find an issue, a new card is added to the [TripleO and RDO CI Status
-Trello board](https://trello.com/b/WXJTwsuU/tripleo-and-rdo-ci-status) where
-we track the status and activities carried out to get it fixed.
+TripleO uses [launchpad](https://bugs.launchpad.net/tripleo/+bugs?orderby=-datecreated&start=0)
+to manage bugs, so any issues should be reported there.
+Bugs unrelated to TripleO should be also reported in
+[Bugzilla](https://bugzilla.redhat.com/enter_bug.cgi?product=RDO) which specified component (if
+not known, should be set to "distribution").
+
+Overall TripleO approach to CI is described
+in this [document](https://docs.openstack.org/tripleo-docs/latest/ci/ruck_rover_primer.html).
 
 ## Status of promotion pipelines
 
 If you are interested in the status of the promotion pipelines in RDO CI you can
 check:
 
-* [*CentOS CI RDO view*](https://ci.centos.org/view/rdo/view/promotion-pipeline)
-can be used to see the result and status of the jobs for each OpenStack
-release.
+* [*Zuul pipelines status view*](https://review.rdoproject.org/zuul/builds?project=rdoinfo)
+can be used to see the result and status of each kind of puppet promotion pipeline
+and OpenStack release.
 
 * [*RDO Dashboard*](https://dashboards.rdoproject.org/rdo-dev) shows the overall
-status of RDO packaging and CI.
+status of RDO promotion pipelines.
 
 <img src="/images/blog/rdo-ci-2.png" width="70%">
+
+* [*RDO FTBFS Dashboard*](https://dashboards.rdoproject.org/report-ftbfs) shows status
+of currently failed package build attempts.
+
+<img src="/images/blog/rdo-ftbfs-dashboard.png" width="90%">
+
+* [*TripleO dashboard*](http://cockpit-ci.tripleo.org/) shows many
+different information and stats, about promotion pipelines and others
 
 ### More info
 
@@ -109,6 +124,7 @@ status of RDO packaging and CI.
 * [Weirdo: A talk about CI in OpenStack and RDO](https://dmsimard.com/2016/03/02/openstack-montreal-a-talk-about-ci-in-openstack-and-rdo/) by dmsimard.
 * [ARA blog posts](https://dmsimard.com/categories/ara) - from dmsimard blog
 * [Ci in RDO: What do we test?](https://amoralej.fedorapeople.org/slides/RDO-CI-summit-bcn-final.pdf) - presentation in RDO and Ceph Meetup BCN.
+* [RDO dashboards repo](https://github.com/rdo-infra/rdo-dashboards)
 
 ----
 
