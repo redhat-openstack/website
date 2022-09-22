@@ -30,40 +30,31 @@ Institute](https://wiki.openstack.org/wiki/OpenStack_Upstream_Institute).
 
 - Alfredo Moralejo &ndash; amoralej
 - Alan Pevec &ndash; apevec
-- Chandan Kumar &ndash; chandankumar
-- David Moreau Simard &ndash; dmsimard
-- Haikel Guemar &ndash; number80
-- Jakub Ružička &ndash; jruzicka
-- Javier Pena &ndash; jpena
-- Rich Bowen &ndash; rbowen
-- Lars Kellogg-Stedman &ndash; larsks
+- Amy Marrich &ndash; spotz
+- Joel Capitao &ndash; jcapitao
 - Jon Schlueter &ndash; jschlueter/yazug
+- Karolina Kula &ndash; kkula
 
 ### Installation
 
 - Alfredo Moralejo &ndash; amoralej
-- Javier Peña &ndash; jpena
-
-### Networking
-
-- Alfredo Moralejo &ndash; amoralej
-
-### Storage
+- Joel Capitao &ndash; jcapitao
+- Amy Marrich &ndash; spotz
 
 ### Packaging
 
 - Alfredo Moralejo &ndash; amoralej
-- Javier Peña &ndash; jpena
+- Joel Capitao &ndash; jcapitao
+- Karolina Kula &ndash; kkula
 
 ### Infrastructure
 
 - Alfredo Moralejo &ndash; amoralej
-- Javier Peña &ndash; jpena
+- Joel Capitao &ndash; jcapitao
 
 ### Documentation
 
-- Rich Bowen &ndash; rbowen
-- Petr Kovar &ndash; pkovar
+- Amy Marrich &ndash; spotz
 
 ## Where to ask
 
