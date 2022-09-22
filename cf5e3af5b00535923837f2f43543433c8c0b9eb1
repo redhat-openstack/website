@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ce18c665_d510fc46",
+        "filename": "source/storage/index.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2022-09-22T15:06:34Z",
+      "side": 0,
+      "message": "I think you can remove also the MD file itself: source/storage/Glance/using-glusterfs-for-glance-with-rdo.html.md\n\nBTW, there is also a reference to GlusterFS in the use/index.html page that i guess can be also removed here or as follow-up, as you prefer:\n\nhttps://github.com/redhat-openstack/website/blob/master/source/use/index.html.md?plain\u003d1#L63",
+      "range": {
+        "startLine": 28,
+        "startChar": 0,
+        "endLine": 28,
+        "endChar": 1
+      },
+      "revId": "cf5e3af5b00535923837f2f43543433c8c0b9eb1",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
