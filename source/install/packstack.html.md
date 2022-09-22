@@ -2,14 +2,16 @@
 title: Packstack
 category: documentation
 authors: apevec, dneary, garrett, jasonbrooks, jlibosva, mmagr, pixelbeat, pmyers,
-  rbowen, gbraad, cbrown2
+  rbowen, gbraad, cbrown2, amoralej
 ---
 
 # Packstack: Create a proof of concept cloud
 
-This document shows how to spin up a proof of concept cloud on one node, using the Packstack installation utility. You will be able to [add more nodes](/install/adding-a-compute-node/) to your OpenStack cloud later, if you choose.
+Packstack is an OpenStack deployment tool intended to **install Proof of Concept small environments in a quick and easy way using the RDO distribution on a CentOS Stream hosts**. Production features such as High Availability, OpenStack upgrades or other day-2 operations are out of the scope of Packstack. For these cases, you can rely on other recommended tools such as [TripleO](https://tripleo-docs.readthedocs.io/en/latest/index.html), [Kolla](https://docs.openstack.org/kolla/latest/) or [Openstack-Ansible](https://docs.openstack.org/openstack-ansible/latest/).
 
-The instructions apply to the following Release and Operating Systems -  **Victoria, Wallaby, Xena and Yoga** on CentOS Stream 8, and **Yoga** on CentOS Stream 9.
+This document shows how to spin up a proof of concept cloud on one node using the Packstack installation utility. You will be able to [add more nodes](/install/adding-a-compute-node/) to your OpenStack cloud later, if you choose.
+
+These instructions apply to the following Release and Operating Systems -  **Victoria, Wallaby, Xena and Yoga** on CentOS Stream 8, and **Yoga** on CentOS Stream 9.
 
 ## WARNING ##
 
@@ -67,13 +69,13 @@ If your system meets all the prerequisites mentioned below, proceed with running
 
 **CentOS Stream 8** is the minimum recommended version, or the equivalent version of one of the RHEL-based Linux distributions such as **Red Hat Enterprise Linux**, **Scientific Linux**, and so on. Packages are provided for **x86_64**, **aarch64** and **ppc64le** architectures although most of the testing is done on **x86_64**.
 
-* See [RDO repositories](/documentation/repositories/) for details on required repositories.
-
-Name the host with a fully qualified domain name rather than a short-form name to avoid DNS issues with Packstack.
-
 ### Hardware
 
 Machine with at least 16GB RAM, processors with hardware virtualization extensions, and at least one network adapter.
+
+### Hostname
+
+Name the host with a fully qualified domain name rather than a short-form name to avoid DNS issues with Packstack.
 
 ### Network
 
@@ -146,13 +148,29 @@ $ sudo setenforce 0
 
 ## Step 4: Run Packstack to install OpenStack
 
-Packstack takes the work out of manually setting up OpenStack. For a single node OpenStack deployment, run the following command:
+Packstack takes the work out of manually setting up OpenStack. It provides a set of options to specify the desired services and configurations for each installation. You can list all the available parameters using:
+
+```
+$ packstack --help
+```
+
+For a simple, single node OpenStack deployment with default options, run the following command:
 
 ```
 $ sudo packstack --allinone
 ```
 
-If you encounter failures, see the [Workarounds](/testday/workarounds/) page for tips.
+Packstack command line interface accepts to use an answers file as a mechanism to specify the parameters. The base answers file can be created with:
+
+```
+$ packstack --gen-answer-file
+```
+
+Then can be used by using `--answer-file` option:
+
+```
+$ sudo packstack --answer-file=<path to the answers file>
+```
 
 If you have run Packstack previously, there will be a file in your home directory named something like `packstack-answers-20130722-153728.txt` You will probably want to use that file again, using the `--answer-file` option, so that any passwords you have already set (for example, mysql) will be reused.
 
