@@ -25,11 +25,7 @@ is composed of several servers:
 * A slave database server, which mirrors the main database and also serves as offsite backup server
   for other services (backup.rdoproject.org).
 
-In addition to this, a separate DLRN instance is supporting the upstream
-[rpm-packaging](https://github.com/openstack/rpm-packaging) project with up to date packages built
-from its spec templates, [rpm-packaging-ci.rdoproject.org](https://rpm-packaging-ci.rdoproject.org/repos/status_report.html).
-
-## <a name="codereivew-ci"></a> Code Review and CI
+## Code Review and CI
 
 The RDO Gerrit instance is running at [review.rdoproject.org](https://review.rdoproject.org/). It makes use
 of a pool of VMs for CI managed by nodepool and running on the RDO Cloud.
@@ -38,9 +34,6 @@ The review.rdoproject.org configuration is managed by the [infrastructure core a
 
 Some additional pieces of infrastructure used for CI are:
 
-* [registry.rdoproject.org](https://console.registry.rdoproject.org/) is a Docker registry used for our
-  containerization efforts.
-* [logs.rdoproject.org](https://logs.rdoproject.org) provides a log storage service for our CI jobs.
 * [images.rdoproject.org](https://images.rdoproject.org/master/rdo_trunk/) store disk images used by the TripleO CI.
 
 ## Blogs
@@ -77,7 +70,7 @@ maintenance windows.
 
 A number of parts of our infrastructure run at CentOS, including
 
-* [Mirroring](http://buildlogs.centos.org/centos/7/cloud/x86_64/)
+* [Mirroring](/documentation/package-list)
 * [CI](https://ci.centos.org/view/rdo/view/promotion-pipeline/)
 * [CentOS Cloud SIG](https://wiki.centos.org/SpecialInterestGroup/Cloud)
   (not infrastructure, but governance/process)
