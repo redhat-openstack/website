@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6c94e4eb_4003b8f4",
+        "filename": "source/resources/image-resources.html.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2022-09-22T15:30:09Z",
+      "side": 1,
+      "message": "this should go with --file option",
+      "range": {
+        "startLine": 50,
+        "startChar": 111,
+        "endLine": 50,
+        "endChar": 129
+      },
+      "revId": "5a532f12b2af580bb853b36d6c71a207961d2f00",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
