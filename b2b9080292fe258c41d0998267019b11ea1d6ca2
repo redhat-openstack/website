@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4bfa8eea_af90d6f4",
+        "filename": "source/install/upgrading-rdo.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2022-09-22T11:01:33Z",
+      "side": 1,
+      "message": "The term \"support\" in RDO or other community projects is problematic and it\u0027s better to avoid.\n\nI\u0027d say, RDO does not validate (or test). \n\nI\u0027d also mention the upstream instructions to upgrade manually but would specify that some adjustments may be needed.\n\nhttps://docs.openstack.org/operations-guide/ops-upgrades.html",
+      "range": {
+        "startLine": 8,
+        "startChar": 30,
+        "endLine": 8,
+        "endChar": 37
+      },
+      "revId": "b2b9080292fe258c41d0998267019b11ea1d6ca2",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
