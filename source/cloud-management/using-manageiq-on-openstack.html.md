@@ -8,11 +8,11 @@ authors: dneary
 
 ## Managing OpenStack with ManageIQ
 
-[ManageIQ](http://manageiq.org) is a cloud management platform which can be deployed on OpenStack, and can manage instances running on OpenStack clouds.
+[ManageIQ](http://manageiq.org) is an Open Source cloud management platform which can be deployed on OpenStack, and can manage instances running on OpenStack clouds.
 
 ### Installing ManageIQ
 
-To download and install ManageIQ for OpenStack, go to the [ManageIQ Download page](http://manageiq.org/download/) and choose either a current stable release or a nightly build. Then, follow the [installation instructions for OpenStack](http://manageiq.org/docs/reference/latest/doc-Installing_on_Red_Hat_Enterprise_Linux_OpenStack_Platform/miq/). The installation process is, essentially, uploading an appliance to Glance, and launching it with an appropriately provisioned instance. ManageIQ needs a minimum of 6 GB RAM and a 45 GB persistent disk.
+To download and install ManageIQ for OpenStack, go to the [ManageIQ Download page](http://manageiq.org/download/) and choose either a current stable release or a nightly build. Then, follow the [installation instructions for OpenStack](https://www.manageiq.org/docs/reference/latest/installing_on_red_hat_enterprise_linux_openstack_platform/index.html). The installation process is, essentially, uploading an appliance to Glance, and launching it with an appropriately provisioned instance. ManageIQ needs a minimum of 6 GB RAM and a 45 GB persistent disk.
 
 Once the application is installed, you can manage your OpenStack cloud by configuring it as a cloud provider for ManageIQ. 
 
