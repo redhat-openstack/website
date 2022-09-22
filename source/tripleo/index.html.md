@@ -21,6 +21,10 @@ Upstream TripleO documentation:
 
 **Note:** Limit your environment-specific content in the menu on the left-hand side of the documentation page.
 
+RDO/TripleO documentation:
+
+* [TripleO in RDO Xena release](/documentation/tripleo-in-xena)
+
 TripleO YouTube channel:
 
 * [TripleO YouTube Channel](https://www.youtube.com/channel/UCNGDxZGwUELpgaBoLvABsTA/)
@@ -29,4 +33,4 @@ TripleO YouTube channel:
 ## Get in touch
 
 *   IRC: **#tripleo** and **#rdo** channels on [OFTC](http://oftc.net).
-*   Mailing list: [**rdo-list**](//www.redhat.com/mailman/listinfo/rdo-list), using **[TripleO]** tag in the subject of the email.
+*   Mailing list: [**openstack-discuss**](https://lists.openstack.org/cgi-bin/mailman/listinfo/openstack-discuss), using **[TripleO]** tag in the subject of the email.
