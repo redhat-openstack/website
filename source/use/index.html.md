@@ -60,7 +60,6 @@ Since RDO sticks closely to the upstream OpenStack project, the documentation at
 
 ### Storage
 
-* [GlusterFS](/storage/Cinder/using-glusterfs-for-cinder-with-rdo)
 * [ThinLVM](/storage/Cinder/using-thinlvm-for-cinder-with-rdo)
 * [EMC](https://wiki.openstack.org/wiki/How to deploy cinder with EMC plug-in)
 * [More&hellip;](/storage/){:.more}

@@ -25,7 +25,6 @@ Below you can find guides, test suggestions, and contact information for the sto
 <div class="split-third with-more">
 ### Glance
 
-*   [Using GlusterFS for Glance with RDO](Glance/using-glusterfs-for-glance-with-rdo)
 *   [Using Swift for Glance with RDO](Glance/using-swift-for-glance-with-rdo)
 *   [Using Ceph for Glance with RDO](/storage/Glance/using-ceph-for-glance-with-rdo/)
 *   [Setting up HA of Glance](Glance/setting-up-ha-of-glance)
