@@ -96,9 +96,9 @@ $ git config --list
 
 * Install the `git-review` tool
 
-RHEL-based systems (e.g. RHEL7, CentOS 7)
+RHEL-based systems (e.g. CentOS Steam 8+ with EPEL repo enabled)
 ```
-$ sudo yum install git-review
+$ sudo dnf install git-review
 ```
 
 Fedora-based systems (after F24)
