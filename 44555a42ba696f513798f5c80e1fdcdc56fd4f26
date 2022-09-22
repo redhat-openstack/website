@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "865553b1_fbbdf024",
+        "filename": "source/resources/image-resources.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2022-09-22T10:58:35Z",
+      "side": 1,
+      "message": "As there are several images provided by CentOS i\u0027d be more specific and say \"CentOS Stream 8 GenericCloud images\" and the same for cs9",
+      "range": {
+        "startLine": 17,
+        "startChar": 21,
+        "endLine": 17,
+        "endChar": 27
+      },
+      "revId": "44555a42ba696f513798f5c80e1fdcdc56fd4f26",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c60008b0_a7ffd3a8",
+        "filename": "source/resources/image-resources.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2022-09-22T10:58:35Z",
+      "side": 1,
+      "message": "This is geo-localized IP. I\u0027d use download.fedoraproject.org instead.",
+      "range": {
+        "startLine": 33,
+        "startChar": 22,
+        "endLine": 33,
+        "endChar": 37
+      },
+      "revId": "44555a42ba696f513798f5c80e1fdcdc56fd4f26",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "651cd8ec_e6270600",
+        "filename": "source/resources/image-resources.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2022-09-22T10:58:35Z",
+      "side": 1,
+      "message": "Could we use openstack image create command instead of glance cli?",
+      "range": {
+        "startLine": 50,
+        "startChar": 6,
+        "endLine": 50,
+        "endChar": 26
+      },
+      "revId": "44555a42ba696f513798f5c80e1fdcdc56fd4f26",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
