@@ -9,7 +9,7 @@ authors: amuller, beni, dneary, garrett, jasonbrooks, jruzicka, jwinn, kashyap, 
 
 ## What is RDO?
 
-RDO is two things. It's a freely-available, community-supported distribution of OpenStack that runs on Red Hat Enterprise Linux (RHEL) and its derivatives, such as [CentOS Stream](CentOS).
+RDO is two things. It's a freely-available, community-supported distribution of OpenStack that runs on Red Hat Enterprise Linux (RHEL) and its derivatives, such as [CentOS Stream](https://www.centos.org/centos-stream/).
 
 In addition to providing a set of software packages, RDO is also a community of users of cloud computing platform on Red Hat-based operating systems to get help and compare notes on running OpenStack.
 
@@ -42,7 +42,7 @@ RDO targets Red Hat Enterprise Linux, CentOS Stream and their derivatives. Speci
 
 The OpenStack project develops code, and does not handle packaging for specific platforms. As a distribution of OpenStack, RDO packages the upstream OpenStack components to run well together on CentOS Stream, Red Hat Enterprise Linux and their derivatives, and provides you with installation tools to make it easier for you to deploy OpenStack.
 
-[Stable client branches](release-cadence) are maintained per release as part of RDO because client backward compatibility isn't guaranteed upstream.
+[Stable client branches](/rdo/release-cadence) are maintained per release as part of RDO because client backward compatibility isn't guaranteed upstream.
 
 ## How can I participate?
 
