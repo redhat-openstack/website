@@ -1,0 +1,199 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6688f2bf_643b82a9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2022-09-23T09:38:27Z",
+      "side": 1,
+      "message": "Much better now!. Some comments inline.",
+      "revId": "0814c4e77845ec7b011b4b77c0616720bc952d95",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "436603af_85b98f1d",
+        "filename": "source/what/promotion-pipeline.html.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2022-09-23T09:38:27Z",
+      "side": 1,
+      "message": "I think it\u0027d be good to specify there are two sets of promotion pipelines for each OpenStack release, TripleO promotion pipelines (used to validate RDO packages with TripleO and to promote the content used by TripleO upstream check and gate jobs) and puppet promotion pipelines (used to validate RDO packages with OpenStack Puppet Modules and to promote the RDO packages used in upstream openstack puppet modules check and gate jobs). These pipelines run in parallel and are composed of different jobs.",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 1
+      },
+      "revId": "0814c4e77845ec7b011b4b77c0616720bc952d95",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9ca69038_9b8a5132",
+        "filename": "source/what/promotion-pipeline.html.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2022-09-23T09:38:27Z",
+      "side": 1,
+      "message": "I\u0027d add \"in TripleO promotion pipelines\".",
+      "range": {
+        "startLine": 27,
+        "startChar": 6,
+        "endLine": 27,
+        "endChar": 7
+      },
+      "revId": "0814c4e77845ec7b011b4b77c0616720bc952d95",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "de8c6319_8ad44ac1",
+        "filename": "source/what/promotion-pipeline.html.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2022-09-23T09:38:27Z",
+      "side": 1,
+      "message": "Id rephrase slightly, something like: These scenarios, in combination with Packstack deployment scenarios are executed in puppet promotion pipelines to test new packages build in RDO Repos.",
+      "range": {
+        "startLine": 35,
+        "startChar": 13,
+        "endLine": 37,
+        "endChar": 34
+      },
+      "revId": "0814c4e77845ec7b011b4b77c0616720bc952d95",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "44fa3ab4_0098802d",
+        "filename": "source/what/promotion-pipeline.html.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2022-09-23T09:38:27Z",
+      "side": 1,
+      "message": "Actually, trunk.rdoproject.org is not CentOS CDN but \"RDO Trunk server\". we have two different links. The one you put is for puppet promotion pipeline. \n\nFor TripleO promotion pipeline would be https://trunk.rdoproject.org/centos9-master/current-tripleo/delorean.repo",
+      "range": {
+        "startLine": 42,
+        "startChar": 32,
+        "endLine": 42,
+        "endChar": 42
+      },
+      "revId": "0814c4e77845ec7b011b4b77c0616720bc952d95",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a01c4229_396789e6",
+        "filename": "source/what/promotion-pipeline.html.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2022-09-23T09:38:27Z",
+      "side": 1,
+      "message": "Actually, the infra we use now (after moving out from the CentOS CI) is unrelated to CentOS Cloud SIG, so i\u0027d remove this reference.\n\nRDO runs the promotion pipelines in the CI infrastruture managed by [Softare Factory](https://softwarefactory-project.io/).",
+      "range": {
+        "startLine": 65,
+        "startChar": 4,
+        "endLine": 65,
+        "endChar": 60
+      },
+      "revId": "0814c4e77845ec7b011b4b77c0616720bc952d95",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a53055e0_bb98d7b8",
+        "filename": "source/what/promotion-pipeline.html.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2022-09-23T09:38:27Z",
+      "side": 1,
+      "message": "Bugs unrelated to TripleO must be reported in...",
+      "range": {
+        "startLine": 84,
+        "startChar": 56,
+        "endLine": 84,
+        "endChar": 60
+      },
+      "revId": "0814c4e77845ec7b011b4b77c0616720bc952d95",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "aea02db2_2242c141",
+        "filename": "source/what/promotion-pipeline.html.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2022-09-23T09:38:27Z",
+      "side": 1,
+      "message": "of puppet promotion pipeline.\n\n(tripleo promotion jobs are not here)",
+      "range": {
+        "startLine": 97,
+        "startChar": 57,
+        "endLine": 97,
+        "endChar": 75
+      },
+      "revId": "0814c4e77845ec7b011b4b77c0616720bc952d95",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4994b9f8_561c6bbf",
+        "filename": "source/what/promotion-pipeline.html.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2022-09-23T09:38:27Z",
+      "side": 1,
+      "message": "For TripleO promotion pipelines, i\u0027d say the best dashboard is http://cockpit-ci.tripleo.org/",
+      "revId": "0814c4e77845ec7b011b4b77c0616720bc952d95",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
