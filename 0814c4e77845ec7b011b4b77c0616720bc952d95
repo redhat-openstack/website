@@ -41,6 +41,30 @@
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "ad0259b1_d0d817c2",
+        "filename": "source/what/promotion-pipeline.html.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2022-09-26T15:23:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "436603af_85b98f1d",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 1
+      },
+      "revId": "0814c4e77845ec7b011b4b77c0616720bc952d95",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "9ca69038_9b8a5132",
@@ -54,6 +78,30 @@
       "writtenOn": "2022-09-23T09:38:27Z",
       "side": 1,
       "message": "I\u0027d add \"in TripleO promotion pipelines\".",
+      "range": {
+        "startLine": 27,
+        "startChar": 6,
+        "endLine": 27,
+        "endChar": 7
+      },
+      "revId": "0814c4e77845ec7b011b4b77c0616720bc952d95",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2fce6a16_6d1995b3",
+        "filename": "source/what/promotion-pipeline.html.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2022-09-26T15:23:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9ca69038_9b8a5132",
       "range": {
         "startLine": 27,
         "startChar": 6,
@@ -87,6 +135,30 @@
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "aa5132dc_ba925b64",
+        "filename": "source/what/promotion-pipeline.html.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2022-09-26T15:23:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "de8c6319_8ad44ac1",
+      "range": {
+        "startLine": 35,
+        "startChar": 13,
+        "endLine": 37,
+        "endChar": 34
+      },
+      "revId": "0814c4e77845ec7b011b4b77c0616720bc952d95",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "44fa3ab4_0098802d",
@@ -100,6 +172,30 @@
       "writtenOn": "2022-09-23T09:38:27Z",
       "side": 1,
       "message": "Actually, trunk.rdoproject.org is not CentOS CDN but \"RDO Trunk server\". we have two different links. The one you put is for puppet promotion pipeline. \n\nFor TripleO promotion pipeline would be https://trunk.rdoproject.org/centos9-master/current-tripleo/delorean.repo",
+      "range": {
+        "startLine": 42,
+        "startChar": 32,
+        "endLine": 42,
+        "endChar": 42
+      },
+      "revId": "0814c4e77845ec7b011b4b77c0616720bc952d95",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9e4f4431_b504623e",
+        "filename": "source/what/promotion-pipeline.html.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2022-09-26T15:23:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "44fa3ab4_0098802d",
       "range": {
         "startLine": 42,
         "startChar": 32,
@@ -133,6 +229,30 @@
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "7001dbbd_ba2966f1",
+        "filename": "source/what/promotion-pipeline.html.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2022-09-26T15:23:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a01c4229_396789e6",
+      "range": {
+        "startLine": 65,
+        "startChar": 4,
+        "endLine": 65,
+        "endChar": 60
+      },
+      "revId": "0814c4e77845ec7b011b4b77c0616720bc952d95",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a53055e0_bb98d7b8",
@@ -146,6 +266,30 @@
       "writtenOn": "2022-09-23T09:38:27Z",
       "side": 1,
       "message": "Bugs unrelated to TripleO must be reported in...",
+      "range": {
+        "startLine": 84,
+        "startChar": 56,
+        "endLine": 84,
+        "endChar": 60
+      },
+      "revId": "0814c4e77845ec7b011b4b77c0616720bc952d95",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bdb6f25f_b73636cf",
+        "filename": "source/what/promotion-pipeline.html.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2022-09-26T15:23:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a53055e0_bb98d7b8",
       "range": {
         "startLine": 84,
         "startChar": 56,
@@ -179,6 +323,30 @@
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "c6d2c21e_371b37f0",
+        "filename": "source/what/promotion-pipeline.html.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2022-09-26T15:23:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "aea02db2_2242c141",
+      "range": {
+        "startLine": 97,
+        "startChar": 57,
+        "endLine": 97,
+        "endChar": 75
+      },
+      "revId": "0814c4e77845ec7b011b4b77c0616720bc952d95",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "4994b9f8_561c6bbf",
@@ -192,6 +360,24 @@
       "writtenOn": "2022-09-23T09:38:27Z",
       "side": 1,
       "message": "For TripleO promotion pipelines, i\u0027d say the best dashboard is http://cockpit-ci.tripleo.org/",
+      "revId": "0814c4e77845ec7b011b4b77c0616720bc952d95",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fab1655a_eee881b0",
+        "filename": "source/what/promotion-pipeline.html.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2022-09-26T15:23:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4994b9f8_561c6bbf",
       "revId": "0814c4e77845ec7b011b4b77c0616720bc952d95",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
