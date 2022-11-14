@@ -11,7 +11,7 @@ Packstack is an OpenStack deployment tool intended to **install Proof of Concept
 
 This document shows how to spin up a proof of concept cloud on one node using the Packstack installation utility. You will be able to [add more nodes](/install/adding-a-compute-node/) to your OpenStack cloud later, if you choose.
 
-These instructions apply to the following Release and Operating Systems -  **Victoria, Wallaby, Xena and Yoga** on CentOS Stream 8, and **Yoga** on CentOS Stream 9.
+These instructions apply to the following Release and Operating Systems -  **Victoria, Wallaby, Xena and Yoga** on CentOS Stream 8, and **Yoga and Zed** on CentOS Stream 9.
 
 ## WARNING ##
 
@@ -44,7 +44,7 @@ If your system meets all the prerequisites mentioned below, proceed with running
   ```
   $ sudo dnf update -y
   $ sudo dnf config-manager --enable crb
-  $ sudo dnf install -y centos-release-openstack-yoga
+  $ sudo dnf install -y centos-release-openstack-zed
   $ sudo setenforce 0
   $ sudo dnf update -y
   $ sudo dnf install -y openstack-packstack
@@ -115,7 +115,7 @@ On CentOS Stream 9, first you need to enable the `crb`.
 Then, the `extras-common` repository provides the RPM that enables the OpenStack repository. It is enabled by default on CentOS Stream 9, so you can simply install the RPM to set up the OpenStack repository:
 ```
 $ sudo dnf config-manager --enable crb
-$ sudo dnf install -y centos-release-openstack-yoga
+$ sudo dnf install -y centos-release-openstack-zed
 ```
 
 On RHEL 8, install the RDO repository RPM to setup the Openstack repository, then you must enable the `codeready-builder` option in `subscription-manager`:

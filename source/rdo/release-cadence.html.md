@@ -16,6 +16,7 @@ Due to the slower release cadence of RHEL and therefore CentOS, only the most re
 When there is a new major CentOS release, the following OpenStack version is packaged for both for the new and the previous version of CentOS. The purpose of this policy is to ease the trasition between them.
 
 |------------------|----------|-----------|
+| CentOS Stream 9  | Zed      | supported |
 | CentOS Stream 9  | Yoga     | supported |
 | CentOS Stream 8  | Yoga     | supported |
 | CentOS Stream 8  | Xena     | supported |
