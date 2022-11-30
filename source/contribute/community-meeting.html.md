@@ -12,6 +12,7 @@ The agenda for that meeting is [in this
 etherpad](https://etherpad.openstack.org/p/RDO-Meeting).
 
 The minutes for these meetings are below:
+* [Nov 30, 2022](https://lists.rdoproject.org/archives/list/dev@lists.rdoproject.org/thread/HCSHINRTUEBCIDM3ATHV6UVUW3WVLNRM/)
 * [Nov 23, 2022](https://lists.rdoproject.org/archives/list/dev@lists.rdoproject.org/thread/CAWE65D4WUAIUMDX4KCTHLKBWVKPJXE4/)
 * [Nov 16, 2022](https://lists.rdoproject.org/archives/list/dev@lists.rdoproject.org/thread/KZ2OUWEJ66FLNBQ3433QPRZOKAXC7PQS/)
 * [Oct 26, 2022](https://lists.rdoproject.org/archives/list/dev@lists.rdoproject.org/thread/6MCT6UYHYBUP5ABW5WGGTUF6TECF56VC/)
