@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0a6700be_e2775381",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2023-01-18T16:55:17Z",
+      "side": 1,
+      "message": "Squashed in https://review.rdoproject.org/r/c/rdo-website/+/46660",
+      "revId": "2611545c0e030bb4542f0543a8207e3960a17fb0",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
