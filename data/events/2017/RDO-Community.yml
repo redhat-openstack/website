@@ -1,0 +1,15 @@
+name: RDO Commuity events
+type: series
+tags: RDO
+
+talks:
+
+- title: Doc Sprint Day
+  location: rdo channel on Freenode
+  speaker: RDO
+  start: 2017-06-08 00:01 CET
+  end: 2017-06-09 23:59 CET
+  description: |
+      Come help improve the RDO documentation, RDO website, and upstream documentation. Join RDO community menbers in identifying obsolete or incorrect documentation, improving the website information architecture, and writing missing documents. Details at https://www.rdoproject.org/events/docdays/
+
+

@@ -1,0 +1,25 @@
+name: RDO Doc Days
+type: series
+tags: RDO
+
+talks:
+
+- title: RDO Doc Day
+  location: rdo channel on Freenode
+  speaker: RDO
+  start: 2016-01-20 00:01 UTC
+  end: 2016-01-21 23:58 UTC
+  description: |
+      Come help make RDO better by improving the documentation and the
+      website. Details at https://www.rdoproject.org/events/docdays
+
+
+- title: RDO Doc Day
+  location: rdo channel on Freenode
+  speaker: RDO
+  start: 2016-03-03 00:01 UTC
+  end: 2016-03-04 23:58 UTC
+  description: |
+      Come help make RDO better by improving the documentation and the
+      website. Details at https://www.rdoproject.org/events/docdays
+
