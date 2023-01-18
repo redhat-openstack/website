@@ -1,0 +1,30 @@
+name: RDO Test Days
+type: series
+tags: RDO
+
+talks:
+
+- title: Pike Milestone 2 Test Day
+  location: rdo channel on Freenode
+  speaker: RDO
+  start: 2017-06-15 00:01 UTC
+  end: 2017-06-16 23:59 UTC
+  description: |
+      Come help make RDO better by testing the Pike Milestone 2 packages. Details at https://www.rdoproject.org/testday/pike/milestone2
+
+- title: Pike Milestone 3 Test Day
+  location: rdo channel on Freenode
+  speaker: RDO
+  start: 2017-08-03 00:01 UTC
+  end: 2017-08-04 23:59 UTC
+  description: |
+      Come help make RDO better by testing the Pike Milestone 3 packages. Details at https://www.rdoproject.org/testday/pike/milestone3
+
+- title: Pike Final Test Day
+  location: rdo channel on Freenode
+  speaker: RDO
+  start: 2017-09-07 00:01 UTC
+  end: 2017-09-08 23:59 UTC
+  description: |
+      Come help make RDO better by testing the Pike Final Release packages. Details at https://www.rdoproject.org/testday/pike/final
+

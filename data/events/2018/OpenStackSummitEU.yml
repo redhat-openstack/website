@@ -1,0 +1,10 @@
+name: OpenStack Summit EU
+location: Berlin, Germany
+start: 2018-11-13
+end: 2018-11-15
+tags: centos rdo
+description: |
+ The open infrastructure landscape is changing, and so is the Summit. Now that users are integrating dozens of open source tools into a modern stack that reaches well beyond the scope of OpenStack, we’re re-organizing the event to focus on specific problem domains like container infrastructure, edge computing and CI/CD and we are focusing on the hard work of integrating all of these tools developed in disparate communities. This is the essential work of 2018 and beyond, to ensure that open infrastructure is truly a viable path for operators.
+
+ More information is available at:
+ <https://www.openstack.org/summit/berlin-2018/>
