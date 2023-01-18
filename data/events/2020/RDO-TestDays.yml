@@ -1,0 +1,13 @@
+name: RDO Test Days
+tags: RDO
+
+talks:
+
+- title: Victoria Release Candidate Test Days
+  location: rdo channel on Freenode
+  speaker: RDO
+  start: 2020-10-05 00:01 UTC
+  end: 2020-10-06 23:59 UTC
+  description: |
+      Come help make RDO better by testing the Victoria Release Candidate 1 packages. Details at https://www.rdoproject.org/testday/victoria/releasecandidate1
+

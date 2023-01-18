@@ -1,0 +1,1172 @@
+name: FOSDEM
+description: |
+  FOSDEM is a free event for software developers to meet, share ideas
+  and collaborate. Every year, thousands of developers of free and
+  open source software from all over the world gather at the event in
+  Brussels.
+
+  Additional details about the conference are available at
+  <https://fosdem.org/2018/>.
+location: Brussels, Belgium
+tags: oVirt fedora rdo
+start: 2018-02-03
+end: 2018-02-04
+talks:
+
+- title: Optimizing software defined storage for the age of flash
+  speaker: Krutika Dhananjay, Manoj Pillai, Raghavendra Gowdappa
+  start: 2018-02-03 18:00 CET
+  end: 2018-02-03 18:50 CET
+  room: Janson
+  track: Performance
+  description: |
+    High-performance flash storage like NVMe SSDs are becoming commonplace
+    in production environments. In this age of fast storage, inefficiencies
+    in storage software stacks that were previously acceptable with slow
+    spinning devices, are no longer tolerable. There are even faster
+    technologies, like NVDIMMs, on the horizon. These developments are
+    particularly challenging for distributed storage solutions like Gluster
+    and Ceph, where network latencies are a fact of life. This talk is on
+    performance analysis and troubleshooting tools and techniques for this
+    age.
+
+- title: 'Python 3: 10 years later (looking back at Python evolutions of the last
+    10 years)'
+  speaker: Victor Stinner
+  start: 2018-02-03 11:00 CET
+  end: 2018-02-03 11:50 CET
+  room: K.1.105 / La Fontaine
+  track: Python
+  description: |
+    Python 3.0 was released 10 years ago. It's time to look back: analyze
+    the migration from Python 2 to Python 3, see the progress we made on
+    the language, list bugs by cannot be fixed in Python 2 because of the
+    backward compatibility, and discuss if it's time or not to bury Python
+    2.
+
+    Python became the defacto language in the scientific world and the
+    favorite programming language as the first language to learn
+    programming.
+
+- title: 'Integrating cloud and container projects in the OPNFV community: cross-community
+    ci (in this talk we will explain about the OPNFV community, and how it interacts
+    with other communities, such as kubernetes or OpenStack, to offer a platform for
+    cross-project ci.)'
+  speaker: Fatih Degirmenci, Yolanda Robla Mota
+  start: 2018-02-03 13:30 CET
+  end: 2018-02-03 14:00 CET
+  room: H.1301 / Cornil
+  track: SDN and NFV
+  description: |
+    This talk will explain the tight relationship between the OpenStack and
+    OPNFV communities, using as a base the Cross Community CI project, and
+    the benefits that both communities get from it.
+
+    Initially the OPNFV CI was based on the consumption of stable
+    artifacts, including stable versions of OpenStack. Developers were not
+    able to work with master versions, causing lack of testing and delay on
+    delivering projects.
+
+    Cross Community CI project (XCI) enabled testing based on master
+    versions of the different upstream components (OpenStack ,
+    OpenDaylight...). This caused to significantly cut the time of
+    development and identify bugs earlier.
+
+    In this talk we will introduce that concept, and we will also explain
+    the tooling used to achieve it (bifrost, openstack-ansible,
+    ansible-opendaylight), showing how a deployment goes from end to end,
+    how to reuse this project for your own needs, and how to start
+    integrating your own project into XCI if that fits into the scope.
+
+- title: 'Virtio 1.1: what''s new in the next version of the virtio standard'
+  speaker: Jens Freimann
+  start: 2018-02-03 17:00 CET
+  end: 2018-02-03 17:30 CET
+  room: H.1301 / Cornil
+  track: SDN and NFV
+  description: |
+    Virtio is a common framework for IO virtualization in hypervisors. It
+    is part of DPDK accelerated Open vSwitch and allows for hardware
+    abstracted VNFs. The virtio OASIS standard is going into the next round
+    and the focus will be on performance improvements. We aim to make it
+    work better on the underlying hardware but also allow for hardware
+    implementations of virtio. This talk will give an update on the current
+    developments and the progress made towards version 1.1. We will look
+    into some of the new features, some benchmarking results and how these
+    help with improving performance.
+
+- title: Advanced go debugging with delve
+  speaker: Derek Parker
+  start: 2018-02-03 11:00 CET
+  end: 2018-02-03 11:30 CET
+  room: H.1308 / Rolin
+  track: Go
+  description: |
+    Learn how to utilize the Delve debugger to dig into and solve complex
+    bugs in your code.
+
+    Delve is a powerful yet simple open source debugger for the Go
+    programming language. In this talk, I will discuss what makes both Go
+    and Delve different from other languages / debuggers, and then dive
+    into real world usage. I will begin by introducing the tool, and
+    showing the basics of how it works. From there I will use specific
+    example problems to show how to use some of the most powerful features
+    of Delve to solve even the most complex bugs.
+
+    This talk will be beneficial to beginners and advanced users alike.
+
+- title: 'Networking deepdive: from net.dial to grpc'
+  speaker: Michael Hausenblas
+  start: 2018-02-03 12:00 CET
+  end: 2018-02-03 12:30 CET
+  room: H.1308 / Rolin
+  track: Go
+  description: |
+    In this talk we'll discuss networking in Go. We start off with a review
+    of the stdlib net package and its sub-packages and then walk through
+    common use cases, patterns and challenges. In the second part we focus
+    on best practices using the stdlib and community-provided frameworks
+    such as gorilla/websocket and gRPC.
+
+- title: Networking swiss army knife for go
+  speaker: Roman Mohr
+  start: 2018-02-03 13:30 CET
+  end: 2018-02-03 14:00 CET
+  room: H.1308 / Rolin
+  track: Go
+  description: |
+    Creating and managing network devices, Traffic Control, routing and
+    iptables, introspecting and manipulating network packets. That normally
+    involves a lot of low level C programming, which introduces a huge gap
+    between frontend (web and service oriented) and backend needs (systems
+    programming). Go is excellent in bridging this gap in general, and
+    thanks to the great work of the Go community, networking tasks are very
+    easy to solve too. This session will introduce a set of libraries which
+    form a comprehensive Swiss Army Knife to tackle almost any network
+    related task on Linux with Go.
+
+- title: 'Antipatterns in openoffice code: how can we ensure better code'
+  speaker: Peter Kovacs
+  start: 2018-02-03 12:20 CET
+  end: 2018-02-03 12:50 CET
+  room: AW1.120
+  track: Open Document Editors
+  description: |
+    Whenever I tried to look through Open Office Code I see the same Issues
+    in Code I see in my consulting work. I would like to go with the
+    Audience through some of the basic Antipatterns of coding. In a
+    presentation I will define those basic Antipatterns. I will give some
+    reasons I have seen in my professional work why they occur and they
+    seem to be true in Open Office, too. In the last phase we will transit
+    into a discussion about how avoid these issues, and how we can reflect
+    on these Issues.
+
+    My Idea is to have 15 Minutes Presentation and 15 Minuts discussion.
+    Language will be in english, as good as my english is. :)
+
+- title: 'Native gtk3 ui: progress from gtk3 themed vcl widgets to native gtk widgets'
+  speaker: Caolán McNamara
+  start: 2018-02-03 14:50 CET
+  end: 2018-02-03 15:10 CET
+  room: AW1.120
+  track: Open Document Editors
+  description: ''
+
+- title: Lo uri 101
+  speaker: Stephan Bergmann
+  start: 2018-02-03 15:10 CET
+  end: 2018-02-03 15:40 CET
+  room: AW1.120
+  track: Open Document Editors
+  description: |
+    This talk will be a short refresher on the various functionality
+    available in LibreOffice for (textual) URI processing. For historical
+    reasons, that functionality is more arcane and error-prone than it
+    needs to be. We will be looking at the typical pitfalls and fixes.
+
+- title: 'Dwarf5 and gnu extensions: new ways to go from binary to source'
+  speaker: Mark Wielaard
+  start: 2018-02-03 16:30 CET
+  end: 2018-02-03 17:10 CET
+  room: AW1.121
+  track: Debugging tools
+  description: |
+    After several years a new DWARF debugging standard, DWARF5, has been
+    released that incorporates various GNU extensions that allow to better
+    express how to map various binary constructs created by optimizing
+    compilers back to the original source code while reducing the size of
+    the debugging information. This results in more expressive debuginfo,
+    but also introduces more complexity that DWARF consumers need to deal
+    with.
+
+- title: Infinity
+  speaker: Gary Benson
+  start: 2018-02-03 18:00 CET
+  end: 2018-02-03 18:40 CET
+  room: AW1.121
+  track: Debugging tools
+  description: |
+    Infinity is a platform-independent system for executables and shared
+    libraries to expose functionality to debug, monitoring, and analysis
+    tooling. It grew from a need to be able to debug multithreaded
+    applications without requiring libthread_db. Other systems exist that
+    use the libthread_db paradigm, for example librtld\_db and OPMD;
+    Infinity was designed to replace this entire class of library-tool
+    interface with something more portable and robust.
+
+    Covers: \* What is Infinity? \* Motivation for creating it \* Status of
+    tooling and glibc/GDB integration \* Mini code walk through
+    (libthread\_db vs Infinity) \* Demonstrations! \* Potential future uses
+
+- title: Pulp 3 - simpler, better, more awesome
+  speaker: Dennis Kliban
+  start: 2018-02-03 10:30 CET
+  end: 2018-02-03 11:00 CET
+  room: K.3.201
+  track: Package Management
+  description: |
+    Pulp is a platform for managing repositories of software packages, but
+    it can store any kind of binary data (e.g. cat photos). The core
+    provides a REST API and manages files, but the real value for users is
+    delivered by the plugins which allows core to manage a content type
+    like a cat photo. The upcoming 3.0 release of Pulp includes a
+    relational database, a new REST API, and a semantically versioned
+    plugin API. This talk is going to briefly explain how Pulp is used,
+    highlight the technologies under the hood, demonstrate the REST API,
+    and show off the plugin API that will be included in Pulp 3.0.
+
+- title: 'Nouveau: status update'
+  speaker: Martin Peres, Pierre Moreau, Karol Herbst
+  start: 2018-02-03 13:20 CET
+  end: 2018-02-03 13:45 CET
+  room: K.4.401
+  track: Graphics
+  description: |
+    Brief update on the Nouveau project.
+
+    We want to talk about what we have done on over the past year(s) and
+    what we are planning to work on in the near future. Main topics will be
+    power management, Nvidia and community.
+
+- title: 'Generic graphics tablets in Linux: hardware peculiarities, software challenges,
+    and how to make them work'
+  speaker: Nikolai Kondrashov
+  start: 2018-02-03 14:50 CET
+  end: 2018-02-03 15:40 CET
+  room: K.4.401
+  track: Graphics
+  description: |
+    Presentation on the DIGImend project's efforts to improve Linux support
+    for generic graphics tablets.
+
+- title: Community DevRoom welcoming remarks
+  speaker: Laura Czajkowski, Leslie Hawthorn
+  start: 2018-02-03 10:30 CET
+  end: 2018-02-03 10:45 CET
+  room: K.4.601
+  track: Community devroom
+  description: In which Leslie and Laura welcome everyone to the Community DevRoom
+    2018
+
+- title: Media 101 for communities
+  speaker: Brian Proffitt
+  start: 2018-02-03 11:20 CET
+  end: 2018-02-03 11:45 CET
+  room: K.4.601
+  track: Community devroom
+  description: |
+    In a world of constant news cycles, getting the word out about your
+    project seems nearly impossible. You've got a web site, a Twitter _and_
+    a Diaspora account, and still it seems like no one is showing up at
+    your virtual doorstop. But there is one old-school toolset at your
+    disposal that can help you and your project be recognized for the
+    awesome you know it to be: the media.
+
+- title: Community karoke
+  speaker: Laura Czajkowski, Leslie Hawthorn
+  start: 2018-02-03 12:50 CET
+  end: 2018-02-03 13:25 CET
+  room: K.4.601
+  track: Community devroom
+  description: |
+    We'll do community karaoke using not much but a laptop and the mic in
+    the room. If you have a song you want to karoke, tell us where you can
+    find the music online and come prepared to sing.
+
+    Those who do not wish to sing or listen are welcome to use this time to
+    go have lunch.
+
+- title: Community DevRoom concluding remarks
+  speaker: Laura Czajkowski, Leslie Hawthorn
+  start: 2018-02-03 18:55 CET
+  end: 2018-02-03 19:00 CET
+  room: K.4.601
+  track: Community devroom
+  description: In which Leslie and Laura provide the concluding remarks for the day.
+
+- title: Convergence of your virtualization and container infrastructures with kubevirt
+  speaker: Fabian Deutsch
+  start: 2018-02-03 10:30 CET
+  end: 2018-02-03 11:15 CET
+  room: UB2.252A / Lameere
+  track: Virtualization and IaaS
+  description: |
+    In order to run containers and virtualization, admins need to take care
+    of two infrastructure stacks. KubeVirt is one way to converge both
+    stacks.
+
+- title: 'A slightly different nesting: KVM on hyper-v'
+  speaker: Vitaly Kuznetsov
+  start: 2018-02-03 11:15 CET
+  end: 2018-02-03 12:00 CET
+  room: UB2.252A / Lameere
+  track: Virtualization and IaaS
+  description: |
+    This may come as a surprise but it is already possible to run nested
+    KVM inside Hyper-V VMs (and this includes several instance types on
+    Azure). Such workloads, however, may not always perform very well. Some
+    limitations come from x86 architecture and conceptual differences
+    between KVM and Hyper-V, other issues could be dealt with within KVM.
+    In this talk Vitaly will go through different performance bottlenecks
+    of nested KVM-on-Hyper-V deployments. The presentation will mainly be
+    focused on low-level features: hardware support for nested
+    virtualization, clocksources and clockevents, virtual device drivers.
+    Benchmark data and general thoughts on the usefulness of such
+    deployments won't be missing too.
+
+- title: Will it blend? (comparison of oVirt, OpenStack and kubernetes schedulers)
+  speaker: Martin Sivák
+  start: 2018-02-03 12:00 CET
+  end: 2018-02-03 12:45 CET
+  room: UB2.252A / Lameere
+  track: Virtualization and IaaS
+  description: |
+    This talk should explain the internal mechanisms and differences
+    between three schedulers that are currently used to plan workload
+    placements in today’s datacenters and clusters.
+
+- title: Leveraging software defined network for virtualization
+  speaker: Marcin Mirecki
+  start: 2018-02-03 14:15 CET
+  end: 2018-02-03 15:00 CET
+  room: UB2.252A / Lameere
+  track: Virtualization and IaaS
+  description: |
+    Software Defined Networking seems to be a natural fit for virtual data
+    centers. Centralized management along with flexibility and speed of
+    provisioning are traits of both virtualization and SDN. The oVirt team
+    aims at making this a reality with OVN, a new network virtualization
+    extension to Open vSwitch. The integration is accomplished by the
+    "network provider for OVN", which uses OVN through an OpenStack
+    Neutron-like API, allowing the use of OVN through Neutron abstractions.
+    This concept is already being used in the oVirt project, and there's
+    work in progress to implement it in the ManageIQ project
+
+    The session will look into utilising Software Defined Network concepts
+    in a virtualization project through the oVirt perspective.
+
+    The presentation will consist of 4 parts: - What is SDN and OVN -
+    Overview of the network provider for OVN - Overview of how the provider
+    is used in oVirt - Live demo: OVN in oVirt
+
+- title: 'Keeping it real (time): real-time support in OpenStack'
+  speaker: Stephen Finucane
+  start: 2018-02-03 15:00 CET
+  end: 2018-02-03 15:45 CET
+  room: UB2.252A / Lameere
+  track: Virtualization and IaaS
+  description: |
+    Real-time in OpenStack is a thing now. Let's explore what this actually
+    looks like to a user, and (in brief) how it works under the hood.
+
+- title: Distributed file storage in multi-tenant clouds using Cephfs
+  speaker: John Spray, Christian Schwede
+  start: 2018-02-03 15:45 CET
+  end: 2018-02-03 16:30 CET
+  room: UB2.252A / Lameere
+  track: Virtualization and IaaS
+  description: |
+    OpenStack deployments are increasingly embracing distributed file
+    storage solutions for virtual servers to provide fault-tolerance,
+    mobility, and shared state between servers. The Ceph distributed file
+    system (CephFS) has taken aleading role in providing this as a
+    cache-coherent, horizontally scalable, and POSIX-compatible file store
+    for OpenStack operators, leveraging Ceph's dominance and flexibility in
+    OpenStack deployments where it already provides object and block
+    storage solutions.
+
+    The OpenStack Shared File Systems service, Manila, provides a modular
+    framework for securely exporting file shares to tenants in the cloud.
+    In this session we will describe how Manila has been extended to
+    support export of shares backed by CephFS via the NFS protocol to
+    tenant VMs. We’ll discuss reasons for using NFS instead of or in
+    addition to doing native CephFS exports and cover current and planned
+    approaches to such issues as multi-tenancy, performance, and scale out
+    of services.
+
+    This talk will be of immediate practical interest to cloud operators
+    who have or are planning use Ceph clusters for object and block storage
+    and want to use the same cluster for shared file services as well as to
+    those more generally interested in Manila, distributed file systems, or
+    Ceph evolution.
+
+- title: Migrating to Red Hat idm in a large Linux environment
+  speaker: Dustin Minnich
+  start: 2018-02-03 10:30 CET
+  end: 2018-02-03 11:10 CET
+  room: UD2.119
+  track: Identity and Access Management
+  description: |
+    This talk will discuss how Red Hat IT is moving from a centralized LDAP
+    and kerberos setup to a Red Hat IdM setup for all of our Linux users
+    and hosts.
+
+- title: 'FreeIPA installation using ansible: description and examples of FreeIPA
+    client and server installations using ansible-FreeIPA.'
+  speaker: Thomas Woerner
+  start: 2018-02-03 11:50 CET
+  end: 2018-02-03 12:20 CET
+  room: UD2.119
+  track: Identity and Access Management
+  description: |
+    The talk will describe freeIPA client and server installations using
+    anisble-freeipa with examples.
+
+    The client installation and configuration using ansible-freeipa
+    provides some simplifications and extensions of the normal installation
+    process like for example the possibility to install several clients, a
+    simple use of one time passwords, enhanced server discovery and also
+    the repair mode.
+
+    The server installation and configruation part is currently work in
+    progress, but should be complete for the talk.
+
+- title: 'Samba ad in Fedora: the long road to ad'
+  speaker: Andreas Schneider
+  start: 2018-02-03 14:55 CET
+  end: 2018-02-03 15:25 CET
+  room: UD2.119
+  track: Identity and Access Management
+  description: |
+    Samba AD is a free software implementation of Microsoft's Active
+    Directory solution. It took more than five years to port Samba AD to
+    MIT Kerberos and now it is a part of Fedora 27 release. However, the
+    work does not stop here. Active Directory is a complex set of
+    technologies and one of driving factors behind Fedora Server work is to
+    make them easier to deploy and manage. The talk will go into details
+    what is needed to be done to make Fedora a preferred distribution to
+    deploy Samba AD.
+
+- title: 'Smart cards in Linux and why you should care: do you want to know how smart
+    cards can help you improve security and work efficiently?'
+  speaker: Jakub Jelen
+  start: 2018-02-03 16:45 CET
+  end: 2018-02-03 17:15 CET
+  room: UD2.119
+  track: Identity and Access Management
+  description: |
+    Do you want to know how Smart Cards can help you improve security and
+    work efficiently? Smart cards are among us for decades, but they are
+    still not widely used on daily basis by most of us, even though they
+    provide significant advantages for both security and usability and all
+    the tools are open source in Linux. Smart cards are no longer only
+    credit-card sized cards, but also more practical USB dongles which are
+    frequently combined with other features such as OTP or U2F, which can
+    take this even further. I will go through architecture of smart cards
+    and show you how they can be used to simplify your work.
+
+    - Anatomy of Smart Card and software using it
+      - project OpenSC
+    - Practical examples
+      - Atomic operations with OpenSC tools
+      - Using smart cards with high-level tools such as OpenSSH, Firefox
+      - Debugging Smart Cards problems
+
+- title: 'SSSD: from an ldap client to the system security services daemon'
+  speaker: Jakub Hrozek
+  start: 2018-02-03 17:20 CET
+  end: 2018-02-03 17:50 CET
+  room: UD2.119
+  track: Identity and Access Management
+  description: |
+    SSSD is known in the OSS world as a client towards different LDAP-like
+    databases. However, recently, we have started taking SSSD beyond its
+    bread and butter LDAP client role to provide services that are usable
+    in a broader context, as an application gateway or to a local machine.
+    As a result, you might soon see SSSD enabled and running in your
+    favourite distribution by default or quietly running on the background
+    of another service.
+
+    In the talk I will demonstrate what enhancements we already did in
+    SSSD, such as how to use SSSD as a gateway between an application and a
+    user database or why should you let SSSD manage your Kerberos
+    credential caches .
+
+    I'll also illustrate things we are working on for the future such how
+    to add and access extra attributes of your local users or why it makes
+    sense to let SSSD handle smart card logins even for local users.
+
+    The talk will be useful to system administrators, mainly those who deal
+    with user account management, but also to developers who work on
+    services that integrate with user databases.
+
+- title: 'User session recording in cockpit: introducing user session recording support
+    in cockpit - a server management web ui'
+  speaker: Nikolai Kondrashov
+  start: 2018-02-03 17:55 CET
+  end: 2018-02-03 18:25 CET
+  room: UD2.119
+  track: Identity and Access Management
+  description: |
+    Have you ever wished you could see how exactly a user broke your
+    server? Have you wished to see how the user stumbled upon the problem
+    they just reported? Would you like to have such a power within your
+    easy reach, right in your browser, without the need for a pesky
+    command-line setup? Wish no more, because we're going to handle that
+    with User Session Recording support in Cockpit!
+
+- title: Declarative extensions for kubernetes in go
+  speaker: Roman Mohr
+  start: 2018-02-03 10:30 CET
+  end: 2018-02-03 11:00 CET
+  room: UD2.120 / Chavanne
+  track: Monitoring and Cloud
+  description: |
+    Declarative systems, like Kubernetes are nice. Instead of forming the
+    state of the system command-by-command, one just posts a set of
+    declarative requirements. The system will try to adapt. While it easy
+    to understand how to use such a system from the user perspective, it
+    requires a complete rethinking for us engineers on how to integrate
+    with such a system. Based on the experiences with extending Kubernetes
+    for KubeVirt with the Kubernetes-Go-SDK, this session gives a short and
+    concise overview on what is required to implement declarative flows in
+    general and particularly in Kubernetes. Real-world examples and
+    pitfalls included.
+
+- title: oVirt metrics and logs - in a unified solution
+  speaker: Shirly Radco
+  start: 2018-02-03 18:20 CET
+  end: 2018-02-03 18:25 CET
+  room: UD2.120 / Chavanne
+  track: Monitoring and Cloud
+  description: |
+    We think Metrics and logs are not that different. Do you agree?
+
+    This was our statement when searching for a unified monitoring solution
+    with real-time analytics,
+
+    for the oVirt data center virtualization project.
+
+    This talk gives an introduction on how to integrate oVirt metrics with
+    the EFK stack on top of OCP.
+
+    Attendees of this session will be able to get an in depth look into the
+    stack architecture and ways to utilize it in open source projects.
+
+- title: Welcome!
+  speaker: Mario Torre
+  start: 2018-02-03 10:25 CET
+  end: 2018-02-03 10:30 CET
+  room: UD2.208 / Decroly
+  track: Free Java
+  description: Welcome to the 2018 edition of the Free Java DevRoom!
+
+- title: The OpenJDK developer experience
+  speaker: Roman Kennke, Erik Helin
+  start: 2018-02-03 11:20 CET
+  end: 2018-02-03 11:45 CET
+  room: UD2.208 / Decroly
+  track: Free Java
+  description: |
+    Much has happened in the last year for developers contributing to
+    OpenJDK: - the repositories have been consolidated into a single
+    repository - the run-test make target has been introduced - the JTReg
+    (and jcov, asmtools and jtharness) build have been greatly improved -
+    there is now a binary build of OpenJDK that can be used as --boot-jdk
+    (on Linux x86-64)
+
+    The situation for HotSpot developers has also improved over the years:
+    - the HotSpot build system was converted to the "new" build system - a
+    proper unit test framework for C++ code (googletest) was added - debug
+    symbols are no longer zipped by default - the JDK and HotSpot JTReg
+    testlibraries were combined into one
+
+    This talk will show how all these changes make the OpenJDK developer
+    experience a lot smoother. The speakers will also share their personal
+    tips and tricks on how to work even faster on OpenJDK!
+
+    We also realize that the OpenJDK developer experience is far from
+    optimal, and would therefore like this talk to initiate a discussion on
+    what could be improved and how people can get involved.
+
+- title: Methodhandles everywhere!
+  speaker: Charles Nutter
+  start: 2018-02-03 13:20 CET
+  end: 2018-02-03 13:45 CET
+  room: UD2.208 / Decroly
+  track: Free Java
+  description: |
+    The MethodHandle API was added in Java 7, as a way to programmatically
+    build up smart function pointers. Far more powerful than simple
+    reflection, handles JIT and optimize like Java code, producing a fast,
+    direct, type-safe callable. And the API has continued to evolve: in
+    Java 9, you can now embed atomic semantics, array views, loops and
+    "finally" logic, and much more. Come learn how flexible and useful
+    MethodHandles can be!
+
+- title: Top ten metrics for evaLuating your garbage collector
+  speaker: Christine H Flood
+  start: 2018-02-03 13:50 CET
+  end: 2018-02-03 14:15 CET
+  room: UD2.208 / Decroly
+  track: Free Java
+  description: |
+    There's an old joke about a new bride who prepares her first big dinner
+    for her new husband. She's making her mother's brisket recipe which
+    starts by cutting the ends off of the roast. Her husband asks her why
+    she cuts the ends off. She says she does it because that's the way her
+    mother always did it. She asks her mother and her mother says "That's
+    the way your grandmother always did it". She asks her grandmother and
+    her grandmother says "That's the only way it would fit in my pan".
+    There's a lot of folklore and myth surrounding Java garbage collection
+    performance, most of which is obsolete, irrelevant to your application,
+    or was never really right in the first place.
+
+    So how do we evaluate a GC algorithm? We can measure various metrics:
+    end to end run time, maximum pause time, average pause time, percentage
+    of the cpu given to the Java threads, memory footprint, micro
+    benchmarks, ... This talk will focus on ten (give or take)
+    metrics/tools we can use to evaluate garbage collection performance.
+    This isn't a comparison of OpenJDK collectors, it's a discussion of
+    what characteristics are important in a good garbage collector and how
+    to measure them.
+
+- title: 'Class metAdata: a user guide'
+  speaker: Andrew Dinn
+  start: 2018-02-03 15:20 CET
+  end: 2018-02-03 15:45 CET
+  room: UD2.208 / Decroly
+  track: Free Java
+  description: |
+    The OpenJDK JVM eats class bytecode and spits out Java heap objects and
+    machine code as part of normal execution. However, the JVM manages more
+    data than just bytecode, Java objects JITted code. In order to manage
+    heap memory and to ensure correct execution, the JVM and JITted code
+    need to retain and, occasionally, interrogate details of the loaded
+    class base. Bytecode is not a very 'efficient' representation for this
+    purpose, nor does it include details of runtime-derived info like class
+    and method implementation dependencies, compile history and JITted code
+    status, or execution profiles.
+
+    So, the JVM throws away most bytecode after parsing, in its place
+    constructing and maintaining its own 'efficient' in-memory (C++) data
+    structures which model both the loaded class and method base and
+    runtime-derived state. This is what is known as Class Metadata. Class
+    Metadata is a significant component of the Native Memory storage
+    allocated and managed by the JVM, alongside JIT Compiler Metadata, GC
+    Metadata, Thread Metadata, etc. For small applications that don't
+    create a large number of Java objects Metadata can constitute a large
+    portion of a Java application's resident memory set.
+
+    This talk will begin by describing how to use the jcmd tool to measure
+    summary JVM Native Memory storage costs, including overall Class
+    Metadata costs. It will also show how to use jcmd to obtain a detailed
+    breakdown of the latter costs, splitting the overheads along two axes:
+    firstly, by class; and secondly, dividing per-class costs into separate
+    sub-costs associated with different component subsets of the class
+    model: classes per se, constant pools, methods and annotations.
+
+    I will go on to explain how Class Metadata is carved out of the memory
+    regions managed by the JVM's Native Memory allocation routines and
+    detail the memory layout of the various C++ types which define the
+    elements of the Class Metadata model, thereby clarifying some of the
+    more detailed statistics available in jcmd output. Real-life use cases
+    will be employed to explain how specific costs arise from code design
+    choices and to suggest how alternative choices might increase or
+    decrease Class Metadata costs.
+
+- title: 'Hairy security: the many threats to a Java web app'
+  speaker: Romain Pelisse, Damien Plard
+  start: 2018-02-03 16:50 CET
+  end: 2018-02-03 17:15 CET
+  room: UD2.208 / Decroly
+  track: Free Java
+  description: |
+    Hairy Security
+
+    It's getting dangerous out there, it's all over the news, IT security
+    is simply no longer something one can ignore.
+
+    In this session we'll model all the threats to a typical web
+    application powered by a Java back-end. We’ll have fun, state the
+    obvious, debate and debunk a few security myths, because, remember,
+    It’s not a question of 'if' but 'when' you’ll be hacked, at the end of
+    this session, you’ll decide for yourself if it's really time for this
+    Java web app to go live !
+
+    It's a fun, pragmatic, very instructive talk we've been doing in the
+    past (well received at Devoxx France for instance)
+
+- title: OpenJDK governing board Q&A
+  speaker: Mark Reinhold, Mario Torre, Andrew Haley, Georges Saab, Doug Lea, John
+    Duimovich
+  start: 2018-02-03 18:20 CET
+  end: 2018-02-03 19:00 CET
+  room: UD2.208 / Decroly
+  track: Free Java
+  description: An open Q&A session with members of the OpenJDK Governing Board.
+
+- title: 'Data integrity protection with cryptsetup tools: what is the Linux dm-integrity
+    module and why we extended dm-crypt to use authenticated encryption'
+  speaker: Milan Broz
+  start: 2018-02-04 12:00 CET
+  end: 2018-02-04 12:50 CET
+  room: Janson
+  track: Security and Encryption
+  description: |
+    The talk describes the architecture of data integrity protection with
+    cryptsetup on Linux systems and the following steps that need to be
+    achieved to have encrypted block-level authenticated storage.
+
+- title: 'Cyborg teams: training machines to be open source contributors'
+  speaker: Stef Walter
+  start: 2018-02-04 10:00 CET
+  end: 2018-02-04 10:50 CET
+  room: K.1.105 / La Fontaine
+  track: Miscellaneous
+  description: |
+    A purely human team does not scale past a certain complexity point. In
+    the Cockpit project we’ve done something amazing: We’ve built a team
+    that’s part human and part machine working on an Open Source project.
+
+- title: Are distributions still relevant?
+  speaker: Sanja Bonic
+  start: 2018-02-04 12:40 CET
+  end: 2018-02-04 12:55 CET
+  room: H.2215 / Ferrer
+  track: Lightning Talks
+  description: |
+    With flatpaks, snaps, and more - do we even still need distributions?
+    What makes a distribution and how can package maintainers reconcile the
+    fact that they have learned the hard ways of packaging for their
+    distribution with the ease of use of distribution-agnostic packages?
+
+    This talk covers distribution-agnostic "apps", whether they are a good
+    idea, why there is often such a backlash against them, and who benefits
+    the most from them.
+
+- title: Wrap it up! packaging from pots to software
+  speaker: Gordon Haff
+  start: 2018-02-04 13:20 CET
+  end: 2018-02-04 13:35 CET
+  room: H.2215 / Ferrer
+  track: Lightning Talks
+  description: |
+    Big changes are well underway in how software gets packaged and
+    delivered. But even relatively modern takes on packaging goods and
+    services for sale and consumption go back hundreds of years. In this
+    talk, I'll take you on a whirlwind tour of packaging. What forms has
+    packaging taken? What problems were being solved? What kinds of
+    trade-offs need to be made? What lessons can we learn? How has
+    packaging evolved from the utilitarian to the experiential?
+
+    And, critically, the trade-offs between prescriptive proprietary
+    bundles and the sort of open-ended unrestricted choice that open source
+    software can enable.
+
+- title: 'Homer 7: introducing the latest homer 7'
+  speaker: Lorenzo Mangani
+  start: 2018-02-04 15:20 CET
+  end: 2018-02-04 15:35 CET
+  room: H.1309 / Van Rijn
+  track: Real Time Communications
+  description: |
+    HOMER 7 is the latest generation of our FOSS RTC and VoiP Capture
+    Framework, focused on integration, modularity and multi protocol
+    support.
+
+- title: 'Introduction to swift object storage: understanding the architecture and
+    use cases'
+  speaker: Thiago da Silva
+  start: 2018-02-04 09:00 CET
+  end: 2018-02-04 09:40 CET
+  room: H.2213
+  track: Software Defined Storage
+  description: |
+    Object Storage is a "relatively" new storage architecture being widely
+    used in cloud computing. This talk will introduce object storage
+    concepts and use cases and how they are different from block and file
+    storage. As an example, we will provide an overview of Openstack Swift,
+    its main features as well as talk about what's in the works for future
+    releases. Swift is a highly available, distributed, eventually
+    consistent object store. It is used at organizations like Wikipedia,
+    OVH, Ebay and many more across the globe to store lots of data
+    efficiently at a massive scale. It provides a RESTful API for data
+    access, making it ideal for use with web applications. This talk will
+    also provide a demo usage of Swift.
+
+- title: 'Gluster-4.0 and gd2: learn what''s in Gluster''s future'
+  speaker: Kaushal M
+  start: 2018-02-04 09:45 CET
+  end: 2018-02-04 10:25 CET
+  room: H.2213
+  track: Software Defined Storage
+  description: |
+    The new Gluster-4.0 release with GlusterD-2.0 makes Gluster easier to
+    scale, manage, integrate and develop for. Learn how this benefits users
+    and developers.
+
+- title: 'Developing applications with swift as storage system: learn about the API
+    features to power up your application'
+  speaker: Christian Schwede
+  start: 2018-02-04 14:00 CET
+  end: 2018-02-04 14:40 CET
+  room: H.2213
+  track: Software Defined Storage
+  description: |
+    Swift comes with a wide variety of API features to build extremely
+    scaleable and durable applications. It uses an RESTful API, making it
+    easy to use and embed in your own applications. One of the great
+    characteristics of (web) applications using Swift as a backend is the
+    separation between application logic and data path. This helps a lot to
+    write lightweight apps in a scaleable way.
+
+    During this talk we'll give you an overview about the included
+    features, how to use them and examples how implementations might look
+    like. An example web application walktrough & demo will showcase why
+    all of these features help you to build your own application.
+
+- title: Reasons to mitigate from nfsv3 to nfsv4/4.1
+  speaker: Manisha Saini
+  start: 2018-02-04 16:45 CET
+  end: 2018-02-04 17:00 CET
+  room: H.2213
+  track: Software Defined Storage
+  description: |
+    This talk will cover the differences between NFSv3 and NFSv4.What’s the
+    Problem with NFSv3 and How NFSv4 is better suited to a wide range of
+    datacenter and high performance compute than its predecessor NFSv3.This
+    talk will also covers the advantages of extended capabilities of NFSV4
+    i.e NFSv4.1 and NFSv4.2 and its support with Gluster NFS-Ganesha
+
+- title: Building rock climbing maps with openstreetmap
+  speaker: Viet Nguyen
+  start: 2018-02-04 13:30 CET
+  end: 2018-02-04 14:00 CET
+  room: AW1.126
+  track: Geospatial
+  description: |
+    Traditionally natural rock climbing walls and routes have been
+    developed on a volunteer-basis and openly shared among the climbing
+    community. However, Open-license data set for climbing routes in
+    electronic format is not widely available. OpenBeta Initiative project
+    is building an open source app to make it easier for rock climbers to
+    contribute climbing routes and GPS-coordinates to OpenStreetMap.
+
+- title: Distributing OS images with casync
+  speaker: Lennart Poettering
+  start: 2018-02-04 14:30 CET
+  end: 2018-02-04 15:25 CET
+  room: K.3.201
+  track: Distributions
+  description: |
+    casync is a project that combines the idea of the rsync algorithm with
+    git's idea of a content-addressable file systems into one tool for
+    efficient delivery of OS images over the Internet. It has a focus on
+    simplicity, accuracy and security.
+
+- title: Fedora modularity ii - the rise, the fall, and the happy future
+  speaker: Langdon White, Adam Samalik
+  start: 2018-02-04 15:30 CET
+  end: 2018-02-04 16:25 CET
+  room: K.3.201
+  track: Distributions
+  description: |
+    Fedora Modularity decouples lifecycle of software from the core
+    distribution, and allows packagers to build RPM packages for multiple
+    releases from a single source branch. Come and learn about easier
+    packager workflows, making multiple versions of packages available, but
+    also about what we have learned while developing Modularity, what we
+    have tried and failed, and our current direction.
+
+- title: Cultural interpretations of design and openness
+  speaker: Carol Chen
+  start: 2018-02-04 13:00 CET
+  end: 2018-02-04 13:20 CET
+  room: K.4.201
+  track: Open Source Design
+  description: |
+    I'm not a designer, but I've lived and worked in 3 different continents
+    with both proprietary and open source software, and find my
+    appreciation and idea of what "good design" is has changed with my
+    experience and exposure. As I moved from software development to
+    community outreach and marketing, I learn more about how design affects
+    every aspect of the product and promotion. To top it off, I've
+    encountered many different understanding of what openness is,
+    especially when related to design. In this presentation I'd like to
+    share some observations and lessons learned, and hope it can help
+    designers, especially open source designers, navigate and negotiate the
+    diversity in cultures and expectations.
+
+- title: 'Cancelled sitl bringup with the iio framework: bootstrapping a x86 based
+    drone platform'
+  speaker: Bandan Das
+  start: 2018-02-04 12:00 CET
+  end: 2018-02-04 12:30 CET
+  room: K.4.401
+  track: Hardware Enablement
+  description: |
+    This talk aims at an introduction to using the Industrial IO(IIO)
+    framework to initialize sensors and acquire data to feed to a Software
+    in the Loop(SITL) interface of drone software such as iNav/Cleanflight.
+    Most flight controller boards are based on low power ARM
+    microcontrollers and the flight controller software is not usually
+    based on Linux. However, with the availability of increasingly powerful
+    boards with onboard sensors and multicore processors, using a Linux
+    based flight controller software can be used to our advantage.
+    Experimenting with onboard devices and scheduling algorithms can lead
+    to interesting applications with minimal porting overhead to new
+    architectures.
+
+- title: 'Improving Linux laptop battery life: reducing Linux power consumption'
+  speaker: Hans de Goede
+  start: 2018-02-04 14:00 CET
+  end: 2018-02-04 14:30 CET
+  room: K.4.401
+  track: Hardware Enablement
+  description: |
+    Modern laptops can use a lot less energy then laptops from a decade
+    ago. But in order to actually get this low energy usage the operating
+    system needs to make efficient use of the hardware. Linux supports a
+    lot of hardware power-saving features, but many of them are disabled by
+    default because they cause problems on certain devices or in certain,
+    often corner-case, circumstances. This talk will describe and look into
+    recent efforts to enable more power-saving features by default in such
+    a way that this will not cause regressions. The end goal of these
+    efforts is to shave of at least 2 watt of the typical idle
+    power-consumption of 6-9 watt for recent (Hasswell or newer) laptops.
+    The goal is to achieve this saving on an OOTB Fedora Workstation
+    install without the user needing to do any manual tweaks.
+
+- title: Automating secure boot testing
+  speaker: Erico Nunes
+  start: 2018-02-04 15:40 CET
+  end: 2018-02-04 16:00 CET
+  room: K.4.401
+  track: Hardware Enablement
+  description: |
+    Short talk about the status and challenges of Secure Boot testing
+    automation at Red Hat, done as part of the kernel UEFI testing. The
+    talk aims to cover the tools and platforms used for testing, as well as
+    the coverage that it currently provides.
+
+- title: 'Next generation config management: reactive systems'
+  speaker: James Shubin
+  start: 2018-02-04 09:00 CET
+  end: 2018-02-04 09:50 CET
+  room: UA2.114 / Baudoux
+  track: Config Management
+  description: |
+    The main design features of the tool include: \* Parallel execution \*
+    Event driven mechanism \* Distributed architecture And a: \*
+    Declarative, Functional, Reactive programming language.
+
+    The tool has two main parts: the engine, and the language. This
+    presentation will demo both and include many interactive examples
+    showing you how to build reactive, autonomous, real-time systems.
+    Finally we'll talk about some of the future designs we're planning and
+    make it easy for new users to get involved and help shape the project.
+
+- title: 'Cockpit: a Linux sysadmin session in your browser'
+  speaker: Stef Walter
+  start: 2018-02-04 11:30 CET
+  end: 2018-02-04 11:55 CET
+  room: UA2.114 / Baudoux
+  track: Config Management
+  description: |
+    Cockpit is an open source project that has built the new system admin
+    UI for Linux. It turns Linux server into something discoverable and
+    usable. Its goal is to remove the steep learning curve for Linux
+    deployments. But more than that, it's a real Linux session in a web
+    browser.
+
+- title: 'Highly available Foreman: a presentation about highly available Foreman
+    including common pitfalls and decisions you''ll have to make.'
+  speaker: Sean O'Keeffe
+  start: 2018-02-04 14:00 CET
+  end: 2018-02-04 14:50 CET
+  room: UA2.114 / Baudoux
+  track: Config Management
+  description: |
+    This talk will demo a 2 node Foreman cluster with a separate 2 node
+    Smart Proxy Cluster. I will start by presenting some of the
+    architecture choices. I will then demo some of the tips and tricks you
+    can use to achieve HA. I will finally share some of the future planned
+    designs for HA and how this process could be simplified in the future.
+
+- title: 'Understanding 26 u.s.c. § 501, and organizational governance: ... and why
+    understanding all this matters outside the u.s.'
+  speaker: James Shubin
+  start: 2018-02-04 10:00 CET
+  end: 2018-02-04 10:25 CET
+  room: UA2.220 / Guillissen
+  track: Legal and Policy Issues
+  description: |
+    We often hear about the charitable organizations registered in the
+    United States Federal tax system, but talking about the implications is
+    sometimes taboo. I'll try and talk about these issues openly, and
+    discuss some of the consequences (both +ive & -ive) for public
+    software. I'll provide a list of a few well-known organizations, and
+    explain why it both matters and doesn't. Lastly I'll present some
+    reporting that I did while researching this presentation.
+
+- title: 'A lion, a head, and a dash of yaml: extending sphinx to automate your documentation'
+  speaker: Stephen Finucane
+  start: 2018-02-04 11:00 CET
+  end: 2018-02-04 11:30 CET
+  room: UD2.119
+  track: Tool the Docs
+  description: |
+    The Sphinx documentation tool provides tremendous extensibility and
+    theming options; options which are massively underutilized. We
+    demonstrate how you can go about writing your own extensions and themes
+    for Sphinx and ultimately how you treat your docs like code.
+
+- title: 'Mallard, pintail, and other duck topics: topic-oriented help at the GNOME
+    project'
+  speaker: Shaun McCance
+  start: 2018-02-04 11:35 CET
+  end: 2018-02-04 12:00 CET
+  room: UD2.119
+  track: Tool the Docs
+  description: |
+    Mallard completely reinvented topic-oriented help for GNOME. Learn
+    about Mallard's unique topic organization system. Discover Ducktype, a
+    lightweight but semantic format with all the power of Mallard. And
+    witness Pintail, the all-in-one one documentation site builder built
+    from the ecosystem of Mallard tools.
+
+- title: You want a clean desktop OS? containerize it
+  speaker: Sanja Bonic
+  start: 2018-02-04 10:00 CET
+  end: 2018-02-04 10:25 CET
+  room: UD2.120 / Chavanne
+  track: Containers
+  description: |
+    Containers are all the rage, alongside cloud and DevOps. Sometimes they
+    also induce rage. In this talk, we will take a look at using Fedora
+    Atomic on your desktop, when it makes sense, and what the potential
+    benefits vs drawbacks of having a container-based OS on your desktop
+    are for you as a developer.
+
+- title: 'Optimized container live-migration: incremental live-migration of lxd system
+    containers with criu'
+  speaker: Christian Brauner, Adrian Reber
+  start: 2018-02-04 15:30 CET
+  end: 2018-02-04 15:50 CET
+  room: UD2.120 / Chavanne
+  track: Containers
+  description: |
+    LXD has supported container migration between hosts for a long time.
+    Recently we have not just implemented optimized transfers of container
+    storage for non-live migration and live migration but also optimized
+    transfers of the container's memory state for the live migration case.
+    This talk will give an overview how live and non-live migration works
+    and what was done to tweak performance.
+
+- title: 'Black blocks: kubernetes, meet OpenStack cinder'
+  speaker: Adam Litke
+  start: 2018-02-04 09:00 CET
+  end: 2018-02-04 09:45 CET
+  room: UD2.218A
+  track: Virtualization and IaaS
+  description: |
+    As kubernetes clusters take on more workloads, the need for persistent
+    storage has only increased. Users want to connect more storage devices
+    and use them efficiently. Cinder has been solving this use case in
+    Openstack for a long time and can be integrated with any kubernetes
+    cluster regardless of its cloud provider. By deploying a standalone
+    cinder service and a new external provisioner to a cluster, pods can
+    access almost any volume that cinder is able to provision. Complex
+    operations such as cloning, snapshots, and migration become services of
+    the cluster. This presentation will describe and demonstrate a cinder
+    external provisioner, enumerate its advantages, discuss challenges
+    especially around deployment, and propose collaboration opportunities
+    between Openstack and kubernetes.
+
+- title: Live block device operations in QEMU
+  speaker: Kashyap Chamarthy
+  start: 2018-02-04 10:30 CET
+  end: 2018-02-04 11:15 CET
+  room: UD2.218A
+  track: Virtualization and IaaS
+  description: |
+    QEMU is an open source machine emulator and virtualizer when used in
+    combination with hypervisors such as Xen or KVM, the Linux Kernel-based
+    Virtual Machine.
+
+    This talk will focus on QEMU's Block Layer, and in particular it will
+    examine the four main types of (potentially long-running) live block
+    operations: 'stream', 'commit', 'mirror', and 'backup' in detail. After
+    setting some context, we will see what they are, where they're used,
+    and how they can be invoked via the QMP (QEMU Machine Protocol)
+    interface or the libvirt API.
+
+- title: Kubernetes load balancing for virtual machines (pods)
+  speaker: Yanir Quinn
+  start: 2018-02-04 11:15 CET
+  end: 2018-02-04 12:00 CET
+  room: UD2.218A
+  track: Virtualization and IaaS
+  description: |
+    Due to the fact that a Kubernetes cluster is very dynamic and its state
+    changes over time, its initial scheduling decision might turn out to be
+    a sub-optimal one with respect to the cluster's ever-changing state.
+    This brings us to the need of a load balancing/rescheduling mechanism
+    that will work on top of Kubernetes.
+
+- title: Device assignment for VMs in kubernetes
+  speaker: Martin Polednik
+  start: 2018-02-04 12:00 CET
+  end: 2018-02-04 12:45 CET
+  room: UD2.218A
+  track: Virtualization and IaaS
+  description: |
+    Assigning a host device to a VM is commonly supported task by
+    virtualization management software. Because of performance requirements
+    of modern workloads, the same could be said for container orchestration
+    tools. But it is not the same assignment - as VM and containers have
+    varying degree of isolation, it is done at different system layers. How
+    could we bring device assignment to infrastructure that handles both
+    VMs and containers, such as KubeVirt?
+
+    The talk aims to \* introduce KubeVirt, a Kubernetes add-on to manage
+    virtual machines, \* give overview of device assignment in Kubernetes
+    and in VM management software oVirt, \* present an idea of combining
+    these two.
+
+- title: 'Automate oVirt disaster recovery solution with ansible: see how ansible
+    makes oVirt recovery a piece of cake'
+  speaker: Maor Lipchuk
+  start: 2018-02-04 12:45 CET
+  end: 2018-02-04 13:30 CET
+  room: UD2.218A
+  track: Virtualization and IaaS
+  description: |
+    Even the best system administrator cannot always avoid any and every
+    disaster that may plague his data center, but he should have a
+    contingency plan to recover from one - and an administrator that
+    manages his virtual data centers with oVirt is of course no different.
+    This session will showcase how Ansible can be used to leverage the new
+    APIs introduced in oVirt 4.2 to create a fully-fledged DR strategy.
+
+- title: Finding your way through the QEMU parameter jungle
+  speaker: Thomas Huth
+  start: 2018-02-04 14:15 CET
+  end: 2018-02-04 15:00 CET
+  room: UD2.218A
+  track: Virtualization and IaaS
+  description: |
+    This talk provides a survey of the different ways that can be used to
+    configure devices, backends and other interfaces of QEMU via its
+    command line options.

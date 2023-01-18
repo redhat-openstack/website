@@ -1,0 +1,10 @@
+name: OpenStack PTG
+location: Dublin, Ireland
+start: 2018-02-26
+end: 2018-03-02
+tags: rdo
+description: |
+ The Project Teams Gathering (PTG) is a new event organized by the OpenStack Foundation. Every six months (Q1 and Q3), at the beginning of the development phase of a release cycle, project teams will meet in person to discuss priorities for the upcoming cycle, iterate quickly on solutions for complex issues, and make fast progress on critical items.
+
+ More information is available at:
+ <https://www.openstack.org/ptg/>
