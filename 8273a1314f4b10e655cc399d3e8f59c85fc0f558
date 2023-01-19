@@ -22,6 +22,53 @@
       },
       "revId": "8273a1314f4b10e655cc399d3e8f59c85fc0f558",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b88efca3_2d11761d",
+        "filename": ".gitmodules",
+        "patchSetId": 2
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2023-01-19T08:25:26Z",
+      "side": 0,
+      "message": "the submodule was configured to pull rh-events repo contents in \"data/events\" path. As we don\u0027t want to rely on it anymore, we can get rid of it (as a result the whole file is removed). This is the result of \"git rm data/events\" command, git removed this part automatically and \"data/events\" file [1] as well.",
+      "parentUuid": "b4356d2b_7fb9cc73",
+      "range": {
+        "startLine": 3,
+        "startChar": 7,
+        "endLine": 3,
+        "endChar": 44
+      },
+      "revId": "8273a1314f4b10e655cc399d3e8f59c85fc0f558",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "71bbfbc1_e8651a13",
+        "filename": "data/events",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2023-01-19T08:25:26Z",
+      "side": 0,
+      "message": "[1]",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 1,
+        "endChar": 1
+      },
+      "revId": "8273a1314f4b10e655cc399d3e8f59c85fc0f558",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
