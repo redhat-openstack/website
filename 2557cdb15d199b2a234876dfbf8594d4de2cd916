@@ -16,6 +16,23 @@
       "message": "See comment, really only -1 vs 0 for visibility ",
       "revId": "2557cdb15d199b2a234876dfbf8594d4de2cd916",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1ad019ea_33a82000",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2023-01-20T10:06:04Z",
+      "side": 1,
+      "message": "\nI\u0027m not sure how this will work in the production server. There we have a populated data/events directory with the submodule and when it tries to apply this patch it will fail with something like (i\u0027ve tested locally):\n\nerror: The following untracked working tree files would be overwritten by checkout:\n\tdata/events/2015/RDO-TestDays.yml\n\tdata/events/2016/RDO-DocDays.yml\n        ....\n\nSo we have two options:\n\n1. Coordinate the deployment of this change with the admin of doc server (probably stop cron job, merge this change, remove the old data/events and git pull)\n2. Move events to a diferent directori data/events_new.\n\nTBH, i\u0027m not sure what other changes may be neede to implement this and make whatever is processing the events to look in a diferent folder so it may be better to go with option 1.\n\nAlso, note there are more files that need to be modified:\n\nhttps://github.com/redhat-openstack/website/blob/master/run-server.sh#L3-L6\nhttps://github.com/redhat-openstack/website/blob/master/source/blog/config.rb#L205-L208\nhttps://github.com/redhat-openstack/website/blob/master/source/blog/config.rb#L223-L226\nhttps://github.com/redhat-openstack/website/blob/master/docker.sh#L5-L7\nhttps://github.com/redhat-openstack/website/blob/master/config.rb#L200-L203\nhttps://github.com/redhat-openstack/website/blob/master/config.rb#L218-L221\n\n\n",
+      "revId": "2557cdb15d199b2a234876dfbf8594d4de2cd916",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
