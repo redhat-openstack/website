@@ -9,7 +9,7 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
     addressable (2.3.8)
-    asciidoctor (1.5.6.2)
+    asciidoctor (1.5.8)
     autoprefixer-rails (8.2.0)
       execjs
     bootstrap-sass (3.3.7)
@@ -218,7 +218,7 @@ DEPENDENCIES
   open-uri-cached
   rails-assets-bootstrap-sortable
   rails-assets-fullcalendar (~> 2.9.1)
-  rails-assets-jquery (~> 1)!
+  rails-assets-jquery (~> 1)
   rails-assets-momentjs
   rb-inotify (~> 0.9.10)
   ruby18_source_location
