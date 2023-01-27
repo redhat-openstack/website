@@ -1,0 +1,36 @@
+name: CentOS Connect
+description: |
+  CentOS Connect is a free mini-conference focusing on CentOS Stream, 
+  the CentOS SIGs, and the entire Enterprise Linux ecosystem. CentOS 
+  Connect at FOSDEM happens February 3, 2023, the day before FOSDEM.
+
+  Additional details about the conference are available at
+  <https://connect.centos.org/#schedule>.
+location: Brussels, Belgium
+tags: rdo centos
+start: 2023-02-03
+end: 2023-02-03
+
+talks:
+
+- title: From code to cloud - the journey of Openstack package
+  location: Brussels, Belgium
+  speaker: Karolina Kula
+  start: 2023-02-03 12:00 UTC
+  end: 2023-02-03 12:45 UTC
+  description: |
+    OpenStack is a huge cloud computing project, which does not provide 
+    packaging for platforms – RDO does it for rpm-based Linux distros. 
+    Delivering packages for such project with new release every half a 
+    year is a challenging task. In this talk I’d like to bring closer to 
+    audience our continous-delivery approach to package delivery – starting 
+    from creating and adding new packages, through updates and managing all 
+    packages already delivered, share our practice in automation and tips 
+    how to not get drown in dependencies of dependencies. The journey will 
+    also have quick stop in building tools we are using in RDO and 
+    continuous integration to ensure stability and compatibility, to finally 
+    reach the point of having new OpenStack release. This talk is intended 
+    not only for those, whose daily duties are connected with cloud or 
+    continous-delivery technologies, but also for anyone interested in topic 
+    of delivering packages at great scale in open source cloud project, or 
+    would like to contribute to RDO.
