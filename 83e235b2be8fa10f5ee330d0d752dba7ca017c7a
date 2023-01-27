@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fc1f38c1_45dcc019",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2023-01-27T11:04:38Z",
+      "side": 1,
+      "message": "We need to wait of previous patch to be merged and built",
+      "revId": "83e235b2be8fa10f5ee330d0d752dba7ca017c7a",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
