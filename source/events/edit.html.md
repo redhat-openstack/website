@@ -4,17 +4,15 @@ title: Edit RDO events
 
 # Editing the RDO events calendar
 
-The RDO events calendar is maintained as part of the
-[community.redhat.com](https://community.redhat.com) events site. To edit or add
-an RDO-related meetup, [edit this file](https://github.com/OSAS/rh-events/edit/master/2020/RDO-Meetups.yml) and send a pull request. If your event is some other
-community event, such as a mini-conference, [put it in this file
-instead](https://github.com/OSAS/rh-events/edit/master/2020/RDO-Community.yml).
+The RDO events calendar is maintained as part of the RDO website. To edit or add
+an RDO-related meetup, edit this year's RDO-Meetups.yml file. If your event is
+some other community event, such as a mini-conference, add it to this year's
+RDO-Community.yml file.
 
 A few words of caution:
 
 * The yml calendar format is very finicky. If you are planning to edit a lot of
-  events, consider cloning [the entire
-  repository](https://github.com/OSAS/rh-events) and running the
+  events, consider cloning the RDO website and running the
   `validate.rb` script in the top level directory before you send pull
   requests, to ensure that there are no syntax errors.
 
