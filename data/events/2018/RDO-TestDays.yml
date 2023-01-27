@@ -1,0 +1,30 @@
+name: RDO Test Days
+type: series
+tags: RDO
+
+talks:
+
+- title: Rocky Milestone 1 Test Days
+  location: rdo channel on Freenode
+  speaker: RDO
+  start: 2018-05-03 00:01 UTC
+  end: 2018-05-04 23:59 UTC
+  description: |
+      Come help make RDO better by testing the Rocky Milestone 1 packages. Details at https://www.rdoproject.org/testday/rocky/milestone1
+
+- title: Rocky Milestone 2 Test Days
+  location: rdo channel on Freenode
+  speaker: RDO
+  start: 2018-06-14 00:01 UTC
+  end: 2018-06-15 23:59 UTC
+  description: |
+      Come help make RDO better by testing the Rocky Milestone 2 packages. Details at https://www.rdoproject.org/testday/rocky/milestone2
+
+- title: Rocky Milestone 3 Test Days
+  location: rdo channel on Freenode
+  speaker: RDO
+  start: 2018-08-02 00:01 UTC
+  end: 2018-08-03 23:59 UTC
+  description: |
+      Come help make RDO better by testing the Rocky Milestone 3 Release packages. Details at https://www.rdoproject.org/testday/rocky/milestone3
+

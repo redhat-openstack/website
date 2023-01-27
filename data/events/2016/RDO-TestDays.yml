@@ -1,0 +1,62 @@
+name: RDO Test Days
+type: series
+tags: RDO
+
+talks:
+
+- title: Newton Milestone 3 Test Day
+  location: rdo channel on Freenode
+  speaker: RDO
+  start: 2016-09-08 00:01 UTC
+  end: 2016-09-09 23:59 UTC
+  description: |
+      Come help make RDO better by testing the Newton Milestone 3
+      packages. Details at https://www.rdoproject.org/testday/newton/milestone3
+
+- title: Newton Milestone RC Test Day
+  location: rdo channel on Freenode
+  speaker: RDO
+  start: 2016-09-29 00:01 UTC
+  end: 2016-09-30 23:59 UTC
+  description: |
+      Come help make RDO better by testing the Newton Release Candidate
+      packages. Details at https://www.rdoproject.org/testday/newton/rc
+
+
+- title: Newton GA Test Day
+  location: rdo channel on Freenode
+  speaker: RDO
+  start: 2016-10-13 00:01 UTC
+  end: 2016-10-14 23:59 UTC
+  description: |
+      Come help make RDO better by testing the Newton release
+      packages. Details at https://www.rdoproject.org/testday/newton/final
+
+- title: Ocata Milestone 1 Test Day
+  location: rdo channel on Freenode
+  speaker: RDO
+  start: 2016-12-01 00:01 UTC
+  end: 2016-12-02 23:59 UTC
+  description: |
+      Come help make RDO better by testing the Ocata Milestone 1
+      packages. Details at https://www.rdoproject.org/testday/ocata/milestone1
+
+- title: Ocata Milestone 3 Test Day
+  location: rdo channel on Freenode
+  speaker: RDO
+  start: 2017-02-02 00:01 UTC
+  end: 2017-02-03 23:59 UTC
+  description: |
+      Come help make RDO better by testing the Ocata Milestone 3
+      packages. Details at https://www.rdoproject.org/testday/ocata/milestone3
+
+- title: Ocata Final Test Day
+  location: rdo channel on Freenode
+  speaker: RDO
+  start: 2017-03-02 00:01 UTC
+  end: 2017-03-03 23:59 UTC
+  description: |
+      Come help make RDO better by testing the Ocata final release packages
+      packages. Details at https://www.rdoproject.org/testday/ocata/final
+
+
