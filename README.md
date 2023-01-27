@@ -24,7 +24,15 @@ cd <rdo-website local directory>
 $ podman build -t rdo-website .
 ```
 
-2. Run the website using the local content. This container will run the middleman engine in the container
+2. Clone the events submodule
+
+```
+cd <rdo-website local directory>
+$ git submodule init
+$ git submodule update
+```
+
+3. Run the website using the local content. This container will run the middleman engine in the container
 using the local website content so that you can edit ant check the resulting webpage. You need to mount
 the data and source directory from the local git repo to the container:
 
@@ -48,7 +56,7 @@ as "bundler".
 ## Initial setup
 Clone this repository and run the `setup.sh` script located in the checked out repository directory.
 
-The script will initialize, install system dependencies, and run a
+The script will initialize and update the git submodules, install system dependencies, and run a
 `bundle install`.
 
 It is expected that you are on a YUM based system with `sudo` access.
