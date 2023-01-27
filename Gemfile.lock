@@ -218,7 +218,7 @@ DEPENDENCIES
   open-uri-cached
   rails-assets-bootstrap-sortable
   rails-assets-fullcalendar (~> 2.9.1)
-  rails-assets-jquery (~> 1)
+  rails-assets-jquery (~> 1)!
   rails-assets-momentjs
   rb-inotify (~> 0.9.10)
   ruby18_source_location

@@ -202,6 +202,11 @@ configure :development do
   # workaround https://github.com/middleman-contrib/middleman-deploy/issues/51
   next if ARGV.include? 'deploy'
 
+  puts "\nUpdating git submodules..."
+  puts `git submodule init && git submodule sync`
+  puts `git submodule foreach "git pull -qf origin master"`
+  `git commit -q -m "updated events" data/events &>/dev/null`
+  puts "\n"
   puts '== Administration is at http://0.0.0.0:4567/admin/'
 
   activate :livereload
@@ -215,6 +220,11 @@ end
 
 # Build-specific configuration
 configure :build do
+  puts "\nUpdating git submodules..."
+  puts `git submodule init`
+  puts `git submodule foreach "git pull -qf origin master"`
+  puts "\n"
+
   ## Ignore administration UI
   ignore '/admin/*'
   ignore '/javascripts/admin*'
