@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4ac11221_794273fd",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2023-01-27T11:27:19Z",
+      "side": 1,
+      "message": "We need to ninja merge it to unblock the git submodule removal. we\u0027ll fix it in next review.",
+      "revId": "1b92cfc82fe3088ec60ed959e8986cbe7faf598b",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
