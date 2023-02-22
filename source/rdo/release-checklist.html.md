@@ -63,7 +63,6 @@ A release announcement should include:
 
 * Where to get it
 * What's in it
-* When the test day will be
 * When the *next* release is coming
 * Highlight the work of individuals when possible, especially people
   that are not @redhat.com
@@ -72,7 +71,8 @@ A release announcement should include:
 
 The release announcement should be sent to the following lists:
 
-* rdo-list - rdo-list@redhat.com
+* rdo dev list - dev@lists.rdoproject.org
+* rdo users list - users@lists.rdoproject.org
 * centos-devel - centos-devel@centos.org
 * openstack-discuss - openstack-discuss@lists.openstack.org
 * Twitter - @rdocommunity
