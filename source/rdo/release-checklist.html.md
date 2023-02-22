@@ -44,14 +44,14 @@ release.
 
 ## Technical release criteria
 
-Before announcing a new release to the community formally it's needed to ensure that some technical conditions are met with CloudSIG builds:
+Before formally announcing a new release to the community, it is necessary to ensure that some
+technical conditions are met with CloudSIG builds in order to validate the release works as expected.
 
+* All the packages provided in the repository are installable with no errors in an updated CentOS Stream system.
 * The three packstack all-in-one upstream scenarios can be executed successfully.
-* The four puppet-openstack-integration scenarios can be executed successfully.
-* TripleO container images can be built.
-* TripleO standalone scenario001 can be deployed with the containers from CloudSIG builds.
+* All the puppet-openstack-integration scenarios can be executed successfully.
 
-This criteria has been agreed for Ussuri GA and may be updated for next releases.
+This criteria has been agreed for Antelope GA and may be updated for next releases.
 
 ## Release fanfare
 
