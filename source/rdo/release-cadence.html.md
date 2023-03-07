@@ -15,13 +15,35 @@ Due to the slower release cadence of RHEL and therefore CentOS, only the most re
 
 When there is a new major CentOS release, the following OpenStack version is packaged for both for the new and the previous version of CentOS. The purpose of this policy is to ease the trasition between them.
 
+### Maintained RDO versions in CloudSIG repos
+
+RDO [CloudSIG repositories](https://www.rdoproject.org/what/repos/) are based on tag releases provided by OpenStack project. According to the [definition of maintenance phases of OpenStack](https://docs.openstack.org/project-team-guide/stable-branches.html#maintenance-phases), RDO will not update CloudSIG repos after a release is transitioned to Extended Maintenance status.
+
+Current maintained CloudSIG releases are:
+
 |------------------|----------|-----------|
 | CentOS Stream 9  | Zed      | supported |
 | CentOS Stream 9  | Yoga     | supported |
 | CentOS Stream 8  | Yoga     | supported |
 | CentOS Stream 8  | Xena     | supported |
-| CentOS Stream 8  | Wallaby  | supported |
-| CentOS Stream 8  | Victoria | supported |
+
+### Maintained RDO versions in RDO Trunk repos
+
+In order to provide patches merged in OpenStack releases in Extended Maintenance state, RDO mantains [RDO Trunk repositories](https://www.rdoproject.org/what/trunk-repos/) following stable branches or pinned releases until they are EOL.
+
+Currently, RDO maintains following RDO Trunk repositories:
+
+|------------------|----------|-----------|
+| CentOS Stream 9  | Zed      | supported |
+| CentOS Stream 9  | Yoga     | supported |
+| CentOS Stream 8  | Yoga     | supported |
+| CentOS Stream 8  | Xena     | supported |
+| CentOS Stream 9  | Wallaby     | extended maintenance |
+| CentOS Stream 8  | Wallaby     | extended maintenance |
+| CentOS Stream 8  | Victoria     | extended maintenance |
+| CentOS Stream 8  | Ussuri     | extended maintenance |
+| CentOS Stream 8  | Train     | extended maintenance |
+
 
 ### RHEL compatibility
 
