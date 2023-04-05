@@ -56,4 +56,5 @@ title: RDO Package Maintainer Guide
 * [Fixing a FTBFS (failed to build from source)](https://blogs.rdoproject.org/7903/how-to-fix-a-ftbfs-using-dlrn)
 * [Adding a patch](/documentation/intro-packaging/#introducingremoving-patches)
 * [Preparing for a new OpenStack release](/documentation/branching/)
+* [New release process](/documentation/new-release-process)
 
