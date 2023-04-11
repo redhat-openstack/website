@@ -1,0 +1,780 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7bb45f5b_3a662045",
+        "filename": "source/documentation/new-release-process.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2023-04-11T11:42:10Z",
+      "side": 1,
+      "message": "New release process sounds like \"this is the new process to create releases\" and i guess you mean \"This is the process to create a new release\". I\u0027d use something like \"Process to create a new RDO release\".",
+      "range": {
+        "startLine": 3,
+        "startChar": 7,
+        "endLine": 3,
+        "endChar": 27
+      },
+      "revId": "0acf1cdfe32a3b2b2b24308c040a7d5d52f87d6f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a4b1a5e2_3171ec64",
+        "filename": "source/documentation/new-release-process.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2023-04-11T11:42:10Z",
+      "side": 1,
+      "message": "I\u0027d add a paragraph about what\u0027s the goal of the process (some reference to OpenStack releases model https://releases.openstack.org/reference/release_models.html#cycle-with-intermediary) and when this process is started (typically at \"Final release for non-client libraries\" milestone of upstream release process).",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 14
+      },
+      "revId": "0acf1cdfe32a3b2b2b24308c040a7d5d52f87d6f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "79b9d628_0493b479",
+        "filename": "source/documentation/new-release-process.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2023-04-11T11:42:10Z",
+      "side": 1,
+      "message": "I\u0027d be very explicit about CBS tag for *next* release here.",
+      "range": {
+        "startLine": 13,
+        "startChar": 0,
+        "endLine": 13,
+        "endChar": 51
+      },
+      "revId": "0acf1cdfe32a3b2b2b24308c040a7d5d52f87d6f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f8b01704_d3d6e2ff",
+        "filename": "source/documentation/new-release-process.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2023-04-11T11:42:10Z",
+      "side": 1,
+      "message": "to be consistent with other examples below, which refer to Antelope preparation, i\u0027d use example https://pagure.io/centos-infra/issue/1077",
+      "range": {
+        "startLine": 13,
+        "startChar": 247,
+        "endLine": 13,
+        "endChar": 287
+      },
+      "revId": "0acf1cdfe32a3b2b2b24308c040a7d5d52f87d6f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a00d6f43_128ab7d3",
+        "filename": "source/documentation/new-release-process.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2023-04-11T11:42:10Z",
+      "side": 1,
+      "message": "What if we create a section \"2. Create the RDO Trunk repository for the new release\" and make current 2, 3 and 4 subsections of it?\n\nI\u0027d rephrase a bit: this \"Create a DLRN builder for the new OpenStack release in RDO Trunk servers\".",
+      "range": {
+        "startLine": 15,
+        "startChar": 7,
+        "endLine": 15,
+        "endChar": 38
+      },
+      "revId": "0acf1cdfe32a3b2b2b24308c040a7d5d52f87d6f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "680979c5_9d510a70",
+        "filename": "source/documentation/new-release-process.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2023-04-11T11:42:10Z",
+      "side": 1,
+      "message": "I\u0027m not sure what this means. Actually, i\u0027d specify DLRN is used to build RDO Trunk repos.",
+      "range": {
+        "startLine": 17,
+        "startChar": 72,
+        "endLine": 17,
+        "endChar": 104
+      },
+      "revId": "0acf1cdfe32a3b2b2b24308c040a7d5d52f87d6f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5a01ca87_6360ee6d",
+        "filename": "source/documentation/new-release-process.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2023-04-11T11:42:10Z",
+      "side": 1,
+      "message": "I\u0027d include this in the \"prepare new dlrn trunk builder\" section.",
+      "range": {
+        "startLine": 24,
+        "startChar": 0,
+        "endLine": 27,
+        "endChar": 19
+      },
+      "revId": "0acf1cdfe32a3b2b2b24308c040a7d5d52f87d6f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "338d9642_fadfa1d7",
+        "filename": "source/documentation/new-release-process.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2023-04-11T11:42:10Z",
+      "side": 1,
+      "message": "Actually, this is the deps part which is less important and could be done later (after branches creation for deps). What should be done here is to add \u003crelease\u003e-rdo branch to channels.yaml and to cbs jobs as in:\n\nhttps://review.rdoproject.org/r/c/config/+/47480",
+      "range": {
+        "startLine": 38,
+        "startChar": 1,
+        "endLine": 38,
+        "endChar": 27
+      },
+      "revId": "0acf1cdfe32a3b2b2b24308c040a7d5d52f87d6f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "efb7ecd8_c80b3de2",
+        "filename": "source/documentation/new-release-process.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2023-04-11T11:42:10Z",
+      "side": 1,
+      "message": "Build libs, clients and core projects in CloudSIG repos on CBS.",
+      "range": {
+        "startLine": 51,
+        "startChar": 0,
+        "endLine": 51,
+        "endChar": 18
+      },
+      "revId": "0acf1cdfe32a3b2b2b24308c040a7d5d52f87d6f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6e0141ab_cc12c024",
+        "filename": "source/documentation/new-release-process.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2023-04-11T11:42:10Z",
+      "side": 1,
+      "message": "some example?",
+      "range": {
+        "startLine": 55,
+        "startChar": 319,
+        "endLine": 55,
+        "endChar": 323
+      },
+      "revId": "0acf1cdfe32a3b2b2b24308c040a7d5d52f87d6f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "dc3bd842_5777c5a3",
+        "filename": "source/documentation/new-release-process.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2023-04-11T11:42:10Z",
+      "side": 1,
+      "message": "Example?",
+      "range": {
+        "startLine": 56,
+        "startChar": 148,
+        "endLine": 56,
+        "endChar": 150
+      },
+      "revId": "0acf1cdfe32a3b2b2b24308c040a7d5d52f87d6f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "840631c5_fd2aee6c",
+        "filename": "source/documentation/new-release-process.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2023-04-11T11:42:10Z",
+      "side": 1,
+      "message": "I\u0027d add that this needs to be done after the releases are created upstream what means different milestones:\n\n- libs: Final release for non-client libraries\n- clients: Final release for client libraries\n- core: RC1 or newer releases",
+      "revId": "0acf1cdfe32a3b2b2b24308c040a7d5d52f87d6f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "83e4133c_df56beca",
+        "filename": "source/documentation/new-release-process.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2023-04-11T11:42:10Z",
+      "side": 1,
+      "message": "Pin, branch and build non-OpenStack puppet modules in CloudSIG repos\"",
+      "range": {
+        "startLine": 59,
+        "startChar": 7,
+        "endLine": 59,
+        "endChar": 41
+      },
+      "revId": "0acf1cdfe32a3b2b2b24308c040a7d5d52f87d6f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2db3b269_26254439",
+        "filename": "source/documentation/new-release-process.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2023-04-11T11:42:10Z",
+      "side": 1,
+      "message": "with [Puppet OpenStack team](https://governance.openstack.org/tc/reference/projects/puppet-openstack.html)",
+      "range": {
+        "startLine": 60,
+        "startChar": 306,
+        "endLine": 60,
+        "endChar": 332
+      },
+      "revId": "0acf1cdfe32a3b2b2b24308c040a7d5d52f87d6f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "955129ed_22c6c4f4",
+        "filename": "source/documentation/new-release-process.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2023-04-11T11:42:10Z",
+      "side": 1,
+      "message": "I\u0027d rephrase to something like:\n\nNon-OpenStack modules have to be pinned to the last promoted hashes at branching time, since they they don\u0027t follow the OpenStack lifecycle and RDO stable releases shouldn\u0027t follow master branches for them.",
+      "range": {
+        "startLine": 60,
+        "startChar": 0,
+        "endLine": 60,
+        "endChar": 198
+      },
+      "revId": "0acf1cdfe32a3b2b2b24308c040a7d5d52f87d6f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9e59d2a6_d2294af2",
+        "filename": "source/documentation/new-release-process.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2023-04-11T11:42:10Z",
+      "side": 1,
+      "message": "May we link https://review.rdoproject.org/r/c/rdoinfo/+/47673 for consistency?",
+      "range": {
+        "startLine": 62,
+        "startChar": 50,
+        "endLine": 62,
+        "endChar": 99
+      },
+      "revId": "0acf1cdfe32a3b2b2b24308c040a7d5d52f87d6f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "00b8581d_77af63c8",
+        "filename": "source/documentation/new-release-process.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2023-04-11T11:42:10Z",
+      "side": 1,
+      "message": "ditto https://review.rdoproject.org/r/c/config/+/47679",
+      "range": {
+        "startLine": 63,
+        "startChar": 37,
+        "endLine": 63,
+        "endChar": 85
+      },
+      "revId": "0acf1cdfe32a3b2b2b24308c040a7d5d52f87d6f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c34b41f8_2b8d07d3",
+        "filename": "source/documentation/new-release-process.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2023-04-11T11:42:10Z",
+      "side": 1,
+      "message": "This also need to be coordinated with change in DLRN builders for the master and the new release as in https://softwarefactory-project.io/r/c/software-factory/sf-infra/+/27784 and https://review.rdoproject.org/r/c/rdo-infra/ansible-role-dlrn/+/47892",
+      "range": {
+        "startLine": 68,
+        "startChar": 233,
+        "endLine": 68,
+        "endChar": 235
+      },
+      "revId": "0acf1cdfe32a3b2b2b24308c040a7d5d52f87d6f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9b430e92_85f5e4b2",
+        "filename": "source/documentation/new-release-process.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2023-04-11T11:42:10Z",
+      "side": 1,
+      "message": "I\u0027d say \"Branch OpenStack puppet modules and build them in CloudSIG repos\"",
+      "range": {
+        "startLine": 71,
+        "startChar": 0,
+        "endLine": 71,
+        "endChar": 10
+      },
+      "revId": "0acf1cdfe32a3b2b2b24308c040a7d5d52f87d6f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e4d0b69a_c702e61f",
+        "filename": "source/documentation/new-release-process.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2023-04-11T11:42:10Z",
+      "side": 1,
+      "message": "example: https://review.rdoproject.org/r/c/config/+/47909",
+      "range": {
+        "startLine": 73,
+        "startChar": 197,
+        "endLine": 73,
+        "endChar": 204
+      },
+      "revId": "0acf1cdfe32a3b2b2b24308c040a7d5d52f87d6f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "026faf4d_9669cd55",
+        "filename": "source/documentation/new-release-process.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2023-04-11T11:42:10Z",
+      "side": 1,
+      "message": "when the tagged releases are created upstream.",
+      "range": {
+        "startLine": 73,
+        "startChar": 45,
+        "endLine": 73,
+        "endChar": 64
+      },
+      "revId": "0acf1cdfe32a3b2b2b24308c040a7d5d52f87d6f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6c5e2c90_ee5a5db9",
+        "filename": "source/documentation/new-release-process.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2023-04-11T11:42:10Z",
+      "side": 1,
+      "message": "Do we need to update some job to add the new tag for the new-release or is it automated via rdoinfo release?",
+      "range": {
+        "startLine": 73,
+        "startChar": 0,
+        "endLine": 73,
+        "endChar": 63
+      },
+      "revId": "0acf1cdfe32a3b2b2b24308c040a7d5d52f87d6f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "14b3763c_4ee9abed",
+        "filename": "source/documentation/new-release-process.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2023-04-11T11:42:10Z",
+      "side": 1,
+      "message": "Pin, branch and build tempest and tempest plugins in CloudSIG repos\"",
+      "range": {
+        "startLine": 76,
+        "startChar": 8,
+        "endLine": 76,
+        "endChar": 46
+      },
+      "revId": "0acf1cdfe32a3b2b2b24308c040a7d5d52f87d6f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e089c2a5_69402557",
+        "filename": "source/documentation/new-release-process.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2023-04-11T11:42:10Z",
+      "side": 1,
+      "message": "this is tricky. We should do this after building the plugins as in https://review.rdoproject.org/r/c/openstack/tempest-distgit/+/47728 . \nIn some cases we had to disable the boostraping mode to get openstack-tempest-all package in RDO Trunk repo before for CI once the dlrn bootstrap has been finished.",
+      "range": {
+        "startLine": 81,
+        "startChar": 110,
+        "endLine": 81,
+        "endChar": 177
+      },
+      "revId": "0acf1cdfe32a3b2b2b24308c040a7d5d52f87d6f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a3235c98_71a132aa",
+        "filename": "source/documentation/new-release-process.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2023-04-11T11:42:10Z",
+      "side": 1,
+      "message": "https://review.rdoproject.org/r/c/config/+/47729",
+      "range": {
+        "startLine": 82,
+        "startChar": 37,
+        "endLine": 82,
+        "endChar": 85
+      },
+      "revId": "0acf1cdfe32a3b2b2b24308c040a7d5d52f87d6f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "202fe506_a5bae4e2",
+        "filename": "source/documentation/new-release-process.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2023-04-11T11:42:10Z",
+      "side": 1,
+      "message": "https://review.rdoproject.org/r/c/rdoinfo/+/47796",
+      "range": {
+        "startLine": 83,
+        "startChar": 36,
+        "endLine": 83,
+        "endChar": 85
+      },
+      "revId": "0acf1cdfe32a3b2b2b24308c040a7d5d52f87d6f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3243e9a4_0f569be4",
+        "filename": "source/documentation/new-release-process.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2023-04-11T11:42:10Z",
+      "side": 1,
+      "message": "https://review.rdoproject.org/r/c/openstack/tempest-distgit/+/47727",
+      "range": {
+        "startLine": 85,
+        "startChar": 12,
+        "endLine": 85,
+        "endChar": 79
+      },
+      "revId": "0acf1cdfe32a3b2b2b24308c040a7d5d52f87d6f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "69f08cab_8b396480",
+        "filename": "source/documentation/new-release-process.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2023-04-11T11:42:10Z",
+      "side": 1,
+      "message": "https://review.rdoproject.org/r/c/rdo-jobs/+/47911",
+      "range": {
+        "startLine": 90,
+        "startChar": 62,
+        "endLine": 90,
+        "endChar": 112
+      },
+      "revId": "0acf1cdfe32a3b2b2b24308c040a7d5d52f87d6f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ef45a519_0787da5b",
+        "filename": "source/documentation/new-release-process.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2023-04-11T11:42:10Z",
+      "side": 1,
+      "message": "https://review.rdoproject.org/r/c/config/+/47936",
+      "range": {
+        "startLine": 91,
+        "startChar": 62,
+        "endLine": 91,
+        "endChar": 110
+      },
+      "revId": "0acf1cdfe32a3b2b2b24308c040a7d5d52f87d6f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "62db6c8a_1213f550",
+        "filename": "source/documentation/new-release-process.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2023-04-11T11:42:10Z",
+      "side": 1,
+      "message": "https://review.rdoproject.org/r/c/config/+/47901",
+      "range": {
+        "startLine": 94,
+        "startChar": 122,
+        "endLine": 94,
+        "endChar": 170
+      },
+      "revId": "0acf1cdfe32a3b2b2b24308c040a7d5d52f87d6f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f19c4109_33723acb",
+        "filename": "source/documentation/new-release-process.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2023-04-11T11:42:10Z",
+      "side": 1,
+      "message": "could we add an example here?",
+      "range": {
+        "startLine": 98,
+        "startChar": 8,
+        "endLine": 98,
+        "endChar": 78
+      },
+      "revId": "0acf1cdfe32a3b2b2b24308c040a7d5d52f87d6f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7f65c383_e53b9f6b",
+        "filename": "source/documentation/new-release-process.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2023-04-11T11:42:10Z",
+      "side": 1,
+      "message": "ditto",
+      "range": {
+        "startLine": 100,
+        "startChar": 8,
+        "endLine": 100,
+        "endChar": 34
+      },
+      "revId": "0acf1cdfe32a3b2b2b24308c040a7d5d52f87d6f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b09cc3ce_16a5ecbf",
+        "filename": "source/documentation/new-release-process.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 104,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2023-04-11T11:42:10Z",
+      "side": 1,
+      "message": "https://review.rdoproject.org/r/c/rdo-jobs/+/47946",
+      "range": {
+        "startLine": 104,
+        "startChar": 53,
+        "endLine": 104,
+        "endChar": 102
+      },
+      "revId": "0acf1cdfe32a3b2b2b24308c040a7d5d52f87d6f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7c23907d_2e725d96",
+        "filename": "source/documentation/new-release-process.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 120,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2023-04-11T11:42:10Z",
+      "side": 1,
+      "message": "in master release",
+      "range": {
+        "startLine": 120,
+        "startChar": 8,
+        "endLine": 120,
+        "endChar": 62
+      },
+      "revId": "0acf1cdfe32a3b2b2b24308c040a7d5d52f87d6f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
