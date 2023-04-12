@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "c2fcdcf3_aeddf5dc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 691
+      },
+      "writtenOn": "2023-04-12T18:33:31Z",
+      "side": 1,
+      "message": "A few comments, once everything is addressed I\u0027ll do a quick grammar check",
+      "revId": "0acf1cdfe32a3b2b2b24308c040a7d5d52f87d6f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "7bb45f5b_3a662045",
@@ -14,6 +31,30 @@
       "writtenOn": "2023-04-11T11:42:10Z",
       "side": 1,
       "message": "New release process sounds like \"this is the new process to create releases\" and i guess you mean \"This is the process to create a new release\". I\u0027d use something like \"Process to create a new RDO release\".",
+      "range": {
+        "startLine": 3,
+        "startChar": 7,
+        "endLine": 3,
+        "endChar": 27
+      },
+      "revId": "0acf1cdfe32a3b2b2b24308c040a7d5d52f87d6f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b4028ed9_08933427",
+        "filename": "source/documentation/new-release-process.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 691
+      },
+      "writtenOn": "2023-04-12T18:33:31Z",
+      "side": 1,
+      "message": "I agree with this, here\u0027s some other possibles.\nCreating a new RDO release process/guide\nStep by step RDO release process/guide",
+      "parentUuid": "7bb45f5b_3a662045",
       "range": {
         "startLine": 3,
         "startChar": 7,
@@ -772,6 +813,29 @@
         "startChar": 8,
         "endLine": 120,
         "endChar": 62
+      },
+      "revId": "0acf1cdfe32a3b2b2b24308c040a7d5d52f87d6f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "138f7662_5e22523d",
+        "filename": "source/documentation/rdo-packaging.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 691
+      },
+      "writtenOn": "2023-04-12T18:33:31Z",
+      "side": 1,
+      "message": "We might need to update this to address the name comment on previous page",
+      "range": {
+        "startLine": 59,
+        "startChar": 0,
+        "endLine": 59,
+        "endChar": 15
       },
       "revId": "0acf1cdfe32a3b2b2b24308c040a7d5d52f87d6f",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
