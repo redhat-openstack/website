@@ -65,6 +65,30 @@
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "245e3bca_8f6d0438",
+        "filename": "source/documentation/new-release-process.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2023-04-13T11:51:20Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7bb45f5b_3a662045",
+      "range": {
+        "startLine": 3,
+        "startChar": 7,
+        "endLine": 3,
+        "endChar": 27
+      },
+      "revId": "0acf1cdfe32a3b2b2b24308c040a7d5d52f87d6f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a4b1a5e2_3171ec64",
@@ -78,6 +102,30 @@
       "writtenOn": "2023-04-11T11:42:10Z",
       "side": 1,
       "message": "I\u0027d add a paragraph about what\u0027s the goal of the process (some reference to OpenStack releases model https://releases.openstack.org/reference/release_models.html#cycle-with-intermediary) and when this process is started (typically at \"Final release for non-client libraries\" milestone of upstream release process).",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 14
+      },
+      "revId": "0acf1cdfe32a3b2b2b24308c040a7d5d52f87d6f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "32ec619b_d32d024e",
+        "filename": "source/documentation/new-release-process.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2023-04-13T11:51:20Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a4b1a5e2_3171ec64",
       "range": {
         "startLine": 11,
         "startChar": 0,
@@ -134,6 +182,54 @@
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "d5630b5c_35225a33",
+        "filename": "source/documentation/new-release-process.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2023-04-13T11:51:20Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f8b01704_d3d6e2ff",
+      "range": {
+        "startLine": 13,
+        "startChar": 247,
+        "endLine": 13,
+        "endChar": 287
+      },
+      "revId": "0acf1cdfe32a3b2b2b24308c040a7d5d52f87d6f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "855b7db6_95c35e29",
+        "filename": "source/documentation/new-release-process.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2023-04-13T11:51:20Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "79b9d628_0493b479",
+      "range": {
+        "startLine": 13,
+        "startChar": 0,
+        "endLine": 13,
+        "endChar": 51
+      },
+      "revId": "0acf1cdfe32a3b2b2b24308c040a7d5d52f87d6f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a00d6f43_128ab7d3",
@@ -147,6 +243,30 @@
       "writtenOn": "2023-04-11T11:42:10Z",
       "side": 1,
       "message": "What if we create a section \"2. Create the RDO Trunk repository for the new release\" and make current 2, 3 and 4 subsections of it?\n\nI\u0027d rephrase a bit: this \"Create a DLRN builder for the new OpenStack release in RDO Trunk servers\".",
+      "range": {
+        "startLine": 15,
+        "startChar": 7,
+        "endLine": 15,
+        "endChar": 38
+      },
+      "revId": "0acf1cdfe32a3b2b2b24308c040a7d5d52f87d6f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "91f12211_bb3a2b2f",
+        "filename": "source/documentation/new-release-process.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2023-04-13T11:51:20Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a00d6f43_128ab7d3",
       "range": {
         "startLine": 15,
         "startChar": 7,
@@ -180,6 +300,30 @@
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "d66fabb9_267024c8",
+        "filename": "source/documentation/new-release-process.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2023-04-13T11:51:20Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "680979c5_9d510a70",
+      "range": {
+        "startLine": 17,
+        "startChar": 72,
+        "endLine": 17,
+        "endChar": 104
+      },
+      "revId": "0acf1cdfe32a3b2b2b24308c040a7d5d52f87d6f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "5a01ca87_6360ee6d",
@@ -193,6 +337,30 @@
       "writtenOn": "2023-04-11T11:42:10Z",
       "side": 1,
       "message": "I\u0027d include this in the \"prepare new dlrn trunk builder\" section.",
+      "range": {
+        "startLine": 24,
+        "startChar": 0,
+        "endLine": 27,
+        "endChar": 19
+      },
+      "revId": "0acf1cdfe32a3b2b2b24308c040a7d5d52f87d6f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f7970d17_164c894e",
+        "filename": "source/documentation/new-release-process.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2023-04-13T11:51:20Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5a01ca87_6360ee6d",
       "range": {
         "startLine": 24,
         "startChar": 0,
@@ -226,6 +394,30 @@
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "82508297_417823b9",
+        "filename": "source/documentation/new-release-process.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2023-04-13T11:51:20Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "338d9642_fadfa1d7",
+      "range": {
+        "startLine": 38,
+        "startChar": 1,
+        "endLine": 38,
+        "endChar": 27
+      },
+      "revId": "0acf1cdfe32a3b2b2b24308c040a7d5d52f87d6f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "efb7ecd8_c80b3de2",
@@ -239,6 +431,30 @@
       "writtenOn": "2023-04-11T11:42:10Z",
       "side": 1,
       "message": "Build libs, clients and core projects in CloudSIG repos on CBS.",
+      "range": {
+        "startLine": 51,
+        "startChar": 0,
+        "endLine": 51,
+        "endChar": 18
+      },
+      "revId": "0acf1cdfe32a3b2b2b24308c040a7d5d52f87d6f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f00b8464_2b6ba2e9",
+        "filename": "source/documentation/new-release-process.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2023-04-13T11:51:20Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "efb7ecd8_c80b3de2",
       "range": {
         "startLine": 51,
         "startChar": 0,
@@ -272,6 +488,30 @@
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "be8fef9f_74c7b07d",
+        "filename": "source/documentation/new-release-process.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2023-04-13T11:51:20Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6e0141ab_cc12c024",
+      "range": {
+        "startLine": 55,
+        "startChar": 319,
+        "endLine": 55,
+        "endChar": 323
+      },
+      "revId": "0acf1cdfe32a3b2b2b24308c040a7d5d52f87d6f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "dc3bd842_5777c5a3",
@@ -285,6 +525,30 @@
       "writtenOn": "2023-04-11T11:42:10Z",
       "side": 1,
       "message": "Example?",
+      "range": {
+        "startLine": 56,
+        "startChar": 148,
+        "endLine": 56,
+        "endChar": 150
+      },
+      "revId": "0acf1cdfe32a3b2b2b24308c040a7d5d52f87d6f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f9edc236_1ee9559f",
+        "filename": "source/documentation/new-release-process.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2023-04-13T11:51:20Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "dc3bd842_5777c5a3",
       "range": {
         "startLine": 56,
         "startChar": 148,
@@ -312,6 +576,24 @@
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "7da7f131_819c95e1",
+        "filename": "source/documentation/new-release-process.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2023-04-13T11:51:20Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "840631c5_fd2aee6c",
+      "revId": "0acf1cdfe32a3b2b2b24308c040a7d5d52f87d6f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "83e4133c_df56beca",
@@ -325,6 +607,30 @@
       "writtenOn": "2023-04-11T11:42:10Z",
       "side": 1,
       "message": "Pin, branch and build non-OpenStack puppet modules in CloudSIG repos\"",
+      "range": {
+        "startLine": 59,
+        "startChar": 7,
+        "endLine": 59,
+        "endChar": 41
+      },
+      "revId": "0acf1cdfe32a3b2b2b24308c040a7d5d52f87d6f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f2443d47_ce501755",
+        "filename": "source/documentation/new-release-process.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2023-04-13T11:51:20Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "83e4133c_df56beca",
       "range": {
         "startLine": 59,
         "startChar": 7,
@@ -381,6 +687,54 @@
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e7bf553e_93e50b31",
+        "filename": "source/documentation/new-release-process.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2023-04-13T11:51:20Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2db3b269_26254439",
+      "range": {
+        "startLine": 60,
+        "startChar": 306,
+        "endLine": 60,
+        "endChar": 332
+      },
+      "revId": "0acf1cdfe32a3b2b2b24308c040a7d5d52f87d6f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "11cbb36e_eb45c0c2",
+        "filename": "source/documentation/new-release-process.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2023-04-13T11:51:20Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "955129ed_22c6c4f4",
+      "range": {
+        "startLine": 60,
+        "startChar": 0,
+        "endLine": 60,
+        "endChar": 198
+      },
+      "revId": "0acf1cdfe32a3b2b2b24308c040a7d5d52f87d6f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "9e59d2a6_d2294af2",
@@ -394,6 +748,30 @@
       "writtenOn": "2023-04-11T11:42:10Z",
       "side": 1,
       "message": "May we link https://review.rdoproject.org/r/c/rdoinfo/+/47673 for consistency?",
+      "range": {
+        "startLine": 62,
+        "startChar": 50,
+        "endLine": 62,
+        "endChar": 99
+      },
+      "revId": "0acf1cdfe32a3b2b2b24308c040a7d5d52f87d6f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8864a809_4af9ec83",
+        "filename": "source/documentation/new-release-process.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2023-04-13T11:51:20Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9e59d2a6_d2294af2",
       "range": {
         "startLine": 62,
         "startChar": 50,
@@ -427,6 +805,30 @@
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "14f9fe3b_b87c7948",
+        "filename": "source/documentation/new-release-process.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2023-04-13T11:51:20Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "00b8581d_77af63c8",
+      "range": {
+        "startLine": 63,
+        "startChar": 37,
+        "endLine": 63,
+        "endChar": 85
+      },
+      "revId": "0acf1cdfe32a3b2b2b24308c040a7d5d52f87d6f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "c34b41f8_2b8d07d3",
@@ -450,6 +852,30 @@
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "9cc24df3_a7319521",
+        "filename": "source/documentation/new-release-process.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2023-04-13T11:51:20Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c34b41f8_2b8d07d3",
+      "range": {
+        "startLine": 68,
+        "startChar": 233,
+        "endLine": 68,
+        "endChar": 235
+      },
+      "revId": "0acf1cdfe32a3b2b2b24308c040a7d5d52f87d6f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "9b430e92_85f5e4b2",
@@ -463,6 +889,30 @@
       "writtenOn": "2023-04-11T11:42:10Z",
       "side": 1,
       "message": "I\u0027d say \"Branch OpenStack puppet modules and build them in CloudSIG repos\"",
+      "range": {
+        "startLine": 71,
+        "startChar": 0,
+        "endLine": 71,
+        "endChar": 10
+      },
+      "revId": "0acf1cdfe32a3b2b2b24308c040a7d5d52f87d6f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5b72a6ed_5fa28be1",
+        "filename": "source/documentation/new-release-process.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2023-04-13T11:51:20Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9b430e92_85f5e4b2",
       "range": {
         "startLine": 71,
         "startChar": 0,
@@ -542,6 +992,54 @@
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "63a949c0_1d4e8390",
+        "filename": "source/documentation/new-release-process.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2023-04-13T11:51:20Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "026faf4d_9669cd55",
+      "range": {
+        "startLine": 73,
+        "startChar": 45,
+        "endLine": 73,
+        "endChar": 64
+      },
+      "revId": "0acf1cdfe32a3b2b2b24308c040a7d5d52f87d6f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6862bd12_fd674f93",
+        "filename": "source/documentation/new-release-process.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2023-04-13T11:51:20Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e4d0b69a_c702e61f",
+      "range": {
+        "startLine": 73,
+        "startChar": 197,
+        "endLine": 73,
+        "endChar": 204
+      },
+      "revId": "0acf1cdfe32a3b2b2b24308c040a7d5d52f87d6f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "14b3763c_4ee9abed",
@@ -555,6 +1053,30 @@
       "writtenOn": "2023-04-11T11:42:10Z",
       "side": 1,
       "message": "Pin, branch and build tempest and tempest plugins in CloudSIG repos\"",
+      "range": {
+        "startLine": 76,
+        "startChar": 8,
+        "endLine": 76,
+        "endChar": 46
+      },
+      "revId": "0acf1cdfe32a3b2b2b24308c040a7d5d52f87d6f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c8d7584b_91229c2d",
+        "filename": "source/documentation/new-release-process.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2023-04-13T11:51:20Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "14b3763c_4ee9abed",
       "range": {
         "startLine": 76,
         "startChar": 8,
@@ -611,6 +1133,30 @@
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "c600a715_5d21a431",
+        "filename": "source/documentation/new-release-process.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2023-04-13T11:51:20Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a3235c98_71a132aa",
+      "range": {
+        "startLine": 82,
+        "startChar": 37,
+        "endLine": 82,
+        "endChar": 85
+      },
+      "revId": "0acf1cdfe32a3b2b2b24308c040a7d5d52f87d6f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "202fe506_a5bae4e2",
@@ -624,6 +1170,30 @@
       "writtenOn": "2023-04-11T11:42:10Z",
       "side": 1,
       "message": "https://review.rdoproject.org/r/c/rdoinfo/+/47796",
+      "range": {
+        "startLine": 83,
+        "startChar": 36,
+        "endLine": 83,
+        "endChar": 85
+      },
+      "revId": "0acf1cdfe32a3b2b2b24308c040a7d5d52f87d6f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "940dd0be_d409bbf1",
+        "filename": "source/documentation/new-release-process.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2023-04-13T11:51:20Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "202fe506_a5bae4e2",
       "range": {
         "startLine": 83,
         "startChar": 36,
@@ -657,6 +1227,30 @@
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "42af943c_c2ffa488",
+        "filename": "source/documentation/new-release-process.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2023-04-13T11:51:20Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3243e9a4_0f569be4",
+      "range": {
+        "startLine": 85,
+        "startChar": 12,
+        "endLine": 85,
+        "endChar": 79
+      },
+      "revId": "0acf1cdfe32a3b2b2b24308c040a7d5d52f87d6f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "69f08cab_8b396480",
@@ -670,6 +1264,30 @@
       "writtenOn": "2023-04-11T11:42:10Z",
       "side": 1,
       "message": "https://review.rdoproject.org/r/c/rdo-jobs/+/47911",
+      "range": {
+        "startLine": 90,
+        "startChar": 62,
+        "endLine": 90,
+        "endChar": 112
+      },
+      "revId": "0acf1cdfe32a3b2b2b24308c040a7d5d52f87d6f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b6ca2cbc_787647bb",
+        "filename": "source/documentation/new-release-process.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2023-04-13T11:51:20Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "69f08cab_8b396480",
       "range": {
         "startLine": 90,
         "startChar": 62,
@@ -703,6 +1321,30 @@
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "5268629d_00474e1f",
+        "filename": "source/documentation/new-release-process.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2023-04-13T11:51:20Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ef45a519_0787da5b",
+      "range": {
+        "startLine": 91,
+        "startChar": 62,
+        "endLine": 91,
+        "endChar": 110
+      },
+      "revId": "0acf1cdfe32a3b2b2b24308c040a7d5d52f87d6f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "62db6c8a_1213f550",
@@ -716,6 +1358,30 @@
       "writtenOn": "2023-04-11T11:42:10Z",
       "side": 1,
       "message": "https://review.rdoproject.org/r/c/config/+/47901",
+      "range": {
+        "startLine": 94,
+        "startChar": 122,
+        "endLine": 94,
+        "endChar": 170
+      },
+      "revId": "0acf1cdfe32a3b2b2b24308c040a7d5d52f87d6f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "574c1c5e_31b471f1",
+        "filename": "source/documentation/new-release-process.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2023-04-13T11:51:20Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "62db6c8a_1213f550",
       "range": {
         "startLine": 94,
         "startChar": 122,
@@ -749,6 +1415,30 @@
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "c0549791_5428add1",
+        "filename": "source/documentation/new-release-process.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2023-04-13T11:51:20Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f19c4109_33723acb",
+      "range": {
+        "startLine": 98,
+        "startChar": 8,
+        "endLine": 98,
+        "endChar": 78
+      },
+      "revId": "0acf1cdfe32a3b2b2b24308c040a7d5d52f87d6f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "7f65c383_e53b9f6b",
@@ -762,6 +1452,30 @@
       "writtenOn": "2023-04-11T11:42:10Z",
       "side": 1,
       "message": "ditto",
+      "range": {
+        "startLine": 100,
+        "startChar": 8,
+        "endLine": 100,
+        "endChar": 34
+      },
+      "revId": "0acf1cdfe32a3b2b2b24308c040a7d5d52f87d6f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9fb259a5_71dc74bb",
+        "filename": "source/documentation/new-release-process.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2023-04-13T11:51:20Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7f65c383_e53b9f6b",
       "range": {
         "startLine": 100,
         "startChar": 8,
@@ -795,6 +1509,30 @@
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "59943cd0_f348126f",
+        "filename": "source/documentation/new-release-process.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 104,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2023-04-13T11:51:20Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b09cc3ce_16a5ecbf",
+      "range": {
+        "startLine": 104,
+        "startChar": 53,
+        "endLine": 104,
+        "endChar": 102
+      },
+      "revId": "0acf1cdfe32a3b2b2b24308c040a7d5d52f87d6f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "7c23907d_2e725d96",
@@ -818,6 +1556,30 @@
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "d9488307_0bfce294",
+        "filename": "source/documentation/new-release-process.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 120,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2023-04-13T11:51:20Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7c23907d_2e725d96",
+      "range": {
+        "startLine": 120,
+        "startChar": 8,
+        "endLine": 120,
+        "endChar": 62
+      },
+      "revId": "0acf1cdfe32a3b2b2b24308c040a7d5d52f87d6f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "138f7662_5e22523d",
@@ -831,6 +1593,30 @@
       "writtenOn": "2023-04-12T18:33:31Z",
       "side": 1,
       "message": "We might need to update this to address the name comment on previous page",
+      "range": {
+        "startLine": 59,
+        "startChar": 0,
+        "endLine": 59,
+        "endChar": 15
+      },
+      "revId": "0acf1cdfe32a3b2b2b24308c040a7d5d52f87d6f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0d3c1bcf_b75fbd40",
+        "filename": "source/documentation/rdo-packaging.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2023-04-13T11:51:20Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "138f7662_5e22523d",
       "range": {
         "startLine": 59,
         "startChar": 0,
