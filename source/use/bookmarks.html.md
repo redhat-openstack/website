@@ -12,4 +12,3 @@ with the number that you require, and a shipping address.
 
 - [RDO/OpenStack command line cheatsheet](rdo_bookmark.pdf)
 - [Deploying with TripleO](01-tripleo-cheatsheet-deploying-tripleo.pdf)
-

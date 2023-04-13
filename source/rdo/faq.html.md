@@ -58,7 +58,7 @@ RDO is not a fork of OpenStack, but a community focused on packaging and integra
 
 You have multiple options, including:
 
-1. For production environments, consider [TripleO](/tripleo) to provision bare-metal machines and deploy a production cloud environment.
+1. For production environments, consider [TripleO](/tripleo) to provision bare-metal machines and deploy a production cloud environment of an OpenStack Zed or earlier release.
 
 2. For proof of concept (PoC) environments, Packstack, an installation utility which uses Puppet modules to deploy OpenStack, is the primary tool. Instructions on installing RDO with Packstack are available on the [Packstack quickstart](/install/packstack) page.
 

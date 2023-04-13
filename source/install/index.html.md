@@ -8,7 +8,8 @@ authors: cbrown ocf, dansmith, dneary, edmv, radez, rbowen, rlandy, slagle, snec
 
 [← Use](/use/)
 
-For an initial test deployment, follow the [Packstack](/install/packstack) instructions. While using Packstack is sufficient as a proof of concept, there are other ways that you can use to deploy OpenStack with RDO. If you need to deploy a production-ready cloud, possibly with HA, see the [TripleO quickstart](/tripleo).
+For an initial test deployment, follow the [Packstack](/install/packstack) instructions. While using Packstack is sufficient as a proof of concept, there are other ways that you can 
+use to deploy OpenStack with RDO. If you need to deploy a production-ready cloud with an OpenStack Zed or earlier release, possibly with HA, see the [TripleO quickstart](/tripleo).
 
 <div class="splits">
 <div class="split-third with-more">

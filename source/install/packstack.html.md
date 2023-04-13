@@ -7,7 +7,10 @@ authors: apevec, dneary, garrett, jasonbrooks, jlibosva, mmagr, pixelbeat, pmyer
 
 # Packstack: Create a proof of concept cloud
 
-Packstack is an OpenStack deployment tool intended to **install Proof of Concept small environments in a quick and easy way using the RDO distribution on a CentOS Stream hosts**. Production features such as High Availability, OpenStack upgrades or other day-2 operations are out of the scope of Packstack. For these cases, you can rely on other recommended tools such as [TripleO](https://tripleo-docs.readthedocs.io/en/latest/index.html), [Kolla](https://docs.openstack.org/kolla/latest/) or [Openstack-Ansible](https://docs.openstack.org/openstack-ansible/latest/).
+Packstack is an OpenStack deployment tool intended to **install Proof of Concept small environments in a quick and easy way using the RDO distribution on a CentOS Stream hosts**. 
+Production features such as High Availability, OpenStack upgrades or other day-2 operations are out of the scope of Packstack. For these cases, you can rely on other recommended tools 
+such as [TripleO](https://tripleo-docs.readthedocs.io/en/latest/index.html) for an OpenStack Zed or earlier release, [Kolla](https://docs.openstack.org/kolla/latest/) or 
+[Openstack-Ansible](https://docs.openstack.org/openstack-ansible/latest/).
 
 This document shows how to spin up a proof of concept cloud on one node using the Packstack installation utility. You will be able to [add more nodes](/install/adding-a-compute-node/) to your OpenStack cloud later, if you choose.
 

@@ -4,7 +4,8 @@ title: TripleO
 
 # <a name="qs">TripleO</a>
 
-TripleO is a set of tools for the deployment and management of OpenStack which utilizes the RDO repositories.
+TripleO is a set of tools for the deployment and management of OpenStack which utilizes the RDO repositories. The TripleO project was retired after the Zed
+release of OpenStack.
 
 The name TripleO refers to three related things:
 

@@ -6,7 +6,7 @@ title: Recommended hardware
 
 Recommended hardware requirements for an RDO cloud:  
 
-## TripleO - Production
+## TripleO - Production (Zed or earlier)
 
 Production deployments vary greatly but as a very brief guideline:  
 
@@ -17,7 +17,7 @@ X number of compute nodes / hypervisors (can be scaled)
 
 More information at http://tripleo.org/
 
-## TripleO Quickstart - Development
+## TripleO Quickstart - Development (Zed or earlier)
 
 Minimum 32GB of RAM  
 Minimum 120GB free disk space  

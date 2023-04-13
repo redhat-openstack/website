@@ -2,7 +2,7 @@
 title: Project matrix
 ---
 
-# What's in RDO, Packstack, and TripleO
+# What's in RDO, Packstack, and TripleO(pre-Antelope)
 
 If you are interested on what's the purpose of each OpenStack project, consult the [Project navigator](https://www.openstack.org/software/project-navigator/)
 

@@ -15,8 +15,8 @@ Since RDO sticks closely to the upstream OpenStack project, the documentation at
 
 ## Getting started
 
-* [TripleO](https://docs.openstack.org/tripleo-docs) &ndash; Deploy a production cloud
-* [TripleO quickstart](https://docs.openstack.org/tripleo-quickstart/latest/) &ndash; Develop and Test OpenStack
+* [TripleO](https://docs.openstack.org/tripleo-docs) &ndash; Deploy a production cloud for an OpenStack Zed or earlier release.
+* [TripleO quickstart](https://docs.openstack.org/tripleo-quickstart/latest/) &ndash; Develop and Test OpenStack for an OpenStack Zed or earlier release.
 * [Packstack](/install/packstack) &ndash; Spin up an all-in-one concept cloud
 
 </div>

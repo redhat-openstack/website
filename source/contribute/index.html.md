@@ -30,7 +30,6 @@ consult our [mentors list](/contribute/mentors).
 
 ## Tool developer
 
-* [TripleO](https://docs.openstack.org/tripleo-docs/latest/contributor/)
 * [Packstack](https://github.com/openstack/packstack)
 * [Upstream Puppet Modules](https://docs.openstack.org/puppet-openstack-guide/latest/)
 * [Kolla](https://github.com/openstack/kolla)
@@ -96,14 +95,13 @@ Come chat in real-time with RDO users on **IRC** on the [OFTC](http://oftc.net) 
 
 * **#rdo**: Any general conversation about RDO, including developer issues and user questions. ([Transcripts.](http://eavesdrop.openstack.org/irclogs/%23rdo/))
 
-* **#tripleo**: Discussion specifically of TripleO. This tends to be fairly technical. ([Transcripts.](http://eavesdrop.openstack.org/irclogs/%23tripleo/))
-
 * **#openstack**: Remember that RDO is just a small part of a larger community. Questions about OpenStack in general, not specifically about RDO, should go to the upstream channel. ([Transcripts.](http://eavesdrop.openstack.org/irclogs/%23openstack/))
 
 
 Come chat in real-time with the CentOS Cloud SIG  on **IRC** on the [Libera Chat](http://libera.chat) server:
 
-* **#centos-devel**: If you have questions about the CentOS [Cloud Special Interest Group (SIG)](https://wiki.centos.org/SpecialInterestGroup/Cloud) and the parts of the RDO  infrastructure that run in the CentOS Community Build System (cbs), this is where you're most likely to get answers.
+* **#centos-cloud**: If you have questions about the CentOS [Cloud Special Interest Group (SIG)](https://wiki.centos.org/SpecialInterestGroup/Cloud) and the parts of the RDO infrastructure that run in the CentOS Community Build System (cbs), this is where you're most likely to get answers.
+* **#centos-devel**: If you have questions about the CentOS Project
 
 ### IRC meetings
 

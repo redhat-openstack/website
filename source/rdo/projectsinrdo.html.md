@@ -8,7 +8,7 @@ authors: ggillies, hguemar, ihrachys
 The following is a list of Openstack Projects which are already packaged or currently in the process of being packaged and shipped as part of RDO. For the full list, see [rdo.yml](https://github.com/redhat-openstack/rdoinfo/blob/master/rdo.yml)
 
 See also the [project matrix](/rdo/matrix) for a comparison of what's in
-RDO, Packstack, and TripleO.
+RDO, Packstack, and TripleO(pre-Antelope).
 
 ### Keystone
 
