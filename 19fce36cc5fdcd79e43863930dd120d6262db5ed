@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "214eb93c_85b5cfcc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2023-04-14T07:59:20Z",
+      "side": 1,
+      "message": "LGTM",
+      "revId": "19fce36cc5fdcd79e43863930dd120d6262db5ed",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4d9af37a_06402be7",
+        "filename": "source/install/packstack.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2023-04-14T07:59:20Z",
+      "side": 1,
+      "message": "For follow-up review, kolla doesn\u0027t support installing from distro packages anymore, only from source. I\u0027m not sure if we should remove it from this list.",
+      "range": {
+        "startLine": 12,
+        "startChar": 117,
+        "endLine": 12,
+        "endChar": 124
+      },
+      "revId": "19fce36cc5fdcd79e43863930dd120d6262db5ed",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
