@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "62d3deb2_aa35ac4e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2023-04-18T13:49:11Z",
+      "side": 1,
+      "message": "tripleo pipeline will be kept for wallaby release as stable/wallaby branches are still maintained. I\u0027d add it a note about it.",
+      "revId": "68942ed8016ab4ccb2c57b70c4df827a21fefda4",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "2ef3411c_db727686",
@@ -95,6 +112,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "923c053c_e6ff7f10",
+        "filename": "source/what/promotion-pipeline.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2023-04-18T13:49:11Z",
+      "side": 1,
+      "message": "actually, i\u0027d point to current-passed-ci which should be a link to puppet-passed-ci.",
+      "parentUuid": "5be1e7e6_deebdf17",
+      "range": {
+        "startLine": 41,
+        "startChar": 113,
+        "endLine": 41,
+        "endChar": 120
+      },
+      "revId": "68942ed8016ab4ccb2c57b70c4df827a21fefda4",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "f3a3482a_c256b200",
         "filename": "source/what/promotion-pipeline.html.md",
         "patchSetId": 1
@@ -106,6 +147,30 @@
       "writtenOn": "2023-04-14T12:59:23Z",
       "side": 1,
       "message": "I think this part can be removed as well",
+      "range": {
+        "startLine": 42,
+        "startChar": 0,
+        "endLine": 42,
+        "endChar": 191
+      },
+      "revId": "68942ed8016ab4ccb2c57b70c4df827a21fefda4",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "55eb5597_9066489c",
+        "filename": "source/what/promotion-pipeline.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2023-04-18T13:49:11Z",
+      "side": 1,
+      "message": "yes, that is part of tripleo ci deliverables although we probably may maintain images for octavia amphora and ironic-python-agent so, i\u0027m not sure yet.",
+      "parentUuid": "f3a3482a_c256b200",
       "range": {
         "startLine": 42,
         "startChar": 0,
