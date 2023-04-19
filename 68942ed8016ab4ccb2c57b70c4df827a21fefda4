@@ -41,6 +41,30 @@
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "cce6064a_7c1dd1ab",
+        "filename": "source/what/promotion-pipeline.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2023-04-19T11:55:17Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2ef3411c_db727686",
+      "range": {
+        "startLine": 13,
+        "startChar": 0,
+        "endLine": 14,
+        "endChar": 103
+      },
+      "revId": "68942ed8016ab4ccb2c57b70c4df827a21fefda4",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "52a9bc62_3cf66b44",
@@ -82,6 +106,54 @@
         "startChar": 35,
         "endLine": 16,
         "endChar": 38
+      },
+      "revId": "68942ed8016ab4ccb2c57b70c4df827a21fefda4",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "65c42c4d_914621eb",
+        "filename": "source/what/promotion-pipeline.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2023-04-19T11:55:17Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "36af2b1e_b44ba9f7",
+      "range": {
+        "startLine": 16,
+        "startChar": 35,
+        "endLine": 16,
+        "endChar": 38
+      },
+      "revId": "68942ed8016ab4ccb2c57b70c4df827a21fefda4",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f6fca0ba_b74683e1",
+        "filename": "source/what/promotion-pipeline.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2023-04-19T11:55:17Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "52a9bc62_3cf66b44",
+      "range": {
+        "startLine": 16,
+        "startChar": 5,
+        "endLine": 16,
+        "endChar": 14
       },
       "revId": "68942ed8016ab4ccb2c57b70c4df827a21fefda4",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
@@ -134,6 +206,30 @@
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "dec92745_05e58169",
+        "filename": "source/what/promotion-pipeline.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2023-04-19T11:55:17Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "923c053c_e6ff7f10",
+      "range": {
+        "startLine": 41,
+        "startChar": 113,
+        "endLine": 41,
+        "endChar": 120
+      },
+      "revId": "68942ed8016ab4ccb2c57b70c4df827a21fefda4",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "f3a3482a_c256b200",
@@ -171,6 +267,30 @@
       "side": 1,
       "message": "yes, that is part of tripleo ci deliverables although we probably may maintain images for octavia amphora and ironic-python-agent so, i\u0027m not sure yet.",
       "parentUuid": "f3a3482a_c256b200",
+      "range": {
+        "startLine": 42,
+        "startChar": 0,
+        "endLine": 42,
+        "endChar": 191
+      },
+      "revId": "68942ed8016ab4ccb2c57b70c4df827a21fefda4",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8ae87d3b_db8dc330",
+        "filename": "source/what/promotion-pipeline.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2023-04-19T11:55:17Z",
+      "side": 1,
+      "message": "I think we should remove it, as we remove all tripleo details from this article",
+      "parentUuid": "55eb5597_9066489c",
       "range": {
         "startLine": 42,
         "startChar": 0,
