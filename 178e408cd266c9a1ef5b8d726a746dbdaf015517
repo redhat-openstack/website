@@ -41,6 +41,30 @@
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "9b4ca627_2188a13e",
+        "filename": "source/documentation/new-release-guide.html.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2023-04-26T11:01:36Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "62908440_3d093c4a",
+      "range": {
+        "startLine": 10,
+        "startChar": 16,
+        "endLine": 10,
+        "endChar": 25
+      },
+      "revId": "178e408cd266c9a1ef5b8d726a746dbdaf015517",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "2b39ad09_486be861",
@@ -64,6 +88,30 @@
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "dfcec1c3_a2b1650e",
+        "filename": "source/documentation/new-release-guide.html.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2023-04-26T11:01:36Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2b39ad09_486be861",
+      "range": {
+        "startLine": 23,
+        "startChar": 30,
+        "endLine": 23,
+        "endChar": 36
+      },
+      "revId": "178e408cd266c9a1ef5b8d726a746dbdaf015517",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d3a7f006_75cf0485",
@@ -77,6 +125,30 @@
       "writtenOn": "2023-04-25T13:33:24Z",
       "side": 1,
       "message": "should be 4. The rest of numbered section should be updated too.",
+      "range": {
+        "startLine": 40,
+        "startChar": 4,
+        "endLine": 40,
+        "endChar": 5
+      },
+      "revId": "178e408cd266c9a1ef5b8d726a746dbdaf015517",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5702619e_2110e341",
+        "filename": "source/documentation/new-release-guide.html.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2023-04-26T11:01:36Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d3a7f006_75cf0485",
       "range": {
         "startLine": 40,
         "startChar": 4,

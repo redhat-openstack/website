@@ -1040,6 +1040,30 @@
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "4e3e5786_c28418cf",
+        "filename": "source/documentation/new-release-process.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2023-04-26T11:01:36Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6c5e2c90_ee5a5db9",
+      "range": {
+        "startLine": 73,
+        "startChar": 0,
+        "endLine": 73,
+        "endChar": 63
+      },
+      "revId": "0acf1cdfe32a3b2b2b24308c040a7d5d52f87d6f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "14b3763c_4ee9abed",
@@ -1100,6 +1124,30 @@
       "writtenOn": "2023-04-11T11:42:10Z",
       "side": 1,
       "message": "this is tricky. We should do this after building the plugins as in https://review.rdoproject.org/r/c/openstack/tempest-distgit/+/47728 . \nIn some cases we had to disable the boostraping mode to get openstack-tempest-all package in RDO Trunk repo before for CI once the dlrn bootstrap has been finished.",
+      "range": {
+        "startLine": 81,
+        "startChar": 110,
+        "endLine": 81,
+        "endChar": 177
+      },
+      "revId": "0acf1cdfe32a3b2b2b24308c040a7d5d52f87d6f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1dea30ce_4fd7ebd8",
+        "filename": "source/documentation/new-release-process.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2023-04-26T11:01:36Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e089c2a5_69402557",
       "range": {
         "startLine": 81,
         "startChar": 110,
