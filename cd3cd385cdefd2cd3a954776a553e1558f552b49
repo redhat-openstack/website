@@ -1,0 +1,67 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5dd914fb_f1dcee7f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 691
+      },
+      "writtenOn": "2023-05-03T12:48:25Z",
+      "side": 1,
+      "message": "Reaching out to see how Karolina prefers grammar help",
+      "revId": "cd3cd385cdefd2cd3a954776a553e1558f552b49",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "24fb6b0a_e0184e74",
+        "filename": "source/documentation/new-release-guide.html.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 691
+      },
+      "writtenOn": "2023-05-03T12:48:25Z",
+      "side": 1,
+      "message": "which is full",
+      "range": {
+        "startLine": 8,
+        "startChar": 53,
+        "endLine": 8,
+        "endChar": 57
+      },
+      "revId": "cd3cd385cdefd2cd3a954776a553e1558f552b49",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ffcc3fc5_83476a65",
+        "filename": "source/documentation/new-release-guide.html.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 691
+      },
+      "writtenOn": "2023-05-03T12:48:25Z",
+      "side": 1,
+      "message": "a complex",
+      "range": {
+        "startLine": 8,
+        "startChar": 37,
+        "endLine": 8,
+        "endChar": 44
+      },
+      "revId": "cd3cd385cdefd2cd3a954776a553e1558f552b49",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
