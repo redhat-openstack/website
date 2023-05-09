@@ -14,7 +14,7 @@ such as [TripleO](https://tripleo-docs.readthedocs.io/en/latest/index.html) for 
 
 This document shows how to spin up a proof of concept cloud on one node using the Packstack installation utility. You will be able to [add more nodes](/install/adding-a-compute-node/) to your OpenStack cloud later, if you choose.
 
-These instructions apply to the following Release and Operating Systems -  **Victoria, Wallaby, Xena and Yoga** on CentOS Stream 8, and **Yoga and Zed** on CentOS Stream 9.
+These instructions apply to the following Release and Operating Systems -  **Victoria, Wallaby, Xena and Yoga** on CentOS Stream 8, and **Yoga, Zed and Antelope** on CentOS Stream 9.
 
 ## WARNING ##
 
