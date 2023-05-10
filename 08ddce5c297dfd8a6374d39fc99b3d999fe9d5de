@@ -16,6 +16,23 @@
       "message": "Please verify the information is still correct after grammar and rewording",
       "revId": "08ddce5c297dfd8a6374d39fc99b3d999fe9d5de",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "51d9ba7b_ca1ef0df",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2023-05-10T13:43:57Z",
+      "side": 1,
+      "message": "Good to have the release process documented on our website 💯\nI think we\u0027ll keep our Jira User Story template (by cloning it release after release) as the primary place to update the workflow, in order to keep agility. Then we\u0027ll have to keep this page up-to-date based on the evolution of the Jira User Story template\nThank you karolinku",
+      "revId": "08ddce5c297dfd8a6374d39fc99b3d999fe9d5de",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
