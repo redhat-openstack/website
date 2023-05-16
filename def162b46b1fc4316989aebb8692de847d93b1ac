@@ -1,0 +1,412 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5e9b10ca_6d67c257",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 691
+      },
+      "writtenOn": "2023-05-16T17:41:49Z",
+      "side": 1,
+      "message": "Decided to do comments this time around for the grammar fixes",
+      "revId": "def162b46b1fc4316989aebb8692de847d93b1ac",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4f764986_341bb30d",
+        "filename": "source/documentation/general_concept_comparison.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 691
+      },
+      "writtenOn": "2023-05-16T17:41:49Z",
+      "side": 1,
+      "message": "extra space",
+      "range": {
+        "startLine": 8,
+        "startChar": 139,
+        "endLine": 8,
+        "endChar": 140
+      },
+      "revId": "def162b46b1fc4316989aebb8692de847d93b1ac",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8f4aa277_17efb8e8",
+        "filename": "source/documentation/general_concept_comparison.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 691
+      },
+      "writtenOn": "2023-05-16T17:41:49Z",
+      "side": 1,
+      "message": "has",
+      "range": {
+        "startLine": 8,
+        "startChar": 16,
+        "endLine": 8,
+        "endChar": 33
+      },
+      "revId": "def162b46b1fc4316989aebb8692de847d93b1ac",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c4b0f9f8_497cbafe",
+        "filename": "source/documentation/general_concept_comparison.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 691
+      },
+      "writtenOn": "2023-05-16T17:41:49Z",
+      "side": 1,
+      "message": "in",
+      "range": {
+        "startLine": 12,
+        "startChar": 9,
+        "endLine": 12,
+        "endChar": 11
+      },
+      "revId": "def162b46b1fc4316989aebb8692de847d93b1ac",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b5896be6_a440cf4d",
+        "filename": "source/documentation/general_concept_comparison.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 691
+      },
+      "writtenOn": "2023-05-16T17:41:49Z",
+      "side": 1,
+      "message": "are the",
+      "range": {
+        "startLine": 12,
+        "startChar": 16,
+        "endLine": 12,
+        "endChar": 18
+      },
+      "revId": "def162b46b1fc4316989aebb8692de847d93b1ac",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "43c5f5e5_812df452",
+        "filename": "source/documentation/general_concept_comparison.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 691
+      },
+      "writtenOn": "2023-05-16T17:41:49Z",
+      "side": 1,
+      "message": "have",
+      "range": {
+        "startLine": 16,
+        "startChar": 22,
+        "endLine": 16,
+        "endChar": 25
+      },
+      "revId": "def162b46b1fc4316989aebb8692de847d93b1ac",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6def5277_cbffe519",
+        "filename": "source/documentation/general_concept_comparison.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 691
+      },
+      "writtenOn": "2023-05-16T17:41:49Z",
+      "side": 1,
+      "message": "compares",
+      "range": {
+        "startLine": 28,
+        "startChar": 23,
+        "endLine": 28,
+        "endChar": 35
+      },
+      "revId": "def162b46b1fc4316989aebb8692de847d93b1ac",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "eabf4591_8f7a31bb",
+        "filename": "source/documentation/general_concept_comparison.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 691
+      },
+      "writtenOn": "2023-05-16T17:41:49Z",
+      "side": 1,
+      "message": "The first",
+      "range": {
+        "startLine": 28,
+        "startChar": 0,
+        "endLine": 28,
+        "endChar": 5
+      },
+      "revId": "def162b46b1fc4316989aebb8692de847d93b1ac",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a4af1e24_e767ef3c",
+        "filename": "source/documentation/general_concept_comparison.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 691
+      },
+      "writtenOn": "2023-05-16T17:41:49Z",
+      "side": 1,
+      "message": "The second",
+      "range": {
+        "startLine": 29,
+        "startChar": 0,
+        "endLine": 29,
+        "endChar": 6
+      },
+      "revId": "def162b46b1fc4316989aebb8692de847d93b1ac",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "09ad0435_18ddd2fa",
+        "filename": "source/documentation/general_concept_comparison.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 691
+      },
+      "writtenOn": "2023-05-16T17:41:49Z",
+      "side": 1,
+      "message": "describes",
+      "range": {
+        "startLine": 29,
+        "startChar": 11,
+        "endLine": 29,
+        "endChar": 24
+      },
+      "revId": "def162b46b1fc4316989aebb8692de847d93b1ac",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "be8c1243_db246a94",
+        "filename": "source/documentation/general_concept_comparison.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 691
+      },
+      "writtenOn": "2023-05-16T17:41:49Z",
+      "side": 1,
+      "message": "land",
+      "range": {
+        "startLine": 29,
+        "startChar": 38,
+        "endLine": 29,
+        "endChar": 49
+      },
+      "revId": "def162b46b1fc4316989aebb8692de847d93b1ac",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "071edf75_03bf3611",
+        "filename": "source/documentation/general_concept_comparison.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 691
+      },
+      "writtenOn": "2023-05-16T17:41:49Z",
+      "side": 1,
+      "message": "The third roma compares how packages are built.",
+      "range": {
+        "startLine": 30,
+        "startChar": 0,
+        "endLine": 30,
+        "endChar": 54
+      },
+      "revId": "def162b46b1fc4316989aebb8692de847d93b1ac",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e7f9f457_dd656054",
+        "filename": "source/documentation/general_concept_comparison.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 691
+      },
+      "writtenOn": "2023-05-16T17:41:49Z",
+      "side": 1,
+      "message": "in addition, the RDo project takes part",
+      "range": {
+        "startLine": 32,
+        "startChar": 73,
+        "endLine": 32,
+        "endChar": 120
+      },
+      "revId": "def162b46b1fc4316989aebb8692de847d93b1ac",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3da64061_210d8903",
+        "filename": "source/documentation/general_concept_comparison.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 691
+      },
+      "writtenOn": "2023-05-16T17:41:49Z",
+      "side": 1,
+      "message": "composes the RDO repositories",
+      "range": {
+        "startLine": 32,
+        "startChar": 37,
+        "endLine": 32,
+        "endChar": 71
+      },
+      "revId": "def162b46b1fc4316989aebb8692de847d93b1ac",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0b92f249_dcd88303",
+        "filename": "source/documentation/general_concept_comparison.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 691
+      },
+      "writtenOn": "2023-05-16T17:41:49Z",
+      "side": 1,
+      "message": "The first row shows",
+      "range": {
+        "startLine": 57,
+        "startChar": 0,
+        "endLine": 57,
+        "endChar": 20
+      },
+      "revId": "def162b46b1fc4316989aebb8692de847d93b1ac",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a825b727_9a555398",
+        "filename": "source/documentation/general_concept_comparison.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 691
+      },
+      "writtenOn": "2023-05-16T17:41:49Z",
+      "side": 1,
+      "message": "The second and third rows compare",
+      "range": {
+        "startLine": 60,
+        "startChar": 0,
+        "endLine": 60,
+        "endChar": 34
+      },
+      "revId": "def162b46b1fc4316989aebb8692de847d93b1ac",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a60b8c77_961ed236",
+        "filename": "source/documentation/general_concept_comparison.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 691
+      },
+      "writtenOn": "2023-05-16T17:41:49Z",
+      "side": 1,
+      "message": "a",
+      "range": {
+        "startLine": 60,
+        "startChar": 86,
+        "endLine": 60,
+        "endChar": 90
+      },
+      "revId": "def162b46b1fc4316989aebb8692de847d93b1ac",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "87f6f50c_ea4d4085",
+        "filename": "source/documentation/general_concept_comparison.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 691
+      },
+      "writtenOn": "2023-05-16T17:41:49Z",
+      "side": 1,
+      "message": "the package",
+      "range": {
+        "startLine": 60,
+        "startChar": 133,
+        "endLine": 60,
+        "endChar": 140
+      },
+      "revId": "def162b46b1fc4316989aebb8692de847d93b1ac",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
