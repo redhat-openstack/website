@@ -7,6 +7,9 @@ title: Overview of available RDO repos
 There are a number of different repos that the RDO project works out of.
 This is an overview of each of them.
 
+**NOTE:** Overview and comparison of RDO's deliverables can be found in this [article](https://www.rdoproject.org/documentation/general_concept_comparison).
+
+
 ## RDO CloudSIG repositories
 
 Provide a set of stable OpenStack packages through CentOS CloudSIG repos based on CBS, [CentOS Community Build System](https://wiki.centos.org/HowTos/CommunityBuildSystem):
