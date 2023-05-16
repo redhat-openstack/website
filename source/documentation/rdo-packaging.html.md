@@ -44,6 +44,7 @@ title: RDO Package Maintainer Guide
 * [Package building process – overview](/documentation/package-building-overview)
 * [Introduction to packaging at RDO](/documentation/intro-packaging/)
 * [RDO Packaging guidelines](/documentation/rdo-packaging-guidelines/)
+* [Overview and comparison of RDO's deliverables](/documentation/general_concept_comparison/)
 * [Requirements management](/documentation/requirements/)
 
 
