@@ -64,6 +64,54 @@
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e5cd1bda_486e1cba",
+        "filename": "source/documentation/general_concept_comparison.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2023-05-17T12:05:24Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4f764986_341bb30d",
+      "range": {
+        "startLine": 8,
+        "startChar": 139,
+        "endLine": 8,
+        "endChar": 140
+      },
+      "revId": "def162b46b1fc4316989aebb8692de847d93b1ac",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "95806082_e1222bb4",
+        "filename": "source/documentation/general_concept_comparison.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2023-05-17T12:05:24Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8f4aa277_17efb8e8",
+      "range": {
+        "startLine": 8,
+        "startChar": 16,
+        "endLine": 8,
+        "endChar": 33
+      },
+      "revId": "def162b46b1fc4316989aebb8692de847d93b1ac",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "c4b0f9f8_497cbafe",
@@ -110,6 +158,54 @@
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "b475fc9e_e6388f25",
+        "filename": "source/documentation/general_concept_comparison.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2023-05-17T12:05:24Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c4b0f9f8_497cbafe",
+      "range": {
+        "startLine": 12,
+        "startChar": 9,
+        "endLine": 12,
+        "endChar": 11
+      },
+      "revId": "def162b46b1fc4316989aebb8692de847d93b1ac",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a41b07ae_c5f77f9a",
+        "filename": "source/documentation/general_concept_comparison.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2023-05-17T12:05:24Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b5896be6_a440cf4d",
+      "range": {
+        "startLine": 12,
+        "startChar": 16,
+        "endLine": 12,
+        "endChar": 18
+      },
+      "revId": "def162b46b1fc4316989aebb8692de847d93b1ac",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "43c5f5e5_812df452",
@@ -123,6 +219,30 @@
       "writtenOn": "2023-05-16T17:41:49Z",
       "side": 1,
       "message": "have",
+      "range": {
+        "startLine": 16,
+        "startChar": 22,
+        "endLine": 16,
+        "endChar": 25
+      },
+      "revId": "def162b46b1fc4316989aebb8692de847d93b1ac",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "aefb3bd9_9d27a4f4",
+        "filename": "source/documentation/general_concept_comparison.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2023-05-17T12:05:24Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "43c5f5e5_812df452",
       "range": {
         "startLine": 16,
         "startChar": 22,
@@ -174,6 +294,54 @@
         "startChar": 0,
         "endLine": 28,
         "endChar": 5
+      },
+      "revId": "def162b46b1fc4316989aebb8692de847d93b1ac",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f335cef8_cfcaf803",
+        "filename": "source/documentation/general_concept_comparison.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2023-05-17T12:05:24Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "eabf4591_8f7a31bb",
+      "range": {
+        "startLine": 28,
+        "startChar": 0,
+        "endLine": 28,
+        "endChar": 5
+      },
+      "revId": "def162b46b1fc4316989aebb8692de847d93b1ac",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9d9575cb_fd09715b",
+        "filename": "source/documentation/general_concept_comparison.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2023-05-17T12:05:24Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6def5277_cbffe519",
+      "range": {
+        "startLine": 28,
+        "startChar": 23,
+        "endLine": 28,
+        "endChar": 35
       },
       "revId": "def162b46b1fc4316989aebb8692de847d93b1ac",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
@@ -248,6 +416,78 @@
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "2730cb60_7e7d44b3",
+        "filename": "source/documentation/general_concept_comparison.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2023-05-17T12:05:24Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a4af1e24_e767ef3c",
+      "range": {
+        "startLine": 29,
+        "startChar": 0,
+        "endLine": 29,
+        "endChar": 6
+      },
+      "revId": "def162b46b1fc4316989aebb8692de847d93b1ac",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "28889469_c7a62853",
+        "filename": "source/documentation/general_concept_comparison.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2023-05-17T12:05:24Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "09ad0435_18ddd2fa",
+      "range": {
+        "startLine": 29,
+        "startChar": 11,
+        "endLine": 29,
+        "endChar": 24
+      },
+      "revId": "def162b46b1fc4316989aebb8692de847d93b1ac",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f150f65c_94a6d799",
+        "filename": "source/documentation/general_concept_comparison.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2023-05-17T12:05:24Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "be8c1243_db246a94",
+      "range": {
+        "startLine": 29,
+        "startChar": 38,
+        "endLine": 29,
+        "endChar": 49
+      },
+      "revId": "def162b46b1fc4316989aebb8692de847d93b1ac",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "071edf75_03bf3611",
@@ -261,6 +501,30 @@
       "writtenOn": "2023-05-16T17:41:49Z",
       "side": 1,
       "message": "The third roma compares how packages are built.",
+      "range": {
+        "startLine": 30,
+        "startChar": 0,
+        "endLine": 30,
+        "endChar": 54
+      },
+      "revId": "def162b46b1fc4316989aebb8692de847d93b1ac",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "327f9e2f_31b099b6",
+        "filename": "source/documentation/general_concept_comparison.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2023-05-17T12:05:24Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "071edf75_03bf3611",
       "range": {
         "startLine": 30,
         "startChar": 0,
@@ -317,6 +581,54 @@
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "d967f33c_76f4d0cc",
+        "filename": "source/documentation/general_concept_comparison.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2023-05-17T12:05:24Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3da64061_210d8903",
+      "range": {
+        "startLine": 32,
+        "startChar": 37,
+        "endLine": 32,
+        "endChar": 71
+      },
+      "revId": "def162b46b1fc4316989aebb8692de847d93b1ac",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ba90bc54_b3d07773",
+        "filename": "source/documentation/general_concept_comparison.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2023-05-17T12:05:24Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e7f9f457_dd656054",
+      "range": {
+        "startLine": 32,
+        "startChar": 73,
+        "endLine": 32,
+        "endChar": 120
+      },
+      "revId": "def162b46b1fc4316989aebb8692de847d93b1ac",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "0b92f249_dcd88303",
@@ -330,6 +642,30 @@
       "writtenOn": "2023-05-16T17:41:49Z",
       "side": 1,
       "message": "The first row shows",
+      "range": {
+        "startLine": 57,
+        "startChar": 0,
+        "endLine": 57,
+        "endChar": 20
+      },
+      "revId": "def162b46b1fc4316989aebb8692de847d93b1ac",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1bf548db_b600cb3f",
+        "filename": "source/documentation/general_concept_comparison.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2023-05-17T12:05:24Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0b92f249_dcd88303",
       "range": {
         "startLine": 57,
         "startChar": 0,
@@ -404,6 +740,102 @@
         "startChar": 133,
         "endLine": 60,
         "endChar": 140
+      },
+      "revId": "def162b46b1fc4316989aebb8692de847d93b1ac",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "dfed2a00_aeb4463f",
+        "filename": "source/documentation/general_concept_comparison.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2023-05-17T12:05:24Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "87f6f50c_ea4d4085",
+      "range": {
+        "startLine": 60,
+        "startChar": 133,
+        "endLine": 60,
+        "endChar": 140
+      },
+      "revId": "def162b46b1fc4316989aebb8692de847d93b1ac",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7356840f_fb0ba6cf",
+        "filename": "source/documentation/general_concept_comparison.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2023-05-17T12:05:24Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a60b8c77_961ed236",
+      "range": {
+        "startLine": 60,
+        "startChar": 86,
+        "endLine": 60,
+        "endChar": 90
+      },
+      "revId": "def162b46b1fc4316989aebb8692de847d93b1ac",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3a870a33_60e0b70d",
+        "filename": "source/documentation/general_concept_comparison.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2023-05-17T12:05:24Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "87f6f50c_ea4d4085",
+      "range": {
+        "startLine": 60,
+        "startChar": 133,
+        "endLine": 60,
+        "endChar": 140
+      },
+      "revId": "def162b46b1fc4316989aebb8692de847d93b1ac",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "91f3cffb_29b6c92d",
+        "filename": "source/documentation/general_concept_comparison.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2023-05-17T12:05:24Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a825b727_9a555398",
+      "range": {
+        "startLine": 60,
+        "startChar": 0,
+        "endLine": 60,
+        "endChar": 34
       },
       "revId": "def162b46b1fc4316989aebb8692de847d93b1ac",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
