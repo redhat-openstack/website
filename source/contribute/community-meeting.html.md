@@ -13,6 +13,7 @@ etherpad](https://etherpad.openstack.org/p/RDO-Meeting).
 
 The minutes for these meetings are below:
 
+* [Oct 11, 2023](https://lists.rdoproject.org/archives/list/dev@lists.rdoproject.org/thread/XIANAKLKY4YZHJSSKO65KI6JUK5NQ6S5/)
 * [Oct 04, 2023](https://lists.rdoproject.org/archives/list/dev@lists.rdoproject.org/thread/JHSKKEXZYZ4AOWQROGXKG3OQRKYMGR4Q/)
 * [Sep 27, 2023](https://lists.rdoproject.org/archives/list/dev@lists.rdoproject.org/thread/2BLWMKEMYJ54XRG3GLZJE7DK5XWF7W5D/)
 * [Sep 20, 2023](https://lists.rdoproject.org/archives/list/dev@lists.rdoproject.org/thread/YTJCRMMB3JUD57OU5PI6SLQD26ZQ4ATV/)
