@@ -110,6 +110,30 @@
       },
       "revId": "5c8eea0d069f4facfbe07dfe5ade04cc7d86c28d",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2abf93b3_3e6a1296",
+        "filename": "source/install/install-with-ceph.html.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2023-10-18T15:05:44Z",
+      "side": 1,
+      "message": "I tested it locally with\n\npodman run -it quay.io/centos/centos:stream9 sh -c \"dnf update -y \u0026\u0026 dnf install -y \u0027dnf-command(config-manager)\u0027 \u0026\u0026 dnf config-manager --enable crb \u0026\u0026 dnf install -y epel-release \u0026\u0026 dnf config-manager --disable epel-next \u0026\u0026 dnf config-manager --disable epel-cisco-openh264 \u0026\u0026 dnf config-manager --setopt epel.priority\u003d100 --save epel \u0026\u0026 dnf config-manager --setopt epel.includepkgs\u003d\u0027libarrow*,parquet*,python3-asyncssh,re2,python3-grpcio,grpc*,abseil*\u0027 --save epel \u0026\u0026 dnf install -y centos-release-ceph-reef \u0026\u0026 dnf install -y ceph\"",
+      "parentUuid": "81a6d670_33340ac4",
+      "range": {
+        "startLine": 29,
+        "startChar": 0,
+        "endLine": 30,
+        "endChar": 142
+      },
+      "revId": "5c8eea0d069f4facfbe07dfe5ade04cc7d86c28d",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
