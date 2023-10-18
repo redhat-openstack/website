@@ -19,6 +19,7 @@ use to deploy OpenStack with RDO. If you need to deploy a production-ready cloud
 *   [Packstack](/install/packstack) &ndash; proof of concept for single node
 *   [Manual Installation Tutorial](https://docs.openstack.org/install-guide/) &ndash; OpenStack upstream documentation
 *   [Install on LinuxONE](/install/linuxone)
+*   [Install with Ceph](/install/install-with-ceph)
 </div>
 
 <div class="split-third with-more">
