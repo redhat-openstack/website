@@ -41,6 +41,30 @@
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "00bfdeaa_d534b53d",
+        "filename": "source/install/install-with-ceph.html.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2023-10-18T14:52:50Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "bc784620_dfa56fa5",
+      "range": {
+        "startLine": 22,
+        "startChar": 174,
+        "endLine": 22,
+        "endChar": 276
+      },
+      "revId": "5c8eea0d069f4facfbe07dfe5ade04cc7d86c28d",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "01c70e23_bcdaf00e",
@@ -54,6 +78,30 @@
       "writtenOn": "2023-10-18T14:13:42Z",
       "side": 1,
       "message": "I\u0027d replace this two commands by:\n\n$ sudo dnf config-manager --disable epel-next\n$ sudo dnf config-manager --disable epel-cisco-openh264\n$ sudo dnf config-manager --setopt epel.priority\u003d100 --save epel\n$ sudo dnf config-manager --setopt epel.includepkgs\u003d\"libarrow*,parquet*,python3-asyncssh,re2,python3-grpcio,grpc*,abseil*\" --save epel",
+      "range": {
+        "startLine": 29,
+        "startChar": 0,
+        "endLine": 30,
+        "endChar": 142
+      },
+      "revId": "5c8eea0d069f4facfbe07dfe5ade04cc7d86c28d",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "81a6d670_33340ac4",
+        "filename": "source/install/install-with-ceph.html.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2023-10-18T14:52:50Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "01c70e23_bcdaf00e",
       "range": {
         "startLine": 29,
         "startChar": 0,
