@@ -1,0 +1,9 @@
+Code-Review+2: Alfredo Moralejo <amoralej@redhat.com>
+Workflow+1: Joel Capitao <jcapitao@redhat.com>
+Verified+2: Zuul CI <zuul@review.rdoproject.org>
+Code-Review+1: Karolina Kula <kkula@redhat.com>
+Submitted-by: Zuul CI <zuul@review.rdoproject.org>
+Submitted-at: Thu, 19 Oct 2023 12:03:21 +0000
+Reviewed-on: https://review.rdoproject.org/r/c/rdo-website/+/50577
+Project: rdo-website
+Branch: refs/heads/master
