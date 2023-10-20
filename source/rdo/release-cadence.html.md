@@ -22,10 +22,11 @@ RDO [CloudSIG repositories](https://www.rdoproject.org/what/repos/) are based on
 Current maintained CloudSIG releases are:
 
 |------------------|----------|-----------|
+| CentOS Stream 9  | Bobcat   | supported |
+| CentOS Stream 9  | Antelope | supported |
 | CentOS Stream 9  | Zed      | supported |
 | CentOS Stream 9  | Yoga     | supported |
 | CentOS Stream 8  | Yoga     | supported |
-| CentOS Stream 8  | Xena     | supported |
 
 ### Maintained RDO versions in RDO Trunk repos
 
@@ -34,6 +35,8 @@ In order to provide patches merged in OpenStack releases in Extended Maintenance
 Currently, RDO maintains following RDO Trunk repositories:
 
 |------------------|----------|-----------|
+| CentOS Stream 9  | Bobcat   | supported |
+| CentOS Stream 9  | Antelope | supported |
 | CentOS Stream 9  | Zed      | supported |
 | CentOS Stream 9  | Yoga     | supported |
 | CentOS Stream 8  | Yoga     | supported |
