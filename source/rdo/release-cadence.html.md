@@ -43,9 +43,6 @@ Currently, RDO maintains following RDO Trunk repositories:
 | CentOS Stream 8  | Xena     | supported |
 | CentOS Stream 9  | Wallaby     | extended maintenance |
 | CentOS Stream 8  | Wallaby     | extended maintenance |
-| CentOS Stream 8  | Victoria     | extended maintenance |
-| CentOS Stream 8  | Ussuri     | extended maintenance |
-| CentOS Stream 8  | Train     | extended maintenance |
 
 
 ### RHEL compatibility
