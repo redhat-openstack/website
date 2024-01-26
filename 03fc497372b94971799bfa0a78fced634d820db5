@@ -1,0 +1,8 @@
+Workflow+1: Alfredo Moralejo <amoralej@redhat.com>
+Verified+2: Zuul CI <zuul@review.rdoproject.org>
+Code-Review+2: Alfredo Moralejo <amoralej@redhat.com>
+Submitted-by: Zuul CI <zuul@review.rdoproject.org>
+Submitted-at: Fri, 26 Jan 2024 11:29:07 +0000
+Reviewed-on: https://review.rdoproject.org/r/c/rdo-website/+/51401
+Project: rdo-website
+Branch: refs/heads/master
