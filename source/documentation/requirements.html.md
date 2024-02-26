@@ -180,8 +180,8 @@ the CloudSIG using [rdopkg](/documentation/intro-packaging/#rdopkg):
 
 4. In case that the dependency is not in CentOS base or CloudSIG repo, you can check if it has been built
 by other SIGs in [CBS web interface](http://cbs.centos.org/koji/). You can use wildcards in the packages
-search expression. If you find the desired dependency, you can open a bug in [Red Hat Bugzilla for
-RDO product](https://bugzilla.redhat.com/enter_bug.cgi?product=RDO&component=distribution) requesting
+search expression. If you find the desired dependency, you can open a ticket in the [RDO
+Jira board](https://issues.redhat.com/projects/RDO/issues) requesting
 the inclusion of the package in RDO repos. RDO Core members will handle the request.
     <br />
 
@@ -295,7 +295,7 @@ For the master branch, RDO provides a report to quickly check the state of [depe
 * For packages provided in CentOS Stream OS repos, the preferred option is to consume those packages from OS whenever possible, even if versions are below the ones in upper-constraints.txt file.
 If OpenStack requires newer versions of those packages to work properly (for example, an OpenStack project requires a minimal version of the dep which is newer that the one in CentOS)
 there are two options:
-1. Request a package update in CentOS by opening a [bug in bugzilla for RHEL product](https://bugzilla.redhat.com/enter_bug.cgi?product=Red%20Hat%20Enterprise%20Linux%209&version=CentOS%20Stream).
+1. Request a package update in CentOS by opening a [bug in RHEL product](https://bugzilla.redhat.com/enter_bug.cgi?product=Red%20Hat%20Enterprise%20Linux%209&version=CentOS%20Stream).
 This bug will be evaluated following the RHEL process.
 2. Add it to RDO repository following the process described in [Adding a new requirement to RDO](#adding-a-new-requirement-to-rdo). Note that this may impact other packages using it in the Operating System so this option should be minimized.
 

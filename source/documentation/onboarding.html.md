@@ -14,7 +14,7 @@ to get ready:
 * [Create a GitHub account](#github-account)
 * [Sign up to `review.rdoproject.org`](#sign-in)
 * [Add an SSH key to `review.rdoproject.org`](#add-ssh)
-* [Create a Red Hat Bugzilla account](#bugzilla-account)
+* [Create a RDO Jira Board account](#jira-account)
 * [Configure `git` and `git review`](#git-review)
 * [Install the `rdopkg` tool](#rdopkg)
 
@@ -67,17 +67,16 @@ using your GitHub account.
   SSH public key) and paste it there, and then click on the 'Add' button and
   you are done.
 
-<a name="bugzilla-account"/>
+<a name="jira-account"/>
 
-### Create a Red Hat Bugzilla account
-All the bugs related to RDO packages are tracked on Red Hat Bugzilla under the
-*RDO* product. OpenStack project bugs are tracked on
-[Launchpad](https://launchpad.net/openstack).
+### Create a RDO Jira board account
+All the bugs related to RDO packages are tracked on Red Hat Jira under the
+[*RDO* project](https://issues.redhat.com/projects/RDO/issues).
+OpenStack project bugs are tracked on [Launchpad](https://launchpad.net/openstack).
 
-* You can create a Bugzilla account by clicking on
-  [Create a new Red Hat Bugzilla account](https://bugzilla.redhat.com/createaccount.cgi),
-  enter your email, and click on the "send" button. Be sure to check your
-  mailbox, confirm your email address, and you're done.
+* You can create a RDO Board account by clicking on the "Log In" button on the
+  [RDO Board page](https://issues.redhat.com/projects/RDO) then following the
+  "Register for a Red Hat account" link.
 
 <a name="git-review"/>
 

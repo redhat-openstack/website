@@ -39,8 +39,8 @@ consult our [mentors list](/contribute/mentors).
 
 ## Tester
 
-* [Review open bugs](https://bugzilla.redhat.com/buglist.cgi?product=RDO&query_format=advanced&bug_status=NEW&bug_status=ASSIGNED)
-* [File bugs](https://bugzilla.redhat.com/enter_bug.cgi?product=RDO)
+* [Review open bugs](https://issues.redhat.com/issues/?filter=12430650)
+* [File bugs](https://issues.redhat.com/projects/RDO/issues)
 * [Participate in test days](/testday/)
 * [Participate in doc days](/events/docdays/)
 

@@ -14,12 +14,13 @@ title: Adding new packages
 When a new package is required in RDO, it must be added to RDO Trunk packaging.
 To include new packages, following steps are required:
 
-1. Create a "Package Review" bug in [Red Hat bugzilla](https://bugzilla.redhat.com/)
-following the best practices described in [RDO OpenStack Packaging Guidelines](/documentation/rdo-packaging-guidelines/). Once the bug has been created, and an initial license check has been conducted, you can continue with steps 2 and 3.
+1. Create a "Package Review" story in [RDO Jira board](https://issues.redhat.com/projects/RDO/issues). You can clone the [new package template story](https://issues.redhat.com/browse/RDO-255).
+Make sure you replace the title with the actual package name, and provide the reason and upstream code repository in the description. The story should have the Epic Link set to "RDO &lt;release>" and "Fix Version/s" field should be set to the desired RDO release.
+Once the issue has been created, and an initial license check has been conducted, you can continue with steps 2 and 3.
 
 2. Send a review adding the new project in rdo.yml to the [rdoinfo project in
 review.rdoproject.org](https://review.rdoproject.org/r/#/q/project:rdoinfo). In
-this change you must provide the project information and Package Review bugzilla
+this change you must provide the project information and Package Review Jira story
 ticket in the commit message (see [this example](https://review.rdoproject.org/r/#/c/18644/)).
 Add the project definition in **rdo.yml** file and `under-review` tag in **tags/under-review.yml** file,
 as for example:
@@ -57,17 +58,16 @@ This will trigger a CI job to test the package build. The spec will be reviewed 
 core RDO packagers, and **cannot be approved by the requester**.
 
 4. Once the initial spec is considered ready to merge by the reviewers, go back to the Package Review
-Bugzilla and update it with the final spec and SRPM. Then, the formal package 
-review will be conducted by the reviewer, who will set the `rdo-review +` flag. Only after
-the `rdo-review +` flag is set in the Bugzilla bug, the initial spec review will be approved
+Story and update it with the final spec and SRPM. Then, the formal package
+review will be conducted by the reviewer using fedora-review. Only after the fedora-review output is added
+as a comment in the story, the initial spec review will be approved
 in Gerrit.
 
 5. Finally, send a new review to rdoinfo project to remove the `under-review` tag from `tags/under-review.yml` file
 and add tags for which package needs to be build, For current release Train, 2 files need to be updated(`tags/train.yml`,
 `tags/train-uc.yml`) ([example](https://review.rdoproject.org/r/#/c/18757/)).
 This change can be sent before merging review in step 3 if a `Depends-On: <gerrit-change-id step 3>`
-is added, but the review will only be approved once the `rdo-review +` flag has been
-set in the Bugzilla.
+is added.
 
 Once the change is merged in rdoinfo, a new package should be automatically built
 and published in the [RDO Trunk repos](http://trunk.rdoproject.org/centos7-master/report.html).
