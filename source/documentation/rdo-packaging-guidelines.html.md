@@ -39,31 +39,6 @@ On top of it to maintain consistency in package names across different sets of R
 
 **NOTE:** In case of python packages, srpms names should be prefixed with 'python-' and sub packages with 'python2-' or 'python3-'.
 
-## Packages Review Process
-
-* All reviews **must** add the alias RDO-{**release**} to the "Blocks" field on the review request BZ.
-Each release has a BZ created aliased RDO-{**release**}. For example, for the R release add RDO-ROCKY to the Blocks field on the review request BZ.
-To see examples of other BZs that block on a release BZ select one from the block list on [RDO-ROCKY](https://bugzilla.redhat.com/show_bug.cgi?id=RDO-ROCKY)
-
-* Announcing reviews on the RDO mailing list is encouraged to raise awareness within the
-community and speed up the process.
-
-* General-purpose libraries and clients should be submitted through Fedora Package Review
-[Process](https://fedoraproject.org/wiki/Package_Review_Process).
-
-* As for OpenStack services, they should follow the same process but open a ticket under
-the **RDO** product and **Package Review** component. Packagers are encouraged to create
-a git repository with their packaging for pre-review.
-
-If you are looking for an example of Package Review for RDO project, [here](https://bugzilla.redhat.com/buglist.cgi?bug_status=NEW&bug_status=ASSIGNED&classification=Community&component=Package%20Review&list_id=5247140&product=RDO&query_format=advanced)
-you have the list of currently open ones.
-
-### For reviewers
-
-Reviewers are encouraged to use fedora-review tool to generate and post formal review
-on the ticket.
-
-
 ## RDO Guidelines
 
 ### Systemd packaging
