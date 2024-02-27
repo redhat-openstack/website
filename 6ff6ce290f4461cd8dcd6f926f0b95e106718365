@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "65d2b4fc_ce4bc541",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2024-02-27T12:57:05Z",
+      "side": 1,
+      "message": "lgtm, but I think there are still some leftovers (to fix or remove): https://www.rdoproject.org/contribute/rdo-bugtriage/, https://www.rdoproject.org/rdo/bugzilla-ownership/",
+      "revId": "6ff6ce290f4461cd8dcd6f926f0b95e106718365",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
