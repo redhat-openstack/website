@@ -16,6 +16,114 @@
       "message": "lgtm, but I think there are still some leftovers (to fix or remove): https://www.rdoproject.org/contribute/rdo-bugtriage/, https://www.rdoproject.org/rdo/bugzilla-ownership/",
       "revId": "6ff6ce290f4461cd8dcd6f926f0b95e106718365",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e151239c_672f6551",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 29
+      },
+      "writtenOn": "2024-02-28T19:18:48Z",
+      "side": 1,
+      "message": "Some minor nits here.",
+      "revId": "6ff6ce290f4461cd8dcd6f926f0b95e106718365",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "02c4c847_894f6d71",
+        "filename": "source/contribute/index.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 29
+      },
+      "writtenOn": "2024-02-28T19:18:48Z",
+      "side": 1,
+      "message": "This link is weird. It takes you to a template for creating a new package.\n\nI think you\u0027d be better off creating a filter that you can expose and link to in https://issues.redhat.com/secure/ManageFilters.jspa?filterView\u003dpopular (create a filter, save it, set proper permissions so everyone can see it).\n\nThe advantage here is that if you want to adjust the filter, you can without having to update the website.\n\nAlternatively just set this to https://issues.redhat.com/projects/RDO/issues/",
+      "revId": "6ff6ce290f4461cd8dcd6f926f0b95e106718365",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "639dae42_e5f07666",
+        "filename": "source/documentation/add-packages.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 29
+      },
+      "writtenOn": "2024-02-28T19:18:48Z",
+      "side": 1,
+      "message": "I think it might be more accurate to say something like:\n\n\u003e The story should have the Epic Link set to \"RDO \u003crelease_name\u003e\" and \"Fix Version/s\" field should be set to the desired RDO release.\n\nUsing the word \"assigned\" here has a specific connotation in Jira parlance and it can be confusing to read that way.",
+      "range": {
+        "startLine": 18,
+        "startChar": 154,
+        "endLine": 18,
+        "endChar": 163
+      },
+      "revId": "6ff6ce290f4461cd8dcd6f926f0b95e106718365",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "31fcad4f_58d7b14d",
+        "filename": "source/documentation/onboarding.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 29
+      },
+      "writtenOn": "2024-02-28T19:18:48Z",
+      "side": 1,
+      "message": "Since there is a link already in this paragraph, you should link to the Red Hat Jira as well.\n\n...in the [Red Hat Jira](https://issues.redhat.com)",
+      "revId": "6ff6ce290f4461cd8dcd6f926f0b95e106718365",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4890f637_23488de7",
+        "filename": "source/documentation/onboarding.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 29
+      },
+      "writtenOn": "2024-02-28T19:18:48Z",
+      "side": 1,
+      "message": "\u003e You can create an RDO board account by clicking on the \"Log In\" button on the [RDO board page](...), then following the \"Register for a Red Hat account\" link.",
+      "revId": "6ff6ce290f4461cd8dcd6f926f0b95e106718365",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fb6fb285_9d47e99c",
+        "filename": "source/documentation/requirements.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 183,
+      "author": {
+        "id": 29
+      },
+      "writtenOn": "2024-02-28T19:18:48Z",
+      "side": 1,
+      "message": "... you can open a ticket in the ...",
+      "revId": "6ff6ce290f4461cd8dcd6f926f0b95e106718365",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
