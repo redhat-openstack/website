@@ -16,6 +16,24 @@
       "message": "That filter linking looks much better, and is available as a non-logged in user. Thanks!",
       "revId": "65afeead45efcebe80f292e4b3e871eaf49a16e3",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d1f776b7_b6b883b6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2024-02-29T16:09:24Z",
+      "side": 1,
+      "message": "Actually i had looking for some way to do something like that but i missed the permissions part, thank you!",
+      "parentUuid": "d1fb74d0_3c73a29b",
+      "revId": "65afeead45efcebe80f292e4b3e871eaf49a16e3",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
