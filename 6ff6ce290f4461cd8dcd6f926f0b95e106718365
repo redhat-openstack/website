@@ -52,6 +52,24 @@
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a9bbfd2a_09823b11",
+        "filename": "source/contribute/index.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2024-02-29T08:29:19Z",
+      "side": 1,
+      "message": "thanks for the hint!",
+      "parentUuid": "02c4c847_894f6d71",
+      "revId": "6ff6ce290f4461cd8dcd6f926f0b95e106718365",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "639dae42_e5f07666",
@@ -65,6 +83,30 @@
       "writtenOn": "2024-02-28T19:18:48Z",
       "side": 1,
       "message": "I think it might be more accurate to say something like:\n\n\u003e The story should have the Epic Link set to \"RDO \u003crelease_name\u003e\" and \"Fix Version/s\" field should be set to the desired RDO release.\n\nUsing the word \"assigned\" here has a specific connotation in Jira parlance and it can be confusing to read that way.",
+      "range": {
+        "startLine": 18,
+        "startChar": 154,
+        "endLine": 18,
+        "endChar": 163
+      },
+      "revId": "6ff6ce290f4461cd8dcd6f926f0b95e106718365",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f22fe973_186e1832",
+        "filename": "source/documentation/add-packages.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2024-02-29T08:29:19Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "639dae42_e5f07666",
       "range": {
         "startLine": 18,
         "startChar": 154,
@@ -92,6 +134,24 @@
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "2622f888_91e2ccfb",
+        "filename": "source/documentation/onboarding.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2024-02-29T08:29:19Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "31fcad4f_58d7b14d",
+      "revId": "6ff6ce290f4461cd8dcd6f926f0b95e106718365",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "4890f637_23488de7",
@@ -109,6 +169,24 @@
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "f657c719_95cda8aa",
+        "filename": "source/documentation/onboarding.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2024-02-29T08:29:19Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4890f637_23488de7",
+      "revId": "6ff6ce290f4461cd8dcd6f926f0b95e106718365",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "fb6fb285_9d47e99c",
@@ -122,6 +200,24 @@
       "writtenOn": "2024-02-28T19:18:48Z",
       "side": 1,
       "message": "... you can open a ticket in the ...",
+      "revId": "6ff6ce290f4461cd8dcd6f926f0b95e106718365",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7f8a1b56_afd7f47d",
+        "filename": "source/documentation/requirements.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 183,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2024-02-29T08:29:19Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "fb6fb285_9d47e99c",
       "revId": "6ff6ce290f4461cd8dcd6f926f0b95e106718365",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
