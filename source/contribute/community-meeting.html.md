@@ -13,6 +13,8 @@ etherpad](https://etherpad.openstack.org/p/RDO-Meeting).
 
 The minutes for these meetings are below:
 
+* [Mar 27, 2024](https://lists.rdoproject.org/archives/list/dev@lists.rdoproject.org/thread/UIXPKBJPIKOMVJH6DVKFYNCPTE5T5WPM/)
+* [Mar 20, 2024](https://lists.rdoproject.org/archives/list/dev@lists.rdoproject.org/thread/7WA2G7GG6FHCYKM4ZQCFHIXDJT7T66BX/)
 * [Mar 13, 2024](https://lists.rdoproject.org/archives/list/dev@lists.rdoproject.org/thread/FKB56UZMTWX4NUPWFNR6ZODHHZFO57KK/)
 * [Mar 06, 2024](https://lists.rdoproject.org/archives/list/dev@lists.rdoproject.org/thread/Y23RNMJSVD5S22RC4B5M7JKZLW33GR3S/)
 * [Feb 14, 2024](https://lists.rdoproject.org/archives/list/dev@lists.rdoproject.org/thread/WZUVA4FDROCD7C6O2LWKXHUAMOAWWFKT/)
