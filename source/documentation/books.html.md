@@ -6,8 +6,7 @@ authors: rbowen
 
 # Books
 
-[← Docs](/documentation/)
+[← Use](/use/)
 
-*   [OpenStack Cloud Computing Cookbook](https://amzn.com/1782174788), by Kevin Jackson
-*   [OpenStack Essentials](https://www.packtpub.com/books/info/authors/dan-radez), by Dan Radez
-
+- [OpenStack Cloud Computing Cookbook](https://amzn.com/1782174788), by Kevin Jackson
+- [OpenStack Essentials](https://www.packtpub.com/books/info/authors/dan-radez), by Dan Radez
