@@ -10,6 +10,7 @@ authors: jcapitao
 
 | RDO Release | Ceph Release |
 | ------ | ----- |
+| Caracal | Reef |
 | Bobcat | Reef |
 | Antelope | Quincy |
 | Zed | Quincy |
@@ -33,5 +34,5 @@ However, enabling the EPEL repository with the default parameters might conflict
   $ sudo dnf install centos-release-ceph-reef
   $ sudo dnf install ceph
   ```
-  Note: installing `centos-release-ceph-reef` is not needed if `centos-releae-openstack-bobcat` is already installed (i.e it's a requirement).
+  Note: installing `centos-release-ceph-reef` is not needed if `centos-releae-openstack-bobcat` or `centos-releae-openstack-caracal` is already installed (i.e it's a requirement).
 

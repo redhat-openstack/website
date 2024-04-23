@@ -47,7 +47,7 @@ If your system meets all the prerequisites mentioned below, proceed with running
   ```
   $ sudo dnf update -y
   $ sudo dnf config-manager --enable crb
-  $ sudo dnf install -y centos-release-openstack-bobcat
+  $ sudo dnf install -y centos-release-openstack-caracal
   $ sudo setenforce 0
   $ sudo dnf update -y
   $ sudo dnf install -y openstack-packstack
@@ -118,7 +118,7 @@ On CentOS Stream 9, first you need to enable the `crb`.
 Then, the `extras-common` repository provides the RPM that enables the OpenStack repository. It is enabled by default on CentOS Stream 9, so you can simply install the RPM to set up the OpenStack repository:
 ```
 $ sudo dnf config-manager --enable crb
-$ sudo dnf install -y centos-release-openstack-bobcat
+$ sudo dnf install -y centos-release-openstack-caracal
 ```
 
 On RHEL 8, install the RDO repository RPM to setup the Openstack repository, then you must enable the `codeready-builder` option in `subscription-manager`:
