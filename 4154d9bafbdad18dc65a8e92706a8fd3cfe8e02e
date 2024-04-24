@@ -16,6 +16,47 @@
       "message": "centos7 repo in AFS is over, we can probably merge this manually, given that we are moving out of this repo.",
       "revId": "4154d9bafbdad18dc65a8e92706a8fd3cfe8e02e",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d90fd881_9bb9e719",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2024-04-24T09:08:45Z",
+      "side": 1,
+      "message": "I agree +1",
+      "parentUuid": "aef2c438_d639c96f",
+      "revId": "4154d9bafbdad18dc65a8e92706a8fd3cfe8e02e",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "42edccac_44f5325a",
+        "filename": "source/install/install-with-ceph.html.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2024-04-24T09:08:45Z",
+      "side": 1,
+      "message": "it should be Caracal and Reef",
+      "range": {
+        "startLine": 13,
+        "startChar": 0,
+        "endLine": 13,
+        "endChar": 20
+      },
+      "revId": "4154d9bafbdad18dc65a8e92706a8fd3cfe8e02e",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
